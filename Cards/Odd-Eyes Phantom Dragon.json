@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 93149655,
+      "name": "Odd-Eyes Phantom Dragon",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, when an attack is declared involving your face-up monster and an opponent's monster, if you have an \"Odd-Eyes\" card in your other Pendulum Zone: You can make that monster you control gain 1200 ATK until the end of the Battle Phase (even if this card leaves the field).\n\n[ Monster Effect ] \nWhen this Pendulum Summoned card inflicts battle damage to your opponent by attacking: You can inflict damage to your opponent equal to the number of \"Odd-Eyes\" cards in your Pendulum Zones x 1200. You can only use this effect of \"Odd-Eyes Phantom Dragon\" once per turn.",
+      "race": "Dragon",
+      "pend_desc": "Once per turn, when an attack is declared involving your face-up monster and an opponent's monster, if you have an \"Odd-Eyes\" card in your other Pendulum Zone: You can make that monster you control gain 1200 ATK until the end of the Battle Phase (even if this card leaves the field).",
+      "monster_desc": "When this Pendulum Summoned card inflicts battle damage to your opponent by attacking: You can inflict damage to your opponent equal to the number of \"Odd-Eyes\" cards in your Pendulum Zones x 1200. You can only use this effect of \"Odd-Eyes Phantom Dragon\" once per turn.",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "-Eyes Dragon",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-phantom-dragon-7752",
+      "card_sets": [
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.58"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ARC-V Volume 1 promotional card",
+          "set_code": "YA01-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "12.88"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93149655,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93149655.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93149655.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93149655.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "14.95",
+          "amazon_price": "1.12",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 266084,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-04-04",
+          "ocg_date": "2016-04-04",
+          "konami_id": 12482,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

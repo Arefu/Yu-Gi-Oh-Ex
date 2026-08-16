@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 72402069,
+      "name": "D/D/D Super Doom King Bright Armageddon",
+      "typeline": [
+        "Fiend",
+        "Synchro",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Synchro Pendulum Effect Monster",
+      "humanReadableCardType": "Synchro Pendulum Effect Monster",
+      "frameType": "synchro_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, when an opponent's monster declares an attack: You can target 1 \"D/D/D\" Synchro Monster you control; destroy as many monsters your opponent controls as possible with DEF less than or equal to the targeted monster's ATK, and if you do, inflict 1000 damage to your opponent for each monster destroyed.\n\n[ Monster Effect ] \n1 \"D/D\" Tuner + 1+ non-Tuner \"D/D/D\" monsters\r\nYour opponent cannot target monsters you control with card effects. If another monster is Normal or Special Summoned while this monster is on the field (except during the Damage Step): You can make your opponent choose 1 Pendulum Monster they control, and all other monsters they currently control have their effects negated. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.",
+      "race": "Fiend",
+      "pend_desc": "Once per turn, when an opponent's monster declares an attack: You can target 1 \"D/D/D\" Synchro Monster you control; destroy as many monsters your opponent controls as possible with DEF less than or equal to the targeted monster's ATK, and if you do, inflict 1000 damage to your opponent for each monster destroyed.",
+      "monster_desc": "1 \"D/D\" Tuner + 1+ non-Tuner \"D/D/D\" monsters\r\nYour opponent cannot target monsters you control with card effects. If another monster is Normal or Special Summoned while this monster is on the field (except during the Damage Step): You can make your opponent choose 1 Pendulum Monster they control, and all other monsters they currently control have their effects negated. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.",
+      "atk": 3500,
+      "def": 3000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-super-doom-king-bright-armageddon-8898",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.91"
+        },
+        {
+          "set_name": "OTS Tournament Pack 29",
+          "set_code": "OP29-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72402069,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72402069.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72402069.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72402069.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "7.95",
+          "amazon_price": "4.95",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "D/D/D Superdoom King Whitest Armageddon",
+          "views": 159213,
+          "viewsweek": 0,
+          "upvotes": 24,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13132,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

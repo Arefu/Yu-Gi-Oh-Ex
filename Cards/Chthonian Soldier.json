@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 50916353,
+      "name": "Chthonian Soldier",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by an opponent's attacking monster and sent to the Graveyard, the Battle Damage you took from this battle is also inflicted to your opponent.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 1400,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chthonian-soldier-4334",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.94"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN010",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mattel Action Figure promotional cards: Series 3",
+          "set_code": "MF03-EN011",
+          "set_rarity": "Normal Parallel Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50916353,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50916353.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50916353.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50916353.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "4.23",
+          "amazon_price": "5.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75271,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6474,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 1149109,
+      "name": "Deck Lockdown",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Neither player can add cards from the Deck to their hand except by drawing them. Monsters cannot be Special Summoned from the Main Deck. Destroy this card during your 2nd Standby Phase after activation.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/deck-lockdown-102",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Three",
+          "set_code": "AP03-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN090",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1149109,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1149109.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1149109.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1149109.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "0.03",
+          "ebay_price": "0.00",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 252816,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 8,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7633,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

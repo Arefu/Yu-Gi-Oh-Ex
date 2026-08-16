@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 56292140,
+      "name": "Number 51: Finisher the Strong Arm",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 3 monsters\nCannot be destroyed by battle. At the end of the Damage Step, if this card battled: You can detach 1 Xyz Material from this card; place 1 Counter on this card (max. 3). At the end of the Battle Phase, if this card battled, and has 3 of these Counters: You can destroy all cards your opponent controls.",
+      "race": "Rock",
+      "atk": 2600,
+      "def": 0,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-51-finisher-the-strong-arm-4793",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN120",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.11"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56292140,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56292140.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56292140.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56292140.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "2.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 51",
+          "views": 39343,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12547,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

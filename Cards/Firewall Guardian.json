@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 86605184,
+      "name": "Firewall Guardian",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY as material for the Link Summon of a Cyberse monster: You can Special Summon this card, but banish it when it leaves the field. When an attack is declared involving your Link Monster and an opponent's Link Monster: You can banish this card from your GY; negate that attack, and if you do, until the end of this turn, the original ATK of that opponent's monster becomes 0, also it is unaffected by other card effects, except its own. You can only use each effect of \"Firewall Guardian\" once per turn.",
+      "race": "Cyberse",
+      "atk": 100,
+      "def": 2000,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/firewall-guardian-10013",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86605184,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86605184.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86605184.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86605184.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 182881,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14251,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

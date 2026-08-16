@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 75620895,
+      "name": "One-Eyed Skill Gainer",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 monsters\nYou can detach 1 Xyz Material from this card to target 1 face-up Xyz Monster your opponent controls; this card's name and original effect become the same as that monster. This effect can only be used once while this card is face-up on the field.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/one-eyed-skill-gainer-6365",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75620895,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75620895.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75620895.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75620895.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.56",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35588,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10262,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

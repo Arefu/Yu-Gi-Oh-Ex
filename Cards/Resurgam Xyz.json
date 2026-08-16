@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 49082032,
+      "name": "Resurgam Xyz",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "All Xyz Monsters you control gain 800 ATK. Once per turn: You can discard 1 Spell, then target 1 Xyz Monster you control; Special Summon from your Extra Deck, 1 \"Number C\" monster or 1 \"CXyz\" monster, with the same Type as that monster you control but 1 Rank higher, by using it as material. (This is treated as an Xyz Summon. Transfer its materials to the Summoned monster.) If you discarded a card other than a \"Rank-Up-Magic\" Spell to activate this effect, return that Special Summoned monster to the Extra Deck during the End Phase (even if this card leaves the field).",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/resurgam-xyz-10612",
+      "card_sets": [
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN092",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.91"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49082032,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49082032.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49082032.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49082032.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.04",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36547,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011074,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14883,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

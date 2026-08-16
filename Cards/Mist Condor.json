@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 65549080,
+      "name": "Mist Condor",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card from your hand by returning 1 face-up \"Mist Valley\" monster you control to the hand. If you do, this card's ATK becomes 1700.",
+      "race": "Winged Beast",
+      "atk": 1400,
+      "def": 400,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Mist Valley",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mist-condor-5524",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN068",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65549080,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65549080.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65549080.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65549080.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17095,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7816,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

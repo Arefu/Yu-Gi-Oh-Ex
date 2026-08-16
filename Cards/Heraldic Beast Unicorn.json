@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 45705025,
+      "name": "Heraldic Beast Unicorn",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish this card from your Graveyard to target 1 Psychic-Type Xyz Monster in your Graveyard; Special Summon it. Its effects are negated. You can only use the effect of \"Heraldic Beast Unicorn\" once per turn.",
+      "race": "Beast",
+      "atk": 1100,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Heraldic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heraldic-beast-unicorn-3894",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN116",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45705025,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45705025.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45705025.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45705025.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43415,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10375,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

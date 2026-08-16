@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 16360142,
+      "name": "Mathmech Subtraction",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 face-up monster on the field; you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Cyberse monsters, also Special Summon this card from your hand (but it cannot attack this turn), and if you do, the targeted monster loses 1000 ATK until the end of this turn. You can only use this effect of \"Mathmech Subtraction\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Mathmech",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mathmech-subtraction-10414",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16360142,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16360142.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16360142.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16360142.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.26",
+          "tcgplayer_price": "1.10",
+          "ebay_price": "6.99",
+          "amazon_price": "7.72",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mathmech Subtra",
+          "views": 243703,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423004,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14747,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 45815891,
+      "name": "Scrap Archfiend",
+      "typeline": [
+        "Fiend",
+        "Synchro"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters",
+      "race": "Fiend",
+      "atk": 2700,
+      "def": 1800,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrap-archfiend-3903",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution Sneak Peek Participation Card",
+          "set_code": "DREV-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.58"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9 (POR)",
+          "set_code": "OP09-PT036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45815891,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45815891.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45815891.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45815891.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.86",
+          "tcgplayer_price": "1.32",
+          "ebay_price": "2.65",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93264,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9202,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

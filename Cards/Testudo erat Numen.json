@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 74952447,
+      "name": "Testudo erat Numen",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Neither player can Special Summon monsters with 1800 or more ATK.",
+      "race": "Aqua",
+      "atk": 0,
+      "def": 1800,
+      "level": 1,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/testudo-erat-numen-6305",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 21",
+          "set_code": "OP21-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN032",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74952447,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74952447.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74952447.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74952447.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "2.25",
+          "amazon_price": "2.91",
+          "coolstuffinc_price": "6.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 87866,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8808,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 87564935,
+      "name": "Metallizing Parasite - Soltite",
+      "typeline": [
+        "Aqua",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can either: Target 1 face-up monster you control; equip this card to that target, OR: Unequip this card and Special Summon it in face-up Attack Position. While equipped by this effect, the equipped monster cannot be targeted or destroyed by your opponent's monster effects. (A monster can only be equipped with 1 Union Monster at a time. If the equipped monster would be destroyed by battle, destroy this card instead.)",
+      "race": "Aqua",
+      "atk": 1000,
+      "def": 500,
+      "level": 7,
+      "attribute": "WATER",
+      "archetype": "Parasite",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metallizing-parasite-soltite-7328",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87564935,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87564935.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87564935.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87564935.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30908,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10256,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

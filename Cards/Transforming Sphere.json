@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 66094973,
+      "name": "Transforming Sphere",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 face-up Defense Position monster your opponent controls; discard 1 card and equip that target to this card. (You can only equip 1 monster at a time to this card with this effect.) This card gains the ATK of the equipped monster. If this card attacks, it is changed to Defense Position at the end of the Battle Phase. During the End Phase: The monster equipped to this card by this card's effect is Special Summoned to your opponent's side of the field in face-up Defense Position.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 100,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/transforming-sphere-5557",
+      "card_sets": [
+        {
+          "set_name": "Shonen Jump May 2010 subscription bonus",
+          "set_code": "JUMP-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.53"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Six",
+          "set_code": "TU06-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66094973,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66094973.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66094973.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66094973.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "6.90",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16133,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-04",
+          "ocg_date": "2009-10-21",
+          "konami_id": 8700,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

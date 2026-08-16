@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 30155789,
+      "name": "Brutal Potion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "This card becomes an Equip Card, and equips to 1 monster you control. Once per turn, when you inflict damage to your opponent with a card effect, the equipped monster gains 1000 ATK until the End Phase.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brutal-potion-2556",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! GX Tag Force Evolution promotional cards",
+          "set_code": "GX05-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.38"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30155789,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30155789.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30155789.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30155789.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "1.24",
+          "ebay_price": "2.00",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13120,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-12-07",
+          "ocg_date": "2007-12-06",
+          "konami_id": 7354,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

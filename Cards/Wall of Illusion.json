@@ -1,0 +1,135 @@
+{
+  "data": [
+    {
+      "id": 13945283,
+      "name": "Wall of Illusion",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is attacked by a monster, after damage calculation: Return that monster to the hand.",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": 1850,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wall-of-illusion-1192",
+      "card_sets": [
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.38"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN057",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN083",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.35"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN113",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.04"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.97"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.32"
+        },
+        {
+          "set_name": "Tournament Pack 7",
+          "set_code": "TP7-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.21"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.49"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13945283,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13945283.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13945283.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13945283.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "1.51",
+          "amazon_price": "1.73",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 351210,
+          "viewsweek": 42,
+          "upvotes": 16,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-12-16",
+          "konami_id": 4880,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

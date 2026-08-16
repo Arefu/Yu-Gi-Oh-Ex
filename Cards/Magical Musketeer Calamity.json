@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 68024506,
+      "name": "Magical Musketeer Calamity",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, you can activate \"Magical Musket\" Spell/Trap Cards from your hand. If a Spell/Trap Card is activated in this card's column: You can target 1 \"Magical Musket\" monster in your GY; Special Summon it in Defense Position. You can only use this effect of \"Magical Musketeer Calamity\" once per turn.",
+      "race": "Fiend",
+      "atk": 1500,
+      "def": 1300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musketeer-calamity-8743",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN020",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2025 B",
+          "set_code": "LART-EN077",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68024506,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68024506.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68024506.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68024506.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "1.49",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magibullet Shooter Calamity",
+          "views": 125447,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13319,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

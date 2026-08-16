@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 58074177,
+      "name": "Odd-Eyes Wing Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Synchro Pendulum Effect Monster",
+      "humanReadableCardType": "Synchro Pendulum Effect Monster",
+      "frameType": "synchro_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, before damage calculation, if your monster battles an opponent's monster: You can make your monster gain ATK equal to the opponent's monster's ATK, until the end of the Damage Step.\n\n[ Monster Effect ] \n1 DARK Tuner + 1 non-Tuner \"Clear Wing\" monster\r\nIf this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone. You can only use 1 of the following effects of \"Odd-Eyes Wing Dragon\" per turn, and only once that turn.\r\n● You can target 1 Effect Monster your opponent controls; negate its effects until the end of this turn.\r\n● During the Battle Phase, if you control this Synchro Summoned card (Quick Effect): You can destroy all Level 5 or higher monsters your opponent controls.",
+      "race": "Dragon",
+      "pend_desc": "Once per turn, before damage calculation, if your monster battles an opponent's monster: You can make your monster gain ATK equal to the opponent's monster's ATK, until the end of the Damage Step.",
+      "monster_desc": "1 DARK Tuner + 1 non-Tuner \"Clear Wing\" monster\r\nIf this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone. You can only use 1 of the following effects of \"Odd-Eyes Wing Dragon\" per turn, and only once that turn.\r\n● You can target 1 Effect Monster your opponent controls; negate its effects until the end of this turn.\r\n● During the Battle Phase, if you control this Synchro Summoned card (Quick Effect): You can destroy all Level 5 or higher monsters your opponent controls.",
+      "atk": 3000,
+      "def": 2500,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Clear Wing",
+      "scale": 10,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-wing-dragon-8530",
+      "card_sets": [
+        {
+          "set_name": "Dimension Force",
+          "set_code": "DIFO-EN098",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58074177,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58074177.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58074177.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58074177.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "2.00",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 227805,
+          "viewsweek": 0,
+          "upvotes": 65,
+          "downvotes": 11,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2022-05-19",
+          "ocg_date": "2017-04-28",
+          "konami_id": 13122,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

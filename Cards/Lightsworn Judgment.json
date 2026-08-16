@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 66194206,
+      "name": "Lightsworn Judgment",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Place this card on top of the Deck. If this card is sent from the Deck to the Graveyard by a \"Lightsworn\" monster's effect: You can add 1 \"Judgment Dragon\" from your Deck to your hand.",
+      "race": "Normal",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lightsworn-judgment-5563",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN237",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66194206,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66194206.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66194206.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66194206.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78938,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11868,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

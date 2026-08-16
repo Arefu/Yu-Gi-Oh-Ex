@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 18378582,
+      "name": "Archlord Zerato",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by Tributing 1 face-up \"Warrior of Zera\" on your side of the field while \"The Sanctuary in the Sky\" is on the field. If \"The Sanctuary in the Sky\" is on your side of the field, by discarding 1 LIGHT Monster Card from your hand to the Graveyard, destroy all monsters on your opponent's side of the field. If \"The Sanctuary in the Sky\" is not on your side of the field, this effect is not applied.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2300,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archlord-zerato-1594",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "17.5"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN146",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18378582,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18378582.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18378582.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18378582.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.97",
+          "tcgplayer_price": "9.25",
+          "ebay_price": "7.98",
+          "amazon_price": "24.78",
+          "coolstuffinc_price": "13.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70958,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5976,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

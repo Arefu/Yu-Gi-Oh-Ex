@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 38943357,
+      "name": "Spell Power Mastery",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Add 1 \"Endymion\" card from your Deck to your hand, then you can count the number of \"Spell Power Mastery\" and \"Spell Power Grasp\" you control and/or have in your GY, and place that many Spell Counters among card(s) you control that you can place a Spell Counter on. You can only activate 1 \"Spell Power Mastery\" per turn.",
+      "race": "Normal",
+      "archetype": "Endymion",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spell-power-mastery-10161",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Order of the Spellcasters",
+          "set_code": "SR08-EN022",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38943357,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38943357.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38943357.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38943357.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.48",
+          "tcgplayer_price": "4.68",
+          "ebay_price": "3.74",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Spell Power Control",
+          "views": 397270,
+          "viewsweek": 63,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100308022,
+          "tcg_date": "2019-04-19",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14443,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

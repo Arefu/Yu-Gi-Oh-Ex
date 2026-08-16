@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 46710683,
+      "name": "Blackwing - Mistral the Silver Shield",
+      "typeline": [
+        "Winged Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card on the field is destroyed and sent to the Graveyard: Reduce the next battle damage you would take this turn to 0.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 1800,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-mistral-the-silver-shield-3983",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN117",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.38"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46710683,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46710683.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46710683.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46710683.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.85",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95231,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8295,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

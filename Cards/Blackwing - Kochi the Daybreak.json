@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 41902352,
+      "name": "Blackwing - Kochi the Daybreak",
+      "typeline": [
+        "Winged Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card was Special Summoned, it cannot be used as a Synchro Material.",
+      "race": "Winged Beast",
+      "atk": 700,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-kochi-the-daybreak-3574",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN130",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41902352,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41902352.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41902352.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41902352.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31212,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-27",
+          "ocg_date": "2010-10-16",
+          "konami_id": 9242,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

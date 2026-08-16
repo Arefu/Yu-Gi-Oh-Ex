@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 61557074,
+      "name": "Palace of the Elemental Lords",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All monsters you control gain ATK/DEF equal to the number of different Attributes in your GY x 200. Once per turn: You can add 1 \"Elementsaber\" monster from your Deck to your hand, but skip the Battle Phase of your next turn (even if this card leaves the field). Once per turn, if an \"Elementsaber\" monster in your hand or field would send a card(s) from the hand to the GY to activate an effect, you can send that many \"Elementsaber\" monster(s) from your Deck to the GY, instead.",
+      "race": "Field",
+      "archetype": "Elementsaber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/palace-of-the-elemental-lords-9188",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN060",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61557074,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61557074.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61557074.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61557074.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "2.00",
+          "amazon_price": "12.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Temple of the Elemental Lords",
+          "views": 70617,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13614,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

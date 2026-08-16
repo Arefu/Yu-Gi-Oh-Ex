@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 69846323,
+      "name": "Piercing Moray",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can Tribute 1 Fish, Sea Serpent, or Aqua-Type monster; this card gains 600 ATK. If this card attacks a Defense Position monster, inflict piercing Battle Damage to your opponent.",
+      "race": "Fish",
+      "atk": 1500,
+      "def": 500,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/piercing-moray-5872",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN082",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENC06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69846323,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69846323.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69846323.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69846323.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "7.00",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19921,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2012-10-13",
+          "konami_id": 9842,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

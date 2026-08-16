@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 59235795,
+      "name": "Destruction Cyclone",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard, destroy all face-down and non-WIND monsters.",
+      "race": "Reptile",
+      "atk": 2000,
+      "def": 1500,
+      "level": 7,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destruction-cyclone-5033",
+      "card_sets": [
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59235795,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59235795.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59235795.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59235795.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36169,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6984,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

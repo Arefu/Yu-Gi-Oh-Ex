@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 34244455,
+      "name": "Star Staring Starling",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains an effect based on your Main Monster Zone it is in.\r\n● Leftmost: Increase its Level by 4.\r\n● Rightmost: Increase its Level by 3.\r\n● Center: Increase its Level by 2.\r\n● Others: Increase its Level by 1.",
+      "race": "Winged Beast",
+      "atk": 1000,
+      "def": 1500,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/star-staring-starling-10049",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34244455,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34244455.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34244455.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34244455.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.40",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Which Starling",
+          "views": 17847,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14274,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

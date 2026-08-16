@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 22829942,
+      "name": "Fusion Recycling Plant",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can discard 1 card; add 1 \"Polymerization\" from your Deck or GY to your hand. Once per turn, during the End Phase: You can target 1 monster in your GY that was used as a Fusion Material for a Fusion Summon this turn; add it to your hand.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fusion-recycling-plant-8418",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN173",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN058",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.71"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN000",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest Sneak Peek Participation Card",
+          "set_code": "RATE-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "7.5"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Structure Deck: Albaz Strike",
+          "set_code": "SDAZ-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22829942,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22829942.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22829942.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22829942.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.45",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 325171,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-04",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12872,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

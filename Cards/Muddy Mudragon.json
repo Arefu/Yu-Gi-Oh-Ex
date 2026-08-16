@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 84040113,
+      "name": "Muddy Mudragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nThis card can be used as a substitute for any 1 Fusion Material whose name is specifically listed on the Fusion Monster Card, but the other Fusion Material(s) must be correct. During your Main Phase, if you control this Synchro Summoned card: You can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters you control as Fusion Material, including this card. You can only use this effect of \"Muddy Mudragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 500,
+      "def": 2200,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/muddy-mudragon-10305",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13",
+          "set_code": "OP13-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13 (POR)",
+          "set_code": "OP13-PT020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84040113,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84040113.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84040113.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84040113.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.54",
+          "ebay_price": "1.00",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 348953,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101008081,
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-02-12",
+          "konami_id": 14531,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

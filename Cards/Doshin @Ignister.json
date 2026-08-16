@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 78751195,
+      "name": "Doshin @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control an \"@Ignister\" monster: You can Special Summon this card from your hand. You can target 1 Cyberse Link Monster in your GY; return it to the Extra Deck, and if you do, add 1 \"A.I. Love Fusion\" from your Deck to your hand. You can only use each effect of \"Doshin @Ignister\" once per turn.",
+      "race": "Cyberse",
+      "atk": 100,
+      "def": 800,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/doshin-ignister-10586",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78751195,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78751195.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78751195.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78751195.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 99682,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011006,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14815,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

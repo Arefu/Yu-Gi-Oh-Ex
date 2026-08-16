@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 46871387,
+      "name": "Number 55: Gogogo Goliath",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nAll monsters you control gain 800 DEF. You can detach 1 Xyz Material from this card, then target 1 Level 4 EARTH Rock-Type monster in your Graveyard; add that target to your hand. You can only use this effect of \"Number 55: Gogogo Goliath\" once per turn.",
+      "race": "Rock",
+      "atk": 2400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Gogogo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-55-gogogo-goliath-3993",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46871387,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46871387.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46871387.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46871387.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.49",
+          "tcgplayer_price": "1.03",
+          "ebay_price": "0.99",
+          "amazon_price": "1.16",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 55",
+          "views": 94072,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11111,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

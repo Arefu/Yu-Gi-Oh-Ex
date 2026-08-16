@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 7243511,
+      "name": "Koalo-Koala",
+      "typeline": [
+        "Beast",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Sea Koala\" + \"Tree Otter\"\nYou can send 1 Beast-Type monster from your hand to the Graveyard to target 1 monster your opponent controls; destroy it.",
+      "race": "Beast",
+      "atk": 2800,
+      "def": 200,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Koala",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koalo-koala-623",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7243511,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7243511.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7243511.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7243511.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.95",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63585,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2009-12-19",
+          "konami_id": 7845,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 56337500,
+      "name": "Cyberse Reminder",
+      "typeline": [
+        "Cyberse",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\r\nYou can detach 1 material from this card, then target 1 \"Cynet\" Spell/Trap in your GY; add it to your hand. If this Xyz Summoned card is destroyed by battle, or is destroyed by an opponent's card effect while in its owner's Monster Zone: You can Special Summon 2 Level 4 Cyberse monsters with different names from your Deck, but their effects are negated. You can only use each effect of \"Cyberse Reminder\" once per turn, also you cannot Special Summon monsters from the Extra Deck the turn you activate either of this card's effects, except Cyberse monsters.",
+      "race": "Cyberse",
+      "atk": 1800,
+      "def": 800,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-reminder-10016",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56337500,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56337500.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56337500.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56337500.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47743,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14290,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 40189917,
+      "name": "Flamvell Commando",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. This card can only be Normal Summoned by Tributing 1 \"Flamvell\" monster you control. Once per turn, you can remove from play 1 monster in your Graveyard with 200 DEF to inflict damage to your opponent equal to that monster's ATK.",
+      "race": "Pyro",
+      "atk": 2200,
+      "def": 200,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Flamvell",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flamvell-commando-3413",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN086",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40189917,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40189917.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40189917.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40189917.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "4.95",
+          "amazon_price": "17.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23595,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8527,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

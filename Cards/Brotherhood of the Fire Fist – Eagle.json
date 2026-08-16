@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 46241344,
+      "name": "Brotherhood of the Fire Fist - Eagle",
+      "typeline": [
+        "Beast-Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Beast-Warrior monsters\r\nYou can only Special Summon \"Brotherhood of the Fire Fist - Eagle(s)\" once per turn. You can activate \"Fire Fist\" monsters' effects without sending \"Fire Fist\" or \"Fire Formation\" card(s) from your hand or field to the GY. You can target 1 \"Fire Formation\" Spell/Trap you control or in your GY; return it to the hand, then send 1 \"Fire Fist\" monster from your Deck to the GY. You can only use this effect of \"Brotherhood of the Fire Fist - Eagle\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 1700,
+      "def": null,
+      "level": null,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-eagle-9942",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN016",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46241344,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46241344.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46241344.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46241344.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.68",
+          "tcgplayer_price": "2.98",
+          "ebay_price": "1.00",
+          "amazon_price": "3.07",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80132,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-22",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14202,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

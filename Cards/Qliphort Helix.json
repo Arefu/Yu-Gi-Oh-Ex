@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 37991342,
+      "name": "Qliphort Helix",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. All monsters your opponent controls lose 300 ATK.\n\n[ Monster Effect ] \nYou can Normal Summon this card without Tributing. If this card is Normal Summoned without Tributing, or is Special Summoned, its Level becomes 4 and its original ATK becomes 1800. If this card is Normal Summoned/Set, it is unaffected by activated effects from any monster whose original Level/Rank is lower than this card's current Level. If this card is Tributed: You can target 1 Spell/Trap Card on the field; destroy it.",
+      "race": "Machine",
+      "pend_desc": "You cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. All monsters your opponent controls lose 300 ATK.",
+      "monster_desc": "You can Normal Summon this card without Tributing. If this card is Normal Summoned without Tributing, or is Special Summoned, its Level becomes 4 and its original ATK becomes 1800. If this card is Normal Summoned/Set, it is unaffected by activated effects from any monster whose original Level/Rank is lower than this card's current Level. If this card is Tributed: You can target 1 Spell/Trap Card on the field; destroy it.",
+      "atk": 2400,
+      "def": 1000,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Qli",
+      "scale": 9,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/qliphort-helix-3215",
+      "card_sets": [
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers: Super Edition",
+          "set_code": "NECH-ENS04",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "24.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37991342,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37991342.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37991342.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37991342.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.84",
+          "tcgplayer_price": "1.89",
+          "ebay_price": "2.99",
+          "amazon_price": "6.75",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67582,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11355,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

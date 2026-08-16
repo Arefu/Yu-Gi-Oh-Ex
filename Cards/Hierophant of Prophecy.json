@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 92918648,
+      "name": "Hierophant of Prophecy",
+      "typeline": [
+        "Spellcaster",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 7 Spellcaster-Type monsters\n Once per turn: You can detach 1 Xyz Material from this card; destroy Spell/Trap Card(s) your opponent controls, up to the number of \"Spellbook\" Spell Cards in your Graveyard.",
+      "race": "Spellcaster",
+      "atk": 2800,
+      "def": 2600,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hierophant-of-prophecy-7734",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN045",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92918648,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92918648.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92918648.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92918648.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.42",
+          "tcgplayer_price": "2.65",
+          "ebay_price": "2.99",
+          "amazon_price": "13.08",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78583,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10175,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

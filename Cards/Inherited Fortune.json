@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 20057949,
+      "name": "Inherited Fortune",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate during the turn a face-up \"Fortune Lady\" monster you control was destroyed. Special Summon up to 2 \"Fortune Lady\" monsters from your hand during your next Standby Phase.",
+      "race": "Normal",
+      "archetype": "Fortune Lady",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inherited-fortune-1721",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN067",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20057949,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20057949.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20057949.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20057949.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "2.24",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41026,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8502,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

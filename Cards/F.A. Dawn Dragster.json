@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 33158448,
+      "name": "F.A. Dawn Dragster",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nGains ATK equal to its Level x 300. If this card attacks a Defense Position monster, inflict piercing battle damage. Each time a \"F.A.\" Spell/Trap Card or effect is activated: You can increase this card's Level by 1. Once per turn, when your opponent activates a Spell/Trap Card or effect (Quick Effect): You can reduce this card's Level by 2, and if you do, negate the activation, and if you do that, destroy that card.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "F.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/f-a-dawn-dragster-9428",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN061",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN284",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33158448,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33158448.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33158448.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33158448.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.68",
+          "ebay_price": "1.95",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "F.A Dawn Dragster",
+          "views": 1078410,
+          "viewsweek": 63,
+          "upvotes": 12,
+          "downvotes": 9,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13710,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 72589042,
+      "name": "Goddess of Sweet Revenge",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While you control no cards and this is the only card in your hand, when an opponent's monster declares an attack: You can discard this card; destroy as many cards as possible your opponent controls, then you can Special Summon 1 monster from your Deck.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 2000,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goddess-of-sweet-revenge-9333",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection Kaiba",
+          "set_code": "LC06-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN106",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72589042,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72589042.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72589042.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72589042.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.99",
+          "amazon_price": "1.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51599,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-03-08",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13639,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

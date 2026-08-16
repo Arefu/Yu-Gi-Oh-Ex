@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 87025064,
+      "name": "Silver's Cry",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Dragon Normal Monster in your GY; Special Summon that target. You can only activate 1 \"Silver's Cry\" per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silver-s-cry-7284",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN034",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Saga of Blue-Eyes White Dragon Structure Deck",
+          "set_code": "SDBE-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.52"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87025064,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87025064.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87025064.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87025064.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "3.95",
+          "amazon_price": "7.55",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 571011,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-09-12",
+          "ocg_date": "2013-06-15",
+          "konami_id": 10591,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

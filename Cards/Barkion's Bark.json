@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 11813722,
+      "name": "Barkion's Bark",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Activate only if you control a face-up \"Naturia\" monster. Your opponent cannot activate Trap Cards this turn.",
+      "race": "Normal",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/barkion-s-bark-1021",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11813722,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11813722.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11813722.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11813722.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24601,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9129,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

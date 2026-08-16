@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 5008836,
+      "name": "Exodia, the Legendary Defender",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. You can Tribute 5 monsters to Tribute Summon (but not Set) this card. This card's ATK/DEF become the combined original ATK/DEF of the Tributed monsters. If this card Summoned this way destroys a DARK Fiend monster owned by your opponent, you win the Duel at the end of the Damage Step.",
+      "race": "Spellcaster",
+      "atk": -1,
+      "def": -1,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Exodia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/exodia-the-legendary-defender-10080",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin",
+          "set_code": "TN19-EN003",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "3.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5008836,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5008836.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5008836.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5008836.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.69",
+          "tcgplayer_price": "1.32",
+          "ebay_price": "2.29",
+          "amazon_price": "1.90",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Exodia, Master of the Guard",
+          "views": 107578,
+          "viewsweek": 21,
+          "upvotes": 26,
+          "downvotes": 11,
+          "formats": [
+            "TCG",
+            "OCG"
+          ],
+          "tcg_date": "2019-08-29",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14367,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1
+        }
+      ]
+    }
+  ]
+}

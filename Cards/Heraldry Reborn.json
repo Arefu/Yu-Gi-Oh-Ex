@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 84220251,
+      "name": "Heraldry Reborn",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Heraldic Beast\" monster in your Graveyard; Special Summon it.",
+      "race": "Normal",
+      "archetype": "Heraldic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heraldry-reborn-7062",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN162",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84220251,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84220251.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84220251.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84220251.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38314,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10416,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

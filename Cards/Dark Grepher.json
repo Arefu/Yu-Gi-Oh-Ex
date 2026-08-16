@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 14536035,
+      "name": "Dark Grepher",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by discarding 1 Level 5 or higher DARK monster. Once per turn: You can discard 1 DARK monster; send 1 DARK monster from your Deck to the GY.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Grepher",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-grepher-1244",
+      "card_sets": [
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.32"
+        },
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN058",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN208",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.96"
+        },
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness Sneak Peek Participation Card",
+          "set_code": "PTDN-ENSP1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "9.57"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Three",
+          "set_code": "TU03-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14536035,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14536035.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14536035.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14536035.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.43",
+          "tcgplayer_price": "5.35",
+          "ebay_price": "2.00",
+          "amazon_price": "68.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 624869,
+          "viewsweek": 42,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7561,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

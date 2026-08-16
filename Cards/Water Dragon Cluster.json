@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 6022371,
+      "name": "Water Dragon Cluster",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned with the effect of a \"Bonding\" Spell/Trap. If this card is Special Summoned: You can activate this effect; Effect Monsters your opponent currently controls cannot activate their effects for the rest of this turn, also change their ATK to 0 until the end of this turn. (Quick Effect): You can Tribute this card; Special Summon 2 \"Water Dragon\" from your hand and/or Deck in Defense Position, ignoring their Summoning conditions.",
+      "race": "Sea Serpent",
+      "atk": 2800,
+      "def": 2600,
+      "level": 10,
+      "attribute": "WATER",
+      "archetype": "Bonding",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/water-dragon-cluster-8893",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.4"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENC09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6022371,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6022371.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6022371.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6022371.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.97",
+          "amazon_price": "4.14",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79145,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-07",
+          "ocg_date": "2017-06-03",
+          "konami_id": 13188,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

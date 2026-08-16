@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 79875176,
+      "name": "Toon Cannon Soldier",
+      "typeline": [
+        "Machine",
+        "Toon",
+        "Effect"
+      ],
+      "type": "Toon Monster",
+      "humanReadableCardType": "Toon Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot attack the turn it is Summoned. If \"Toon World\" on the field is destroyed, destroy this card. While you control \"Toon World\" and your opponent controls no Toon Monsters, this card can attack your opponent directly. You can Tribute 1 monster; inflict 500 damage to your opponent.",
+      "race": "Machine",
+      "atk": 1400,
+      "def": 1300,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toon-cannon-soldier-6702",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN118",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN109",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack 6",
+          "set_code": "TP6-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "420.17"
+        }
+      ],
+      "banlist_info": {
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 79875176,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79875176.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79875176.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79875176.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.91",
+          "tcgplayer_price": "2.14",
+          "ebay_price": "3.95",
+          "amazon_price": "2.79",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 165026,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-06-01",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5477,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

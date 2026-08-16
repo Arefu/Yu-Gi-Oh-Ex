@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 60431417,
+      "name": "Twilight Twin Dragons",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control \"Punishment Dragon\": Target 1 \"Judgment Dragon\" in your GY; add it to your hand, then send the top 4 cards of your Deck to the GY. If this card is sent from the Deck to the GY by a \"Lightsworn\" monster's effect: You can target 1 \"Punishment Dragon\" in your GY; add it to your hand, then banish the top 4 cards of your Deck.",
+      "race": "Normal",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twilight-twin-dragons-8471",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60431417,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60431417.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60431417.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60431417.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33839,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13099,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

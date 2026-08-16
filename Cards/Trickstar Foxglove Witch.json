@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 86750474,
+      "name": "Trickstar Foxglove Witch",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Fairy monsters\r\nIf this card is Special Summoned: You can inflict 200 damage to your opponent for each card they control. If this Link Summoned card is destroyed by battle or effect: You can Special Summon 1 Link-2 or lower \"Trickstar\" monster from your Extra Deck, then inflict 200 damage to your opponent for each card they control. You can only use each effect of \"Trickstar Foxglove Witch\" once per turn.",
+      "race": "Fairy",
+      "atk": 2200,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Trickstar",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-foxglove-witch-9183",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86750474,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86750474.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86750474.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86750474.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.78",
+          "ebay_price": "0.99",
+          "amazon_price": "1.72",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Trickstar Foxywitch",
+          "views": 133142,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2017-12-23",
+          "konami_id": 13512,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

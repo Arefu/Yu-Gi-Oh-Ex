@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 69304426,
+      "name": "Artifact Vajra",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Set this card from your hand to your Spell & Trap Zone as a Spell. During your opponent's turn, if this Set card in the Spell & Trap Zone is destroyed and sent to your GY: Special Summon it. If this card is Special Summoned during your opponent's turn: Destroy all cards in your Spell & Trap Zones. When an opponent's monster declares a direct attack: You can Special Summon this card from your hand.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 1900,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Artifact",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/artifact-vajra-5831",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69304426,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69304426.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69304426.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69304426.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.31",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48687,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12028,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

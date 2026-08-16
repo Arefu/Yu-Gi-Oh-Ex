@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 81810441,
+      "name": "Stellarknight Alpha",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a \"tellarknight\" monster you control. It gains 500 ATK and DEF, also it is unaffected by your opponent's card effects. If you control a face-up monster that is not a \"tellarknight\" monster, destroy this card.",
+      "race": "Equip",
+      "archetype": "Stellarknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stellarknight-alpha-6866",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN101",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81810441,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81810441.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81810441.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81810441.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33094,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11266,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

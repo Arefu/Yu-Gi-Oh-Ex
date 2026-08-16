@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 51023024,
+      "name": "Reeshaddoll Wendi",
+      "typeline": [
+        "Psychic",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can Special Summon 1 \"Shaddoll\" monster from your Deck in face-up or face-down Defense Position, except \"Reeshaddoll Wendi\".\r\nIf this card is sent to the GY by a card effect: You can Special Summon 1 \"Shaddoll\" monster from your Deck in face-down Defense Position, except \"Reeshaddoll Wendi\". You can only use 1 \"Reeshaddoll Wendi\" effect per turn, and only once that turn.",
+      "race": "Psychic",
+      "atk": 1500,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Shaddoll",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reeshaddoll-wendi-10716",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN244",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN074",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.67"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51023024,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51023024.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51023024.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51023024.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.88",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Rishaddoll Wendi",
+          "views": 724148,
+          "viewsweek": 21,
+          "upvotes": 18,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100337002,
+          "tcg_date": "2020-02-13",
+          "ocg_date": "2019-12-07",
+          "konami_id": 14965,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

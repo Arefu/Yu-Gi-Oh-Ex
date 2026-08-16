@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 78785392,
+      "name": "Flower Gathering",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Special Summon 4 \"Flower Cardian\" monsters with 100 ATK and different names from your Deck in Attack Position, but they have their effects negated, also they cannot be Tributed for a Tribute Summon. You can only activate 1 \"Flower Gathering\" per turn. You cannot Normal or Special Summon other monsters during the turn you activate this card, except \"Flower Cardian\" monsters.",
+      "race": "Normal",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-gathering-6619",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN136",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.77"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78785392,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78785392.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78785392.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78785392.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57816,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12563,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

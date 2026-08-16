@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 81571633,
+      "name": "D/D Proud Ogre",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can pay 500 LP, then target 1 \"D/D\" monster you control; it gains 500 ATK (even if this card leaves the field). Unless you have a \"D/D\" card in your other Pendulum Zone, this card's Pendulum Scale becomes 5.\n\n[ Monster Effect ] \nWhen this card is Normal Summoned: You can Special Summon 1 face-up DARK Pendulum Monster from your Extra Deck, but it has its effects negated, also you cannot Special Summon monsters for the rest of this turn, except \"D/D\" monsters.",
+      "race": "Fiend",
+      "pend_desc": "Once per turn: You can pay 500 LP, then target 1 \"D/D\" monster you control; it gains 500 ATK (even if this card leaves the field). Unless you have a \"D/D\" card in your other Pendulum Zone, this card's Pendulum Scale becomes 5.",
+      "monster_desc": "When this card is Normal Summoned: You can Special Summon 1 face-up DARK Pendulum Monster from your Extra Deck, but it has its effects negated, also you cannot Special Summon monsters for the rest of this turn, except \"D/D\" monsters.",
+      "atk": 2300,
+      "def": 1500,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-proud-ogre-6848",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81571633,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81571633.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81571633.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81571633.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40610,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-01-19",
+          "ocg_date": "2014-08-11",
+          "konami_id": 11329,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

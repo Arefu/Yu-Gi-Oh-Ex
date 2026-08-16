@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 45533023,
+      "name": "Raidraptor - Blaze Falcon",
+      "typeline": [
+        "Winged Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 5 Winged Beast-Type monsters\nThis card can attack directly while it has Xyz Material. When this card inflicts battle damage to your opponent: You can target 1 monster your opponent controls; destroy it. Once per turn: You can detach 1 Xyz Material from this card; destroy as many Special Summoned monsters your opponent controls as possible, and if you do, inflict 500 damage to your opponent for each monster destroyed.",
+      "race": "Winged Beast",
+      "atk": 1000,
+      "def": 2000,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-blaze-falcon-3880",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45533023,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45533023.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45533023.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45533023.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "1.58",
+          "amazon_price": "1.91",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 98961,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11723,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

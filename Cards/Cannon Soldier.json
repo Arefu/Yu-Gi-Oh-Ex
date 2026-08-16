@@ -1,0 +1,116 @@
+{
+  "data": [
+    {
+      "id": 11384280,
+      "name": "Cannon Soldier",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 1 monster; inflict 500 damage to your opponent.",
+      "race": "Machine",
+      "atk": 1400,
+      "def": 1300,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cannon-soldier-982",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN061",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-106",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5.4"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E106",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "8.23"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN106",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.01"
+        },
+        {
+          "set_name": "Structure Deck: Machine Re-Volt",
+          "set_code": "SD10-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        }
+      ],
+      "banlist_info": {
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 11384280,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11384280.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11384280.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11384280.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "3.95",
+          "amazon_price": "5.79",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 387427,
+          "viewsweek": 42,
+          "upvotes": 8,
+          "downvotes": 144,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4518,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

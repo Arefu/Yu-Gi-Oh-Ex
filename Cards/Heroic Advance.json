@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 21924381,
+      "name": "Heroic Advance",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a face-up \"Heroic\" monster you control is targeted for an attack: Target another face-up Level 4 or lower \"Heroic\" monster you control; double its ATK during this Battle Phase, then switch the attack target to it and conduct damage calculation, but monsters cannot be destroyed by this battle.",
+      "race": "Normal",
+      "archetype": "Heroic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heroic-advance-1888",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19 (POR)",
+          "set_code": "OP19-PT041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21924381,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21924381.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21924381.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21924381.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23212,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10291,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

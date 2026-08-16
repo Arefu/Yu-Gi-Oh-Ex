@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 33178416,
+      "name": "Misairuzame",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A missile-launching fish protected by deadly spikes.",
+      "race": "Fish",
+      "atk": 1400,
+      "def": 1600,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/misairuzame-2817",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-111",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.44"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.51"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN111",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33178416,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33178416.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33178416.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33178416.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "5.98",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 310730,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4548,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

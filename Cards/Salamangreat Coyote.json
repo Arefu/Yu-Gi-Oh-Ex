@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 71861848,
+      "name": "Salamangreat Coyote",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the End Phase, if this card is in the GY because it was sent there as Link Material this turn: You can activate 1 of the following effects.\r\n● Target 1 \"Salamangreat\" monster in your GY, except \"Salamangreat Coyote\"; Special Summon it in Defense Position.\r\n● Target 1 \"Salamangreat\" card in your GY, except \"Salamangreat Coyote\"; add it to your hand.\r\nYou can only use this effect of \"Salamangreat Coyote\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": 200,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-coyote-10169",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage Special Edition",
+          "set_code": "RIRA-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.7"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71861848,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71861848.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71861848.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71861848.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59639,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100246002,
+          "tcg_date": "2019-09-12",
+          "ocg_date": "2019-03-20",
+          "konami_id": 14543,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

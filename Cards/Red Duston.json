@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 61019812,
+      "name": "Red Duston",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as a Fusion, Synchro, or Xyz Material for a Summon. While this card is face-up on the field, it cannot be Tributed. When this card on the field is destroyed: The controller takes 500 damage. You can only control 1 face-up \"Red Duston\".",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 1000,
+      "level": 1,
+      "attribute": "FIRE",
+      "archetype": "Duston",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-duston-5178",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN044",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61019812,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61019812.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61019812.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61019812.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "4.95",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32209,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 30,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10403,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

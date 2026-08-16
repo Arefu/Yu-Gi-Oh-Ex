@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 48579379,
+      "name": "Perfectly Ultimate Great Moth",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by Tributing 1 \"Petit Moth\" on your 6th turn or later after it was equipped with \"Cocoon of Evolution\".",
+      "race": "Insect",
+      "atk": 3500,
+      "def": 3000,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/perfectly-ultimate-great-moth-4148",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN249",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENB01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 2",
+          "set_code": "STP2-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Sacred Cards promotional cards",
+          "set_code": "TSC-001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "12.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48579379,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48579379.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48579379.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48579379.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "5.95",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112308,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 5,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-11-04",
+          "ocg_date": "1999-07-08",
+          "konami_id": 4073,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

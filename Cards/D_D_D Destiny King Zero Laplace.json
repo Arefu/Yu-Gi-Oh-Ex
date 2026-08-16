@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 21686473,
+      "name": "D/D/D Destiny King Zero Laplace",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nDuring your Main Phase: You can add 1 face-up \"D/D/D\" Pendulum Monster from your Extra Deck to your hand, except \"D/D/D Destiny King Zero Laplace\". You can only use this effect of \"D/D/D Destiny King Zero Laplace\" once per turn.\n\n[ Monster Effect ] \nYou can Special Summon this card (from your hand) by Tributing 1 \"D/D/D\" monster. Before damage calculation, if this card battles an opponent's monster: You can activate this effect; this card's ATK becomes double that opponent's monster's original ATK until the end of the Damage Step. If this card attacks a Defense Position monster, inflict piercing battle damage. The first time this card would be destroyed by battle each turn, it is not destroyed, and you take no battle damage from that battle.",
+      "race": "Fiend",
+      "pend_desc": "During your Main Phase: You can add 1 face-up \"D/D/D\" Pendulum Monster from your Extra Deck to your hand, except \"D/D/D Destiny King Zero Laplace\". You can only use this effect of \"D/D/D Destiny King Zero Laplace\" once per turn.",
+      "monster_desc": "You can Special Summon this card (from your hand) by Tributing 1 \"D/D/D\" monster. Before damage calculation, if this card battles an opponent's monster: You can activate this effect; this card's ATK becomes double that opponent's monster's original ATK until the end of the Damage Step. If this card attacks a Defense Position monster, inflict piercing battle damage. The first time this card would be destroyed by battle each turn, it is not destroyed, and you take no battle damage from that battle.",
+      "atk": -1,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-destiny-king-zero-laplace-8459",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN079",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ARC-V Volume 3 promotional card",
+          "set_code": "YA03-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "11.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21686473,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21686473.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21686473.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21686473.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.50",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 106591,
+          "viewsweek": 0,
+          "upvotes": 18,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-03-06",
+          "ocg_date": "2017-04-04",
+          "konami_id": 13121,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

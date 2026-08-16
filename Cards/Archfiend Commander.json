@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 68371799,
+      "name": "Archfiend Commander",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control an \"Archfiend\" card, you can Special Summon this card (from your hand), but it cannot attack this turn. You can only Special Summon \"Archfiend Commander\" once per turn this way. When Special Summoned this way: Target 1 \"Archfiend\" card you control; destroy that target. When this card is Tribute Summoned: You can target 1 Level 6 \"Archfiend\" monster in your Graveyard; Special Summon that target in face-up Defense Position.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 1200,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-commander-5744",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tins",
+          "set_code": "CT11-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.48"
+        },
+        {
+          "set_name": "Weekly Shonen Jump December 2013 membership promotional card",
+          "set_code": "JUMP-EN067",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68371799,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68371799.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68371799.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68371799.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94236,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-12-15",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10686,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 74892653,
+      "name": "Stardust Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner Synchro Monster + 1 or more non-Tuner Synchro Monsters\nDuring either player's turn, if your opponent would Special Summon a monster(s): You can Tribute this card; negate the Summon, and if you do, destroy that monster(s). During the End Phase, if this effect was activated this turn (and was not negated): You can Special Summon this card from your Graveyard. If this card is destroyed by battle, or if this face-up card you control leaves the field because of an opponent's card effect: You can Special Summon 1 Level 8 or lower \"Warrior\" Synchro Monster from your Extra Deck. (This Special Summon is treated as a Synchro Summon.)",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 2500,
+      "level": 10,
+      "attribute": "WIND",
+      "archetype": "Stardust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stardust-warrior-6302",
+      "card_sets": [
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENY39",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Synchro Storm",
+          "set_code": "LED8-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.01"
+        },
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74892653,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74892653.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74892653.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74892653.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.94",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 254724,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 6,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-27",
+          "ocg_date": "2014-12-06",
+          "konami_id": 11627,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 91258852,
+      "name": "SPYRAL Master Plan",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can add 1 \"SPYRAL MISSION\" card from your Deck to your hand. If this card is sent from the field to the Graveyard: You can add 1 \"SPYRAL Resort\" and 1 \"SPYRAL\" monster from your Deck to your hand, except \"SPYRAL Master Plan\". You can only use this effect of \"SPYRAL Master Plan\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 2800,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "SPYRAL",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spyral-master-plan-7616",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN087",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN276",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN276",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 91258852,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91258852.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91258852.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91258852.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.49",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 102401,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 8,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12825,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

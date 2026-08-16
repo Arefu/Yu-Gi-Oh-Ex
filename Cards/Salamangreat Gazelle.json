@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 26889158,
+      "name": "Salamangreat Gazelle",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a \"Salamangreat\" monster is sent to your GY, except \"Salamangreat Gazelle\" (except during the Damage Step): You can Special Summon this card from your hand. If this card is Normal or Special Summoned: You can send 1 \"Salamangreat\" card from your Deck to the GY, except \"Salamangreat Gazelle\". You can only use each effect of \"Salamangreat Gazelle\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1500,
+      "def": 1000,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-gazelle-9936",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN049",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN090",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26889158,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26889158.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26889158.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26889158.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "2.83",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 426454,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-02-14",
+          "ocg_date": "2018-12-08",
+          "konami_id": 14240,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

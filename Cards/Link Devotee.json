@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 48068378,
+      "name": "Link Devotee",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Level 4 or lower Cyberse monster\r\nIf this card is Special Summoned: For the rest of this turn, you cannot Link Summon Link-3 or higher Link Monsters. If this co-linked card is Tributed: You can Special Summon 2 \"Link Tokens\" (Cyberse/LIGHT/Level 1/ATK 0/DEF 0). You can only use this effect of \"Link Devotee\" once per turn.",
+      "race": "Cyberse",
+      "atk": 500,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "linkval": 1,
+      "linkmarkers": [
+        "Top"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/link-devotee-9398",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48068378,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48068378.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48068378.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48068378.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 224087,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 6,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13752,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

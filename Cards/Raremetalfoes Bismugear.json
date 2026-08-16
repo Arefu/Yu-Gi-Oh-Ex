@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 18716735,
+      "name": "Raremetalfoes Bismugear",
+      "typeline": [
+        "Psychic",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 other face-up card you control; destroy it, and if you do, Set 1 \"Metalfoes\" Spell/Trap directly from your Deck.\n\n[ Monster Effect ] \nIf this card on the field is destroyed by battle or card effect: You can add 1 \"Metalfoes\" monster from your Deck to your hand during the End Phase of this turn. You can only use this effect of \"Raremetalfoes Bismugear\" once per turn.",
+      "race": "Psychic",
+      "pend_desc": "Once per turn: You can target 1 other face-up card you control; destroy it, and if you do, Set 1 \"Metalfoes\" Spell/Trap directly from your Deck.",
+      "monster_desc": "If this card on the field is destroyed by battle or card effect: You can add 1 \"Metalfoes\" monster from your Deck to your hand during the End Phase of this turn. You can only use this effect of \"Raremetalfoes Bismugear\" once per turn.",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "FIRE",
+      "archetype": "Metalfoes",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raremetalfoes-bismugear-1618",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN142",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN087",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18716735,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18716735.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18716735.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18716735.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.04",
+          "ebay_price": "0.99",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Raremetalfoes Bismagia",
+          "views": 99884,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12612,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

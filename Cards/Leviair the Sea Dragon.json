@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 95992081,
+      "name": "Leviair the Sea Dragon",
+      "typeline": [
+        "Aqua",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\r\nOnce per turn: You can detach 1 material from this card, then target 1 banished Level 4 or lower monster; Special Summon that target to your field.",
+      "race": "Aqua",
+      "atk": 1800,
+      "def": 1600,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/leviair-the-sea-dragon-7991",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN117",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Collectible Tins 2012 Wave 2",
+          "set_code": "CT09-EN018",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.13"
+        },
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN043",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENC38",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.17"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN155",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN155",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95992081,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95992081.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95992081.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95992081.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.38",
+          "tcgplayer_price": "1.98",
+          "ebay_price": "2.90",
+          "amazon_price": "2.91",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 625936,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9660,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

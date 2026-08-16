@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 81057959,
+      "name": "D. Human",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Gifted with the power of dragons, this warrior wields a sword created from a dragon's fang.",
+      "race": "Warrior",
+      "atk": 1300,
+      "def": 1100,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-human-6804",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.35"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81057959,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81057959.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81057959.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81057959.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21038,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4508,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

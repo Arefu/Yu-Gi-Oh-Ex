@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 40089744,
+      "name": "Gateway to Chaos",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: Add 1 \"Black Luster Soldier\" Ritual Monster or 1 \"Gaia The Fierce Knight\" monster from your Deck to your hand. Each time a Monster Card(s) is sent from the hand or field to the GY, place 1 Spell Counter on this card for each of those cards (max. 6). Once per turn: You can remove 3 Spell Counters from this card; add 1 Ritual Spell from your Deck to your hand. You can only activate 1 \"Gateway to Chaos\" per turn.",
+      "race": "Field",
+      "archetype": "Black Luster Soldier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gateway-to-chaos-3403",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN058",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40089744,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40089744.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40089744.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40089744.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.11",
+          "tcgplayer_price": "2.41",
+          "ebay_price": "2.50",
+          "amazon_price": "1.95",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 330536,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12001,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

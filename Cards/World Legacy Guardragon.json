@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 87571563,
+      "name": "World Legacy Guardragon",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can target 1 Level 4 or lower Dragon monster in your GY; add it to your hand or Special Summon it. Once per turn: You can target 1 Dragon monster you control; move that monster you control to another of your Main Monster Zones. You can only activate 1 \"World Legacy Guardragon\" per turn.",
+      "race": "Continuous",
+      "archetype": "Guardragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-guardragon-9846",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN029",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "2.74"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN056",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN062",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87571563,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87571563.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87571563.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87571563.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.59",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Guardragon of the World Legacy",
+          "views": 1077918,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14139,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 63120904,
+      "name": "Orca Mega-Fortress of Darkness",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "By Tributing 1 \"Torpedo Fish\" on your side of the field, destroy 1 monster on the field. By Tributing 1 \"Cannonball Spear Shellfish\" on your side of the field, destroy 1 Spell or Trap Card on the field.",
+      "race": "Sea Serpent",
+      "atk": 2100,
+      "def": 1200,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orca-mega-fortress-of-darkness-5329",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-084",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.9"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN084",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63120904,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63120904.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63120904.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63120904.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.73",
+          "ebay_price": "4.00",
+          "amazon_price": "3.54",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69654,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5896,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

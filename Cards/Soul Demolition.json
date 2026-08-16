@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 76297408,
+      "name": "Soul Demolition",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card's effect when you have a Fiend-Type monster on your side of the field. Pay 500 Life Points to use this effect. Both players select 1 Monster Card from their opponent's Graveyard. Remove the selected cards from play.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soul-demolition-6421",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN135",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.9"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN125",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76297408,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76297408.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76297408.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76297408.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 108030,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-09-20",
+          "konami_id": 5314,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

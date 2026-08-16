@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 13220032,
+      "name": "Vylon Charger",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "All face-up LIGHT monsters you control gain 300 ATK for each Equip Card equipped to this card.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-charger-1139",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5",
+          "set_code": "DT05-EN032",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN032",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0.75"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13220032,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13220032.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13220032.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13220032.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26174,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8909,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

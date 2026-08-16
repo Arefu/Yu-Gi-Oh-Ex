@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 75078585,
+      "name": "Scramble Egg",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If a monster you control is destroyed by battle or card effect and sent to the GY: You can Special Summon 1 \"Sonic Chick\" from your hand, Deck or GY.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scramble-egg-6314",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN230",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75078585,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75078585.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75078585.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75078585.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18913,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2015-01-01",
+          "konami_id": 11673,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

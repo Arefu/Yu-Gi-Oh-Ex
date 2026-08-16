@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 99315585,
+      "name": "The Phantom Knights of Cloven Helm",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a \"Phantom Knights\" card(s) is sent to your GY: This card gains 500 ATK. You can banish this card from your GY; during the End Phase of this turn, add 1 \"Phantom Knights\" card from your GY to your hand. You can only use each effect of \"The Phantom Knights of Cloven Helm\" once per turn.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Phantom Knights",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-phantom-knights-of-cloven-helm-8246",
+      "card_sets": [
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENC04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99315585,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99315585.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99315585.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99315585.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 107081,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12201,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

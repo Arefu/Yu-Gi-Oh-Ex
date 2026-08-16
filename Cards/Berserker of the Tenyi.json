@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 5402805,
+      "name": "Berserker of the Tenyi",
+      "typeline": [
+        "Wyrm",
+        "Link"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Monster",
+      "frameType": "link",
+      "desc": "2+ monsters, including a Link Monster",
+      "race": "Wyrm",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Tenyi",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Top-Right",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/berserker-of-the-tenyi-10206",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN045",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5402805,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5402805.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5402805.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5402805.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Fierce Ogre of Tenyi",
+          "views": 238946,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009045,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14493,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

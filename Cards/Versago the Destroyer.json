@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 50259460,
+      "name": "Versago the Destroyer",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can substitute this card for any 1 Fusion Material Monster. When you do this, the other Fusion Material Monster(s) must be the correct one(s).",
+      "race": "Fiend",
+      "atk": 1100,
+      "def": 900,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/versago-the-destroyer-4279",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENA10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack 5",
+          "set_code": "TP5-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "51.05"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "34.54"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50259460,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50259460.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50259460.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50259460.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "1.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.82",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 151872,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4275,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

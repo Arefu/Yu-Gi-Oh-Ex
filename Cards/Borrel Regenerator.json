@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 6556178,
+      "name": "Borrel Regenerator",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Activate this card by targeting 1 \"Rokket\" monster in your GY; Special Summon it and equip it with this card, but banish it when this card leaves the field. If this card is sent to the GY because the equipped monster is destroyed: You can draw 1 card. You can only use each effect of \"Borrel Regenerator\" once per turn.",
+      "race": "Equip",
+      "archetype": "Rokket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/borrel-regenerator-9414",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN115",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6556178,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6556178.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6556178.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6556178.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 163281,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13769,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

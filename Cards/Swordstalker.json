@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 50005633,
+      "name": "Swordstalker",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A monster formed by the vengeful souls of those who passed away in battle.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 1600,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/swordstalker-4259",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAX-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "25th Anniversary Ultimate Kaiba Set",
+          "set_code": "KC01-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Kaiba",
+          "set_code": "DPKB-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.64"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.82"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50005633,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50005633.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50005633.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50005633.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 133435,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-12-16",
+          "konami_id": 4384,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

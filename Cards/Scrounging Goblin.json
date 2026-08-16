@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 12152769,
+      "name": "Scrounging Goblin",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card inflicts battle damage to your opponent: They can hand you 1 card from their hand to negate this effect, otherwise you add 1 \"Goblin\" card from your Deck to your hand, except \"Goblin Fan\".",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": 2000,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrounging-goblin-1045",
+      "card_sets": [
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN044",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12152769,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12152769.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12152769.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12152769.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29806,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11376,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

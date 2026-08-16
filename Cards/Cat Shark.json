@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 84224627,
+      "name": "Cat Shark",
+      "typeline": [
+        "Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 2 monsters\nWhile this card has an Xyz Material attached that was originally WATER, it cannot be destroyed by battle. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 Rank 4 or lower Xyz Monster you control; its ATK and DEF each become double its original ATK and DEF until the end of this turn.",
+      "race": "Beast",
+      "atk": 500,
+      "def": 500,
+      "level": 2,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cat-shark-7063",
+      "card_sets": [
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN066",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN016",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "15.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84224627,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84224627.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84224627.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84224627.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.59",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 197256,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-03-19",
+          "ocg_date": "2015-03-21",
+          "konami_id": 11652,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

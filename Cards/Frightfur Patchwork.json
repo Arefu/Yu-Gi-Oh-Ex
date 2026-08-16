@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 34773082,
+      "name": "Frightfur Patchwork",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Add 1 \"Edge Imp\" monster and 1 \"Polymerization\" from your Deck to your hand. You can only activate 1 \"Frightfur Patchwork\" per turn.",
+      "race": "Normal",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frightfur-patchwork-2954",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Crystal Revenge",
+          "set_code": "BLCR-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN067",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.45"
+        },
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN099",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34773082,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34773082.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34773082.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34773082.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "3.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 767335,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2016-11-26",
+          "konami_id": 12866,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

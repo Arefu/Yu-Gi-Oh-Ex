@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": 32452818,
+      "name": "Beaver Warrior",
+      "typeline": [
+        "Beast-Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "What this creature lacks in size it makes up for in defense when battling in the prairie.",
+      "race": "Beast-Warrior",
+      "atk": 1200,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/beaver-warrior-2759",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN121",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.08"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E103",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "12.22"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENA05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.88"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.6"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32452818,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32452818.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32452818.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32452818.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 473707,
+          "viewsweek": 42,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4033,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

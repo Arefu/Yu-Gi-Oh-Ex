@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 7799906,
+      "name": "Performapal Smile Sorcerer",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf a monster(s) you control whose current ATK is higher than its original ATK is destroyed by battle or card effect: You can Special Summon this card from your Pendulum Zone. You can only use this effect of \"Performapal Smile Sorcerer\" once per turn.\n\n[ Monster Effect ] \nIf this card is Normal or Special Summoned: You can add 1 \"Smile\" Spell/Trap from your Deck to your hand. If every monster you control is a \"Performapal\" or \"Odd-Eyes\" monster, or a \"Magician\" Pendulum Monster, and this card's current ATK is higher than its original ATK: You can draw cards equal to the number of monsters you control whose current ATK is higher than their original ATK, also you cannot Special Summon monsters for the rest of this turn. You can only use each effect of \"Performapal Smile Sorcerer\" once per turn.",
+      "race": "Spellcaster",
+      "pend_desc": "If a monster(s) you control whose current ATK is higher than its original ATK is destroyed by battle or card effect: You can Special Summon this card from your Pendulum Zone. You can only use this effect of \"Performapal Smile Sorcerer\" once per turn.",
+      "monster_desc": "If this card is Normal or Special Summoned: You can add 1 \"Smile\" Spell/Trap from your Deck to your hand. If every monster you control is a \"Performapal\" or \"Odd-Eyes\" monster, or a \"Magician\" Pendulum Monster, and this card's current ATK is higher than its original ATK: You can draw cards equal to the number of monsters you control whose current ATK is higher than their original ATK, also you cannot Special Summon monsters for the rest of this turn. You can only use each effect of \"Performapal Smile Sorcerer\" once per turn.",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Performapal",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-smile-sorcerer-9957",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7799906,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7799906.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7799906.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7799906.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.97",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48358,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14224,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 75991479,
+      "name": "D.D. Patrol Plane",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the End Phase, if this card is currently banished, and was banished this turn: You can banish 1 card from your hand, field, or GY, and if you do, Special Summon this card in Attack Position. You can only use this effect of \"D.D. Patrol Plane\" once per turn.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "D.D.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-patrol-plane-10446",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75991479,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75991479.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75991479.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75991479.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26698,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010028,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14655,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

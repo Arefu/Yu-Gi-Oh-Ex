@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 21263083,
+      "name": "Pale Beast",
+      "typeline": [
+        "Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "With skin tinged a bluish-white, this strange creature is a fearsome sight to behold.",
+      "race": "Beast",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pale-beast-1829",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.44"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.92"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21263083,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21263083.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21263083.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21263083.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 135682,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4603,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

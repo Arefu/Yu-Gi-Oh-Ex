@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 47346845,
+      "name": "Batteryman AAA",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned or flipped face-up, you can Special Summon 1 \"Batteryman AAA\" from your hand or Graveyard.",
+      "race": "Thunder",
+      "atk": 0,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Batteryman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/batteryman-aaa-4037",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47346845,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47346845.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47346845.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47346845.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "3.95",
+          "amazon_price": "1.38",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41913,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8810,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

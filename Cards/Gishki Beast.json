@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 36227804,
+      "name": "Gishki Beast",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can target 1 Level 4 or lower \"Gishki\" monster in your Graveyard; Special Summon that target in face-up Defense Position.",
+      "race": "Beast",
+      "atk": 1500,
+      "def": 1300,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Gishki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gishki-beast-3061",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN062",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN095",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36227804,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36227804.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36227804.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36227804.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "4.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46504,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2012-01-24",
+          "konami_id": 9443,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

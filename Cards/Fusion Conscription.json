@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 17194258,
+      "name": "Fusion Conscription",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Reveal 1 Fusion Monster in your Extra Deck and add 1 of the Fusion Materials whose name is specifically listed on that card from your Deck or Graveyard to your hand, and if you do, for the rest of this turn after this card resolves, you cannot Normal Summon/Set or Special Summon monsters with the added monster's name, also your monsters with that name cannot activate their effects. You can only activate 1 \"Fusion Conscription\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fusion-conscription-1487",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17194258,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17194258.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17194258.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17194258.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 138645,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11728,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 93294869,
+      "name": "Brotherhood of the Fire Fist - Wolf",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is flipped face-up: You can Set 1 \"Fire Formation\" Trap Card directly from your Deck, then, if this card was Flip Summoned, you can also Set 1 \"Fire Formation\" Spell Card directly from your Deck.",
+      "race": "Beast-Warrior",
+      "atk": 0,
+      "def": 1900,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-wolf-7765",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93294869,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93294869.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93294869.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93294869.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35375,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10507,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

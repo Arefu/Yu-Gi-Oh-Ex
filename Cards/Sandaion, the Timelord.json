@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 33015627,
+      "name": "Sandaion, the Timelord",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned from the Deck. You can only control 1 \"Sandaion, the Timelord\". If only your opponent controls a monster, you can Normal Summon this card without Tributing. Cannot be destroyed by battle or card effects. Neither player takes battle damage from attacks involving this card. At the end of the Battle Phase, if this card battled: Inflict 2000 damage to your opponent. Once per turn, during your Standby Phase: Shuffle this card into the Deck.",
+      "race": "Fairy",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Timelord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sandaion-the-timelord-9360",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33015627,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33015627.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33015627.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33015627.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.40",
+          "tcgplayer_price": "5.12",
+          "ebay_price": "3.94",
+          "amazon_price": "2.69",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 221523,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13819,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

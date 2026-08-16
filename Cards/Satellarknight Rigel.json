@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 13851202,
+      "name": "Satellarknight Rigel",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Summoned: You can target 1 \"tellarknight\" monster on the field; it gains 500 ATK, but send it to the Graveyard during the End Phase. You can only use this effect of \"Satellarknight Rigel\" once per turn.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 700,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Tellarknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/satellarknight-rigel-1187",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity: Super Edition",
+          "set_code": "SECE-ENS05",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.77"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13851202,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13851202.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13851202.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13851202.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "1.79",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30769,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11545,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

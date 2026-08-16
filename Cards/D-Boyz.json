@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 79279397,
+      "name": "D-Boyz",
+      "typeline": [
+        "Fiend",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can Special Summon any number of \"D-Boyz\" from your Deck in face-up Attack Position, then you take 1000 damage for each monster Special Summoned by this effect.",
+      "race": "Fiend",
+      "atk": 100,
+      "def": 1000,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-boyz-6652",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN084",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENG06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79279397,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79279397.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79279397.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79279397.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "5.32",
+          "amazon_price": "7.98",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22520,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2012-10-13",
+          "konami_id": 9867,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

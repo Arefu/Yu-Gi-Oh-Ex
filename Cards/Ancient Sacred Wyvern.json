@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 25958491,
+      "name": "Ancient Sacred Wyvern",
+      "typeline": [
+        "Fairy",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 LIGHT Tuner + 1 or more non-Tuner monsters\nWhile your LP is higher than your opponent's, this card gains ATK equal to the difference. While your LP is lower than your opponent's, this card loses ATK equal to the difference. When this card is destroyed by battle and sent to the Graveyard: You can pay 1000 LP; Special Summon this card.",
+      "race": "Fairy",
+      "atk": 2100,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-sacred-wyvern-2237",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN043",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN239",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25958491,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25958491.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25958491.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25958491.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "14.01",
+          "tcgplayer_price": "15.77",
+          "ebay_price": "35.99",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "8.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 301874,
+          "viewsweek": 63,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8333,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 44665365,
+      "name": "Herald of Perfection",
+      "typeline": [
+        "Fairy",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Dawn of the Herald\". During either player's turn, when your opponent activates a Spell Card, Trap Card, or monster effect: You can send 1 Fairy-Type monster from your hand to the Graveyard; negate the activation, and if you do, destroy it.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 2800,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Herald",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/herald-of-perfection-3802",
+      "card_sets": [
+        {
+          "set_name": "Gold Series: Haunted Mine",
+          "set_code": "GLD5-EN030",
+          "set_rarity": "Ghost/Gold Rare",
+          "set_rarity_code": "(GGR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN085",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN237",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN237",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN039",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44665365,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44665365.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44665365.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44665365.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "0.99",
+          "amazon_price": "6.40",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 220253,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 7674,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

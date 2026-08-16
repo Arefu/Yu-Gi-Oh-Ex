@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 84569886,
+      "name": "D/D/D Super Doom King Purple Armageddon",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Fusion Monster",
+      "humanReadableCardType": "Fusion Pendulum Effect Monster",
+      "frameType": "fusion_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, before damage calculation, if your \"D/D/D\" Fusion Monster battles an opponent's monster: You can make that opponent's monster lose 1000 ATK until the end of this turn (even if this card leaves the field).\n\n[ Monster Effect ] \n2 \"D/D/D\" monsters\r\nYou can target 1 Attack Position monster your opponent controls; destroy it, and if you do, inflict damage to your opponent equal to half its original ATK. You can only use this effect of \"D/D/D Super Doom King Purple Armageddon\" once per turn. Before damage calculation, if an opponent's monster battles: You can make its ATK become equal to its original ATK until the end of the Damage Step. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.",
+      "race": "Fiend",
+      "pend_desc": "Once per turn, before damage calculation, if your \"D/D/D\" Fusion Monster battles an opponent's monster: You can make that opponent's monster lose 1000 ATK until the end of this turn (even if this card leaves the field).",
+      "monster_desc": "2 \"D/D/D\" monsters\r\nYou can target 1 Attack Position monster your opponent controls; destroy it, and if you do, inflict damage to your opponent equal to half its original ATK. You can only use this effect of \"D/D/D Super Doom King Purple Armageddon\" once per turn. Before damage calculation, if an opponent's monster battles: You can make its ATK become equal to its original ATK until the end of the Damage Step. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.",
+      "atk": 3500,
+      "def": 3000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-super-doom-king-purple-armageddon-8911",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN230",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 29",
+          "set_code": "OP29-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84569886,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84569886.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84569886.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84569886.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "D/D/D Super Doom King Purplish Armageddon",
+          "views": 156258,
+          "viewsweek": 0,
+          "upvotes": 24,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2017-04-28",
+          "konami_id": 13123,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 21113684,
+      "name": "Supreme Arcanite Magician",
+      "typeline": [
+        "Spellcaster",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Spellcaster-Type Synchro Monster + 1 Spellcaster-Type monster\nThis monster can only be Special Summoned by Fusion Summon (from the Extra Deck). When this card is Fusion Summoned, place 2 Spell Counters on it. This card gains 1000 ATK for each Spell Counter on it. Once per turn, you can remove 1 Spell Counter from your side of the field to activate 1 of the following effects: ● Select 1 card on the field, and destroy it. ● Draw 1 card.",
+      "race": "Spellcaster",
+      "atk": 1400,
+      "def": 2800,
+      "level": 10,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/supreme-arcanite-magician-1814",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN038",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21113684,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21113684.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21113684.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21113684.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.79",
+          "tcgplayer_price": "17.38",
+          "ebay_price": "15.26",
+          "amazon_price": "16.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95029,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9115,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 38459905,
+      "name": "F.A. Test Run",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"F.A.\" monster you control; change its battle position, then, destroy 1 card on the field. During your Main Phase, except the turn this card was sent to the GY: You can banish this card from your GY, then target 1 face-up card you control; destroy it, and if you do, Special Summon 1 \"F.A.\" monster from your Deck. You can only use each effect of \"F.A. Test Run\" once per turn.",
+      "race": "Quick-Play",
+      "archetype": "F.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/f-a-test-run-9271",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN228",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38459905,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38459905.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38459905.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38459905.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.73",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51697,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13541,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

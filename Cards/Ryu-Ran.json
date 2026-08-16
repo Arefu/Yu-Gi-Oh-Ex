@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 2964201,
+      "name": "Ryu-Ran",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A vicious little dragon sheltered in an egg that looks deceptively harmless.",
+      "race": "Dragon",
+      "atk": 2200,
+      "def": 2600,
+      "level": 7,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ryu-ran-265",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAS-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "12.38"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2964201,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2964201.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2964201.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2964201.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "1.51",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 227979,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4732,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

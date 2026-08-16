@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 30786387,
+      "name": "Flower Stacking",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Choose 3 \"Flower Cardian\" monsters with different names from your Deck, and place them on top of your Deck in any order. During your Main Phase, except the turn this card was sent to the Graveyard: You can banish this card from your Graveyard, then target 1 \"Flower Cardian\" monster in your Graveyard; add it to your hand. You can only use this effect of \"Flower Stacking\" once per turn.",
+      "race": "Normal",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-stacking-2615",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30786387,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30786387.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30786387.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30786387.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.50",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57420,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12645,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

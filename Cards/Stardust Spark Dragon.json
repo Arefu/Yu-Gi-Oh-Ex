@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 83994433,
+      "name": "Stardust Spark Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\nOnce per turn (Quick Effect): You can target 1 face-up card you control; once during this turn, it cannot be destroyed by battle or card effects.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Stardust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stardust-spark-dragon-7044",
+      "card_sets": [
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Volume 5 promotional card",
+          "set_code": "YF05-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83994433,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83994433.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83994433.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83994433.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "1.95",
+          "amazon_price": "1.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 388944,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-05",
+          "ocg_date": "2013-01-04",
+          "konami_id": 10479,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

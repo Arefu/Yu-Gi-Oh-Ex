@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 56364287,
+      "name": "Cyber Dragon Herz",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's name becomes \"Cyber Dragon\" while on the field or in the GY. You can only use 1 of the following effects of \"Cyber Dragon Herz\" per turn, and only once that turn.\r\n● If this card is Special Summoned: You can make this card's Level become 5 until the end of this turn, also, you cannot Special Summon monsters for the rest of this turn, except Machine monsters. \r\n● If this card is sent to the GY: You can add 1 other \"Cyber Dragon\" from your Deck or GY to your hand.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-dragon-herz-9411",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN086",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56364287,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56364287.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56364287.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56364287.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.29",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 1011961,
+          "viewsweek": 21,
+          "upvotes": 28,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13723,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

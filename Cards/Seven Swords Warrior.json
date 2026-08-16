@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 43366227,
+      "name": "Seven Swords Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nOnce per turn, when an Equip Card is equipped to this card: Inflict 800 damage to your opponent. Once per turn: You can target 1 Equip Card equipped to this card; send it to the Graveyard. When an Equip Card equipped to this card is sent to the Graveyard (except during the Damage Step): You can target 1 face-up monster your opponent controls; destroy that target.",
+      "race": "Warrior",
+      "atk": 2300,
+      "def": 1800,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/seven-swords-warrior-3695",
+      "card_sets": [
+        {
+          "set_name": "Shonen Jump December 2010 subscription bonus",
+          "set_code": "JUMP-EN047",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "11.23"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN048",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43366227,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43366227.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43366227.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43366227.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "4.71",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38603,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-12-01",
+          "ocg_date": "2010-05-21",
+          "konami_id": 9194,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

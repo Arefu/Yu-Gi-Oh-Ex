@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 68054593,
+      "name": "Fiery Fervor",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up monster you control; equip this card to that target. If your opponent controls a monster with ATK higher than that same monster's original ATK, the ATK of the equipped monster becomes double the equipped monster's original ATK, during the Damage Step only.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fiery-fervor-5719",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68054593,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68054593.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68054593.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68054593.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27751,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9782,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

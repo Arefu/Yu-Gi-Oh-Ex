@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 30100551,
+      "name": "Minerva, the Exalted Lightsworn",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\r\nYou can detach 1 material from this card; send the top 3 cards of your Deck to the GY, then draw cards equal to the number of \"Lightsworn\" cards sent to the GY by this effect. If this card is destroyed by battle, or if this card in its owner's possession is destroyed by an opponent's card effect: You can send the top 3 cards of your Deck to the GY, then you can destroy cards on the field up to the number of \"Lightsworn\" cards sent to the GY by this effect. You can only use each effect of \"Minerva, the Exalted Lightsworn\" once per turn.",
+      "race": "Fairy",
+      "atk": 2000,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/minerva-the-exalted-lightsworn-2550",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN013",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN044",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2015 Prize Card",
+          "set_code": "YCSW-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4510.81"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2015 Prize Card",
+          "set_code": "YCSW-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5107.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30100551,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30100551.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30100551.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30100551.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.27",
+          "tcgplayer_price": "0.91",
+          "ebay_price": "12.79",
+          "amazon_price": "12.12",
+          "coolstuffinc_price": "8.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 376914,
+          "viewsweek": 21,
+          "upvotes": 22,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-30",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11867,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

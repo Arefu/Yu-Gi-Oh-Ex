@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 575512,
+      "name": "PSY-Frame Circuit",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "If a \"PSY-Frame\" monster(s) is Special Summoned to your side of the field (except during the Damage Step), you can: Immediately after this effect resolves, Synchro Summon 1 Synchro Monster, using only \"PSY-Frame\" monsters you control. At the start of the Damage Step, if a \"PSY-Frame\" monster you control battles an opponent's monster: You can discard 1 \"PSY-Frame\" monster; your battling monster gains ATK equal to the discarded monster's ATK until the end of this turn.",
+      "race": "Field",
+      "archetype": "PSY-Frame",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psy-frame-circuit-54",
+      "card_sets": [
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN036",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 575512,
+          "image_url": "https://images.ygoprodeck.com/images/cards/575512.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/575512.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/575512.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "2.07",
+          "amazon_price": "54.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70720,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-01",
+          "ocg_date": "2015-08-22",
+          "konami_id": 12075,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

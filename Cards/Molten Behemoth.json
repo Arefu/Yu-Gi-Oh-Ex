@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 17192817,
+      "name": "Molten Behemoth",
+      "typeline": [
+        "Pyro",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A giant born from magma, it attacks with a magma punch.",
+      "race": "Pyro",
+      "atk": 1000,
+      "def": 2200,
+      "level": 5,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/molten-behemoth-1486",
+      "card_sets": [
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17192817,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17192817.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17192817.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17192817.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51126,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5029,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

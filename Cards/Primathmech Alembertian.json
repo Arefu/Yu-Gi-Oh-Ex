@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 85692042,
+      "name": "Primathmech Alembertian",
+      "typeline": [
+        "Cyberse",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2+ Level 4 monsters\r\nYou can Tribute 1 monster; Special Summon 1 Level 4 \"Mathmech\" monster from your hand or GY. If this card is Xyz Summoned: You can detach 2 to 4 materials from this card, then activate the appropriate effect;\r\n● 2: Add 1 \"Mathmech\" card from your Deck to your hand.\r\n● 3: Add 1 Level 4 monster from your Deck to your hand.\r\n● 4: Add 1 Spell/Trap from your Deck to your hand.\r\nYou can only use each effect of \"Primathmech Alembertian\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Mathmech",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/primathmech-alembertian-10545",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN030",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN040",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "55.54"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85692042,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85692042.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85692042.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85692042.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "24.99",
+          "amazon_price": "89.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mathmech Editor d'Alembertian",
+          "views": 392703,
+          "viewsweek": 42,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100200170,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-21",
+          "konami_id": 14800,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

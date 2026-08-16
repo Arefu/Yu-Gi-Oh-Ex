@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 6148016,
+      "name": "Geargiagear",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Special Summon 2 \"Geargiano\" monsters from your Deck and increase their Levels by 1. You can only activate 1 \"Geargiagear\" per turn.",
+      "race": "Normal",
+      "archetype": "Geargia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/geargiagear-540",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Geargia Rampage Structure Deck",
+          "set_code": "SDGR-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN077",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6148016,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6148016.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6148016.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6148016.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "1.74",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37103,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10558,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

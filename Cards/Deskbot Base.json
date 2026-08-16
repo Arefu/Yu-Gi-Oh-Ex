@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 12215894,
+      "name": "Deskbot Base",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All \"Deskbot\" monsters on the field gain 500 ATK and DEF. Once per turn: You can reveal any number of \"Deskbot\" cards in your hand and shuffle them into the Deck, then draw the same number of cards. You can banish 9 \"Deskbot\" cards with different names from your field and/or Graveyard, except \"Deskbot Base\"; shuffle all cards from your opponent's hand, field and Graveyard into the Deck.",
+      "race": "Field",
+      "archetype": "Deskbot",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/deskbot-base-1053",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12215894,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12215894.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12215894.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12215894.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76142,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12340,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

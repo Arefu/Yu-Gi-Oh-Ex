@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "id": 74191942,
+      "name": "Painful Choice",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 5 cards from your Deck and show them to your opponent. Your opponent selects 1 card among them. Add that card to your hand and discard the remaining cards to the Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/painful-choice-6240",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.79"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.21"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "19.3"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.84"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.79"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden",
+        "ban_goat": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 74191942,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74191942.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74191942.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74191942.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.03",
+          "tcgplayer_price": "1.79",
+          "ebay_price": "4.49",
+          "amazon_price": "24.03",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 335669,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4911,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

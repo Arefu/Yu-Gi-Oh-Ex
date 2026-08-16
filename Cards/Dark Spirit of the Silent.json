@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 93599951,
+      "name": "Dark Spirit of the Silent",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when an opponent's monster declares an attack. Negate that attack, and select another face-up monster your opponent controls. That monster attacks instead. (If it is in face-up Defense Position, change it to Attack Position.)",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-spirit-of-the-silent-7790",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-079",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.09"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E079",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.5"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN079",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "34.6"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93599951,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93599951.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93599951.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93599951.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.99",
+          "amazon_price": "2.77",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 177659,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5227,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 6260554,
+      "name": "Do a Barrel Roll",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell Card, Trap Card, or monster effect is activated: Tribute all \"Mecha Phantom Beast Tokens\" you control; negate the activation, and if you do, destroy it.",
+      "race": "Counter",
+      "archetype": "Mecha Phantom Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/do-a-barrel-roll-549",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN074",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6260554,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6260554.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6260554.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6260554.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.29",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28524,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10555,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

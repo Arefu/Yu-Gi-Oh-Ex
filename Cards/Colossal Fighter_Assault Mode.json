@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 38898779,
+      "name": "Colossal Fighter/Assault Mode",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except with \"Assault Mode Activate\". When this card is Special Summoned, you can send up to 2 Warrior-Type monsters from your Deck to the Graveyard. All monsters your opponent controls lose 100 ATK for every Warrior-Type monster in your Graveyard. When this card on the field is destroyed, you can Special Summon 1 \"Colossal Fighter\" from your Graveyard.",
+      "race": "Warrior",
+      "atk": 3300,
+      "def": 1500,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Assault Mode",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/colossal-fighter-assault-mode-3296",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crimson Crisis Sneak Peek Participation Card",
+          "set_code": "CRMS-ENSP1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.71"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38898779,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38898779.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38898779.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38898779.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.30",
+          "tcgplayer_price": "1.45",
+          "ebay_price": "4.99",
+          "amazon_price": "2.48",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39011,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2009-09-19",
+          "konami_id": 8138,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

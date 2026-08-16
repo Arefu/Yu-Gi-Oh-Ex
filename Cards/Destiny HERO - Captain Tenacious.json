@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 77608643,
+      "name": "Destiny HERO - Captain Tenacious",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during your Standby Phase: You can target 1 \"Destiny HERO\" monster in your Graveyard that was destroyed by battle since your last Standby Phase, if you controlled this face-up card when the target was destroyed; Special Summon that target.",
+      "race": "Warrior",
+      "atk": 800,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destiny-hero-captain-tenacious-6532",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN182",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.86"
+        },
+        {
+          "set_name": "Duelist Pack: Aster Phoenix",
+          "set_code": "DP05-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77608643,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77608643.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77608643.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77608643.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.95",
+          "amazon_price": "1.30",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97100,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6659,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

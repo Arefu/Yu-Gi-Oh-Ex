@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 44487250,
+      "name": "Xyz Block",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When your opponent activates a monster effect: Detach 1 Xyz Material from a monster you control; negate the activation, and if you do, destroy that monster.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-block-3792",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44487250,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44487250.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44487250.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44487250.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.95",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49369,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10553,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

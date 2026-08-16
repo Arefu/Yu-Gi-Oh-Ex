@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 42309337,
+      "name": "Counter Counter",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Negate the activation of a Counter Trap Card, and destroy it.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/counter-counter-3608",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Seven",
+          "set_code": "CP07-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.92"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42309337,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42309337.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42309337.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42309337.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "2.19",
+          "amazon_price": "0.61",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58584,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7236,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

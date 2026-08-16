@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 42901635,
+      "name": "Berserkion the Electromagna Warrior",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 1 \"Alpha The Electromagnet Warrior\", \"Beta The Electromagnet Warrior\", and \"Gamma The Electromagnet Warrior\" from your hand, Graveyard, and/or face-up from your Monster Zone. You can banish 1 Level 4 or lower \"Magnet Warrior\" monster from your Graveyard, then target 1 card your opponent controls; destroy it. If this card is destroyed by battle, or if this card in its owner's possession is destroyed by an opponent's card effect: You can target 1 each of your banished \"Alpha The Electromagnet Warrior\", \"Beta The Electromagnet Warrior\", and \"Gamma The Electromagnet Warrior\"; Special Summon them.",
+      "race": "Rock",
+      "atk": 3000,
+      "def": 2800,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Magnet Warrior",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/berserkion-the-electromagna-warrior-3660",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Yugi Muto",
+          "set_code": "SDMY-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42901635,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42901635.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42901635.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42901635.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.00",
+          "tcgplayer_price": "4.98",
+          "ebay_price": "3.00",
+          "amazon_price": "3.50",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 189087,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-20",
+          "ocg_date": "2016-06-18",
+          "konami_id": 12576,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

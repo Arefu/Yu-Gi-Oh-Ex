@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 81263643,
+      "name": "Mystrick Hulder",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can discard 1 card; apply the following effect, depending on the type of card discarded.\r\n● Monster: Add 1 Trap from your GY to your hand.\r\n● Spell: Add 1 monster from your GY to your hand.\r\n● Trap: Add 1 Spell from your GY to your hand.\r\nYou can only use this effect of \"Mystrick Hulder\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 2400,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystrick-hulder-9638",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN173",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81263643,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81263643.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81263643.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81263643.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Huldra the Hidden",
+          "views": 20217,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13913,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

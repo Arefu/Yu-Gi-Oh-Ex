@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 88940154,
+      "name": "Bujingi Centipede",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a Beast-Warrior-Type \"Bujin\" monster: You can banish this card from your Graveyard, then target 1 Spell/Trap Card your opponent controls; destroy that target. You can only use the effect of \"Bujingi Centipede\" once per turn.",
+      "race": "Beast",
+      "atk": 1700,
+      "def": 500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujingi-centipede-7430",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN148",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88940154,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88940154.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88940154.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88940154.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36071,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10757,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

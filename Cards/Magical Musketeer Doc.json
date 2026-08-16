@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 68246154,
+      "name": "Magical Musketeer Doc",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, you can activate \"Magical Musket\" Spell/Trap Cards from your hand. If a Spell/Trap Card is activated in this card's column: You can add 1 \"Magical Musket\" card from your GY to your hand, but not a card with the same name as that activated card. You can only use this effect of \"Magical Musketeer Doc\" once per turn.",
+      "race": "Fiend",
+      "atk": 1400,
+      "def": 1200,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musketeer-doc-8749",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68246154,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68246154.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68246154.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68246154.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.95",
+          "ebay_price": "2.29",
+          "amazon_price": "2.17",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magibullet Shooter Doctor",
+          "views": 111687,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13316,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 88095331,
+      "name": "Evoltile Najasho",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card on the field is Tributed: You can Special Summon 1 \"Evolsaur\" monster from your Deck.",
+      "race": "Reptile",
+      "atk": 100,
+      "def": 2000,
+      "level": 2,
+      "attribute": "FIRE",
+      "archetype": "Evolsaur",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evoltile-najasho-7367",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN083",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 22",
+          "set_code": "OP22-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88095331,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88095331.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88095331.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88095331.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.95",
+          "amazon_price": "0.48",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43711,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2012-10-13",
+          "konami_id": 10018,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

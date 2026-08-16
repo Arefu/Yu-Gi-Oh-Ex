@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 18724123,
+      "name": "Infernity Archer",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have no cards in your hand, this card can attack your opponent directly.",
+      "race": "Fiend",
+      "atk": 2000,
+      "def": 1000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Infernity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernity-archer-1619",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN094",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18724123,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18724123.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18724123.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18724123.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "4.95",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32461,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2011-08-20",
+          "konami_id": 9859,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

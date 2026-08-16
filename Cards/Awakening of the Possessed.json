@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 62256492,
+      "name": "Awakening of the Possessed",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Monsters you control gain 300 ATK for each different Attribute you control. \"Charmer\" and \"Familiar-Possessed\" monsters you control cannot be destroyed by card effects. If a Spellcaster monster(s) with 1850 original ATK is Normal or Special Summoned to your field: Draw 1 card. You can only use this effect of \"Awakening of the Possessed\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Charmer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/awakening-of-the-possessed-9952",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN030",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "THE CHRONICLES DECK: Spirit Charmers (All-Foil Edition)",
+          "set_code": "CH02-EN031",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62256492,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62256492.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62256492.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62256492.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.49",
+          "amazon_price": "0.94",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Possessed Awakening",
+          "views": 176503,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14389,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

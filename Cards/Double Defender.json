@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 44883600,
+      "name": "Double Defender",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, when an opponent's monster declares an attack while you control 2 or more face-up Defense Position monsters: You can target the attacking monster; negate that attack.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/double-defender-3823",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44883600,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44883600.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44883600.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44883600.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22362,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9923,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

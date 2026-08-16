@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 27642961,
+      "name": "SPYRAL MISSION - Assault",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Destroy this card during your 3rd End Phase after activation. Once per turn, if a \"SPYRAL\" monster you control destroys a monster by battle, or if you destroy a card(s) on the field with a \"SPYRAL\" monster's effect you control: You can draw 1 card. You can banish this card from your Graveyard; Special Summon 1 \"SPYRAL\" monster from your hand.",
+      "race": "Continuous",
+      "archetype": "SPYRAL",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spyral-mission-assault-2354",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27642961,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27642961.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27642961.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27642961.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "2.00",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60860,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12826,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

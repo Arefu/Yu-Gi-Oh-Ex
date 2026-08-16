@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 92015800,
+      "name": "Number 76: Harmonizer Gradielle",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 7 monsters\r\nThis card's Attribute is also treated as each of its attached materials' Attributes. Cannot be destroyed by battle with a monster of the same Attribute, also cannot be destroyed by the activated effects of your opponent's monsters with the same Attribute. (Quick Effect): You can target 1 monster in your opponent's GY; detach 1 material from this card, and if you do, attach that target to this card as material. You can only use this effect of \"Number 76: Harmonizer Gradielle\" once per turn.",
+      "race": "Fairy",
+      "atk": 2700,
+      "def": 2100,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-76-harmonizer-gradielle-10343",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN029",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92015800,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92015800.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92015800.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92015800.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.89",
+          "tcgplayer_price": "7.36",
+          "ebay_price": "4.01",
+          "amazon_price": "5.11",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 76: Gladiyell the Melody Lumaestra",
+          "views": 208780,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248032,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14565,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

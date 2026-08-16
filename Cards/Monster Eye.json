@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 84133008,
+      "name": "Monster Eye",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can pay 1000 Life Points; add 1 \"Polymerization\" from your Graveyard to your hand.",
+      "race": "Fiend",
+      "atk": 250,
+      "def": 350,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/monster-eye-7056",
+      "card_sets": [
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Championship 2011 Card Pack",
+          "set_code": "WP11-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84133008,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84133008.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84133008.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84133008.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "87.14",
+          "tcgplayer_price": "34.23",
+          "ebay_price": "149.99",
+          "amazon_price": "10.75",
+          "coolstuffinc_price": "79.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18578,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-14",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4408,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

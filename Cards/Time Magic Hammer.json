@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 10960419,
+      "name": "Time Magic Hammer",
+      "typeline": [
+        "Spellcaster",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "Must be Special Summoned with \"The Claw of Hermos\", using a Spellcaster monster. If this card is Special Summoned: Target 1 other face-up monster on the field; equip this card to it. At the start of the Damage Step, if it battles an opponent's monster: You can roll a six-sided die, and banish that opponent's monster until the Standby Phase of the Nth turn after this effect's activation (N = the result).",
+      "race": "Spellcaster",
+      "atk": 500,
+      "def": 400,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Legendary Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/time-magic-hammer-941",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN009",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.65"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN063",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENA40",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10960419,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10960419.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10960419.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10960419.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.59",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 100051,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11888,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

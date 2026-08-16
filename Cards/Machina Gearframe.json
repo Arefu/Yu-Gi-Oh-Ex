@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 42940404,
+      "name": "Machina Gearframe",
+      "typeline": [
+        "Machine",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can add 1 \"Machina\" monster from your Deck to your hand, except \"Machina Gearframe\". Once per turn, you can either: Target 1 Machine monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, destroy this card instead.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Machina",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/machina-gearframe-3662",
+      "card_sets": [
+        {
+          "set_name": "Machina Mayhem Structure Deck",
+          "set_code": "SDMM-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.47"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN234",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN234",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.55"
+        },
+        {
+          "set_name": "Structure Deck: Mechanized Madness",
+          "set_code": "SR10-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42940404,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42940404.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42940404.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42940404.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.00",
+          "tcgplayer_price": "5.50",
+          "ebay_price": "2.49",
+          "amazon_price": "6.88",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 380930,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-19",
+          "ocg_date": "2009-12-12",
+          "konami_id": 8693,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

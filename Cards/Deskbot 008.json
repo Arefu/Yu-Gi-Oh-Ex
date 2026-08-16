@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 24573625,
+      "name": "Deskbot 008",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"Deskbot\" monsters. This effect cannot be negated.\n\n[ Monster Effect ] \nThis card gains 500 ATK for each \"Deskbot\" card in your Graveyard. Your opponent cannot target face-up \"Deskbot\" cards with card effects, except this one. This card can make up to 2 attacks on monsters during each Battle Phase.",
+      "race": "Machine",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"Deskbot\" monsters. This effect cannot be negated.",
+      "monster_desc": "This card gains 500 ATK for each \"Deskbot\" card in your Graveyard. Your opponent cannot target face-up \"Deskbot\" cards with card effects, except this one. This card can make up to 2 attacks on monsters during each Battle Phase.",
+      "atk": 500,
+      "def": 500,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Deskbot",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/deskbot-008-2121",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN207",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24573625,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24573625.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24573625.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24573625.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.75",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70985,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12148,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

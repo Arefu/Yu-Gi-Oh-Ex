@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 69394324,
+      "name": "Destiny HERO - Dominance",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "3 \"Destiny HERO\" monsters\r\nDuring your Main Phase: You can look at the top 5 cards of your Deck or your opponent's Deck, then place them on the top of the Deck in any order. When this card destroys an opponent's monster by battle: You can draw 1 card. If this Fusion Summoned card is destroyed by battle or card effect: You can target 3 Level 9 or lower \"Destiny HERO\" monsters with different names in your GY; Special Summon them. You can only use each effect of \"Destiny HERO - Dominance\" once per turn.",
+      "race": "Warrior",
+      "atk": 2900,
+      "def": 2600,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destiny-hero-dominance-9976",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN064",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69394324,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69394324.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69394324.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69394324.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "1.59",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Destiny HERO - Dominateguy",
+          "views": 190997,
+          "viewsweek": 0,
+          "upvotes": 29,
+          "downvotes": 9,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14281,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

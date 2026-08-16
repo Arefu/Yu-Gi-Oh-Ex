@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 49370026,
+      "name": "Genin",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "''A creature that defeats its enemies using sleight-of-hand.''",
+      "race": "Spellcaster",
+      "atk": 600,
+      "def": 900,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Fan-Made Cards",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/genin-4208",
+      "card_images": [
+        {
+          "id": 49370026,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49370026.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49370026.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49370026.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.00",
+          "tcgplayer_price": "0.00",
+          "ebay_price": "6.00",
+          "amazon_price": "68.40",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 11766,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "OCG",
+            "Master Duel"
+          ],
+          "ocg_date": "1999-03-18",
+          "konami_id": 4190,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

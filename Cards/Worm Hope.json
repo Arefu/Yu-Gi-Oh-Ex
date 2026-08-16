@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 11159464,
+      "name": "Worm Hope",
+      "typeline": [
+        "Reptile",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: When this card is flipped face-up by an opponent's monster's attack, draw 1 card.\nWhen this card is sent from the field to the Graveyard, send 1 card from your hand to the Graveyard.",
+      "race": "Reptile",
+      "atk": 800,
+      "def": 1500,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/worm-hope-964",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN082",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11159464,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11159464.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11159464.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11159464.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18360,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7830,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

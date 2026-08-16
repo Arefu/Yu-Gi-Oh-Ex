@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 63300440,
+      "name": "Dragon Shield",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Dragon-Type monster. It cannot be destroyed by battle or by card effects. Neither player takes any battle damage from attacks involving it.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragon-shield-5347",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light: Deluxe Edition",
+          "set_code": "JOTL-ENDE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.15"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63300440,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63300440.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63300440.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63300440.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "8.68",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77885,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-09-27",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10792,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

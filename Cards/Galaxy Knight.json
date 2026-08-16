@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 35950025,
+      "name": "Galaxy Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Photon\" or \"Galaxy\" monster, you can Normal Summon this card without Tributing. If Summoned this way: Target 1 \"Galaxy-Eyes Photon Dragon\" in your GY (if possible); regardless, this card loses 1000 ATK, and if it does, Special Summon that target (if any) in Defense Position. This ATK decrease lasts until the end of this turn.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 2600,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Galaxy-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/galaxy-knight-3039",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN049",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.23"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35950025,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35950025.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35950025.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35950025.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "6.14",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 368739,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2012-09-15",
+          "konami_id": 10339,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

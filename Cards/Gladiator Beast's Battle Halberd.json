@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 99013397,
+      "name": "Gladiator Beast's Battle Halberd",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a \"Gladiator Beast\" monster. When it attacks, destroy 1 Spell or Trap Card at the end of the Damage Step. When the equipped monster is returned from your side of the field to the Deck and this card is sent to the Graveyard, return this card to your hand.",
+      "race": "Equip",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-s-battle-halberd-8225",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99013397,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99013397.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99013397.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99013397.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.97",
+          "amazon_price": "0.30",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42134,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7308,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

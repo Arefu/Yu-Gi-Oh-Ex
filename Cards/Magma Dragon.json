@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 95833645,
+      "name": "Magma Dragon",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned: You can target 1 Wyrm-Type monster in your Graveyard, except \"Magma Dragon\"; Special Summon it in Defense Position, but its effects are negated. You can only use this effect of \"Magma Dragon\" once per turn. You cannot Special Summon monsters the turn you activate this effect, except Wyrm-Type monsters.",
+      "race": "Wyrm",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magma-dragon-7981",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95833645,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95833645.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95833645.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95833645.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27692,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11709,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

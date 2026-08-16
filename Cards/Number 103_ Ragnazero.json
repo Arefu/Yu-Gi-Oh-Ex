@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 94380860,
+      "name": "Number 103: Ragnazero",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nOnce per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up Attack Position monster your opponent controls, whose current ATK is different from its original ATK; destroy it, and if you do, draw 1 card.",
+      "race": "Fairy",
+      "atk": 2400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-103-ragnazero-7851",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Seven",
+          "set_code": "AP07-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossover Breakers",
+          "set_code": "CRBR-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94380860,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94380860.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94380860.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94380860.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "2.90",
+          "amazon_price": "3.01",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 103",
+          "views": 288480,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11071,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

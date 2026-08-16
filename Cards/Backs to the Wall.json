@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 32603633,
+      "name": "Backs to the Wall",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Pay LP so that you only have 100 left; Special Summon as many \"Six Samurai\" monsters with different names from your GY as possible. You cannot Special Summon a monster with the same name as a monster you already control.",
+      "race": "Normal",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/backs-to-the-wall-2774",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN053",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32603633,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32603633.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32603633.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32603633.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54366,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7134,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

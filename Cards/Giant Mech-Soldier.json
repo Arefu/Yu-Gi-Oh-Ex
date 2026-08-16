@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 72299832,
+      "name": "Giant Mech-Soldier",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster swings an earth-shaking axe that cannot be blocked by a common sword.",
+      "race": "Machine",
+      "atk": 1750,
+      "def": 1900,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/giant-mech-soldier-6067",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72299832,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72299832.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72299832.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72299832.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.32",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15563,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-12-05",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4414,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

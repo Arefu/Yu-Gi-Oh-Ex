@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 51091138,
+      "name": "Fuse Line",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "While this card is Set: Target 1 card on the field in this card's column; destroy it.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fuse-line-8847",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN155",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN078",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51091138,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51091138.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51091138.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51091138.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Blasting Wire",
+          "views": 22215,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13294,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

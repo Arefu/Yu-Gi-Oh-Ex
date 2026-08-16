@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 97729135,
+      "name": "Staring Contest",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When you Special Summon a monster to the Extra Monster Zone: You can target 1 monster in your opponent's Main Monster Zone; move that target to their zone in the same column as that Extra Monster Zone monster. When your opponent Special Summons a monster to the Extra Monster Zone: You can target 1 monster in your Main Monster Zone; move that target to your zone in the same column as that Extra Monster Zone monster. These effects cannot be activated in the Damage Step.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/staring-contest-9252",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97729135,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97729135.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97729135.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97729135.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Staredown",
+          "views": 16249,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13618,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

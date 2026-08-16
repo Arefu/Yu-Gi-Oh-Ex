@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 42592719,
+      "name": "Gladiator Beast Alexander",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned except by the effect of \"Gladiator Beast Dimacari\". If this card was Special Summoned, it is unaffected by the effects of Spell Cards. At the end of the Battle Phase, if this card attacked or was attacked, you can return it to the Deck to Special Summon 1 \"Gladiator Beast\" monster from your Deck, except \"Gladiator Beast Alexander\".",
+      "race": "Beast",
+      "atk": 2400,
+      "def": 600,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-alexander-3632",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN017",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42592719,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42592719.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42592719.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42592719.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.11",
+          "tcgplayer_price": "0.85",
+          "ebay_price": "9.50",
+          "amazon_price": "18.95",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46836,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7282,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

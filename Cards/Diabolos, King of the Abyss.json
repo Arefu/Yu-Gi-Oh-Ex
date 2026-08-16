@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 29424328,
+      "name": "Diabolos, King of the Abyss",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. If you Tribute Summon this card, the Tributes must be DARK. Cannot be Tributed by card effects while face-up on the field. Once per turn, during your opponent's Draw Phase, before their normal draw: Look at the top card of your opponent's Deck, and if you do, place that card on either the top or bottom of their Deck.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 1000,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/diabolos-king-of-the-abyss-2496",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN061",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Lair of Darkness",
+          "set_code": "SR06-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29424328,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29424328.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29424328.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29424328.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67742,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-03-08",
+          "konami_id": 7146,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

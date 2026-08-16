@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 3030892,
+      "name": "Test Ape",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard, you can Special Summon 1 Level 4 or lower \"Gladiator Beast\" monster from your Deck.",
+      "race": "Beast",
+      "atk": 700,
+      "def": 300,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/test-ape-272",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3030892,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3030892.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3030892.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3030892.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.69",
+          "ebay_price": "1.25",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54312,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7290,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

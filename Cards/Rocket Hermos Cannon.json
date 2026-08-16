@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 46354113,
+      "name": "Rocket Hermos Cannon",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "Must be Special Summoned with \"The Claw of Hermos\", using a Warrior monster. If this card is Special Summoned: Target 1 other face-up monster on the field; equip this card to it. It can make a second attack during each Battle Phase, also, if it attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Legendary Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rocket-hermos-cannon-3952",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN010",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN064",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENA41",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46354113,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46354113.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46354113.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46354113.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93986,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11889,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

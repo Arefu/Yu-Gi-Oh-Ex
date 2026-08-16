@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 1218214,
+      "name": "Cubic Dharma",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "You take no battle damage from attacks involving your \"Cubic\" monsters. You can only use each of the following effects of \"Cubic Dharma\" once per turn, during your Main Phase:\r\n● You can send 1 \"Cubic\" card from your hand to the GY, and if you do, draw 1 card.\r\n● You can banish this card from your GY, then target 1 \"Cubic\" monster in your GY; add it to your hand.",
+      "race": "Continuous",
+      "archetype": "Cubic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cubic-dharma-10128",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN050",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.72"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1218214,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1218214.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1218214.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1218214.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 119034,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14381,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

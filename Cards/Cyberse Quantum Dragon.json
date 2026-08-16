@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 63533837,
+      "name": "Cyberse Quantum Dragon",
+      "typeline": [
+        "Cyberse",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nWhile you control a Link Monster, monsters your opponent controls cannot target monsters you control for attacks, except this one, also your opponent cannot target monsters you control with card effects, except this one. Once per turn, at the start of the Damage Step, if this card battles an opponent's monster: You can return that opponent's monster to the hand, also, this card can make a second attack in a row.",
+      "race": "Cyberse",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-quantum-dragon-9772",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN018",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "3.33"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63533837,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63533837.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63533837.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63533837.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.47",
+          "tcgplayer_price": "0.63",
+          "ebay_price": "2.45",
+          "amazon_price": "3.17",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 462680,
+          "viewsweek": 0,
+          "upvotes": 50,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14115,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

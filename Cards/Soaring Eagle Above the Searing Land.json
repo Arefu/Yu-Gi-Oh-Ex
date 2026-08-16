@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 26381750,
+      "name": "Soaring Eagle Above the Searing Land",
+      "typeline": [
+        "Winged Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard for a Synchro Summon: You can Special Summon this card. You must have 3 or more \"Laval\" monsters with different names in your Graveyard to activate and to resolve this effect. If this card is Special Summoned with this effect, banish it when it leaves the field.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 0,
+      "level": 1,
+      "attribute": "FIRE",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soaring-eagle-above-the-searing-land-2267",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN023",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26381750,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26381750.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26381750.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26381750.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.97",
+          "amazon_price": "1.13",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23124,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8900,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

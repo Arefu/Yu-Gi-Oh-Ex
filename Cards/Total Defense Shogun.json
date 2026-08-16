@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 75372290,
+      "name": "Total Defense Shogun",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is changed to Defense Position when it is Normal Summoned or Flip Summoned successfully. This card can attack while it is in Defense Position. If this card attacks while in Defense Position, apply the ATK of this card for damage calculation.",
+      "race": "Warrior",
+      "atk": 1550,
+      "def": 2500,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/total-defense-shogun-6341",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2004",
+          "set_code": "CT1-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "7.18"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB-EN55",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN110",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75372290,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75372290.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75372290.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75372290.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.64",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "4.95",
+          "amazon_price": "6.58",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32815,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-09-01",
+          "ocg_date": "2001-01-21",
+          "konami_id": 4788,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

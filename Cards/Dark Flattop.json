@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 67904682,
+      "name": "Dark Flattop",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 DARK Tuner + 1 or more non-Tuner Machine-Type monsters\nOnce per turn: You can target 1 \"Reactor\" monster or \"Flying Fortress SKY FIRE\" in your Graveyard; Special Summon that target, ignoring its Summoning conditions. If this card is destroyed and sent to the Graveyard: You can Special Summon 1 Level 5 or lower Machine-Type monster from your hand.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-flattop-5700",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN096",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67904682,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67904682.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67904682.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67904682.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37060,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2010-11-20",
+          "konami_id": 9218,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

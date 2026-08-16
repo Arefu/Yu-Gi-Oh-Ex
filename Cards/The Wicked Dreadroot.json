@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 62180201,
+      "name": "The Wicked Dreadroot",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. This card cannot be Normal Summoned or Set except by Tributing 3 monsters. Halve the ATK and DEF of all monsters on the field, except this card.",
+      "race": "Fiend",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Wicked God",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-wicked-dreadroot-5260",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2010 Wave 1",
+          "set_code": "CT07-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.01"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.81"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 6, Issue 1 promotional card",
+          "set_code": "JUMP-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.97"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62180201,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62180201.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62180201.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62180201.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "3.98",
+          "amazon_price": "24.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71675,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-01",
+          "ocg_date": "2005-04-21",
+          "konami_id": 6405,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

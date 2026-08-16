@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 31076103,
+      "name": "The First Sarcophagus",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "During each of your opponent's End Phases, place 1 card face-up on your side of the field from your hand or Deck in this order: \"The Second Sarcophagus\", \"The Third Sarcophagus\". If 1 Sarcophagus card is removed from your side of the field, all of them on your side of the field are sent to the Graveyard. When you have all 3 Sarcophagus cards on your side of the field, send all Sarcophagus cards on your side of the field to the Graveyard to Special Summon 1 \"Spirit of the Pharaoh\" from your hand or Deck.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-first-sarcophagus-2637",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-101",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.6"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN214",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31076103,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31076103.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31076103.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31076103.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.75",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56836,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6063,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

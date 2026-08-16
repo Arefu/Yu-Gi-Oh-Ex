@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 30907810,
+      "name": "Magical Musket Mastermind Zakiel",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute Summon this card face-up by Tributing 1 \"Magical Musket\" monster. During either player's turn, you can activate \"Magical Musket\" Spell/Trap Cards from your hand. Once per turn, during your opponent's End Phase: You can draw cards equal to the number of \"Magical Musket\" Spell/Trap Cards you activated this turn while this card was face-up on your field. You can only use this effect of \"Magical Musket Mastermind Zakiel\" once per turn.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 2500,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musket-mastermind-zakiel-8589",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN022",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30907810,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30907810.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30907810.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30907810.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.48",
+          "tcgplayer_price": "0.64",
+          "ebay_price": "1.25",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magibullet Fiend Zamiel",
+          "views": 54714,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13321,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

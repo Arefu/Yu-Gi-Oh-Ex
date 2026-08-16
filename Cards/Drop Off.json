@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 55773067,
+      "name": "Drop Off",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When your opponent draws for their normal draw in their Draw Phase: Your opponent discards 1 card they just drew.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/drop-off-4751",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN205",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.02"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.55"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.2"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN145",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55773067,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55773067.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55773067.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55773067.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.70",
+          "ebay_price": "2.24",
+          "amazon_price": "2.85",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 113824,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5404,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

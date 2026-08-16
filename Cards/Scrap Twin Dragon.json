@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 50278554,
+      "name": "Scrap Twin Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Scrap\" Tuner + 1 or more non-Tuner monsters\nOnce per turn, you can select 1 card you control and 2 cards your opponent controls. Destroy the one you control and return the two your opponent controls to the hand. When this card is destroyed by your opponent's card (either by battle or by card effect) and sent to the Graveyard, select 1 non-Synchro \"Scrap\" monster in your Graveyard, and Special Summon it.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2200,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Scrap",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrap-twin-dragon-4283",
+      "card_sets": [
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN044",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50278554,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50278554.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50278554.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50278554.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "4.99",
+          "amazon_price": "17.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67841,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9121,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

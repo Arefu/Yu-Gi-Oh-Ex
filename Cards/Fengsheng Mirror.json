@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 37406863,
+      "name": "Fengsheng Mirror",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Look at your opponent's hand. Select and discard 1 Spirit monster to the Graveyard if Spirit monsters exist in his/her hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fengsheng-mirror-3167",
+      "card_sets": [
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37406863,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37406863.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37406863.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37406863.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92314,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5385,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

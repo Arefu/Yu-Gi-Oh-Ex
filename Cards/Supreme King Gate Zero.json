@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 96227613,
+      "name": "Supreme King Gate Zero",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you control \"Supreme King Z-ARC\", you take no damage. Once per turn, if you have \"Supreme King Gate Infinity\" in your other Pendulum Zone: You can destroy both cards in your Pendulum Zones, and if you do, add 1 \"Polymerization\" Spell Card or \"Fusion\" Spell Card from your Deck to your hand.\n\n[ Monster Effect ] \nOnce per turn: You can target 1 other face-up card you control; destroy both it and this card, and if you do, Special Summon 1 Dragon-Type Fusion or Synchro Monster from your Extra Deck, but its ATK and DEF become 0, it has its effects negated, also it cannot be used as a Material for a Synchro or Xyz Summon. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "race": "Fiend",
+      "pend_desc": "If you control \"Supreme King Z-ARC\", you take no damage. Once per turn, if you have \"Supreme King Gate Infinity\" in your other Pendulum Zone: You can destroy both cards in your Pendulum Zones, and if you do, add 1 \"Polymerization\" Spell Card or \"Fusion\" Spell Card from your Deck to your hand.",
+      "monster_desc": "Once per turn: You can target 1 other face-up card you control; destroy both it and this card, and if you do, Special Summon 1 Dragon-Type Fusion or Synchro Monster from your Extra Deck, but its ATK and DEF become 0, it has its effects negated, also it cannot be used as a Material for a Synchro or Xyz Summon. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "atk": 0,
+      "def": 0,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Supreme King",
+      "scale": 0,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/supreme-king-gate-zero-8370",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN055",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 23",
+          "set_code": "OP23-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96227613,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96227613.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96227613.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96227613.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.99",
+          "amazon_price": "3.39",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 592430,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 7,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12931,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

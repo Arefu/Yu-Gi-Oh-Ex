@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 26270847,
+      "name": "Performapal Silver Claw",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nAll \"Performapal\" monsters you control gain 300 ATK.\n\n[ Monster Effect ] \nWhen this card declares an attack: All \"Performapal\" monsters you currently control gain 300 ATK, until the end of the Battle Phase.",
+      "race": "Beast",
+      "pend_desc": "All \"Performapal\" monsters you control gain 300 ATK.",
+      "monster_desc": "When this card declares an attack: All \"Performapal\" monsters you currently control gain 300 ATK, until the end of the Battle Phase.",
+      "atk": 1800,
+      "def": 800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Performapal",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-silver-claw-2257",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN101",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26270847,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26270847.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26270847.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26270847.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77259,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2014-04-21",
+          "konami_id": 11301,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

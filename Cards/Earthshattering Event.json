@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 54407825,
+      "name": "Earthshattering Event",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If a card(s) is sent from the Deck to the Graveyard: Target 1 card in either player's Graveyard; shuffle it into the Deck, also neither player can send cards from the Deck to the Graveyard for the rest of this turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/earthshattering-event-4630",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN042",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54407825,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54407825.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54407825.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54407825.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.94",
+          "amazon_price": "1.60",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14159,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 11208,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

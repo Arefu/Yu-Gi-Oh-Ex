@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 29389368,
+      "name": "Nutrient Z",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "During damage calculation, when you are about to take 2000 or more battle damage: Gain 4000 LP first.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nutrient-z-2491",
+      "card_sets": [
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.7"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8",
+          "set_code": "OP08-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29389368,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29389368.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29389368.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29389368.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "1.00",
+          "amazon_price": "1.64",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 139754,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5403,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

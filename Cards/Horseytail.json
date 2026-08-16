@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 82994509,
+      "name": "Horseytail",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard, Special Summon 1 \"Horseytail Token\" (Plant-Type/WIND/Level 1/ATK 0/DEF 0) to your opponent's side of the field in Defense Position. When this Token is destroyed by battle with a Plant-Type monster, its controller sends 1 card from their hand to the Graveyard.",
+      "race": "Plant",
+      "atk": 400,
+      "def": 500,
+      "level": 2,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/horseytail-6966",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82994509,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82994509.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82994509.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82994509.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37129,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7669,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

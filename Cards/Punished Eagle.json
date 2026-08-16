@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 74703140,
+      "name": "Punished Eagle",
+      "typeline": [
+        "Winged Beast",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Blue-Winged Crown\" + \"Niwatori\"",
+      "race": "Winged Beast",
+      "atk": 2100,
+      "def": 1800,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/punished-eagle-6283",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-100",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E100",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.02"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN100",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74703140,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74703140.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74703140.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74703140.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 187733,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4471,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

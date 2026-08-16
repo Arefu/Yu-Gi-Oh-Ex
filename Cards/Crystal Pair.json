@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 47121070,
+      "name": "Crystal Pair",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a \"Crystal Beast\" monster you control is destroyed by battle and sent to the Graveyard: Place 1 \"Crystal Beast\" monster from your Deck face-up in your Spell & Trap Card Zone as a Continuous Spell Card, then you take no Battle Damage for the rest of this turn.",
+      "race": "Normal",
+      "archetype": "Crystal Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crystal-pair-4022",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jesse Anderson",
+          "set_code": "DP07-EN025",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.48"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN172",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.44"
+        },
+        {
+          "set_name": "Structure Deck: Legend of the Crystal Beasts",
+          "set_code": "SDCB-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47121070,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47121070.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47121070.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47121070.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "6.23",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51153,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-10-20",
+          "konami_id": 7388,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

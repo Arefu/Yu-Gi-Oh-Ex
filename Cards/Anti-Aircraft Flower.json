@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 65064143,
+      "name": "Anti-Aircraft Flower",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "By Tributing 1 Insect-Type monster on your side of the field, inflict 800 points of damage to your opponent's Life Points.",
+      "race": "Plant",
+      "atk": 0,
+      "def": 1600,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Anti",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/anti-aircraft-flower-5485",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-076",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN076",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65064143,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65064143.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65064143.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65064143.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.66",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69861,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5890,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

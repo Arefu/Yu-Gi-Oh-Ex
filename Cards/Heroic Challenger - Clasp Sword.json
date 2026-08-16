@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 28194325,
+      "name": "Heroic Challenger - Clasp Sword",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned by the effect of a \"Heroic Challenger\" monster: You can add 1 \"Heroic Challenger\" monster from your Deck to your hand. You can only use the effect of \"Heroic Challenger - Clasp Sword\" once per turn.",
+      "race": "Warrior",
+      "atk": 300,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Heroic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heroic-challenger-clasp-sword-2401",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28194325,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28194325.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28194325.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28194325.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "1.95",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23731,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10697,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

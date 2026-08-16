@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 67959180,
+      "name": "Goddess of Whim",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can toss a coin and call Heads or Tails. If you call it right, double this card's ATK during this turn. If you call it wrong, halve its ATK during this turn.",
+      "race": "Fairy",
+      "atk": 950,
+      "def": 700,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goddess-of-whim-5709",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN241",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.2"
+        },
+        {
+          "set_name": "McDonald's Promotional Cards",
+          "set_code": "MP1-003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67959180,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67959180.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67959180.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67959180.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "7.99",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57212,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-12-20",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4435,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

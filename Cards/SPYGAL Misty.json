@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 94096018,
+      "name": "SPYGAL Misty",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can declare 1 card type (Monster, Spell, or Trap); reveal the top card of your opponent's Deck, and if you do, draw 1 card if it is a card of that type. Once per turn, during either player's turn: You can target 1 \"SPYRAL Super Agent\" you control and 1 monster your opponent controls; return both monsters to the hand.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "SPYRAL",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spygal-misty-8549",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94096018,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94096018.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94096018.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94096018.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "2.49",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26723,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12877,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

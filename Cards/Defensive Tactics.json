@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 28877100,
+      "name": "Defensive Tactics",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you control a face-up \"Gladiator Beast\" monster: For the rest of this turn, monsters you control cannot be destroyed by battle, and any Battle Damage you take is reduced to 0. After this card resolves, put it on the bottom of your Deck.",
+      "race": "Normal",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/defensive-tactics-2451",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN083",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN083",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN265",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28877100,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28877100.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28877100.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28877100.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.55",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.49",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43072,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7483,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 81974607,
+      "name": "Cipher Wing",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Cipher\" monster, you can Special Summon this card (from your hand). You can Tribute this card; increase the Levels of all \"Cipher\" monsters you control by 4 until the end of this turn.",
+      "race": "Machine",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Cipher",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cipher-wing-6883",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN124",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81974607,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81974607.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81974607.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81974607.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81984,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12551,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

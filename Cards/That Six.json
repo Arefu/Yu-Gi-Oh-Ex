@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 39454112,
+      "name": "That Six",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Each time a player rolls a die (or dice), you can choose 1 die result, and apply the appropriate effect, based on the result.\n● 1, 3, or 5: The die result is treated as 6.\n● 2, 4, or 6: The die result is treated as 1.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/that-six-3345",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39454112,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39454112.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39454112.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39454112.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.95",
+          "tcgplayer_price": "0.69",
+          "ebay_price": "2.60",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69599,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11289,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

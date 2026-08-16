@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 69512157,
+      "name": "Vector Pendulum, the Dracoverlord",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nNegate all card effects in your opponent's Pendulum Zones.\n\n[ Monster Effect ] \n''This Overlord overran an entire world with his army of Dracofiends, using his Dragon Alchemy to convert all life into his terrible minions. The source of this power is unidentified, and probably extra-dimensional.''",
+      "race": "Dragon",
+      "pend_desc": "Negate all card effects in your opponent's Pendulum Zones.",
+      "monster_desc": "''This Overlord overran an entire world with his army of Dracofiends, using his Dragon Alchemy to convert all life into his terrible minions. The source of this power is unidentified, and probably extra-dimensional.''",
+      "atk": 1850,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Pendulum",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vector-pendulum-the-dracoverlord-5844",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN041",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69512157,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69512157.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69512157.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69512157.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "2.50",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 119410,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11968,
+          "has_effect": 0,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

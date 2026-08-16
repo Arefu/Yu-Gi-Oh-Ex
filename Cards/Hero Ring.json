@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 26647858,
+      "name": "Hero Ring",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 Warrior-Type monster with 1500 or less ATK; equip this card to that target. Monsters your opponent controls with 1900 or more ATK cannot attack that target.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hero-ring-2285",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN110",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENA19",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Duel Academy promotional cards",
+          "set_code": "GX1-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26647858,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26647858.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26647858.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26647858.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "14.99",
+          "amazon_price": "4.01",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28265,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-01-10",
+          "ocg_date": "2005-10-13",
+          "konami_id": 6528,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

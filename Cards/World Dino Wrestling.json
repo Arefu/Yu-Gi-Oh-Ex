@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 90173539,
+      "name": "World Dino Wrestling",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "While you control a \"Dinowrestler\" monster, each player can attack with only 1 monster during each Battle Phase. If your \"Dinowrestler\" monster attacks an opponent's monster, it gains 200 ATK during damage calculation only. If your opponent controls more monsters than you do: You can banish this card from the GY; Special Summon 1 \"Dinowrestler\" monster from your Deck. You can only use this effect of \"World Dino Wrestling\" once per turn.",
+      "race": "Field",
+      "archetype": "Dinowrestler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-dino-wrestling-9610",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN197",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90173539,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90173539.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90173539.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90173539.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96769,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13941,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

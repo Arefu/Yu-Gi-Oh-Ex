@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 50554729,
+      "name": "Amorphage Infection",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "All \"Amorphage\" monsters on the field gain 100 ATK and DEF for each \"Amorphage\" card on the field. If a monster(s) in your hand or you control is Tributed, or destroyed by battle or card effect: You can add 1 \"Amorphage\" card from your Deck to your hand. You can only use this effect of \"Amorphage Infection\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Amorphage",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amorphage-infection-4307",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN063",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50554729,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50554729.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50554729.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50554729.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44031,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12335,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

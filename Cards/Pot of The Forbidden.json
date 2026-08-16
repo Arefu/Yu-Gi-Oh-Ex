@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 91501248,
+      "name": "Pot of The Forbidden",
+      "typeline": [
+        "Rock",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can activate 1 of these effects;\n● Draw 2 cards.\n● Return all Spell and Trap Cards on the field to the hand.\n● Destroy all monsters your opponent controls.\n● Look at your opponent's hand, also shuffle 1 card from their hand into the Deck.\nYou can only use this effect of \"Pot of The Forbidden\" once per turn.",
+      "race": "Rock",
+      "atk": 2000,
+      "def": 3000,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Greed",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pot-of-the-forbidden-7629",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN134",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN040",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Revenge",
+          "set_code": "PHRE-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Revenge",
+          "set_code": "PHRE-EN027",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91501248,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91501248.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91501248.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91501248.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 178479,
+          "viewsweek": 42,
+          "upvotes": 20,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11984,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

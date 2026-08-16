@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 59687381,
+      "name": "Defense Zone",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "For each monster a player controls in their Main Monster Zone, their Spells/Traps in the same column as that monster cannot be destroyed by their opponent's card effects, and their opponent cannot target them with card effects.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/defense-zone-8884",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN066",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59687381,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59687381.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59687381.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59687381.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "1.75",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22023,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13105,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 49513164,
+      "name": "Invoked Raidjin",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Aleister the Invoker\" + 1 WIND monster\r\nOnce per turn, during either player's turn: You can target 1 face-up monster on the field; change it to face-down Defense Position.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 2400,
+      "level": 5,
+      "attribute": "WIND",
+      "archetype": "Invoked",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/invoked-raidjin-4219",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN028",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49513164,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49513164.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49513164.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49513164.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "3.59",
+          "amazon_price": "6.22",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Raideen the Eidolon Beast",
+          "views": 536764,
+          "viewsweek": 64,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12845,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

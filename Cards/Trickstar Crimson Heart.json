@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 51011872,
+      "name": "Trickstar Crimson Heart",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Trickstar\" monsters\r\nEach time a \"Trickstar\" monster(s) is Normal or Special Summoned to a zone(s) this card points to, gain 200 LP. You can discard 1 \"Trickstar\" card; both players draw 1 card, but if your LP was at least 2000 higher than your opponent's when this effect was activated, you draw 2 cards instead. You can only use this effect of \"Trickstar Crimson Heart\" once per turn.",
+      "race": "Fairy",
+      "atk": 2000,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Trickstar",
+      "linkval": 2,
+      "linkmarkers": [
+        "Right",
+        "Bottom-Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-crimson-heart-8735",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike Special Edition",
+          "set_code": "SAST-ENSE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.47"
+        },
+        {
+          "set_name": "Weekly Shonen Jump January 2018 membership promotional card",
+          "set_code": "JUMP-EN083",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.55"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51011872,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51011872.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51011872.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51011872.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.40",
+          "amazon_price": "0.80",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Trickstar Bloody Mary",
+          "views": 108381,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-07-21",
+          "konami_id": 13343,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

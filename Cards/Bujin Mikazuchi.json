@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 53678698,
+      "name": "Bujin Mikazuchi",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a Beast-Warrior-Type \"Bujin\" monster(s) you control is destroyed by battle or by card effect and sent to the Graveyard: You can Special Summon this card from your hand. Once per turn, during the End Phase, if a \"Bujin\" monster(s) was sent from your hand to your Graveyard this turn while you controlled this face-up card: You can add 1 \"Bujin\" Spell/Trap Card from your Deck to your hand. You can only control 1 \"Bujin Mikazuchi\".",
+      "race": "Beast-Warrior",
+      "atk": 1900,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujin-mikazuchi-4574",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN144",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN022",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53678698,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53678698.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53678698.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53678698.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.52",
+          "tcgplayer_price": "1.46",
+          "ebay_price": "2.49",
+          "amazon_price": "2.24",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52632,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10753,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

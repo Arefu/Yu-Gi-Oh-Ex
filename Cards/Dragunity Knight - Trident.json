@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 80159717,
+      "name": "Dragunity Knight - Trident",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Dragon-Type Tuner + 1 or more non-Tuner Winged Beast-Type monsters\nOnce per turn, you can send up to 3 cards you control to the Graveyard to look at your opponent's Extra Deck and send an equal number of cards from there to the Graveyard.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 1700,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Dragunity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragunity-knight-trident-6719",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN040",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 4: Trishula's Triumph",
+          "set_code": "HA04-EN028",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN164",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN164",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80159717,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80159717.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80159717.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80159717.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "0.99",
+          "amazon_price": "9.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58921,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-25",
+          "ocg_date": "2009-10-01",
+          "konami_id": 8576,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

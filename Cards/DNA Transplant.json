@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 56769674,
+      "name": "DNA Transplant",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate by declaring 1 monster Attribute. All face-up monsters become that Attribute.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dna-transplant-4836",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN292",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56769674,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56769674.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56769674.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56769674.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.00",
+          "amazon_price": "1.14",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116655,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5919,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

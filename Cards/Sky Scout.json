@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 30532390,
+      "name": "Sky Scout",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "With eyes like a hawk and a flying speed exceeding Mach 5, this monster is a master of the sky.",
+      "race": "Winged Beast",
+      "atk": 1800,
+      "def": 600,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-scout-2592",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Two",
+          "set_code": "AP02-EN014",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.4"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.07"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30532390,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30532390.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30532390.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30532390.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Harpie's Brother",
+          "views": 192118,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4980,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

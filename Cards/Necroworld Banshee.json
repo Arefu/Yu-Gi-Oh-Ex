@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 66570171,
+      "name": "Necroworld Banshee",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "\"Zombie World\" in the Field Zone cannot be destroyed by card effects, also neither player can target it with card effects. (Quick Effect): You can banish this card from your field or GY; activate 1 \"Zombie World\" from your hand or Deck. You can only use this effect of \"Necroworld Banshee\" once per turn.",
+      "race": "Zombie",
+      "atk": 1800,
+      "def": 200,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Field Searcher",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/necroworld-banshee-9696",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN114",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.2"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Horde",
+          "set_code": "SR07-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66570171,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66570171.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66570171.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66570171.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.55",
+          "amazon_price": "1.30",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Otherworldly Banshee",
+          "views": 814247,
+          "viewsweek": 21,
+          "upvotes": 18,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-01",
+          "ocg_date": "2018-09-22",
+          "konami_id": 14057,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

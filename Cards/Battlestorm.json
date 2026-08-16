@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 69695704,
+      "name": "Battlestorm",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 100 ATK for each Winged Beast-Type monster you control. Once per turn: You can target 1 Spell/Trap Card your opponent controls; destroy that target. You must control 3 or more Winged Beast-Type monsters to activate and to resolve this effect.",
+      "race": "Winged Beast",
+      "atk": 1700,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlestorm-5859",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN055",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN055",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle Sneak Peek Participation Card",
+          "set_code": "RGBT-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69695704,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69695704.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69695704.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69695704.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26146,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8371,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

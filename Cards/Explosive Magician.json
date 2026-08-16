@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 33413279,
+      "name": "Explosive Magician",
+      "typeline": [
+        "Spellcaster",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner Spellcaster monsters\r\nYou can remove 2 Spell Counters from your field, then target 1 Spell/Trap your opponent controls; destroy that target.",
+      "race": "Spellcaster",
+      "atk": 2500,
+      "def": 1800,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/explosive-magician-2836",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 10",
+          "set_code": "OP10-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN044",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33413279,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33413279.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33413279.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33413279.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "3.95",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96559,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8479,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

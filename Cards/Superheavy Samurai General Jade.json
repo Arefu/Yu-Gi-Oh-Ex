@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 42880485,
+      "name": "Superheavy Samurai General Jade",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"Superheavy Samurai\" monsters. This effect cannot be negated. Once per turn: You can target 1 \"Superheavy Samurai\" monster you control; increase its Level by 1 (even if this card leaves the field).\n\n[ Monster Effect ] \nYou can Tribute Summon this card by Tributing 1 \"Superheavy Samurai\" monster. When this card is Normal or Special Summoned: You can change its battle position. This card can attack while in face-up Defense Position. If it does, apply its DEF for damage calculation.",
+      "race": "Machine",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"Superheavy Samurai\" monsters. This effect cannot be negated. Once per turn: You can target 1 \"Superheavy Samurai\" monster you control; increase its Level by 1 (even if this card leaves the field).",
+      "monster_desc": "You can Tribute Summon this card by Tributing 1 \"Superheavy Samurai\" monster. When this card is Normal or Special Summoned: You can change its battle position. This card can attack while in face-up Defense Position. If it does, apply its DEF for damage calculation.",
+      "atk": 1800,
+      "def": 2800,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-general-jade-3658",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN181",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42880485,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42880485.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42880485.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42880485.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.15",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55592,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12118,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

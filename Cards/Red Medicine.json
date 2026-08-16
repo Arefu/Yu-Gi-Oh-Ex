@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 38199696,
+      "name": "Red Medicine",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Increase your Life Points by 500 points.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-medicine-3238",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN115",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.19"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.78"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck 2006",
+          "set_code": "YSD-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38199696,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38199696.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38199696.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38199696.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 295084,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4345,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

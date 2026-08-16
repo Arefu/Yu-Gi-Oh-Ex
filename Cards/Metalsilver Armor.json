@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 33114323,
+      "name": "Metalsilver Armor",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "As long as you control the monster equipped with this card, your opponent cannot use the effect of a Spell, Trap, or Effect Monster that targets 1 monster, except the equipped monster.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metalsilver-armor-2815",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.89"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33114323,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33114323.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33114323.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33114323.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "1.49",
+          "amazon_price": "4.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 138687,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5611,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

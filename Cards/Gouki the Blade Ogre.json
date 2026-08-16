@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 95515058,
+      "name": "Gouki The Blade Ogre",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ \"Gouki\" monsters\r\nGains 300 ATK for each monster it points to. Once per turn: You can Tribute 1 monster this card points to on either field; this card can make a second attack during each Battle Phase this turn.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Gouki",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gouki-the-blade-ogre-10033",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95515058,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95515058.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95515058.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95515058.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42959,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14293,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

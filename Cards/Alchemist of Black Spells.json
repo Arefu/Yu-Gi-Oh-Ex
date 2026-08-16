@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 78121572,
+      "name": "Alchemist of Black Spells",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can change this face-up Attack Position card you control to face-up Defense Position and place 1 Spell Counter on a face-up card you control that you can place a Spell Counter on.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 1800,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alchemist-of-black-spells-6567",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN082",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENA03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78121572,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78121572.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78121572.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78121572.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "3.99",
+          "amazon_price": "9.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44682,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8754,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

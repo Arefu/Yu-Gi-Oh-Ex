@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 19684740,
+      "name": "Fairy Knight Ingunar",
+      "typeline": [
+        "Plant",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 6 monsters\nOnce per turn: You can detach 2 Xyz Materials from this card; return all other cards on the field to the hand. Your opponent cannot activate cards or effects in response to this effect's activation.",
+      "race": "Plant",
+      "atk": 2200,
+      "def": 3000,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fairy-knight-ingunar-1696",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19684740,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19684740.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19684740.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19684740.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.34",
+          "tcgplayer_price": "1.04",
+          "ebay_price": "1.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69283,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10941,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

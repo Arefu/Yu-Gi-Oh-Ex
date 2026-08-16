@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 69243953,
+      "name": "Butterfly Dagger - Elma",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "The equipped monster gains 300 ATK. When this card is destroyed and sent to the Graveyard while equipped: You can return this card to the hand.",
+      "race": "Equip",
+      "archetype": "Guardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/butterfly-dagger-elma-5823",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-032",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.87"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN032",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN194",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN136",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.08"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden",
+        "ban_goat": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 69243953,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69243953.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69243953.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69243953.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.90",
+          "tcgplayer_price": "0.66",
+          "ebay_price": "3.29",
+          "amazon_price": "15.28",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 100697,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5724,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

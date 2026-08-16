@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 42444868,
+      "name": "Rebirth of Parshath",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, is activated: Reveal 1 Counter Trap in your hand, then discard 1 card and pay 1000 LP; negate the activation, and if you do, shuffle that card into the Deck. Then, you can Special Summon 1 \"Parshath\" monster from your Deck or Extra Deck.",
+      "race": "Counter",
+      "archetype": "Parshath",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rebirth-of-parshath-8813",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42444868,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42444868.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42444868.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42444868.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.63",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 140014,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-01-18",
+          "ocg_date": "2017-09-23",
+          "konami_id": 13354,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

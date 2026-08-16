@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 84664085,
+      "name": "Satellite Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner Synchro Monsters\r\nIf this card is Synchro Summoned: You can target cards your opponent controls, up to the number of Synchro Monsters in your GY; destroy them, and if you do, this card gains 1000 ATK for each card destroyed. If this Synchro Summoned card is destroyed: You can Special Summon up to 3 Level 8 or lower \"Warrior\", \"Synchron\", and/or \"Stardust\" Synchro Monsters with different names from your GY. You can only use each effect of \"Satellite Warrior\" once per turn.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 10,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/satellite-warrior-10687",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.36"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN121",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84664085,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84664085.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84664085.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84664085.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.44",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 465291,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413023,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14915,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

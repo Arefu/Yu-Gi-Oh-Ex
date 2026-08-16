@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 19619755,
+      "name": "Performapal Five-Rainbow Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon, except from the Extra Deck. This effect cannot be negated. Each player applies 1 of these effects based on the number of Set cards in their Spell & Trap Zones.\r\n● 0: All monsters they control cannot attack or activate their effects.\r\n● 4 or more: The ATK of all monsters they control become double their original ATK.\n\n[ Monster Effect ] \nIf either player Sets a Spell/Trap on your field while this card is in your GY (except during the Damage Step): You can place this card in your Pendulum Zone.",
+      "race": "Spellcaster",
+      "pend_desc": "You cannot Pendulum Summon, except from the Extra Deck. This effect cannot be negated. Each player applies 1 of these effects based on the number of Set cards in their Spell & Trap Zones.\r\n● 0: All monsters they control cannot attack or activate their effects.\r\n● 4 or more: The ATK of all monsters they control become double their original ATK.",
+      "monster_desc": "If either player Sets a Spell/Trap on your field while this card is in your GY (except during the Damage Step): You can place this card in your Pendulum Zone.",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Performapal",
+      "scale": 12,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-five-rainbow-magician-8541",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19619755,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19619755.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19619755.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19619755.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.80",
+          "tcgplayer_price": "1.89",
+          "ebay_price": "9.99",
+          "amazon_price": "1.58",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 157474,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13130,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

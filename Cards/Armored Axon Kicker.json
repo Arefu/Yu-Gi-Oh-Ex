@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 62742651,
+      "name": "Armored Axon Kicker",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a face-up Psychic-Type monster, you can Normal Summon this card without Tributing. If this card destroys an opponent's monster by battle, you take damage equal to half the destroyed monster's ATK. Then, you can Special Summon 1 monster from your Graveyard with ATK less than or equal to the damage you took.",
+      "race": "Psychic",
+      "atk": 2200,
+      "def": 1800,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armored-axon-kicker-5299",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62742651,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62742651.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62742651.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62742651.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.92",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42632,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8320,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

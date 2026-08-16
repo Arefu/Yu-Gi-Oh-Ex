@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 99185129,
+      "name": "Nekroz of Clausolas",
+      "typeline": [
+        "Warrior",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Nekroz\" Ritual Spell. Must be Ritual Summoned. You can only use each of these effects of \"Nekroz of Clausolas\" once per turn.\r\n● You can discard this card; add 1 \"Nekroz\" Spell/Trap from your Deck to your hand.\r\n● (Quick Effect): You can target 1 face-up monster on the field that was Special Summoned from the Extra Deck; until the end of this turn, that target's ATK becomes 0, also that target's effects are negated.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 2300,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Nekroz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nekroz-of-clausolas-8235",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN131",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.75"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN013",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.94"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99185129,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99185129.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99185129.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99185129.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.44",
+          "amazon_price": "0.73",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 231110,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11483,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

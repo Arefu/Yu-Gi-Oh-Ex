@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 49275969,
+      "name": "Nidhogg, Generaider Boss of Ice",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only control 1 \"Nidhogg, Generaider Boss of Ice\". When your opponent would Special Summon a monster(s) (Quick Effect): You can Tribute 1 \"Generaider\" monster or 1 Wyrm monster; negate the Summon, and if you do, destroy that monster(s). You can only use this effect of \"Nidhogg, Generaider Boss of Ice\" once per turn.",
+      "race": "Wyrm",
+      "atk": 2100,
+      "def": 2600,
+      "level": 9,
+      "attribute": "WATER",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nidhogg-generaider-boss-of-ice-10487",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN031",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.17"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49275969,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49275969.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49275969.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49275969.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.75",
+          "tcgplayer_price": "1.01",
+          "ebay_price": "5.00",
+          "amazon_price": "1.95",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Nidhegg, Generaider Boss of Ice",
+          "views": 147010,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423031,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14774,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

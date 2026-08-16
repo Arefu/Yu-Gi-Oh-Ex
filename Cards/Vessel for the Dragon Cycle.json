@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 65124425,
+      "name": "Vessel for the Dragon Cycle",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send 1 Wyrm monster from your Deck to the GY, then, if you control a face-up non-Effect Monster, you can add from your Deck to your hand 1 \"Tenyi\" monster with a different name from the monster sent to the GY. You can only activate 1 \"Vessel for the Dragon Cycle\" per turn.",
+      "race": "Normal",
+      "archetype": "Tenyi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vessel-for-the-dragon-cycle-10217",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN131",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN101",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17",
+          "set_code": "OP17-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17 (POR)",
+          "set_code": "OP17-PT009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65124425,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65124425.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65124425.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65124425.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "2.94",
+          "amazon_price": "1.32",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hollow of Dragon Chakra",
+          "views": 358597,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009059,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14504,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

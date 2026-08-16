@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 40230018,
+      "name": "Spellbook Library of the Crescent",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you have no \"Spellbook\" Spell Cards in your Graveyard: Reveal 3 \"Spellbook\" Spell Cards with different names from your Deck, your opponent randomly adds 1 of them to your hand, and shuffle the rest back into your Deck. You can only activate 1 \"Spellbook Library of the Crescent\" per turn. You cannot activate any Spell Cards the turn you activate this card, except \"Spellbook\" Spell Cards.",
+      "race": "Normal",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spellbook-library-of-the-crescent-3419",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Three",
+          "set_code": "AP03-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40230018,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40230018.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40230018.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40230018.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.13",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "2.25",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70771,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10318,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

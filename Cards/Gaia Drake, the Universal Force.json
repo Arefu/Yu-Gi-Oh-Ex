@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 58601383,
+      "name": "Gaia Drake, the Universal Force",
+      "typeline": [
+        "Beast-Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Gaia Knight, the Force of Earth\" + 1 non-Effect Synchro Monster\nThis card cannot be targeted by, or destroyed by, the effects of Effect Monsters.",
+      "race": "Beast-Warrior",
+      "atk": 3500,
+      "def": 2800,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Gaia The Fierce Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gaia-drake-the-universal-force-4984",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN039",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58601383,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58601383.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58601383.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58601383.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.66",
+          "tcgplayer_price": "13.55",
+          "ebay_price": "11.49",
+          "amazon_price": "15.14",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61841,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9116,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

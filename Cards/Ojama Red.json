@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 37132349,
+      "name": "Ojama Red",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Special Summon up to 4 \"Ojama\" monsters from your hand in Attack Position.",
+      "race": "Beast",
+      "atk": 0,
+      "def": 1000,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Ojama",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ojama-red-3142",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 8",
+          "set_code": "OP08-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN096",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENC10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37132349,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37132349.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37132349.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37132349.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "23.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 201120,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2008-12-20",
+          "konami_id": 8264,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

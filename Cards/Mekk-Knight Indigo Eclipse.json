@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 92204263,
+      "name": "Mekk-Knight Indigo Eclipse",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If 2 or more cards are in the same column, you can Special Summon this card (from your hand) in that column. You can only Special Summon \"Mekk-Knight Indigo Eclipse\" once per turn this way. Once per turn (Quick Effect): You can target 1 \"Mekk-Knight\" monster you control; move that target to another of your Main Monster Zones.",
+      "race": "Psychic",
+      "atk": 2400,
+      "def": 2400,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Mekk-Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mekk-knight-indigo-eclipse-8974",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN182",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92204263,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92204263.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92204263.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92204263.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.69",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mekk-Knight Azure Blue",
+          "views": 283595,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13389,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

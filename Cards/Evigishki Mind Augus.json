@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 11877465,
+      "name": "Evigishki Mind Augus",
+      "typeline": [
+        "Aqua",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Gishki\" Ritual Spell Card. When this card is Ritual Summoned: Target up to 5 cards in any Graveyard(s); shuffle those targets into the Deck.",
+      "race": "Aqua",
+      "atk": 2500,
+      "def": 2000,
+      "level": 6,
+      "attribute": "WATER",
+      "archetype": "Gishki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evigishki-mind-augus-1028",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN084",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN051",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11877465,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11877465.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11877465.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11877465.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.74",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "2.05",
+          "amazon_price": "2.42",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46845,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9178,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 39111158,
+      "name": "Tri-Horned Dragon",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An unworthy dragon with three sharp horns sprouting from its head.",
+      "race": "Dragon",
+      "atk": 2850,
+      "def": 2350,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tri-horned-dragon-3313",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "54.11"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "93.53"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN157",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN001",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39111158,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39111158.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39111158.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39111158.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.95",
+          "tcgplayer_price": "4.84",
+          "ebay_price": "19.99",
+          "amazon_price": "39.98",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 324160,
+          "viewsweek": 21,
+          "upvotes": 34,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4711,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 76348260,
+      "name": "Mimir of the Nordic Ascendant",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, at the start of your Standby Phase, if you control a \"Nordic\" monster and this card is in your GY: You can send 1 Spell from your hand to the GY; Special Summon this card.",
+      "race": "Fairy",
+      "atk": 600,
+      "def": 0,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Nordic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mimir-of-the-nordic-ascendant-6424",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN185",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76348260,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76348260.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76348260.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76348260.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.95",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 110944,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9309,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

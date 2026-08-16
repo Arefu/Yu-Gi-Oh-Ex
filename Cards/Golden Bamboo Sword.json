@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 74029853,
+      "name": "Golden Bamboo Sword",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control a \"Bamboo Sword\" Equip Spell: Draw 2 cards.",
+      "race": "Normal",
+      "archetype": "Bamboo Sword",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/golden-bamboo-sword-6223",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN054",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74029853,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74029853.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74029853.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74029853.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "1.99",
+          "amazon_price": "1.21",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 582110,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7635,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

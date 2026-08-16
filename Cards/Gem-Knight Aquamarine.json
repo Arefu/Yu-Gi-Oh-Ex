@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 13108445,
+      "name": "Gem-Knight Aquamarine",
+      "typeline": [
+        "Aqua",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Gem-Knight Sapphire\" + 1 \"Gem-Knight\" monster\nMust first be Fusion Summoned with the above Fusion Material Monsters. If this card attacks, it is changed to Defense Position at the end of the Battle Phase. When this card is sent from the field to the Graveyard: Target 1 card your opponent controls; return that target to the hand.",
+      "race": "Aqua",
+      "atk": 1400,
+      "def": 2600,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-knight-aquamarine-1130",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN137",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN035",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13108445,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13108445.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13108445.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13108445.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.76",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111486,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8912,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

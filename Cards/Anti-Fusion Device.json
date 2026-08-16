@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 72150572,
+      "name": "Anti-Fusion Device",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Destroy 1 face-up Fusion Monster on the field.",
+      "race": "Normal",
+      "archetype": "Anti",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/anti-fusion-device-6054",
+      "card_sets": [
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72150572,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72150572.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72150572.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72150572.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45391,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 7011,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

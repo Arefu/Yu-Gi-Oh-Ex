@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 50371210,
+      "name": "Beacon of White",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "If you do not control another \"Beacon of White\", and you have 3 or more \"Blue-Eyes\" monsters in your GY: Target 1 of them; Special Summon it, but it has its effects negated, also equip it with this card. When this card leaves the field, banish the equipped monster. Other monsters you control cannot attack, also if you have any number of \"Blue-Eyes\" monster(s) in your GY, the equipped monster can attack up to that number of times during each Battle Phase.",
+      "race": "Equip",
+      "archetype": "Blue-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/beacon-of-white-4291",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow: Special Edition",
+          "set_code": "BOSH-ENSE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.9"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN035",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENK20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50371210,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50371210.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50371210.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50371210.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.03",
+          "ebay_price": "4.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68640,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-25",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12332,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

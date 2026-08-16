@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 88086137,
+      "name": "Broken Line",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, is activated in this card's column, while this card is Set: Negate the activation, and if you do, destroy that card.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/broken-line-8582",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN156",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN079",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN151",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88086137,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88086137.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88086137.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88086137.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "4.65",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Shut Line",
+          "views": 53546,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13295,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

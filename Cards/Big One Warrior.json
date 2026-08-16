@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 89235196,
+      "name": "Big One Warrior",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase, you can send 1 Level 1 monster, except this card, from your hand to the Graveyard to Special Summon this card from your hand.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 600,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/big-one-warrior-7453",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89235196,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89235196.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89235196.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89235196.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "1.39",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27877,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-21",
+          "ocg_date": "2010-10-16",
+          "konami_id": 9237,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 55591586,
+      "name": "Thunder Dragonduo",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 1 LIGHT and 1 DARK monster from your GY. Once per turn, if a monster effect is activated in the hand: This card gains 300 ATK until the end of this turn. When this card destroys an opponent's monster by battle: You can banish 1 card from your GY; add 1 Thunder monster from your Deck to your hand. Once per turn, during your opponent's End Phase: You can target 1 of your banished cards; place it on the top or bottom of your Deck.",
+      "race": "Thunder",
+      "atk": 2800,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Thunder Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thunder-dragonduo-9619",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN170",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN022",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55591586,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55591586.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55591586.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55591586.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.19",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Thunder Dragon Aeon",
+          "views": 273148,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13909,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 80811661,
+      "name": "Hamburger Recipe",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card is used to Ritual Summon \"Hungry Burger\". You must also Tribute monsters whose total Level Stars equal 6 or more from the field or your hand.",
+      "race": "Ritual",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hamburger-recipe-6779",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "16.6"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wild Survivors",
+          "set_code": "WISU-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80811661,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80811661.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80811661.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80811661.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "3.95",
+          "amazon_price": "1.46",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171133,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4683,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

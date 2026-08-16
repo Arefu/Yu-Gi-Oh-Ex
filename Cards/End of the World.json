@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 8198712,
+      "name": "End of the World",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card is used to Ritual Summon \"Ruin, Queen of Oblivion\" or \"Demise, King of Armageddon\". You must also Tribute monsters from your hand or field whose total Levels exactly equal the Level of the Ritual Monster you Ritual Summon.",
+      "race": "Ritual",
+      "archetype": "Demise",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/end-of-the-world-694",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN233",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN166",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.71"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8198712,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8198712.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8198712.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8198712.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "2.31",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 149935,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6617,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

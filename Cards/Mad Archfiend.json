@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 94664694,
+      "name": "Mad Archfiend",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks a Defense Position monster, inflict piercing battle damage to your opponent. If this face-up Attack Position card is targeted for an attack: Change it to Defense Position.",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mad-archfiend-7874",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Deck: Yuya & Declan",
+          "set_code": "YS15-END06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Legion Starter Deck",
+          "set_code": "YS15-ENL08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.28"
+        },
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN002",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.67"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94664694,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94664694.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94664694.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94664694.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "2.95",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73517,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7871,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

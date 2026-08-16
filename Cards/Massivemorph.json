@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 67820935,
+      "name": "Massivemorph",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up monster your opponent controls; its ATK and DEF become double its current ATK and DEF, but it cannot attack directly.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/massivemorph-5697",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN230",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67820935,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67820935.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67820935.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67820935.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24920,
+          "viewsweek": 42,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12815,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

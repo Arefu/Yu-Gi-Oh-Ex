@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 44481227,
+      "name": "Performapal Camelump",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, during your Main Phase 1: You can target 1 face-up monster you control; the monsters your opponent currently controls lose 800 DEF until the end of this turn, and if they do, if the targeted monster attacks a Defense Position monster this turn, inflict piercing battle damage to your opponent. (These effects remain even if this card leaves the field.)\n\n[ Monster Effect ] \nIf this card is destroyed by battle: You can make the monster that destroyed this card lose 800 ATK.",
+      "race": "Beast",
+      "pend_desc": "Once per turn, during your Main Phase 1: You can target 1 face-up monster you control; the monsters your opponent currently controls lose 800 DEF until the end of this turn, and if they do, if the targeted monster attacks a Defense Position monster this turn, inflict piercing battle damage to your opponent. (These effects remain even if this card leaves the field.)",
+      "monster_desc": "If this card is destroyed by battle: You can make the monster that destroyed this card lose 800 ATK.",
+      "atk": 800,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-camelump-3791",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44481227,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44481227.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44481227.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44481227.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31549,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11789,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 12948099,
+      "name": "Old Entity Cthugua",
+      "typeline": [
+        "Pyro",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf this card is Synchro Summoned: You can return all Rank 4 Xyz Monsters on the field to the Extra Deck. If you Fusion Summon using this card as Fusion Material: Draw 1 card. An Xyz Monster that was Summoned using this card on the field as Xyz Material gains this effect.\r\n● If it is Xyz Summoned: Draw 1 card.",
+      "race": "Pyro",
+      "atk": 2200,
+      "def": 200,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/old-entity-cthugua-1112",
+      "card_sets": [
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN016",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12948099,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12948099.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12948099.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12948099.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.74",
+          "tcgplayer_price": "0.64",
+          "ebay_price": "5.95",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Old Entity Chthugha",
+          "views": 103872,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11436,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

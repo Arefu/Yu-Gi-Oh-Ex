@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 59251766,
+      "name": "Bujingi Hare",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can banish this card from your Graveyard, then target 1 Beast-Warrior-Type \"Bujin\" monster you control; once during this turn, it cannot be destroyed by battle or by card effects. You can only use the effect of \"Bujingi Hare\" once per turn.",
+      "race": "Beast",
+      "atk": 1700,
+      "def": 500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujingi-hare-5035",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN211",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59251766,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59251766.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59251766.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59251766.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.37",
+          "tcgplayer_price": "2.89",
+          "ebay_price": "2.25",
+          "amazon_price": "3.06",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39193,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10916,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

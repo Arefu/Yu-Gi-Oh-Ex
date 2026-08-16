@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 22159429,
+      "name": "Trickstar Magical Laurel",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Activate this card by targeting 1 \"Trickstar\" monster in your GY; Special Summon it and equip it with this card. When this card leaves the field, destroy that monster. Once per turn, if the equipped monster inflicts battle or effect damage to your opponent: You can Special Summon 1 \"Trickstar\" monster from your hand. You can only activate 1 \"Trickstar Magical Laurel\" per turn.",
+      "race": "Equip",
+      "archetype": "Trickstar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-magical-laurel-9182",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN022",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.87"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22159429,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22159429.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22159429.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22159429.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "0.99",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Trickstar Magicorolla",
+          "views": 118755,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2017-12-23",
+          "konami_id": 13513,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

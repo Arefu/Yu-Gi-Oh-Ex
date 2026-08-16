@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 6205579,
+      "name": "Fusion Parasite",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can be used as a substitute for any 1 Fusion Material whose name is specifically listed on the Fusion Monster Card, but the other Fusion Material(s) must be correct. Cannot be used as Fusion Material otherwise. If this card is Special Summoned (except during the Damage Step): You can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters you control as Fusion Materials, including this card.",
+      "race": "Insect",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Parasite",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fusion-parasite-546",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN177",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6205579,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6205579.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6205579.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6205579.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "2.00",
+          "amazon_price": "0.93",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76934,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12744,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

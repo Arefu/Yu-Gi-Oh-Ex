@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "id": 69579761,
+      "name": "Des Koala",
+      "typeline": [
+        "Beast",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Inflict 400 damage to your opponent for each card in their hand.",
+      "race": "Beast",
+      "atk": 1100,
+      "def": 1800,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Koala",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/des-koala-5852",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN132",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Demo Pack",
+          "set_code": "DEM1-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-077",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.25"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN062",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENE01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's 2009",
+          "set_code": "5DS2-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69579761,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69579761.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69579761.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69579761.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 334329,
+          "viewsweek": 42,
+          "upvotes": 5,
+          "downvotes": 8,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-03-19",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5661,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

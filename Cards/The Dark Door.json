@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 30606547,
+      "name": "The Dark Door",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Only 1 monster can attack during each Battle Phase.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-dark-door-2602",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.93"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.52"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN126",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30606547,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30606547.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30606547.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30606547.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 314958,
+          "viewsweek": 95,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5225,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

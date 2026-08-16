@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 816427,
+      "name": "Neo Flamvell Lady",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "(Quick Effect): You can send 1 FIRE monster from your hand to the GY, then target 1 card in your opponent's GY; banish that card. If a card is banished from your opponent's GY, while you control this monster (except during the Damage Step): You can send 1 FIRE monster with 200 or less DEF from your Deck to the GY, except \"Neo Flamvell Lady\". You can only use each effect of \"Neo Flamvell Lady\" once per turn.",
+      "race": "Pyro",
+      "atk": 1600,
+      "def": 200,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Flamvell",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neo-flamvell-lady-10022",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 816427,
+          "image_url": "https://images.ygoprodeck.com/images/cards/816427.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/816427.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/816427.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62852,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14264,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

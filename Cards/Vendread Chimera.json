@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 13482075,
+      "name": "Vendread Chimera",
+      "typeline": [
+        "Zombie",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Vendread\" Ritual Spell. When a card or effect is activated that would destroy a card on the field (Quick Effect): You can banish 1 Zombie monster from your GY; negate the activation, and if you do, destroy that card. If this card is Tributed, or banished, for a Ritual Summon: All monsters your opponent controls lose 500 ATK/DEF. You can only use each effect of \"Vendread Chimera\" once per turn.",
+      "race": "Zombie",
+      "atk": 2300,
+      "def": 0,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Vendread",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vendread-chimera-9001",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN158",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN082",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13482075,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13482075.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13482075.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13482075.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.79",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53729,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13362,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

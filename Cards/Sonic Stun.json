@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 93138457,
+      "name": "Sonic Stun",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's monster declares an attack: Negate the attack, then you can Special Summon 1 \"T.G.\" monster, or 1 Level 4 or lower Tuner, from your hand or Deck.",
+      "race": "Normal",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sonic-stun-10347",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93138457,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93138457.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93138457.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93138457.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36530,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248029,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14562,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

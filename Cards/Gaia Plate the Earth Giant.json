@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 14258627,
+      "name": "Gaia Plate the Earth Giant",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card by removing from play any 2 Rock-Type monsters in your Graveyard. During your Standby Phase, remove from play 1 Rock-Type monster in your Graveyard, or send this card to the Graveyard. Halve the ATK and DEF of any monster that battles with this card.",
+      "race": "Rock",
+      "atk": 2800,
+      "def": 1000,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gaia-plate-the-earth-giant-1221",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN094",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN094",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14258627,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14258627.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14258627.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14258627.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.24",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "13.50",
+          "amazon_price": "2.39",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 114802,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2007-10-20",
+          "konami_id": 7558,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

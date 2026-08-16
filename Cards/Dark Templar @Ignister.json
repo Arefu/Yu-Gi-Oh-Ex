@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 97383507,
+      "name": "Dark Templar @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3 monsters with different names\r\nIf a monster(s) is Special Summoned to a zone(s) this card points to, even during the Damage Step: You can Special Summon as many Level 4 or lower \"@Ignister\" monsters from your GY as possible to your zone(s) this card points to, but their effects are negated. When this card destroys an opponent's monster by battle: You can Special Summon 1 Cyberse monster from your GY. You can only use each effect of \"Dark Templar @Ignister\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "@Ignister",
+      "linkval": 3,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-templar-ignister-10522",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.87"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97383507,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97383507.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97383507.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97383507.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.29",
+          "amazon_price": "2.73",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 189558,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011045,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14854,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

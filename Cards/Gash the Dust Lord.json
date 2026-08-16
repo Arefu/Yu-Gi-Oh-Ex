@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 19012345,
+      "name": "Gash the Dust Lord",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card inflicts battle damage to your opponent: Increase the Level of this card by 1 (max. 12).",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gash-the-dust-lord-1640",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.53"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19012345,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19012345.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19012345.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19012345.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13099,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2010-03-20",
+          "konami_id": 9012,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 38999506,
+      "name": "Cosmo Queen",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Queen of the galaxies and mistress of the stars.",
+      "race": "Spellcaster",
+      "atk": 2900,
+      "def": 2450,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cosmo-queen-3306",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN160",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "McDonald's Promotional Cards",
+          "set_code": "MP1-002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "41.32"
+        },
+        {
+          "set_name": "Super Starter: V for Victory",
+          "set_code": "YS13-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38999506,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38999506.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38999506.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38999506.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "1.15",
+          "ebay_price": "2.99",
+          "amazon_price": "18.32",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 129022,
+          "viewsweek": 0,
+          "upvotes": 23,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-12-20",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4714,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

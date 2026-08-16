@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 7180418,
+      "name": "Armor Exe",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot attack in the same turn it is Normal Summoned, Flip Summoned, or Special Summoned. During each of your and your opponent's Standby Phases, remove 1 Spell Counter on your side of the field. If you do not, destroy this card.",
+      "race": "Rock",
+      "atk": 2400,
+      "def": 1400,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armor-exe-616",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN130",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-075",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7180418,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7180418.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7180418.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7180418.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 108262,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5659,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 74530899,
+      "name": "Metaion, the Timelord",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned from the Deck. If you control no monsters, you can Normal Summon this card without Tributing. Cannot be destroyed by battle or card effects. You take no battle damage from attacks involving this Attack Position card. At the end of the Battle Phase, if this card battled: Return as many monsters on the field as possible to the hand (other than this card), and if you do, inflict 300 damage to your opponent for each card returned. Once per turn, during your Standby Phase: Shuffle this card into the Deck.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "FIRE",
+      "archetype": "Timelord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metaion-the-timelord-6264",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN228",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN098",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN034",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74530899,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74530899.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74530899.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74530899.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.48",
+          "amazon_price": "2.63",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 182537,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-02-21",
+          "konami_id": 9698,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

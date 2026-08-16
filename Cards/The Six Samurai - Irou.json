@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 27782503,
+      "name": "The Six Samurai - Irou",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the start of the Damage Step, if this card attacked a face-down Defense Position monster: Destroy that monster. You must control a face-up \"Six Samurai\" monster with a different name to activate and to resolve this effect. If this card would be destroyed, you can destroy another face-up \"Six Samurai\" monster you control instead.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-six-samurai-irou-2364",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN232",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN093",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27782503,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27782503.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27782503.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27782503.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "2.50",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 128906,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6968,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

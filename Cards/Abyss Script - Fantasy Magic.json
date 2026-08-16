@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 87390798,
+      "name": "Abyss Script - Fantasy Magic",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Abyss Actor\" monster you control; this turn, every monster that battles it, but is not destroyed, returns to the hand at the end of the Damage Step. If this Set card in its owner's control is destroyed by an opponent's card effect, and you have a face-up \"Abyss Actor\" Pendulum Monster in your Extra Deck: You can target 1 card your opponent controls; place it on top of the Deck.",
+      "race": "Normal",
+      "archetype": "Abyss Actor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-script-fantasy-magic-7314",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.78"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87390798,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87390798.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87390798.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87390798.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.50",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27646,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12717,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

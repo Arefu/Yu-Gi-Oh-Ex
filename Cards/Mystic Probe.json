@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 49251811,
+      "name": "Mystic Probe",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card when a Continuous Spell Card is activated. Negate all Continuous Spell Cards during the turn this card is activated.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystic-probe-4202",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.68"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49251811,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49251811.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49251811.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49251811.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 119063,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4944,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

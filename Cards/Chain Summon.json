@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 90812044,
+      "name": "Chain Summon",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control 2 or more face-up Xyz Monsters: Target the one with the lowest Rank (your choice, if tied); Special Summon 1 Xyz Monster from your Extra Deck, whose Rank is lower than that Xyz Monster, but the Special Summoned monster cannot attack directly, also return it to the Extra Deck during the End Phase.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chain-summon-9051",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.82"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90812044,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90812044.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90812044.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90812044.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.99",
+          "amazon_price": "7.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21594,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-03-11",
+          "konami_id": 12888,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

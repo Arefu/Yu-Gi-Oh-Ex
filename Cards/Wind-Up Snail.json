@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 58475908,
+      "name": "Wind-Up Snail",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can target 1 Set card on the field; return that target to the hand. This effect can be used only once while this card is face-up on the field.",
+      "race": "Aqua",
+      "atk": 100,
+      "def": 2000,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Wind-Up",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wind-up-snail-4971",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58475908,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58475908.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58475908.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58475908.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33081,
+          "viewsweek": 42,
+          "upvotes": 1,
+          "downvotes": 9,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9634,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

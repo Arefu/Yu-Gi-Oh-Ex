@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 87890143,
+      "name": "Generation Force",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control an Xyz Monster: Add 1 \"Xyz\" card from your Deck to your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/generation-force-7351",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 30",
+          "set_code": "OP30-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87890143,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87890143.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87890143.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87890143.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "3.11",
+          "amazon_price": "20.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97235,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10193,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

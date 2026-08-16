@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 25132288,
+      "name": "Light End Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner LIGHT monsters\nAt attack declaration, if this card battles another monster: You can have this card lose 500 ATK and DEF (permanently), and the monster this card is battling loses 1500 ATK and DEF until the End Phase.",
+      "race": "Dragon",
+      "atk": 2600,
+      "def": 2100,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/light-end-dragon-2160",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN189",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN067",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN091",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25132288,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25132288.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25132288.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25132288.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.74",
+          "tcgplayer_price": "1.23",
+          "ebay_price": "2.49",
+          "amazon_price": "1.70",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 147989,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2008-05-21",
+          "konami_id": 7372,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

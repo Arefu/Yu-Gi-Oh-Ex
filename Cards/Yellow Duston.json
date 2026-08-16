@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 16366810,
+      "name": "Yellow Duston",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as a Fusion, Synchro, or Xyz Material for a Summon. While this card is face-up on the field, it cannot be Tributed. When this card on the field is destroyed: The controller targets 1 monster in their Graveyard; shuffle that target into the Deck. You can only control 1 face-up \"Yellow Duston\".",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 1000,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Duston",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yellow-duston-1410",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN040",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16366810,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16366810.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16366810.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16366810.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "4.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30677,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10643,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

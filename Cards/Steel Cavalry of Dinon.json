@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 2396042,
+      "name": "Steel Cavalry of Dinon",
+      "typeline": [
+        "Dinosaur",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "At the start of the Damage Step, if this card battles a Pendulum Monster: This card's ATK and DEF become half its current ATK and DEF until the end of the Damage Step.",
+      "race": "Dinosaur",
+      "atk": 1600,
+      "def": 2600,
+      "level": 4,
+      "attribute": "EARTH",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steel-cavalry-of-dinon-217",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN000",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow Sneak Peek Participation Card",
+          "set_code": "BOSH-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2396042,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2396042.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2396042.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2396042.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23101,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-09",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12241,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

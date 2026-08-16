@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 42713844,
+      "name": "Subterror Behemoth Umastryx",
+      "typeline": [
+        "Reptile",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can target 1 monster your opponent controls; banish it. You can only use this effect of \"Subterror Behemoth Umastryx\" once per turn.\r\nWhen a face-up monster you control is flipped face-down, if you control no face-up monsters: You can Special Summon this card from your hand in Defense Position. Once per turn: You can change this card to face-down Defense Position.",
+      "race": "Reptile",
+      "atk": 2000,
+      "def": 2700,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Subterror",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/subterror-behemoth-umastryx-3646",
+      "card_sets": [
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN083",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42713844,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42713844.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42713844.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42713844.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.21",
+          "tcgplayer_price": "5.93",
+          "ebay_price": "9.19",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 182444,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12685,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

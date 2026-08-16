@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 66865880,
+      "name": "Marshmallon Glasses",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "While \"Marshmallon\" is in your Monster Zone, your opponent cannot target monsters other than \"Marshmallon\" for attacks.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marshmallon-glasses-5617",
+      "card_sets": [
+        {
+          "set_name": "Premium Pack (TCG)",
+          "set_code": "PP01-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.09"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENC35",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.47"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66865880,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66865880.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66865880.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66865880.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "1.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68352,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-07-26",
+          "ocg_date": "2004-03-11",
+          "konami_id": 6007,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

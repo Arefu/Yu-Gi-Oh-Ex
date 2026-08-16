@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 6247535,
+      "name": "Borreload eXcharge Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 DARK Dragon monsters\r\nNeither player can target this Xyz Summoned card with monster effects, except its own. Once per turn: You can detach 1 material from this card, then target 1 face-up monster on the field; it loses 600 ATK/DEF, then, you can Special Summon 1 \"Borrel\" monster from your GY, but banish it during the End Phase, also you cannot Special Summon other monsters or attack directly for the rest of this turn.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Borrel",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/borreload-excharge-dragon-10186",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN117",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.8"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6247535,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6247535.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6247535.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6247535.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "1.58",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Borreload xCharge Dragon",
+          "views": 162376,
+          "viewsweek": 0,
+          "upvotes": 25,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009039,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14487,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

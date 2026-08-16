@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 25231813,
+      "name": "Silver Wing",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Level 8 or higher Dragon-Type Synchro Monster. Twice per turn, it cannot be destroyed by battle. If it would be destroyed by a card effect, you can destroy this card instead.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silver-wing-2167",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei 2",
+          "set_code": "DP09-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25231813,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25231813.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25231813.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25231813.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "1.10",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52532,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8336,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

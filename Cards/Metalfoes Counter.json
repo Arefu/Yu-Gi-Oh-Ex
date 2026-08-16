@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 33327029,
+      "name": "Metalfoes Counter",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If a card(s) you control is destroyed by battle or card effect: Special Summon 1 \"Metalfoes\" monster from your Deck. During either player's turn, except the turn this card was sent to the Graveyard: You can banish this card from your Graveyard; add 1 face-up \"Metalfoes\" Pendulum Monster from your Extra Deck to your hand.",
+      "race": "Normal",
+      "archetype": "Metalfoes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metalfoes-counter-2832",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN111",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN124",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN056",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33327029,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33327029.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33327029.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33327029.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.00",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Metalphosis Counter",
+          "views": 75108,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12471,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 32476603,
+      "name": "Silverrokket Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a Link Monster's effect is activated that targets this face-up card on the field (Quick Effect): You can destroy this card, then look at your opponent's Extra Deck and banish 1 card from it. During the End Phase, if this card is in the GY because it was destroyed on the field by battle or card effect and sent there this turn: You can Special Summon 1 \"Rokket\" monster from your Deck, except \"Silverrokket Dragon\". You can only use each effect of \"Silverrokket Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 1900,
+      "def": 100,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Rokket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silverrokket-dragon-10355",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.69"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32476603,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32476603.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32476603.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32476603.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.95",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 353375,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100336001,
+          "tcg_date": "2019-08-15",
+          "ocg_date": "2019-06-22",
+          "konami_id": 14614,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

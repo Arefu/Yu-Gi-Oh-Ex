@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 4998619,
+      "name": "Buster Gundil the Cubic Behemoth",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by sending 3 \"Cubic\" monsters you control to the Graveyard, and cannot be Special Summoned by other ways. If Summoned this way, this card gains 3000 ATK. This card can make a second and third attack during each Battle Phase. If this card in your possession is sent to your Graveyard by your opponent's card (by battle or card effect): You can target up to 3 \"Cubic\" monsters in your Graveyard; Special Summon them, then you can add 1 \"Cubic\" card from your Deck or Graveyard to your hand.",
+      "race": "Beast",
+      "atk": 0,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Cubic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/buster-gundil-the-cubic-behemoth-444",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN035",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS35",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG35",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4998619,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4998619.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4998619.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4998619.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.25",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116551,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12518,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

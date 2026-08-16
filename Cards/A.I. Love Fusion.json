@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 59332125,
+      "name": "A.I. Love Fusion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Fusion Summon 1 Cyberse Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material. If you use your \"@Ignister\" monster as Fusion Material, you can also use 1 Link Monster your opponent controls as material. You can only activate 1 \"A.I. Love Fusion\" per turn.",
+      "race": "Normal",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/a-i-love-fusion-10591",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.88"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59332125,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59332125.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59332125.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59332125.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "A.I.Love Yousion",
+          "views": 86833,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011053,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14862,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

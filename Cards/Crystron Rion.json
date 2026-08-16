@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 66938505,
+      "name": "Crystron Rion",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "During your opponent's Main Phase or Battle Phase: You can target 1 of your banished non-Tuner monsters; Special Summon it, but it has its effects negated (if any), and if you do, immediately after this effect resolves, Synchro Summon 1 Machine-Type Synchro Monster using only that monster and this card (this is a Quick Effect). These Synchro Materials are shuffled into the Deck instead of being sent to the Graveyard. You can only use this effect of \"Crystron Rion\" once per turn.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 500,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Crystron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crystron-rion-5621",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN187",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance: Special Edition",
+          "set_code": "INOV-ENSE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.99"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66938505,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66938505.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66938505.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66938505.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66344,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-12-08",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12755,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

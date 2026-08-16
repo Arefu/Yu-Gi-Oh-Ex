@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 57355219,
+      "name": "Paradox Fusion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a monster(s) would be Special Summoned, OR a Spell/Trap Card is activated: Banish 1 face-up Fusion Monster you control; negate the Special Summon or activation, and if you do, destroy that card, also during your 2nd End Phase, return the banished Fusion Monster to your field in face-up Attack Position.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/paradox-fusion-4888",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN076",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN058",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57355219,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57355219.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57355219.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57355219.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "2.50",
+          "amazon_price": "2.54",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30602,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 9007,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 33725002,
+      "name": "V Salamander",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can target 1 \"Utopia\" monster in your Graveyard; Special Summon that target. You can target 1 \"Number C39: Utopia Ray V\" you control; equip this monster you control to that target. Once per turn, while this card is equipped to a monster: You can detach 1 Xyz Material from the equipped monster; negate the equipped monster's effects (even after this card leaves the field or the monster becomes unaffected by card effects), and if you do, destroy all monsters your opponent controls, and if you do that, inflict 1000 damage to your opponent for each monster destroyed by this effect.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1300,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/v-salamander-2859",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33725002,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33725002.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33725002.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33725002.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41543,
+          "viewsweek": 0,
+          "upvotes": 103,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10605,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

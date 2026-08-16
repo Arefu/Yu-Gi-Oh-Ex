@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 67901914,
+      "name": "Magical Musket - Steady Hands",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Magical Musket\" monster you control; its ATK/DEF become double its original ATK/DEF until the end of this turn. It cannot attack directly during the turn you activate this card. You can only activate 1 \"Magical Musket - Steady Hands\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musket-steady-hands-8583",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67901914,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67901914.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67901914.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67901914.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.07",
+          "amazon_price": "5.47",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magibullet - Never-Endorphin",
+          "views": 49930,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13322,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

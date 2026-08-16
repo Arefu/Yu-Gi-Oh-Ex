@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 22423493,
+      "name": "Qliphort Genius",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Machine monsters\r\nThis Link Summoned card is unaffected by Spell/Trap effects and the activated effects of other Link Monsters. Once per turn: You can target 1 face-up card on each player's field, except this card; both those cards have their effects negated until the end of this turn. When 2 monsters are Special Summoned at the same time to the zones this card points to: You can add 1 Level 5 or higher Machine monster from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "archetype": "Qli",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/qliphort-genius-9063",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN095",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.47"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN095",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22423493,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22423493.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22423493.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22423493.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.80",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "1.49",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 523555,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13502,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

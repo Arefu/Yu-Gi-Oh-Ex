@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 75209824,
+      "name": "Guardian Statue",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can flip this card into face-down Defense Position. When this card is Flip Summoned, return 1 monster on your opponent's side of the field to its owner's hand.",
+      "race": "Rock",
+      "atk": 800,
+      "def": 1400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Guardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardian-statue-6326",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN201",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Invincible Fortress",
+          "set_code": "SD7-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.62"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75209824,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75209824.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75209824.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75209824.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 110766,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6330,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

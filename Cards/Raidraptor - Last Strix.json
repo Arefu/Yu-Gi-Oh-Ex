@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 97219708,
+      "name": "Raidraptor - Last Strix",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a \"Raidraptor\" monster you control battles, while you have any Spell/Trap Cards on your field or in your Graveyard, during damage calculation (in either player's turn): You can Special Summon this card from your hand, then gain 100 LP for each Spell/Trap Card you control and in your Graveyard. You can Tribute this card; your opponent takes no battle damage this turn, also you Special Summon 1 \"Raidraptor\" Xyz Monster from your Extra Deck in Defense Position, but its effects are negated, also return it to the Extra Deck during the End Phase. You can only use this effect of \"Raidraptor - Last Strix\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-last-strix-8089",
+      "card_sets": [
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97219708,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97219708.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97219708.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97219708.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.75",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 106310,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12210,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

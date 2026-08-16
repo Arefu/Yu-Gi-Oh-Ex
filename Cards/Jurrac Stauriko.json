@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 48411996,
+      "name": "Jurrac Stauriko",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by battle: Special Summon 2 \"Jurrac Tokens\" (Dinosaur/FIRE/Level 1/ATK 0/DEF 0) in Defense Position. They cannot be Tributed for a Tribute Summon, unless it is for a \"Jurrac\" monster.",
+      "race": "Dinosaur",
+      "atk": 500,
+      "def": 400,
+      "level": 2,
+      "attribute": "FIRE",
+      "archetype": "Jurrac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jurrac-stauriko-4131",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN069",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 4",
+          "set_code": "STP4-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN024",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48411996,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48411996.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48411996.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48411996.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "6.95",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34098,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-07-01",
+          "konami_id": 8398,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 84012625,
+      "name": "Cosmic Flare",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Stardust\" Synchro Monster you control; this turn, if that Synchro Monster you control battles an opponent's monster, shuffle that opponent's monster into the Deck at the start of the Damage Step. If a \"Stardust\" Synchro Monster you control would Tribute itself to activate its effect, you can banish this card from your Graveyard instead.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cosmic-flare-8355",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.84"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16",
+          "set_code": "OP16-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16 (POR)",
+          "set_code": "OP16-PT024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84012625,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84012625.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84012625.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84012625.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.95",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68893,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-02-11",
+          "konami_id": 13000,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

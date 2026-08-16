@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 82971335,
+      "name": "Fortune Lady Earth",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's ATK and DEF are equal to its Level x 400. During each of your Standby Phases, increase the Level of this card by 1 (max 12). When the Level of this card increases, inflict 400 damage to your opponent.",
+      "race": "Spellcaster",
+      "atk": -1,
+      "def": -1,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Fortune Lady",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortune-lady-earth-6965",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82971335,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82971335.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82971335.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82971335.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.29",
+          "tcgplayer_price": "1.26",
+          "ebay_price": "5.11",
+          "amazon_price": "3.77",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84609,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8447,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

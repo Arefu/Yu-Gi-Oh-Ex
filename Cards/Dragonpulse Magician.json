@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 15146890,
+      "name": "Dragonpulse Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, if you have a \"Magician\" card in your other Pendulum Zone: You can discard 1 Pendulum Monster, then target 1 face-up monster on the field; destroy it.\n\n[ Monster Effect ] \n''This boy magician has the gift of seeing the natural lines of energy that run through the earth, which his people call the Pulse of the Dragon. His exuberance and skill put him in high regard with his mentor, the \"Dragonpit Magician\".''",
+      "race": "Spellcaster",
+      "pend_desc": "Once per turn, if you have a \"Magician\" card in your other Pendulum Zone: You can discard 1 Pendulum Monster, then target 1 face-up monster on the field; destroy it.",
+      "monster_desc": "''This boy magician has the gift of seeing the natural lines of energy that run through the earth, which his people call the Pulse of the Dragon. His exuberance and skill put him in high regard with his mentor, the \"Dragonpit Magician\".''",
+      "atk": 1800,
+      "def": 900,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Magician",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonpulse-magician-1297",
+      "card_sets": [
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.1"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15146890,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15146890.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15146890.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15146890.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "3.00",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 130147,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-12-03",
+          "ocg_date": "2015-06-20",
+          "konami_id": 11934,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

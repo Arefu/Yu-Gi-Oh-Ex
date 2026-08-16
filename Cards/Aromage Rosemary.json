@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 58569561,
+      "name": "Aromage Rosemary",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While your LP are higher than your opponent's, if a Plant monster you control attacks, your opponent cannot activate monster effects until the end of the Damage Step. Once per turn, if you gain LP: Target 1 face-up monster on the field; change its battle position.",
+      "race": "Plant",
+      "atk": 1800,
+      "def": 700,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Aroma",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aromage-rosemary-4981",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN083",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.96"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58569561,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58569561.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58569561.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58569561.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.86",
+          "ebay_price": "1.79",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 178173,
+          "viewsweek": 0,
+          "upvotes": 20,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11820,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

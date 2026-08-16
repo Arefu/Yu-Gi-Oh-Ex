@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 49195710,
+      "name": "Number C65: King Overfiend",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 3 DARK monsters\nOnce per turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster your opponent controls; it loses 1000 ATK and DEF. While this card has \"Number 65: Djinn Buster\" as an Xyz Material, it gains this effect.\n● Effect Monsters your opponent controls cannot activate their effects.",
+      "race": "Fiend",
+      "atk": 1600,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c65-king-overfiend-4195",
+      "card_sets": [
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49195710,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49195710.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49195710.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49195710.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.61",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "1.84",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C65",
+          "views": 51961,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10779,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

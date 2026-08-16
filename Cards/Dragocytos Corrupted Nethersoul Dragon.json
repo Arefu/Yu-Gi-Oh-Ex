@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 21435914,
+      "name": "Dragocytos Corrupted Nethersoul Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 DARK Tuner + 1 non-Tuner Dragon-Type monster\nCannot be destroyed by battle. When this card destroys an opponent's monster by battle and sends it to the Graveyard: You can activate this effect; this card can make a second attack on an opponent's monster in a row. During your Standby Phase: You can target 1 face-up monster your opponent controls; its ATK becomes half its current ATK, and if it does, inflict damage to your opponent equal to that lost ATK.",
+      "race": "Dragon",
+      "atk": 4000,
+      "def": 2000,
+      "level": 10,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragocytos-corrupted-nethersoul-dragon-1843",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN014",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "3.23"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21435914,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21435914.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21435914.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21435914.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.62",
+          "tcgplayer_price": "0.82",
+          "ebay_price": "3.70",
+          "amazon_price": "2.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 135092,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-03-19",
+          "ocg_date": "2015-03-21",
+          "konami_id": 11650,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

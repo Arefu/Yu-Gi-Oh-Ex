@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 14309486,
+      "name": "Koa'ki Meiru Overload",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the GY or reveal 1 Rock monster in your hand. When your opponent would Summon a monster(s) (Quick Effect): You can Tribute this card; negate the Summon, and if you do, destroy that monster(s).",
+      "race": "Rock",
+      "atk": 1900,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-overload-1226",
+      "card_sets": [
+        {
+          "set_name": "Secret Slayers",
+          "set_code": "SESL-EN051",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN033",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14309486,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14309486.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14309486.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14309486.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94091,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11553,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

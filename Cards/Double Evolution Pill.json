@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 38179121,
+      "name": "Double Evolution Pill",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Banish 1 Dinosaur monster and 1 non-Dinosaur monster from your hand and/or GY; Special Summon 1 Level 7 or higher Dinosaur monster from your hand or Deck, ignoring its Summoning conditions. You can only activate 1 \"Double Evolution Pill\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/double-evolution-pill-8713",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN028",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.23"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.93"
+        },
+        {
+          "set_name": "Ultimate Tournament Pack 1",
+          "set_code": "UP01-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wild Survivors",
+          "set_code": "WISU-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38179121,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38179121.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38179121.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38179121.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.94",
+          "amazon_price": "2.47",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 641587,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 6839,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

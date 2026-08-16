@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 76865611,
+      "name": "Morphtronic Lantron",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "● While in Attack Position: Any effect damage you would take from an opponent's card effect is inflicted to your opponent instead.\n● While in Defense Position: When this card is destroyed by battle and sent to the Graveyard, you take no Battle Damage this turn.",
+      "race": "Machine",
+      "atk": 200,
+      "def": 200,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Morphtronic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morphtronic-lantron-6467",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76865611,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76865611.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76865611.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76865611.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31811,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9481,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

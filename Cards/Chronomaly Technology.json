@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 90951921,
+      "name": "Chronomaly Technology",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Chronomaly\" monster in your Graveyard; banish it, then look at the top 2 cards of your Deck, add 1 of them to your hand, and send the other to the Graveyard. You can only activate 1 \"Chronomaly Technology\" per turn. You cannot Special Summon any monsters during the turn you activate this card, except \"Chronomaly\" monsters.",
+      "race": "Normal",
+      "archetype": "Chronomaly",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chronomaly-technology-7596",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90951921,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90951921.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90951921.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90951921.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34969,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10184,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

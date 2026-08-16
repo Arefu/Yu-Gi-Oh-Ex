@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 54178659,
+      "name": "The Weather Painter Rainbow",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3 \"The Weather\" monsters\r\nWhen your opponent would Special Summon a monster(s) (Quick Effect): You can send this Link Summoned card to the GY; negate the Summon, and if you do, destroy that monster(s). Once per turn, during the Standby Phase of the turn after this card was banished from the field to activate a \"The Weather\" card's effect: You can Special Summon this banished card. \"The Weather\" Effect Monsters this card points to gain the following effect.\r\n● When a card or effect is activated (Quick Effect): You can banish this card; negate the activation, and if you do, destroy that card.",
+      "race": "Fairy",
+      "atk": 2400,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "The Weather",
+      "linkval": 3,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-weather-painter-rainbow-8603",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN033",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN035",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54178659,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54178659.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54178659.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54178659.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.37",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Rainbow Weathery Arciel",
+          "views": 121013,
+          "viewsweek": 0,
+          "upvotes": 23,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13334,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

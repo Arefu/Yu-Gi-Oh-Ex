@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 15520842,
+      "name": "Photon Hand",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control a \"Photon\" or \"Galaxy\" monster: Pay 1000 LP, then target 1 monster your opponent controls; take control of it. If you do not control \"Galaxy-Eyes Photon Dragon\" at activation, you can only target an Xyz Monster. You can only activate 1 \"Photon Hand\" per turn.",
+      "race": "Normal",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-hand-9559",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15520842,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15520842.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15520842.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15520842.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "3.74",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Photon Hand (Card)",
+          "views": 55336,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-09-27",
+          "konami_id": 13860,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

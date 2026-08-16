@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 25067275,
+      "name": "Swords at Dawn",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Equip Spell Card in your Graveyard and 1 appropriate monster on the field; equip the Equip Spell Card to that monster. Destroy that Equip Spell Card during the End Phase. If you activate this card, you cannot Special Summon for the rest of this turn. You can only activate 1 \"Swords at Dawn\" per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/swords-at-dawn-2155",
+      "card_sets": [
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN030",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "2.06"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25067275,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25067275.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25067275.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25067275.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19496,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10797,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 20563387,
+      "name": "Number C80: Requiem in Berserk",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 5 monsters\nYou can target 1 face-up Xyz Monster you control; equip this monster you control to that target. It gains 2000 ATK. If a monster equipped with this card would be destroyed, destroy this card instead. If this card has \"Number 80: Rhapsody in Berserk\" as an Xyz Material, it gains this effect.\n● You can detach 1 Xyz Material from this card, then target 1 card on the field; banish that target.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 2000,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c80-requiem-in-berserk-1767",
+      "card_sets": [
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20563387,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20563387.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20563387.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20563387.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "2.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C80",
+          "views": 39302,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11075,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

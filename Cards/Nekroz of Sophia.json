@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 21105106,
+      "name": "Nekroz of Sophia",
+      "typeline": [
+        "Spellcaster",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Nekroz\" Ritual Spell Card. Must be Ritual Summoned from your hand by using 3 monsters you control with different Types, and cannot be Special Summoned by other ways. During either player's Main Phase 1: You can discard this card and 1 \"Nekroz\" Spell Card; your opponent cannot Special Summon monsters from the Extra Deck during this phase. When this card is Ritual Summoned: You can banish all other cards on the field and in the Graveyards. You cannot Normal Summon/Set or Special Summon other monsters the turn you activate this effect.",
+      "race": "Spellcaster",
+      "atk": 3600,
+      "def": 3400,
+      "level": 11,
+      "attribute": "LIGHT",
+      "archetype": "Nekroz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nekroz-of-sophia-1813",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN134",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN038",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN038",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21105106,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21105106.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21105106.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21105106.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "17.99",
+          "amazon_price": "10.94",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52826,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11713,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 11234702,
+      "name": "T.G. Screw Serpent",
+      "typeline": [
+        "Sea Serpent",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can target 1 Level 4 or lower \"T.G.\" monster in your GY, except \"T.G. Screw Serpent\"; Special Summon that monster, but its effects are negated. You can banish this card from your GY, then target 1 \"T.G.\" monster you control; increase or reduce its Level by 1 until the end of this turn. You can only use each effect of \"T.G. Screw Serpent\" once per turn.",
+      "race": "Sea Serpent",
+      "atk": 1300,
+      "def": 500,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/t-g-screw-serpent-9769",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11234702,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11234702.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11234702.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11234702.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "0.99",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93334,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14086,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

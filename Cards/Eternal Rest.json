@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 95051344,
+      "name": "Eternal Rest",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Destroy all monsters equipped with Equip Cards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/eternal-rest-7912",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-060",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "1.58"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E060",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "1.42"
+        },
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-060",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN060",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "3.24"
+        },
+        {
+          "set_name": "Spell Ruler (25th Anniversary Edition)",
+          "set_code": "SRL-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95051344,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95051344.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95051344.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95051344.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 226109,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4662,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 97973387,
+      "name": "Droll Bird",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster stuns its enemies with a massive beak and ear-piercing wails.",
+      "race": "Winged Beast",
+      "atk": 600,
+      "def": 500,
+      "level": 2,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/droll-bird-8142",
+      "card_sets": [
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Championship 2011 Card Pack",
+          "set_code": "WP11-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97973387,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97973387.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97973387.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97973387.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "60.39",
+          "tcgplayer_price": "33.99",
+          "ebay_price": "3.88",
+          "amazon_price": "18.48",
+          "coolstuffinc_price": "39.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20539,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-14",
+          "ocg_date": "1999-03-01",
+          "konami_id": 4213,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

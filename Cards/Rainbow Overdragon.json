@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 37440988,
+      "name": "Rainbow Overdragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "7 \"Crystal Beast\" monsters\r\n(This card is always treated as an \"Ultimate Crystal\" card.)\r\nMust be either Fusion Summoned, or Special Summoned by Tributing 1 Level 10 \"Ultimate Crystal\" monster (in which case you do not use \"Polymerization\"). Once per turn: You can banish 1 \"Crystal Beast\" monster from your GY; this card gains ATK equal to the banished monster's, until the end of this turn. (Quick Effect): You can Tribute this Fusion Summoned card; shuffle all cards on the field into the Deck.",
+      "race": "Dragon",
+      "atk": 4000,
+      "def": 0,
+      "level": 12,
+      "attribute": "LIGHT",
+      "archetype": "Crystal Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rainbow-overdragon-8979",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.81"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN101",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENF21",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Legend of the Crystal Beasts",
+          "set_code": "SDCB-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37440988,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37440988.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37440988.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37440988.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Ultimate Crystal God Rainbow Over Dragon",
+          "views": 274231,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 9,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-22",
+          "ocg_date": "2017-11-11",
+          "konami_id": 13484,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

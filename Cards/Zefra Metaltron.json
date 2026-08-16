@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 85216896,
+      "name": "Zefra Metaltron",
+      "typeline": [
+        "Wyrm",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters Special Summoned from the Extra Deck\r\nIf a monster(s) this card points to that was Special Summoned from the Extra Deck is destroyed by battle or an opponent's card effect: Add 1 monster from your GY or 1 face-up Pendulum Monster from your Extra Deck to your hand. You can target 1 monster on each player's field that was Special Summoned from the Extra Deck, except this card; banish both until the End Phase. You can only use each effect of \"Zefra Metaltron\" once per turn.",
+      "race": "Wyrm",
+      "atk": 2500,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Zefra",
+      "linkval": 3,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zefra-metaltron-9151",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85216896,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85216896.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85216896.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85216896.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.76",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 241763,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13504,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

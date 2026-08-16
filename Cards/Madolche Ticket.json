@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 60470713,
+      "name": "Madolche Ticket",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When a \"Madolche\" card(s) is returned from your side of the field or Graveyard to your hand or Main Deck by a card effect: Add 1 \"Madolche\" monster from your Deck to your hand. If you control a face-up Fairy-Type \"Madolche\" monster, you can Special Summon the monster from your Deck in face-up Attack Position instead of adding it to your hand. You can only use the effect of \"Madolche Ticket\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Madolche",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/madolche-ticket-5130",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60470713,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60470713.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60470713.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60470713.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.82",
+          "ebay_price": "1.34",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 163159,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10283,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

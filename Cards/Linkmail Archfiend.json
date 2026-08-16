@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 68295149,
+      "name": "Linkmail Archfiend",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters, including a Ritual, Fusion, Synchro, or Xyz Monster\r\nIf this card is Special Summoned: You can target 1 Ritual, Fusion, Synchro, or Xyz Monster you control or in your GY; all monsters your opponent currently controls lose ATK equal to the targeted monster's ATK, until the end of this turn. Your opponent cannot target monsters you control, that were Special Summoned from the Extra Deck, with monster effects. If this card would be destroyed by battle or card effect, you can banish 1 Ritual, Fusion, Synchro, or Xyz Monster from your GY instead.",
+      "race": "Cyberse",
+      "atk": 2800,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top-Left",
+        "Left",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/linkmail-archfiend-10261",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN125",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68295149,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68295149.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68295149.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68295149.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Link Mail Archfiend",
+          "views": 63690,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009047,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14495,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

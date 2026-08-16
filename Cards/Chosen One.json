@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 21888494,
+      "name": "Chosen One",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 1 Monster Card and 2 non-Monster Cards from your hand. Your opponent randomly selects 1 card among them. If it is a Monster Card, it is Special Summoned and send the remaining 2 cards to the Graveyard. If not, send all the cards to the Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chosen-one-1885",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN217",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-014",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E014",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN014",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "5.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21888494,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21888494.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21888494.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21888494.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 161730,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5101,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 55051920,
+      "name": "Orcustrated Core",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn: You can banish 1 monster from your field or GY, then target 1 \"Orcust\" or \"World Legacy\" card you control, except \"Orcustrated Core\"; neither player can target it with card effects this turn (even if this card leaves the field). If other \"Orcust\" and/or \"World Legacy\" card(s) you control would be destroyed by battle or card effect, you can send this card to the GY instead.",
+      "race": "Continuous",
+      "archetype": "Orcust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orcustrated-core-9653",
+      "card_sets": [
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55051920,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55051920.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55051920.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55051920.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orphegel Core",
+          "views": 36101,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13958,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 41858121,
+      "name": "Vylon Matter",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 3 Equip Spell Cards in your Graveyard. Return them to the Deck and apply 1 of these effects: ● Draw 1 card. ● Destroy 1 card your opponent controls.",
+      "race": "Normal",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-matter-3571",
+      "card_sets": [
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41858121,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41858121.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41858121.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41858121.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36938,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9351,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 17739335,
+      "name": "Zerrziel, Ruler of the Evil Eyed",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ \"Evil Eye\" monsters\r\nIf this card was Link Summoned using a monster with 2600 or higher ATK as material, it can make a second attack during each Battle Phase. If this card is equipped with \"Evil Eye of Selene\" (Quick Effect): You can target 1 card your opponent controls; destroy it. You can only use this effect of \"Zerrziel, Ruler of the Evil Eyed\" once per turn. Once per turn, during the next Standby Phase after this effect was activated: Negate the effect of 1 Effect Monster this card currently points to.",
+      "race": "Fiend",
+      "atk": 2600,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Evil Eye",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zerrziel-ruler-of-the-evil-eyed-9991",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN236",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN031",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17739335,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17739335.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17739335.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17739335.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Zerachiel, King of the Evil Eye",
+          "views": 113510,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412031,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14421,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

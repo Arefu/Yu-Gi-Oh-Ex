@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 77379481,
+      "name": "Sasuke Samurai #3",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card inflicts Battle Damage to your opponent's Life Points, your opponent draws cards until his/her hand has 7 cards.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sasuke-samurai-3-6507",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77379481,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77379481.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77379481.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77379481.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.48",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Sasuke Samurai 3",
+          "views": 83161,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-04-24",
+          "konami_id": 5821,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

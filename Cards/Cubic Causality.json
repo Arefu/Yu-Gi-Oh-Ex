@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 38606913,
+      "name": "Cubic Causality",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Distribute a number of Cubic Counters on face-up monsters your opponent controls, up to the number of \"Cubic\" monsters you control. (Monsters with a Cubic Counter cannot attack, also negate their effects.) You can banish this card from your GY, then target 1 \"Cubic\" monster you control; this turn, each time it destroys a monster by battle that has a Cubic Counter, inflict damage to your opponent equal to the original ATK of that destroyed monster. You can only use each effect of \"Cubic Causality\" once per turn.",
+      "race": "Normal",
+      "archetype": "Cubic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cubic-causality-10077",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN051",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38606913,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38606913.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38606913.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38606913.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cubic Omen",
+          "views": 79272,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14382,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

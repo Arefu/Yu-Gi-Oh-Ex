@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 40817915,
+      "name": "Kurivolt",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 Xyz Monster that has material; detach 1 material from it, and if you do, Special Summon 1 \"Kurivolt\" from your Deck. Cannot be used as Synchro Material.",
+      "race": "Thunder",
+      "atk": 300,
+      "def": 200,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kurivolt-3469",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 15 participation cards",
+          "set_code": "DL15-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.72"
+        },
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.74"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN013",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2019)",
+          "set_code": "AC19-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40817915,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40817915.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40817915.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40817915.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.95",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74908,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9875,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

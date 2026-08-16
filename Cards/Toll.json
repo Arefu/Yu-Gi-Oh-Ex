@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 82003859,
+      "name": "Toll",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each player must pay 500 Life Points to declare an attack.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toll-6889",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-034",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "2.41"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E034",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-034",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN034",
+          "set_rarity": "Super Short Print",
+          "set_rarity_code": "(SSP)",
+          "set_price": "1.96"
+        },
+        {
+          "set_name": "Spell Ruler (25th Anniversary Edition)",
+          "set_code": "SRL-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82003859,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82003859.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82003859.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82003859.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 332180,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4896,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

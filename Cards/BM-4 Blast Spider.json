@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 40634253,
+      "name": "BM-4 Blast Spider",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 DARK Machine monster you control and 1 face-up card your opponent controls; destroy them. If a monster you control that was originally a DARK Machine destroys an opponent's monster(s) by battle or card effect and sends it to the GY: You can inflict damage to your opponent equal to half the original ATK of 1 of those monster(s) destroyed and sent to the GY. You can only use this effect of \"BM-4 Blast Spider\" once per turn.",
+      "race": "Machine",
+      "atk": 1400,
+      "def": 2200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bm-4-blast-spider-8941",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40634253,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40634253.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40634253.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40634253.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "1.47",
+          "ebay_price": "3.50",
+          "amazon_price": "1.79",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "BM-4 Bomb Spider",
+          "views": 105422,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-22",
+          "ocg_date": "2017-11-11",
+          "konami_id": 13472,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

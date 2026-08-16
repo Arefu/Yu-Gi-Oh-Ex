@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 5050644,
+      "name": "Aroma Garden",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, if you control an \"Aroma\" monster: You can gain 500 LP, also all monsters you control gain 500 ATK and DEF until the end of your opponent's next turn (even if this card leaves the field). If a face-up \"Aroma\" monster you control is destroyed by battle or card effect and sent to the Graveyard: Gain 1000 LP.",
+      "race": "Field",
+      "archetype": "Aroma",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aroma-garden-449",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5050644,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5050644.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5050644.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5050644.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "4.00",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 204784,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11846,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

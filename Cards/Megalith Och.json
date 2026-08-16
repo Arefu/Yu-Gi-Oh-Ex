@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 36849933,
+      "name": "Megalith Och",
+      "typeline": [
+        "Rock",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with a \"Megalith\" card. If this card is Ritual Summoned: You can draw 1 card, then discard 1 card. During the Main Phase (Quick Effect): You can activate this effect; Ritual Summon 1 Ritual Monster from your hand, by Tributing monsters from your hand or field, including this card on your field, whose total Levels equal or exceed the Level of the Ritual Monster. You can only use this effect of \"Megalith Och\" once per turn.",
+      "race": "Rock",
+      "atk": 1000,
+      "def": 2700,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Megalith",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/megalith-och-10626",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36849933,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36849933.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36849933.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36849933.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95171,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011037,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14846,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

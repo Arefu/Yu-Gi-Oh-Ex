@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 24037702,
+      "name": "March of the Dark Brigade",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Lightsworn\" monster in your GY that has a Level; add it to your hand, then banish a number of cards from the top of your Deck equal to the original Level of that monster in your hand. You can only activate 1 \"March of the Dark Brigade\" per turn.",
+      "race": "Normal",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/march-of-the-dark-brigade-8766",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN059",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24037702,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24037702.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24037702.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24037702.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "1.30",
+          "amazon_price": "0.68",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "March of Darkness",
+          "views": 35794,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13098,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

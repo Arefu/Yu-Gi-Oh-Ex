@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 65872270,
+      "name": "Igknight Burst",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, during your Main Phase: You can destroy up to 3 other \"Igknight\" cards you control, then return an equal number of cards your opponent controls to the hand. If this card is sent to the Graveyard: You can add 1 face-up \"Igknight\" Pendulum Monster from your Extra Deck to your hand.",
+      "race": "Continuous",
+      "archetype": "Igknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/igknight-burst-5545",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65872270,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65872270.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65872270.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65872270.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18337,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11857,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

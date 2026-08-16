@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 78229193,
+      "name": "White Aura Dolphin",
+      "typeline": [
+        "Fish",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nOnce per turn: You can target 1 face-up monster your opponent controls; its ATK becomes half its original ATK until the end of this turn. If this card you control is destroyed by an opponent's card (by battle or card effect) and sent to your GY: You can banish 1 other WATER monster from your GY; Special Summon this card, and if you do, it is treated as a Tuner.",
+      "race": "Fish",
+      "atk": 2400,
+      "def": 1000,
+      "level": 6,
+      "attribute": "WATER",
+      "archetype": "White",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-aura-dolphin-8532",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN019",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78229193,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78229193.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78229193.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78229193.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.80",
+          "amazon_price": "3.59",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117078,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13144,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

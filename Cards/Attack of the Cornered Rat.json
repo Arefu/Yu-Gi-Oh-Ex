@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 84389640,
+      "name": "Attack of the Cornered Rat",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If a Level 3 or lower Normal Monster you control battles, during the Damage Step you can pay Life Points in multiples of 100. The ATK of the opponent's monster is reduced by the amount of Life Points you paid, until the End Phase. (You cannot pay more Life Points than the ATK of the opponent's monster.)",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/attack-of-the-cornered-rat-7078",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84389640,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84389640.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84389640.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84389640.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31124,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8227,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

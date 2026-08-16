@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 30757396,
+      "name": "Blood Mefist",
+      "typeline": [
+        "Fiend",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nOnce per turn, during your opponent's Standby Phase: You can inflict 300 damage to your opponent for each card your opponent controls. Each time your opponent Sets a Spell or Trap Card(s): Inflict 300 damage to your opponent.",
+      "race": "Fiend",
+      "atk": 2800,
+      "def": 1300,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blood-mefist-2612",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2011 Prize Card",
+          "set_code": "YCSW-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6518.97"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2011 Prize Card",
+          "set_code": "YCSW-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6528.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30757396,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30757396.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30757396.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30757396.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "45.68",
+          "tcgplayer_price": "1800.00",
+          "ebay_price": "999.99",
+          "amazon_price": "1.21",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46162,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-07",
+          "ocg_date": "2010-11-20",
+          "konami_id": 9220,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

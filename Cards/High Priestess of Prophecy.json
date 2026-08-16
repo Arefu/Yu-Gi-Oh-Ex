@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 86585274,
+      "name": "High Priestess of Prophecy",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal 3 \"Spellbook\" Spells in your hand; Special Summon this card from your hand. Once per turn: You can banish 1 \"Spellbook\" Spell from your hand or GY, then target 1 card on the field; destroy that target.",
+      "race": "Spellcaster",
+      "atk": 2500,
+      "def": 2100,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Priestess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/high-priestess-of-prophecy-7254",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN184",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN184",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN100",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.65"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN100",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.77"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86585274,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86585274.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86585274.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86585274.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "0.99",
+          "amazon_price": "0.94",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116230,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10150,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

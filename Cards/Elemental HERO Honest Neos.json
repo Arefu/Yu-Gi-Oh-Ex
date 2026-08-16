@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 14124483,
+      "name": "Elemental HERO Honest Neos",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "(Quick Effect): You can discard this card, then target 1 \"HERO\" monster on the field; it gains 2500 ATK until the end of this turn. (Quick Effect): You can discard 1 \"HERO\" monster; this card gains ATK equal to the discarded monster's ATK until the end of this turn. You can only use each effect of \"Elemental HERO Honest Neos\" once per turn.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-honest-neos-8902",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN120",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN079",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.31"
+        },
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN102",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14124483,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14124483.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14124483.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14124483.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "2.99",
+          "amazon_price": "0.70",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Elemental HERO Honesty Neos",
+          "views": 711152,
+          "viewsweek": 21,
+          "upvotes": 22,
+          "downvotes": 7,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2016-12-17",
+          "konami_id": 12901,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

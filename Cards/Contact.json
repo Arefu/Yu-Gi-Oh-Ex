@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 16616620,
+      "name": "Contact",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send all \"Chrysalis\" monsters you control to the Graveyard, and Special Summon 1 monster from your hand or Deck that is written in the card text of those cards.",
+      "race": "Normal",
+      "archetype": "Chrysalis",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/contact-1429",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 2",
+          "set_code": "DP03-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16616620,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16616620.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16616620.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16616620.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "8.55",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45852,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6774,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

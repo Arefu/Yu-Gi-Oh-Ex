@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 1571945,
+      "name": "White Ninja",
+      "typeline": [
+        "Warrior",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Target 1 Defense Position monster on the field; destroy that target.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-ninja-138",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAX-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN205",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 13 participation cards",
+          "set_code": "DL13-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.95"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1571945,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1571945.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1571945.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1571945.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 202362,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6334,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

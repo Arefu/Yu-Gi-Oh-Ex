@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 25669282,
+      "name": "Burnout",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Banish 1 face-up \"Chemicritter\" monster you control; Special Summon 2 \"Chemicritter\" monsters from your Deck, with different names from each other. When your opponent declares a direct attack, except the turn this card was sent to the Graveyard: You can banish this card from your Graveyard, then target 1 of your banished Gemini monsters; Special Summon it, and if you do, it becomes an Effect Monster and gains its effects. You can only activate 1 \"Burnout\" per turn.",
+      "race": "Normal",
+      "archetype": "Chemicritter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/burnout-2208",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25669282,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25669282.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25669282.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25669282.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29130,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12663,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

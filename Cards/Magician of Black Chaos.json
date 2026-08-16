@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 30208479,
+      "name": "Magician of Black Chaos",
+      "typeline": [
+        "Spellcaster",
+        "Ritual"
+      ],
+      "type": "Ritual Monster",
+      "humanReadableCardType": "Ritual Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Black Magic Ritual\".",
+      "race": "Spellcaster",
+      "atk": 2800,
+      "def": 2600,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magician-of-black-chaos-2559",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.93"
+        },
+        {
+          "set_name": "Premium Pack (TCG)",
+          "set_code": "PP01-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "10.77"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "8.53"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENC01",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30208479,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30208479.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30208479.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30208479.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.71",
+          "tcgplayer_price": "2.95",
+          "ebay_price": "2.95",
+          "amazon_price": "8.00",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 203754,
+          "viewsweek": 21,
+          "upvotes": 28,
+          "downvotes": 5,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-07-26",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4728,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

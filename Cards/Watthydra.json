@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 29765339,
+      "name": "Watthydra",
+      "typeline": [
+        "Thunder",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Watt\" Tuner + 1 or more non-Tuner Thunder-Type monsters\nThis card can attack your opponent directly. When this card inflicts Battle Damage to your opponent by a direct attack, choose 1 card in your Deck and remove it from play. Add that card to your hand during your 2nd Standby Phase after activating this effect.",
+      "race": "Thunder",
+      "atk": 1500,
+      "def": 1500,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Watt",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/watthydra-2520",
+      "card_sets": [
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29765339,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29765339.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29765339.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29765339.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "2.87",
+          "ebay_price": "1.48",
+          "amazon_price": "5.68",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52734,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9335,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

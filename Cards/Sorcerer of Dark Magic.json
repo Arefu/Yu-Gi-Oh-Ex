@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 88619463,
+      "name": "Sorcerer of Dark Magic",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing 2 Level 6 or higher Spellcaster-Type monsters, and cannot be Special Summoned by other ways. During either player's turn, when a Trap Card is activated: You can negate the activation, and if you do, destroy it. This card must be face-up on the field to activate and to resolve this effect.",
+      "race": "Spellcaster",
+      "atk": 3200,
+      "def": 2800,
+      "level": 9,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sorcerer-of-dark-magic-7408",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yugi",
+          "set_code": "DPYG-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "11.8"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.71"
+        },
+        {
+          "set_name": "Movie Pack",
+          "set_code": "MOV-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88619463,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88619463.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88619463.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88619463.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.83",
+          "tcgplayer_price": "2.62",
+          "ebay_price": "16.99",
+          "amazon_price": "11.59",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 160814,
+          "viewsweek": 21,
+          "upvotes": 16,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-08-13",
+          "ocg_date": "2004-08-21",
+          "konami_id": 6086,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

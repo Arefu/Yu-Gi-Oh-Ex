@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 27354732,
+      "name": "Mythical Beast Jackal King",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you have no card in your other Pendulum Zone: You can destroy this card, and if you do, Special Summon 1 face-up \"Mythical Beast\" Pendulum Monster from your Extra Deck, except \"Mythical Beast Jackal King\". You can only use this effect of \"Mythical Beast Jackal King\" once per turn.\n\n[ Monster Effect ] \nEach time a Spell Card is activated, place 2 Spell Counters on this card when that Spell resolves. Once per turn, when an opponent activates a monster effect (Quick Effect): You can remove 2 Spell Counters from your field; negate the activation, and if you do, destroy that card.",
+      "race": "Spellcaster",
+      "pend_desc": "If you have no card in your other Pendulum Zone: You can destroy this card, and if you do, Special Summon 1 face-up \"Mythical Beast\" Pendulum Monster from your Extra Deck, except \"Mythical Beast Jackal King\". You can only use this effect of \"Mythical Beast Jackal King\" once per turn.",
+      "monster_desc": "Each time a Spell Card is activated, place 2 Spell Counters on this card when that Spell resolves. Once per turn, when an opponent activates a monster effect (Quick Effect): You can remove 2 Spell Counters from your field; negate the activation, and if you do, destroy that card.",
+      "atk": 2400,
+      "def": 1400,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Mythical Beast",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mythical-beast-jackal-king-8991",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27354732,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27354732.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27354732.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27354732.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.55",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "2.95",
+          "amazon_price": "1.89",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 503749,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13396,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

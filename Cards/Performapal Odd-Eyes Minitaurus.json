@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 10731333,
+      "name": "Performapal Odd-Eyes Minitaurus",
+      "typeline": [
+        "Beast-Warrior",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf your \"Performapal\" or \"Odd-Eyes\" monster attacks a Defense Position monster, inflict piercing battle damage to your opponent.\n\n[ Monster Effect ] \nDuring damage calculation, if your Pendulum Monster attacks an opponent's monster: You can make that opponent's monster lose 100 ATK for each \"Performapal\" and \"Odd-Eyes\" card you control, during damage calculation only.",
+      "race": "Beast-Warrior",
+      "pend_desc": "If your \"Performapal\" or \"Odd-Eyes\" monster attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "monster_desc": "During damage calculation, if your Pendulum Monster attacks an opponent's monster: You can make that opponent's monster lose 100 ATK for each \"Performapal\" and \"Odd-Eyes\" card you control, during damage calculation only.",
+      "atk": 1200,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Odd-Eyes",
+      "scale": 6,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-odd-eyes-minitaurus-8651",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10731333,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10731333.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10731333.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10731333.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.29",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Performapal Odd-Eyes Minotaur",
+          "views": 87423,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13127,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

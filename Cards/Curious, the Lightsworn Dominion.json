@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 98095162,
+      "name": "Curious, the Lightsworn Dominion",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3 monsters with the same Attribute but different Types\r\nIf this face-up card is destroyed by battle, or leaves the field because of an opponent's card effect while its owner controls it: You can target 1 card in your GY; add it to your hand. You can only use each of the following effects of \"Curious, the Lightsworn Dominion\" once per turn.\r\n● If this card is Link Summoned: You can send 1 card from your Deck to the GY.\r\n● If a card(s) is sent from your Deck to the GY by an effect: Send the top 3 cards of your Deck to the GY.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Lightsworn",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/curious-the-lightsworn-dominion-9060",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN091",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 98095162,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98095162.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98095162.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98095162.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.22",
+          "tcgplayer_price": "0.96",
+          "ebay_price": "1.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Kyrios, Dominion of the Lightsworn",
+          "views": 388003,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13492,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

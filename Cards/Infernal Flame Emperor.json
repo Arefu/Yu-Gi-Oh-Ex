@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 19847532,
+      "name": "Infernal Flame Emperor",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. When this card is Tribute Summoned, you can remove from play up to 5 FIRE monsters in your Graveyard. Destroy a number of Spell/Trap Cards on the field equal to the number of monsters removed from play for this effect.",
+      "race": "Pyro",
+      "atk": 2700,
+      "def": 1600,
+      "level": 9,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernal-flame-emperor-1708",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Blaze of Destruction",
+          "set_code": "SD3-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.78"
+        },
+        {
+          "set_name": "Structure Deck: Fire Kings",
+          "set_code": "SR14-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "56.85"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN011",
+          "set_rarity": "Reprint",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19847532,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19847532.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19847532.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19847532.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "9.00",
+          "amazon_price": "6.98",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55419,
+          "viewsweek": 0,
+          "upvotes": 18,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-09",
+          "ocg_date": "2005-01-20",
+          "konami_id": 6368,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

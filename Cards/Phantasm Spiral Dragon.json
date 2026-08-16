@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 56649609,
+      "name": "Phantasm Spiral Dragon",
+      "typeline": [
+        "Wyrm",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A ferocious serpent that was being hunted by Atlanteans. Battle-weary and ragged, it came upon an ancient light, and gained new strength for its battle. With its increased power, it launched an invasion of enemy territory with a renewed assault.",
+      "race": "Wyrm",
+      "atk": 2900,
+      "def": 2900,
+      "level": 8,
+      "attribute": "WATER",
+      "archetype": "Atlantean",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phantasm-spiral-dragon-8376",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN028",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56649609,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56649609.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56649609.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56649609.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.63",
+          "ebay_price": "1.58",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Spiral, the Mythic Radiance Dragon",
+          "views": 237092,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12942,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

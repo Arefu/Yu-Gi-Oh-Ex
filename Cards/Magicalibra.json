@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 43857222,
+      "name": "Magicalibra",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Tuner",
+        "Normal"
+      ],
+      "type": "Pendulum Tuner Effect Monster",
+      "humanReadableCardType": "Pendulum Tuner Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can declare a Level from 1 to 6, then target 2 face-up monsters you control; until the end of this turn, reduce the Level of 1 of those monsters by the declared amount, and if you do, increase the Level of the other by the same amount (even if this card leaves the field). You can only use this effect of \"Magicalibra\" once per turn.\n\n[ Monster Effect ] \n''A sentient scale. It maintains the balance of the universe, but often places the stars on the wrong side.''",
+      "race": "Spellcaster",
+      "pend_desc": "You can declare a Level from 1 to 6, then target 2 face-up monsters you control; until the end of this turn, reduce the Level of 1 of those monsters by the declared amount, and if you do, increase the Level of the other by the same amount (even if this card leaves the field). You can only use this effect of \"Magicalibra\" once per turn.",
+      "monster_desc": "''A sentient scale. It maintains the balance of the universe, but often places the stars on the wrong side.''",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WATER",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magicalibra-10271",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43857222,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43857222.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43857222.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43857222.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magical Scales of Libra",
+          "views": 52227,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009037,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14485,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

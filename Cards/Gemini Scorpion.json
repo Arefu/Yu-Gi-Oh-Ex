@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 91798373,
+      "name": "Gemini Scorpion",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned, you can Special Summon 1 Level 4 or lower Gemini monster from your hand.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gemini-scorpion-7654",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91798373,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91798373.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91798373.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91798373.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.00",
+          "amazon_price": "1.86",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29437,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8598,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

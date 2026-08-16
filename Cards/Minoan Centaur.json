@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 43708640,
+      "name": "Minoan Centaur",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. You can Tribute this card to Special Summon 2 Level 4 Beast-Warrior-Type Normal Monsters from your Deck.",
+      "race": "Beast-Warrior",
+      "atk": 1800,
+      "def": 1000,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/minoan-centaur-3730",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43708640,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43708640.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43708640.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43708640.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "3.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28036,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8180,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

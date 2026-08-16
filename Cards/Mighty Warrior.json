@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 53981499,
+      "name": "Mighty Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nIf this card destroys an opponent's monster by battle: Inflict damage to your opponent equal to half the destroyed monster's original ATK.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 2000,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mighty-warrior-4598",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN096",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53981499,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53981499.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53981499.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53981499.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51738,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-09-21",
+          "konami_id": 8775,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

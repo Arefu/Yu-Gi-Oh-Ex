@@ -1,0 +1,113 @@
+{
+  "data": [
+    {
+      "id": 67300516,
+      "name": "Red-Eyes Wyvern",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your End Phase, if you did not Normal Summon/Set a monster this turn: You can banish this card from your Graveyard; Special Summon 1 \"Red-Eyes\" monster from your Graveyard, except \"Red-Eyes B. Chick\".",
+      "race": "Dragon",
+      "atk": 1800,
+      "def": 1600,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-eyes-wyvern-5660",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy: Special Edition",
+          "set_code": "ANPR-ENSE2",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.79"
+        },
+        {
+          "set_name": "Astral Pack Eight",
+          "set_code": "AP08-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of the True Dragons Structure Deck",
+          "set_code": "SR02-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENB06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Tag Force 3 promotional cards",
+          "set_code": "GX06-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "53.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67300516,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67300516.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67300516.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67300516.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.72",
+          "tcgplayer_price": "1.75",
+          "ebay_price": "7.99",
+          "amazon_price": "1.40",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 545531,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-28",
+          "ocg_date": "2008-11-27",
+          "konami_id": 7982,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 37910722,
+      "name": "Ascension Sky Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf this card is Synchro Summoned: It gains 800 ATK for each card currently in your hand. When this card you control is destroyed by your opponent's card and sent to your GY, if all of the monsters that were used for the Synchro Summon of this card are in your GY: You can Special Summon all of them, but their effects are negated. You can only use this effect of \"Ascension Sky Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": -1,
+      "def": 3000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ascension-sky-dragon-3208",
+      "card_sets": [
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB34",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.78"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2014 Prize Card",
+          "set_code": "YCSW-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2534.65"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2014 Prize Card",
+          "set_code": "YCSW-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2920.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37910722,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37910722.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37910722.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37910722.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "2.96",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92313,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-09-07",
+          "ocg_date": "2013-08-21",
+          "konami_id": 10848,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

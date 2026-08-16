@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 4042268,
+      "name": "Island Turtle",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A huge turtle that is often mistaken for an island.",
+      "race": "Aqua",
+      "atk": 1100,
+      "def": 2000,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/island-turtle-362",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-095",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E095",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "5.82"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN095",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4042268,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4042268.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4042268.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4042268.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 128268,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5146,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

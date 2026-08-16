@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 41729254,
+      "name": "Hajun, the Winged Mayakashi",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 \"Mayakashi\" monster from your Deck, except \"Hajun, the Winged Mayakashi\". You can only use this effect of \"Hajun, the Winged Mayakashi\" once per turn. You cannot Special Summon monsters from the Extra Deck, except \"Mayakashi\" monsters.",
+      "race": "Zombie",
+      "atk": 600,
+      "def": 400,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Mayakashi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hajun-the-winged-mayakashi-9723",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN029",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN017",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41729254,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41729254.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41729254.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41729254.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.50",
+          "amazon_price": "4.17",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Winged Mayakashi - Hajun",
+          "views": 224339,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14036,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

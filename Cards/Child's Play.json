@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 12021072,
+      "name": "Child's Play",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time your opponent Summons a monster(s), gain 300 LP. Your monsters cannot be destroyed by battle while you have 10,000 or more LP.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/child-s-play-9849",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12021072,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12021072.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12021072.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12021072.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "0.99",
+          "amazon_price": "0.40",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Refuge in Audacity",
+          "views": 140833,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14146,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

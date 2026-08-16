@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 2273734,
+      "name": "Satellarknight Altair",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Summoned: You can target 1 \"tellarknight\" monster in your Graveyard, except \"Satellarknight Altair\"; Special Summon that monster in Defense Position, also monsters you control cannot attack for the rest of this turn, except \"tellarknight\" monsters. You can only use this effect of \"Satellarknight Altair\" once per turn.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 1300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Tellarknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/satellarknight-altair-201",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN075",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Astral Pack Seven",
+          "set_code": "AP07-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN060",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2273734,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2273734.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2273734.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2273734.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "5.95",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 145961,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11228,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

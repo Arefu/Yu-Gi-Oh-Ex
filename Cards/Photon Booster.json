@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 71233859,
+      "name": "Photon Booster",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Level 4 or lower LIGHT monster on the field, except a Token; the ATK of all monsters currently on the field with its name become 2000, until the end of this turn.",
+      "race": "Normal",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-booster-5983",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 18 participation cards",
+          "set_code": "DL18-EN013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.27"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN052",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71233859,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71233859.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71233859.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71233859.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27363,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9770,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 6351548,
+      "name": "Dawn Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent from the field to the Graveyard: You can send 1 LIGHT monster from your Deck to the Graveyard. If this card is sent from your Deck to the Graveyard: Target 1 LIGHT monster in your Graveyard; place that target on the top of your Deck. You can only use 1 \"Dawn Knight\" effect per turn, and only once that turn.",
+      "race": "Warrior",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dawn-knight-558",
+      "card_sets": [
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN016",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "2.96"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN033",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6351548,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6351548.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6351548.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6351548.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.95",
+          "amazon_price": "0.83",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93148,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11062,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

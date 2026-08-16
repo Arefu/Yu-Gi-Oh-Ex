@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 69764158,
+      "name": "Peropero Cerperus",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you take damage by battle or an opponent's card effect while this card is in the GY: You can banish this card from the GY, then target 1 card on the field; destroy it.",
+      "race": "Beast",
+      "atk": 0,
+      "def": 1800,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/peropero-cerperus-5866",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN008",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "2.27"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69764158,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69764158.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69764158.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69764158.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "2.25",
+          "amazon_price": "0.92",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61875,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-03-19",
+          "ocg_date": "2015-03-21",
+          "konami_id": 11645,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

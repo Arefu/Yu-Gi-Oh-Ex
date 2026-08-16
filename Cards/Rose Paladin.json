@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 96385345,
+      "name": "Rose Paladin",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card destroys an opponent's monster by battle and sends it to the Graveyard: You can Tribute this card; Special Summon 1 Plant-Type monster from your hand or Deck in Defense Position. You can send this card from your hand to the Graveyard; add 1 Level 7 or higher Plant-Type monster from your Deck to your hand. You can only use this effect of \"Rose Paladin\" once per turn.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Rose Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rose-paladin-8022",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN106",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN004",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "2.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96385345,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96385345.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96385345.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96385345.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "2.95",
+          "amazon_price": "3.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77130,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-03-19",
+          "ocg_date": "2015-03-21",
+          "konami_id": 11643,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

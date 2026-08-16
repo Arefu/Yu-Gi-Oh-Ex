@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 42598242,
+      "name": "Special Hurricane",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Discard 1 card from your hand. Destroy all Special Summoned monsters on the field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/special-hurricane-3633",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.76"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN197",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42598242,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42598242.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42598242.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42598242.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.76",
+          "ebay_price": "1.00",
+          "amazon_price": "5.54",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101370,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6046,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

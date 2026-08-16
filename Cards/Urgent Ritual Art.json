@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 38844957,
+      "name": "Urgent Ritual Art",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you control no Ritual Monsters: Banish 1 Ritual Spell from your hand or GY; this card's effect becomes that card's effect that Ritual Summons a monster when the card is activated.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/urgent-ritual-art-3293",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN078",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN060",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38844957,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38844957.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38844957.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38844957.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35674,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12021,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

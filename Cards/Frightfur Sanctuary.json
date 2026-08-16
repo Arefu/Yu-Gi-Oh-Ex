@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 74839123,
+      "name": "Frightfur Sanctuary",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Activate this card by discarding 1 card and sending 2 \"Frightfur\" monsters from your Extra Deck to the Graveyard. All Fusion Monsters you control are also treated as \"Frightfur\" monsters. If this card is sent to the Graveyard: You can target 1 \"Frightfur\" Fusion Monster in your Graveyard; return it to the Extra Deck.",
+      "race": "Continuous",
+      "archetype": "Frightfur",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frightfur-sanctuary-6293",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74839123,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74839123.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74839123.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74839123.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.00",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32591,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12454,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

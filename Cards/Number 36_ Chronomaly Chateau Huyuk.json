@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 50260683,
+      "name": "Number 36: Chronomaly Chateau Huyuk",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 \"Chronomaly\" monsters\nOnce per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster your opponent controls; change its ATK to 0 until the end of this turn. You can Tribute 1 \"Chronomaly\" monster, then target 1 monster your opponent controls, whose current ATK is different from its original ATK; destroy that target.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 2500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Chronomaly",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-36-chronomaly-chateau-huyuk-4280",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50260683,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50260683.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50260683.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50260683.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.96",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.85",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 36",
+          "views": 51920,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10973,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

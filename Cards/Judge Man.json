@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 30113682,
+      "name": "Judge Man",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This club-wielding warrior battles to the end and will never surrender.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 1500,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/judge-man-2552",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Ultimate Kaiba Set",
+          "set_code": "KC01-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Kaiba",
+          "set_code": "DPKB-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.98"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30113682,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30113682.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30113682.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30113682.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.99",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115092,
+          "viewsweek": 21,
+          "upvotes": 20,
+          "downvotes": 12,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-12-16",
+          "konami_id": 4039,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

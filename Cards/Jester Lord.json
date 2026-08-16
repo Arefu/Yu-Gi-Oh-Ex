@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 72992744,
+      "name": "Jester Lord",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this card is the only monster on the field, it gains 1000 ATK for each card in the Spell & Trap Card Zones.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Jester",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jester-lord-6127",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN001",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72992744,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72992744.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72992744.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72992744.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "1.15",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35003,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8299,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 23020408,
+      "name": "Soul Servant",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Place 1 card on top of the Deck from your hand, Deck, or GY, that is \"Dark Magician\" or specifically lists \"Dark Magician\" or \"Dark Magician Girl\" in its text, except \"Soul Servant\". During your Main Phase: You can banish this card from your GY; draw cards equal to the number of \"Palladium\" monsters, \"Dark Magician\", and/or \"Dark Magician Girl\", with different names, on the field and in the GYs. You can only use this effect of \"Soul Servant\" once per turn.",
+      "race": "Quick-Play",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soul-servant-10705",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "35.69"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN095",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "11.47"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN271",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN271",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Winner's Pack 2026-2027",
+          "set_code": "WI26-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23020408,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23020408.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23020408.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23020408.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "14.46",
+          "tcgplayer_price": "6.34",
+          "ebay_price": "15.99",
+          "amazon_price": "11.50",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Faithful Servant",
+          "views": 989987,
+          "viewsweek": 42,
+          "upvotes": 22,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413003,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14907,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

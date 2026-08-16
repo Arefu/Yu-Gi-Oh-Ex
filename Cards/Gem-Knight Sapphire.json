@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 27126980,
+      "name": "Gem-Knight Sapphire",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "His Sapphire power commands the waters to protect him from attack. His comrades trust in his silent protection.",
+      "race": "Aqua",
+      "atk": 0,
+      "def": 2100,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-knight-sapphire-2320",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN017",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27126980,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27126980.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27126980.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27126980.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "1.20",
+          "ebay_price": "2.97",
+          "amazon_price": "2.42",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67740,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8894,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

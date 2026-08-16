@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 60992364,
+      "name": "ZW - Leo Arms",
+      "typeline": [
+        "Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 5 monsters\nThis card cannot attack your opponent directly. Once per turn: You can detach 1 Xyz Material from this card; add 1 \"ZW -\" monster from your Deck to your hand. You can target 1 \"Utopia\" monster you control; equip this monster on the field to that target. It gains 3000 ATK. During your Battle Phase, if a monster attacked this turn while equipped with this card: You can send this Equip Card to the Graveyard; the monster that was equipped with this card can make a second attack, on an opponent's monster, during this Battle Phase.",
+      "race": "Beast",
+      "atk": 3000,
+      "def": 1200,
+      "level": 5,
+      "attribute": "LIGHT",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zw-leo-arms-5175",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN047",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN047",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.93"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60992364,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60992364.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60992364.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60992364.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.95",
+          "amazon_price": "6.85",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 99134,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10406,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

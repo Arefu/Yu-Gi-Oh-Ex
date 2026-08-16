@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 30864377,
+      "name": "Gladiator Beast Tamer Editor",
+      "typeline": [
+        "Beast-Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 Level 5 or higher \"Gladiator Beast\" monsters\r\nMust first be Special Summoned (from your Extra Deck) by shuffling the above cards you control into the Deck. (You do not use \"Polymerization\".) Cannot be used as Fusion Material. Once per turn: You can Special Summon 1 \"Gladiator Beast\" Fusion Monster from your Extra Deck, except \"Gladiator Beast Tamer Editor\", ignoring its Summoning conditions. At the end of the Battle Phase, if your \"Gladiator Beast\" monster battled: You can shuffle that monster into the Deck or Extra Deck; Special Summon 1 \"Gladiator Beast\" monster from your Deck.",
+      "race": "Beast-Warrior",
+      "atk": 2400,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-tamer-editor-8660",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN023",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.14"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30864377,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30864377.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30864377.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30864377.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.94",
+          "amazon_price": "2.84",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 166001,
+          "viewsweek": 21,
+          "upvotes": 14,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13152,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 38383368,
+      "name": "Extraceratops",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a monster in the Extra Monster Zone is destroyed by battle with a monster in the Main Monster Zone and sent to the GY, while this card is in the GY: You can Special Summon this card, in Defense Position, to the field of that destroyed monster's owner. You can only use this effect of \"Extraceratops\" once per turn. If this card Summoned this way is destroyed and sent to the GY: Draw 1 card.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/extraceratops-9859",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38383368,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38383368.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38383368.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38383368.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Extracaretops",
+          "views": 11823,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14108,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 45222299,
+      "name": "Evigishki Gustkraken",
+      "typeline": [
+        "Aqua",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Gishki\" Ritual Spell Card. When this card is Ritual Summoned: Look at up to 2 random cards in your opponent's hand, then shuffle 1 of them into the Deck.",
+      "race": "Aqua",
+      "atk": 2400,
+      "def": 1000,
+      "level": 6,
+      "attribute": "WATER",
+      "archetype": "Gishki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evigishki-gustkraken-3856",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN082",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN046",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45222299,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45222299.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45222299.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45222299.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.86",
+          "tcgplayer_price": "1.31",
+          "ebay_price": "6.50",
+          "amazon_price": "1.12",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68517,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9597,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

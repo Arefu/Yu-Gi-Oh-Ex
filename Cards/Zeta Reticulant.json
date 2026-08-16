@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 64382839,
+      "name": "Zeta Reticulant",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 1 \"Eva Token\" to Special Summon this card from your hand. While this card is in your Graveyard, each time a monster(s) your opponent controls is removed from play, Special Summon 1 \"Eva Token\" (Fiend-Type/DARK/Level 2/ATK 500/DEF 500).",
+      "race": "Fairy",
+      "atk": 2400,
+      "def": 2100,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zeta-reticulant-5435",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN094",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64382839,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64382839.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64382839.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64382839.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "8.67",
+          "tcgplayer_price": "13.65",
+          "ebay_price": "2.99",
+          "amazon_price": "5.49",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18199,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2006-05-20",
+          "konami_id": 6794,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

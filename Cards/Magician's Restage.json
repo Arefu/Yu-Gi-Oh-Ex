@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 40252269,
+      "name": "Magician's Restage",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "You can target 1 Level 3 or lower Spellcaster-Type monster in your Graveyard; Special Summon it. This effect can only be used once while this card is face-up on the field. If this card is sent to the Graveyard: You can add 1 \"Magician\" Continuous Spell Card from your Deck to your hand, except \"Magician's Restage\".",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magician-s-restage-8390",
+      "card_sets": [
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40252269,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40252269.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40252269.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40252269.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magician's Encore",
+          "views": 305623,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12965,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

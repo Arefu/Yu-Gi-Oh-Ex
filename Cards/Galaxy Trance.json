@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 63956833,
+      "name": "Galaxy Trance",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Pay 2000 LP, then target 1 \"Photon\" monster in your GY; Special Summon both it and 1 \"Galaxy\" monster from your Deck, with the same Level, both in Defense Position, and if you do, each monster's ATK become 2000, also their effects are negated. You can only activate 1 \"Galaxy Trance\" per turn. You cannot Normal or Special Summon monsters during the turn you activate this card, except \"Photon\" and \"Galaxy\" monsters.",
+      "race": "Normal",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/galaxy-trance-9622",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN198",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63956833,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63956833.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63956833.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63956833.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "2.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Galaxy Transer",
+          "views": 257091,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13943,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

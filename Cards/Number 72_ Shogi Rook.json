@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 75253697,
+      "name": "Number 72: Shogi Rook",
+      "typeline": [
+        "Beast-Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 6 monsters\nOnce per turn: You can detach 2 Xyz Materials from this card, then target 1 face-up monster your opponent controls and 1 Set Spell/Trap Card your opponent controls; destroy them, but any battle damage your opponent takes is halved for the rest of this turn.",
+      "race": "Beast-Warrior",
+      "atk": 2500,
+      "def": 1200,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-72-shogi-rook-6330",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monstrous Revenge",
+          "set_code": "BLMR-EN080",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ZEXAL Volume 5 promotional card",
+          "set_code": "YZ05-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "17.7"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75253697,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75253697.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75253697.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75253697.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "2.99",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 72",
+          "views": 28933,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-07-01",
+          "ocg_date": "2013-08-02",
+          "konami_id": 10843,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

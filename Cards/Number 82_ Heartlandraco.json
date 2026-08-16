@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 31437713,
+      "name": "Number 82: Heartlandraco",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\r\nWhile you control a face-up Spell, your opponent cannot target this card for attacks. Once per turn: You can detach 1 material from this card; this turn, this card can attack your opponent directly, but other monsters cannot attack.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-82-heartlandraco-2663",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN025",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "4.23"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2018)",
+          "set_code": "AC18-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.91"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31437713,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31437713.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31437713.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31437713.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.39",
+          "tcgplayer_price": "4.33",
+          "ebay_price": "4.90",
+          "amazon_price": "7.50",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 82",
+          "views": 171073,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11020,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

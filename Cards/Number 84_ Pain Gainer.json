@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 26556950,
+      "name": "Number 84: Pain Gainer",
+      "typeline": [
+        "Insect",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 11 monsters\nYou can also Xyz Summon this card by using a Rank 8, 9, or 10 DARK Xyz Monster you control with 2 or more Xyz Materials as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) This card gains DEF equal to the combined Ranks of all Xyz Monsters you control x 200. While this card has Xyz Material, each time your opponent activates a Spell/Trap Card, inflict 600 damage to your opponent immediately after it resolves. Once per turn: You can detach 1 Xyz Material from this card; destroy all face-up monsters your opponent controls with DEF less than or equal to this card's.",
+      "race": "Insect",
+      "atk": 0,
+      "def": 0,
+      "level": 11,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-84-pain-gainer-2277",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN151",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN010",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "8.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26556950,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26556950.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26556950.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26556950.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "5.49",
+          "amazon_price": "6.00",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 84",
+          "views": 402338,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-03-17",
+          "ocg_date": "2016-03-19",
+          "konami_id": 12262,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

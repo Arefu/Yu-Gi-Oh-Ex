@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 34358408,
+      "name": "Djinn Presider of Rituals",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you Ritual Summon a monster, you can banish this card from your Graveyard as 1 of the monsters required for the Ritual Summon. If the monster Ritual Summoned using this card destroys a monster by battle, the controller of the Ritual Monster draws 1 card.",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": 1400,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Djinn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/djinn-presider-of-rituals-2919",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34358408,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34358408.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34358408.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34358408.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71452,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8473,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

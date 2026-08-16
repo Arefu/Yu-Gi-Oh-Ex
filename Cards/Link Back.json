@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 3567660,
+      "name": "Link Back",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Link Monster you control in the Extra Monster Zone; move that monster you control to your Main Monster Zone it points to, then, you can send cards from the top of your Deck to the GY equal to its Link Rating. You can only activate 1 \"Link Back\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/link-back-10187",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3567660,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3567660.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3567660.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3567660.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 11494,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009051,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14499,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

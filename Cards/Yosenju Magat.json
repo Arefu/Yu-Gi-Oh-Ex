@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 49249907,
+      "name": "Yosenju Magat",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned: You can Special Summon 1 \"Yosenju\" monster from your Deck, except \"Yosenju Magat\". During the End Phase, if this card was Special Summoned this turn: Return it to the hand.",
+      "race": "Beast",
+      "atk": 2000,
+      "def": 100,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Yosenju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yosenju-magat-4201",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49249907,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49249907.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49249907.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49249907.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24847,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11546,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

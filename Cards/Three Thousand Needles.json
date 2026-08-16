@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 7852878,
+      "name": "Three Thousand Needles",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the end of the Damage Step, if this Defense Position card was attacked by a monster whose ATK is lower than this card's DEF: Destroy the attacking monster.",
+      "race": "Beast",
+      "atk": 3000,
+      "def": 1800,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/three-thousand-needles-671",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN039",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7852878,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7852878.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7852878.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7852878.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.95",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24171,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10169,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

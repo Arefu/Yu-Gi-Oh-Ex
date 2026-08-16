@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 98301564,
+      "name": "Guiding Ariadne",
+      "typeline": [
+        "Fairy",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nApply these effects.\r\n● You do not pay LP to activate Counter Trap Cards.\r\n● You do not discard to activate Counter Trap Cards.\n\n[ Monster Effect ] \nIf this card is destroyed by battle or card effect: You can reveal 3 Counter Traps from your Deck, your opponent chooses 1 for you to add to your hand, and you shuffle the rest back into your Deck.",
+      "race": "Fairy",
+      "pend_desc": "Apply these effects.\r\n● You do not pay LP to activate Counter Trap Cards.\r\n● You do not discard to activate Counter Trap Cards.",
+      "monster_desc": "If this card is destroyed by battle or card effect: You can reveal 3 Counter Traps from your Deck, your opponent chooses 1 for you to add to your hand, and you shuffle the rest back into your Deck.",
+      "atk": 1700,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Counter Fairy",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guiding-ariadne-8171",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN027",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98301564,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98301564.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98301564.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98301564.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 187294,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12144,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

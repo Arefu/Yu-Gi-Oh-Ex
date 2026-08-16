@@ -1,0 +1,108 @@
+{
+  "data": [
+    {
+      "id": 58332301,
+      "name": "Evil HERO Dark Gaia",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Fiend-Type monster + 1 Rock-Type monster\nMust be Special Summoned with \"Dark Fusion\" and cannot be Special Summoned by other ways. The original ATK of this card is equal to the combined original ATK of the Fusion Material Monsters used to Fusion Summon it. When this card declares an attack: You can change all Defense Position monsters your opponent controls to face-up Attack Position. (Flip Effects are not activated at this time.)",
+      "race": "Fiend",
+      "atk": -1,
+      "def": 0,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Evil HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evil-hero-dark-gaia-4962",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 3",
+          "set_code": "DP06-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN069",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.51"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.93"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENA24",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58332301,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58332301.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58332301.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58332301.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 184675,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7261,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

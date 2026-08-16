@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 525110,
+      "name": "Cherry Inmato",
+      "typeline": [
+        "Plant",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard, you can Special Summon up to 2 \"Inmato\" monsters from your Deck. They cannot be used as Synchro Material Monsters this turn.",
+      "race": "Plant",
+      "atk": 700,
+      "def": 400,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cherry-inmato-51",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 525110,
+          "image_url": "https://images.ygoprodeck.com/images/cards/525110.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/525110.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/525110.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58331,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8798,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

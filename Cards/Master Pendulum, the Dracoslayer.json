@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 75195825,
+      "name": "Master Pendulum, the Dracoslayer",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce, while this card is in your Pendulum Zone: You can target 1 card in a Pendulum Zone; destroy it.\n\n[ Monster Effect ] \n''\"Luster Pendulum, the Dracoslayer\" continues his journey to uncover the secrets of Dragon Alchemy, believing it is the key to dispelling his curse and restoring his memory. His power continues to grow... perhaps the same power used by the Dracofiends?''",
+      "race": "Dragon",
+      "pend_desc": "Once, while this card is in your Pendulum Zone: You can target 1 card in a Pendulum Zone; destroy it.",
+      "monster_desc": "''\"Luster Pendulum, the Dracoslayer\" continues his journey to uncover the secrets of Dragon Alchemy, believing it is the key to dispelling his curse and restoring his memory. His power continues to grow... perhaps the same power used by the Dracofiends?''",
+      "atk": 1950,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Dracoslayer",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/master-pendulum-the-dracoslayer-6324",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN059",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75195825,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75195825.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75195825.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75195825.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.96",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 191563,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12131,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

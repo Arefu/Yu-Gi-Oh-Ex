@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 72426662,
+      "name": "Demise, King of Armageddon",
+      "typeline": [
+        "Fiend",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"End of the World\". You can pay 2000 LP; destroy all other cards on the field.",
+      "race": "Fiend",
+      "atk": 2400,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Demise",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/demise-king-of-armageddon-6079",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN232",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN155",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "413.26"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN035",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN035",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72426662,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72426662.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72426662.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72426662.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.00",
+          "tcgplayer_price": "0.96",
+          "ebay_price": "2.99",
+          "amazon_price": "2.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 226186,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6613,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

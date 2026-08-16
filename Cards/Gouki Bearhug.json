@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 12097275,
+      "name": "Gouki Bearhug",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned by the effect of a \"Gouki\" card, or Normal Summoned: You can target 1 face-up monster your opponent controls; its ATK becomes half its original ATK until the end of this turn. If this card is sent from the field to the GY: You can add 1 \"Gouki\" card from your Deck to your hand, except \"Gouki Bearhug\". You can only use each effect of \"Gouki Bearhug\" once per turn.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 0,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Gouki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gouki-bearhug-9118",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12097275,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12097275.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12097275.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12097275.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gouki Hugbear",
+          "views": 63483,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13565,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 8041569,
+      "name": "Laval Lakeside Lady",
+      "typeline": [
+        "Pyro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your Graveyard and you have 3 or more \"Laval\" monsters with different names in your Graveyard: You can banish this card and 1 other \"Laval\" monster from your Graveyard to target 1 Set card your opponent controls; destroy that target.",
+      "race": "Pyro",
+      "atk": 200,
+      "def": 200,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/laval-lakeside-lady-682",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN070",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN034",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8041569,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8041569.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8041569.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8041569.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.71",
+          "tcgplayer_price": "0.79",
+          "ebay_price": "2.22",
+          "amazon_price": "3.15",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38057,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9585,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

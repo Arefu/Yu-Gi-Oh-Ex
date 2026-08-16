@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 36970611,
+      "name": "PSY-Frame Overload",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn: You can banish 1 \"PSY-Frame\" monster from your hand or face-up from your side of the field, then target 1 card on the field; banish it face-down. During either player's turn, except the turn this card was sent to the Graveyard: You can banish this card from your Graveyard; add 1 \"PSY-Frame\" card from your Deck to your hand, except \"PSY-Frame Overload\".",
+      "race": "Continuous",
+      "archetype": "PSY-Frame",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psy-frame-overload-3127",
+      "card_sets": [
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36970611,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36970611.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36970611.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36970611.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.72",
+          "ebay_price": "2.29",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56624,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-01",
+          "ocg_date": "2015-08-22",
+          "konami_id": 12076,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

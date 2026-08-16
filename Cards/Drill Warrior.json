@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 3429238,
+      "name": "Drill Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Drill Synchron\" + 1 or more non-Tuner monsters\nOnce per turn, during your Main Phase 1: You can halve this card's ATK, and if you do, it can attack your opponent directly this turn. Once per turn: You can discard 1 card, and if you do, banish this card. During your next Standby Phase: Special Summon this card banished by this effect, then add 1 monster from your Graveyard to your hand.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 2000,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/drill-warrior-306",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN041",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN018",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution: Special Edition",
+          "set_code": "DREV-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.24"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN038",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN232",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN232",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3429238,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3429238.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3429238.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3429238.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.00",
+          "tcgplayer_price": "0.73",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 253456,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8652,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

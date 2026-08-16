@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 21834870,
+      "name": "Fists of the Unrivaled Tenyi",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, is activated while you control a face-up non-Effect Monster: Negate the activation. If this Set card you control is destroyed by your opponent's card effect: You can Special Summon 1 non-Effect Monster from your Extra Deck.",
+      "race": "Counter",
+      "archetype": "Tenyi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fists-of-the-unrivaled-tenyi-10218",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN135",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN174",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN072",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21834870,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21834870.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21834870.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21834870.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tenyi Wushuang Strike",
+          "views": 236208,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009072,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14518,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

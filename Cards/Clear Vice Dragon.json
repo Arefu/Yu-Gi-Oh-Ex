@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 97811903,
+      "name": "Clear Vice Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You are unaffected by the effects of \"Clear World\". If this card attacks an opponent's monster, the ATK of this card becomes twice the ATK of the attack target, during damage calculation only. If this card would be destroyed by an opponent's card effect, you can discard 1 card instead.",
+      "race": "Dragon",
+      "atk": -1,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/clear-vice-dragon-8132",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN209",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN071",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN098",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97811903,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97811903.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97811903.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97811903.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "2.99",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57247,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-05-21",
+          "konami_id": 8538,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

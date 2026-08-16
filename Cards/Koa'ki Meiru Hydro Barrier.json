@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 31692182,
+      "name": "Koa'ki Meiru Hydro Barrier",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can return 1 \"Iron Core of Koa'ki Meiru\" from your hand to the top of the Deck. If you do, the effect(s) of all face-up Effect Monsters are negated until the Standby Phase of your next turn, except \"Koa'ki Meiru\" monsters.",
+      "race": "Aqua",
+      "atk": 1000,
+      "def": 1900,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-hydro-barrier-2689",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31692182,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31692182.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31692182.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31692182.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29442,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8313,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

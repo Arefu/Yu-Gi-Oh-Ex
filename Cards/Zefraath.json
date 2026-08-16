@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 29432356,
+      "name": "Zefraath",
+      "typeline": [
+        "Rock",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nDuring your Main Phase: You can add 1 \"Zefra\" Pendulum Monster from your Deck to your Extra Deck face-up, and if you do, change this card's Pendulum Scale to be the same as that Pendulum Monster's, until the end of this turn. You can only use this effect of \"Zefraath\" once per turn.\n\n[ Monster Effect ] \nCannot be Normal Summoned/Set. Must be Special Summoned (from your face-up Extra Deck) by Tributing all monsters you control, including at least 3 \"Zefra\" monsters, and cannot be Special Summoned by other ways. After you Special Summon this card, you can conduct 1 Pendulum Summon of a \"Zefra\" monster(s) during your Main Phase this turn, in addition to your Pendulum Summon. (You can only gain this effect once per turn.) Once per turn: You can Tribute 1 monster; Special Summon 1 \"Zefra\" monster from your Deck.",
+      "race": "Rock",
+      "pend_desc": "During your Main Phase: You can add 1 \"Zefra\" Pendulum Monster from your Deck to your Extra Deck face-up, and if you do, change this card's Pendulum Scale to be the same as that Pendulum Monster's, until the end of this turn. You can only use this effect of \"Zefraath\" once per turn.",
+      "monster_desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your face-up Extra Deck) by Tributing all monsters you control, including at least 3 \"Zefra\" monsters, and cannot be Special Summoned by other ways. After you Special Summon this card, you can conduct 1 Pendulum Summon of a \"Zefra\" monster(s) during your Main Phase this turn, in addition to your Pendulum Summon. (You can only gain this effect once per turn.) Once per turn: You can Tribute 1 monster; Special Summon 1 \"Zefra\" monster from your Deck.",
+      "atk": 3450,
+      "def": 2950,
+      "level": 11,
+      "attribute": "EARTH",
+      "archetype": "Zefra",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zefraath-8862",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29432356,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29432356.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29432356.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29432356.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.38",
+          "amazon_price": "1.36",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111761,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12944,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

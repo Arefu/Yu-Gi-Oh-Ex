@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 88820235,
+      "name": "Elemental HERO Shining Phoenix Enforcer",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Phoenix Enforcer\" + \"Elemental HERO Sparkman\"\nMust be Fusion Summoned and cannot be Special Summoned by other ways. This card gains 300 ATK for each \"Elemental HERO\" card in your Graveyard. This card cannot be destroyed by battle.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2100,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-shining-phoenix-enforcer-7425",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN213",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "52.35"
+        },
+        {
+          "set_name": "Duelist Pack: Aster Phoenix",
+          "set_code": "DP05-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN033",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN139",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "8.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88820235,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88820235.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88820235.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88820235.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.35",
+          "tcgplayer_price": "4.99",
+          "ebay_price": "734.99",
+          "amazon_price": "21.44",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131316,
+          "viewsweek": 0,
+          "upvotes": 63,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6656,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

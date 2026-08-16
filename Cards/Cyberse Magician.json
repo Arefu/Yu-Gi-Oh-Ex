@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 24731391,
+      "name": "Cyberse Magician",
+      "typeline": [
+        "Cyberse",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Cynet Ritual\". Any damage you take is halved. (You cannot halve the same damage twice this way.) While you control a Link Monster, monsters your opponent controls cannot target monsters you control for attacks, except this one, also your opponent cannot target monsters you control with card effects, except this one. If this card battles a Link Monster, it gains 1000 ATK during that damage calculation only. If this card in your possession is destroyed by an opponent's card effect: You can add 1 Cyberse monster from your Deck to your hand.",
+      "race": "Cyberse",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-magician-9377",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN095",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24731391,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24731391.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24731391.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24731391.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.89",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101751,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13742,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

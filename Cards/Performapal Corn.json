@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 33103459,
+      "name": "Performapal Corn",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during your Main Phase, if this card was Normal or Special Summoned this turn: You can target 1 other \"Performapal\" monster you control with 1000 or less ATK; change both it and this card, that you control, from face-up Attack Position to Defense Position, and if you do, add 1 \"Odd-Eyes\" monster from your Deck to your hand. During your opponent's turn: You can banish 1 \"Performapal\" monster, except \"Performapal Corn\", and this card from your Graveyard; gain 500 LP (this is a Quick Effect).",
+      "race": "Beast-Warrior",
+      "atk": 600,
+      "def": 1000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-corn-2813",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33103459,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33103459.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33103459.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33103459.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28467,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12531,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

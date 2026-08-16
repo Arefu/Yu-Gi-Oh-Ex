@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 549481,
+      "name": "Prevent Rat",
+      "typeline": [
+        "Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This creature is shielded with a tough hide of hair and is excellent at defending itself.",
+      "race": "Beast",
+      "atk": 500,
+      "def": 2000,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prevent-rat-52",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.9"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN084",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 549481,
+          "image_url": "https://images.ygoprodeck.com/images/cards/549481.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/549481.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/549481.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171215,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4261,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 58831685,
+      "name": "Giant Red Seasnake",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A sea-dwelling snake that attacks passing enemies with its sharp teeth.",
+      "race": "Aqua",
+      "atk": 1800,
+      "def": 800,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/giant-red-seasnake-5003",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN097",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack 4",
+          "set_code": "TP4-007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.93"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "286.6"
+        },
+        {
+          "set_name": "World Championship 2011 Card Pack",
+          "set_code": "WP11-EN008",
+          "set_rarity": "European & Oceanian debut",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58831685,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58831685.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58831685.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58831685.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.00",
+          "amazon_price": "0.81",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 121645,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4453,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

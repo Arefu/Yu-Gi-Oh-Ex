@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 35037880,
+      "name": "Saber Reflection",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "When you take battle or effect damage while you control an \"X-Saber\" monster: Gain LP equal to the damage you took, and if you do, inflict the same amount of damage to your opponent, then you can add 1 \"Saber\" Spell/Trap Card or \"Gottoms\" card from your Deck to your hand. You can only activate 1 \"Saber Reflection\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "X-Saber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/saber-reflection-2972",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35037880,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35037880.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35037880.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35037880.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26489,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2014-08-09",
+          "konami_id": 11452,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

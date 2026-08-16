@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 50400231,
+      "name": "Satellite Cannon",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be destroyed by battle with a Level 7 or lower monster. During each of your End Phases: This card gains 1000 ATK. If this card attacks, this increased ATK returns to 0, after damage calculation.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 5,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/satellite-cannon-4292",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game One",
+          "set_code": "CP01-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "136.52"
+        },
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN241",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "658.96"
+        },
+        {
+          "set_name": "Turbo Pack: Booster One",
+          "set_code": "TU01-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50400231,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50400231.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50400231.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50400231.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "2.88",
+          "amazon_price": "2.23",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55020,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-11",
+          "ocg_date": "2003-03-20",
+          "konami_id": 4780,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

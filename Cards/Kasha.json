@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 52512994,
+      "name": "Kasha",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by controlling 2 or more Zombie monsters. If this card is Special Summoned: Shuffle as many other monsters on the field as possible into the Deck, and if you do, this card's ATK becomes 1000 x the number of face-up monsters shuffled into the Deck this way, whose original Type was Zombie.",
+      "race": "Zombie",
+      "atk": -1,
+      "def": 1000,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kasha-4471",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN098",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 16 participation cards",
+          "set_code": "DL16-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.91"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN206",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Horde",
+          "set_code": "SR07-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52512994,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52512994.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52512994.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52512994.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.00",
+          "amazon_price": "1.05",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70588,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2008-09-21",
+          "konami_id": 7937,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

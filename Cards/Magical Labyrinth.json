@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 64389297,
+      "name": "Magical Labyrinth",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to \"Labyrinth Wall\". You can Tribute the equipped monster; Special Summon \"Wall Shadow\" from your Deck.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-labyrinth-5437",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN231",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.4"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.71"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64389297,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64389297.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64389297.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64389297.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "3.00",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 209443,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4658,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 6764709,
+      "name": "F.A. Dark Dragster",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by having a Level 7 or higher \"F.A.\" monster on the field, but no \"F.A. Dark Dragster\" in your Monster Zone. Gains ATK equal to its Level x 300. Each time a \"F.A.\" Spell/Trap Card or effect is activated: You can increase this card's Level by 1. Once per turn: You can target 1 card on the field; reduce this card's Level by 3, and if you do, destroy that target.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "F.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/f-a-dark-dragster-9427",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6764709,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6764709.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6764709.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6764709.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54081,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13709,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

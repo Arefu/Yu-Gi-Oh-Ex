@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 90247311,
+      "name": "Yellow Dragon Ninja",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned, except with the effect of a \"Ninja\" monster or \"Ninjitsu Art\" card. Once per turn (Quick Effect): You can send 1 \"Ninja\" monster and 1 \"Ninjitsu Art\" card from your hand and/or face-up field to the GY, then target up to 2 Spells/Traps on the field; destroy them.",
+      "race": "Dinosaur",
+      "atk": 3000,
+      "def": 1500,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yellow-dragon-ninja-9756",
+      "card_sets": [
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN013",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90247311,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90247311.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90247311.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90247311.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "3.90",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53881,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14004,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

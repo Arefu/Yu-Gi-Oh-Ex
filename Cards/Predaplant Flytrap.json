@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 96622984,
+      "name": "Predaplant Flytrap",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 face-up monster your opponent controls; place 1 Predator Counter on it, and if it is Level 2 or higher, it becomes Level 1 as long as it has a Predator Counter. At the start of the Damage Step, when this card battles a monster with an equal or lower Level: You can destroy that monster, then increase this card's Level by the original Level of the destroyed monster.",
+      "race": "Plant",
+      "atk": 400,
+      "def": 800,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-flytrap-8040",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN131",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96622984,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96622984.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96622984.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96622984.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.50",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96778,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12596,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

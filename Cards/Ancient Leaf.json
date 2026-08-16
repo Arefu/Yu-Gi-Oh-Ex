@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 11830996,
+      "name": "Ancient Leaf",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you have 9000 or more Life Points, you can pay 2000 Life Points to draw 2 cards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-leaf-1024",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN061",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11830996,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11830996.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11830996.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11830996.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.27",
+          "tcgplayer_price": "0.63",
+          "ebay_price": "2.78",
+          "amazon_price": "1.74",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74135,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8351,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

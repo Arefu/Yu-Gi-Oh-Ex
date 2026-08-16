@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 96051150,
+      "name": "Hazy Flame Mantikor",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Your opponent cannot target this card with card effects. Once per turn, during either player's turn: You can send 1 FIRE monster, except this card, from your hand or face-up from your side of the field to the Graveyard; this card cannot be destroyed by card effects this turn.",
+      "race": "Winged Beast",
+      "atk": 2200,
+      "def": 300,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Hazy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hazy-flame-mantikor-7998",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96051150,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96051150.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96051150.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96051150.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28443,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10470,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 22200403,
+      "name": "Hypnosister",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains effects based on the total number of cards in both players' Pendulum Zones.\n● 1 or more: This card gains 800 ATK and DEF.\n● 2 or more: At the start of the Damage Step, if this card battles a Pendulum Summoned monster: Destroy that monster.\n● 3 or more: Monsters your opponent controls must attack this card, if able.\n● 4: If this card destroys a monster by battle or by its own effect: Draw 1 card.",
+      "race": "Psychic",
+      "atk": 1300,
+      "def": 1400,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hypnosister-1914",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22200403,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22200403.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22200403.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22200403.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23339,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11252,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

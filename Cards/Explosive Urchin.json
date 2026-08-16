@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 52140003,
+      "name": "Explosive Urchin",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate only when your opponent activates a Trap Card. During your Standby Phase: Inflict 1000 damage to your opponent. Your opponent must control a face-up Trap Card for you to activate and resolve this effect. During your 3rd End Phase after activation, send this card to the Graveyard.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/explosive-urchin-4443",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52140003,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52140003.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52140003.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52140003.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31508,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9682,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 79698395,
+      "name": "Realm of Danger!",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Your opponent cannot target \"Danger!\" monsters you control with card effects during the turn they are Special Summoned. Once per turn: You can target 1 \"Danger!\" monster you control; while you control that face-up monster and this face-up card, that monster can attack directly, also your opponent's monsters cannot target it for attacks, but it does not prevent your opponent from attacking you directly.",
+      "race": "Field",
+      "archetype": "Danger!",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/realm-of-danger-9632",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN140",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79698395,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79698395.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79698395.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79698395.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39350,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2019-09-14",
+          "konami_id": 13982,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

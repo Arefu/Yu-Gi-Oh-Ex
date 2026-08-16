@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 645087,
+      "name": "Cyberse Gadget",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can target 1 Level 2 or lower monster in your GY; Special Summon it in Defense Position, but its effects are negated. If this card is sent from the field to the GY: You can Special Summon 1 \"Gadget Token\" (Cyberse/LIGHT/Level 2/ATK 0/DEF 0). You can only use this effect of \"Cyberse Gadget\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1400,
+      "def": 300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Gadget",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-gadget-8466",
+      "card_sets": [
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN135",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Structure Deck: Powercode Link",
+          "set_code": "SDPL-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 645087,
+          "image_url": "https://images.ygoprodeck.com/images/cards/645087.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/645087.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/645087.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cyverse Gadget",
+          "views": 340603,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-09",
+          "ocg_date": "2017-03-21",
+          "konami_id": 13039,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 65025250,
+      "name": "Yosenju Shinchu L",
+      "typeline": [
+        "Rock",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf a \"Yosenju\" monster(s) you control would be destroyed by battle or card effect, you can destroy this card instead.\n\n[ Monster Effect ] \nIf this card is Normal Summoned: Change it to Defense Position. Your opponent cannot target \"Yosenju\" monsters you control with card effects, except this one.",
+      "race": "Rock",
+      "pend_desc": "If a \"Yosenju\" monster(s) you control would be destroyed by battle or card effect, you can destroy this card instead.",
+      "monster_desc": "If this card is Normal Summoned: Change it to Defense Position. Your opponent cannot target \"Yosenju\" monsters you control with card effects, except this one.",
+      "atk": 0,
+      "def": 2100,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Yosenju",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yosenju-shinchu-l-5481",
+      "card_sets": [
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN007",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65025250,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65025250.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65025250.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65025250.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.35",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48530,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11476,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

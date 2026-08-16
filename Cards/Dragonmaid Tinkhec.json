@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 42055234,
+      "name": "Dragonmaid Tinkhec",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be destroyed by card effects while you control a Fusion Monster. You can only use each of the following effects of \"Dragonmaid Tinkhec\" once per turn.\r\n● (Quick Effect): You can discard this card, then target 1 \"Dragonmaid\" monster you control; it gains 2000 ATK until the end of this turn.\r\n● At the end of the Battle Phase: You can return this card to the hand, and if you do, Special Summon 1 Level 3 \"Dragonmaid\" monster from your hand.",
+      "race": "Dragon",
+      "atk": 2700,
+      "def": 1700,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Dragonmaid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonmaid-tinkhec-10535",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN059",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.67"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42055234,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42055234.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42055234.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42055234.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.78",
+          "ebay_price": "3.75",
+          "amazon_price": "2.17",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragonmaid Flamme",
+          "views": 423353,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423019,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14762,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 52738610,
+      "name": "Dance Princess of the Nekroz",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Your opponent cannot activate cards or effects in response to the activation of a \"Nekroz\" Ritual Spell Card. \"Nekroz\" Ritual Monsters you control cannot be targeted by an opponent's card effects. If this card is Tributed by a card effect: You can target 1 of your banished \"Necroz\" monsters, except \"Dance Princess of the Nekroz\"; add it to your hand. You can only use this effect of \"Dance Princess of the Nekroz\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 800,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Nekroz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dance-princess-of-the-nekroz-4491",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN213",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN028",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52738610,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52738610.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52738610.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52738610.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "150.00",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52665,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11548,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

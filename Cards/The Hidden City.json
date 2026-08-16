@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 5697558,
+      "name": "The Hidden City",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can add 1 \"Subterror\" monster from your Deck to your hand. Once per turn: You can change 1 face-down Defense Position \"Subterror\" monster you control to face-up Attack or Defense Position. Once per turn, when an opponent's monster declares an attack: You can change 1 face-down Defense Position \"Subterror\" monster you control to face-up Attack or Defense Position, then you can negate the attack. You can only activate 1 \"The Hidden City\" per turn.",
+      "race": "Field",
+      "archetype": "Subterror",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-hidden-city-504",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN115",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN085",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5697558,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5697558.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5697558.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5697558.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 238994,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12687,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

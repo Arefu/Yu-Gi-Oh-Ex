@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 62312469,
+      "name": "Dark Doriado",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nAll EARTH, WATER, FIRE, and WIND monsters you control gain 200 ATK/DEF for every different Attribute among the monsters you control.\n\n[ Monster Effect ] \nIf this card is Normal or Special Summoned: You can choose 4 monsters from your Deck (1 EARTH, 1 WATER, 1 FIRE, and 1 WIND), then place them on top of the Deck in any order.",
+      "race": "Spellcaster",
+      "pend_desc": "All EARTH, WATER, FIRE, and WIND monsters you control gain 200 ATK/DEF for every different Attribute among the monsters you control.",
+      "monster_desc": "If this card is Normal or Special Summoned: You can choose 4 monsters from your Deck (1 EARTH, 1 WATER, 1 FIRE, and 1 WIND), then place them on top of the Deck in any order.",
+      "atk": 1800,
+      "def": 1400,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Dark counterpart",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-doriado-5268",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN203",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.74"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62312469,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62312469.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62312469.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62312469.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 90403,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12143,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

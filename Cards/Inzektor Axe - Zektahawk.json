@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 87973893,
+      "name": "Inzektor Axe - Zektahawk",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to an \"Inzektor\" monster. It gains 1000 ATK. When the equipped monster declares an attack, your opponent cannot activate Spell/Trap Cards.",
+      "race": "Equip",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-axe-zektahawk-7355",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Order of Chaos Sneak Peek Participation Card",
+          "set_code": "ORCS-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "7.54"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87973893,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87973893.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87973893.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87973893.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21393,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2012-10-13",
+          "konami_id": 10021,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

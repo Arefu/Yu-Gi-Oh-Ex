@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 40164421,
+      "name": "Minerva, Lightsworn Maiden",
+      "typeline": [
+        "Spellcaster",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can add 1 LIGHT Dragon-Type monster from your Deck to your hand, whose Level is less than or equal to the total number of \"Lightsworn\" monsters with different names in your Graveyard. If this card is sent from the hand or Deck to the Graveyard: Send the top card of your Deck to the Graveyard. During each of your End Phases: Send the top 2 cards of your Deck to the Graveyard.",
+      "race": "Spellcaster",
+      "atk": 800,
+      "def": 200,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/minerva-lightsworn-maiden-3410",
+      "card_sets": [
+        {
+          "set_name": "Realm of Light Structure Deck",
+          "set_code": "SDLI-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.29"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40164421,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40164421.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40164421.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40164421.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.72",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "2.29",
+          "amazon_price": "12.12",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 166735,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-06-27",
+          "ocg_date": "2013-11-23",
+          "konami_id": 10885,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

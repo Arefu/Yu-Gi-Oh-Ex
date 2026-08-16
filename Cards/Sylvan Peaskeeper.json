@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 63257623,
+      "name": "Sylvan Peaskeeper",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can excavate the top card of your Deck, and if it is a Plant-Type monster, send it to the Graveyard. Otherwise, place it on the bottom of your Deck. If this card is excavated from the Deck and sent to the Graveyard by a card effect: You can target 1 Level 4 or lower Plant-Type monster in your Graveyard; Special Summon that target. You can only use this effect of \"Sylvan Peaskeeper\" once per turn.",
+      "race": "Plant",
+      "atk": 400,
+      "def": 100,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Sylvan",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sylvan-peaskeeper-5344",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN196",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant: Deluxe Edition",
+          "set_code": "LVAL-ENDE1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63257623,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63257623.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63257623.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63257623.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "2.09",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48856,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10901,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

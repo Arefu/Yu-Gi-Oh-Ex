@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 20541432,
+      "name": "Key Mace #2",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This fiend brings out the worst in everyone.",
+      "race": "Fiend",
+      "atk": 1050,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/key-mace-2-1765",
+      "card_sets": [
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Championship 2011 Card Pack",
+          "set_code": "WP11-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20541432,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20541432.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20541432.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20541432.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "73.47",
+          "tcgplayer_price": "28.50",
+          "ebay_price": "45.99",
+          "amazon_price": "0.00",
+          "coolstuffinc_price": "19.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Key Mace 2",
+          "views": 20001,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-14",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4606,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 67724379,
+      "name": "Koumori Dragon",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A vicious, fire-breathing dragon whose wicked flame corrupts the souls of its victims.",
+      "race": "Dragon",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koumori-dragon-5690",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.04"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67724379,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67724379.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67724379.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67724379.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.74",
+          "ebay_price": "1.97",
+          "amazon_price": "3.78",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 147454,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-12-16",
+          "konami_id": 4037,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 79544790,
+      "name": "Regretful Rebirth",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a monster you control is destroyed by battle and sent to the Graveyard: Target that monster; Special Summon it in face-up Defense Position, but it is destroyed during your End Phase.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/regretful-rebirth-6670",
+      "card_sets": [
+        {
+          "set_name": "Onslaught of the Fire Kings Structure Deck",
+          "set_code": "SDOK-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Tag Force 4 promotional cards",
+          "set_code": "TF04-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.33"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Tag Force 4 promotional cards",
+          "set_code": "TF04-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79544790,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79544790.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79544790.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79544790.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.59",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17284,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-09-17",
+          "konami_id": 8519,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 72144675,
+      "name": "Troposphere",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you Tribute Summon this card, the Tribute must be Winged Beast-Type. This card is unaffected by the effects of Trap Cards.",
+      "race": "Winged Beast",
+      "atk": 2400,
+      "def": 2000,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/troposphere-6053",
+      "card_sets": [
+        {
+          "set_name": "Shonen Jump Scholastic Edition Vol. 9, Issue 1 promotional card",
+          "set_code": "JMPS-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "34.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72144675,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72144675.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72144675.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72144675.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "24.22",
+          "tcgplayer_price": "6.87",
+          "ebay_price": "2.50",
+          "amazon_price": "29.19",
+          "coolstuffinc_price": "17.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 11443,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-01",
+          "ocg_date": "2010-05-21",
+          "konami_id": 9197,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

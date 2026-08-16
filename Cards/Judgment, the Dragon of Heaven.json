@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 41659072,
+      "name": "Judgment, the Dragon of Heaven",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf you Synchro Summon this card, all materials must be the same Attribute. Once per turn, if you have 4 or more Tuners with different names in your GY and control this Synchro Summoned card: You can pay half your LP; destroy all other cards on the field, also, you cannot Special Summon monsters for the rest of this turn, except Dragon monsters. Once per turn, during your End Phase: Banish 4 cards from the top of your Deck.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2600,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/judgment-the-dragon-of-heaven-9509",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN049",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Weekly Shonen Jump December 2018 membership promotional cards",
+          "set_code": "JUMP-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "7.89"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41659072,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41659072.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41659072.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41659072.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.93",
+          "tcgplayer_price": "1.36",
+          "ebay_price": "3.50",
+          "amazon_price": "5.16",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Judgment, the Seraphic Dragon",
+          "views": 80345,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-12-01",
+          "ocg_date": "2018-05-21",
+          "konami_id": 13973,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 81386177,
+      "name": "Bottom Dweller",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This is one sea creature whose wrath is something monsters fear to face.",
+      "race": "Fish",
+      "atk": 1650,
+      "def": 1700,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bottom-dweller-6834",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.81"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.28"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81386177,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81386177.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81386177.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81386177.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.00",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 127374,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4445,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

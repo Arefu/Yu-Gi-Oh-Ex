@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 20154092,
+      "name": "Chronomaly Cabrera Trebuchet",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can Tribute 1 other \"Chronomaly\" monster, then target 1 face-up monster your opponent controls; its ATK becomes 0 until the End Phase.",
+      "race": "Rock",
+      "atk": 0,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Chronomaly",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chronomaly-cabrera-trebuchet-1731",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20154092,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20154092.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20154092.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20154092.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.65",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22141,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10688,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

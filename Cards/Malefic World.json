@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 27564031,
+      "name": "Malefic World",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "While this card is face-up on the field, you can activate this effect instead of conducting a normal draw during your Draw Phase. Choose 3 \"Malefic\" cards from your Deck and have your opponent pick 1 of them at random to add to your hand. Shuffle the rest back into your Deck.",
+      "race": "Field",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-world-2350",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 13 (POR)",
+          "set_code": "OP13-PT036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 3D Bonds Beyond Time Movie Pack",
+          "set_code": "YMP1-EN008",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27564031,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27564031.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27564031.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27564031.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.66",
+          "tcgplayer_price": "1.04",
+          "ebay_price": "2.98",
+          "amazon_price": "4.49",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101869,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-22",
+          "ocg_date": "2011-02-26",
+          "konami_id": 9232,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

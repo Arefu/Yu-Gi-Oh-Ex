@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 55291359,
+      "name": "Succubus Knight",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A warrior wizard adept in casting bone-chilling spells.",
+      "race": "Warrior",
+      "atk": 1650,
+      "def": 1300,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/succubus-knight-4707",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-117",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.84"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.21"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN117",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55291359,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55291359.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55291359.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55291359.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.85",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 357768,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4627,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

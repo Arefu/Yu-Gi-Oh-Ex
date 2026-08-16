@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 72283691,
+      "name": "Golden Castle of Stromberg",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, during your Standby Phase, you must banish 10 cards from the top of your Deck face-down (this is not optional), or this card is destroyed. During your Main Phase: You can Special Summon 1 monster from your Deck that specifically lists the card \"Golden Castle of Stromberg\" in its text. You cannot Normal Summon/Set the turn you activate this effect (even if this card leaves the field). You can only use this effect of \"Golden Castle of Stromberg\" once per turn. When an opponent's monster declares an attack: Destroy the attacking monster, and if you do, inflict damage to your opponent equal to half the ATK that monster had on the field.",
+      "race": "Field",
+      "archetype": "Golden Castle of Stromberg",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/golden-castle-of-stromberg-9521",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN010",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "9.42"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN094",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72283691,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72283691.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72283691.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72283691.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "1.95",
+          "amazon_price": "2.30",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 234031,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13808,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

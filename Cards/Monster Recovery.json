@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 93108433,
+      "name": "Monster Recovery",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 monster you control that is owned by you; if that monster is still on the field, shuffle it and your entire hand into the Deck, also, after that, draw cards equal to the number of cards you shuffled from your hand into the Deck by this effect. (You cannot activate this card if you have a card in your hand that is owned by your opponent.)",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/monster-recovery-7747",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN181",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.44"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.89"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN066",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENB29",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93108433,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93108433.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93108433.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93108433.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "2.00",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 234338,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5152,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

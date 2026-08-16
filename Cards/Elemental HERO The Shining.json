@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 22061412,
+      "name": "Elemental HERO The Shining",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Elemental HERO\" monster + 1 LIGHT monster\nMust be Fusion Summoned and cannot be Special Summoned by other ways. This card gains 300 ATK for each of your banished \"Elemental HERO\" monsters. When this card is sent from the field to the Graveyard: You can target up to 2 of your banished \"Elemental HERO\" monsters; add those targets to your hand.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 2100,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-the-shining-1901",
+      "card_sets": [
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-ENV01",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "7.06"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Volume 6 promotional card",
+          "set_code": "YG06-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "11.74"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22061412,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22061412.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22061412.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22061412.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.06",
+          "tcgplayer_price": "2.25",
+          "ebay_price": "6.00",
+          "amazon_price": "16.88",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 261590,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-03-01",
+          "ocg_date": "2009-11-04",
+          "konami_id": 8545,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

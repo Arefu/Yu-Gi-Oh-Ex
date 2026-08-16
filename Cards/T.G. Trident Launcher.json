@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 50750868,
+      "name": "T.G. Trident Launcher",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Effect Monsters, including a \"T.G.\" Tuner\r\nIf this card is Link Summoned, you can: Special Summon 3 \"T.G.\" monsters (1 from your hand, 1 from your Deck, and 1 from your GY) in Defense Position to your zones this card points to, also you cannot Special Summon monsters for the rest of this turn, except \"T.G.\" monsters. You can only use this effect of \"T.G. Trident Launcher\" once per turn. Your opponent cannot target \"T.G.\" Synchro Monsters this card points to with card effects.",
+      "race": "Machine",
+      "atk": 2200,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "T.G.",
+      "linkval": 3,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/t-g-trident-launcher-9770",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 23",
+          "set_code": "OP23-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN050",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50750868,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50750868.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50750868.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50750868.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "3.59",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53805,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14127,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

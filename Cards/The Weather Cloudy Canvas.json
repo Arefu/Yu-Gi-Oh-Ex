@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 53956001,
+      "name": "The Weather Cloudy Canvas",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "\"The Weather\" Effect Monsters in your Main Monster Zones of this card's column and its adjacent columns gain this effect.\r\n● You can banish this card, then target 1 face-up monster on the field (except during the Damage Step) (Quick Effect); halve its current ATK for the rest of this turn, but it can attack directly this turn.\r\nYou can only control 1 \"The Weather Cloudy Canvas\".",
+      "race": "Continuous",
+      "archetype": "The Weather",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-weather-cloudy-canvas-8753",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN099",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53956001,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53956001.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53956001.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53956001.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cloudy Weathery Pattern",
+          "views": 43745,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13337,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

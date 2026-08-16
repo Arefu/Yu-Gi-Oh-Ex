@@ -1,0 +1,108 @@
+{
+  "data": [
+    {
+      "id": 22056710,
+      "name": "Vampire Genesis",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by banishing 1 \"Vampire Lord\" you control, and cannot be Special Summoned by other ways. Once per turn: You can discard 1 Zombie-Type monster to the Graveyard, then target 1 Zombie-Type monster in your Graveyard with a Level less than the discarded Zombie-Type monster's; Special Summon that target.",
+      "race": "Zombie",
+      "atk": 3000,
+      "def": 2100,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Vampire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vampire-genesis-1900",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN198",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENC01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENC01",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Madness",
+          "set_code": "SD2-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.28"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "45.37"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN010",
+          "set_rarity": "Reprint",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22056710,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22056710.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22056710.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22056710.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.75",
+          "amazon_price": "4.95",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78956,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-01-01",
+          "ocg_date": "2004-12-09",
+          "konami_id": 6293,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

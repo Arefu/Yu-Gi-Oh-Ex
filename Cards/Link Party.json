@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 68957925,
+      "name": "Link Party",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Apply this effect depending on the number of different original Attributes of the Link Monsters on the field.\r\n● 1: All Link Monsters you control gain 500 ATK.\r\n● 2: All Link Monsters your opponent controls lose 1000 ATK.\r\n● 3: Gain 1500 LP.\r\n● 4: Inflict 2000 damage to your opponent.\r\n● 5: Special Summon 1 monster with 2500 or more ATK from your Deck.\r\n● 6: Destroy all monsters your opponent controls with 3000 or less ATK.\r\nYou can only activate 1 \"Link Party\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/link-party-9555",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.89"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68957925,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68957925.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68957925.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68957925.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23600,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2018-05-27",
+          "konami_id": 13886,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

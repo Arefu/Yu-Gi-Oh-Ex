@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 77307161,
+      "name": "Trickstar Bloom",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Level 2 or lower \"Trickstar\" monster\r\nIf this card is Link Summoned: You can make your opponent draw 1 card. If a face-up \"Trickstar\" monster this card points to is destroyed by battle or card effect: You can inflict 200 damage to your opponent for each card in their hand. You can only use this effect of \"Trickstar Bloom\" once per turn.",
+      "race": "Fairy",
+      "atk": 100,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Trickstar",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-bloom-9170",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77307161,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77307161.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77307161.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77307161.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 130381,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13593,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

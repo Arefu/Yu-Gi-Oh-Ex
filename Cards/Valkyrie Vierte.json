@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 81558967,
+      "name": "Valkyrie Vierte",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can excavate the top cards of your Deck equal to the number of other \"Valkyrie\" monsters you control, and if you do, add 1 excavated Normal Spell/Trap to your hand, also send the remaining cards to the GY. Otherwise, shuffle all excavated cards into the Deck. When this card is destroyed by battle and sent to the GY: You can Special Summon 1 \"Valkyrie\" monster from your Deck. You can only use each effect of \"Valkyrie Vierte\" once per turn.",
+      "race": "Fairy",
+      "atk": 1400,
+      "def": 1400,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/valkyrie-vierte-10116",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN089",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81558967,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81558967.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81558967.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81558967.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73607,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14360,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

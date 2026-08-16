@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 35050257,
+      "name": "Cyber Larva",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is targeted for an attack: You take no battle damage for the rest of this turn. When this card is destroyed by battle and sent to the GY: You can Special Summon 1 \"Cyber Larva\" from your Deck.",
+      "race": "Machine",
+      "atk": 400,
+      "def": 600,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-larva-2973",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years",
+          "set_code": "LC02-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35050257,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35050257.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35050257.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35050257.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74438,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-10-04",
+          "ocg_date": "2010-03-20",
+          "konami_id": 8421,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

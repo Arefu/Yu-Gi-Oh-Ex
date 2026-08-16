@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 1118137,
+      "name": "Power of the Guardians",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "If an attack is declared involving the equipped monster: Place 1 Spell Counter on this card. The equipped monster gains 500 ATK/DEF for each Spell Counter on this card. If the equipped monster would be destroyed by battle or card effect, you can remove 1 Spell Counter from your field, instead.",
+      "race": "Equip",
+      "archetype": "Guardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/power-of-the-guardians-9017",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN208",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN060",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1118137,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1118137.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1118137.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1118137.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.37",
+          "tcgplayer_price": "1.44",
+          "ebay_price": "3.39",
+          "amazon_price": "3.48",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Power of the Guardians (card)",
+          "views": 311951,
+          "viewsweek": 0,
+          "upvotes": 30,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13431,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

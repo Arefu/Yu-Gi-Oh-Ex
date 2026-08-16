@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 63012333,
+      "name": "Soul-Absorbing Bone Tower",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control another Zombie-Type monster, your opponent cannot target this card for attacks. Each time a Zombie-Type monster(s) is Special Summoned: Send the top 2 cards of your opponent's Deck to the Graveyard.",
+      "race": "Zombie",
+      "atk": 400,
+      "def": 1500,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soul-absorbing-bone-tower-5320",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.23"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN195",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Madness",
+          "set_code": "SD2-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.98"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63012333,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63012333.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63012333.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63012333.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "1.00",
+          "amazon_price": "3.59",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 198248,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5956,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

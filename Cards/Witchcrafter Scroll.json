@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 19673561,
+      "name": "Witchcrafter Scroll",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, when your Spellcaster monster destroys a monster by battle: You can draw 1 card. You can only use 1 of the following effects of \"Witchcrafter Scroll\" per turn, and only once that turn.\r\n● If a \"Witchcrafter\" monster you control would discard to activate an effect, you can send this card from your field to the GY instead.\r\n● During your End Phase, if you control a \"Witchcrafter\" monster, while this card is in your GY: You can place this card face-up in your Spell & Trap Zone.",
+      "race": "Continuous",
+      "archetype": "Witchcrafter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/witchcrafter-scroll-10143",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN230",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN025",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19673561,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19673561.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19673561.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19673561.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Witchcraft Scroll",
+          "views": 119136,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412025,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14415,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 35984222,
+      "name": "Ido the Supreme Magical Force",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You cannot Summon monsters. You can only control 1 \"Ido the Supreme Magical Force\". If this card is destroyed by a card effect and sent to the Graveyard, Special Summon it from your Graveyard during the next turn's Standby Phase and destroy all other monsters you control.",
+      "race": "Fiend",
+      "atk": 2200,
+      "def": 800,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ido-the-supreme-magical-force-3043",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN026",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN096",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35984222,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35984222.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35984222.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35984222.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.81",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "34.99",
+          "amazon_price": "79.95",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91026,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-08-21",
+          "konami_id": 8087,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

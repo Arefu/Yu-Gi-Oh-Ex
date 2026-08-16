@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 81873903,
+      "name": "Evoltile Westlo",
+      "typeline": [
+        "Reptile",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Special Summon 1 \"Evolsaur\" monster from your Deck.",
+      "race": "Reptile",
+      "atk": 700,
+      "def": 1900,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Evolsaur",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evoltile-westlo-6873",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81873903,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81873903.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81873903.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81873903.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.93",
+          "tcgplayer_price": "2.17",
+          "ebay_price": "2.89",
+          "amazon_price": "3.59",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24611,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9735,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

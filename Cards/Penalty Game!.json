@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 967928,
+      "name": "Penalty Game!",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When your opponent has 4 cards in their hand: Activate 1 of these effects.\n● Your opponent cannot draw during their next Draw Phase.\n● Your opponent cannot activate Spell/Trap Cards this turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/penalty-game-83",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN171",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN051",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN296",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 967928,
+          "image_url": "https://images.ygoprodeck.com/images/cards/967928.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/967928.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/967928.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.54",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "7.99",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61424,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-02-26",
+          "ocg_date": "2004-11-25",
+          "konami_id": 6277,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

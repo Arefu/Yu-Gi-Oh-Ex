@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 45586855,
+      "name": "Ally of Justice Cyclone Creator",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can discard 1 card from your hand to return Spell/Trap Cards from the field to the hand equal to the number of face-up Tuner monsters on the field.",
+      "race": "Machine",
+      "atk": 1400,
+      "def": 1200,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Ally of Justice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ally-of-justice-cyclone-creator-3882",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN092",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Revenge",
+          "set_code": "PHRE-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45586855,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45586855.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45586855.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45586855.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "8.00",
+          "amazon_price": "4.45",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35855,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2008-06-21",
+          "konami_id": 7840,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

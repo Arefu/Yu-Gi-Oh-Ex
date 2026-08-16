@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 40061558,
+      "name": "Apoqliphort Skybase",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. Requires 3 \"Qli\" Tributes to Normal Summon/Set. If this card is Normal Summoned/Set, it is unaffected by Spell/Trap effects and by activated effects from any monster whose original Level/Rank is lower than this card's current Level. Once per turn: You can target 1 monster your opponent controls; take control of it until the End Phase.",
+      "race": "Machine",
+      "atk": 2900,
+      "def": 2500,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Apoqliphort",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/apoqliphort-skybase-3402",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN211",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40061558,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40061558.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40061558.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40061558.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "2.50",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40876,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11543,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

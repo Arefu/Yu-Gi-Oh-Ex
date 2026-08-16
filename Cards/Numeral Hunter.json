@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 37115973,
+      "name": "Numeral Hunter",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Summoned: Return all \"Number\" Xyz Monsters on the field to the Extra Deck. Neither player can Special Summon \"Number\" Xyz Monsters. Cannot be destroyed by battle with an Xyz Monster. This card is unaffected by the effects of Xyz Monsters.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 1400,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/numeral-hunter-3140",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN021",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37115973,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37115973.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37115973.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37115973.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.61",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "1.20",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13913,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11295,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

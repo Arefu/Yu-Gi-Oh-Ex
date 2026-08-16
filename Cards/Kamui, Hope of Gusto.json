@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 72439556,
+      "name": "Kamui, Hope of Gusto",
+      "typeline": [
+        "Psychic",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Special Summon 1 \"Gusto\" Tuner monster from your Deck.",
+      "race": "Psychic",
+      "atk": 200,
+      "def": 1000,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kamui-hope-of-gusto-6081",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN080",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72439556,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72439556.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72439556.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72439556.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.87",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "1.34",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27841,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9595,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

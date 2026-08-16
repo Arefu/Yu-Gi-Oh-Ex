@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 17382973,
+      "name": "Prank-Kids Dodo-Doodle-Doo",
+      "typeline": [
+        "Thunder",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Prank-Kids\" monsters\r\nIf this card is Link Summoned: You can add 1 \"Prank-Kids\" Spell/Trap from your Deck to your hand. You can Tribute this card, then target 2 \"Prank-Kids\" cards with different names in your GY, except Link Monsters; add them to your hand. You can only use each effect of \"Prank-Kids Dodo-Doodle-Doo\" once per turn.",
+      "race": "Thunder",
+      "atk": 2000,
+      "def": null,
+      "level": null,
+      "attribute": "WIND",
+      "archetype": "Prank-Kids",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prank-kids-dodo-doodle-doo-9725",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN114",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17382973,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17382973.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17382973.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17382973.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.79",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Prankids Doodle",
+          "views": 222403,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14026,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

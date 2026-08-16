@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 54266211,
+      "name": "Evolsaur Vulcano",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned by the effect of an \"Evoltile\" monster: You can target 1 \"Evolsaur\" monster in your Graveyard; Special Summon that target. It cannot declare an attack.",
+      "race": "Dinosaur",
+      "atk": 1200,
+      "def": 1000,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Evolsaur",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evolsaur-vulcano-4615",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54266211,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54266211.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54266211.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54266211.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.46",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42815,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9737,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

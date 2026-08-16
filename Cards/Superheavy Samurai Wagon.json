@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 34496660,
+      "name": "Superheavy Samurai Wagon",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can change its battle position. This card can attack while in face-up Defense Position. If it does, apply its DEF for damage calculation. If you have no Spells/Traps in your GY: You can change this face-up Defense Position card you control to Attack Position, and if you do, add 1 \"Superheavy Samurai Soul\" monster from your Deck to your hand. You can only use this effect of \"Superheavy Samurai Wagon\" once per turn.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-wagon-2931",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN089",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Eternity Code",
+          "set_code": "ETCO-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34496660,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34496660.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34496660.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34496660.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Superheavy Samurai Daihachi",
+          "views": 147868,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-04-30",
+          "ocg_date": "2016-11-26",
+          "konami_id": 12863,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

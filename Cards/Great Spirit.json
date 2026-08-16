@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 92736188,
+      "name": "Great Spirit",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during your Main Phase, you can flip this card into face-down Defense Position. When this card is Flip Summoned, you can switch the original ATK and DEF of 1 face-up EARTH monster on the field until the end of this turn.",
+      "race": "Rock",
+      "atk": 500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/great-spirit-7721",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Invincible Fortress",
+          "set_code": "SD7-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.52"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92736188,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92736188.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92736188.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92736188.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.99",
+          "amazon_price": "1.40",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21433,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-15",
+          "ocg_date": "2005-12-08",
+          "konami_id": 6641,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

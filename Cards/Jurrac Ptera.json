@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 45711266,
+      "name": "Jurrac Ptera",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is attacked, return the attacking monster to the hand after damage calculation and this card gains DEF equal to the returned monster's Level x 100.",
+      "race": "Dinosaur",
+      "atk": 800,
+      "def": 1500,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Jurrac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jurrac-ptera-3895",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN013",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45711266,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45711266.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45711266.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45711266.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "1.00",
+          "ebay_price": "6.95",
+          "amazon_price": "0.26",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26994,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-04-14",
+          "konami_id": 8238,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

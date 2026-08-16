@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 10189126,
+      "name": "Masked Sorcerer",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card inflicts Battle Damage to your opponent's Life Points, draw 1 card from your Deck.",
+      "race": "Spellcaster",
+      "atk": 900,
+      "def": 1400,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/masked-sorcerer-881",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN154",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.92"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10189126,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10189126.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10189126.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10189126.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "3.95",
+          "amazon_price": "7.55",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 226039,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4226,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

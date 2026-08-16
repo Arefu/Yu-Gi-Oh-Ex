@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 12408276,
+      "name": "Kozmoll Dark Lady",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can banish this card; Special Summon 1 Level 6 or higher \"Kozmo\" monster from your hand. You can only use this effect of \"Kozmoll Dark Lady\" once per turn. Once per turn, during either player's turn, when another monster's effect is activated: You can pay 1000 LP; negate the activation, and if you do, destroy that monster.",
+      "race": "Psychic",
+      "atk": 2200,
+      "def": 1800,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmoll-dark-lady-1070",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.7"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN083",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12408276,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12408276.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12408276.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12408276.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "6.95",
+          "amazon_price": "7.26",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 137480,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12386,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 43147039,
+      "name": "Photon Vanisher",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) while you control a \"Photon\" or \"Galaxy\" monster. Cannot attack the turn it is Special Summoned. You can only Special Summon \"Photon Vanisher(s)\" once per turn. If this card is Special Summoned: You can add 1 \"Galaxy-Eyes Photon Dragon\" from your Deck to your hand. An Xyz Monster that was Summoned using this card on the field as material gains this effect.\r\n● Banish any monster destroyed by battle with this card.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Galaxy-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-vanisher-9538",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monstrous Revenge",
+          "set_code": "BLMR-EN058",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.66"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43147039,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43147039.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43147039.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43147039.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "43147039",
+          "views": 426543,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 43147079,
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13858,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

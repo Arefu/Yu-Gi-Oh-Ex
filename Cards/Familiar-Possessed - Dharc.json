@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 21390858,
+      "name": "Familiar-Possessed - Dharc",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand or Deck) by sending 1 face-up \"Dharc the Dark Charmer\" you control and 1 face-up DARK monster you control to the Graveyard. When you do: You can add 1 Level 3 or 4 LIGHT Spellcaster-Type monster from your Deck to your hand. If this card was Special Summoned by this effect and attacks a Defense Position monster, inflict piercing Battle Damage to your opponent.",
+      "race": "Spellcaster",
+      "atk": 1850,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Charmer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/familiar-possessed-dharc-1839",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21390858,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21390858.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21390858.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21390858.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.79",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.93",
+          "amazon_price": "1.47",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117341,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9907,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 90365482,
+      "name": "Hebo, Lord of the River",
+      "typeline": [
+        "Aqua",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Spirit Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. If this card is Normal Summoned or flipped face-up: You can target 1 face-up monster on the field; that target is treated as a Spirit monster, also return that target to the hand during the End Phase. Once per turn, during the End Phase, if this card was Normal Summoned or flipped face-up this turn: Return it to the hand.",
+      "race": "Aqua",
+      "atk": 1800,
+      "def": 600,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hebo-lord-of-the-river-7547",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN195",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90365482,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90365482.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90365482.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90365482.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34208,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12765,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

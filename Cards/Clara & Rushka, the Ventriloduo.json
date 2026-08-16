@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 1482001,
+      "name": "Clara & Rushka, the Ventriloduo",
+      "typeline": [
+        "Spellcaster",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Normal Summoned/Set monster\nCannot be Link Summoned except during Main Phase 2.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "linkval": 1,
+      "linkmarkers": [
+        "Top"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/clara-rushka-the-ventriloduo-8992",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN049",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1482001,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1482001.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1482001.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1482001.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "1.23",
+          "ebay_price": "3.92",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Clara",
+          "views": 178768,
+          "viewsweek": 21,
+          "upvotes": 20,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13420,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

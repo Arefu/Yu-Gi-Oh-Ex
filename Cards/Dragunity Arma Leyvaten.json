@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 63487632,
+      "name": "Dragunity Arma Leyvaten",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card from your hand or Graveyard by removing from play 1 face-up monster you control equipped with a \"Dragunity\" card(s). When this card is Normal or Special Summoned, you can select 1 Dragon-Type monster in your Graveyard, except \"Dragunity Arma Leyvaten\", and equip it to this card. When this card is sent to the Graveyard by your opponent's card effect, you can select 1 of the monsters that were equipped to this card when it was sent to the Graveyard, and Special Summon that monster from the Graveyard.",
+      "race": "Dragon",
+      "atk": 2600,
+      "def": 1200,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Dragunity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragunity-arma-leyvaten-5363",
+      "card_sets": [
+        {
+          "set_name": "Dragunity Legion Structure Deck",
+          "set_code": "SDDL-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.45"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63487632,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63487632.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63487632.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63487632.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "1.75",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96332,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-03-04",
+          "ocg_date": "2010-06-19",
+          "konami_id": 9046,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

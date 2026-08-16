@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 98927491,
+      "name": "Ambulance Rescueroid",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Rescueroid\" + \"Ambulanceroid\"\nThis monster cannot be Special Summoned except by Fusion Summon. Once per turn, when a monster on your side of the field is destroyed by battle and sent to the Graveyard, you can Special Summon that monster in Defense Position.",
+      "race": "Machine",
+      "atk": 2300,
+      "def": 1800,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ambulance-rescueroid-8216",
+      "card_sets": [
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENB23",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98927491,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98927491.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98927491.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98927491.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82329,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6744,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

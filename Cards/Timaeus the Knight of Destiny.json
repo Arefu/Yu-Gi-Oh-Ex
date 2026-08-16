@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 53315891,
+      "name": "Timaeus the Knight of Destiny",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Legendary Knight Timaeus\" + \"Legendary Knight Critias\" + \"Legendary Knight Hermos\"\nMust be Special Summoned (from your Extra Deck) by sending the above cards you control to the Graveyard, and cannot be Special Summoned by other ways. (You do not use \"Polymerization\".) Unaffected by other cards' effects. Once per battle, if this card battles, during damage calculation (in either player's turn): You can make this card's ATK and DEF become equal to the ATK of the monster on the field with the highest ATK (your choice, if tied). When this card is destroyed by battle: You can Special Summon 3 \"Legendary Knight\" monsters from your hand, Deck, and/or Graveyard, ignoring their Summoning conditions.",
+      "race": "Warrior",
+      "atk": -1,
+      "def": -1,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Legendary Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/timaeus-the-knight-of-destiny-4543",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.2"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN054",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN055",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53315891,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53315891.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53315891.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53315891.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "0.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105725,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11880,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

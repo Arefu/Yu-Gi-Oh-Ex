@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 80559548,
+      "name": "Speedroid Razorang",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot attack the turn it is Normal Summoned. Once per turn: You can target 1 face-up monster on the field; change this card to Defense Position, and if you do, that target loses 800 ATK until the end of this turn.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/speedroid-razorang-6757",
+      "card_sets": [
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80559548,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80559548.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80559548.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80559548.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "2.00",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28070,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-01",
+          "ocg_date": "2015-08-22",
+          "konami_id": 12050,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

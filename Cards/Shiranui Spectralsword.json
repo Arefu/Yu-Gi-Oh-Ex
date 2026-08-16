@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 36630403,
+      "name": "Shiranui Spectralsword",
+      "typeline": [
+        "Zombie",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your GY, except the turn this card was sent to the GY: You can target 1 non-Tuner Zombie monster in your GY; banish both it and this card, and if you do, Special Summon 1 Zombie Synchro Monster from your Extra Deck whose Level equals the total Levels those 2 monsters had. You can only use this effect of \"Shiranui Spectralsword\" once per turn.",
+      "race": "Zombie",
+      "atk": 800,
+      "def": 0,
+      "level": 2,
+      "attribute": "FIRE",
+      "archetype": "Shiranui",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiranui-spectralsword-3099",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN199",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN031",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36630403,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36630403.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36630403.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36630403.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 258777,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12139,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

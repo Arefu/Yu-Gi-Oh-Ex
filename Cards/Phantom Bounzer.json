@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 17189532,
+      "name": "Phantom Bounzer",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card on the field is destroyed and sent to the Graveyard: You can add 2 \"Bounzer\" cards from your Deck to your hand.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 1200,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Bounzer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phantom-bounzer-1484",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17189532,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17189532.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17189532.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17189532.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.04",
+          "ebay_price": "2.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21959,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10034,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

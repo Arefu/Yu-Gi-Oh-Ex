@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 47986555,
+      "name": "Millennium Golem",
+      "typeline": [
+        "Rock",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "For nearly a millennium, this golem has served as guardian of an ancient treasure trove.",
+      "race": "Rock",
+      "atk": 2000,
+      "def": 2200,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/millennium-golem-4098",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack 7",
+          "set_code": "TP7-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47986555,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47986555.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47986555.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47986555.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.86",
+          "tcgplayer_price": "3.10",
+          "ebay_price": "60.00",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52709,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-01",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4459,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

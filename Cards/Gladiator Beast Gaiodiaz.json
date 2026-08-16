@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 90957527,
+      "name": "Gladiator Beast Gaiodiaz",
+      "typeline": [
+        "Dinosaur",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Gladiator Beast Spartacus\" + 1 \"Gladiator Beast\" monster\nThis card can only be Special Summoned from your Extra Deck, by returning the above cards you control to the Deck. (You do not use \"Polymerization\".) When this card destroys a monster by battle and sends it to the Graveyard, inflict damage to your opponent equal to the DEF of the destroyed monster. At the end of the Battle Phase, if this card attacked or was attacked, you can return it to the Extra Deck to Special Summon 2 \"Gladiator Beast\" monsters from your Deck, except \"Gladiator Beast Spartacus\".",
+      "race": "Dinosaur",
+      "atk": 2600,
+      "def": 1500,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-gaiodiaz-7598",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90957527,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90957527.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90957527.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90957527.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.21",
+          "tcgplayer_price": "2.79",
+          "ebay_price": "2.99",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76302,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7302,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

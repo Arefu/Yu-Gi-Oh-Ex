@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 95714077,
+      "name": "Wind-Up Factory",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, if an effect of a \"Wind-Up\" monster is activated (except during the Damage Step): You can add 1 Level 4 or lower \"Wind-Up\" monster from your Deck to your hand.",
+      "race": "Continuous",
+      "archetype": "Wind-Up",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wind-up-factory-7972",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN054",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Eight",
+          "set_code": "TU08-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95714077,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95714077.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95714077.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95714077.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.02",
+          "tcgplayer_price": "3.56",
+          "ebay_price": "2.99",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50950,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9671,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

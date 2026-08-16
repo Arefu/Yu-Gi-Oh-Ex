@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 10071456,
+      "name": "Protector of the Throne",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "While the king is away, this queen protects his throne with a mighty defense.",
+      "race": "Warrior",
+      "atk": 800,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/protector-of-the-throne-873",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-087",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E087",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.4"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN087",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10071456,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10071456.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10071456.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10071456.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "5.00",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 133519,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4286,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

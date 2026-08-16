@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 73271204,
+      "name": "Recardination",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Flower Cardian\" monster in your Graveyard; add it to your hand, then you can Special Summon 1 \"Flower Cardian\" monster from your hand, ignoring its Summoning conditions. If this card is sent to the Graveyard by a \"Flower Cardian\" monster's effect: You can excavate the top 5 cards of your Deck, and if you do, you can add 1 excavated Spell/Trap Card to your hand. Place the remaining cards on top of your Deck in any order.",
+      "race": "Normal",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/recardination-6153",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73271204,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73271204.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73271204.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73271204.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "0.99",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58276,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12792,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

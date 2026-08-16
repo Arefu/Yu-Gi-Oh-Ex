@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 13391185,
+      "name": "Noble Knight Gwalchavad",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is treated as a Normal Monster while face-up on the field. While equipped with a \"Noble Arms\" Equip Spell Card, this card becomes an Effect Monster with this effect.\n● You can target 1 \"Noble Knight\" monster in your Graveyard; add it to your hand, and if you do, destroy 1 \"Noble Arms\" Equip Spell Card you control. You can only use this effect of \"Noble Knight Gwalchavad\" once per turn.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knight-gwalchavad-1149",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN081",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN007",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "2.66"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13391185,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13391185.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13391185.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13391185.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "9.99",
+          "amazon_price": "1.54",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36702,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10595,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

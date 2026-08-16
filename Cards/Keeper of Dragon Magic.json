@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 48048590,
+      "name": "Keeper of Dragon Magic",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can discard 1 card; add 1 \"Polymerization\" Normal Spell or \"Fusion\" Normal Spell from your Deck to your hand. You can reveal 1 Fusion Monster in your Extra Deck; Special Summon 1 of the Fusion Materials whose name is specifically listed on that monster from your GY, in face-down Defense Position. You can only use each effect of \"Keeper of Dragon Magic\" once per turn. You cannot Special Summon monsters from the Extra Deck, except Fusion Monsters, the turn you activate either of this card's effects.",
+      "race": "Dragon",
+      "atk": 1800,
+      "def": 1300,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/keeper-of-dragon-magic-9283",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tins",
+          "set_code": "CT15-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.54"
+        },
+        {
+          "set_name": "Structure Deck: Albaz Strike",
+          "set_code": "SDAZ-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.9"
+        },
+        {
+          "set_name": "THE CHRONICLES DECK: The Fallen & The Virtuous (All-Foil Edition)",
+          "set_code": "CH01-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48048590,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48048590.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48048590.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48048590.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "2.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Keeper of Dragonic Magic",
+          "views": 692005,
+          "viewsweek": 21,
+          "upvotes": 22,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-30",
+          "ocg_date": "2018-02-21",
+          "konami_id": 13689,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

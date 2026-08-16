@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 1006081,
+      "name": "Junk Changer",
+      "typeline": [
+        "Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only use the following effect of \"Junk Changer\" once per turn. If this card is Normal or Special Summoned: You can target 1 \"Junk\" monster on the field, then activate 1 of these effects;\n● Increase its Level by 1.\n● Reduce its Level by 1.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-changer-92",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN002",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "1.64"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1006081,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1006081.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1006081.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1006081.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "1.45",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57871,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-03-17",
+          "ocg_date": "2016-03-19",
+          "konami_id": 12255,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

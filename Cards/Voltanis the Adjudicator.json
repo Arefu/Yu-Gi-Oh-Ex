@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 20951752,
+      "name": "Voltanis the Adjudicator",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "After 1 of your Counter Trap Cards has been activated and has resolved, you can Tribute all monsters you control to Special Summon this card. If this card is Special Summoned in this way, you can destroy cards your opponent controls up to the number of Fairy-Type monsters you Tributed.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 1400,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/voltanis-the-adjudicator-1801",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN203",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "16.21"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN023",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20951752,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20951752.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20951752.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20951752.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.33",
+          "tcgplayer_price": "4.75",
+          "ebay_price": "5.99",
+          "amazon_price": "15.80",
+          "coolstuffinc_price": "19.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55491,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6696,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

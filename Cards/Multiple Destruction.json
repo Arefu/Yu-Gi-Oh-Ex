@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 14057297,
+      "name": "Multiple Destruction",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If both players have 3 or more cards in their hand: Each player places their entire hand on the bottom of the Deck in any order, also you lose LP equal to the total number of cards returned to the Deck by this effect x 300 (min. 1), then each player draws 5 cards. You can only activate 1 \"Multiple Destruction\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/multiple-destruction-1205",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Battle City",
+          "set_code": "DPBC-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14057297,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14057297.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14057297.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14057297.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.86",
+          "tcgplayer_price": "1.16",
+          "ebay_price": "1.39",
+          "amazon_price": "2.85",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 137280,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-06-19",
+          "ocg_date": "2015-06-06",
+          "konami_id": 5481,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 80741828,
+      "name": "Witch's Apprentice",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "As long as this card remains face-up on the field, increase the ATK of all DARK monsters by 500 points and decrease the ATK of all LIGHT monsters by 400 points.",
+      "race": "Spellcaster",
+      "atk": 550,
+      "def": 500,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/witch-s-apprentice-6772",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-121",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.25"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E121",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "8.01"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN121",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80741828,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80741828.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80741828.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80741828.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "2.06",
+          "amazon_price": "2.08",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 182905,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4634,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

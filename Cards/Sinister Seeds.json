@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 60406591,
+      "name": "Sinister Seeds",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a monster you control is destroyed by a battle in which you took damage, and it was in face-up Attack Position at the start of the Damage Step and when it was destroyed: Special Summon 1 \"Sinister Seed Token\" (Plant-Type/DARK/Level 1/ATK 100/DEF 100) for every 500 points of battle damage you took from that battle.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sinister-seeds-5123",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN192",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN192",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60406591,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60406591.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60406591.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60406591.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43551,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7464,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 16006416,
+      "name": "D/D/D Flame High King Genghis",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 Level 5 or higher \"D/D\" monster + 1 \"D/D\" monster\r\nIf another \"D/D\" monster(s) is Normal or Special Summoned to your field while you control this monster (except during the Damage Step): You can target 1 \"D/D\" monster in your GY; Special Summon it. You can only use this effect of \"D/D/D Flame High King Genghis\" once per turn. Once per your turn, when a Spell/Trap Card, or its effect, is activated (Quick Effect): You can negate the activation.",
+      "race": "Fiend",
+      "atk": 2800,
+      "def": 2400,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-flame-high-king-genghis-8774",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN229",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16006416,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16006416.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16006416.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16006416.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "D/D/D Flame Emperor Executive Genghis",
+          "views": 260023,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2017-02-21",
+          "konami_id": 13016,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

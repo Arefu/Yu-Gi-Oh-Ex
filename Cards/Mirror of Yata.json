@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 1200843,
+      "name": "Mirror of Yata",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Spirit monster. The equipped monster does not have to have its effect that returns it to the hand activated. If it would be destroyed by battle, destroy this card instead.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mirror-of-yata-105",
+      "card_sets": [
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1200843,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1200843.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1200843.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1200843.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "2.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50207,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2008-04-19",
+          "konami_id": 7682,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

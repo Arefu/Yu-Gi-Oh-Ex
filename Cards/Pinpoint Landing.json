@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": 17322533,
+      "name": "Pinpoint Landing",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If exactly 1 monster is Special Summoned, from the hand to your field: You can draw 1 card. You can only use this effect of \"Pinpoint Landing\" once per turn. During your End Phase, if you have not drawn a card by this effect this turn, send this card to the GY.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pinpoint-landing-9694",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN081",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Revenge",
+          "set_code": "PHRE-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17322533,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17322533.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17322533.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17322533.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.98",
+          "amazon_price": "3.26",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89313,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2019-09-14",
+          "konami_id": 13977,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

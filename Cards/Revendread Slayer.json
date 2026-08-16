@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 4388680,
+      "name": "Revendread Slayer",
+      "typeline": [
+        "Zombie",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with any \"Vendread\" Ritual Spell. Once per battle, if this card battles an opponent's monster, during damage calculation (Quick Effect): You can banish 1 Zombie monster from your GY; this card gains 300 ATK. If this Ritual Summoned card is sent to the GY: You can add 1 Ritual Spell from your Deck to your hand, and if you do, send 1 \"Vendread\" monster from your Deck to the GY. You can only use this effect of \"Revendread Slayer\" once per turn.",
+      "race": "Zombie",
+      "atk": 2400,
+      "def": 0,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Vendread",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/revendread-slayer-8772",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 6",
+          "set_code": "OP06-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4388680,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4388680.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4388680.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4388680.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "3.95",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 158422,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-09-09",
+          "konami_id": 13208,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

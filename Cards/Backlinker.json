@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 71172240,
+      "name": "Backlinker",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If only your opponent controls a monster in the Extra Monster Zone, you can Special Summon this card (from your hand). You can Tribute this card; shuffle all monsters from the Extra Monster Zones into the Deck, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn.",
+      "race": "Cyberse",
+      "atk": 1600,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/backlinker-8910",
+      "card_sets": [
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN010",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN010",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Structure Deck: Cyberse Link",
+          "set_code": "SDCL-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71172240,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71172240.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71172240.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71172240.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39549,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-02",
+          "ocg_date": "2017-06-17",
+          "konami_id": 13195,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

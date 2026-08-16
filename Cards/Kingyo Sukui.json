@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 9251497,
+      "name": "Kingyo Sukui",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can target 1 monster in your opponent's GY; excavate the top card of your Deck, and if it is a monster with the same Attribute as the target, add it to your hand, and if you do, shuffle the target into the Deck. Otherwise, send the excavated card to the GY, also destroy this card. You can only use this effect of \"Kingyo Sukui\" once per turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kingyo-sukui-10008",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN031",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.91"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9251497,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9251497.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9251497.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9251497.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Goldfish Rescue",
+          "views": 11497,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14390,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

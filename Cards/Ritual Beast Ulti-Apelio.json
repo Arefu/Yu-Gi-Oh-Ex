@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 86274272,
+      "name": "Ritual Beast Ulti-Apelio",
+      "typeline": [
+        "Pyro",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Ritual Beast Tamer\" monster + 1 \"Spiritual Beast\" monster\nMust be Special Summoned (from your Extra Deck) by banishing the above cards you control, and cannot be Special Summoned by other ways. (You do not use \"Polymerization\".) If this card attacks, it is unaffected by other cards' effects until the end of the Damage Step. During either player's turn: You can return this card you control to the Extra Deck, then target 2 of your banished monsters (1 \"Ritual Beast Tamer\" monster and 1 \"Spiritual Beast\" monster); Special Summon them in Defense Position.",
+      "race": "Pyro",
+      "atk": 2600,
+      "def": 400,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Ritual Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ritual-beast-ulti-apelio-7229",
+      "card_sets": [
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN028",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.92"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86274272,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86274272.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86274272.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86274272.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.30",
+          "tcgplayer_price": "1.00",
+          "ebay_price": "1.98",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 135109,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11498,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

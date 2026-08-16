@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 36378044,
+      "name": "Lucky Punch",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, when an opponent's monster declares an attack: You can toss a coin 3 times. If the result is 3 heads, draw 3 cards, but if the result is 3 tails, destroy this card. If this face-up card on the field is destroyed: You lose 6000 Life Points.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lucky-punch-3075",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36378044,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36378044.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36378044.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36378044.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63230,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10210,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 23912837,
+      "name": "Resh Shaddoll Incarnation",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 \"Shaddoll\" monster in your GY; Special Summon it in face-up or face-down Defense Position.\r\nYou can banish this card and 1 \"Shaddoll\" card from your GY, then activate 1 of these effects;\r\n● Change 1 face-down monster you control to face-up Defense Position.\r\n● Change 1 face-up monster you control to face-down Defense Position.\r\nYou can only use 1 \"Resh Shaddoll Incarnation\" effect per turn, and only once that turn.",
+      "race": "Normal",
+      "archetype": "Shaddoll",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/resh-shaddoll-incarnation-10714",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN134",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23912837,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23912837.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23912837.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23912837.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.89",
+          "amazon_price": "0.91",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Reshaddoll Incarnation",
+          "views": 371909,
+          "viewsweek": 42,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100337033,
+          "tcg_date": "2020-02-13",
+          "ocg_date": "2019-12-07",
+          "konami_id": 14967,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 99916754,
+      "name": "Naturia Exterio",
+      "typeline": [
+        "Beast",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Naturia Beast\" + \"Naturia Barkion\"\nA Fusion Summon of this card can only be conducted with the above Fusion Material Monsters. While this card is face-up on the field, you can negate the activation of a Spell/Trap Card, and destroy it, by removing from play 1 card from your Graveyard, then sending the top card of your Deck to the Graveyard.",
+      "race": "Beast",
+      "atk": 2800,
+      "def": 2400,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naturia-exterio-8294",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN085",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 4: Trishula's Triumph",
+          "set_code": "HA04-EN055",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN119",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN119",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99916754,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99916754.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99916754.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99916754.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "4.99",
+          "amazon_price": "3.96",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 262129,
+          "viewsweek": 0,
+          "upvotes": 20,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-25",
+          "ocg_date": "2010-01-21",
+          "konami_id": 8727,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

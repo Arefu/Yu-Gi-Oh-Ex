@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 50732780,
+      "name": "Stygian Security",
+      "typeline": [
+        "Fiend",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by battle and sent to the Graveyard: Special Summon 1 Level 1 Fiend-Type monster from your Deck.",
+      "race": "Fiend",
+      "atk": 100,
+      "def": 600,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stygian-security-4323",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia promotional cards",
+          "set_code": "WC10-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "10.92"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's World Championship 2010: Reverse of Arcadia promotional cards",
+          "set_code": "WC10-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50732780,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50732780.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50732780.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50732780.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.70",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.39",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54929,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-23",
+          "ocg_date": "2010-02-18",
+          "konami_id": 8738,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

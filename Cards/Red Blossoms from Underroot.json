@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 71521025,
+      "name": "Red Blossoms from Underroot",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand: You can target 1 Spell/Trap in each GY; banish them, and if you do, Special Summon this card. You can Tribute this card, then target 1 Fusion, Synchro, Xyz, or Link Monster in either GY; banish that target, and if you do, Special Summon 1 monster from your GY with a different monster card type (Fusion, Synchro, Xyz, or Link) from that target. You can only use each effect of \"Red Blossoms from Underroot\" once per turn.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-blossoms-from-underroot-10247",
+      "card_sets": [
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71521025,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71521025.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71521025.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71521025.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "1.55",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Blood Blossom of the Afterlife",
+          "views": 101808,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100200163,
+          "tcg_date": "2019-10-10",
+          "ocg_date": "2019-04-20",
+          "konami_id": 14606,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

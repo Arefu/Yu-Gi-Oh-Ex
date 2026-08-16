@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 80978111,
+      "name": "Flying \"C\"",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent Normal or Special Summons a monster(s) (except during the Damage Step): You can Special Summon this card from your hand to the opponent's field in Defense Position. The controller of this card cannot Xyz Summon.",
+      "race": "Insect",
+      "atk": 700,
+      "def": 700,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "\"C\"",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flying-c-6794",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN039",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light: Deluxe Edition",
+          "set_code": "JOTL-ENDE2",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.89"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN078",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 1",
+          "set_code": "OP01-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80978111,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80978111.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80978111.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80978111.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.71",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Flying",
+          "views": 100452,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10642,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

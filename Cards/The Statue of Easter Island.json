@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 10262698,
+      "name": "The Statue of Easter Island",
+      "typeline": [
+        "Rock",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A stone monument from Easter Island that launches laser blasts from its rock-hewn lips.",
+      "race": "Rock",
+      "atk": 1100,
+      "def": 1400,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-statue-of-easter-island-889",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN088",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.18"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.85"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10262698,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10262698.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10262698.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10262698.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.67",
+          "ebay_price": "3.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51951,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4521,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

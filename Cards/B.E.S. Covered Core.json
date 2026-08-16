@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 15317640,
+      "name": "B.E.S. Covered Core",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, put 2 counters on it. This card cannot be destroyed by battle. If this card attacks or is attacked, at the end of the Damage Step toss a coin and call it. If you call it wrong, remove 1 counter. If this card battles without a counter, destroy it at the end of the Damage Step.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 800,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "B.E.S.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/b-e-s-covered-core-1317",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN133",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "19.64"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN013",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15317640,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15317640.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15317640.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15317640.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.20",
+          "tcgplayer_price": "0.80",
+          "ebay_price": "30.00",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "15.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45499,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6591,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 8192327,
+      "name": "Phosphorage the Elemental Lord",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by having exactly 5 LIGHT monsters in your GY. When this card is Special Summoned: You can destroy all monsters your opponent controls. You can only use this effect of \"Phosphorage the Elemental Lord\" once per turn. If this face-up card leaves the field, skip the Battle Phase of your next turn.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2200,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Elemental Lord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phosphorage-the-elemental-lord-9193",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8192327,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8192327.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8192327.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8192327.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.54",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Forceaurage the Elemental Lord",
+          "views": 88023,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13580,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

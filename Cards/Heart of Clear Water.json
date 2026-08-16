@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 64801562,
+      "name": "Heart of Clear Water",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "If the equipped monster's ATK is 1300 or higher, this card is destroyed. The monster equipped with this card is not destroyed as a result of battle or by the effect of a card that targets the monster. (Damage calculation is applied normally.)",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heart-of-clear-water-5469",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN186",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.63"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.51"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64801562,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64801562.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64801562.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64801562.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 139696,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5386,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

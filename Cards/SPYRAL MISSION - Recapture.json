@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 39373426,
+      "name": "SPYRAL MISSION - Recapture",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Destroy this card during your 3rd End Phase after activation. Once per turn, if a \"SPYRAL\" monster is Special Summoned to your field (except during the Damage Step): You can target 1 monster your opponent controls; take control of it until the End Phase, but it cannot attack directly this turn. If a \"SPYRAL\" monster(s) you control would be destroyed by battle or card effect, you can banish this card from your Graveyard instead of destroying 1 of those \"SPYRAL\" monsters.",
+      "race": "Continuous",
+      "archetype": "SPYRAL",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spyral-mission-recapture-8873",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN089",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39373426,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39373426.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39373426.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39373426.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19182,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12880,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

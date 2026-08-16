@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 38783169,
+      "name": "Squeaknight",
+      "typeline": [
+        "Warrior",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned: You can activate this effect; treat this card as a Tuner this turn, also you can only Special Summon once from the Extra Deck for the rest of this turn. Once per turn, you can either: Target 1 face-up monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, destroy this card instead.",
+      "race": "Warrior",
+      "atk": 500,
+      "def": 500,
+      "level": 1,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/squeaknight-10671",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.95"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38783169,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38783169.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38783169.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38783169.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tune Knight",
+          "views": 127772,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011031,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14840,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

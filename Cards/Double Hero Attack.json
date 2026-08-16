@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 73239437,
+      "name": "Double Hero Attack",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If you control a Fusion Monster that lists \"Elemental HERO Neos\" as material: Target 1 \"HERO\" Fusion Monster in your GY; Special Summon it, ignoring its Summoning conditions. You can only activate 1 \"Double Hero Attack\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/double-hero-attack-9946",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73239437,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73239437.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73239437.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73239437.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55474,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14217,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

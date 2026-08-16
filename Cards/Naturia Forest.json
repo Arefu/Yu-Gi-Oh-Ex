@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 37322745,
+      "name": "Naturia Forest",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "If you negate the activation of a card your opponent controls, you can add 1 Level 3 or lower \"Naturia\" monster from your Deck to your hand.",
+      "race": "Field",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naturia-forest-3161",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37322745,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37322745.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37322745.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37322745.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.20",
+          "amazon_price": "1.75",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36713,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8982,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

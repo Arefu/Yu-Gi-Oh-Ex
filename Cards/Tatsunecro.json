@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 3096468,
+      "name": "Tatsunecro",
+      "typeline": [
+        "Zombie",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this Normal Summoned/Set monster would be used as Synchro Material, 1 monster in your hand can be used as 1 of the other materials. If you do this, all materials for that Summon are banished instead of being sent to the GY. You cannot Special Summon monsters, except Zombie monsters.",
+      "race": "Zombie",
+      "atk": 500,
+      "def": 1700,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tatsunecro-9761",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN112",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.89"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Horde",
+          "set_code": "SR07-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.6"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3096468,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3096468.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3096468.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3096468.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96317,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-01",
+          "ocg_date": "2018-09-22",
+          "konami_id": 14055,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

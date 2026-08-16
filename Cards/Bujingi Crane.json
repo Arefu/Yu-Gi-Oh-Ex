@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 68601507,
+      "name": "Bujingi Crane",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During damage calculation (in either player's turn), if a Beast-Warrior-Type \"Bujin\" monster you control battles an opponent's monster: You can send this card from your hand to the Graveyard; the ATK of your monster becomes double its original ATK, during that damage calculation only.",
+      "race": "Winged Beast",
+      "atk": 1600,
+      "def": 300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujingi-crane-5765",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2014 Mega-Tins",
+          "set_code": "CT11-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN020",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68601507,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68601507.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68601507.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68601507.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58485,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10623,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

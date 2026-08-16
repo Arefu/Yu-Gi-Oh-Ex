@@ -1,0 +1,163 @@
+{
+  "data": [
+    {
+      "id": 91152256,
+      "name": "Celtic Guardian",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An elf who learned to wield a sword, he baffles enemies with lightning-swift attacks.",
+      "race": "Warrior",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Celtic Guard",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/celtic-guardian-7610",
+      "card_sets": [
+        {
+          "set_name": "Anniversary Pack",
+          "set_code": "YAP1-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "42.36"
+        },
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN104",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "10.42"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "14.44"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENA06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.88"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.67"
+        },
+        {
+          "set_name": "Starter Deck: Yugi Evolution",
+          "set_code": "SYE-008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91152256,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91152256.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91152256.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91152256.jpg"
+        },
+        {
+          "id": 91152257,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91152257.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91152257.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91152257.jpg"
+        },
+        {
+          "id": 91152258,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91152258.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91152258.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91152258.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "5.00",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 374645,
+          "viewsweek": 0,
+          "upvotes": 21,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Celtic Guardian",
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-18",
+          "konami_id": 4047,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

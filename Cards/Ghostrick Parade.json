@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 29400787,
+      "name": "Ghostrick Parade",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Monsters cannot attack face-down Defense Position monsters, but can attack directly if all monsters their opponent controls are face-down Defense Position. Your opponent takes no damage. When an opponent's monster declares a direct attack: You can add 1 \"Ghostrick\" card from your Deck to your hand.",
+      "race": "Field",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-parade-2492",
+      "card_sets": [
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29400787,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29400787.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29400787.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29400787.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "3.00",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112354,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11092,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

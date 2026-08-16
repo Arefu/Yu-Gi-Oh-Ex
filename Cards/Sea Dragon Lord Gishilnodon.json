@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 76891401,
+      "name": "Sea Dragon Lord Gishilnodon",
+      "typeline": [
+        "Sea Serpent",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 Level 3 non-Tuner monster\r\nWhen a face-up Level 3 or lower monster on the field is sent to the Graveyard, this card's ATK becomes 3000 until the End Phase of this turn.",
+      "race": "Sea Serpent",
+      "atk": 2300,
+      "def": 1800,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sea-dragon-lord-gishilnodon-6468",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76891401,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76891401.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76891401.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76891401.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.36",
+          "tcgplayer_price": "11.42",
+          "ebay_price": "6.49",
+          "amazon_price": "26.69",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 209713,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8196,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

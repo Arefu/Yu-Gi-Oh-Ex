@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 70369116,
+      "name": "Predaplant Verte Anaconda",
+      "typeline": [
+        "Plant",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Effect Monsters\r\nYou can target 1 face-up monster on the field; it becomes DARK until the end of this turn. You can pay 2000 LP and send 1 \"Fusion\" or \"Polymerization\" Normal or Quick-Play Spell from your Deck to the GY; this effect becomes that Spell's effect when that card is activated, also, you cannot Special Summon monsters for the rest of this turn. You can only use each effect of \"Predaplant Verte Anaconda\" once per turn.",
+      "race": "Plant",
+      "atk": 500,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-verte-anaconda-10695",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "15.22"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN036",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 70369116,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70369116.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70369116.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70369116.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.40",
+          "tcgplayer_price": "1.63",
+          "ebay_price": "2.37",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "staple": "Yes",
+          "views": 1720346,
+          "viewsweek": 0,
+          "upvotes": 34,
+          "downvotes": 18,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257071,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14944,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

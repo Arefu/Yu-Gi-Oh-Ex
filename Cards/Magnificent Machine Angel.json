@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 27331568,
+      "name": "Magnificent Machine Angel",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 \"Cyber Angel\" Ritual Monster from your hand or field, then target 1 LIGHT Fairy monster you control; it gains ATK/DEF equal to the Level the monster had when Tributed x 200, until the end of this turn. This turn, if it battles an opponent's monster that was Special Summoned from the Extra Deck, that opponent's monster's effects are negated during that Battle Phase only. You can only activate 1 \"Magnificent Machine Angel\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Cyber Angel",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magnificent-machine-angel-9900",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.93"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27331568,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27331568.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27331568.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27331568.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Majestic Machine Angel",
+          "views": 36049,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14174,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

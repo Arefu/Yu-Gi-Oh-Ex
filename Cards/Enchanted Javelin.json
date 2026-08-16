@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 96355986,
+      "name": "Enchanted Javelin",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Select 1 attacking monster. Gain Life Points equal to its ATK.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/enchanted-javelin-8017",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.82"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "10.26"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96355986,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96355986.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96355986.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96355986.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.00",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 169469,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4992,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

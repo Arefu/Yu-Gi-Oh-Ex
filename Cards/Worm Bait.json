@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 43140791,
+      "name": "Worm Bait",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control an Insect monster: Special Summon 2 \"Worm Tokens\" (Insect/EARTH/Level 1/ATK 0/DEF 0). You cannot Normal or Special Summon any Level 3 or 4 monsters the turn you activate this card.",
+      "race": "Normal",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/worm-bait-3677",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENB20",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Tag Force 4 promotional cards",
+          "set_code": "TF04-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.02"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Tag Force 4 promotional cards",
+          "set_code": "TF04-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "7.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43140791,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43140791.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43140791.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43140791.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.85",
+          "amazon_price": "8.00",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77006,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-09-17",
+          "konami_id": 8518,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

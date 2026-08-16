@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 3679218,
+      "name": "Knightmare Mermaid",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 \"Knightmare\" monster, except \"Knightmare Mermaid\"\r\nIf this card is Link Summoned: You can discard 1 card; Special Summon 1 \"Knightmare\" monster from your Deck, then, if this card was co-linked when this effect was activated, you can draw 1 card. You can only use this effect of \"Knightmare Mermaid\" once per turn. Monsters on the field lose 1000 ATK/DEF, unless they are co-linked.",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": null,
+      "level": 0,
+      "attribute": "WATER",
+      "archetype": "Knightmare",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/knightmare-mermaid-9231",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN025",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 3679218,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3679218.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3679218.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3679218.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.69",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Troymare Mermaid",
+          "views": 291167,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13597,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

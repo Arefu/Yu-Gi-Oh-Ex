@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 86165817,
+      "name": "Evil HERO Malicious Bane",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Evil HERO\" monster + 1 Level 5 or higher monster\r\nMust be Special Summoned with \"Dark Fusion\". Cannot be destroyed by battle or card effects. During your Main Phase: You can destroy all monsters your opponent controls with ATK less than or equal to this card's, also this card gains 200 ATK for each monster destroyed this way, also you cannot declare an attack for the rest of this turn, except with \"HERO\" monsters. You can only use this effect of \"Evil HERO Malicious Bane\" once per turn.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Evil HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evil-hero-malicious-bane-10339",
+      "card_sets": [
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN069",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "24.25"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 27",
+          "set_code": "OP27-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86165817,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86165817.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86165817.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86165817.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "4.29",
+          "amazon_price": "2.98",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 480977,
+          "viewsweek": 0,
+          "upvotes": 30,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100422012,
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14586,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

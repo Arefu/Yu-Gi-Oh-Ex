@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 19667590,
+      "name": "Gogogo Gigas",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this card is in your Graveyard, if you Special Summon a \"Gogogo\" monster(s) (except during the Damage Step): You can Special Summon this card from your Graveyard in face-up Defense Position. You cannot conduct your Battle Phase the turn you activate this effect. You can only use the effect of \"Gogogo Gigas\" once per turn.",
+      "race": "Rock",
+      "atk": 0,
+      "def": 2200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Gogogo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gogogo-gigas-1694",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN121",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19667590,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19667590.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19667590.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19667590.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118077,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10483,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

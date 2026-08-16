@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 37993923,
+      "name": "Junk Gardna",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Junk Synchron\" + 1 or more non-Tuner monsters\nOnce per turn, you can select 1 monster your opponent controls, and change its battle position. This effect can be activated during either player's turn. If this card is sent from the field to the Graveyard, you can select 1 monster on the field and change its battle position.",
+      "race": "Warrior",
+      "atk": 1400,
+      "def": 2600,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-gardna-3216",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! 3D Bonds Beyond Time Movie Pack",
+          "set_code": "YMP1-EN006",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37993923,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37993923.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37993923.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37993923.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.92",
+          "tcgplayer_price": "0.82",
+          "ebay_price": "4.50",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 102687,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-22",
+          "ocg_date": "2011-02-26",
+          "konami_id": 9045,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

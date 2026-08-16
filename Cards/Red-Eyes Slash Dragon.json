@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 21140872,
+      "name": "Red-Eyes Slash Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Red-Eyes B. Dragon\" + 1 Warrior monster\r\nWhen a \"Red-Eyes\" monster declares an attack: You can target 1 Warrior monster in your GY; equip it to this card as an Equip Spell with this effect. ● The equipped monster gains 200 ATK.\r\nWhen a card or effect is activated that targets a card you control (Quick Effect): You can send 1 Equip Card you control to the GY; negate the activation, and if you do, destroy that card. If this card is destroyed by battle or card effect: You can Special Summon as many monsters from your GY as possible, that were equipped to this card.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 2400,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-eyes-slash-dragon-8504",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN031",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "15.34"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN014",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21140872,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21140872.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21140872.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21140872.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "1.61",
+          "ebay_price": "11.84",
+          "amazon_price": "15.98",
+          "coolstuffinc_price": "11.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 343093,
+          "viewsweek": 0,
+          "upvotes": 46,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-07",
+          "ocg_date": "2017-06-03",
+          "konami_id": 13170,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

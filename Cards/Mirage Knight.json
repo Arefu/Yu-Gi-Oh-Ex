@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 49217579,
+      "name": "Mirage Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by \"Dark Flare Knight\" and cannot be Special Summoned by other ways. During damage calculation only, this card gains ATK equal to the original ATK of the opponent's monster it is battling. During the End Phase of a turn this card attacked or was attacked: Banish this card.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 2000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mirage-knight-4198",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-018",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "9.64"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN018",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN180",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.29"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49217579,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49217579.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49217579.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49217579.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.84",
+          "tcgplayer_price": "1.21",
+          "ebay_price": "8.95",
+          "amazon_price": "4.18",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 78365,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5699,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 30325729,
+      "name": "Dokuroyaiba",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A boomerang with brains that will pursue a target to the ends of the earth.",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": 400,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dokuroyaiba-2569",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.42"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENB07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30325729,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30325729.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30325729.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30325729.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83576,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5150,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

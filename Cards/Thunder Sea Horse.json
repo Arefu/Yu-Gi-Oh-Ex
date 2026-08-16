@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 48049769,
+      "name": "Thunder Sea Horse",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card; add 2 Level 4 LIGHT Thunder-Type monsters of the same name with 1600 or less ATK from your Deck to your hand. You can only use the effect of \"Thunder Sea Horse\" once per turn. You cannot Special Summon during the turn you activate this effect.",
+      "race": "Thunder",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thunder-sea-horse-4101",
+      "card_sets": [
+        {
+          "set_name": "2013 Collectible Tins Wave 2",
+          "set_code": "CT10-EN016",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.97"
+        },
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN098",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48049769,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48049769.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48049769.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48049769.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "3.88",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68489,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2013-09-21",
+          "konami_id": 10215,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

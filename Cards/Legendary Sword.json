@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 61854111,
+      "name": "Legendary Sword",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Warrior monster. It gains 300 ATK/DEF.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/legendary-sword-5237",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-040",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "4.49"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E031",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "6.82"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN040",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon (25th Anniversary Edition)",
+          "set_code": "LOB-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Duelists of Tomorrow",
+          "set_code": "SS02-ENB13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61854111,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61854111.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61854111.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61854111.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.99",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 358723,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4307,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

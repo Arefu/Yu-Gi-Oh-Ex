@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 50548657,
+      "name": "Prompthorn",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 1 Level 4 or lower Cyberse monster; Special Summon any number of Cyberse Normal Monsters from your Deck and/or GY whose total Levels equal the Tributed monster's Level on the field, but banish them during the End Phase. You can only use this effect of \"Prompthorn\" once per turn.",
+      "race": "Cyberse",
+      "atk": 200,
+      "def": 400,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prompthorn-9257",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50548657,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50548657.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50548657.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50548657.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Prompt Horn",
+          "views": 38810,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13557,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

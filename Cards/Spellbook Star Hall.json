@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 56321639,
+      "name": "Spellbook Star Hall",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time a \"Spellbook\" Spell Card is activated, place 1 Spell Counter on this card. All Spellcaster-Type monsters you control gain 100 ATK for each Spell Counter on this card. When this card with Spell Counter(s) is destroyed and sent to the Graveyard: You can add 1 Spellcaster-Type monster from your Deck to your hand, whose Level is less than or equal to the number of Spell Counters that were on this card.",
+      "race": "Continuous",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spellbook-star-hall-4794",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Astral Pack Three",
+          "set_code": "AP03-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56321639,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56321639.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56321639.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56321639.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.60",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70968,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10358,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

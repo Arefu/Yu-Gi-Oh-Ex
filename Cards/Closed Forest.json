@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 78082039,
+      "name": "Closed Forest",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All Beast-Type monsters you control gain 100 ATK for each monster in your Graveyard. Field Spell Cards cannot be activated. Field Spell Cards cannot be activated during the turn this card is destroyed.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/closed-forest-6566",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack One",
+          "set_code": "AP01-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN171",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN171",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Duel Transer promotional cards",
+          "set_code": "YDT1-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78082039,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78082039.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78082039.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78082039.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.93",
+          "tcgplayer_price": "1.15",
+          "ebay_price": "5.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71425,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-12-07",
+          "ocg_date": "2011-04-21",
+          "konami_id": 8585,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 35419032,
+      "name": "Infestation Infection",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn: You can shuffle 1 \"lswarm\" monster from your hand or face-up from your side of the field into the Main Deck; add 1 \"lswarm\" monster from your Deck to your hand.",
+      "race": "Continuous",
+      "archetype": "Infestation",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infestation-infection-3001",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN050",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN030",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35419032,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35419032.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35419032.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35419032.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.56",
+          "tcgplayer_price": "0.79",
+          "ebay_price": "1.57",
+          "amazon_price": "1.76",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42795,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9832,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 67934141,
+      "name": "Ultimate Baseball Kid",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 1000 ATK for each face-up FIRE monster on the field, except this card. You can send 1 other face-up FIRE monster you control to the Graveyard; inflict 500 damage to your opponent.",
+      "race": "Warrior",
+      "atk": 500,
+      "def": 1000,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ultimate-baseball-kid-5704",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 15 participation cards",
+          "set_code": "DL15-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.86"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Blaze of Destruction",
+          "set_code": "SD3-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67934141,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67934141.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67934141.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67934141.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "4.00",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 119218,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6113,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

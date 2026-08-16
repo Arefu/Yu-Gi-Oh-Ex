@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 44586426,
+      "name": "Batteryman Solar",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can send 1 Thunder monster from your Deck to the GY. If a Thunder monster(s) is Normal or Special Summoned while this monster is on the field: Special Summon 1 \"Batteryman Token\" (Thunder/LIGHT/Level 1/ATK 0/DEF 0). You can target 1 \"Batteryman\" Effect Monster you control or in your GY; this card's name becomes that monster's until the End Phase. You can only use each effect of \"Batteryman Solar\" once per turn.",
+      "race": "Thunder",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Batteryman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/batteryman-solar-9214",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10",
+          "set_code": "OP10-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44586426,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44586426.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44586426.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44586426.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "0.99",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 321619,
+          "viewsweek": 253,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13581,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

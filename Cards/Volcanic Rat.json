@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 33112041,
+      "name": "Volcanic Rat",
+      "typeline": [
+        "Pyro",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This mutated mouse dwells in the core of active volcanoes. No amount of heat is too much for it to bear.",
+      "race": "Pyro",
+      "atk": 500,
+      "def": 500,
+      "level": 1,
+      "attribute": "FIRE",
+      "archetype": "Volcanic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/volcanic-rat-2814",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33112041,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33112041.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33112041.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33112041.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "3.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41684,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7191,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

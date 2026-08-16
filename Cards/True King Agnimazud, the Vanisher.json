@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 96746083,
+      "name": "True King Agnimazud, the Vanisher",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand: You can destroy 2 other monsters in your hand and/or face-up field, including a FIRE monster, and if you do, Special Summon this card, and if you do that, you can banish 1 monster from your opponent's field or GY, if both the destroyed monsters were FIRE. If this card is destroyed by card effect: You can add 1 non-FIRE Wyrm monster from your GY to your hand. You can only use each effect of \"True King Agnimazud, the Vanisher\" once per turn.",
+      "race": "Wyrm",
+      "atk": 2900,
+      "def": 1900,
+      "level": 9,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/true-king-agnimazud-the-vanisher-8049",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN080",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Fire Kings",
+          "set_code": "SR14-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96746083,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96746083.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96746083.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96746083.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "3.95",
+          "amazon_price": "1.54",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 526683,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12424,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

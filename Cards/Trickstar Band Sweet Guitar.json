@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 91272072,
+      "name": "Trickstar Band Sweet Guitar",
+      "typeline": [
+        "Fairy",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Trickstar\" Link Monster + 1 \"Trickstar\" monster\r\nEffect damage inflicted to your opponent by your \"Trickstar\" Link Monster linked to this card is doubled. If your opponent takes damage by a \"Trickstar\" monster's effect: This card gains ATK equal to the damage they took. Once per turn, during the End Phase, if this card attacked this turn: The ATK gained from this effect returns to 0, then you can add 1 \"Trickstar\" monster from your GY to your hand.",
+      "race": "Fairy",
+      "atk": 2200,
+      "def": 1200,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Trickstar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-band-sweet-guitar-9811",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91272072,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91272072.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91272072.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91272072.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.38",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75615,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14110,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 95463814,
+      "name": "Phantasm Emperor Trilojig",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "3 Level 10 monsters\r\nIf this card is Special Summoned, or if another monster is Special Summoned from the GY to your field while you control this monster: You can target 1 face-up monster your opponent controls; inflict damage to your opponent equal to half its original ATK. You can only use this effect of \"Phantasm Emperor Trilojig\" once per turn.",
+      "race": "Fiend",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Chaos Phantom",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phantasm-emperor-trilojig-9962",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.68"
+        },
+        {
+          "set_name": "Structure Deck: Sacred Beasts",
+          "set_code": "SDSA-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95463814,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95463814.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95463814.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95463814.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 165903,
+          "viewsweek": 22,
+          "upvotes": 6,
+          "downvotes": 10,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14345,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

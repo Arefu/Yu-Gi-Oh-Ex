@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 32061744,
+      "name": "Wattkeeper",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Select 1 Level 4 or lower \"Watt\" monster in your Graveyard. Special Summon that monster from the Graveyard. Destroy it during the End Phase.",
+      "race": "Normal",
+      "archetype": "Watt",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wattkeeper-2725",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32061744,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32061744.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32061744.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32061744.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27751,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9151,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

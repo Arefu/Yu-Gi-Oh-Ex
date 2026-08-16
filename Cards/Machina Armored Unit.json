@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 31828916,
+      "name": "Machina Armored Unit",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, when a Machine monster is destroyed by battle and sent to your GY: You can Special Summon 1 Machine monster from your Deck that has the same Attribute and less ATK than that destroyed monster in the GY.",
+      "race": "Continuous",
+      "archetype": "Machina",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/machina-armored-unit-2702",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Two",
+          "set_code": "AP02-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENB19",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Machina Mayhem Structure Deck",
+          "set_code": "SDMM-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "Structure Deck: Mechanized Madness",
+          "set_code": "SR10-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31828916,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31828916.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31828916.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31828916.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 155525,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-19",
+          "ocg_date": "2009-12-12",
+          "konami_id": 8696,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

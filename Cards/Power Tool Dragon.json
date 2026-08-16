@@ -1,0 +1,120 @@
+{
+  "data": [
+    {
+      "id": 2403771,
+      "name": "Power Tool Dragon",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nOnce per turn: You can reveal 3 Equip Spell Cards from your Deck, then your opponent randomly adds 1 of them to your hand, and you shuffle the rest back into your Deck. If this card would be destroyed while equipped with an Equip Spell Card(s), you can send 1 of those cards to the Graveyard instead.",
+      "race": "Machine",
+      "atk": 2300,
+      "def": 2500,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Power Tool",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/power-tool-dragon-218",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2009 Wave 1",
+          "set_code": "CT06-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "13.09"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN177",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.46"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN236",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.85"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN135",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN135",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN042",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN042",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2403771,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2403771.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2403771.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2403771.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.51",
+          "tcgplayer_price": "0.99",
+          "ebay_price": "2.99",
+          "amazon_price": "18.67",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 322814,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8137,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

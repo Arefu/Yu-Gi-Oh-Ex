@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 36898537,
+      "name": "Metaphys Horus",
+      "typeline": [
+        "Wyrm",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\nIf this card is Synchro Summoned: You can activate the appropriate effect(s), depending on the non-Tuner monster(s) used as Synchro Material;\n● Normal Monster: This face-up card is unaffected by other card effects this turn.\n● Effect Monster: You can target 1 other face-up card on the field; negate that target's effects.\n● Pendulum Monster: Your opponent chooses 1 monster they control and gives control of it to you, but it cannot attack this turn.",
+      "race": "Wyrm",
+      "atk": 2300,
+      "def": 1600,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Metaphys",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metaphys-horus-3120",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN222",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN049",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN049",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36898537,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36898537.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36898537.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36898537.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "23.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 139032,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11569,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

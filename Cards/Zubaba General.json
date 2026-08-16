@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 31563350,
+      "name": "Zubaba General",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nOnce per turn: You can detach 1 Xyz Material from this card; equip 1 Warrior-Type monster from your hand to this card. This card gains ATK equal to the combined ATK of the monsters equipped to it by this effect.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zubaba-general-2684",
+      "card_sets": [
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN104",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "10.41"
+        },
+        {
+          "set_name": "Weekly Shonen Jump July 2013 membership promotional card",
+          "set_code": "JUMP-EN065",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.61"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31563350,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31563350.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31563350.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31563350.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.95",
+          "amazon_price": "3.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76208,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-09",
+          "ocg_date": "2013-03-16",
+          "konami_id": 10453,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

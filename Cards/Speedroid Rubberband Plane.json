@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 8284390,
+      "name": "Speedroid Rubberband Plane",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a monster is Special Summoned to your field (except during the Damage Step): You can Special Summon this card from your hand, also you cannot Special Summon monsters for the rest of this turn, except WIND monsters. You can only use this effect of \"Speedroid Rubberband Plane\" once per turn. If this card is Normal or Special Summoned: You can target 1 face-up monster on the field; it loses 600 ATK until the end of this turn.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 0,
+      "level": 5,
+      "attribute": "WIND",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/speedroid-rubberband-plane-8361",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8284390,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8284390.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8284390.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8284390.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.49",
+          "amazon_price": "0.30",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Speedroid 5 6 Plane",
+          "views": 78724,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12922,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

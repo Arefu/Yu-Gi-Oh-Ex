@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 7369217,
+      "name": "Metallizing Parasite - Lunatite",
+      "typeline": [
+        "Aqua",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during your Main Phase, if you control this monster on the field, you can equip it to a face-up monster on your side of the field as an Equip Spell Card, OR unequip the Union equipment and Special Summon this card in face-up Attack Position. While equipped to a monster by this card's effect, that monster will be unaffected by the effects of Spell Cards controlled by your opponent. (1 monster can only be equipped with 1 Union Monster at a time. If the monster that this card is equipped to is destroyed as a result of battle, destroy this card instead.)",
+      "race": "Aqua",
+      "atk": 1000,
+      "def": 500,
+      "level": 7,
+      "attribute": "WATER",
+      "archetype": "Parasite",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metallizing-parasite-lunatite-630",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-074",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN074",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN236",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7369217,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7369217.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7369217.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7369217.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.44",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95773,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5779,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

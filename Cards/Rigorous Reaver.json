@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 39180960,
+      "name": "Rigorous Reaver",
+      "typeline": [
+        "Plant",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Each player discards 1 card.\nIf this card is destroyed by battle: The monster that destroyed it loses 500 ATK and DEF.",
+      "race": "Plant",
+      "atk": 1600,
+      "def": 100,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rigorous-reaver-3322",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN045",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Champion Pack: Game Six",
+          "set_code": "CP06-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "26.88"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN008",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39180960,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39180960.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39180960.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39180960.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "44.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44171,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-12",
+          "ocg_date": "2001-09-06",
+          "konami_id": 5044,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 39275698,
+      "name": "Harpie's Feather Rest",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 3 \"Harpie Lady\" and/or \"Harpie Lady Sisters\" in your GY; shuffle them into the Deck, then draw 1 card. If you controlled a Level 5 or higher \"Harpie\" monster when you activated this effect, draw 2 cards instead. For the rest of this turn after this card resolves, you cannot Special Summon monsters, except WIND monsters. You can only activate 1 \"Harpie's Feather Rest\" per turn.",
+      "race": "Normal",
+      "archetype": "Harpie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/harpie-s-feather-rest-9891",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.18"
+        },
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2020 Q",
+          "set_code": "LART-EN029",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39275698,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39275698.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39275698.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39275698.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.89",
+          "ebay_price": "7.95",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Harpie's Feather Roosting",
+          "views": 156559,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14168,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

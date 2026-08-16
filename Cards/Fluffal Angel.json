@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 45215225,
+      "name": "Fluffal Angel",
+      "typeline": [
+        "Fairy",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can target 1 \"Fluffal\" or \"Edge Imp\" monster in your GY; Special Summon it, also, you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Fusion Monsters (even if this card leaves the field). You can only use this effect of \"Fluffal Angel\" once per turn.\n\n[ Monster Effect ] \nYou can Tribute this card, then target 1 \"Frightfur\" Fusion Monster in your GY; discard 1 card, and if you do, Special Summon the targeted monster. You can only use this effect of \"Fluffal Angel\" once per turn.",
+      "race": "Fairy",
+      "pend_desc": "You can target 1 \"Fluffal\" or \"Edge Imp\" monster in your GY; Special Summon it, also, you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Fusion Monsters (even if this card leaves the field). You can only use this effect of \"Fluffal Angel\" once per turn.",
+      "monster_desc": "You can Tribute this card, then target 1 \"Frightfur\" Fusion Monster in your GY; discard 1 card, and if you do, Special Summon the targeted monster. You can only use this effect of \"Fluffal Angel\" once per turn.",
+      "atk": 600,
+      "def": 1200,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Fluffal",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fluffal-angel-9349",
+      "card_sets": [
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN020",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45215225,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45215225.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45215225.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45215225.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.89",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66824,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-06-18",
+          "ocg_date": "2018-03-20",
+          "konami_id": 13701,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 89397517,
+      "name": "Legend of Heart",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Pay 2000 LP and Tribute 1 Warrior monster; banish up to 3 \"Legendary Dragon\" Spells with different names from your hand and/or GY, and if you do, Special Summon that many \"Legendary Knight\" monsters with different names from your hand, Deck, and/or GY. You can only activate 1 \"Legend of Heart\" per turn.",
+      "race": "Normal",
+      "archetype": "Legendary Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/legend-of-heart-7465",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend",
+          "set_code": "DRLG-EN006",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "13.86"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.92"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENA24",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89397517,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89397517.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89397517.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89397517.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.95",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95046,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-04-25",
+          "ocg_date": "2014-05-17",
+          "konami_id": 11152,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

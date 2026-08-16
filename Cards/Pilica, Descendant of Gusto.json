@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 71175527,
+      "name": "Pilica, Descendant of Gusto",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can target 1 WIND Tuner monster in your Graveyard; Special Summon that target in face-up Defense Position. Its effects are negated. If you activated this effect, you cannot Special Summon monsters for the rest of this turn, except WIND monsters. You can only use this effect of \"Pilica, Descendant of Gusto\" once per turn.",
+      "race": "Psychic",
+      "atk": 1000,
+      "def": 1500,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pilica-descendant-of-gusto-5977",
+      "card_sets": [
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN029",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71175527,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71175527.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71175527.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71175527.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "4.91",
+          "ebay_price": "6.20",
+          "amazon_price": "12.99",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83658,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11058,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

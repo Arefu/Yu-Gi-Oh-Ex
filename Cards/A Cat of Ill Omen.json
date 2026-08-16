@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 24140059,
+      "name": "A Cat of Ill Omen",
+      "typeline": [
+        "Beast",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Choose 1 Trap from your Deck and place it on top of your Deck, or, if \"Necrovalley\" is on the field, you can add that Trap to your hand instead.",
+      "race": "Beast",
+      "atk": 500,
+      "def": 300,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/a-cat-of-ill-omen-2087",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.22"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Destiny Masters",
+          "set_code": "SS01-ENB11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24140059,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24140059.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24140059.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24140059.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "2.19",
+          "ebay_price": "3.99",
+          "amazon_price": "4.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 326297,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-05-16",
+          "konami_id": 5520,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

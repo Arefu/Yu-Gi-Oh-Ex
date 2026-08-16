@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 58604027,
+      "name": "The Legendary Exodia Incarnate",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing 1 \"Forbidden One\" monster, and cannot be Special Summoned by other ways. This card gains 1000 ATK for each \"Forbidden One\" monster in your Graveyard. Unaffected by other cards' effects. Once per turn, during your End Phase: Add 1 \"Forbidden One\" monster from your Graveyard to your hand. When this card is destroyed by battle and sent to the Graveyard: You can reveal any number of \"Forbidden One\" monsters in your hand, and if you do, draw 1 card for each.",
+      "race": "Spellcaster",
+      "atk": -1,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Exodia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-legendary-exodia-incarnate-4985",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN051",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN051",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENY01",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58604027,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58604027.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58604027.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58604027.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "59.99",
+          "amazon_price": "3.68",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 350652,
+          "viewsweek": 21,
+          "upvotes": 33,
+          "downvotes": 11,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-06",
+          "ocg_date": "2015-11-28",
+          "konami_id": 5012,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

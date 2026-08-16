@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 13611090,
+      "name": "Majespecter Sonics",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Majespecter\" monster you control; until the end of this turn, its ATK and DEF become double its current ATK and DEF, also any battle damage it inflicts to your opponent is halved.",
+      "race": "Quick-Play",
+      "archetype": "Majespecter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/majespecter-sonics-1168",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN219",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13611090,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13611090.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13611090.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13611090.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31327,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12172,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

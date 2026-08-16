@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 42378577,
+      "name": "Pendulum Switch",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can target 1 card in your Pendulum Zone; Special Summon it. You can target 1 Pendulum Monster in your Monster Zone; place that Pendulum Monster in your Pendulum Zone. You can only use 1 \"Pendulum Switch\" effect per turn, and only once that turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pendulum-switch-8494",
+      "card_sets": [
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC24",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.01"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN000",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis Sneak Peek Participation Card",
+          "set_code": "MACR-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.31"
+        },
+        {
+          "set_name": "Tactical Masters",
+          "set_code": "TAMA-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42378577,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42378577.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42378577.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42378577.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94193,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-04-29",
+          "ocg_date": "2017-09-09",
+          "konami_id": 13020,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

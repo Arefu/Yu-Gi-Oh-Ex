@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 27813661,
+      "name": "Sky Iris",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Your opponent cannot target \"Magician\", \"Performapal\", or \"Odd-Eyes\" cards in your Pendulum Zones with card effects. You can target 1 other face-up card you control; destroy it, and if you do, add 1 \"Odd-Eyes\" card from your Deck to your hand. You can only use this effect of \"Sky Iris\" once per turn.",
+      "race": "Field",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-iris-2366",
+      "card_sets": [
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO19",
+          "set_rarity": "3",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO19",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO19",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.73"
+        },
+        {
+          "set_name": "OTS Tournament Pack 3",
+          "set_code": "OP03-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27813661,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27813661.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27813661.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27813661.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.95",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 336016,
+          "viewsweek": 42,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-12-03",
+          "ocg_date": "2015-06-20",
+          "konami_id": 11939,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

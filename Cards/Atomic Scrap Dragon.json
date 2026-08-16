@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 92361635,
+      "name": "Atomic Scrap Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Scrap\" Tuner + 2 or more non-Tuner monsters\nOnce per turn, you can select 1 card you control and up to 3 cards in your opponent's Graveyard. Destroy your selected card and return the opponent's cards you selected to the Deck. When this card is destroyed by your opponent's card (either by battle or by card effect) and sent to the Graveyard, select 1 non-Synchro \"Scrap\" monster in your Graveyard, and Special Summon it.",
+      "race": "Dragon",
+      "atk": 3200,
+      "def": 2400,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Scrap",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/atomic-scrap-dragon-7693",
+      "card_sets": [
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN043",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92361635,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92361635.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92361635.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92361635.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.76",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "6.99",
+          "amazon_price": "5.49",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55727,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9334,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

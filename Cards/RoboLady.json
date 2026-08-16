@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 92421852,
+      "name": "Robolady",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A warrior fully covered with metal. It upgrades by fusing with \"Roboyarou\".",
+      "race": "Machine",
+      "atk": 450,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/robolady-7702",
+      "card_sets": [
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92421852,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92421852.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92421852.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92421852.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "3.50",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70766,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5072,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

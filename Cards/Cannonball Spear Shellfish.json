@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 95614612,
+      "name": "Cannonball Spear Shellfish",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While \"Umi\" is face-up on the field, this card is unaffected by any Spell Cards.",
+      "race": "Aqua",
+      "atk": 1000,
+      "def": 1000,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Umi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cannonball-spear-shellfish-7963",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-085",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN085",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95614612,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95614612.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95614612.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95614612.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "3.54",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82191,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5897,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

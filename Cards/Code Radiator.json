@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 75130221,
+      "name": "Code Radiator",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Cyberse monster you control would be used as Link Material for a \"Code Talker\" monster, this card in your hand can also be used as material. If this card is sent from the hand or field to the GY as material for the Link Summon of a \"Code Talker\" monster: You can target 1 face-up monster your opponent controls; change its ATK 0, also negate its effects. If this card on the field was used as material, you can target 2 monsters, instead. You can only use each effect of \"Code Radiator\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1600,
+      "def": 800,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Code Talker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/code-radiator-9575",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN039",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.22"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75130221,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75130221.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75130221.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75130221.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.50",
+          "amazon_price": "5.84",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 194705,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-22",
+          "ocg_date": "2018-06-23",
+          "konami_id": 13874,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

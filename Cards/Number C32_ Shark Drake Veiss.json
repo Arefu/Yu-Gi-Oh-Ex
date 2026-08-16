@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 49221191,
+      "name": "Number C32: Shark Drake Veiss",
+      "typeline": [
+        "Sea Serpent",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "4 Level 4 WATER monsters\nYou can also Xyz Summon this card by using a \"Number 32: Shark Drake\" you control as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) During either player's turn, if your Life Points are 1000 or less: You can detach 1 Xyz Material from this card and banish 1 monster from your Graveyard to target 1 face-up monster on the field; that target's ATK and DEF become 0 until the End Phase.",
+      "race": "Sea Serpent",
+      "atk": 2800,
+      "def": 2100,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Shark",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c32-shark-drake-veiss-4200",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Heroes Mega Pack",
+          "set_code": "MP23-EN279",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN039",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN039",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49221191,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49221191.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49221191.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49221191.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "26.99",
+          "amazon_price": "46.64",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C32",
+          "views": 108522,
+          "viewsweek": 21,
+          "upvotes": 76,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10261,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 75660578,
+      "name": "Hela, Generaider Boss of Doom",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only control 1 \"Hela, Generaider Boss of Doom\". (Quick Effect): You can Tribute 1 \"Generaider\" monster or 1 Zombie monster, then target 1 \"Generaider\" monster or 1 Zombie monster in your GY, with a different name than the Tributed monster had on the field; Special Summon that monster in Defense Position. You can only use this effect of \"Hela, Generaider Boss of Doom\" once per turn.",
+      "race": "Zombie",
+      "atk": 800,
+      "def": 2800,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hela-generaider-boss-of-doom-10488",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN090",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.96"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN032",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75660578,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75660578.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75660578.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75660578.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.50",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hel, Generaider Boss of Doom",
+          "views": 191925,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423032,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14775,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 96220350,
+      "name": "Idaten the Conqueror Star",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 Level 5 or higher Warrior monsters\r\nIf this card is Fusion Summoned: You can add 1 Level 5 Warrior monster from your Deck to your hand. You can only use this effect of \"Idaten the Conqueror Star\" once per turn. Once per turn: You can discard any number of cards; this card gains 200 ATK for each card discarded. Once per battle, during damage calculation, if this card battles an opponent's monster with an equal or lower Level (Quick Effect): You can make that opponent's monster's ATK 0 during that damage calculation only.",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 2200,
+      "level": 10,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/idaten-the-conqueror-star-9485",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96220350,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96220350.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96220350.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96220350.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.75",
+          "tcgplayer_price": "0.95",
+          "ebay_price": "0.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 128403,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13832,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

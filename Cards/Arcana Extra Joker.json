@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 64454614,
+      "name": "Arcana Extra Joker",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3 Warrior monsters with different names\r\nOnce per turn, when a Spell/Trap Card, or monster effect, is activated that targets this face-up card on the field or a monster this card points to (Quick Effect): You can discard the same type of card (Monster, Spell, or Trap); negate the activation. When this Link Summoned card is destroyed by battle and sent to the GY: You can Special Summon 1 Level 4 Warrior Normal Monster from your Deck, and if you do, add 1 Level 4 Warrior monster from your Deck to your hand.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcana-extra-joker-9202",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tins",
+          "set_code": "CT15-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.61"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN030",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64454614,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64454614.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64454614.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64454614.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "4.95",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 167598,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-30",
+          "ocg_date": "2018-03-10",
+          "konami_id": 13542,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

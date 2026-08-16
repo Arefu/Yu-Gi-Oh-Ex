@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 76775123,
+      "name": "Patrol Robo",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Standby Phase, you can look at 1 face-down card that's been Set by your opponent as long as this card remains face-up on the field.",
+      "race": "Machine",
+      "atk": 1100,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/patrol-robo-6461",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "158.47"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "222.49"
+        },
+        {
+          "set_name": "Tournament Pack: 3rd Season",
+          "set_code": "TP3-008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76775123,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76775123.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76775123.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76775123.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.00",
+          "tcgplayer_price": "3.12",
+          "ebay_price": "2.49",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41240,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4586,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

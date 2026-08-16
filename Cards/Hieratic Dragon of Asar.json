@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 30794966,
+      "name": "Hieratic Dragon of Asar",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by banishing 1 LIGHT Dragon-Type monster and 1 Dragon-Type Normal Monster from your Graveyard. If this face-up card on the field would be destroyed, you can Tribute 1 face-up \"Hieratic\" monster instead, except this card.",
+      "race": "Dragon",
+      "atk": 2600,
+      "def": 700,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Hieratic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hieratic-dragon-of-asar-2616",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30794966,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30794966.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30794966.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30794966.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.64",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42991,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10047,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

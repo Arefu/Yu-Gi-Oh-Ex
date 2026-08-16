@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 17968114,
+      "name": "Amazon of the Seas",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A mermaid who serves as a herald to the Ocean Lord. She protects the sacred domain of Atlantis.",
+      "race": "Fish",
+      "atk": 1300,
+      "def": 1400,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amazon-of-the-seas-1558",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Six",
+          "set_code": "AP06-EN016",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Champion Pack: Game Five",
+          "set_code": "CP05-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17968114,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17968114.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17968114.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17968114.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.14",
+          "tcgplayer_price": "11.97",
+          "ebay_price": "4.79",
+          "amazon_price": "6.08",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29143,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-08",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4632,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

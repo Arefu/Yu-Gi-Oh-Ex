@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 29596581,
+      "name": "Thunder Dragonroar",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card; add to your hand, 1 of your \"Thunder Dragon\" cards that is banished or in your GY, except \"Thunder Dragonroar\". If this card is banished, or sent from the field to the GY: You can Special Summon 1 \"Thunder Dragon\" monster from your Deck in Defense Position, but return it to the hand during the End Phase. You can only use 1 \"Thunder Dragonroar\" effect per turn, and only once that turn.",
+      "race": "Thunder",
+      "atk": 2400,
+      "def": 0,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Thunder Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/thunder-dragonroar-9618",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN169",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN077",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29596581,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29596581.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29596581.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29596581.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "7.95",
+          "amazon_price": "4.52",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Beastial Thunder Dragon",
+          "views": 511623,
+          "viewsweek": 21,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13908,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

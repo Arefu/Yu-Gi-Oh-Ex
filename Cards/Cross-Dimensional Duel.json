@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 56889,
+      "name": "Cross-Dimensional Duel",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 \"Ancient Gear\" monster you control; banish it. During the next Standby Phase, return that banished monster to the field, and if you do, its ATK becomes double its original ATK until the end of that turn. If 1 or more \"Ancient Gear Golem\" or \"Ancient Gear Golem - Ultimate Pound\" you control would be destroyed by battle or card effect, you can banish this card from your GY instead.",
+      "race": "Normal",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cross-dimensional-duel-9082",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.9"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56889,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56889.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56889.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56889.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "20.44",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Competition - Cross Dimension",
+          "views": 59696,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-22",
+          "ocg_date": "2017-11-11",
+          "konami_id": 13483,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

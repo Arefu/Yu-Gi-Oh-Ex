@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 64681432,
+      "name": "Gandora the Dragon of Destruction",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. You can pay half your LP; destroy as many cards on the field as possible (other than this card), and if you do, banish them. This card gains 300 ATK for each card destroyed this way. Once per turn, during the End Phase, if this card was Normal or Flip Summoned this turn: Send it to the Graveyard.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gandora",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gandora-the-dragon-of-destruction-5458",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2010 Wave 2",
+          "set_code": "CT07-EN020",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.63"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 7, Issue 1 promotional card",
+          "set_code": "JUMP-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "11.52"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN041",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENC03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64681432,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64681432.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64681432.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64681432.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "7.99",
+          "amazon_price": "1.10",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 142901,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-01-01",
+          "ocg_date": "2005-08-28",
+          "konami_id": 6076,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

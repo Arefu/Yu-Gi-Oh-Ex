@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 82562802,
+      "name": "Cyberdark Claw",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY while equipped to a monster: You can target 1 \"Cyberdark\" monster in your GY; add it to your hand. You can only use each of the following effects of \"Cyberdark Claw\" once per turn.\r\n● You can discard this card; add 1 \"Cyberdark\" Spell/Trap from your Deck to your hand.\r\n● During damage calculation, if a monster equipped with this card battles: You can send 1 monster from your Extra Deck to the GY.",
+      "race": "Dragon",
+      "atk": 1600,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Cyberdark",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberdark-claw-8563",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN023",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.53"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENG10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82562802,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82562802.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82562802.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82562802.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "1.10",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 376187,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-07",
+          "ocg_date": "2017-06-03",
+          "konami_id": 13181,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

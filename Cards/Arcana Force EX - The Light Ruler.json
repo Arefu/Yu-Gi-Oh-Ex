@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 5861892,
+      "name": "Arcana Force EX - The Light Ruler",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by sending 3 monsters you control to the Graveyard, and cannot be Special Summoned by other ways. When this card is Special Summoned: Toss a coin and gain the appropriate effect.\n● Heads: When this card destroys an opponent's monster by battle and sends it to the Graveyard: You can target 1 card in your Graveyard; add that target to your hand.\n● Tails: During either player's turn, when a Spell/Trap Card, or monster effect, that targets this card is activated: This card loses exactly 1000 ATK and you negate the activation, and if you do, destroy it.",
+      "race": "Fairy",
+      "atk": 4000,
+      "def": 4000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Arcana Force",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcana-force-ex-the-light-ruler-516",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN002",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 6, Issue 12 promotional card",
+          "set_code": "JUMP-EN027",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.91"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2013",
+          "set_code": "SP13-EN044",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5861892,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5861892.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5861892.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5861892.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.74",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "3.00",
+          "amazon_price": "1.47",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94112,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-05",
+          "ocg_date": "2007-08-21",
+          "konami_id": 7344,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

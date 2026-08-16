@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 26378150,
+      "name": "Rude Kaiser",
+      "typeline": [
+        "Beast-Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "With an axe in each hand, this monster delivers heavy damage.",
+      "race": "Beast-Warrior",
+      "atk": 1800,
+      "def": 1600,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rude-kaiser-2266",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Ultimate Kaiba Set",
+          "set_code": "KC01-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.45"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26378150,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26378150.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26378150.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26378150.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.82",
+          "ebay_price": "1.00",
+          "amazon_price": "4.94",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79480,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4388,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 68431965,
+      "name": "Shooting Riser Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nIf this card is Synchro Summoned: You can send 1 monster from your Deck to the GY, whose Level is lower than this card's on the field, and if you do, reduce this card's Level by that monster's, but for the rest of this turn, you cannot activate the effects of monsters with the same name the sent monster had in the GY. You can only use this effect of \"Shooting Riser Dragon\" once per turn. Once per Chain, during your opponent's Main Phase, you can (Quick Effect): Immediately after this effect resolves, Synchro Summon using this card you control.",
+      "race": "Dragon",
+      "atk": 2100,
+      "def": 1700,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shooting-riser-dragon-9355",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm Special Edition",
+          "set_code": "DANE-ENSE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.93"
+        },
+        {
+          "set_name": "Weekly Shonen Jump July 2018 membership promotional card",
+          "set_code": "JUMP-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68431965,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68431965.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68431965.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68431965.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.29",
+          "tcgplayer_price": "3.13",
+          "ebay_price": "1.99",
+          "amazon_price": "5.50",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 641215,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-12",
+          "ocg_date": "2018-03-20",
+          "konami_id": 13714,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

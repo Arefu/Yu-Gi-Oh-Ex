@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 94425169,
+      "name": "Spring of Rebirth",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Increase your Life Points by 500 points every time monsters return from the field to the owner's hand.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spring-of-rebirth-7856",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN185",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94425169,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94425169.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94425169.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94425169.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "1.00",
+          "amazon_price": "1.14",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 134693,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5164,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

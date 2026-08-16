@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 14531242,
+      "name": "Opticlops",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A one-eyed giant that serves the \"Dark Ruler Ha Des\", it skewers its enemies with its sharp horn, shattering them to pieces.",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": 1700,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/opticlops-1243",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN131",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.08"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.83"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN112",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Reloaded",
+          "set_code": "YSKR-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14531242,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14531242.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14531242.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14531242.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 148096,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-09-20",
+          "konami_id": 5309,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 17760003,
+      "name": "Genex Ally Triarm",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Genex Controller\" + 1 or more non-Tuner monsters\nThis card's effects depend on the Attribute(s) of its non-Tuner Synchro Material Monsters. Once per turn, you can discard 1 card to activate one of its effects: ● WIND: Send 1 random card from your opponent's hand to the Graveyard. ● WATER: Select 1 Spell/Trap Card on the field, and destroy it. ● DARK: Select 1 face-up LIGHT monster on the field, destroy it and draw 1 card.",
+      "race": "Machine",
+      "atk": 2400,
+      "def": 1600,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/genex-ally-triarm-1544",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN038",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 4: Trishula's Triumph",
+          "set_code": "HA04-EN026",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17760003,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17760003.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17760003.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17760003.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "1.50",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27932,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-25",
+          "ocg_date": "2009-10-01",
+          "konami_id": 8574,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

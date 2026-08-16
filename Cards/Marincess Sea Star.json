@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 62886670,
+      "name": "Marincess Sea Star",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send this card from your hand to the GY, then target 1 \"Marincess\" monster you control; it gains 800 ATK until the end of this turn. You can use this effect of \"Marincess Sea Star\" up to twice per turn.",
+      "race": "Cyberse",
+      "atk": 800,
+      "def": 400,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Marincess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marincess-sea-star-10191",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN103",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62886670,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62886670.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62886670.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62886670.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48938,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009004,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14452,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

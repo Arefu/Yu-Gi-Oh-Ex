@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 37011715,
+      "name": "Miraculous Rebirth",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Activate only as Chain Link 4 or higher. Select 1 monster from either player's Graveyard and Special Summon it. You cannot activate this card if multiple cards/effects with the same name are in that Chain.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/miraculous-rebirth-3129",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Eight",
+          "set_code": "CP08-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN044",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37011715,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37011715.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37011715.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37011715.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "2.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35079,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6905,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

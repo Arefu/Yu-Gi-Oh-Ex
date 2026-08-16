@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 41307269,
+      "name": "Superheavy Samurai Kabuto",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent Special Summons a monster(s): You can change as many Attack Position \"Superheavy Samurai\" monsters you control as possible to Defense Position, and if you do, the ones changed by this effect gain 500 DEF until the end of this turn.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 2000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-kabuto-3524",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN132",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41307269,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41307269.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41307269.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41307269.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34028,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11340,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

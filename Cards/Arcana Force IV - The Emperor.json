@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 61175706,
+      "name": "Arcana Force IV - The Emperor",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Summoned, toss a coin: ● Heads: All \"Arcana Force\" monsters you control gain 500 ATK. ● Tails: All \"Arcana Force\" monsters you control lose 500 ATK.",
+      "race": "Fairy",
+      "atk": 1400,
+      "def": 1400,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Arcana Force",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcana-force-iv-the-emperor-5188",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61175706,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61175706.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61175706.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61175706.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.01",
+          "ebay_price": "2.00",
+          "amazon_price": "1.10",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81126,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7584,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

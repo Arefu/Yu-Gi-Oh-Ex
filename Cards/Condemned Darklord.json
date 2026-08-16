@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 35306215,
+      "name": "Condemned Darklord",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Fairy monsters\r\nYou can Tribute Summon Fairy monsters that require 2 Tributes by banishing 2 monsters from your GY instead of Tributing (it is still treated as a Tribute Summon). You can discard 1 card; take 1 \"Darklord\" monster from your Deck, and either add it to your hand or send it to the GY. You can only use this effect of \"Condemned Darklord\" once per turn. Once per turn, during your End Phase: Gain 500 LP for each Fairy monster on the field.",
+      "race": "Fairy",
+      "atk": 1600,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Darklord",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/condemned-darklord-9938",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.67"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN107",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35306215,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35306215.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35306215.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35306215.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "7.95",
+          "amazon_price": "3.58",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 311145,
+          "viewsweek": 42,
+          "upvotes": 35,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14208,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

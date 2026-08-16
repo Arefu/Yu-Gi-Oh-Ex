@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 91712985,
+      "name": "Kamion, the Timelord",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned from the Deck. If you control no monsters, you can Normal Summon this card without Tributing. Cannot be destroyed by battle or card effects. You take no battle damage from attacks involving this card. At the end of the Battle Phase, if this card battled: Shuffle 1 card your opponent controls into the Deck, and if you do, inflict 500 damage to your opponent. Neither player can activate cards or effects in response to this effect's activation. Once per turn, during your Standby Phase: Shuffle this card into the Deck.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Timelord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kamion-the-timelord-8517",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91712985,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91712985.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91712985.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91712985.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.92",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 143304,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13160,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 75745607,
+      "name": "Hino-Kagu-Tsuchi",
+      "typeline": [
+        "Pyro",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Spirit Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. This card returns to its owner's hand during the End Phase of the turn it is Normal Summoned or flipped face-up. If this card inflicts Battle Damage to your opponent, they discard all cards in their hand during the next Draw Phase, before they draw.",
+      "race": "Pyro",
+      "atk": 2800,
+      "def": 2900,
+      "level": 8,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hino-kagu-tsuchi-6376",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN182",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "12.49"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-070",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "11.65"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN070",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN060",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75745607,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75745607.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75745607.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75745607.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.51",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "5.25",
+          "amazon_price": "10.18",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 122782,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5380,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

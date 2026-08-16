@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 87210505,
+      "name": "Knight's Title",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 face-up \"Dark Magician\"; Special Summon 1 \"Dark Magician Knight\" from your hand, Deck or Graveyard.",
+      "race": "Normal",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/knight-s-title-7296",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.63"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Double Pack promotional cards",
+          "set_code": "ROD-EN002",
+          "set_rarity": "Super Parallel Rare",
+          "set_rarity_code": "(SPR)",
+          "set_price": "3.01"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Reshef of Destruction promotional cards",
+          "set_code": "ROD-EN002",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "3.01"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87210505,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87210505.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87210505.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87210505.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.12",
+          "tcgplayer_price": "0.64",
+          "ebay_price": "2.99",
+          "amazon_price": "5.16",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37649,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-29",
+          "ocg_date": "2003-03-20",
+          "konami_id": 5757,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

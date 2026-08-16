@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 72813401,
+      "name": "Hi-Speedroid Rubber Band Shooter",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 WIND monsters\r\nDuring your Main Phase, you can: Immediately after this effect resolves, Normal Summon 1 WIND monster, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Synchro Monsters. You can banish 1 WIND Synchro Monster from your Extra Deck; reveal 2 \"Speedroid\" monsters with different names from your Deck whose total Levels equal the Level of that Synchro Monster, your opponent randomly picks 1 for you to add to your hand, and you send the other to the GY. You can only use each effect of \"Hi-Speedroid Rubber Band Shooter\" once per turn.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "WIND",
+      "archetype": "Hi-Speedroid",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hi-speedroid-rubber-band-shooter-9926",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN050",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.48"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENS36",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENS36",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72813401,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72813401.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72813401.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72813401.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "2.70",
+          "amazon_price": "4.74",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hi-Speedroid GOM Gun",
+          "views": 145515,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14206,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

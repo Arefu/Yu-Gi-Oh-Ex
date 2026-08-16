@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 31766317,
+      "name": "Archfiend Empress",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If (exactly) 1 face-up DARK Fiend-Type monster on the field, except this card, would be destroyed, you can remove from play 1 DARK Fiend-Type monster from your Graveyard, instead. When this card is destroyed and sent from the field to the Graveyard, you can select 1 Level 6 or higher DARK Fiend-Type monster in your Graveyard, except \"Archfiend Empress\", and Special Summon it.",
+      "race": "Fiend",
+      "atk": 2900,
+      "def": 2100,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-empress-2695",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast Sneak Peek Participation Card",
+          "set_code": "STBL-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "7.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31766317,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31766317.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31766317.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31766317.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.50",
+          "amazon_price": "0.70",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89555,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9277,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

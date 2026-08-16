@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 59640711,
+      "name": "Speedroid Den-Den Daiko Duke",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish this card from your Graveyard; Special Summon 1 \"Speedroid\" Tuner monster from your hand or Graveyard, except \"Speedroid Den-Den Daiko Duke\". You can only use this effect of \"Speedroid Den-Den Daiko Duke\" once per turn.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/speedroid-den-den-daiko-duke-5066",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENS07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Synchro Storm",
+          "set_code": "LED8-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "OTS Tournament Pack 27",
+          "set_code": "OP27-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59640711,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59640711.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59640711.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59640711.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171581,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12278,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

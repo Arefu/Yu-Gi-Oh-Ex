@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 15240238,
+      "name": "Mist Bird Clausolas",
+      "typeline": [
+        "Winged Beast",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nOnce per turn: You can target 1 face-up monster your opponent controls; its ATK becomes 0, and if it does, its effects are negated. These changes last until the end of this turn.",
+      "race": "Winged Beast",
+      "atk": 0,
+      "def": 2300,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mist-bird-clausolas-1306",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15240238,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15240238.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15240238.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15240238.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "1.16",
+          "ebay_price": "2.49",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50335,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10646,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

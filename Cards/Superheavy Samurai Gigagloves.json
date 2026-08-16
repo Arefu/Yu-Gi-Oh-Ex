@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 62017867,
+      "name": "Superheavy Samurai Gigagloves",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard, and you have no Spell/Trap Cards in your Graveyard: You can look at 5 cards from the top of your Deck, then place them on the top of the Deck in any order. When an opponent's monster declares a direct attack: You can banish this card from your Graveyard; excavate the top card of your Deck, and if it is a \"Superheavy Samurai\" monster, add it to your hand, and if you do, the attacking monster's ATK becomes 0. Otherwise, send it to the Graveyard.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-gigagloves-5248",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN010",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62017867,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62017867.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62017867.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62017867.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50629,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11682,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

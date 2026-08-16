@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 72181263,
+      "name": "D/D Orthros",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Pendulum Tuner Effect Monster",
+      "humanReadableCardType": "Pendulum Tuner Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 Spell/Trap Card on the field and 1 other \"D/D\" or \"Dark Contract\" card you control; destroy them.\n\n[ Monster Effect ] \nWhen you take battle or effect damage: You can Special Summon this card from your hand. If this card is Special Summoned to your field, you cannot Special Summon monsters for the rest of this turn, except Fiend-Type monsters.",
+      "race": "Fiend",
+      "pend_desc": "Once per turn: You can target 1 Spell/Trap Card on the field and 1 other \"D/D\" or \"Dark Contract\" card you control; destroy them.",
+      "monster_desc": "When you take battle or effect damage: You can Special Summon this card from your hand. If this card is Special Summoned to your field, you cannot Special Summon monsters for the rest of this turn, except Fiend-Type monsters.",
+      "atk": 600,
+      "def": 1800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-orthros-6056",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72181263,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72181263.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72181263.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72181263.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.00",
+          "tcgplayer_price": "2.73",
+          "ebay_price": "3.00",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 202301,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-01-19",
+          "ocg_date": "2015-12-12",
+          "konami_id": 12228,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

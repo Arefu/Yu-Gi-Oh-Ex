@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 95362816,
+      "name": "Elemental HERO Lady Heat",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases: Inflict 200 damage to your opponent for each face-up \"Elemental HERO\" monster you control.",
+      "race": "Pyro",
+      "atk": 1300,
+      "def": 1000,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-lady-heat-7940",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.02"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN008",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "13.62"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95362816,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95362816.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95362816.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95362816.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "1.08",
+          "ebay_price": "3.75",
+          "amazon_price": "5.48",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72128,
+          "viewsweek": 42,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-07-31",
+          "ocg_date": "2007-03-08",
+          "konami_id": 7024,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

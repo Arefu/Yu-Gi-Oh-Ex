@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 49888191,
+      "name": "Garnecia Elefantis",
+      "typeline": [
+        "Beast-Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A monster so heavy that each step rocks the earth.",
+      "race": "Beast-Warrior",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/garnecia-elefantis-4252",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-125",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.44"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E125",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "11.96"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN125",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49888191,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49888191.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49888191.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49888191.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.75",
+          "tcgplayer_price": "1.13",
+          "ebay_price": "0.99",
+          "amazon_price": "4.31",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 114521,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-07-21",
+          "konami_id": 4787,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

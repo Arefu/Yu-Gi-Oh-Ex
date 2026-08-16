@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 76862289,
+      "name": "Yamata Dragon",
+      "typeline": [
+        "Dragon",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Spirit Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. This card returns to its owner's hand during the End Phase of the turn it is Normal Summoned or flipped face-up. When this card inflicts Battle Damage to your opponent, draw cards until you have 5 cards in your hand.",
+      "race": "Dragon",
+      "atk": 2600,
+      "def": 3100,
+      "level": 7,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yamata-dragon-6466",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN179",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.8"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-067",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "26"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN067",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack 6",
+          "set_code": "TP6-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76862289,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76862289.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76862289.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76862289.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.88",
+          "tcgplayer_price": "1.81",
+          "ebay_price": "7.64",
+          "amazon_price": "10.18",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 124227,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5377,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

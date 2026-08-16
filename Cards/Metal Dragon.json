@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 9293977,
+      "name": "Metal Dragon",
+      "typeline": [
+        "Machine",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Steel Ogre Grotto #1\" + \"Lesser Dragon\"",
+      "race": "Machine",
+      "atk": 1850,
+      "def": 1700,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metal-dragon-788",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-102",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.94"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "8.28"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN102",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9293977,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9293977.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9293977.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9293977.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "3.95",
+          "amazon_price": "599.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 236471,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4415,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

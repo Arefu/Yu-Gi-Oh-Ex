@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 55784832,
+      "name": "Morinphen",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A strange fiend with long arms and razor-sharp talons.",
+      "race": "Fiend",
+      "atk": 1550,
+      "def": 1300,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morinphen-4752",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.6"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55784832,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55784832.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55784832.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55784832.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 130692,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4504,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

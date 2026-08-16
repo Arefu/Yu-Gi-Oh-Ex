@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 67048711,
+      "name": "7",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When there are 3 face-up \"7\" cards on your side of the field, draw 3 cards from your Deck. Then destroy all \"7\" cards. When this card is sent directly from the field to your Graveyard, increase your Life Points by 700 points.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/7-5633",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-091",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.29"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN204",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.55"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67048711,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67048711.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67048711.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67048711.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.73",
+          "ebay_price": "30.99",
+          "amazon_price": "1.58",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80641,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6053,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

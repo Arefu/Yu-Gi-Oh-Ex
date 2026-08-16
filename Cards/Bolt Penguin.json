@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 48531733,
+      "name": "Bolt Penguin",
+      "typeline": [
+        "Thunder",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "With each arm forming an electric whip, this monster paralyzes its enemies with electric shocks.",
+      "race": "Thunder",
+      "atk": 1100,
+      "def": 800,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Penguin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bolt-penguin-4143",
+      "card_sets": [
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48531733,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48531733.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48531733.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48531733.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "5.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28788,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4467,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

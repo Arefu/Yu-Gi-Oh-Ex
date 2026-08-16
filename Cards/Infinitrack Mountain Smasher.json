@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 60195675,
+      "name": "Infinitrack Mountain Smasher",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 7 monsters\r\nWhen this card destroys an opponent's monster by battle: You can attach that monster to this card as material. You can only use each of the following effects of \"Infinitrack Mountain Smasher\" once per turn.\r\n● You can detach 1 material from this card; it gains 1000 ATK.\r\n● If this card is in your GY: You can Tribute 1 Machine Link Monster; Special Summon this card in Defense Position.",
+      "race": "Machine",
+      "atk": 2100,
+      "def": 3100,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Infinitrack",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infinitrack-mountain-smasher-10134",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN213",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60195675,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60195675.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60195675.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60195675.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Infinitrack Colossal Mountain",
+          "views": 130896,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412008,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14398,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

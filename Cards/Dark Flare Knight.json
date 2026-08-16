@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 13722870,
+      "name": "Dark Flare Knight",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Dark Magician\" + \"Flame Swordsman\"\nYou take no Battle Damage from battles involving this card. When this card is destroyed by battle and sent to the Graveyard: Special Summon 1 \"Mirage Knight\" from your hand or Deck.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 800,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-flare-knight-1177",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "10.71"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN179",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13722870,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13722870.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13722870.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13722870.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.47",
+          "tcgplayer_price": "4.24",
+          "ebay_price": "8.95",
+          "amazon_price": "15.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 328858,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5698,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

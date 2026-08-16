@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 98126725,
+      "name": "Shien's Advisor",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned while you control a \"Six Samurai\" monster: Declare 1 Monster Type; while this card is face-up on the field, monsters with the declared Monster Type cannot declare an attack or be Special Summoned.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shien-s-advisor-8152",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN029",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN046",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98126725,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98126725.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98126725.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98126725.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40522,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9500,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

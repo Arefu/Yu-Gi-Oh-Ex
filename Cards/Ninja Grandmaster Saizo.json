@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 37354507,
+      "name": "Ninja Grandmaster Saizo",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Ninja\" monsters\r\nDuring your Main Phase: You can Set 1 \"Ninjitsu Art\" Spell/Trap directly from your Deck. You can only use this effect of \"Ninja Grandmaster Saizo\" once per turn. While this card points to a monster(s), this card cannot be targeted for an attack, also your opponent cannot target it with card effects.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Ninja",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ninja-grandmaster-saizo-9754",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 20",
+          "set_code": "OP20-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN011",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "10.8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37354507,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37354507.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37354507.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37354507.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.74",
+          "amazon_price": "9.89",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 98119,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14002,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

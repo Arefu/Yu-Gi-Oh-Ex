@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 12600382,
+      "name": "Exodia Necross",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned with \"Contract with Exodia\", and cannot be Special Summoned by other ways. Cannot be destroyed by battle or Spell/Trap effect. Once per turn, during your Standby Phase: This card gains 500 ATK. Destroy this card unless all 5 of these cards are in your Graveyard - \"Exodia the Forbidden One\", \"Right Arm of the Forbidden One\", \"Left Arm of the Forbidden One\", \"Right Leg of the Forbidden One\" and \"Left Leg of the Forbidden One\".",
+      "race": "Spellcaster",
+      "atk": 1800,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Exodia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/exodia-necross-1088",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "59.15"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN182",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENY09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Master Collection Volume 2",
+          "set_code": "MC2-EN003",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "51.83"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2024",
+          "set_code": "LART-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12600382,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12600382.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12600382.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12600382.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "6.99",
+          "amazon_price": "55.54",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 178670,
+          "viewsweek": 21,
+          "upvotes": 30,
+          "downvotes": 19,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5701,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

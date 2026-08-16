@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 20513882,
+      "name": "Painful Escape",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Tribute 1 monster; add 1 monster with the same original Type, Attribute, and Level, but with a different original name, from your Deck or Graveyard to your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/painful-escape-1762",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN162",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN081",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20513882,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20513882.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20513882.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20513882.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.00",
+          "amazon_price": "0.70",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21771,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12099,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

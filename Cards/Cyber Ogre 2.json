@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 37057012,
+      "name": "Cyber Ogre 2",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Cyber Ogre\" + \"Cyber Ogre\"\nA Fusion Summon of this monster can only be conducted with the above Fusion Material Monsters. When this card attacks, it gains ATK equal to half the ATK of the attack target, during damage calculation only.",
+      "race": "Machine",
+      "atk": 2600,
+      "def": 1900,
+      "level": 7,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-ogre-2-3134",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN036",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37057012,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37057012.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37057012.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37057012.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.82",
+          "tcgplayer_price": "5.11",
+          "ebay_price": "2.99",
+          "amazon_price": "73.04",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54070,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6856,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

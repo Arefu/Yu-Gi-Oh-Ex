@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 40695128,
+      "name": "Maharaghi",
+      "typeline": [
+        "Rock",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Spirit Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. This card returns to the owner's hand during the End Phase of the turn that this card is Normal Summoned or flipped face-up. If this card is Normal Summoned or flipped face-up, look at 1 card on the top of your Deck during your next Draw Phase (before you draw), and return the card to the top or the bottom of your Deck.",
+      "race": "Rock",
+      "atk": 1200,
+      "def": 1700,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/maharaghi-3462",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN175",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-064",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.4"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN064",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Structure Deck: Invincible Fortress",
+          "set_code": "SD7-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40695128,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40695128.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40695128.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40695128.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.29",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93270,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5373,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

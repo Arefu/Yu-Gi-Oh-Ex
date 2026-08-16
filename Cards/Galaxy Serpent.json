@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 11066358,
+      "name": "Galaxy Serpent",
+      "typeline": [
+        "Dragon",
+        "Tuner",
+        "Normal"
+      ],
+      "type": "Normal Tuner Monster",
+      "humanReadableCardType": "Tuner Normal Monster",
+      "frameType": "normal",
+      "desc": "Your hopes and dreams will be refreshed if you catch a glimpse of this rare creature in the evening twilight, soaring in the Sea of Stars.",
+      "race": "Dragon",
+      "atk": 1000,
+      "def": 0,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/galaxy-serpent-956",
+      "card_sets": [
+        {
+          "set_name": "Advanced Demo Deck Extra Pack",
+          "set_code": "DEM4-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light Sneak Peek Participation Card",
+          "set_code": "JOTL-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.06"
+        },
+        {
+          "set_name": "Starter Deck: Link Strike",
+          "set_code": "YS17-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11066358,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11066358.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11066358.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11066358.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "3.95",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 170523,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-03",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10812,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

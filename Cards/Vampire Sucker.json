@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 37129797,
+      "name": "Vampire Sucker",
+      "typeline": [
+        "Zombie",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Zombie monsters\r\nIf you would Tribute a monster(s) for a Tribute Summon, you can Tribute a Zombie monster(s) your opponent controls, even though you do not control them. You can only use each of the following effects of \"Vampire Sucker\" once per turn. You can target 1 monster in your opponent's GY; Special Summon it to your opponent's field in Defense Position, but it becomes a Zombie monster. If a Zombie monster(s) is Special Summoned from either GY: Draw 1 card.",
+      "race": "Zombie",
+      "atk": 1600,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Vampire",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vampire-sucker-9211",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN030",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN050",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN150",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN106",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37129797,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37129797.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37129797.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37129797.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "3.75",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 660087,
+          "viewsweek": 21,
+          "upvotes": 22,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13604,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 93775296,
+      "name": "Reverse Reuse",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target up to 2 Flip monsters in your Graveyard; Special Summon them to your opponent's side of the field, in face-up or face-down Defense Position.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reverse-reuse-7805",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93775296,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93775296.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93775296.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93775296.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44838,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11915,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

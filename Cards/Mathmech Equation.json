@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 14025912,
+      "name": "Mathmech Equation",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Mathmech\" monster in your GY; Special Summon it, and if you do, it gains 1000 ATK until the end of this turn. You can only activate 1 \"Mathmech Equation\" per turn.",
+      "race": "Normal",
+      "archetype": "Mathmech",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mathmech-equation-10420",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monstrous Revenge",
+          "set_code": "BLMR-EN092",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN010",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14025912,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14025912.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14025912.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14025912.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "6.95",
+          "amazon_price": "5.69",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mathmech Formula",
+          "views": 147957,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423010,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14753,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

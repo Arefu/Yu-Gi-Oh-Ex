@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 1966438,
+      "name": "Abominable Unchained Soul",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only Special Summon \"Abominable Unchained Soul(s)\" once per turn. If a card(s) you control is destroyed by battle or card effect: You can Special Summon this card from your hand. If this card is Special Summoned: You can discard 1 card; destroy 1 card on the field. Once per turn, during the End Phase, if this card is in the GY because it was destroyed on the field and sent there this turn: You can Special Summon this card, but place it on the bottom of the Deck when it leaves the field.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 1500,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abominable-unchained-soul-10632",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Valiant Smashers",
+          "set_code": "VASM-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1966438,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1966438.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1966438.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1966438.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.74",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "The Abominable Unchained Soul",
+          "views": 428383,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011019,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14828,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

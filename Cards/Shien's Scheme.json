@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 77847678,
+      "name": "Shien's Scheme",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If a \"Six Samurai\" monster you control is destroyed by battle: Special Summon up to 2 \"Six Samurai\" monsters from your hand.",
+      "race": "Normal",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shien-s-scheme-6550",
+      "card_sets": [
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77847678,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77847678.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77847678.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77847678.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38824,
+          "viewsweek": 84,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9366,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

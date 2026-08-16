@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 96677818,
+      "name": "Spellbook Organization",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Look at the top 3 cards of your Deck, then return them to the top of the Deck in any order.",
+      "race": "Quick-Play",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spellbook-organization-8044",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN148",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series: Haunted Mine",
+          "set_code": "GLD5-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-093",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96677818,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96677818.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96677818.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96677818.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "4.99",
+          "amazon_price": "1.67",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Pigeonholing Books of Spell",
+          "views": 104700,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5676,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 52518793,
+      "name": "Colosseum - Cage of the Gladiator Beasts",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Place 1 Counter on this card each time a monster is Special Summoned from either player's Deck. All \"Gladiator Beast\" monsters gain 100 ATK and DEF for each of these counters on this card. If this card would be destroyed by a card effect, you can discard 1 \"Colosseum - Cage of the Gladiator Beasts\" to prevent this card from being destroyed.",
+      "race": "Field",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/colosseum-cage-of-the-gladiator-beasts-4472",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN054",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52518793,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52518793.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52518793.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52518793.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.11",
+          "tcgplayer_price": "2.24",
+          "ebay_price": "3.50",
+          "amazon_price": "6.21",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58196,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7307,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

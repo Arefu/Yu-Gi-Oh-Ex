@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 40894584,
+      "name": "Jigabyte",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only control 1 \"Jigabyte\". If you control a Spellcaster-Type monster, you can Special Summon this card (from your hand). When this card is destroyed by battle or card effect and sent to the Graveyard: You can Special Summon 1 monster with 1500 ATK and 200 DEF from your Deck, except \"Jigabyte\".",
+      "race": "Reptile",
+      "atk": 1500,
+      "def": 200,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jigabyte-3479",
+      "card_sets": [
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "THE CHRONICLES DECK: Spirit Charmers (All-Foil Edition)",
+          "set_code": "CH02-EN013",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40894584,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40894584.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40894584.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40894584.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 170041,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11554,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

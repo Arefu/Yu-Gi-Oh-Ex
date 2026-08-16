@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 22657402,
+      "name": "Isolde, Belle of the Underworld",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control \"Tristan, Knight of the Underworld\", you can Special Summon this card (from your hand). Cannot be Special Summoned by other ways. You can target up to 2 Zombie monsters you control and declare a Level from 5 to 8; they become that Level until the end of this turn, also you cannot Special Summon monsters for the rest of this turn, except Zombie monsters. You can only use this effect of \"Isolde, Belle of the Underworld\" once per turn.",
+      "race": "Zombie",
+      "atk": 1000,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/isolde-belle-of-the-underworld-1950",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN010",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "2.39"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Horde",
+          "set_code": "SR07-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22657402,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22657402.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22657402.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22657402.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.95",
+          "amazon_price": "1.41",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62870,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-03-19",
+          "ocg_date": "2015-03-21",
+          "konami_id": 11647,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

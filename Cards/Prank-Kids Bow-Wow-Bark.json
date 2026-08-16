@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 43886072,
+      "name": "Prank-Kids Bow-Wow-Bark",
+      "typeline": [
+        "Pyro",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Prank-Kids\" monsters\r\nA \"Prank-Kids\" monster this card points to gains 1000 ATK. During your opponent's turn (Quick Effect): You can Tribute this card, then target 2 \"Prank-Kids\" cards with different names in your GY, except Link Monsters; add them to your hand, also \"Prank-Kids\" monsters you control cannot be destroyed by your opponent's card effects this turn. You can only use this effect of \"Prank-Kids Bow-Wow-Bark\" once per turn.",
+      "race": "Pyro",
+      "atk": 2000,
+      "def": null,
+      "level": null,
+      "attribute": "FIRE",
+      "archetype": "Prank-Kids",
+      "linkval": 2,
+      "linkmarkers": [
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prank-kids-bow-wow-bark-9727",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN115",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43886072,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43886072.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43886072.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43886072.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Prankids Bowwow",
+          "views": 168878,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14027,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

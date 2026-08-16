@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 72378329,
+      "name": "Beast-Eyes Pendulum Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 DARK Dragon-Type monster + 1 Beast-Type monster\nMust be either Fusion Summoned, or Special Summoned by Tributing the above cards you control (in which case you do not use \"Polymerization\"), and cannot be Special Summoned by other ways. If this card destroys a monster by battle: Inflict damage to your opponent equal to the original ATK of the Beast-Type Fusion Material used for this card's Summon.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Pendulum Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/beast-eyes-pendulum-dragon-6075",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow: Special Edition",
+          "set_code": "BOSH-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.82"
+        },
+        {
+          "set_name": "Weekly Shonen Jump October 2015 membership promotional card",
+          "set_code": "JUMP-EN074",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72378329,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72378329.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72378329.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72378329.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.66",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "2.44",
+          "amazon_price": "1.35",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94220,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-07",
+          "ocg_date": "2014-09-20",
+          "konami_id": 11513,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

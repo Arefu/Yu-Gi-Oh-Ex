@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 95511642,
+      "name": "Crowned by the World Chalice",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "With her magical staff, she can channel the living heart of her world to shield her people from the Mekk-Knights that have overrun it.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 2100,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "World Chalice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crowned-by-the-world-chalice-8716",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95511642,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95511642.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95511642.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95511642.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.00",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Chalice-Bearing Priestess",
+          "views": 101011,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13057,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

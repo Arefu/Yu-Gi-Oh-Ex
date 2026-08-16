@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 12253117,
+      "name": "World Suppression",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card when a Field Spell Card is activated. Negate the Field Spell Card during the turn this card is activated.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-suppression-1057",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.59"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12253117,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12253117.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12253117.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12253117.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 119805,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4943,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 13235258,
+      "name": "Corrosive Scales",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 Insect monster you control; equip this card to it. While you control the equipped monster, your opponent's monsters cannot attack Insect monsters, except the equipped monster. While this card is equipped to a monster, each time your opponent Normal or Special Summons a monster(s), OR activates a card or effect, place 1 Scale Counter on each face-up monster they control. Each monster your opponent controls loses 100 ATK/DEF for each Scale Counter it has.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/corrosive-scales-9071",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.64"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENB27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13235258,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13235258.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13235258.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13235258.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37077,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-22",
+          "ocg_date": "2017-11-11",
+          "konami_id": 13471,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

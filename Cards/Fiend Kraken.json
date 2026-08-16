@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 77456781,
+      "name": "Fiend Kraken",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A giant squid that drags its enemies to a watery grave.",
+      "race": "Aqua",
+      "atk": 1200,
+      "def": 1400,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fiend-kraken-6513",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENC08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77456781,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77456781.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77456781.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77456781.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "15.00",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50526,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2023-08-24",
+          "ocg_date": "1999-08-02",
+          "konami_id": 4076,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

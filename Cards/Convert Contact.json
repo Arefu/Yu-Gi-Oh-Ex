@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 82639107,
+      "name": "Convert Contact",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control no monsters: Send 2 \"Neo-Spacian\" monsters (1 from your hand and 1 from your Deck) to the GY, then draw 2 cards.",
+      "race": "Normal",
+      "archetype": "Neo-Spacian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/convert-contact-6945",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN055",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 3",
+          "set_code": "DP06-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82639107,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82639107.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82639107.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82639107.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.39",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 184862,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7159,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

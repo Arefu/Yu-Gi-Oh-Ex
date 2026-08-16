@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 9024198,
+      "name": "D/D/D Abyss King Gilgamesh",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"D/D\" monsters\r\nIf this card is Special Summoned: You can activate this effect; you cannot Special Summon monsters for the rest of this turn, except \"D/D\" monsters, also place 2 \"D/D\" Pendulum Monsters with different names from your Deck in your Pendulum Zones, and if you do, take 1000 damage. If this Link Summoned card is destroyed by battle with an opponent's attacking monster, or by an opponent's card effect while in its owner's Monster Zone: You can Special Summon 1 \"D/D\" monster from your Extra Deck or GY in Defense Position. You can only use each effect of \"D/D/D Abyss King Gilgamesh\" once per turn.",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-abyss-king-gilgamesh-9890",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9024198,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9024198.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9024198.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9024198.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.43",
+          "tcgplayer_price": "1.19",
+          "ebay_price": "2.00",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 331929,
+          "viewsweek": 0,
+          "upvotes": 78,
+          "downvotes": 8,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14204,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

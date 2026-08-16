@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 63571750,
+      "name": "Pharaoh's Treasure",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Shuffle this card face-up into your Deck. If you draw this face-up card that was added to the Deck by this effect: Send it to the GY, then target 1 card in your GY, except this card; add that target to your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pharaoh-s-treasure-5370",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN248",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-052",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENA27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63571750,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63571750.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63571750.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63571750.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84978,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5449,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

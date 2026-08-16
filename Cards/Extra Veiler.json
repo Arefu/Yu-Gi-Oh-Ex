@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 32391566,
+      "name": "Extra Veiler",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent Special Summons a monster(s), except during the Damage Step: You can Special Summon this card from your hand, and if you do, your opponent takes any effect damage you would have taken from their card effects this turn, instead.",
+      "race": "Spellcaster",
+      "atk": 600,
+      "def": 200,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/extra-veiler-2752",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32391566,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32391566.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32391566.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32391566.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "12.00",
+          "amazon_price": "2.54",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34330,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9088,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

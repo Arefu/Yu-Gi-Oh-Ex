@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 88935103,
+      "name": "Nobledragon Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Pendulum Tuner Effect Monster",
+      "humanReadableCardType": "Pendulum Tuner Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nUnless you have a \"Magician\" card in your other Pendulum Zone, destroy this card.\n\n[ Monster Effect ] \nCannot be used as Synchro Material, except for the Synchro Summon of a Dragon Synchro Monster. If this card is used as Synchro Material, unless all other Synchro Materials are \"Odd-Eyes\" monsters, place this card on the bottom of the Deck. If this card is in your hand or GY: You can target 1 Level 7 or higher \"Odd-Eyes\" monster you control; reduce its Level by 3, and if you do, Special Summon this card.",
+      "race": "Spellcaster",
+      "pend_desc": "Unless you have a \"Magician\" card in your other Pendulum Zone, destroy this card.",
+      "monster_desc": "Cannot be used as Synchro Material, except for the Synchro Summon of a Dragon Synchro Monster. If this card is used as Synchro Material, unless all other Synchro Materials are \"Odd-Eyes\" monsters, place this card on the bottom of the Deck. If this card is in your hand or GY: You can target 1 Level 7 or higher \"Odd-Eyes\" monster you control; reduce its Level by 3, and if you do, Special Summon this card.",
+      "atk": 700,
+      "def": 1400,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Magician",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nobledragon-magician-7429",
+      "card_sets": [
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88935103,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88935103.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88935103.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88935103.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 184567,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-12-03",
+          "ocg_date": "2015-06-20",
+          "konami_id": 11936,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

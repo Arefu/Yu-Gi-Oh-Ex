@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 44203504,
+      "name": "Robotic Knight",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "The Commander of Machine-Types, he serves the Machine King. He is famous for the way he controls his troops.",
+      "race": "Machine",
+      "atk": 1600,
+      "def": 1800,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/robotic-knight-3770",
+      "card_sets": [
+        {
+          "set_name": "Demo Deck 2015",
+          "set_code": "DEM2-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.95"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.9"
+        },
+        {
+          "set_name": "Starter Deck: Syrus Truesdale",
+          "set_code": "YSDS-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44203504,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44203504.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44203504.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44203504.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96409,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5027,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

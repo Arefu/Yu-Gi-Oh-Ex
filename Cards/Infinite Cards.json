@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 94163677,
+      "name": "Infinite Cards",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "There is no limit to the number of cards in players' hands.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infinite-cards-7835",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN230",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN050",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.81"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.07"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "20.49"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.63"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN035",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENH13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94163677,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94163677.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94163677.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94163677.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 245046,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5121,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

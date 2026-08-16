@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 86943389,
+      "name": "Hi-Speedroid Puzzle",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nAt the start of the Damage Step, if this card battles a Special Summoned monster: You can make this card's ATK become double its current ATK until the end of the Damage Step. Once per turn, during the End Phase, if this card is in the Graveyard because this Synchro Summoned card was sent there from the field this turn: You can target 1 \"Speedroid\" monster in your Graveyard, except \"Hi-Speedroid Puzzle\"; add it to your hand.",
+      "race": "Machine",
+      "atk": 1300,
+      "def": 1600,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Hi-Speedroid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hi-speedroid-puzzle-7278",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENS28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN050",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86943389,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86943389.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86943389.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86943389.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.45",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63183,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12322,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

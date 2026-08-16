@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 25726386,
+      "name": "Megalith Aratron",
+      "typeline": [
+        "Rock",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with a \"Megalith\" card. During the Main Phase (Quick Effect): You can discard this card; Ritual Summon 1 \"Megalith\" Ritual Monster from your hand, by Tributing monsters from your hand or field whose total Levels equal or exceed its Level. When your opponent activates a card or effect that targets a card you control (Quick Effect): You can place 1 Ritual Monster from your GY on the bottom of the Deck, and if you do, negate that activation, and if you do that, destroy it. You can only use each effect of \"Megalith Aratron\" once per turn.",
+      "race": "Rock",
+      "atk": 2000,
+      "def": 3000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Megalith",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/megalith-aratron-10623",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25726386,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25726386.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25726386.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25726386.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "1.60",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 153776,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011040,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14849,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

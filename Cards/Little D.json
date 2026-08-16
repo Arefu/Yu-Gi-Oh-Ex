@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 42625254,
+      "name": "Little D",
+      "typeline": [
+        "Dinosaur",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Yo, this tyrannosaurus tot's got a terrible temper.",
+      "race": "Dinosaur",
+      "atk": 1100,
+      "def": 700,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/little-d-3636",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN145",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42625254,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42625254.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42625254.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42625254.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "9.93",
+          "tcgplayer_price": "22.57",
+          "ebay_price": "4.99",
+          "amazon_price": "2.96",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21545,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-10-11",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4579,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

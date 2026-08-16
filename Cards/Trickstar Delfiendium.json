@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 3792766,
+      "name": "Trickstar Delfiendium",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ \"Trickstar\" monsters\r\nWhen this card declares an attack while pointing to a \"Trickstar\" monster: You can target your banished \"Trickstar\" cards, up to the number of Link Monsters your opponent controls; add them to your hand, and if you do, this card gains 1000 ATK for each card added, until the end of this turn.",
+      "race": "Fairy",
+      "atk": 2200,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Trickstar",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-delfiendium-9237",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3792766,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3792766.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3792766.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3792766.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.04",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83098,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13594,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

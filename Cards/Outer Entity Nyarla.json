@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 8809344,
+      "name": "Outer Entity Nyarla",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\r\nWhen this card is Xyz Summoned: You can discard any number of cards; increase this card's Rank by the number of discarded cards. Once per turn, while this card has Xyz Material: You can target 1 monster in your GY; detach all materials from this card, and if you do, attach that target to this card as material. When a monster is attached by this effect, this card's Type and Attribute become the same as that monster's original Type and Attribute.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 2600,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/outer-entity-nyarla-747",
+      "card_sets": [
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENL37",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN017",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.84"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8809344,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8809344.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8809344.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8809344.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.48",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Outer God Nyarla",
+          "views": 176045,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10996,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

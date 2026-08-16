@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 15610297,
+      "name": "Vijam the Cubic Seed",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be destroyed by battle. At the end of the Damage Step, if this card battled an opponent's monster: You can place this card face-up in your Spell & Trap Zone as a Continuous Spell Card, and if you do, place 1 Cubic Counter on that opponent's monster. (Monsters with a Cubic Counter cannot attack, also negate their effects.) If this card is treated as a Continuous Spell Card by this effect, during your Main Phase: You can Special Summon this card from your Spell & Trap Zone.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Cubic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vijam-the-cubic-seed-1348",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.08"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS32",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.3"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG32",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "2.92"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15610297,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15610297.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15610297.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15610297.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "2.48",
+          "amazon_price": "4.94",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 238810,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12515,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

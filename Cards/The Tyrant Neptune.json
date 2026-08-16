@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 88071625,
+      "name": "The Tyrant Neptune",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned. You can Tribute Summon this card by Tributing 1 monster. This card gains the total original ATK and DEF of the monster(s) Tributed for its Tribute Summon. When this card is Tribute Summoned: Target 1 Effect Monster in the Graveyard that was Tributed for the Tribute Summon; this card's name becomes that target's name, and this card gains that target's effects.",
+      "race": "Reptile",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-tyrant-neptune-7365",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2011 Wave 2",
+          "set_code": "CT08-EN018",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.88"
+        },
+        {
+          "set_name": "Shonen Jump May 2010 subscription bonus",
+          "set_code": "JUMP-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "47.97"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 88071625,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88071625.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88071625.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88071625.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.79",
+          "ebay_price": "2.22",
+          "amazon_price": "2.51",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40988,
+          "viewsweek": 0,
+          "upvotes": 20,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-01",
+          "ocg_date": "2009-10-21",
+          "konami_id": 8733,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

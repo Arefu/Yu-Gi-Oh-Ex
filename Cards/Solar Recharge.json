@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 691925,
+      "name": "Solar Recharge",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Discard 1 \"Lightsworn\" monster; draw 2 cards, then send the top 2 cards of your Deck to the GY.",
+      "race": "Normal",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/solar-recharge-64",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy: Special Edition",
+          "set_code": "ANPR-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.99"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN052",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN052",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN046",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "2.62"
+        },
+        {
+          "set_name": "Realm of Light Structure Deck",
+          "set_code": "SDLI-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 691925,
+          "image_url": "https://images.ygoprodeck.com/images/cards/691925.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/691925.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/691925.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.82",
+          "tcgplayer_price": "2.33",
+          "ebay_price": "90.00",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 517635,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7625,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

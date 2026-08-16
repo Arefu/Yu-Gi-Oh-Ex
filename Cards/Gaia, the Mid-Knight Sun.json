@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 40371092,
+      "name": "Gaia, the Mid-Knight Sun",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only use each effect of \"Gaia, the Mid-Knight Sun\" once per turn.\n● You can Tribute 1 other LIGHT monster; add 1 Level 4 DARK Warrior-Type monster from your Deck to your hand, then send 1 card from your hand to the Graveyard.\n● You can banish 1 DARK monster from your Graveyard, then target 1 monster on the field; it loses 500 ATK until the end of your opponent's turn.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Gaia The Fierce Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gaia-the-mid-knight-sun-3429",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40371092,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40371092.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40371092.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40371092.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91270,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2013-08-11",
+          "konami_id": 10825,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 38180759,
+      "name": "Unformed Void",
+      "typeline": [
+        "Aqua",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 monsters\nOnce per turn, during your opponent's Main Phase: You can detach 1 Xyz Material from this card; this card gains ATK and DEF equal to the total ATK of all face-up Xyz Monsters your opponent currently controls (this is a Quick Effect).",
+      "race": "Aqua",
+      "atk": 0,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unformed-void-3237",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38180759,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38180759.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38180759.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38180759.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26908,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10722,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

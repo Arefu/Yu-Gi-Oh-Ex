@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 48829461,
+      "name": "Malefic Paradox Gear",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a face-up Field Spell is on the field: You can Tribute this card; Special Summon 1 \"Malefic Parallel Gear\" from your Deck, then, add 1 \"Malefic\" monster from your Deck to your hand, except \"Malefic Paradox Gear\". If a \"Malefic\" monster would banish a monster to Special Summon itself by its own way, you can banish this card you control or in your GY instead. You can only use each effect of \"Malefic Paradox Gear\" once per turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-paradox-gear-10125",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN048",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48829461,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48829461.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48829461.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48829461.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95762,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14379,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

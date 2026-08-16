@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 75304793,
+      "name": "Symph Amplifire",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Each time an effect of a \"Symphonic Warrior\" card is activated, place 1 Symphonic Counter on this card when that effect resolves. All \"Symphonic Warrior\" monsters on the field gain 100 ATK for each Symphonic Counter on this card. Once per turn: You can remove 5 or 7 Symphonic Counters from your field; apply this effect, depending on the number of Symphonic Counters removed.\r\n● 5 Counters: Inflict 300 damage to your opponent for each \"Symphonic Warrior\" card on the field.\r\n● 7 Counters: Banish cards your opponent controls and/or in their Graveyard, up to the number of \"Symphonic Warrior\" cards on the field.",
+      "race": "Field",
+      "archetype": "Symphonic Warrior",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/symph-amplifire-6334",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN234",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19",
+          "set_code": "OP19-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.79"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19 (POR)",
+          "set_code": "OP19-PT026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75304793,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75304793.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75304793.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75304793.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25013,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11610,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

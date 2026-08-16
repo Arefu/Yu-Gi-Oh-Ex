@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 19642774,
+      "name": "Fleur Synchron",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard as a Synchro Material: You can Special Summon 1 Level 2 or lower monster from your hand.",
+      "race": "Machine",
+      "atk": 400,
+      "def": 200,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fleur-synchron-1691",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Synchro Storm",
+          "set_code": "LED8-EN031",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Revenge",
+          "set_code": "PHRE-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.93"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Tag Force 5 promotional cards",
+          "set_code": "TF05-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "23.05"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Tag Force 5 Promotional Cards",
+          "set_code": "TF05-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19642774,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19642774.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19642774.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19642774.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.30",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 198189,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-10-26",
+          "ocg_date": "2010-09-16",
+          "konami_id": 9198,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

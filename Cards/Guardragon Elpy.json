@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 86148577,
+      "name": "Guardragon Elpy",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Level 4 or lower Dragon monster\r\nYou cannot Special Summon monsters, except Dragon monsters. During your Main Phase: You can Special Summon 1 Dragon monster from your hand or Deck to your zone that 2 or more Link Monsters point to. You can only use this effect of \"Guardragon Elpy\" once per turn. You can only Special Summon \"Guardragon Elpy(s)\" once per turn.",
+      "race": "Dragon",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Guardragon",
+      "linkval": 1,
+      "linkmarkers": [
+        "Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardragon-elpy-9842",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN021",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "1.82"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN051",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 86148577,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86148577.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86148577.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86148577.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "1.39",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Elpy the Guardragon",
+          "views": 631172,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 8,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14128,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

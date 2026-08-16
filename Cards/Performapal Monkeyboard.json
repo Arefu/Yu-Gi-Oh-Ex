@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 17330916,
+      "name": "Performapal Monkeyboard",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nUnless you have a \"Performapal\" card in your other Pendulum Zone, this card's Pendulum Scale becomes 4. During your Main Phase, if this card was activated this turn: You can add 1 Level 4 or lower \"Performapal\" monster from your Deck to your hand. You can only use this effect of \"Performapal Monkeyboard\" once per turn.\n\n[ Monster Effect ] \nYou can discard this card; reveal 1 \"Performapal\" or \"Odd-Eyes\" monster in your hand, and if you do, reduce the Levels of monsters in your hand with that name by 1 for the rest of this turn (even after they are Summoned/Set).",
+      "race": "Beast",
+      "pend_desc": "Unless you have a \"Performapal\" card in your other Pendulum Zone, this card's Pendulum Scale becomes 4. During your Main Phase, if this card was activated this turn: You can add 1 Level 4 or lower \"Performapal\" monster from your Deck to your hand. You can only use this effect of \"Performapal Monkeyboard\" once per turn.",
+      "monster_desc": "You can discard this card; reveal 1 \"Performapal\" or \"Odd-Eyes\" monster in your hand, and if you do, reduce the Levels of monsters in your hand with that name by 1 for the rest of this turn (even after they are Summoned/Set).",
+      "atk": 1000,
+      "def": 2400,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-monkeyboard-1501",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO04",
+          "set_rarity": "3",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO04",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO04",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 1",
+          "set_code": "OP01-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17330916,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17330916.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17330916.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17330916.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "5.95",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 164998,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 6,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12111,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

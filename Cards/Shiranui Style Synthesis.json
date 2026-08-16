@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 40005099,
+      "name": "Shiranui Style Synthesis",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, if you control no monsters: You can send 1 card from your hand to the Graveyard, then activate 1 of these effects.\r\n● Target 1 Zombie-Type monster with 0 DEF in your Graveyard; Special Summon it.\r\n● Target 1 of your banished Zombie-Type monsters with 0 DEF; return it to the Graveyard.\r\nYou can only activate 1 \"Shiranui Style Synthesis\" per turn.",
+      "race": "Field",
+      "archetype": "Shiranui",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiranui-style-synthesis-3397",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN220",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40005099,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40005099.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40005099.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40005099.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "3.47",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60487,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12173,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 88693151,
+      "name": "Trickstar Fusion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Fusion Summon 1 \"Trickstar\" Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material. You can banish this card from your GY, then target 1 \"Trickstar\" monster in your GY; add it to your hand, but you cannot Normal Summon/Set or Special Summon monsters with that name for the rest of this turn.",
+      "race": "Normal",
+      "archetype": "Trickstar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-fusion-9835",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88693151,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88693151.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88693151.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88693151.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67267,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14136,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

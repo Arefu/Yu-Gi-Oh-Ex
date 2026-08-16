@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 75840616,
+      "name": "Bujintei Susanowo",
+      "typeline": [
+        "Beast-Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 \"Bujin\" monsters\nThis card can attack all monsters your opponent controls once each. Once per turn: You can detach 1 Xyz Material from this card; take 1 \"Bujin\" monster from your Deck, and either add it to your hand or send it to the Graveyard. You can only control 1 \"Bujintei Susanowo\".",
+      "race": "Beast-Warrior",
+      "atk": 2400,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujintei-susanowo-6383",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN100",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2014 Mega-Tins",
+          "set_code": "CT11-EN002",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "2.18"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN057",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN057",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75840616,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75840616.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75840616.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75840616.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.48",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "4.29",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71408,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10660,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

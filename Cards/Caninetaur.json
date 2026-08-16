@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 91754175,
+      "name": "Caninetaur",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, if this card battles an opponent's monster, during damage calculation (in either player's turn): You can send 1 Beast, Beast-Warrior, or Winged Beast-Type monster from your hand or Deck to the Graveyard, and if you do, this card gains ATK equal to the sent monster's Level x 100, until the end of the Battle Phase.",
+      "race": "Beast-Warrior",
+      "atk": 1500,
+      "def": 200,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/caninetaur-7651",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN165",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91754175,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91754175.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91754175.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91754175.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25968,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11875,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

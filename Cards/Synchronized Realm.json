@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 61032879,
+      "name": "Synchronized Realm",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time you Synchro Summon a Synchro Monster, inflict 500 damage to your opponent.",
+      "race": "Continuous",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/synchronized-realm-5179",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's",
+          "set_code": "5DS1-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.49"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61032879,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61032879.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61032879.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61032879.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "1.79",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52504,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-05",
+          "ocg_date": "2008-03-15",
+          "konami_id": 7693,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

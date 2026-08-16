@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 93600443,
+      "name": "Mask Change II",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Discard 1 card, then target 1 face-up monster you control that has a Level; send it to the Graveyard, also, after that, if it left the field by this effect, Special Summon from your Extra Deck, 1 \"Masked HERO\" monster with the same Attribute, but a higher Level than, the Attribute/Level the monster had when it was on the field (its original Attribute/Level, if face-down. This Special Summon is treated as a Special Summon with \"Mask Change\"). You can only activate 1 \"Mask Change II\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Masked HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mask-change-ii-7791",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN113",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.34"
+        },
+        {
+          "set_name": "HERO Strike Structure Deck",
+          "set_code": "SDHS-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN086",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93600443,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93600443.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93600443.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93600443.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "2.95",
+          "amazon_price": "1.43",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 270995,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-29",
+          "ocg_date": "2014-06-21",
+          "konami_id": 9271,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

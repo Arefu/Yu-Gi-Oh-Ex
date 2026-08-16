@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 22377815,
+      "name": "Aquarian Alessa",
+      "typeline": [
+        "Aqua",
+        "Gemini",
+        "Effect"
+      ],
+      "type": "Gemini Monster",
+      "humanReadableCardType": "Gemini Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is treated as a Normal Monster while face-up on the field or in the Graveyard. While this card is face-up on the field, you can Normal Summon it to have it be treated as an Effect Monster with this effect:\n● When this card destroys an opponent's monster by battle and sends it to the Graveyard, they discard 1 random card.",
+      "race": "Aqua",
+      "atk": 1500,
+      "def": 500,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aquarian-alessa-1923",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN020",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN020",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22377815,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22377815.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22377815.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22377815.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "4.99",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31496,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7197,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

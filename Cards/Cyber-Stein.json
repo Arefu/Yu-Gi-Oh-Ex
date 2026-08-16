@@ -1,0 +1,116 @@
+{
+  "data": [
+    {
+      "id": 69015963,
+      "name": "Cyber-Stein",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can pay 5000 LP; Special Summon 1 Fusion Monster from your Extra Deck in Attack Position.",
+      "race": "Machine",
+      "atk": 700,
+      "def": 500,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-stein-5797",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN074",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN100",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.98"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16",
+          "set_code": "OP16-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 16 (POR)",
+          "set_code": "OP16-PT004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN146",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN146",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shonen Jump Championship 2004 Prize Card",
+          "set_code": "SJC-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "24067.8"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 69015963,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69015963.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69015963.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69015963.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.30",
+          "tcgplayer_price": "3.32",
+          "ebay_price": "4.50",
+          "amazon_price": "6.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 452175,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-12-04",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4426,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

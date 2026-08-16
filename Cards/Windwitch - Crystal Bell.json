@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 25793414,
+      "name": "Windwitch - Crystal Bell",
+      "typeline": [
+        "Spellcaster",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Windwitch - Winter Bell\" + 1 \"Windwitch\" monster\r\nYou can target 1 monster in either player's Graveyard; until the End Phase, this card's name becomes that target's original name, and replace this effect with that target's original effects. If this card in your possession is destroyed by your opponent's card (by battle or card effect) and sent to your Graveyard: You can target 1 \"Windwitch - Winter Bell\" and 1 Level 4 or lower \"Windwitch\" monster in your Graveyard; Special Summon them. You can only use each effect of \"Windwitch - Crystal Bell\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 2800,
+      "def": 2400,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Windwitch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/windwitch-crystal-bell-2220",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25793414,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25793414.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25793414.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25793414.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Wind Witch - Crystal Bell",
+          "views": 59306,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12775,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

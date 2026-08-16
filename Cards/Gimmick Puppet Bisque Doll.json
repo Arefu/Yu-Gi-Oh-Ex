@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 79086452,
+      "name": "Gimmick Puppet Bisque Doll",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by discarding 1 \"Gimmick Puppet\" monster. You can banish this card from your GY; your opponent cannot target \"Gimmick Puppet\" monsters you control with card effects this turn.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 1000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gimmick-puppet-bisque-doll-10366",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.69"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79086452,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79086452.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79086452.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79086452.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "2.00",
+          "amazon_price": "4.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 164841,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14598,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

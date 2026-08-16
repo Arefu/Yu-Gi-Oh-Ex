@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 6958551,
+      "name": "Shadow Toon",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control \"Toon World\": Target 1 face-up monster your opponent controls; inflict damage to your opponent equal to the ATK of that face-up monster. You can only activate 1 \"Shadow Toon\" per turn.",
+      "race": "Normal",
+      "archetype": "Toon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shadow-toon-598",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.36"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN076",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6958551,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6958551.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6958551.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6958551.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.90",
+          "tcgplayer_price": "1.34",
+          "ebay_price": "4.50",
+          "amazon_price": "1.85",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 152759,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11903,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 44852429,
+      "name": "D/D/D Cursed King Siegfried",
+      "typeline": [
+        "Fiend",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner \"D/D\" monsters\nDuring either player's turn: You can target 1 face-up Spell/Trap Card on the field; that target has its effects negated, until the next Standby Phase. You can only use this effect of \"D/D/D Cursed King Siegfried\" once per turn. If this card is destroyed by battle or card effect and sent to the Graveyard: Gain 1000 LP for each \"Dark Contract\" card you control.",
+      "race": "Fiend",
+      "atk": 2800,
+      "def": 2200,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-cursed-king-siegfried-3818",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44852429,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44852429.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44852429.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44852429.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "1.48",
+          "ebay_price": "2.46",
+          "amazon_price": "20.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 277452,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-01-19",
+          "ocg_date": "2015-12-12",
+          "konami_id": 12233,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

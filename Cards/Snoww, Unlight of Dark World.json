@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 60228941,
+      "name": "Snoww, Unlight of Dark World",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is discarded to the Graveyard by a card effect: If it was discarded from your hand to your Graveyard by an opponent's card effect, you can target 1 monster in your opponent's Graveyard; add 1 \"Dark World\" card from your Deck to your hand, then Special Summon that target (if any) in face-up Defense Position.",
+      "race": "Fiend",
+      "atk": 1700,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Dark World",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/snoww-unlight-of-dark-world-5110",
+      "card_sets": [
+        {
+          "set_name": "Gates of the Underworld Structure Deck",
+          "set_code": "SDGU-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.93"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN248",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dark World",
+          "set_code": "SR13-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60228941,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60228941.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60228941.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60228941.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.99",
+          "amazon_price": "19.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 476830,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-10-13",
+          "ocg_date": "2011-06-18",
+          "konami_id": 9713,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 78835747,
+      "name": "Performapal Kaleidoscorp",
+      "typeline": [
+        "Insect",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nAll LIGHT monsters you control gain 300 ATK.\n\n[ Monster Effect ] \nOnce per turn: You can target 1 face-up monster you control; this turn, it can attack all Special Summoned monsters your opponent controls, once each.",
+      "race": "Insect",
+      "pend_desc": "All LIGHT monsters you control gain 300 ATK.",
+      "monster_desc": "Once per turn: You can target 1 face-up monster you control; this turn, it can attack all Special Summoned monsters your opponent controls, once each.",
+      "atk": 100,
+      "def": 2300,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Performapal",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-kaleidoscorp-6623",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN065",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN016",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78835747,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78835747.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78835747.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78835747.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36381,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11218,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

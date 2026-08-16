@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 48015771,
+      "name": "Summon Over",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Each time a monster(s) is Special Summoned, place 1 Summon Counter on this card (max. 6). This card with 6 Summon Counters cannot be destroyed by card effects. At the start of each Main Phase 1, if this card has 6 Summon Counters: The turn player can activate this effect; they send this card to the GY, and if they do, they send all Special Summoned monsters their opponent controls to the GY.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/summon-over-9864",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48015771,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48015771.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48015771.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48015771.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13522,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14147,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 51043053,
+      "name": "Heliosphere Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While your opponent has 4 or less cards in their hand and this card is the only monster you control, your opponent cannot declare an attack. Once per turn, if you control a Level 8 Dragon-Type monster: You can make this card become Level 8 until the end of this turn.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 1900,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heliosphere-dragon-4344",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51043053,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51043053.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51043053.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51043053.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 60414,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11033,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

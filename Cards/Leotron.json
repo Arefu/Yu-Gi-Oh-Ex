@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 47226949,
+      "name": "Leotron",
+      "typeline": [
+        "Cyberse",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A territorial electronic monster that guards its own domain.",
+      "race": "Cyberse",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/leotron-9358",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47226949,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47226949.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47226949.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47226949.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "2.95",
+          "amazon_price": "5.76",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Lighdron Leo",
+          "views": 47115,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-12",
+          "ocg_date": "2018-03-24",
+          "konami_id": 13692,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

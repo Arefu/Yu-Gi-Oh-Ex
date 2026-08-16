@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 58984738,
+      "name": "Dinomight Knight, the True Dracofighter",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "To Tribute Summon this card face-up, you can Tribute a Continuous Spell/Trap you control, instead of a monster. Once per turn, when your opponent activates a card or effect while you control this Tribute Summoned monster (Quick Effect): You can take 1 \"True Draco\" or \"True King\" Continuous Trap from your Deck, and either activate it or add it to your hand.",
+      "race": "Wyrm",
+      "atk": 2500,
+      "def": 1200,
+      "level": 6,
+      "attribute": "WATER",
+      "archetype": "True Draco",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinomight-knight-the-true-dracofighter-8340",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN126",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN054",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN022",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58984738,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58984738.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58984738.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58984738.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dynamite Knuckle, the True Dracofighter",
+          "views": 284530,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12936,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

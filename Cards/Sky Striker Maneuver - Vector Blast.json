@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 21623008,
+      "name": "Sky Striker Maneuver - Vector Blast",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control no monsters in your Main Monster Zone: Each player sends the top 2 cards of their Deck to the GY (or as many as possible, if less than 2), then, if you sent at least 1 card to the GY, and have 3 or more Spells in your GY, you can shuffle all your opponent's monsters from the Extra Monster Zones into the Deck.",
+      "race": "Normal",
+      "archetype": "Sky Striker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-striker-maneuver-vector-blast-9641",
+      "card_sets": [
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN061",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21623008,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21623008.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21623008.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21623008.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "2.49",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Sky Striker Maneuver - Vectored Blast!",
+          "views": 96765,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13948,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

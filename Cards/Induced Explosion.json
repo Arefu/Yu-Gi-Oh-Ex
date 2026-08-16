@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 68077936,
+      "name": "Induced Explosion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a card(s) you control is destroyed by a Spell effect (except during the Damage Step): Target 1 card your opponent controls; destroy it. During either player's turn, except the turn this card was sent to the Graveyard, when a card(s) you control is destroyed by a Spell effect (except during the Damage Step): You can banish this card from your Graveyard, then target 1 card your opponent controls; destroy it.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/induced-explosion-5722",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS09",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG09",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68077936,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68077936.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68077936.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68077936.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25880,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12492,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

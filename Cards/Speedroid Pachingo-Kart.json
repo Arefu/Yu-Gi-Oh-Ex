@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 85034450,
+      "name": "Speedroid Pachingo-Kart",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can discard 1 Machine-Type monster, then target 1 monster on the field; destroy it.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/speedroid-pachingo-kart-7132",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN005",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85034450,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85034450.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85034450.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85034450.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "2.09",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33901,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12279,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

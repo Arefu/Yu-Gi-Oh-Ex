@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 61257789,
+      "name": "Stardust Dragon/Assault Mode",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned with \"Assault Mode Activate\" (or by its own effect). When a card or effect is activated (Quick Effect): You can Tribute this card; negate the activation, and if you do, destroy it. Once per turn, during the End Phase, if this effect was activated this turn (and was not negated): You can Special Summon this card from your GY. When this card on the field is destroyed: You can target 1 \"Stardust Dragon\" in your GY; Special Summon it.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2500,
+      "level": 10,
+      "attribute": "WIND",
+      "archetype": "/Assault Mode",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stardust-dragon-assault-mode-5195",
+      "card_sets": [
+        {
+          "set_name": "Burst Protocol",
+          "set_code": "BPRO-EN101",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack Collection Tin 2009",
+          "set_code": "DPCT-EN003",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "7.67"
+        },
+        {
+          "set_name": "Duelist Pack Collection Tin 2009",
+          "set_code": "DPCT-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.35"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei 2",
+          "set_code": "DP09-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10",
+          "set_code": "OP10-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61257789,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61257789.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61257789.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61257789.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "1.75",
+          "ebay_price": "2.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 217469,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 8,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-03-10",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8091,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

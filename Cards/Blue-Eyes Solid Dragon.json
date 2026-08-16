@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 57043986,
+      "name": "Blue-Eyes Solid Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can target 1 face-up monster your opponent controls; negate its effects. When your opponent activates a card or effect (Quick Effect): You can shuffle this card from the field into the Deck, and if you do, Special Summon 1 \"Blue-Eyes White Dragon\" from your Deck. You can only use each effect of \"Blue-Eyes Solid Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Blue-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blue-eyes-solid-dragon-9533",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN014",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "7.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57043986,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57043986.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57043986.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57043986.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.71",
+          "tcgplayer_price": "1.23",
+          "ebay_price": "3.57",
+          "amazon_price": "21.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 284228,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13843,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

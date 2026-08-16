@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 82315772,
+      "name": "Heraldic Beast Eale",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control 2 or more \"Heraldic Beast\" monsters, you can Special Summon this card (from your hand).",
+      "race": "Beast",
+      "atk": 1000,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Heraldic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heraldic-beast-eale-6917",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82315772,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82315772.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82315772.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82315772.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30243,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10373,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 51205763,
+      "name": "Krawler Glial",
+      "typeline": [
+        "Insect",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can Special Summon 1 \"Krawler\" monster from your hand or GY, in face-up Attack Position or face-down Defense Position, except \"Krawler Glial\".\r\nIf this face-up card in its owner's control leaves the field because of an opponent's card effect: You can Special Summon 2 \"Krawler\" monsters with different names from your Deck in face-down Defense Position, except \"Krawler Glial\". You can only use each effect of \"Krawler Glial\" once per turn.",
+      "race": "Insect",
+      "atk": 700,
+      "def": 1500,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Krawler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/krawler-glial-8692",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51205763,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51205763.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51205763.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51205763.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Krawler Glia",
+          "views": 88683,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13234,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

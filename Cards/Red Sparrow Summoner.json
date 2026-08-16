@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 81354330,
+      "name": "Red Sparrow Summoner",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card you control is destroyed by battle with an opponent's attacking monster and sent to your Graveyard: You can Special Summon 1 Warrior-Type monster with 1500 or less ATK from your Deck in Attack Position.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 1300,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-sparrow-summoner-6830",
+      "card_sets": [
+        {
+          "set_name": "Super Starter: Space-Time Showdown",
+          "set_code": "YS14-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81354330,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81354330.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81354330.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81354330.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29659,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-07-10",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11143,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

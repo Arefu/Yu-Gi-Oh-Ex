@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 38030232,
+      "name": "Tenyi Spirit - Sahasrara",
+      "typeline": [
+        "Wyrm",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Wyrm monsters\r\nWhile you control a face-up non-Effect Monster, monsters your opponent controls cannot target Effect Monsters for attacks, also your opponent cannot target Effect Monsters on the field with card effects. (Quick Effect): You can target 1 Effect Monster your opponent controls; Special Summon 1 \"Tenyi Spirit Token\" (Wyrm/LIGHT/Level 4/ATK ?/DEF 0). This Token's ATK becomes that targeted monster's original ATK. You can only use this effect of \"Tenyi Spirit - Sahasrara\" once per turn.",
+      "race": "Wyrm",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Tenyi",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top",
+        "Top-Right",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tenyi-spirit-sahasrara-10733",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.65"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17",
+          "set_code": "OP17-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17 (POR)",
+          "set_code": "OP17-PT025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38030232,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38030232.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38030232.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38030232.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.59",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 143136,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257096,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14949,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 66973070,
+      "name": "Dreadscythe Harvester",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 1 Insect-Type monster to have this card gain 500 ATK until the end of the turn.",
+      "race": "Insect",
+      "atk": 2300,
+      "def": 1600,
+      "level": 8,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dreadscythe-harvester-5626",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2010 Wave 2",
+          "set_code": "CT07-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.95"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN100",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shonen Jump 2007 subscription bonus",
+          "set_code": "JUMP-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "14.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66973070,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66973070.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66973070.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66973070.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "8.89",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17210,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-07-15",
+          "ocg_date": "2006-05-20",
+          "konami_id": 6465,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

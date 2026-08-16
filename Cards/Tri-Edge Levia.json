@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 68836428,
+      "name": "Tri-Edge Levia",
+      "typeline": [
+        "Sea Serpent",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 3 monsters\nBanish any monster destroyed by battle with this card. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster on the field; it loses 800 ATK, also its effects are negated. These changes last until the end of this turn.",
+      "race": "Sea Serpent",
+      "atk": 1800,
+      "def": 1500,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tri-edge-levia-5786",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN132",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN026",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "2.8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68836428,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68836428.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68836428.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68836428.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.84",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "2.99",
+          "amazon_price": "3.96",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79056,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11021,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

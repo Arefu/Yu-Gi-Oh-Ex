@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 84504242,
+      "name": "Megalith Portal",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "The first time each Ritual Summoned monster would be destroyed by battle each turn, it is not destroyed. If a \"Megalith\" monster is Special Summoned (except during the Damage Step): You can target 1 Ritual Monster in your GY; add it to your hand. You can only use this effect of \"Megalith Portal\" once per turn.",
+      "race": "Field",
+      "archetype": "Megalith",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/megalith-portal-10630",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84504242,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84504242.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84504242.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84504242.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 88918,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011057,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14866,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

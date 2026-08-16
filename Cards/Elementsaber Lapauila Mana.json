@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 71797713,
+      "name": "Elementsaber Lapauila Mana",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send 2 other monsters from your hand to the GY; Special Summon this card from your hand. You can only use this effect of \"Elementsaber Lapauila Mana\" once per turn. Apply the following effect(s) to \"Elementsaber\" and \"Elemental Lord\" monsters you control, depending on the original Attributes of any \"Elementsaber\" monsters sent to the GY to activate this card's effect.\r\n● EARTH or WIND: Cannot be destroyed by battle.\r\n● WATER or FIRE: Cannot be destroyed by effects.\r\n● LIGHT or DARK: Your opponent cannot target it with card effects.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 2100,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Elementsaber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elementsaber-lapauila-mana-9168",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71797713,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71797713.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71797713.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71797713.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.50",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Elementsaber Willard",
+          "views": 91602,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13579,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

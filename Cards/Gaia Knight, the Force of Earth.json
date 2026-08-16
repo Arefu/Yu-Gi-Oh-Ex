@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 97204936,
+      "name": "Gaia Knight, the Force of Earth",
+      "typeline": [
+        "Warrior",
+        "Synchro"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 800,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Gaia The Fierce Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gaia-knight-the-force-of-earth-8087",
+      "card_sets": [
+        {
+          "set_name": "Advanced Demo Deck Extra Pack",
+          "set_code": "DEM4-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 17 participation cards",
+          "set_code": "DL17-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.95"
+        },
+        {
+          "set_name": "Starter Deck: Duelist Toolbox",
+          "set_code": "5DS3-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's",
+          "set_code": "5DS1-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97204936,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97204936.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97204936.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97204936.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.81",
+          "ebay_price": "3.00",
+          "amazon_price": "3.50",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 421093,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-05",
+          "ocg_date": "2008-03-15",
+          "konami_id": 7697,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

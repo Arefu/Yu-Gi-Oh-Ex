@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 80233946,
+      "name": "Gora Turtle",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "As long as this card remains face-up on the field, monsters with an ATK equal to 1900 or more cannot declare an attack.",
+      "race": "Aqua",
+      "atk": 1100,
+      "def": 1100,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gora-turtle-6730",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN215",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80233946,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80233946.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80233946.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80233946.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85683,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5411,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

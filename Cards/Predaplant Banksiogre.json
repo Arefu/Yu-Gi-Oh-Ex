@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 22138839,
+      "name": "Predaplant Banksiogre",
+      "typeline": [
+        "Plant",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by Tributing 1 opponent's monster with a Predator Counter. If this card is sent from the field to the GY: Place 1 Predator Counter on each face-up monster your opponent controls, and if you do, any of those monsters that are Level 2 or higher become Level 1 as long as they have a Predator Counter.",
+      "race": "Plant",
+      "atk": 2000,
+      "def": 100,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-banksiogre-8878",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22138839,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22138839.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22138839.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22138839.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "1.14",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118548,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13055,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

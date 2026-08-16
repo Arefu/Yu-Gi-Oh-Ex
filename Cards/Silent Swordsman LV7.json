@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 37267041,
+      "name": "Silent Swordsman LV7",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by \"Silent Swordsman LV5\", and cannot be Special Summoned by other ways. Negate all Spell effects on the field.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 1000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Silent Swordsman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silent-swordsman-lv7-3155",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN001",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 17 participation cards",
+          "set_code": "DL17-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5.6"
+        },
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.19"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 7 Trials to Glory: World Championship Tournament 2005 promotional cards",
+          "set_code": "WC5-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "11.88"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENC06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37267041,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37267041.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37267041.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37267041.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "4.97",
+          "amazon_price": "1.18",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 164074,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-02-15",
+          "ocg_date": "2005-01-07",
+          "konami_id": 6166,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

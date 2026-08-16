@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 37310367,
+      "name": "Lockout Gardna",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an opponent's monster declares a direct attack: You can Special Summon this card from your hand in Attack Position, and if you do, it cannot be destroyed by battle this turn. When an effect of a monster your opponent controls is activated that targets 1 Cyberse monster you control (and no other cards) (Quick Effect): You can negate the effects of both that Cyberse monster you control and that opponent's monster until the end of this turn.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lockout-gardna-8933",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN170",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break Special Edition",
+          "set_code": "CIBR-ENSE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.12"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37310367,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37310367.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37310367.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37310367.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32211,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-12-07",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13372,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

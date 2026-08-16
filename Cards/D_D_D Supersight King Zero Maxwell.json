@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 76029419,
+      "name": "D/D/D Supersight King Zero Maxwell",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can target 1 face-up monster on the field; its DEF becomes 0 until the end of this turn (even if this card leaves the field). You can only use this effect of \"D/D/D Supersight King Zero Maxwell\" once per turn.\n\n[ Monster Effect ] \nBefore damage calculation, if this card attacks an opponent's Defense Position monster: You can change the DEF of that opponent's monster to 0 until the end of the Damage Step. If this card attacks a Defense Position monster, inflict piercing battle damage. You take no battle damage from battles involving this card.",
+      "race": "Fiend",
+      "pend_desc": "You can target 1 face-up monster on the field; its DEF becomes 0 until the end of this turn (even if this card leaves the field). You can only use this effect of \"D/D/D Supersight King Zero Maxwell\" once per turn.",
+      "monster_desc": "Before damage calculation, if this card attacks an opponent's Defense Position monster: You can change the DEF of that opponent's monster to 0 until the end of the Damage Step. If this card attacks a Defense Position monster, inflict piercing battle damage. You take no battle damage from battles involving this card.",
+      "atk": 2800,
+      "def": 2500,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-supersight-king-zero-maxwell-8664",
+      "card_sets": [
+        {
+          "set_name": "2022 Tin of the Pharaoh's Gods",
+          "set_code": "MP22-EN112",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lightning Overdrive",
+          "set_code": "LIOV-EN095",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76029419,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76029419.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76029419.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76029419.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "1.83",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42250,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2021-06-03",
+          "ocg_date": "2017-09-21",
+          "konami_id": 13304,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

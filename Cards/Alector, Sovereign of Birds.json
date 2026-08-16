@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 17573739,
+      "name": "Alector, Sovereign of Birds",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls 2 or more face-up monsters of the same Attribute, you can Special Summon this card (from your hand). Once per turn: You can target 1 face-up card on the field; that target's effects are negated during this turn. There can only be 1 face-up \"Alector, Sovereign of Birds\" on the field.",
+      "race": "Winged Beast",
+      "atk": 2400,
+      "def": 2000,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alector-sovereign-of-birds-1528",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN153",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN153",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Six",
+          "set_code": "TU06-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! R Volume 5 promotional card",
+          "set_code": "YR05-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17573739,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17573739.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17573739.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17573739.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "15.00",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50305,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-06-02",
+          "ocg_date": "2008-04-04",
+          "konami_id": 7782,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

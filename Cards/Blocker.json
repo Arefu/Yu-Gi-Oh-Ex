@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 34743446,
+      "name": "Blocker",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Constructed from several components, this monster can launch them in a pincer attack.",
+      "race": "Machine",
+      "atk": 850,
+      "def": 1800,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blocker-2952",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack 8",
+          "set_code": "TP8-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.19"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34743446,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34743446.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34743446.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34743446.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.29",
+          "tcgplayer_price": "2.17",
+          "ebay_price": "1.75",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24529,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-04-28",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4422,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

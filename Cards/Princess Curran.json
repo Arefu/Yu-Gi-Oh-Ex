@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 2316186,
+      "name": "Princess Curran",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except with \"Trial of the Princesses\". During your Standby Phase, inflict 600 damage to your opponent for each monster they control.",
+      "race": "Spellcaster",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/princess-curran-206",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN148",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "74.78"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN028",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN028",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2316186,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2316186.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2316186.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2316186.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "21.99",
+          "amazon_price": "1.04",
+          "coolstuffinc_price": "29.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45747,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6606,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

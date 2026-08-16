@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 15013468,
+      "name": "Andro Sphinx",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can pay 500 Life Points to Special Summon this card when \"Pyramid of Light\" is on the field. This card cannot attack during the turn that it is Normal Summoned or Special Summoned. This card cannot be Special Summoned from the Graveyard. If this card destroys a Defense Position monster as a result of battle, inflict damage to your opponent's Life Points equal to half of the ATK of the destroyed monster.",
+      "race": "Beast",
+      "atk": 3000,
+      "def": 2500,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Sphinx",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/andro-sphinx-1287",
+      "card_sets": [
+        {
+          "set_name": "Exclusive Pack",
+          "set_code": "EP1-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15013468,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15013468.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15013468.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15013468.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "1.99",
+          "amazon_price": "1.21",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59648,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-07-25",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6087,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

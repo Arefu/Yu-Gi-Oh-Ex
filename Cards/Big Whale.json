@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 18322364,
+      "name": "Big Whale",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Tribute Summoned: You can Tribute this card; Special Summon 3 Level 3 WATER monsters from your Deck. Their effects are negated.",
+      "race": "Fish",
+      "atk": 1000,
+      "def": 3000,
+      "level": 9,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/big-whale-1590",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18322364,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18322364.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18322364.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18322364.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34383,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10489,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

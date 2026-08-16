@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 43202238,
+      "name": "Yazi, Evil of the Yang Zing",
+      "typeline": [
+        "Wyrm",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nCannot be targeted by an opponent's card effects. You can only use each of these effects of \"Yazi, Evil of the Yang Zing\" once per turn.\n● You can target 1 \"Yang Zing\" monster you control and 1 card your opponent controls; destroy them.\n● When this card you control is destroyed by battle or card effect and sent to your Graveyard: You can Special Summon 1 Wyrm-Type monster from your Deck in Defense Position.",
+      "race": "Wyrm",
+      "atk": 2600,
+      "def": 2100,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Yang Zing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yazi-evil-of-the-yang-zing-3681",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN163",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN131",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17",
+          "set_code": "OP17-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17 (POR)",
+          "set_code": "OP17-PT022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN051",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN051",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43202238,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43202238.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43202238.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43202238.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 468124,
+          "viewsweek": 23,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11383,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

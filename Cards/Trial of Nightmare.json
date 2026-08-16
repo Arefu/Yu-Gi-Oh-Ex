@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 77827521,
+      "name": "Trial of Nightmare",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This fiend passes judgment on enemies that are locked in coffins.",
+      "race": "Fiend",
+      "atk": 1300,
+      "def": 900,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trial-of-nightmare-6548",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.78"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E112",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "16.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77827521,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77827521.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77827521.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77827521.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Trial of Hell",
+          "views": 329986,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4125,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

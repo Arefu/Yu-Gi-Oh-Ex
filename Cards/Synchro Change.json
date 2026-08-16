@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 36737092,
+      "name": "Synchro Change",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Remove from play 1 face-up Synchro Monster you control. Special Summon 1 Synchro Monster from your Extra Deck whose Level is the same as the removed monster's. Its effect(s) is negated.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/synchro-change-3111",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN089",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36737092,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36737092.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36737092.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36737092.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46725,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2009-09-19",
+          "konami_id": 8147,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

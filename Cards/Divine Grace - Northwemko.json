@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 61757117,
+      "name": "Divine Grace - Northwemko",
+      "typeline": [
+        "Spellcaster",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "This card can only be Ritual Summoned with the Ritual Spell Card, \"Ritual of Grace\". When this card is Ritual Summoned, select a number of face-up cards on the field (except this card), up to the number of monsters you used for the Ritual Summon. While any of the selected cards are face-up on the field, this card cannot be destroyed by card effects.",
+      "race": "Spellcaster",
+      "atk": 2700,
+      "def": 1200,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/divine-grace-northwemko-5228",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN039",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61757117,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61757117.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61757117.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61757117.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.67",
+          "tcgplayer_price": "4.98",
+          "ebay_price": "25.99",
+          "amazon_price": "143.98",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41589,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8474,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

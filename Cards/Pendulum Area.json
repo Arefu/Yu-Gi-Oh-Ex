@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": 2359348,
+      "name": "Pendulum Area",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If all monsters you control are Pendulum Monsters (min. 1): Target 2 cards in your Pendulum Zones; destroy both cards, and if you do, neither player can Special Summon for the rest of this turn, except by Pendulum Summon.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pendulum-area-211",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN077",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN170",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.89"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2359348,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2359348.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2359348.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2359348.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.25",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28283,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12020,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

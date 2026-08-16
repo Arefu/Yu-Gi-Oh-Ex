@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 56789759,
+      "name": "Tyhone #2",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A crimson dragon that spits fireballs to create a blazing sea of fire.",
+      "race": "Dragon",
+      "atk": 1700,
+      "def": 1900,
+      "level": 6,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tyhone-2-4838",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.12"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56789759,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56789759.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56789759.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56789759.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "5.99",
+          "amazon_price": "0.32",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tyhone 2",
+          "views": 111333,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4561,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

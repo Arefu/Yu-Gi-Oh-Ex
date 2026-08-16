@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 84442536,
+      "name": "Graydle Combat",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card, or monster effect, that targets exactly 1 \"Graydle\" monster you control (and no other cards) is activated: Activate 1 of these effects;\n● The activated effect becomes \"Destroy that monster\".\n● Negate the activation, and if you do, destroy that card.",
+      "race": "Counter",
+      "archetype": "Graydle",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/graydle-combat-7084",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84442536,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84442536.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84442536.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84442536.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22439,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12665,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

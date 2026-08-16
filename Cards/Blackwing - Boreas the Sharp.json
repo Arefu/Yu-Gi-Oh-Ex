@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 16516630,
+      "name": "Blackwing - Boreas the Sharp",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase 1: You can banish this card from the Graveyard, then target 1 \"Blackwing\" monster you control; if that monster attacks this turn, you take no battle damage from that attack, it is not destroyed by that battle, also destroy the opponent's monster that it battled, after damage calculation.",
+      "race": "Winged Beast",
+      "atk": 1300,
+      "def": 900,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-boreas-the-sharp-1423",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN126",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16516630,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16516630.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16516630.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16516630.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.75",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33579,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9298,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

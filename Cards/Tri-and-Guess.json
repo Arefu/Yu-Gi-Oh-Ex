@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 73988674,
+      "name": "Tri-and-Guess",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If each player has an Extra Deck: Declare 1 Extra Deck monster card type (Fusion, Synchro, or Xyz); both players reveal their Extra Deck, and the player who has more cards of the declared card type gains 3000 Life Points.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tri-and-guess-6219",
+      "card_sets": [
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73988674,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73988674.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73988674.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73988674.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.69",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "2.94",
+          "amazon_price": "3.06",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 146836,
+          "viewsweek": 42,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11109,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

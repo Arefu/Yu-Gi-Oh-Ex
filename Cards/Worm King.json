@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 10026986,
+      "name": "Worm King",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can be Tribute Summoned in face-up Attack Position by Tributing 1 Reptile-Type \"Worm\" monster. You can Tribute 1 Reptile-Type \"Worm\" monster to select 1 card your opponent controls, and destroy it.",
+      "race": "Reptile",
+      "atk": 2700,
+      "def": 1100,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/worm-king-867",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN085",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10026986,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10026986.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10026986.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10026986.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.32",
+          "tcgplayer_price": "0.88",
+          "ebay_price": "2.55",
+          "amazon_price": "1.18",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35739,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7833,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

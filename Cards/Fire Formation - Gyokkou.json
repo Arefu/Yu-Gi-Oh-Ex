@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 19059929,
+      "name": "Fire Formation - Gyokkou",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Activate this card by targeting 1 Set Spell/Trap Card your opponent controls. Your opponent cannot activate the targeted card in response to this card's activation. While this card is face-up on the field, that Set card cannot be activated. All Beast-Warrior-Type monsters you control gain 100 ATK.",
+      "race": "Continuous",
+      "archetype": "Fire Formation",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-formation-gyokkou-1647",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN062",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19059929,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19059929.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19059929.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19059929.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.98",
+          "amazon_price": "2.17",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Fire Formation - Gyokko",
+          "views": 54763,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10543,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

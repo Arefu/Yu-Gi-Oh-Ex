@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 71181155,
+      "name": "Phantom Beast Cross-Wing",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this card is in the Graveyard, \"Gazelle the King of Mythical Beasts\" and all \"Phantom Beast\" monsters on the field gain 300 ATK.",
+      "race": "Beast-Warrior",
+      "atk": 1300,
+      "def": 1300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phantom-beast-cross-wing-5978",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Tag Force promotional cards",
+          "set_code": "GX02-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71181155,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71181155.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71181155.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71181155.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "1.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31324,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-16",
+          "ocg_date": "2006-09-14",
+          "konami_id": 6954,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

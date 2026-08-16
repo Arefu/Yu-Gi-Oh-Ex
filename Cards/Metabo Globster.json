@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 49808196,
+      "name": "Metabo Globster",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you Tribute this card for the Tribute Summon of a DARK monster, Special Summon 3 \"Metabo Tokens\" (Fiend-Type/DARK/Level 1/ATK 0/DEF 0) in Defense Position. These Tokens cannot be Tributed for a Tribute Summon.",
+      "race": "Fiend",
+      "atk": 800,
+      "def": 300,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metabo-globster-4241",
+      "card_sets": [
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN085",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49808196,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49808196.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49808196.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49808196.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "3.00",
+          "amazon_price": "0.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25740,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7565,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

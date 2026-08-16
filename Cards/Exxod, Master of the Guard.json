@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 55737443,
+      "name": "Exxod, Master of The Guard",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by Tributing 1 \"sphinx\" monster. Each time an EARTH monster is Flip Summoned while this card remains face-up on the field, inflict 1000 damage to your opponent.",
+      "race": "Rock",
+      "atk": 0,
+      "def": 4000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Sphinx",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/exxod-master-of-the-guard-4746",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Invincible Fortress",
+          "set_code": "SD7-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.44"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "113.22"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN015",
+          "set_rarity": "Reprint",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55737443,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55737443.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55737443.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55737443.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.76",
+          "tcgplayer_price": "0.89",
+          "ebay_price": "1.98",
+          "amazon_price": "7.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62290,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-15",
+          "ocg_date": "2005-12-08",
+          "konami_id": 6640,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

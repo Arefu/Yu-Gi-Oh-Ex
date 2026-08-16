@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 17589298,
+      "name": "Sword of Dark Rites",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a DARK monster. It gains 400 ATK. When the equipped monster is Tributed and this card is sent to the Graveyard, return this card to your hand.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sword-of-dark-rites-1529",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN067",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17589298,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17589298.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17589298.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17589298.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "24.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29797,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-03-08",
+          "konami_id": 7152,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "data": [
+    {
+      "id": 49881766,
+      "name": "Archfiend Soldier",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An expert at battle who belongs to a crack diabolical unit. He's famous because he always gets the job done.",
+      "race": "Fiend",
+      "atk": 1900,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-soldier-4250",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Deck: Yuya & Declan",
+          "set_code": "YS15-END02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.26"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN112",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack: Epic Dawn",
+          "set_code": "BP01-EN112",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5.5"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Legion Starter Deck",
+          "set_code": "YS15-ENL02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.67"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN219",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENE02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Syrus Truesdale",
+          "set_code": "YSDS-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49881766,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49881766.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49881766.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49881766.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "2.22",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 318403,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5762,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

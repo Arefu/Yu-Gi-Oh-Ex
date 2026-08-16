@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 90908427,
+      "name": "Steel Ogre Grotto #2",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A mechanized iron doll with tremendous strength.",
+      "race": "Machine",
+      "atk": 1900,
+      "def": 2200,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steel-ogre-grotto-2-7592",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Ultimate Kaiba Set",
+          "set_code": "KC01-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.78"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.87"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90908427,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90908427.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90908427.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90908427.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.01",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Steel Ogre Grotto 2",
+          "views": 95466,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4741,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

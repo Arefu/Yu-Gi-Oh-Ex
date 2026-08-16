@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 64751286,
+      "name": "Penumbral Soldier Lady",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card battles a LIGHT monster, this card gains 1000 ATK during the Damage Step only.",
+      "race": "Warrior",
+      "atk": 2100,
+      "def": 1400,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/penumbral-soldier-lady-5464",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN033",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64751286,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64751286.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64751286.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64751286.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.85",
+          "tcgplayer_price": "0.68",
+          "ebay_price": "2.89",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53729,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6125,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

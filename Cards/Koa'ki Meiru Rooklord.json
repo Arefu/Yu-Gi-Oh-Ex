@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 10060427,
+      "name": "Koa'ki Meiru Rooklord",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Warrior-Type monster in your hand. You can Tribute Summon this card by Tributing 1 \"Koa'ki Meiru\" monster. When this card is Normal Summoned, you can remove from play 1 \"Koa'ki Meiru\" card in your Graveyard to destroy up to 2 cards your opponent controls.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 2200,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-rooklord-871",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN028",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10060427,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10060427.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10060427.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10060427.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.70",
+          "tcgplayer_price": "0.66",
+          "ebay_price": "1.49",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24833,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8463,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

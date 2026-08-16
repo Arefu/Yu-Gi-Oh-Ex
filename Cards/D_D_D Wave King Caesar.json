@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 3758046,
+      "name": "D/D/D Wave King Caesar",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 Fiend-Type monsters\nDuring either player's turn: You can detach 1 Xyz Material from this card; at the end of the Battle Phase, Special Summon from your Graveyard as many monsters destroyed this turn as possible, but during the next Standby Phase, take 1000 damage for each monster Special Summoned by this effect. If this card is sent from the field to the Graveyard: You can add 1 \"Dark Contract\" card from your Deck to your hand. You can only use each effect of \"D/D/D Wave King Caesar\" once per turn.",
+      "race": "Fiend",
+      "atk": 2400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-wave-king-caesar-335",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3758046,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3758046.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3758046.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3758046.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.61",
+          "tcgplayer_price": "1.08",
+          "ebay_price": "4.00",
+          "amazon_price": "1.15",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 180157,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11457,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

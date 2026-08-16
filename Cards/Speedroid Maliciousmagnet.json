@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 62899696,
+      "name": "Speedroid Maliciousmagnet",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as Synchro Material except for a Synchro Summon by its own effect. During your Main Phase, if this card is Normal or Special Summoned: You can target 1 face-up monster your opponent controls; immediately after this effect resolves, Synchro Summon 1 WIND Synchro Monster using only this card you control and that monster. You can only use this effect of \"Speedroid Maliciousmagnet\" once per turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/speedroid-maliciousmagnet-8861",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62899696,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62899696.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62899696.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62899696.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48359,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12921,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

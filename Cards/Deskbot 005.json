@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 10117149,
+      "name": "Deskbot 005",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"Deskbot\" monsters. This effect cannot be negated.\n\n[ Monster Effect ] \nIf this card is Normal or Special Summoned: You can target 1 Spell/Trap Card on the field; destroy it. This card gains 500 ATK for each face-up \"Deskbot\" monster in your Extra Deck. If this card in the Pendulum Zone is destroyed: You can target 1 \"Deskbot\" monster in your Graveyard; Special Summon it. You can only use this effect of \"Deskbot 005\" once per turn.",
+      "race": "Machine",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"Deskbot\" monsters. This effect cannot be negated.",
+      "monster_desc": "If this card is Normal or Special Summoned: You can target 1 Spell/Trap Card on the field; destroy it. This card gains 500 ATK for each face-up \"Deskbot\" monster in your Extra Deck. If this card in the Pendulum Zone is destroyed: You can target 1 \"Deskbot\" monster in your Graveyard; Special Summon it. You can only use this effect of \"Deskbot 005\" once per turn.",
+      "atk": 500,
+      "def": 500,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Deskbot",
+      "scale": 10,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/deskbot-005-877",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10117149,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10117149.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10117149.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10117149.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76454,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11828,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

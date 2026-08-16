@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 67049542,
+      "name": "Dark Bat",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Bats from the netherworld that use their hyper senses to detect their enemies.",
+      "race": "Winged Beast",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-bat-5634",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.77"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67049542,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67049542.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67049542.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67049542.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.03",
+          "ebay_price": "1.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68208,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 4978,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

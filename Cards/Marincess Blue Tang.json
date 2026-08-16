@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 91953000,
+      "name": "Marincess Blue Tang",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can send 1 \"Marincess\" monster from your Deck to the GY, except \"Marincess Blue Tang\". If this card is sent to the GY as material for the Link Summon of a WATER monster: You can excavate the top 3 cards of your Deck, and if you do, you can add 1 excavated \"Marincess\" card to your hand, also shuffle the rest into your Deck. You can only use each effect of \"Marincess Blue Tang\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Marincess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marincess-blue-tang-10394",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN149",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.32"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Duels From the Deep",
+          "set_code": "LED9-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.89"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91953000,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91953000.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91953000.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91953000.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.46",
+          "amazon_price": "18.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 262654,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010004,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14631,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

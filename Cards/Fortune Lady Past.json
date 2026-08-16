@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 57869175,
+      "name": "Fortune Lady Past",
+      "typeline": [
+        "Spellcaster",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's ATK/DEF become its Level x 200. Once per turn, during your Standby Phase: Increase this card's Level by 1 (max. 12). You can target 1 \"Fortune Lady\" monster you control; banish any number of other Spellcaster monsters from your hand, field, and/or GY, and if you do, increase or reduce that monster's Level by the number of monsters banished, until the end of this turn. You can only use this effect of \"Fortune Lady Past\" once per turn.",
+      "race": "Spellcaster",
+      "atk": -1,
+      "def": -1,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Fortune Lady",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortune-lady-past-10236",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57869175,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57869175.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57869175.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57869175.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.00",
+          "amazon_price": "0.94",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 126954,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009008,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14470,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

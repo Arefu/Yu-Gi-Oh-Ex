@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 99162753,
+      "name": "Sextet Summon",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Banish from your hand, GY, and/or face-up field, 6 monsters (1 each Ritual, Fusion, Synchro, Xyz, Pendulum, and Link), each with the same original Type, then Special Summon 1 monster from your Deck or Extra Deck, with the same original Type as those banished monsters. You can only activate 1 \"Sextet Summon\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sextet-summon-10266",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN066",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99162753,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99162753.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99162753.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99162753.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 11246,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009066,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14514,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 96967123,
+      "name": "Dharma Cannon",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A monstrous creature whose body is lined with cannons that never miss their targets.",
+      "race": "Machine",
+      "atk": 900,
+      "def": 500,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dharma-cannon-8067",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96967123,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96967123.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96967123.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96967123.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "11.88",
+          "tcgplayer_price": "4.63",
+          "ebay_price": "9.90",
+          "amazon_price": "12.99",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21458,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4550,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

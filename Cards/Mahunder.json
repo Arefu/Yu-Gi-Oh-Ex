@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 21524779,
+      "name": "Mahunder",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can Normal Summon 1 Level 4 LIGHT Thunder-Type monster from your hand, except \"Mahunder\", as an additional Normal Summon.",
+      "race": "Thunder",
+      "atk": 1400,
+      "def": 700,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mahunder-1856",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN096",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21524779,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21524779.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21524779.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21524779.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.63",
+          "tcgplayer_price": "0.98",
+          "ebay_price": "2.00",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67330,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-05-21",
+          "konami_id": 10305,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

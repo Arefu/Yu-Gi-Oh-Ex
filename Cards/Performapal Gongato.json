@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 9106362,
+      "name": "Performapal Gongato",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, when an opponent's monster declares a direct attack: You can activate this effect; you take no battle damage from that battle (even if this card leaves the field).\n\n[ Monster Effect ] \nOnce per turn, when an attack is declared involving a monster you control and an opponent's monster: You can activate this effect; you take no battle damage from that battle.",
+      "race": "Beast",
+      "pend_desc": "Once per turn, when an opponent's monster declares a direct attack: You can activate this effect; you take no battle damage from that battle (even if this card leaves the field).",
+      "monster_desc": "Once per turn, when an attack is declared involving a monster you control and an opponent's monster: You can activate this effect; you take no battle damage from that battle.",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-gongato-771",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9106362,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9106362.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9106362.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9106362.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25095,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12401,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

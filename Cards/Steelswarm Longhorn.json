@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 62007535,
+      "name": "Steelswarm Longhorn",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, if this card was Tribute Summoned by Tributing a \"Steelswarm\" monster(s): You can pay 1000 Life Points to target 1 monster on the field; destroy that target.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 0,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Steelswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/steelswarm-longhorn-5246",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6a",
+          "set_code": "DT06-EN031",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN016",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62007535,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62007535.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62007535.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62007535.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.86",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "2.00",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18929,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-02-03",
+          "ocg_date": "2010-12-01",
+          "konami_id": 9387,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 83544697,
+      "name": "Contact with Gusto",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 2 \"Gusto\" monsters in your Graveyard and 1 card your opponent controls; shuffle both targets in your Graveyard into the Deck, then destroy the opponent's target.",
+      "race": "Normal",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/contact-with-gusto-7011",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN092",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN056",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83544697,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83544697.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83544697.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83544697.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "1.95",
+          "amazon_price": "1.86",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27219,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9183,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

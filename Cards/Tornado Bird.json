@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": 71283180,
+      "name": "Tornado Bird",
+      "typeline": [
+        "Winged Beast",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Return 2 Spell or Trap Cards on the field to their owners' hands.",
+      "race": "Winged Beast",
+      "atk": 1100,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tornado-bird-5988",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-072",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.74"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E072",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.39"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN072",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "8.8"
+        },
+        {
+          "set_name": "Tournament Pack 5",
+          "set_code": "TP5-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71283180,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71283180.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71283180.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71283180.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "1.42",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 134624,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5257,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

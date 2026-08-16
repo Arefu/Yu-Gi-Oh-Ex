@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 40343749,
+      "name": "House Duston",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this face-up card on the field is destroyed by your opponent's card (either by battle, and it was face-up at the start of the Damage Step, or by card effect) and sent to the Graveyard: You can Special Summon any \"Duston\" monsters of your choice from your hand and/or Deck to anywhere on the field, but you must Special Summon an equal number of monsters on each side.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 1000,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Duston",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/house-duston-3426",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40343749,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40343749.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40343749.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40343749.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "4.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44407,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10258,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

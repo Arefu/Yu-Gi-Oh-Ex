@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 58012107,
+      "name": "Alien Psychic",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is changed to Defense Position when it is Normal Summoned or Flip Summoned. Monsters with A-Counters cannot declare an attack.",
+      "race": "Reptile",
+      "atk": 200,
+      "def": 100,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Alien",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alien-psychic-4935",
+      "card_sets": [
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58012107,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58012107.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58012107.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58012107.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.50",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51550,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6987,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

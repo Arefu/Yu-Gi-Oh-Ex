@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 93662626,
+      "name": "Igknight Veteran",
+      "typeline": [
+        "Warrior",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you have an \"Igknight\" card in your other Pendulum Zone: You can destroy both cards in your Pendulum Zones, and if you do, add 1 FIRE Warrior-Type monster from your Deck or Graveyard to your hand.\n\n[ Monster Effect ] \n''This grizzled leader of the bodyguards division acts as chaperone to the Cavalier, and is one of the few complainers about her recklessness (mostly to the Gallant, the only one who understands him).''",
+      "race": "Warrior",
+      "pend_desc": "If you have an \"Igknight\" card in your other Pendulum Zone: You can destroy both cards in your Pendulum Zones, and if you do, add 1 FIRE Warrior-Type monster from your Deck or Graveyard to your hand.",
+      "monster_desc": "''This grizzled leader of the bodyguards division acts as chaperone to the Cavalier, and is one of the few complainers about her recklessness (mostly to the Gallant, the only one who understands him).''",
+      "atk": 1300,
+      "def": 2700,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Igknight",
+      "scale": 7,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/igknight-veteran-7792",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN131",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93662626,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93662626.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93662626.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93662626.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58934,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11975,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

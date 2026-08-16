@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 39984786,
+      "name": "Spawn Alligator",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the End Phase of the turn this card was Tribute Summoned by Tributing a Reptile-Type monster: Target 1 monster that was used for the Tribute Summon of this card; Special Summon it from the Graveyard.",
+      "race": "Reptile",
+      "atk": 2200,
+      "def": 1000,
+      "level": 5,
+      "attribute": "WATER",
+      "archetype": "Alligator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spawn-alligator-3394",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years",
+          "set_code": "LC02-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39984786,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39984786.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39984786.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39984786.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17955,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-10-04",
+          "ocg_date": "2010-03-20",
+          "konami_id": 8702,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

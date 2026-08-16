@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 69632396,
+      "name": "Goblin Out of the Frying Pan",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Pay 500 Life Points. Negate the activation of a Spell Card and return it to the owner's hand.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goblin-out-of-the-frying-pan-5856",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN179",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.9"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN059",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage",
+          "set_code": "SD09-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69632396,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69632396.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69632396.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69632396.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "4.46",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47085,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6625,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

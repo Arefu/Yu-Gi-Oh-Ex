@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 97836203,
+      "name": "T.G. Halberd Cannon",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner Synchro Monster + 2 or more non-Tuner Synchro Monsters\nMust be Synchro Summoned, and cannot be Special Summoned by other ways. Once per turn, during either player's turn, when a monster(s) would be Summoned: You can negate the Summon, and if you do, destroy that monster. This card must be face-up on the field to activate and to resolve this effect. When this card is sent from the field to the Graveyard: You can target 1 \"T.G.\" monster in your Graveyard; Special Summon that target.",
+      "race": "Machine",
+      "atk": 4000,
+      "def": 4000,
+      "level": 12,
+      "attribute": "EARTH",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/t-g-halberd-cannon-8133",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN043",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN216",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97836203,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97836203.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97836203.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97836203.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.38",
+          "tcgplayer_price": "5.04",
+          "ebay_price": "4.99",
+          "amazon_price": "12.48",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84218,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9514,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

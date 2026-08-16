@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 80102359,
+      "name": "Reinforced Human Psychic Borg",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Up to twice per turn, you can remove from play 1 Psychic-Type monster from your Graveyard to have this card gain 500 ATK.",
+      "race": "Psychic",
+      "atk": 1500,
+      "def": 800,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reinforced-human-psychic-borg-6715",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN029",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80102359,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80102359.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80102359.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80102359.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.36",
+          "tcgplayer_price": "5.65",
+          "ebay_price": "1.89",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28301,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8181,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

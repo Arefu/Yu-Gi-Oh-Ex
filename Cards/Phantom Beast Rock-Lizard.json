@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 70969517,
+      "name": "Phantom Beast Rock-Lizard",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you're Tributing a \"Phantom Beast\" monster or \"Gazelle the King of Mythical Beasts\", this card can be Normal Summoned with 1 Tribute. When this card destroys a monster by battle, inflict 500 damage to your opponent. When this card is destroyed and sent to the Graveyard by an opponent's card effect, inflict 2000 damage to your opponent.",
+      "race": "Beast-Warrior",
+      "atk": 2200,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phantom-beast-rock-lizard-5964",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker: Special Edition",
+          "set_code": "FOTB-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.17"
+        },
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70969517,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70969517.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70969517.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70969517.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29444,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-06-25",
+          "ocg_date": "2006-09-14",
+          "konami_id": 6957,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

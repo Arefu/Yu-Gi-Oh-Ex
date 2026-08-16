@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 88413677,
+      "name": "Doyon @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can target 1 \"@Ignister\" monster in your GY; add it to your hand. If this card is sent to the GY as material for the Link Summon of a Cyberse monster: You can target 1 \"A.I.\" Spell/Trap in your GY; add it to your hand. You can only use each effect of \"Doyon @Ignister\" once per turn.",
+      "race": "Cyberse",
+      "atk": 400,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/doyon-ignister-10587",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.98"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88413677,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88413677.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88413677.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88413677.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 145685,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011003,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14812,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

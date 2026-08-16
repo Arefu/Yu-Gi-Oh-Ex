@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 744887,
+      "name": "Utgarda, Generaider Boss of Delusion",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only control 1 \"Utgarda, Generaider Boss of Delusion\". (Quick Effect): You can Tribute 2 \"Generaider\" monsters and/or Rock monsters, then target 1 card on the field; banish it. You can only use this effect of \"Utgarda, Generaider Boss of Delusion\" once per turn.",
+      "race": "Rock",
+      "atk": 2200,
+      "def": 2700,
+      "level": 9,
+      "attribute": "LIGHT",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/utgarda-generaider-boss-of-delusion-10606",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN022",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 744887,
+          "image_url": "https://images.ygoprodeck.com/images/cards/744887.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/744887.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/744887.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Utgard, Generaider Boss of Lies",
+          "views": 130801,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011022,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14831,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

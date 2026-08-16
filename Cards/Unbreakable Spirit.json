@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 88494120,
+      "name": "Unbreakable Spirit",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you control only 1 face-up monster: Target that monster; until the end of this turn, it gains ATK equal to the ATK of the monster your opponent currently controls with the lowest ATK (your choice, if tied).",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unbreakable-spirit-7401",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN234",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN234",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88494120,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88494120.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88494120.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88494120.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.25",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14918,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-07-31",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11429,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

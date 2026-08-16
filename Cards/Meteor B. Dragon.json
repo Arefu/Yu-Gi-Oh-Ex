@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 90660762,
+      "name": "Meteor Black Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Red-Eyes Black Dragon\" + \"Meteor Dragon\"",
+      "race": "Dragon",
+      "atk": 3500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/meteor-black-dragon-7573",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.82"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 3",
+          "set_code": "STP3-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90660762,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90660762.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90660762.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90660762.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "3.95",
+          "amazon_price": "7.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Meteor B. Dragon",
+          "views": 112361,
+          "viewsweek": 0,
+          "upvotes": 33,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-03-16",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4719,
+          "has_effect": 0,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

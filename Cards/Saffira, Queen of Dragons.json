@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 56350972,
+      "name": "Saffira, Queen of Dragons",
+      "typeline": [
+        "Dragon",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Hymn of Light\". During the End Phase, if this card was Ritual Summoned this turn, or if a LIGHT monster was sent from the hand or Deck to the Graveyard this turn while this card was face-up on the field: You can activate 1 of these effects;\n● Draw 2 cards, then discard 1 card.\n● Discard 1 random card from your opponent's hand.\n● Add 1 LIGHT monster from your Graveyard to your hand.\nYou can only use 1 \"Saffira, Queen of Dragons\" effect per turn, and only once that turn.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 2400,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/saffira-queen-of-dragons-4798",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN095",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN050",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN050",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 24",
+          "set_code": "OP24-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56350972,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56350972.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56350972.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56350972.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "5.45",
+          "amazon_price": "2.44",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97754,
+          "viewsweek": 21,
+          "upvotes": 18,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11259,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

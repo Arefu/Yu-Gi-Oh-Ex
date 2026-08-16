@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 51790181,
+      "name": "Pot of Benevolence",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 2 cards from the Graveyard(s), and shuffle them into their owner's Deck(s). After activation, remove this card from play instead of sending it to the Graveyard. You can only activate 1 \"Pot of Benevolence\" per turn.",
+      "race": "Normal",
+      "archetype": "Greed",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pot-of-benevolence-4406",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN061",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Pot Collection",
+          "set_code": "TBC1-EN004",
+          "set_rarity": "Ultra Parallel Rare",
+          "set_rarity_code": "(UPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51790181,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51790181.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51790181.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51790181.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.54",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "1.99",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116827,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8672,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 66719533,
+      "name": "Asymmetaphys",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can banish 1 \"Metaphys\" card from your hand, and if you do, draw 1 card. Once per turn, if your \"Metaphys\" card in its owner's possession is banished: Apply this effect depending on whose turn it is.\r\n● Your turn: All monsters on the field lose 500 ATK/DEF, except \"Metaphys\" monsters.\r\n● Opponent's turn: Change the battle positions of all monsters on the field, except \"Metaphys\" monsters.",
+      "race": "Continuous",
+      "archetype": "Metaphys",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/asymmetaphys-8844",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN060",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66719533,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66719533.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66719533.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66719533.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.23",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "2.94",
+          "amazon_price": "3.71",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Metaphys Asymmetry",
+          "views": 84027,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13276,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

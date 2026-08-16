@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 47027714,
+      "name": "T.G. Halberd Cannon/Assault Mode",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned with \"Assault Mode Activate\". You can only use each of the following effects of \"T.G. Halberd Cannon/Assault Mode\" once per turn.\r\n● When your opponent would Summon a monster (Quick Effect): You can negate the Summon, and if you do, banish that monster and all Special Summoned monsters your opponent controls.\r\n● When this card on the field is destroyed: You can target 1 \"T.G. Halberd Cannon\" in your GY; Special Summon it, ignoring its Summoning conditions.",
+      "race": "Machine",
+      "atk": 4500,
+      "def": 4500,
+      "level": 12,
+      "attribute": "EARTH",
+      "archetype": "Assault Mode",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/t-g-halberd-cannon-assault-mode-10038",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47027714,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47027714.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47027714.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47027714.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81243,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14262,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

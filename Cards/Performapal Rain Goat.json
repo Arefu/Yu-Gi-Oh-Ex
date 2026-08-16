@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 16617334,
+      "name": "Performapal Rain Goat",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a card or effect is activated that would inflict damage to you (Quick Effect): You can discard this card; make that effect damage to you 0. During the Main Phase (Quick Effect): You can discard this card, then target 1 \"Performapal\" or \"Odd-Eyes\" card you control; this turn, it cannot be destroyed by battle or card effects.",
+      "race": "Beast",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "WATER",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-rain-goat-1430",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN177",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16617334,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16617334.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16617334.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16617334.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43884,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12114,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 9547962,
+      "name": "Euler's Circuit",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Your opponent's monsters cannot attack if you control 3 or more \"Tindangle\" monsters. Once per turn, during your Standby Phase: You can target 1 \"Tindangle\" monster you control; give control of it to your opponent. You can banish this card from your GY and discard 1 \"Tindangle\" card; add 1 \"Euler's Circuit\" from your Deck to your hand. You can only use this effect of \"Euler's Circuit\" once per turn.",
+      "race": "Field",
+      "archetype": "Tindangle",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/euler-s-circuit-8959",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9547962,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9547962.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9547962.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9547962.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Euler Circuit",
+          "views": 35258,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13426,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

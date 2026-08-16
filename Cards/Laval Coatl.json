@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 45439263,
+      "name": "Laval Coatl",
+      "typeline": [
+        "Pyro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have 3 or more \"Laval\" monsters with different names in your Graveyard, you can Special Summon this card (from your hand).",
+      "race": "Pyro",
+      "atk": 1300,
+      "def": 700,
+      "level": 2,
+      "attribute": "FIRE",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/laval-coatl-3871",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN071",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN035",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45439263,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45439263.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45439263.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45439263.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "4.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32738,
+          "viewsweek": 42,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9586,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

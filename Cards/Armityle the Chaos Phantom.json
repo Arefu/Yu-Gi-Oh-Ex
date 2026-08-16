@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 43378048,
+      "name": "Armityle the Chaos Phantasm",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Uria, Lord of Searing Flames\" + \"Hamon, Lord of Striking Thunder\" + \"Raviel, Lord of Phantasms\"\r\nMust first be Special Summoned (from your Extra Deck) by banishing the above cards you control. (You do not use \"Polymerization\".) Cannot be destroyed by battle. Gains 10,000 ATK during your turn only.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 12,
+      "attribute": "DARK",
+      "archetype": "Chaos Phantom",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armityle-the-chaos-phantasm-3696",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN091",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN099",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.57"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN211",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Sacred Beasts",
+          "set_code": "SDSA-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43378048,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43378048.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43378048.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43378048.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.23",
+          "tcgplayer_price": "1.16",
+          "ebay_price": "2.29",
+          "amazon_price": "3.61",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Armityle the Chaos Phantom",
+          "views": 276328,
+          "viewsweek": 0,
+          "upvotes": 53,
+          "downvotes": 12,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2007-08-21",
+          "konami_id": 7342,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

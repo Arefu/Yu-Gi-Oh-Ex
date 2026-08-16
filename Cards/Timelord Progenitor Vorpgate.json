@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 67508932,
+      "name": "Timelord Progenitor Vorpgate",
+      "typeline": [
+        "Fairy",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nCannot be destroyed by battle or card effects. You take no battle damage from attacks involving this card. At the end of the Damage Step, if this card that was Special Summoned from the Extra Deck battled: You can activate this effect; banish all monsters your opponent controls, also, for the rest of this turn, halve the battle damage your opponent takes. Once per turn, during the End Phase, if this effect was activated this turn: Special Summon as many monsters as possible that you banished with this card's effect, to your opponent's field.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Timelord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/timelord-progenitor-vorpgate-9788",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN008",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ARC-V Volume 6 promotional card",
+          "set_code": "YA06-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "17.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67508932,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67508932.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67508932.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67508932.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.90",
+          "tcgplayer_price": "3.19",
+          "ebay_price": "11.30",
+          "amazon_price": "2.53",
+          "coolstuffinc_price": "19.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Timelord Progenitor Vulgate",
+          "views": 163712,
+          "viewsweek": 0,
+          "upvotes": 25,
+          "downvotes": 17,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-09-03",
+          "ocg_date": "2018-10-04",
+          "konami_id": 14163,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

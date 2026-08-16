@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 80335817,
+      "name": "Timebreaker Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nEach turn, the first Pendulum Monster(s) you control that would be destroyed by an opponent's card effect, is not destroyed.\n\n[ Monster Effect ] \nWhen this card is Pendulum Summoned from the hand (and no other cards are Pendulum Summoned at the same time): You can make this card's ATK become double its original ATK. Once per turn: You can target 1 monster on the field; banish both it and this card from the field until your next Standby Phase.",
+      "race": "Spellcaster",
+      "pend_desc": "Each turn, the first Pendulum Monster(s) you control that would be destroyed by an opponent's card effect, is not destroyed.",
+      "monster_desc": "When this card is Pendulum Summoned from the hand (and no other cards are Pendulum Summoned at the same time): You can make this card's ATK become double its original ATK. Once per turn: You can target 1 monster on the field; banish both it and this card from the field until your next Standby Phase.",
+      "atk": 1400,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Magician",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/timebreaker-magician-6738",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN174",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80335817,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80335817.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80335817.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80335817.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "2.77",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 107658,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12110,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

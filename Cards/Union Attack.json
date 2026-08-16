@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 60399954,
+      "name": "Union Attack",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 face-up monster you control; add up the total ATK of all other face-up Attack Position monsters you currently control, then during the Battle Phase of this turn only, the monster gains that much ATK, but cannot inflict battle damage to your opponent, also other face-up Attack Position monsters cannot attack.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/union-attack-5122",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN152",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN152",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN083",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.24"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN093",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60399954,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60399954.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60399954.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60399954.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.90",
+          "amazon_price": "0.88",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34901,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2004-10-21",
+          "konami_id": 6288,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

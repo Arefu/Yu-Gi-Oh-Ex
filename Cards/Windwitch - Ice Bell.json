@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 43722862,
+      "name": "Windwitch - Ice Bell",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control no monsters: You can Special Summon this card from your hand, then you can Special Summon 1 \"Windwitch\" monster from your Deck, but it cannot be Tributed. You cannot Special Summon monsters from the Extra Deck the turn you activate this effect, except Level 5 or higher WIND monsters. If this card is Normal or Special Summoned: You can inflict 500 damage to your opponent. You can only use each effect of \"Windwitch - Ice Bell\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Windwitch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/windwitch-ice-bell-3734",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 15",
+          "set_code": "OP15-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.66"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN273",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN273",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN046",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43722862,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43722862.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43722862.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43722862.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "2.18",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Wind Witch - Ice Bell",
+          "views": 313870,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12742,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

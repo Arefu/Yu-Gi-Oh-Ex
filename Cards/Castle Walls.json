@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 44209392,
+      "name": "Castle Walls",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Increase the DEF of 1 face-up monster on the field by 500 points until the end of this turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/castle-walls-3771",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck 2006",
+          "set_code": "YSD-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.79"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.76"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.81"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.86"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44209392,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44209392.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44209392.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44209392.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.55",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57448,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4850,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

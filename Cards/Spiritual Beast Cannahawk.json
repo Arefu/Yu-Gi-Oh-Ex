@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 49885567,
+      "name": "Spiritual Beast Cannahawk",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can banish 1 \"Ritual Beast\" card from your Deck, face-up. During your second Standby Phase after this effect's activation, add the card banished by this effect to your hand. You can only Special Summon \"Spiritual Beast Cannahawk(s)\" once per turn.",
+      "race": "Thunder",
+      "atk": 1400,
+      "def": 600,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Ritual Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spiritual-beast-cannahawk-4251",
+      "card_sets": [
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN027",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49885567,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49885567.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49885567.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49885567.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.47",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "5.60",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 201076,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11497,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

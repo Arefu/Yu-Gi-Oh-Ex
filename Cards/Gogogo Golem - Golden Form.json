@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 2948263,
+      "name": "Gogogo Golem - Golden Form",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing 1 \"Gogogo\" monster, and cannot be Special Summoned by other ways. This card's ATK becomes double the original ATK of the Tributed monster. Any battle damage your opponent takes from attacks involving this card is halved. Once per turn, during either player's turn, if a monster effect is activated on your opponent's side of the field: This card loses exactly 1500 ATK, and if it does, negate that effect.",
+      "race": "Rock",
+      "atk": -1,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Gogogo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gogogo-golem-golden-form-262",
+      "card_sets": [
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2948263,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2948263.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2948263.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2948263.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44232,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2013-09-21",
+          "konami_id": 10830,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

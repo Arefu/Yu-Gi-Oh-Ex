@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 675319,
+      "name": "Zodiac Sign",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All \"Zoodiac\" monsters you control gain 300 ATK and DEF. Monsters your opponent controls cannot target face-up Beast-Warrior-Type monsters you control for attacks, except the Beast-Warrior-Type monster you control with the highest ATK (either, if tied). Once per turn, if a \"Zoodiac\" monster(s) you control would be destroyed by card effect, you can destroy 1 monster in your hand or field instead of 1 \"Zoodiac\" monster.",
+      "race": "Field",
+      "archetype": "Zoodiac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zodiac-sign-63",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN211",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 675319,
+          "image_url": "https://images.ygoprodeck.com/images/cards/675319.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/675319.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/675319.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36101,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12793,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

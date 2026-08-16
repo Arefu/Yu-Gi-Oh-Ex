@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 57319935,
+      "name": "Xyz Xtreme !!",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an Xyz Monster you control is destroyed by battle: Pay 1000 Life Points; you reveal 1 Xyz Monster from the Extra Deck with a Rank less than or equal to that destroyed monster's, and so can your opponent (simultaneously). The player who revealed the monster with lower ATK takes damage equal to the difference between the revealed monsters' ATK's. If the opponent doesn't reveal a monster, inflict damage to your opponent equal to the ATK of your revealed monster.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-xtreme-4885",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57319935,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57319935.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57319935.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57319935.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Xyz Xtreme !!",
+          "views": 19813,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10292,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

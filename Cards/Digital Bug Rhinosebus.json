@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 85004150,
+      "name": "Digital Bug Rhinosebus",
+      "typeline": [
+        "Insect",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 or more Level 7 LIGHT Insect-Type monsters\nYou can also Xyz Summon this card by detaching 2 Xyz Materials from a Rank 5 or 6 Insect-Type Xyz Monster you control, then using that Xyz Monster as the Xyz Material. (Xyz Materials attached to that monster also become Xyz Materials on this card.) If this card attacks a Defense Position monster, inflict piercing battle damage to your opponent. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card; destroy the face-up monster(s) your opponent controls with the highest DEF (all, if tied).",
+      "race": "Insect",
+      "atk": 2600,
+      "def": 2200,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Digital Bug",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/digital-bug-rhinosebus-7130",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN056",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85004150,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85004150.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85004150.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85004150.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54088,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12328,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 44680819,
+      "name": "Ranryu",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only control 1 \"Ranryu\". If you control a Spellcaster monster, you can Special Summon this card (from your hand). If this card is destroyed by battle or card effect and sent to the GY: You can target 1 monster with 1500 ATK/200 DEF in your GY, except \"Ranryu\"; Special Summon it.",
+      "race": "Dragon",
+      "atk": 1500,
+      "def": 200,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ranryu-10267",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN112",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "THE CHRONICLES DECK: Spirit Charmers (All-Foil Edition)",
+          "set_code": "CH02-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44680819,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44680819.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44680819.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44680819.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.20",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Storm Dragon",
+          "views": 135762,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009026,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14482,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

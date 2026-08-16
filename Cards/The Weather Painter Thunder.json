@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 91299846,
+      "name": "The Weather Painter Thunder",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send 1 face-up Continuous Spell/Trap you control to the GY; place 1 \"The Weather\" Spell/Trap from your Deck face-up in your Spell & Trap Zone. You can only use this effect of \"The Weather Painter Thunder\" once per turn. Once per turn, during the Standby Phase of the turn after this card was banished from the field to activate a \"The Weather\" card's effect: You can Special Summon this banished card.",
+      "race": "Fairy",
+      "atk": 1700,
+      "def": 0,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "The Weather",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-weather-painter-thunder-8785",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN097",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN033",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91299846,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91299846.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91299846.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91299846.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.74",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Thunder Weathery Turmer",
+          "views": 122314,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13332,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

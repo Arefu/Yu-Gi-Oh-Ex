@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 28332833,
+      "name": "Flamvell Poun",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard: You can add 1 monster with 200 DEF from your Deck to your hand.",
+      "race": "Pyro",
+      "atk": 200,
+      "def": 200,
+      "level": 1,
+      "attribute": "FIRE",
+      "archetype": "Flamvell",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flamvell-poun-2409",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN070",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Onslaught of the Fire Kings Structure Deck",
+          "set_code": "SDOK-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28332833,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28332833.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28332833.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28332833.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43311,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7818,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 64002884,
+      "name": "Simorgh Repulsion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Discard 1 Winged Beast monster; return all cards in your opponent's Spell & Trap Zones to the hand. You can banish this card from your GY; reveal 1 Winged Beast monster in your hand, and if you do, reduce the Levels of monsters in your hand with that name by 1 for the rest of this turn (even after they are Summoned). You can only activate 1 \"Simorgh Repulsion\" per turn.",
+      "race": "Normal",
+      "archetype": "Simorgh",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/simorgh-repulsion-10257",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64002884,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64002884.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64002884.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64002884.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Simorgh Rejection",
+          "views": 61157,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009062,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14507,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 43912676,
+      "name": "Celestia",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All Wyrm-Type monsters gain 300 ATK and DEF. Once per turn: You can banish 3 Wyrm-Type monsters from your Graveyard, then target 1 card on the field; destroy it.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/celestia-3750",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN175",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43912676,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43912676.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43912676.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43912676.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "4.98",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24708,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11397,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

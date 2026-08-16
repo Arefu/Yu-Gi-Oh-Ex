@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 54401832,
+      "name": "Metalfoes Crimsonite",
+      "typeline": [
+        "Psychic",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Metalfoes\" monster + 2 monsters with 3000 or less ATK",
+      "race": "Psychic",
+      "atk": 3000,
+      "def": 3000,
+      "level": 9,
+      "attribute": "FIRE",
+      "archetype": "Metalfoes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metalfoes-crimsonite-4629",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN094",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN053",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN045",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54401832,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54401832.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54401832.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54401832.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.29",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Metalphosis Cardinal",
+          "views": 60049,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12444,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

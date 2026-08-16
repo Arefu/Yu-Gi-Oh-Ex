@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 11074235,
+      "name": "Mana Dragon Zirnitron",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Spell/Trap you control leaves the field because of an opponent's effect, and is now in the GY or banished (except during the Damage Step): You can Special Summon this card from your GY (if it was there when that Spell/Trap left) or hand (even if not), then you can Set 1 Spell/Trap that is banished or in your GY to your Spell & Trap Zone. You can only use this effect of \"Mana Dragon Zirnitron\" once per turn. If Summoned this way, banish this card when it leaves the field.",
+      "race": "Dragon",
+      "atk": 2200,
+      "def": 1200,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mana-dragon-zirnitron-9468",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN090",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11074235,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11074235.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11074235.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11074235.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Zirdras, the Magicrystal Dragon",
+          "staple": "Yes",
+          "views": 196214,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13737,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 76218313,
+      "name": "Dragon Buster Destruction Sword",
+      "typeline": [
+        "Dragon",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"Buster Blader\" you control; equip this monster from your hand or your side of the field to that target. While this card is equipped to a monster, your opponent cannot Special Summon monsters from the Extra Deck. While this card is equipped to a monster: You can Special Summon this equipped card. You can only use this effect of \"Dragon Buster Destruction Sword\" once per turn.",
+      "race": "Dragon",
+      "atk": 400,
+      "def": 300,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Destruction Sword",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragon-buster-destruction-sword-6416",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN190",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN079",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76218313,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76218313.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76218313.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76218313.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.09",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 738928,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12128,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

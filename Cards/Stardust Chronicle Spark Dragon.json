@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 89474727,
+      "name": "Stardust Chronicle Spark Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner Synchro Monster + 1+ non-Tuner Synchro Monsters\nMust be Synchro Summoned. Once per turn (Quick Effect): You can banish 1 Synchro Monster from your GY; this card is unaffected by other cards' effects for the rest of this turn. If this card in its owner's possession is destroyed by an opponent's card (by battle or card effect): You can target 1 of your banished Dragon Synchro Monsters; Special Summon it.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2500,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Stardust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stardust-chronicle-spark-dragon-7471",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break Special Edition",
+          "set_code": "CIBR-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8.13"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Volume 9 promotional card",
+          "set_code": "YF09-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "13.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89474727,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89474727.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89474727.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89474727.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.09",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "1.99",
+          "amazon_price": "2.39",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 132770,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-04-05",
+          "ocg_date": "2015-06-04",
+          "konami_id": 11944,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

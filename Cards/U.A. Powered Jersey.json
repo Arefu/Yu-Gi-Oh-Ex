@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 35884610,
+      "name": "U.A. Powered Jersey",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a \"U.A.\" monster. It gains 1000 ATK and DEF, also if it battles an opponent's monster, any battle damage it inflicts to your opponent is doubled. If the equipped monster destroys a monster by its attack: It can make a second attack during this Battle Phase. During your Standby Phase: Banish the equipped monster. If this card is sent to the Graveyard because the equipped monster returned to the hand: You can return this card to the hand.",
+      "race": "Equip",
+      "archetype": "U.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/u-a-powered-jersey-3038",
+      "card_sets": [
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35884610,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35884610.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35884610.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35884610.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.00",
+          "amazon_price": "1.06",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46101,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11512,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "data": [
+    {
+      "id": 46821314,
+      "name": "Humanoid Slime",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This slime apparently has some human genes in its genetic makeup.",
+      "race": "Aqua",
+      "atk": 800,
+      "def": 2000,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Slime",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/humanoid-slime-3989",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN207",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-003",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.89"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E003",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN003",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "6.95"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENH03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46821314,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46821314.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46821314.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46821314.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "8.95",
+          "amazon_price": "5.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 217262,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5060,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

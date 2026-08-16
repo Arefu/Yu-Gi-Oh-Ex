@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 80367387,
+      "name": "Koa'ki Meiru Bergzak",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Warrior-Type monster in your hand. If this card destroys an opponent's monster by battle, it can attack once again in a row.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-bergzak-6741",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN099",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80367387,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80367387.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80367387.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80367387.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.65",
+          "tcgplayer_price": "3.70",
+          "ebay_price": "11.00",
+          "amazon_price": "6.99",
+          "coolstuffinc_price": "8.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32408,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2009-04-21",
+          "konami_id": 8516,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

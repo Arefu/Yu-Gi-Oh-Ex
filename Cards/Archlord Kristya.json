@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 59509952,
+      "name": "Archlord Kristya",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have exactly 4 Fairy monsters in your GY, you can Special Summon this card (from your hand). If Summoned this way: Target 1 Fairy monster in your GY; add that target to your hand. Neither player can Special Summon monsters. If this face-up card would be sent from the field to the GY, place it on top of the Deck, instead.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2300,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archlord-kristya-5057",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2011 Wave 1",
+          "set_code": "CT08-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.36"
+        },
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN096",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Valiant Smashers",
+          "set_code": "VASM-EN048",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Valiant Smashers",
+          "set_code": "VASM-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59509952,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59509952.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59509952.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59509952.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "4.95",
+          "amazon_price": "89.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 650549,
+          "viewsweek": 63,
+          "upvotes": 12,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-01-21",
+          "konami_id": 8283,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

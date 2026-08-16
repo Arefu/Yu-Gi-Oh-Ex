@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 43735670,
+      "name": "Marincess Blue Slug",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Level 4 or lower \"Marincess\" monster\r\nIf this card is Link Summoned: You can target 1 \"Marincess\" monster in your GY, except \"Marincess Blue Slug\"; add it to your hand, also you cannot Special Summon monsters for the rest of this turn, except WATER monsters. You can only Link Summon \"Marincess Blue Slug\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1500,
+      "def": null,
+      "level": null,
+      "attribute": "WATER",
+      "archetype": "Marincess",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marincess-blue-slug-10193",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN118",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.33"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43735670,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43735670.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43735670.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43735670.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.49",
+          "tcgplayer_price": "1.86",
+          "ebay_price": "3.50",
+          "amazon_price": "33.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171709,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009040,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14488,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

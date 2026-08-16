@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 34680482,
+      "name": "Madolche Anjelly",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card in your possession is destroyed by your opponent's card (by battle or card effect) and sent to your Graveyard: Shuffle this card into the Deck. You can Tribute this card; Special Summon 1 \"Madolche\" monster from your Deck, but shuffle it into the Deck during the End Phase of your next turn. You can only use this effect of \"Madolche Anjelly\" once per turn. That Special Summoned monster cannot be destroyed by battle.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Madolche",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/madolche-anjelly-2945",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN073",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN215",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN215",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34680482,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34680482.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34680482.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34680482.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "0.90",
+          "ebay_price": "4.45",
+          "amazon_price": "14.65",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 258767,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11057,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 14989021,
+      "name": "Simorgh, Bird of Divinity",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. If you Tribute Summon this card, all Tributes must be WIND. Each player takes 1000 damage during each of their End Phases, while this card remains face-up on the field. This damage is decreased by 500 for each Spell/Trap Card the player controls.",
+      "race": "Winged Beast",
+      "atk": 2700,
+      "def": 1000,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Simorgh",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/simorgh-bird-of-divinity-1286",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Lord of the Storm",
+          "set_code": "SD8-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.67"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "51.13"
+        },
+        {
+          "set_name": "World Championship 2010 Card Pack",
+          "set_code": "WCPP-EN016",
+          "set_rarity": "Reprint",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14989021,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14989021.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14989021.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14989021.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.80",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "1.72",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30367,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-07-12",
+          "ocg_date": "2006-03-16",
+          "konami_id": 6720,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

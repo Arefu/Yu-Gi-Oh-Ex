@@ -1,0 +1,149 @@
+{
+  "data": [
+    {
+      "id": 16178681,
+      "name": "Odd-Eyes Pendulum Dragon",
+      "typeline": [
+        "Dragon",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can reduce the battle damage you take from an attack involving a Pendulum Monster you control to 0. During your End Phase: You can destroy this card, and if you do, add 1 Pendulum Monster with 1500 or less ATK from your Deck to your hand. You can only use each Pendulum Effect of \"Odd-Eyes Pendulum Dragon\" once per turn.\n\n[ Monster Effect ] \nIf this card battles an opponent's monster, any battle damage this card inflicts to your opponent is doubled.",
+      "race": "Dragon",
+      "pend_desc": "You can reduce the battle damage you take from an attack involving a Pendulum Monster you control to 0. During your End Phase: You can destroy this card, and if you do, add 1 Pendulum Monster with 1500 or less ATK from your Deck to your hand. You can only use each Pendulum Effect of \"Odd-Eyes Pendulum Dragon\" once per turn.",
+      "monster_desc": "If this card battles an opponent's monster, any battle damage this card inflicts to your opponent is doubled.",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "-Eyes Dragon",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-pendulum-dragon-1388",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tins",
+          "set_code": "CT12-EN001",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "3.53"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN105",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.79"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "7.54"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN004",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "16.54"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC01",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.75"
+        },
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.88"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN012",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "5"
+        },
+        {
+          "set_name": "Starter Deck: Yuya",
+          "set_code": "YS16-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.87"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16178681,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16178681.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16178681.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16178681.jpg"
+        },
+        {
+          "id": 16178682,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16178682.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16178682.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16178682.jpg"
+        },
+        {
+          "id": 16178683,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16178683.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16178683.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16178683.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "12.99",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 573750,
+          "viewsweek": 0,
+          "upvotes": 43,
+          "downvotes": 32,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Odd-Eyes Pendulum Dragon",
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11213,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

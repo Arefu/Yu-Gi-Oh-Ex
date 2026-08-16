@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 81983656,
+      "name": "Blackwing Tamer - Obsidian Hawk Joe",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Blackwing\" Tuner + 1 or more non-Tuner \"Blackwing\" monsters\nYou can target 1 Level 5 or higher Winged Beast-Type monster in your Graveyard; Special Summon it. During either player's turn, when your opponent activates a card or effect that targets only this card, or when your opponent targets this card for an attack: You can target 1 other \"Blackwing\" monster you control that would be an appropriate target; that card/effect/attack now targets the new target. You can only use each effect of \"Blackwing Tamer - Obsidian Hawk Joe\" once per turn.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-tamer-obsidian-hawk-joe-6885",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Premium Gold: Return of the Bling",
+          "set_code": "PGL2-EN012",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "2.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81983656,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81983656.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81983656.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81983656.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "0.99",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 203471,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-03-19",
+          "ocg_date": "2015-03-21",
+          "konami_id": 9463,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 4820694,
+      "name": "Constellar Tempest",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "During your End Phase: You can target 2 \"Constellar\" Xyz Monsters you control that have Xyz Material; detach all Xyz Materials from both Xyz Monsters, and if you do, halve your opponent's LP. You can only use this effect of \"Constellar Tempest\" once per Duel. Once per turn, during your Standby Phase: You can target 1 \"Constellar\" Xyz Monster you control and 1 \"Constellar\" monster in your Graveyard; attach that monster from the Graveyard to that Xyz Monster as an Xyz Material.",
+      "race": "Continuous",
+      "archetype": "Constellar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/constellar-tempest-428",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4820694,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4820694.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4820694.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4820694.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25794,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2014-08-09",
+          "konami_id": 11454,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

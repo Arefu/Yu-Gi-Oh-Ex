@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 81788994,
+      "name": "Curse of the Shadow Prison",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Each time a \"Shaddoll\" monster(s) is sent to the GY by a card effect, place 1 Spellstone Counter on this card for each sent monster. All monsters your opponent controls lose 100 ATK for each Spellstone Counter on this card during your opponent's turn only. Each time you Fusion Summon a \"Shaddoll\" Fusion Monster, you can remove 3 Spellstone Counters from this card to use 1 appropriate face-up monster your opponent controls as 1 of the Fusion Materials.",
+      "race": "Field",
+      "archetype": "Shaddoll",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/curse-of-the-shadow-prison-6864",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN104",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81788994,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81788994.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81788994.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81788994.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50172,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11269,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

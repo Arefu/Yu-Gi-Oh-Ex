@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 89521713,
+      "name": "Madolche Cruffssant",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card in your possession is destroyed by your opponent's card (either by battle or by card effect) and sent to your Graveyard: Shuffle this card into the Deck. Once per turn: You can target 1 face-up \"Madolche\" card you control, except this card; return it to the hand, and if you do, increase this card's Level by 1 and ATK by 300.",
+      "race": "Beast",
+      "atk": 1500,
+      "def": 1200,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Madolche",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/madolche-cruffssant-7475",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89521713,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89521713.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89521713.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89521713.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "0.99",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46332,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10247,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

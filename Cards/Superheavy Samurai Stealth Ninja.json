@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 50065971,
+      "name": "Superheavy Samurai Stealth Ninja",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Machine-Type Tuner + 1 or more non-Tuner Machine-Type monsters\r\nThis card can attack while in face-up Defense Position. If it does, apply its DEF for damage calculation. If you have no Spell/Trap Cards in your Graveyard: You can halve this card's original DEF until the end of this turn, and if you do, this card can attack your opponent directly this turn. Once per turn, during the next Standby Phase after this card was destroyed by a card effect and sent to the Graveyard: You can Special Summon this card.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 2800,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-stealth-ninja-4262",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN203",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN044",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50065971,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50065971.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50065971.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50065971.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.00",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80064,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12779,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 99659159,
+      "name": "Dragon Mastery",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each monster you control that is equipped with a \"Dragunity\" monster(s) gains 500 ATK. Once per turn, you can select 1 face-up monster you control, and equip it with 1 Dragon-Type \"Dragunity\" monster from your hand.",
+      "race": "Continuous",
+      "archetype": "Dragunity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragon-mastery-8275",
+      "card_sets": [
+        {
+          "set_name": "Dragunity Legion Structure Deck",
+          "set_code": "SDDL-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99659159,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99659159.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99659159.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99659159.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "0.99",
+          "amazon_price": "1.60",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29036,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-03-04",
+          "ocg_date": "2010-06-19",
+          "konami_id": 9050,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

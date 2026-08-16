@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 50608164,
+      "name": "Masked HERO Koga",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "Must be Special Summoned with \"Mask Change\" and cannot be Special Summoned by other ways. This card gains 500 ATK for each monster your opponent controls. Once per turn, during either player's turn: You can banish 1 \"HERO\" monster from your Graveyard, then target 1 face-up monster on the field; that target loses ATK equal to the ATK of the monster banished to activate this effect, until the end of this turn.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 1800,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Masked HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/masked-hero-koga-4311",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Eight",
+          "set_code": "AP08-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "HERO Strike Structure Deck",
+          "set_code": "SDHS-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50608164,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50608164.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50608164.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50608164.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 133585,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-29",
+          "ocg_date": "2014-06-21",
+          "konami_id": 11311,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 81128478,
+      "name": "Lair Wire",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Remove from play 1 Insect-Type monster from your Graveyard and select 1 monster your opponent controls. Destroy the selected monster.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lair-wire-6809",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81128478,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81128478.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81128478.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81128478.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "2.00",
+          "amazon_price": "1.70",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49740,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8682,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

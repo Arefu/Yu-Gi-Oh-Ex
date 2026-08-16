@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 48252330,
+      "name": "Madolche Butlerusk",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card you control is destroyed by your opponent's card (either by battle or by card effect) and sent to your Graveyard: Shuffle this card into your Deck. When this card is Normal Summoned: You can add 1 Field Spell Card from your Deck to your hand. There must be another face-up \"Madolche\" monster on the field to activate and to resolve this effect.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Madolche",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/madolche-butlerusk-4120",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48252330,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48252330.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48252330.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48252330.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "4.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55008,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10155,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

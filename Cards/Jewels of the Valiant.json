@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 72710085,
+      "name": "Jewels of the Valiant",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "If exactly 1 monster is banished from your Graveyard (and no other cards are banished at the same time), except during the Damage Step: You can send, from your Deck to the Graveyard, 1 monster that has a different Attribute from that banished monster. You can only use the effect of \"Jewels of the Valiant\" once per turn.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jewels-of-the-valiant-6104",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72710085,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72710085.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72710085.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72710085.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20243,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10548,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

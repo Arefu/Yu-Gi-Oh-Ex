@@ -1,0 +1,118 @@
+{
+  "data": [
+    {
+      "id": 1861629,
+      "name": "Decode Talker",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Effect Monsters\r\nGains 500 ATK for each monster it points to. When your opponent activates a card or effect that targets a card(s) you control (Quick Effect): You can Tribute 1 monster this card points to; negate the activation, and if you do, destroy that card.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Code Talker",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/decode-talker-8433",
+      "card_sets": [
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN106",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "OTS Tournament Pack 6",
+          "set_code": "OP06-EN001",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "24.91"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN031",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "2.34"
+        },
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.85"
+        },
+        {
+          "set_name": "Starter Deck: Link Strike",
+          "set_code": "YS17-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.47"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1861629,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1861629.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1861629.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1861629.jpg"
+        },
+        {
+          "id": 1861630,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1861630.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1861630.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1861630.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 894743,
+          "viewsweek": 0,
+          "upvotes": 63,
+          "downvotes": 20,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Decode Talker",
+          "tcg_date": "2017-07-20",
+          "ocg_date": "2017-03-25",
+          "konami_id": 13036,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

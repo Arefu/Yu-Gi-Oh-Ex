@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 44901281,
+      "name": "Saber Hole",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Activate only while you control a face-up \"X-Saber\" monster. Negate the Summon of a monster, and destroy it.",
+      "race": "Counter",
+      "archetype": "Hole",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/saber-hole-3826",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN073",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENX27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44901281,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44901281.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44901281.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44901281.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "5.09",
+          "amazon_price": "5.29",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35940,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8684,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

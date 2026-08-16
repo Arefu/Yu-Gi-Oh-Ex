@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 66707058,
+      "name": "Goblin Black Ops",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can attack your opponent directly. If this card attacks, it is changed to Defense Position at the end of the Battle Phase. This card's battle position cannot be changed until the end of your next turn, except with a card effect.",
+      "race": "Beast-Warrior",
+      "atk": 1300,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/goblin-black-ops-5601",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN030",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66707058,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66707058.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66707058.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66707058.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.58",
+          "tcgplayer_price": "0.72",
+          "ebay_price": "2.49",
+          "amazon_price": "5.65",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36877,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7295,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

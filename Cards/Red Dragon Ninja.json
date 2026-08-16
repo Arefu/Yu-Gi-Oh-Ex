@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 58165765,
+      "name": "Red Dragon Ninja",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Summoned: You can banish 1 \"Ninja\" or \"Ninjitsu Art\" card from your GY, then target 1 Set card your opponent controls; reveal that Set card, then return it to either the top or bottom of the Deck. Your opponent cannot activate the targeted card in response to this effect's activation. You can only use this effect of \"Red Dragon Ninja\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 2400,
+      "def": 1200,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Ninja",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-dragon-ninja-4949",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN082",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58165765,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58165765.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58165765.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58165765.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40601,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10352,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

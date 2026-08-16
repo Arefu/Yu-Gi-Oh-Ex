@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 17601919,
+      "name": "Pumprincess the Princess of Ghosts",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this face-up card is destroyed while in a Monster Zone, you can place it face-up in your Spell & Trap Zone as a Continuous Spell Card, instead of sending it to the Graveyard. While this card is treated as a Continuous Spell Card by this effect, during each player's Standby Phase: Place 1 Pumpkin Counter on this card. All monsters your opponent controls lose 100 ATK and DEF for each Pumpkin Counter on this card.",
+      "race": "Zombie",
+      "atk": 900,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pumprincess-the-princess-of-ghosts-1531",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN154",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17601919,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17601919.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17601919.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17601919.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54416,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10763,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 6330307,
+      "name": "DZW - Chimera Clad",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"Number C39\" monster you control; equip this monster from your hand or your side of the field to that target. The equipped monster cannot be destroyed by battle. At the end of the Damage Step, when the equipped monster attacks an opponent's monster, but the opponent's monster was not destroyed by the battle: You can make the opponent's monster's ATK 0 (even after this card leaves the field or the monster becomes unaffected by card effects), and if you do, the equipped monster can make a second attack on the same monster in a row.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dzw-chimera-clad-555",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6330307,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6330307.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6330307.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6330307.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35391,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10604,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

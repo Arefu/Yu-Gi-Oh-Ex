@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 10691144,
+      "name": "Mirror of the Ice Barrier",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "During this turn, each time a card(s) is removed from play from your hand, your side of the field, and/or your Graveyard by the effect of an opponent's Effect Monster: ● If a card in your hand is removed from play, remove from play up to 2 random cards in your opponent's hand. ● If a card you control is removed from play, remove from play up to 2 cards your opponent controls. ● If a card in your Graveyard is removed from play, remove from play up to 2 cards in your opponent's Graveyard.",
+      "race": "Quick-Play",
+      "archetype": "Ice Barrier",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mirror-of-the-ice-barrier-923",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Freezing Chains",
+          "set_code": "SDFC-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10691144,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10691144.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10691144.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10691144.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45500,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9132,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

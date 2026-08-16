@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 67629977,
+      "name": "Hoshiningen",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "All LIGHT monsters on the field gain 500 ATK, also all DARK monsters on the field lose 400 ATK.",
+      "race": "Fairy",
+      "atk": 500,
+      "def": 700,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hoshiningen-5682",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-102",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.8"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E102",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.88"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN102",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2018)",
+          "set_code": "AC18-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67629977,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67629977.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67629977.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67629977.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.00",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171637,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4498,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

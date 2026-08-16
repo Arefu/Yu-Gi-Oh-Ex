@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 16227556,
+      "name": "Inspection",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "During your opponent's Standby Phase, you can pay 500 Life Points to randomly select 1 card in your opponent's hand and look at it.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inspection-1396",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.18"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.33"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16227556,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16227556.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16227556.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16227556.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.00",
+          "amazon_price": "0.74",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171830,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4967,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

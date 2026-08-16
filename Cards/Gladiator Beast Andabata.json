@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 3779662,
+      "name": "Gladiator Beast Andabata",
+      "typeline": [
+        "Beast-Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Gladiator Beast Augustus\" + 2 \"Gladiator Beast\" monsters\r\nMust first be Special Summoned (from your Extra Deck) by shuffling the above cards you control into the Deck. (You do not use \"Polymerization\".) If Summoned this way: You can Special Summon 1 Level 7 or lower \"Gladiator Beast\" Fusion Monster from your Extra Deck, ignoring its Summoning conditions. At the end of the Battle Phase, if this card battled: You can return it to the Extra Deck; Special Summon 2 \"Gladiator Beast\" monsters from your Deck.",
+      "race": "Beast-Warrior",
+      "atk": 1000,
+      "def": 2800,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-andabata-8661",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN022",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.47"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3779662,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3779662.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3779662.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3779662.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.99",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gladiator Beast Andabatae",
+          "views": 79988,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13151,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

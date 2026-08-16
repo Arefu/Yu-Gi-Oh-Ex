@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 63175639,
+      "name": "Fool of Prophecy",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can send 1 \"Spellbook\" Spell Card from your Deck to the Graveyard. During the End Phase of the turn this card activated this effect: You can Tribute this card; Special Summon 1 Level 5 or higher DARK Spellcaster-Type monster from your Deck. You must have 5 or more \"Spellbook\" Spell Cards with different names in your Graveyard to activate and to resolve this effect.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fool-of-prophecy-5333",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN035",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63175639,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63175639.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63175639.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63175639.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.74",
+          "tcgplayer_price": "0.64",
+          "ebay_price": "1.58",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27676,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10394,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

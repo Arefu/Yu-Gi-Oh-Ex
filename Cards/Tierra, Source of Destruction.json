@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 91588074,
+      "name": "Tierra, Source of Destruction",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by shuffling 10 other cards with different names from your hand and/or field into the Deck and/or Extra Deck, and cannot be Special Summoned by other ways. This card's Special Summon cannot be negated. If this card is Special Summoned: Shuffle all cards into the Deck, except this card, from each player's hand, field, Graveyard, and face-up Pendulum Monsters from the Extra Deck. Neither player can activate cards or effects in response to this effect's activation.",
+      "race": "Fiend",
+      "atk": 3400,
+      "def": 3600,
+      "level": 11,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tierra-source-of-destruction-7636",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN027",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91588074,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91588074.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91588074.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91588074.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.00",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49231,
+          "viewsweek": 21,
+          "upvotes": 14,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12762,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

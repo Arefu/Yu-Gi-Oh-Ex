@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 53347303,
+      "name": "Blue-Eyes Shining Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing 1 \"Blue-Eyes Ultimate Dragon\". Gains 300 ATK for each Dragon monster in your GY. When a card or effect is activated that targets this card (Quick Effect): You can negate that effect.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2500,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Blue-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blue-eyes-shining-dragon-4547",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN008",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Movie Pack",
+          "set_code": "MOV-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN096",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53347303,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53347303.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53347303.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53347303.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "1.41",
+          "ebay_price": "9.95",
+          "amazon_price": "12.98",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 156656,
+          "viewsweek": 0,
+          "upvotes": 217,
+          "downvotes": 7,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-08-13",
+          "ocg_date": "2004-08-25",
+          "konami_id": 6082,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

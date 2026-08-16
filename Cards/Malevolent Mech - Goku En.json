@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 31571902,
+      "name": "Malevolent Mech - Goku En",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Normal Summon this card without Tributing. Once per turn, during the End Phase, if this card was Summoned this way: Send it to the GY, then take damage equal to its original ATK in the GY. This card must be the only Zombie monster on the field to activate and to resolve this effect.",
+      "race": "Zombie",
+      "atk": 2400,
+      "def": 1400,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malevolent-mech-goku-en-2685",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN207",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Horde",
+          "set_code": "SR07-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Zombie World Structure Deck",
+          "set_code": "SDZW-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31571902,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31571902.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31571902.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31571902.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61548,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-10-21",
+          "ocg_date": "2008-06-21",
+          "konami_id": 7855,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

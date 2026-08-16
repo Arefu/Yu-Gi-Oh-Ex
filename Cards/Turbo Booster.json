@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 60187739,
+      "name": "Turbo Booster",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have Normal Summoned a monster this turn, you can Special Summon this card from your hand. You can Tribute this card to destroy 1 monster your opponent controls that battled one of your monsters this turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/turbo-booster-5106",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei",
+          "set_code": "DP08-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60187739,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60187739.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60187739.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60187739.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.49",
+          "amazon_price": "3.66",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 161665,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2008-04-19",
+          "konami_id": 7699,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 45458027,
+      "name": "Gearspring Spirit",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by having only Machine-Type monsters in your Graveyard (min. 1). Once per turn: You can target 1 face-up monster your opponent controls; its ATK becomes 0 until the End Phase.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 100,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gearspring-spirit-3874",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN058",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45458027,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45458027.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45458027.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45458027.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "1.99",
+          "amazon_price": "3.57",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81690,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 9980,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

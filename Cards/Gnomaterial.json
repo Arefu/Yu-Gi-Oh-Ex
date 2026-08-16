@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 58655504,
+      "name": "Gnomaterial",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent Special Summons a monster(s) while you control no cards: You can discard this card, then target 1 face-up monster your opponent controls; this turn, that monster cannot be Tributed, or used as material for a Fusion, Synchro, Xyz, or Link Summon. You can only use this effect of \"Gnomaterial\" once per turn.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 1000,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gnomaterial-10306",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN050",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN089",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58655504,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58655504.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58655504.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58655504.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "4.19",
+          "amazon_price": "8.04",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gnomaterial",
+          "views": 146028,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101008000,
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14530,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

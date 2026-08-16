@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 13386503,
+      "name": "Ghost Knight of Jackal",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon an opponent's monster that is destroyed and sent to the Graveyard by this card as a result of battle to your side of the field in face-up Defense Position.",
+      "race": "Beast-Warrior",
+      "atk": 1700,
+      "def": 1600,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghost-knight-of-jackal-1148",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-071",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.41"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN184",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13386503,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13386503.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13386503.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13386503.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.99",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54079,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6033,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

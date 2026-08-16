@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 24661486,
+      "name": "Cold Enchanter",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard 1 card to target 1 face-up monster on the field; place an Ice Counter on that target. This card gains 300 ATK for each Ice Counter on the field.",
+      "race": "Aqua",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cold-enchanter-2130",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN201",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN096",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24661486,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24661486.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24661486.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24661486.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "5.95",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57614,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2007-05-21",
+          "konami_id": 6928,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

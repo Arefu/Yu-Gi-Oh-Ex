@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 2572890,
+      "name": "Majespecter Tempest",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a monster(s) would be Special Summoned, or a monster effect is activated: Tribute 1 WIND Spellcaster-Type monster; negate the Summon or activation, and if you do, destroy that card.",
+      "race": "Counter",
+      "archetype": "Majespecter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/majespecter-tempest-234",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN159",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 24",
+          "set_code": "OP24-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2572890,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2572890.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2572890.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2572890.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57994,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12017,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

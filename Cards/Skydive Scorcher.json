@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 40522482,
+      "name": "Skydive Scorcher",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Elemental HERO\" Fusion Monster you control; destroy as many monsters your opponent controls as possible, with ATK higher than that monster's, then inflict damage to your opponent equal to the highest original ATK among those destroyed monsters in the Graveyard (your choice, if tied). If a \"Skyscraper\" Field Spell Card is in your Field Zone, inflict damage to your opponent equal to the combined original ATK of those destroyed monsters in the Graveyard, instead.",
+      "race": "Normal",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skydive-scorcher-9038",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN029",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40522482,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40522482.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40522482.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40522482.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.59",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "1.99",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44818,
+          "viewsweek": 0,
+          "upvotes": 111,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2016-12-17",
+          "konami_id": 12902,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

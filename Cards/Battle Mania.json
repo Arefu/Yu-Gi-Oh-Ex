@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 31245780,
+      "name": "Battle Mania",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only during your opponent's Standby Phase. All face-up monsters your opponent controls are changed to Attack Position, and cannot change their battle positions this turn. All monsters your opponent currently controls must attack this turn, if able.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battle-mania-2649",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN063",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei",
+          "set_code": "DP08-EN025",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31245780,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31245780.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31245780.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31245780.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "1.99",
+          "amazon_price": "2.52",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91709,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7918,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

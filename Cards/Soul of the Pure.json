@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 47852924,
+      "name": "Soul of the Pure",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Increase your Life Points by 800 points.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soul-of-the-pure-4088",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.42"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "39.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47852924,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47852924.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47852924.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47852924.jpg"
+        },
+        {
+          "id": 47852925,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47852925.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47852925.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47852925.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "19.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41825,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 47852924,
+          "treated_as": "Soul of the Pure",
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4347,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

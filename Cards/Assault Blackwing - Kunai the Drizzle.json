@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 70456282,
+      "name": "Assault Blackwing - Kunai the Drizzle",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by Tributing 1 \"Blackwing\" monster. If Summoned this way, this card is treated as a Tuner monster. Once per turn: You can target 1 Synchro Monster you control, and declare a Level from 1 to 8; it becomes that Level until the end of this turn.",
+      "race": "Winged Beast",
+      "atk": 2100,
+      "def": 1600,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/assault-blackwing-kunai-the-drizzle-5927",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN119",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN018",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70456282,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70456282.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70456282.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70456282.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.30",
+          "tcgplayer_price": "3.40",
+          "ebay_price": "2.90",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77046,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11962,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

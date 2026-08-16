@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 6979239,
+      "name": "Woodland Sprite",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Send 1 Equip Card equipped to this card to the Graveyard. Inflict 500 points of damage to your opponent's Life Points.",
+      "race": "Plant",
+      "atk": 900,
+      "def": 400,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/woodland-sprite-600",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN172",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.15"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.58"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6979239,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6979239.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6979239.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6979239.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 99279,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5032,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

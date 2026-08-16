@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 29296344,
+      "name": "Quadborrel Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Dragon monsters, including a \"Rokket\" monster\r\nYou can discard 1 card, then target 1 face-up monster on the field; you cannot Special Summon Link-2 or lower monsters from the Extra Deck for the rest of this turn, also destroy the targeted monster, then if it was a Link Monster, you can Special Summon any number of \"Rokket\" monsters with different names, from your hand or GY, up to its Link Rating. You can only use this effect of \"Quadborrel Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Borrel",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/quadborrel-dragon-10320",
+      "card_sets": [
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN108",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29296344,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29296344.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29296344.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29296344.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.84",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Sawnborrel Dragon",
+          "views": 299863,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100336052,
+          "tcg_date": "2019-08-15",
+          "ocg_date": "2019-06-22",
+          "konami_id": 14626,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

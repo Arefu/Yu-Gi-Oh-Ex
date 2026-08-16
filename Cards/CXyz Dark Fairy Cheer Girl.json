@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 23454876,
+      "name": "CXyz Dark Fairy Cheer Girl",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 5 monsters\nWhen this card is sent from the field to the Graveyard: Draw 1 card. If this card has \"Fairy Cheer Girl\" as an Xyz Material, it gains this effect.\n● When this card destroys an opponent's monster by battle and remains on the field: You can detach 1 Xyz Material from this card; inflict 400 damage to your opponent for each card in your hand.",
+      "race": "Fairy",
+      "atk": 2500,
+      "def": 1900,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "CXyz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cxyz-dark-fairy-cheer-girl-2024",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23454876,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23454876.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23454876.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23454876.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50895,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10528,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

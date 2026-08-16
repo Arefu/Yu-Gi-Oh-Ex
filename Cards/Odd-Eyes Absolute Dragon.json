@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 16691074,
+      "name": "Odd-Eyes Absolute Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 7 monsters\r\nWhen any player's monster declares an attack: You can detach 1 material from this card; negate the attack, then you can Special Summon 1 \"Odd-Eyes\" monster from your hand or GY. If this Xyz Summoned card is sent to the GY: You can Special Summon 1 \"Odd-Eyes\" monster from your Extra Deck, except \"Odd-Eyes Absolute Dragon\". You can only use each effect of \"Odd-Eyes Absolute Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 2500,
+      "level": 7,
+      "attribute": "WATER",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-absolute-dragon-1435",
+      "card_sets": [
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC34",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.88"
+        },
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16691074,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16691074.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16691074.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16691074.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.79",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 770395,
+          "viewsweek": 63,
+          "upvotes": 15,
+          "downvotes": 6,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-12-03",
+          "ocg_date": "2015-06-20",
+          "konami_id": 11942,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

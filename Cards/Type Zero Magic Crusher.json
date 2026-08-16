@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 21237481,
+      "name": "Type Zero Magic Crusher",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Discard 1 Spell Card from your hand to inflict 500 points of damage to your opponent's Life Points.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/type-zero-magic-crusher-1825",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN188",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.65"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21237481,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21237481.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21237481.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21237481.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 160369,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5153,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

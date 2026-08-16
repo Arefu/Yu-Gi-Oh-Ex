@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 86325573,
+      "name": "Battlin' Boxer Big Bandage",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, this card cannot be destroyed by battle. Once per turn: You can target 1 \"Battlin' Boxer\" monster in your Graveyard, or 1 of your banished \"Battlin' Boxer\" monsters, that has a Level; all \"Battlin' Boxer\" monsters you currently control become that monster's current Level.",
+      "race": "Warrior",
+      "atk": 1100,
+      "def": 1400,
+      "level": 2,
+      "attribute": "FIRE",
+      "archetype": "Battlin' Boxer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlin-boxer-big-bandage-7234",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86325573,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86325573.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86325573.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86325573.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39596,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11037,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

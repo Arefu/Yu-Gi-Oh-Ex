@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 93657021,
+      "name": "Destiny HERO - Dusktopia",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Destiny HERO\" Fusion Monster + 1 \"Destiny HERO\" monster\r\nIf this card is Fusion Summoned: You can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from your hand or field as Fusion Material. Once per turn (Quick Effect): You can target 1 monster on the field; make it unable to be destroyed by battle or card effects, and if you do, neither player takes any battle damage from attacks involving that monster (these effects last until the end of this turn).",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 3000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Destiny HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destiny-hero-dusktopia-8668",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN025",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.18"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENA32",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93657021,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93657021.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93657021.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93657021.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 146778,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13154,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 6552938,
+      "name": "Raidraptor - Rudder Strix",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned from the hand by the effect of a \"Raidraptor\" card, or Normal Summoned: You can inflict 600 damage to your opponent. When an opponent's monster declares an attack that targets this card: You can Special Summon up to 2 \"Raidraptor\" monsters from your hand, and if you do, monsters your opponent controls cannot target those monsters for attacks this turn.",
+      "race": "Winged Beast",
+      "atk": 0,
+      "def": 1600,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-rudder-strix-8657",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN014",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6552938,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6552938.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6552938.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6552938.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "19.99",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34158,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13139,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

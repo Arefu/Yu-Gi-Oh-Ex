@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 95923441,
+      "name": "Triamid Hunter",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Field Spell Card is face-up on the field, you can Normal Summon 1 Rock-Type monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) Once per turn, during your opponent's turn: You can target 1 \"Triamid\" Field Spell Card in your Field Zone; send it to the Graveyard, and if you do, activate 1 \"Triamid\" Field Spell Card from your Deck with a different name (this is a Quick Effect).",
+      "race": "Rock",
+      "atk": 1400,
+      "def": 1100,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Triamid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/triamid-hunter-7986",
+      "card_sets": [
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN028",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95923441,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95923441.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95923441.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95923441.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.00",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52134,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12427,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 42216237,
+      "name": "Angel of Zera",
+      "typeline": [
+        "Fairy",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nThis card gains 100 ATK for each of your opponent's banished cards. During the Standby Phase of the next turn after this card was banished: Special Summon this banished card. You can only use the effect of \"Angel of Zera\" once per turn.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2300,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Fairy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/angel-of-zera-3600",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN116",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN087",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Valiant Smashers",
+          "set_code": "VASM-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42216237,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42216237.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42216237.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42216237.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "3.53",
+          "amazon_price": "2.61",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 90945,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10819,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

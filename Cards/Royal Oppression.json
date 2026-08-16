@@ -1,0 +1,115 @@
+{
+  "data": [
+    {
+      "id": 93016201,
+      "name": "Royal Oppression",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Either player can pay 800 Life Points to negate the Special Summon of a monster(s), and/or an effect that Special Summons a monster(s), and destroy those cards.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/royal-oppression-7741",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Eight",
+          "set_code": "CP08-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN200",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.25"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN048",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN047",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "10.16"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN120",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN120",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 93016201,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93016201.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93016201.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93016201.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "8.32",
+          "tcgplayer_price": "9.26",
+          "ebay_price": "8.95",
+          "amazon_price": "12.98",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 259540,
+          "viewsweek": 42,
+          "upvotes": 6,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5399,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

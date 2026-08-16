@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 82685480,
+      "name": "Rage of Kairyu-Shin",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If \"Umi\" is on the field: Target monsters your opponent controls, up to the number of WATER monsters you control whose original Levels are 5 or higher; destroy them, and if you do, the zones they were in cannot be used until the end of the next turn. You can only activate 1 \"Rage of Kairyu-Shin\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Umi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rage-of-kairyu-shin-8505",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN017",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "Legendary Duelists: Duels From the Deep",
+          "set_code": "LED9-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82685480,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82685480.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82685480.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82685480.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 96881,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-07",
+          "ocg_date": "2017-06-03",
+          "konami_id": 13178,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

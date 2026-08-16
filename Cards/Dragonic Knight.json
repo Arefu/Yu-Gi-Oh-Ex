@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 38109772,
+      "name": "Dragonic Knight",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When the effect of an opponent's monster is activated that targets and destroys a card(s) you control, you can send the targeted card(s) to the Graveyard to Special Summon this card from your hand.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 2300,
+      "level": 7,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonic-knight-3230",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2010 Wave 1",
+          "set_code": "CT07-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.6"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 6, Issue 9 promotional card",
+          "set_code": "JUMP-EN026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.47"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38109772,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38109772.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38109772.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38109772.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "3.49",
+          "amazon_price": "1.08",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32136,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-09-01",
+          "ocg_date": "2006-05-20",
+          "konami_id": 6790,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

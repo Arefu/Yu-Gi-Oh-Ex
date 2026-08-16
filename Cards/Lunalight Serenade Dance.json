@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 13935001,
+      "name": "Lunalight Serenade Dance",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "When a Fusion Monster(s) is Fusion Summoned to your field (except during the Damage Step): You can target 1 of those monsters; apply these effects in sequence.\r\n● Special Summon 1 \"Lunalight Token\" (Beast-Warrior/DARK/Level 4/ATK 2000/DEF 2000) to your opponent's field.\r\n● That target gains 500 ATK for each monster your opponent controls (even if this card leaves the field).\r\nDuring your Main Phase: You can banish this card from your GY; send 1 card from your hand to the GY, and if you do, Special Summon 1 \"Lunalight\" monster from your Deck. You can only use this effect of \"Lunalight Serenade Dance\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Lunalight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lunalight-serenade-dance-9907",
+      "card_sets": [
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENL28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN131",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13935001,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13935001.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13935001.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13935001.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "3.14",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 196278,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14189,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

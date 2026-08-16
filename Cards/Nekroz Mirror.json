@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 14735698,
+      "name": "Nekroz Mirror",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card can be used to Ritual Summon any \"Nekroz\" Ritual Monster. Tribute monsters from your hand or field, and/or banish \"Nekroz\" monsters from your GY, then Ritual Summon 1 \"Nekroz\" Ritual Monster from your hand whose Level exactly equals the total Levels of those monsters. You can only use this effect of \"Nekroz Mirror\" once per turn. If you control no monsters: You can banish this card and 1 \"Nekroz\" monster from your GY; add 1 \"Nekroz\" Spell from your Deck to your hand.",
+      "race": "Ritual",
+      "archetype": "Nekroz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nekroz-mirror-1261",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN165",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN097",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.53"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14735698,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14735698.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14735698.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14735698.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.74",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 149907,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11490,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 32864,
+      "name": "The 13th Grave",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A zombie that suddenly appeared from plot #13 - an empty grave.",
+      "race": "Zombie",
+      "atk": 1200,
+      "def": 900,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-13th-grave-2",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.82"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.81"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32864,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32864.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32864.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32864.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 300462,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-18",
+          "konami_id": 4138,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 87294988,
+      "name": "Chirubimé, Princess of Autumn Leaves",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Your opponent cannot target face-up Plant monsters for attacks, except this one. If this card in your possession is sent to your GY by your opponent's card: You can Special Summon 1 Plant monster from your Deck, except \"Chirubimé, Princess of Autumn Leaves\".",
+      "race": "Plant",
+      "atk": 1800,
+      "def": 2800,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chirubime-princess-of-autumn-leaves-7304",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN216",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secret Slayers",
+          "set_code": "SESL-EN054",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87294988,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87294988.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87294988.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87294988.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.49",
+          "amazon_price": "1.51",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Chirubime, Princess of Autumn Leaves",
+          "views": 66778,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10925,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

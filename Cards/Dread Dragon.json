@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 51925772,
+      "name": "Dread Dragon",
+      "typeline": [
+        "Dragon",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard, you can add 1 Level 3 or lower Dragon-Type monster from your Deck to your hand.",
+      "race": "Dragon",
+      "atk": 1100,
+      "def": 400,
+      "level": 2,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dread-dragon-4419",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51925772,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51925772.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51925772.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51925772.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "2.00",
+          "amazon_price": "2.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53732,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8784,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

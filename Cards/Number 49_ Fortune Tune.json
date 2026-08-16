@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 16259549,
+      "name": "Number 49: Fortune Tune",
+      "typeline": [
+        "Winged Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nDuring each of your Standby Phases: Gain 500 Life Points. This card cannot be targeted by card effects. If this face-up card would be destroyed, you can detach 1 Xyz Material from this card instead. When this card is sent from the field to the Graveyard: Target 2 Level 3 monsters in your Graveyard; shuffle them both into the Deck, and if you do, return this card from your Graveyard to the Extra Deck. You can only use this effect of \"Number 49: Fortune Tune\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 400,
+      "def": 900,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-49-fortune-tune-1402",
+      "card_sets": [
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN029",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16259549,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16259549.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16259549.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16259549.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "0.99",
+          "amazon_price": "2.90",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 49",
+          "views": 277781,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10703,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

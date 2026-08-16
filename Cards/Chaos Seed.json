@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 76766706,
+      "name": "Chaos Seed",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control both LIGHT and DARK monster(s): You can target 1 of your banished LIGHT or DARK Warrior-Type monsters; add it to your hand. You can only activate 1 \"Chaos Seed\" per turn.",
+      "race": "Normal",
+      "archetype": "Chaos",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chaos-seed-6459",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76766706,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76766706.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76766706.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76766706.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37530,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2013-08-11",
+          "konami_id": 10826,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 94350039,
+      "name": "T.G. Gear Zombie",
+      "typeline": [
+        "Zombie",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"T.G.\" monster you control; Special Summon this card from your hand, then the targeted monster loses 1000 ATK. You can only use this effect of \"T.G. Gear Zombie\" once per turn.",
+      "race": "Zombie",
+      "atk": 600,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/t-g-gear-zombie-10215",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN088",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN023",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.53"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94350039,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94350039.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94350039.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94350039.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61810,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248026,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14559,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 7864030,
+      "name": "Superheavy Samurai Blowtorch",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an opponent's monster declares an attack while you have no Spell/Trap Cards in your Graveyard: You can send this card from your hand to the Graveyard, then target 1 \"Superheavy Samurai\" monster you control; change the attack target to it and perform damage calculation. Once per turn, when an opponent's monster declares an attack: You can change the attack target to this card and perform damage calculation. Cannot be destroyed by battle.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 300,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-blowtorch-672",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7864030,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7864030.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7864030.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7864030.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30124,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11791,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

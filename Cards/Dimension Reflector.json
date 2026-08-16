@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 54297661,
+      "name": "Dimension Reflector",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate this card by banishing 2 monsters you control, then target 1 face-up monster your opponent controls; Special Summon this card in Attack Position as an Effect Monster (Spellcaster-Type/DARK/Level 4/ATK ?/DEF ?) with ATK and DEF equal to that face-up monster's ATK. (This card is also still a Trap Card.) If this monster is Summoned this way: Inflict damage to your opponent equal to this card's ATK.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dimension-reflector-4618",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS21",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG21",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54297661,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54297661.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54297661.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54297661.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "3.95",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42685,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12504,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

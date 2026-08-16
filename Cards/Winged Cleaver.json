@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 39175982,
+      "name": "Winged Cleaver",
+      "typeline": [
+        "Insect",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Few can withstand the scythe-like arms of this dangerous creature.",
+      "race": "Insect",
+      "atk": 700,
+      "def": 700,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/winged-cleaver-3321",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENB05",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39175982,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39175982.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39175982.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39175982.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17471,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-01",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4215,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

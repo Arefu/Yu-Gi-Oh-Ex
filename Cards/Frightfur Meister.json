@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 77522571,
+      "name": "Frightfur Meister",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can Tribute 1 Level 4 or lower \"Frightfur\", \"Fluffal\", or \"Edge Imp\" monster; Special Summon from your Deck, 1 Fiend monster with the same Level, but with a different name. You can only use this effect of \"Frightfur Meister\" once per turn.\n\n[ Monster Effect ] \nDuring your Main Phase: You can Special Summon 1 Level 4 or lower \"Frightfur\", \"Fluffal\", or \"Edge Imp\" monster from your Deck, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Fusion Monsters. You can Tribute 2 or more Fiend monsters; Special Summon 1 \"Frightfur\" Fusion Monster from your Extra Deck, whose Level equals the combined original Levels of those monsters. (This is treated as a Fusion Summon.) You can only use each effect of \"Frightfur Meister\" once per turn.",
+      "race": "Fiend",
+      "pend_desc": "You can Tribute 1 Level 4 or lower \"Frightfur\", \"Fluffal\", or \"Edge Imp\" monster; Special Summon from your Deck, 1 Fiend monster with the same Level, but with a different name. You can only use this effect of \"Frightfur Meister\" once per turn.",
+      "monster_desc": "During your Main Phase: You can Special Summon 1 Level 4 or lower \"Frightfur\", \"Fluffal\", or \"Edge Imp\" monster from your Deck, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Fusion Monsters. You can Tribute 2 or more Fiend monsters; Special Summon 1 \"Frightfur\" Fusion Monster from your Extra Deck, whose Level equals the combined original Levels of those monsters. (This is treated as a Fusion Summon.) You can only use each effect of \"Frightfur Meister\" once per turn.",
+      "atk": 0,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Frightfur",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frightfur-meister-9536",
+      "card_sets": [
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77522571,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77522571.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77522571.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77522571.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51831,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-06-18",
+          "ocg_date": "2018-09-21",
+          "konami_id": 13991,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

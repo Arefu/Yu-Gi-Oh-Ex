@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 58419204,
+      "name": "Survival Instinct",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Banish any number of Dinosaur-Type monsters from your Graveyard; gain 400 Life Points for each Dinosaur-Type monster banished to activate this card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/survival-instinct-4966",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN167",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage",
+          "set_code": "SD09-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.98"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58419204,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58419204.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58419204.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58419204.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.90",
+          "amazon_price": "3.59",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40558,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-10-20",
+          "ocg_date": "2006-06-22",
+          "konami_id": 6818,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

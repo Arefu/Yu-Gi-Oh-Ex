@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 59258334,
+      "name": "Brainwashing Beam",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Select 1 monster with at least 1 A-Counter on your opponent's side of the field and take control of that monster. During each of your End Phases, remove 1 A-Counter from that controlled monster. If all A-Counters are removed from that monster, or that monster is destroyed, destroy this card.",
+      "race": "Continuous",
+      "archetype": "Alien",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brainwashing-beam-5037",
+      "card_sets": [
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN060",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59258334,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59258334.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59258334.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59258334.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.00",
+          "amazon_price": "1.53",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76101,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6812,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

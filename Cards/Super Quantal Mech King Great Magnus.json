@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 84025439,
+      "name": "Super Quantal Mech King Great Magnus",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 12 monsters\r\nIf this card is sent to the GY: You can Special Summon 3 \"Super Quantal Mech Beast\" Xyz Monsters with different names from your GY. This card gains these effects, based on the number of materials with different names attached to it. ● 2+: Once per turn, during the Main Phase (Quick Effect): You can detach 1 material from this card; shuffle 1 card on the field into the Deck. ● 4+: It is unaffected by card effects, except \"Super Quant\" cards. ● 6+: Your opponent cannot add cards from the Deck to the hand by card effects.",
+      "race": "Machine",
+      "atk": 3600,
+      "def": 3200,
+      "level": 12,
+      "attribute": "LIGHT",
+      "archetype": "Super Quant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-quantal-mech-king-great-magnus-7047",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN093",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.44"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN037",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84025439,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84025439.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84025439.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84025439.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "0.99",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 391481,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12222,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

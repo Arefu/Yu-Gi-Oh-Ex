@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 6840573,
+      "name": "Barox",
+      "typeline": [
+        "Fiend",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Frenzied Panda\" + \"Ryu-Kishin\"",
+      "race": "Fiend",
+      "atk": 1380,
+      "def": 1530,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/barox-589",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Two",
+          "set_code": "AP02-EN018",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "12.72"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6840573,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6840573.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6840573.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6840573.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "5.00",
+          "amazon_price": "19.99",
+          "coolstuffinc_price": "8.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97577,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-04-19",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4092,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

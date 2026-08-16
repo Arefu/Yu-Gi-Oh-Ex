@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 28577986,
+      "name": "Mermail Abyssocea",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"Mermail\" monster you control; Special Summon any number of Level 4 or lower \"Mermail\" monsters from your Deck whose combined Levels are less than or equal to the Level of that monster, then send that monster to the Graveyard. You can only use the effect of \"Mermail Abyssocea\" once per turn.",
+      "race": "Aqua",
+      "atk": 1100,
+      "def": 1900,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Mermail",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mermail-abyssocea-2433",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28577986,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28577986.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28577986.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28577986.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45487,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10511,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

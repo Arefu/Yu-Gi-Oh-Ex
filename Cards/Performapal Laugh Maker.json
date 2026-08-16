@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 44944304,
+      "name": "Performapal Laugh Maker",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, if your opponent controls a monster whose current ATK is higher than its original ATK: You can gain 1000 LP.\n\n[ Monster Effect ] \nWhen this card declares an attack: You can make this card gain 1000 ATK for each monster on the field whose current ATK is higher than its original ATK, except other monsters you control, until the end of the Battle Phase. If this card is destroyed by battle or card effect while its current ATK is higher than its original ATK: You can target 1 monster in your Graveyard; Special Summon it. You can only use 1 monster effect of \"Performapal Laugh Maker\" per turn, and only once that turn.",
+      "race": "Spellcaster",
+      "pend_desc": "Once per turn, if your opponent controls a monster whose current ATK is higher than its original ATK: You can gain 1000 LP.",
+      "monster_desc": "When this card declares an attack: You can make this card gain 1000 ATK for each monster on the field whose current ATK is higher than its original ATK, except other monsters you control, until the end of the Battle Phase. If this card is destroyed by battle or card effect while its current ATK is higher than its original ATK: You can target 1 monster in your Graveyard; Special Summon it. You can only use 1 monster effect of \"Performapal Laugh Maker\" per turn, and only once that turn.",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Performapal",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-laugh-maker-3831",
+      "card_sets": [
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44944304,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44944304.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44944304.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44944304.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "9.99",
+          "amazon_price": "1.04",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42424,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12739,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 49563947,
+      "name": "Neo Aqua Madoor",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "The true nature of this wizard, who rules all water. It defends itself with a vast, impenetrable wall of ice.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 3000,
+      "level": 6,
+      "attribute": "WATER",
+      "archetype": "Madoor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neo-aqua-madoor-4223",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49563947,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49563947.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49563947.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49563947.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.79",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76014,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6094,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

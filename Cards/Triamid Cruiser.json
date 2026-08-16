@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 45383307,
+      "name": "Triamid Cruiser",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Each time a Rock-Type monster is Normal Summoned, gain 500 LP. If a \"Triamid\" monster is Normal Summoned: You can draw 1 card, then discard 1 card. If this face-up card in the Field Zone is sent to the Graveyard: You can add 1 \"Triamid\" monster from your Deck to your hand. You can only use this effect of \"Triamid Cruiser\" once per turn.",
+      "race": "Field",
+      "archetype": "Triamid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/triamid-cruiser-3868",
+      "card_sets": [
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN063",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45383307,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45383307.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45383307.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45383307.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46391,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12462,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

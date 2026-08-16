@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 25796442,
+      "name": "Ritual Cage",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "You take no battle damage from attacks involving a Ritual Monster you control. Ritual Monsters you control cannot be targeted by, or destroyed by, monster effects.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ritual-cage-2222",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25796442,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25796442.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25796442.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25796442.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.50",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68474,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8671,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

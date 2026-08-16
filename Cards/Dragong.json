@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 83980492,
+      "name": "Dragong",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "''This gong harbors the soul of an untamed dragon. It soars through the skies with an incredible roar, marshaling all those who hear its call to battle.''",
+      "race": "Machine",
+      "atk": 500,
+      "def": 2100,
+      "level": 4,
+      "attribute": "EARTH",
+      "scale": 7,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragong-7040",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN096",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83980492,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83980492.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83980492.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83980492.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23930,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2014-12-20",
+          "konami_id": 11658,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

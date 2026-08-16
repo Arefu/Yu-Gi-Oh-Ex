@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 30276969,
+      "name": "Reese the Ice Mistress",
+      "typeline": [
+        "Sea Serpent",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be destroyed by battle with a Level 4 or higher monster.",
+      "race": "Sea Serpent",
+      "atk": 800,
+      "def": 800,
+      "level": 2,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reese-the-ice-mistress-2565",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN064",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Realm of the Sea Emperor Structure Deck",
+          "set_code": "SDRE-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30276969,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30276969.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30276969.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30276969.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.66",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54920,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7812,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

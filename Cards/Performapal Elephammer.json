@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 340002,
+      "name": "Performapal Elephammer",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control 2 or more \"Performapal\" cards, you can Normal Summon this card without Tributing. Cannot attack unless you control another \"Performapal\" card. When this card declares an attack: You can return all Spell and Trap Cards your opponent controls to the hand.",
+      "race": "Beast",
+      "atk": 2600,
+      "def": 1800,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-elephammer-36",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 340002,
+          "image_url": "https://images.ygoprodeck.com/images/cards/340002.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/340002.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/340002.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "2.00",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43011,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11677,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

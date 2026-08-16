@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 13241004,
+      "name": "Fluffal Penguin",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can Special Summon 1 \"Fluffal\" monster from your hand, except \"Fluffal Penguin\". This effect can only be used once while this card is face-up on the field. If this card is sent to the Graveyard as a Fusion Material for a Fusion Summon of a \"Frightfur\" Fusion Monster: You can draw 2 cards, then discard 1 card. You can only use this effect of \"Fluffal Penguin\" once per turn.",
+      "race": "Fairy",
+      "atk": 1600,
+      "def": 1100,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Fluffal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fluffal-penguin-1140",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13241004,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13241004.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13241004.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13241004.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "5.74",
+          "ebay_price": "2.99",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 231093,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12841,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

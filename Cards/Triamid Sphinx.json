@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 68406755,
+      "name": "Triamid Sphinx",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned with the effect of a \"Triamid\" card, and cannot be Special Summoned by other ways. If a face-up \"Triamid\" card(s) you control, except \"Triamid Sphinx\", is destroyed by battle or card effect: You can Special Summon this card from your hand. While you control another \"Triamid\" card, this card gains 500 ATK and DEF for each Field Spell Card with a different name in your Graveyard, also monsters your opponent controls cannot attack, except to attack \"Triamid Sphinx\".",
+      "race": "Rock",
+      "atk": 2500,
+      "def": 2500,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Triamid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/triamid-sphinx-5751",
+      "card_sets": [
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68406755,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68406755.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68406755.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68406755.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64718,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12429,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

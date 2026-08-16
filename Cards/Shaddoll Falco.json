@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 37445295,
+      "name": "Shaddoll Falco",
+      "typeline": [
+        "Spellcaster",
+        "Flip",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Flip Tuner Effect Monster",
+      "humanReadableCardType": "Flip Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can target 1 \"Shaddoll\" monster in your GY, except \"Shaddoll Falco\"; Special Summon it in face-down Defense Position.\r\nIf this card is sent to the GY by a card effect: You can Special Summon it in face-down Defense Position. You can only use 1 \"Shaddoll Falco\" effect per turn, and only once that turn.",
+      "race": "Spellcaster",
+      "atk": 600,
+      "def": 1400,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Shaddoll",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shaddoll-falco-3172",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN078",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN080",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN023",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37445295,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37445295.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37445295.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37445295.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.49",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 355366,
+          "viewsweek": 42,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11232,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 93084621,
+      "name": "Unchained Soul of Anguish",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters including an \"Unchained Soul\" monster\r\nYou can target 1 face-up monster your opponent controls; immediately after this effect resolves, Link Summon 1 DARK Link Monster, except \"Unchained Soul of Anguish\", by using only that opponent's monster and this card you control as material. If this card on the field is destroyed by battle or card effect: You can target 1 Fiend monster in your GY, except \"Unchained Soul of Anguish\"; add it to your hand. You can only use each effect of \"Unchained Soul of Anguish\" once per turn.",
+      "race": "Fiend",
+      "atk": 2400,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Unchained",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unchained-soul-of-anguish-10405",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN174",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN158",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN044",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93084621,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93084621.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93084621.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93084621.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.98",
+          "amazon_price": "1.94",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hakaishin Arba",
+          "views": 437603,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010044,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14671,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

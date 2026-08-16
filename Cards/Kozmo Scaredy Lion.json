@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 86013171,
+      "name": "Kozmo Scaredy Lion",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can banish this card; Special Summon 1 Level 3 or higher \"Kozmo\" monster from your hand. You can only use this effect of \"Kozmo Scaredy Lion\" once per turn. Once per turn: You can pay 500 LP, then target 3 of your banished \"Kozmo\" monsters; return them to the Graveyard, and if you do, inflict 500 damage to your opponent.",
+      "race": "Psychic",
+      "atk": 1200,
+      "def": 500,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmo-scaredy-lion-7205",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN082",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86013171,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86013171.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86013171.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86013171.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.25",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31724,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12385,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

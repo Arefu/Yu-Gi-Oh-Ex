@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 43925870,
+      "name": "Windmill Genex",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Genex Controller\" + 1 or more non-Tuner WIND monsters\nThis card gains 300 ATK for each face-down Spell and Trap Card on the field. You can send 1 card from your hand to the Graveyard to select and destroy 1 face-down Spell or Trap Card.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 1600,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/windmill-genex-3751",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN089",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN059",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43925870,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43925870.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43925870.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43925870.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "2.00",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26659,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-12-04",
+          "konami_id": 8120,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

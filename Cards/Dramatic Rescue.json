@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 80193355,
+      "name": "Dramatic Rescue",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when a card is activated that targets an \"Amazoness\" monster. Return the targeted monster to its owner's hand and Special Summon 1 other monster from your hand.",
+      "race": "Normal",
+      "archetype": "Amazoness",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dramatic-rescue-6725",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN152",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-097",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.59"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-END18",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80193355,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80193355.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80193355.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80193355.jpg"
+        },
+        {
+          "id": 80193356,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80193356.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80193356.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80193356.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "5.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 95806,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Dramatic Rescue",
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5299,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

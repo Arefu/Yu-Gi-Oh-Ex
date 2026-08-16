@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 32841045,
+      "name": "Magical Musketeer Caspar",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, you can activate \"Magical Musket\" Spell/Trap Cards from your hand. If a Spell/Trap Card is activated in this card's column (except during the Damage Step): You can add 1 \"Magical Musket\" card from your Deck to your hand, but not a card with the same name as that activated card. You can only use this effect of \"Magical Musketeer Caspar\" once per turn.",
+      "race": "Fiend",
+      "atk": 1200,
+      "def": 2000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musketeer-caspar-8601",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN071",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN016",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32841045,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32841045.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32841045.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32841045.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magibullet Shooter Caspar",
+          "views": 173178,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13315,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

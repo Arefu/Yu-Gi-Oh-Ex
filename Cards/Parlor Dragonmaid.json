@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 88453933,
+      "name": "Parlor Dragonmaid",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can send 1 \"Dragonmaid\" card from your Deck to the GY, except \"Parlor Dragonmaid\". At the start of the Battle Phase: You can return this card to the hand, and if you do, Special Summon 1 Level 8 \"Dragonmaid\" monster from your hand or GY. You can only use each effect of \"Parlor Dragonmaid\" once per turn.",
+      "race": "Dragon",
+      "atk": 500,
+      "def": 1700,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Dragonmaid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/parlor-dragonmaid-10526",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN060",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN023",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN020",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88453933,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88453933.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88453933.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88453933.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.44",
+          "tcgplayer_price": "4.04",
+          "ebay_price": "4.46",
+          "amazon_price": "5.93",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragonmaid Parla",
+          "views": 730058,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423020,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14763,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

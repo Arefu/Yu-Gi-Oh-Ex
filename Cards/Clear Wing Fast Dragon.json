@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 90036274,
+      "name": "Clear Wing Fast Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Synchro Pendulum Effect Monster",
+      "humanReadableCardType": "Synchro Pendulum Effect Monster",
+      "frameType": "synchro_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can send 1 face-up \"Speedroid\" Tuner and 1 face-up non-Tuner monster you control to the GY, whose total Levels equal 7; Special Summon this card from your Pendulum Zone. You can only use this effect of \"Clear Wing Fast Dragon\" once per turn.\n\n[ Monster Effect ] \n1 Tuner + 1+ non-Tuner WIND monsters\r\n(Quick Effect): You can target 1 face-up monster your opponent controls that was Special Summoned from the Extra Deck; until the end of this turn, change its ATK to 0, also negate that face-up monster's effects. You can only use this effect of \"Clear Wing Fast Dragon\" once per turn. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "race": "Dragon",
+      "pend_desc": "You can send 1 face-up \"Speedroid\" Tuner and 1 face-up non-Tuner monster you control to the GY, whose total Levels equal 7; Special Summon this card from your Pendulum Zone. You can only use this effect of \"Clear Wing Fast Dragon\" once per turn.",
+      "monster_desc": "1 Tuner + 1+ non-Tuner WIND monsters\r\n(Quick Effect): You can target 1 face-up monster your opponent controls that was Special Summoned from the Extra Deck; until the end of this turn, change its ATK to 0, also negate that face-up monster's effects. You can only use this effect of \"Clear Wing Fast Dragon\" once per turn. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Clear Wing",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/clear-wing-fast-dragon-7523",
+      "card_sets": [
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENS29",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ARC-V Volume 2 promotional card",
+          "set_code": "YA02-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.14"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90036274,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90036274.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90036274.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90036274.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.40",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 264030,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-05",
+          "ocg_date": "2016-10-04",
+          "konami_id": 12828,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

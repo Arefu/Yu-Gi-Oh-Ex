@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 2347477,
+      "name": "Micro Coder",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Cyberse monster you control would be used as Link Material for a \"Code Talker\" monster, this card in your hand can also be used as material. If this card is sent from the hand or field to the GY as material for the Link Summon of a \"Code Talker\" monster: You can either add 1 \"Cynet\" Spell/Trap from your Deck to your hand, or, if this card on the field was used as material, you can add 1 Level 4 Cyberse monster instead. You can only use each effect of \"Micro Coder\" once per turn.",
+      "race": "Cyberse",
+      "atk": 300,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Code Talker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/micro-coder-9576",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN102",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Toon Chaos",
+          "set_code": "TOCH-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Legacy of the Duelist: Link Evolution promotional cards",
+          "set_code": "LOD2-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2347477,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2347477.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2347477.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2347477.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.44",
+          "amazon_price": "0.38",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 346859,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-20",
+          "ocg_date": "2018-06-23",
+          "konami_id": 13872,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

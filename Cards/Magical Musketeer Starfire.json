@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 31629407,
+      "name": "Magical Musketeer Starfire",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, you can activate \"Magical Musket\" Spell/Trap Cards from your hand. If a Spell/Trap Card is activated in this card's column (except during the Damage Step): You can Special Summon 1 Level 4 or lower \"Magical Musket\" monster from your Deck in Defense Position, except \"Magical Musketeer Starfire\". You can only use this effect of \"Magical Musketeer Starfire\" once per turn.",
+      "race": "Fiend",
+      "atk": 1300,
+      "def": 1700,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musketeer-starfire-8750",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN019",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31629407,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31629407.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31629407.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31629407.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magibullet Shooter Star",
+          "views": 250633,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13318,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 33897356,
+      "name": "Shootingcode Talker",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Cyberse monsters\r\nAt the start of your Battle Phase: You can activate this effect; this Battle Phase, this card can make attacks on your opponent's monsters, up to the number of monsters this card currently points to +1, but this turn, when it attacks your opponent's only monster, this card loses 400 ATK during that damage calculation only. At the end of each Battle Phase: You can draw cards equal to the number of monsters this card destroyed by battle this turn.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": null,
+      "level": null,
+      "attribute": "WATER",
+      "archetype": "Code Talker",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shootingcode-talker-9542",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN105",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33897356,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33897356.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33897356.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33897356.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "7.95",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 194877,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-22",
+          "ocg_date": "2018-06-23",
+          "konami_id": 13879,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

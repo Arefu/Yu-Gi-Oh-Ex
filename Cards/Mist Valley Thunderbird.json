@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 69448290,
+      "name": "Mist Valley Thunderbird",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this face-up card on the field returns to the hand, Special Summon it. This card cannot attack during the turn it was Special Summoned by this effect.",
+      "race": "Thunder",
+      "atk": 1100,
+      "def": 700,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Mist Valley",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mist-valley-thunderbird-5839",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN013",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal",
+          "set_code": "HA01-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN056",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69448290,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69448290.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69448290.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69448290.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.50",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 125199,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-05",
+          "ocg_date": "2008-04-12",
+          "konami_id": 7530,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

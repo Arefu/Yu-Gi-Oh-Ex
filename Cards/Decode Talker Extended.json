@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 30822527,
+      "name": "Decode Talker Extended",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Effect Monsters\r\nThis card's name becomes \"Decode Talker\" while on the field. Gains 500 ATK for each monster it points to. During your Battle Phase, if a monster this card points to is destroyed by battle or sent to the GY: This card can make a second attack during each Battle Phase this turn.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Code Talker",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/decode-talker-extended-10158",
+      "card_sets": [
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.62"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30822527,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30822527.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30822527.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30822527.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.93",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Extended Decode Talker",
+          "views": 117606,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-10-10",
+          "ocg_date": "2019-03-23",
+          "konami_id": 14437,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

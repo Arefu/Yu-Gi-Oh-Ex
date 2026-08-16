@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 77387463,
+      "name": "Vulcan Dragni the Cubic King",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by sending 2 \"Cubic\" monsters you control to the Graveyard. If Summoned this way, this card gains 1600 ATK. If this card is Special Summoned from the hand: Inflict 800 damage to your opponent. At the end of the Damage Step, if this card battled: You can target up to 3 \"Vijam the Cubic Seed\" in your Graveyard; send this card to the Graveyard, and if you do, Special Summon them, then you can add 1 \"Indiora Doom Volt the Cubic Emperor\" from your Deck to your hand.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Cubic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vulcan-dragni-the-cubic-king-6508",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS37",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.57"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG37",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.66"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77387463,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77387463.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77387463.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77387463.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64523,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12520,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

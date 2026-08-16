@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 54773234,
+      "name": "Forbidden Scripture",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If a monster battles an opponent's monster, during damage calculation: Negate all other card effects on the field until the end of the Damage Step, also damage calculation for this battle uses each monster's original ATK and DEF.",
+      "race": "Quick-Play",
+      "archetype": "Forbidden",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/forbidden-scripture-4669",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN038",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN184",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN184",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN067",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54773234,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54773234.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54773234.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54773234.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "2.21",
+          "amazon_price": "1.94",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39705,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11096,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

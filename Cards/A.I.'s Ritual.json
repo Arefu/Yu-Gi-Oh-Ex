@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 85327820,
+      "name": "A.I.'s Ritual",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card can be used to Ritual Summon any Cyberse Ritual Monster. You must also Tribute \"@Ignister\" monsters from your hand or field whose total Levels equal or exceed the Level of the Ritual Monster you Ritual Summon. If you control an \"@Ignister\" monster when this effect is activated, you can also use \"@Ignister\" monster(s) in your GY, by banishing them.",
+      "race": "Ritual",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/a-i-s-ritual-10593",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.88"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85327820,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85327820.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85327820.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85327820.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67432,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011054,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14863,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

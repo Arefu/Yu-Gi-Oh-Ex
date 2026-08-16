@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 10282757,
+      "name": "Planckton",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Apply these effects until the end of this turn.\n● Rank 3 or lower Xyz Monsters gain 500 ATK and DEF.\n● Rank 4 or higher Xyz Monsters cannot attack.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/planckton-891",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10282757,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10282757.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10282757.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10282757.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 6629,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10998,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

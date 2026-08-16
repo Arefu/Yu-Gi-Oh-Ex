@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 87511987,
+      "name": "Spikebot",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A mechanical soldier created by a wicked sorcerer, it attacks with the two steel balls attached to its arms.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 1700,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spikebot-7321",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.71"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87511987,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87511987.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87511987.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87511987.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 99022,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 4778,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 4478086,
+      "name": "Clock Spartoi",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Cyberse monsters\r\nIf this card is Link Summoned: You can add 1 \"Cynet Fusion\" from your Deck to your hand. If a monster(s) is Special Summoned to a zone(s) this card points to (except during the Damage Step): You can target 1 Level 4 or lower Cyberse monster in your GY; Special Summon it, but negate its effects, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Fusion Monsters. You can only use each effect of \"Clock Spartoi\" once per turn.",
+      "race": "Cyberse",
+      "atk": 800,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/clock-spartoi-9578",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN185",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN039",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4478086,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4478086.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4478086.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4478086.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Clock Spartoi",
+          "views": 92738,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13926,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

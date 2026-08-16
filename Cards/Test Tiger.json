@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 92373006,
+      "name": "Test Tiger",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a face-up \"Gladiator Beast\" monster, you can Special Summon this card (from your hand). You can Tribute this card to target 1 face-up \"Gladiator Beast\" monster you control; shuffle that target into the Deck, then Special Summon 1 \"Gladiator Beast\" from your Deck, and treat it as if it was Special Summoned by the effect of a \"Gladiator Beast\" monster.",
+      "race": "Beast",
+      "atk": 600,
+      "def": 300,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/test-tiger-7695",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN082",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN029",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN242",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN189",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN189",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92373006,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92373006.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92373006.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92373006.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.27",
+          "tcgplayer_price": "6.37",
+          "ebay_price": "6.41",
+          "amazon_price": "7.31",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 220739,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7482,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

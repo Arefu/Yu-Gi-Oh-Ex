@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 4779823,
+      "name": "Michael, the Arch-Lightsworn",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner LIGHT monsters\nOnce per turn: You can pay 1000 LP, then target 1 card on the field; banish that target. When this card is destroyed: You can target any number of other \"Lightsworn\" monsters in your Graveyard; shuffle them into the Deck, and if you do, you gain 300 LP for each returned card. Once per turn, during your End Phase: Send the top 3 cards of your Deck to the Graveyard.",
+      "race": "Dragon",
+      "atk": 2600,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/michael-the-arch-lightsworn-423",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 1",
+          "set_code": "OP01-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Realm of Light Structure Deck",
+          "set_code": "SDLI-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4779823,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4779823.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4779823.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4779823.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.65",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "2.44",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 361652,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-06-27",
+          "ocg_date": "2013-11-23",
+          "konami_id": 10884,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

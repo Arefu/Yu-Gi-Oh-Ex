@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 35952884,
+      "name": "Shooting Quasar Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner Synchro Monster + 2 or more non-Tuner Synchro Monsters\nMust be Synchro Summoned, and cannot be Special Summoned by other ways. This card's maximum number of attacks per Battle Phase equals the number of non-Tuner monsters used as its Synchro Material. Once per turn, during either player's turn, when a card or effect is activated: You can negate the activation, and if you do, destroy it. When this card leaves the field: You can Special Summon 1 \"Shooting Star Dragon\" from your Extra Deck.",
+      "race": "Dragon",
+      "atk": 4000,
+      "def": 4000,
+      "level": 12,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shooting-quasar-dragon-3040",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's",
+          "set_code": "LC05-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.89"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN158",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN158",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN143",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN143",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shonen Jump December 2011 subscription bonus",
+          "set_code": "JUMP-EN055",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "28.52"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35952884,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35952884.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35952884.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35952884.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.13",
+          "tcgplayer_price": "2.07",
+          "ebay_price": "5.00",
+          "amazon_price": "5.75",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 511020,
+          "viewsweek": 0,
+          "upvotes": 73,
+          "downvotes": 10,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-12-01",
+          "ocg_date": "2011-03-25",
+          "konami_id": 9709,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

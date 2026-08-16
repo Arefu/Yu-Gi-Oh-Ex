@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 73405179,
+      "name": "Iron Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Loses 1000 ATK while you control \"Iron Hans\". If this card on the field is destroyed by battle or sent to the GY by a card effect: You can add 1 \"Iron Hans\" from your Deck to your hand, or, if \"Golden Castle of Stromberg\" is in a Field Zone, you can add 1 Warrior monster from your Deck to your hand, instead. You can only use this effect of \"Iron Knight\" once per turn.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 700,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Golden Castle of Stromberg",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/iron-knight-9518",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73405179,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73405179.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73405179.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73405179.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.50",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51844,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13805,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

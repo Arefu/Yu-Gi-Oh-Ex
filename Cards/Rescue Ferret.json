@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 56343672,
+      "name": "Rescue Ferret",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can shuffle this card you control into the Deck; Special Summon monster(s) from your Deck, except \"Rescue Ferret\", whose total Levels equal 6, to your zone(s) a Link Monster(s) points to, but those Summoned monsters have their effects negated, also destroy them during the End Phase. You can only use this effect of \"Rescue Ferret\" once per turn.",
+      "race": "Beast",
+      "atk": 300,
+      "def": 100,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rescue-ferret-8740",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN054",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN029",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENC08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56343672,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56343672.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56343672.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56343672.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.99",
+          "amazon_price": "1.43",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 172291,
+          "viewsweek": 0,
+          "upvotes": 26,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13068,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

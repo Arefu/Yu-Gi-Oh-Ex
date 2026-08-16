@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 40844552,
+      "name": "Valkyrie of the Nordic Ascendant",
+      "typeline": [
+        "Fairy",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "(This card is not treated as a \"Valkyrie\" card.)\r\nWhen this card is Normal Summoned, if your opponent controls a monster and you control no other cards: You can banish 2 \"Nordic\" monsters from your hand; Special Summon 2 \"Einherjar Tokens\" (Warrior/EARTH/Level 4/ATK 1000/DEF 1000) in Defense Position.",
+      "race": "Fairy",
+      "atk": 400,
+      "def": 800,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Nordic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/valkyrie-of-the-nordic-ascendant-3473",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN184",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN047",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40844552,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40844552.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40844552.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40844552.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "2.99",
+          "amazon_price": "0.54",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 126565,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9308,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 58185394,
+      "name": "Giant Kozaky",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If there is no face-up \"Kozaky\" on the field, destroy this card. If this face-up card is destroyed, inflict damage equal to the original ATK of this card to its current controller.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 2400,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/giant-kozaky-4951",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58185394,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58185394.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58185394.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58185394.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.00",
+          "amazon_price": "0.30",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 86783,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6420,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

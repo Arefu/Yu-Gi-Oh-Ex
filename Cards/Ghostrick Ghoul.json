@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 85463083,
+      "name": "Ghostrick Ghoul",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned, unless you control a \"Ghostrick\" monster. Once per turn: You can change this card to face-down Defense Position. Once per turn, during your Main Phase 1: You can target 1 \"Ghostrick\" monster you control; its ATK becomes equal to the combined original ATK of all \"Ghostrick\" monsters currently on the field, until the end of your opponent's next turn, but if it does, only that monster can attack this turn.",
+      "race": "Zombie",
+      "atk": 1100,
+      "def": 1200,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-ghoul-7162",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN126",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters Sneak Peek Participation Card",
+          "set_code": "SHSP-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85463083,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85463083.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85463083.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85463083.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.84",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.29",
+          "amazon_price": "1.65",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 48885,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-02",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10871,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

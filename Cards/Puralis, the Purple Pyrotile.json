@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 37038993,
+      "name": "Puralis, the Purple Pyrotile",
+      "typeline": [
+        "Reptile",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 non-Tuner monster\nWhen this card is sent from the field to the Graveyard: All monsters your opponent currently controls lose 500 ATK.",
+      "race": "Reptile",
+      "atk": 800,
+      "def": 1400,
+      "level": 2,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/puralis-the-purple-pyrotile-3130",
+      "card_sets": [
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37038993,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37038993.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37038993.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37038993.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "2.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28907,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10788,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 71782404,
+      "name": "Red-Eyes Burn",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If a face-up \"Red-Eyes\" monster(s) you control, except \"Red-Eyes B. Chick\", is destroyed by battle or card effect: Target 1 of those monsters; both players take damage equal to its original ATK. You can only activate 1 \"Red-Eyes Burn\" per turn.",
+      "race": "Normal",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-eyes-burn-6030",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.94"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71782404,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71782404.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71782404.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71782404.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "2.09",
+          "amazon_price": "1.35",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115171,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11899,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

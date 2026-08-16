@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 26557451,
+      "name": "Draw Discharge",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When your opponent draws a card(s) by their own card effect: Look at those cards, and if any are monsters, inflict damage to your opponent equal to their combined ATK, and if you do that, banish all cards you looked at. You can only activate 1 \"Draw Discharge\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/draw-discharge-10189",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN132",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26557451,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26557451.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26557451.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26557451.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29822,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009067,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14515,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

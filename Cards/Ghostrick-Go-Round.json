@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 37055344,
+      "name": "Ghostrick-Go-Round",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, during the Battle Phase: You can activate 1 of these effects.\n● Target 1 \"Ghostrick\" monster you control; change that target to face-down Defense Position, and if you do, change 1 face-down Defense Position monster your opponent controls to face-up Attack Position.\n● Target 1 face-down Defense Position monster you control; change that target to face-up Attack Position, and if it is a \"Ghostrick\" monster, change 1 face-up monster your opponent controls to face-down Defense Position.",
+      "race": "Continuous",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-go-round-3133",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN233",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN074",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37055344,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37055344.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37055344.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37055344.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.75",
+          "tcgplayer_price": "0.77",
+          "ebay_price": "2.00",
+          "amazon_price": "2.68",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84699,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10960,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

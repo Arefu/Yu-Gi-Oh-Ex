@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 79965360,
+      "name": "Amazoness Heirloom",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to an \"Amazoness\" monster. Once per turn, that monster cannot be destroyed by battle. After damage calculation, if the equipped monster attacks a monster: Destroy the attacked monster.",
+      "race": "Equip",
+      "archetype": "Amazoness",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amazoness-heirloom-6703",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN087",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-END12",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Duelists of Tomorrow",
+          "set_code": "SS02-ENC14",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.34"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79965360,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79965360.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79965360.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79965360.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "3.49",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71490,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9209,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

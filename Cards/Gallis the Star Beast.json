@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 30915572,
+      "name": "Gallis the Star Beast",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal this card in your hand; send the top card of your Deck to the Graveyard, then, if it was a monster, inflict damage to your opponent equal to its Level x 200 and Special Summon this card from your hand, otherwise destroy this card.",
+      "race": "Beast",
+      "atk": 800,
+      "def": 800,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gallis-the-star-beast-2624",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN041",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.54"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Tag Force 3 promotional cards",
+          "set_code": "GX06-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "23.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30915572,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30915572.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30915572.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30915572.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.69",
+          "tcgplayer_price": "0.84",
+          "ebay_price": "4.19",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 133185,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-28",
+          "ocg_date": "2008-11-27",
+          "konami_id": 7981,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

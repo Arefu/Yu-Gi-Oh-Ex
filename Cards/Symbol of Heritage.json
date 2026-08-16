@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 45305419,
+      "name": "Symbol of Heritage",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Activate only while there are 3 Monster Cards with the same name in your Graveyard. Select 1 of those monsters, Special Summon it, and equip it with this card. When this card is destroyed, destroy the equipped monster.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/symbol-of-heritage-3862",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN163",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.81"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45305419,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45305419.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45305419.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45305419.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.40",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66388,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6615,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

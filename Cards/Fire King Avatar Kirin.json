@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 96594609,
+      "name": "Fire King Avatar Kirin",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a face-up \"Fire King\" monster you control is destroyed by a card effect (except during the Damage Step): You can Special Summon this card from your hand. If this card is destroyed and sent to the Graveyard: You can send 1 FIRE monster from your Deck to the Graveyard.",
+      "race": "Beast",
+      "atk": 1000,
+      "def": 200,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Fire King",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-king-avatar-kirin-8037",
+      "card_sets": [
+        {
+          "set_name": "Onslaught of the Fire Kings Structure Deck",
+          "set_code": "SDOK-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Structure Deck: Fire Kings",
+          "set_code": "SR14-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96594609,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96594609.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96594609.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96594609.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "1.25",
+          "amazon_price": "2.59",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 129698,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-08",
+          "ocg_date": "2012-12-08",
+          "konami_id": 10347,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

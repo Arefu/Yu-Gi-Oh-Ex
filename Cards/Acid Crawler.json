@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 77568553,
+      "name": "Acid Crawler",
+      "typeline": [
+        "Insect",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "''A giant caterpillar that secretes an acid mist that melts anything.''",
+      "race": "Insect",
+      "atk": 900,
+      "def": 700,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Recolored counterpart",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/acid-crawler-6525",
+      "card_images": [
+        {
+          "id": 77568553,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77568553.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77568553.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77568553.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.77",
+          "tcgplayer_price": "0.00",
+          "ebay_price": "5.00",
+          "amazon_price": "0.00",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16869,
+          "viewsweek": 85,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "OCG",
+            "Master Duel"
+          ],
+          "ocg_date": "1999-09-23",
+          "konami_id": 4646,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

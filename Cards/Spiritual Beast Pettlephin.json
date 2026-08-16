@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 13890468,
+      "name": "Spiritual Beast Pettlephin",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can banish 1 \"Ritual Beast\" card from your hand, then target 1 card your opponent controls; return it to the hand. You can only Special Summon \"Spiritual Beast Pettlephin(s)\" once per turn.",
+      "race": "Aqua",
+      "atk": 0,
+      "def": 2000,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Ritual Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spiritual-beast-pettlephin-1189",
+      "card_sets": [
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13890468,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13890468.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13890468.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13890468.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83144,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11496,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

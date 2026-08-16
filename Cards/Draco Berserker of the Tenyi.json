@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 5041348,
+      "name": "Draco Berserker of the Tenyi",
+      "typeline": [
+        "Wyrm",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nWhen your opponent activates a monster's effect (Quick Effect): You can banish it. If this attacking card destroys an Effect Monster by battle and sends it to the GY: This card gains ATK equal to the destroyed monster's original ATK, also it can make a second attack on a monster during this Battle Phase. You can only use each effect of \"Draco Berserker of the Tenyi\" once per turn.",
+      "race": "Wyrm",
+      "atk": 3000,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Tenyi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/draco-berserker-of-the-tenyi-10357",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN166",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "5.04"
+        },
+        {
+          "set_name": "Battles of Legend: Monstrous Revenge",
+          "set_code": "BLMR-EN074",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN035",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Valiant Smashers",
+          "set_code": "VASM-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5041348,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5041348.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5041348.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5041348.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "2.99",
+          "amazon_price": "8.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragon Ogre Deity of Tenyi",
+          "views": 1029373,
+          "viewsweek": 0,
+          "upvotes": 23,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010035,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14662,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

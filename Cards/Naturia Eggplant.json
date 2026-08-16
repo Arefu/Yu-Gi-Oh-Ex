@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 37349495,
+      "name": "Naturia Eggplant",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is sent from the field to the Graveyard, you can select 1 \"Naturia\" monster in your Graveyard, except \"Naturia Eggplant\", and add it to your hand.",
+      "race": "Plant",
+      "atk": 1000,
+      "def": 700,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naturia-eggplant-3162",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN098",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37349495,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37349495.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37349495.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37349495.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.66",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "1.95",
+          "amazon_price": "2.01",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21722,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2010-10-21",
+          "konami_id": 9440,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

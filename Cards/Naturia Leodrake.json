@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 16527176,
+      "name": "Naturia Leodrake",
+      "typeline": [
+        "Beast",
+        "Synchro"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Monster",
+      "frameType": "synchro",
+      "desc": "1 EARTH Tuner + 1 or more non-Tuner EARTH monsters",
+      "race": "Beast",
+      "atk": 3000,
+      "def": 1800,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naturia-leodrake-1424",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN088",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN058",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN121",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN121",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16527176,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16527176.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16527176.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16527176.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.85",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57495,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-12-04",
+          "konami_id": 8119,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

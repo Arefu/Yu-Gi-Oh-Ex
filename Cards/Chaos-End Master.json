@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 46609443,
+      "name": "Chaos-End Master",
+      "typeline": [
+        "Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card destroys an opponent's monster by battle and sends it to the Graveyard, you can Special Summon 1 Level 5 or higher monster with 1600 or less ATK from your Deck.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Chaos",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chaos-end-master-3974",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN092",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46609443,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46609443.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46609443.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46609443.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "19.23",
+          "tcgplayer_price": "27.70",
+          "ebay_price": "16.45",
+          "amazon_price": "44.99",
+          "coolstuffinc_price": "29.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Chaos End Master",
+          "views": 66429,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2008-05-21",
+          "konami_id": 7837,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

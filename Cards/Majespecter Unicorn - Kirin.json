@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 31178212,
+      "name": "Majespecter Unicorn - Kirin",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "During either player's turn: You can target 1 Pendulum Monster in your Monster Zone and 1 monster your opponent controls; return them to the hand(s). You can only use this effect of \"Majespecter Unicorn - Kirin\" once per turn. Cannot be targeted or destroyed by your opponent's card effects.",
+      "race": "Spellcaster",
+      "atk": 2000,
+      "def": 2000,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Majespecter",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/majespecter-unicorn-kirin-2645",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN129",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN065",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN260",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN260",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31178212,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31178212.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31178212.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31178212.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.95",
+          "amazon_price": "0.93",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71087,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11973,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 18426196,
+      "name": "Noble Knight Joan",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks, it loses 300 ATK during the Damage Step only. If this card in your possession is destroyed by your opponent's card (either by battle or by card effect) and sent to your Graveyard: You can send 1 card from your hand to the Graveyard then target 1 Level 4 or lower Warrior-Type monster in your Graveyard; add that target to your hand.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 1300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knight-joan-1597",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN092",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Synchro Storm",
+          "set_code": "LED8-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.89"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18426196,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18426196.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18426196.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18426196.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52112,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2010-09-16",
+          "konami_id": 9201,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

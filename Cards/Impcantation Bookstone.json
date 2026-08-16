@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 18474999,
+      "name": "Impcantation Bookstone",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal 1 Ritual Spell in your hand; Special Summon both this card from your hand and 1 \"Impcantation\" monster from your Deck, except \"Impcantation Bookstone\". If this card is Special Summoned from the Deck: You can target 1 Ritual Spell in your GY; add it to your hand. You can only use 1 \"Impcantation Bookstone\" effect per turn, and only once that turn. You cannot Special Summon monsters from the Extra Deck.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 0,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Impcantation",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/impcantation-bookstone-9672",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN172",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wild Survivors",
+          "set_code": "WISU-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18474999,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18474999.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18474999.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18474999.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.13",
+          "amazon_price": "0.73",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 395611,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13911,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 86062400,
+      "name": "Xyz Avenger",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is unaffected by the effects of Xyz Monsters. When this card is destroyed by battle with an Xyz Monster and sent to the Graveyard: Activate 1 of these effects, depending on the Rank of the Xyz Monster that destroyed this card;\n● Rank 3 or lower: Your opponent sends 1 card from their Extra Deck to the Graveyard.\n● Rank 4: Choose 1 card in your opponent's Extra Deck and send it to the Graveyard.\n● Rank 5 or higher: Your opponent sends as many cards from their Extra Deck to the Graveyard as possible, but not more than the Xyz Monster's Rank.",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": 700,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-avenger-7209",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86062400,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86062400.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86062400.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86062400.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23527,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10928,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

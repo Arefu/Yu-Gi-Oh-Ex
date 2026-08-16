@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 59969392,
+      "name": "Archfiend Zombie-Skull",
+      "typeline": [
+        "Zombie",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Plaguespreader Zombie\" + 2+ non-Tuner Zombie monsters\r\nZombie monsters you control cannot be destroyed by card effects.",
+      "race": "Zombie",
+      "atk": 2500,
+      "def": 1200,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-zombie-skull-5096",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN058",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59969392,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59969392.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59969392.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59969392.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "0.71",
+          "ebay_price": "1.46",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 156127,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8332,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

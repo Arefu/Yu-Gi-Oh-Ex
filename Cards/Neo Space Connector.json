@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 85840608,
+      "name": "Neo Space Connector",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Special Summon 1 \"Neo-Spacian\" monster or 1 \"Elemental HERO Neos\" from your hand or Deck in Defense Position. You can Tribute this card, then target 1 \"Neo-Spacian\" monster or 1 \"Elemental HERO Neos\" in your GY; Special Summon it in Defense Position. You can only use each effect of \"Neo Space Connector\" once per turn.",
+      "race": "Warrior",
+      "atk": 800,
+      "def": 1800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/neo-space-connector-9798",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion Special Edition",
+          "set_code": "SOFU-ENSE3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85840608,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85840608.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85840608.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85840608.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "4.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Neospace Connector",
+          "views": 618146,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 9,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-12-06",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14085,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

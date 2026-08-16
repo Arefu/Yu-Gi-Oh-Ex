@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 75779210,
+      "name": "Vylon Epsilon",
+      "typeline": [
+        "Fairy",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 LIGHT Tuner + 1 or more non-Tuner monsters\nEquip Cards equipped to this card cannot be targeted by cards or effects. Once per turn: You can send 1 Equip Card equipped to this card to the Graveyard to target 1 monster your opponent controls; destroy that target.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 1200,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-epsilon-6378",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN040",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN025",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75779210,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75779210.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75779210.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75779210.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.23",
+          "tcgplayer_price": "1.52",
+          "ebay_price": "3.35",
+          "amazon_price": "3.05",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37269,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8917,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

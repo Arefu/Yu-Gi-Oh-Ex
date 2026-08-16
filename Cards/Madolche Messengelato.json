@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 52404456,
+      "name": "Madolche Messengelato",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card in your possession is destroyed by your opponent's card (either by battle or by card effect) and sent to your Graveyard: Shuffle this card into the Deck. When this card is Special Summoned: You can add 1 \"Madolche\" Spell/Trap Card from your Deck to your hand. You must control a face-up Beast-Type \"Madolche\" monster to activate and to resolve this effect.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Madolche",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/madolche-messengelato-4465",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14",
+          "set_code": "OP14-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52404456,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52404456.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52404456.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52404456.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.11",
+          "tcgplayer_price": "2.69",
+          "ebay_price": "3.95",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 222304,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10249,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

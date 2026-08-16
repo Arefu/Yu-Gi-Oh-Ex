@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 13482262,
+      "name": "Impcantation Thanatosis",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can reveal 1 \"Impcantation\" monster in your hand and Special Summon 2 monsters with that monster's name from your Deck, then shuffle the revealed monster into the Deck. Once per turn, if a Ritual Monster is Special Summoned to your field (except during the Damage Step): You can target 1 card on the field; destroy it. You can only activate 1 \"Impcantation Thanatosis\" per turn.",
+      "race": "Field",
+      "archetype": "Impcantation",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/impcantation-thanatosis-9983",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13482262,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13482262.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13482262.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13482262.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Impcantation Secret Study",
+          "views": 58597,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14312,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

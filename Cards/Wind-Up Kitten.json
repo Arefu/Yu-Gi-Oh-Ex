@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 25716180,
+      "name": "Wind-Up Kitten",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 monster your opponent controls; return that target to the hand. This effect can only be used once while this card is face-up on the field.",
+      "race": "Beast",
+      "atk": 800,
+      "def": 500,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Wind-Up",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wind-up-kitten-2212",
+      "card_sets": [
+        {
+          "set_name": "Maze of Memories",
+          "set_code": "MAZE-EN041",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Memories",
+          "set_code": "MAZE-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN026",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25716180,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25716180.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25716180.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25716180.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.63",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "1.64",
+          "amazon_price": "8.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 97307,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9744,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 36757171,
+      "name": "Evilswarm Bahamut",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 \"lswarm\" monsters\nOnce per turn: You can detach 1 Xyz Material from this card to target 1 face-up monster your opponent controls; discard 1 \"lswarm\" monster, and if you do, take control of that opponent's monster.",
+      "race": "Dragon",
+      "atk": 2350,
+      "def": 1350,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Lswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evilswarm-bahamut-3113",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN040",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36757171,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36757171.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36757171.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36757171.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.09",
+          "tcgplayer_price": "0.84",
+          "ebay_price": "9.99",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63795,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9826,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

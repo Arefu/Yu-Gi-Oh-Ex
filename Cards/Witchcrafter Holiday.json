@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 83301414,
+      "name": "Witchcrafter Holiday",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Witchcrafter\" monster in your GY; Special Summon it. During your End Phase, if you control a \"Witchcrafter\" monster, while this card is in your GY: You can add this card to your hand. You can only use 1 \"Witchcrafter Holiday\" effect per turn, and only once that turn.",
+      "race": "Normal",
+      "archetype": "Witchcrafter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/witchcrafter-holiday-10147",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN226",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.61"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN021",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83301414,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83301414.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83301414.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83301414.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.39",
+          "tcgplayer_price": "1.54",
+          "ebay_price": "7.00",
+          "amazon_price": "3.81",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Witchcraft Sabotage",
+          "views": 250881,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412021,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14411,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

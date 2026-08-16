@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 34302287,
+      "name": "Phantasm Spiral Battle",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If all monsters you control are Normal Monsters (min. 1): Target 1 card your opponent controls; destroy it. If \"Umi\" is on the field, you can activate this card from your hand. You can banish this card from your Graveyard, then target 1 Normal Monster you control; equip that Normal Monster with all \"Phantasm Spiral\" Equip Spell Cards you control that can equip to it.",
+      "race": "Normal",
+      "archetype": "Phantasm Spiral",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/phantasm-spiral-battle-8402",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN072",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34302287,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34302287.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34302287.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34302287.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.46",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "23.27",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Clashing Whirlpool of the Mythic Radiance Dragon",
+          "views": 124972,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12986,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

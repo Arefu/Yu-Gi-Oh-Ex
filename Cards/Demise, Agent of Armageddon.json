@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 86124104,
+      "name": "Demise, Agent of Armageddon",
+      "typeline": [
+        "Fiend",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Cycle of the World\". This card's name becomes \"Demise, King of Armageddon\" while in the hand or on the field. If this card is Ritual Summoned: Destroy 1 face-up monster on the field. If this card is sent to the GY: You can target 1 Ritual Monster you control; while it is face-up on your field, your opponent cannot activate cards or effects in response to the activation of your Ritual Monsters' effects.",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Demise",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/demise-agent-of-armageddon-9370",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86124104,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86124104.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86124104.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86124104.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "3.95",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Demise, Fiend of Armageddon",
+          "views": 98703,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13744,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 62070231,
+      "name": "Number 94: Crystalzero",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 5 WATER monsters\r\nDuring either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster on the field; its ATK becomes half its current ATK until the end of your turn.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 1600,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-94-crystalzero-5252",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62070231,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62070231.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62070231.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62070231.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.48",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "3.00",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 94",
+          "views": 53183,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2013-10-19",
+          "konami_id": 10855,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

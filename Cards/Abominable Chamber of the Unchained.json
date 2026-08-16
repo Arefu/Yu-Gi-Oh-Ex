@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 80801743,
+      "name": "Abominable Chamber of the Unchained",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Special Summon 1 \"Unchained\" monster from your hand or GY. If this Set card is destroyed by card effect: You can Special Summon 1 \"Unchained\" monster from your Deck. You can only use each effect of \"Abominable Chamber of the Unchained\" once per turn.",
+      "race": "Normal",
+      "archetype": "Unchained",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abominable-chamber-of-the-unchained-10410",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN192",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80801743,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80801743.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80801743.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80801743.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.59",
+          "tcgplayer_price": "0.64",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hakai Dual Dirge",
+          "views": 437277,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010070,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14697,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

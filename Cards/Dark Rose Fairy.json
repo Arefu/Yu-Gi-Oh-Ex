@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 90724272,
+      "name": "Dark Rose Fairy",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a Tuner(s) is Special Summoned (except during the Damage Step): You can Special Summon this card from your hand. If this card is in your GY: You can send 1 card from your hand or field to the GY; place this card on the top or bottom of your Deck. You can only use each effect of \"Dark Rose Fairy\" once per turn.",
+      "race": "Fairy",
+      "atk": 800,
+      "def": 1000,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-rose-fairy-9878",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN107",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90724272,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90724272.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90724272.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90724272.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 124258,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-10",
+          "ocg_date": "2018-11-10",
+          "konami_id": 14176,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

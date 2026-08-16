@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 71759912,
+      "name": "Tree Otter",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 face-up monster you control; it gains 1000 ATK until the end of this turn. You must control a Beast-Type monster (other than this card) to activate and to resolve this effect.",
+      "race": "Beast",
+      "atk": 1200,
+      "def": 100,
+      "level": 2,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tree-otter-6029",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN062",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN095",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71759912,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71759912.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71759912.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71759912.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "2.95",
+          "amazon_price": "1.29",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57744,
+          "viewsweek": 22,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2008-12-20",
+          "konami_id": 7844,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

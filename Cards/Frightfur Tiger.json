@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 464362,
+      "name": "Frightfur Tiger",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Edge Imp Sabres\" + 1 or more \"Fluffal\" monsters\nWhen this card is Fusion Summoned: You can target cards on the field, up to the number of Fusion Materials used for its Fusion Summon; destroy them. All \"Frightfur\" monsters you control gain 300 ATK for each \"Fluffal\" monster and \"Frightfur\" monster you control. You can only control 1 \"Frightfur Tiger\".",
+      "race": "Fiend",
+      "atk": 1900,
+      "def": 1200,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frightfur-tiger-47",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions: Special Edition",
+          "set_code": "CORE-ENSE2",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.97"
+        },
+        {
+          "set_name": "Dimension of Chaos: Special Edition",
+          "set_code": "DOCS-ENSE2",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.3"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN022",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.56"
+        },
+        {
+          "set_name": "Weekly Shonen Jump July 2015 membership promotional card",
+          "set_code": "JUMP-EN073",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.29"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 464362,
+          "image_url": "https://images.ygoprodeck.com/images/cards/464362.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/464362.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/464362.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "1.00",
+          "amazon_price": "1.96",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 209690,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-01",
+          "ocg_date": "2014-11-28",
+          "konami_id": 11617,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

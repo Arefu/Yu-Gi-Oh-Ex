@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 91392974,
+      "name": "Apparition",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If a face-up \"HERO\" monster(s) you control is destroyed by battle or card effect: Special Summon 1 Level 4 or lower \"Vision HERO\" monster from your Deck, then you can halve the original ATK/DEF of 1 monster your opponent controls. You can only activate 1 \"Apparition\" per turn.",
+      "race": "Normal",
+      "archetype": "Vision HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/apparition-10294",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN087",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN013",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91392974,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91392974.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91392974.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91392974.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "5.17",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31486,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248013,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 9228,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 92223641,
+      "name": "The Fountain in the Sky",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When a LIGHT monster is destroyed by battle and sent to your Graveyard, you can remove that monster from play to gain Life Points equal to its ATK.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-fountain-in-the-sky-7687",
+      "card_sets": [
+        {
+          "set_name": "Lost Sanctuary Structure Deck",
+          "set_code": "SDLS-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN052",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92223641,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92223641.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92223641.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92223641.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.50",
+          "amazon_price": "1.44",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46843,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8827,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

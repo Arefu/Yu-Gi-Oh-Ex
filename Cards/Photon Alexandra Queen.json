@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 75797046,
+      "name": "Photon Alexandra Queen",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 \"Butterspy\" monsters\nYou can detach 1 Xyz Material from this card; return all monsters on the field to the hand, then inflict 300 damage to each player for each card returned to their hand.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Butterspy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/photon-alexandra-queen-6380",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN047",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75797046,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75797046.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75797046.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75797046.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.78",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "2.15",
+          "amazon_price": "0.74",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31413,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10720,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

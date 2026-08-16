@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 94677445,
+      "name": "Ib the World Chalice Justiciar",
+      "typeline": [
+        "Spellcaster",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nFor this card's Synchro Summon, you can treat 1 \"World Chalice\" Normal Monster you control as a Tuner. You can only use each of the following effects of \"Ib the World Chalice Justiciar\" once per turn.\r\n● If this card is Synchro Summoned: You can add 1 \"World Legacy\" card from your Deck to your hand.\r\n● If this Synchro Summoned card is sent from the field to the GY: You can Special Summon 1 \"World Chalice\" monster from your Deck or GY, except \"Ib the World Chalice Justiciar\".",
+      "race": "Spellcaster",
+      "atk": 1800,
+      "def": 2100,
+      "level": 5,
+      "attribute": "WATER",
+      "archetype": "World Chalice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ib-the-world-chalice-justiciar-10037",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN089",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN035",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94677445,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94677445.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94677445.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94677445.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "9.99",
+          "amazon_price": "8.16",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Ib the World Chalice Miko",
+          "views": 351061,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14285,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

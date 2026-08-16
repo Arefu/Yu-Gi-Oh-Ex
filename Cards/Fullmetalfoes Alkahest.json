@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 77693536,
+      "name": "Fullmetalfoes Alkahest",
+      "typeline": [
+        "Psychic",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Metalfoes\" monster + 1 Normal Monster\r\nMust be Fusion Summoned. Once per turn, during your opponent's turn (Quick Effect): You can target 1 Effect Monster on the field; equip that target to this card. This card gains DEF equal to the combined original ATK of the monsters equipped to it by this effect. You can use monsters you control equipped to this card you control as material for the Fusion Summon of a \"Metalfoes\" Fusion Monster that lists them as materials.",
+      "race": "Psychic",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "FIRE",
+      "archetype": "Metalfoes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fullmetalfoes-alkahest-6538",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN081",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN039",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77693536,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77693536.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77693536.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77693536.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.35",
+          "amazon_price": "0.75",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Fullmetalphosis Alkahest",
+          "views": 70257,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12629,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

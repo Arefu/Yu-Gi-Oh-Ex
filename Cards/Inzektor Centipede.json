@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 21790410,
+      "name": "Inzektor Centipede",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can equip 1 \"Inzektor\" monster from your hand or Graveyard to this card. If an Equip Card(s) is sent to your Graveyard while equipped to this card (except during the Damage Step): You can add 1 \"Inzektor\" card from your Deck to your hand. While this card is equipped to a monster, that monster's Level is increased by 3.",
+      "race": "Insect",
+      "atk": 1600,
+      "def": 1200,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-centipede-1876",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack One",
+          "set_code": "AP01-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Grand Creators",
+          "set_code": "GRCR-EN039",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21790410,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21790410.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21790410.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21790410.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "3.99",
+          "amazon_price": "3.15",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91686,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9893,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

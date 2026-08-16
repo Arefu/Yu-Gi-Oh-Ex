@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 23965037,
+      "name": "Doriado's Blessing",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card is used to Ritual Summon \"Elemental Mistress Doriado\". You must also Tribute monsters whose total Levels equal 3 or more from the field or your hand.",
+      "race": "Ritual",
+      "archetype": "Doriado",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/doriado-s-blessing-2065",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN223",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23965037,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23965037.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23965037.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23965037.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "2.54",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56381,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6350,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

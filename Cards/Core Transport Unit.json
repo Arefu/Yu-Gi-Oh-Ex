@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 30770156,
+      "name": "Core Transport Unit",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, you can discard 1 card to add 1 \"Iron Core of Koa'ki Meiru\" from your Deck to your hand.",
+      "race": "Continuous",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/core-transport-unit-2613",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN089",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30770156,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30770156.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30770156.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30770156.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "21.35",
+          "tcgplayer_price": "13.94",
+          "ebay_price": "3.33",
+          "amazon_price": "5.90",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20286,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8762,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 5265750,
+      "name": "Skull Mariner",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A pirate ship that appears out of the mist and sinks any seagoing vessels.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 900,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skull-mariner-464",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.43"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5265750,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5265750.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5265750.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5265750.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105256,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5143,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

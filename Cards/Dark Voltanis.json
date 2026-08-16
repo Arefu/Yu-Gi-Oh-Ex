@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 65282484,
+      "name": "Dark Voltanis",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "After 1 Counter Trap Card you control has been activated and has resolved, you can Tribute 1 DARK monster to Special Summon this card from your hand. If this card is Special Summoned in this way, destroy 1 card on the field.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 1400,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-voltanis-5501",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN081",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65282484,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65282484.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65282484.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65282484.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.12",
+          "tcgplayer_price": "6.70",
+          "ebay_price": "4.99",
+          "amazon_price": "15.46",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24093,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2009-09-19",
+          "konami_id": 8139,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

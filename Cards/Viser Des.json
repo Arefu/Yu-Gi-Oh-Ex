@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 56043447,
+      "name": "Viser Des",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal Summoned: Target 1 monster your opponent controls; during your third Standby Phase after this effect's activation, destroy that monster. This card cannot be destroyed by battle while the targeted monster is on the field.",
+      "race": "Fiend",
+      "atk": 500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/viser-des-4769",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN093",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Twisted Nightmares",
+          "set_code": "SS05-ENB16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "Structure Deck: Marik (TCG)",
+          "set_code": "SDMA-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56043447,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56043447.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56043447.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56043447.jpg"
+        },
+        {
+          "id": 56043446,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56043446.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56043446.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56043446.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "4.53",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81089,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Viser Des",
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2002-01-25",
+          "konami_id": 5292,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

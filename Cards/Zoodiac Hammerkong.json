@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 14970113,
+      "name": "Zoodiac Hammerkong",
+      "typeline": [
+        "Beast-Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 or more Level 4 monsters\r\nOnce per turn, you can also Xyz Summon \"Zoodiac Hammerkong\" by using 1 \"Zoodiac\" monster you control with a different name as Xyz Material. (If you used an Xyz Monster, any Xyz Materials attached to it also become Xyz Materials on this card.) This card gains ATK and DEF equal to the ATK and DEF of all \"Zoodiac\" monsters attached to it as Materials. While this card has Xyz Material, your opponent cannot target face-up \"Zoodiac\" monsters on the field with card effects, except this one. Once per turn, during the End Phase: Detach 1 Xyz Material from this card.",
+      "race": "Beast-Warrior",
+      "atk": -1,
+      "def": -1,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Zoodiac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zoodiac-hammerkong-8422",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14970113,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14970113.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14970113.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14970113.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 126191,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12961,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

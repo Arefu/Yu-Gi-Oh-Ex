@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 8785161,
+      "name": "Raidraptor - Wild Vulture",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase, if this card was Normal or Special Summoned this turn: You can Tribute this card; Special Summon 2 \"Raidraptor\" monsters from your hand and/or Graveyard whose total Levels equal 6.",
+      "race": "Winged Beast",
+      "atk": 1600,
+      "def": 2000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-wild-vulture-744",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN116",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8785161,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8785161.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8785161.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8785161.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.45",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34955,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11957,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 54289683,
+      "name": "Power Capsule",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 1 face-up \"Victory Viper XX03\" you control to activate this card. Select 1 effect of \"Victory Viper XX03\", and apply it as this card's effect.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/power-capsule-4617",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN223",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Enemy of Justice",
+          "set_code": "EOJ-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54289683,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54289683.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54289683.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54289683.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46649,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-05-17",
+          "ocg_date": "2006-02-16",
+          "konami_id": 6706,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

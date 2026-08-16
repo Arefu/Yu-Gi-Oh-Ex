@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 52558805,
+      "name": "Temtempo the Percussion Djinn",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nOnce per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up Xyz Monster your opponent controls; detach 1 Xyz Material from that monster, and if you do, all \"Djinn\" Xyz Monsters you currently control gain 500 ATK.",
+      "race": "Fiend",
+      "atk": 1700,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Djinn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/temtempo-the-percussion-djinn-4475",
+      "card_sets": [
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN029",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Xyz Symphony",
+          "set_code": "YS12-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52558805,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52558805.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52558805.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52558805.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "2.77",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54530,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-13",
+          "ocg_date": "2012-03-17",
+          "konami_id": 10126,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

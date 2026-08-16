@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 38277918,
+      "name": "Mikazukinoyaiba",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A dragon warrior of the moon armed with a crescent sword.",
+      "race": "Dragon",
+      "atk": 2200,
+      "def": 2350,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mikazukinoyaiba-3244",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN098",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.34"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "113.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38277918,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38277918.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38277918.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38277918.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "2.75",
+          "amazon_price": "1.12",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42693,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4717,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

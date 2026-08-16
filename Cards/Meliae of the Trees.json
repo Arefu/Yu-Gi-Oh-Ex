@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 64245689,
+      "name": "Meliae of the Trees",
+      "typeline": [
+        "Plant",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 EARTH monsters\nOnce per turn: You can detach 1 Xyz Material from this card, then activate 1 of these effects.\n● Send 1 Plant-Type monster from your Deck to the Graveyard.\n● Target 1 Plant-Type monster in your Graveyard; Special Summon that target in face-up Defense Position.",
+      "race": "Plant",
+      "atk": 1700,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/meliae-of-the-trees-5419",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN165",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN055",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64245689,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64245689.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64245689.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64245689.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.34",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "3.74",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68960,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10786,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

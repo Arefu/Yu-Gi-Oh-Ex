@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 94573223,
+      "name": "Inzektor Giga-Mantis",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 face-up \"Inzektor\" monster you control; equip this card from your hand to that target. While this card is equipped to a monster, that monster's original ATK becomes 2400. If this card is sent to the Graveyard while equipped to a monster: You can target 1 \"Inzektor\" monster in your Graveyard except \"Inzektor Giga-Mantis\"; Special Summon that target. This effect of \"Inzektor Giga-Mantis\" can only be used once per turn.",
+      "race": "Insect",
+      "atk": 2400,
+      "def": 0,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-giga-mantis-7867",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN063",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN021",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94573223,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94573223.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94573223.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94573223.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75597,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9895,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

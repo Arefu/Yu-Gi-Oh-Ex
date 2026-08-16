@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 99414168,
+      "name": "Elemental Mistress Doriado",
+      "typeline": [
+        "Spellcaster",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "This card can only be Ritual Summoned with the Ritual Spell Card, \"Doriado's Blessing\". The Attribute of this card is also treated as WIND, WATER, FIRE, and EARTH while it is face-up on the field.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 1400,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Doriado",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-mistress-doriado-8254",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN214",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN034",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN034",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99414168,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99414168.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99414168.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99414168.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.98",
+          "ebay_price": "8.99",
+          "amazon_price": "3.46",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74347,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6343,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

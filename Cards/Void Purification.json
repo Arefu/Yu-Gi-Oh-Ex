@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 61965407,
+      "name": "Void Purification",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If you control a monster that is not an \"Infernoid\" monster, send this card to the Graveyard. You can only use each of these effects of \"Void Purification\" once per turn.\n● During each of your opponent's Standby Phases: You can target 1 \"Infernoid\" monster in your Graveyard; add it to your hand.\n● During each of your Standby Phases: You can target 1 of your banished \"Infernoid\" monsters; return it to the Graveyard.",
+      "race": "Continuous",
+      "archetype": "Infernoid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/void-purification-5244",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61965407,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61965407.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61965407.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61965407.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.50",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26186,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11748,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

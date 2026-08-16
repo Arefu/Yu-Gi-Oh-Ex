@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 75498415,
+      "name": "Blackwing - Sirocco the Dawn",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls a monster and you control no monsters, you can Normal Summon/Set this card without Tributing. Once per turn, during your Main Phase 1: You can target 1 \"Blackwing\" monster you control; until the end of this turn, it gains ATK equal to the total ATK of all \"Blackwing\" monsters currently on the field, except itself. Monsters other than the targeted monster cannot attack during the turn you activate this effect.",
+      "race": "Winged Beast",
+      "atk": 2000,
+      "def": 900,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-sirocco-the-dawn-6354",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Crystal Revenge",
+          "set_code": "BLCR-EN058",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 17 participation cards",
+          "set_code": "DL17-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.45"
+        },
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN112",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Four",
+          "set_code": "TU04-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Seven",
+          "set_code": "TU07-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75498415,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75498415.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75498415.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75498415.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.93",
+          "tcgplayer_price": "0.97",
+          "ebay_price": "0.99",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 254481,
+          "viewsweek": 42,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8013,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

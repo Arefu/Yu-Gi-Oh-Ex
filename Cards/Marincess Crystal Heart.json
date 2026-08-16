@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 67712104,
+      "name": "Marincess Crystal Heart",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 WATER monsters\r\nUnaffected by your opponent's monster effects while this card is in the Extra Monster Zone. During the Damage Step, if this card battles an opponent's monster, that opponent's monster is unaffected by card effects, except its own. When this card, or your \"Marincess\" Link Monster this card points to, is targeted for an attack: You can send 1 \"Marincess\" monster from your hand to the GY; for that battle, your monster cannot be destroyed by battle and you take no battle damage.",
+      "race": "Cyberse",
+      "atk": 0,
+      "def": null,
+      "level": null,
+      "attribute": "WATER",
+      "archetype": "Marincess",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/marincess-crystal-heart-10395",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN170",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Duels From the Deep",
+          "set_code": "LED9-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.92"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67712104,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67712104.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67712104.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67712104.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.48",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 115909,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010040,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14667,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

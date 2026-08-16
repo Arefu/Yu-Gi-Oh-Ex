@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 36521459,
+      "name": "Malefic Stardust Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned or Set. Must be Special Summoned (from your hand) by banishing 1 \"Stardust Dragon\" from your Extra Deck, and cannot be Special Summoned by other ways. There can only be 1 face-up \"Malefic\" monster on the field. Face-up Field Spell Cards cannot be destroyed by effects. Other monsters you control cannot declare an attack. If there is no face-up Field Spell Card on the field, destroy this card.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-stardust-dragon-3086",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2011 Wave 2",
+          "set_code": "CT08-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.16"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13 (POR)",
+          "set_code": "OP13-PT031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 8, Issue 9 promotional card",
+          "set_code": "JUMP-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36521459,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36521459.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36521459.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36521459.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.51",
+          "tcgplayer_price": "3.12",
+          "ebay_price": "3.99",
+          "amazon_price": "6.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 164112,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-01",
+          "ocg_date": "2010-01-21",
+          "konami_id": 8865,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 17086528,
+      "name": "Xiangsheng Magician",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 face-up Xyz Monster you control, and 1 Level 5 or higher monster you control; that Xyz Monster's Rank becomes equal to the Level of that Level 5 or higher monster, until the end of this turn (even if this card leaves the field). While you control more cards than your opponent does, this card's Pendulum Scale becomes 4.\n\n[ Monster Effect ] \nYour opponent takes no battle damage from attacks involving this card. Once per turn: You can target 1 other face-up monster you control; this card's ATK becomes equal to that monster's current ATK, until the end of this turn.",
+      "race": "Spellcaster",
+      "pend_desc": "Once per turn: You can target 1 face-up Xyz Monster you control, and 1 Level 5 or higher monster you control; that Xyz Monster's Rank becomes equal to the Level of that Level 5 or higher monster, until the end of this turn (even if this card leaves the field). While you control more cards than your opponent does, this card's Pendulum Scale becomes 4.",
+      "monster_desc": "Your opponent takes no battle damage from attacks involving this card. Once per turn: You can target 1 other face-up monster you control; this card's ATK becomes equal to that monster's current ATK, until the end of this turn.",
+      "atk": 500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Magician",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xiangsheng-magician-1475",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN018",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17086528,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17086528.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17086528.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17086528.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "2.19",
+          "amazon_price": "1.72",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 100639,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11788,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

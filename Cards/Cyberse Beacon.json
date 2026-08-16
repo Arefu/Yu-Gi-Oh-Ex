@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 91269402,
+      "name": "Cyberse Beacon",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you took damage by battle or an opponent's card effect this turn: Add 1 Level 4 or lower Cyberse monster from your Deck to your hand. You can only activate 1 \"Cyberse Beacon\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyberse-beacon-8607",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN147",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist Special Edition",
+          "set_code": "COTD-ENSE4",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.35"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN044",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN044",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91269402,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91269402.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91269402.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91269402.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43132,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-21",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13283,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

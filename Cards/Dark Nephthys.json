@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 38107923,
+      "name": "Dark Nephthys",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have 3 or more DARK monsters in your Graveyard and this card in your hand: You can banish 2 of them from your Graveyard; send this card from your hand to the Graveyard. During your next Standby Phase after this card was sent to the Graveyard by this effect: Special Summon this card from the Graveyard. When this card is Special Summoned: Target 1 Spell/Trap Card on the field; destroy that target.",
+      "race": "Winged Beast",
+      "atk": 2400,
+      "def": 1600,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Nephthys",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-nephthys-3229",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN211",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.69"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN018",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38107923,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38107923.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38107923.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38107923.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.76",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "4.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 157741,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7420,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

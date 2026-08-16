@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 79383919,
+      "name": "Evil Eye Retribution",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell/Trap Card is activated, while you control an \"Evil Eye\" monster: Negate the activation, and if you do, destroy it. If \"Evil Eye of Selene\" is in your Spell & Trap Zone, this card's activation and effect cannot be negated. You can only activate 1 \"Evil Eye Retribution\" per turn.",
+      "race": "Counter",
+      "archetype": "Evil Eye",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evil-eye-retribution-10102",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN244",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN039",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79383919,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79383919.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79383919.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79383919.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.64",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Sentence of the Evil Eye",
+          "views": 82698,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412039,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14429,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

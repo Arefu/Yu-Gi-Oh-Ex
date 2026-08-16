@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 42421606,
+      "name": "Number 85: Crazy Box",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nThis card cannot attack. Once per turn: You can detach 1 Xyz Material from this card; roll a six-sided die and apply the result.\n1: Halve your Life Points. 2: Draw 1 card.\n3: Your opponent discards 1 card.\n4: Negate the effects of 1 face-up card on the field until the end of this turn.\n5: Destroy 1 card on the field. 6: Destroy this card.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 300,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-85-crazy-box-3618",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42421606,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42421606.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42421606.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42421606.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.49",
+          "tcgplayer_price": "3.93",
+          "ebay_price": "3.75",
+          "amazon_price": "3.82",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 85",
+          "views": 152692,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10707,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

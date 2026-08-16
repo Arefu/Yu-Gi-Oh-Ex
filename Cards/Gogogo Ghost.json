@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 56105047,
+      "name": "Gogogo Ghost",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned: You can target 1 \"Gogogo Golem\" in your Graveyard; Special Summon that target in face-up Defense Position, then change this card to Defense Position. You can only use the effect of \"Gogogo Ghost\" once per turn.",
+      "race": "Zombie",
+      "atk": 1900,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Gogogo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gogogo-ghost-4779",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56105047,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56105047.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56105047.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56105047.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46900,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10361,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

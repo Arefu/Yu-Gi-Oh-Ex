@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 50692511,
+      "name": "Raidraptor - Call",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Raidraptor\" monster you control; Special Summon 1 monster with the same name as that monster on the field from your hand or Deck in Defense Position. You can only activate 1 \"Raidraptor - Call\" per turn. You cannot Special Summon monsters during the turn you activate this card, except \"Raidraptor\" monsters.",
+      "race": "Normal",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-call-4317",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 24",
+          "set_code": "OP24-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN025",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50692511,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50692511.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50692511.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50692511.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "6.90",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66709,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12212,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

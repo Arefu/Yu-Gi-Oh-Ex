@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 80831552,
+      "name": "Dinowrestler Valeonyx",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If only your opponent controls a monster, you can Special Summon this card (from your hand). While you control a Link-3 or higher \"Dinowrestler\" monster, face-up monsters you control are unaffected by the activated effects of your opponent's Link-3 or lower monsters.",
+      "race": "Dinosaur",
+      "atk": 1600,
+      "def": 0,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Dinowrestler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinowrestler-valeonyx-10481",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN151",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80831552,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80831552.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80831552.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80831552.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34140,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010007,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14634,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

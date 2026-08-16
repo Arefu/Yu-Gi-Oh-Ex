@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 57450198,
+      "name": "Super Quantal Mech Beast Lusterrex",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 7 monsters\r\nCannot attack unless it has material. Once per turn: You can detach 1 material from this card, then target 1 Effect Monster on the field; negate that face-up monster's effects until the end of this turn. This is a Quick Effect if this card has \"Super Quantum White Layer\" as material. Once per turn: You can attach 1 \"Super Quantum\" monster from your hand or field to this card as material.",
+      "race": "Machine",
+      "atk": 2700,
+      "def": 1900,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Super Quant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-quantal-mech-beast-lusterrex-10029",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57450198,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57450198.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57450198.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57450198.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "2.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Super Quantal Mech Beast Lusterex",
+          "views": 131624,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14287,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 93850652,
+      "name": "Beat, Bladesman Fur Hire",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can Special Summon 1 monster \"Fur Hire\" from your hand, except \"Beat, Bladesman Fur Hire\". If a monster \"Fur Hire\" is Special Summoned to your field while you control this monster (except during the Damage Step): You can add 1 monster \"Fur Hire\" from your Deck to your hand, except \"Beat, Bladesman Fur Hire\". You can only use each effect of \"Beat, Bladesman Fur Hire\" once per turn.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 500,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Fur Hire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/beat-bladesman-fur-hire-9280",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN247",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN017",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93850652,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93850652.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93850652.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93850652.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.95",
+          "amazon_price": "1.69",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Beat, Swordsman of the Skyfang Brigade",
+          "views": 310809,
+          "viewsweek": 21,
+          "upvotes": 17,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13658,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

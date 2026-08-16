@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 83747250,
+      "name": "Twilight Cloth",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up monster you control; banish any number of \"Lightsworn\" monsters from your GY, and if you do, that monster gains 200 ATK and DEF for each monster banished by this effect, until the end of this turn. If this card is sent from the Deck to the GY by a \"Lightsworn\" monster's effect: You can activate this effect; this turn, \"Lightsworn\" monsters you control cannot be destroyed by battle or card effects.",
+      "race": "Normal",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twilight-cloth-8887",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN083",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83747250,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83747250.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83747250.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83747250.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20013,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13112,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

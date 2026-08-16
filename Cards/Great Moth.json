@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 14141448,
+      "name": "Great Moth",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This monster cannot be Normal Summoned or Set. This card can only be Special Summoned by Tributing \"Petit Moth\" during your 4th turn after \"Petit Moth\" has been equipped with \"Cocoon of Evolution\".",
+      "race": "Insect",
+      "atk": 2600,
+      "def": 2500,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/great-moth-1210",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-070",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.34"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E070",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "9.02"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN070",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14141448,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14141448.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14141448.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14141448.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "0.00",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 211998,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4063,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 26194151,
+      "name": "Necroid Synchro",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Banish 1 Tuner and up to 2 non-Tuner monsters from your Graveyard, and if you do, Special Summon 1 \"Stardust\" Synchro Monster from your Extra Deck whose Level equals the total Levels of those banished monsters, but it has its effects negated. (This Special Summon is treated as a Synchro Summon.)",
+      "race": "Normal",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/necroid-synchro-8315",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26194151,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26194151.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26194151.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26194151.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "2.99",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59831,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-03-11",
+          "konami_id": 12892,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

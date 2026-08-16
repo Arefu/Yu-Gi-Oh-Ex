@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 45298492,
+      "name": "Scarred Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nYour opponent cannot target face-up Warrior-Type monsters for attacks, except this one. Once per turn, if this card would be destroyed by battle, it is not destroyed.",
+      "race": "Warrior",
+      "atk": 2100,
+      "def": 1000,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scarred-warrior-3861",
+      "card_sets": [
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45298492,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45298492.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45298492.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45298492.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "0.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53700,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-03-16",
+          "ocg_date": "2011-03-12",
+          "konami_id": 9016,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

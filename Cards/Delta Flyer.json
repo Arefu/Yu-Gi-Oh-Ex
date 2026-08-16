@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 57568840,
+      "name": "Delta Flyer",
+      "typeline": [
+        "Dragon",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can select 1 other face-up monster you control and increase its Level by 1.",
+      "race": "Dragon",
+      "atk": 1500,
+      "def": 900,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/delta-flyer-4901",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN016",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57568840,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57568840.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57568840.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57568840.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "2.25",
+          "amazon_price": "2.23",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74215,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8947,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

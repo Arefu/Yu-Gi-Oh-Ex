@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 48649353,
+      "name": "Ushi Oni",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A bull fiend restored by the dark arts, this monster appears out of a jar.",
+      "race": "Fiend",
+      "atk": 2150,
+      "def": 1950,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ushi-oni-4153",
+      "card_sets": [
+        {
+          "set_name": "McDonald's Promotional Cards",
+          "set_code": "MP1-013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48649353,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48649353.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48649353.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48649353.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "24.64",
+          "tcgplayer_price": "9.06",
+          "ebay_price": "6.00",
+          "amazon_price": "10.78",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32144,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-12-20",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4407,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

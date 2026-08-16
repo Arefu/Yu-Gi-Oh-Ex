@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 25123713,
+      "name": "Dyna, Hero Fur Hire",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned: You can banish cards from your opponent's GY, up to the number of monsters \"Fur Hire\" you control with different names. You can only use this effect of \"Dyna, Hero Fur Hire\" once per turn. Monsters your opponent controls cannot target monsters \"Fur Hire\" you control for attacks, except this one.",
+      "race": "Beast-Warrior",
+      "atk": 2500,
+      "def": 1400,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Fur Hire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dyna-hero-fur-hire-9311",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN251",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN021",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25123713,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25123713.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25123713.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25123713.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "2.50",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dyna, Champion of the Skyfang Brigade",
+          "views": 97223,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13662,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

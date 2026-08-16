@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 47106439,
+      "name": "Gishki Vision",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you Ritual Summon exactly 1 WATER Ritual Monster with a card effect that requires use of monsters, this card can be used as the entire requirement. You can discard this card; add 1 \"Gishki\" Ritual Monster from your Deck to your hand.",
+      "race": "Sea Serpent",
+      "atk": 700,
+      "def": 500,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Gishki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gishki-vision-4019",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN076",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.2"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47106439,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47106439.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47106439.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47106439.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.58",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89104,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9591,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

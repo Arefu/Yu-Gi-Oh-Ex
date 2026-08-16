@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 59843383,
+      "name": "Shiranui Sunsaga",
+      "typeline": [
+        "Zombie",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Zombie Tuner + 1+ non-Tuner Zombie monsters\r\nIf this card is Special Summoned: You can return any number of your Zombie Synchro Monsters, that are banished or are in your GY, to the Extra Deck, then you can destroy cards your opponent controls, equal to the number of cards returned. If a Zombie monster(s) you control would be destroyed by battle or card effect, you can banish 1 \"Shiranui\" monster from your GY instead. You can only Special Summon \"Shiranui Sunsaga(s)\" once per turn.",
+      "race": "Zombie",
+      "atk": 3500,
+      "def": 0,
+      "level": 10,
+      "attribute": "FIRE",
+      "archetype": "Shiranui",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiranui-sunsaga-5089",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN204",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10",
+          "set_code": "OP10-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59843383,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59843383.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59843383.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59843383.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "2.79",
+          "amazon_price": "1.38",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 206980,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12782,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

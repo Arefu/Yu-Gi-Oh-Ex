@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "id": 55878038,
+      "name": "Chaos Dragon Levianeer",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by banishing 3 LIGHT and/or DARK monsters from your GY. When Summoned this way: You can activate this effect; apply the following effect, based on the Attribute(s) of the monsters banished for the Special Summon, also this card cannot attack for the rest of this turn.\r\n● Only LIGHT: Special Summon 1 monster from your GY in Defense Position.\r\n● Only DARK: Shuffle 1 random card from your opponent's hand into the Deck.\r\n● Both LIGHT and DARK: Destroy up to 2 cards on the field.\r\nYou can only use this effect of \"Chaos Dragon Levianeer\" once per turn.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/chaos-dragon-levianeer-9593",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN035",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN058",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.69"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN017",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12",
+          "set_code": "OP12-EN001",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT001",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN025",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Albaz Strike",
+          "set_code": "SDAZ-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1"
+        },
+        {
+          "set_name": "Ultimate Tournament Pack 1",
+          "set_code": "UP01-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55878038,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55878038.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55878038.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55878038.jpg"
+        },
+        {
+          "id": 55878039,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55878039.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55878039.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55878039.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.84",
+          "amazon_price": "0.37",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Levionia the Primordial Chaos Dragon",
+          "views": 1336120,
+          "viewsweek": 21,
+          "upvotes": 20,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Chaos Dragon Levianeer",
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13912,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

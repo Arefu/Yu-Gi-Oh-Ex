@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 75043725,
+      "name": "Emissary of the Afterlife",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is sent from the field to the Graveyard: Each player adds 1 Level 3 or lower Normal Monster from their Deck to their hand.",
+      "race": "Fiend",
+      "atk": 1600,
+      "def": 600,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/emissary-of-the-afterlife-6312",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-076",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.15"
+        },
+        {
+          "set_name": "Champion Pack: Game One",
+          "set_code": "CP01-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN189",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN255",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75043725,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75043725.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75043725.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75043725.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.96",
+          "tcgplayer_price": "6.43",
+          "ebay_price": "1.99",
+          "amazon_price": "2.91",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 166079,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6038,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

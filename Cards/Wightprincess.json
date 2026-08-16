@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 90243945,
+      "name": "Wightprincess",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's name becomes \"Skull Servant\" while it is in the Graveyard. If this card is Normal or Special Summoned: You can send 1 \"Wightprince\" from your Deck to the Graveyard. During either player's turn: You can send this card from your hand or field to the Graveyard; all monsters currently on the field lose ATK and DEF equal to their own Level/Rank x 300, until the end of this turn.",
+      "race": "Zombie",
+      "atk": 1600,
+      "def": 0,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Skull Servant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wightprincess-7536",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN197",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 25",
+          "set_code": "OP25-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90243945,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90243945.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90243945.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90243945.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "1.10",
+          "amazon_price": "2.84",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 224263,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12768,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

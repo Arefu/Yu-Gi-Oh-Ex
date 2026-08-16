@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "id": 99177923,
+      "name": "Infernity Archfiend",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you draw this card, if you have no other cards in your hand: You can reveal this card; Special Summon this card from your hand. When this card is Special Summoned: You can add 1 \"Infernity\" card from your Deck to your hand. You must have no cards in your hand to activate and to resolve this effect.",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernity-archfiend-8234",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7",
+          "set_code": "DT07-EN060",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN060",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "10.21"
+        },
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN027",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 2",
+          "set_code": "OP02-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN220",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN220",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's World Championship 2009: Stardust Accelerator promotional cards",
+          "set_code": "WC09-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "38.63"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's World Championship 2009: Stardust Accelerator promotional cards",
+          "set_code": "WC09-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "15.19"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99177923,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99177923.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99177923.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99177923.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.54",
+          "tcgplayer_price": "0.68",
+          "ebay_price": "0.99",
+          "amazon_price": "3.77",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 140260,
+          "viewsweek": 0,
+          "upvotes": 28,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-19",
+          "ocg_date": "2009-03-26",
+          "konami_id": 8272,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

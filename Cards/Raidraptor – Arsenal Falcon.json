@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 96157835,
+      "name": "Raidraptor - Arsenal Falcon",
+      "typeline": [
+        "Winged Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 7 monsters\nOnce per turn: You can detach 1 material from this card; Special Summon 1 Level 4 Winged Beast monster from your Deck. If this card has any number of \"Raidraptor\" monsters as material, it can attack up to that many times during each Battle Phase. If this card is sent to the GY while it has a \"Raidraptor\" monster as material: You can Special Summon 1 \"Raidraptor\" Xyz Monster from your Extra Deck, except \"Raidraptor - Arsenal Falcon\", and if you do, attach this card from your GY to it as material.",
+      "race": "Winged Beast",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-arsenal-falcon-8005",
+      "card_sets": [
+        {
+          "set_name": "Rise of the Duelist",
+          "set_code": "ROTD-EN094",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96157835,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96157835.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96157835.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96157835.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.47",
+          "tcgplayer_price": "9.88",
+          "ebay_price": "3.99",
+          "amazon_price": "2.33",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 354533,
+          "viewsweek": 0,
+          "upvotes": 34,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-08-06",
+          "ocg_date": "2016-11-26",
+          "konami_id": 12868,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

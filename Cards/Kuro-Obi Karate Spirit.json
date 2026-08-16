@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 77511331,
+      "name": "Kuro-Obi Karate Spirit",
+      "typeline": [
+        "Warrior",
+        "Pendulum",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Pendulum Spirit Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf a monster(s) is Pendulum Summoned: Return this card from the Pendulum Zone to the hand.\n\n[ Monster Effect ] \nWhen this card is Normal Summoned: You can send to the GY all Spells/Traps your opponent controls in the same column as the card(s) in your Pendulum Zones. Once per turn, during the End Phase, if this card was Normal Summoned or flipped face-up this turn: Return this card to the hand.",
+      "race": "Warrior",
+      "pend_desc": "If a monster(s) is Pendulum Summoned: Return this card from the Pendulum Zone to the hand.",
+      "monster_desc": "When this card is Normal Summoned: You can send to the GY all Spells/Traps your opponent controls in the same column as the card(s) in your Pendulum Zones. Once per turn, during the End Phase, if this card was Normal Summoned or flipped face-up this turn: Return this card to the hand.",
+      "atk": 2400,
+      "def": 1000,
+      "level": 5,
+      "attribute": "WIND",
+      "archetype": "Martial Art Spirit",
+      "scale": 9,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kuro-obi-karate-spirit-9295",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN224",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77511331,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77511331.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77511331.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77511331.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71278,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2018-09-08",
+          "konami_id": 13533,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

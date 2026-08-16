@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 75524092,
+      "name": "Vicious Claw",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "The equipped monster gains 300 ATK. If the equipped monster would be destroyed by battle, return this card to its owner's hand instead. Then, destroy 1 monster, except the one that battled the equipped monster, and inflict 600 damage to your opponent. After that, Special Summon 1 \"Evil Token\" (Fiend-Type/DARK/Level 7/ATK 2500/DEF 2500) on your opponent's side of the field. During the turn this card is returned to your hand, you cannot use \"Vicious Claw\" from your hand.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vicious-claw-6357",
+      "card_sets": [
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN047",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75524092,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75524092.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75524092.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75524092.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.82",
+          "ebay_price": "2.99",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57503,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7446,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 598988,
+      "name": "Malefic Rainbow Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned, except by removing from play 1 \"Rainbow Dragon\" from your hand or Deck. There can only be 1 face-up \"Malefic\" monster on the field. Other monsters you control cannot declare an attack. If there is no face-up Field Spell Card on the field, destroy this card.",
+      "race": "Dragon",
+      "atk": 4000,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-rainbow-dragon-57",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! 3D Bonds Beyond Time Movie Pack",
+          "set_code": "YMP1-EN005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 598988,
+          "image_url": "https://images.ygoprodeck.com/images/cards/598988.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/598988.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/598988.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.51",
+          "tcgplayer_price": "3.81",
+          "ebay_price": "5.54",
+          "amazon_price": "15.00",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 149483,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-22",
+          "ocg_date": "2011-02-26",
+          "konami_id": 9044,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

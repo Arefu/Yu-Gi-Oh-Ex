@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 90162951,
+      "name": "Number 35: Ravenous Tarantula",
+      "typeline": [
+        "Insect",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 10 monsters\nAll monsters you control gain ATK and DEF equal to the difference between your LP and your opponent's. While this card has Xyz Material, each time your opponent Special Summons a monster(s), inflict 600 damage to your opponent. Once per turn: You can detach 1 Xyz Material from this card; destroy all face-up monsters your opponent controls with ATK less than or equal to this card's.",
+      "race": "Insect",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-35-ravenous-tarantula-7531",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN009",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "6.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90162951,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90162951.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90162951.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90162951.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.70",
+          "tcgplayer_price": "8.45",
+          "ebay_price": "11.99",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 35",
+          "views": 379844,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-03-17",
+          "ocg_date": "2016-03-19",
+          "konami_id": 12261,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 5177985,
+      "name": "Shiranui Swordmaster",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your GY and you control 2 or more \"Shiranui\" monsters with different names: You can Special Summon this card, but banish it when it leaves the field. If this card is banished: You can target 1 Zombie monster you control; it gains 600 ATK until the end of this turn. You can only use each effect of \"Shiranui Swordmaster\" once per turn.",
+      "race": "Zombie",
+      "atk": 600,
+      "def": 0,
+      "level": 2,
+      "attribute": "FIRE",
+      "archetype": "Shiranui",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiranui-swordmaster-9780",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5177985,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5177985.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5177985.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5177985.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Shiranui Sensei",
+          "views": 55895,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14095,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

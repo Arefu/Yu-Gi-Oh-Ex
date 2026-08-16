@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 39299733,
+      "name": "Fortune Chariot",
+      "typeline": [
+        "Fairy",
+        "Union",
+        "Effect"
+      ],
+      "type": "Union Effect Monster",
+      "humanReadableCardType": "Union Effect Monster",
+      "frameType": "effect",
+      "desc": "(This card is also always treated as a \"Valkyrie\" card.)\r\nOnce per turn, you can either: Target 1 Fairy monster you control; equip this card to that target, OR: Unequip this card and Special Summon it. If the equipped monster would be destroyed by battle or card effect, destroy this card instead. The equipped monster can attack directly, but when it does so using this effect, the battle damage inflicted to your opponent is halved.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": 2000,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortune-chariot-9748",
+      "card_sets": [
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.01"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39299733,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39299733.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39299733.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39299733.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31065,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-16",
+          "ocg_date": "2019-09-14",
+          "konami_id": 13996,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

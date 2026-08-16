@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 38250531,
+      "name": "Crimson Knight Vampire Bram",
+      "typeline": [
+        "Zombie",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 5 Zombie monsters\r\nYou can detach 1 material from this card, then target 1 monster in your opponent's GY; Special Summon that target to your field, but only that monster can attack for the rest of this turn. You can only use this effect of \"Crimson Knight Vampire Bram\" once per turn. Once per turn, during the Standby Phase of the next turn after this card you controlled was destroyed by your opponent's card and sent to your GY: Special Summon this card in Defense Position.",
+      "race": "Zombie",
+      "atk": 2500,
+      "def": 0,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Vampire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crimson-knight-vampire-bram-3241",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN164",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.12"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN138",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN054",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38250531,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38250531.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38250531.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38250531.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "3.06",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 244638,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10785,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

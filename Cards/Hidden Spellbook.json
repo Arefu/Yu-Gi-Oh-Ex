@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 21840375,
+      "name": "Hidden Spellbook",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "During your turn: Target 2 Spell Cards in your Graveyard; shuffle those targets into the Deck.",
+      "race": "Normal",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hidden-spellbook-1879",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN154",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series: Haunted Mine",
+          "set_code": "GLD5-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21840375,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21840375.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21840375.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21840375.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "3.99",
+          "amazon_price": "1.59",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hidden Book of Spell",
+          "views": 103877,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5680,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 84401683,
+      "name": "Gorgonic Guardian",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 Rock-Type monsters\nOnce per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster your opponent controls; its ATK becomes 0, and if it does, its effects are negated. These effects last until the end of this turn. Once per turn: You can target 1 monster on the field with 0 ATK; destroy it.",
+      "race": "Rock",
+      "atk": 1600,
+      "def": 1200,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Gorgonic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gorgonic-guardian-7080",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN220",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84401683,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84401683.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84401683.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84401683.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.00",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118709,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10937,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

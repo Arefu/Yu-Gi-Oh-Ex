@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 86377375,
+      "name": "Ahrima, the Wicked Warden",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card; add 1 \"Lair of Darkness\" from your Deck to your hand. You can Tribute 1 DARK monster; draw 1 card, or, if you Tributed a DARK monster other than this card to activate this effect, you can add 1 DARK monster with 2000 or more DEF from your Deck to your hand, instead. You can only use this effect of \"Ahrima, the Wicked Warden\" once per turn.",
+      "race": "Fiend",
+      "atk": 1700,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ahrima-the-wicked-warden-9316",
+      "card_sets": [
+        {
+          "set_name": "Egyptian God Deck: Slifer the Sky Dragon",
+          "set_code": "EGS1-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Structure Deck: Lair of Darkness",
+          "set_code": "SR06-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86377375,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86377375.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86377375.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86377375.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.69",
+          "amazon_price": "4.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Ahrima, King of Wickedness",
+          "views": 541556,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-04-19",
+          "ocg_date": "2018-03-10",
+          "konami_id": 13684,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 67964209,
+      "name": "Divine Dragon Aquabizarre",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can Tribute 1 other face-up WATER monster and select 1 Continuous or Field Spell Card in your Graveyard to return it to the top of your Deck.",
+      "race": "Sea Serpent",
+      "atk": 2100,
+      "def": 1500,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/divine-dragon-aquabizarre-5710",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67964209,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67964209.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67964209.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67964209.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "1.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49370,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8317,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

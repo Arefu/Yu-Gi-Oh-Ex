@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": 90357090,
+      "name": "Silver Fang",
+      "typeline": [
+        "Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A snow wolf that's beautiful to the eye, but absolutely vicious in battle.",
+      "race": "Beast",
+      "atk": 1200,
+      "def": 800,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/silver-fang-7545",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN106",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.76"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.14"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENA07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.28"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.31"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90357090,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90357090.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90357090.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90357090.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 345697,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4071,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

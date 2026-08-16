@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 75390004,
+      "name": "Megazowler",
+      "typeline": [
+        "Dinosaur",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Nothing stands in the way of this spike-covered dinosaur!",
+      "race": "Dinosaur",
+      "atk": 1800,
+      "def": 2000,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/megazowler-6345",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN147",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75390004,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75390004.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75390004.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75390004.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "9.08",
+          "tcgplayer_price": "11.98",
+          "ebay_price": "6.34",
+          "amazon_price": "4.64",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36819,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-10-11",
+          "ocg_date": "2000-03-01",
+          "konami_id": 4085,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

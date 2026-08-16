@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 17238333,
+      "name": "Wretched Ghost of the Attic",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A harmless monster found lurking in just about any attic.",
+      "race": "Fiend",
+      "atk": 550,
+      "def": 400,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wretched-ghost-of-the-attic-1491",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack 8",
+          "set_code": "TP8-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "10.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17238333,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17238333.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17238333.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17238333.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.94",
+          "tcgplayer_price": "13.24",
+          "ebay_price": "4.99",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20752,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-04-28",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4569,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

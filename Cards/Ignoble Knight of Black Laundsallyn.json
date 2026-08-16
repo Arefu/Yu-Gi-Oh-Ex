@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 95772051,
+      "name": "Ignoble Knight of Black Laundsallyn",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send 1 face-up LIGHT Normal Monster you control to the Graveyard; Special Summon this card from your hand or Graveyard. You can Tribute 1 \"Noble Knight\" monster; add 1 \"Noble Arms\" card from your Deck to your hand. You can only use this effect of \"Ignoble Knight of Black Laundsallyn\" once per turn. You can only control 1 \"Ignoble Knight of Black Laundsallyn\".",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 800,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ignoble-knight-of-black-laundsallyn-7976",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Abyss Rising Sneak Peek Participation Card",
+          "set_code": "ABYR-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.59"
+        },
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN005",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "3.72"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95772051,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95772051.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95772051.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95772051.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54580,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-03",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10350,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

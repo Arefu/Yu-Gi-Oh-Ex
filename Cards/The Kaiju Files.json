@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 11163040,
+      "name": "The Kaiju Files",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time a \"Kaiju\" monster(s) is Special Summoned from the hand and/or GY, place 1 Kaiju Counter on this card (max. 5). Once per turn: You can target 1 \"Kaiju\" monster on the field; destroy that monster, then Special Summon 1 \"Kaiju\" monster with a different original name from your Deck to its controller's field. You can send this card with 3 or more Kaiju Counters to the GY; add 1 \"Kaiju\" Spell/Trap from your Deck to your hand, except \"The Kaiju Files\".",
+      "race": "Continuous",
+      "archetype": "Kaiju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-kaiju-files-965",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN091",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11163040,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11163040.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11163040.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11163040.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 104087,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12392,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

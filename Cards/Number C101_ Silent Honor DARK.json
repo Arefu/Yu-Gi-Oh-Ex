@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 12744567,
+      "name": "Number C101: Silent Honor DARK",
+      "typeline": [
+        "Aqua",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 5 monsters\nOnce per turn: You can target 1 Special Summoned monster your opponent controls; attach it to this card as a face-up Xyz Material. When this card is destroyed and sent to the Graveyard while it has Xyz Material: You can Special Summon this card from your Graveyard, then gain LP equal to the original ATK of this card. \"Number 101: Silent Honor ARK\" must be in your Graveyard to activate and to resolve this effect. If this card is Special Summoned this way, it cannot attack for the rest of this turn.",
+      "race": "Aqua",
+      "atk": 2800,
+      "def": 1500,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c101-silent-honor-dark-1100",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN218",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN275",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN046",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Duels From the Deep",
+          "set_code": "LED9-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.01"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN061",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12744567,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12744567.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12744567.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12744567.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C101",
+          "views": 436937,
+          "viewsweek": 21,
+          "upvotes": 18,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10932,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

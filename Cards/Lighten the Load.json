@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 37231841,
+      "name": "Lighten the Load",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, you can add 1 Level 7 or higher monster from your hand to your Deck and shuffle it, then draw 1 card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lighten-the-load-3151",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN107",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN047",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37231841,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37231841.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37231841.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37231841.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82095,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6215,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

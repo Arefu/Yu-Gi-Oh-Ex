@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 72278479,
+      "name": "Black Return",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When exactly 1 \"Blackwing\" monster (and no other monster) is Special Summoned: Target 1 face-up monster your opponent controls; gain LP equal to the ATK of that target, and if you do, return it to the hand.",
+      "race": "Normal",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/black-return-6062",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN145",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.58"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72278479,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72278479.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72278479.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72278479.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.24",
+          "tcgplayer_price": "0.80",
+          "ebay_price": "6.59",
+          "amazon_price": "4.95",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25137,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-27",
+          "ocg_date": "2010-10-16",
+          "konami_id": 9246,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

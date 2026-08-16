@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 77454922,
+      "name": "Fortress Whale's Oath",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card is used to Ritual Summon \"Fortress Whale\". You must also Tribute monsters from your hand or field whose total Levels equal 7 or more.",
+      "race": "Ritual",
+      "archetype": "Umi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortress-whale-s-oath-6512",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENC17",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack 7",
+          "set_code": "TP7-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.93"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77454922,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77454922.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77454922.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77454922.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "4.95",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76045,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-01",
+          "ocg_date": "2000-03-23",
+          "konami_id": 4706,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

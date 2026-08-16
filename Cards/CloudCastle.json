@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 9348522,
+      "name": "Cloudcastle",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nWhen this card is Synchro Summoned: You can target 1 Level 9 monster in your Graveyard; Special Summon that target. Level 8 or lower monsters cannot attack the turn they are Normal or Special Summoned.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 3000,
+      "level": 9,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cloudcastle-793",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN125",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "King's Court",
+          "set_code": "KICO-EN039",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.87"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENX38",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9348522,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9348522.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9348522.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9348522.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 283849,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2013-12-21",
+          "konami_id": 11004,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 63253763,
+      "name": "Alien Overlord",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can remove 2 A-Counters from anywhere on the field to Special Summon this card from your hand. Once per turn, you can place 1 A-Counter on each face-up monster your opponent controls. (If a monster with an A-Counter battles an \"Alien\" monster, it loses 300 ATK and DEF for each A-Counter during damage calculation only.) You can only control 1 \"Alien Overlord\".",
+      "race": "Reptile",
+      "atk": 2200,
+      "def": 1600,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Alien",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alien-overlord-5343",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63253763,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63253763.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63253763.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63253763.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.85",
+          "tcgplayer_price": "0.89",
+          "ebay_price": "1.65",
+          "amazon_price": "2.13",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105021,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8033,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

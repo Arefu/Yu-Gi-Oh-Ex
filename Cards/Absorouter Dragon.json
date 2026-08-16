@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 67748760,
+      "name": "Absorouter Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Rokket\" monster, you can Special Summon this card (from your hand). You can only Special Summon \"Absorouter Dragon\" once per turn this way. If this card is sent to the GY: You can add 1 \"Rokket\" monster from your Deck to your hand. You can only use this effect of \"Absorouter Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 1200,
+      "def": 2800,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Rokket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/absorouter-dragon-10387",
+      "card_sets": [
+        {
+          "set_name": "Maze of Muertos",
+          "set_code": "MZMU-EN090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67748760,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67748760.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67748760.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67748760.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "4.50",
+          "amazon_price": "2.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 746440,
+          "viewsweek": 0,
+          "upvotes": 21,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100336005,
+          "tcg_date": "2019-08-15",
+          "ocg_date": "2019-06-22",
+          "konami_id": 14618,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

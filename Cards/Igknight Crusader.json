@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 61639289,
+      "name": "Igknight Crusader",
+      "typeline": [
+        "Warrior",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you have an \"Igknight\" card in your other Pendulum Zone: You can destroy both cards in your Pendulum Zones, and if you do, add 1 FIRE Warrior-Type monster from your Deck or Graveyard to your hand.\n\n[ Monster Effect ] \n''This impulsive Igknight warrior is fanatical about the causes he fights for. Because of this passion, his comrades try to keep him at arm's length.''",
+      "race": "Warrior",
+      "pend_desc": "If you have an \"Igknight\" card in your other Pendulum Zone: You can destroy both cards in your Pendulum Zones, and if you do, add 1 FIRE Warrior-Type monster from your Deck or Graveyard to your hand.",
+      "monster_desc": "''This impulsive Igknight warrior is fanatical about the causes he fights for. Because of this passion, his comrades try to keep him at arm's length.''",
+      "atk": 1600,
+      "def": 300,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Igknight",
+      "scale": 2,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/igknight-crusader-5220",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN027",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61639289,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61639289.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61639289.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61639289.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.90",
+          "tcgplayer_price": "0.95",
+          "ebay_price": "3.99",
+          "amazon_price": "8.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67823,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11811,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

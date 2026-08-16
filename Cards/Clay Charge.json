@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 22479888,
+      "name": "Clay Charge",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When an \"Elemental HERO Clayman\" you control is targeted for an attack (even if it is face-down, but reveal it to your opponent in that case): Destroy the attacking monster and that \"Elemental HERO Clayman\", and inflict 800 damage to your opponent.",
+      "race": "Normal",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/clay-charge-1931",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki",
+          "set_code": "DP1-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.71"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN111",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22479888,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22479888.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22479888.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22479888.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "2.79",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44169,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-08",
+          "ocg_date": "2005-10-20",
+          "konami_id": 6539,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

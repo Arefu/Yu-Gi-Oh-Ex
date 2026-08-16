@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 94620082,
+      "name": "Salamangreat Foxy",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can excavate the top 3 cards of your Deck, and if you do, you can add 1 excavated \"Salamangreat\" card to your hand, also shuffle the rest into the Deck. If this card is in your GY, and a face-up Spell/Trap is on the field: You can discard 1 \"Salamangreat\" card; Special Summon this card, then you can destroy 1 face-up Spell/Trap on the field. You can only use 1 \"Salamangreat Foxy\" effect per turn, and only once that turn.",
+      "race": "Cyberse",
+      "atk": 1000,
+      "def": 1200,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-foxy-9588",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN154",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94620082,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94620082.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94620082.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94620082.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.95",
+          "amazon_price": "2.62",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 433031,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 7,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13890,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

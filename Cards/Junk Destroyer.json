@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 74860293,
+      "name": "Junk Destroyer",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Junk Synchron\" + 1 or more non-Tuner monsters\nWhen this card is Synchro Summoned: You can target cards on the field, up to the number of non-Tuner monsters used for the Synchro Summon of this card; destroy those targets.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 2500,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-destroyer-6300",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Duelist Toolbox",
+          "set_code": "5DS3-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74860293,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74860293.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74860293.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74860293.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.86",
+          "tcgplayer_price": "0.79",
+          "ebay_price": "7.99",
+          "amazon_price": "4.48",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 175012,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-28",
+          "ocg_date": "2010-03-20",
+          "konami_id": 8860,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

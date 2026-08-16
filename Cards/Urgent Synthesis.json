@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 99002135,
+      "name": "Urgent Synthesis",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Return 1 \"Iron Core of Koa'ki Meiru\" from your Graveyard to the Deck. Special Summon 1 Level 4 or lower \"Koa'ki Meiru\" monster from your hand or your Graveyard.",
+      "race": "Normal",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/urgent-synthesis-8223",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99002135,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99002135.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99002135.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99002135.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29473,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8209,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

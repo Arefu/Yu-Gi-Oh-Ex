@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 8972398,
+      "name": "Omni Dragon Brotaur",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a monster you control is destroyed by battle or an opponent's card effect: You can Special Summon this card from the GY (if it was there when the monster was destroyed) or hand (even if not), but banish it when it leaves the field. If this card is Special Summoned: You can target 1 face-up monster on the field; discard 1 card, and if you do, add 1 monster from your Deck to your hand, with the same Type and Attribute as that target, but a different name. You can only use each effect of \"Omni Dragon Brotaur\" once per turn.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/omni-dragon-brotaur-10050",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN059",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.75"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Albaz Strike",
+          "set_code": "SDAZ-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.82"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8972398,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8972398.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8972398.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8972398.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "4.95",
+          "amazon_price": "4.80",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Larfae Dragon Larvaur",
+          "views": 520683,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14270,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

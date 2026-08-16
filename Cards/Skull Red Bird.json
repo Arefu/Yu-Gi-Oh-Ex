@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 10202894,
+      "name": "Skull Red Bird",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster swoops down and attacks with a rain of knives stored in its wings.",
+      "race": "Winged Beast",
+      "atk": 1550,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/skull-red-bird-883",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-105",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.85"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.27"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN105",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.81"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10202894,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10202894.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10202894.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10202894.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 416673,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4472,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

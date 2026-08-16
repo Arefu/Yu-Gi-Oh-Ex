@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 27618634,
+      "name": "The Unhappy Girl",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While this card is in face-up Attack Position on the field, this card is not destroyed as a result of battle. (Damage calculation is applied normally.) A monster that battled with this card cannot change its battle position, except with a card effect, or attack while this card is in face-up Attack Position on the field.",
+      "race": "Spellcaster",
+      "atk": 400,
+      "def": 300,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-unhappy-girl-2352",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-010",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "4.33"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN122",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27618634,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27618634.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27618634.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27618634.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.68",
+          "ebay_price": "2.99",
+          "amazon_price": "7.29",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64334,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5955,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 36931229,
+      "name": "Castle Gate",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be destroyed by battle. Once per turn, if this card is in face-up Attack Position, you can Tribute 1 Level 5 or lower monster to inflict damage to your opponent equal to that monster's original ATK.",
+      "race": "Rock",
+      "atk": 0,
+      "def": 2400,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/castle-gate-3123",
+      "card_sets": [
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36931229,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36931229.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36931229.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36931229.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "2.95",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32910,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2004-10-21",
+          "konami_id": 6229,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

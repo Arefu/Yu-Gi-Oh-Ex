@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 29802344,
+      "name": "Snakeyashi",
+      "typeline": [
+        "Plant",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster is formed by several serpents that break off to individually attack nearby enemies.",
+      "race": "Plant",
+      "atk": 1000,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/snakeyashi-2522",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 5",
+          "set_code": "OP05-EN014",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29802344,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29802344.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29802344.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29802344.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "2.73",
+          "ebay_price": "4.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16077,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "1999-09-23",
+          "konami_id": 4626,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

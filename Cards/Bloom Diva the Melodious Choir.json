@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 84988419,
+      "name": "Bloom Diva the Melodious Choir",
+      "typeline": [
+        "Fairy",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Melodious Maestra\" monster + 1 \"Melodious\" monster\nCannot be destroyed by battle or card effects, also you take no battle damage from attacks involving this card. If this card battles a Special Summoned monster, after damage calculation: You can inflict damage to your opponent equal to the difference between the original ATK of that opponent's monster and this card, and if you do, destroy that opponent's monster.",
+      "race": "Fairy",
+      "atk": 1000,
+      "def": 2000,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Melodious",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bloom-diva-the-melodious-choir-7128",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN036",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84988419,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84988419.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84988419.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84988419.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.49",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "2.00",
+          "amazon_price": "1.43",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 124532,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11715,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

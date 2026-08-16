@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 72330894,
+      "name": "Simorgh, Bird of Sovereignty",
+      "typeline": [
+        "Winged Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters, including a Winged Beast monster\r\nCannot be used as Link Material. Your opponent cannot target this card or a Winged Beast monster(s) this card points to with card effects. If this card would be destroyed by battle, you can destroy 1 other \"Simorgh\" card you control instead. During the End Phase: You can Special Summon 1 Winged Beast monster from your hand or Deck, with a Level equal to or lower than the total number of unused Spell & Trap Zones on the field. You can only use this effect of \"Simorgh, Bird of Sovereignty\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 2400,
+      "def": null,
+      "level": null,
+      "attribute": "WIND",
+      "archetype": "Simorgh",
+      "linkval": 3,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/simorgh-bird-of-sovereignty-10739",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.43"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 72330894,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72330894.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72330894.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72330894.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.66",
+          "ebay_price": "1.70",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Simorgh, Bird of Kings",
+          "views": 380911,
+          "viewsweek": 0,
+          "upvotes": 21,
+          "downvotes": 10,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257026,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14935,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

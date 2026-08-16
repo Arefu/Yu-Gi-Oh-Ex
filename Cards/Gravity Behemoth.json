@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 56931015,
+      "name": "Gravity Behemoth",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If it is not the first turn of the Duel and there are no cards on the field, you can Normal Summon this card without Tributing. You can destroy all Field Spell Cards on the field. This card cannot attack the turn you activate this effect.",
+      "race": "Beast",
+      "atk": 2300,
+      "def": 2000,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravity-behemoth-4852",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Eight",
+          "set_code": "CP08-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "34.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56931015,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56931015.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56931015.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56931015.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "17.65",
+          "tcgplayer_price": "30.51",
+          "ebay_price": "25.00",
+          "amazon_price": "25.01",
+          "coolstuffinc_price": "19.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13473,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-01-05",
+          "ocg_date": "2006-12-16",
+          "konami_id": 7144,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 75162696,
+      "name": "Victoria",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 Dragon-Type monster in your opponent's Graveyard; Special Summon that target to your side of the field. Your opponent cannot target face-up Fairy-Type monsters for attacks, except this one.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/victoria-6321",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 16 participation cards",
+          "set_code": "DL16-EN008",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.91"
+        },
+        {
+          "set_name": "Lost Sanctuary Structure Deck",
+          "set_code": "SDLS-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN093",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75162696,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75162696.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75162696.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75162696.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.28",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "19.99",
+          "amazon_price": "1.48",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37382,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2008-08-04",
+          "konami_id": 8076,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

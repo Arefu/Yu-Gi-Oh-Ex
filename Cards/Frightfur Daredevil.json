@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 91034681,
+      "name": "Frightfur Daredevil",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Edge Imp\" monster + 1 \"Fluffal\" monster\r\nWhen this card destroys an opponent's monster by battle: You can inflict 1000 damage to your opponent. If this face-up card is destroyed by battle, or leaves the field because of an opponent's card effect while its owner controls it: You can inflict 500 damage to your opponent for each \"Frightfur\" monster in your Graveyard. You can only use this effect of \"Frightfur Daredevil\" once per turn.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 2200,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frightfur-daredevil-9052",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "10.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91034681,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91034681.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91034681.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91034681.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.52",
+          "tcgplayer_price": "10.57",
+          "ebay_price": "8.49",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112537,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-25",
+          "ocg_date": "2017-03-11",
+          "konami_id": 12885,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

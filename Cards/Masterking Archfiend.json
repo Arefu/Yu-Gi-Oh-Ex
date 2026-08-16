@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 35606858,
+      "name": "Masterking Archfiend",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Fiend monsters\nOnce per turn, during your Standby Phase, pay 500 LP or destroy this card. Once per Chain, if you pay LP (except during the Damage Step): You can send 1 Fiend monster from your Deck to the GY with ATK or DEF equal to the amount paid. Once per Chain, if a Fiend monster(s) is sent to your GY (except during the Damage Step): You can roll a six-sided die, then apply this effect on 1 of those monsters based on the result.\n● 1: Add it to your hand. ● 2, 3, 4, 5: Shuffle into the Deck. ● 6: Special Summon it.",
+      "race": "Fiend",
+      "atk": 2000,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/masterking-archfiend-9073",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35606858,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35606858.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35606858.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35606858.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.86",
+          "ebay_price": "3.50",
+          "amazon_price": "1.42",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Perpetual King Archfiend",
+          "views": 140599,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-11-25",
+          "konami_id": 13490,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

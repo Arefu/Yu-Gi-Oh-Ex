@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 17881964,
+      "name": "Darkfire Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Firegrass\" + \"Petit Dragon\"",
+      "race": "Dragon",
+      "atk": 1500,
+      "def": 1250,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darkfire-dragon-1553",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "24.4"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN019",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 3rd Season",
+          "set_code": "TP3-016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.87"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17881964,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17881964.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17881964.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17881964.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "3.30",
+          "ebay_price": "1.50",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 479480,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4174,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

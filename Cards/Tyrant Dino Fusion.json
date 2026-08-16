@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 15543940,
+      "name": "Tyrant Dino Fusion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Fusion Summon 1 \"Dinowrestler\" monster from your Extra Deck, using monsters you control as Fusion Material. If you do, the first time that face-up monster on the field would be destroyed by battle or card effect, it is not destroyed.",
+      "race": "Quick-Play",
+      "archetype": "Dinowrestler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tyrant-dino-fusion-10058",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15543940,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15543940.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15543940.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15543940.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51494,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14303,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

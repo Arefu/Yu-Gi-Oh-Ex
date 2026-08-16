@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 52589809,
+      "name": "Wandering King Wildwind",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a Fiend-Type Tuner with 1500 or less ATK, you can Special Summon this card (from your hand). If you attempt this, you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except Synchro Monsters. During your Main Phase, except the turn this card was sent to the Graveyard: You can banish this card from your Graveyard; add 1 Fiend-Type Tuner with 1500 or less ATK from your Deck to your hand.",
+      "race": "Fiend",
+      "atk": 1700,
+      "def": 1300,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wandering-king-wildwind-9040",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN016",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.28"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN110",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Structure Deck: The Crimson King",
+          "set_code": "SDCK-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52589809,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52589809.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52589809.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52589809.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.67",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 399048,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-03-11",
+          "konami_id": 12893,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

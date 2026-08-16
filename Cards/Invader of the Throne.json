@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "id": 3056267,
+      "name": "Invader of the Throne",
+      "typeline": [
+        "Warrior",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Select 1 monster on your opponent's side of the field and switch control of it with this card. This effect cannot be activated during the Battle Phase.",
+      "race": "Warrior",
+      "atk": 1350,
+      "def": 1700,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/invader-of-the-throne-274",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.43"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.66"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.81"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN026",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3056267,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3056267.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3056267.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3056267.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "9.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117954,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4647,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

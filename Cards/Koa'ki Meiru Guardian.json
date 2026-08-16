@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 45041488,
+      "name": "Koa'ki Meiru Guardian",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the GY or reveal 1 Rock monster in your hand. When a monster effect is activated (Quick Effect): You can Tribute this card; negate the activation, and if you do, destroy that monster.",
+      "race": "Rock",
+      "atk": 1900,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-guardian-3840",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN056",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack Collection Tin 2009",
+          "set_code": "RGBT-ENPP3",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.38"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secret Slayers",
+          "set_code": "SESL-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45041488,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45041488.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45041488.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45041488.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.29",
+          "tcgplayer_price": "1.54",
+          "ebay_price": "1.49",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 470182,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-03-10",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8175,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

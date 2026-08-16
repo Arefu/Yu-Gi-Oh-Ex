@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "id": 78437364,
+      "name": "Gouki The Great Ogre",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ \"Gouki\" monsters\r\nAll monsters on the field lose ATK equal to their original DEF. If this card would be destroyed by battle or card effect, you can destroy 1 of your monsters this card points to instead.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Gouki",
+      "linkval": 3,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gouki-the-great-ogre-8730",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN064",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN073",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "OTS Tournament Pack 29",
+          "set_code": "OP29-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN034",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN034",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78437364,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78437364.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78437364.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78437364.jpg"
+        },
+        {
+          "id": 78437365,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78437365.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78437365.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78437365.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.00",
+          "amazon_price": "0.26",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74283,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Gouki The Great Ogre",
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13084,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

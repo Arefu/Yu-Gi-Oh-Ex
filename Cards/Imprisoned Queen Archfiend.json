@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 52248570,
+      "name": "Imprisoned Queen Archfiend",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your Standby Phases, you must pay 1000 Life Points (this is not optional), or this card is destroyed. During your Standby Phase: Target 1 Level 4 or lower Fiend-Type monster on the field; that target gains 1000 ATK until the End Phase. \"Pandemonium\" must be on the field and this card must be in your Graveyard to activate and to resolve this effect.",
+      "race": "Fiend",
+      "atk": 2600,
+      "def": 1700,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/imprisoned-queen-archfiend-4452",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Three",
+          "set_code": "AP03-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENI16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52248570,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52248570.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52248570.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52248570.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75208,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7370,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

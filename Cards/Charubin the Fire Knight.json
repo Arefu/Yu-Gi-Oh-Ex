@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 37421579,
+      "name": "Charubin the Fire Knight",
+      "typeline": [
+        "Pyro",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Monster Egg\" + \"Hinotama Soul\"",
+      "race": "Pyro",
+      "atk": 1100,
+      "def": 800,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/charubin-the-fire-knight-3170",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.84"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.59"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37421579,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37421579.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37421579.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37421579.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.99",
+          "amazon_price": "0.68",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 201008,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4139,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

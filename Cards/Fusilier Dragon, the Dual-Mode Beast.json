@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 51632798,
+      "name": "Fusilier Dragon, the Dual-Mode Beast",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Normal Summon/Set this card without Tributing, but its original ATK and DEF become halved.",
+      "race": "Machine",
+      "atk": 2800,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fusilier-dragon-the-dual-mode-beast-4396",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Seven",
+          "set_code": "CP07-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Master of Pendulum Structure Deck",
+          "set_code": "SDMP-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.78"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN031",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rise of Destiny",
+          "set_code": "RDS-EN031",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51632798,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51632798.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51632798.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51632798.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.95",
+          "tcgplayer_price": "5.14",
+          "ebay_price": "17.99",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 268205,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-20",
+          "ocg_date": "2004-08-05",
+          "konami_id": 6200,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

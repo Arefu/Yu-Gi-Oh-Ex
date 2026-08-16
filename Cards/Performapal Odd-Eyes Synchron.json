@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 82224646,
+      "name": "Performapal Odd-Eyes Synchron",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Pendulum Tuner Effect Monster",
+      "humanReadableCardType": "Pendulum Tuner Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 \"Performapal\" or \"Odd-Eyes\" monster you control; this turn, that face-up monster is treated as a Tuner, also its Level becomes 1 (even if this card leaves the field).\n\n[ Monster Effect ] \nIf this card, Special Summoned from the Extra Deck, is used as Synchro Material, banish it. When this card is Normal Summoned: You can target 1 Level 3 or lower \"Performapal\" or \"Odd-Eyes\" monster in your GY; Special Summon it, but it has its effects negated. Once per turn: You can target 1 card in your Pendulum Zone; Special Summon it, but it has its effects negated (if any), and if you do, immediately after this effect resolves, Synchro Summon 1 Synchro Monster using only that monster and this card.",
+      "race": "Spellcaster",
+      "pend_desc": "Once per turn: You can target 1 \"Performapal\" or \"Odd-Eyes\" monster you control; this turn, that face-up monster is treated as a Tuner, also its Level becomes 1 (even if this card leaves the field).",
+      "monster_desc": "If this card, Special Summoned from the Extra Deck, is used as Synchro Material, banish it. When this card is Normal Summoned: You can target 1 Level 3 or lower \"Performapal\" or \"Odd-Eyes\" monster in your GY; Special Summon it, but it has its effects negated. Once per turn: You can target 1 card in your Pendulum Zone; Special Summon it, but it has its effects negated (if any), and if you do, immediately after this effect resolves, Synchro Summon 1 Synchro Monster using only that monster and this card.",
+      "atk": 200,
+      "def": 600,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Odd-Eyes",
+      "scale": 6,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-odd-eyes-synchron-8659",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.57"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENO10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82224646,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82224646.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82224646.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82224646.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "3.75",
+          "amazon_price": "5.20",
+          "coolstuffinc_price": "8.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 278330,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13129,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

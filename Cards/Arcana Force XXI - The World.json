@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 23846921,
+      "name": "Arcana Force XXI - The World",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Summoned, toss a coin: ● Heads: During your End Phase, you can send 2 monsters you control to the Graveyard to skip your opponent's next turn. ● Tails: During your opponent's Draw Phase, add the top card of their Graveyard to their hand.",
+      "race": "Fairy",
+      "atk": 3100,
+      "def": 3100,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Arcana Force",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcana-force-xxi-the-world-2054",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN016",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN016",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23846921,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23846921.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23846921.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23846921.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.19",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "29.99",
+          "amazon_price": "24.51",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 140786,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7589,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

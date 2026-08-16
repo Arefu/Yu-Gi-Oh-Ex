@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 65301952,
+      "name": "Alchemic Magician",
+      "typeline": [
+        "Spellcaster",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 Spellcaster-Type monsters\nThis card gains 200 ATK for each Spell Card in your Graveyard. Once per turn, during your End Phase: You can detach 1 Xyz Material from this card and send 1 card from your hand to the Graveyard; choose 1 Spell Card from your Deck, then Set it in your Spell & Trap Card Zone.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alchemic-magician-5503",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65301952,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65301952.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65301952.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65301952.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "17.22",
+          "tcgplayer_price": "24.15",
+          "ebay_price": "4.49",
+          "amazon_price": "22.50",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 121985,
+          "viewsweek": 0,
+          "upvotes": 26,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10177,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

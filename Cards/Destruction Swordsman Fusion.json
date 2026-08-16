@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 41940225,
+      "name": "Destruction Swordsman Fusion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Fusion Summon 1 Fusion Monster that lists \"Buster Blader\" as Material from your Extra Deck, using monsters from your hand or either side of the field as Fusion Materials. If this card is in your Graveyard: You can send 1 card from your hand to the Graveyard; add this card to your hand. You can only use each effect of \"Destruction Swordsman Fusion\" once per turn.",
+      "race": "Quick-Play",
+      "archetype": "Destruction Sword",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/destruction-swordsman-fusion-3577",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN215",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENA16",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41940225,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41940225.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41940225.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41940225.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "2.49",
+          "amazon_price": "1.16",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 185701,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12167,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

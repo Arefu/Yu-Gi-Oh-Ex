@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 6616912,
+      "name": "Gabrion, the Timelord",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned from the Deck. If you control no monsters, you can Normal Summon this card without Tributing. Cannot be destroyed by battle or card effects. You take no battle damage from attacks involving this card. At the end of the Battle Phase, if this card battled: Shuffle as many cards your opponent controls as possible into the Deck(s), then they draw cards equal to the number shuffled into their Main Deck. Once per turn, during your Standby Phase: Shuffle this card into the Deck.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 10,
+      "attribute": "WATER",
+      "archetype": "Timelord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gabrion-the-timelord-9477",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6616912,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6616912.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6616912.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6616912.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.80",
+          "ebay_price": "1.05",
+          "amazon_price": "4.97",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 106194,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13818,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

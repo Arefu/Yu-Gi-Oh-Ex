@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 23212990,
+      "name": "Six Strike - Thunder Blast",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Remove 1 Bushido Counter from your side of the field to activate 1 of these effects.\n● Target 1 monster your opponent controls; destroy that target.\n● Target 1 card your opponent controls; return that target to the hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/six-strike-thunder-blast-1997",
+      "card_sets": [
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN089",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23212990,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23212990.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23212990.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23212990.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.63",
+          "ebay_price": "2.69",
+          "amazon_price": "2.28",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30677,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9458,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 38520918,
+      "name": "Ancient Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card inflicts battle damage to your opponent by a direct attack: You can increase this card's Level by 1 and ATK by 500.",
+      "race": "Dragon",
+      "atk": 1400,
+      "def": 1300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-dragon-3264",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Deck: Yuya & Declan",
+          "set_code": "YS15-ENY08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4"
+        },
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38520918,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38520918.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38520918.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38520918.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "5.93",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66870,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10116,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

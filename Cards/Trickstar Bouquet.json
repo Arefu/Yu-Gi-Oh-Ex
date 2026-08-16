@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 99890852,
+      "name": "Trickstar Bouquet",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Trickstar\" monster you control and 1 face-up monster on the field; return that \"Trickstar\" monster to the hand, and if you do, the other monster gains ATK equal to the original ATK of the returned monster, until the end of this turn. You can only activate 1 \"Trickstar Bouquet\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Trickstar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-bouquet-9238",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN055",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99890852,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99890852.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99890852.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99890852.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59735,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13609,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

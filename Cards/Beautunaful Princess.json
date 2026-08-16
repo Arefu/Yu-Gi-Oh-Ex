@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 6625096,
+      "name": "Beautunaful Princess",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can banish this card; Special Summon 1 Level 4 or lower Fish-Type monster from your Deck, except \"Beautunaful Princess\". You can only use this effect of \"Beautunaful Princess\" once per turn.",
+      "race": "Fish",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/beautunaful-princess-579",
+      "card_sets": [
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN052",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN036",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6625096,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6625096.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6625096.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6625096.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.54",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "0.99",
+          "amazon_price": "11.96",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 341131,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11065,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

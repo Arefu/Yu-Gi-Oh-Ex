@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 95308449,
+      "name": "Final Countdown",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Pay 2000 Life Points. After 20 turns have passed (counting the turn you activate this card as the 1st turn), you win the Duel.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/final-countdown-7936",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game One",
+          "set_code": "CP01-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.92"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN253",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 95308449,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95308449.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95308449.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95308449.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "2.99",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 265622,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5788,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

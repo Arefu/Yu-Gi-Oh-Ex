@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 58392024,
+      "name": "Mispolymerization",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when a Fusion Monster is Special Summoned. Return all face-up Fusion Monsters to their respective Extra Decks.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mispolymerization-4965",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN233",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Millennium",
+          "set_code": "TLM-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58392024,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58392024.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58392024.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58392024.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.25",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116352,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-05-28",
+          "ocg_date": "2005-02-24",
+          "konami_id": 6360,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

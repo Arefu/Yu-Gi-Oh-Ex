@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 17141718,
+      "name": "Flower Cardian Zebra Grass",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While you control a Level 7 or lower \"Flower Cardian\" monster: You can Special Summon this card from your hand, also you cannot Normal or Special Summon monsters for the rest of this turn, except \"Flower Cardian\" monsters. If this card is Normal or Special Summoned: You can reveal any number of \"Flower Cardian\" monsters in your hand, shuffle them into the Deck, then draw the same number of cards.",
+      "race": "Warrior",
+      "atk": 100,
+      "def": 100,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-cardian-zebra-grass-1480",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN128",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN032",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.01"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17141718,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17141718.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17141718.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17141718.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59283,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12555,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

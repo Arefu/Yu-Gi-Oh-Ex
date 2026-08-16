@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 95288024,
+      "name": "Sky Dragon",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A flying dragon with four wings housing some very dangerous blades.",
+      "race": "Dragon",
+      "atk": 1900,
+      "def": 1800,
+      "level": 6,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-dragon-7934",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95288024,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95288024.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95288024.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95288024.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "17.47",
+          "tcgplayer_price": "11.94",
+          "ebay_price": "1.45",
+          "amazon_price": "1.93",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36257,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4430,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

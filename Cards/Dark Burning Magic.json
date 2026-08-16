@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 75190122,
+      "name": "Dark Burning Magic",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If you control monsters whose original names are \"Dark Magician\" and \"Dark Magician Girl\": Destroy all cards your opponent controls.",
+      "race": "Quick-Play",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-burning-magic-6323",
+      "card_sets": [
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENS05",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.19"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN246",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN246",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75190122,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75190122.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75190122.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75190122.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.43",
+          "ebay_price": "2.95",
+          "amazon_price": "1.95",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 410184,
+          "viewsweek": 21,
+          "upvotes": 22,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-10-06",
+          "ocg_date": "2015-01-10",
+          "konami_id": 11670,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

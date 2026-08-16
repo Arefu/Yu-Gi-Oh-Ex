@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 61912252,
+      "name": "Infinitrack Trencher",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute 1 EARTH Machine monster; Special Summon this card from your hand in Defense Position. You can banish this card from your GY, then target 1 Level 5 or lower \"Infinitrack\" monster in your GY, except \"Infinitrack Trencher\"; Special Summon that monster in Defense Position. You can only use each effect of \"Infinitrack Trencher\" once per turn.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 2400,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Infinitrack",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infinitrack-trencher-10166",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN210",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61912252,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61912252.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61912252.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61912252.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.63",
+          "amazon_price": "1.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 224424,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412005,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14395,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 65475294,
+      "name": "The Unfriendly Amazon",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Tribute 1 of your monsters on the field (excluding this monster) during each of your Standby Phases. If you do not, this card is destroyed.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-unfriendly-amazon-5519",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.71"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65475294,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65475294.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65475294.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65475294.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.15",
+          "amazon_price": "1.26",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 215777,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5194,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

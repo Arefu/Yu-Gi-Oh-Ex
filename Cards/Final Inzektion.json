@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 51549976,
+      "name": "Final Inzektion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send 5 face-up \"Inzektor\" cards you control to the Graveyard; destroy all cards your opponent controls, also, during the Battle Phase of this turn, your opponent cannot activate monster effects that activate in the hand or Graveyard.",
+      "race": "Normal",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/final-inzektion-4385",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51549976,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51549976.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51549976.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51549976.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17369,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10083,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

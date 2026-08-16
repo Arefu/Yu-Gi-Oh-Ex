@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 65612386,
+      "name": "Angmarl the Fiendish Monarch",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Tribute Summoned: You can banish 1 Spell Card from your Graveyard; add 1 card with the same name as the banished Spell Card from your Deck to your hand.",
+      "race": "Fiend",
+      "atk": 2400,
+      "def": 1000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Monarch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/angmarl-the-fiendish-monarch-9046",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN001",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "1.64"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65612386,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65612386.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65612386.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65612386.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.67",
+          "tcgplayer_price": "0.54",
+          "ebay_price": "3.00",
+          "amazon_price": "1.22",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Demon Emperor Angmar",
+          "views": 57986,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-03-17",
+          "ocg_date": "2016-03-19",
+          "konami_id": 12254,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

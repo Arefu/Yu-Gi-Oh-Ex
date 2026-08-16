@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 5772618,
+      "name": "Hi-Speedroid Kitedrake",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 WIND Machine Tuner + 1+ non-Tuner monsters\r\nIf this card is Synchro Summoned: You can activate 1 of these effects;\r\n● Destroy all other cards on the field.\r\n● Negate the effects of all face-up cards your opponent currently controls.\r\nIf this card in your possession is sent to your GY by an opponent's card: You can add 1 \"Speedroid\" monster from your Deck to your hand.\r\nYou can only use each effect of \"Hi-Speedroid Kitedrake\" once per turn.",
+      "race": "Machine",
+      "atk": 3000,
+      "def": 2800,
+      "level": 8,
+      "attribute": "WIND",
+      "archetype": "Hi-Speedroid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hi-speedroid-kitedrake-10081",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN044",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.24"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENS30",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Synchro Storm",
+          "set_code": "LED8-EN018",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5772618,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5772618.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5772618.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5772618.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "2.10",
+          "amazon_price": "0.48",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 162395,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-01-21",
+          "konami_id": 14430,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

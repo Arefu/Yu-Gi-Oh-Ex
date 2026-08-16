@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 52702748,
+      "name": "D.D. Guide",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, give control of it to your opponent. During each player's End Phase, your opponent selects 1 card from the Graveyard of this card's controller and removes it from play.",
+      "race": "Warrior",
+      "atk": 1400,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "D.D.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-guide-4489",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN134",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.51"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52702748,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52702748.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52702748.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52702748.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.95",
+          "amazon_price": "0.68",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 126037,
+          "viewsweek": 63,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6592,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

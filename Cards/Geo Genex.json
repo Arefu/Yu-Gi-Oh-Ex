@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 33972299,
+      "name": "Geo Genex",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Genex Controller\" + 1 or more non-Tuner EARTH monsters\nOnce per turn, if you control a face-up Level 4 or lower \"Genex\" monster(s), you can switch the original ATK and DEF of this card until the End Phase, for as long as you control a face-up Level 4 or lower \"Genex\" monster(s).",
+      "race": "Machine",
+      "atk": 1800,
+      "def": 2800,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/geo-genex-2884",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 2",
+          "set_code": "DT02-EN035",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 2",
+          "set_code": "HA02-EN029",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33972299,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33972299.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33972299.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33972299.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.67",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "1.20",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24772,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-25",
+          "ocg_date": "2008-09-22",
+          "konami_id": 7972,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

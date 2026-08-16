@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 95395761,
+      "name": "Inzektor Ant",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can equip 1 \"Inzektor\" monster from your hand or Graveyard to this card. While this card is equipped to a monster, that monster's Level is increased by 3, also it gains ATK and DEF equal to this card's ATK and DEF. If the equipped monster would be destroyed, you can destroy this Equip Card instead.",
+      "race": "Insect",
+      "atk": 200,
+      "def": 600,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-ant-7942",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95395761,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95395761.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95395761.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95395761.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28447,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9892,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

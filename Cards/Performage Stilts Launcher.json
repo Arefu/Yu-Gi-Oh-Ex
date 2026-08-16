@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 4081665,
+      "name": "Performage Stilts Launcher",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If there are no monsters on the field, you can Special Summon this card (from your hand), but you cannot Normal Summon/Set for the rest of this turn. During either player's turn, when a card or effect is activated that would inflict damage to your opponent, while you have another \"Performage\" monster in your Graveyard: You can banish this card from your Graveyard; inflict 2000 damage to your opponent. You can only use this effect of \"Performage Stilts Launcher\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 2200,
+      "def": 0,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Performage",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performage-stilts-launcher-367",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4081665,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4081665.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4081665.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4081665.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30761,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11803,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 30575681,
+      "name": "Noble Knight Bedwyr",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can send 1 \"Noble Arms\" Equip Spell Card from your Deck to the Graveyard. During either player's turn: You can target 1 \"Noble Arms\" Equip Spell Card and 1 appropriate monster on the field; equip that Equip Spell Card to that appropriate monster. This effect can only be used once while this card is face-up on the field.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knight-bedwyr-2596",
+      "card_sets": [
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN002",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "4.55"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30575681,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30575681.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30575681.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30575681.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.80",
+          "tcgplayer_price": "1.21",
+          "ebay_price": "1.25",
+          "amazon_price": "3.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39431,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-20",
+          "ocg_date": "2014-12-20",
+          "konami_id": 11469,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

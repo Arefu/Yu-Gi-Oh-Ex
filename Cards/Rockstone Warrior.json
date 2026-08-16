@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 51987571,
+      "name": "Rockstone Warrior",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You take no Battle Damage from battles involving this card. When this attacking card is destroyed by battle and sent to the Graveyard, Special Summon 2 \"Rockstone Tokens\" (Rock-Type/EARTH/Level 1/ATK 0/DEF 0). These Tokens cannot be Tributed for a Tribute Summon.",
+      "race": "Rock",
+      "atk": 1800,
+      "def": 1600,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rockstone-warrior-4425",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 2",
+          "set_code": "DP09-EN006",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51987571,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51987571.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51987571.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51987571.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54036,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8154,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

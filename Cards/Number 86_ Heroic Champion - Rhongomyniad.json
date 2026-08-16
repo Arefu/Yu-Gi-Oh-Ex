@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 63504681,
+      "name": "Number 86: Heroic Champion - Rhongomyniad",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 or more (max. 5) Level 4 Warrior monsters\nOnce per turn, during your opponent's End Phase: Detach 1 material from this card. This card gains effects based on the number of materials attached to it.\n● 1+: Cannot be destroyed by battle. ● 2+: Gains 1500 ATK/DEF. ● 3+: Unaffected by other cards' effects. ● 4+: Your opponent cannot Normal or Special Summon monsters. ● 5: Once per turn: You can destroy all cards your opponent controls.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Heroic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-86-heroic-champion-rhongomyniad-5364",
+      "card_sets": [
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENC37",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN022",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 63504681,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63504681.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63504681.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63504681.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.58",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "0.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 86",
+          "views": 208985,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 9,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11296,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

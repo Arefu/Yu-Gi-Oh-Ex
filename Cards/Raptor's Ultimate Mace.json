@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 87609391,
+      "name": "Raptor's Ultimate Mace",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a \"Raidraptor\" monster. It gains 1000 ATK. When the equipped monster is targeted for an attack by a monster whose ATK is higher than the equipped monster: You can add 1 \"Rank-Up-Magic\" Spell Card from your Deck to your hand, and if you do, you take no battle damage from that battle.",
+      "race": "Equip",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raptor-s-ultimate-mace-7333",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN145",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87609391,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87609391.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87609391.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87609391.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28832,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11999,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

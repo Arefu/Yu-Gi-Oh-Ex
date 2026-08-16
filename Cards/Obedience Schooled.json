@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 72537897,
+      "name": "Obedience Schooled",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control no monsters: Special Summon 3 Level 2 or lower Beast-Type Effect Monsters with different names from your Deck. Their effects are negated, and they are destroyed during the End Phase. If you activate this card, you cannot Special Summon for the rest of this turn, except Beast-Type monsters.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/obedience-schooled-6088",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN242",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN071",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN088",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 72537897,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72537897.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72537897.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72537897.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.58",
+          "amazon_price": "2.24",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 520174,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10992,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

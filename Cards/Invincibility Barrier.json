@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 17722185,
+      "name": "Invincibility Barrier",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn: You can banish 1 face-up Ritual, Fusion, Synchro, Xyz, Pendulum, or Link Monster you control; this turn, the effects of monsters with the same card type as that banished monster (Ritual, Fusion, Synchro, Xyz, Pendulum, or Link) are negated.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/invincibility-barrier-9680",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN211",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17722185,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17722185.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17722185.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17722185.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.09",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Invincible Halo",
+          "views": 12188,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13963,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

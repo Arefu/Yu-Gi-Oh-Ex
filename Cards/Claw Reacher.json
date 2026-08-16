@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 41218256,
+      "name": "Claw Reacher",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Stretching arms and razor-sharp claws make this monster a formidable opponent.",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/claw-reacher-3518",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.83"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41218256,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41218256.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41218256.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41218256.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "3.99",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44348,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4184,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 52340444,
+      "name": "Sky Striker Mecha - Hornet Drones",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "If you control no monsters in your Main Monster Zone: Special Summon 1 \"Sky Striker Ace Token\" (Warrior/DARK/Level 1/ATK 0/DEF 0) in Defense Position, which cannot be Tributed, and if you have 3 or more Spells in your GY when this effect resolves, the Token's ATK/DEF become 1500 instead.",
+      "race": "Quick-Play",
+      "archetype": "Sky Striker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-striker-mecha-hornet-drones-9318",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN263",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN033",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN053",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENS13",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited",
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 52340444,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52340444.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52340444.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52340444.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "2.89",
+          "amazon_price": "0.74",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Brandish Mecha Hornet Bit",
+          "views": 1072538,
+          "viewsweek": 42,
+          "upvotes": 9,
+          "downvotes": 6,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13674,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

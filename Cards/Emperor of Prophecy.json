@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 53136004,
+      "name": "Emperor of Prophecy",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish both 1 face-up Spellcaster-Type monster you control, except this card, and 1 \"Spellbook\" card from your Graveyard to target 1 face-up monster your opponent controls; take control of that target until the End Phase. You can only use the effect of \"Emperor of Prophecy\" once per turn. This card cannot attack during the turn you activate this effect.",
+      "race": "Spellcaster",
+      "atk": 2300,
+      "def": 2000,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Spellbook",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/emperor-of-prophecy-4526",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53136004,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53136004.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53136004.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53136004.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32215,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10246,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

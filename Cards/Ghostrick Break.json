@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 80802524,
+      "name": "Ghostrick Break",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When exactly 1 face-up \"Ghostrick\" monster you control (and no other cards) is destroyed by battle or an opponent's card effect and sent to your Graveyard: Target 2 \"Ghostrick\" monsters in your Graveyard with different names from the destroyed monster; Special Summon them in face-down Defense Position.",
+      "race": "Normal",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-break-6778",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 18",
+          "set_code": "OP18-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80802524,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80802524.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80802524.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80802524.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.77",
+          "amazon_price": "1.68",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66028,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 11209,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

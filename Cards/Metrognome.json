@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 26638543,
+      "name": "Metrognome",
+      "typeline": [
+        "Fairy",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 other card in a Pendulum Zone; this card's Pendulum Scale becomes equal to that card's, until the end of this turn.\n\n[ Monster Effect ] \nWhile you have 2 cards in your Pendulum Zones with the same Pendulum Scale, this card gains ATK and DEF equal to the Pendulum Scale x 100, and can attack your opponent directly. If this card inflicts battle damage to your opponent by a direct attack: Destroy all cards in the Pendulum Zones.",
+      "race": "Fairy",
+      "pend_desc": "Once per turn: You can target 1 other card in a Pendulum Zone; this card's Pendulum Scale becomes equal to that card's, until the end of this turn.",
+      "monster_desc": "While you have 2 cards in your Pendulum Zones with the same Pendulum Scale, this card gains ATK and DEF equal to the Pendulum Scale x 100, and can attack your opponent directly. If this card inflicts battle damage to your opponent by a direct attack: Destroy all cards in the Pendulum Zones.",
+      "atk": 1800,
+      "def": 1600,
+      "level": 4,
+      "attribute": "EARTH",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metrognome-2283",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN198",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN034",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26638543,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26638543.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26638543.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26638543.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16671,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12769,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

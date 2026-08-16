@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 2772236,
+      "name": "Wattchimera",
+      "typeline": [
+        "Thunder",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Watt\" Tuner + 1 or more non-Tuner Thunder-Type monsters\nThis card can attack your opponent directly. When this card inflicts Battle Damage to your opponent by a direct attack, place 1 random card from your opponent's hand on top of their Deck.",
+      "race": "Thunder",
+      "atk": 1400,
+      "def": 1200,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Watt",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wattchimera-247",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN044",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 23",
+          "set_code": "OP23-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2772236,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2772236.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2772236.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2772236.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "7.00",
+          "amazon_price": "17.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58380,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8975,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

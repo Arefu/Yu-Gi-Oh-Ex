@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": 67598234,
+      "name": "Gaia Saber, the Lightning Shadow",
+      "typeline": [
+        "Machine",
+        "Link"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Monster",
+      "frameType": "link",
+      "desc": "2+ monsters",
+      "race": "Machine",
+      "atk": 2600,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "archetype": "Gaia The Fierce Knight",
+      "linkval": 3,
+      "linkmarkers": [
+        "Left",
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gaia-saber-the-lightning-shadow-8434",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN087",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN051",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Devastator",
+          "set_code": "DUDE-EN022",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.38"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67598234,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67598234.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67598234.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67598234.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.94",
+          "amazon_price": "1.14",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Gaiasaber, the Virtual Knight",
+          "views": 176148,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 13,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13090,
+          "has_effect": 0,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

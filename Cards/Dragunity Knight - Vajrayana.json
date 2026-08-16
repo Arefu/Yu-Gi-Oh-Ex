@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 21249921,
+      "name": "Dragunity Knight - Vajrayana",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Dragon Tuner + 1+ non-Tuner Winged Beast monsters\nWhen this card is Synchro Summoned: You can target 1 Level 3 or lower Dragon \"Dragunity\" monster in your GY; equip that target to this card. Once per turn: You can send 1 Equip Card equipped to this card to the GY; double this card's ATK until the end of this turn.",
+      "race": "Dragon",
+      "atk": 1900,
+      "def": 1200,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Dragunity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragunity-knight-vajrayana-1827",
+      "card_sets": [
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN050",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN101",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN101",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21249921,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21249921.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21249921.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21249921.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.84",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "1.76",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 132392,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2009-06-06",
+          "konami_id": 8548,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

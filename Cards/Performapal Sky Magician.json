@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 73734821,
+      "name": "Performapal Sky Magician",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, if you activate a Spell Card: This card gains 300 ATK. (Quick Effect): You can target 1 Continuous Spell you control; return it to the hand, then you can activate 1 \"Magician\" Continuous Spell from your hand. You can only use this effect of \"Performapal Sky Magician\" once per turn. If this face-up card leaves the field: You can target 1 card on the field; destroy it.",
+      "race": "Spellcaster",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Performapal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-sky-magician-8356",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.33"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73734821,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73734821.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73734821.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73734821.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42104,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12915,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

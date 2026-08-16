@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 49352945,
+      "name": "Elemental HERO Storm Neos",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Neos\" + \"Neo-Spacian Air Hummingbird\" + \"Neo-Spacian Aqua Dolphin\"\nMust first be Special Summoned (from your Extra Deck) by shuffling the above cards you control into the Deck. (You do not use \"Polymerization\".) Once per turn: You can destroy all Spell and Trap Cards on the field. During the End Phase: Shuffle this card into the Extra Deck. When this card is shuffled into the Extra Deck this way: Shuffle all cards on the field into the Deck.",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 2500,
+      "level": 9,
+      "attribute": "WIND",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-storm-neos-4206",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.87"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49352945,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49352945.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49352945.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49352945.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.86",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "7.99",
+          "amazon_price": "3.40",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 146328,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7442,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

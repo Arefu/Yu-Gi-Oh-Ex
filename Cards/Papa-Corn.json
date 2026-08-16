@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 73776643,
+      "name": "Papa-Corn",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While a Field Spell Card is face-up on the field, this card gains 1000 ATK.",
+      "race": "Plant",
+      "atk": 1200,
+      "def": 800,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/papa-corn-6194",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN097",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73776643,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73776643.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73776643.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73776643.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23120,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-03-21",
+          "konami_id": 10211,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

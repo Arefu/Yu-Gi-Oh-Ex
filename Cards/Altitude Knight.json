@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 27632240,
+      "name": "Altitude Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, if another monster on the field returns to the hand or Main Deck: Send 1 WIND monster from your Deck to the Graveyard.",
+      "race": "Warrior",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/altitude-knight-2353",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN036",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN046",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27632240,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27632240.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27632240.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27632240.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "3.95",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22663,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10517,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

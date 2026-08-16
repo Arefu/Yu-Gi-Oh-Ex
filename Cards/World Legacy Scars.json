@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 35546670,
+      "name": "World Legacy Scars",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All \"Mekk-Knight\" monsters on the field gain 300 ATK/DEF. Once per turn: You can discard 1 \"Mekk-Knight\" monster or 1 \"World Legacy\" card; draw 1 card. You can banish 8 \"Mekk-Knight\" monsters with different names from your GY and/or face-up from your field; send your opponent's entire hand and Extra Deck to the GY.",
+      "race": "Field",
+      "archetype": "Mekk-Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-scars-8948",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN205",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force Sneak Peek Participation Card",
+          "set_code": "EXFO-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35546670,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35546670.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35546670.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35546670.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Scars Caused by the World Legacy",
+          "views": 68763,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-01-27",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13427,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

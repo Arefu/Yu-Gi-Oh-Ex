@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 99675356,
+      "name": "Shien's Footsoldier",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the Graveyard: You can Special Summon 1 Level 3 or lower \"Six Samurai\" monster from your Deck.",
+      "race": "Warrior",
+      "atk": 700,
+      "def": 300,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shien-s-footsoldier-8277",
+      "card_sets": [
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99675356,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99675356.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99675356.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99675356.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.50",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64796,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6970,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

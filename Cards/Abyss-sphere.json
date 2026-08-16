@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 60202749,
+      "name": "Abyss-sphere",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Special Summon 1 \"Mermail\" monster from your Deck. Its effects are negated. You cannot activate any Spell Cards. When this card leaves the field, destroy that monster. Destroy this card during your opponent's next End Phase after activation.",
+      "race": "Continuous",
+      "archetype": "Mermail",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-sphere-5107",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN072",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60202749,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60202749.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60202749.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60202749.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "12.66",
+          "tcgplayer_price": "19.09",
+          "ebay_price": "4.15",
+          "amazon_price": "17.99",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52398,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10294,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

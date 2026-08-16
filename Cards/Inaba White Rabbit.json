@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 77084837,
+      "name": "Inaba White Rabbit",
+      "typeline": [
+        "Beast",
+        "Spirit",
+        "Effect"
+      ],
+      "type": "Spirit Monster",
+      "humanReadableCardType": "Spirit Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Special Summoned. This card returns to the owner's hand during the End Phase of the turn that this card is Normal Summoned or flipped face-up. This monster attacks your opponent's Life Points directly.",
+      "race": "Beast",
+      "atk": 700,
+      "def": 500,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inaba-white-rabbit-6486",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN176",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.92"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-065",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "2.84"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN065",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77084837,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77084837.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77084837.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77084837.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.48",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.95",
+          "amazon_price": "1.38",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 132380,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5374,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

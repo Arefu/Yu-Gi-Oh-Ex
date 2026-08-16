@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 43387895,
+      "name": "Supreme King Dragon Starving Venom",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 DARK Pendulum Monsters\r\nMust be either Fusion Summoned, or Special Summoned by Tributing the above cards you control (in which case you do not use \"Polymerization\"). Once per turn: You can target 1 other monster on the field or in the GY; until the End Phase, this card's name becomes that monster's original name, and replace this effect with that monster's original effects, also for the rest of this turn, if your monster attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Supreme King",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/supreme-king-dragon-starving-venom-8455",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN038",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC26",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.46"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 43387895,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43387895.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43387895.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43387895.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "5.95",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Supreme King Servant Dragon Starving Venom",
+          "views": 292653,
+          "viewsweek": 42,
+          "upvotes": 23,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13077,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

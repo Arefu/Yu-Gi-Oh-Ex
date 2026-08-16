@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 80141055,
+      "name": "Bearblocker",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your opponent's turn, Set cards in your Spell & Trap Zones cannot be destroyed by card effects. If a Set card(s) in your Spell & Trap Zone is destroyed by an opponent's card effect: This card gains 800 ATK until the end of this turn.",
+      "race": "Fiend",
+      "atk": 1600,
+      "def": 0,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bearblocker-9644",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN175",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Masters",
+          "set_code": "TAMA-EN050",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80141055,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80141055.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80141055.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80141055.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.03",
+          "ebay_price": "3.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Bearrier",
+          "views": 44005,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13916,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

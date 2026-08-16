@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 42233477,
+      "name": "Battleguard Rage",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate this card by targeting 1 Warrior-Type monster you control; it gains 1000 ATK. Monsters destroyed by battle with it are returned to the hand instead of going to the Graveyard. When that monster leaves the field, destroy this card.",
+      "race": "Continuous",
+      "archetype": "Battleguard",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battleguard-rage-3601",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN110",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN166",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42233477,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42233477.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42233477.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42233477.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52621,
+          "viewsweek": 0,
+          "upvotes": 30,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11277,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

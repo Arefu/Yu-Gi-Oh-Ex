@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 94331452,
+      "name": "Symphonic Warrior Drumss",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can declare 1 Attribute and select 1 face-up \"Symphonic Warrior\" monster on the field. That monster becomes that Attribute. You can declare 1 Attribute and remove from play this card from your Graveyard to select 1 face-up \"Symphonic Warrior\" monster you control, and make it that Attribute.",
+      "race": "Machine",
+      "atk": 700,
+      "def": 700,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Symphonic Warrior",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/symphonic-warrior-drumss-7847",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 19 (POR)",
+          "set_code": "OP19-PT031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN034",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94331452,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94331452.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94331452.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94331452.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.84",
+          "amazon_price": "1.20",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23187,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9325,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 31706048,
+      "name": "World Legacy Survivor",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Excavate the top 5 cards of your Deck, and if you do, add 1 excavated \"Krawler\" monster or \"World Legacy\" card to your hand, also send the remaining cards to the GY. Otherwise, shuffle all excavated cards into the Deck. For the rest of this turn after this card resolves, you cannot Special Summon monsters from the Extra Deck, except Link Monsters. You can only activate 1 \"World Legacy Survivor\" per turn.",
+      "race": "Normal",
+      "archetype": "Krawler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-survivor-9462",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN119",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN060",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31706048,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31706048.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31706048.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31706048.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Legacy Survival",
+          "views": 148758,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13776,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

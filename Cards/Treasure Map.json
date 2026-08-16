@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 54762426,
+      "name": "Treasure Map",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card in response to the activation of an effect that would return this card from the field to the hand. Draw 2 cards from your Deck and discard 1 card from your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/treasure-map-4667",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Special Edition",
+          "set_code": "DPK-ENSE2",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54762426,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54762426.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54762426.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54762426.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "1.60",
+          "amazon_price": "3.60",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13921,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-03-09",
+          "ocg_date": "2005-12-01",
+          "konami_id": 6583,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

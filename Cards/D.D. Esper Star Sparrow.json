@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 80208158,
+      "name": "D.D. Esper Star Sparrow",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "There can only be 1 \"D.D. Esper Star Sparrow\" on the field. Your opponent cannot target other monsters you control with effects or for attacks. When an opponent's monster declares a direct attack while this card is in your Graveyard: You can Special Summon this card from your Graveyard in face-up Defense Position. If Summoned this way, banish it when it leaves the field.",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 1500,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "D.D.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-esper-star-sparrow-6727",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN051",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN031",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "War of the Giants Reinforcements",
+          "set_code": "WGRT-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.19"
+        },
+        {
+          "set_name": "War of the Giants: Round 2",
+          "set_code": "BPW2-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80208158,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80208158.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80208158.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80208158.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "2.95",
+          "amazon_price": "0.73",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39026,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 9973,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

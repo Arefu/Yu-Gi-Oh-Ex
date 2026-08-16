@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 3549275,
+      "name": "Dice Jar",
+      "typeline": [
+        "Rock",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Both players roll a six-sided die. The player with the lower result takes damage equal to their opponent's roll x 500. However, if the winner rolled a 6, the loser takes 6000 damage. If the rolls are the same, both players roll again.",
+      "race": "Rock",
+      "atk": 200,
+      "def": 300,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Dice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dice-jar-314",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN226",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.85"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN262",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaonic Guardian",
+          "set_code": "PGD-027",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "4.53"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3549275,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3549275.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3549275.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3549275.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.00",
+          "tcgplayer_price": "3.33",
+          "ebay_price": "3.94",
+          "amazon_price": "4.48",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 242336,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-07-18",
+          "ocg_date": "2002-03-21",
+          "konami_id": 5424,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

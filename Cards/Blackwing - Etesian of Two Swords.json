@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 78564023,
+      "name": "Blackwing - Etesian of Two Swords",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a \"Blackwing\" monster you control battles an opponent's monster, and your opponent still controls that monster at the end of the Damage Step: You can send this card from your hand to the Graveyard; inflict 1000 damage to your opponent.",
+      "race": "Winged Beast",
+      "atk": 400,
+      "def": 1600,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blackwing-etesian-of-two-swords-6598",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN123",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78564023,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78564023.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78564023.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78564023.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "2.04",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36852,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9092,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

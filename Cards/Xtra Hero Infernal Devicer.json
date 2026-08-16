@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 19324993,
+      "name": "Xtra HERO Infernal Devicer",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"HERO\" monsters\r\nIf this card is Link Summoned: You can reveal 1 \"HERO\" Fusion Monster in your Extra Deck, and if you do, add up to 2 of the Fusion Materials listed on that card, with different names, from your Deck to your hand. You cannot Special Summon monsters the turn you activate this effect, except \"HERO\" monsters. You can only use this effect of \"Xtra HERO Infernal Devicer\" once per turn. Fiend monsters this card points to gain ATK/DEF equal to its Level x 100.",
+      "race": "Fiend",
+      "atk": 1700,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Elemental HERO",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xtra-hero-infernal-devicer-10711",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN009",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN013",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19324993,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19324993.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19324993.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19324993.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.09",
+          "tcgplayer_price": "8.63",
+          "ebay_price": "14.95",
+          "amazon_price": "4.79",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Xtra HERO Hell Diviser",
+          "views": 238803,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257031,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14936,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 47363932,
+      "name": "Scrap Wyvern",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters, including a \"Scrap\" monster\r\nYou can target 1 \"Scrap\" monster in your GY; Special Summon it, then destroy 1 card you control. If another face-up \"Scrap\" monster is destroyed by card effect, while you control this monster (except during the Damage Step): You can Special Summon 1 \"Scrap\" monster from your Deck, then destroy 1 card on the field. You can only use each effect of \"Scrap Wyvern\" once per turn.",
+      "race": "Dragon",
+      "atk": 1700,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Scrap",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrap-wyvern-9943",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact Special Edition",
+          "set_code": "CHIM-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.5"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN061",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47363932,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47363932.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47363932.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47363932.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.33",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 229469,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-12-05",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14199,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

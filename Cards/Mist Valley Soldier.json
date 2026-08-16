@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 22837504,
+      "name": "Mist Valley Soldier",
+      "typeline": [
+        "Winged Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "While you control this face-up card, any opponent's monster that battles this card, but is not destroyed by the battle, returns to its owner's hand at the end of the Damage Step.",
+      "race": "Winged Beast",
+      "atk": 1700,
+      "def": 300,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Mist Valley",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mist-valley-soldier-1963",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN015",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal",
+          "set_code": "HA01-EN006",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN058",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "2.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22837504,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22837504.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22837504.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22837504.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "2.54",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65768,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-05",
+          "ocg_date": "2008-04-12",
+          "konami_id": 7532,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

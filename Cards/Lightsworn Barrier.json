@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 22201234,
+      "name": "Lightsworn Barrier",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "When a \"Lightsworn\" monster you control is targeted for an attack: You can send the top 2 cards of your Deck to the Graveyard, then target the attacking monster; negate the attack.",
+      "race": "Continuous",
+      "archetype": "Lightsworn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lightsworn-barrier-1915",
+      "card_sets": [
+        {
+          "set_name": "Realm of Light Structure Deck",
+          "set_code": "SDLI-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.62"
+        },
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN075",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22201234,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22201234.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22201234.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22201234.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.55",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66499,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2008-04-19",
+          "konami_id": 7764,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

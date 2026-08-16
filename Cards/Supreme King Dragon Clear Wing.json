@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 70771599,
+      "name": "Supreme King Dragon Clear Wing",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner DARK Pendulum Monsters\r\nIf this card is Synchro Summoned: You can destroy all face-up monsters your opponent controls. Once per turn, before damage calculation, if this card battles an opponent's monster: You can destroy that monster, and if you do, inflict damage to your opponent equal to the destroyed monster's original ATK. If this card is in your GY: You can Tribute 2 \"Supreme King Dragon\" monsters; Special Summon this card.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Clear Wing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/supreme-king-dragon-clear-wing-8487",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN039",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC30",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.7"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70771599,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70771599.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70771599.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70771599.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "5.95",
+          "amazon_price": "1.95",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Supreme King Servant Dragon Clear Wing",
+          "views": 381734,
+          "viewsweek": 21,
+          "upvotes": 29,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13078,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

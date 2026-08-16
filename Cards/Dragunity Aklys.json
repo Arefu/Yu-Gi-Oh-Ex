@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 36870345,
+      "name": "Dragunity Aklys",
+      "typeline": [
+        "Dragon",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, you can Special Summon 1 \"Dragunity\" monster from your hand, then equip it with this card. When this card is sent to the Graveyard while equipped to a monster, select 1 card on the field, and destroy it.",
+      "race": "Dragon",
+      "atk": 1000,
+      "def": 800,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Dragunity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragunity-aklys-3119",
+      "card_sets": [
+        {
+          "set_name": "Dragunity Legion Structure Deck",
+          "set_code": "SDDL-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.27"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36870345,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36870345.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36870345.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36870345.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "1.19",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40697,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-03-04",
+          "ocg_date": "2010-06-19",
+          "konami_id": 9048,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

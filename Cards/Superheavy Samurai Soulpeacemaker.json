@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 95500396,
+      "name": "Superheavy Samurai Soulpeacemaker",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"Superheavy Samurai\" monster you control; equip this monster from your hand or field to that target. While this card is equipped to a monster by this effect, monsters your opponent controls cannot attack monsters you control, except the equipped monster. You can Tribute a monster you control equipped with this card by this card's effect; Special Summon 1 \"Superheavy Samurai\" monster from your Deck. You can only use this effect of \"Superheavy Samurai Soulpeacemaker\" once per turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-soulpeacemaker-7955",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN134",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95500396,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95500396.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95500396.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95500396.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "7.90",
+          "amazon_price": "2.80",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 126946,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12599,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

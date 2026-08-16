@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 69526976,
+      "name": "Cupid Dunk",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be destroyed by battle with a monster, unless that monster has a higher Level. Once per turn, during your Standby Phase: You can increase this card's Level by 1.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cupid-dunk-10066",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69526976,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69526976.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69526976.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69526976.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Low Cupid",
+          "views": 32301,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14278,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 96864105,
+      "name": "Number C73: Abyss Supra Splash",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 6 monsters\nIf a monster you control battles an opponent's monster, during damage calculation (in either player's turn): You can detach 1 Xyz Material from this card once per battle; your battling monster gains ATK equal to the ATK of the opponent's monster it is battling, during that damage calculation only. If this card has \"Number 73: Abyss Splash\" as Xyz Material, it gains this effect.\n● This card cannot be destroyed by card effects.",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 2000,
+      "level": 6,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c73-abyss-supra-splash-8055",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend",
+          "set_code": "DRLG-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96864105,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96864105.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96864105.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96864105.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "1.76",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C73",
+          "views": 65602,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-04-25",
+          "ocg_date": "2014-05-17",
+          "konami_id": 11185,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

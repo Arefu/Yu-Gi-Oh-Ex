@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 13995824,
+      "name": "Voltic Bicorn",
+      "typeline": [
+        "Beast",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Beast-Type Tuner + 1 or more non-Tuner monsters\nIf this card is destroyed by your opponent's card (either by battle or by card effect), both players send the top 7 cards of their Deck to the Graveyard.",
+      "race": "Beast",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/voltic-bicorn-1197",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN041",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13995824,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13995824.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13995824.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13995824.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.36",
+          "tcgplayer_price": "2.01",
+          "ebay_price": "9.90",
+          "amazon_price": "2.95",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30767,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8972,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 39261576,
+      "name": "Particle Fusion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send, from your side of the field to the Graveyard, the Fusion Material Monsters that are listed on a \"Gem-Knight\" Fusion Monster Card, then Special Summon that Fusion Monster from your Extra Deck. (This Special Summon is treated as a Fusion Summon.) When you do: Banish this card from the Graveyard to target 1 \"Gem-Knight\" Fusion Material Monster used for the Fusion Summon; the Fusion Summoned monster gains that monster's ATK until the End Phase.",
+      "race": "Normal",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/particle-fusion-3331",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN093",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39261576,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39261576.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39261576.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39261576.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.67",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "1.99",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38348,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9606,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

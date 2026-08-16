@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 4367330,
+      "name": "Zoodiac Bunnyblast",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by battle or card effect: You can target 1 \"Zoodiac\" card in your Graveyard, except \"Zoodiac Bunnyblast\"; add it to your hand. An Xyz Monster whose original Type is Beast-Warrior and has this card as Xyz Material gains this effect.\r\n● During either player's turn, when your opponent activates a Spell Card or effect that targets this card: You can detach 1 Xyz Material from this card; negate the activation.",
+      "race": "Beast-Warrior",
+      "atk": 800,
+      "def": 800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Zoodiac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zoodiac-bunnyblast-394",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN182",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4367330,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4367330.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4367330.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4367330.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "23.27",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Zoodiac Rabbina",
+          "views": 93211,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12750,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

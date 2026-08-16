@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 48152161,
+      "name": "The Sanctified Darklord",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Send 1 \"Darklord\" monster from your hand or face-up from your field to the GY; negate the effects of 1 Effect Monster on the field until the end of this turn, and if you do, gain LP equal to its ATK. You can only activate 1 \"The Sanctified Darklord\" per turn.",
+      "race": "Normal",
+      "archetype": "Darklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-sanctified-darklord-9256",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN075",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48152161,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48152161.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48152161.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48152161.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.28",
+          "tcgplayer_price": "5.63",
+          "ebay_price": "1.76",
+          "amazon_price": "0.44",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Darklord Divinity",
+          "views": 174803,
+          "viewsweek": 42,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13629,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

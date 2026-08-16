@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 67231737,
+      "name": "Link Bumper",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Cyberse monsters\r\nOnce per turn, at the end of the Damage Step, if your monster this card points to attacked an opponent's Link Monster: You can activate this effect; the monster that attacked gains 1 additional attack on an opponent's Link Monster during this Battle Phase for each Link Monster you currently control, except this card. Your monsters (except that monster) cannot attack the turn you activate this effect.",
+      "race": "Cyberse",
+      "atk": 1400,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/link-bumper-8731",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN032",
+          "set_rarity": "Starfoil",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack VRAINS",
+          "set_code": "SP18-EN032",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "1.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67231737,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67231737.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67231737.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67231737.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40525,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13259,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 27416701,
+      "name": "Shiba-Warrior Taro",
+      "typeline": [
+        "Beast-Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be destroyed by battle. When a card on the field is destroyed by battle or by a card effect, return this face-up card to its owner's hand.",
+      "race": "Beast-Warrior",
+      "atk": 800,
+      "def": 600,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiba-warrior-taro-2342",
+      "card_sets": [
+        {
+          "set_name": "Anniversary Pack",
+          "set_code": "YAP1-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "72.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27416701,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27416701.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27416701.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27416701.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.00",
+          "tcgplayer_price": "24.22",
+          "ebay_price": "16.99",
+          "amazon_price": "1.16",
+          "coolstuffinc_price": "29.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55359,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-12-08",
+          "ocg_date": "2008-12-20",
+          "konami_id": 8267,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

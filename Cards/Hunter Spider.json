@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 80141480,
+      "name": "Hunter Spider",
+      "typeline": [
+        "Insect",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster feeds on whatever it catches in its web.",
+      "race": "Insect",
+      "atk": 1600,
+      "def": 1400,
+      "level": 5,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hunter-spider-6718",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.6"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80141480,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80141480.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80141480.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80141480.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 110504,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-07-22",
+          "konami_id": 4620,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

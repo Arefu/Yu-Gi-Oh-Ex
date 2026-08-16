@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 61399402,
+      "name": "Light Dragon @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\r\nIf a monster(s) you control would be destroyed by card effect, you can detach 1 material from this card instead. You can only use each of the following effects of \"Light Dragon @Ignister\" once per turn.\r\n● You can detach 1 material from this card; destroy face-up monsters your opponent controls, up to the number of \"@Ignister\" monsters you control.\r\n● When another Cyberse monster you control inflicts battle damage to your opponent: You can Special Summon 1 Link Monster from your GY.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/light-dragon-ignister-10519",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.87"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENM27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of the Master",
+          "set_code": "MZTM-EN094",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61399402,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61399402.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61399402.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61399402.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Light Dragon @Ignister",
+          "views": 429447,
+          "viewsweek": 42,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011044,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14853,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

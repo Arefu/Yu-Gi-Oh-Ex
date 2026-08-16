@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 49202331,
+      "name": "CXyz Skypalace Babylon",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 11 monsters\nWhen this card destroys a monster by battle and sends it to the Graveyard: Inflict damage to your opponent equal to half the original ATK of the destroyed monster in the Graveyard. If this card has \"Skypalace Gangaridai\" as an Xyz Material, it gains this effect.\n● Once per turn, if this card destroys a monster by battle: You can detach 1 Xyz Material from this card; it can make a second attack in a row.",
+      "race": "Machine",
+      "atk": 3800,
+      "def": 4000,
+      "level": 11,
+      "attribute": "WIND",
+      "archetype": "CXyz",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cxyz-skypalace-babylon-4196",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN046",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49202331,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49202331.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49202331.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49202331.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.01",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35100,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10719,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

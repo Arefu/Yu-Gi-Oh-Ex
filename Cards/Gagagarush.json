@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 13166204,
+      "name": "Gagagarush",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a face-up \"Gagaga\" monster(s) you control is targeted by the effect of an opponent's monster: Negate the effect of that opponent's monster, and if you do, destroy it, then inflict damage to your opponent equal to the destroyed monster's ATK or DEF in the Graveyard (whichever is higher).",
+      "race": "Normal",
+      "archetype": "Gagaga",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gagagarush-1132",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13166204,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13166204.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13166204.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13166204.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25445,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10197,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

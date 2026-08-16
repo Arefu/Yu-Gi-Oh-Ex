@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 76039636,
+      "name": "Doom Dozer",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned or Set. Must be Special Summoned (from your hand) by banishing 2 Insect-Type monsters from your Graveyard, and cannot be Special Summoned by other ways. When this card inflicts Battle Damage to your opponent: Send the top card of their Deck to the Graveyard.",
+      "race": "Insect",
+      "atk": 2800,
+      "def": 2600,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/doom-dozer-6400",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN144",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "51"
+        },
+        {
+          "set_name": "Duelist League 14 participation cards",
+          "set_code": "DL14-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "28.5"
+        },
+        {
+          "set_name": "Gold Series",
+          "set_code": "GLD1-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN049",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN024",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76039636,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76039636.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76039636.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76039636.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "4.15",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 222402,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6602,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

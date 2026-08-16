@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 62517849,
+      "name": "Number 39: Utopia Double",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\r\n(Quick Effect): You can detach 1 material from this card; add 1 \"Double or Nothing!\" from your Deck to your hand, then Special Summon from your Extra Deck, 1 \"Utopia\" Xyz Monster, except \"Number 39: Utopia Double\", by using this face-up card you control as material, and if you do, its ATK becomes doubled, but it cannot attack directly. (This is treated as an Xyz Summon. Transfer its materials to the Summoned monster.) You can only use this effect of \"Number 39: Utopia Double\" once per turn.",
+      "race": "Warrior",
+      "atk": 0,
+      "def": 2500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-39-utopia-double-9951",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN031",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "14.2"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62517849,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62517849.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62517849.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62517849.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.92",
+          "ebay_price": "15.95",
+          "amazon_price": "13.48",
+          "coolstuffinc_price": "12.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 39",
+          "views": 726050,
+          "viewsweek": 0,
+          "upvotes": 20,
+          "downvotes": 7,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14220,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

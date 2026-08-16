@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 23689428,
+      "name": "Infinitrack Goliath",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 non-Link \"Infinitrack\" monster\r\nIf this card is sent from the field to the GY: You can target 1 Xyz Monster you control; attach this card to that monster as material. You can only use this effect of \"Infinitrack Goliath\" once per turn. An Xyz Monster whose original Type is Machine and has this card as material gains this effect.\r\n● This card cannot be destroyed by card effects.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Infinitrack",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infinitrack-goliath-10101",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN215",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.02"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23689428,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23689428.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23689428.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23689428.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.03",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.95",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 253214,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412100,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14400,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

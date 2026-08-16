@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 9485511,
+      "name": "U.A. Goalkeeper",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by returning 1 \"U.A.\" monster you control to the hand, except \"U.A. Goalkeeper\". You can only Special Summon \"U.A. Goalkeeper\" once per turn this way. Once per turn, during your opponent's turn: You can target 1 \"U.A.\" monster you control; once during this turn, it cannot be destroyed by battle or card effects (this is a Quick Effect).",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 2800,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "U.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/u-a-goalkeeper-804",
+      "card_sets": [
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9485511,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9485511.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9485511.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9485511.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.95",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26959,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11511,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 38737148,
+      "name": "Lightray Daedalus",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by having 4 or more LIGHT monsters in your Graveyard, and cannot be Special Summoned by other ways. Once per turn: You can target 1 Field Spell Card and 2 other cards on the field; destroy them.",
+      "race": "Sea Serpent",
+      "atk": 2600,
+      "def": 1500,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lightray-daedalus-3284",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Realm of Light Structure Deck",
+          "set_code": "SDLI-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38737148,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38737148.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38737148.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38737148.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57168,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10056,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

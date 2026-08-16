@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 43413875,
+      "name": "Flower Cardian Zebra Grass with Moon",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by Tributing 1 Level 8 \"Flower Cardian\" monster, except \"Flower Cardian Zebra Grass with Moon\". If this card is Special Summoned: Draw 1 card, and if you do, show it, then you can Special Summon it if it is a \"Flower Cardian\" monster. Otherwise, send it to the Graveyard. Once per turn, if this card destroys an opponent's monster by battle: You can draw 1 card.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-cardian-zebra-grass-with-moon-3701",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN132",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.38"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43413875,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43413875.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43413875.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43413875.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22027,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12559,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

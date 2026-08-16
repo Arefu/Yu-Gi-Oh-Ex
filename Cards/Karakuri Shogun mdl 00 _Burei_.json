@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 23874409,
+      "name": "Karakuri Shogun mdl 00 \"Burei\"",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner Machine-Type monsters\nWhen this card is Synchro Summoned: You can Special Summon 1 \"Karakuri\" monster from your Deck. Once per turn: You can target 1 monster on the field; change its battle position.",
+      "race": "Machine",
+      "atk": 2600,
+      "def": 1900,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Karakuri",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/karakuri-shogun-mdl-00-burei-2058",
+      "card_sets": [
+        {
+          "set_name": "2013 Collectible Tins Wave 1",
+          "set_code": "CT10-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.55"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN043",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23874409,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23874409.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23874409.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23874409.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.73",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "27.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Karakuri Shogun mdl 00",
+          "views": 95054,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9120,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

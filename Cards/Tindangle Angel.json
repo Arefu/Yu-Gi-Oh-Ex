@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 68860936,
+      "name": "Tindangle Angel",
+      "typeline": [
+        "Fiend",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can Special Summon 1 Flip monster from your hand or GY in face-down Defense Position, except \"Tindangle Angel\", then, if it is your opponent's Battle Phase, end the Battle Phase. You can only use this effect of \"Tindangle Angel\" once per turn.",
+      "race": "Fiend",
+      "atk": 500,
+      "def": 1800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Tindangle",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tindangle-angel-8936",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68860936,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68860936.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68860936.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68860936.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74794,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13379,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

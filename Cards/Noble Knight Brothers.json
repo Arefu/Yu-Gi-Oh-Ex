@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 57690191,
+      "name": "Noble Knight Brothers",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can only attack if you control exactly 3 \"Noble Knight\" monsters (and no other monsters). When this card is Normal Summoned: You can Special Summon up to 2 \"Noble Knight\" monsters from your hand, also you cannot Special Summon monsters for the rest of this turn, except \"Noble Knight\" monsters. Once per turn: You can target 3 \"Noble Knight\" and/or \"Noble Arms\" cards in your GY; shuffle all 3 into the Deck, then draw 1 card.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 2400,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knight-brothers-4910",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN046",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN083",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN081",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57690191,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57690191.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57690191.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57690191.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "3.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 110334,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 11196,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

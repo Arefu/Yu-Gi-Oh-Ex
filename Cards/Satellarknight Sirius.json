@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 63274863,
+      "name": "Satellarknight Sirius",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Summoned: You can target 5 \"tellarknight\" monsters in your Graveyard; shuffle all 5 into the Deck, then draw 1 card. You can only use this effect of \"Satellarknight Sirius\" once per turn.",
+      "race": "Warrior",
+      "atk": 1600,
+      "def": 900,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Tellarknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/satellarknight-sirius-5346",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN146",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63274863,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63274863.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63274863.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63274863.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40548,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11359,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

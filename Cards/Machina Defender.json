@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 96384007,
+      "name": "Machina Defender",
+      "typeline": [
+        "Machine",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Add 1 \"Commander Covington\" from your Deck to your hand.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Machina",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/machina-defender-8021",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN170",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machina Mayhem Structure Deck",
+          "set_code": "SDMM-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Structure Deck: Mechanized Madness",
+          "set_code": "SR10-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96384007,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96384007.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96384007.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96384007.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25446,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-19",
+          "ocg_date": "2005-12-17",
+          "konami_id": 6303,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

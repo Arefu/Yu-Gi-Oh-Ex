@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 6442944,
+      "name": "Kaiser Sea Snake",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls a monster and you control no monsters, you can Special Summon this card (from your hand). You can only Special Summon \"Kaiser Sea Snake\" once per turn this way. When Summoned this way: You can Special Summon 1 Level 8 Sea Serpent monster from your hand or GY, but its ATK/DEF become 0. If this card is Special Summoned, its Level becomes 4 and original ATK becomes 0.",
+      "race": "Sea Serpent",
+      "atk": 2500,
+      "def": 1000,
+      "level": 8,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kaiser-sea-snake-568",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6442944,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6442944.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6442944.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6442944.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.01",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28665,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2015-03-20",
+          "konami_id": 11780,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

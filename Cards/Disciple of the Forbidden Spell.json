@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 15595052,
+      "name": "Disciple of the Forbidden Spell",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Summoned, declare different Monster Card Attributes equal to the number of \"Disciple of the Forbidden Spell\"(s) in your Graveyard. If this card attacks a monster that has a declared Attribute, destroy the monster with this card's effect without applying damage calculation.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/disciple-of-the-forbidden-spell-1345",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN136",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.56"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15595052,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15595052.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15595052.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15595052.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63478,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6594,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

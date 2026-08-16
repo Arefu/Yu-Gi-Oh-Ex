@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 50725996,
+      "name": "Dark Magician Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned with \"Knight's Title\" and cannot be Special Summoned by other ways. When this card is Special Summoned: Target 1 card on the field; destroy that target.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 2100,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-magician-knight-4322",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.89"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Double Pack promotional cards",
+          "set_code": "ROD-EN001",
+          "set_rarity": "Super Parallel Rare",
+          "set_rarity_code": "(SPR)",
+          "set_price": "17.83"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Reshef of Destruction promotional cards",
+          "set_code": "ROD-EN001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "4.96"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50725996,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50725996.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50725996.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50725996.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "11.69",
+          "tcgplayer_price": "7.86",
+          "ebay_price": "3.29",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79043,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-29",
+          "ocg_date": "2003-03-20",
+          "konami_id": 5756,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

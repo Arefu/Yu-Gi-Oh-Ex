@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 89448140,
+      "name": "Magicians' Defense",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "While you control a Spellcaster-Type monster, any damage you take is halved. (You cannot halve the same damage twice this way.) If this card is sent from the field to the Graveyard: You can target 1 Spellcaster-Type monster in your Graveyard; Special Summon it.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magicians-defense-7469",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.6"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS28",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.85"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG28",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "3.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89448140,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89448140.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89448140.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89448140.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.89",
+          "ebay_price": "4.50",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 146916,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12511,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

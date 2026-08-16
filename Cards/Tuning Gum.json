@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 82744076,
+      "name": "Tuning Gum",
+      "typeline": [
+        "Fiend",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 face-up monster you control; that face-up monster is treated as a Tuner this turn. You can only use this effect of \"Tuning Gum\" once per turn. You can only attack with Synchro Monsters during the turn you activate this effect. During either player's turn, when a card or effect is activated that targets exactly 1 Synchro Monster you control (and no other cards): You can banish this card from your Graveyard; negate the activation.",
+      "race": "Fiend",
+      "atk": 400,
+      "def": 1200,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tuning-gum-6955",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN089",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82744076,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82744076.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82744076.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82744076.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.45",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26534,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12439,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

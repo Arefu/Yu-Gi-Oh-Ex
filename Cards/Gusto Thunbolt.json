@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 28066831,
+      "name": "Gusto Thunbolt",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the end of the Battle Phase, if this card is in the Graveyard because it was destroyed by battle and sent to the Graveyard this turn: You can banish 1 \"Gusto\" monster from your Graveyard; Special Summon 1 WIND Psychic-Type monster with 1500 or less DEF from your Deck.",
+      "race": "Thunder",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gusto-thunbolt-2389",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN072",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28066831,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28066831.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28066831.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28066831.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "1.25",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22563,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9166,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

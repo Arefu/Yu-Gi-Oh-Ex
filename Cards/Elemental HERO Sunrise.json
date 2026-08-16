@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 22908820,
+      "name": "Elemental HERO Sunrise",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 \"HERO\" monsters with different Attributes\r\nMust be Fusion Summoned. Monsters you control gain 200 ATK for each different Attribute you control. You can only use each of the following effects of \"Elemental HERO Sunrise\" once per turn.\r\n● If this card is Special Summoned: You can add 1 \"Miracle Fusion\" from your Deck to your hand.\r\n● When an attack is declared involving another \"HERO\" monster you control: You can target 1 card on the field; destroy it.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 1200,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-sunrise-10691",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN155",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "17.38"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN104",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "5.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22908820,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22908820.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22908820.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22908820.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "3.89",
+          "amazon_price": "2.33",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Elemental HERO Sunriser",
+          "views": 566989,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413012,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14910,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

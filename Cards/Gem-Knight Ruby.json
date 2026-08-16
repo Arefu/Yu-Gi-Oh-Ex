@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 76614340,
+      "name": "Gem-Knight Ruby",
+      "typeline": [
+        "Pyro",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Gem-Knight Garnet\" + 1 \"Gem-Knight\" monster\nMust first be Fusion Summoned with the above Fusion Material Monsters. Once per turn: You can Tribute 1 face-up \"Gem-\" monster; this card gains ATK equal to the Tributed monster's ATK on the field, until the End Phase. If this card attacks a Defense Position monster, inflict piercing Battle Damage to your opponent.",
+      "race": "Pyro",
+      "atk": 2500,
+      "def": 1300,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-knight-ruby-6447",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN136",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN034",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN019",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76614340,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76614340.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76614340.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76614340.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "3.56",
+          "amazon_price": "3.47",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 100874,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8911,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 9794980,
+      "name": "Knightmare Incarnation Idlee",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Level 9 monsters you control cannot be destroyed by card effects. You can only use each of the following effects of \"Knightmare Incarnation Idlee\" once per turn.\r\n● If the total Link Rating of the monsters on the field is 8 or more (Quick Effect): You can Special Summon this card from your hand.\r\n● If this card is Special Summoned, while your opponent controls more Link Monsters than you do: You can send all Link Monsters on the field to the GY.",
+      "race": "Fairy",
+      "atk": 2100,
+      "def": 2100,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Knightmare",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/knightmare-incarnation-idlee-9972",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN017",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9794980,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9794980.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9794980.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9794980.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.48",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Astro Knightmare Idlee",
+          "views": 105379,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14267,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

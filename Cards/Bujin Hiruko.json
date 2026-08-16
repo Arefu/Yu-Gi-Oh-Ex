@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 70026064,
+      "name": "Bujin Hiruko",
+      "typeline": [
+        "Beast-Warrior",
+        "Pendulum",
+        "Normal"
+      ],
+      "type": "Pendulum Normal Monster",
+      "humanReadableCardType": "Pendulum Normal Monster",
+      "frameType": "normal_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can banish this card in your Pendulum Zone, then target 1 \"Bujin\" Xyz Monster you control; Special Summon from your Extra Deck, 1 \"Bujin\" Xyz Monster with a different name, by using that target as the Xyz Material. (This Special Summon is treated as an Xyz Summon. Xyz Materials attached to it also become Xyz Materials on the Summoned monster.)\n\n[ Monster Effect ] \n''Imprisoned after a showdown with \"Bujin Hirume\" over the Sky Throne, this master schemer eventually escaped by manipulating Hirume and creating the sinister \"Bujinki Amaterasu\", then went on to almost engulf the world in darkness, but was finally defeated by Yamato and his allies.''",
+      "race": "Beast-Warrior",
+      "pend_desc": "You can banish this card in your Pendulum Zone, then target 1 \"Bujin\" Xyz Monster you control; Special Summon from your Extra Deck, 1 \"Bujin\" Xyz Monster with a different name, by using that target as the Xyz Material. (This Special Summon is treated as an Xyz Summon. Xyz Materials attached to it also become Xyz Materials on the Summoned monster.)",
+      "monster_desc": "''Imprisoned after a showdown with \"Bujin Hirume\" over the Sky Throne, this master schemer eventually escaped by manipulating Hirume and creating the sinister \"Bujinki Amaterasu\", then went on to almost engulf the world in darkness, but was finally defeated by Yamato and his allies.''",
+      "atk": 1000,
+      "def": 2000,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujin-hiruko-5888",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN092",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70026064,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70026064.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70026064.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70026064.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49014,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12025,
+          "has_effect": 0,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

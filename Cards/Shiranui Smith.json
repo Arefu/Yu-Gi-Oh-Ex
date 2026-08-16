@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 62038047,
+      "name": "Shiranui Smith",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent from the field to the Graveyard as a Synchro Material: You can add 1 \"Shiranui\" card from your Deck to your hand, except \"Shiranui Smith\". You can only use this effect of \"Shiranui Smith\" once per turn. If this card is banished: You can activate this effect; this turn, Zombie-Type monsters you control cannot be destroyed by battle.",
+      "race": "Zombie",
+      "atk": 1000,
+      "def": 0,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Shiranui",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiranui-smith-5250",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN200",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62038047,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62038047.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62038047.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62038047.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61727,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12140,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

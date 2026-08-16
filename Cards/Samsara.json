@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 44182827,
+      "name": "Samsara",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Monster Cards Tributed for a Ritual Summon are returned to the owner's Deck instead of being sent to the Graveyard.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/samsara-3768",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN168",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44182827,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44182827.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44182827.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44182827.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "13.50",
+          "amazon_price": "1.15",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55507,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6618,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

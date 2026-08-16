@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 13574687,
+      "name": "Turbo Cannon",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Turbo Rocket\" + 1 or more non-Tuner monsters\nOnce per turn, you can destroy 1 face-up monster on the field and inflict damage to its controller equal to half of its ATK.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 0,
+      "level": 3,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/turbo-cannon-1164",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13574687,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13574687.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13574687.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13574687.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.08",
+          "tcgplayer_price": "1.83",
+          "ebay_price": "3.95",
+          "amazon_price": "2.73",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29587,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8331,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

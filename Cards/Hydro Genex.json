@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 47421985,
+      "name": "Hydro Genex",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Genex Controller\" + 1 or more non-Tuner WATER monsters\nWhen this card destroys an opponent's monster by battle and sends it to the Graveyard, gain Life Points equal to the ATK of the destroyed monster.",
+      "race": "Machine",
+      "atk": 2300,
+      "def": 1800,
+      "level": 6,
+      "attribute": "WATER",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hydro-genex-4046",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN088",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN095",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47421985,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47421985.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47421985.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47421985.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.57",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "4.59",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28678,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7834,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

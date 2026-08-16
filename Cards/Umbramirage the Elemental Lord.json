@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 59281822,
+      "name": "Umbramirage the Elemental Lord",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by having exactly 5 DARK monsters in your GY. If this card is Special Summoned: Add 1 monster with 1500 or less ATK from your Deck to your hand. You can only use this effect of \"Umbramirage the Elemental Lord\" once per turn. If this face-up card leaves the field, skip the Battle Phase of your next turn.",
+      "race": "Fiend",
+      "atk": 2800,
+      "def": 2200,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Elemental Lord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/umbramirage-the-elemental-lord-9455",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59281822,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59281822.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59281822.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59281822.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Oblemirage the Elemental Lord",
+          "views": 46875,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13735,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

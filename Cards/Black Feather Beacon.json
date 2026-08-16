@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 40279770,
+      "name": "Black Feather Beacon",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when you take damage from a card effect. Special Summon 1 Level 4 or lower \"Blackwing\" monster from your hand.",
+      "race": "Normal",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/black-feather-beacon-3423",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Crow",
+          "set_code": "DP11-EN029",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40279770,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40279770.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40279770.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40279770.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "2.50",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14947,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-27",
+          "ocg_date": "2010-10-16",
+          "konami_id": 9245,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

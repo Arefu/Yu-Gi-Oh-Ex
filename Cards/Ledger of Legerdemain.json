@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 56256517,
+      "name": "Ledger of Legerdemain",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Banish 3 cards from the top of your Deck, face-down. During your 3rd Standby Phase after this card's activation, add all 3 cards to your hand. You can only activate 1 \"Ledger of Legerdemain\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ledger-of-legerdemain-9470",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN067",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENF11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56256517,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56256517.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56256517.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56256517.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "4.89",
+          "amazon_price": "12.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Seer's Passbook",
+          "views": 295371,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13783,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

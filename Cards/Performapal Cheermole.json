@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 17857780,
+      "name": "Performapal Cheermole",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nAll Pendulum Monsters you control gain 300 ATK.\n\n[ Monster Effect ] \nYou can target 1 monster whose current ATK is different from its original ATK; apply the appropriate effect. You can only use this effect of \"Performapal Cheermole\" once per turn.\r\n● If that monster's current ATK is higher than its original ATK, it gains 1000 ATK.\r\n● If that monster's current ATK is lower than its original ATK, it loses 1000 ATK.",
+      "race": "Beast",
+      "pend_desc": "All Pendulum Monsters you control gain 300 ATK.",
+      "monster_desc": "You can target 1 monster whose current ATK is different from its original ATK; apply the appropriate effect. You can only use this effect of \"Performapal Cheermole\" once per turn.\r\n● If that monster's current ATK is higher than its original ATK, it gains 1000 ATK.\r\n● If that monster's current ATK is lower than its original ATK, it loses 1000 ATK.",
+      "atk": 600,
+      "def": 1000,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-cheermole-1550",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN126",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN001",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17857780,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17857780.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17857780.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17857780.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27643,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11333,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

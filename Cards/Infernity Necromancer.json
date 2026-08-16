@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 56209279,
+      "name": "Infernity Necromancer",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned, it is changed to Defense Position. If you have no cards in your hand, this card gains the following effect: Once per turn, you can select 1 \"Infernity\" monster in your Graveyard, except \"Infernity Necromancer\", and Special Summon it.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 2000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Infernity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernity-necromancer-4785",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN052",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 14 (POR)",
+          "set_code": "OP14-PT032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56209279,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56209279.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56209279.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56209279.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "0.52",
+          "ebay_price": "3.00",
+          "amazon_price": "8.95",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 127282,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8443,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

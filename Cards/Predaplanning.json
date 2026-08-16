@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 44536921,
+      "name": "Predaplanning",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Send 1 \"Predaplant\" monster from your Deck to the GY; place 1 Predator Counter on each face-up monster on the field, and if you do, any of those monsters that are Level 2 or higher become Level 1 as long as they have a Predator Counter. If you Fusion Summon a DARK monster while this card is in your GY (except during the Damage Step): You can banish this card from your GY, then target 1 card on the field; destroy it. You can only use each effect of \"Predaplanning\" once per turn.",
+      "race": "Normal",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplanning-10375",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.97"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44536921,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44536921.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44536921.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44536921.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.99",
+          "amazon_price": "1.95",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 141189,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100422049,
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14605,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

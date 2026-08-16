@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 70948327,
+      "name": "Nanobreaker",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card attacks a face-up Level 3 or lower monster, destroy the monster immediately with this card's effect without applying damage calculation.",
+      "race": "Machine",
+      "atk": 1600,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nanobreaker-5963",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.25"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70948327,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70948327.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70948327.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70948327.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.35",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67765,
+          "viewsweek": 63,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6499,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

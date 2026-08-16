@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 81670445,
+      "name": "Time Thief Hack",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "During the turn they are Special Summoned, Xyz Monsters you control cannot be destroyed by your opponent's card effects, also your opponent cannot target them with card effects. You can target 1 face-up Xyz Monster you control; it gains 300 ATK for each material currently attached to it, until the end of this turn, and if it does, and also has a material that is owned by your opponent, it can attack directly this turn (even if this card leaves the field). You can only use this effect of \"Time Thief Hack\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Time Thief",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/time-thief-hack-10118",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN066",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.43"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81670445,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81670445.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81670445.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81670445.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.68",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105609,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14357,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

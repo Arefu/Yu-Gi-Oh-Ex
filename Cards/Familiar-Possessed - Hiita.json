@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 4376658,
+      "name": "Familiar-Possessed - Hiita",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand or Deck) by sending 1 face-up \"Hiita the Fire Charmer\" and 1 face-up FIRE monster you control to the GY. If this card Special Summoned by its own effect attacks a Defense Position monster, inflict piercing battle damage.",
+      "race": "Spellcaster",
+      "atk": 1850,
+      "def": 1500,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Charmer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/familiar-possessed-hiita-395",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN088",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.95"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.92"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "THE CHRONICLES DECK: Spirit Charmers (All-Foil Edition)",
+          "set_code": "CH02-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4376658,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4376658.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4376658.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4376658.jpg"
+        },
+        {
+          "id": 4376659,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4376659.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4376659.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4376659.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "2.95",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 165576,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Familiar-Possessed - Hiita",
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6509,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

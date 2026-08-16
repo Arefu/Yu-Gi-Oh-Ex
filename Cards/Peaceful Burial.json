@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 14055212,
+      "name": "Peaceful Burial",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Send 1 monster from your Deck to the GY, but for the rest of this turn, you cannot activate cards, or the effects of cards, with the same name the sent monster had in the GY. You can only activate 1 \"Peaceful Burial\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/peaceful-burial-10458",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN196",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.01"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN077",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14055212,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14055212.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14055212.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14055212.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Soothing Burial",
+          "views": 39963,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010077,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14704,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

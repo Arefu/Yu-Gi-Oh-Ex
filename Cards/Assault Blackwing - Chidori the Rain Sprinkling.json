@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 23338098,
+      "name": "Assault Blackwing - Chidori the Rain Sprinkling",
+      "typeline": [
+        "Winged Beast",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nIf this card is Synchro Summoned using a \"Blackwing\" monster as Material, it is treated as a Tuner monster while face-up on the field. This card gains 300 ATK for each \"Blackwing\" monster in your Graveyard. When this card is destroyed and sent to the Graveyard: You can target 1 Winged Beast-Type Synchro Monster in your Graveyard, except \"Assault Blackwing - Chidori the Rain Sprinkling\"; Special Summon it.",
+      "race": "Winged Beast",
+      "atk": 2600,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Blackwing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/assault-blackwing-chidori-the-rain-sprinkling-2014",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN051",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23338098,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23338098.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23338098.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23338098.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.16",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "1.48",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 159153,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12323,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

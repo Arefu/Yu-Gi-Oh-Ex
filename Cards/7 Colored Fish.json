@@ -1,0 +1,114 @@
+{
+  "data": [
+    {
+      "id": 23771716,
+      "name": "7 Colored Fish",
+      "typeline": [
+        "Fish",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A rare rainbow fish that has never been caught by mortal man.",
+      "race": "Fish",
+      "atk": 1800,
+      "def": 800,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/7-colored-fish-2049",
+      "card_sets": [
+        {
+          "set_name": "Gold Series",
+          "set_code": "GLD1-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.85"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.61"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENC09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.86"
+        },
+        {
+          "set_name": "Structure Deck: Fury from the Deep",
+          "set_code": "SD4-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.35"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23771716,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23771716.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23771716.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23771716.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.99",
+          "amazon_price": "2.77",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 515508,
+          "viewsweek": 21,
+          "upvotes": 26,
+          "downvotes": 6,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4446,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

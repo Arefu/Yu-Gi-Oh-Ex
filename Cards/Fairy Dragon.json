@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 20315854,
+      "name": "Fairy Dragon",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This beautiful Dragon spirit harbors hidden strength.",
+      "race": "Dragon",
+      "atk": 1100,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fairy-dragon-1742",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Three",
+          "set_code": "CP03-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.67"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20315854,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20315854.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20315854.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20315854.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.95",
+          "tcgplayer_price": "24.32",
+          "ebay_price": "0.99",
+          "amazon_price": "5.93",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29149,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-15",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4609,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

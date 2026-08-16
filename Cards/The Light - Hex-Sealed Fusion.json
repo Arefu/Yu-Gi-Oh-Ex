@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 15717011,
+      "name": "The Light - Hex-Sealed Fusion",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can substitute this card for any 1 Fusion Material Monster, but the other Fusion Material Monster(s) must be correct. You can Tribute Fusion Material Monsters on the field, including this face-up card; Special Summon 1 corresponding LIGHT Fusion Monster from your Extra Deck.",
+      "race": "Rock",
+      "atk": 1000,
+      "def": 1600,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-light-hex-sealed-fusion-1355",
+      "card_sets": [
+        {
+          "set_name": "Cyber Dragon Revolution Structure Deck",
+          "set_code": "SDCR-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN147",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flaming Eternity",
+          "set_code": "FET-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN262",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15717011,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15717011.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15717011.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15717011.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.51",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "2.89",
+          "amazon_price": "5.98",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 296965,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-02-26",
+          "ocg_date": "2004-11-25",
+          "konami_id": 6256,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

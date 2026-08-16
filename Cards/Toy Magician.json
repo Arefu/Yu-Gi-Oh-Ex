@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 58132856,
+      "name": "Toy Magician",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Set this card from your hand to your Spell & Trap Zone as a Spell. During the End Phase, if this Set card in your Spell & Trap Zone was destroyed by an opponent's card effect and sent to the GY this turn: Special Summon this card. If this card is Flip Summoned: Destroy Spells and Traps on the field, equal to the number of \"Toy Magicians\" on the field.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 1500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toy-magician-4946",
+      "card_sets": [
+        {
+          "set_name": "The Duelist Genesis",
+          "set_code": "TDGS-EN099",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2018)",
+          "set_code": "AC18-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.57"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58132856,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58132856.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58132856.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58132856.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.96",
+          "ebay_price": "8.99",
+          "amazon_price": "20.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37522,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-08-09",
+          "ocg_date": "2006-04-21",
+          "konami_id": 6815,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

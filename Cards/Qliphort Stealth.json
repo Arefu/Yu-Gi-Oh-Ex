@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 13073850,
+      "name": "Qliphort Stealth",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. All \"Qli\" monsters you control gain 300 ATK.\n\n[ Monster Effect ] \nYou can Normal Summon this card without Tributing. If this card is Normal Summoned without Tributing, or is Special Summoned, its Level becomes 4 and its original ATK becomes 1800. If this card is Normal Summoned/Set, it is unaffected by activated effects from any monster whose original Level/Rank is lower than this card's current Level. When this card is Tribute Summoned by Tributing a \"Qli\" monster(s): You can target 1 card on the field; return it to the hand. Your opponent cannot activate cards or effects in response to this effect's activation.",
+      "race": "Machine",
+      "pend_desc": "You cannot Special Summon monsters, except \"Qli\" monsters. This effect cannot be negated. All \"Qli\" monsters you control gain 300 ATK.",
+      "monster_desc": "You can Normal Summon this card without Tributing. If this card is Normal Summoned without Tributing, or is Special Summoned, its Level becomes 4 and its original ATK becomes 1800. If this card is Normal Summoned/Set, it is unaffected by activated effects from any monster whose original Level/Rank is lower than this card's current Level. When this card is Tribute Summoned by Tributing a \"Qli\" monster(s): You can target 1 card on the field; return it to the hand. Your opponent cannot activate cards or effects in response to this effect's activation.",
+      "atk": 2800,
+      "def": 1000,
+      "level": 8,
+      "attribute": "EARTH",
+      "archetype": "Qli",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/qliphort-stealth-1128",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN210",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN022",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13073850,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13073850.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13073850.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13073850.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.63",
+          "tcgplayer_price": "2.14",
+          "ebay_price": "1.65",
+          "amazon_price": "3.75",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69852,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11542,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

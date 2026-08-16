@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 30341772,
+      "name": "Utopia Buster",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control a \"Utopia\" monster: Destroy the 1 face-up monster your opponent controls that has the lowest ATK (your choice, if tied), and if you do, inflict damage to your opponent equal to the destroyed monster's ATK on the field.",
+      "race": "Normal",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/utopia-buster-2573",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN009",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "1.78"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30341772,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30341772.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30341772.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30341772.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.47",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "0.99",
+          "amazon_price": "3.82",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34013,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2013-03-16",
+          "konami_id": 10456,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 29357956,
+      "name": "Gladiator Beast Nerokius",
+      "typeline": [
+        "Winged Beast",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "3 \"Gladiator Beast\" monsters\nMust first be Special Summoned (from your Extra Deck) by shuffling the above cards you control into the Deck. (You do not use \"Polymerization\".) Cannot be destroyed by battle. If this card attacks or is attacked, your opponent cannot activate cards or effects until the end of the Damage Step. At the end of the Battle Phase, if this card attacked or was attacked: You can shuffle it into the Extra Deck; Special Summon 2 \"Gladiator Beast\" monsters from your Deck.",
+      "race": "Winged Beast",
+      "atk": 2800,
+      "def": 1900,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-nerokius-2489",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN051",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN086",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29357956,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29357956.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29357956.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29357956.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.04",
+          "tcgplayer_price": "1.17",
+          "ebay_price": "1.95",
+          "amazon_price": "2.73",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77843,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-09-13",
+          "konami_id": 11201,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

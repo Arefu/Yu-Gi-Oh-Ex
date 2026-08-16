@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 67328336,
+      "name": "Meklord Fortress",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "\"Meklord Emperor\" monsters you control cannot be targeted by the effects of Synchro Monsters. When this card on the field is destroyed and sent to the Graveyard: You can add 1 \"Meklord Emperor\" monster from your Deck to your hand.",
+      "race": "Field",
+      "archetype": "Meklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/meklord-fortress-5663",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN095",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN173",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67328336,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67328336.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67328336.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67328336.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28615,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2010-08-20",
+          "konami_id": 9267,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

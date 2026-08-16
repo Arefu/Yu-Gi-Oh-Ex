@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 50920465,
+      "name": "Blizzard Thunderbird",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard 1 card; Special Summon 2 WATER Winged Beast-Type monsters, 1 from your hand and 1 from your Graveyard, except \"Blizzard Thunderbird\", then return this card from the field to the hand. You can only use this effect of \"Blizzard Thunderbird\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 1600,
+      "def": 1400,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blizzard-thunderbird-4335",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50920465,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50920465.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50920465.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50920465.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34588,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11036,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

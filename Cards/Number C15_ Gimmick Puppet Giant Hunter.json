@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 33776843,
+      "name": "Number C15: Gimmick Puppet Giant Hunter",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 9 monsters\nOnce per turn: You can detach 1 Xyz Material from this card, then target 1 card your opponent controls; destroy it, and if you do, and it was a monster, inflict damage to your opponent equal to its original ATK.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 1500,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Gimmick Puppet",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c15-gimmick-puppet-giant-hunter-2867",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN019",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "4.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33776843,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33776843.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33776843.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33776843.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.71",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "3.94",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C15",
+          "views": 163697,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11014,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

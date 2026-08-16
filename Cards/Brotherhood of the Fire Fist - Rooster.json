@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 30929786,
+      "name": "Brotherhood of the Fire Fist - Rooster",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned by the effect of a \"Fire Fist\" monster: You can add 1 \"Fire Fist\" monster from your Deck to your hand. You can only use this effect of \"Brotherhood of the Fire Fist - Rooster\" once per turn. Once per turn: You can send 1 face-up \"Fire Formation\" Spell/Trap you control to the GY; Set 1 \"Fire Formation\" Spell/Trap directly from your Deck.",
+      "race": "Beast-Warrior",
+      "atk": 1500,
+      "def": 100,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-rooster-2626",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN120",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN094",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30929786,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30929786.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30929786.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30929786.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.10",
+          "amazon_price": "2.16",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 74959,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-01-11",
+          "konami_id": 10445,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

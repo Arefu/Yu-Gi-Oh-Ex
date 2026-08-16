@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 92266279,
+      "name": "Humid Winds",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can pay 1000 LP; add 1 \"Aroma\" monster from your Deck to your hand. If your LP is lower than your opponent's: You can gain 500 LP. You can only use each effect of \"Humid Winds\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Aroma",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/humid-winds-7689",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN074",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 25",
+          "set_code": "OP25-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92266279,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92266279.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92266279.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92266279.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "1.53",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 191216,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11858,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

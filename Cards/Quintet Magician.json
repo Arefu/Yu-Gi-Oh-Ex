@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 84433295,
+      "name": "Quintet Magician",
+      "typeline": [
+        "Spellcaster",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "5 Spellcaster monsters\r\nMust be Fusion Summoned. If this card is Fusion Summoned using 5 Spellcaster monsters with different names: You can destroy all cards your opponent controls. This face-up card on the field cannot be Tributed, nor used as Fusion Material, also it cannot be destroyed by card effects.",
+      "race": "Spellcaster",
+      "atk": 4500,
+      "def": 4500,
+      "level": 12,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/quintet-magician-9273",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN040",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.97"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN127",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.02"
+        },
+        {
+          "set_name": "THE CHRONICLES DECK: Spirit Charmers (All-Foil Edition)",
+          "set_code": "CH02-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84433295,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84433295.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84433295.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84433295.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "4.95",
+          "amazon_price": "5.76",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 570115,
+          "viewsweek": 21,
+          "upvotes": 32,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-02-23",
+          "konami_id": 13690,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

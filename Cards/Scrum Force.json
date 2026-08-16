@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 20920083,
+      "name": "Scrum Force",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "While you control 2 or more face-up Defense Position monsters, your opponent cannot target Defense Position monsters you control with card effects, and they cannot be destroyed by your opponent's card effects. If this card would be destroyed by card effect, you can destroy 1 card in your Spell & Trap Zone instead.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrum-force-1798",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN116",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20920083,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20920083.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20920083.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20920083.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14298,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12543,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

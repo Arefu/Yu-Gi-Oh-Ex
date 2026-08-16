@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 90740329,
+      "name": "Taunt",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only during your opponent's Main Phase 1; select 1 monster on your side of the field. While the selected card remains on the field, if your opponent attacks with a monster(s) this turn, they must select the selected monster as the attack target.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/taunt-7578",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN049",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90740329,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90740329.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90740329.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90740329.jpg"
+        },
+        {
+          "id": 90740330,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90740330.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90740330.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90740330.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63751,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Taunt",
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6140,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

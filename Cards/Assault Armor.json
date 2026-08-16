@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 88190790,
+      "name": "Assault Armor",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Warrior-Type monster that is the only monster you control. It gains 300 ATK. During your Main Phase 1, you can send this equipped card to the Graveyard to allow the equipped monster to attack twice during each Battle Phase this turn.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/assault-armor-7373",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN092",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN096",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88190790,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88190790.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88190790.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88190790.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "2.99",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42007,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7494,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

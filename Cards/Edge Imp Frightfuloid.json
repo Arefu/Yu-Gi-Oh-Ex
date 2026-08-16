@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 34566435,
+      "name": "Edge Imp Frightfuloid",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "(This card is always treated as a \"Frightfur\" card.)\nYou can target 1 \"Frightfur\" Fusion Monster you control or in your Graveyard; this card's ATK and DEF each become equal to the original ATK and DEF of that monster, until the end of this turn. You can only use this effect of \"Edge Imp Frightfuloid\" once per turn.",
+      "race": "Fiend",
+      "atk": 1300,
+      "def": 1300,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/edge-imp-frightfuloid-2937",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34566435,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34566435.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34566435.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34566435.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45331,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11690,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

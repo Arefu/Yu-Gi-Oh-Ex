@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 29948642,
+      "name": "Dig Beak",
+      "typeline": [
+        "Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This beast coils like a snake, and strikes quickly with its snapping beak.",
+      "race": "Beast",
+      "atk": 500,
+      "def": 800,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dig-beak-2538",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack 7",
+          "set_code": "TP7-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29948642,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29948642.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29948642.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29948642.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.96",
+          "tcgplayer_price": "1.04",
+          "ebay_price": "1.80",
+          "amazon_price": "1.40",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14603,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-01",
+          "ocg_date": "1999-03-01",
+          "konami_id": 4165,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

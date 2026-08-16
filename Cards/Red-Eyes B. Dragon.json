@@ -1,0 +1,372 @@
+{
+  "data": [
+    {
+      "id": 74677422,
+      "name": "Red-Eyes Black Dragon",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "''A ferocious dragon with a deadly attack.''",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-eyes-black-dragon-6276",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN054",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Anniversary Pack",
+          "set_code": "YAP1-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "89.05"
+        },
+        {
+          "set_name": "Booster Pack Collectors Tins 2002",
+          "set_code": "BPT-005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "88.23"
+        },
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN126",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.83"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "12.71"
+        },
+        {
+          "set_name": "Dragons Collide Structure Deck",
+          "set_code": "SDDC-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "11.22"
+        },
+        {
+          "set_name": "Duel Terminal - Preview Wave 1",
+          "set_code": "DTP1-EN003",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Duel Terminal - Preview Wave 2",
+          "set_code": "DTP1-EN003",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "750"
+        },
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN003",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "217.5"
+        },
+        {
+          "set_name": "Duelist Pack: Battle City",
+          "set_code": "DPBC-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.01"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-070",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "39.69"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E056",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "920.45"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN070",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection",
+          "set_code": "LC01-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "7.28"
+        },
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.19"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENJ01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN000",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.72"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.34"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN003",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "9.72"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN003",
+          "set_rarity": "Premium Gold Rare",
+          "set_rarity_code": "(PG)",
+          "set_price": "8.09"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.12"
+        },
+        {
+          "set_name": "Nike collaboration cards",
+          "set_code": "NKC1-EN002",
+          "set_rarity": "Reprint",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN081",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Bonanza",
+          "set_code": "RA03-EN081",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN109",
+          "set_rarity": "Platinum Secret Rare",
+          "set_rarity_code": "(PS)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Quarter Century Stampede",
+          "set_code": "RA04-EN109",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN086",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rarity Collection 5",
+          "set_code": "RA05-EN086",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "149.02"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 2, Issue 1 promotional card",
+          "set_code": "JMP-002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.78"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Duelists of Tomorrow",
+          "set_code": "SS02-ENB01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.7"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 1",
+          "set_code": "STP1-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "14.42"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN167",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.54"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN167",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "8.2"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "18.76"
+        },
+        {
+          "set_name": "Structure Deck: Dragon's Roar",
+          "set_code": "SD1-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.89"
+        },
+        {
+          "set_name": "Swedish Shonen Jump 2005, Issue 12 promotional card",
+          "set_code": "JMP-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Power of Chaos: Joey the Passion promotional cards",
+          "set_code": "PCJ-EN001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "230"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74677422,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74677422.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74677422.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74677422.jpg"
+        },
+        {
+          "id": 74677423,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74677423.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74677423.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74677423.jpg"
+        },
+        {
+          "id": 74677424,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74677424.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74677424.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74677424.jpg"
+        },
+        {
+          "id": 74677425,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74677425.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74677425.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74677425.jpg"
+        },
+        {
+          "id": 74677426,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74677426.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74677426.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74677426.jpg"
+        },
+        {
+          "id": 74677427,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74677427.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74677427.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74677427.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.99",
+          "amazon_price": "2.69",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Red-Eyes B. Dragon",
+          "views": 1555655,
+          "viewsweek": 63,
+          "upvotes": 110,
+          "downvotes": 21,
+          "formats": [
+            "GOAT",
+            "Speed Duel",
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Red-Eyes B. Dragon",
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-05-27",
+          "konami_id": 4088,
+          "has_effect": 0,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

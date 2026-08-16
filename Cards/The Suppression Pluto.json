@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 24413299,
+      "name": "The Suppression Pluto",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can declare 1 card name; look at your opponent's hand, then if they have the declared card in their hand, apply 1 of these effects.\r\n● Take control of 1 monster your opponent controls.\r\n● Destroy 1 Spell/Trap Card your opponent controls, then you can Set the destroyed Spell/Trap Card on your field.",
+      "race": "Fiend",
+      "atk": 2600,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-suppression-pluto-2108",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN106",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.87"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN010",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.78"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24413299,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24413299.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24413299.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24413299.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33349,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 9561,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 74168099,
+      "name": "Brotherhood of the Fire Fist - Horse Prince",
+      "typeline": [
+        "Beast-Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 FIRE Tuner + 1+ non-Tuner monsters\r\nWhen this card is Synchro Summoned: You can Special Summon 1 Level 3 FIRE monster from your Deck. After you Synchro Summon this card, you cannot Special Summon Level 5 or higher monsters for the rest of the turn.",
+      "race": "Beast-Warrior",
+      "atk": 2200,
+      "def": 2200,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-horse-prince-6239",
+      "card_sets": [
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN097",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12",
+          "set_code": "OP12-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74168099,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74168099.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74168099.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74168099.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.75",
+          "tcgplayer_price": "1.20",
+          "ebay_price": "2.00",
+          "amazon_price": "3.89",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 150846,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10328,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

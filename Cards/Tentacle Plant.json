@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 60715406,
+      "name": "Tentacle Plant",
+      "typeline": [
+        "Plant",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "''A carnivorous plant that has an outgrowth of tentacles. It attacks someone nearby by extending its tentacles.''",
+      "race": "Plant",
+      "atk": 500,
+      "def": 600,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Recolored counterpart",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tentacle-plant-5152",
+      "card_images": [
+        {
+          "id": 60715406,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60715406.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60715406.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60715406.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.00",
+          "tcgplayer_price": "0.00",
+          "ebay_price": "15.00",
+          "amazon_price": "1.02",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 8200,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "OCG",
+            "Master Duel"
+          ],
+          "ocg_date": "1999-10-17",
+          "konami_id": 4595,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

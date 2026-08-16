@@ -1,0 +1,135 @@
+{
+  "data": [
+    {
+      "id": 16589042,
+      "name": "Swift Gaia the Fierce Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this is the only card in your hand, you can Normal Summon it without Tributing.",
+      "race": "Warrior",
+      "atk": 2300,
+      "def": 2100,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Gaia The Fierce Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/swift-gaia-the-fierce-knight-1428",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Eight",
+          "set_code": "AP08-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Collectible Tins 2004",
+          "set_code": "CT1-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "6.67"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN111",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal - Preview Wave 2",
+          "set_code": "DTP1-EN026",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "333"
+        },
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN056",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.29"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN085",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.2"
+        },
+        {
+          "set_name": "Structure Deck: Warrior's Triumph",
+          "set_code": "SD5-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.42"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16589042,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16589042.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16589042.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16589042.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.55",
+          "ebay_price": "0.99",
+          "amazon_price": "9.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 139349,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 4,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-09-01",
+          "ocg_date": "2001-06-28",
+          "konami_id": 5243,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

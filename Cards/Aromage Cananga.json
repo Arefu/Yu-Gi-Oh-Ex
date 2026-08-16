@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 22174866,
+      "name": "Aromage Cananga",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While your LP is higher than your opponent's, face-up monsters your opponent controls lose 500 ATK and DEF. Once per turn, if you gain LP: Target 1 Spell/Trap Card your opponent controls; return it to the hand.",
+      "race": "Plant",
+      "atk": 1400,
+      "def": 1000,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Aroma",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aromage-cananga-1913",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22174866,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22174866.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22174866.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22174866.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.50",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112650,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11819,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 39838559,
+      "name": "F.A. Circuit Grand Prix",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Increase the Levels of all \"F.A.\" monsters on the field by 2 during the Battle Phase only. Once per turn, when your \"F.A.\" monster destroys an opponent's monster by battle: You can draw 1 card. If this face-up card on the field is destroyed by a card effect: You can add 1 \"F.A.\" card from your Deck to your hand, except \"F.A. Circuit Grand Prix\". You can only use this effect of \"F.A. Circuit Grand Prix\" once per turn.",
+      "race": "Field",
+      "archetype": "F.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/f-a-circuit-grand-prix-8760",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN088",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39838559,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39838559.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39838559.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39838559.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.88",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 50768,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-09-09",
+          "konami_id": 13215,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

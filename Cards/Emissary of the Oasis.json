@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 6103294,
+      "name": "Emissary of the Oasis",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While a face-up Level 3 or lower Normal Monster is on your side of the field, your opponent cannot select this card as an attack target. While this card is face-up on your side of the field, any Battle Damage to the controller of this card from battle involving a Level 3 or lower Normal Monster becomes 0.",
+      "race": "Spellcaster",
+      "atk": 600,
+      "def": 400,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/emissary-of-the-oasis-533",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-083",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.49"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN196",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6103294,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6103294.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6103294.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6103294.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.71",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56811,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6045,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

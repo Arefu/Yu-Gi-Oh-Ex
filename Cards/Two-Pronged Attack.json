@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 83887306,
+      "name": "Two-Pronged Attack",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Select and destroy 2 of your monsters and 1 of your opponent's monsters.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/two-pronged-attack-7035",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-061",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.2"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.01"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN061",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.51"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.86"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.93"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-E026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83887306,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83887306.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83887306.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83887306.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.74",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 244952,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 5,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-06",
+          "konami_id": 4839,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

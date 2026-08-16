@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 11969228,
+      "name": "Dragunity Knight - Romulus",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Dragon and/or Winged Beast monsters, except Tokens\r\nIf this card is Link Summoned: You can add 1 \"Dragunity\" Spell/Trap or 1 \"Dragon Ravine\" from your Deck to your hand. If a Dragon monster(s) is Special Summoned from the Extra Deck to a zone this card points to (except during the Damage Step): You can Special Summon 1 Dragon or Winged Beast monster from your hand in Defense Position, but for the rest of this turn, its effects (if any) are negated and it cannot be used as Link Material. You can only use each effect of \"Dragunity Knight - Romulus\" once per turn.",
+      "race": "Dragon",
+      "atk": 1200,
+      "def": null,
+      "level": null,
+      "attribute": "WIND",
+      "archetype": "Dragunity",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragunity-knight-romulus-9888",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN145",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "2.98"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN142",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN098",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11969228,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11969228.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11969228.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11969228.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.24",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 661166,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 5,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14198,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

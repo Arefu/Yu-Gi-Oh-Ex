@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 75448086,
+      "name": "Generaider Boss Quest",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Reveal 1 \"Generaider\" monster in your hand, and if you do, add up to 2 \"Generaider\" Spells/Traps with different names from each other from your Deck to your hand, except \"Generaider Boss Quest\". Then place the revealed card on the bottom of your Deck. You can only activate 1 \"Generaider Boss Quest\" per turn.",
+      "race": "Normal",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/generaider-boss-quest-10491",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN035",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.89"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75448086,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75448086.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75448086.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75448086.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.71",
+          "tcgplayer_price": "1.08",
+          "ebay_price": "3.00",
+          "amazon_price": "1.04",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Generaider Quest",
+          "views": 117246,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423035,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14778,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

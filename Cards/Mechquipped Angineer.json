@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 15914410,
+      "name": "Mechquipped Angineer",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\nOnce per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up Attack Position monster you control; change it to face-up Defense Position, and if you do, it cannot be destroyed by battle or by card effects this turn.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 1000,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mechquipped-angineer-1367",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN035",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.54"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15914410,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15914410.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15914410.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15914410.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.83",
+          "ebay_price": "1.49",
+          "amazon_price": "1.79",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64061,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10709,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

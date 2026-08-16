@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 10532969,
+      "name": "Hyper-Ancient Shark Megalodon",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card inflicts battle damage to your opponent: You can target 1 monster your opponent controls; destroy that target.",
+      "race": "Fish",
+      "atk": 2900,
+      "def": 1300,
+      "level": 8,
+      "attribute": "WATER",
+      "archetype": "Shark",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hyper-ancient-shark-megalodon-913",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN121",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN121",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10532969,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10532969.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10532969.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10532969.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49275,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10371,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

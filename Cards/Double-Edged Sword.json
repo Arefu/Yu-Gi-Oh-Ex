@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 41927278,
+      "name": "Double-Edged Sword",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "You can only control 1 \"Double-Edged Sword\". The equipped monster gains 2000 ATK, also both players take any battle damage from attacks involving the equipped monster. If you take 2000 or more battle damage: Send this card to the GY.",
+      "race": "Equip",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/double-edged-sword-10664",
+      "card_sets": [
+        {
+          "set_name": "Amazing Defenders",
+          "set_code": "AMDE-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41927278,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41927278.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41927278.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41927278.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Fragile Double-Edged Sword",
+          "views": 125734,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011068,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14877,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

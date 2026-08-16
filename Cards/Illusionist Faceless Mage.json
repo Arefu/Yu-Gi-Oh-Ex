@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 28546905,
+      "name": "Illusionist Faceless Mage",
+      "typeline": [
+        "Spellcaster",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Manipulates enemy attacks with the power of illusion.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 2200,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/illusionist-faceless-mage-2427",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.62"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.72"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN068",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENB02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Starter Deck: Pegasus",
+          "set_code": "SDP-004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.78"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28546905,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28546905.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28546905.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28546905.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.00",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 206456,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4048,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

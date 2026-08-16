@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 93302695,
+      "name": "Kozmoll Wickedwitch",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can banish this card; Special Summon 1 Level 5 or higher \"Kozmo\" monster from your hand. You can only use this effect of \"Kozmoll Wickedwitch\" once per turn. Once per turn, during either player's turn: You can pay 1000 LP; this turn, this card cannot be destroyed by battle or card effects.",
+      "race": "Psychic",
+      "atk": 1900,
+      "def": 300,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmoll-wickedwitch-7767",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN083",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN029",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93302695,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93302695.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93302695.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93302695.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.94",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 106631,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12101,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

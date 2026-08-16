@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 71983925,
+      "name": "Talisman of Spell Sealing",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card while there is a face-up \"Sealmaster Meisei\" on your side of the field. While this card is face-up on the field, Spell Cards cannot be activated and the effects of face-up Spell Cards on the field are negated. When \"Sealmaster Meisei\" is removed from the field, destroy this card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/talisman-of-spell-sealing-6043",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.79"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN161",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENG17",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71983925,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71983925.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71983925.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71983925.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "3.95",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42523,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2003-11-20",
+          "konami_id": 5989,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

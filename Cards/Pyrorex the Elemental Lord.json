@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 35842855,
+      "name": "Pyrorex the Elemental Lord",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by having exactly 5 FIRE monsters in your GY. When this card is Special Summoned: You can target 1 monster your opponent controls; destroy it, and if you do, both players take damage equal to half the original ATK of the destroyed monster. You can only use this effect of \"Pyrorex the Elemental Lord\" once per turn. If this face-up card leaves the field, skip the Battle Phase of your next turn.",
+      "race": "Dinosaur",
+      "atk": 2800,
+      "def": 2200,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Elemental Lord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pyrorex-the-elemental-lord-3035",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN069",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN040",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35842855,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35842855.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35842855.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35842855.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54501,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10399,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

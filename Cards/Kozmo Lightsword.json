@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 82270047,
+      "name": "Kozmo Lightsword",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Psychic-Type \"Kozmo\" monster. It gains 500 ATK and DEF, it can make up to 2 attacks on monsters during each Battle Phase, also if it attacks a Defense Position monster, inflict piercing battle damage to your opponent. If this card is sent from the field to the Graveyard: You can pay 800 LP; add this card to your hand. You can only use this effect of \"Kozmo Lightsword\" once per turn.",
+      "race": "Equip",
+      "archetype": "Kozmo",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kozmo-lightsword-6913",
+      "card_sets": [
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN033",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82270047,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82270047.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82270047.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82270047.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.45",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30309,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12104,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

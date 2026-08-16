@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 94997874,
+      "name": "Prediction Princess Tarotrei",
+      "typeline": [
+        "Fairy",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Prediction Ritual\". Once per turn, during your End Phase: You can Special Summon 1 Flip monster from your hand or Graveyard in face-down Defense Position. You can only use 1 of the following effects of \"Prediction Princess Tarotrei\" per turn, and only once that turn.\n● During either player's turn: You can target 1 face-down monster on the field; change it to face-up Attack Position.\n● During either player's turn: You can target 1 face-up monster on the field; change it to face-down Defense Position.",
+      "race": "Fairy",
+      "atk": 2700,
+      "def": 1200,
+      "level": 9,
+      "attribute": "LIGHT",
+      "archetype": "Prediction Princess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prediction-princess-tarotrei-7908",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN035",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.83"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN086",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "OTS Tournament Pack 2",
+          "set_code": "OP02-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94997874,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94997874.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94997874.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94997874.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 138903,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11912,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "data": [
+    {
+      "id": 79853073,
+      "name": "Cipher Soldier",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card battles a Warrior-Type monster, during damage calculation: This card gains 2000 ATK and DEF during that damage calculation only.",
+      "race": "Machine",
+      "atk": 1350,
+      "def": 1800,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Cipher",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cipher-soldier-6697",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Four",
+          "set_code": "CP04-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machina Mayhem Structure Deck",
+          "set_code": "SDMM-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "OTS Tournament Pack 3",
+          "set_code": "OP03-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Six",
+          "set_code": "TU06-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Falsebound Kingdom promotional cards",
+          "set_code": "TFK-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "35.81"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! World Championship Tournament 2004 promotional cards",
+          "set_code": "WC4-002",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "8.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79853073,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79853073.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79853073.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79853073.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.67",
+          "tcgplayer_price": "3.40",
+          "ebay_price": "10.00",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Kinetic Soldier",
+          "views": 156324,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-02-10",
+          "ocg_date": "2001-09-06",
+          "konami_id": 5034,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

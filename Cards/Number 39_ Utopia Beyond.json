@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 21521304,
+      "name": "Number 39: Utopia Beyond",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 6 monsters\nIf this card is Xyz Summoned: The ATK of all monsters your opponent currently controls become 0. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up Xyz Monster you control and 1 \"Utopia\" monster in your Graveyard; banish the first target, and if you do, Special Summon the second target, then gain 1250 LP.",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 2500,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-39-utopia-beyond-1855",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN188",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN095",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers: Super Edition",
+          "set_code": "NECH-ENS13",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21521304,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21521304.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21521304.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21521304.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.67",
+          "tcgplayer_price": "0.73",
+          "ebay_price": "4.19",
+          "amazon_price": "8.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 39",
+          "views": 574377,
+          "viewsweek": 21,
+          "upvotes": 43,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-03-20",
+          "konami_id": 11132,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

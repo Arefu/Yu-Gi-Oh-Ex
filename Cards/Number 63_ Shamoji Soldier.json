@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 89642993,
+      "name": "Number 63: Shamoji Soldier",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 1 monsters\nYou can only use the effect of \"Number 63: Shamoji Soldier\" once per turn. You can detach 1 Xyz Material from this card, then activate 1 of these effects;\n● At the start of your opponent's next Standby Phase, each player draws 1 card.\n● Each player gains 1000 Life Points.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 2000,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-63-shamoji-soldier-7493",
+      "card_sets": [
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.84"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89642993,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89642993.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89642993.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89642993.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.80",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "0.99",
+          "amazon_price": "1.10",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 63",
+          "views": 44838,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10705,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

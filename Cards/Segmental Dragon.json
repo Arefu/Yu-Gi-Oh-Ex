@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 15066114,
+      "name": "Segmental Dragon",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Normal Summon/Set this card without Tributing, but its original ATK/DEF becomes halved. Once per turn, if this Normal Summoned/Set card is on the field (Quick Effect): You can destroy this face-up card, and if you do, destroy all monsters in the Main Monster Zones with ATK less than or equal to the ATK this card had on the field.",
+      "race": "Cyberse",
+      "atk": 2600,
+      "def": 2400,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/segmental-dragon-9131",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Powercode Link",
+          "set_code": "SDPL-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15066114,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15066114.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15066114.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15066114.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.99",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33429,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-09",
+          "ocg_date": "2017-12-09",
+          "konami_id": 13525,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

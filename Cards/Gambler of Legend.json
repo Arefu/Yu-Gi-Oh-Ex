@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 2196767,
+      "name": "Gambler of Legend",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can toss a coin 3 times and apply the appropriate effect: ● 3 Heads: Destroy all monsters your opponent controls. ● 2 Heads: Discard 1 random card from your opponent's hand. ● 1 Head: Destroy 1 card you control. ● 3 Tails: Discard your entire hand.",
+      "race": "Spellcaster",
+      "atk": 500,
+      "def": 1400,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gambler-of-legend-197",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2196767,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2196767.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2196767.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2196767.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "1.75",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 113151,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7296,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

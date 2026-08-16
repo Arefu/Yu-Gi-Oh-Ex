@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 6387204,
+      "name": "Number C6: Chronomaly Chaos Atlandis",
+      "typeline": [
+        "Machine",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 7 monsters\nIf you activate any of this card's effects, your opponent takes no further damage this turn. Once per turn: You can target 1 monster your opponent controls; equip that target to this card as an Equip Spell Card whose effect makes this monster gain 1000 ATK. If this card has \"Number 6: Chronomaly Atlandis\" as an Xyz Material, it gains this effect.\n● You can detach 3 Xyz Materials from this card and send all \"Number\" monsters equipped by this card's effect to the Graveyard (min. 1); make your opponent's Life Points 100.",
+      "race": "Machine",
+      "atk": 3300,
+      "def": 3300,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Chaos",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c6-chronomaly-chaos-atlandis-563",
+      "card_sets": [
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN018",
+          "set_rarity": "Gold Secret Rare",
+          "set_rarity_code": "(GScR)",
+          "set_price": "8.49"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 6387204,
+          "image_url": "https://images.ygoprodeck.com/images/cards/6387204.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/6387204.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/6387204.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.07",
+          "tcgplayer_price": "1.63",
+          "ebay_price": "4.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C6",
+          "views": 72979,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-03-28",
+          "ocg_date": "2014-03-21",
+          "konami_id": 11013,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

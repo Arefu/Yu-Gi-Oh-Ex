@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 51447164,
+      "name": "T.G. Blade Blaster",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner Synchro Monster + 1 or more non-Tuner Synchro Monsters\nDuring either player's turn, when your opponent activates a Spell/Trap Card that targets this face-up card: You can send 1 card from your hand to the Graveyard; negate the effect. Once per turn, during your opponent's turn: You can banish 1 \"T.G.\" monster from your Graveyard; banish this face-up card on the field (this is a Quick Effect). During the next Standby Phase after this card was banished by this effect: Special Summon this card.",
+      "race": "Machine",
+      "atk": 3300,
+      "def": 2200,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/t-g-blade-blaster-4377",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN042",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN042",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN215",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51447164,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51447164.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51447164.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51447164.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.80",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "22.00",
+          "amazon_price": "1.22",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68109,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9513,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

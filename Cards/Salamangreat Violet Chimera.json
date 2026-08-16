@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 37261776,
+      "name": "Salamangreat Violet Chimera",
+      "typeline": [
+        "Cyberse",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Salamangreat\" monster + 1 Link Monster\r\nIf this card is Fusion Summoned: You can make this card gain ATK equal to half the combined original ATK of the materials used to Summon it, until the end of this turn. Once per battle, during damage calculation, if this monster battles a monster whose current ATK is different from its original ATK (Quick Effect): You can double this card's ATK during damage calculation only. If this card that was Fusion Summoned using \"Salamangreat Violet Chimera\" as material battles a monster, that monster's ATK becomes 0 during damage calculation only.",
+      "race": "Cyberse",
+      "atk": 2800,
+      "def": 2000,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-violet-chimera-9804",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN034",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37261776,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37261776.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37261776.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37261776.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 409071,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14111,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

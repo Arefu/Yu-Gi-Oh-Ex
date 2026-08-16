@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 34989413,
+      "name": "Reprodocus",
+      "typeline": [
+        "Dinosaur",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters\r\nYou can activate 1 of these effects.\r\n● Declare 1 Monster Type; all face-up monsters this card points to become that Type until the end of this turn.\r\n● Declare 1 Attribute; all face-up monsters this card points to become that Attribute until the end of this turn.\r\nYou can only use this effect of \"Reprodocus\" once per turn.",
+      "race": "Dinosaur",
+      "atk": 800,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reprodocus-9464",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN110",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9",
+          "set_code": "OP09-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 9 (POR)",
+          "set_code": "OP09-PT007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34989413,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34989413.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34989413.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34989413.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.52",
+          "tcgplayer_price": "0.71",
+          "ebay_price": "1.49",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Riplodocus",
+          "views": 331987,
+          "viewsweek": 63,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13764,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

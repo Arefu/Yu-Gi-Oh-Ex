@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 66926224,
+      "name": "The Law of the Normal",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "You can only activate this card while there are 5 face-up Level 2 or lower Normal Monsters on your side of the field. Both players discard all cards in their hands, and destroy all cards on the field except Level 2 or lower Normal Monsters.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-law-of-the-normal-5619",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.41"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN207",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66926224,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66926224.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66926224.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66926224.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.99",
+          "amazon_price": "2.61",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89374,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6056,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

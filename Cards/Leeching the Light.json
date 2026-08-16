@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 90263923,
+      "name": "Leeching the Light",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select 1 face-up LIGHT monster your opponent controls. All face-up Attack Position monsters you control gain ATK equal to the ATK of the selected monster, until the End Phase.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/leeching-the-light-7538",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90263923,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90263923.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90263923.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90263923.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.87",
+          "tcgplayer_price": "0.56",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41913,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8836,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

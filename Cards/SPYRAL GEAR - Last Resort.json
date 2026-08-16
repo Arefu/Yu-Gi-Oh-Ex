@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 37433748,
+      "name": "SPYRAL GEAR - Last Resort",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"SPYRAL\" monster you control; equip this monster from your hand or field to that target. While this card is equipped to a monster by this effect, the equipped monster cannot be destroyed by battle or card effects, also your opponent cannot target it with card effects. Once per turn, if this card is equipped to a monster by this effect: You can send 1 other card you control to the Graveyard; the equipped monster can attack directly this turn.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "SPYRAL",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spyral-gear-last-resort-8553",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37433748,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37433748.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37433748.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37433748.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72527,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-09-09",
+          "konami_id": 13026,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

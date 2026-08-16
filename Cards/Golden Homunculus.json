@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 27408609,
+      "name": "Golden Homunculus",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 300 ATK and DEF for each of your banished cards.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1500,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/golden-homunculus-2340",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN066",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENF02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENF02",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Emperor Structure Deck",
+          "set_code": "SDDE-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.8"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Ultimate Masters: World Championship Tournament 2006 promotional cards",
+          "set_code": "WC6-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.87"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27408609,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27408609.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27408609.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27408609.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.75",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 86312,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-03-14",
+          "ocg_date": "2006-02-23",
+          "konami_id": 6645,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

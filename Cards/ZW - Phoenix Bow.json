@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 87008374,
+      "name": "ZW - Phoenix Bow",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 face-up \"Number C39: Utopia Ray\" you control; equip this card from your hand to that target. It gains 1100 ATK. When the equipped monster destroys an opponent's monster by battle: Inflict 1000 damage to your opponent. You can only control 1 face-up \"ZW - Phoenix Bow\".",
+      "race": "Winged Beast",
+      "atk": 1100,
+      "def": 0,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Utopia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zw-phoenix-bow-7282",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN003",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87008374,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87008374.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87008374.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87008374.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32661,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10133,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

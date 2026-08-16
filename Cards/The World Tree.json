@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 5973663,
+      "name": "The World Tree",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time a face-up Plant-Type monster(s) on the field is destroyed, place 1 Flower Counter on this card. You can remove any number of Flower Counters from this card to activate these effects.\n● 1 Counter: Target 1 Plant-Type monster on the field; that target gains 400 ATK and DEF until the end of this turn. (This ATK gain remains even if this card leaves the field.)\n● 2 Counters: Target 1 card on the field; destroy that target.\n● 3 Counters: Target 1 Plant-Type monster in your Graveyard; Special Summon that target.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-world-tree-523",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist League 18 participation cards",
+          "set_code": "DL18-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "11.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5973663,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5973663.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5973663.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5973663.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "9.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64309,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7914,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

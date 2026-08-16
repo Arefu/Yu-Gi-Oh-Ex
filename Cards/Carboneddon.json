@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 15981690,
+      "name": "Carboneddon",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card battles a FIRE monster, during damage calculation: This card gains 1000 ATK during damage calculation only. You can banish this card from your Graveyard; Special Summon, from your hand or Deck, 1 Level 7 or lower Dragon-Type Normal Monster in face-up Defense Position. You can only use this effect of \"Carboneddon\" once per turn.",
+      "race": "Dinosaur",
+      "atk": 800,
+      "def": 600,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Bonding",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/carboneddon-1376",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend",
+          "set_code": "DRLG-EN022",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.33"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.1"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENC07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15981690,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15981690.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15981690.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15981690.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 302027,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-04-25",
+          "ocg_date": "2014-05-17",
+          "konami_id": 11167,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

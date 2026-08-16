@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 29590752,
+      "name": "Gladiator Beast Octavius",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Special Summoned by the effect of a \"Gladiator Beast\" monster: Target 1 face-down Spell or Trap Card in the Spell & Trap Card Zone; destroy that target. At the end of your Battle Phase, if this card attacked or was attacked: Shuffle this card into the Deck or discard 1 card.",
+      "race": "Winged Beast",
+      "atk": 2500,
+      "def": 1200,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gladiator-beast-octavius-2506",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN000",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "25.17"
+        },
+        {
+          "set_name": "Gladiator's Assault Sneak Peek Participation Card",
+          "set_code": "GLAS-ENSP1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "7.57"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN235",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29590752,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29590752.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29590752.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29590752.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.13",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "4.46",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39821,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7480,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

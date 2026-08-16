@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 18386170,
+      "name": "Dante, Pilgrim of the Burning Abyss",
+      "typeline": [
+        "Fairy",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "3 \"Burning Abyss\" monsters with different names\nMust be Fusion Summoned and cannot be Special Summoned by other ways. Cannot be targeted by an opponent's card effects. Once per turn, during either player's turn: You can send 1 \"Burning Abyss\" card from your hand to the Graveyard; draw 1 card. If this card is destroyed by battle and sent to the Graveyard, or if this card you control is sent to your Graveyard by an opponent's card effect: You can send 1 random card from your opponent's hand to the Graveyard.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2500,
+      "level": 9,
+      "attribute": "LIGHT",
+      "archetype": "Burning Abyss",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dante-pilgrim-of-the-burning-abyss-1595",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN084",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Gold: Infinite Gold",
+          "set_code": "PGL3-EN058",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18386170,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18386170.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18386170.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18386170.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.79",
+          "tcgplayer_price": "0.70",
+          "ebay_price": "3.60",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 161407,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11774,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

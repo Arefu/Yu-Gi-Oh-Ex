@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 77205367,
+      "name": "Number C96: Dark Storm",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "4 Level 3 DARK monsters\nThis card cannot be destroyed by battle, also all battle damage you take from battles involving this card is also inflicted to your opponent. If this card has \"Number 96: Dark Mist\" as an Xyz Material, it gains this effect.\n● Once per battle, during either player's turn, when an attack is declared involving this card and an opponent's monster: You can detach 1 Xyz Material from this card; the ATK of the opponent's monster becomes 0, and if it does, this card gains ATK equal to the original ATK of the opponent's monster.",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-c96-dark-storm-6496",
+      "card_sets": [
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN046",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN046",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77205367,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77205367.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77205367.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77205367.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.65",
+          "tcgplayer_price": "1.34",
+          "ebay_price": "1.84",
+          "amazon_price": "4.00",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number C96",
+          "views": 54369,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10777,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

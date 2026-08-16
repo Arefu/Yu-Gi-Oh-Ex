@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 76232340,
+      "name": "Sengenjin",
+      "typeline": [
+        "Beast-Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An unstoppable savage that carries Millennium Items.",
+      "race": "Beast-Warrior",
+      "atk": 2750,
+      "def": 2500,
+      "level": 8,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sengenjin-6419",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN049",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN003",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.87"
+        },
+        {
+          "set_name": "Premium Pack 2 (TCG)",
+          "set_code": "PP02-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.38"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! World Championship 2004 prize cards",
+          "set_code": "WCS-EN403",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "281.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76232340,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76232340.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76232340.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76232340.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "20.00",
+          "amazon_price": "7.85",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71403,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-07-25",
+          "ocg_date": "1999-08-26",
+          "konami_id": 4709,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

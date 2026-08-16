@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 74637266,
+      "name": "Octoberser",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "With the head of a fish and the legs of an octopus, this strange creature attacks enemies by flinging spears.",
+      "race": "Aqua",
+      "atk": 1600,
+      "def": 1400,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/octoberser-6273",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.87"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.16"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74637266,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74637266.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74637266.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74637266.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 112744,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4137,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

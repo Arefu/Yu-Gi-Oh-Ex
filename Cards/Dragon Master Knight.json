@@ -1,0 +1,106 @@
+{
+  "data": [
+    {
+      "id": 62873545,
+      "name": "Dragon Master Knight",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Black Luster Soldier\" + \"Blue-Eyes Ultimate Dragon\"\r\nMust be Fusion Summoned. This card gains 500 ATK for each Dragon monster you control, except this card.",
+      "race": "Dragon",
+      "atk": 5000,
+      "def": 5000,
+      "level": 12,
+      "attribute": "LIGHT",
+      "archetype": "Blue-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragon-master-knight-5308",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Kaiba",
+          "set_code": "DPKB-EN027",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Rivals of the Pharaoh",
+          "set_code": "DPRP-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection Kaiba Mega Pack",
+          "set_code": "LCKC-EN065",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack 2",
+          "set_code": "RP02-EN097",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ultimate Edition 2",
+          "set_code": "UE02-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "16.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62873545,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62873545.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62873545.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62873545.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.78",
+          "tcgplayer_price": "1.52",
+          "ebay_price": "7.49",
+          "amazon_price": "13.75",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 242182,
+          "viewsweek": 0,
+          "upvotes": 1533,
+          "downvotes": 9,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-11",
+          "ocg_date": "2002-07-04",
+          "konami_id": 5501,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

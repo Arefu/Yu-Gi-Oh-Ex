@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 34143852,
+      "name": "Heroic Challenger - Extra Sword",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "An Xyz Monster that was Summoned using this card as Xyz Material gains this effect.\n● When it is Xyz Summoned: It gains 1000 ATK.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Heroic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/heroic-challenger-extra-sword-2901",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19 (POR)",
+          "set_code": "OP19-PT037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34143852,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34143852.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34143852.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34143852.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47754,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10230,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

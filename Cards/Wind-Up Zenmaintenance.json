@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 1735088,
+      "name": "Wind-Up Zenmaintenance",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Wind-Up\" monsters\r\nIf this card is destroyed and sent to the GY: You can target 1 \"Wind-Up\" Xyz Monster you control; attach this card to it as material. You can only use each of the following effects of \"Wind-Up Zenmaintenance\" once per turn.\r\n● If this card is Link Summoned: You can add 1 \"Wind-Up\" card from your Deck to your hand.\r\n● You can banish 1 face-up \"Wind-Up\" monster you control, face-down; Special Summon 1 monster from your Deck with the same name that card had on the field.",
+      "race": "Machine",
+      "atk": 1800,
+      "def": null,
+      "level": 0,
+      "attribute": "LIGHT",
+      "archetype": "Wind-Up",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wind-up-zenmaintenance-9200",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN049",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1735088,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1735088.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1735088.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1735088.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Wind-Up Maintenance Zenmaicon",
+          "views": 44948,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13603,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

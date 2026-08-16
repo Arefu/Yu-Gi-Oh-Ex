@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 3428069,
+      "name": "Buster Blader, the Destruction Swordmaster",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's name becomes \"Buster Blader\" while it is on the field or in the Graveyard. If a monster(s) your opponent controls is destroyed by battle or card effect and sent to the Graveyard: You can target 1 of those destroyed monsters; equip it to this card. Once per turn: You can send 1 Monster Card you control that is equipped to this card to the Graveyard; destroy all monsters your opponent controls with the same Type as that monster sent to the Graveyard.",
+      "race": "Warrior",
+      "atk": 2600,
+      "def": 2300,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Destruction Sword",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/buster-blader-the-destruction-swordmaster-305",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN189",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN100",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN182",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3428069,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3428069.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3428069.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3428069.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.67",
+          "ebay_price": "3.60",
+          "amazon_price": "1.95",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 402594,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12126,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

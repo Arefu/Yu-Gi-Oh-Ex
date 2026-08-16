@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 38643567,
+      "name": "Inzektor Orb",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up \"Inzektor\" monster you control; equip this card to that target. It gains 500 ATK and DEF. When exactly 1 \"Inzektor\" monster you control is targeted by a card effect (except during the Damage Step): You can send this Equip Card to the Graveyard; negate that effect.",
+      "race": "Normal",
+      "archetype": "Inzektor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/inzektor-orb-3275",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN070",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38643567,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38643567.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38643567.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38643567.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15264,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9944,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

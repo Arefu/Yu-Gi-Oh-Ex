@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 63821877,
+      "name": "The Phantom Knights of Ragged Gloves",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "A DARK Xyz Monster that was Summoned using this card on the field as Xyz Material gains this effect.\n● If it is Xyz Summoned: It gains 1000 ATK.\nYou can banish this card from your GY; send 1 \"Phantom Knights\" card from your Deck to the GY. You can only use each effect of \"The Phantom Knights of Ragged Gloves\" once per turn.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 500,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Phantom Knights",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-phantom-knights-of-ragged-gloves-5391",
+      "card_sets": [
+        {
+          "set_name": "Brothers of Legend",
+          "set_code": "BROL-EN079",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.18"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENC03",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.36"
+        },
+        {
+          "set_name": "OTS Tournament Pack 2",
+          "set_code": "OP02-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63821877,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63821877.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63821877.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63821877.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.50",
+          "amazon_price": "0.40",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 362105,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12200,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

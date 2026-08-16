@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 88724332,
+      "name": "Night Dragolich",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Change all non-Wyrm-Type Attack Position monsters that were Special Summoned from the Main or Extra Deck to Defense Position. All non-Wyrm-Type monsters that were Special Summoned from the Main or Extra Deck lose DEF equal to their original DEF.",
+      "race": "Wyrm",
+      "atk": 1700,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/night-dragolich-7416",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN153",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88724332,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88724332.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88724332.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88724332.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.80",
+          "amazon_price": "0.83",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31280,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11366,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 81820689,
+      "name": "The Inexperienced Spy",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Select and see 1 card in your opponent's hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-inexperienced-spy-6868",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.43"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.84"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81820689,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81820689.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81820689.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81820689.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "5.00",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24749,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4848,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

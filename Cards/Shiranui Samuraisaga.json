@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 57288064,
+      "name": "Shiranui Samuraisaga",
+      "typeline": [
+        "Zombie",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Zombie-Type Tuner + 1 or more non-Tuner Zombie-Type monsters\nOnce per turn, during either player's turn: You can target 1 of your banished Zombie-Type monsters; shuffle it into the Deck, and if you do, change to Defense Position all monsters your opponent controls with ATK less than or equal to that monster's. If this card is banished: You can target 1 face-up monster your opponent controls; it loses 500 ATK. You can only Special Summon \"Shiranui Samuraisaga(s)\" once per turn.",
+      "race": "Zombie",
+      "atk": 2500,
+      "def": 0,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Shiranui",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiranui-samuraisaga-4881",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN211",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57288064,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57288064.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57288064.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57288064.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.99",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 167041,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12161,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

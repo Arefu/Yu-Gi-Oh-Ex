@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 54098121,
+      "name": "Mysterious Puppeteer",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time you or your opponent Normal Summons or Flip Summons a monster, increase your Life Points by 500 points.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mysterious-puppeteer-4605",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 21",
+          "set_code": "OP21-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.36"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Evolution",
+          "set_code": "SKE-017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54098121,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54098121.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54098121.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54098121.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.19",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42489,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-10-17",
+          "konami_id": 4172,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

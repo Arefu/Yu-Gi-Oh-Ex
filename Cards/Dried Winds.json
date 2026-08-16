@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 28265983,
+      "name": "Dried Winds",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If you gain LP: Target 1 face-up monster your opponent controls; destroy it. If you control an \"Aroma\" monster and your LP is at least 3000 higher than your opponent's: You can pay LP equal to the difference; destroy face-up monsters your opponent controls whose combined ATK is less than or equal to the LP you paid to activate this effect. You can only use each effect of \"Dried Winds\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Aroma",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dried-winds-2403",
+      "card_sets": [
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN075",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 25",
+          "set_code": "OP25-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28265983,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28265983.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28265983.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28265983.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.38",
+          "ebay_price": "16.99",
+          "amazon_price": "14.09",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 141283,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11859,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

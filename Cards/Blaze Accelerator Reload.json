@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 52198054,
+      "name": "Blaze Accelerator Reload",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "This card's name becomes \"Tri-Blaze Accelerator\" while in the Spell & Trap Zone. During either player's Main Phase: You can send 1 \"Volcanic\" card from your hand to the Graveyard, and if you do, draw 1 card. You can only use this effect of \"Blaze Accelerator Reload\" once per turn. During either player's Main Phase: You can banish this card from your Graveyard; send 1 \"Volcanic\" card from your Deck to the Graveyard.",
+      "race": "Continuous",
+      "archetype": "Blaze Accelerator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blaze-accelerator-reload-4448",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52198054,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52198054.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52198054.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52198054.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.50",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 134661,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11597,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

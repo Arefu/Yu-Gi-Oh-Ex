@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 87774234,
+      "name": "Watapon",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is added from your Deck to your hand by a card effect: You can Special Summon this card.",
+      "race": "Fairy",
+      "atk": 200,
+      "def": 300,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/watapon-7344",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.52"
+        },
+        {
+          "set_name": "Movie Pack",
+          "set_code": "MOV-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87774234,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87774234.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87774234.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87774234.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.69",
+          "tcgplayer_price": "0.54",
+          "ebay_price": "1.00",
+          "amazon_price": "1.78",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55888,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-08-13",
+          "ocg_date": "2004-11-03",
+          "konami_id": 6092,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

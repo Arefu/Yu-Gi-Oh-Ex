@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 76372778,
+      "name": "Evigishki Merrowgeist",
+      "typeline": [
+        "Aqua",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\n After damage calculation, if this card destroys an opponent's monster by battle: You can detach 1 Xyz Material from this card; shuffle the destroyed monster into the Deck instead of sending it to the Graveyard.",
+      "race": "Aqua",
+      "atk": 2100,
+      "def": 1600,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Gishki",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evigishki-merrowgeist-6426",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN121",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN089",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN053",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76372778,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76372778.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76372778.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76372778.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.96",
+          "tcgplayer_price": "2.25",
+          "ebay_price": "1.88",
+          "amazon_price": "1.89",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80240,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9604,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

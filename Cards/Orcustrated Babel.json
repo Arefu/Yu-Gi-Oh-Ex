@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 90351981,
+      "name": "Orcustrated Babel",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "You can activate the effects of \"Orcust\" monsters in your GY, or of Link Monsters you control with \"Orcust\" in their original names, as Quick Effects. During your Main Phase, if this card is in your GY, except the turn it was sent to the GY: You can send 1 card from your hand to the GY; add this card to your hand.",
+      "race": "Field",
+      "archetype": "Orcust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orcustrated-babel-9669",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN097",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10",
+          "set_code": "OP10-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90351981,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90351981.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90351981.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90351981.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.39",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orphegel Babel",
+          "views": 299426,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13944,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

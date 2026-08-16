@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 62125438,
+      "name": "Synchron Carrier",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase, you can Normal Summon 1 \"Synchron\" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.) If another \"Synchron\" monster is sent to your Graveyard as a Synchro Material for the Synchro Summon of a Warrior or Machine-Type Synchro Monster, while you control this card: You can Special Summon 1 \"Synchron Token\" (Machine-Type/EARTH/Level 2/ATK 1000/DEF 0). You can only use this effect of \"Synchron Carrier\" once per turn.",
+      "race": "Machine",
+      "atk": 0,
+      "def": 1000,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/synchron-carrier-5256",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN094",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.67"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62125438,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62125438.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62125438.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62125438.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.77",
+          "tcgplayer_price": "0.42",
+          "ebay_price": "2.09",
+          "amazon_price": "1.38",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 338931,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-27",
+          "ocg_date": "2014-12-06",
+          "konami_id": 11622,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

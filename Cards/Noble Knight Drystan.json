@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 53550467,
+      "name": "Noble Knight Drystan",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While you control another \"Noble Knight\" monster, your opponent cannot target your monsters with less than 1800 ATK, except this card, for attacks or with card effects. If a \"Noble Arms\" Equip Spell Card is equipped to this card: Target 1 face-up card on the field; destroy that target. You can only use this effect of \"Noble Knight Drystan\" once per turn.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knight-drystan-4562",
+      "card_sets": [
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN084",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN008",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "5.84"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53550467,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53550467.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53550467.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53550467.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "1.89",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 64079,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10813,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

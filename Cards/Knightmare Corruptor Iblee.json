@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 10158145,
+      "name": "Knightmare Corruptor Iblee",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can target 1 Link Monster in your GY; Special Summon it to your field so it points to this card, but change its ATK to 0, also negate its effects. You cannot Special Summon monsters, except Link Monsters. If this card in its owner's control is sent to the GY: You can Special Summon this card to your opponent's field in Defense Position. You can only use this effect of \"Knightmare Corruptor Iblee\" once per turn.",
+      "race": "Cyberse",
+      "atk": 0,
+      "def": 0,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Knightmare",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/knightmare-corruptor-iblee-9224",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Monstrous Revenge",
+          "set_code": "BLMR-EN057",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN017",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10158145,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10158145.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10158145.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10158145.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "2.25",
+          "amazon_price": "14.75",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Destroymare Iblee",
+          "views": 456240,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 9,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13571,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

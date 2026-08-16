@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 16751086,
+      "name": "Warm Worm",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed, send the top 3 cards of your opponent's Deck to the Graveyard.",
+      "race": "Insect",
+      "atk": 600,
+      "def": 1400,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/warm-worm-1441",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Tag Force 4 promotional cards",
+          "set_code": "TF04-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "24.84"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Tag Force 4 promotional cards",
+          "set_code": "TF04-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "23.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16751086,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16751086.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16751086.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16751086.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "5.50",
+          "tcgplayer_price": "24.48",
+          "ebay_price": "13.99",
+          "amazon_price": "29.99",
+          "coolstuffinc_price": "21.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 82732,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-09-17",
+          "konami_id": 8517,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 8794435,
+      "name": "Maju Garzett",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The ATK of this card becomes equal to the combined original ATK of the 2 monsters you Tributed for the Tribute Summon of this card.",
+      "race": "Fiend",
+      "atk": -1,
+      "def": 0,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Maju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/maju-garzett-745",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-024",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.61"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN024",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.65"
+        },
+        {
+          "set_name": "Dark Crisis (25th Anniversary Edition)",
+          "set_code": "DCR-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN186",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8794435,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8794435.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8794435.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8794435.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 119732,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2002-11-21",
+          "konami_id": 5716,
+          "has_effect": 1,
+          "question_atk": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

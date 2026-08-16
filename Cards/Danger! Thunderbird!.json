@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 90807199,
+      "name": "Danger! Thunderbird!",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal this card in your hand; your opponent randomly chooses 1 card from your entire hand, then you discard the chosen card. Then, if the discarded card was not \"Danger! Thunderbird!\", Special Summon 1 \"Danger! Thunderbird!\" from your hand, and if you do, draw 1 card. If this card is discarded: You can target 1 Set card your opponent controls; destroy it. You can only use this effect of \"Danger! Thunderbird!\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 2800,
+      "def": 2400,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Danger!",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/danger-thunderbird-9802",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN217",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN090",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.86"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN082",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dark World",
+          "set_code": "SR13-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90807199,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90807199.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90807199.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90807199.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.89",
+          "amazon_price": "4.95",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 683315,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14067,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 59537380,
+      "name": "Guardragon Agarpain",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Dragon monsters\r\nYou cannot Special Summon monsters, except Dragon monsters. During your Main Phase: You can Special Summon 1 Dragon monster from your Extra Deck, to an Extra Monster Zone or Main Monster Zone you can Summon to, that 2 or more Link Monsters point to. You can only use this effect of \"Guardragon Agarpain\" once per turn. You can only Special Summon \"Guardragon Agarpain(s)\" once per turn.",
+      "race": "Dragon",
+      "atk": 1500,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Guardragon",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/guardragon-agarpain-9844",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN053",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 59537380,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59537380.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59537380.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59537380.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.49",
+          "amazon_price": "0.91",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Agarpain the Guardragon",
+          "views": 298260,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 20,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14130,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

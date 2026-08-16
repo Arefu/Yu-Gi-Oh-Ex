@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 28966434,
+      "name": "Solitaire Magician",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can select 1 face-up \"Fortune Lady\" monster you control and 1 other face-up monster on the field. Reduce the Level of the selected \"Fortune Lady\" monster by 3, and destroy the other selected monster.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 1300,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Fortune Lady",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/solitaire-magician-2457",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28966434,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28966434.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28966434.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28966434.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "5.00",
+          "amazon_price": "1.77",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54178,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8448,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

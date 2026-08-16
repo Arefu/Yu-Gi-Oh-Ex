@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 30451366,
+      "name": "Mystical Sheep #1",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can substitute this card for any 1 Fusion-Material Monster. When you do this, the other Fusion-Material Monster(s) must be the correct one(s).",
+      "race": "Beast",
+      "atk": 1150,
+      "def": 900,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mystical-sheep-1-2581",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack 5",
+          "set_code": "TP5-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-013",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "48.62"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30451366,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30451366.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30451366.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30451366.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.60",
+          "tcgplayer_price": "5.39",
+          "ebay_price": "7.99",
+          "amazon_price": "4.50",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mystical Sheep 1",
+          "views": 48943,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4648,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

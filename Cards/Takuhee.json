@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 3170832,
+      "name": "Takuhee",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This bird is known far and wide as a harbinger of doom.",
+      "race": "Winged Beast",
+      "atk": 1450,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/takuhee-290",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 2",
+          "set_code": "OP02-EN014",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3170832,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3170832.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3170832.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3170832.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.99",
+          "tcgplayer_price": "4.42",
+          "ebay_price": "10.00",
+          "amazon_price": "10.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29100,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-07-05",
+          "konami_id": 4587,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

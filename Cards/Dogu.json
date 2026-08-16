@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 95816395,
+      "name": "Dogu",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the End Phase, if this card is in the Graveyard because it was sent there by an opponent's card effect this turn while in your possession: You can add, from your Deck to your hand, 1 monster with a different Level from the monsters you control and the monsters in your Graveyard. You can only use this effect of \"Dogu\" once per turn.",
+      "race": "Rock",
+      "atk": 1900,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dogu-7980",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95816395,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95816395.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95816395.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95816395.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24648,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11251,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

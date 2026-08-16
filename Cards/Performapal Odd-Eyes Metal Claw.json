@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 65029288,
+      "name": "Performapal Odd-Eyes Metal Claw",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Odd-Eyes\" monster + 1 \"Performapal\" monster\nCannot be used as Fusion Material. If this card was Fusion Summoned with \"Polymerization\", it is unaffected by other cards' effects. When this card declares an attack: All monsters you currently control gain 300 ATK until the end of the Battle Phase.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-odd-eyes-metal-claw-5483",
+      "card_sets": [
+        {
+          "set_name": "Rise of the Duelist",
+          "set_code": "ROTD-EN092",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65029288,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65029288.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65029288.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65029288.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.47",
+          "ebay_price": "1.20",
+          "amazon_price": "1.45",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92753,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-08-06",
+          "ocg_date": "2016-07-29",
+          "konami_id": 12698,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

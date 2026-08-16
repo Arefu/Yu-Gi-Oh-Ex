@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 176392,
+      "name": "Koa'ki Meiru Prototype",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a face-up \"Koa'ki Meiru\" monster(s) on the field would be destroyed during the End Phase, you can destroy this card instead. When a face-up \"Koa'ki Meiru\" monster(s) on the field is destroyed during the End Phase, you can Special Summon 1 \"Koa'ki Meiru Token\" (Rock-Type/EARTH/Level 4/ATK 1800/DEF 1800).",
+      "race": "Rock",
+      "atk": 1800,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-prototype-18",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 176392,
+          "image_url": "https://images.ygoprodeck.com/images/cards/176392.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/176392.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/176392.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.29",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25570,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2011-09-17",
+          "konami_id": 9033,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

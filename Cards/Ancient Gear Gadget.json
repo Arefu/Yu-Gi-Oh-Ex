@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 18486927,
+      "name": "Ancient Gear Gadget",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can declare 1 card type (Monster, Spell, or Trap); this turn, if a monster you control attacks, your opponent's Spell Cards, Trap Cards, or monster effects (whichever was declared) cannot be activated until the end of the Damage Step. Once per turn: You can declare 1 \"Gadget\" monster's card name; until the End Phase, this card's name becomes that name.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 2000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-gadget-1602",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machine Reactor Structure Deck",
+          "set_code": "SR03-EN000",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-END11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18486927,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18486927.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18486927.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18486927.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 160655,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-04-13",
+          "ocg_date": "2016-09-24",
+          "konami_id": 12675,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

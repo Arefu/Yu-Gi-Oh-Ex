@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 43341600,
+      "name": "Apple of Enlightenment",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target cards in your opponent's GY, up to the number of \"Valkyrie\" monsters you control; banish them. If this Set card in its owner's control has left the field because of an opponent's effect, and is now in the GY or banished: You can draw cards equal to the number of \"Valkyrie\" monsters you control +1.",
+      "race": "Normal",
+      "archetype": "Valkyrie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/apple-of-enlightenment-10114",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN091",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43341600,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43341600.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43341600.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43341600.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Apple of Enlightnment",
+          "views": 39451,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14362,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

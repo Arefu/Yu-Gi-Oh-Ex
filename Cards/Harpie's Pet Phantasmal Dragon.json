@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 85909450,
+      "name": "Harpie's Pet Phantasmal Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 WIND monsters\nThis card's effects can only be applied/resolved while it has Xyz Material. This card can attack your opponent directly. Your opponent cannot target any \"Harpie\" monsters with effects or for attacks. During each of your End Phases: Detach 1 Xyz Material from this card.",
+      "race": "Dragon",
+      "atk": 2000,
+      "def": 2500,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Harpie",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/harpie-s-pet-phantasmal-dragon-7201",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN032",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN055",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN132",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85909450,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85909450.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85909450.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85909450.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "4.95",
+          "amazon_price": "0.82",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 163973,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10536,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

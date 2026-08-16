@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 23274061,
+      "name": "Wattsquirrel",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can attack twice during each Battle Phase. If this card battles, negate the effects of the monster it battled, after damage calculation (including in the Graveyard).",
+      "race": "Thunder",
+      "atk": 700,
+      "def": 100,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Watt",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wattsquirrel-2004",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23274061,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23274061.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23274061.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23274061.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.84",
+          "ebay_price": "1.49",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31210,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9106,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

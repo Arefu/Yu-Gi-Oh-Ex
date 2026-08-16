@@ -1,0 +1,57 @@
+{
+  "data": [
+    {
+      "id": 62671448,
+      "name": "Toad Master",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "''A hermit frog that has been in existence for thousands of years, it attacks with tadpoles.''",
+      "race": "Aqua",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Frog",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/toad-master-5294",
+      "card_images": [
+        {
+          "id": 62671448,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62671448.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62671448.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62671448.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.57",
+          "tcgplayer_price": "0.00",
+          "ebay_price": "3.00",
+          "amazon_price": "5.48",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 12964,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "OCG",
+            "Master Duel"
+          ],
+          "ocg_date": "1999-09-23",
+          "konami_id": 4146,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

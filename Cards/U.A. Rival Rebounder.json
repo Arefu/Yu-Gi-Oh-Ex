@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 17264592,
+      "name": "U.A. Rival Rebounder",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) by returning 1 \"U.A.\" monster you control to the hand, except \"U.A. Rival Rebounder\". You can only Special Summon \"U.A. Rival Rebounder\" once per turn this way. If this card is Special Summoned during your opponent's turn, or Normal Summoned: You can Special Summon 1 \"U.A.\" monster from your hand or Graveyard, except \"U.A. Rival Rebounder\". You can only use this effect of \"U.A. Rival Rebounder\" once per turn.",
+      "race": "Warrior",
+      "atk": 2200,
+      "def": 2300,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "U.A.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/u-a-rival-rebounder-1495",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN087",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17264592,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17264592.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17264592.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17264592.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.35",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34747,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11777,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

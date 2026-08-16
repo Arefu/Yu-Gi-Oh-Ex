@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 51782995,
+      "name": "Defender of Nephthys",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can destroy 1 card in your hand, and if you do, Special Summon 1 Level 4 or lower \"Nephthys\" monster from your hand, except \"Defender of Nephthys\". During your next Standby Phase after this card was destroyed by card effect and sent to the GY: You can destroy 1 \"Nephthys\" monster in your Deck, except \"Defender of Nephthys\". You can only use each effect of \"Defender of Nephthys\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1400,
+      "def": 200,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Nephthys",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/defender-of-nephthys-9701",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51782995,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51782995.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51782995.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51782995.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.25",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Protector of Nephthys",
+          "views": 66758,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14012,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

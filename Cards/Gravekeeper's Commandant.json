@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 17393207,
+      "name": "Gravekeeper's Commandant",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can discard this card to the Graveyard; add 1 \"Necrovalley\" from your Deck to your hand.",
+      "race": "Spellcaster",
+      "atk": 1600,
+      "def": 1500,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-commandant-1507",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN015",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN191",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Marik (TCG)",
+          "set_code": "SDMA-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.51"
+        },
+        {
+          "set_name": "Turbo Pack: Booster Two",
+          "set_code": "TU02-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17393207,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17393207.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17393207.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17393207.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.53",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "2.95",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 311105,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7106,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

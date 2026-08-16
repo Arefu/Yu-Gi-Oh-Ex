@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 67532912,
+      "name": "Science Soldier",
+      "typeline": [
+        "Warrior",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Soldiers equipped with state-of-the-art weaponry to face unknown creatures.",
+      "race": "Warrior",
+      "atk": 800,
+      "def": 800,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/science-soldier-5677",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-097",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E097",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.3"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN097",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67532912,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67532912.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67532912.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67532912.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.69",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68533,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5148,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

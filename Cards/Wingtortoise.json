@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 10132124,
+      "name": "Wingtortoise",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a face-up Fish, Sea Serpent, or Aqua-Type monster(s) you control is banished: You can Special Summon this card from your hand or Graveyard. (The banished monster(s) must be Fish, Sea Serpent, or Aqua-Type even after being banished.)",
+      "race": "Aqua",
+      "atk": 1500,
+      "def": 1400,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wingtortoise-879",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN022",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10132124,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10132124.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10132124.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10132124.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25593,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2011-04-16",
+          "konami_id": 9639,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

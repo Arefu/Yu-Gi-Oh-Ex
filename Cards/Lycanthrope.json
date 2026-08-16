@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 84385264,
+      "name": "Lycanthrope",
+      "typeline": [
+        "Beast-Warrior",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "This card can only be Ritual Summoned with the Ritual Spell Card, \"Synthesis Spell\". When this card inflicts Battle Damage to your opponent, inflict 200 damage to your opponent for each Normal Monster in your Graveyard.",
+      "race": "Beast-Warrior",
+      "atk": 2400,
+      "def": 1800,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lycanthrope-7076",
+      "card_sets": [
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84385264,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84385264.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84385264.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84385264.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "2.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69801,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 6991,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

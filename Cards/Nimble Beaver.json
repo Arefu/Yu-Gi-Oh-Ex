@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 68353324,
+      "name": "Nimble Beaver",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Special Summon 1 Level 3 or lower \"Nimble\" monster from your Deck or GY.",
+      "race": "Beast",
+      "atk": 400,
+      "def": 200,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Nimble",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nimble-beaver-8690",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN129",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN040",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Egyptian God Deck: Obelisk the Tormentor",
+          "set_code": "EGO1-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.39"
+        },
+        {
+          "set_name": "OTS Tournament Pack 20",
+          "set_code": "OP20-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68353324,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68353324.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68353324.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68353324.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "2.95",
+          "amazon_price": "2.79",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 519480,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13256,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

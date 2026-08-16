@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 11039171,
+      "name": "Frightfur Wolf",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Edge Imp Sabres\" + 1 or more \"Fluffal\" monsters\nMust be Fusion Summoned with the above Fusion Materials and cannot be Special Summoned by other ways. This card can attack a number of times each Battle Phase, up to the number of Fusion Materials used for its Fusion Summon.",
+      "race": "Fiend",
+      "atk": 2000,
+      "def": 1500,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frightfur-wolf-948",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN159",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN047",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11039171,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11039171.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11039171.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11039171.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "1.47",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 163894,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11379,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

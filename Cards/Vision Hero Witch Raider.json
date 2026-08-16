@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 82697428,
+      "name": "Vision HERO Witch Raider",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "To Tribute Summon this card face-up, you can Tribute Trap(s) you control, as well as monsters. When this card is Normal Summoned: You can destroy all Spells and Traps your opponent controls. You cannot Special Summon monsters during the turn you activate this effect, except \"HERO\" monsters.",
+      "race": "Warrior",
+      "atk": 2700,
+      "def": 1900,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Vision HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vision-hero-witch-raider-8519",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN060",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN026",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82697428,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82697428.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82697428.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82697428.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 61677,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 9074,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 89462956,
+      "name": "Dealer's Choice",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Each player shuffles their Deck, then each player draws 1 card, then each player discards 1 card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dealer-s-choice-9471",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN135",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89462956,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89462956.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89462956.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89462956.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.46",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17362,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13796,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

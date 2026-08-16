@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 54149433,
+      "name": "Fire King Avatar Garunix",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a face-up \"Fire King\" monster you control is destroyed by a card effect (except during the Damage Step): You can Special Summon this card from your hand. If this card in your possession is destroyed by your opponent's card (either by battle or by card effect) and sent to your Graveyard: You can Special Summon 1 \"Fire King Avatar\" monster from your Deck.",
+      "race": "Winged Beast",
+      "atk": 700,
+      "def": 1700,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Fire King",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-king-avatar-garunix-4608",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Fire Kings",
+          "set_code": "SR14-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54149433,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54149433.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54149433.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54149433.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "3.53",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73258,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10515,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

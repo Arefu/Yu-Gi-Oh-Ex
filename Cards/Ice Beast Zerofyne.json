@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 86848580,
+      "name": "Ice Beast Zerofyne",
+      "typeline": [
+        "Winged Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 Winged Beast-Type monsters\nOnce per turn: You can detach 1 Xyz Material from this card; negate the effects of all face-up cards your opponent currently controls, and if you do, this card gains 300 ATK for each face-up card currently on the field, except this card (these effects are applied until your next Standby Phase).",
+      "race": "Winged Beast",
+      "atk": 2000,
+      "def": 2200,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ice-beast-zerofyne-7272",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN049",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86848580,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86848580.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86848580.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86848580.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.65",
+          "ebay_price": "3.00",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 151594,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10530,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

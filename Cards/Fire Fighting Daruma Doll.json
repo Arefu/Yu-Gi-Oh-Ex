@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 64514892,
+      "name": "Fire Fighting Daruma Doll",
+      "typeline": [
+        "Beast-Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Beast, Beast-Warrior, and/or Winged Beast monsters\r\nThis card gains 100 ATK for each Beast, Beast-Warrior, and Winged Beast monster on the field. Once per turn: You can target 1 Spell/Trap on each field; destroy them. When this card destroys an opponent's monster by battle: You can target 1 of your Beast, Beast-Warrior, or Winged Beast monsters, that is banished or is in your GY; add it to your hand.",
+      "race": "Beast-Warrior",
+      "atk": 1500,
+      "def": null,
+      "level": 0,
+      "attribute": "FIRE",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-fighting-daruma-doll-9243",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64514892,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64514892.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64514892.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64514892.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.33",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Pint-Sized Priest Hidaruma",
+          "views": 176673,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13605,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

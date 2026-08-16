@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 99111753,
+      "name": "Security Dragon",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters\r\nOnce while face-up on the field, if this card is co-linked: You can target 1 monster your opponent controls; return it to the hand. You can only use this effect of \"Security Dragon\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1100,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/security-dragon-9075",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99111753,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99111753.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99111753.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99111753.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "3.95",
+          "amazon_price": "2.17",
+          "coolstuffinc_price": "5.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 364439,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2017-10-21",
+          "konami_id": 13489,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

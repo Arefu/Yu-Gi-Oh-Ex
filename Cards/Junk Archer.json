@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 42810973,
+      "name": "Junk Archer",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Junk Synchron\" + 1 or more non-Tuner monsters\nOnce per turn: You can target 1 monster your opponent controls; banish it. During the End Phase of this turn, return it to your opponent's side of the field, in the same battle position.",
+      "race": "Warrior",
+      "atk": 2300,
+      "def": 2000,
+      "level": 7,
+      "attribute": "EARTH",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-archer-3652",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monstrous Revenge",
+          "set_code": "BLMR-EN073",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Pack: Yusei 2",
+          "set_code": "DP09-EN016",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42810973,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42810973.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42810973.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42810973.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "12.99",
+          "amazon_price": "4.48",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 224123,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-15",
+          "ocg_date": "2009-10-17",
+          "konami_id": 8581,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

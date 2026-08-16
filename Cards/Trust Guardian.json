@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 87319876,
+      "name": "Trust Guardian",
+      "typeline": [
+        "Fairy",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be used as a Synchro Material Monster, except for the Synchro Summon of a Level 7 or higher Synchro Monster. Once per turn, that Synchro Monster cannot be destroyed by battle. Each time this effect is applied, that Synchro Monster loses 400 ATK and DEF at the end of the Damage Step.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 800,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Guardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trust-guardian-7307",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87319876,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87319876.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87319876.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87319876.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.91",
+          "ebay_price": "3.99",
+          "amazon_price": "3.94",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 27392,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8785,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

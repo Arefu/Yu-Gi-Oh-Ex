@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 32530043,
+      "name": "Gallant Granite",
+      "typeline": [
+        "Rock",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\r\nYou can detach 1 material from this card, then activate 1 of these effects;\r\n● Add 1 Rock monster from your Deck to your hand.\r\n● Special Summon 1 Rock monster from your hand in face-down Defense Position.\r\nYou can only use this effect of \"Gallant Granite\" once per turn.",
+      "race": "Rock",
+      "atk": 2300,
+      "def": 1800,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gallant-granite-10382",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN167",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "2.59"
+        },
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN286",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32530043,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32530043.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32530043.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32530043.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.95",
+          "tcgplayer_price": "1.42",
+          "ebay_price": "3.49",
+          "amazon_price": "3.69",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Granite Loyalist",
+          "views": 684997,
+          "viewsweek": 42,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010036,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14663,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 83027236,
+      "name": "Light of Destruction",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "When an opponent's card effect sends a card(s) from their Deck to the Graveyard, send the top 3 cards of their Deck to the Graveyard.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/light-of-destruction-6972",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83027236,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83027236.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83027236.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83027236.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.99",
+          "amazon_price": "99.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23787,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 9011,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

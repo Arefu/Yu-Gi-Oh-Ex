@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 5388481,
+      "name": "Darkfire Soldier #1",
+      "typeline": [
+        "Pyro",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "An explosive expert from a special elite force.",
+      "race": "Pyro",
+      "atk": 1700,
+      "def": 1150,
+      "level": 4,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darkfire-soldier-1-477",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5388481,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5388481.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5388481.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5388481.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "4.00",
+          "amazon_price": "0.05",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Darkfire Soldier 1",
+          "views": 143159,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4973,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

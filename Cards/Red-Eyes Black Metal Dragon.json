@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 64335805,
+      "name": "Red-Eyes Black Metal Dragon",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your Deck) by Tributing \"Red-Eyes B. Dragon\" equipped with \"Metalmorph\".",
+      "race": "Machine",
+      "atk": 2800,
+      "def": 2400,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-eyes-black-metal-dragon-5429",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Millennium Pack",
+          "set_code": "MIL1-EN035",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.84"
+        },
+        {
+          "set_name": "Premium Pack (TCG)",
+          "set_code": "PP01-EN015",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "19.84"
+        },
+        {
+          "set_name": "Premium Pack (TCG)",
+          "set_code": "PP01-EN015",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.19"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Forbidden Memories promotional cards",
+          "set_code": "FMR-001",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "223.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64335805,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64335805.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64335805.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64335805.jpg"
+        },
+        {
+          "id": 64335804,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64335804.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64335804.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64335804.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.63",
+          "ebay_price": "6.95",
+          "amazon_price": "5.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 162036,
+          "viewsweek": 21,
+          "upvotes": 12,
+          "downvotes": 8,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Red-Eyes Black Metal Dragon",
+          "tcg_date": "2002-11-25",
+          "ocg_date": "1999-12-09",
+          "konami_id": 4748,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

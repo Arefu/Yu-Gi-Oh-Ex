@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 8964854,
+      "name": "Combination Attack",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "During a Battle Phase, you can use this effect on 1 monster that has attacked this turn and is equipped with a Union Monster. Change the Union Monster back to a monster in face-up Attack or Defense Position. Also, the monster that was equipped with the Union Monster may attack again this turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/combination-attack-759",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-030",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8964854,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8964854.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8964854.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8964854.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.95",
+          "amazon_price": "1.42",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84515,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-07-18",
+          "konami_id": 5604,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

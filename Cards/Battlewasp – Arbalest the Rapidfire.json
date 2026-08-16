@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 90161770,
+      "name": "Battlewasp - Arbalest the Rapidfire",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can target 1 Level 3 or lower Insect monster in your GY; Special Summon that monster in Defense Position. If this card in its owner's possession is destroyed by an opponent's card: You can Special Summon 1 \"Battlewasp\" monster from your hand or Deck. You can only use this effect of \"Battlewasp - Arbalest the Rapidfire\" once per turn.",
+      "race": "Insect",
+      "atk": 1800,
+      "def": 800,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Battlewasp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlewasp-arbalest-the-rapidfire-10203",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN035",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.49"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90161770,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90161770.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90161770.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90161770.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.45",
+          "ebay_price": "1.49",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 118138,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248038,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14571,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

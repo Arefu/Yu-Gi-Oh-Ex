@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 50669347,
+      "name": "Nephthys, the Sacred Preserver",
+      "typeline": [
+        "Winged Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 \"Nephthys\" monsters\r\nYou can only use the following effect of \"Nephthys, the Sacred Preserver\" once per turn. During your Main Phase, if this card was Link Summoned: You can activate 1 of these effects;\r\n● Add 1 Level 8 Winged Beast monster from your Deck to your hand, then you can add 1 Ritual Spell from your GY to your hand.\r\n● Destroy 1 \"Nephthys\" monster this card points to, and Special Summon 1 \"Nephthys\" monster with a different original name from your GY, but negate its effects.",
+      "race": "Winged Beast",
+      "atk": 1200,
+      "def": null,
+      "level": null,
+      "attribute": "FIRE",
+      "archetype": "Nephthys",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nephthys-the-sacred-preserver-9704",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN007",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50669347,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50669347.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50669347.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50669347.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "1.95",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Nephthys the Sacred Palladium",
+          "views": 55068,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14015,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

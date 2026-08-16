@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 983995,
+      "name": "Rebound",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When your opponent activates a Spell Card, Trap Card, or monster effect that returns a card(s) from the field to the hand: Negate that effect, and if you do, send 1 card from your opponent's hand (at random) or from their side of the field to the Graveyard. When this Set card is destroyed by your opponent's card effect and sent to the Graveyard: Draw 1 card.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rebound-86",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN079",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 983995,
+          "image_url": "https://images.ygoprodeck.com/images/cards/983995.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/983995.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/983995.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "2.36",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15099,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10209,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

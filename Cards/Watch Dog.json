@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 86889202,
+      "name": "Watch Dog",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase 2, if this card was Normal Summoned this turn: You can send 1 Spell Card from your hand to the Graveyard; Set 1 Continuous Spell Card directly from your Deck. You can only use this effect of \"Watch Dog\" once per turn. You cannot Special Summon during the turn you activate this effect.",
+      "race": "Pyro",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/watch-dog-7276",
+      "card_sets": [
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86889202,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86889202.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86889202.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86889202.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28986,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11372,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

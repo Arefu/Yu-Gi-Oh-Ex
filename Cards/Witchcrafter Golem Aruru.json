@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 71074418,
+      "name": "Witchcrafter Golem Aruru",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent activates a card or effect that targets a Spellcaster monster(s) you control, or targets it for an attack (Quick Effect): You can target 1 card your opponent controls, or 1 \"Witchcrafter\" Spell in your GY; Special Summon this card from your hand, and if you do, return that targeted card to the hand. You can only use this effect of \"Witchcrafter Golem Aruru\" once per turn. Once per turn, during your opponent's Standby Phase: Return this card to the hand.",
+      "race": "Spellcaster",
+      "atk": 2800,
+      "def": 0,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Witchcrafter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/witchcrafter-golem-aruru-10185",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN113",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.5"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN028",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71074418,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71074418.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71074418.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71074418.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Witchcrafter Golem Arles",
+          "views": 378077,
+          "viewsweek": 43,
+          "upvotes": 23,
+          "downvotes": 8,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009028,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14483,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 41517789,
+      "name": "Star Eater",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nMust be Synchro Summoned, and cannot be Special Summoned by other ways. This card's Synchro Summon cannot be negated. When Synchro Summoned, cards and effects cannot be activated. If this card attacks, it is unaffected by other card effects until the end of the Damage Step.",
+      "race": "Dragon",
+      "atk": 3200,
+      "def": 2800,
+      "level": 11,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/star-eater-3552",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN096",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN047",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN047",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN047",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41517789,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41517789.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41517789.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41517789.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "8.53",
+          "tcgplayer_price": "9.50",
+          "ebay_price": "7.50",
+          "amazon_price": "14.99",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 237294,
+          "viewsweek": 21,
+          "upvotes": 15,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10650,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

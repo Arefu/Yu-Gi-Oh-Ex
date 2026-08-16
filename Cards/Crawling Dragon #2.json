@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 38289717,
+      "name": "Crawling Dragon #2",
+      "typeline": [
+        "Dinosaur",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A powerful dragon with teeth that can grind almost anything to dust.",
+      "race": "Dinosaur",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crawling-dragon-2-3246",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN141",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENA04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.36"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38289717,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38289717.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38289717.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38289717.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.32",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "0.99",
+          "amazon_price": "8.01",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Crawling Dragon 2",
+          "views": 61239,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-10-17",
+          "konami_id": 4087,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 13452889,
+      "name": "Vector Scare Archfiend",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Cyberse monsters\r\nWhen this card destroys an opponent's monster by battle and sends it to the GY: You can Tribute 1 monster that this card points to; Special Summon that destroyed monster to any zone this card points to. If you Special Summon to your opponent's field by this effect, this card can make a second attack during this Battle Phase (although your opponent gains control of that Special Summoned monster).",
+      "race": "Cyberse",
+      "atk": 2400,
+      "def": null,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Right",
+        "Bottom-Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vector-scare-archfiend-9009",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13452889,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13452889.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13452889.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13452889.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 38188,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13411,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

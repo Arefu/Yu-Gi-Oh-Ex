@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 83810690,
+      "name": "X-Saber Wayne",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nWhen this card is Synchro Summoned, you can Special Summon 1 Level 4 or lower Warrior-Type monster from your hand.",
+      "race": "Warrior",
+      "atk": 2100,
+      "def": 400,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "X-Saber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/x-saber-wayne-7031",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 1",
+          "set_code": "DT01-EN089",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Duelist Toolbox",
+          "set_code": "5DS3-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83810690,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83810690.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83810690.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83810690.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.51",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "16.00",
+          "amazon_price": "0.88",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67540,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-01-29",
+          "ocg_date": "2008-06-24",
+          "konami_id": 7835,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

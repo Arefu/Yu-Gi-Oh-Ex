@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 84257883,
+      "name": "B.E.S. Blaster Cannon Core",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls more monsters than you do, you can Special Summon this card (from your hand). You can only Special Summon \"B.E.S. Blaster Cannon Core\" once per turn this way. If this card is Normal or Special Summoned: Place 3 counters on this card. Cannot be destroyed by battle. At the end of the Damage Step, if this card battled: Remove 1 counter from this card. If you cannot, destroy it.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 3000,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "B.E.S.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/b-e-s-blaster-cannon-core-10222",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN111",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84257883,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84257883.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84257883.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84257883.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75604,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009023,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14471,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

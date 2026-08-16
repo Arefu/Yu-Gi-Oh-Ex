@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 89544521,
+      "name": "Deskbot Jet",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nThis card gains 500 ATK and DEF for each \"Deskbot\" card on the field. You can only use 1 of the following effects of \"Deskbot Jet\" per turn, and only once that turn.\n● You can target 1 \"Deskbot\" card you control; destroy it, and if you do, Special Summon 1 \"Deskbot\" monster from your Deck.\n● You can target 1 \"Deskbot\" card you control and 1 face-up card on the field; destroy them.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 500,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Deskbot",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/deskbot-jet-7477",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN142",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89544521,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89544521.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89544521.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89544521.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.75",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72240,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11993,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

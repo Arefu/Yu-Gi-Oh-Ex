@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 40666140,
+      "name": "Ljosalf of the Nordic Alfar",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can target 1 face-up monster you control, except this card; Special Summon 1 \"Nordic\" monster from your hand with a Level less than or equal to that face-up monster's Level.",
+      "race": "Spellcaster",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Nordic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ljosalf-of-the-nordic-alfar-3460",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN181",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB06",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40666140,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40666140.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40666140.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40666140.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93252,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9305,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 2095764,
+      "name": "Bixi, Water of the Yang Zing",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card you control is destroyed by battle or card effect and sent to your Graveyard: You can Special Summon 1 \"Yang Zing\" monster from your Deck in Attack Position, except \"Bixi, Water of the Yang Zing\". You can only use this effect of \"Bixi, Water of the Yang Zing\" once per turn. Once per turn, during your opponent's Main Phase or Battle Phase, you can: Immediately after this effect resolves, Synchro Summon 1 Synchro Monster, using only \"Yang Zing\" monsters you control (this is a Quick Effect). A Synchro Monster that used this card as a Synchro Material is unaffected by Trap effects.",
+      "race": "Wyrm",
+      "atk": 0,
+      "def": 2000,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Yang Zing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bixi-water-of-the-yang-zing-185",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN085",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2095764,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2095764.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2095764.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2095764.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "1.27",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72735,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11239,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

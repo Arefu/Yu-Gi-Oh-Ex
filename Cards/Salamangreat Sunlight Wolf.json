@@ -1,0 +1,110 @@
+{
+  "data": [
+    {
+      "id": 87871125,
+      "name": "Salamangreat Sunlight Wolf",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 FIRE Effect Monsters\r\nIf a monster(s) is Normal or Special Summoned to the zone(s) this card points to (except during the Damage Step): You can add 1 FIRE monster from your GY to your hand, but for the rest of this turn, you cannot Normal Summon/Set or Special Summon monsters with the added monster's name. During your Main Phase, if you control this card that was Link Summoned using \"Salamangreat Sunlight Wolf\" as material: You can add 1 \"Salamangreat\" Spell/Trap from your GY to your hand. You can only use each effect of \"Salamangreat Sunlight Wolf\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1800,
+      "def": null,
+      "level": null,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-sunlight-wolf-9774",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN089",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN000",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10",
+          "set_code": "OP10-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87871125,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87871125.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87871125.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87871125.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.18",
+          "tcgplayer_price": "0.74",
+          "ebay_price": "1.95",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 795451,
+          "viewsweek": 21,
+          "upvotes": 18,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14125,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

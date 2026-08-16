@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 53530069,
+      "name": "Spirit of the Breeze",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "As long as this card remains in face-up Attack Position on your side of the field, increase your Life Points by 1000 points during each of your Standby Phases.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 1800,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spirit-of-the-breeze-4559",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN235",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.22"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.83"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN037",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53530069,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53530069.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53530069.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53530069.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116809,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5200,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 2881864,
+      "name": "Naglfar, Generaider Boss of Fire",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can only control 1 \"Naglfar, Generaider Boss of Fire\". If a card(s) you control would be destroyed by battle or card effect, you can destroy 1 \"Generaider\" monster or 1 Beast-Warrior monster you control instead. You can only use this effect of \"Naglfar, Generaider Boss of Fire\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 3100,
+      "def": 200,
+      "level": 9,
+      "attribute": "FIRE",
+      "archetype": "Generaider",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naglfar-generaider-boss-of-fire-10486",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN030",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2881864,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2881864.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2881864.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2881864.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.44",
+          "tcgplayer_price": "0.66",
+          "ebay_price": "17.95",
+          "amazon_price": "1.70",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Naglfar, Generaider Boss of Flames",
+          "views": 85830,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423030,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14773,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

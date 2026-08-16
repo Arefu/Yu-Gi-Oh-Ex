@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 45045866,
+      "name": "Ocean's Keeper",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent. When this card is destroyed by battle, add 1 \"Thousand-Eyes Jellyfish\" or 1 \"Cranium Fish\" from your Deck to your hand.",
+      "race": "Fish",
+      "atk": 1500,
+      "def": 1200,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ocean-s-keeper-3842",
+      "card_sets": [
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45045866,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45045866.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45045866.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45045866.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26983,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7333,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 28151978,
+      "name": "Speedroid Dominobutterfly",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Pendulum Tuner Effect Monster",
+      "humanReadableCardType": "Pendulum Tuner Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except WIND monsters. This effect cannot be negated. You can discard 1 WIND monster, then target 1 of your banished WIND monsters; add it to your hand. You can only use this effect of \"Speedroid Dominobutterfly\" once per turn.\n\n[ Monster Effect ] \nCannot be used as a Synchro Material, except for the Synchro Summon of a WIND Dragon or Machine-Type Synchro Monster. If this card, Special Summoned from the Extra Deck, is used as a Material for a Synchro Summon, banish it.",
+      "race": "Machine",
+      "pend_desc": "You cannot Pendulum Summon monsters, except WIND monsters. This effect cannot be negated. You can discard 1 WIND monster, then target 1 of your banished WIND monsters; add it to your hand. You can only use this effect of \"Speedroid Dominobutterfly\" once per turn.",
+      "monster_desc": "Cannot be used as a Synchro Material, except for the Synchro Summon of a WIND Dragon or Machine-Type Synchro Monster. If this card, Special Summoned from the Extra Deck, is used as a Material for a Synchro Summon, banish it.",
+      "atk": 100,
+      "def": 300,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "roid",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/speedroid-dominobutterfly-8305",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Dimensional Guardians",
+          "set_code": "DPDG-EN004",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28151978,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28151978.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28151978.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28151978.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.77",
+          "tcgplayer_price": "4.16",
+          "ebay_price": "4.19",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Speedroid Domino Butterfly",
+          "views": 43970,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-25",
+          "ocg_date": "2017-03-11",
+          "konami_id": 12883,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 47870325,
+      "name": "Smile Action",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: Each player can banish up to 5 Spells from their own GY, face-down. If a monster declares an attack: The attacked player activates this effect;\r\n● You (the attacked player) can randomly add 1 of your cards banished by this card's effect to your hand, then you can discard it and negate that attack, but if you do not discard that added card, any battle damage you take this turn is doubled (even if this card leaves the field).",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/smile-action-10680",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.2"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN133",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.89"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47870325,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47870325.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47870325.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47870325.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.04",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20016,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413048,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14928,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

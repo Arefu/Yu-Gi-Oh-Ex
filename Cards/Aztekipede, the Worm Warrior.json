@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 75081613,
+      "name": "Aztekipede, the Worm Warrior",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by banishing 1 Insect-Type monster from your Graveyard, and cannot be Special Summoned by other ways. If this card inflicts battle damage to your opponent: Send the top card of their Deck to the Graveyard.",
+      "race": "Insect",
+      "atk": 1900,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Worm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/aztekipede-the-worm-warrior-6315",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN041",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN089",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75081613,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75081613.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75081613.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75081613.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "2.69",
+          "amazon_price": "1.08",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91210,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7569,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

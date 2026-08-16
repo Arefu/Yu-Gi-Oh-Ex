@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 40253382,
+      "name": "TG-SX1",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a \"T.G.\" monster you control destroys an opponent's monster by battle and sends it to the Graveyard: Target 1 \"T.G.\" Synchro Monster in your Graveyard; Special Summon that target.",
+      "race": "Normal",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tg-sx1-3421",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN220",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40253382,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40253382.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40253382.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40253382.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25825,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9540,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

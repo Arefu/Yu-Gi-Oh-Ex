@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 93788854,
+      "name": "The Wandering Doomed",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "''A monster that wanders the edges of the netherworld.''",
+      "race": "Zombie",
+      "atk": 800,
+      "def": 600,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Recolored counterpart",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-wandering-doomed-7806",
+      "card_images": [
+        {
+          "id": 93788854,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93788854.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93788854.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93788854.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.80",
+          "tcgplayer_price": "0.00",
+          "ebay_price": "5.00",
+          "amazon_price": "35.06",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 14316,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "OCG",
+            "Master Duel"
+          ],
+          "ocg_date": "1999-05-27",
+          "konami_id": 4562,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

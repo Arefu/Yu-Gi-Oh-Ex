@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 15177750,
+      "name": "Blessed Winds",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can activate 1 of the following effects.\r\n● Send 1 Plant monster from your hand or face-up field to the GY; gain 500 LP.\r\n● Target 1 Plant monster in your GY; shuffle it into the Deck, then gain 500 LP.\r\n● Pay 1000 LP; Special Summon 1 \"Aroma\" monster from your GY.\r\nYou can only use this effect of \"Blessed Winds\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Aroma",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blessed-winds-10453",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN074",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 25",
+          "set_code": "OP25-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15177750,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15177750.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15177750.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15177750.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.69",
+          "amazon_price": "2.43",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 189576,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010074,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14701,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

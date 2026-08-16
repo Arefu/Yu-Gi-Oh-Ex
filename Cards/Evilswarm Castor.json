@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 79785958,
+      "name": "Evilswarm Castor",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the turn this card was Normal Summoned, you can Normal Summon 1 \"lswarm\" monster in addition to your Normal Summon/Set. (You can only gain this effect once per turn.)",
+      "race": "Warrior",
+      "atk": 1750,
+      "def": 550,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Steelswarm",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/evilswarm-castor-6688",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7b",
+          "set_code": "DT07-EN072",
+          "set_rarity": "Duel Terminal Rare Parallel Rare",
+          "set_rarity_code": "(DRPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79785958,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79785958.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79785958.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79785958.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.10",
+          "tcgplayer_price": "0.86",
+          "ebay_price": "1.99",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72229,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-02-01",
+          "ocg_date": "2012-01-24",
+          "konami_id": 9990,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

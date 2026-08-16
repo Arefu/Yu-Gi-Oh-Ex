@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 3136426,
+      "name": "Level Limit - Area B",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Change all face-up Level 4 or higher monsters to Defense Position.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/level-limit-area-b-285",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-092",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "4.48"
+        },
+        {
+          "set_name": "Astral Pack Seven",
+          "set_code": "AP07-EN010",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN205",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN279",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.47"
+        },
+        {
+          "set_name": "Structure Deck: Blaze of Destruction",
+          "set_code": "SD3-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.91"
+        }
+      ],
+      "banlist_info": {
+        "ban_goat": "Semi-Limited"
+      },
+      "card_images": [
+        {
+          "id": 3136426,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3136426.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3136426.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3136426.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.12",
+          "tcgplayer_price": "4.99",
+          "ebay_price": "3.99",
+          "amazon_price": "2.92",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 490094,
+          "viewsweek": 42,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6054,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

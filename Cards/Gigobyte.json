@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 53776525,
+      "name": "Gigobyte",
+      "typeline": [
+        "Reptile",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "He has a tranquil soul, but carries a destiny that one day his heart shall be tainted by evil....",
+      "race": "Reptile",
+      "atk": 350,
+      "def": 300,
+      "level": 1,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gigobyte-4579",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-056",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "4.85"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN169",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53776525,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53776525.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53776525.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53776525.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.42",
+          "tcgplayer_price": "2.19",
+          "ebay_price": "3.50",
+          "amazon_price": "6.70",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 59035,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6019,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

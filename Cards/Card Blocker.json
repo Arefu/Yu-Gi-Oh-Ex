@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 42256406,
+      "name": "Card Blocker",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Summoned: Change it to Defense Position. When a face-up monster you control is targeted for an attack: You can change the target to this card. When this card is targeted for an attack: You can choose a number from 1 to 3, then send that many cards from the top of your Deck to the Graveyard; this card gains 500 DEF for each card sent, until the End Phase.",
+      "race": "Warrior",
+      "atk": 400,
+      "def": 400,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/card-blocker-3604",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN093",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42256406,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42256406.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42256406.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42256406.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "3.95",
+          "amazon_price": "2.84",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26227,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2007-08-21",
+          "konami_id": 7345,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

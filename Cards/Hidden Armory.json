@@ -1,0 +1,103 @@
+{
+  "data": [
+    {
+      "id": 52105192,
+      "name": "Hidden Armory",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Send the top card of your Deck to the GY; add 1 Equip Spell from your Deck or GY to your hand. You cannot Normal Summon/Set the turn you activate this card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hidden-armory-4439",
+      "card_sets": [
+        {
+          "set_name": "Amazing Defenders",
+          "set_code": "AMDE-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Astral Pack One",
+          "set_code": "AP01-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 6",
+          "set_code": "STP6-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN163",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.14"
+        },
+        {
+          "set_name": "The Grand Creators",
+          "set_code": "GRCR-EN054",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0.9"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Warriors' Strike Structure Deck",
+          "set_code": "SDWS-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52105192,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52105192.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52105192.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52105192.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.95",
+          "amazon_price": "1.78",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 234936,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-10-23",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7493,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

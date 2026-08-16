@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 72029628,
+      "name": "Fragment Fusion",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Banish from your Graveyard the Fusion Material Monsters that are listed on a \"Gem-Knight\" Fusion Monster Card, then Special Summon that Fusion Monster from your Extra Deck. (This Special Summon is treated as a Fusion Summon.) Destroy it during the End Phase.",
+      "race": "Normal",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fragment-fusion-6046",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN048",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN028",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72029628,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72029628.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72029628.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72029628.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "1.62",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30149,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9830,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

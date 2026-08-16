@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 79306385,
+      "name": "Oracle of the Herald",
+      "type": "Spell Card",
+      "humanReadableCardType": "Ritual Spell",
+      "frameType": "spell",
+      "desc": "This card is used to Ritual Summon \"Herald of Ultimateness\". You must also Tribute monsters from your hand or field whose total Levels equal 12 or more. Your opponent cannot activate cards or effects in response to this card's activation.",
+      "race": "Ritual",
+      "archetype": "Herald",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/oracle-of-the-herald-6653",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN176",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN066",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79306385,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79306385.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79306385.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79306385.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.97",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47997,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11398,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 8687195,
+      "name": "Dreamsprite",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When attacked by your opponent's monster, select another 1 of your Monster Cards and designate it as the attack's target, then calculate damage.",
+      "race": "Plant",
+      "atk": 300,
+      "def": 200,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dreamsprite-734",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.23"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "12.04"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8687195,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8687195.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8687195.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8687195.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "1.19",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 136702,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5258,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

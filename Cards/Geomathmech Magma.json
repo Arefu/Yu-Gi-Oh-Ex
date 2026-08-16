@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 15248594,
+      "name": "Geomathmech Magma",
+      "typeline": [
+        "Cyberse",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nWhen this card destroys a monster by battle: You can target up to 2 cards your opponent controls; destroy them. If this card is destroyed by battle, or if this card in its owner's possession is destroyed by an opponent's card effect: You can add 1 \"Mathmech\" Spell/Trap from your Deck to your hand. You can only use each effect of \"Geomathmech Magma\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2500,
+      "def": 0,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Mathmech",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/geomathmech-magma-10417",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN007",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.76"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15248594,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15248594.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15248594.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15248594.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.80",
+          "tcgplayer_price": "0.81",
+          "ebay_price": "1.98",
+          "amazon_price": "3.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mathmech Processor Magma",
+          "views": 159504,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423007,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14750,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

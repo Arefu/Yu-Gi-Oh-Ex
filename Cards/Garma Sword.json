@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 90844184,
+      "name": "Garma Sword",
+      "typeline": [
+        "Warrior",
+        "Ritual"
+      ],
+      "type": "Ritual Monster",
+      "humanReadableCardType": "Ritual Monster",
+      "frameType": "ritual",
+      "desc": "This card can only be Ritual Summoned with the Ritual Spell Card, \"Garma Sword Oath\".",
+      "race": "Warrior",
+      "atk": 2550,
+      "def": 2150,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/garma-sword-7584",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack 8",
+          "set_code": "TP8-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "797.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90844184,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90844184.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90844184.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90844184.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "147.64",
+          "tcgplayer_price": "367.00",
+          "ebay_price": "2.75",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "499.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21873,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-04-28",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4722,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

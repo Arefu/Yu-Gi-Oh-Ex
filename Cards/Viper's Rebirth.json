@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 64973456,
+      "name": "Viper's Rebirth",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Activate only if all monsters in your Graveyard are Reptile-Type. Select 1 non-Tuner monster in your Graveyard. Special Summon it. Destroy it during the End Phase.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/viper-s-rebirth-5478",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ancient Guardians",
+          "set_code": "ANGU-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.04"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64973456,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64973456.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64973456.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64973456.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "1.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66152,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8660,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

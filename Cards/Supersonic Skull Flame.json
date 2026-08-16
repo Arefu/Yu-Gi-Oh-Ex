@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 63804806,
+      "name": "Supersonic Skull Flame",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card can only be Special Summoned by removing from play 1 \"Skull Flame\" from your Graveyard. Once per turn, you can inflict 400 damage to your opponent for each \"Burning Skull Head\" in your Graveyard. When this card is sent from the field to the Graveyard, you can Special Summon 1 \"Skull Flame\" from your Graveyard.",
+      "race": "Zombie",
+      "atk": 2600,
+      "def": 2000,
+      "level": 10,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/supersonic-skull-flame-5389",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Wheelie Breakers Promotional Cards",
+          "set_code": "WB01-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "20.27"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! 5D's Wheelie Breakers Promotional Cards",
+          "set_code": "WB01-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "19.15"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63804806,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63804806.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63804806.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63804806.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.86",
+          "tcgplayer_price": "7.92",
+          "ebay_price": "15.42",
+          "amazon_price": "36.00",
+          "coolstuffinc_price": "15.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22147,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-19",
+          "ocg_date": "2009-03-26",
+          "konami_id": 8268,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

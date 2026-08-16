@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 31044787,
+      "name": "Ferret Flames",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If the combined ATK of all face-up monsters your opponent controls is higher than your LP: Make your opponent shuffle monsters they control into the Deck (their choice), so that the combined ATK of the remaining monsters they control becomes less than or equal to your LP.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ferret-flames-2633",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Legend of the Crystal Beasts",
+          "set_code": "SDCB-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31044787,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31044787.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31044787.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31044787.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "5.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 206849,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11861,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

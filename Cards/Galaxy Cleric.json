@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 28770951,
+      "name": "Galaxy Cleric",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand: You can target 1 \"Photon\" or \"Galaxy\" Xyz Monster you control; attach this card to it as material. If this card is Normal or Special Summoned: You can target 5 \"Photon\" and/or \"Galaxy\" cards with different names in your GY; shuffle them into the Deck, then draw 2 cards. You can only use 1 \"Galaxy Cleric\" effect per turn, and only once that turn.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/galaxy-cleric-9624",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN161",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28770951,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28770951.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28770951.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28770951.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84692,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13897,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

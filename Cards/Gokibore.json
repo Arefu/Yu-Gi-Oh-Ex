@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 15367030,
+      "name": "Gokibore",
+      "typeline": [
+        "Insect",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A large, spherical roach that attacks its enemies by rolling over them.",
+      "race": "Insect",
+      "atk": 1200,
+      "def": 1400,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gokibore-1322",
+      "card_sets": [
+        {
+          "set_name": "McDonald's Promotional Cards 2",
+          "set_code": "MDP2-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "7.8"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-END11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15367030,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15367030.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15367030.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15367030.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "3.99",
+          "amazon_price": "4.76",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 134535,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-12-22",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4060,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

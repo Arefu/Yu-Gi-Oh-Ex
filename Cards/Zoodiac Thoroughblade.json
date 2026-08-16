@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 77150143,
+      "name": "Zoodiac Thoroughblade",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can discard 1 \"Zoodiac\" card, and if you do, draw 1 card. An Xyz Monster whose original Type is Beast-Warrior and has this card as Xyz Material gains this effect.\r\n● If this card attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Beast-Warrior",
+      "atk": 1600,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Zoodiac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zoodiac-thoroughblade-6493",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN184",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN017",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77150143,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77150143.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77150143.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77150143.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.32",
+          "tcgplayer_price": "1.38",
+          "ebay_price": "6.16",
+          "amazon_price": "3.27",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 276253,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12752,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

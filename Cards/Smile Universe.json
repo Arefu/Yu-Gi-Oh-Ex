@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 35259350,
+      "name": "Smile Universe",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Special Summon as many face-up Pendulum Monsters from your Extra Deck as possible, but they have their effects negated (if any), then your opponent gains LP equal to the total original ATK of those Special Summoned monsters. You cannot Normal or Special Summon other monsters, or attack, during the turn you activate this card.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/smile-universe-8805",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN056",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35259350,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35259350.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35259350.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35259350.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "2.97",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40950,
+          "viewsweek": 0,
+          "upvotes": 71,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13095,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

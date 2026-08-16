@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 61320914,
+      "name": "Vision HERO Minimum Ray",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you take battle or effect damage while this card is in your GY: You can place this card from your GY in your Spell & Trap Zone as a face-up Continuous Trap. During the Main Phase, if this card is treated as a Continuous Trap: You can Tribute 1 \"HERO\" monster; Special Summon this card. If this card is Special Summoned from the Spell & Trap Zone: You can destroy 1 Level 4 or lower monster your opponent controls. You can only use each effect of \"Vision HERO Minimum Ray\" once per turn.",
+      "race": "Warrior",
+      "atk": 1200,
+      "def": 700,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Vision HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vision-hero-minimum-ray-10287",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN055",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61320914,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61320914.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61320914.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61320914.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31599,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248005,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 9055,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

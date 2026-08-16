@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 76902476,
+      "name": "Mecha Phantom Beast Turtletracer",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's Level is increased by the total Levels of all \"Mecha Phantom Beast Tokens\" you control. While you control a Token, this card cannot be destroyed by battle or card effects. Each turn, the first \"Mecha Phantom Beast Token\" you control that would be destroyed by battle, is not destroyed.",
+      "race": "Machine",
+      "atk": 500,
+      "def": 2000,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Mecha Phantom Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mecha-phantom-beast-turtletracer-6470",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN000",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy Sneak Peek Participation Card",
+          "set_code": "LTGY-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76902476,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76902476.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76902476.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76902476.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22874,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-11",
+          "ocg_date": "2013-05-18",
+          "konami_id": 10594,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

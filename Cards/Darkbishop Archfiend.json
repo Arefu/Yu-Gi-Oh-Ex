@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 35798491,
+      "name": "Darkbishop Archfiend",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The controller of this card pays 500 Life Points during each of his/her Standby Phases (this is not optional). When an Archfiend Monster Card on your side of the field is targeted by the effect of a card controlled by your opponent, when resolving the effect, roll a six-sided die. If the result is 1, 3, or 6, negate the effect and destroy the opponent's card.",
+      "race": "Fiend",
+      "atk": 300,
+      "def": 1400,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darkbishop-archfiend-3030",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-069",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "3.17"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN069",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN231",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENE07",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35798491,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35798491.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35798491.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35798491.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.95",
+          "amazon_price": "1.40",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101633,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5774,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

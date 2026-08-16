@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 13662809,
+      "name": "Abyss Script - Rise of the Abyss King",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target face-up cards on the field, up to the number of Attack Position \"Abyss Actor\" monsters with different names you control; destroy them. If you control a Level 7 or higher \"Abyss Actor\" monster, your opponent cannot activate cards or effects in response to this card's activation. If this Set card in its owner's control is destroyed by an opponent's card effect, and you have a face-up \"Abyss Actor\" Pendulum Monster in your Extra Deck: You can add up to 2 \"Abyss Actor\" cards and/or \"Abyss Script\" Spells with different names from your Deck to your hand.",
+      "race": "Normal",
+      "archetype": "Abyss Actor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-script-rise-of-the-abyss-king-1172",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN027",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN054",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13662809,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13662809.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13662809.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13662809.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71376,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12721,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

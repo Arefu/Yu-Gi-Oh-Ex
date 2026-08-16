@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 43577607,
+      "name": "Yang Zing Prana",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "This card gains these effects, based on the number of different Attributes the \"Yang Zing\" monsters in your Graveyard have.\n● 2 or more: All \"Yang Zing\" monsters you control gain 500 ATK.\n● 3 or more: If a \"Yang Zing\" monster(s) you control would be destroyed by battle or card effect, you can send this card to the Graveyard instead.\n● 4 or more: Your opponent cannot Set monsters. Change all face-up monsters your opponent controls to Attack Position.\n● 5 or more: You can send this card to the Graveyard; destroy all cards on the field.",
+      "race": "Continuous",
+      "archetype": "Yang Zing",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/yang-zing-prana-3717",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN106",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN158",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.94"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43577607,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43577607.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43577607.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43577607.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30882,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11271,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

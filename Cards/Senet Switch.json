@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 63394872,
+      "name": "Senet Switch",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn, during your Main Phase, you can move 1 monster on your side of the field to an adjacent (horizontal) unoccupied Monster Card Zone.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/senet-switch-5354",
+      "card_sets": [
+        {
+          "set_name": "Cyberdark Impact",
+          "set_code": "CDIP-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Masters",
+          "set_code": "TAMA-EN042",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63394872,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63394872.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63394872.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63394872.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81454,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-11-15",
+          "ocg_date": "2006-08-10",
+          "konami_id": 6909,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

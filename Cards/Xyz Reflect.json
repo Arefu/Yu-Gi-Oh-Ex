@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 2371506,
+      "name": "Xyz Reflect",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When a Spell Card, Trap Card, or monster effect is activated that targets a face-up Xyz Monster(s) on the field: Negate the activation, and if you do, destroy it, then inflict 800 damage to your opponent.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-reflect-214",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN066",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN066",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack 2014",
+          "set_code": "SP14-EN038",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2371506,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2371506.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2371506.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2371506.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "1.90",
+          "amazon_price": "10.08",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46073,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9940,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

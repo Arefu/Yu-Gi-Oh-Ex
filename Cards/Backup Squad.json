@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 28486799,
+      "name": "Backup Squad",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time you take 1000 or more damage by your opponent's card effect or their monster's attack: Draw 1 card for every 1000 damage you took.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/backup-squad-8578",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN145",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN065",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENG13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Starter Decks: Match of the Millennium",
+          "set_code": "SS04-ENA27",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28486799,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28486799.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28486799.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28486799.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.71",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Replenishment Squad",
+          "views": 61610,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13281,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

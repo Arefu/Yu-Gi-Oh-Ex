@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 42589641,
+      "name": "Stellarknight Triverr",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 4 \"tellarknight\" monsters\nDuring the turn you Xyz Summon this card, you cannot Special Summon monsters, except \"tellarknight\" monsters. If this card is Xyz Summoned: Return all other cards on the field to the hand. Once per turn: You can detach 1 Xyz Material from this card; send 1 random card from your opponent's hand to the Graveyard. If this card with Xyz Material is sent to the Graveyard: You can target 1 \"tellarknight\" monster in your Graveyard; Special Summon it.",
+      "race": "Warrior",
+      "atk": 2100,
+      "def": 2500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Stellarknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/stellarknight-triverr-3630",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN165",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN098",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN054",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN054",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42589641,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42589641.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42589641.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42589641.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "2.75",
+          "amazon_price": "2.82",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116785,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11386,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 3841833,
+      "name": "Fluffal Bear",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send this card from your hand to the Graveyard; Set 1 \"Toy Vendor\" directly from your Deck to your Spell & Trap Zone. You can Tribute this card, then target 1 \"Polymerization\" in your Graveyard; add it to your hand. You can only use 1 \"Fluffal Bear\" effect per turn, and only once that turn.",
+      "race": "Fairy",
+      "atk": 1200,
+      "def": 800,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Fluffal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fluffal-bear-345",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN139",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN023",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3841833,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3841833.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3841833.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3841833.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "1.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 241429,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11348,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

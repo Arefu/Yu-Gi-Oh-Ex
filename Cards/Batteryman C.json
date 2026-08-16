@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 19733961,
+      "name": "Batteryman C",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If all \"Batteryman C\"(s) you control are in Attack Position, all Machine-Type monsters you control gain 500 ATK for each \"Batteryman C\" you control. If all \"Batteryman C\"(s) you control are in Defense Position, all Machine-Type monsters you control gain 500 DEF for each \"Batteryman C\" you control.",
+      "race": "Thunder",
+      "atk": 0,
+      "def": 0,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Batteryman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/batteryman-c-1698",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19733961,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19733961.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19733961.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19733961.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "3.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 69669,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6428,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

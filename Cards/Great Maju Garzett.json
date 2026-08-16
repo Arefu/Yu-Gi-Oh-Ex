@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 47942531,
+      "name": "Great Maju Garzett",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The ATK of this card becomes twice the original ATK of 1 monster that you Tributed for the Tribute Summon of this card.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Maju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/great-maju-garzett-4095",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-063",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.08"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN063",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN225",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47942531,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47942531.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47942531.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47942531.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "0.98",
+          "ebay_price": "3.38",
+          "amazon_price": "3.19",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 151607,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5768,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

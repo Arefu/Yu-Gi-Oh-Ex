@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 64973287,
+      "name": "Dinomist Pteran",
+      "typeline": [
+        "Machine",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf another \"Dinomist\" card(s) you control would be destroyed by battle or an opponent's card effect, you can destroy this card instead.\n\n[ Monster Effect ] \nWhen this card destroys an opponent's monster by battle: You can add 1 \"Dinomist\" card from your Deck to your hand.",
+      "race": "Machine",
+      "pend_desc": "If another \"Dinomist\" card(s) you control would be destroyed by battle or an opponent's card effect, you can destroy this card instead.",
+      "monster_desc": "When this card destroys an opponent's monster by battle: You can add 1 \"Dinomist\" card from your Deck to your hand.",
+      "atk": 1800,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Dinomist",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinomist-pteran-5477",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN195",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 64973287,
+          "image_url": "https://images.ygoprodeck.com/images/cards/64973287.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/64973287.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/64973287.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.44",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62696,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12134,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

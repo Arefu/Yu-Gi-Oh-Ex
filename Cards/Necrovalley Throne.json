@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 37561138,
+      "name": "Necrovalley Throne",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Activate 1 of these effects.\r\n● Add 1 \"Gravekeeper's\" monster from your Deck to your hand.\r\n● Immediately after this effect resolves, Normal Summon 1 \"Gravekeeper's\" monster.\r\nYou can only activate 1 \"Necrovalley Throne\" per turn.",
+      "race": "Normal",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/necrovalley-throne-9660",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN055",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37561138,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37561138.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37561138.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37561138.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Throne of Necrovalley",
+          "views": 221885,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13942,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

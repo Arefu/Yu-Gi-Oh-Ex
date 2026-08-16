@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 10275411,
+      "name": "Xyz Revenge",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If your opponent controls a face-up Xyz Monster that has Xyz Material: Target 1 Xyz monster in your Graveyard; Special Summon it, then detach 1 Xyz Material from a monster your opponent controls and attach it to that monster as an Xyz Material. You can only activate 1 \"Xyz Revenge\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-revenge-890",
+      "card_sets": [
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN059",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10275411,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10275411.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10275411.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10275411.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24913,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10540,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

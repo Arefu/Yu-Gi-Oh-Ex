@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 71197066,
+      "name": "Gizmek Orochi, the Serpentron Sky Slasher",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is in your hand or GY (Quick Effect): You can banish 8 cards from the top of your Deck face-down; Special Summon this card. You can banish 3 cards from your Extra Deck face-down, then target 1 face-up monster on the field; destroy it. You can only use 1 \"Gizmek Orochi, the Serpentron Sky Slasher\" effect per turn, and only once that turn.",
+      "race": "Machine",
+      "atk": 2450,
+      "def": 2450,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gizmek-orochi-the-serpentron-sky-slasher-10243",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN114",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.2"
+        },
+        {
+          "set_name": "Amazing Defenders",
+          "set_code": "AMDE-EN048",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Amazing Defenders",
+          "set_code": "AMDE-EN048",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN029",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71197066,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71197066.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71197066.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71197066.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "4.74",
+          "amazon_price": "0.37",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Metal Snake Murakumo no Orochi",
+          "views": 722402,
+          "viewsweek": 21,
+          "upvotes": 13,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009029,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14480,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

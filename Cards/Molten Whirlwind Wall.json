@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 37436476,
+      "name": "Molten Whirlwind Wall",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "All face-up \"Laval\" monsters you control gain 100 ATK for each \"Laval\" monster in your Graveyard.",
+      "race": "Continuous",
+      "archetype": "Laval",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/molten-whirlwind-wall-3171",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN050",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37436476,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37436476.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37436476.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37436476.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17907,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8922,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 17475251,
+      "name": "Brotherhood of the Fire Fist - Hawk",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card in its owner's possession is destroyed by an opponent's card (either by battle or by card effect): You can Set 1 \"Fire Formation\" Spell Card directly from your Deck. While you control a \"Fire Formation\" Spell/Trap Card, all \"Fire Fist\" monsters you control gain 500 ATK and DEF.",
+      "race": "Beast-Warrior",
+      "atk": 200,
+      "def": 1500,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Fire Fist",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/brotherhood-of-the-fire-fist-hawk-1515",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Two",
+          "set_code": "AP02-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cosmo Blazer",
+          "set_code": "CBLZ-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 17475251,
+          "image_url": "https://images.ygoprodeck.com/images/cards/17475251.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/17475251.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/17475251.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "2.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45592,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-01-25",
+          "ocg_date": "2012-11-17",
+          "konami_id": 10380,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

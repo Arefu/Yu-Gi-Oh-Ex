@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 41410651,
+      "name": "Mathmech Billionblade Nayuta",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a Cyberse monster. If the equipped monster battles an opponent's monster, during damage calculation: You can send 1 \"Mathmech\" monster from your Deck to the GY; the equipped monster gains ATK equal to the sent monster's ATK, until the end of this turn (even if this card leaves the field). If this card is sent from the Spell & Trap Zone to the GY: You can target 1 \"Mathmech\" card in your GY, except \"Mathmech Billionblade Nayuta\"; add it to your hand. You can only use each effect of \"Mathmech Billionblade Nayuta\" once per turn.",
+      "race": "Equip",
+      "archetype": "Mathmech",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mathmech-billionblade-nayuta-10421",
+      "card_sets": [
+        {
+          "set_name": "Mystic Fighters",
+          "set_code": "MYFI-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.13"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41410651,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41410651.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41410651.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41410651.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mathmech Divider Nayuta",
+          "views": 76429,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100423011,
+          "tcg_date": "2019-11-21",
+          "ocg_date": "2019-08-03",
+          "konami_id": 14754,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

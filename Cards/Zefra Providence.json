@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 74580251,
+      "name": "Zefra Providence",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Add 1 \"Zefra\" card from your Deck to your hand, except \"Zefra Providence\". If a \"Zefra\" card(s) you control would be destroyed, except the turn this card was sent to the Graveyard, you can banish this card from your Graveyard instead. You can only activate 1 \"Zefra Providence\" per turn.",
+      "race": "Normal",
+      "archetype": "Zefra",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zefra-providence-8337",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN061",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74580251,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74580251.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74580251.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74580251.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.49",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 67335,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12975,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 95291684,
+      "name": "D.D. Unicorn Knight",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card can only be Special Summoned if your opponent controls a monster(s) and you control a face-up Tuner monster(s). When this card is Special Summoned this way, you can select 1 of your removed from play Level 3 or lower non-Tuner monsters and Special Summon it. Its effect(s) are negated. You cannot Normal Summon or Set the turn you Special Summon this card.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 900,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "D.D.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-unicorn-knight-7935",
+      "card_sets": [
+        {
+          "set_name": "Duelist Revolution",
+          "set_code": "DREV-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95291684,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95291684.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95291684.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95291684.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25512,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-08-07",
+          "ocg_date": "2010-04-17",
+          "konami_id": 8942,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

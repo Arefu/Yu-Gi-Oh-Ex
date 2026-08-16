@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 39752820,
+      "name": "Lib the World Key Blademaster",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters\r\nCan only be Link Summoned while you have a \"World Legacy\" card in your GY. You can only use each of the following effects of \"Lib the World Key Blademaster\" once per turn.\r\n● During your Main Phase: You can Set 1 \"World Legacy\" Spell/Trap directly from your Deck, but it cannot be activated this turn while you have no \"World Legacy\" monster in your GY.\r\n● If this Link Summoned card is sent to the GY as Link Material: You can shuffle 1 card on the field into the Deck.",
+      "race": "Cyberse",
+      "atk": 2000,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "World Legacy",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Bottom-Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lib-the-world-key-blademaster-10708",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN159",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.27"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39752820,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39752820.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39752820.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39752820.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.95",
+          "amazon_price": "2.38",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Lib the World Keymaster",
+          "views": 311110,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257081,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14946,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

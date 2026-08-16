@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 99551425,
+      "name": "Labyrinth Tank",
+      "typeline": [
+        "Machine",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Giga-Tech Wolf\" + \"Cannon Soldier\"",
+      "race": "Machine",
+      "atk": 2400,
+      "def": 2400,
+      "level": 7,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/labyrinth-tank-8266",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN230",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.98"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.99"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99551425,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99551425.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99551425.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99551425.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.49",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 242498,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4376,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

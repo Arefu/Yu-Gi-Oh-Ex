@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 54752875,
+      "name": "Twin-Headed Thunder Dragon",
+      "typeline": [
+        "Thunder",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Thunder Dragon\" + \"Thunder Dragon\"",
+      "race": "Thunder",
+      "atk": 2800,
+      "def": 2100,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Thunder Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/twin-headed-thunder-dragon-4666",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Legends",
+          "set_code": "DLG1-EN043",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.35"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-120",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.97"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E120",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "15.84"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN120",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Retro Pack",
+          "set_code": "RP01-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.68"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54752875,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54752875.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54752875.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54752875.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.89",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "3.95",
+          "amazon_price": "6.59",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 736201,
+          "viewsweek": 42,
+          "upvotes": 14,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4619,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

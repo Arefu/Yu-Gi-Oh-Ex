@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 69069911,
+      "name": "Kachi Kochi Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nOnce per turn, when this card destroys an opponent's monster by battle and sends it to the Graveyard: You can detach 1 Xyz Material from this card; it can can make a second attack in a row.",
+      "race": "Dragon",
+      "atk": 2100,
+      "def": 1300,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kachi-kochi-dragon-5804",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis: Special Edition",
+          "set_code": "MACR-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.71"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! ZEXAL Volume 1 promotional card",
+          "set_code": "YZ01-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.69"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69069911,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69069911.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69069911.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69069911.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56573,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-06-05",
+          "ocg_date": "2011-06-03",
+          "konami_id": 9839,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

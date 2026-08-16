@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 40991587,
+      "name": "The Lady in Wight",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Face-up Level 3 or lower Zombie-Type monsters on the field, except \"The Lady in Wight\", cannot be destroyed by battle and are unaffected by Spell/Trap effects. This card's name becomes \"Skull Servant\" while it is in the Graveyard.",
+      "race": "Zombie",
+      "atk": 0,
+      "def": 2200,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Skull Servant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-lady-in-wight-3490",
+      "card_sets": [
+        {
+          "set_name": "Gold Series: Haunted Mine",
+          "set_code": "GLD5-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13",
+          "set_code": "OP13-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13 (POR)",
+          "set_code": "OP13-PT014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40991587,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40991587.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40991587.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40991587.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.86",
+          "ebay_price": "2.66",
+          "amazon_price": "6.83",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 251340,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7611,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

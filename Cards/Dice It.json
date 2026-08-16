@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 8868767,
+      "name": "Dice It",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Roll a six-sided die. Apply this effect, depending on whose turn it is.\r\n● During your turn: Banish cards from your GY equal to the result. Then, if the result was 1, send 6 cards from the top of your Deck to the GY.\r\n● During your opponent's turn: Send cards from the top of your Deck to the GY equal to the result. Then, if the result was 6, banish 1 card from your GY.",
+      "race": "Normal",
+      "archetype": "Dice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dice-it-10040",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN080",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8868767,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8868767.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8868767.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8868767.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dice Rollette",
+          "views": 30762,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14330,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

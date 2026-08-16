@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 91407982,
+      "name": "Fortune Vision",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: You can add 1 \"Fortune Lady\" card from your Deck to your hand. Once per turn, if a card(s) you control is banished by card effect (except during the Damage Step): You can activate this effect; this turn, monsters you control cannot be destroyed by card effects (even if this card leaves the field). Once per turn, if a card(s) your opponent controls is banished by card effect (except during the Damage Step): You can make the next battle damage you take this turn become 0 (even if this card leaves the field). You can only activate 1 \"Fortune Vision\" per turn.",
+      "race": "Continuous",
+      "archetype": "Fortune Lady",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortune-vision-10197",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN055",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91407982,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91407982.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91407982.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91407982.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 104824,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009055,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14508,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

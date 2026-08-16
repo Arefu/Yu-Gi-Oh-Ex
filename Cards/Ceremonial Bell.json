@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 20228463,
+      "name": "Ceremonial Bell",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Both players must keep their hands revealed.",
+      "race": "Spellcaster",
+      "atk": 0,
+      "def": 1850,
+      "level": 3,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ceremonial-bell-1736",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.41"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.67"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2018)",
+          "set_code": "AC18-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.37"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20228463,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20228463.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20228463.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20228463.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 204466,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-07-13",
+          "konami_id": 4928,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

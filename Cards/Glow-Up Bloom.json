@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 92964816,
+      "name": "Glow-Up Bloom",
+      "typeline": [
+        "Zombie",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY: You can banish this card from your GY; add 1 Level 5 or higher Zombie monster from your Deck to your hand, or, if \"Zombie World\" is in a Field Zone, you can Special Summon it from your Deck instead, also, in either case, you cannot Special Summon monsters for the rest of this turn, except Zombie monsters. You can only use this effect of \"Glow-Up Bloom\" once per turn.",
+      "race": "Zombie",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/glow-up-bloom-9768",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN115",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.41"
+        },
+        {
+          "set_name": "Structure Deck: Zombie Horde",
+          "set_code": "SR07-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.11"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92964816,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92964816.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92964816.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92964816.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.95",
+          "ebay_price": "1.75",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 605742,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-01",
+          "ocg_date": "2018-09-22",
+          "konami_id": 14058,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

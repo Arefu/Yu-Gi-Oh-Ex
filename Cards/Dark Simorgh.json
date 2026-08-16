@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 11366199,
+      "name": "Dark Simorgh",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While face-up on the field, this card is also WIND-Attribute. You can banish 1 DARK monster and 1 WIND monster from your Graveyard; Special Summon this card from your hand. You can banish 1 DARK monster and 1 WIND monster from your hand; Special Summon this card from your Graveyard. Your opponent cannot Set any cards on the field.",
+      "race": "Winged Beast",
+      "atk": 2700,
+      "def": 1000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Simorgh",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-simorgh-980",
+      "card_sets": [
+        {
+          "set_name": "Collectible Tins 2011 Wave 1",
+          "set_code": "CT08-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.31"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17",
+          "set_code": "OP17-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 17 (POR)",
+          "set_code": "OP17-PT016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN092",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11366199,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11366199.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11366199.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11366199.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "1.12",
+          "ebay_price": "13.50",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 194869,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2008-01-21",
+          "konami_id": 7770,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

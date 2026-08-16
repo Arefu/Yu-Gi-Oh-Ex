@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 30270176,
+      "name": "Crimson Nova the Dark Cubic Lord",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by revealing 3 other \"Cubic\" cards in your hand with different names, and cannot be Special Summoned by other ways. Unaffected by other monsters' activated effects, whose original ATK is 3000 or less. When this attacking card destroys a monster by battle: You can activate this effect; this card can make a second attack during this Battle Phase. During your End Phase: Each player takes 3000 damage. You can only use this effect of \"Crimson Nova the Dark Cubic Lord\" once per turn.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 0,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Cubic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crimson-nova-the-dark-cubic-lord-2564",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.25"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS39",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.54"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG39",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "2.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30270176,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30270176.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30270176.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30270176.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "3.25",
+          "amazon_price": "2.71",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 221952,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12522,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

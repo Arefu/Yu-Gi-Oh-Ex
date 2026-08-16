@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 35618217,
+      "name": "Lunalight Kaleido Chick",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can send 1 \"Lunalight\" monster from your Deck or Extra Deck to the GY; the name of this face-up card on the field can be treated as the sent monster's, if used as Fusion Material this turn. If this card is sent to the GY by a card effect: You can target 1 \"Polymerization\" in your GY; add it to your hand. You can only use this effect of \"Lunalight Kaleido Chick\" once per turn. If this card is banished: You can activate this effect; this turn, your opponent's cards and effects cannot be activated during the Battle Phase.",
+      "race": "Beast-Warrior",
+      "atk": 1400,
+      "def": 800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Lunalight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lunalight-kaleido-chick-3017",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN164",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN068",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENL05",
+          "set_rarity": "2",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Sisters of the Rose",
+          "set_code": "LED4-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35618217,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35618217.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35618217.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35618217.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 403578,
+          "viewsweek": 63,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2016-11-26",
+          "konami_id": 12860,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

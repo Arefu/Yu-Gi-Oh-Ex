@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 88923963,
+      "name": "Noble Knight Iyvanne",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a \"Noble Arms\" Equip Spell becomes equipped to this card: You can Special Summon 1 \"Noble Knight Token\" (Warrior/LIGHT/Level 4/ATK 1000/DEF 1000), also you cannot Special Summon monsters for the rest of this turn, except \"Noble Knight\" monsters. You can only use this effect of \"Noble Knight Iyvanne\" once per turn. While this card is equipped with a \"Noble Arms\" Equip Spell, all other \"Noble Knight\" monsters you control gain 500 ATK.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/noble-knight-iyvanne-9816",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN222",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN088",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88923963,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88923963.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88923963.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88923963.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "3.00",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84674,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14073,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

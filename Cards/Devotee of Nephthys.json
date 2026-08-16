@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 88176533,
+      "name": "Devotee of Nephthys",
+      "typeline": [
+        "Spellcaster",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Rebirth of Nephthys\". You can only use each of the following effects of \"Devotee of Nephthys\" once per turn.\r\n● If this card is Ritual Summoned: You can activate this effect; Special Summon 1 \"Nephthys\" monster from your Deck, also during the End Phase of this turn, destroy this card.\r\n● If this card is in the GY: You can destroy 1 \"Nephthys\" card in your hand, and if you do, Special Summon this card.",
+      "race": "Spellcaster",
+      "atk": 1200,
+      "def": 1200,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Nephthys",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/devotee-of-nephthys-9702",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN005",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88176533,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88176533.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88176533.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88176533.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.98",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "1.59",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Avatar of Nephthys",
+          "views": 91737,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14013,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

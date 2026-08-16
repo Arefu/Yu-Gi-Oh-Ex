@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 8581705,
+      "name": "Infernalqueen Archfiend",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "The controller of this card pays 500 Life Points during each of his/her Standby Phases (this is not optional). When this card is targeted by the effect of a card controlled by your opponent, when resolving the effect, roll a six-sided die. If the result is 2 or 5, negate the effect and destroy the opponent's card. As long as this card remains on the field, during each Standby Phase, increase the ATK of 1 Archfiend Monster Card by 1000 points until the End Phase.",
+      "race": "Fiend",
+      "atk": 900,
+      "def": 1500,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infernalqueen-archfiend-726",
+      "card_sets": [
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-071",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.37"
+        },
+        {
+          "set_name": "Dark Crisis",
+          "set_code": "DCR-EN071",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN233",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duelists of Shadows",
+          "set_code": "SGX3-ENE04",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8581705,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8581705.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8581705.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8581705.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "2.49",
+          "amazon_price": "1.88",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 102814,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-12-01",
+          "ocg_date": "2003-02-20",
+          "konami_id": 5776,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 32825095,
+      "name": "White Moray",
+      "typeline": [
+        "Fish",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the turn you Normal Summoned this card, it can attack your opponent directly. If this card is Special Summoned from the GY: You can treat it as a Tuner this turn.",
+      "race": "Fish",
+      "atk": 600,
+      "def": 200,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "White",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-moray-8523",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN051",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32825095,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32825095.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32825095.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32825095.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "1.31",
+          "amazon_price": "0.65",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22382,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13143,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

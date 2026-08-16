@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 97574404,
+      "name": "Arcana Force VI - The Lovers",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Summoned, toss a coin: ● Heads: This card can be treated as 2 Tributes for the Tribute Summon of an \"Arcana Force\" monster. ● Tails: You cannot Tribute Summon \"Arcana Force\" monsters.",
+      "race": "Fairy",
+      "atk": 1600,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Arcana Force",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcana-force-vi-the-lovers-8112",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97574404,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97574404.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97574404.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97574404.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72268,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7585,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

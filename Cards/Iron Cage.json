@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 45072394,
+      "name": "Iron Cage",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: Send 1 monster you control to the GY, or if \"Golden Castle of Stromberg\" is in a Field Zone, you can send 1 monster your opponent controls to the GY, instead. Once per turn, during your Standby Phase: You can target the monster that was sent to the GY by this card's effect; destroy this card, and if you do, Special Summon that monster to your field. You can only activate 1 \"Iron Cage\" per turn.",
+      "race": "Continuous",
+      "archetype": "Golden Castle of Stromberg",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/iron-cage-9524",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.72"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45072394,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45072394.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45072394.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45072394.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "2.50",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32383,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13810,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

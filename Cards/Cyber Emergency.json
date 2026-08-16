@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 60600126,
+      "name": "Cyber Emergency",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Add 1 LIGHT Machine monster that cannot be Normal Summoned/Set, or 1 \"Cyber Dragon\" monster, from your Deck to your hand. If the activation of this card in its owner's possession was negated by your opponent's card effect and sent to your GY: You can discard 1 card; add this card to your hand. You can only activate 1 \"Cyber Emergency\" per turn.",
+      "race": "Normal",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-emergency-9510",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN105",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN016",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "16.53"
+        },
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN092",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "4.41"
+        },
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.84"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60600126,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60600126.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60600126.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60600126.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.49",
+          "amazon_price": "0.57",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Emergency Cyber",
+          "views": 1452405,
+          "viewsweek": 21,
+          "upvotes": 31,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 8428,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

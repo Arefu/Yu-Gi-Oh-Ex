@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 92870717,
+      "name": "Dragonox, the Empowered Warrior",
+      "typeline": [
+        "Warrior",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhen an opponent's monster declares an attack: You can destroy this card, then end the Battle Phase.\n\n[ Monster Effect ] \nOnce per turn: You can discard 1 card, then target 1 Warrior or Spellcaster-Type monster with 2000 or less ATK in your Graveyard; Special Summon it in face-down Defense Position.",
+      "race": "Warrior",
+      "pend_desc": "When an opponent's monster declares an attack: You can destroy this card, then end the Battle Phase.",
+      "monster_desc": "Once per turn: You can discard 1 card, then target 1 Warrior or Spellcaster-Type monster with 2000 or less ATK in your Graveyard; Special Summon it in face-down Defense Position.",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Empowered Warrior",
+      "scale": 7,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragonox-the-empowered-warrior-7730",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tins",
+          "set_code": "CT13-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.3"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92870717,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92870717.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92870717.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92870717.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63690,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-09-01",
+          "ocg_date": "2015-04-25",
+          "konami_id": 11872,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

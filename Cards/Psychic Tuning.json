@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 3891471,
+      "name": "Psychic Tuning",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Select 1 Psychic-Type monster in your Graveyard and Special Summon it in Attack Position. It is treated as a Tuner monster. When this card is removed from the field, destroy that monster. When that monster is removed from the field, destroy this card. When this card is sent to the Graveyard, take damage equal to that monster's Level x 400.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psychic-tuning-348",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN076",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3891471,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3891471.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3891471.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3891471.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 29085,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8071,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

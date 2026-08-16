@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 46955770,
+      "name": "Gravekeeper's Heretic",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card on the field is unaffected by all other card effects, as long as \"Necrovalley\" is also on the field.",
+      "race": "Spellcaster",
+      "atk": 1800,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravekeeper-s-heretic-4000",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN241",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN084",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46955770,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46955770.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46955770.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46955770.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.04",
+          "tcgplayer_price": "0.62",
+          "ebay_price": "4.99",
+          "amazon_price": "1.19",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 124184,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10988,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

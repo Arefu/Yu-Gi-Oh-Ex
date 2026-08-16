@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 19748583,
+      "name": "Gwenhwyfar, Queen of Noble Arms",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target 1 \"Noble Knight\" monster you control; equip this card from your hand or Graveyard to that target. You can only use this effect of \"Gwenhwyfar, Queen of Noble Arms\" once per turn. The equipped monster gains 300 ATK. Apply the appropriate effect, depending on the Attribute of the equipped monster.\n● LIGHT: If the equipped monster would be destroyed by a card effect, you can destroy this card instead.\n● DARK: If the equipped monster battles an opponent's monster, at the start of the Damage Step: You can destroy that monster, then destroy this card.",
+      "race": "Spellcaster",
+      "atk": 300,
+      "def": 300,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "Noble Knight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gwenhwyfar-queen-of-noble-arms-1702",
+      "card_sets": [
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN086",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Noble Knights of the Round Table Box Set",
+          "set_code": "NKRT-EN012",
+          "set_rarity": "Platinum Rare",
+          "set_rarity_code": "(PIR)",
+          "set_price": "13.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19748583,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19748583.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19748583.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19748583.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.65",
+          "tcgplayer_price": "1.18",
+          "ebay_price": "3.99",
+          "amazon_price": "4.27",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77621,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10990,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

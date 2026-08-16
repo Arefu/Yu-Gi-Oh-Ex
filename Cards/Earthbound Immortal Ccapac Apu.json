@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 46263076,
+      "name": "Earthbound Immortal Ccapac Apu",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "There can only be 1 \"Earthbound Immortal\" monster on the field. If there is no face-up Field Spell on the field, destroy this card. Your opponent's monsters cannot target this card for attacks. This card can attack directly. If this card destroys an opponent's monster by battle: Inflict damage to your opponent equal to the destroyed monster's original ATK.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 2500,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Earthbound",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/earthbound-immortal-ccapac-apu-3946",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN147",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN000",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN039",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.91"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN020",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN020",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46263076,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46263076.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46263076.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46263076.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 130338,
+          "viewsweek": 21,
+          "upvotes": 16,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8172,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

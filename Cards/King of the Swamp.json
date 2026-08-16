@@ -1,0 +1,135 @@
+{
+  "data": [
+    {
+      "id": 79109599,
+      "name": "King of the Swamp",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card can be used as a substitute for any 1 Fusion Material whose name is specifically listed on the Fusion Monster Card, but the other Fusion Material(s) must be correct. You can discard this card to the Graveyard; add 1 \"Polymerization\" from your Deck to your hand.",
+      "race": "Aqua",
+      "atk": 500,
+      "def": 1100,
+      "level": 3,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/king-of-the-swamp-6641",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "14.49"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN195",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN055",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "15.59"
+        },
+        {
+          "set_name": "Hobby League 1 participation cards C",
+          "set_code": "HL1-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "136.61"
+        },
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN046",
+          "set_rarity": "Collector's Rare",
+          "set_rarity_code": "(CR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Justice Hunters",
+          "set_code": "JUSH-EN046",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN256",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "15.2"
+        },
+        {
+          "set_name": "Legendary Decks II",
+          "set_code": "LDK2-ENK17",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "14.27"
+        },
+        {
+          "set_name": "OTS Tournament Pack 20",
+          "set_code": "OP20-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79109599,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79109599.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79109599.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79109599.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "3.49",
+          "amazon_price": "15.00",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 980514,
+          "viewsweek": 63,
+          "upvotes": 11,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6044,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 84620194,
+      "name": "Girochin Kuwagata",
+      "typeline": [
+        "Insect",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Despite its small size, this monster has powerful jaws that can rip metal to shreds.",
+      "race": "Insect",
+      "atk": 1700,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/girochin-kuwagata-7097",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.89"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN085",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84620194,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84620194.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84620194.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84620194.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "1.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 137563,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5136,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

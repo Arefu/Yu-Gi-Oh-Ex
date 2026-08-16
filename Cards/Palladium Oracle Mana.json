@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": 42006475,
+      "name": "Palladium Oracle Mana",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When your opponent activates a card or effect that targets 1 Spellcaster monster you control (and no other cards), while this card is in your hand or GY (Quick Effect): You can Special Summon this card. You can only use this effect of \"Palladium Oracle Mana\" once per turn. Level 7 or higher Spellcaster monsters you control cannot be destroyed by card effects. If this card is destroyed by battle or card effect: You can Special Summon 1 \"Dark Magician Girl\" from your hand, Deck, or GY.",
+      "race": "Spellcaster",
+      "atk": 2000,
+      "def": 1700,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/palladium-oracle-mana-10074",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin",
+          "set_code": "TN19-EN004",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "6.83"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42006475,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42006475.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42006475.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42006475.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.60",
+          "tcgplayer_price": "2.22",
+          "ebay_price": "0.99",
+          "amazon_price": "2.44",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 255833,
+          "viewsweek": 0,
+          "upvotes": 21,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG"
+          ],
+          "tcg_date": "2019-08-29",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14368,
+          "has_effect": 1
+        }
+      ]
+    }
+  ]
+}

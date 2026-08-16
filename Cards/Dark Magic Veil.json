@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 82404868,
+      "name": "Dark Magic Veil",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Pay 1000 LP; Special Summon 1 DARK Spellcaster-Type monster from your hand or Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-magic-veil-6928",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.05"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS19",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.68"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG19",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "3.62"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82404868,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82404868.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82404868.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82404868.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.83",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "4.19",
+          "amazon_price": "4.12",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 328704,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12502,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

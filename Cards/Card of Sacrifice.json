@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 88513608,
+      "name": "Card of Sacrifice",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Draw 2 cards, if the combined ATK of all your face-up Attack Position monsters (minimum 2) is less than the ATK of your opponent's face-up monster with the lowest ATK. You cannot Summon or change Battle Position the turn you activate this card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/card-of-sacrifice-7403",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN029",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88513608,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88513608.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88513608.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88513608.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "1.04",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19905,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-21",
+          "ocg_date": "2010-10-16",
+          "konami_id": 9240,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

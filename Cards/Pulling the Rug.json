@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 34717238,
+      "name": "Pulling the Rug",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Negate the activation and effect of an Effect Monster whose effect activated when a monster was Normal Summoned (even itself), and destroy that Effect Monster.",
+      "race": "Counter",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pulling-the-rug-2951",
+      "card_sets": [
+        {
+          "set_name": "Champion Pack: Game Five",
+          "set_code": "CP05-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 23",
+          "set_code": "OP23-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Strike of Neos",
+          "set_code": "STON-EN060",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34717238,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34717238.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34717238.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34717238.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.37",
+          "tcgplayer_price": "9.09",
+          "ebay_price": "10.99",
+          "amazon_price": "10.58",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 140120,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-02-28",
+          "ocg_date": "2006-11-16",
+          "konami_id": 7016,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

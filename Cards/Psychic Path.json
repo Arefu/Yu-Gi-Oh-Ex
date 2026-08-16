@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 25401880,
+      "name": "Psychic Path",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Pay 800 Life Points and select up to 2 of your removed from play Psychic-Type monsters. Add them to your hand.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psychic-path-2184",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25401880,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25401880.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25401880.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25401880.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "2.49",
+          "amazon_price": "2.43",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 55028,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8210,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 7279373,
+      "name": "Abyss Actor - Twinkle Little Star",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"Abyss Actor\" monsters. This effect cannot be negated. Once per turn: You can target 1 \"Abyss Actor\" monster you control; this turn, it can make up to 3 attacks on monsters during each Battle Phase, also other monsters you control cannot attack for the rest of this turn (even if this card leaves the field).\n\n[ Monster Effect ] \nCannot be destroyed by battle during your turn. This card can make up to 3 attacks on monsters during each Battle Phase.",
+      "race": "Fiend",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"Abyss Actor\" monsters. This effect cannot be negated. Once per turn: You can target 1 \"Abyss Actor\" monster you control; this turn, it can make up to 3 attacks on monsters during each Battle Phase, also other monsters you control cannot attack for the rest of this turn (even if this card leaves the field).",
+      "monster_desc": "Cannot be destroyed by battle during your turn. This card can make up to 3 attacks on monsters during each Battle Phase.",
+      "atk": 1000,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Abyss Actor",
+      "scale": 9,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-actor-twinkle-little-star-626",
+      "card_sets": [
+        {
+          "set_name": "Rise of the Duelist",
+          "set_code": "ROTD-EN081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7279373,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7279373.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7279373.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7279373.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Abyss Actor - Twinkle Littlestar",
+          "views": 60226,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-08-06",
+          "ocg_date": "2016-11-26",
+          "konami_id": 12865,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

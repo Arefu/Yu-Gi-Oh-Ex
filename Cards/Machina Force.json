@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 58054262,
+      "name": "Machina Force",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by \"Commander Covington\". You must pay 1000 LP to declare an attack with this card. You can send this card you control to the GY, then target 1 \"Machina Soldier\", \"Machina Sniper\", and \"Machina Defender\" in your GY; Special Summon those targets.",
+      "race": "Machine",
+      "atk": 4600,
+      "def": 4100,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Machina",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/machina-force-4938",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN171",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Machina Mayhem Structure Deck",
+          "set_code": "SDMM-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.11"
+        },
+        {
+          "set_name": "Structure Deck: Mechanized Madness",
+          "set_code": "SR10-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58054262,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58054262.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58054262.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58054262.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.38",
+          "tcgplayer_price": "2.49",
+          "ebay_price": "14.95",
+          "amazon_price": "5.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77183,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-19",
+          "ocg_date": "2005-12-17",
+          "konami_id": 6308,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

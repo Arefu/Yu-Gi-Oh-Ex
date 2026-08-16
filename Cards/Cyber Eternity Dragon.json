@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 82315403,
+      "name": "Cyber Eternity Dragon",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Cyber Dragon\" monster + 2 Machine monsters\r\nIf you have a Machine Fusion Monster(s) in your GY, your opponent cannot target this card with card effects, also it cannot be destroyed by your opponent's card effects. If this Fusion Summoned card you control is sent to your GY by an opponent's card: You can Special Summon 1 \"Cyber Dragon\" from your hand, Deck, or GY. You can banish this card from your GY; this turn, your opponent cannot target Fusion Monsters you control with card effects, also they cannot be destroyed by your opponent's card effects.",
+      "race": "Machine",
+      "atk": 2800,
+      "def": 4000,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Cyber Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-eternity-dragon-9540",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN012",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "11.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82315403,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82315403.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82315403.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82315403.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.00",
+          "tcgplayer_price": "1.93",
+          "ebay_price": "8.95",
+          "amazon_price": "9.46",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 371448,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 8,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-09-27",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13847,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 81344637,
+      "name": "Basilius, Familiar of the Evil Eye",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control an \"Evil Eye\" monster, you can Special Summon this card (from your hand). You can only Special Summon \"Basilius, Familiar of the Evil Eye\" once per turn this way. During your Main Phase: You can send 1 \"Evil Eye\" Spell/Trap from your Deck to the GY. You can only use this effect of \"Basilius, Familiar of the Evil Eye\" once per turn.",
+      "race": "Fiend",
+      "atk": 400,
+      "def": 2000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Evil Eye",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/basilius-familiar-of-the-evil-eye-10096",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN235",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "The Infinity Chasers",
+          "set_code": "INCH-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81344637,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81344637.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81344637.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81344637.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Bajilius, Retainer of the Evil Eye",
+          "views": 106843,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100412030,
+          "tcg_date": "2019-03-21",
+          "ocg_date": "2019-02-23",
+          "konami_id": 14420,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

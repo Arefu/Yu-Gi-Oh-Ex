@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 84271823,
+      "name": "Puzzlomino, the Drop-n-Deleter",
+      "typeline": [
+        "Spellcaster",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with different Levels\r\nIf a monster is Special Summoned face-up to a zone this card points to while you control this monster (except during the Damage Step): You can declare a Level from 1 to 8; that monster becomes that Level until the end of the turn. You can target 2 monsters with the same Level (1 from each field); destroy them. You can only use each effect of \"Puzzlomino, the Drop-n-Deleter\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1300,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "linkval": 2,
+      "linkmarkers": [
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/puzzlomino-the-drop-n-deleter-10072",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84271823,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84271823.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84271823.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84271823.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Place-N'-Erase Puzzle Polyromino",
+          "views": 165407,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14299,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

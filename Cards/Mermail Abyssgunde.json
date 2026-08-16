@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 69293721,
+      "name": "Mermail Abyssgunde",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is discarded to the Graveyard: You can target 1 \"Mermail\" monster in your Graveyard, except \"Mermail Abyssgunde\"; Special Summon that target. You can only use the effect of \"Mermail Abyssgunde\" once per turn.",
+      "race": "Aqua",
+      "atk": 1400,
+      "def": 800,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Mermail",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mermail-abyssgunde-5828",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN015",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Astral Pack Three",
+          "set_code": "AP03-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Glorious Gallery",
+          "set_code": "BLGG-EN057",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69293721,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69293721.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69293721.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69293721.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.99",
+          "amazon_price": "0.91",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 152329,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10237,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

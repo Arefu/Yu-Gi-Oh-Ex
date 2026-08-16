@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 1828513,
+      "name": "Shadow of the Six Samurai - Shien",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 \"Six Samurai\" monsters\r\nOnce per turn (Quick Effect): You can detach 1 material from this card, then target 1 \"Six Samurai\" monster you control with less than 2000 ATK; its original ATK becomes 2000 until the end of this turn.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shadow-of-the-six-samurai-shien-162",
+      "card_sets": [
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.92"
+        },
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.43"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1828513,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1828513.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1828513.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1828513.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "1.25",
+          "amazon_price": "0.86",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 145079,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-06-21",
+          "ocg_date": "2012-10-13",
+          "konami_id": 10217,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

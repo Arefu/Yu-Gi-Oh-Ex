@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 73783043,
+      "name": "R-Genex Accelerator",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a \"Genex\" monster is added from your Deck to your hand, you can reveal that monster to Special Summon it.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 1900,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/r-genex-accelerator-6197",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 3",
+          "set_code": "DT03-EN073",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 3",
+          "set_code": "HA03-EN045",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73783043,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73783043.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73783043.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73783043.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15128,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-09-25",
+          "ocg_date": "2009-07-01",
+          "konami_id": 8402,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

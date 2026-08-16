@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 20281581,
+      "name": "Performapal Momoncarpet",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Pendulum Flip Effect Monster",
+      "humanReadableCardType": "Pendulum Flip Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nUnless you have a card in your other Pendulum Zone, destroy this card. While this card is in the Pendulum Zone, any battle damage you take becomes halved.\n\n[ Monster Effect ] \nFLIP: You can target 1 Set card on the field; destroy it. If this card is Special Summoned: You can change it to face-down Defense Position.",
+      "race": "Beast",
+      "pend_desc": "Unless you have a card in your other Pendulum Zone, destroy this card. While this card is in the Pendulum Zone, any battle damage you take becomes halved.",
+      "monster_desc": "FLIP: You can target 1 Set card on the field; destroy it. If this card is Special Summoned: You can change it to face-down Defense Position.",
+      "atk": 1000,
+      "def": 100,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "scale": 7,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-momoncarpet-1740",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Yuya",
+          "set_code": "YS16-EN004",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20281581,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20281581.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20281581.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20281581.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.29",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13999,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-26",
+          "ocg_date": "2016-03-19",
+          "konami_id": 12374,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

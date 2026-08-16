@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 18302224,
+      "name": "Reverse of Neos",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Activate only when a face-up \"Neos\" Fusion Monster you control is destroyed. Special Summon 1 \"Elemental Hero Neos\" from your Deck in Attack Position. It gains 1000 ATK and is destroyed during the End Phase of this turn.",
+      "race": "Quick-Play",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reverse-of-neos-1588",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Jaden Yuki 3",
+          "set_code": "DP06-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN046",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18302224,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18302224.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18302224.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18302224.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.74",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58898,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7163,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 72258771,
+      "name": "Koa'ki Meiru Valafar",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard. You can Tribute Summon this monster by Tributing 1 \"Koa'ki Meiru\" monster. This card cannot be destroyed by the effects of Trap Cards. During battle between this attacking card and a Defense Position monster whose DEF is lower than the ATK of this card, inflict the difference as Battle Damage to your opponent.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 2100,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-valafar-6060",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72258771,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72258771.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72258771.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72258771.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.17",
+          "tcgplayer_price": "1.01",
+          "ebay_price": "1.99",
+          "amazon_price": "0.51",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26135,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8173,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

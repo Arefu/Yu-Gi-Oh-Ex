@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 16329071,
+      "name": "World Legacy Trap Globe",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Shuffle into the Deck, 5 of your \"World Legacy\" cards with different names that are banished, in your hand or GY, and/or face-up on your field, except \"World Legacy Trap Globe\", then draw 2 cards. You can only activate 1 \"World Legacy Trap Globe\" per turn.",
+      "race": "Normal",
+      "archetype": "World Legacy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-trap-globe-8573",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN074",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16329071,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16329071.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16329071.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16329071.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Trap Crawling on World Legacy",
+          "views": 29959,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13290,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

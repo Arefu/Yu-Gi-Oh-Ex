@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 57006589,
+      "name": "Energy-Absorbing Monolith",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Chain this card to an opponent's card effect that would inflict damage to you. That damage is negated, and you gain Life Points equal to the amount you would have taken.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/energy-absorbing-monolith-4857",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN075",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN075",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57006589,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57006589.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57006589.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57006589.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "0.58",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19403,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7324,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

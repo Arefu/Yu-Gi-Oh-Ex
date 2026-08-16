@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 34116027,
+      "name": "Dragunity Knight - Gae Dearg",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Dragon Tuner + 1+ non-Tuner Winged Beast monsters\nOnce per turn: You can add 1 Level 4 or lower Dragon or Winged Beast monster from your Deck to your hand, then discard 1 Dragon or Winged Beast monster.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 800,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Dragunity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragunity-knight-gae-dearg-2899",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN059",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN163",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal: Chapter 1",
+          "set_code": "HAC1-EN163",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN098",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34116027,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34116027.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34116027.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34116027.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "0.99",
+          "amazon_price": "1.76",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 143713,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2009-07-01",
+          "konami_id": 8427,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

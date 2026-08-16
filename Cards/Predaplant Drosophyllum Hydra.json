@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 99913726,
+      "name": "Predaplant Drosophyllum Hydra",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand or GY) by Tributing 1 monster on either player's field with a Predator Counter. You can only Special Summon \"Predaplant Drosophyllum Hydra\" once per turn this way. If this card is on the field or in your GY (Quick Effect): You can banish 1 other \"Predaplant\" monster from your GY, then target 1 face-up monster on the field; it loses 500 ATK. You can only use this effect of \"Predaplant Drosophyllum Hydra\" once per turn.",
+      "race": "Plant",
+      "atk": 800,
+      "def": 2300,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-drosophyllum-hydra-8293",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN002",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.98"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99913726,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99913726.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99913726.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99913726.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 129225,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12831,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

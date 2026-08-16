@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 53819028,
+      "name": "Predaplant Sarraceniant",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an opponent's monster declares a direct attack: You can Special Summon this card from your hand. After damage calculation, if this card battled an opponent's monster: You can destroy that opponent's monster. If this card is destroyed by battle, or if this card on the field is sent to the Graveyard by a card effect: You can add 1 \"Predap\" card from your Deck to your hand, except \"Predaplant Sarraceniant\". You can only use this effect of \"Predaplant Sarraceniant\" once per turn.",
+      "race": "Plant",
+      "atk": 100,
+      "def": 600,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-sarraceniant-4583",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.52"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53819028,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53819028.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53819028.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53819028.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.34",
+          "tcgplayer_price": "0.79",
+          "ebay_price": "2.93",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 182354,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12830,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

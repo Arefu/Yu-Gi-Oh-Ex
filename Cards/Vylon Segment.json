@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 1644289,
+      "name": "Vylon Segment",
+      "type": "Spell Card",
+      "humanReadableCardType": "Equip Spell",
+      "frameType": "spell",
+      "desc": "Equip only to a \"Vylon\" monster. It cannot be targeted by the opponent's monster effects or Trap effects. If this face-up card on the field is sent to the Graveyard: You can add 1 \"Vylon\" Spell Card from your Deck to your hand.",
+      "race": "Equip",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-segment-146",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 6b",
+          "set_code": "DT06-EN095",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 6: Omega Xyz",
+          "set_code": "HA06-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1644289,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1644289.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1644289.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1644289.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.97",
+          "amazon_price": "0.61",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20552,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-05-25",
+          "ocg_date": "2011-04-01",
+          "konami_id": 9608,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

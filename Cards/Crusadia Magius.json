@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 72228247,
+      "name": "Crusadia Magius",
+      "typeline": [
+        "Spellcaster",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 \"Crusadia\" monster, except \"Crusadia Magius\"\r\nGains ATK equal to the original ATK of the monster this card points to. The monster this card points to cannot attack. If an Effect Monster is Special Summoned to the zone this card points to (except during the Damage Step): You can add 1 \"Crusadia\" monster from your Deck to your hand. You can only use this effect of \"Crusadia Magius\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 100,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Crusadia",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crusadia-magius-9441",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN105",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72228247,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72228247.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72228247.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72228247.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "1.50",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magias Palladion",
+          "views": 242920,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13759,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

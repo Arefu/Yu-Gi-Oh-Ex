@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 71408082,
+      "name": "Paladin of Dark Dragon",
+      "typeline": [
+        "Dragon",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Dark Dragon Ritual\". At the start of the Damage Step, if this card attacks a Defense Position monster: Destroy that monster. You can Tribute this card; Special Summon 1 \"Red-Eyes\" monster from your hand or Deck, except \"Red-Eyes B. Chick\". You can only use this effect of \"Paladin of Dark Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 1900,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/paladin-of-dark-dragon-5995",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN018",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.04"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN069",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71408082,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71408082.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71408082.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71408082.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.35",
+          "ebay_price": "0.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101550,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11896,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

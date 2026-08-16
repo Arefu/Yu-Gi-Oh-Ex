@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 58753372,
+      "name": "Super Quantal Fairy Alphan",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can target 1 \"Super Quant\" monster you control; all face-up monsters you currently control become that monster's Level. You can Tribute this card; reveal 3 \"Super Quant\" monsters with different names from your Deck, your opponent randomly picks 1 for you to Special Summon to your field, and you send the rest to the Graveyard. You can only use this effect of \"Super Quantal Fairy Alphan\" once per turn.",
+      "race": "Fairy",
+      "atk": 0,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Super Quant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-quantal-fairy-alphan-4995",
+      "card_sets": [
+        {
+          "set_name": "Wing Raiders",
+          "set_code": "WIRA-EN033",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58753372,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58753372.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58753372.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58753372.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "3.26",
+          "ebay_price": "2.15",
+          "amazon_price": "1.79",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 152280,
+          "viewsweek": 42,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-02-11",
+          "ocg_date": "2015-11-14",
+          "konami_id": 12218,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 23204029,
+      "name": "Contrast HERO Chaos",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 \"Masked HERO\" monsters\n(This card is always treated as an \"Elemental HERO\" card.)\nMust be Fusion Summoned and cannot be Special Summoned by other ways. While face-up on the field, this card is also LIGHT-Attribute. Once per turn, during either player's turn: You can target 1 face-up card on the field; negate that target's effects until the end of this turn.",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 2600,
+      "level": 9,
+      "attribute": "DARK",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/contrast-hero-chaos-1995",
+      "card_sets": [
+        {
+          "set_name": "HERO Strike Structure Deck",
+          "set_code": "SDHS-EN041",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 23204029,
+          "image_url": "https://images.ygoprodeck.com/images/cards/23204029.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/23204029.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/23204029.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.73",
+          "tcgplayer_price": "4.69",
+          "ebay_price": "1.26",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 173547,
+          "viewsweek": 0,
+          "upvotes": 266,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-29",
+          "ocg_date": "2014-06-21",
+          "konami_id": 11310,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

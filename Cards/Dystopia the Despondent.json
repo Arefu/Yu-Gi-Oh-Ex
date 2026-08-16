@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 52085072,
+      "name": "Dystopia the Despondent",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand or Graveyard) by sending 4 face-up Level 1 monsters you control to the Graveyard, and cannot be Special Summoned by other ways. Other monsters you control cannot attack. During either player's Battle Step, once per battle involving this card: You can banish 1 Level 1 monster from your Graveyard; until the end of the Damage Step, this card is unaffected by other cards' effects, also it cannot be destroyed by battle.",
+      "race": "Fiend",
+      "atk": 5000,
+      "def": 5000,
+      "level": 12,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dystopia-the-despondent-4434",
+      "card_sets": [
+        {
+          "set_name": "Invasion: Vengeance: Special Edition",
+          "set_code": "INOV-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "18.72"
+        },
+        {
+          "set_name": "Weekly Shonen Jump January 2016 membership promotional card",
+          "set_code": "JUMP-EN075",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "16.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52085072,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52085072.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52085072.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52085072.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.95",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "9.99",
+          "amazon_price": "2.96",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 184466,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-18",
+          "ocg_date": "2015-06-20",
+          "konami_id": 11943,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

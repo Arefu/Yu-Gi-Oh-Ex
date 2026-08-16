@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 29666221,
+      "name": "Orcustrated Attack",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a monster declares an attack: Tribute 1 \"Orcust\" or \"World Legacy\" monster, then target 1 monster your opponent controls; banish it.",
+      "race": "Normal",
+      "archetype": "Orcust",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/orcustrated-attack-9654",
+      "card_sets": [
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29666221,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29666221.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29666221.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29666221.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Orphegel Attack",
+          "views": 34704,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13957,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

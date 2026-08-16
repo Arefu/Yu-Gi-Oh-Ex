@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 99173029,
+      "name": "Spiritual Energy Settle Machine",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "As long as this card remains face-up on the field, all Spirit monsters remain face-up on the field and do not return to their owners' hands during the End Phase even if they are Normal Summoned or flipped face-up. Discard 1 card from your hand during each of your End Phases. If you do not, destroy this card. When this card is removed from the field, all face-up Spirit monsters return to the owners' hands.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spiritual-energy-settle-machine-8233",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN191",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.26"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.62"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN082",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.4"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99173029,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99173029.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99173029.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99173029.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.00",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 122992,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-11-29",
+          "konami_id": 5390,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 38049541,
+      "name": "Genex Ally Chemistrer",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can declare 1 Attribute and discard this card to select 1 face-up \"Genex\" monster you control. That monster becomes that Attribute. This effect can be activated during either player's turn.",
+      "race": "Machine",
+      "atk": 200,
+      "def": 500,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Genex",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/genex-ally-chemistrer-3227",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 4",
+          "set_code": "DT04-EN066",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 4: Trishula's Triumph",
+          "set_code": "HA04-EN036",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38049541,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38049541.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38049541.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38049541.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16348,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-25",
+          "ocg_date": "2010-01-21",
+          "konami_id": 8708,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

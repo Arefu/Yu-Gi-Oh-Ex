@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 62337487,
+      "name": "Fortress Whale",
+      "typeline": [
+        "Fish",
+        "Ritual"
+      ],
+      "type": "Ritual Monster",
+      "humanReadableCardType": "Ritual Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Fortress Whale's Oath\".",
+      "race": "Fish",
+      "atk": 2350,
+      "def": 2150,
+      "level": 7,
+      "attribute": "WATER",
+      "archetype": "Umi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortress-whale-5272",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Tournament Pack 2",
+          "set_code": "STP2-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Scars of Battle",
+          "set_code": "SBSC-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENC11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack 7",
+          "set_code": "TP7-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "821.97"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62337487,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62337487.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62337487.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62337487.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.38",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77904,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 4,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-11-01",
+          "ocg_date": "2000-03-23",
+          "konami_id": 4724,
+          "has_effect": 0,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

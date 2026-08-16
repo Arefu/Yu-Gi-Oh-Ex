@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 21893603,
+      "name": "Lee the World Chalice Fairy",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can add 1 \"World Chalice\" monster from your Deck to your hand. If this card is in your GY: You can send 1 monster from your hand or field to the GY; add this card to your hand. You can only use each effect of \"Lee the World Chalice Fairy\" once per turn.",
+      "race": "Fairy",
+      "atk": 100,
+      "def": 2000,
+      "level": 2,
+      "attribute": "LIGHT",
+      "archetype": "World Chalice",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lee-the-world-chalice-fairy-8804",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN048",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN022",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21893603,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21893603.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21893603.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21893603.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.35",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "1.99",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Star Grail Fairy Ries",
+          "views": 170938,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13061,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

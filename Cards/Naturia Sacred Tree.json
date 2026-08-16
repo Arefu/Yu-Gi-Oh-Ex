@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 3734202,
+      "name": "Naturia Sacred Tree",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If this card is sent to the Graveyard: Add 1 \"Naturia\" card from your Deck to your hand, except \"Naturia Sacred Tree\". You can only use 1 of the following effects of \"Naturia Sacred Tree\" per turn, and only once that turn.\n● You can Tribute 1 EARTH Insect-Type monster; Special Summon 1 Level 4 or lower EARTH Plant-Type monster from your Deck.\n● You can Tribute 1 EARTH Plant-Type monster; Special Summon 1 Level 4 or lower EARTH Insect-Type monster from your Deck.",
+      "race": "Continuous",
+      "archetype": "Naturia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/naturia-sacred-tree-333",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 20",
+          "set_code": "OP20-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Beware of Traptrix",
+          "set_code": "SDBT-EN037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN076",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 3734202,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3734202.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3734202.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3734202.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 165834,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11408,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

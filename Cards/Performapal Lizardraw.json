@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 73130445,
+      "name": "Performapal Lizardraw",
+      "typeline": [
+        "Reptile",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you have a \"Performapal\" card in your other Pendulum Zone, except \"Performapal Lizardraw\": You can destroy this card, and if you do, draw 1 card. You can only use this effect of \"Performapal Lizardraw\" once per turn.\n\n[ Monster Effect ] \nIf another face-up monster you control is destroyed by your opponent's attack or card effect: You can draw cards equal to the number of \"Performapal\" monsters you currently control. You can only use this effect of \"Performapal Lizardraw\" once per turn.",
+      "race": "Reptile",
+      "pend_desc": "If you have a \"Performapal\" card in your other Pendulum Zone, except \"Performapal Lizardraw\": You can destroy this card, and if you do, draw 1 card. You can only use this effect of \"Performapal Lizardraw\" once per turn.",
+      "monster_desc": "If another face-up monster you control is destroyed by your opponent's attack or card effect: You can draw cards equal to the number of \"Performapal\" monsters you currently control. You can only use this effect of \"Performapal Lizardraw\" once per turn.",
+      "atk": 1200,
+      "def": 600,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "scale": 6,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-lizardraw-6139",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 1",
+          "set_code": "OP01-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73130445,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73130445.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73130445.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73130445.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111016,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11679,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

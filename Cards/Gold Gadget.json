@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "id": 55010259,
+      "name": "Gold Gadget",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can Special Summon 1 Level 4 Machine monster from your hand. If this card is destroyed by battle or card effect: You can Special Summon 1 Level 4 \"Gadget\" monster from your Deck, except \"Gold Gadget\". You can only use 1 \"Gold Gadget\" effect per turn, and only once that turn.",
+      "race": "Machine",
+      "atk": 1700,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Gadget",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gold-gadget-4685",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN043",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.53"
+        },
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack",
+          "set_code": "MVP1-EN018",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack Secret Edition",
+          "set_code": "MVP1-ENS18",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! The Dark Side of Dimensions Movie Pack: Gold Edition",
+          "set_code": "MVP1-ENG18",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "2.38"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55010259,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55010259.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55010259.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55010259.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 336191,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-07-21",
+          "ocg_date": "2016-04-23",
+          "konami_id": 12501,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

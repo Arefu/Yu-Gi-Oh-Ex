@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 65277087,
+      "name": "Gusto Gulldo",
+      "typeline": [
+        "Winged Beast",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is sent from the field to the Graveyard: You can Special Summon 1 Level 2 or lower \"Gusto\" monster from your Deck.",
+      "race": "Winged Beast",
+      "atk": 500,
+      "def": 500,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gusto-gulldo-5500",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN070",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65277087,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65277087.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65277087.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65277087.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "2.09",
+          "amazon_price": "1.85",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51860,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9164,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

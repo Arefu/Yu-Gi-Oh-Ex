@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 82085619,
+      "name": "Shining Friendship",
+      "typeline": [
+        "Fairy",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "The peacemaker among monsters.",
+      "race": "Fairy",
+      "atk": 1300,
+      "def": 1100,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shining-friendship-6899",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN089",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "9.31"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.65"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82085619,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82085619.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82085619.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82085619.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.30",
+          "tcgplayer_price": "2.03",
+          "ebay_price": "4.00",
+          "amazon_price": "15.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70700,
+          "viewsweek": 0,
+          "upvotes": 15,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4614,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

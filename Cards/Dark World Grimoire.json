@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 61623148,
+      "name": "Dark World Grimoire",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "During your End Phase, if you discard a monster(s) to the Graveyard because you had more cards than your hand size limit: You can target 1 of those monsters; Special Summon that target.",
+      "race": "Continuous",
+      "archetype": "Dark World",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-world-grimoire-5218",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN252",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN062",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61623148,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61623148.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61623148.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61623148.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "1.90",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54672,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2007-11-23",
+          "konami_id": 7461,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

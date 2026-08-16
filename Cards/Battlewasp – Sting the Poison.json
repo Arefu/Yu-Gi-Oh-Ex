@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 28388927,
+      "name": "Battlewasp - Sting the Poison",
+      "typeline": [
+        "Insect",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can add 1 \"Battlewasp\" monster from your Deck to your hand, except \"Battlewasp - Sting the Poison\". (Quick Effect): You can Tribute 1 other Insect monster, then target 1 Effect Monster your opponent controls; negate its effects until the end of this turn. You can only use each effect of \"Battlewasp - Sting the Poison\" once per turn.",
+      "race": "Insect",
+      "atk": 400,
+      "def": 800,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Battlewasp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlewasp-sting-the-poison-10315",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN033",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.73"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 28388927,
+          "image_url": "https://images.ygoprodeck.com/images/cards/28388927.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/28388927.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/28388927.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.70",
+          "tcgplayer_price": "0.98",
+          "ebay_price": "1.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 195710,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100248036,
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2019-05-18",
+          "konami_id": 14569,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

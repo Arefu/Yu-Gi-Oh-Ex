@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 8783685,
+      "name": "Hourglass of Life",
+      "typeline": [
+        "Fairy",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This creature grants power instead of shortening life.",
+      "race": "Fairy",
+      "atk": 700,
+      "def": 600,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hourglass-of-life-743",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENI01",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8783685,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8783685.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8783685.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8783685.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23210,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2022-03-17",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4235,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 87054946,
+      "name": "Nephthys, the Sacred Flame",
+      "typeline": [
+        "Winged Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters, including a Ritual Monster\r\nWhile this card is in the Extra Monster Zone, monsters your opponent controls cannot target \"Nephthys\" monsters in the Main Monster Zones for attacks. This card gains effects based on the number of Ritual Monsters used for its Link Summon.\r\n● 1+: Cannot be destroyed by battle.\r\n● 2+: Cannot be destroyed by card effects, also it gains 1200 ATK.\r\n● 3: Neither player can target this card with card effects, also it gains another 1200 ATK.",
+      "race": "Winged Beast",
+      "atk": 2400,
+      "def": null,
+      "level": 0,
+      "attribute": "FIRE",
+      "archetype": "Nephthys",
+      "linkval": 3,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/nephthys-the-sacred-flame-9592",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN008",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 87054946,
+          "image_url": "https://images.ygoprodeck.com/images/cards/87054946.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/87054946.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/87054946.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.06",
+          "tcgplayer_price": "1.31",
+          "ebay_price": "2.89",
+          "amazon_price": "1.52",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Nephthys the Blazing Sacred Phoenix",
+          "views": 160095,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14016,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

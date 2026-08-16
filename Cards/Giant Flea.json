@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 41762634,
+      "name": "Giant Flea",
+      "typeline": [
+        "Insect",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A massive flea that feeds on the blood of its enemies.",
+      "race": "Insect",
+      "atk": 1500,
+      "def": 1200,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/giant-flea-3567",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.18"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "11.79"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41762634,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41762634.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41762634.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41762634.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.00",
+          "tcgplayer_price": "4.70",
+          "ebay_price": "5.99",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46400,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4061,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 89127526,
+      "name": "Barrier Resonator",
+      "typeline": [
+        "Fiend",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn: You can send this card from your hand to the Graveyard, then target 1 Tuner monster you control; this turn, it cannot be destroyed by battle, also you take no battle damage from attacks involving it.",
+      "race": "Fiend",
+      "atk": 300,
+      "def": 800,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Resonator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/barrier-resonator-7444",
+      "card_sets": [
+        {
+          "set_name": "2-Player Starter Set",
+          "set_code": "STAS-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN066",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89127526,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89127526.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89127526.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89127526.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56449,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9297,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

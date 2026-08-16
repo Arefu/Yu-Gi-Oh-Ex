@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 31313405,
+      "name": "Salamangreat Pyro Phoenix",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ FIRE Effect Monsters\r\nIf this card is Link Summoned using \"Salamangreat Pyro Phoenix\" as material: You can destroy all cards your opponent controls. You can only use each of the following effects of \"Salamangreat Pyro Phoenix\" once per turn.\r\n● You can target 1 Link Monster in your opponent's GY; Special Summon it to your opponent's field.\r\n● If a Link Monster(s) is Special Summoned to your opponent's field (except during the Damage Step): You can target 1 of those monsters; inflict damage to your opponent equal to that monster's original ATK.",
+      "race": "Cyberse",
+      "atk": 2800,
+      "def": null,
+      "level": null,
+      "attribute": "FIRE",
+      "archetype": "Salamangreat",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-pyro-phoenix-10385",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN169",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.25"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN039",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN039",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31313405,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31313405.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31313405.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31313405.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "9.23",
+          "tcgplayer_price": "6.16",
+          "ebay_price": "2.49",
+          "amazon_price": "2.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 226367,
+          "viewsweek": 0,
+          "upvotes": 20,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010039,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14666,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

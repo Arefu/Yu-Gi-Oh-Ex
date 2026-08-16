@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 7850740,
+      "name": "Xyz Slidolphin",
+      "typeline": [
+        "Sea Serpent",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If an Xyz Monster is Special Summoned to your field (except during the Damage Step): You can Special Summon this card from your hand. If an Xyz Monster(s) is Special Summoned to your field while this card is in your GY, except the turn this card was sent to your GY (and except during the Damage Step): You can target 1 of those Xyz Monsters; attach this card to it as material. You can only use each effect of \"Xyz Slidolphin\" once per turn.",
+      "race": "Sea Serpent",
+      "atk": 1200,
+      "def": 1800,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xyz-slidolphin-10055",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7850740,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7850740.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7850740.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7850740.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 93532,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14273,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

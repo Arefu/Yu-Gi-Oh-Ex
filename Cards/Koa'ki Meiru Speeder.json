@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 68809475,
+      "name": "Koa'ki Meiru Speeder",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During each of your End Phases, destroy this card unless you send 1 \"Iron Core of Koa'ki Meiru\" from your hand to the Graveyard or reveal 1 Machine-Type monster in your hand. If you draw \"Iron Core of Koa'ki Meiru\" during your Draw Phase, you can reveal it to your opponent to draw 1 more card.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 2200,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Koa'ki Meiru",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/koa-ki-meiru-speeder-5778",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN020",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68809475,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68809475.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68809475.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68809475.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23582,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8311,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

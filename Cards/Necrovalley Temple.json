@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 56773577,
+      "name": "Necrovalley Temple",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "While a \"Gravekeeper's\" monster(s) and \"Necrovalley\" are both on the field, monsters your opponent controls lose 500 ATK/DEF. Once per turn, during the Main Phase, if you control no card in your Field Zone: You can activate 1 \"Necrovalley\" directly from your hand or GY. If this card in your possession is destroyed by an opponent's effect and sent to your GY: You can Set 1 \"Necrovalley\" Spell/Trap directly from your Deck, except \"Necrovalley Temple\".",
+      "race": "Continuous",
+      "archetype": "Gravekeeper's",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/necrovalley-temple-9661",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN205",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN068",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56773577,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56773577.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56773577.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56773577.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.54",
+          "amazon_price": "1.09",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Sacred Temples of Necrovalley",
+          "views": 89601,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13955,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

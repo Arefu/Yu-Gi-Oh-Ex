@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 61391302,
+      "name": "Odd-Eyes Advance Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Tribute Summon this card by Tributing 1 Level 5 or higher monster. If this card is Tribute Summoned: You can destroy 1 monster your opponent controls, and if you do, inflict damage to your opponent equal to that monster's original ATK. When this card destroys a monster by battle: You can Special Summon 1 Level 5 or higher monster from your hand or GY in Defense Position, except \"Odd-Eyes Advance Dragon\". You can only use this effect of \"Odd-Eyes Advance Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2500,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Odd-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/odd-eyes-advance-dragon-9922",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN011",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.16"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61391302,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61391302.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61391302.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61391302.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "1.02",
+          "ebay_price": "2.44",
+          "amazon_price": "1.98",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171532,
+          "viewsweek": 21,
+          "upvotes": 19,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14223,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

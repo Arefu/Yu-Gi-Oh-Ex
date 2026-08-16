@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 66863374,
+      "name": "Test Panther",
+      "typeline": [
+        "Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters including a \"Gladiator Beast\" monster\r\nIf this card is Link Summoned: You can add 1 \"Gladiator Beast\" card from your Deck to your hand. You can target 1 \"Gladiator Beast\" monster you control; shuffle that \"Gladiator Beast\" monster into the Deck, and if you do, Special Summon 1 \"Gladiator Beast\" monster with a different original name from your Deck. (This is treated as a Special Summon by a \"Gladiator Beast\" monster's effect.) You can only use each effect of \"Test Panther\" once per turn.",
+      "race": "Beast",
+      "atk": 800,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Gladiator Beast",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/test-panther-10440",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN176",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.37"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN046",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66863374,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66863374.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66863374.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66863374.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.43",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 102320,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010046,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14673,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

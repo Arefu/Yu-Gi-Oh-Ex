@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 5795980,
+      "name": "Strike of the Monarchs",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "You can Tribute 1 face-up Level 5 or higher Normal Summoned/Set monster, then target 1 face-up card on the field; negate its effects, then draw 1 card. (The effects remain negated until the end of this turn.) During your Main Phase, if this card is in your Graveyard: You can banish this card, then declare 1 Attribute; all face-up monsters currently on the field become that Attribute until the end of this turn.",
+      "race": "Quick-Play",
+      "archetype": "Monarch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/strike-of-the-monarchs-510",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN177",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Emperor of Darkness Structure Deck",
+          "set_code": "SR01-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The New Challengers",
+          "set_code": "NECH-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5795980,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5795980.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5795980.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5795980.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72658,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-11-06",
+          "ocg_date": "2014-07-19",
+          "konami_id": 11399,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

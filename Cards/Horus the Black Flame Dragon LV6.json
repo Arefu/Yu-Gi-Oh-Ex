@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 11224103,
+      "name": "Horus the Black Flame Dragon LV6",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is unaffected by Spell effects. During the End Phase, if this card destroyed a monster by battle this turn: You can send this face-up card to the Graveyard; Special Summon 1 \"Horus the Black Flame Dragon LV8\" from your hand or Deck.",
+      "race": "Dragon",
+      "atk": 2300,
+      "def": 1600,
+      "level": 6,
+      "attribute": "FIRE",
+      "archetype": "Horus the Black Flame Dragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/horus-the-black-flame-dragon-lv6-968",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 3",
+          "set_code": "DR3-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN198",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.72"
+        },
+        {
+          "set_name": "Rise of the Dragon Lords Structure Deck",
+          "set_code": "SDRL-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul of the Duelist",
+          "set_code": "SOD-EN007",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba Reloaded",
+          "set_code": "YSKR-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11224103,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11224103.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11224103.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11224103.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.77",
+          "tcgplayer_price": "0.53",
+          "ebay_price": "39.99",
+          "amazon_price": "149.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 332275,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "2004-05-27",
+          "konami_id": 6099,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 90576781,
+      "name": "Reptilianne Poison",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Activate only if you control a face-up \"Reptilianne\" monster. Change 1 Defense Position monster your opponent controls to face-up Attack Position and reduce its ATK to 0.",
+      "race": "Normal",
+      "archetype": "Reptilianne",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/reptilianne-poison-7565",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 17 (POR)",
+          "set_code": "OP17-PT028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN088",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90576781,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90576781.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90576781.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90576781.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.48",
+          "amazon_price": "3.55",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26672,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2010-09-18",
+          "konami_id": 8601,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

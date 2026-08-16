@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 37209439,
+      "name": "Dark Contract with Errors",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Once per turn, if you control a \"D/D\" monster: You can negate all Trap Card effects on the field (other than this card's) for the rest of this turn (even if this card leaves the field). Once per turn, during your Standby Phase: Take 1000 damage.",
+      "race": "Continuous",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-contract-with-errors-3150",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN155",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN036",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37209439,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37209439.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37209439.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37209439.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.39",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52225,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12013,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

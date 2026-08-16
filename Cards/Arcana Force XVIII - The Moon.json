@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 97452817,
+      "name": "Arcana Force XVIII - The Moon",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Summoned, toss a coin: ● Heads: During your Standby Phase, you can Special Summon 1 \"Moon Token\" (Fairy-Type/LIGHT/Level 1/ATK 0/DEF 0). ● Tails: During each of your End Phases, select 1 monster you control and give control of it to your opponent.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2800,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Arcana Force",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcana-force-xviii-the-moon-8104",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97452817,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97452817.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97452817.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97452817.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "1.75",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77966,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7588,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 72355272,
+      "name": "Metaphys Nephthys",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned by the effect of a \"Metaphys\" monster: You can banish all Set Spells and Traps on the field. If this card is banished, during the Standby Phase of the next turn: You can shuffle this banished card into the Deck; add 1 \"Metaphys\" card from your Deck to your hand, except \"Metaphys Nephthys\".",
+      "race": "Wyrm",
+      "atk": 2400,
+      "def": 1600,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Metaphys",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metaphys-nephthys-8835",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72355272,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72355272.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72355272.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72355272.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 107408,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13241,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

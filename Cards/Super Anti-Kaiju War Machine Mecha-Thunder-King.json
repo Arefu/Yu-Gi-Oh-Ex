@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 29913783,
+      "name": "Super Anti-Kaiju War Machine Mecha-Thunder-King",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During the Main Phase (Quick Effect): You can discard this card; banish 1 \"Kaiju\" monster you control that is owned by your opponent, then, you can Special Summon 1 monster from your GY. You can only control 1 \"Kaiju\" monster. This card is unaffected by other \"Kaiju\" cards' effects, also it cannot be destroyed by battle with a \"Kaiju\" monster. During your End Phase, if this card is in your GY: You can Special Summon this card. You can only use this effect of \"Super Anti-Kaiju War Machine Mecha-Thunder-King\" once per Duel.",
+      "race": "Machine",
+      "atk": 2200,
+      "def": 2100,
+      "level": 9,
+      "attribute": "LIGHT",
+      "archetype": "Kaiju",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/super-anti-kaiju-war-machine-mecha-thunder-king-10123",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN081",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29913783,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29913783.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29913783.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29913783.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "2.43",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 91702,
+          "viewsweek": 21,
+          "upvotes": 19,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2019-09-14",
+          "konami_id": 14352,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 99510761,
+      "name": "Lord of the Lamp",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This spirit emerges from the mystic lamp and obeys the wishes of its summoner.",
+      "race": "Fiend",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lord-of-the-lamp-8261",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Seven",
+          "set_code": "AP07-EN015",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN098",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.25"
+        },
+        {
+          "set_name": "Hobby League 1 participation cards A",
+          "set_code": "HL1-EN001",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.63"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 99510761,
+          "image_url": "https://images.ygoprodeck.com/images/cards/99510761.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/99510761.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/99510761.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "2.12",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20135,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-01",
+          "ocg_date": "1999-10-17",
+          "konami_id": 4155,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

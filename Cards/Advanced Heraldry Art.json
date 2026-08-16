@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 61314842,
+      "name": "Advanced Heraldry Art",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 2 \"Heraldic Beast\" monsters in your Graveyard; Special Summon both those targets. Immediately after this card resolves, Xyz Summon 1 Xyz Monster using those 2 monsters only.",
+      "race": "Normal",
+      "archetype": "Heraldic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/advanced-heraldry-art-5198",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN055",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN161",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61314842,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61314842.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61314842.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61314842.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.24",
+          "amazon_price": "0.86",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 83981,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10277,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

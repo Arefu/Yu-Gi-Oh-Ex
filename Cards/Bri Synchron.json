@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 52840598,
+      "name": "Bri Synchron",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard as a Synchro Material, until the end of this turn, the Synchro Monster that used this card as a Synchro Material gains 600 ATK, but its effects are negated.",
+      "race": "Machine",
+      "atk": 1500,
+      "def": 1100,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bri-synchron-4501",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN014",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52840598,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52840598.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52840598.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52840598.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.45",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "2.75",
+          "amazon_price": "1.68",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54028,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-21",
+          "ocg_date": "2010-10-16",
+          "konami_id": 9236,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

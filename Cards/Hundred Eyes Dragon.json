@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 95453143,
+      "name": "Hundred Eyes Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 DARK Tuner + 1 or more non-Tuner Fiend-Type monsters\nOnce per turn: You can banish 1 Level 6 or lower DARK Effect Monster from your Graveyard; until the End Phase, this card's name becomes that banished monster's, and replace this effect with that banished monster's original effects. If this card is destroyed and sent to the Graveyard: Add 1 \"Earthbound Immortal\" monster from your Deck to your hand.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2500,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Earthbound",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hundred-eyes-dragon-7949",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack Collection Tin 2011",
+          "set_code": "DPC5-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.71"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN154",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 8, Issue 5 promotional card",
+          "set_code": "JUMP-EN039",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.48"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95453143,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95453143.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95453143.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95453143.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "3.00",
+          "amazon_price": "0.83",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 117264,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 9,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-01",
+          "ocg_date": "2009-08-03",
+          "konami_id": 8604,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

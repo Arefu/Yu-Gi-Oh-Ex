@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 59771339,
+      "name": "Junk Berserker",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "\"Junk Synchron\" + 1 or more non-Tuner monsters\nYou can banish 1 \"Junk\" monster from your Graveyard, then target 1 face-up monster your opponent controls; that target loses ATK equal to the banished monster's ATK. At the start of the Damage Step, if this card attacks a Defense Position monster: Destroy that monster.",
+      "race": "Warrior",
+      "atk": 2700,
+      "def": 1800,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Junk",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/junk-berserker-5078",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN037",
+          "set_rarity": "Ghost Rare",
+          "set_rarity_code": "(GR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN037",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN043",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59771339,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59771339.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59771339.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59771339.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.07",
+          "tcgplayer_price": "5.23",
+          "ebay_price": "6.99",
+          "amazon_price": "8.56",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116512,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9508,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

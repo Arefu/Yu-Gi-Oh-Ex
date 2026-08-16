@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 91250514,
+      "name": "Tongue Twister",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card was Tribute Summoned, when it is sent from the field to the Graveyard, draw 2 cards and remove this card from play.",
+      "race": "Fiend",
+      "atk": 400,
+      "def": 300,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tongue-twister-7615",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN085",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 91250514,
+          "image_url": "https://images.ygoprodeck.com/images/cards/91250514.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/91250514.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/91250514.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "9.68",
+          "tcgplayer_price": "18.49",
+          "ebay_price": "9.99",
+          "amazon_price": "24.99",
+          "coolstuffinc_price": "15.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17150,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7485,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

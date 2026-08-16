@@ -1,0 +1,107 @@
+{
+  "data": [
+    {
+      "id": 94905343,
+      "name": "Rabid Horseman",
+      "typeline": [
+        "Beast-Warrior",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Battle Ox\" + \"Mystic Horseman\"",
+      "race": "Beast-Warrior",
+      "atk": 2000,
+      "def": 1700,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rabid-horseman-7898",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Ultimate Kaiba Set",
+          "set_code": "KC01-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.82"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "4.06"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN077",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94905343,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94905343.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94905343.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94905343.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 220451,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4098,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

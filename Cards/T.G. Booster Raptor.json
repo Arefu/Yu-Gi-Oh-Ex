@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 48633301,
+      "name": "T.G. Booster Raptor",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"T.G.\" monster, you can Special Summon this card (from your hand). You can only Special Summon \"T.G. Booster Raptor\" once per turn this way. Once per turn, during the End Phase, if this card is in the GY because it was destroyed on the field and sent there this turn: You can add 1 \"T.G.\" monster from your Deck to your hand, except \"T.G. Booster Raptor\".",
+      "race": "Dinosaur",
+      "atk": 400,
+      "def": 300,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "T.G.",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/t-g-booster-raptor-9803",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 23",
+          "set_code": "OP23-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48633301,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48633301.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48633301.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48633301.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75170,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14087,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "id": 76209339,
+      "name": "Megalith Emergence",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "You can target 1 \"Megalith\" monster in your GY; Special Summon it in Defense Position, but place it on the bottom of the Deck when it leaves the field (even if this card leaves the field). You can only use this effect of \"Megalith Emergence\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Megalith",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/megalith-emergence-10629",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76209339,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76209339.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76209339.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76209339.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "1.20",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Megalith Emersion",
+          "views": 63387,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011072,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14881,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

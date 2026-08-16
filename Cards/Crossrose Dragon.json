@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 72218246,
+      "name": "Crossrose Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with different Types\r\nDuring the Main Phase (Quick Effect): You can Tribute this card and 1 Plant monster; Special Summon 1 \"Rose\" Synchro Monster or 1 Plant Synchro Monster from your Extra Deck. (This is treated as a Synchro Summon.) If a monster(s) you control is destroyed by card effect, while this card is in your GY (except during the Damage Step): You can banish this card; Special Summon 1 \"Rose Dragon\" monster from your GY. You can only use each effect of \"Crossrose Dragon\" once per turn.",
+      "race": "Dragon",
+      "atk": 800,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Rose Dragon",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/crossrose-dragon-10707",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN015",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.17"
+        },
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENA30",
+          "set_rarity": "2",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN114",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72218246,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72218246.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72218246.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72218246.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.24",
+          "amazon_price": "1.24",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cross Rose Dragon",
+          "views": 170056,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257041,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14938,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 55001420,
+      "name": "Arcane Archer of the Forest",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "While there is a Plant-Type monster on your side of the field, this card cannot be attacked. By Tributing 1 Plant-Type monster on your side of the field, destroy 1 Spell or Trap Card on the field.",
+      "race": "Warrior",
+      "atk": 900,
+      "def": 1400,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/arcane-archer-of-the-forest-4683",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.5"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN141",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 55001420,
+          "image_url": "https://images.ygoprodeck.com/images/cards/55001420.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/55001420.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/55001420.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "1.08",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 52210,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2005-03-17",
+          "konami_id": 5971,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

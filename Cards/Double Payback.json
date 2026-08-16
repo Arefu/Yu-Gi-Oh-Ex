@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 5914184,
+      "name": "Double Payback",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate only when you take 1000 or more damage from your opponent's card effect: Place 1 Payback Counter on this card for every 1000 damage you took. During the End Phase of your opponent's next turn: Destroy this card, and if you do, inflict 2000 damage to your opponent for each Payback Counter on this card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/double-payback-519",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN080",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5914184,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5914184.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5914184.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5914184.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17151,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10103,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

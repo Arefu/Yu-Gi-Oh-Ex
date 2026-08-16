@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 16272453,
+      "name": "Armor Ninjitsu Art of Alchemy",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control a \"Ninjitsu Art\" card: Destroy as many other \"Ninjitsu Art\" cards you control as possible, then draw 2 cards.",
+      "race": "Normal",
+      "archetype": "Ninjitsu Art",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/armor-ninjitsu-art-of-alchemy-1404",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN051",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadows in Valhalla",
+          "set_code": "SHVA-EN027",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16272453,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16272453.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16272453.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16272453.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68908,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2011-11-19",
+          "konami_id": 9925,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 14934922,
+      "name": "Salamangreat Rage",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate 1 of these effects.\r\n● Send 1 \"Salamangreat\" monster from your hand or face-up field to the GY, then target 1 card on the field; destroy it.\r\n● Target 1 \"Salamangreat\" Link Monster you control that was Link Summoned using a monster with its same name as material; destroy cards your opponent controls, up to that monster's Link Rating.\r\nYou can only activate 1 \"Salamangreat Rage\" per turn.",
+      "race": "Normal",
+      "archetype": "Salamangreat",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/salamangreat-rage-9899",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12",
+          "set_code": "OP12-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Structure Deck: Soulburner",
+          "set_code": "SDSB-EN032",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14934922,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14934922.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14934922.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14934922.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "2.29",
+          "amazon_price": "4.01",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 291331,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-02-14",
+          "ocg_date": "2018-12-08",
+          "konami_id": 14246,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

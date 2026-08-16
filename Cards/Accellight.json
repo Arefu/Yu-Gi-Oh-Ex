@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 34838437,
+      "name": "Accellight",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If you control no monsters: Special Summon 1 Level 4 or lower \"Photon\" or \"Galaxy\" monster from your Deck. You can only activate 1 \"Accellight\" per turn. You cannot Normal Summon/Set during the turn you activate this card.",
+      "race": "Normal",
+      "archetype": "Photon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/accellight-2961",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Zexal Collection Tin",
+          "set_code": "ZTIN-EN016",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 34838437,
+          "image_url": "https://images.ygoprodeck.com/images/cards/34838437.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/34838437.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/34838437.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "2.00",
+          "amazon_price": "3.73",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 161962,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-03-07",
+          "ocg_date": "2012-09-15",
+          "konami_id": 10342,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

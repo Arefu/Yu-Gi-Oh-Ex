@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 75917088,
+      "name": "Princess Pikeru",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except with \"Trial of the Princesses\". During your Standby Phase, gain 800 Life Points for each monster you control.",
+      "race": "Spellcaster",
+      "atk": 2000,
+      "def": 0,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/princess-pikeru-6389",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN147",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "54.36"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow of Infinity",
+          "set_code": "SOI-EN027",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75917088,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75917088.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75917088.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75917088.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "149.99",
+          "amazon_price": "1.27",
+          "coolstuffinc_price": "29.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46764,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-02-18",
+          "ocg_date": "2005-11-17",
+          "konami_id": 6605,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

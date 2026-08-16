@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 94136469,
+      "name": "Checksum Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When an opponent's monster declares an attack: You can Special Summon this card from your hand, then, gain LP equal to half this card's DEF. This Attack Position card cannot be destroyed by battle.",
+      "race": "Dragon",
+      "atk": 400,
+      "def": 2400,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/checksum-dragon-10388",
+      "card_sets": [
+        {
+          "set_name": "Structure Deck: Rokket Revolt",
+          "set_code": "SDRR-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94136469,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94136469.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94136469.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94136469.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "0.99",
+          "amazon_price": "0.74",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 62831,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100336006,
+          "tcg_date": "2019-08-15",
+          "ocg_date": "2019-06-22",
+          "konami_id": 14619,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

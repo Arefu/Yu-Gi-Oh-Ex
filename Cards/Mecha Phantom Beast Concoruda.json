@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 53451824,
+      "name": "Mecha Phantom Beast Concoruda",
+      "typeline": [
+        "Machine",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nTokens you control cannot be destroyed by battle or card effects. If this card you control is destroyed by your opponent's card (either by battle or by card effect) and sent to your Graveyard: You can Tribute all Tokens you control, then target 1 Level 4 or lower \"Mecha Phantom Beast\" monster in your Graveyard; Special Summon that target.",
+      "race": "Machine",
+      "atk": 2400,
+      "def": 1200,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Mecha Phantom Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mecha-phantom-beast-concoruda-4552",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN093",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53451824,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53451824.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53451824.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53451824.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.50",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44088,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10644,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

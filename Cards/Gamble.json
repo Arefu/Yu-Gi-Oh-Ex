@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 37313786,
+      "name": "Gamble",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card when your opponent's hand is 6 or more cards and your hand is 2 or less. Toss a coin and call heads or tails. If you call it right, draw until your hand has 5 cards. If you call it wrong, skip your next turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gamble-3159",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN172",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.21"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37313786,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37313786.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37313786.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37313786.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.00",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 222464,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 4950,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

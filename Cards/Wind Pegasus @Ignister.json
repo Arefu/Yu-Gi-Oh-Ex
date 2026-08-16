@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 98506199,
+      "name": "Wind Pegasus @Ignister",
+      "typeline": [
+        "Cyberse",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nDuring your Main Phase: You can destroy Spells/Traps your opponent controls, up to the number of \"@Ignister\" monsters you control. If another card(s) you control is destroyed by battle or an opponent's card effect, while this card is on the field or in the GY: You can banish this card, then target 1 card your opponent controls; shuffle it into the Deck. You can only use each effect of \"Wind Pegasus @Ignister\" once per turn.",
+      "race": "Cyberse",
+      "atk": 2300,
+      "def": 1500,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/wind-pegasus-ignister-10578",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.01"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN042",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98506199,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98506199.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98506199.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98506199.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.27",
+          "tcgplayer_price": "0.80",
+          "ebay_price": "1.47",
+          "amazon_price": "3.05",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 790324,
+          "viewsweek": 168,
+          "upvotes": 3,
+          "downvotes": 4,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011042,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14851,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

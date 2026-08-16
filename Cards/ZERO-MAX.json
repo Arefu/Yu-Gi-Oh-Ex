@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 30562585,
+      "name": "ZERO-MAX",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Activate only if you have no cards in your hand. Select 1 \"Infernity\" monster in your Graveyard. Special Summon it, and destroy all face-up monsters on the field with ATK lower than the Special Summoned monster's ATK. You cannot conduct your Battle Phase during the same turn you activate this card.",
+      "race": "Normal",
+      "archetype": "Infernity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zero-max-2595",
+      "card_sets": [
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30562585,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30562585.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30562585.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30562585.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.89",
+          "tcgplayer_price": "1.92",
+          "ebay_price": "4.29",
+          "amazon_price": "4.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45616,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8822,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

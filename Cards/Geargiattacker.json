@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 72370114,
+      "name": "Geargiattacker",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can change this card to face-down Defense Position. When this card is flipped face-up: You can destroy any number of Spell/Trap Cards on the field, up to the number of other \"Geargia\" monsters you control.",
+      "race": "Machine",
+      "atk": 1900,
+      "def": 100,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Geargia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/geargiattacker-6074",
+      "card_sets": [
+        {
+          "set_name": "Geargia Rampage Structure Deck",
+          "set_code": "SDGR-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.72"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72370114,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72370114.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72370114.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72370114.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.99",
+          "amazon_price": "0.69",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20253,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-10-16",
+          "ocg_date": "2013-11-23",
+          "konami_id": 10883,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

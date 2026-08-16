@@ -1,0 +1,93 @@
+{
+  "data": [
+    {
+      "id": 51828629,
+      "name": "Giltia the D. Knight",
+      "typeline": [
+        "Warrior",
+        "Fusion"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Monster",
+      "frameType": "fusion",
+      "desc": "\"Guardian of the Labyrinth\" + \"Protector of the Throne\"",
+      "race": "Warrior",
+      "atk": 1850,
+      "def": 1500,
+      "level": 5,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/giltia-the-d-knight-4410",
+      "card_sets": [
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.23"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.83"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN094",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENB21",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51828629,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51828629.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51828629.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51828629.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.72",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 687041,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4395,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

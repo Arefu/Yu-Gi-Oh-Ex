@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 33784505,
+      "name": "Jar Robber",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "You can only activate this card when \"Pot of Greed\" is activated. Negate the effect of the \"Pot of Greed\" and draw 1 card from your Deck.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/jar-robber-2869",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN146",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33784505,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33784505.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33784505.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33784505.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89481,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 4,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5674,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

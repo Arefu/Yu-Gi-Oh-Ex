@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 27918365,
+      "name": "World Legacy - \"World Crown\"",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand) in Defense Position to your zone a Link Monster points to. You can only Special Summon \"World Legacy - \"World Crown\"\" once per turn this way. When a monster on the field that was Special Summoned from the Extra Deck activates its effect (Quick Effect): You can Tribute this card; negate the activation, and if you do, destroy it. If this Normal Summoned/Set card is Tributed: You can add 1 \"World Legacy\" Spell/Trap from your Deck to your hand. You can only use this effect of \"World Legacy - \"World Crown\"\" once per turn.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 2000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "World Legacy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-legacy-world-crown-9424",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN082",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN082",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN011",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27918365,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27918365.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27918365.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27918365.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.25",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Legacy - World Crown",
+          "views": 372029,
+          "viewsweek": 21,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13731,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

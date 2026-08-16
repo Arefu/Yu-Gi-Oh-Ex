@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 90207654,
+      "name": "Gullveig of the Nordic Ascendant",
+      "typeline": [
+        "Fairy",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "1 Level 5 or lower \"Nordic\" monster\r\nIf this card is Link Summoned: You can banish up to 3 cards from your hand and/or field, and if you do, Special Summon that many \"Nordic\" monsters from your Deck in Defense Position, also, for the rest of this turn, you cannot Special Summon monsters, except \"Aesir\" monsters, nor Normal Summon/Set any monsters. You can only use this effect of \"Gullveig of the Nordic Ascendant\" once per turn. While this card points to an \"Aesir\" monster, your opponent cannot target that monster with card effects, also monsters your opponent controls cannot target this card for attacks.",
+      "race": "Fairy",
+      "atk": 800,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "archetype": "Nordic",
+      "linkval": 1,
+      "linkmarkers": [
+        "Bottom-Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gullveig-of-the-nordic-ascendant-9800",
+      "card_sets": [
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENB00",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18",
+          "set_code": "OP18-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "OTS Tournament Pack 18 (POR)",
+          "set_code": "OP18-PT023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90207654,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90207654.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90207654.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90207654.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "1.24",
+          "amazon_price": "2.18",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 144591,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-04",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14053,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

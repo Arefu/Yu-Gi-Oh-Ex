@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 85709845,
+      "name": "Gamushara",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a Defense Position monster you control is targeted for an attack: Change that Defense Position monster to face-up Attack Position. Then, if the attacking monster is destroyed by that battle and sent to the Graveyard: Inflict damage to your opponent equal to that monster's original ATK in the Graveyard.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gamushara-7183",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85709845,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85709845.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85709845.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85709845.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15458,
+          "viewsweek": 0,
+          "upvotes": 53,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10090,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

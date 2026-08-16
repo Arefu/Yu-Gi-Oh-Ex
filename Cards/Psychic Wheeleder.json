@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 3233859,
+      "name": "Psychic Wheeleder",
+      "typeline": [
+        "Psychic",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a Level 3 monster other than \"Psychic Wheeleder\", you can Special Summon this card (from your hand) in Defense Position. You can only Special Summon \"Psychic Wheeleder\" once per turn this way. If this card is sent to the GY as Synchro Material: You can target 1 monster on the field with less ATK than the Synchro Monster that used this card as material; destroy it. You can only use this effect of \"Psychic Wheeleder\" once per turn.",
+      "race": "Psychic",
+      "atk": 600,
+      "def": 0,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/psychic-wheeleder-9792",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN014",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.24"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Grand Creators",
+          "set_code": "GRCR-EN045",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 3233859,
+          "image_url": "https://images.ygoprodeck.com/images/cards/3233859.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/3233859.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/3233859.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "4.95",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Psychic Wheelder",
+          "views": 442486,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14101,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

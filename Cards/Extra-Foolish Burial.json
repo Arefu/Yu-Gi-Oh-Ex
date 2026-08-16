@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 57995165,
+      "name": "Extra-Foolish Burial",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Pay half your LP; send 1 monster from your Extra Deck to the GY. You can only activate 1 \"Extra-Foolish Burial\" per turn. You cannot Set Spells/Traps during the turn you activate this card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/extra-foolish-burial-9637",
+      "card_sets": [
+        {
+          "set_name": "Genesis Impact",
+          "set_code": "GEIM-EN043",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.02"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN055",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN065",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57995165,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57995165.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57995165.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57995165.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Foolish Mass Burial",
+          "views": 314195,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13952,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 98012938,
+      "name": "Vulcan the Divine",
+      "typeline": [
+        "Beast-Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nIf this card is Synchro Summoned: Target 1 face-up card you control and 1 face-up card your opponent controls; return those targets to the hand, but for the rest of this turn, you cannot activate cards, or the effects of cards, with the same name as those returned to the hand by this effect. You can only use this effect of \"Vulcan the Divine\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 2000,
+      "def": 1600,
+      "level": 6,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vulcan-the-divine-8144",
+      "card_sets": [
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN134",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN249",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Weekly Shonen Jump September 2013 membership promotional card",
+          "set_code": "JUMP-EN066",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 98012938,
+          "image_url": "https://images.ygoprodeck.com/images/cards/98012938.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/98012938.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/98012938.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.40",
+          "tcgplayer_price": "0.29",
+          "ebay_price": "19.99",
+          "amazon_price": "3.08",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51872,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-10-24",
+          "ocg_date": "2012-12-22",
+          "konami_id": 10461,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

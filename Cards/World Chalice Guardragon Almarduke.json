@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 95793022,
+      "name": "World Chalice Guardragon Almarduke",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "3 Link Monsters\r\nMust first be either Fusion Summoned, or Special Summoned from your Extra Deck by Tributing the above cards you control (in which case you do not use \"Polymerization\"). This card can attack all monsters your opponent controls once each. When an attack is declared involving this card and an opponent's Link Monster: You can banish 1 Link Monster with the same Link Rating as that monster from your field or GY; destroy that opponent's monster, and if you do, inflict damage to your opponent equal to its original ATK.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2600,
+      "level": 9,
+      "attribute": "WIND",
+      "archetype": "Guardragon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/world-chalice-guardragon-almarduke-10030",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.13"
+        },
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN285",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN032",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95793022,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95793022.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95793022.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95793022.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.68",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Almarduk the World Chalice Guardragon",
+          "views": 362230,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14282,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

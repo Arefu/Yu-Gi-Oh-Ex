@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 36733451,
+      "name": "Dimensional Alchemist",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can activate this effect to remove from play the top card of your Deck and give this card 500 ATK until the End Phase. When this card is destroyed and sent from your side of the field to your Graveyard, you can select 1 of your removed from play monsters and return it to your hand.",
+      "race": "Fairy",
+      "atk": 1300,
+      "def": 200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dimensional-alchemist-3108",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 3",
+          "set_code": "GLD3-EN015",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Battle City Box",
+          "set_code": "SBCB-EN136",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        },
+        {
+          "set_name": "The Dark Emperor Structure Deck",
+          "set_code": "SDDE-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 36733451,
+          "image_url": "https://images.ygoprodeck.com/images/cards/36733451.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/36733451.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/36733451.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.59",
+          "tcgplayer_price": "2.07",
+          "ebay_price": "8.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 179696,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-04-02",
+          "ocg_date": "2007-12-15",
+          "konami_id": 7517,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

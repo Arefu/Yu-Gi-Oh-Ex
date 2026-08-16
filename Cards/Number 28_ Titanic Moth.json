@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 53701457,
+      "name": "Number 28: Titanic Moth",
+      "typeline": [
+        "Insect",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 7 monsters\r\nIf you control no other monsters, this card can attack directly, but when it does so using this effect, the battle damage inflicted to your opponent is halved. When this card inflicts battle damage to your opponent: You can detach 1 Xyz Material from this card; inflict 500 damage to your opponent for each card in their hand.",
+      "race": "Insect",
+      "atk": 2400,
+      "def": 2200,
+      "level": 7,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-28-titanic-moth-9042",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN013",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "OTS Tournament Pack 22",
+          "set_code": "OP22-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53701457,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53701457.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53701457.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53701457.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "4.29",
+          "amazon_price": "1.92",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 28",
+          "views": 107389,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-03-11",
+          "konami_id": 12890,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

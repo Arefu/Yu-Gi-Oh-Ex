@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": 40453765,
+      "name": "Swamp Battleguard",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 500 ATK for each \"Lava Battleguard\" you control.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 1500,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Battleguard",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/swamp-battleguard-3441",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.25"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.43"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN063",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19",
+          "set_code": "OP19-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "OTS Tournament Pack 19 (POR)",
+          "set_code": "OP19-PT014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack ARC-V",
+          "set_code": "SP15-EN002",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40453765,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40453765.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40453765.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40453765.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.00",
+          "amazon_price": "1.76",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 242114,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "2000-01-27",
+          "konami_id": 4018,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

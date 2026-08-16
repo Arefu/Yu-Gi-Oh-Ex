@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 49296203,
+      "name": "Karakuri Bonze mdl 9763 \"Kunamzan\"",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card must attack, if able. If this card is targeted for an attack: Change the battle position of this card. If this card is in your hand: You can target 1 \"Karakuri\" monster you control; change its battle position, and if you do, Special Summon this card as a Tuner, also you cannot Special Summon monsters from the Extra Deck for the rest of this turn, except EARTH Machine monsters. You can only use this effect of \"Karakuri Bonze mdl 9763 \"Kunamzan\"\" once per turn.",
+      "race": "Machine",
+      "atk": 2000,
+      "def": 1500,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Karakuri",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/karakuri-bonze-mdl-9763-kunamzan-10584",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49296203,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49296203.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49296203.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49296203.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Karakuri Monk mdl 9763 \"Kunamusan\"",
+          "views": 74723,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011014,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14823,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

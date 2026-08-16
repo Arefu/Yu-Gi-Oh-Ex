@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 89818984,
+      "name": "Flower Cardian Willow with Calligrapher",
+      "typeline": [
+        "Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by Tributing 1 Level 11 \"Flower Cardian\" monster, except \"Flower Cardian Willow with Calligrapher\". If this card is Special Summoned: Draw 1 card, and if you do, show it, then you can Special Summon it if it is a \"Flower Cardian\" monster. Otherwise, send it to the Graveyard. When this card is used as Synchro Material, you can treat it and all other Synchro Materials (that have a Level) as Level 2 monsters.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 2000,
+      "level": 11,
+      "attribute": "DARK",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-cardian-willow-with-calligrapher-7506",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN133",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.03"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89818984,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89818984.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89818984.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89818984.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65774,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12560,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

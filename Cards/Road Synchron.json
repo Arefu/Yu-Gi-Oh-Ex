@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 71971554,
+      "name": "Road Synchron",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "When using this card as Synchro Material for the Synchro Summon of a monster other than \"Road Warrior\", reduce this card's Level by 2. If this card attacks, at the end of the Damage Step: Increase its Level by 1 until the end of this turn.",
+      "race": "Machine",
+      "atk": 1600,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/road-synchron-6042",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 2",
+          "set_code": "DP09-EN002",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.07"
+        },
+        {
+          "set_name": "Starter Deck: Yu-Gi-Oh! 5D's 2009",
+          "set_code": "5DS2-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71971554,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71971554.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71971554.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71971554.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "1.98",
+          "amazon_price": "1.76",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 145960,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-06-09",
+          "ocg_date": "2009-03-14",
+          "konami_id": 7841,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

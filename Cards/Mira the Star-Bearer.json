@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 60181553,
+      "name": "Mira the Star-Bearer",
+      "typeline": [
+        "Warrior",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 1 monsters\nIf this face-up card would be destroyed, you can detach 1 Xyz Material from this card instead. Level 4 or lower monsters you control cannot be destroyed by card effects.",
+      "race": "Warrior",
+      "atk": 1100,
+      "def": 1000,
+      "level": 1,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mira-the-star-bearer-5105",
+      "card_sets": [
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN091",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 60181553,
+          "image_url": "https://images.ygoprodeck.com/images/cards/60181553.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/60181553.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/60181553.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47076,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2011-05-21",
+          "konami_id": 9836,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 78527720,
+      "name": "Prinzessin",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 \"Pumpkin Carriage\" from your hand or Deck, then, if \"Golden Castle of Stromberg\" is in a Field Zone, you can equip 1 \"Glass Slippers\" from your Deck to this card. You can only use this effect of \"Prinzessin\" once per turn. When this card inflicts battle damage to your opponent by a direct attack: You can target 1 \"Glass Slippers\" equipped to this card and 1 face-up monster on the field; equip that \"Glass Slippers\" to that target.",
+      "race": "Fairy",
+      "atk": 300,
+      "def": 600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Golden Castle of Stromberg",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prinzessin-9515",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN004",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "1.87"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78527720,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78527720.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78527720.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78527720.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.10",
+          "tcgplayer_price": "0.84",
+          "ebay_price": "2.39",
+          "amazon_price": "5.10",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Cinderella",
+          "views": 63539,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13802,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

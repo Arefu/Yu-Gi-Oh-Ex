@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 86221741,
+      "name": "Raidraptor - Ultimate Falcon",
+      "typeline": [
+        "Winged Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 10 Winged Beast-Type monsters\nUnaffected by other cards' effects. You can detach 1 Xyz Material from this card; for the rest of this turn, all monsters your opponent controls will lose 1000 ATK, also your opponent's cards and effects cannot be activated. If this card has a \"Raidraptor\" monster as Xyz Material, it gains this effect.\n● Once per turn, during the End Phase: You can make all monsters your opponent controls lose 1000 ATK. If your opponent controls no face-up monsters, inflict 1000 damage to your opponent.",
+      "race": "Winged Beast",
+      "atk": 3500,
+      "def": 2000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-ultimate-falcon-7224",
+      "card_sets": [
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN140",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.19"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN053",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86221741,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86221741.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86221741.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86221741.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.36",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "2.95",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 505583,
+          "viewsweek": 21,
+          "upvotes": 36,
+          "downvotes": 7,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12325,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

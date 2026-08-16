@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 111280,
+      "name": "Dark Magic Expanded",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Apply these effects in sequence, based on the number of \"Dark Magician\" and/or \"Dark Magician Girl\" on the field and in the GYs.\r\n● 1+: 1 DARK Spellcaster monster on the field gains 1000 ATK until the end of this turn.\r\n● 2+: This turn, your opponent cannot activate cards and effects in response to your Spell/Trap Card or effect activation, also Spells/Traps you control cannot be destroyed by your opponent's card effects.\r\n● 3+: DARK Spellcaster monsters you currently control are unaffected by your opponent's card effects, until the end of this turn.",
+      "race": "Quick-Play",
+      "archetype": "Dark Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-magic-expanded-9",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN102",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENA17",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.49"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 111280,
+          "image_url": "https://images.ygoprodeck.com/images/cards/111280.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/111280.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/111280.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.22",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "5.00",
+          "amazon_price": "2.72",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 313961,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 12,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12458,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

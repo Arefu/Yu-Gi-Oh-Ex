@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 81524977,
+      "name": "Seed Cannon",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time a Plant-Type monster(s) is Summoned, place 1 Plant Counter on this card (max. 5). You can send this card to the Graveyard to inflict 500 damage to your opponent for each Plant Counter on it.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/seed-cannon-6845",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN057",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81524977,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81524977.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81524977.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81524977.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.37",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43311,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8052,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 65056481,
+      "name": "Satellarknight Alsahm",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Summoned: You can inflict 1000 damage to your opponent. You can only use this effect of \"Satellarknight Alsahm\" once per turn.",
+      "race": "Warrior",
+      "atk": 1400,
+      "def": 1800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Tellarknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/satellarknight-alsahm-5484",
+      "card_sets": [
+        {
+          "set_name": "Duelist Alliance",
+          "set_code": "DUEA-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65056481,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65056481.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65056481.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65056481.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.86",
+          "tcgplayer_price": "0.63",
+          "ebay_price": "4.00",
+          "amazon_price": "3.62",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44869,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-08-14",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11230,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

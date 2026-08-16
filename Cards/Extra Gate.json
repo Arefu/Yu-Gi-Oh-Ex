@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 7405310,
+      "name": "Extra Gate",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Declare a Level between 1 and 12; your opponent banishes 1 monster of that Level from their Extra Deck. If your opponent does not have a monster of that Level in their Extra Deck, you discard 1 card.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/extra-gate-635",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN056",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7405310,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7405310.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7405310.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7405310.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "3.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13241,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9774,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

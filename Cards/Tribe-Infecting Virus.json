@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 33184167,
+      "name": "Tribe-Infecting Virus",
+      "typeline": [
+        "Aqua",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Discard 1 card from your hand and declare 1 Type of monster. Destroy all face-up monsters of the declared Type on the field.",
+      "race": "Aqua",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tribe-infecting-virus-2818",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 1",
+          "set_code": "DR1-EN131",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magician's Force",
+          "set_code": "MFC-076",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "14.46"
+        },
+        {
+          "set_name": "Structure Deck: Fury from the Deep",
+          "set_code": "SD4-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.56"
+        }
+      ],
+      "banlist_info": {
+        "ban_goat": "Limited"
+      },
+      "card_images": [
+        {
+          "id": 33184167,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33184167.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33184167.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33184167.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.00",
+          "tcgplayer_price": "8.35",
+          "ebay_price": "4.17",
+          "amazon_price": "13.52",
+          "coolstuffinc_price": "7.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 499874,
+          "viewsweek": 42,
+          "upvotes": 14,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-10-10",
+          "ocg_date": "2002-09-19",
+          "konami_id": 5660,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

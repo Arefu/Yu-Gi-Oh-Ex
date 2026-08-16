@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 21065189,
+      "name": "Firewall eXceed Dragon",
+      "typeline": [
+        "Cyberse",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2+ Level 4 monsters\r\nThis Xyz Summoned card gains 500 ATK x the total Link Rating of Link Monsters linked to this card. You can detach 2 materials from this card, then target 1 Link-4 Cyberse Link Monster in your GY; Special Summon it to your field so it points to this card, also you cannot Special Summon other monsters or attack directly for the rest of this turn.",
+      "race": "Cyberse",
+      "atk": 2500,
+      "def": 2000,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/firewall-exceed-dragon-9977",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN067",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.66"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN036",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21065189,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21065189.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21065189.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21065189.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "0.99",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Firewall Xceed Dragon",
+          "views": 181929,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 12,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14286,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 22070401,
+      "name": "Starving Venemy Lethal Dose Dragon",
+      "typeline": [
+        "Dragon",
+        "Fusion",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Fusion Monster",
+      "humanReadableCardType": "Fusion Pendulum Effect Monster",
+      "frameType": "fusion_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, during your Main Phase: You can place 1 Venemy Counter on each face-up monster your opponent controls. All monsters on the field, except DARK Dragon monsters, lose 200 ATK for each Venemy Counter on the field.\n\n[ Monster Effect ] \n3 DARK Pendulum Monsters\r\nEach time a card(s) is sent from the field to the GY, place 1 Venemy Counter on this card for each sent card. All monsters on the field, except DARK Dragon monsters, lose 200 ATK for each Venemy Counter on the field. Once per turn, during your Main Phase: You can negate the effects of all face-up monsters your opponent currently controls, until the end of this turn. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "race": "Dragon",
+      "pend_desc": "Once per turn, during your Main Phase: You can place 1 Venemy Counter on each face-up monster your opponent controls. All monsters on the field, except DARK Dragon monsters, lose 200 ATK for each Venemy Counter on the field.",
+      "monster_desc": "3 DARK Pendulum Monsters\r\nEach time a card(s) is sent from the field to the GY, place 1 Venemy Counter on this card for each sent card. All monsters on the field, except DARK Dragon monsters, lose 200 ATK for each Venemy Counter on the field. Once per turn, during your Main Phase: You can negate the effects of all face-up monsters your opponent currently controls, until the end of this turn. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "atk": 2800,
+      "def": 2000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Venom",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/starving-venemy-lethal-dose-dragon-9964",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN037",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.51"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22070401,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22070401.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22070401.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22070401.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.83",
+          "ebay_price": "2.99",
+          "amazon_price": "2.78",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 116900,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14343,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

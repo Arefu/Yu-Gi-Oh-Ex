@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 80513550,
+      "name": "Dragon Queen of Tragic Endings",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned or Set. Must first be Special Summoned (from your hand) while you control 3 or more face-up Continuous Spell Cards. When this attacking card inflicts Battle Damage to your opponent: Your opponent sends 1 card from their hand to the Graveyard, then you draw 1 card. During your Standby Phase, if this card is in your Graveyard and was sent there from the field: You can send 1 face-up Continuous Spell Card you control to the Graveyard; Special Summon this card from the Graveyard.",
+      "race": "Dragon",
+      "atk": 1900,
+      "def": 2600,
+      "level": 6,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragon-queen-of-tragic-endings-6749",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN014",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80513550,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80513550.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80513550.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80513550.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "7.64",
+          "tcgplayer_price": "10.38",
+          "ebay_price": "1.99",
+          "amazon_price": "7.20",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 39067,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8625,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

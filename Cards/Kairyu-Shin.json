@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 76634149,
+      "name": "Kairyu-Shin",
+      "typeline": [
+        "Sea Serpent",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A sea dragon known as the King of the Ocean, it attacks its enemies with huge tidal waves.",
+      "race": "Sea Serpent",
+      "atk": 1800,
+      "def": 1500,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kairyu-shin-6448",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.95"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76634149,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76634149.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76634149.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76634149.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.62",
+          "tcgplayer_price": "1.90",
+          "ebay_price": "2.24",
+          "amazon_price": "2.54",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49121,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-12-05",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4079,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

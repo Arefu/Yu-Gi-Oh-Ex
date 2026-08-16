@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 10755984,
+      "name": "Daigusto Eguls",
+      "typeline": [
+        "Psychic",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner \"Gusto\" monsters\nOnce per turn, during your End Phase: You can banish 1 WIND monster from your Graveyard to target 1 face-down card your opponent controls; destroy that target.",
+      "race": "Psychic",
+      "atk": 2600,
+      "def": 1800,
+      "level": 7,
+      "attribute": "WIND",
+      "archetype": "Gusto",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/daigusto-eguls-929",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5b",
+          "set_code": "DT05-EN090",
+          "set_rarity": "Duel Terminal Ultra Parallel Rare",
+          "set_rarity_code": "(DUPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN054",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10755984,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10755984.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10755984.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10755984.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.49",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "1.49",
+          "amazon_price": "1.69",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32061,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-09-29",
+          "ocg_date": "2010-08-03",
+          "konami_id": 9181,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

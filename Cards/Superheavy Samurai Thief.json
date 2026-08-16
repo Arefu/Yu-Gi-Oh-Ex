@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 14756848,
+      "name": "Superheavy Samurai Thief",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have no Spell/Trap Cards in your Graveyard, you can Special Summon this card (from your hand). After this card was Special Summoned this way, you cannot Special Summon monsters for the rest of this turn, except \"Superheavy Samurai\" monsters. You can Tribute this card, then activate 1 of these effects;\r\n● Destroy 1 card in your opponent's Spell & Trap Zone, then you can Set the destroyed Spell/Trap Card on your side of the field.\r\n● Destroy 1 card in your opponent's Pendulum Zone, then you can place the destroyed card in your Pendulum Zone.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 1000,
+      "level": 10,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-thief-1263",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN108",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14756848,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14756848.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14756848.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14756848.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.00",
+          "amazon_price": "1.37",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 77147,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11948,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

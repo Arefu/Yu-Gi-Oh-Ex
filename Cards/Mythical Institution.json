@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 94599451,
+      "name": "Mythical Institution",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time a face-up \"Mythical Beast\" Pendulum Monster Card(s) you control is destroyed by battle or card effect, place 2 Spell Counters on this card. Once per turn: You can remove any number of Spell Counters from your field; add 1 monster to your hand from your Deck or face-up Extra Deck, with a Level equal to the number removed, that you can place a Spell Counter on. If this card on the field would be destroyed by card effect, you can remove 1 Spell Counter from this card instead.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mythical-institution-9461",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN120",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94599451,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94599451.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94599451.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94599451.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.75",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magic Lab",
+          "views": 206123,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13778,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

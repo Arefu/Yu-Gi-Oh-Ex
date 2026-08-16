@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 22499034,
+      "name": "Ignis Heat, the True Dracowarrior",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "To Tribute Summon this card face-up, you can Tribute a Continuous Spell/Trap you control, instead of a monster. Once per turn, when your opponent activates a card or effect while you control this Tribute Summoned monster (Quick Effect): You can take 1 \"True Draco\" or \"True King\" Continuous Spell from your Deck, and either activate it or add it to your hand.",
+      "race": "Wyrm",
+      "atk": 2400,
+      "def": 1000,
+      "level": 5,
+      "attribute": "FIRE",
+      "archetype": "True Draco",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ignis-heat-the-true-dracowarrior-8338",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN053",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22499034,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22499034.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22499034.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22499034.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.74",
+          "tcgplayer_price": "2.20",
+          "ebay_price": "1.84",
+          "amazon_price": "1.01",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 326207,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12935,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

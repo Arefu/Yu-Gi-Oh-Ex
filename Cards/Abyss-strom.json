@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 97697447,
+      "name": "Abyss-strom",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Send 1 face-up \"Umi\" you control to the Graveyard; send all Spell and Trap Cards on the field to the Graveyard.",
+      "race": "Normal",
+      "archetype": "Umi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-strom-8123",
+      "card_sets": [
+        {
+          "set_name": "Abyss Rising",
+          "set_code": "ABYR-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97697447,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97697447.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97697447.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97697447.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44356,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-11-09",
+          "ocg_date": "2012-07-21",
+          "konami_id": 10295,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

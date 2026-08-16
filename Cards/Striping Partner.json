@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 74715061,
+      "name": "Striping Partner",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by the following effect. If the effect activation of a monster you control is negated (except during the Damage Step): You can Special Summon this card from your hand.\nWhen this card is Special Summoned: You can target 1 Level 4 or lower Cyberse monster in your GY; Special Summon it. You can only use this effect of \"Striping Partner\" once per turn.",
+      "race": "Cyberse",
+      "atk": 1200,
+      "def": 1600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/striping-partner-9032",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN171",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74715061,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74715061.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74715061.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74715061.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24878,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13373,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

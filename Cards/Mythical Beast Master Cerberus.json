@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 53842431,
+      "name": "Mythical Beast Master Cerberus",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you have no card in your other Pendulum Zone: You can destroy this card, and if you do, add 1 Level 7 or lower \"Mythical Beast\" Effect Monster from your Deck to your hand. You can only use this effect of \"Mythical Beast Master Cerberus\" once per turn.\n\n[ Monster Effect ] \nEach time a Spell Card is activated, place 2 Spell Counters on this card when that Spell resolves. Cannot be destroyed by card effects while 4 or more Spell Counters are on your field. Once per turn: You can remove 4 Spell Counters from your field, then target 1 monster your opponent controls; banish it face-up, and if you do, this card gains ATK equal to the banished monster's original ATK until the end of the opponent's turn.",
+      "race": "Spellcaster",
+      "pend_desc": "If you have no card in your other Pendulum Zone: You can destroy this card, and if you do, add 1 Level 7 or lower \"Mythical Beast\" Effect Monster from your Deck to your hand. You can only use this effect of \"Mythical Beast Master Cerberus\" once per turn.",
+      "monster_desc": "Each time a Spell Card is activated, place 2 Spell Counters on this card when that Spell resolves. Cannot be destroyed by card effects while 4 or more Spell Counters are on your field. Once per turn: You can remove 4 Spell Counters from your field, then target 1 monster your opponent controls; banish it face-up, and if you do, this card gains ATK equal to the banished monster's original ATK until the end of the opponent's turn.",
+      "atk": 2800,
+      "def": 2800,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Mythical Beast",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mythical-beast-master-cerberus-8816",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN185",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN027",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN059",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53842431,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53842431.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53842431.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53842431.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.17",
+          "tcgplayer_price": "1.18",
+          "ebay_price": "3.49",
+          "amazon_price": "2.04",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 480288,
+          "viewsweek": 0,
+          "upvotes": 29,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13397,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

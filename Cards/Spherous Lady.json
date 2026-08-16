@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 52121290,
+      "name": "Spherous Lady",
+      "typeline": [
+        "Rock",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "Many have been deceived by the beauty of this vampire.",
+      "race": "Rock",
+      "atk": 400,
+      "def": 1400,
+      "level": 3,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spherous-lady-4441",
+      "card_sets": [
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.61"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.99"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52121290,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52121290.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52121290.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52121290.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "5.00",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51544,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-07-21",
+          "konami_id": 5086,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

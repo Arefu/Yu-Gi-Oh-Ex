@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 19025379,
+      "name": "Lord of the Red",
+      "typeline": [
+        "Dragon",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Red-Eyes Transmigration\". Once per turn, during either player's turn, when a card or effect is activated, except \"Lord of the Red\": You can target 1 monster on the field; destroy it. Once per turn, during either player's turn, when a card or effect is activated, except \"Lord of the Red\": You can target 1 Spell/Trap Card on the field; destroy it.",
+      "race": "Dragon",
+      "atk": 2400,
+      "def": 2100,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Red-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lord-of-the-red-1643",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN016",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.86"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN068",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19025379,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19025379.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19025379.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19025379.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "2.29",
+          "amazon_price": "1.78",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 197417,
+          "viewsweek": 0,
+          "upvotes": 16,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11894,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

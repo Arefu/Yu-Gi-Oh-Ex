@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 80036543,
+      "name": "Hope for Escape",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If your opponent's LP is at least 1000 higher than yours: Pay 1000 LP; draw 1 card for every 2000 points difference between your LP and your opponent's.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hope-for-escape-6711",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN040",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN063",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80036543,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80036543.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80036543.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80036543.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "1.99",
+          "amazon_price": "1.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 104974,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9354,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

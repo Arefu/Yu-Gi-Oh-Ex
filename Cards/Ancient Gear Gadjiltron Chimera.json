@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 86321248,
+      "name": "Ancient Gear Gadjiltron Chimera",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains the appropriate effects if you Normal Summon it by Tributing these monsters.\n● Green Gadget: This card gains 300 ATK.\n● Red Gadget: If this card inflicts battle damage to your opponent by a direct attack: Inflict 500 damage to your opponent.\n● Yellow Gadget: If this card destroys an opponent's monster by battle: Inflict 700 damage to your opponent.",
+      "race": "Machine",
+      "atk": 2300,
+      "def": 1300,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Ancient Gear",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ancient-gear-gadjiltron-chimera-7233",
+      "card_sets": [
+        {
+          "set_name": "Geargia Rampage Structure Deck",
+          "set_code": "SDGR-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.61"
+        },
+        {
+          "set_name": "Machine Reactor Structure Deck",
+          "set_code": "SR03-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Machine Re-Volt",
+          "set_code": "SD10-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.52"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86321248,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86321248.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86321248.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86321248.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56469,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-01-17",
+          "ocg_date": "2006-09-14",
+          "konami_id": 6933,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

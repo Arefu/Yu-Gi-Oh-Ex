@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 61583217,
+      "name": "Cynet Universe",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "All Link Monsters you control gain 300 ATK. Once per turn: You can target 1 monster in the GY; shuffle it into the Deck. If this card on the field is destroyed by a card effect: Send all monsters in the Extra Monster Zones to the GY.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cynet-universe-8742",
+      "card_sets": [
+        {
+          "set_name": "Starter Deck: Codebreaker",
+          "set_code": "YS18-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Link Strike",
+          "set_code": "YS17-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 61583217,
+          "image_url": "https://images.ygoprodeck.com/images/cards/61583217.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/61583217.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/61583217.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58103,
+          "viewsweek": 0,
+          "upvotes": 9,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-20",
+          "ocg_date": "2017-03-25",
+          "konami_id": 13033,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

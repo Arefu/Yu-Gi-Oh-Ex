@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 59057953,
+      "name": "Abyss Actors Back Stage",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you have 2 \"Abyss Actor\" cards in your Pendulum Zones: Add 2 \"Abyss Actor\" Pendulum Monsters with different names from your Deck to your Extra Deck face-up. You can only activate 1 \"Abyss Actors Back Stage\" per turn.",
+      "race": "Normal",
+      "archetype": "Abyss Actor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/abyss-actors-back-stage-5027",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN028",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.39"
+        },
+        {
+          "set_name": "Legendary Duelists: White Dragon Abyss",
+          "set_code": "LED3-EN055",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59057953,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59057953.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59057953.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59057953.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33099,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-17",
+          "ocg_date": "2016-08-06",
+          "konami_id": 12722,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

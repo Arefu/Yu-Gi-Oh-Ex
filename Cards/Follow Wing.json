@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 42776855,
+      "name": "Follow Wing",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate this card by targeting 1 Synchro Monster you control; it cannot be destroyed by battle or your opponent's card effects. At the start of the Damage Step, if it battles an opponent's Level 5 or higher monster: You can destroy that opponent's monster, and if you do, the targeted Synchro Monster gains ATK equal to the original ATK of the destroyed monster, until the end of this turn. When that monster leaves the field, destroy this card.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/follow-wing-3649",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN224",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN070",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42776855,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42776855.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42776855.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42776855.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.09",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37446,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12178,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 25531465,
+      "name": "Magicat",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the Graveyard for the Synchro Summon of a Spellcaster-Type Synchro Monster, you can return 1 Spell Card from your Graveyard to the top of your Deck.",
+      "race": "Spellcaster",
+      "atk": 600,
+      "def": 500,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magicat-2196",
+      "card_sets": [
+        {
+          "set_name": "Ancient Prophecy",
+          "set_code": "ANPR-EN031",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 25531465,
+          "image_url": "https://images.ygoprodeck.com/images/cards/25531465.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/25531465.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/25531465.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.36",
+          "ebay_price": "1.29",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31109,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-09-01",
+          "ocg_date": "2009-04-18",
+          "konami_id": 8322,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

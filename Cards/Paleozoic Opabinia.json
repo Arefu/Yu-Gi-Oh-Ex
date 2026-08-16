@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 37649320,
+      "name": "Paleozoic Opabinia",
+      "typeline": [
+        "Aqua",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 2 monsters\nThis card is unaffected by other monsters' effects. You can activate \"Paleozoic\" Trap Cards from your hand. If this card has a Trap Card as Xyz Material: You can detach 1 Xyz Material from this card; add 1 \"Paleozoic\" Trap Card from your Deck to your hand. You can only use this effect of \"Paleozoic Opabinia\" once per turn.",
+      "race": "Aqua",
+      "atk": 0,
+      "def": 2400,
+      "level": 2,
+      "attribute": "WATER",
+      "archetype": "Paleozoic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/paleozoic-opabinia-3185",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN172",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "2025 Mega-Pack Tin",
+          "set_code": "MP25-EN138",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN099",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37649320,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37649320.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37649320.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37649320.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.38",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "1.50",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Burgesstoma Opabinia",
+          "views": 204852,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-09-10",
+          "konami_id": 12196,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

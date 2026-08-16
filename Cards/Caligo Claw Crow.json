@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 67692580,
+      "name": "Caligo Claw Crow",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a DARK monster, you can Special Summon this card (from your hand). You can only Special Summon \"Caligo Claw Crow\" once per turn this way.",
+      "race": "Winged Beast",
+      "atk": 900,
+      "def": 600,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/caligo-claw-crow-5687",
+      "card_sets": [
+        {
+          "set_name": "Egyptian God Deck: Slifer the Sky Dragon",
+          "set_code": "EGS1-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.45"
+        },
+        {
+          "set_name": "Maximum Gold",
+          "set_code": "MAGO-EN102",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Super Starter: V for Victory",
+          "set_code": "YS13-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67692580,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67692580.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67692580.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67692580.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "2.00",
+          "amazon_price": "1.53",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 280957,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-06-14",
+          "ocg_date": "2013-03-01",
+          "konami_id": 10566,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 16802689,
+      "name": "Flower Cardian Paulownia with Phoenix",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by Tributing 1 Level 12 \"Flower Cardian\" monster, except \"Flower Cardian Paulownia with Phoenix\". If this card is Special Summoned: Draw 1 card, and if you do, show it, then you can Special Summon it if it is a \"Flower Cardian\" monster. Otherwise, send it to the Graveyard. Once per turn, when this card inflicts battle damage to your opponent: You can draw 1 card.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 2000,
+      "level": 12,
+      "attribute": "DARK",
+      "archetype": "Flower Cardian",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flower-cardian-paulownia-with-phoenix-1446",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN134",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.05"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.29"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16802689,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16802689.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16802689.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16802689.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43505,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12561,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

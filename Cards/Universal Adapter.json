@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 53077251,
+      "name": "Universal Adapter",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 face-up monster your opponent controls; the ATK of all other monsters currently on the field become equal to that monster's current ATK, until the end of this turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/universal-adapter-9374",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN134",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN079",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction Special Edition",
+          "set_code": "FLOD-ENSE4",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53077251,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53077251.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53077251.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53077251.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "1.24",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 15912,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-07",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13795,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

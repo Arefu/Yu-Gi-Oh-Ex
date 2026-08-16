@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 88093706,
+      "name": "Update Jammer",
+      "typeline": [
+        "Cyberse",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Level 2 or higher Cyberse monsters\r\nOnce per battle, during damage calculation, if your Cyberse monster battles (Quick Effect): You can activate this effect; negate all other card effects on the field until the end of the Damage Step, damage calculation for this battle uses each monster's original ATK/DEF, also if an opponent's monster is destroyed by this battle and sent to the GY, inflict 1000 damage to your opponent. If this card is sent to the GY as Link Material: That Link Monster can make a second attack during each Battle Phase this turn.",
+      "race": "Cyberse",
+      "atk": 2000,
+      "def": null,
+      "level": null,
+      "attribute": "WIND",
+      "linkval": 2,
+      "linkmarkers": [
+        "Top",
+        "Left"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/update-jammer-9866",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN105",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.79"
+        },
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 88093706,
+          "image_url": "https://images.ygoprodeck.com/images/cards/88093706.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/88093706.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/88093706.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.27",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 394496,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-31",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14122,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

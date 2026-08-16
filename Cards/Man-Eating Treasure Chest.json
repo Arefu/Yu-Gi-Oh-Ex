@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 13723605,
+      "name": "Man-Eating Treasure Chest",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A monster disguised as a treasure chest that is known to attack the unwary adventurer.",
+      "race": "Fiend",
+      "atk": 1600,
+      "def": 1000,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/man-eating-treasure-chest-1178",
+      "card_sets": [
+        {
+          "set_name": "Demo Deck 2015",
+          "set_code": "DEM2-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.29"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E106",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.61"
+        },
+        {
+          "set_name": "Starter Deck: Yugi",
+          "set_code": "SDY-037",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13723605,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13723605.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13723605.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13723605.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "159.99",
+          "amazon_price": "0.64",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47770,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-12-16",
+          "konami_id": 4883,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

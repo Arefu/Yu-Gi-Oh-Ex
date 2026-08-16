@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 76751255,
+      "name": "Igknight Reload",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Reveal any number of Pendulum Monsters from your hand and shuffle them into the Deck, then draw cards equal to the number of cards you shuffled into the Deck +1. For the rest of this turn after this card resolves, you cannot draw cards by card effects. You can only activate 1 \"Igknight Reload\" per turn.",
+      "race": "Quick-Play",
+      "archetype": "Igknight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/igknight-reload-6456",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN148",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ancient Guardians",
+          "set_code": "ANGU-EN057",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN061",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 3",
+          "set_code": "OP03-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 76751255,
+          "image_url": "https://images.ygoprodeck.com/images/cards/76751255.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/76751255.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/76751255.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 102091,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 12005,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

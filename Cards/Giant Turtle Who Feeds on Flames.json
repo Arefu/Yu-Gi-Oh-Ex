@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 96981563,
+      "name": "Giant Turtle Who Feeds on Flames",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A crimson-shelled tortoise that feeds on flames.",
+      "race": "Aqua",
+      "atk": 1400,
+      "def": 1800,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/giant-turtle-who-feeds-on-flames-8068",
+      "card_sets": [
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.14"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.4"
+        },
+        {
+          "set_name": "Spell Ruler",
+          "set_code": "SRL-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 96981563,
+          "image_url": "https://images.ygoprodeck.com/images/cards/96981563.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/96981563.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/96981563.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.57",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101168,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-16",
+          "ocg_date": "2000-04-20",
+          "konami_id": 4599,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

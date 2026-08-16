@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 20765952,
+      "name": "Mask of Dispel",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Select 1 face-up Spell Card on the field. The controller of the Spell Card takes 500 points of damage during each of your Standby Phases. When the selected card is removed from the field, destroy this card.",
+      "race": "Continuous",
+      "archetype": "Mask",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mask-of-dispel-1784",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN220",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.15"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "13.49"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "16.46"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20765952,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20765952.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20765952.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20765952.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.63",
+          "tcgplayer_price": "0.88",
+          "ebay_price": "1.99",
+          "amazon_price": "5.88",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 155312,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5104,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

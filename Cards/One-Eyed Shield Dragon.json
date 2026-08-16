@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 33064647,
+      "name": "One-Eyed Shield Dragon",
+      "typeline": [
+        "Dragon",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This dragon wears a shield not only for its own protection, but also for ramming its enemies.",
+      "race": "Dragon",
+      "atk": 700,
+      "def": 1300,
+      "level": 3,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/one-eyed-shield-dragon-2810",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-087",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.47"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN087",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magic Ruler",
+          "set_code": "MRL-E127",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.29"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 33064647,
+          "image_url": "https://images.ygoprodeck.com/images/cards/33064647.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/33064647.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/33064647.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.01",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 221139,
+          "viewsweek": 21,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-03-27",
+          "konami_id": 4302,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

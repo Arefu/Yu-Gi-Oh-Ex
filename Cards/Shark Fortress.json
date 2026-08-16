@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 50449881,
+      "name": "Shark Fortress",
+      "typeline": [
+        "Fish",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 5 monsters\nYour opponent cannot target monsters for attacks, except this one. Once per turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster you control; it can make a second attack during each Battle Phase this turn.",
+      "race": "Fish",
+      "atk": 2400,
+      "def": 1800,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Shark",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shark-fortress-4298",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Lord of the Tachyon Galaxy",
+          "set_code": "LTGY-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50449881,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50449881.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50449881.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50449881.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 152024,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-05-17",
+          "ocg_date": "2013-02-16",
+          "konami_id": 10529,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

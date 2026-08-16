@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 63468625,
+      "name": "Meklord Astro Mekanikle",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by sending 3 \"Meklord\" monsters from your hand to the Graveyard, and cannot be Special Summoned by other ways. Once per turn: You can target 1 Synchro Monster your opponent controls; equip that target to this card. This card gains ATK equal to the combined ATK of the monsters equipped to it by this effect. Once per turn, during your Standby Phase: You can send 1 of these equipped monsters you control to the Graveyard; inflict damage to your opponent equal to that monster's original ATK. You cannot conduct your Battle Phase the turn you activate this effect.",
+      "race": "Machine",
+      "atk": 4000,
+      "def": 4000,
+      "level": 12,
+      "attribute": "LIGHT",
+      "archetype": "Meklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/meklord-astro-mekanikle-5360",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN161",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Rage of Ra",
+          "set_code": "LED7-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shonen Jump June/July 2011 subscription bonus",
+          "set_code": "JUMP-EN050",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "7.14"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! World Championship Qualifier National Championships 2011 prize cards",
+          "set_code": "WQ11-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4056.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 63468625,
+          "image_url": "https://images.ygoprodeck.com/images/cards/63468625.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/63468625.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/63468625.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66833,
+          "viewsweek": 0,
+          "upvotes": 12,
+          "downvotes": 5,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-01",
+          "ocg_date": "2010-12-18",
+          "konami_id": 9553,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

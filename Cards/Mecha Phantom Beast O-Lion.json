@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 72291078,
+      "name": "Mecha Phantom Beast O-Lion",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "You can banish this card from your Graveyard; immediately after this effect resolves, Normal Summon 1 \"Mecha Phantom Beast\" monster from your hand. While you control a Token, this card cannot be destroyed by battle or card effects. If this card is sent to the Graveyard: You can Special Summon 1 \"Mecha Phantom Beast Token\" (Machine-Type/WIND/Level 3/ATK 0/DEF 0). You can only use this effect of \"Mecha Phantom Beast O-Lion\" once per turn.",
+      "race": "Machine",
+      "atk": 600,
+      "def": 1000,
+      "level": 2,
+      "attribute": "WIND",
+      "archetype": "Mecha Phantom Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mecha-phantom-beast-o-lion-6064",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Armageddon",
+          "set_code": "BLAR-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Primal Origin",
+          "set_code": "PRIO-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72291078,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72291078.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72291078.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72291078.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.66",
+          "ebay_price": "2.49",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 487072,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-05-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11055,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

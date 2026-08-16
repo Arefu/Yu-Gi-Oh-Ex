@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 30653113,
+      "name": "Blessings of the Nile",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Each time card(s) are discarded from your hand to the Graveyard by the effect of a card controlled by your opponent, increase your Life Points by 1000 points.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/blessings-of-the-nile-2606",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.64"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN203",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30653113,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30653113.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30653113.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30653113.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57022,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6052,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

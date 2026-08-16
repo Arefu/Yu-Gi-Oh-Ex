@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 84812868,
+      "name": "Lunalight White Rabbit",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can target 1 \"Lunalight\" monster in your Graveyard, except \"Lunalight White Rabbit\"; Special Summon it in Defense Position. Once per turn: You can target Spell/Trap Cards your opponent controls, up to the number of other \"Lunalight\" cards you control; return them to the hand.",
+      "race": "Beast-Warrior",
+      "atk": 800,
+      "def": 800,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Lunalight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lunalight-white-rabbit-7113",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84812868,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84812868.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84812868.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84812868.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "3.00",
+          "amazon_price": "1.47",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81511,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12282,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

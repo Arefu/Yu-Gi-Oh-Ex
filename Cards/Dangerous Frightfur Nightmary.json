@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 58468105,
+      "name": "Dangerous Frightfur Nightmary",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Edge Imp\" monster + 2 \"Fluffal\" monsters\r\nGains 300 ATK for each Fairy and Fiend monster in your GY, during your turn only. When this Fusion Summoned card destroys a monster by battle: You can send \"Frightfur\", \"Fluffal\", and/or \"Edge Imp\" monsters from your Deck to the GY, equal to the original Level of that destroyed monster. When your opponent activates a card or effect that targets this card on the field (Quick Effect): You can banish 1 \"Frightfur\" monster from your Extra Deck; negate that effect.",
+      "race": "Fiend",
+      "atk": 2000,
+      "def": 3000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Frightfur",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dangerous-frightfur-nightmary-10005",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.62"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58468105,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58468105.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58468105.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58468105.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 124070,
+          "viewsweek": 0,
+          "upvotes": 20,
+          "downvotes": 7,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-03-09",
+          "konami_id": 14344,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

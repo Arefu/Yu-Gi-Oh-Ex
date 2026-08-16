@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 77330185,
+      "name": "XX-Saber Garsem",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card on the field is destroyed and sent to the Graveyard by a card effect, add 1 \"X-Saber\" monster from your Deck to your hand. This card gains 200 ATK for each face-up \"X-Saber\" monster you control.",
+      "race": "Beast",
+      "atk": 1400,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "X-Saber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/xx-saber-garsem-6501",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENX07",
+          "set_rarity": "2",
+          "set_rarity_code": "",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77330185,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77330185.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77330185.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77330185.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47252,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8637,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

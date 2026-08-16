@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 19441018,
+      "name": "Batteryman Industrial Strength",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by removing from play 2 \"Batteryman\" monsters from your Graveyard. Once per turn, you can remove from play 1 Thunder-Type monster from your Graveyard to destroy 1 monster and 1 Spell or Trap Card on the field.",
+      "race": "Thunder",
+      "atk": 2600,
+      "def": 0,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Batteryman",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/batteryman-industrial-strength-1676",
+      "card_sets": [
+        {
+          "set_name": "Light of Destruction",
+          "set_code": "LODT-EN031",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 19441018,
+          "image_url": "https://images.ygoprodeck.com/images/cards/19441018.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/19441018.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/19441018.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "3.24",
+          "amazon_price": "2.23",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 75504,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-05-03",
+          "ocg_date": "2008-02-23",
+          "konami_id": 7604,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

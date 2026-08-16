@@ -1,0 +1,108 @@
+{
+  "data": [
+    {
+      "id": 49868263,
+      "name": "Ryu Senshi",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Warrior Dai Grepher\" + \"Spirit Ryu\"\r\nA Fusion Summon of this card can only be done with the above Fusion Materials. When a Normal Trap Card is activated (Quick Effect): You can pay 1000 LP; negate that effect. This card must be face-up on the field to activate and to resolve this effect. Negate the effects of any Spell Card that targets this card and destroy it.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 1200,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ryu-senshi-4248",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN139",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "5.19"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5"
+        },
+        {
+          "set_name": "Legacy of Darkness",
+          "set_code": "LOD-EN019",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 3",
+          "set_code": "STP3-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.92"
+        },
+        {
+          "set_name": "Tournament Pack 6",
+          "set_code": "TP6-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 49868263,
+          "image_url": "https://images.ygoprodeck.com/images/cards/49868263.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/49868263.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/49868263.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.81",
+          "tcgplayer_price": "3.09",
+          "ebay_price": "2.95",
+          "amazon_price": "12.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 384893,
+          "viewsweek": 21,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-06-06",
+          "ocg_date": "2001-09-20",
+          "konami_id": 5319,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

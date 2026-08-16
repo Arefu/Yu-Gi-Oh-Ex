@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 9097866,
+      "name": "Cross Debug",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control 2 or more Link Monsters: You can Special Summon this card from your hand. During damage calculation, if your Link Monster battles an opponent's Link Monster (Quick Effect): You can banish this card from your GY, then target 1 Link Monster in your GY; your battling monster cannot be destroyed by that battle, also, until the end of this turn, it gains ATK equal to the target's ATK. You can only use each effect of \"Cross Debug\" once per turn.",
+      "race": "Cyberse",
+      "atk": 900,
+      "def": 600,
+      "level": 2,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cross-debug-10183",
+      "card_sets": [
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9097866,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9097866.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9097866.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9097866.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46945,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101009002,
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2019-04-13",
+          "konami_id": 14450,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

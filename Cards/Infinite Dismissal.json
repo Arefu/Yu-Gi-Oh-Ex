@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 54109233,
+      "name": "Infinite Dismissal",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Level 3 or lower monsters are destroyed during the End Phase of the turn that they are Normal Summoned or Flip Summoned.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/infinite-dismissal-4606",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN186",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "5.42"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54109233,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54109233.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54109233.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54109233.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 187863,
+          "viewsweek": 42,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-12-14",
+          "konami_id": 5112,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

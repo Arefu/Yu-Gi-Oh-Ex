@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 57405307,
+      "name": "Winged Dragon, Guardian of the Fortress #2",
+      "typeline": [
+        "Winged Beast",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster's wings are capable of generating tornadoes.",
+      "race": "Winged Beast",
+      "atk": 1200,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/winged-dragon-guardian-of-the-fortress-2-4890",
+      "card_sets": [
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "15.04"
+        },
+        {
+          "set_name": "Tournament Pack: 1st Season",
+          "set_code": "TP1-E022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57405307,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57405307.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57405307.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57405307.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.65",
+          "tcgplayer_price": "28.72",
+          "ebay_price": "10.00",
+          "amazon_price": "0.01",
+          "coolstuffinc_price": "17.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Winged Dragon, Guardian of the Fortress 2",
+          "views": 52214,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-09-01",
+          "ocg_date": "1999-05-25",
+          "konami_id": 4558,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

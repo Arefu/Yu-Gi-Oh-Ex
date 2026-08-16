@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 72237166,
+      "name": "Samsara Kaiser",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When you Tribute Summon a monster by Tributing this card, return this card to your hand.",
+      "race": "Warrior",
+      "atk": 200,
+      "def": 100,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/samsara-kaiser-6059",
+      "card_sets": [
+        {
+          "set_name": "The Dark Emperor Structure Deck",
+          "set_code": "SDDE-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72237166,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72237166.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72237166.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72237166.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.06",
+          "ebay_price": "3.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 12297,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-04-02",
+          "ocg_date": "2007-12-15",
+          "konami_id": 7518,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 75153328,
+      "name": "Packet Swap",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 face-up non-Link Monster you control and 1 Link Monster your opponent controls; switch control of those monsters. You can only activate 1 \"Packet Swap\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/packet-swap-10068",
+      "card_sets": [
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75153328,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75153328.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75153328.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75153328.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Creature Disconnect",
+          "views": 25862,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14317,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

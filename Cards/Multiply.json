@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 40703222,
+      "name": "Multiply",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Tribute 1 face-up \"Kuriboh\"; Special Summon as many \"Kuriboh Tokens\" (Fiend/DARK/Level 1/ATK 300/DEF 200) as possible, in Defense Position. They cannot be Tributed for a Tribute Summon.",
+      "race": "Quick-Play",
+      "archetype": "Kuriboh",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/multiply-3463",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN090",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN086",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Advent Calendar (2019)",
+          "set_code": "AC19-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.13"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENA32",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Yugi's Legendary Decks",
+          "set_code": "YGLD-ENB32",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40703222,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40703222.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40703222.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40703222.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "1.99",
+          "amazon_price": "2.75",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 343010,
+          "viewsweek": 42,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2000-12-21",
+          "konami_id": 4805,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

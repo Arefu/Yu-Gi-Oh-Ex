@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 50005218,
+      "name": "Sky Striker Airspace - Area Zero",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "You can target 1 other card you control; excavate the top 3 cards of your Deck, and if you do, you can add 1 excavated \"Sky Striker\" card to your hand, also shuffle the rest into the Deck, then, if you excavated a \"Sky Striker\" card, send the targeted card to the GY. If this card in the Field Zone is sent to the GY by a card effect: You can Special Summon 1 \"Sky Striker Ace\" monster from your Deck. You can only use each effect of \"Sky Striker Airspace - Area Zero\" once per turn.",
+      "race": "Field",
+      "archetype": "Sky Striker",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-striker-airspace-area-zero-9312",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN269",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN039",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Modern Decks 2026",
+          "set_code": "L26D-ENS19",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50005218,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50005218.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50005218.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50005218.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "5.95",
+          "amazon_price": "0.90",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Brandish Airspace Area Zero",
+          "views": 518657,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13680,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

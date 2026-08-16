@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 40080312,
+      "name": "Elemental HERO Nebula Neos",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Neos\" + \"Neo-Spacian Grand Mole\" + \"Neo-Spacian Dark Panther\"\r\nMust first be Special Summoned (from your Extra Deck) by shuffling the above cards you control into the Deck. (You do not use \"Polymerization\".) If this card is Special Summoned from the Extra Deck: Draw cards equal to the number of cards your opponent controls, then negate the effects of 1 face-up card on the field until the end of this turn. Once per turn, during the End Phase: Shuffle this card into the Extra Deck, and if you do, banish all cards on the field face-down.",
+      "race": "Warrior",
+      "atk": 3000,
+      "def": 2500,
+      "level": 9,
+      "attribute": "EARTH",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-nebula-neos-9765",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tins",
+          "set_code": "CT15-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.67"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40080312,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40080312.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40080312.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40080312.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.20",
+          "tcgplayer_price": "0.95",
+          "ebay_price": "1.89",
+          "amazon_price": "1.17",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 241966,
+          "viewsweek": 0,
+          "upvotes": 38,
+          "downvotes": 7,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-08-30",
+          "ocg_date": "2018-12-22",
+          "konami_id": 13867,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

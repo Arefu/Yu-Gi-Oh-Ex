@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 11790356,
+      "name": "Buster Dragon",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nAll monsters your opponent controls become Dragon-Type. Once per turn, if you do not control a \"Buster Blader\" monster: You can target 1 \"Buster Blader\" in your Graveyard; Special Summon it. Once per turn, during your opponent's turn: You can target 1 \"Buster Blader\" monster you control; equip it with 1 \"Destruction Sword\" monster from your Graveyard (this is a Quick Effect).",
+      "race": "Dragon",
+      "atk": 1200,
+      "def": 2800,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Destruction Sword",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/buster-dragon-1019",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN052",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN097",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.56"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11790356,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11790356.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11790356.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11790356.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "2.19",
+          "ebay_price": "4.95",
+          "amazon_price": "0.72",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 385116,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12160,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

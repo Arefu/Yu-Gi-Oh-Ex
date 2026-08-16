@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 57458399,
+      "name": "Satellite Synchron",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If a monster(s) is Special Summoned from your GY (except during the Damage Step): You can Special Summon this card from your hand. If you have a Synchro Monster with \"Warrior\", \"Synchron\", or \"Stardust\" in its original name on your field or GY: You can make this card's Level become 4 until the end of this turn. You can only use each effect of \"Satellite Synchron\" once per turn.",
+      "race": "Machine",
+      "atk": 700,
+      "def": 100,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Synchron",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/satellite-synchron-10686",
+      "card_sets": [
+        {
+          "set_name": "Legendary 5D&apos;s Decks",
+          "set_code": "L5DD-ENY11",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Magical Hero",
+          "set_code": "LED6-EN025",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.13"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN119",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.12"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN045",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57458399,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57458399.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57458399.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57458399.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.98",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 280898,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100413025,
+          "tcg_date": "2020-01-16",
+          "ocg_date": "2019-11-09",
+          "konami_id": 14917,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 39064822,
+      "name": "Knightmare Goblin",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with different names\r\nIf this card is Link Summoned during your turn: You can discard 1 card; if this card was co-linked when this effect was activated, you can draw 1 card, also, during your Main Phase this turn, you can Normal Summon 1 monster from your hand to your zone this card points to, in addition to your Normal Summon/Set. You can only apply this effect of \"Knightmare Goblin\" once per turn. Neither player can target co-linked monsters you control with card effects.",
+      "race": "Fiend",
+      "atk": 1300,
+      "def": null,
+      "level": 0,
+      "attribute": "WIND",
+      "archetype": "Knightmare",
+      "linkval": 2,
+      "linkmarkers": [
+        "Left",
+        "Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/knightmare-goblin-9232",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN044",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 39064822,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39064822.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39064822.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39064822.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.48",
+          "tcgplayer_price": "2.32",
+          "ebay_price": "5.95",
+          "amazon_price": "4.16",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Troymare Goblin",
+          "views": 149938,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13598,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

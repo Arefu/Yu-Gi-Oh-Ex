@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 47664723,
+      "name": "Darklord Edeh Arae",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned from the Graveyard, it gains this effect.\n● If this card attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Fairy",
+      "atk": 2300,
+      "def": 2000,
+      "level": 5,
+      "attribute": "DARK",
+      "archetype": "Darklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darklord-edeh-arae-4070",
+      "card_sets": [
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN040",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years",
+          "set_code": "LC02-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.71"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2010 Prize Cards",
+          "set_code": "YCSW-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1220"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! Championship Series 2010 Prize Cards",
+          "set_code": "YCSW-EN003",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1990"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47664723,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47664723.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47664723.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47664723.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "4.49",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28112,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-16",
+          "ocg_date": "2009-09-21",
+          "konami_id": 8289,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

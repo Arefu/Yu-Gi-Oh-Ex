@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 44035031,
+      "name": "Gravity Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1 or more non-Tuner monsters\nWhen this card is Synchro Summoned: It gains 300 ATK for each face-up monster your opponent controls. Once per turn, during your opponent's Battle Phase: You can target 1 Defense Position monster your opponent controls; change it to face-up Attack Position, also it must attack this turn, if able.",
+      "race": "Warrior",
+      "atk": 2100,
+      "def": 1000,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gravity-warrior-3757",
+      "card_sets": [
+        {
+          "set_name": "Premium Collection Tin",
+          "set_code": "PRC1-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.75"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44035031,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44035031.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44035031.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44035031.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "2.75",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 53765,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-03-16",
+          "ocg_date": "2012-03-17",
+          "konami_id": 9969,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

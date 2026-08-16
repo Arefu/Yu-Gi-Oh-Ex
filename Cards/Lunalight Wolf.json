@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 47705572,
+      "name": "Lunalight Wolf",
+      "typeline": [
+        "Beast-Warrior",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"Lunalight\" monsters. This effect cannot be negated. Once per turn: You can Fusion Summon 1 \"Lunalight\" Fusion Monster from your Extra Deck, by banishing Fusion Materials listed on it from your field or Graveyard.\n\n[ Monster Effect ] \nIf a \"Lunalight\" monster you control attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "race": "Beast-Warrior",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"Lunalight\" monsters. This effect cannot be negated. Once per turn: You can Fusion Summon 1 \"Lunalight\" Fusion Monster from your Extra Deck, by banishing Fusion Materials listed on it from your field or Graveyard.",
+      "monster_desc": "If a \"Lunalight\" monster you control attacks a Defense Position monster, inflict piercing battle damage to your opponent.",
+      "atk": 2000,
+      "def": 1800,
+      "level": 6,
+      "attribute": "LIGHT",
+      "archetype": "Lunalight",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lunalight-wolf-4075",
+      "card_sets": [
+        {
+          "set_name": "Legendary Arc-V Decks",
+          "set_code": "LAVD-ENL03",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN012",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 47705572,
+          "image_url": "https://images.ygoprodeck.com/images/cards/47705572.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/47705572.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/47705572.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.34",
+          "ebay_price": "3.00",
+          "amazon_price": "1.38",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 258211,
+          "viewsweek": 42,
+          "upvotes": 9,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12284,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

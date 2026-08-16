@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "id": 85696777,
+      "name": "Harpie Conductor",
+      "typeline": [
+        "Winged Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 WIND monsters\r\nThis card's name becomes \"Harpie Lady\" while on the field or in the GY. You can only use each of the following effects of \"Harpie Conductor\" once per turn.\r\n● If a \"Harpie\" monster(s) you control would be destroyed by battle or card effect, you can destroy 1 Spell/Trap you control instead.\r\n● If another face-up \"Harpie\" monster you control returns to your hand (except during the Damage Step): You can target 1 Special Summoned monster your opponent controls; return it to the hand.",
+      "race": "Winged Beast",
+      "atk": 1900,
+      "def": null,
+      "level": null,
+      "attribute": "WIND",
+      "archetype": "Harpie",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/harpie-conductor-9901",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Hero's Revenge",
+          "set_code": "BLHR-EN047",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.23"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 2",
+          "set_code": "LDS2-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.32"
+        },
+        {
+          "set_name": "The Lost Art Promotion (series)",
+          "set_code": "LART-EN026",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Lost Art Promotion 2020 N",
+          "set_code": "LART-EN026",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85696777,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85696777.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85696777.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85696777.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "2.95",
+          "amazon_price": "3.48",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 247129,
+          "viewsweek": 0,
+          "upvotes": 24,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-11",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14194,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

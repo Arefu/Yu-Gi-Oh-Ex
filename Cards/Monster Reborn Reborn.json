@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 50213848,
+      "name": "Monster Reborn Reborn",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 3 monsters in your GY; your opponent chooses 1, you Special Summon it, and if you do, banish the rest. You can only activate 1 \"Monster Reborn Reborn\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/monster-reborn-reborn-9246",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN044",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN066",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction Sneak Peek Participation Card",
+          "set_code": "FLOD-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.96"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 50213848,
+          "image_url": "https://images.ygoprodeck.com/images/cards/50213848.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/50213848.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/50213848.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.79",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Selective Reborn",
+          "views": 119342,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 6,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-04-28",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13620,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 85718645,
+      "name": "Delg the Dark Monarch",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Special Summoned: You can target up to 2 cards in your opponent's Graveyard; banish that target(s), then send the same number of cards from the top of their Deck to the Graveyard. This card cannot attack during the turn it is Normal or Special Summoned.",
+      "race": "Spellcaster",
+      "atk": 2400,
+      "def": 1000,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Monarch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/delg-the-dark-monarch-7184",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 17 participation cards",
+          "set_code": "DL17-EN009",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "6.83"
+        },
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN037",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 85718645,
+          "image_url": "https://images.ygoprodeck.com/images/cards/85718645.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/85718645.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/85718645.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "6.22",
+          "tcgplayer_price": "6.68",
+          "ebay_price": "10.99",
+          "amazon_price": "22.68",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 111053,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9114,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 1764972,
+      "name": "Doomkaiser Dragon/Assault Mode",
+      "typeline": [
+        "Zombie",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except with \"Assault Mode Activate\". When this card is Special Summoned, Special Summon any number of Zombie-Type monsters from either player's Graveyard(s) to your side of the field. Those monsters' effects are negated, and they are destroyed during the End Phase this turn. When this card on the field is destroyed, you can Special Summon 1 \"Doomkaiser Dragon\" from your Graveyard.",
+      "race": "Zombie",
+      "atk": 2900,
+      "def": 2000,
+      "level": 8,
+      "attribute": "FIRE",
+      "archetype": "Assault Mode",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/doomkaiser-dragon-assault-mode-154",
+      "card_sets": [
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN019",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crimson Crisis",
+          "set_code": "CRMS-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1764972,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1764972.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1764972.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1764972.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.32",
+          "tcgplayer_price": "7.91",
+          "ebay_price": "3.10",
+          "amazon_price": "3.84",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45324,
+          "viewsweek": 0,
+          "upvotes": 24,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-02-28",
+          "ocg_date": "2008-11-15",
+          "konami_id": 8017,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

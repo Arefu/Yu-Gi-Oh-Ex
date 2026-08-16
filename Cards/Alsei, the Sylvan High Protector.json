@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 10406322,
+      "name": "Alsei, the Sylvan High Protector",
+      "typeline": [
+        "Plant",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 8 monsters\nOnce per turn: You can declare 1 card name; excavate the top card of your Deck, and if it is the declared card, add it to your hand. Otherwise, send it to the Graveyard. If a card is sent from your Deck to the Graveyard by a card effect (except during the Damage Step): You can detach 1 Xyz Material from this card, then target 1 card on the field; place that target on either the top or bottom of the Deck. You can only use this effect of \"Alsei, the Sylvan High Protector\" once per turn.",
+      "race": "Plant",
+      "atk": 2300,
+      "def": 3200,
+      "level": 8,
+      "attribute": "LIGHT",
+      "archetype": "Sylvan",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/alsei-the-sylvan-high-protector-901",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN221",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN052",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Memories",
+          "set_code": "MAZE-EN052",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10406322,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10406322.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10406322.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10406322.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "6.95",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 182973,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10938,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 30194529,
+      "name": "Ningirsu the World Chalice Warrior",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Link Monsters\r\nIf this card is Link Summoned: Draw cards equal to the number of \"World Chalice\" monsters this card points to. You can only use this effect of \"Ningirsu the World Chalice Warrior\" once per turn. Once per turn: You can send 1 card from each player's field to the GYs. If this card is sent from the field to the GY: You can Special Summon 1 \"World Chalice\" monster from your hand.",
+      "race": "Warrior",
+      "atk": 2500,
+      "def": null,
+      "level": 0,
+      "attribute": "EARTH",
+      "archetype": "World Chalice",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Left",
+        "Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ningirsu-the-world-chalice-warrior-8715",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN068",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN050",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30194529,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30194529.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30194529.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30194529.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.47",
+          "tcgplayer_price": "0.49",
+          "ebay_price": "3.46",
+          "amazon_price": "1.79",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Stargrail Warrior Ningirsu",
+          "views": 410651,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13089,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

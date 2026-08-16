@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 1045143,
+      "name": "Geargiano Mk-II",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal or Flip Summoned: You can Special Summon 1 \"Geargia\" monster from your hand or Graveyard in Defense Position.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": 500,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Geargia",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/geargiano-mk-ii-95",
+      "card_sets": [
+        {
+          "set_name": "Duelist League 18 participation cards",
+          "set_code": "DL18-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "10.96"
+        },
+        {
+          "set_name": "Geargia Rampage Structure Deck",
+          "set_code": "SDGR-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.17"
+        },
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1045143,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1045143.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1045143.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1045143.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49319,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-04-14",
+          "konami_id": 10157,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

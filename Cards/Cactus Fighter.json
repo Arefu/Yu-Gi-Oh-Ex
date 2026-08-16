@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 74440055,
+      "name": "Cactus Fighter",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card destroys an opponent's monster by battle, Special Summon 1 \"Needle Token\" (Plant-Type/EARTH/Level 1/ATK 500/DEF 500) to your opponent's side of the field in Defense Position.",
+      "race": "Plant",
+      "atk": 1900,
+      "def": 400,
+      "level": 4,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cactus-fighter-6258",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN082",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74440055,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74440055.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74440055.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74440055.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47584,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2009-09-19",
+          "konami_id": 8079,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

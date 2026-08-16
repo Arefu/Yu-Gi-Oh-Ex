@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 8437145,
+      "name": "Void Seer",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Target 1 \"Infernoid\" monster you control; that target is unaffected by the opponent's card effects this turn. If an \"Infernoid\" monster(s) you control would be destroyed by a card effect, you can banish this card from your Graveyard instead of destroying 1 of those monsters.",
+      "race": "Quick-Play",
+      "archetype": "Infernoid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/void-seer-715",
+      "card_sets": [
+        {
+          "set_name": "2015 Mega-Tin Mega Pack",
+          "set_code": "MP15-EN228",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity",
+          "set_code": "SECE-EN057",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Secrets of Eternity: Super Edition",
+          "set_code": "SECE-ENS12",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.66"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 8437145,
+          "image_url": "https://images.ygoprodeck.com/images/cards/8437145.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/8437145.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/8437145.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.68",
+          "tcgplayer_price": "0.96",
+          "ebay_price": "2.20",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 35359,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-01-15",
+          "ocg_date": "2014-11-15",
+          "konami_id": 11577,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

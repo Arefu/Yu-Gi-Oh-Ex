@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 67232306,
+      "name": "Mirror Mail",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "When a face-up monster you control is targeted for an attack: Its ATK becomes equal to that of the attacking monster.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mirror-mail-5650",
+      "card_sets": [
+        {
+          "set_name": "Photon Shockwave",
+          "set_code": "PHSW-EN067",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 67232306,
+          "image_url": "https://images.ygoprodeck.com/images/cards/67232306.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/67232306.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/67232306.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31736,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-11-10",
+          "ocg_date": "2011-07-16",
+          "konami_id": 9785,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 14457896,
+      "name": "Parasite Paranoid",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "(Quick Effect): You can target 1 face-up monster on the field; equip this card from your hand to that target. The equipped monster becomes an Insect monster, cannot attack Insect monsters, also its effects that activate by targeting an Insect monster(s) are negated. You can only use this effect of \"Parasite Paranoid\" once per turn. If this Equip Card is sent to the GY: You can Special Summon 1 Level 7 or higher Insect monster from your hand, ignoring its Summoning conditions.",
+      "race": "Insect",
+      "atk": 500,
+      "def": 300,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Parasite",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/parasite-paranoid-8943",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Ancient Millennium",
+          "set_code": "LED2-EN007",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.72"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel Tournament Pack 3",
+          "set_code": "STP3-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-END08",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Trials of the Kingdom",
+          "set_code": "SBTK-EN028",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "18.58"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14457896,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14457896.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14457896.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14457896.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "3.45",
+          "amazon_price": "24.95",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 132560,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-22",
+          "ocg_date": "2017-11-11",
+          "konami_id": 13468,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 84530620,
+      "name": "Pahunder",
+      "typeline": [
+        "Thunder",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can Normal Summon 1 Level 4 LIGHT Thunder-Type monster from your hand, except \"Pahunder\", as an additional Normal Summon.",
+      "race": "Thunder",
+      "atk": 1300,
+      "def": 600,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pahunder-7090",
+      "card_sets": [
+        {
+          "set_name": "Return of the Duelist",
+          "set_code": "REDU-EN095",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 84530620,
+          "image_url": "https://images.ygoprodeck.com/images/cards/84530620.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/84530620.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/84530620.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "2.00",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70722,
+          "viewsweek": 22,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-08-18",
+          "ocg_date": "2012-05-21",
+          "konami_id": 10304,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 54514594,
+      "name": "Volcanic Hammerer",
+      "typeline": [
+        "Pyro",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, you can inflict damage to your opponent equal to the number of \"Volcanic\" monsters in your Graveyard x 200. If you activate this effect, this card cannot attack during this turn.",
+      "race": "Pyro",
+      "atk": 2400,
+      "def": 1500,
+      "level": 5,
+      "attribute": "FIRE",
+      "archetype": "Volcanic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/volcanic-hammerer-4642",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Duel Academy Box",
+          "set_code": "SGX1-ENH09",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54514594,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54514594.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54514594.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54514594.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76513,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7104,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

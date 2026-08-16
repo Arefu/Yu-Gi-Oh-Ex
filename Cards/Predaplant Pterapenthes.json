@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 26308721,
+      "name": "Predaplant Pterapenthes",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card inflicts battle damage to your opponent: You can target 1 face-up monster your opponent controls; place 1 Predator Counter on it, and if it is Level 2 or higher, it becomes Level 1 as long as it has a Predator Counter. Once per turn: You can target 1 monster your opponent controls with a Level less than or equal to this card's; take control of it until the End Phase.",
+      "race": "Plant",
+      "atk": 300,
+      "def": 2100,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Predaplant",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/predaplant-pterapenthes-2262",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "1.94"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26308721,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26308721.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26308721.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26308721.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.57",
+          "ebay_price": "2.50",
+          "amazon_price": "11.50",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47610,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 3,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12832,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

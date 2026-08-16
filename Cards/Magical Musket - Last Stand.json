@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 29628180,
+      "name": "Magical Musket - Last Stand",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "When your opponent activates a Spell/Trap Card while you control a \"Magical Musket\" monster: Negate the activation, and if you do, destroy that card. You can only activate 1 \"Magical Musket - Last Stand\" per turn.",
+      "race": "Counter",
+      "archetype": "Magical Musket",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/magical-musket-last-stand-8799",
+      "card_sets": [
+        {
+          "set_name": "Spirit Warriors",
+          "set_code": "SPWA-EN028",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29628180,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29628180.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29628180.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29628180.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.05",
+          "tcgplayer_price": "2.48",
+          "ebay_price": "5.49",
+          "amazon_price": "3.86",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Magibullet - Deadman's Burst",
+          "views": 126859,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-11-16",
+          "ocg_date": "2017-08-11",
+          "konami_id": 13327,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

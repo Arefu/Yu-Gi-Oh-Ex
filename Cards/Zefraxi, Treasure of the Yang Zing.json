@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 21495657,
+      "name": "Zefraxi, Treasure of the Yang Zing",
+      "typeline": [
+        "Wyrm",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"Yang Zing\" and \"Zefra\" monsters. This effect cannot be negated.\n\n[ Monster Effect ] \nIf this card is Pendulum Summoned, or Special Summoned from the Main Deck: You can target 1 \"Yang Zing\" or \"Zefra\" monster you control, except \"Zefraxi, Treasure of the Yang Zing\"; that face-up monster is treated as a Tuner this turn, also place this card on the bottom of the Deck when it leaves the field. You can only use this effect of \"Zefraxi, Treasure of the Yang Zing\" once per turn.",
+      "race": "Wyrm",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"Yang Zing\" and \"Zefra\" monsters. This effect cannot be negated.",
+      "monster_desc": "If this card is Pendulum Summoned, or Special Summoned from the Main Deck: You can target 1 \"Yang Zing\" or \"Zefra\" monster you control, except \"Zefraxi, Treasure of the Yang Zing\"; that face-up monster is treated as a Tuner this turn, also place this card on the bottom of the Deck when it leaves the field. You can only use this effect of \"Zefraxi, Treasure of the Yang Zing\" once per turn.",
+      "atk": 1500,
+      "def": 0,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Yang Zing",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zefraxi-treasure-of-the-yang-zing-1849",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN024",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN071",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.33"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN046",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21495657,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21495657.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21495657.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21495657.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "1.95",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 84931,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11699,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

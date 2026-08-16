@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 39732186,
+      "name": "Prohibit Snake",
+      "typeline": [
+        "Cyberse",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "At the start of the Damage Step, if your Cyberse Link Monster battles an opponent's monster: You can send this card from your hand to the GY; return that opponent's monster to the hand. When your Cyberse monster destroys an opponent's monster by battle and sends it to the GY, while this card is in your GY: You can banish 1 card from your GY, then target 1 Level 4 or lower Cyberse monster in your GY; add it to your hand. You can only use each effect of \"Prohibit Snake\" once per turn.",
+      "race": "Cyberse",
+      "atk": 500,
+      "def": 1000,
+      "level": 2,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prohibit-snake-9596",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN038",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.31"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39732186,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39732186.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39732186.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39732186.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.19",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Profibit Snake",
+          "views": 82016,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-22",
+          "ocg_date": "2018-06-23",
+          "konami_id": 13873,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

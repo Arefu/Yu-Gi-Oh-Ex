@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": 1621413,
+      "name": "Dark Requiem Xyz Dragon",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "3 Level 5 monsters\nIf this card has \"Dark Rebellion Xyz Dragon\" as material, it gains these effects.\n● Once per turn: You can detach 1 material from this card, then target 1 face-up monster your opponent controls; change its ATK to 0, and if you do, this card gains ATK equal to that monster's original ATK.\n● When your opponent activates a monster effect (Quick Effect): You can detach 1 material from this card; negate the activation, and if you do, destroy that card, then you can Special Summon 1 Xyz Monster from your GY.",
+      "race": "Dragon",
+      "atk": 3000,
+      "def": 2500,
+      "level": 5,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dark-requiem-xyz-dragon-142",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN099",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.39"
+        },
+        {
+          "set_name": "Invasion: Vengeance",
+          "set_code": "INOV-EN049",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Hero Decks",
+          "set_code": "LEHD-ENC34",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.22"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15",
+          "set_code": "OP15-EN002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT002",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1621413,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1621413.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1621413.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1621413.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "15.99",
+          "amazon_price": "2.14",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 413438,
+          "viewsweek": 63,
+          "upvotes": 67,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-11-03",
+          "ocg_date": "2016-07-09",
+          "konami_id": 12639,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

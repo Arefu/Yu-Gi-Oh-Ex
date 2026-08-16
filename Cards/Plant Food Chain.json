@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 54451023,
+      "name": "Plant Food Chain",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 Plant-Type monster you control; equip this card to that target. It gains 500 ATK. If this card is destroyed by a card effect while equipped: You can target 1 Plant-Type monster in your Graveyard; Special Summon that target.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/plant-food-chain-4633",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN212",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN212",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN076",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54451023,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54451023.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54451023.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54451023.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "5.00",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58457,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7931,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

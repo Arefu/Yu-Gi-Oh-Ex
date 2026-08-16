@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 16469012,
+      "name": "Teva",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Tribute Summoned successfully, your opponent cannot declare an attack during his/her next turn.",
+      "race": "Warrior",
+      "atk": 2000,
+      "def": 1500,
+      "level": 5,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/teva-1417",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! Capsule Monster Coliseum promotional cards",
+          "set_code": "CMC-EN003",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.59"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16469012,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16469012.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16469012.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16469012.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.29",
+          "tcgplayer_price": "4.27",
+          "ebay_price": "4.99",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 16005,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-11-26",
+          "ocg_date": "2004-07-29",
+          "konami_id": 5933,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

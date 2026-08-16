@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 5128859,
+      "name": "Elemental HERO Marine Neos",
+      "typeline": [
+        "Warrior",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Elemental HERO Neos\" + \"Neo-Spacian Marine Dolphin\"\nMust first be Special Summoned (from your Extra Deck) by shuffling the above cards you control into the Deck. (You do not use \"Polymerization\".) Once per turn: You can destroy 1 random card in your opponent's hand.",
+      "race": "Warrior",
+      "atk": 2800,
+      "def": 2300,
+      "level": 8,
+      "attribute": "WATER",
+      "archetype": "Elemental HERO",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elemental-hero-marine-neos-454",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "11.97"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5128859,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5128859.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5128859.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5128859.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "1.62",
+          "ebay_price": "4.25",
+          "amazon_price": "13.04",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 80316,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7175,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

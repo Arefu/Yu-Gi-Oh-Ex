@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 4145852,
+      "name": "Zoodiac Ramram",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by battle or card effect: You can target 1 \"Zoodiac\" monster in your GY, except \"Zoodiac Ramram\"; Special Summon it. An Xyz Monster whose original Type is Beast-Warrior and has this card as material gains this effect.\r\n● When your opponent activates a Trap Card or effect that targets this card (Quick Effect): You can detach 1 material from this card; negate the activation.",
+      "race": "Beast-Warrior",
+      "atk": 400,
+      "def": 2000,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Zoodiac",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zoodiac-ramram-371",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN185",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 5",
+          "set_code": "OP05-EN008",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 4145852,
+          "image_url": "https://images.ygoprodeck.com/images/cards/4145852.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/4145852.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/4145852.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.28",
+          "ebay_price": "3.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Zoodiac Ram",
+          "views": 229264,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 10,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12753,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

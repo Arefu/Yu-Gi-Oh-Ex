@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 66023650,
+      "name": "Folgo, Justice Fur Hire",
+      "typeline": [
+        "Beast",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "3 monsters with different Types\r\nCannot be used as Link Material. If this card is Link Summoned: You can Special Summon 1 monster \"Fur Hire\" with a different Type from the 3 monsters used for the Link Summon, from your Deck in Defense Position. If a card(s) your opponent controls is destroyed by battle or card effect: You can draw 1 card, then if you control 3 or more monsters \"Fur Hire\" with different names, draw 2 additional cards. You can only use each effect of \"Folgo, Justice Fur Hire\" once per turn.",
+      "race": "Beast",
+      "atk": 2400,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Fur Hire",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/folgo-justice-fur-hire-9605",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN190",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66023650,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66023650.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66023650.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66023650.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.54",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 244727,
+          "viewsweek": 0,
+          "upvotes": 21,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13934,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

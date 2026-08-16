@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 18897163,
+      "name": "D/D/D Super Doom King Dark Armageddon",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "XYZ Pendulum Effect Monster",
+      "humanReadableCardType": "Xyz Pendulum Effect Monster",
+      "frameType": "xyz_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn, if you have a \"D/D\" card in your other Pendulum Zone: You can Special Summon 1 \"D/D/D\" Xyz Monster from your Extra Deck, except \"D/D/D Super Doom King Dark Armageddon\".\n\n[ Monster Effect ] \n2 Level 8 \"D/D/D\" monsters\r\nCannot be Pendulum Summoned. When this card is Xyz Summoned: You can attach 1 face-up \"D/D\" Pendulum Monster from your Extra Deck to this card as material. Pendulum Monsters you control cannot be destroyed by card effects. Once per turn: You can detach 1 material from this card, then target monsters your opponent controls, equal to the number of Pendulum Monsters you control; destroy them. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.",
+      "race": "Fiend",
+      "pend_desc": "Once per turn, if you have a \"D/D\" card in your other Pendulum Zone: You can Special Summon 1 \"D/D/D\" Xyz Monster from your Extra Deck, except \"D/D/D Super Doom King Dark Armageddon\".",
+      "monster_desc": "2 Level 8 \"D/D/D\" monsters\r\nCannot be Pendulum Summoned. When this card is Xyz Summoned: You can attach 1 face-up \"D/D\" Pendulum Monster from your Extra Deck to this card as material. Pendulum Monsters you control cannot be destroyed by card effects. Once per turn: You can detach 1 material from this card, then target monsters your opponent controls, equal to the number of Pendulum Monsters you control; destroy them. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.",
+      "atk": 3500,
+      "def": 3000,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-super-doom-king-dark-armageddon-8901",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Light's Revenge",
+          "set_code": "BLLR-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.65"
+        },
+        {
+          "set_name": "OTS Tournament Pack 29",
+          "set_code": "OP29-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18897163,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18897163.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18897163.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18897163.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.33",
+          "amazon_price": "4.95",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "D/D/D Superdoom King Darkness Armageddon",
+          "views": 143982,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-07-06",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13133,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

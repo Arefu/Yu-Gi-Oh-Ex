@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 44790889,
+      "name": "Hammer Bounzer",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If your opponent controls a card and you control no cards, you can Normal Summon this card without Tributing. If this card attacks an opponent's monster, as long as you control no Spell/Trap Cards, your opponent cannot activate any Spell/Trap Cards until the end of the Damage Step.",
+      "race": "Warrior",
+      "atk": 2300,
+      "def": 2000,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Bounzer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hammer-bounzer-3814",
+      "card_sets": [
+        {
+          "set_name": "Galactic Overlord",
+          "set_code": "GAOV-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 44790889,
+          "image_url": "https://images.ygoprodeck.com/images/cards/44790889.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/44790889.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/44790889.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "2.95",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 23425,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-04-28",
+          "ocg_date": "2012-02-18",
+          "konami_id": 10032,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

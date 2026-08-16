@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 14512825,
+      "name": "Pumpkin Carriage",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "\"Prinzessin\" you control can attack directly. Your opponent cannot target \"Golden Castle of Stromberg\" you control with card effects, also it cannot be destroyed by card effects.",
+      "race": "Plant",
+      "atk": 0,
+      "def": 300,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Golden Castle of Stromberg",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pumpkin-carriage-9516",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.05"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 14512825,
+          "image_url": "https://images.ygoprodeck.com/images/cards/14512825.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/14512825.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/14512825.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.95",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 46281,
+          "viewsweek": 21,
+          "upvotes": 74,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13803,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

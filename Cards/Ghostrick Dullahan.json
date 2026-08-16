@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 46895036,
+      "name": "Ghostrick Dullahan",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 1 monsters\nThis card gains 200 ATK for each \"Ghostrick\" card you control. Once per turn, during either player's turn: You can detach 1 Xyz Material from this card, then target 1 face-up monster on the field; halve its ATK, until the end of this turn. If this card is sent to the Graveyard: You can target 1 other \"Ghostrick\" card in your Graveyard; add that target to your hand.",
+      "race": "Fiend",
+      "atk": 1000,
+      "def": 0,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Ghostrick",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghostrick-dullahan-3995",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN222",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN139",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.27"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN053",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46895036,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46895036.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46895036.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46895036.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.50",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 209945,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10939,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

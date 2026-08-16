@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 22842214,
+      "name": "Sea Lancer",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can target any number of your banished Fish, Sea Serpent, and Aqua-Type monsters; equip them to this card. This effect can only be used once while this card is face-up on the field. If this face-up card on the field would be destroyed, you can destroy 1 of those cards, instead. This card gains 1000 ATK while equipped with a monster(s) by this effect.",
+      "race": "Beast-Warrior",
+      "atk": 1300,
+      "def": 1000,
+      "level": 5,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sea-lancer-1965",
+      "card_sets": [
+        {
+          "set_name": "Generation Force",
+          "set_code": "GENF-EN081",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22842214,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22842214.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22842214.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22842214.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.34",
+          "tcgplayer_price": "0.37",
+          "ebay_price": "0.99",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 32144,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-08-06",
+          "ocg_date": "2012-10-13",
+          "konami_id": 9841,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

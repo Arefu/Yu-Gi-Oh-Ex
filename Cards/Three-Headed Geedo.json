@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 78423643,
+      "name": "Three-Headed Geedo",
+      "typeline": [
+        "Fiend",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A three-headed nocturnal monster that is absolutely ruthless when fighting.",
+      "race": "Fiend",
+      "atk": 1200,
+      "def": 1400,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/three-headed-geedo-6590",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.75"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78423643,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78423643.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78423643.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78423643.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 122210,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2002-06-20",
+          "konami_id": 4752,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

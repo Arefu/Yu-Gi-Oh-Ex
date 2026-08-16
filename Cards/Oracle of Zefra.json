@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 32354768,
+      "name": "Oracle of Zefra",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "When this card is activated: Add 1 \"Zefra\" monster from your Deck to your hand. When you Ritual Summon using a \"Zefra\" monster, or Special Summon using a \"Zefra\" monster as Material, you can activate these effects depending on the monster Summoned, once per turn per effect:\n● Ritual: Shuffle 1 monster on the field into the Deck.\n● Fusion: Special Summon 1 monster from your hand.\n● Synchro: Choose 1 monster from your Deck and place it on top of your Deck.\n● Xyz: Draw 1 card, then discard 1 card.\nYou can only activate 1 \"Oracle of Zefra\" per turn.",
+      "race": "Field",
+      "archetype": "Zefra",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/oracle-of-zefra-2748",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN060",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN073",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.31"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN050",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32354768,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32354768.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32354768.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32354768.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "8.59",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 89101,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11735,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 77421977,
+      "name": "A.I. Shadow",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Activate this card by targeting 1 \"@Ignister\" monster you control. That monster gains 800 ATK, also all monsters your opponent controls must attack that monster you control, if able. If this face-up card in its owner's Spell & Trap Zone has left the field because of an opponent's effect, and is now in the GY or banished: Draw 1 card. You can only use this effect of \"A.I. Shadow\" once per turn.",
+      "race": "Continuous",
+      "archetype": "@Ignister",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/a-i-shadow-10605",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN029",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.85"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 77421977,
+          "image_url": "https://images.ygoprodeck.com/images/cards/77421977.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/77421977.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/77421977.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44974,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011069,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14878,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

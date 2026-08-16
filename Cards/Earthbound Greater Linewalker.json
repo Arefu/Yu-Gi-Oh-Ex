@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 45836982,
+      "name": "Earthbound Greater Linewalker",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a Synchro Monster(s) and have a Synchro Monster(s) in your GY: You can Special Summon this card from your hand. During your Main Phase: You can add 1 \"Earthbound Immortal\" monster from your Deck or GY to your hand. If an \"Earthbound Immortal\" monster is Normal Summoned while this monster is on the field: You can make your opponent's LP 3000. You can only use each effect of \"Earthbound Greater Linewalker\" once per turn.",
+      "race": "Fiend",
+      "atk": 2900,
+      "def": 2900,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Earthbound",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/earthbound-greater-linewalker-10340",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.55"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN049",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.21"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN050",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45836982,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45836982.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45836982.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45836982.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.07",
+          "ebay_price": "1.89",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Earthbound Overwalker",
+          "views": 125398,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100422023,
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14591,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

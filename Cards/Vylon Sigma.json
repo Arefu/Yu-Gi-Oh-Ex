@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 48370501,
+      "name": "Vylon Sigma",
+      "typeline": [
+        "Fairy",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 LIGHT Tuner + 1 or more non-Tuner LIGHT monsters\nWhen this card declares an attack, if it is the only monster you control: You can equip 1 Equip Spell Card from your Deck to this face-up card.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 1000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Vylon",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vylon-sigma-4129",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 5a",
+          "set_code": "DT05-EN039",
+          "set_rarity": "Duel Terminal Super Parallel Rare",
+          "set_rarity_code": "(DSPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 5: Steelswarm Invasion",
+          "set_code": "HA05-EN024",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48370501,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48370501.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48370501.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48370501.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.29",
+          "tcgplayer_price": "0.48",
+          "ebay_price": "30.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30035,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-05-29",
+          "ocg_date": "2010-04-27",
+          "konami_id": 8916,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

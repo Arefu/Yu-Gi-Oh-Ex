@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 56980148,
+      "name": "Dinowrestler Systegosaur",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned: You can add 1 \"Dinowrestler\" monster or 1 \"World Dino Wrestling\" from your Deck to your hand. During the End Phase, if this card is in the GY because it was sent there this turn, and your opponent controls more monsters than you do: You can target 1 \"Dinowrestler\" monster in your GY, except \"Dinowrestler Systegosaur\"; Special Summon it. You can only use each effect of \"Dinowrestler Systegosaur\" once per turn.",
+      "race": "Dinosaur",
+      "atk": 1900,
+      "def": 0,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Dinowrestler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinowrestler-systegosaur-9609",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN159",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN008",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 56980148,
+          "image_url": "https://images.ygoprodeck.com/images/cards/56980148.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/56980148.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/56980148.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dinowrestler Systego",
+          "views": 108155,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13895,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

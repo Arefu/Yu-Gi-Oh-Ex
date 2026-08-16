@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 59123937,
+      "name": "D/D Vice Typhon",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is Normal Summoned: You can Tribute 1 \"D/D\" monster; Special Summon 1 Level 7 \"D/D/D\" monster from your Deck. During your Main Phase, if this card is in the GY because it was sent there this turn: You can Fusion Summon 1 Level 8 or higher \"D/D/D\" Fusion Monster from your Extra Deck, by banishing Fusion Materials listed on it from your GY, including this card. You can only use each effect of \"D/D Vice Typhon\" once per turn.",
+      "race": "Fiend",
+      "atk": 2300,
+      "def": 2800,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-vice-typhon-8442",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59123937,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59123937.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59123937.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59123937.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.75",
+          "amazon_price": "5.86",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 171407,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13056,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

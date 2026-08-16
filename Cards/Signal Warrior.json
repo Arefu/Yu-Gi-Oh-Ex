@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 9634146,
+      "name": "Signal Warrior",
+      "typeline": [
+        "Warrior",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nOnce per turn, during the Standby Phase: Place 1 Signal Counter on each face-up card in the Field Zone, also place 1 on this card. This card with a Signal Counter(s) cannot be destroyed by battle or your opponent's card effects. Once per turn: You can remove 4, 7, or 10 Signal Counters from anywhere on the field; apply this effect, depending on the number removed.\r\n● 4: Inflict 800 damage to your opponent. ● 7: Draw 1 card. ● 10: Destroy 1 card on the field.",
+      "race": "Warrior",
+      "atk": 2400,
+      "def": 1000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/signal-warrior-9920",
+      "card_sets": [
+        {
+          "set_name": "Duel Power",
+          "set_code": "DUPO-EN006",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 9634146,
+          "image_url": "https://images.ygoprodeck.com/images/cards/9634146.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/9634146.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/9634146.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.27",
+          "ebay_price": "0.99",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44393,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-04-03",
+          "ocg_date": "2018-12-22",
+          "konami_id": 14218,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

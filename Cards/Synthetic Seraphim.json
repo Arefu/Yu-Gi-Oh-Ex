@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 16946849,
+      "name": "Synthetic Seraphim",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Each time a Counter Trap Card is activated, immediately after it resolves, Special Summon 1 \"Synthetic Seraphim Token\" (Fairy/LIGHT/Level 1/ATK 300/DEF 300).",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/synthetic-seraphim-1460",
+      "card_sets": [
+        {
+          "set_name": "Power of the Duelist",
+          "set_code": "POTD-EN059",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN034",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16946849,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16946849.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16946849.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16946849.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45512,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-08-16",
+          "ocg_date": "2006-05-18",
+          "konami_id": 6711,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

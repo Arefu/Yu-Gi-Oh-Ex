@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 95372220,
+      "name": "Flash Charge Dragon",
+      "typeline": [
+        "Dragon",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ Dragon monsters\r\nYou cannot Summon/Set monsters to a zone this card points to. Once per turn, if a monster(s) is Normal or Special Summoned, to a zone(s) this card points to (except during the Damage Step): You can destroy 1 monster this card points to, and if you do, inflict 500 damage to your opponent. When a card or effect is activated that targets this face-up card (Quick Effect): You can Tribute 1 monster; negate the activation. ",
+      "race": "Dragon",
+      "atk": 2300,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "linkval": 3,
+      "linkmarkers": [
+        "Top-Left",
+        "Top",
+        "Top-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flash-charge-dragon-9513",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Chapter 1",
+          "set_code": "BLC1-EN114",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Relentless Revenge",
+          "set_code": "BLRR-EN045",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "2.81"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95372220,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95372220.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95372220.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95372220.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "5.74",
+          "amazon_price": "2.50",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 40883,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-06-28",
+          "ocg_date": "2018-05-12",
+          "konami_id": 13838,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 48372950,
+      "name": "Dinowrestler Eskrimamenchi",
+      "typeline": [
+        "Dinosaur",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control a \"Dinowrestler\" monster, you can Normal Summon this card without Tributing. During your turn, if your opponent Special Summons a monster(s) while this card is in your GY (except during the Damage Step): You can target 1 Level 4 or lower \"Dinowrestler\" monster in your GY; Special Summon it, then add this card to your hand. You can only use this effect of \"Dinowrestler Eskrimamenchi\" once per turn.",
+      "race": "Dinosaur",
+      "atk": 2200,
+      "def": 0,
+      "level": 6,
+      "attribute": "EARTH",
+      "archetype": "Dinowrestler",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dinowrestler-eskrimamenchi-10062",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN052",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.04"
+        },
+        {
+          "set_name": "Dark Neostorm",
+          "set_code": "DANE-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48372950,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48372950.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48372950.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48372950.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 65844,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-05-02",
+          "ocg_date": "2019-01-12",
+          "konami_id": 14256,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

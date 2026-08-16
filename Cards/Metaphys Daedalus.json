@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 45960523,
+      "name": "Metaphys Daedalus",
+      "typeline": [
+        "Wyrm",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Special Summoned by the effect of a \"Metaphys\" monster: You can banish all other face-up Special Summoned monsters on the field. If this card is banished, during the Standby Phase of the next turn: You can shuffle this banished card into the Deck; banish 1 \"Metaphys\" card from your Deck, except \"Metaphys Daedalus\".",
+      "race": "Wyrm",
+      "atk": 2600,
+      "def": 1500,
+      "level": 7,
+      "attribute": "LIGHT",
+      "archetype": "Metaphys",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/metaphys-daedalus-8834",
+      "card_sets": [
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN024",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 45960523,
+          "image_url": "https://images.ygoprodeck.com/images/cards/45960523.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/45960523.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/45960523.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "4.98",
+          "amazon_price": "0.60",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 94057,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13240,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

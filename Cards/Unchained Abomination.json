@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 29479265,
+      "name": "Unchained Abomination",
+      "typeline": [
+        "Fiend",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters including a Link Monster\r\nIf a card(s) on the field is destroyed by card effect, except by \"Unchained Abomination\" (except during the Damage Step): You can target 1 card on the field; destroy it. When another monster is destroyed by battle: You can target 1 card on the field; destroy it. During the End Phase: You can target 1 card on the field; destroy it. You can only use each effect of \"Unchained Abomination\" once per turn.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "DARK",
+      "archetype": "Unchained",
+      "linkval": 4,
+      "linkmarkers": [
+        "Top",
+        "Bottom-Left",
+        "Bottom",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/unchained-abomination-10406",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN175",
+          "set_rarity": "Prismatic Secret Rare",
+          "set_rarity_code": "(PScR)",
+          "set_price": "4.94"
+        },
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Maestros",
+          "set_code": "MAMS-EN124",
+          "set_rarity": "Starlight Rare",
+          "set_rarity_code": "(StR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Maestros",
+          "set_code": "MAMS-EN124",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 22",
+          "set_code": "OP22-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29479265,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29479265.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29479265.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29479265.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.58",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "5.45",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Hakai Souohshin Raigou",
+          "views": 872108,
+          "viewsweek": 42,
+          "upvotes": 22,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010045,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14672,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

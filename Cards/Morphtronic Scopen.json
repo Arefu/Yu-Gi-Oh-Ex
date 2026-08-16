@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 10591919,
+      "name": "Morphtronic Scopen",
+      "typeline": [
+        "Machine",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "● While in Attack Position: Once per turn, you can Special Summon 1 Level 4 \"Morphtronic\" monster from your hand. Destroy it during the End Phase.\n● While in Defense Position: While this card is in face-up Defense Position, it is Level 4.",
+      "race": "Machine",
+      "atk": 800,
+      "def": 1400,
+      "level": 3,
+      "attribute": "LIGHT",
+      "archetype": "Morphtronic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/morphtronic-scopen-917",
+      "card_sets": [
+        {
+          "set_name": "Raging Battle",
+          "set_code": "RGBT-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10591919,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10591919.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10591919.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10591919.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.57",
+          "tcgplayer_price": "0.68",
+          "ebay_price": "2.07",
+          "amazon_price": "1.50",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81391,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-05-02",
+          "ocg_date": "2009-02-14",
+          "konami_id": 8168,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

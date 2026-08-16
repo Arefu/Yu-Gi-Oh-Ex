@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 26834022,
+      "name": "Disarm",
+      "type": "Trap Card",
+      "humanReadableCardType": "Counter Trap",
+      "frameType": "trap",
+      "desc": "Return 1 \"Gladiator Beast\" card from your hand to the Deck, and negate the activation and effect of a Spell Card, and destroy it.",
+      "race": "Counter",
+      "archetype": "Gladiator Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/disarm-2297",
+      "card_sets": [
+        {
+          "set_name": "Gladiator's Assault",
+          "set_code": "GLAS-EN071",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 26834022,
+          "image_url": "https://images.ygoprodeck.com/images/cards/26834022.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/26834022.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/26834022.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.25",
+          "ebay_price": "1.25",
+          "amazon_price": "1.03",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47844,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-11-14",
+          "ocg_date": "2007-07-21",
+          "konami_id": 7320,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

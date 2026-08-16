@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 2819435,
+      "name": "Pacifis, the Phantasm City",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "(This card's name is always treated as \"Umi\".)\r\nYou cannot Normal or Special Summon Effect Monsters the turn you activate either of this card's effects (even if this card leaves the field). Once per turn, if you Normal or Special Summon exactly 1 Normal Monster (and no other cards): Add 1 \"Phantasm Spiral\" card from your Deck to your hand. If your opponent activates a card or effect (except during the Damage Step), and you control no Tokens: You can Special Summon 1 \"Phantasm Spiral Token\" (Wyrm-Type/WATER/Level 8/ATK 2000/DEF 2000).",
+      "race": "Field",
+      "archetype": "Phantasm Spiral",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/pacifis-the-phantasm-city-8393",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2819435,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2819435.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2819435.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2819435.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.02",
+          "tcgplayer_price": "0.58",
+          "ebay_price": "2.00",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Pacifis, City of Mythic Radiance",
+          "views": 185404,
+          "viewsweek": 0,
+          "upvotes": 24,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Umi",
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12970,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

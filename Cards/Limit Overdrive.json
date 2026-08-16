@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 35014241,
+      "name": "Limit Overdrive",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Return 1 Tuner Synchro Monster and 1 non-Tuner Synchro Monster you control to the Extra Deck; Special Summon 1 Synchro Monster from your Extra Deck that has a Level equal to the combined Levels the 2 monsters had on the field, ignoring its Summoning conditions. You can only activate 1 \"Limit Overdrive\" per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/limit-overdrive-2969",
+      "card_sets": [
+        {
+          "set_name": "Synchron Extreme Structure Deck",
+          "set_code": "SDSE-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.17"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35014241,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35014241.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35014241.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35014241.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.81",
+          "ebay_price": "2.75",
+          "amazon_price": "4.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Limitover Drive",
+          "views": 66616,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-27",
+          "ocg_date": "2014-12-06",
+          "konami_id": 11624,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 38325384,
+      "name": "Mythical Bestiary",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Send the top 2 cards of your Deck to the GY, then target 1 face-up card on the field that you can place a Spell Counter on; place up to 2 Spell Counters on it. If this card in its owner's possession is destroyed by an opponent's card effect: You can Special Summon 1 monster from your Deck that you can place a Spell Counter on, and if you do, place up to 2 Spell Counters on it. You can only activate 1 \"Mythical Bestiary\" per turn.",
+      "race": "Quick-Play",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mythical-bestiary-8817",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN058",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10",
+          "set_code": "OP10-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 10 (POR)",
+          "set_code": "OP10-PT024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 38325384,
+          "image_url": "https://images.ygoprodeck.com/images/cards/38325384.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/38325384.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/38325384.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.84",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 68362,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13429,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 95568112,
+      "name": "Rain Bozu",
+      "typeline": [
+        "Fairy",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nOnce per turn: You can target 1 face-up monster you control; it gains ATK equal to the difference between the number of cards in the Extra Decks x 100, until the end of this turn (even if this card leaves the field).\n\n[ Monster Effect ] \nGains ATK during your turn only, and gains DEF during your opponent's turn only, each equal to the difference between the number of cards in the Extra Decks x 200. If this card attacks, it is changed to Defense Position at the end of the Battle Phase. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.",
+      "race": "Fairy",
+      "pend_desc": "Once per turn: You can target 1 face-up monster you control; it gains ATK equal to the difference between the number of cards in the Extra Decks x 100, until the end of this turn (even if this card leaves the field).",
+      "monster_desc": "Gains ATK during your turn only, and gains DEF during your opponent's turn only, each equal to the difference between the number of cards in the Extra Decks x 200. If this card attacks, it is changed to Defense Position at the end of the Battle Phase. If this card in the Monster Zone is destroyed: You can place this card in your Pendulum Zone.",
+      "atk": 0,
+      "def": 0,
+      "level": 7,
+      "attribute": "LIGHT",
+      "scale": 8,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/rain-bozu-9553",
+      "card_sets": [
+        {
+          "set_name": "2021 Tin of Ancient Battles",
+          "set_code": "MP21-EN090",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.95"
+        },
+        {
+          "set_name": "Eternity Code",
+          "set_code": "ETCO-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95568112,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95568112.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95568112.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95568112.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 28018,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-04-30",
+          "ocg_date": "2018-05-27",
+          "konami_id": 13884,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 32298781,
+      "name": "Triangle Power",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Increase the original ATK and DEF of all face-up Level 1 Normal Monsters (except Tokens) on your side of the field by 2000 points until the End Phase. Destroy all Level 1 Normal Monsters on your side of the field during the End Phase.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/triangle-power-2744",
+      "card_sets": [
+        {
+          "set_name": "Ancient Sanctuary",
+          "set_code": "AST-098",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.04"
+        },
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN211",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32298781,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32298781.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32298781.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32298781.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "1.00",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66116,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-06-01",
+          "ocg_date": "2004-02-26",
+          "konami_id": 6060,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

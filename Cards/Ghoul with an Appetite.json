@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 95265975,
+      "name": "Ghoul with an Appetite",
+      "typeline": [
+        "Zombie",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "''A monster with a heavy appetite that has never been satisfied.''",
+      "race": "Zombie",
+      "atk": 1600,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Recolored counterpart",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghoul-with-an-appetite-7931",
+      "card_images": [
+        {
+          "id": 95265975,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95265975.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95265975.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95265975.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.00",
+          "tcgplayer_price": "0.00",
+          "ebay_price": "5.00",
+          "amazon_price": "6.39",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 13882,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "OCG",
+            "Master Duel"
+          ],
+          "ocg_date": "2000-01-27",
+          "konami_id": 4602,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

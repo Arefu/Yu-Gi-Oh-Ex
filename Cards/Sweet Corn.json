@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 74983881,
+      "name": "Sweet Corn",
+      "typeline": [
+        "Plant",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during your Main Phase 2: You can pay 500 Life Points; Special Summon 1 \"Maize Token\" (Plant-Type/EARTH/Level 1/ATK 0/DEF 0).",
+      "race": "Plant",
+      "atk": 0,
+      "def": 0,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sweet-corn-6308",
+      "card_sets": [
+        {
+          "set_name": "Order of Chaos",
+          "set_code": "ORCS-EN092",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74983881,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74983881.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74983881.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74983881.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25664,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-01-14",
+          "ocg_date": "2009-12-19",
+          "konami_id": 8857,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

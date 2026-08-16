@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 57777714,
+      "name": "Ritual Beast Tamer Zeframpilica",
+      "typeline": [
+        "Psychic",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"Ritual Beast\" and \"Zefra\" monsters. This effect cannot be negated.\n\n[ Monster Effect ] \nWhen this card is Normal or Pendulum Summoned: You can target 1 \"Ritual Beast\" or \"Zefra\" monster in your Graveyard, except \"Ritual Beast Tamer Zeframpilica\"; Special Summon it, but destroy it during the End Phase. You can only Special Summon \"Ritual Beast Tamer Zeframpilica(s)\" once per turn.",
+      "race": "Psychic",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"Ritual Beast\" and \"Zefra\" monsters. This effect cannot be negated.",
+      "monster_desc": "When this card is Normal or Pendulum Summoned: You can target 1 \"Ritual Beast\" or \"Zefra\" monster in your Graveyard, except \"Ritual Beast Tamer Zeframpilica\"; Special Summon it, but destroy it during the End Phase. You can only Special Summon \"Ritual Beast Tamer Zeframpilica(s)\" once per turn.",
+      "atk": 1000,
+      "def": 1500,
+      "level": 3,
+      "attribute": "WIND",
+      "archetype": "Ritual Beast",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ritual-beast-tamer-zeframpilica-4918",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN048",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 57777714,
+          "image_url": "https://images.ygoprodeck.com/images/cards/57777714.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/57777714.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/57777714.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.49",
+          "amazon_price": "1.18",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 105611,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11703,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

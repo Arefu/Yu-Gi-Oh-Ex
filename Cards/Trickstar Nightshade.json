@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 86825114,
+      "name": "Trickstar Nightshade",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is sent to the GY as Link Material for the Link Summon of a \"Trickstar\" monster: You can Special Summon this card, but banish it when it leaves the field. You can only use this effect of \"Trickstar Nightshade\" once per turn.",
+      "race": "Fairy",
+      "atk": 100,
+      "def": 0,
+      "level": 1,
+      "attribute": "LIGHT",
+      "archetype": "Trickstar",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/trickstar-nightshade-9095",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN004",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 86825114,
+          "image_url": "https://images.ygoprodeck.com/images/cards/86825114.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/86825114.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/86825114.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 120732,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13561,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

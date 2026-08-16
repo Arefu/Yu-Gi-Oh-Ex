@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 46237548,
+      "name": "Knight of the Red Lotus",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have exactly 3 Normal Monsters in your Graveyard, you can Special Summon this card from your hand by removing from play 2 Normal Monsters from your Graveyard. Once per turn, you can select and Special Summon 1 Level 4 or lower Normal Monster from your Graveyard.",
+      "race": "Warrior",
+      "atk": 2100,
+      "def": 1800,
+      "level": 6,
+      "attribute": "FIRE",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/knight-of-the-red-lotus-3941",
+      "card_sets": [
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN032",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46237548,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46237548.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46237548.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46237548.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.86",
+          "tcgplayer_price": "3.87",
+          "ebay_price": "4.99",
+          "amazon_price": "2.69",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 30322,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8467,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

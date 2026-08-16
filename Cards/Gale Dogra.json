@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 16229315,
+      "name": "Gale Dogra",
+      "typeline": [
+        "Insect",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can pay 3000 Life Points to send 1 monster from your Extra Deck to the Graveyard.",
+      "race": "Insect",
+      "atk": 650,
+      "def": 600,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gale-dogra-1397",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN090",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Cyber Strike",
+          "set_code": "SDCS-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 16229315,
+          "image_url": "https://images.ygoprodeck.com/images/cards/16229315.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/16229315.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/16229315.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "2.99",
+          "amazon_price": "0.87",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 155746,
+          "viewsweek": 22,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "1999-12-01",
+          "konami_id": 4512,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

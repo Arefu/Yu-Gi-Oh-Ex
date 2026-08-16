@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 15495787,
+      "name": "Superheavy Samurai Prepped Defense",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Normal or Flip Summoned, if you have any Spell/Trap Cards in your Graveyard. When you take battle damage, if you have no Spell/Trap Cards in your Graveyard and this card is in your hand: You can Special Summon this card, and if you do, it cannot be destroyed by battle or card effects this turn.",
+      "race": "Machine",
+      "atk": 100,
+      "def": 2100,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-prepped-defense-1333",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN180",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15495787,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15495787.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15495787.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15495787.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 31713,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12117,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 29088922,
+      "name": "Fortune Lady Water",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's ATK/DEF become its Level x 300. Once per turn, during your Standby Phase: Increase this card's Level by 1 (max. 12). If this card is Special Summoned while you control a \"Fortune Lady\" monster except \"Fortune Lady Water\": Draw 2 cards.",
+      "race": "Spellcaster",
+      "atk": -1,
+      "def": -1,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Fortune Lady",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fortune-lady-water-2467",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 11",
+          "set_code": "OP11-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 11 (POR)",
+          "set_code": "OP11-PT016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN010",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29088922,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29088922.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29088922.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29088922.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.44",
+          "ebay_price": "2.00",
+          "amazon_price": "1.68",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 122977,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8445,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

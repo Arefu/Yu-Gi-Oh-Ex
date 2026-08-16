@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 83831356,
+      "name": "Runaway Karakuri",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Select 1 face-up \"Karakuri\" monster on the field. Until the End Phase, it gains 1000 ATK but its effect(s) is negated.",
+      "race": "Quick-Play",
+      "archetype": "Karakuri",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/runaway-karakuri-7033",
+      "card_sets": [
+        {
+          "set_name": "Extreme Victory",
+          "set_code": "EXVC-EN058",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83831356,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83831356.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83831356.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83831356.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 20631,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-04-30",
+          "ocg_date": "2011-02-11",
+          "konami_id": 9529,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

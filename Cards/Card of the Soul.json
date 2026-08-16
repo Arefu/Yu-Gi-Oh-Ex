@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 7044562,
+      "name": "Card of the Soul",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Look at your Deck, and if you do, you can add 1 monster from your Deck to your hand, whose sum of ATK and DEF equals your LP. You can only activate 1 \"Card of the Soul\" per turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/card-of-the-soul-604",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN107",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Dark Illusion",
+          "set_code": "TDIL-EN068",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7044562,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7044562.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7044562.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7044562.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.63",
+          "tcgplayer_price": "7.73",
+          "ebay_price": "1.00",
+          "amazon_price": "4.94",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 88983,
+          "viewsweek": 84,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-04",
+          "ocg_date": "2016-04-09",
+          "konami_id": 12467,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

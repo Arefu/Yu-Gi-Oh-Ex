@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 95026693,
+      "name": "Soul of Fire",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Your opponent draws 1 card. Select 1 Pyro-Type monster from your Deck and remove it from play. Inflict damage to your opponent equal to half the ATK of the removed monster. If you activate this card, you cannot declare an attack this turn.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/soul-of-fire-7909",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN031",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN031",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95026693,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95026693.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95026693.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95026693.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.41",
+          "tcgplayer_price": "0.51",
+          "ebay_price": "4.99",
+          "amazon_price": "1.68",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 58982,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7087,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

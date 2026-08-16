@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 20584712,
+      "name": "SPYRAL Tough",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card's name becomes \"SPYRAL Super Agent\" while it is on the field or in the GY. Once per turn: You can declare 1 type of card (Monster, Spell, or Trap) and target 1 card your opponent controls; reveal the top card of your opponent's Deck, and if you do, destroy the targeted card if the revealed card is the declared type.",
+      "race": "Warrior",
+      "atk": 1900,
+      "def": 1500,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "SPYRAL",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spyral-tough-8550",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 7",
+          "set_code": "OP07-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 7 (POR)",
+          "set_code": "OP07-PT005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN087",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 20584712,
+          "image_url": "https://images.ygoprodeck.com/images/cards/20584712.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/20584712.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/20584712.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "2.95",
+          "amazon_price": "1.13",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 90555,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2017-09-09",
+          "konami_id": 12878,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

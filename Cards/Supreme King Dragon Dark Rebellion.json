@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 42160203,
+      "name": "Supreme King Dragon Dark Rebellion",
+      "typeline": [
+        "Dragon",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 DARK Pendulum Monsters\r\nOnce per turn, before damage calculation, if this card battles an opponent's monster: You can detach 1 material from this card; until the end of this turn, change the ATK of that face-up opponent's monster to 0, and if you do, this card gains ATK equal to the original ATK of that opponent's monster. During the Battle Phase (Quick Effect): You can return this card to the Extra Deck; Special Summon up to 2 face-up \"Supreme King Dragon\" and/or \"Supreme King Gate\" Pendulum Monsters from your Extra Deck in Defense Position.",
+      "race": "Dragon",
+      "atk": 2500,
+      "def": 2000,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Supreme King",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/supreme-king-dragon-dark-rebellion-8561",
+      "card_sets": [
+        {
+          "set_name": "Code of the Duelist",
+          "set_code": "COTD-EN041",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Dragon Decks",
+          "set_code": "LEDD-ENC33",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.48"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 42160203,
+          "image_url": "https://images.ygoprodeck.com/images/cards/42160203.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/42160203.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/42160203.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "1.95",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Supreme King Servant Dragon Dark Rebellion",
+          "views": 332055,
+          "viewsweek": 0,
+          "upvotes": 22,
+          "downvotes": 9,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-08-03",
+          "ocg_date": "2017-04-15",
+          "konami_id": 13080,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

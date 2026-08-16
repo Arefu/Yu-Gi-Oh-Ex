@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 13760677,
+      "name": "P.M. Captor",
+      "typeline": [
+        "Zombie",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhen you Pendulum Summon a Zombie-Type monster(s): You can activate this effect; it cannot be destroyed by battle or card effects this turn.\n\n[ Monster Effect ] \nIf this card destroys a monster by battle: You can target 1 Pendulum Monster in your Graveyard; add it to your hand.",
+      "race": "Zombie",
+      "pend_desc": "When you Pendulum Summon a Zombie-Type monster(s): You can activate this effect; it cannot be destroyed by battle or card effects this turn.",
+      "monster_desc": "If this card destroys a monster by battle: You can target 1 Pendulum Monster in your Graveyard; add it to your hand.",
+      "atk": 1800,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/p-m-captor-1180",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN044",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13760677,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13760677.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13760677.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13760677.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "1.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 12315,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2015-09-19",
+          "konami_id": 11433,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

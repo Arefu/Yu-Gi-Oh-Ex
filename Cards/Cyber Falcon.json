@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 30655537,
+      "name": "Cyber Falcon",
+      "typeline": [
+        "Machine",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A jet-powered hawk that travels at the speed of sound.",
+      "race": "Machine",
+      "atk": 1400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cyber-falcon-2607",
+      "card_sets": [
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.74"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-E047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "7.85"
+        },
+        {
+          "set_name": "Pharaoh's Servant",
+          "set_code": "PSV-EN047",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 30655537,
+          "image_url": "https://images.ygoprodeck.com/images/cards/30655537.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/30655537.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/30655537.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 92295,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-20",
+          "ocg_date": "2000-09-28",
+          "konami_id": 4977,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

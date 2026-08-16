@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "id": 74752631,
+      "name": "Battle Shogun of the Six Samurai",
+      "typeline": [
+        "Warrior",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 Warrior monsters, including a \"Six Samurai\" monster\r\nIf this card is Link Summoned: You can discard 1 card; add 1 card from your Deck to your hand that has an effect that places a Bushido Counter(s). You can only use this effect of \"Battle Shogun of the Six Samurai\" once per turn. Each time a \"Six Samurai\" monster(s) is Normal or Special Summoned to a zone(s) this card points to, place 1 Bushido Counter on this card. Gains 100 ATK for each Bushido Counter on your field.",
+      "race": "Warrior",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "archetype": "Six Samurai",
+      "linkval": 2,
+      "linkmarkers": [
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battle-shogun-of-the-six-samurai-9914",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact Special Edition",
+          "set_code": "CHIM-ENSE2",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.61"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN143",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.01"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74752631,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74752631.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74752631.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74752631.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.84",
+          "tcgplayer_price": "1.22",
+          "ebay_price": "0.99",
+          "amazon_price": "0.52",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Great General of the Six Samurai",
+          "views": 271150,
+          "viewsweek": 0,
+          "upvotes": 21,
+          "downvotes": 9,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-12-05",
+          "ocg_date": "2018-11-23",
+          "konami_id": 14200,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

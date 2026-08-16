@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 48427163,
+      "name": "Lunalight Purple Butterfly",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send this card from your hand or field to the Graveyard, then target 1 \"Lunalight\" monster you control; it gains 1000 ATK until the end of this turn. You can banish this card from your Graveyard; Special Summon 1 \"Lunalight\" monster from your hand. You can only use this effect of \"Lunalight Purple Butterfly\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 1000,
+      "def": 1000,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Lunalight",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/lunalight-purple-butterfly-4135",
+      "card_sets": [
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN009",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48427163,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48427163.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48427163.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48427163.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.25",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "1.00",
+          "amazon_price": "1.28",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 98589,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12281,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

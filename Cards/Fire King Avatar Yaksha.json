@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 66413481,
+      "name": "Fire King Avatar Yaksha",
+      "typeline": [
+        "Beast-Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If a face-up \"Fire King\" monster you control is destroyed by a card effect (except during the Damage Step): You can Special Summon this card from your hand. If this card is destroyed and sent to the Graveyard: You can destroy 1 card in your hand or that you control. You can only use this effect of \"Fire King Avatar Yaksha\" once per turn.",
+      "race": "Beast-Warrior",
+      "atk": 1800,
+      "def": 200,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Fire King",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/fire-king-avatar-yaksha-5576",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN121",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN095",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Fire Kings",
+          "set_code": "SR14-EN006",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 66413481,
+          "image_url": "https://images.ygoprodeck.com/images/cards/66413481.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/66413481.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/66413481.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "3.00",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 130505,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-01-11",
+          "konami_id": 10446,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 7489323,
+      "name": "Milus Radiant",
+      "typeline": [
+        "Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "As long as this card remains face-up on the field, increase the ATK of all EARTH monsters by 500 points and decrease the ATK of all WIND monsters by 400 points.",
+      "race": "Beast",
+      "atk": 300,
+      "def": 250,
+      "level": 1,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/milus-radiant-640",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 2",
+          "set_code": "DB2-EN065",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-110",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.38"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-E110",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "4.34"
+        },
+        {
+          "set_name": "Metal Raiders",
+          "set_code": "MRD-EN110",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Starter Deck: Joey",
+          "set_code": "SDJ-014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.71"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 7489323,
+          "image_url": "https://images.ygoprodeck.com/images/cards/7489323.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/7489323.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/7489323.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.18",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.50",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 163259,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-06-26",
+          "ocg_date": "1999-11-18",
+          "konami_id": 4533,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

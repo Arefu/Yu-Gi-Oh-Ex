@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 48605591,
+      "name": "Terminal World NEXT",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Activate this card if your opponent controls 3 or fewer monsters and 3 or fewer Spell/Trap Cards, while you control no other cards. Cards cannot be placed on the field if it would give any player more than 3 monsters or more than 3 Spell/Trap Cards on their field.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/terminal-world-next-4151",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN219",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN067",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 48605591,
+          "image_url": "https://images.ygoprodeck.com/images/cards/48605591.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/48605591.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/48605591.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 12325,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12802,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 70109009,
+      "name": "Ultimate Earthbound Immortal",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If a Normal Summoned/Set \"Earthbound Immortal\" monster is on the field: You can target 1 face-up monster on the field; destroy it. You can only use this effect of \"Ultimate Earthbound Immortal\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Earthbound",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ultimate-earthbound-immortal-10377",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Immortal Destiny",
+          "set_code": "LED5-EN027",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 3",
+          "set_code": "LDS3-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.9"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70109009,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70109009.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70109009.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70109009.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "15.50",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "The Ultimate Earthbound Immortal",
+          "views": 46429,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100422027,
+          "tcg_date": "2019-09-26",
+          "ocg_date": "2019-06-08",
+          "konami_id": 14595,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

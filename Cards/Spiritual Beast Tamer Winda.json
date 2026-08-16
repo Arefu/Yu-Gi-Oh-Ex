@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 65193366,
+      "name": "Spiritual Beast Tamer Winda",
+      "typeline": [
+        "Psychic",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card in its owner's possession is destroyed by an opponent's card (by battle or card effect): You can Special Summon 1 \"Ritual Beast\" monster from your Deck or Extra Deck, ignoring its Summoning conditions. You can only Special Summon \"Spiritual Beast Tamer Winda(s)\" once per turn.",
+      "race": "Psychic",
+      "atk": 1600,
+      "def": 1800,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Ritual Beast",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/spiritual-beast-tamer-winda-5493",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN192",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN070",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN026",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 65193366,
+          "image_url": "https://images.ygoprodeck.com/images/cards/65193366.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/65193366.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/65193366.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "2.00",
+          "amazon_price": "2.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 161523,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12761,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

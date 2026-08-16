@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 70117860,
+      "name": "Windwitch - Snow Bell",
+      "typeline": [
+        "Spellcaster",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If you control 2 or more WIND monsters, and no non-WIND monsters: You can Special Summon this card from your hand. A WIND Synchro Monster that was Summoned using this card as Synchro Material cannot be destroyed by your opponent's card effects.",
+      "race": "Spellcaster",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "WIND",
+      "archetype": "Windwitch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/windwitch-snow-bell-5901",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 8",
+          "set_code": "OP08-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN008",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 70117860,
+          "image_url": "https://images.ygoprodeck.com/images/cards/70117860.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/70117860.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/70117860.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.53",
+          "tcgplayer_price": "1.40",
+          "ebay_price": "2.95",
+          "amazon_price": "9.60",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Wind Witch - Snow Bell",
+          "views": 223822,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12743,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

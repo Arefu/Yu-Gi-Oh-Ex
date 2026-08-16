@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 81059524,
+      "name": "Des Volstgalph",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card destroys an opponent's monster by battle and sends it to the Graveyard: Inflict 500 damage to your opponent. Each time a Normal or Quick-Play Spell Card resolves, this card gains 200 ATK until the end of this turn.",
+      "race": "Dragon",
+      "atk": 2200,
+      "def": 1700,
+      "level": 6,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/des-volstgalph-6805",
+      "card_sets": [
+        {
+          "set_name": "Gold Series 2009",
+          "set_code": "GLD2-EN002",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Pharaoh Tour 2005 promotional cards",
+          "set_code": "PT1-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Premium Gold",
+          "set_code": "PGLD-EN061",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "1.4"
+        },
+        {
+          "set_name": "Shonen Jump Championship 2005 Prize Card",
+          "set_code": "SJC-EN002",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "95074.95"
+        },
+        {
+          "set_name": "Space-Time Showdown Power-Up Pack",
+          "set_code": "YS14-ENA02",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81059524,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81059524.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81059524.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81059524.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.41",
+          "ebay_price": "4.75",
+          "amazon_price": "6.99",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 42530,
+          "viewsweek": 0,
+          "upvotes": 10,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-20",
+          "ocg_date": "2001-12-20",
+          "konami_id": 5408,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

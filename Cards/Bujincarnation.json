@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "id": 73906480,
+      "name": "Bujincarnation",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "If your opponent controls a monster and you control no monsters: Target 1 \"Bujin\" monster in your Graveyard and 1 of your banished \"Bujin\" monsters; Special Summon both targets. They cannot be used as Xyz Material for an Xyz Summon, except for the Xyz Summon of a Beast, Beast-Warrior, or Winged Beast-Type monster.",
+      "race": "Normal",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujincarnation-6210",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN102",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Astral Pack Six",
+          "set_code": "AP06-EN012",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Judgment of the Light",
+          "set_code": "JOTL-EN063",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 73906480,
+          "image_url": "https://images.ygoprodeck.com/images/cards/73906480.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/73906480.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/73906480.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.30",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 51633,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-08-08",
+          "ocg_date": "2013-04-20",
+          "konami_id": 10666,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

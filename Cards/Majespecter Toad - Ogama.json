@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 645794,
+      "name": "Majespecter Toad - Ogama",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "When this card is Normal or Special Summoned: You can Set 1 \"Majespecter\" Spell/Trap Card directly from your Deck, but it cannot activate this turn. You can only use this effect of \"Majespecter Toad - Ogama\" once per turn. Cannot be targeted or destroyed by your opponent's card effects.",
+      "race": "Spellcaster",
+      "atk": 1300,
+      "def": 500,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Majespecter",
+      "scale": 5,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/majespecter-toad-ogama-60",
+      "card_sets": [
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN074",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 645794,
+          "image_url": "https://images.ygoprodeck.com/images/cards/645794.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/645794.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/645794.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 66515,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12138,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

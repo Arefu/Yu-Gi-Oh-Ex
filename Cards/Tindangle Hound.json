@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 31759689,
+      "name": "Tindangle Hound",
+      "typeline": [
+        "Fiend",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can target 1 other face-up monster on the field; this card gains ATK equal to that target's original ATK, then change that target to face-down Defense Position.\r\nEach monster your opponent controls loses 1000 ATK for each monster linked to it. If this card is destroyed by battle or card effect and sent to the GY: You can target 1 face-down monster on the field; change it to face-up Defense Position.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 0,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Tindangle",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tindangle-hound-8937",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31759689,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31759689.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31759689.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31759689.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 41175,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13381,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

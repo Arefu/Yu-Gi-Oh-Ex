@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 93343894,
+      "name": "Water Magician",
+      "typeline": [
+        "Aqua",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This monster swamps an opponent with an almost endless supply of water.",
+      "race": "Aqua",
+      "atk": 1400,
+      "def": 1000,
+      "level": 4,
+      "attribute": "WATER",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/water-magician-7769",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 4",
+          "set_code": "OP04-EN014",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tournament Pack: 2nd Season",
+          "set_code": "TP2-030",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.61"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93343894,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93343894.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93343894.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93343894.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "2.85",
+          "ebay_price": "3.49",
+          "amazon_price": "5.01",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26793,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-10-01",
+          "ocg_date": "1999-10-17",
+          "konami_id": 4436,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 18514525,
+      "name": "Prank-Kids Rocket Ride",
+      "typeline": [
+        "Pyro",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "2 \"Prank-Kids\" monsters\r\nIf this card is Fusion Summoned: You can have this card lose 1000 ATK this turn, also it can attack directly this turn. You can Tribute this card, then target 2 \"Prank-Kids\" non-Fusion Monsters with different names in your GY; Special Summon them, but they cannot attack this turn. You can only use each effect of \"Prank-Kids Rocket Ride\" once per turn.",
+      "race": "Pyro",
+      "atk": 2000,
+      "def": 0,
+      "level": 5,
+      "attribute": "FIRE",
+      "archetype": "Prank-Kids",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prank-kids-rocket-ride-9712",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN017",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN111",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.07"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18514525,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18514525.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18514525.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18514525.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.48",
+          "amazon_price": "0.99",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Prankids Rocket",
+          "views": 186865,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14023,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

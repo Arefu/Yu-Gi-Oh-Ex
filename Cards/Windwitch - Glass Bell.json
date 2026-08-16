@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 71007216,
+      "name": "Windwitch - Glass Bell",
+      "typeline": [
+        "Spellcaster",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is Normal or Special Summoned: You can add 1 \"Windwitch\" monster from your Deck to your hand, except \"Windwitch - Glass Bell\", also you cannot Special Summon monsters for the rest of this turn, except WIND monsters. You can only use this effect of \"Windwitch - Glass Bell\" once per turn.",
+      "race": "Spellcaster",
+      "atk": 1500,
+      "def": 1500,
+      "level": 4,
+      "attribute": "WIND",
+      "archetype": "Windwitch",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/windwitch-glass-bell-5965",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 8",
+          "set_code": "OP08-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN098",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71007216,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71007216.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71007216.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71007216.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.43",
+          "tcgplayer_price": "2.39",
+          "ebay_price": "8.25",
+          "amazon_price": "7.50",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Wind Witch - Glass Bell",
+          "views": 268388,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-11-26",
+          "konami_id": 12861,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

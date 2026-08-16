@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 32775808,
+      "name": "Archfiend's Manifestation",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"Summoned Skull\" + 1 DARK monster\nThis card's name becomes \"Summoned Skull\" on the field, but is still treated as an \"Archfiend\" card. All \"Summoned Skull\" you control gain 500 ATK. If this Fusion Summoned card you control is sent to your GY by an opponent's card: You can Special Summon 1 \"Summoned Skull\" from your hand, Deck, or GY.",
+      "race": "Fiend",
+      "atk": 2500,
+      "def": 1200,
+      "level": 6,
+      "attribute": "DARK",
+      "archetype": "Archfiend",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/archfiend-s-manifestation-9526",
+      "card_sets": [
+        {
+          "set_name": "Fists of the Gadgets",
+          "set_code": "FIGA-EN034",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.25"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32775808,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32775808.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32775808.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32775808.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.19",
+          "tcgplayer_price": "1.55",
+          "ebay_price": "2.49",
+          "amazon_price": "0.50",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Manifested Skull Archfiend",
+          "views": 117476,
+          "viewsweek": 0,
+          "upvotes": 14,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-08-22",
+          "ocg_date": "2018-06-09",
+          "konami_id": 13882,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

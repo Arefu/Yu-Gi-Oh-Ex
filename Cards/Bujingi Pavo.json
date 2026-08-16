@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 10860121,
+      "name": "Bujingi Pavo",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a Beast-Warrior-Type \"Bujin\" monster you control is destroyed by battle and sent to the Graveyard: You can send this card from your hand to the Graveyard; Special Summon 1 \"Bujin\" monster from your Deck. You can only use the effect of \"Bujingi Pavo\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 1700,
+      "def": 800,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Bujin",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/bujingi-pavo-937",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN240",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN083",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10860121,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10860121.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10860121.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10860121.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.28",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.97",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 18068,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2014-09-13",
+          "konami_id": 10987,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 71422989,
+      "name": "Absorb Fusion",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Add 1 \"Gem-Knight\" card from your Deck to your hand, then you can apply this effect.\n● Fusion Summon 1 \"Gem-Knight\" Fusion Monster from your Extra Deck, by banishing Fusion Materials listed on it from your hand or your side of the field.\nYou can only activate 1 \"Absorb Fusion\" per turn. You cannot Special Summon monsters the turn you activate this card, except \"Gem-Knight\" monsters.",
+      "race": "Normal",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/absorb-fusion-6000",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Monster Mayhem",
+          "set_code": "BLMM-EN164",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions",
+          "set_code": "CORE-EN092",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 71422989,
+          "image_url": "https://images.ygoprodeck.com/images/cards/71422989.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/71422989.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/71422989.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "15.00",
+          "amazon_price": "13.58",
+          "coolstuffinc_price": "9.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 99749,
+          "viewsweek": 21,
+          "upvotes": 10,
+          "downvotes": 3,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-08-06",
+          "ocg_date": "2014-08-09",
+          "konami_id": 11453,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

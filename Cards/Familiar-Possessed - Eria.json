@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 68881649,
+      "name": "Familiar-Possessed - Eria",
+      "typeline": [
+        "Spellcaster",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can Special Summon this card (from your hand or Deck) by sending 1 face-up \"Eria the Water Charmer\" and 1 face-up WATER monster you control to the GY. If this card Special Summoned by its own effect attacks a Defense Position monster, inflict piercing battle damage.",
+      "race": "Spellcaster",
+      "atk": 1850,
+      "def": 1500,
+      "level": 4,
+      "attribute": "WATER",
+      "archetype": "Charmer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/familiar-possessed-eria-5790",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN087",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "6.74"
+        },
+        {
+          "set_name": "Elemental Energy",
+          "set_code": "EEN-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.09"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN038",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.94"
+        },
+        {
+          "set_name": "Structure Deck: Spirit Charmers",
+          "set_code": "SDCH-EN038",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "2.11"
+        },
+        {
+          "set_name": "THE CHRONICLES DECK: Spirit Charmers (All-Foil Edition)",
+          "set_code": "CH02-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 68881649,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68881649.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68881649.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68881649.jpg"
+        },
+        {
+          "id": 68881650,
+          "image_url": "https://images.ygoprodeck.com/images/cards/68881650.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/68881650.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/68881650.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "1.99",
+          "amazon_price": "1.16",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 154308,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Familiar-Possessed - Eria",
+          "tcg_date": "2005-11-05",
+          "ocg_date": "2005-08-11",
+          "konami_id": 6508,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 39972129,
+      "name": "Number 64: Ronin Raccoon Sandayu",
+      "typeline": [
+        "Beast",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 2 Beast-Type monsters\r\nOnce per turn: You can detach 1 Xyz Material from this card; Special Summon 1 \"Kagemusha Raccoon Token\" (Beast-Type/EARTH/Level 1/ATK ?/DEF 0). (When Summoned, its ATK becomes equal to the current ATK of the monster on the field that has the highest ATK. Your choice, if tied.) While you control another Beast-Type monster, this card cannot be destroyed by battle or card effects.",
+      "race": "Beast",
+      "atk": 1000,
+      "def": 1000,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-64-ronin-raccoon-sandayu-3390",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN161",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shadow Specters",
+          "set_code": "SHSP-EN051",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 39972129,
+          "image_url": "https://images.ygoprodeck.com/images/cards/39972129.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/39972129.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/39972129.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.18",
+          "tcgplayer_price": "3.85",
+          "ebay_price": "6.99",
+          "amazon_price": "4.60",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 64",
+          "views": 283470,
+          "viewsweek": 21,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-11-08",
+          "ocg_date": "2013-07-20",
+          "konami_id": 10782,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 15609017,
+      "name": "Shock Surprise",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Banish up to 2 \"Speedroid\" monsters from your Graveyard, then target that many cards on the field; destroy them.",
+      "race": "Normal",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shock-surprise-1347",
+      "card_sets": [
+        {
+          "set_name": "High-Speed Riders",
+          "set_code": "HSRD-EN012",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.32"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15609017,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15609017.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15609017.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15609017.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.60",
+          "ebay_price": "1.30",
+          "amazon_price": "2.79",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 33744,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-10-01",
+          "ocg_date": "2015-08-22",
+          "konami_id": 12057,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

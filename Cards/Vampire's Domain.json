@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 5795882,
+      "name": "Vampire's Domain",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Once per turn: You can pay 500 LP; during your Main Phase this turn, you can Normal Summon 1 \"Vampire\" monster in addition to your Normal Summon/Set. (Even if this card leaves the field. You can only gain this effect once per turn.) Each time your \"Vampire\" monster inflicts battle damage to your opponent: Gain the same amount of LP.",
+      "race": "Continuous",
+      "archetype": "Vampire",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vampire-s-domain-9346",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN241",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Saviors",
+          "set_code": "DASA-EN009",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15",
+          "set_code": "OP15-EN024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.76"
+        },
+        {
+          "set_name": "OTS Tournament Pack 15 (POR)",
+          "set_code": "OP15-PT024",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 5795882,
+          "image_url": "https://images.ygoprodeck.com/images/cards/5795882.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/5795882.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/5795882.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.50",
+          "ebay_price": "2.89",
+          "amazon_price": "2.59",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Vampire Territory",
+          "views": 257560,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-24",
+          "ocg_date": "2018-02-24",
+          "konami_id": 13652,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

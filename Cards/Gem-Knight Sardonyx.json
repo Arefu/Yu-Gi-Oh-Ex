@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 43114901,
+      "name": "Gem-Knight Sardonyx",
+      "typeline": [
+        "Pyro",
+        "Gemini",
+        "Effect"
+      ],
+      "type": "Gemini Monster",
+      "humanReadableCardType": "Gemini Effect Monster",
+      "frameType": "effect",
+      "desc": "This card is treated as a Normal Monster while face-up on the field or in the Graveyard. While this card is face-up on the field, you can Normal Summon it to have it become an Effect Monster with this effect.\n● When this card destroys an opponent's monster by battle and sends it to the Graveyard: You can add 1 \"Gem-Knight\" card from your Deck to your hand.",
+      "race": "Pyro",
+      "atk": 1800,
+      "def": 900,
+      "level": 4,
+      "attribute": "EARTH",
+      "archetype": "Gem-",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gem-knight-sardonyx-3675",
+      "card_sets": [
+        {
+          "set_name": "Duel Terminal 7a",
+          "set_code": "DT07-EN014",
+          "set_rarity": "Duel Terminal Normal Parallel Rare",
+          "set_rarity_code": "(DNPR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Hidden Arsenal 7: Knight of Stars",
+          "set_code": "HA07-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43114901,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43114901.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43114901.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43114901.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.26",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "3.00",
+          "amazon_price": "0.84",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 44604,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2012-09-28",
+          "ocg_date": "2011-10-04",
+          "konami_id": 9803,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

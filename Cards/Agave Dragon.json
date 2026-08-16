@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 2411269,
+      "name": "Agave Dragon",
+      "typeline": [
+        "Wyrm",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2+ monsters, except Tokens\r\nIf this card is Link Summoned: You can apply these effects in sequence, depending on the Types of monsters in the GYs (skip over any that do not apply). You can only use this effect of \"Agave Dragon\" once per turn.\r\n● Inflict 100 damage to your opponent for each Dragon.\r\n● This card gains 200 ATK for each Dinosaur.\r\n● All monsters your opponent currently controls lose 300 ATK for each Sea Serpent.\r\n● You gain 400 LP for each Wyrm.",
+      "race": "Wyrm",
+      "atk": 3000,
+      "def": null,
+      "level": null,
+      "attribute": "EARTH",
+      "linkval": 4,
+      "linkmarkers": [
+        "Left",
+        "Right",
+        "Bottom-Left",
+        "Bottom-Right"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/agave-dragon-9673",
+      "card_sets": [
+        {
+          "set_name": "2019 Gold Sarcophagus Tin Mega Pack",
+          "set_code": "MP19-EN191",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Soul Fusion",
+          "set_code": "SOFU-EN048",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2411269,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2411269.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2411269.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2411269.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragon Agave",
+          "views": 185115,
+          "viewsweek": 0,
+          "upvotes": 19,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-10-18",
+          "ocg_date": "2018-07-14",
+          "konami_id": 13935,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

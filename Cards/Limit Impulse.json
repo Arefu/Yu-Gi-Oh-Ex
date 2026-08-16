@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 82324105,
+      "name": "Limit Impulse",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Send 2 cards from your hand to the GY; Special Summon 2 \"Soul Tokens\" (Fiend/DARK/Level 1/ATK 0/DEF 0). They cannot be Tributed except for a Tribute Summon.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/limit-impulse-6919",
+      "card_sets": [
+        {
+          "set_name": "Speed Duel Starter Decks: Ultimate Predators",
+          "set_code": "SS03-ENA28",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        },
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN045",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.03"
+        },
+        {
+          "set_name": "Stardust Overdrive",
+          "set_code": "SOVR-EN072",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82324105,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82324105.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82324105.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82324105.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.04",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 36945,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2009-11-17",
+          "ocg_date": "2009-07-18",
+          "konami_id": 8507,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

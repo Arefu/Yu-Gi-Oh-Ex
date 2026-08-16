@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 29208536,
+      "name": "Number 45: Crumble Logos the Prophet of Demolition",
+      "typeline": [
+        "Zombie",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 or more Level 2 monsters\nOnce per turn: You can detach 1 Xyz Material from this card, then target 1 other face-up card on the field; while this monster is face-up on the field, that target has its effects negated. While that target is on the field, cards with the same name as that target, and their effects, cannot be activated.",
+      "race": "Zombie",
+      "atk": 2200,
+      "def": 0,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-45-crumble-logos-the-prophet-of-demolition-2476",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN119",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dragons of Legend: Unleashed",
+          "set_code": "DRL3-EN023",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "3.86"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 29208536,
+          "image_url": "https://images.ygoprodeck.com/images/cards/29208536.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/29208536.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/29208536.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.50",
+          "tcgplayer_price": "0.40",
+          "ebay_price": "2.01",
+          "amazon_price": "1.91",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 45",
+          "views": 180683,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-08-18",
+          "ocg_date": "2016-05-14",
+          "konami_id": 12546,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

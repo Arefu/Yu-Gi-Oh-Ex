@@ -1,0 +1,86 @@
+{
+  "data": [
+    {
+      "id": 22211622,
+      "name": "Supreme King Gate Infinity",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you control a monster, you cannot Pendulum Summon. This effect cannot be negated. Once per turn, if you control \"Supreme King Z-ARC\": You can target 1 face-up monster your opponent controls; gain LP equal to its ATK.\n\n[ Monster Effect ] \nOnce per turn: You can target 1 other face-up card you control; destroy both it and this card, and if you do, Special Summon 1 Dragon-Type Xyz or Pendulum Monster from your Extra Deck, but its ATK and DEF become 0, it has its effects negated, also it cannot be used as a Material for a Synchro or Xyz Summon. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "race": "Fiend",
+      "pend_desc": "If you control a monster, you cannot Pendulum Summon. This effect cannot be negated. Once per turn, if you control \"Supreme King Z-ARC\": You can target 1 face-up monster your opponent controls; gain LP equal to its ATK.",
+      "monster_desc": "Once per turn: You can target 1 other face-up card you control; destroy both it and this card, and if you do, Special Summon 1 Dragon-Type Xyz or Pendulum Monster from your Extra Deck, but its ATK and DEF become 0, it has its effects negated, also it cannot be used as a Material for a Synchro or Xyz Summon. If this card in the Monster Zone is destroyed by battle or card effect: You can place this card in your Pendulum Zone.",
+      "atk": 0,
+      "def": 0,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "Supreme King",
+      "scale": 13,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/supreme-king-gate-infinity-8371",
+      "card_sets": [
+        {
+          "set_name": "Maximum Crisis",
+          "set_code": "MACR-EN018",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Maze of Millennia",
+          "set_code": "MZMI-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 23",
+          "set_code": "OP23-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 22211622,
+          "image_url": "https://images.ygoprodeck.com/images/cards/22211622.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/22211622.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/22211622.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "2.76",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 193397,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-05-04",
+          "ocg_date": "2017-01-14",
+          "konami_id": 12932,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

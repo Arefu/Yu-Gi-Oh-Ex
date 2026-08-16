@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 92481084,
+      "name": "Temple of the Mind's Eye",
+      "type": "Spell Card",
+      "humanReadableCardType": "Field Spell",
+      "frameType": "spell",
+      "desc": "Any battle damage a player takes becomes 1000.",
+      "race": "Field",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/temple-of-the-mind-s-eye-8846",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN144",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN064",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92481084,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92481084.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92481084.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92481084.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.03",
+          "tcgplayer_price": "0.09",
+          "ebay_price": "2.50",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Altar of the Mind's Eye",
+          "views": 28523,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-07-08",
+          "konami_id": 13280,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

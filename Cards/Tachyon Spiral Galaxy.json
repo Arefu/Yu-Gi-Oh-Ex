@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 89789152,
+      "name": "Tachyon Spiral Galaxy",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Target 1 Dragon \"Galaxy\" monster you control; until the end of this turn, it cannot be destroyed by battle, also it is unaffected by other card effects, except its own. You can only activate 1 \"Tachyon Spiral Galaxy\" per turn. If you control a \"Galaxy-Eyes Tachyon Dragon\" monster, you can activate this card from your hand.",
+      "race": "Normal",
+      "archetype": "Galaxy-Eyes",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/tachyon-spiral-galaxy-10472",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN073",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 89789152,
+          "image_url": "https://images.ygoprodeck.com/images/cards/89789152.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/89789152.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/89789152.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Tachyon Galaxy Spiral",
+          "views": 63938,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010073,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14700,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

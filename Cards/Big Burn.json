@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 95472621,
+      "name": "Big Burn",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "You can only activate this card when your opponent activates a card that targets a monster in the Graveyard. Remove from play all monsters in both players' Graveyards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/big-burn-7952",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.89"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN047",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 95472621,
+          "image_url": "https://images.ygoprodeck.com/images/cards/95472621.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/95472621.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/95472621.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.33",
+          "tcgplayer_price": "0.69",
+          "ebay_price": "1.25",
+          "amazon_price": "1.35",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49613,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-04-24",
+          "konami_id": 5851,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

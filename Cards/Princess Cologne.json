@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 75574498,
+      "name": "Princess Cologne",
+      "typeline": [
+        "Fairy",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\nWhen this card is Xyz Summoned: You can target 1 \"Box of Friends\" in your Graveyard; Special Summon that target. If you control another monster, your opponent cannot target this card with cards, effects, or for attacks. If a face-up Normal Monster(s) you control is destroyed by battle or by card effect and sent to the Graveyard: You can detach 1 Xyz Material from this card; Special Summon 1 Normal Monster from your Deck or Graveyard in face-up Defense Position.",
+      "race": "Fairy",
+      "atk": 500,
+      "def": 2200,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/princess-cologne-6363",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past: The 2nd Haunting",
+          "set_code": "GFP2-EN137",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.24"
+        },
+        {
+          "set_name": "Number Hunters",
+          "set_code": "NUMH-EN050",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.41"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75574498,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75574498.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75574498.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75574498.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.20",
+          "amazon_price": "3.99",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 73218,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2013-07-12",
+          "ocg_date": "2013-08-10",
+          "konami_id": 10723,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

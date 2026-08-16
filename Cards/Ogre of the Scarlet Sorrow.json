@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 82670878,
+      "name": "Ogre of the Scarlet Sorrow",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your opponent's turn, when your opponent declares a second direct attack during the same Battle Phase, you can Special Summon this card from your hand. When you do, this card's ATK and DEF becomes equal to the ATK and DEF of the first monster that attacked directly this turn, if it is still face-up on the field. The turn this card is Special Summoned with this effect, your opponent cannot select monsters other than this card as an attack target while this card is face-up on the field.",
+      "race": "Fiend",
+      "atk": 0,
+      "def": 0,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ogre-of-the-scarlet-sorrow-6947",
+      "card_sets": [
+        {
+          "set_name": "Absolute Powerforce",
+          "set_code": "ABPF-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 82670878,
+          "image_url": "https://images.ygoprodeck.com/images/cards/82670878.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/82670878.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/82670878.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "2.49",
+          "amazon_price": "1.07",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 22079,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-02-12",
+          "ocg_date": "2009-11-14",
+          "konami_id": 8616,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

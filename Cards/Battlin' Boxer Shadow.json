@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 35537251,
+      "name": "Battlin' Boxer Shadow",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "During your Main Phase: You can detach 1 Xyz Material from a \"Battlin' Boxer\" Xyz Monster you control, and if you do, Special Summon this card from your hand. You can only use this effect of \"Battlin' Boxer Shadow\" once per turn.",
+      "race": "Warrior",
+      "atk": 1800,
+      "def": 1400,
+      "level": 4,
+      "attribute": "FIRE",
+      "archetype": "Battlin' Boxer",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battlin-boxer-shadow-3009",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists: Soulburning Volcano",
+          "set_code": "LD10-EN056",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN013",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 35537251,
+          "image_url": "https://images.ygoprodeck.com/images/cards/35537251.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/35537251.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/35537251.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.99",
+          "amazon_price": "0.98",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54033,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-02-15",
+          "konami_id": 11117,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

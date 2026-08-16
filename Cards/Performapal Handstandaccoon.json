@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "id": 81055000,
+      "name": "Performapal Handstandaccoon",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can target 1 \"Performapal\" card you control; return it to the hand, but for the rest of this turn, you cannot activate cards, or the effects of cards, with the same name as the one returned to the hand by this effect (even if this card leaves the field). You can only use this effect of \"Performapal Handstandaccoon\" once per turn.\n\n[ Monster Effect ] \nWhen this card is destroyed by battle: You can target 1 card on the field; return it to the hand.",
+      "race": "Beast",
+      "pend_desc": "You can target 1 \"Performapal\" card you control; return it to the hand, but for the rest of this turn, you cannot activate cards, or the effects of cards, with the same name as the one returned to the hand by this effect (even if this card leaves the field). You can only use this effect of \"Performapal Handstandaccoon\" once per turn.",
+      "monster_desc": "When this card is destroyed by battle: You can target 1 card on the field; return it to the hand.",
+      "atk": 400,
+      "def": 600,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Performapal",
+      "scale": 3,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-handstandaccoon-6802",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN174",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Raging Tempest",
+          "set_code": "RATE-EN002",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 81055000,
+          "image_url": "https://images.ygoprodeck.com/images/cards/81055000.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/81055000.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/81055000.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "1.75",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Performapal Return Tantan",
+          "views": 25786,
+          "viewsweek": 21,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-09",
+          "ocg_date": "2016-10-08",
+          "konami_id": 12737,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

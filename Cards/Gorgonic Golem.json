@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "id": 37984162,
+      "name": "Gorgonic Golem",
+      "typeline": [
+        "Rock",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If this card is destroyed by battle and sent to the Graveyard: The ATK of the monster that destroyed it becomes 0. You can banish this card from your Graveyard, then target 1 Set Spell/Trap Card your opponent controls; that target cannot be activated this turn. Your opponent cannot activate the targeted card in response to this effect's activation.",
+      "race": "Rock",
+      "atk": 1200,
+      "def": 600,
+      "level": 3,
+      "attribute": "DARK",
+      "archetype": "Gorgonic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gorgonic-golem-3214",
+      "card_sets": [
+        {
+          "set_name": "2014 Mega-Tin Mega Pack",
+          "set_code": "MP14-EN192",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN110",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 3: Monster League",
+          "set_code": "BP03-EN110",
+          "set_rarity": "Shatterfoil Rare",
+          "set_rarity_code": "(SHR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legacy of the Valiant",
+          "set_code": "LVAL-EN011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 37984162,
+          "image_url": "https://images.ygoprodeck.com/images/cards/37984162.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/37984162.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/37984162.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.04",
+          "tcgplayer_price": "0.11",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 37917,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2014-01-24",
+          "ocg_date": "2013-11-16",
+          "konami_id": 10897,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

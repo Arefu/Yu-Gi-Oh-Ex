@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 15629801,
+      "name": "Battle Waltz",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Target 1 Synchro Monster you control; Special Summon 1 \"Waltz Token\" with the current Type, Attribute, Level, ATK and DEF of that monster. Neither player takes any battle damage from attacks involving this Token.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/battle-waltz-1349",
+      "card_sets": [
+        {
+          "set_name": "Duelist Pack: Yusei 3",
+          "set_code": "DP10-EN023",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN050",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.22"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15629801,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15629801.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15629801.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15629801.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.09",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 17000,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-01-21",
+          "ocg_date": "2010-10-16",
+          "konami_id": 9238,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

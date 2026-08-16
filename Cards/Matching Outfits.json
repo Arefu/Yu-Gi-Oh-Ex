@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 94446564,
+      "name": "Matching Outfits",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Both players reveal the top card of their Deck, and if they are the same type of card (Monster, Spell, or Trap), both players add them to their hands. Otherwise, banish them.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/matching-outfits-9556",
+      "card_sets": [
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN099",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 94446564,
+          "image_url": "https://images.ygoprodeck.com/images/cards/94446564.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/94446564.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/94446564.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.08",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Pair Look",
+          "views": 12422,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2018-05-27",
+          "konami_id": 13887,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

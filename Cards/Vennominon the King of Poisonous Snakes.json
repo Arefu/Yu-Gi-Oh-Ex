@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": 72677437,
+      "name": "Vennominon the King of Poisonous Snakes",
+      "typeline": [
+        "Reptile",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be Special Summoned by another Effect Monster's effect. This card is unaffected by \"Venom Swamp\". This card gains 500 ATK for each Reptile-Type monster in your Graveyard. When this card is destroyed by battle and sent to the Graveyard: You can banish 1 other Reptile-Type monster from your Graveyard; Special Summon this card.",
+      "race": "Reptile",
+      "atk": 0,
+      "def": 0,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Venom",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/vennominon-the-king-of-poisonous-snakes-6101",
+      "card_sets": [
+        {
+          "set_name": "Ancient Guardians",
+          "set_code": "ANGU-EN040",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.07"
+        },
+        {
+          "set_name": "Legendary Collection 2: The Duel Academy Years Mega Pack",
+          "set_code": "LCGX-EN192",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Ra Yellow Mega Pack",
+          "set_code": "RYMP-EN069",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN014",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Tactical Evolution",
+          "set_code": "TAEV-EN014",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 72677437,
+          "image_url": "https://images.ygoprodeck.com/images/cards/72677437.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/72677437.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/72677437.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "0.78",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 148053,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-08-15",
+          "ocg_date": "2007-05-12",
+          "konami_id": 7183,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

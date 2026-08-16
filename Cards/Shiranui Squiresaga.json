@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 52711246,
+      "name": "Shiranui Squiresaga",
+      "typeline": [
+        "Zombie",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 Tuner + 1+ non-Tuner monsters\r\nYou can only Special Summon \"Shiranui Squiresaga(s)\" once per turn. Once per turn: You can banish 1 face-up monster you control or in your GY, then apply these effects, in sequence, depending on what the monster was before it was banished, if it was any of these.\r\n● Zombie: You can have all monsters you control gain 300 ATK.\r\n● FIRE: You can destroy 1 Spell/Trap on the field.\r\n● Synchro: You can destroy 1 monster on the field.",
+      "race": "Zombie",
+      "atk": 2100,
+      "def": 0,
+      "level": 7,
+      "attribute": "FIRE",
+      "archetype": "Shiranui",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shiranui-squiresaga-9782",
+      "card_sets": [
+        {
+          "set_name": "Savage Strike",
+          "set_code": "SAST-EN041",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Savage Strike Sneak Peek Participation Card",
+          "set_code": "SAST-ENSP1",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "3.39"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 52711246,
+          "image_url": "https://images.ygoprodeck.com/images/cards/52711246.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/52711246.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/52711246.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.45",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Shiranui Spiritsaga",
+          "views": 176368,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-01-26",
+          "ocg_date": "2018-10-13",
+          "konami_id": 14118,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

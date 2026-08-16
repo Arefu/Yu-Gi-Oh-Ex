@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 40921744,
+      "name": "Darklord Zerato",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have 4 or more DARK monsters with different names in your Graveyard, you can Tribute Summon this card by Tributing 1 DARK monster. You can send 1 DARK monster from your hand to the Graveyard; destroy all monsters your opponent controls. Once per turn, during the End Phase, if this effect was activated this turn: Destroy this card.",
+      "race": "Fairy",
+      "atk": 2800,
+      "def": 2300,
+      "level": 8,
+      "attribute": "DARK",
+      "archetype": "Darklord",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/darklord-zerato-3484",
+      "card_sets": [
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN060",
+          "set_rarity": "Mosaic Rare",
+          "set_rarity_code": "(MSR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Battle Pack 2: War of the Giants",
+          "set_code": "BP02-EN060",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Destiny Soldiers",
+          "set_code": "DESO-EN041",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Gold Series 4: Pyramids Edition",
+          "set_code": "GLD4-EN022",
+          "set_rarity": "Gold Rare",
+          "set_rarity_code": "(GUR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Legendary Collection 3: Yugi's World Mega Pack",
+          "set_code": "LCYW-EN212",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.54"
+        },
+        {
+          "set_name": "Phantom Darkness",
+          "set_code": "PTDN-EN081",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40921744,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40921744.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40921744.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40921744.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.46",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "34.99",
+          "amazon_price": "1.34",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 188549,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-01-26",
+          "ocg_date": "2008-09-13",
+          "konami_id": 7562,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

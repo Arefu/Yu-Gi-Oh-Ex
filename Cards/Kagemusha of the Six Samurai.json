@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 1498130,
+      "name": "Kagemusha of the Six Samurai",
+      "typeline": [
+        "Warrior",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "During either player's turn, when exactly 1 face-up \"Six Samurai\" monster you control is targeted by a Spell Card, Trap Card, or card effect that could have targeted this card: You can activate this effect; that Spell/Trap/effect now targets this face-up card on the field, instead.",
+      "race": "Warrior",
+      "atk": 400,
+      "def": 1800,
+      "level": 2,
+      "attribute": "EARTH",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/kagemusha-of-the-six-samurai-128",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack One",
+          "set_code": "AP01-EN006",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1498130,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1498130.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1498130.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1498130.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.61",
+          "ebay_price": "5.95",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 128013,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9316,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

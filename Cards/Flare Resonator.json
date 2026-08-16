@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 13708425,
+      "name": "Flare Resonator",
+      "typeline": [
+        "Fiend",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Tuner Monster",
+      "humanReadableCardType": "Tuner Effect Monster",
+      "frameType": "effect",
+      "desc": "A Synchro Monster that used this card as a Synchro Material gains 300 ATK.",
+      "race": "Fiend",
+      "atk": 300,
+      "def": 1300,
+      "level": 3,
+      "attribute": "FIRE",
+      "archetype": "Resonator",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/flare-resonator-1176",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 5D's Mega Pack",
+          "set_code": "LC5D-EN062",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "The Shining Darkness",
+          "set_code": "TSHD-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 13708425,
+          "image_url": "https://images.ygoprodeck.com/images/cards/13708425.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/13708425.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/13708425.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "0.59",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 86401,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-05-07",
+          "ocg_date": "2010-02-20",
+          "konami_id": 8786,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

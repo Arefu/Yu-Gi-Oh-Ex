@@ -1,0 +1,90 @@
+{
+  "data": [
+    {
+      "id": 75116619,
+      "name": "Legendary Six Samurai - Enishi",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn, during either player's turn: You can banish 2 \"Six Samurai\" monsters from your Graveyard to target 1 face-up monster on the field; return that target to the hand. You must control a face-up \"Six Samurai\" monster with a different name to activate and to resolve this effect. While you control 2 or more face-up \"Six Samurai\" monsters except \"Legendary Six Samurai - Enishi\", this card gains 500 ATK and DEF.",
+      "race": "Warrior",
+      "atk": 1700,
+      "def": 700,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Six Samurai",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/legendary-six-samurai-enishi-6318",
+      "card_sets": [
+        {
+          "set_name": "OTS Tournament Pack 12 (POR)",
+          "set_code": "OP12-PT028",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Samurai Warlords Structure Deck",
+          "set_code": "SDWA-EN017",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.67"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN021",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Storm of Ragnarok",
+          "set_code": "STOR-EN021",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75116619,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75116619.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75116619.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75116619.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.75",
+          "tcgplayer_price": "0.83",
+          "ebay_price": "10.95",
+          "amazon_price": "2.15",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 103367,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-02-08",
+          "ocg_date": "2010-11-13",
+          "konami_id": 9312,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

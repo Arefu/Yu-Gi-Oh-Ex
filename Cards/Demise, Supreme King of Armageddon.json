@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "id": 59913418,
+      "name": "Demise, Supreme King of Armageddon",
+      "typeline": [
+        "Fiend",
+        "Ritual",
+        "Effect"
+      ],
+      "type": "Ritual Effect Monster",
+      "humanReadableCardType": "Ritual Effect Monster",
+      "frameType": "ritual",
+      "desc": "You can Ritual Summon this card with \"Cycle of the World\". This card's name becomes \"Demise, King of Armageddon\" while in the hand or on the field. While this Ritual Summoned card is on the field, your Ritual Monsters cannot be destroyed by battle. If all monsters used to Ritual Summon this card were Ritual Monsters, you do not pay LP to activate its effects. Once per turn: You can pay 2000 LP; destroy as many other cards on the field as possible, and if you do, inflict 200 damage to your opponent for each destroyed card they controlled.",
+      "race": "Fiend",
+      "atk": 3000,
+      "def": 3000,
+      "level": 10,
+      "attribute": "DARK",
+      "archetype": "Demise",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/demise-supreme-king-of-armageddon-9368",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN030",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8",
+          "set_code": "OP08-EN005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 8 (POR)",
+          "set_code": "OP08-PT005",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 59913418,
+          "image_url": "https://images.ygoprodeck.com/images/cards/59913418.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/59913418.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/59913418.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.21",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.99",
+          "amazon_price": "2.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 188481,
+          "viewsweek": 0,
+          "upvotes": 17,
+          "downvotes": 4,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13746,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

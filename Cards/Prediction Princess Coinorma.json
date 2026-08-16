@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 32231618,
+      "name": "Prediction Princess Coinorma",
+      "typeline": [
+        "Fairy",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: You can Special Summon 1 Level 3 or higher Flip monster from your hand or Deck in face-down Defense Position, also you cannot activate monster effects for the rest of this turn, except \"Prediction Princess\" monsters'.",
+      "race": "Fairy",
+      "atk": 800,
+      "def": 1400,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Prediction Princess",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/prediction-princess-coinorma-2736",
+      "card_sets": [
+        {
+          "set_name": "Dragons of Legend 2",
+          "set_code": "DRL2-EN030",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "2.18"
+        },
+        {
+          "set_name": "Dragons of Legend: The Complete Series",
+          "set_code": "DLCS-EN081",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "OTS Tournament Pack 2",
+          "set_code": "OP02-EN020",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32231618,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32231618.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32231618.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32231618.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 71954,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-07-16",
+          "ocg_date": "2015-05-16",
+          "konami_id": 11907,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

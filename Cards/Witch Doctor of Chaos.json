@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 75946257,
+      "name": "Witch Doctor of Chaos",
+      "typeline": [
+        "Spellcaster",
+        "Flip",
+        "Effect"
+      ],
+      "type": "Flip Effect Monster",
+      "humanReadableCardType": "Flip Effect Monster",
+      "frameType": "effect",
+      "desc": "FLIP: Select 1 Monster Card from you or your opponent's Graveyard. Remove it from play.",
+      "race": "Spellcaster",
+      "atk": 500,
+      "def": 500,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Chaos",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/witch-doctor-of-chaos-6393",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-016",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "1.08"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN016",
+          "set_rarity": "Short Print",
+          "set_rarity_code": "(SP)",
+          "set_price": "0.00"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 75946257,
+          "image_url": "https://images.ygoprodeck.com/images/cards/75946257.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/75946257.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/75946257.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.14",
+          "ebay_price": "0.99",
+          "amazon_price": "1.45",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 85192,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-04-24",
+          "konami_id": 5826,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

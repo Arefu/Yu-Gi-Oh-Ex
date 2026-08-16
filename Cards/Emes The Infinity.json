@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 43580269,
+      "name": "Emes the Infinity",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Each time this card destroys an opponent's monster and sends it to the Graveyard as a result of battle, increase the ATK of this card by 700 points.",
+      "race": "Machine",
+      "atk": 2500,
+      "def": 2000,
+      "level": 7,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/emes-the-infinity-3718",
+      "card_sets": [
+        {
+          "set_name": "Yu-Gi-Oh! Destiny Board Traveler promotional cards",
+          "set_code": "DBT-EN001",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.09"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 43580269,
+          "image_url": "https://images.ygoprodeck.com/images/cards/43580269.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/43580269.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/43580269.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.71",
+          "tcgplayer_price": "1.13",
+          "ebay_price": "3.00",
+          "amazon_price": "1.99",
+          "coolstuffinc_price": "2.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 24771,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-10-26",
+          "ocg_date": "2004-02-05",
+          "konami_id": 5931,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

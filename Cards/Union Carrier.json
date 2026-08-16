@@ -1,0 +1,77 @@
+{
+  "data": [
+    {
+      "id": 83152482,
+      "name": "Union Carrier",
+      "typeline": [
+        "Machine",
+        "Link",
+        "Effect"
+      ],
+      "type": "Link Monster",
+      "humanReadableCardType": "Link Effect Monster",
+      "frameType": "link",
+      "desc": "2 monsters with the same Type or Attribute\r\nCannot be used as Link Material the turn it is Link Summoned. You can target 1 face-up monster you control; equip 1 monster to it from your hand or Deck with its same original Type or Attribute. The equipped monster gains 1000 ATK. If you equipped it from the Deck, you cannot Special Summon monsters with that Equip Card's name for the rest of this turn. You can only use this effect of \"Union Carrier\" once per turn.",
+      "race": "Machine",
+      "atk": 1000,
+      "def": null,
+      "level": null,
+      "attribute": "LIGHT",
+      "linkval": 2,
+      "linkmarkers": [
+        "Right",
+        "Bottom"
+      ],
+      "ygoprodeck_url": "https://ygoprodeck.com/card/union-carrier-10709",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "9.4"
+        }
+      ],
+      "banlist_info": {
+        "ban_tcg": "Forbidden",
+        "ban_ocg": "Forbidden"
+      },
+      "card_images": [
+        {
+          "id": 83152482,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83152482.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83152482.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83152482.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.18",
+          "tcgplayer_price": "0.96",
+          "ebay_price": "4.75",
+          "amazon_price": "5.99",
+          "coolstuffinc_price": "3.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 472732,
+          "viewsweek": 21,
+          "upvotes": 11,
+          "downvotes": 6,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 100257011,
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-11-23",
+          "konami_id": 14932,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 2364438,
+      "name": "Mayakashi Return",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Take 1 \"Mayakashi\" card from your Deck, except \"Mayakashi Return\", and either add it to your hand or send it to the GY. You can only activate 1 \"Mayakashi Return\" per turn.",
+      "race": "Normal",
+      "archetype": "Mayakashi",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mayakashi-return-9720",
+      "card_sets": [
+        {
+          "set_name": "Hidden Summoners",
+          "set_code": "HISU-EN038",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Magnificent Mavens",
+          "set_code": "MAMA-EN019",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 2364438,
+          "image_url": "https://images.ygoprodeck.com/images/cards/2364438.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/2364438.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/2364438.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "2.91",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mayakashi Revolt",
+          "views": 181309,
+          "viewsweek": 21,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-11-15",
+          "ocg_date": "2018-08-04",
+          "konami_id": 14044,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

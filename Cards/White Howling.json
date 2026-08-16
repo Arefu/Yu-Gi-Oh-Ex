@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 62487836,
+      "name": "White Howling",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "If you control a WATER monster: Target 1 Spell in your opponent's GY; banish it, and if you do, for the rest of this turn negate all Spell effects on your opponent's field.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/white-howling-9145",
+      "card_sets": [
+        {
+          "set_name": "2020 Tin of Lost Memories Mega Pack",
+          "set_code": "MP20-EN143",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.32"
+        },
+        {
+          "set_name": "Rising Rampage",
+          "set_code": "RIRA-EN096",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 62487836,
+          "image_url": "https://images.ygoprodeck.com/images/cards/62487836.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/62487836.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/62487836.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 131608,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2019-07-25",
+          "ocg_date": "2018-03-10",
+          "konami_id": 13551,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

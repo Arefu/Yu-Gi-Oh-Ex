@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "id": 21297224,
+      "name": "Hysteric Fairy",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Tribute 2 monsters on your side of the field to increase your Life Points by 1000 points.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hysteric-fairy-1832",
+      "card_sets": [
+        {
+          "set_name": "Dark Beginning 1",
+          "set_code": "DB1-EN238",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.53"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-E042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.13"
+        },
+        {
+          "set_name": "Labyrinth of Nightmare",
+          "set_code": "LON-EN042",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.19"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 21297224,
+          "image_url": "https://images.ygoprodeck.com/images/cards/21297224.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/21297224.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/21297224.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.20",
+          "ebay_price": "0.99",
+          "amazon_price": "1.65",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 300359,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2003-03-01",
+          "ocg_date": "2001-04-19",
+          "konami_id": 5205,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

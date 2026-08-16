@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 53724621,
+      "name": "Performapal Guitartle",
+      "typeline": [
+        "Aqua",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf a \"Performapal\" card is activated in your other Pendulum Zone: You can draw 1 card. You can only use this effect of \"Performapal Guitartle\" once per turn.\n\n[ Monster Effect ] \nOnce per turn: You can target 1 card in your Pendulum Zone; increase its Pendulum Scale by 2 until the end of this turn.",
+      "race": "Aqua",
+      "pend_desc": "If a \"Performapal\" card is activated in your other Pendulum Zone: You can draw 1 card. You can only use this effect of \"Performapal Guitartle\" once per turn.",
+      "monster_desc": "Once per turn: You can target 1 card in your Pendulum Zone; increase its Pendulum Scale by 2 until the end of this turn.",
+      "atk": 300,
+      "def": 400,
+      "level": 1,
+      "attribute": "WATER",
+      "archetype": "Performapal",
+      "scale": 6,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/performapal-guitartle-4578",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN175",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Breakers of Shadow",
+          "set_code": "BOSH-EN004",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 1",
+          "set_code": "OP01-EN009",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53724621,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53724621.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53724621.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53724621.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "1.99",
+          "amazon_price": "0.29",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 56850,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-01-14",
+          "ocg_date": "2015-10-17",
+          "konami_id": 12112,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

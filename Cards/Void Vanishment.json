@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "id": 78748366,
+      "name": "Void Vanishment",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "You can discard 1 card; add 1 \"Void\" Spell/Trap Card from your Deck to your hand, except \"Void Vanishment\" or \"Null and Void\", also you cannot Normal or Special Summon monsters for the rest of this turn, except \"Infernoid\" monsters. You can only use this effect of \"Void Vanishment\" once per turn. If an \"Infernoid\" monster you control battles an opponent's monster, after damage calculation: You can send this card to the Graveyard; banish those monsters.",
+      "race": "Continuous",
+      "archetype": "Infernoid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/void-vanishment-6615",
+      "card_sets": [
+        {
+          "set_name": "Battles of Legend: Terminal Revenge",
+          "set_code": "BLTR-EN100",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN061",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 78748366,
+          "image_url": "https://images.ygoprodeck.com/images/cards/78748366.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/78748366.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/78748366.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.39",
+          "ebay_price": "3.89",
+          "amazon_price": "7.12",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 128644,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11736,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "id": 10877309,
+      "name": "Time Thief Startup",
+      "type": "Spell Card",
+      "humanReadableCardType": "Quick-Play Spell",
+      "frameType": "spell",
+      "desc": "Special Summon 1 \"Time Thief\" monster from your hand. During your Main Phase: You can banish this card from your GY, then target 1 \"Time Thief\" Xyz Monster you control; attach 3 \"Time Thief\" cards of different types (1 Monster, 1 Spell, and 1 Trap) from your GY to that monster as material. You can only use 1 \"Time Thief Startup\" effect per turn, and only once that turn.",
+      "race": "Quick-Play",
+      "archetype": "Time Thief",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/time-thief-startup-10575",
+      "card_sets": [
+        {
+          "set_name": "Ghosts From the Past",
+          "set_code": "GFTP-EN067",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.59"
+        },
+        {
+          "set_name": "Ignition Assault",
+          "set_code": "IGAS-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 10877309,
+          "image_url": "https://images.ygoprodeck.com/images/cards/10877309.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/10877309.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/10877309.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "1.19",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Time Thief Start-Up",
+          "views": 111469,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101011061,
+          "tcg_date": "2020-01-30",
+          "ocg_date": "2019-10-12",
+          "konami_id": 14870,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

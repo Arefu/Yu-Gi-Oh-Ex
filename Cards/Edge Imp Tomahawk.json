@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 97567736,
+      "name": "Edge Imp Tomahawk",
+      "typeline": [
+        "Fiend",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can send 1 \"Edge Imp\" monster from your hand to the Graveyard; inflict 800 damage to your opponent. You can send 1 \"Edge Imp\" monster from your Deck to the Graveyard, except \"Edge Imp Tomahawk\"; this card's name becomes the sent monster's name, until the End Phase. You can only use each effect of \"Edge Imp Tomahawk\" once per turn.",
+      "race": "Fiend",
+      "atk": 1800,
+      "def": 800,
+      "level": 4,
+      "attribute": "DARK",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/edge-imp-tomahawk-8110",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN014",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 97567736,
+          "image_url": "https://images.ygoprodeck.com/images/cards/97567736.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/97567736.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/97567736.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.20",
+          "tcgplayer_price": "0.32",
+          "ebay_price": "1.60",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43592,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11689,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

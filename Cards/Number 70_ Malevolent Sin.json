@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 80796456,
+      "name": "Number 70: Malevolent Sin",
+      "typeline": [
+        "Insect",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 4 monsters\r\nOnce per turn: You can detach 1 Xyz Material from this card, then target 1 monster your opponent controls; banish it until your opponent's next Standby Phase. At the end of the Damage Step, if this card attacked: You can make this card gain 300 ATK, and if you do, increase its Rank by 3.",
+      "race": "Insect",
+      "atk": 2400,
+      "def": 1200,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/number-70-malevolent-sin-8308",
+      "card_sets": [
+        {
+          "set_name": "Duelist Saga",
+          "set_code": "DUSA-EN014",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "5.28"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80796456,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80796456.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80796456.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80796456.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "1.57",
+          "tcgplayer_price": "1.27",
+          "ebay_price": "4.42",
+          "amazon_price": "20.00",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Number 70: Deadly Sin",
+          "views": 213654,
+          "viewsweek": 21,
+          "upvotes": 6,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-03-30",
+          "ocg_date": "2017-03-11",
+          "konami_id": 12891,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

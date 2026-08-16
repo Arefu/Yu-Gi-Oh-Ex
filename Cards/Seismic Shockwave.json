@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 79569173,
+      "name": "Seismic Shockwave",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "Destroy this card during your 3rd Standby Phase after activation. Activate this card when a face-up Dinosaur-Type monster you control is destroyed and sent to the Graveyard (except during the Damage Step): Choose 3 of your opponent's unused Spell & Trap Zones. Those Zones cannot be used. If this card destroys itself: You can target 1 Dinosaur-Type monster in your Graveyard; add that target to your hand.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/seismic-shockwave-6672",
+      "card_sets": [
+        {
+          "set_name": "Legendary Collection 4: Joey's World Mega Pack",
+          "set_code": "LCJW-EN169",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 4",
+          "set_code": "OP04-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Dinosaur's Rage",
+          "set_code": "SD09-EN031",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 79569173,
+          "image_url": "https://images.ygoprodeck.com/images/cards/79569173.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/79569173.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/79569173.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.90",
+          "amazon_price": "0.96",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 21889,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2006-10-20",
+          "ocg_date": "2006-06-22",
+          "konami_id": 6825,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 90098780,
+      "name": "Humhumming the Key Djinn",
+      "typeline": [
+        "Fiend",
+        "Xyz",
+        "Effect"
+      ],
+      "type": "XYZ Monster",
+      "humanReadableCardType": "Xyz Effect Monster",
+      "frameType": "xyz",
+      "desc": "2 Level 3 monsters\r\nWhen this card is Special Summoned: You can target 1 \"Djinn\" Xyz Monster in your Graveyard; Special Summon it, then you can attach up to 2 cards from your hand to it as Xyz Materials. Once per turn: You can detach 1 Xyz Material from this card, then target 1 \"Djinn\" Xyz Monster you control; this turn, it can attack your opponent directly.",
+      "race": "Fiend",
+      "atk": 1100,
+      "def": 1800,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Djinn",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/humhumming-the-key-djinn-7525",
+      "card_sets": [
+        {
+          "set_name": "World Superstars",
+          "set_code": "WSUP-EN023",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 90098780,
+          "image_url": "https://images.ygoprodeck.com/images/cards/90098780.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/90098780.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/90098780.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.23",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.48",
+          "amazon_price": "0.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 34160,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-04-16",
+          "ocg_date": "2014-04-19",
+          "konami_id": 11297,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

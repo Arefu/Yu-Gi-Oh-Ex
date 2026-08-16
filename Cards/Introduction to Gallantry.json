@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 69091732,
+      "name": "Introduction to Gallantry",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Activate only when your opponent has 5 or more cards in their hand. Your opponent discards 1 random card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/introduction-to-gallantry-5806",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN053",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69091732,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69091732.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69091732.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69091732.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.06",
+          "tcgplayer_price": "0.05",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 25854,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7135,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

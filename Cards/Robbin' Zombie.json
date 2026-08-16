@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 83258273,
+      "name": "Robbin' Zombie",
+      "type": "Trap Card",
+      "humanReadableCardType": "Continuous Trap",
+      "frameType": "trap",
+      "desc": "If your monster inflicts battle damage to your opponent: Send the top card of their Deck to the GY.",
+      "race": "Continuous",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/robbin-zombie-6990",
+      "card_sets": [
+        {
+          "set_name": "Dark Revelation Volume 2",
+          "set_code": "DR2-EN110",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-109",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "2.09"
+        },
+        {
+          "set_name": "Invasion of Chaos",
+          "set_code": "IOC-EN109",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Attack from the Deep",
+          "set_code": "SBAD-EN016",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.06"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83258273,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83258273.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83258273.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83258273.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.14",
+          "tcgplayer_price": "0.16",
+          "ebay_price": "1.95",
+          "amazon_price": "1.30",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 81325,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2004-03-01",
+          "ocg_date": "2003-07-17",
+          "konami_id": 5920,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

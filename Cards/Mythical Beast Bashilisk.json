@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 80959027,
+      "name": "Mythical Beast Bashilisk",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nIf you have no card in your other Pendulum Zone: You can destroy this card, and if you do, shuffle 1 face-up Spellcaster Pendulum Monster from your Extra Deck into your Main Deck, except \"Mythical Beast Bashilisk\", then draw 1 card. You can only use this effect of \"Mythical Beast Bashilisk\" once per turn.\n\n[ Monster Effect ] \nEach time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. You can remove 3 Spell Counters from your field; return 1 \"Mythical Beast\" card from your Pendulum Zone or face-up from your Extra Deck to the hand. You can only use this effect of \"Mythical Beast Bashilisk\" once per turn.",
+      "race": "Spellcaster",
+      "pend_desc": "If you have no card in your other Pendulum Zone: You can destroy this card, and if you do, shuffle 1 face-up Spellcaster Pendulum Monster from your Extra Deck into your Main Deck, except \"Mythical Beast Bashilisk\", then draw 1 card. You can only use this effect of \"Mythical Beast Bashilisk\" once per turn.",
+      "monster_desc": "Each time a Spell Card is activated, place 1 Spell Counter on this card when that Spell resolves. You can remove 3 Spell Counters from your field; return 1 \"Mythical Beast\" card from your Pendulum Zone or face-up from your Extra Deck to the hand. You can only use this effect of \"Mythical Beast Bashilisk\" once per turn.",
+      "atk": 1800,
+      "def": 500,
+      "level": 4,
+      "attribute": "LIGHT",
+      "archetype": "Mythical Beast",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mythical-beast-bashilisk-9022",
+      "card_sets": [
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN025",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 80959027,
+          "image_url": "https://images.ygoprodeck.com/images/cards/80959027.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/80959027.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/80959027.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.24",
+          "tcgplayer_price": "0.22",
+          "ebay_price": "1.02",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Mythical Beast Basilisk",
+          "views": 65638,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13395,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

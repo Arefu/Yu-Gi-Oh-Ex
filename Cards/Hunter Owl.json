@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 51962254,
+      "name": "Hunter Owl",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains 500 ATK for each face-up WIND monster you control. While you control another face-up WIND monster, your opponent cannot select this card as an attack target.",
+      "race": "Winged Beast",
+      "atk": 1000,
+      "def": 900,
+      "level": 4,
+      "attribute": "WIND",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/hunter-owl-4423",
+      "card_sets": [
+        {
+          "set_name": "Dragunity Legion Structure Deck",
+          "set_code": "SDDL-EN013",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! GX Spirit Caller promotional cards",
+          "set_code": "GX03-EN002",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "3.45"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 51962254,
+          "image_url": "https://images.ygoprodeck.com/images/cards/51962254.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/51962254.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/51962254.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.33",
+          "ebay_price": "0.99",
+          "amazon_price": "0.80",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 19068,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-01-02",
+          "ocg_date": "2006-11-30",
+          "konami_id": 7038,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

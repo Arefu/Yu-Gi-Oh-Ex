@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": 93368494,
+      "name": "Mayosenju Daibak",
+      "typeline": [
+        "Beast",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nWhen a \"Yosenju\" monster you control declares an attack: You can have that attacking monster gain 300 ATK until the end of the Battle Phase.\n\n[ Monster Effect ] \nCannot be Special Summoned, except by Pendulum Summon. This card's Pendulum Summon cannot be negated. If this card is Normal or Special Summoned: You can target up to 2 cards on the field; return them to the hand. Once per turn, during the End Phase, if this card was Special Summoned this turn: Return it to the hand.",
+      "race": "Beast",
+      "pend_desc": "When a \"Yosenju\" monster you control declares an attack: You can have that attacking monster gain 300 ATK until the end of the Battle Phase.",
+      "monster_desc": "Cannot be Special Summoned, except by Pendulum Summon. This card's Pendulum Summon cannot be negated. If this card is Normal or Special Summoned: You can target up to 2 cards on the field; return them to the hand. Once per turn, during the End Phase, if this card was Special Summoned this turn: Return it to the hand.",
+      "atk": 3000,
+      "def": 300,
+      "level": 10,
+      "attribute": "WIND",
+      "archetype": "Yosenju",
+      "scale": 7,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/mayosenju-daibak-7772",
+      "card_sets": [
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN003",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Star Pack Battle Royal",
+          "set_code": "SP17-EN003",
+          "set_rarity": "Starfoil Rare",
+          "set_rarity_code": "(SFR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "The Secret Forces",
+          "set_code": "THSF-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "4.02"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 93368494,
+          "image_url": "https://images.ygoprodeck.com/images/cards/93368494.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/93368494.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/93368494.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.66",
+          "tcgplayer_price": "0.75",
+          "ebay_price": "4.29",
+          "amazon_price": "2.28",
+          "coolstuffinc_price": "1.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 57598,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-02-12",
+          "ocg_date": "2014-10-11",
+          "konami_id": 11471,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

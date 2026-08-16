@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 53293545,
+      "name": "Firegrass",
+      "typeline": [
+        "Plant",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "A fire-breathing plant found growing near volcanoes.",
+      "race": "Plant",
+      "atk": 700,
+      "def": 600,
+      "level": 2,
+      "attribute": "EARTH",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/firegrass-4542",
+      "card_sets": [
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "3.18"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-E014",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "8.82"
+        },
+        {
+          "set_name": "Legend of Blue Eyes White Dragon",
+          "set_code": "LOB-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 53293545,
+          "image_url": "https://images.ygoprodeck.com/images/cards/53293545.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/53293545.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/53293545.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.02",
+          "tcgplayer_price": "0.10",
+          "ebay_price": "1.00",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 183899,
+          "viewsweek": 21,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2002-03-08",
+          "ocg_date": "1999-02-04",
+          "konami_id": 4163,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

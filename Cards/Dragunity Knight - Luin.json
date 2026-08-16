@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "id": 12496261,
+      "name": "Dragunity Knight - Luin",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Tuner",
+        "Effect"
+      ],
+      "type": "Synchro Tuner Monster",
+      "humanReadableCardType": "Synchro Tuner Effect Monster",
+      "frameType": "synchro",
+      "desc": "1 \"Dragunity\" Tuner + 1+ non-Tuner monsters\r\nIf this card is Special Summoned: You can target 1 \"Dragunity\" monster in your GY; equip it to this card. If this card is sent to the GY: You can target 1 \"Dragunity\" monster you control; equip this card to that target. It gains 1000 ATK/DEF. You can only use each effect of \"Dragunity Knight - Luin\" once per turn.",
+      "race": "Dragon",
+      "atk": 1200,
+      "def": 1900,
+      "level": 6,
+      "attribute": "WIND",
+      "archetype": "Dragunity",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dragunity-knight-luin-9415",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Horizon",
+          "set_code": "CYHO-EN032",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 12496261,
+          "image_url": "https://images.ygoprodeck.com/images/cards/12496261.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/12496261.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/12496261.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.39",
+          "tcgplayer_price": "1.74",
+          "ebay_price": "1.09",
+          "amazon_price": "0.90",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Dragunity Knight - Harloon",
+          "views": 78480,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-07-26",
+          "ocg_date": "2018-04-14",
+          "konami_id": 13748,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

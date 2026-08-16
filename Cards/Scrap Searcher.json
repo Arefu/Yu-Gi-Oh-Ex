@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 92901944,
+      "name": "Scrap Searcher",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When a \"Scrap\" monster you control, except \"Scrap Searcher\", is destroyed and sent to the Graveyard while this card is in the Graveyard, you can Special Summon this card from your Graveyard. When this card is Special Summoned, destroy all face-up monsters you control, except \"Scrap\" monsters.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 300,
+      "level": 1,
+      "attribute": "EARTH",
+      "archetype": "Scrap",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/scrap-searcher-7733",
+      "card_sets": [
+        {
+          "set_name": "Starstrike Blast",
+          "set_code": "STBL-EN025",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92901944,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92901944.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92901944.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92901944.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.31",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 43172,
+          "viewsweek": 0,
+          "upvotes": 0,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2010-11-06",
+          "ocg_date": "2010-07-17",
+          "konami_id": 9102,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

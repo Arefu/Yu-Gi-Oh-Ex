@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 31102447,
+      "name": "Amazoness Spy",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "You can reveal 1 other \"Amazoness\" monster in your hand; Special Summon this card from your hand. You can only use this effect of \"Amazoness Spy\" once per turn. When this card is destroyed by battle and sent to the GY: You can target 1 \"Amazoness\" monster in your GY, except \"Amazoness Spy\"; return it to the hand, or shuffle it into the Deck.",
+      "race": "Warrior",
+      "atk": 800,
+      "def": 1200,
+      "level": 3,
+      "attribute": "EARTH",
+      "archetype": "Amazoness",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/amazoness-spy-8498",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN165",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Circuit Break",
+          "set_code": "CIBR-EN093",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Arena of Lost Souls",
+          "set_code": "SBLS-EN021",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31102447,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31102447.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31102447.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31102447.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.26",
+          "ebay_price": "0.99",
+          "amazon_price": "1.30",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 101193,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 2,
+          "formats": [
+            "Speed Duel",
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-10-19",
+          "ocg_date": "2017-05-13",
+          "konami_id": 13146,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

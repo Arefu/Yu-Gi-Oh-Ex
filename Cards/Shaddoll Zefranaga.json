@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 58016954,
+      "name": "Shaddoll Zefranaga",
+      "typeline": [
+        "Spellcaster",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou cannot Pendulum Summon monsters, except \"Shaddoll\" and \"Zefra\" monsters. This effect cannot be negated.\n\n[ Monster Effect ] \nIf this card is Pendulum Summoned or sent to the GY: You can target 1 card in either player's Pendulum Zone; return it to the hand. You must have a \"Zefra\" card in your Pendulum Zone to activate and to resolve this effect. You can only use this effect of \"Shaddoll Zefranaga\" once per turn.",
+      "race": "Spellcaster",
+      "pend_desc": "You cannot Pendulum Summon monsters, except \"Shaddoll\" and \"Zefra\" monsters. This effect cannot be negated.",
+      "monster_desc": "If this card is Pendulum Summoned or sent to the GY: You can target 1 card in either player's Pendulum Zone; return it to the hand. You must have a \"Zefra\" card in your Pendulum Zone to activate and to resolve this effect. You can only use this effect of \"Shaddoll Zefranaga\" once per turn.",
+      "atk": 900,
+      "def": 100,
+      "level": 2,
+      "attribute": "DARK",
+      "archetype": "Shaddoll",
+      "scale": 1,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/shaddoll-zefranaga-4937",
+      "card_sets": [
+        {
+          "set_name": "Crossed Souls",
+          "set_code": "CROS-EN022",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Structure Deck: Shaddoll Showdown",
+          "set_code": "SDSH-EN010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.08"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58016954,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58016954.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58016954.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58016954.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.05",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49024,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 0,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-14",
+          "ocg_date": "2015-02-14",
+          "konami_id": 11697,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

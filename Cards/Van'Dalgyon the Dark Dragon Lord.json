@@ -1,0 +1,91 @@
+{
+  "data": [
+    {
+      "id": 24857466,
+      "name": "Van'Dalgyon the Dark Dragon Lord",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you negate the activation of an opponent's Spell/Trap Card(s), or opponent's monster effect(s), with a Counter Trap Card (except during the Damage Step): You can Special Summon this card from your hand. If Summoned this way, activate these effects and resolve in sequence, depending on the type of card(s) negated by that Counter Trap:\n● Spell: Inflict 1500 damage to your opponent.\n● Trap: Target 1 card your opponent controls; destroy that target.\n● Monster: Target 1 monster in your Graveyard; Special Summon it.",
+      "race": "Dragon",
+      "atk": 2800,
+      "def": 2500,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/van-dalgyon-the-dark-dragon-lord-2142",
+      "card_sets": [
+        {
+          "set_name": "Astral Pack Six",
+          "set_code": "AP06-EN019",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Collectible Tins 2010 Wave 1",
+          "set_code": "CT07-EN007",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "6.79"
+        },
+        {
+          "set_name": "Shonen Jump Vol. 6, Issue 3 promotional card",
+          "set_code": "JUMP-EN023",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "6.41"
+        },
+        {
+          "set_name": "Yu-Gi-Oh! R Volume 1 promotional card",
+          "set_code": "YR01-EN001",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "19.18"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 24857466,
+          "image_url": "https://images.ygoprodeck.com/images/cards/24857466.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/24857466.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/24857466.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.54",
+          "tcgplayer_price": "0.95",
+          "ebay_price": "3.39",
+          "amazon_price": "1.63",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 54408,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 1,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-02-01",
+          "ocg_date": "2005-04-03",
+          "konami_id": 6410,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

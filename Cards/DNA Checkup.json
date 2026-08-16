@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 27340877,
+      "name": "DNA Checkup",
+      "type": "Trap Card",
+      "humanReadableCardType": "Normal Trap",
+      "frameType": "trap",
+      "desc": "Select 1 face-down monster you control. Your opponent declares 2 Attributes. Reveal the selected monster. If its Attribute is one of the declared Attributes, your opponent draws 2 cards. If not, you draw 2 cards.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/dna-checkup-2336",
+      "card_sets": [
+        {
+          "set_name": "Crossroads of Chaos",
+          "set_code": "CSOC-EN078",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 27340877,
+          "image_url": "https://images.ygoprodeck.com/images/cards/27340877.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/27340877.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/27340877.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.13",
+          "tcgplayer_price": "0.17",
+          "ebay_price": "0.99",
+          "amazon_price": "0.20",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 47161,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2008-11-01",
+          "ocg_date": "2008-07-19",
+          "konami_id": 7933,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

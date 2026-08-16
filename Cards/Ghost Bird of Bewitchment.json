@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 15419596,
+      "name": "Ghost Bird of Bewitchment",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card gains an effect based on your Main Monster Zone it is in.\r\n● Leftmost: Gains 1000 ATK/DEF.\r\n● Rightmost: Can make up to 2 attacks on monsters during each Battle Phase.\r\n● Center: Your opponent cannot target this card with card effects, also it cannot be destroyed by your opponent's card effects.\r\n● Others: Monsters in this column cannot activate their effects.",
+      "race": "Winged Beast",
+      "atk": 1300,
+      "def": 1500,
+      "level": 4,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ghost-bird-of-bewitchment-8925",
+      "card_sets": [
+        {
+          "set_name": "2018 Mega-Tin Mega Pack",
+          "set_code": "MP18-EN190",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Extreme Force",
+          "set_code": "EXFO-EN032",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 15419596,
+          "image_url": "https://images.ygoprodeck.com/images/cards/15419596.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/15419596.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/15419596.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.11",
+          "tcgplayer_price": "0.13",
+          "ebay_price": "0.99",
+          "amazon_price": "0.55",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 26428,
+          "viewsweek": 0,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-02-01",
+          "ocg_date": "2017-10-14",
+          "konami_id": 13402,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

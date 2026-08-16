@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 83303851,
+      "name": "D/D/D Chaos King Apocalypse",
+      "typeline": [
+        "Fiend",
+        "Pendulum",
+        "Effect"
+      ],
+      "type": "Pendulum Effect Monster",
+      "humanReadableCardType": "Pendulum Effect Monster",
+      "frameType": "effect_pendulum",
+      "desc": "[ Pendulum Effect ] \nYou can banish 2 \"D/D\" monsters from your Graveyard; Special Summon this card from your Pendulum Zone.\n\n[ Monster Effect ] \nDuring your opponent's turn, if this card is in your hand or Graveyard: You can target 2 face-up Spell/Trap Cards you control; you cannot Special Summon monsters for the rest of this turn, except Fiend-Type monsters, also destroy the targeted cards, and if you do, Special Summon this card (this is a Quick Effect). You can only use this effect of \"D/D/D Chaos King Apocalypse\" once per turn.",
+      "race": "Fiend",
+      "pend_desc": "You can banish 2 \"D/D\" monsters from your Graveyard; Special Summon this card from your Pendulum Zone.",
+      "monster_desc": "During your opponent's turn, if this card is in your hand or Graveyard: You can target 2 face-up Spell/Trap Cards you control; you cannot Special Summon monsters for the rest of this turn, except Fiend-Type monsters, also destroy the targeted cards, and if you do, Special Summon this card (this is a Quick Effect). You can only use this effect of \"D/D/D Chaos King Apocalypse\" once per turn.",
+      "atk": 2700,
+      "def": 2000,
+      "level": 7,
+      "attribute": "DARK",
+      "archetype": "D/D",
+      "scale": 4,
+      "ygoprodeck_url": "https://ygoprodeck.com/card/d-d-d-chaos-king-apocalypse-6997",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Domination Structure Deck",
+          "set_code": "SDPD-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 83303851,
+          "image_url": "https://images.ygoprodeck.com/images/cards/83303851.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/83303851.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/83303851.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.24",
+          "ebay_price": "1.55",
+          "amazon_price": "0.89",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 144743,
+          "viewsweek": 0,
+          "upvotes": 13,
+          "downvotes": 3,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-01-19",
+          "ocg_date": "2015-12-12",
+          "konami_id": 12225,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

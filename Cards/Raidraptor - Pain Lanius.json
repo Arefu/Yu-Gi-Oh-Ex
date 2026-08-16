@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 46589034,
+      "name": "Raidraptor - Pain Lanius",
+      "typeline": [
+        "Winged Beast",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Cannot be used as an Xyz Material for an Xyz Summon, except for the Xyz Summon of a Winged Beast-Type monster. If this card is in your hand: You can target 1 \"Raidraptor\" monster you control that has a Level; take damage equal to its ATK or DEF (whichever is lower, but your choice if tied), and if you do, Special Summon this card, and if you do that, this card's Level becomes the current Level of the targeted monster. You can only use this effect of \"Raidraptor - Pain Lanius\" once per turn.",
+      "race": "Winged Beast",
+      "atk": 100,
+      "def": 100,
+      "level": 1,
+      "attribute": "DARK",
+      "archetype": "Raidraptor",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/raidraptor-pain-lanius-3973",
+      "card_sets": [
+        {
+          "set_name": "2017 Mega-Tin Mega Pack",
+          "set_code": "MP17-EN007",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Shining Victories",
+          "set_code": "SHVI-EN015",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46589034,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46589034.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46589034.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46589034.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.07",
+          "tcgplayer_price": "0.19",
+          "ebay_price": "1.25",
+          "amazon_price": "1.66",
+          "coolstuffinc_price": "1.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 166871,
+          "viewsweek": 21,
+          "upvotes": 7,
+          "downvotes": 2,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2016-05-05",
+          "ocg_date": "2016-01-09",
+          "konami_id": 12287,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "data": [
+    {
+      "id": 1686814,
+      "name": "Ultimaya Tzolkin",
+      "typeline": [
+        "Dragon",
+        "Synchro",
+        "Effect"
+      ],
+      "type": "Synchro Monster",
+      "humanReadableCardType": "Synchro Effect Monster",
+      "frameType": "synchro",
+      "desc": "(This card's original Level is always treated as 12.)\nCannot be Synchro Summoned. Must be Special Summoned (from your Extra Deck) by sending 2 Level 5 or higher monsters you control with the same Level to the Graveyard (1 Tuner and 1 non-Tuner), and cannot be Special Summoned by other ways. Once per turn, when a Spell/Trap Card(s) is Set on your side of the field (except during the Damage Step): You can Special Summon 1 \"Power Tool\" Synchro Monster or 1 Level 7 or 8 Dragon-Type Synchro Monster from your Extra Deck. Cannot be targeted for attacks or by card effects, while you control another Synchro Monster.",
+      "race": "Dragon",
+      "atk": 0,
+      "def": 0,
+      "level": 0,
+      "attribute": "DARK",
+      "archetype": "Power Tool",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/ultimaya-tzolkin-149",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Tin: Dueling Mirrors",
+          "set_code": "MP24-EN027",
+          "set_rarity": "Quarter Century Secret Rare",
+          "set_rarity_code": "",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Clash of Rebellions: Special Edition",
+          "set_code": "CORE-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "5.14"
+        },
+        {
+          "set_name": "Dimension of Chaos: Special Edition",
+          "set_code": "DOCS-ENSE1",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "12.76"
+        },
+        {
+          "set_name": "Maximum Gold: El Dorado",
+          "set_code": "MGED-EN138",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "1.1"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13",
+          "set_code": "OP13-EN018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "OTS Tournament Pack 13 (POR)",
+          "set_code": "OP13-PT018",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0.00"
+        },
+        {
+          "set_name": "Weekly Shonen Jump April 2015 membership promotional card",
+          "set_code": "JUMP-EN072",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "32.44"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 1686814,
+          "image_url": "https://images.ygoprodeck.com/images/cards/1686814.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/1686814.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/1686814.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.34",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 553935,
+          "viewsweek": 84,
+          "upvotes": 31,
+          "downvotes": 5,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-05-07",
+          "ocg_date": "2014-12-20",
+          "konami_id": 11614,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

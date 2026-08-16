@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "id": 92562411,
+      "name": "The World Legacy",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "You can only control 1 \"The World Legacy\". Each time a face-up Level 5 or higher monster(s) is sent from the field to the GY, place 1 counter on this card for each sent card (max. 7). You can send this card with 7 counters to the GY; Special Summon 1 Cyberse Link Monster from your Extra Deck.",
+      "race": "Continuous",
+      "archetype": "World Legacy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/the-world-legacy-10460",
+      "card_sets": [
+        {
+          "set_name": "Chaos Impact",
+          "set_code": "CHIM-EN061",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 92562411,
+          "image_url": "https://images.ygoprodeck.com/images/cards/92562411.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/92562411.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/92562411.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.12",
+          "tcgplayer_price": "0.15",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "World Legacy's Continuation",
+          "views": 28797,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 1,
+          "formats": [
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "beta_id": 101010061,
+          "tcg_date": "2019-10-24",
+          "ocg_date": "2019-07-13",
+          "konami_id": 14688,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

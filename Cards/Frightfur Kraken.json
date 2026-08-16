@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 40636712,
+      "name": "Frightfur Kraken",
+      "typeline": [
+        "Fiend",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "1 \"Edge Imp\" monster + 1 \"Fluffal\" monster\r\nOnce per turn: You can target 1 monster your opponent controls; send it to the Graveyard. This card cannot attack directly the turn this effect is activated. This card can make a second attack during each Battle Phase. Once per turn, at the end of the Battle Phase, if this card battled: You can change this card to Defense Position.",
+      "race": "Fiend",
+      "atk": 2200,
+      "def": 3000,
+      "level": 8,
+      "attribute": "WATER",
+      "archetype": "Edge Imp",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/frightfur-kraken-3455",
+      "card_sets": [
+        {
+          "set_name": "Fusion Enforcers",
+          "set_code": "FUEN-EN020",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 40636712,
+          "image_url": "https://images.ygoprodeck.com/images/cards/40636712.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/40636712.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/40636712.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "4.25",
+          "tcgplayer_price": "5.46",
+          "ebay_price": "8.24",
+          "amazon_price": "17.54",
+          "coolstuffinc_price": "4.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 208949,
+          "viewsweek": 0,
+          "upvotes": 11,
+          "downvotes": 2,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-02-23",
+          "ocg_date": "2016-11-12",
+          "konami_id": 12842,
+          "has_effect": 1,
+          "md_rarity": "Ultra Rare"
+        }
+      ]
+    }
+  ]
+}

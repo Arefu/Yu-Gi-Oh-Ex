@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 18378992,
+      "name": "Malefic Selector",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Banish 2 \"Malefic\" cards from your GY; add 2 \"Malefic\" cards from your Deck to your hand, except \"Malefic Selector\", with different names from each other and from the banished cards. You can only activate 1 \"Malefic Selector\" per turn.",
+      "race": "Normal",
+      "archetype": "Malefic",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/malefic-selector-10107",
+      "card_sets": [
+        {
+          "set_name": "Duel Overload",
+          "set_code": "DUOV-EN045",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.26"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 18378992,
+          "image_url": "https://images.ygoprodeck.com/images/cards/18378992.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/18378992.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/18378992.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.10",
+          "tcgplayer_price": "0.21",
+          "ebay_price": "0.99",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 79897,
+          "viewsweek": 0,
+          "upvotes": 3,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2020-03-19",
+          "ocg_date": "2019-02-09",
+          "konami_id": 14372,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

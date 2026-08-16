@@ -1,0 +1,83 @@
+{
+  "data": [
+    {
+      "id": 58257569,
+      "name": "Red-Eyes Baby Dragon",
+      "typeline": [
+        "Dragon",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "When this card is destroyed by battle and sent to the GY: You can Special Summon 1 Level 7 or lower \"Red-Eyes\" monster from your Deck, and if you do, equip this card from the GY to it. It gains 300 ATK. If this card is sent to the GY while equipped to a monster: You can add 1 Level 1 Dragon monster from your Deck or GY to your hand.",
+      "race": "Dragon",
+      "atk": 1200,
+      "def": 700,
+      "level": 3,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/red-eyes-baby-dragon-8503",
+      "card_sets": [
+        {
+          "set_name": "Legendary Duelists",
+          "set_code": "LEDU-EN001",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "17.46"
+        },
+        {
+          "set_name": "Legendary Duelists: Season 1",
+          "set_code": "LDS1-EN010",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 58257569,
+          "image_url": "https://images.ygoprodeck.com/images/cards/58257569.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/58257569.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/58257569.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "3.24",
+          "tcgplayer_price": "4.77",
+          "ebay_price": "21.00",
+          "amazon_price": "20.98",
+          "coolstuffinc_price": "0.99"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 340824,
+          "viewsweek": 21,
+          "upvotes": 14,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Speed Duel",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2017-09-07",
+          "ocg_date": "2017-06-03",
+          "konami_id": 13168,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

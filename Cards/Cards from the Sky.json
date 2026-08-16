@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 54977057,
+      "name": "Cards from the Sky",
+      "type": "Spell Card",
+      "humanReadableCardType": "Normal Spell",
+      "frameType": "spell",
+      "desc": "Banish 1 LIGHT Fairy monster in your hand, and if you do, draw 2 cards. You cannot Special Summon or conduct your Battle Phase the turn you activate this card.",
+      "race": "Normal",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/cards-from-the-sky-4682",
+      "card_sets": [
+        {
+          "set_name": "Lost Sanctuary Structure Deck",
+          "set_code": "SDLS-EN023",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "1.53"
+        },
+        {
+          "set_name": "Structure Deck: Wave of Light",
+          "set_code": "SR05-EN027",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 54977057,
+          "image_url": "https://images.ygoprodeck.com/images/cards/54977057.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/54977057.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/54977057.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.16",
+          "tcgplayer_price": "0.31",
+          "ebay_price": "0.99",
+          "amazon_price": "0.39",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 72745,
+          "viewsweek": 0,
+          "upvotes": 4,
+          "downvotes": 4,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2011-06-10",
+          "ocg_date": "2010-12-11",
+          "konami_id": 9290,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

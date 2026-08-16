@@ -1,0 +1,99 @@
+{
+  "data": [
+    {
+      "id": 31122090,
+      "name": "Gyakutenno Megami",
+      "typeline": [
+        "Fairy",
+        "Normal"
+      ],
+      "type": "Normal Monster",
+      "humanReadableCardType": "Normal Monster",
+      "frameType": "normal",
+      "desc": "This fairy uses her mystical power to protect the weak and provide spiritual support.",
+      "race": "Fairy",
+      "atk": 1800,
+      "def": 2000,
+      "level": 6,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/gyakutenno-megami-2641",
+      "card_sets": [
+        {
+          "set_name": "25th Anniversary Ultimate Kaiba Set",
+          "set_code": "KC01-EN009",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Anniversary Pack",
+          "set_code": "YAP1-EN005",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "20.7"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-011",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "2.19"
+        },
+        {
+          "set_name": "Starter Deck: Kaiba",
+          "set_code": "SDK-E010",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "11.8"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 31122090,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31122090.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31122090.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31122090.jpg"
+        },
+        {
+          "id": 31122091,
+          "image_url": "https://images.ygoprodeck.com/images/cards/31122091.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/31122091.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/31122091.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "1.00",
+          "ebay_price": "5.70",
+          "amazon_price": "8.03",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 63094,
+          "viewsweek": 0,
+          "upvotes": 8,
+          "downvotes": 0,
+          "formats": [
+            "GOAT",
+            "OCG GOAT",
+            "Duel Links",
+            "Common Charity",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Gyakutenno Megami",
+          "tcg_date": "2002-03-29",
+          "ocg_date": "1999-12-16",
+          "konami_id": 4096,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

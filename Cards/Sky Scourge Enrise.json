@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "id": 11458071,
+      "name": "Sky Scourge Enrise",
+      "typeline": [
+        "Fairy",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "This card cannot be Normal Summoned or Set. This card cannot be Special Summoned except by removing from play 3 LIGHT Fairy-Type monsters and 1 DARK Fiend monster in your Graveyard. Once per turn, you can remove from play 1 face-up monster on the field. If you activate this effect, this card cannot attack during this turn.",
+      "race": "Fairy",
+      "atk": 2400,
+      "def": 1500,
+      "level": 8,
+      "attribute": "LIGHT",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/sky-scourge-enrise-989",
+      "card_sets": [
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Force of the Breaker",
+          "set_code": "FOTB-EN021",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 11458071,
+          "image_url": "https://images.ygoprodeck.com/images/cards/11458071.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/11458071.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/11458071.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "2.73",
+          "tcgplayer_price": "1.07",
+          "ebay_price": "1.39",
+          "amazon_price": "0.62",
+          "coolstuffinc_price": "0.00"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 49645,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 1,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-05-16",
+          "ocg_date": "2007-02-15",
+          "konami_id": 7112,
+          "has_effect": 1,
+          "md_rarity": "Super Rare"
+        }
+      ]
+    }
+  ]
+}

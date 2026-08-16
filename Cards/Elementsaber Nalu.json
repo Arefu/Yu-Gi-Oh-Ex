@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "id": 46425662,
+      "name": "Elementsaber Nalu",
+      "typeline": [
+        "Warrior",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "Once per turn: You can send 1 \"Elementsaber\" monster from your hand to the GY, then target 1 \"Elementsaber\" or \"Elemental Lord\" monster in your GY, except \"Elementsaber Nalu\"; add it to your hand. Once per turn, if this card is in the GY: You can declare 1 Attribute; this card in the GY becomes that Attribute until the end of this turn.",
+      "race": "Warrior",
+      "atk": 1500,
+      "def": 1000,
+      "level": 3,
+      "attribute": "WATER",
+      "archetype": "Elementsaber",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/elementsaber-nalu-9215",
+      "card_sets": [
+        {
+          "set_name": "Flames of Destruction",
+          "set_code": "FLOD-EN021",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 46425662,
+          "image_url": "https://images.ygoprodeck.com/images/cards/46425662.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/46425662.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/46425662.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.17",
+          "tcgplayer_price": "0.18",
+          "ebay_price": "0.99",
+          "amazon_price": "1.00",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45480,
+          "viewsweek": 0,
+          "upvotes": 2,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2018-05-03",
+          "ocg_date": "2018-01-13",
+          "konami_id": 13575,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

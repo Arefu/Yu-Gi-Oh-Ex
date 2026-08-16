@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "id": 74850403,
+      "name": "Star Pendulumgraph",
+      "type": "Spell Card",
+      "humanReadableCardType": "Continuous Spell",
+      "frameType": "spell",
+      "desc": "Your opponent cannot target Spellcaster-Type monsters you control with Spell Cards or effects. If a face-up \"Magician\" Pendulum Monster Card(s) leaves your Monster Zone or Pendulum Zone: Add 1 \"Magician\" Pendulum Monster from your Deck to your hand. You can only use this effect of \"Star Pendulumgraph\" once per turn.",
+      "race": "Continuous",
+      "archetype": "Magician",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/star-pendulumgraph-8322",
+      "card_sets": [
+        {
+          "set_name": "Pendulum Evolution",
+          "set_code": "PEVO-EN007",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "1.55"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 74850403,
+          "image_url": "https://images.ygoprodeck.com/images/cards/74850403.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/74850403.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/74850403.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.37",
+          "tcgplayer_price": "0.46",
+          "ebay_price": "1.11",
+          "amazon_price": "1.49",
+          "coolstuffinc_price": "0.79"
+        }
+      ],
+      "misc_info": [
+        {
+          "beta_name": "Pendulumgraph of Ages",
+          "views": 228825,
+          "viewsweek": 21,
+          "upvotes": 5,
+          "downvotes": 1,
+          "formats": [
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "treated_as": "Star Pendulumgraph",
+          "tcg_date": "2017-06-22",
+          "ocg_date": "2016-12-23",
+          "konami_id": 12912,
+          "has_effect": 1,
+          "md_rarity": "Rare"
+        }
+      ]
+    }
+  ]
+}

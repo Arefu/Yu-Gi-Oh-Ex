@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "id": 32752319,
+      "name": "UFOroid Fighter",
+      "typeline": [
+        "Machine",
+        "Fusion",
+        "Effect"
+      ],
+      "type": "Fusion Monster",
+      "humanReadableCardType": "Fusion Effect Monster",
+      "frameType": "fusion",
+      "desc": "\"UFOroid\" + 1 Warrior-Type monster\nA Fusion Summon of this card can only be conducted with the above Fusion Material Monsters. The original ATK and DEF of this card become equal to the combined original ATK of the 2 Fusion Material Monsters you used for the Fusion Summon of this card.",
+      "race": "Machine",
+      "atk": -1,
+      "def": -1,
+      "level": 10,
+      "attribute": "LIGHT",
+      "archetype": "Roid",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/uforoid-fighter-2790",
+      "card_sets": [
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN034",
+          "set_rarity": "Ultimate Rare",
+          "set_rarity_code": "(UtR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Cybernetic Revolution",
+          "set_code": "CRV-EN034",
+          "set_rarity": "Ultra Rare",
+          "set_rarity_code": "(UR)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dark Revelation Volume 4",
+          "set_code": "DR04-EN034",
+          "set_rarity": "Rare",
+          "set_rarity_code": "(R)",
+          "set_price": "42.08"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENE10",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Speed Duel GX: Midterm Paradox",
+          "set_code": "SGX2-ENE10",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 32752319,
+          "image_url": "https://images.ygoprodeck.com/images/cards/32752319.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/32752319.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/32752319.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.19",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "0.99",
+          "amazon_price": "94.89",
+          "coolstuffinc_price": "0.49"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 76508,
+          "viewsweek": 0,
+          "upvotes": 6,
+          "downvotes": 2,
+          "formats": [
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "Speed Duel",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2005-08-06",
+          "ocg_date": "2005-05-26",
+          "konami_id": 6395,
+          "has_effect": 1,
+          "question_atk": 1,
+          "question_def": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

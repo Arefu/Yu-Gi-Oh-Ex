@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 69123138,
+      "name": "Zera the Mant",
+      "typeline": [
+        "Fiend",
+        "Ritual"
+      ],
+      "type": "Ritual Monster",
+      "humanReadableCardType": "Ritual Monster",
+      "frameType": "ritual",
+      "desc": "This card can only be Ritual Summoned with the Ritual Spell Card, \"Zera Ritual\".",
+      "race": "Fiend",
+      "atk": 2800,
+      "def": 2300,
+      "level": 8,
+      "attribute": "DARK",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/zera-the-mant-5810",
+      "card_sets": [
+        {
+          "set_name": "Premium Pack (TCG)",
+          "set_code": "PP01-EN011",
+          "set_rarity": "Secret Rare",
+          "set_rarity_code": "(ScR)",
+          "set_price": "15.01"
+        },
+        {
+          "set_name": "Premium Pack (TCG)",
+          "set_code": "PP01-EN011",
+          "set_rarity": "Super Rare",
+          "set_rarity_code": "(SR)",
+          "set_price": "4.72"
+        },
+        {
+          "set_name": "Speed Duel: Streets of Battle City",
+          "set_code": "SBC1-ENI13",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 69123138,
+          "image_url": "https://images.ygoprodeck.com/images/cards/69123138.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/69123138.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/69123138.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.15",
+          "tcgplayer_price": "0.23",
+          "ebay_price": "2.49",
+          "amazon_price": "3.98",
+          "coolstuffinc_price": "0.39"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 70677,
+          "viewsweek": 0,
+          "upvotes": 7,
+          "downvotes": 0,
+          "formats": [
+            "OCG GOAT",
+            "Duel Links",
+            "Edison",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2007-07-26",
+          "ocg_date": "1999-12-18",
+          "konami_id": 4366,
+          "has_effect": 0,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}

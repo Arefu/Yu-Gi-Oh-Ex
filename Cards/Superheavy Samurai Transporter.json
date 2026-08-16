@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "id": 41141943,
+      "name": "Superheavy Samurai Transporter",
+      "typeline": [
+        "Machine",
+        "Effect"
+      ],
+      "type": "Effect Monster",
+      "humanReadableCardType": "Effect Monster",
+      "frameType": "effect",
+      "desc": "If you have no Spell/Trap Cards in your Graveyard, you can Special Summon this card (from your hand). After this card was Special Summoned this way, you cannot Special Summon monsters for the rest of this turn, except \"Superheavy Samurai\" monsters. If you have no Spell/Trap Cards in your Graveyard: You can Tribute this card; Special Summon up to 2 monsters from your hand to your opponent's side of the field in Defense Position, then draw cards equal to the number of monsters Special Summoned by this effect. You can only use this effect of \"Superheavy Samurai Transporter\" once per turn.",
+      "race": "Machine",
+      "atk": 1200,
+      "def": 1800,
+      "level": 5,
+      "attribute": "EARTH",
+      "archetype": "Superheavy",
+      "ygoprodeck_url": "https://ygoprodeck.com/card/superheavy-samurai-transporter-3503",
+      "card_sets": [
+        {
+          "set_name": "2016 Mega-Tin Mega Pack",
+          "set_code": "MP16-EN109",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        },
+        {
+          "set_name": "Dimension of Chaos",
+          "set_code": "DOCS-EN005",
+          "set_rarity": "Common",
+          "set_rarity_code": "(C)",
+          "set_price": "0"
+        }
+      ],
+      "card_images": [
+        {
+          "id": 41141943,
+          "image_url": "https://images.ygoprodeck.com/images/cards/41141943.jpg",
+          "image_url_small": "https://images.ygoprodeck.com/images/cards_small/41141943.jpg",
+          "image_url_cropped": "https://images.ygoprodeck.com/images/cards_cropped/41141943.jpg"
+        }
+      ],
+      "card_prices": [
+        {
+          "cardmarket_price": "0.08",
+          "tcgplayer_price": "0.12",
+          "ebay_price": "1.00",
+          "amazon_price": "0.25",
+          "coolstuffinc_price": "0.25"
+        }
+      ],
+      "misc_info": [
+        {
+          "views": 45423,
+          "viewsweek": 0,
+          "upvotes": 1,
+          "downvotes": 0,
+          "formats": [
+            "Duel Links",
+            "Common Charity",
+            "TCG",
+            "OCG",
+            "Master Duel"
+          ],
+          "tcg_date": "2015-11-05",
+          "ocg_date": "2015-07-18",
+          "konami_id": 11949,
+          "has_effect": 1,
+          "md_rarity": "Common"
+        }
+      ]
+    }
+  ]
+}
