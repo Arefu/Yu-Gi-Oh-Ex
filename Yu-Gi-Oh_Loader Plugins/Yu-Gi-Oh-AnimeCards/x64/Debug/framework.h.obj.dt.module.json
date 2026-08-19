@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "x64\\Debug\\framework.obj",
+            "outputs": [
+                "x64\\Debug\\framework.h.obj.dt.module.json",
+                "x64\\Debug\\framework.h.obj.dt.d.json",
+                "x64\\Debug\\Yu-Gi-Oh-AnimeCards.pch"
+            ],
+            "requires": []
+        }
+    ]
+}
