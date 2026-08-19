@@ -20,7 +20,7 @@
 typedef __int64 Address;
 
 extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
-
+static HWND g_hWnd = nullptr;
 static Address oCreateDeviceAndSwapChain = 0x14090D2B0;
 static Address nCreateDeviceAndSwapChain = 0x0;
 
@@ -53,9 +53,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
     if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
         return true;
 
-    if (ImGui::GetIO().WantCaptureMouse)
-        return true;
-
     switch (msg)
     {
     case WM_KEYDOWN:
@@ -77,6 +74,41 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
     case WM_CLOSE:
         YuGiOhEx::g_bIsQuitReady = true;
         break;
+
+    case WM_MOUSEMOVE: case WM_LBUTTONDOWN: case WM_LBUTTONUP:
+    case WM_RBUTTONDOWN: case WM_RBUTTONUP:
+    case WM_MBUTTONDOWN: case WM_MBUTTONUP:
+    case WM_XBUTTONDOWN: case WM_XBUTTONUP:
+    case WM_MOUSEWHEEL: case WM_MOUSEHWHEEL:
+        if (ImGui::GetIO().WantCaptureMouse)
+            return true;
+        break;
+
+    case WM_SIZE:
+    {
+        if (wParam != SIZE_MINIMIZED && pMainRenderTargetView)
+        {
+            pMainRenderTargetView->Release();
+            pMainRenderTargetView = nullptr;
+        }
+
+        LRESULT result = CallWindowProcA(oWndProc, hWnd, msg, wParam, lParam);
+
+        if (wParam != SIZE_MINIMIZED && pDevice && pSwapChain)
+        {
+            ID3D11Texture2D* pBackBuffer = nullptr;
+            pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
+            if (pBackBuffer)
+            {
+                pDevice->CreateRenderTargetView(pBackBuffer, NULL, &pMainRenderTargetView);
+                pBackBuffer->Release();
+            }
+        }
+
+        return result;
+    }
+    default:
+        break;
     }
 
     PluginManager::ProcessInput(hWnd, msg, wParam, lParam);
@@ -85,6 +117,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
 {
+    RECT rect;
+    if (GetClientRect(g_hWnd, &rect))  // see note below
+    {
+        ImGuiIO& io = ImGui::GetIO();
+        io.DisplaySize = ImVec2((float)(rect.right - rect.left), (float)(rect.bottom - rect.top));
+    }
+
     ImGui_ImplWin32_NewFrame();
     ImGui_ImplDX11_NewFrame();
     ImGui::NewFrame();
@@ -383,14 +422,17 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(
     _ImGuiContext = ImGui::GetCurrentContext();
     ImGuiIO& io = ImGui::GetIO();
     (void)io;
-    io.DisplaySize = ImVec2(1920, 1080);
 
     DXGI_SWAP_CHAIN_DESC sd;
     pSwapChain->GetDesc(&sd);
 
+    RECT rect;
+    GetClientRect(sd.OutputWindow, &rect);
+    io.DisplaySize = ImVec2((float)(rect.right - rect.left), (float)(rect.bottom - rect.top));
+
     ImGui_ImplWin32_Init(sd.OutputWindow);
     ImGui_ImplDX11_Init(pDevice, pContext);
-
+    g_hWnd = sd.OutputWindow;
     ID3D11Texture2D* pBackBuffer = nullptr;
     pSwapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (LPVOID*)&pBackBuffer);
     pDevice->CreateRenderTargetView(pBackBuffer, NULL, &pMainRenderTargetView);

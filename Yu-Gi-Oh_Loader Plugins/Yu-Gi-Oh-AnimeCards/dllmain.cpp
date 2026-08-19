@@ -46,38 +46,6 @@ static float kCardArtScale = 1.3f;
 static float kCardArtOffsetX = 0.0f;   // positive = right, negative = left
 static float kCardArtOffsetY = -50.0f; // positive = down, negative = up
 
-static float ReadConfigFloat(const std::string& configPath, const char* key, float defaultValue)
-{
-    char defaultStr[64];
-    snprintf(defaultStr, sizeof(defaultStr), "%g", defaultValue);
-
-    char buf[64] = {};
-    GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", key, defaultStr,
-        buf, sizeof(buf), configPath.c_str());
-
-    char* end = nullptr;
-    float value = std::strtof(buf, &end);
-    if (end == buf)
-        return defaultValue; // unparsable, keep default
-
-    return value;
-}
-
-static void LoadConfig()
-{
-    kCustomAtkX = ReadConfigFloat(".\\Config.ini", "CustomAtkX", kCustomAtkX);
-    kCustomAtkY = ReadConfigFloat(".\\Config.ini", "CustomAtkY", kCustomAtkY);
-    kCustomDefX = ReadConfigFloat(".\\Config.ini", "CustomDefX", kCustomDefX);
-    kCustomDefY = ReadConfigFloat(".\\Config.ini", "CustomDefY", kCustomDefY);
-
-    kAtkTextScale = ReadConfigFloat(".\\Config.ini", "AtkTextScale", kAtkTextScale);
-    kDefTextScale = ReadConfigFloat(".\\Config.ini", "DefTextScale", kDefTextScale);
-
-    kCardArtScale = ReadConfigFloat(".\\Config.ini", "CardArtScale", kCardArtScale);
-    kCardArtOffsetX = ReadConfigFloat(".\\Config.ini", "CardArtOffsetX", kCardArtOffsetX);
-    kCardArtOffsetY = ReadConfigFloat(".\\Config.ini", "CardArtOffsetY", kCardArtOffsetY);
-}
-
 constexpr float kVanillaAtkX = 367.0f;
 constexpr float kVanillaAtkY = 544.0f;
 constexpr float kAbilitySlotX = 32.0f;
@@ -334,7 +302,45 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     case DLL_PROCESS_ATTACH:
     {
         Logger::SetupLogger();
-        LoadConfig();
+
+        char cfgBuf[64];
+        char* cfgEnd = nullptr;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomAtkX", "135", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vCustomAtkX = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kCustomAtkX = vCustomAtkX;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomAtkY", "507", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vCustomAtkY = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kCustomAtkY = vCustomAtkY;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomDefX", "250", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vCustomDefX = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kCustomDefX = vCustomDefX;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomDefY", "500", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vCustomDefY = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kCustomDefY = vCustomDefY;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "AtkTextScale", "2.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vAtkTextScale = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kAtkTextScale = vAtkTextScale;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "DefTextScale", "2.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vDefTextScale = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kDefTextScale = vDefTextScale;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CardArtScale", "1.3", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vCardArtScale = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kCardArtScale = vCardArtScale;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CardArtOffsetX", "0", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vCardArtOffsetX = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kCardArtOffsetX = vCardArtOffsetX;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CardArtOffsetY", "-50", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vCardArtOffsetY = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kCardArtOffsetY = vCardArtOffsetY;
 
         p_g_bIsJpVersion = (bool*)ResolveVA(0x14332A348);
 
