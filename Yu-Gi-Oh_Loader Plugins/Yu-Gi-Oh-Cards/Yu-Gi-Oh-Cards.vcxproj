@@ -97,22 +97,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cards.cpp" />
+    <ClCompile Include="Card.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Limit.cpp" />
     <ClCompile Include="Logger.cpp" />
-    <ClCompile Include="Memory.cpp" />
-    <ClCompile Include="Patcher.cpp" />
-    <ClCompile Include="Targets.cpp" />
+    <ClCompile Include="Save.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Yu-Gi-Oh.def" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cards.h" />
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="Limit.h" />
     <ClInclude Include="Logger.h" />
-    <ClInclude Include="Memory.h" />
-    <ClInclude Include="Patcher.h" />
-    <ClInclude Include="Targets.h" />
+    <ClInclude Include="Save.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

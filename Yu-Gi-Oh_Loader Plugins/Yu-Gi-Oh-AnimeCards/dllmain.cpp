@@ -46,6 +46,12 @@ static float kCardArtScale = 1.3f;
 static float kCardArtOffsetX = 0.0f;   // positive = right, negative = left
 static float kCardArtOffsetY = -50.0f; // positive = down, negative = up
 
+// Defaults match the vanilla Spell/Trap property icon position
+// (343, 83 non-JP / 343, 86 JP) - i.e. the top-right circular icon.
+// Override via Config.ini if you want it somewhere else.
+static float kCustomSTIconX = 343.0f;
+static float kCustomSTIconY = 83.0f;
+
 constexpr float kVanillaAtkX = 367.0f;
 constexpr float kVanillaAtkY = 544.0f;
 constexpr float kAbilitySlotX = 32.0f;
@@ -81,6 +87,13 @@ constexpr float kArtLinkY0 = 104.0f;
 constexpr float kArtLinkX1 = 373.0f;    // 26 + 347
 constexpr float kArtLinkY1 = 548.0f;    // 104 + 444
 
+// Spell/Trap property icon (source rect built with size 20.0 in
+// sub_14074E7D0's v290/v291, placed at these baked-in offsets). This is
+// the round icon at the top-right of the card.
+constexpr float kSTIconX0 = 343.0f;
+constexpr float kSTIconY0_NonJp = 83.0f;
+constexpr float kSTIconY0_Jp = 86.0f;
+
 extern "C" void Hook_sub_1408795A0(void* a1, float x0, float y0, float x1, float y1,
     float u0, float v0, float u1, float v1, int a10, int color)
 {
@@ -107,6 +120,20 @@ extern "C" void Hook_sub_1408795A0(void* a1, float x0, float y0, float x1, float
         return;
     }
 
+    bool isSTIcon = NearlyEqual(x0, kSTIconX0) &&
+        (NearlyEqual(y0, kSTIconY0_NonJp) || NearlyEqual(y0, kSTIconY0_Jp));
+
+    if (isSTIcon)
+    {
+        float w = x1 - x0;
+        float h = y1 - y0;
+
+        orig_sub_1408795A0(a1, kCustomSTIconX, kCustomSTIconY,
+            kCustomSTIconX + w, kCustomSTIconY + h,
+            u0, v0, u1, v1, a10, color);
+        return;
+    }
+
     orig_sub_1408795A0(a1, x0, y0, x1, y1, u0, v0, u1, v1, a10, color);
 }
 
@@ -114,11 +141,13 @@ using fn_Get_RawDefFromFullCardProps = int(__fastcall*)(unsigned short);
 using fn_sub_14081A670 = int(__fastcall*)(unsigned short);
 using fn_sub_14081A730 = int(__fastcall*)(unsigned short);
 using fn_Get_CardTypeFromFullCardPropsByKonamiId = int(__fastcall*)(unsigned short);
+using fn_Get_SpellTrapCardPropertyFromFullCardProps = int(__fastcall*)(unsigned short);
 
 static fn_Get_RawDefFromFullCardProps orig_Get_RawDefFromFullCardProps = nullptr;
 static fn_sub_14081A670 orig_sub_14081A670 = nullptr;
 static fn_sub_14081A730 orig_sub_14081A730 = nullptr;
 static fn_Get_CardTypeFromFullCardPropsByKonamiId orig_Get_CardTypeFromFullCardPropsByKonamiId = nullptr;
+static fn_Get_SpellTrapCardPropertyFromFullCardProps orig_Get_SpellTrapCardPropertyFromFullCardProps = nullptr;
 
 // Forward-declared here; g_currentCardId is defined further down, right
 // next to Hook_sub_14074E7D0 which sets it. Declared early so the
@@ -140,14 +169,15 @@ extern unsigned short g_currentCardId;
 // something other than Spell/Trap for this game's encoding, possibly
 // tangled up with Synchro/Fusion/etc. extra-deck types) or a mistake.
 // Worth double-checking against real card data before relying on it.
+//
+// IMPORTANT: since this is used below to gate the monster ST-icon fix,
+// test it against Fusion/Synchro/XYZ/Pendulum/Link monsters specifically
+// — if any of those hit `default` instead of a monster-safe case, the
+// icon-forcing hook below will misfire for them.
 inline bool IsTrapSpellCard(unsigned short cardId)
 {
-    int t = orig_Get_CardTypeFromFullCardPropsByKonamiId(cardId);
     switch (orig_Get_CardTypeFromFullCardPropsByKonamiId(cardId))
-
     {
-     
-
     case 13:
     case 14:
     case 42:
@@ -162,13 +192,13 @@ inline bool IsTrapSpellCard(unsigned short cardId)
 
 extern "C" int Hook_Get_RawDefFromFullCardProps(unsigned short cardId)
 {
-    if (IsTrapSpellCard(cardId)) return 0;
+   // if (IsTrapSpellCard(cardId)) return 0;
     return orig_Get_RawDefFromFullCardProps(cardId);
 }
 
 extern "C" int Hook_sub_14081A670(unsigned short cardId)
 {
-    if (IsTrapSpellCard(cardId)) return 0;
+  //  if (IsTrapSpellCard(cardId)) return 0;
 
     return orig_sub_14081A670(cardId);
 }
@@ -177,6 +207,32 @@ extern "C" int Hook_sub_14081A730(unsigned short cardId)
 {
     if (IsTrapSpellCard(cardId)) return 0;
     return orig_sub_14081A730(cardId);
+}
+
+// In sub_14074E7D0, the entire ST-icon build+draw block is gated on
+// `Get_SpellTrapCardPropertyFromFullCardProps(cardId) != 0`. For monster
+// cards this vanilla getter returns 0, so the icon never gets built and
+// never reaches Hook_sub_1408795A0 above at all. Forcing a non-zero
+// property id for monsters makes the game build + draw the icon through
+// the normal codepath, at the position controlled by
+// kCustomSTIconX/kCustomSTIconY above.
+//
+// kMonsterSTIconPropertyId: the value returned here is passed into
+// sub_1407FD3E0 to resolve which icon texture to use. Pick whichever
+// property id maps to the texture you want to show for monsters — you'll
+// likely need to test a few values in-game. An id that doesn't map to a
+// valid entry risks sub_1407FD3E0 or the downstream texture lookup
+// misbehaving, so start conservative and verify no crashes before
+// treating this as final.
+constexpr int kMonsterSTIconPropertyId = 1; // TODO: verify this maps to the icon you want
+
+extern "C" int Hook_Get_SpellTrapCardPropertyFromFullCardProps(unsigned short cardId)
+{
+    if (!IsTrapSpellCard(cardId)) // per IsTrapSpellCard's (inverted-named) logic, false == monster
+    {
+        return kMonsterSTIconPropertyId;
+    }
+    return orig_Get_SpellTrapCardPropertyFromFullCardProps(cardId);
 }
 
 struct FontTable
@@ -198,8 +254,8 @@ inline bool IsAbilityWrapFont(uint32_t fontId)
     const FontTable& fonts = GetFontTable();
     for (int i = 3; i <= 8; ++i)
     {
-        if (fonts.v[i] == kFontSentinel) break;
-        if (fonts.v[i] == fontId) return true;
+        if (fonts.v[7] == kFontSentinel) break;
+        if (fonts.v[3] == fontId) return true;
     }
     return false;
 }
@@ -342,6 +398,14 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         cfgEnd = nullptr; float vCardArtOffsetY = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCardArtOffsetY = vCardArtOffsetY;
 
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomSTIconX", "500", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vCustomSTIconX = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kCustomSTIconX = vCustomSTIconX;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomSTIconY", "183", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vCustomSTIconY = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kCustomSTIconY = vCustomSTIconY;
+
         p_g_bIsJpVersion = (bool*)ResolveVA(0x14332A348);
 
         orig_sub_140766540 = (fn_sub_140766540)ResolveVA(0x140766540);
@@ -356,6 +420,14 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         orig_sub_14081A730 = (fn_sub_14081A730)ResolveVA(0x14081A730);
         orig_Get_CardTypeFromFullCardPropsByKonamiId = (fn_Get_CardTypeFromFullCardPropsByKonamiId)ResolveVA(0x14081A650);
 
+        // TODO: fill in the real RVA for Get_SpellTrapCardPropertyFromFullCardProps
+        // (only seen as thunk j_YGO::CARDS::Get_SpellTrapCardPropertyFromFullCardProps
+        // so far — the thunk's own target address in your IDB is what belongs here).
+        // Leaving this at 0 will resolve to GameBase() - kImageBase, which is NOT a
+        // valid function pointer — do not attach/build until this is corrected.
+        orig_Get_SpellTrapCardPropertyFromFullCardProps =
+            (fn_Get_SpellTrapCardPropertyFromFullCardProps)ResolveVA(0x014081A630 /* TODO */);
+
         DetourTransactionBegin();
         DetourUpdateThread(GetCurrentThread());
         DetourAttach(&(PVOID&)orig_sub_140766540, Hook_sub_140766540);
@@ -365,6 +437,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         DetourAttach(&(PVOID&)orig_Get_RawDefFromFullCardProps, Hook_Get_RawDefFromFullCardProps);
         DetourAttach(&(PVOID&)orig_sub_14081A670, Hook_sub_14081A670);
         DetourAttach(&(PVOID&)orig_sub_14081A730, Hook_sub_14081A730);
+         DetourAttach(&(PVOID&)orig_Get_SpellTrapCardPropertyFromFullCardProps,Hook_Get_SpellTrapCardPropertyFromFullCardProps); // uncomment once RVA above is fixed
         LONG err = DetourTransactionCommit();
         (void)err;
 

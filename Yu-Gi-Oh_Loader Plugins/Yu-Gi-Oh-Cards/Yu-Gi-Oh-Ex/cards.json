@@ -1,0 +1,18 @@
+{
+  "cards": [
+    {
+      "id": 15000,
+      "name": "Test Custom Card",
+      "description": "The first card added through the JSON pipeline.",
+      "image": "15000.png",
+      "kind": "Effect",
+      "type": "Warrior",
+      "attribute": "Light",
+      "level": 7,
+      "atk": 2500,
+      "def": 2000,
+      "limitation": "Unlimited",
+      "copies": 3
+    }
+  ]
+}

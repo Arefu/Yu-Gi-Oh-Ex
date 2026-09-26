@@ -358,3 +358,29 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+
+# Game data and saves - never commit these
+*.zib
+*.dat
+Binaries/*/Tools/YGO_2020/
+
+# IDA Pro working files (the .i64 database itself is kept out of git too)
+*.i64
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+
+# Stray screenshots
+Screenshot*.png
+
+# C++ build intermediates (MSVC module scan output etc.)
+x64/
+*.dt.d.json
+*.dt.module.json
+*.command
+
+# Stray output folders from building a project without the solution's SolutionDir
+/Tools/**/Binaries/
+/File Type Libraries/**/Binaries/
