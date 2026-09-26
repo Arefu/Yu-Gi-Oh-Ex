@@ -86,6 +86,15 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 
         SetWindowText(GetConsoleWindow(), L"Yu-Gi-Oh! Console");
 
+        // QuickEdit pauses any process that writes to the console once the window is clicked,
+        // which freezes the game (most noticeably while it is shutting down).
+        {
+            HANDLE consoleIn = GetStdHandle(STD_INPUT_HANDLE);
+            DWORD mode = 0;
+            if (GetConsoleMode(consoleIn, &mode))
+                SetConsoleMode(consoleIn, (mode & ~ENABLE_QUICK_EDIT_MODE) | ENABLE_EXTENDED_FLAGS);
+        }
+
         WriteLog("Ready!", MODULE_NAME, 0);
 
         //  std::thread(ProcessInput).detach();
