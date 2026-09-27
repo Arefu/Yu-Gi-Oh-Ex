@@ -66,6 +66,7 @@ namespace WolfX
             CARDS_BTN_CloseBinder = new Button();
             CARDS_BTN_OpenCards = new Button();
             CARDS_BTN_SaveCard = new Button();
+            CARDS_BTN_ExportJson = new Button();
             groupBox2 = new GroupBox();
             CARDS_CB_CardType = new ComboBox();
             label3 = new Label();
@@ -161,10 +162,10 @@ namespace WolfX
             YDC_TC_CardsInDeck = new TabControl();
             tabPage1 = new TabPage();
             YDC_LV_MainDeckCards = new ListView();
-            tabPage3 = new TabPage();
-            YDC_LV_SideDeckCards = new ListView();
             tabPage2 = new TabPage();
             YDC_LV_ExtraDeckCards = new ListView();
+            tabPage3 = new TabPage();
+            YDC_LV_SideDeckCards = new ListView();
             groupBox12 = new GroupBox();
             YDC_CB_UseCardID = new CheckBox();
             YDC_BTN_OpenSaveFile = new Button();
@@ -228,10 +229,14 @@ namespace WolfX
             PACKDATA_LBL_NumberOfCommon = new Label();
             label20 = new Label();
             label27 = new Label();
-            Page_SaveGameManager = new TabPage();
-            groupBox22 = new GroupBox();
-            button6 = new Button();
-            SaveGame_BTN_OpenSave = new Button();
+            Page_SaveEditorFull = new TabPage();
+            SaveEditorFull = new SaveEditorPage();
+            Page_StartingCollection = new TabPage();
+            StartingCollectionEditor = new StartingCollectionPage();
+            Page_PackDefinitions = new TabPage();
+            PackDefinitionsEditor = new PackDefPage();
+            Page_DeckData = new TabPage();
+            DeckDataEditor = new DeckDataPage();
             MenuBar = new MenuStrip();
             toolsToolStripMenuItem = new ToolStripMenuItem();
             WOLFUI_TOOLITEM_OpenConfigEditor = new ToolStripMenuItem();
@@ -285,8 +290,8 @@ namespace WolfX
             groupBox14.SuspendLayout();
             YDC_TC_CardsInDeck.SuspendLayout();
             tabPage1.SuspendLayout();
-            tabPage3.SuspendLayout();
             tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
             groupBox12.SuspendLayout();
             groupBox13.SuspendLayout();
             Page_PDLimitsManager.SuspendLayout();
@@ -304,8 +309,10 @@ namespace WolfX
             tabPage5.SuspendLayout();
             groupBox20.SuspendLayout();
             groupBox19.SuspendLayout();
-            Page_SaveGameManager.SuspendLayout();
-            groupBox22.SuspendLayout();
+            Page_SaveEditorFull.SuspendLayout();
+            Page_StartingCollection.SuspendLayout();
+            Page_PackDefinitions.SuspendLayout();
+            Page_DeckData.SuspendLayout();
             MenuBar.SuspendLayout();
             SuspendLayout();
             // 
@@ -319,7 +326,10 @@ namespace WolfX
             WolfX_TabManager.Controls.Add(Page_YDCManager);
             WolfX_TabManager.Controls.Add(Page_PDLimitsManager);
             WolfX_TabManager.Controls.Add(Page_CardShopManager);
-            WolfX_TabManager.Controls.Add(Page_SaveGameManager);
+            WolfX_TabManager.Controls.Add(Page_SaveEditorFull);
+            WolfX_TabManager.Controls.Add(Page_StartingCollection);
+            WolfX_TabManager.Controls.Add(Page_PackDefinitions);
+            WolfX_TabManager.Controls.Add(Page_DeckData);
             WolfX_TabManager.Dock = DockStyle.Fill;
             WolfX_TabManager.Location = new Point(0, 24);
             WolfX_TabManager.Name = "WolfX_TabManager";
@@ -623,6 +633,7 @@ namespace WolfX
             groupBox6.Controls.Add(CARDS_BTN_CloseBinder);
             groupBox6.Controls.Add(CARDS_BTN_OpenCards);
             groupBox6.Controls.Add(CARDS_BTN_SaveCard);
+            groupBox6.Controls.Add(CARDS_BTN_ExportJson);
             groupBox6.Location = new Point(666, 6);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(303, 154);
@@ -671,7 +682,17 @@ namespace WolfX
             CARDS_BTN_SaveCard.Text = "Save Card";
             CARDS_BTN_SaveCard.UseVisualStyleBackColor = true;
             CARDS_BTN_SaveCard.Click += CARDS_BTN_SaveCard_Click;
-            // 
+            //
+            // CARDS_BTN_ExportJson
+            //
+            CARDS_BTN_ExportJson.Location = new Point(128, 52);
+            CARDS_BTN_ExportJson.Name = "CARDS_BTN_ExportJson";
+            CARDS_BTN_ExportJson.Size = new Size(160, 25);
+            CARDS_BTN_ExportJson.TabIndex = 4;
+            CARDS_BTN_ExportJson.Text = "Export to cards.json";
+            CARDS_BTN_ExportJson.UseVisualStyleBackColor = true;
+            CARDS_BTN_ExportJson.Click += CARDS_BTN_ExportJson_Click;
+            //
             // groupBox2
             // 
             groupBox2.Controls.Add(CARDS_CB_CardType);
@@ -1662,6 +1683,26 @@ namespace WolfX
             YDC_LV_MainDeckCards.UseCompatibleStateImageBehavior = false;
             YDC_LV_MainDeckCards.View = View.List;
             // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(YDC_LV_ExtraDeckCards);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Size = new Size(1232, 468);
+            tabPage2.TabIndex = 2;
+            tabPage2.Text = "Extra Deck";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // YDC_LV_ExtraDeckCards
+            // 
+            YDC_LV_ExtraDeckCards.Dock = DockStyle.Fill;
+            YDC_LV_ExtraDeckCards.Location = new Point(0, 0);
+            YDC_LV_ExtraDeckCards.Name = "YDC_LV_ExtraDeckCards";
+            YDC_LV_ExtraDeckCards.Size = new Size(1232, 468);
+            YDC_LV_ExtraDeckCards.TabIndex = 2;
+            YDC_LV_ExtraDeckCards.UseCompatibleStateImageBehavior = false;
+            YDC_LV_ExtraDeckCards.View = View.List;
+            // 
             // tabPage3
             // 
             tabPage3.Controls.Add(YDC_LV_SideDeckCards);
@@ -1682,26 +1723,6 @@ namespace WolfX
             YDC_LV_SideDeckCards.TabIndex = 1;
             YDC_LV_SideDeckCards.UseCompatibleStateImageBehavior = false;
             YDC_LV_SideDeckCards.View = View.List;
-            // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(YDC_LV_ExtraDeckCards);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Size = new Size(1232, 468);
-            tabPage2.TabIndex = 2;
-            tabPage2.Text = "Extra Deck";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // YDC_LV_ExtraDeckCards
-            // 
-            YDC_LV_ExtraDeckCards.Dock = DockStyle.Fill;
-            YDC_LV_ExtraDeckCards.Location = new Point(0, 0);
-            YDC_LV_ExtraDeckCards.Name = "YDC_LV_ExtraDeckCards";
-            YDC_LV_ExtraDeckCards.Size = new Size(1232, 468);
-            YDC_LV_ExtraDeckCards.TabIndex = 2;
-            YDC_LV_ExtraDeckCards.UseCompatibleStateImageBehavior = false;
-            YDC_LV_ExtraDeckCards.View = View.List;
             // 
             // groupBox12
             // 
@@ -2378,46 +2399,77 @@ namespace WolfX
             label27.Size = new Size(0, 15);
             label27.TabIndex = 0;
             // 
-            // Page_SaveGameManager
+            // Page_SaveEditorFull
             // 
-            Page_SaveGameManager.Controls.Add(groupBox22);
-            Page_SaveGameManager.Location = new Point(4, 24);
-            Page_SaveGameManager.Name = "Page_SaveGameManager";
-            Page_SaveGameManager.Size = new Size(1256, 629);
-            Page_SaveGameManager.TabIndex = 8;
-            Page_SaveGameManager.Text = "Save Game Editor";
-            Page_SaveGameManager.UseVisualStyleBackColor = true;
+            Page_SaveEditorFull.Controls.Add(SaveEditorFull);
+            Page_SaveEditorFull.Location = new Point(4, 24);
+            Page_SaveEditorFull.Name = "Page_SaveEditorFull";
+            Page_SaveEditorFull.Size = new Size(1256, 629);
+            Page_SaveEditorFull.TabIndex = 9;
+            Page_SaveEditorFull.Text = "Save Editor";
+            Page_SaveEditorFull.UseVisualStyleBackColor = true;
             // 
-            // groupBox22
+            // SaveEditorFull
             // 
-            groupBox22.Controls.Add(button6);
-            groupBox22.Controls.Add(SaveGame_BTN_OpenSave);
-            groupBox22.Location = new Point(8, 3);
-            groupBox22.Name = "groupBox22";
-            groupBox22.Size = new Size(200, 100);
-            groupBox22.TabIndex = 15;
-            groupBox22.TabStop = false;
-            groupBox22.Text = "Save Handler";
+            SaveEditorFull.Dock = DockStyle.Fill;
+            SaveEditorFull.Location = new Point(0, 0);
+            SaveEditorFull.Name = "SaveEditorFull";
+            SaveEditorFull.Size = new Size(1256, 629);
+            SaveEditorFull.TabIndex = 0;
             // 
-            // button6
+            // Page_StartingCollection
             // 
-            button6.Enabled = false;
-            button6.Location = new Point(6, 53);
-            button6.Name = "button6";
-            button6.Size = new Size(72, 25);
-            button6.TabIndex = 4;
-            button6.Text = "Save ";
-            button6.UseVisualStyleBackColor = true;
+            Page_StartingCollection.Controls.Add(StartingCollectionEditor);
+            Page_StartingCollection.Location = new Point(4, 24);
+            Page_StartingCollection.Name = "Page_StartingCollection";
+            Page_StartingCollection.Size = new Size(1256, 629);
+            Page_StartingCollection.TabIndex = 10;
+            Page_StartingCollection.Text = "Starting Collection";
+            Page_StartingCollection.UseVisualStyleBackColor = true;
             // 
-            // SaveGame_BTN_OpenSave
+            // StartingCollectionEditor
             // 
-            SaveGame_BTN_OpenSave.Location = new Point(6, 22);
-            SaveGame_BTN_OpenSave.Name = "SaveGame_BTN_OpenSave";
-            SaveGame_BTN_OpenSave.Size = new Size(72, 25);
-            SaveGame_BTN_OpenSave.TabIndex = 2;
-            SaveGame_BTN_OpenSave.Text = "Open ";
-            SaveGame_BTN_OpenSave.UseVisualStyleBackColor = true;
-            SaveGame_BTN_OpenSave.Click += SaveGame_BTN_OpenSave_Click;
+            StartingCollectionEditor.Dock = DockStyle.Fill;
+            StartingCollectionEditor.Location = new Point(0, 0);
+            StartingCollectionEditor.Name = "StartingCollectionEditor";
+            StartingCollectionEditor.Size = new Size(1256, 629);
+            StartingCollectionEditor.TabIndex = 0;
+            // 
+            // Page_PackDefinitions
+            // 
+            Page_PackDefinitions.Controls.Add(PackDefinitionsEditor);
+            Page_PackDefinitions.Location = new Point(4, 24);
+            Page_PackDefinitions.Name = "Page_PackDefinitions";
+            Page_PackDefinitions.Size = new Size(1256, 629);
+            Page_PackDefinitions.TabIndex = 11;
+            Page_PackDefinitions.Text = "Pack Definitions";
+            Page_PackDefinitions.UseVisualStyleBackColor = true;
+            // 
+            // PackDefinitionsEditor
+            // 
+            PackDefinitionsEditor.Dock = DockStyle.Fill;
+            PackDefinitionsEditor.Location = new Point(0, 0);
+            PackDefinitionsEditor.Name = "PackDefinitionsEditor";
+            PackDefinitionsEditor.Size = new Size(1256, 629);
+            PackDefinitionsEditor.TabIndex = 0;
+            // 
+            // Page_DeckData
+            // 
+            Page_DeckData.Controls.Add(DeckDataEditor);
+            Page_DeckData.Location = new Point(4, 24);
+            Page_DeckData.Name = "Page_DeckData";
+            Page_DeckData.Size = new Size(1256, 629);
+            Page_DeckData.TabIndex = 12;
+            Page_DeckData.Text = "Deck Data";
+            Page_DeckData.UseVisualStyleBackColor = true;
+            // 
+            // DeckDataEditor
+            // 
+            DeckDataEditor.Dock = DockStyle.Fill;
+            DeckDataEditor.Location = new Point(0, 0);
+            DeckDataEditor.Name = "DeckDataEditor";
+            DeckDataEditor.Size = new Size(1256, 629);
+            DeckDataEditor.TabIndex = 0;
             // 
             // MenuBar
             // 
@@ -2620,8 +2672,8 @@ namespace WolfX
             groupBox14.PerformLayout();
             YDC_TC_CardsInDeck.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
-            tabPage3.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
             groupBox12.ResumeLayout(false);
             groupBox12.PerformLayout();
             groupBox13.ResumeLayout(false);
@@ -2647,8 +2699,10 @@ namespace WolfX
             groupBox20.PerformLayout();
             groupBox19.ResumeLayout(false);
             groupBox19.PerformLayout();
-            Page_SaveGameManager.ResumeLayout(false);
-            groupBox22.ResumeLayout(false);
+            Page_SaveEditorFull.ResumeLayout(false);
+            Page_StartingCollection.ResumeLayout(false);
+            Page_PackDefinitions.ResumeLayout(false);
+            Page_DeckData.ResumeLayout(false);
             MenuBar.ResumeLayout(false);
             MenuBar.PerformLayout();
             ResumeLayout(false);
@@ -2773,6 +2827,7 @@ namespace WolfX
         private Label label13;
         private TextBox YDC_TB_DeckName;
         private Button CARDS_BTN_SaveCard;
+        private Button CARDS_BTN_ExportJson;
         private Button CARDS_BTN_OpenCards;
         private CheckBox YDC_CB_UseCardID;
         private CheckBox YDC_CB_UseSimpleEditor;
@@ -2846,10 +2901,14 @@ namespace WolfX
         private Button PACKDATA_BTN_AddCards;
         private ListView YDC_LV_SideDeckCards;
         private ListView YDC_LV_ExtraDeckCards;
-        private TabPage Page_SaveGameManager;
-        private GroupBox groupBox22;
-        public Button button6;
-        private Button SaveGame_BTN_OpenSave;
+        private TabPage Page_SaveEditorFull;
+        private global::WolfX.Types.SaveEditorPage SaveEditorFull;
+        private TabPage Page_StartingCollection;
+        private global::WolfX.Types.StartingCollectionPage StartingCollectionEditor;
+        private TabPage Page_PackDefinitions;
+        private global::WolfX.Types.PackDefPage PackDefinitionsEditor;
+        private TabPage Page_DeckData;
+        private global::WolfX.Types.DeckDataPage DeckDataEditor;
         private ComboBox CARDS_CB_CardSearcher;
         private TextBox CARDS_TB_CardName;
         private GroupBox groupBox23;

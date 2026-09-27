@@ -1,4 +1,5 @@
-﻿using CARD_Kana;
+﻿using System.IO;
+using CARD_Kana;
 using CARD_Named;
 using CARD_PackID;
 using CARD_Pass;
@@ -62,6 +63,63 @@ namespace WolfX
             Card_Pass.Save();
             Card_Kana.Save(State.Language.ToString()[0]);
             Card_PackID.Save();
+        }
+
+        // Names the Yu-Gi-Oh-Cards plugin understands in cards.json; any other value is written as the raw number.
+        private static readonly HashSet<string> JsonKinds = new(Enum.GetNames<CARDS_INFO.CARD_Kind>().Where(n => n != "Default"), StringComparer.OrdinalIgnoreCase);   // every kind the game has; the plugin reads the names
+        private static readonly HashSet<string> JsonTypes = new(StringComparer.OrdinalIgnoreCase)
+        {
+            "Dragon", "Zombie", "Fiend", "Pyro", "SeaSerpent", "Rock", "Machine", "Fish", "Dinosaur", "Insect", "Beast", "BeastWarrior",
+            "Plant", "Aqua", "Warrior", "WingedBeast", "Fairy", "Spellcaster", "Thunder", "Reptile", "Psychic", "Wyrm", "Cyberse",
+            "DivineBeast", "Spell", "Trap",
+        };
+        private static readonly string[] JsonIcons = ["Normal", "Counter", "Field", "Equip", "Continuous", "QuickPlay", "Ritual"];
+
+        private static object JsonEnum<T>(T value, HashSet<string> known) where T : struct, Enum
+        {
+            string name = value.ToString();
+            return known.Contains(name) ? name : Convert.ToInt32(value);
+        }
+
+        /// <summary>Writes every card to cards.json in the form the Yu-Gi-Oh-Cards plugin reads. A card whose id the game already has overwrites that card.</summary>
+        private void CARDS_BTN_ExportJson_Click(object sender, EventArgs e)
+        {
+            if (CARDS_Cards.Cards.Count == 0)
+            {
+                MessageBox.Show("Open the cards first (Open Cards).", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            using var dialog = new SaveFileDialog { FileName = "cards.json", Filter = "cards.json|*.json", Title = "Export cards" };
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+                return;
+
+            var cards = new List<Dictionary<string, object>>();
+            for (int i = 0; i < CARDS_Cards.Cards.Count; i++)
+            {
+                var card = CARDS_Cards.Cards[i];
+                var entry = new Dictionary<string, object>
+                {
+                    ["id"] = card.ID,
+                    ["name"] = card.Name ?? "",
+                    ["description"] = card.Desc ?? "",
+                    ["kind"] = JsonEnum(card.Kind, JsonKinds),
+                    ["attribute"] = card.Attribute == CARDS_INFO.CARD_Attribute.Unknown ? 0 : card.Attribute.ToString().Replace("Monster", ""),
+                    ["type"] = JsonEnum(card.Type, JsonTypes),
+                    ["level"] = card.Level,
+                };
+                if (card.Kind is CARDS_INFO.CARD_Kind.Spell or CARDS_INFO.CARD_Kind.Trap)   // only Spells and Traps have an icon (Continuous, Quick-Play...)
+                    entry["icon"] = card.Ico >= 0 && card.Ico < JsonIcons.Length ? JsonIcons[card.Ico] : card.Ico;
+                if (i < Card_Pass._Passwords.Count && Card_Pass._Passwords[i] != 0)   // the card's real passcode: match it to downloaded card data to know the card exists in the game
+                    entry["password"] = Card_Pass._Passwords[i];
+                if (card.Attack >= 0) entry["atk"] = card.Attack;   // -1 is "?" in the game data
+                if (card.Defense >= 0) entry["def"] = card.Defense;
+                cards.Add(entry);
+            }
+
+            var options = new System.Text.Json.JsonSerializerOptions { WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
+            File.WriteAllText(dialog.FileName, System.Text.Json.JsonSerializer.Serialize(new { cards }, options), new System.Text.UTF8Encoding(false));
+            MessageBox.Show($"Exported {cards.Count} cards to {dialog.FileName}", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void CARDS_BTN_CloseBinder_Click(object sender, EventArgs e)

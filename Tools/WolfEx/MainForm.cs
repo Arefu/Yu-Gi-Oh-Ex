@@ -1,4 +1,4 @@
-namespace WolfEx
+﻿namespace WolfEx
 {
     /// <summary>A page of WolfEx that edits files in the game's Yu-Gi-Oh-Ex folder.</summary>
     internal interface IContentPanel
@@ -16,38 +16,17 @@ namespace WolfEx
     /// Edits the content the Yu-Gi-Oh-MoreCards plugin loads from the game folder: Yu-Gi-Oh-Ex/cards.json (new cards
     /// and their art) Yu-Gi-Oh-Ex/unlocks.json (cards the player owns from the start) and Yu-Gi-Oh-Ex/packs.json (cards added to shop packs). Only JSON and image files.
     /// </summary>
-    internal sealed class MainForm : Form
+    internal sealed partial class MainForm : Form
     {
-        private readonly TextBox _gameFolder = new() { ReadOnly = true, Dock = DockStyle.Fill };
-        private readonly Label _status = new() { AutoSize = true, Padding = new Padding(4, 6, 0, 0), Dock = DockStyle.Bottom };
-        private readonly List<IContentPanel> _panels = [];
-        private readonly TabControl _tabs = new() { Dock = DockStyle.Fill };
+        private readonly List<IContentPanel> _panels;
 
         public MainForm()
         {
-            Text = "WolfEx - new content for Legacy of the Duelist";
-            Width = 1100;
-            Height = 760;
+            InitializeComponent();
 
-            var top = new TableLayoutPanel { Dock = DockStyle.Top, Height = 38, ColumnCount = 5, Padding = new Padding(4) };
-            top.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
-            top.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-            for (int i = 0; i < 3; i++)
-                top.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
-
-            top.Controls.Add(new Label { Text = "Game folder:", AutoSize = true, Padding = new Padding(0, 6, 4, 0) }, 0, 0);
-            top.Controls.Add(_gameFolder, 1, 0);
-            top.Controls.Add(MakeButton("Browse...", (_, _) => Browse()), 2, 0);
-            top.Controls.Add(MakeButton("Reload", (_, _) => Reload()), 3, 0);
-            top.Controls.Add(MakeButton("Save all", (_, _) => SaveAll()), 4, 0);
-
-            AddPanel(new CardsPanel());
-            AddPanel(new UnlocksPanel());
-            AddPanel(new PacksPanel());
-
-            Controls.Add(_tabs);
-            Controls.Add(_status);
-            Controls.Add(top);
+            // The pages are the tabs in the designer, in the same order.
+            _panels = [cardsPanel, unlocksPanel, packsPanel, menusPanel];
+            cardsPanel.Warning += SetStatus;
 
             string? saved = ReadRemembered();
             if (saved != null && Directory.Exists(saved))
@@ -59,16 +38,13 @@ namespace WolfEx
                 SetStatus("Pick the game folder (the one with YuGiOh.exe). Files go in its Yu-Gi-Oh-Ex folder.");
         }
 
-        private string ExtraCardsFolder => Path.Combine(_gameFolder.Text, "Yu-Gi-Oh-Ex");
+        private void btnBrowse_Click(object? sender, EventArgs e) => Browse();
 
-        private void AddPanel(IContentPanel panel)
-        {
-            _panels.Add(panel);
-            var page = new TabPage(panel.Title);
-            page.Controls.Add((Control)panel);
-            ((Control)panel).Dock = DockStyle.Fill;
-            _tabs.TabPages.Add(page);
-        }
+        private void btnReload_Click(object? sender, EventArgs e) => Reload();
+
+        private void btnSaveAll_Click(object? sender, EventArgs e) => SaveAll();
+
+        private string ExtraCardsFolder => Path.Combine(_gameFolder.Text, "Yu-Gi-Oh-Ex");
 
         private void Browse()
         {
@@ -97,6 +73,7 @@ namespace WolfEx
             if (string.IsNullOrEmpty(_gameFolder.Text))
                 return;
 
+            WolfX.Types.CardCatalog.Use(_gameFolder.Text);
             foreach (var panel in _panels)
                 panel.LoadFrom(ExtraCardsFolder, _gameFolder.Text);
 
@@ -127,13 +104,6 @@ namespace WolfEx
         }
 
         private void SetStatus(string text) => _status.Text = text;
-
-        private static Button MakeButton(string text, EventHandler onClick)
-        {
-            var button = new Button { Text = text, AutoSize = true };
-            button.Click += onClick;
-            return button;
-        }
 
         private static string RememberedFile =>
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WolfEx", "game.folder");

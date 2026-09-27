@@ -1,4 +1,4 @@
-using System.Text;
+﻿using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
@@ -8,9 +8,53 @@ namespace WolfEx
     /// Yu-Gi-Oh-Ex/cards.json: new cards, and their art next to it. Field names and values are the ones the
     /// Yu-Gi-Oh-MoreCards plugin reads (Card.h / Card.cpp).
     /// </summary>
-    internal sealed class CardsPanel : UserControl, IContentPanel
+    internal sealed partial class CardsPanel : UserControl, IContentPanel
     {
-        private static readonly (string Name, int Value)[] Kinds = { ("Normal", 0x0), ("Effect", 0x1), ("Spell", 0xD), ("Trap", 0xE) };
+        // Every kind the game has: its card frame comes from the kind, so an Xyz Effect is drawn as one.
+        private static readonly (string Name, int Value)[] Kinds =
+        {
+            ("Normal", 0),
+            ("Effect", 1),
+            ("Fusion", 2),
+            ("Fusion Effect", 3),
+            ("Ritual", 4),
+            ("Ritual Effect", 5),
+            ("Toon", 6),
+            ("Spirit", 7),
+            ("Union", 8),
+            ("Gemini", 9),
+            ("Token", 10),
+            ("Spell", 13),
+            ("Trap", 14),
+            ("Tuner Normal", 15),
+            ("Tuner Effect", 16),
+            ("Synchro", 17),
+            ("Synchro Effect", 18),
+            ("Synchro Tuner Effect", 19),
+            ("Xyz", 22),
+            ("Xyz Effect", 23),
+            ("Flip Effect", 24),
+            ("Pendulum", 25),
+            ("Pendulum Effect", 26),
+            ("Special Summoned Effect", 27),
+            ("Toon Effect", 28),
+            ("Spirit Effect", 29),
+            ("Tuner", 30),
+            ("Tuner Flip Effect", 32),
+            ("Pendulum Tuner Effect", 33),
+            ("Xyz Pendulum Effect", 34),
+            ("Pendulum Flip Effect", 35),
+            ("Synchro Pendulum Effect", 36),
+            ("Union Tuner Effect", 37),
+            ("Ritual Spirit Effect", 38),
+            ("Fusion Tuner", 39),
+            ("Pendulum Effect Alt", 40),
+            ("Fusion Pendulum Effect", 41),
+            ("Link", 42),
+            ("Link Effect", 43),
+            ("Pendulum Tuner Normal", 44),
+            ("Pendulum Spirit Effect", 45),
+        };
         private static readonly (string Name, int Value)[] Attributes =
         {
             ("Special", 0), ("Light", 1), ("Dark", 2), ("Water", 3), ("Fire", 4),
@@ -64,80 +108,35 @@ namespace WolfEx
         private string _folder = "";
         private bool _binding;
 
-        private readonly ListBox _list = new() { Dock = DockStyle.Fill, IntegralHeight = false };
-        private readonly NumericUpDown _id = new() { Minimum = MinId, Maximum = MaxId, Value = MinId };
-        private readonly TextBox _name = new();
-        private readonly TextBox _desc = new() { Multiline = true, Height = 90, ScrollBars = ScrollBars.Vertical };
-        private readonly ComboBox _kind = MakeCombo(Kinds);
-        private readonly ComboBox _type = MakeCombo(Types);
-        private readonly ComboBox _attribute = MakeCombo(Attributes);
-        private readonly ComboBox _icon = MakeCombo(Icons);
-        private readonly NumericUpDown _level = new() { Minimum = 1, Maximum = 12, Value = 4 };
-        private readonly NumericUpDown _atk = new() { Minimum = 0, Maximum = 9990, Increment = 100 };
-        private readonly NumericUpDown _def = new() { Minimum = 0, Maximum = 9990, Increment = 100 };
-        private readonly ComboBox _limitation = MakeCombo(Limitations);
-        private readonly NumericUpDown _copies = new() { Minimum = 0, Maximum = 3, Value = 3 };
-        private readonly TextBox _artPath = new() { ReadOnly = true, Dock = DockStyle.Fill };
-        private readonly PictureBox _preview = new() { SizeMode = PictureBoxSizeMode.Zoom, BorderStyle = BorderStyle.FixedSingle, Size = new Size(200, 200) };
-        private readonly Label _artInfo = new() { AutoSize = true };
+        /// <summary>Something the user should know about the card being edited (shown in the status bar).</summary>
+        public event Action<string>? Warning;
 
         public string Title => "New cards";
 
         public CardsPanel()
         {
-            var left = new Panel { Dock = DockStyle.Fill };
-            var leftButtons = new FlowLayoutPanel { Dock = DockStyle.Bottom, Height = 34, Padding = new Padding(2) };
-            leftButtons.Controls.Add(MakeButton("Add", (_, _) => AddCard(null)));
-            leftButtons.Controls.Add(MakeButton("Duplicate", (_, _) => DuplicateCard()));
-            leftButtons.Controls.Add(MakeButton("Delete", (_, _) => DeleteCard()));
-            left.Controls.Add(_list);
-            left.Controls.Add(leftButtons);
-
-            var form = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, Padding = new Padding(8) };
-            form.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
-            form.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-            AddRow(form, "Card ID:", _id);
-            AddRow(form, "Name:", _name);
-            AddRow(form, "Description:", _desc);
-            AddRow(form, "Kind:", _kind);
-            AddRow(form, "Type:", _type);
-            AddRow(form, "Attribute:", _attribute);
-            AddRow(form, "Icon (Spell/Trap):", _icon);
-            AddRow(form, "Level:", _level);
-            AddRow(form, "ATK:", _atk);
-            AddRow(form, "DEF:", _def);
-            AddRow(form, "Limitation:", _limitation);
-            AddRow(form, "Owned from the start:", _copies);
-
-            var artRow = new TableLayoutPanel { Dock = DockStyle.Fill, AutoSize = true, ColumnCount = 2 };
-            artRow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-            artRow.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
-            artRow.Controls.Add(_artPath, 0, 0);
-            artRow.Controls.Add(MakeButton("Choose art...", (_, _) => ChooseArt()), 1, 0);
-            AddRow(form, "Art (png / jpg):", artRow);
-            AddRow(form, "", _preview);
-            AddRow(form, "", _artInfo);
-
-            var right = new Panel { Dock = DockStyle.Fill, AutoScroll = true };
-            right.Controls.Add(form);
-
-            var split = new SplitContainer { Dock = DockStyle.Fill, FixedPanel = FixedPanel.Panel1, SplitterDistance = 260 };
-            split.Panel1.Controls.Add(left);
-            split.Panel2.Controls.Add(right);
-            Controls.Add(split);
-
-            _list.SelectedIndexChanged += (_, _) => BindSelected();
-            foreach (var control in new Control[] { _id, _name, _desc, _kind, _type, _attribute, _icon, _level, _atk, _def, _limitation, _copies })
-            {
-                switch (control)
-                {
-                    case NumericUpDown number: number.ValueChanged += (_, _) => Commit(); break;
-                    case ComboBox combo: combo.SelectedIndexChanged += (_, _) => { if (combo == _kind) ApplyKindRules(); Commit(); }; break;
-                    default: control.TextChanged += (_, _) => Commit(); break;
-                }
-            }
+            InitializeComponent();
+            Disposed += (_, _) => _preview.Image?.Dispose();
             SetEditorEnabled(false);
         }
+
+        private void List_SelectedIndexChanged(object? sender, EventArgs e) => BindSelected();
+
+        /// <summary>Every field of the card: Kind also decides which of the others apply.</summary>
+        private void Editor_Changed(object? sender, EventArgs e)
+        {
+            if (sender == _kind)
+                ApplyKindRules();
+            Commit();
+        }
+
+        private void btnAdd_Click(object? sender, EventArgs e) => AddCard(null);
+
+        private void btnDuplicate_Click(object? sender, EventArgs e) => DuplicateCard();
+
+        private void btnDelete_Click(object? sender, EventArgs e) => DeleteCard();
+
+        private void btnChooseArt_Click(object? sender, EventArgs e) => ChooseArt();
 
         // ---------------------------------------------------------------- IContentPanel
 
@@ -234,33 +233,6 @@ namespace WolfEx
             return true;
         }
 
-        // ---------------------------------------------------------------- layout helpers
-
-        private static ComboBox MakeCombo((string Name, int Value)[] items)
-        {
-            var box = new ComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Dock = DockStyle.Fill };
-            box.Items.AddRange(items.Select(item => (object)item.Name).ToArray());
-            box.SelectedIndex = 0;
-            return box;
-        }
-
-        private static Button MakeButton(string text, EventHandler onClick)
-        {
-            var button = new Button { Text = text, AutoSize = true };
-            button.Click += onClick;
-            return button;
-        }
-
-        private static void AddRow(TableLayoutPanel table, string label, Control control)
-        {
-            int row = table.RowCount++;
-            table.RowStyles.Add(new RowStyle(SizeType.AutoSize));
-            table.Controls.Add(new Label { Text = label, AutoSize = true, Anchor = AnchorStyles.Left | AnchorStyles.Top, Padding = new Padding(0, 6, 8, 0) }, 0, row);
-            control.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
-            control.Margin = new Padding(3);
-            table.Controls.Add(control, 1, row);
-        }
-
         // ---------------------------------------------------------------- model <-> UI
 
         private CardModel? Selected => _list.SelectedIndex >= 0 ? _cards[_list.SelectedIndex] : null;
@@ -284,6 +256,10 @@ namespace WolfEx
 
         private void BindSelected()
         {
+            // Committing a change swaps the list item, which raises this again: don't rebind (that would reset the box being typed in).
+            if (_binding)
+                return;
+
             var card = Selected;
             SetEditorEnabled(card != null);
             if (card == null)
@@ -430,6 +406,7 @@ namespace WolfEx
             {
                 _artPath.Text = string.IsNullOrEmpty(card.Image) ? "(no art)" : card.Image + "  (file missing)";
                 _artInfo.Text = "Without art the game shows a placeholder.";
+                _artInfo.ForeColor = SystemColors.ControlText;
                 return;
             }
 
@@ -441,12 +418,41 @@ namespace WolfEx
                 _preview.Image = new Bitmap(image);
                 _artPath.Text = path;
                 _artInfo.Text = $"{image.Width} x {image.Height}" + (card.PendingArt != null ? "  - copied when saved" : "");
+                CheckArt(card, image);
             }
             catch (Exception ex)
             {
                 _artPath.Text = path;
                 _artInfo.Text = "Could not read the image: " + ex.Message;
             }
+        }
+
+        /// <summary>The size the game expects for card art; anything else is stretched to fit.</summary>
+        private const int ArtSize = 304;
+
+        /// <summary>Warns (in red under the picture and in the status bar) when the picture isn't the recommended 304 x 304, 24 bit, JPG.</summary>
+        private void CheckArt(CardModel card, Image image)
+        {
+            var problems = new List<string>();
+            if (image.Width != ArtSize || image.Height != ArtSize)
+                problems.Add($"this image is {image.Width} x {image.Height}, not {ArtSize} x {ArtSize} - expect distortion in the game");
+
+            string extension = Path.GetExtension(card.PendingArt ?? card.Image).ToLowerInvariant();
+            if (extension is not (".jpg" or ".jpeg"))
+                problems.Add("JPG is recommended");
+            if (Image.GetPixelFormatSize(image.PixelFormat) != 24)
+                problems.Add($"24 bit colour is recommended (this is {Image.GetPixelFormatSize(image.PixelFormat)} bit)");
+
+            if (problems.Count == 0)
+            {
+                _artInfo.ForeColor = SystemColors.ControlText;
+                return;
+            }
+
+            string message = $"\"{card.Name}\": " + string.Join("; ", problems) + ".";
+            _artInfo.Text += Environment.NewLine + string.Join(Environment.NewLine, problems.Select(problem => "! " + problem));
+            _artInfo.ForeColor = Color.Firebrick;
+            Warning?.Invoke("Art warning - " + message);
         }
 
         // ---------------------------------------------------------------- json
@@ -518,14 +524,6 @@ namespace WolfEx
             json["limitation"] = card.Limitation;
             json["copies"] = card.Copies;
             return json;
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-                _preview.Image?.Dispose();
-
-            base.Dispose(disposing);
         }
     }
 }

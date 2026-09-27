@@ -1,16 +1,9 @@
-﻿namespace WolfX.WolfX.File_Type_UI
+namespace WolfX.WolfX.File_Type_UI
 {
     partial class Config
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,222 +15,266 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            UseJP_CheckBox = new CheckBox();
-            AutoPause_CheckBox = new CheckBox();
-            NoBan_CheckBox = new CheckBox();
-            FreeStore_CheckBox = new CheckBox();
-            groupBox2 = new GroupBox();
-            AutoLoadPlugins_CheckBox = new CheckBox();
-            label1 = new Label();
-            PluginPath_TextBox = new TextBox();
-            groupBox3 = new GroupBox();
-            label2 = new Label();
-            Archive_TextBox = new TextBox();
-            BTN_CONFIG_OnSave = new Button();
-            AllowMultiInstance_CB = new CheckBox();
-            DisableJanken_CB = new CheckBox();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
+            topPanel = new Panel();
+            filterBox = new TextBox();
+            filterLabel = new Label();
+            browseButton = new Button();
+            pathBox = new TextBox();
+            split = new SplitContainer();
+            grid = new DataGridView();
+            colSection = new DataGridViewTextBoxColumn();
+            colSetting = new DataGridViewTextBoxColumn();
+            colValue = new DataGridViewTextBoxColumn();
+            colDefault = new DataGridViewTextBoxColumn();
+            colInFile = new DataGridViewTextBoxColumn();
+            helpText = new TextBox();
+            helpTitle = new Label();
+            bottomPanel = new Panel();
+            statusLabel = new Label();
+            saveButton = new Button();
+            resetButton = new Button();
+            reloadButton = new Button();
+            topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)split).BeginInit();
+            split.Panel1.SuspendLayout();
+            split.Panel2.SuspendLayout();
+            split.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
+            bottomPanel.SuspendLayout();
             SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(DisableJanken_CB);
-            groupBox1.Controls.Add(UseJP_CheckBox);
-            groupBox1.Controls.Add(AutoPause_CheckBox);
-            groupBox1.Controls.Add(NoBan_CheckBox);
-            groupBox1.Controls.Add(FreeStore_CheckBox);
-            groupBox1.Location = new Point(12, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(151, 160);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Patch Me Out";
-            // 
-            // UseJP_CheckBox
-            // 
-            UseJP_CheckBox.AutoSize = true;
-            UseJP_CheckBox.Location = new Point(6, 97);
-            UseJP_CheckBox.Name = "UseJP_CheckBox";
-            UseJP_CheckBox.Size = new Size(122, 19);
-            UseJP_CheckBox.TabIndex = 3;
-            UseJP_CheckBox.Text = "Use JP Title Screen";
-            UseJP_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // AutoPause_CheckBox
-            // 
-            AutoPause_CheckBox.AutoSize = true;
-            AutoPause_CheckBox.Location = new Point(6, 72);
-            AutoPause_CheckBox.Name = "AutoPause_CheckBox";
-            AutoPause_CheckBox.Size = new Size(86, 19);
-            AutoPause_CheckBox.TabIndex = 2;
-            AutoPause_CheckBox.Text = "Auto Pause";
-            AutoPause_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // NoBan_CheckBox
-            // 
-            NoBan_CheckBox.AutoSize = true;
-            NoBan_CheckBox.Location = new Point(6, 47);
-            NoBan_CheckBox.Name = "NoBan_CheckBox";
-            NoBan_CheckBox.Size = new Size(92, 19);
-            NoBan_CheckBox.TabIndex = 1;
-            NoBan_CheckBox.Text = "No PDLimits";
-            NoBan_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // FreeStore_CheckBox
-            // 
-            FreeStore_CheckBox.AutoSize = true;
-            FreeStore_CheckBox.Location = new Point(6, 22);
-            FreeStore_CheckBox.Name = "FreeStore_CheckBox";
-            FreeStore_CheckBox.Size = new Size(78, 19);
-            FreeStore_CheckBox.TabIndex = 0;
-            FreeStore_CheckBox.Text = "Free Store";
-            FreeStore_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(AutoLoadPlugins_CheckBox);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Controls.Add(PluginPath_TextBox);
-            groupBox2.Location = new Point(169, 12);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(151, 160);
-            groupBox2.TabIndex = 1;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "GUI";
-            // 
-            // AutoLoadPlugins_CheckBox
-            // 
-            AutoLoadPlugins_CheckBox.AutoSize = true;
-            AutoLoadPlugins_CheckBox.Location = new Point(6, 72);
-            AutoLoadPlugins_CheckBox.Name = "AutoLoadPlugins_CheckBox";
-            AutoLoadPlugins_CheckBox.Size = new Size(123, 19);
-            AutoLoadPlugins_CheckBox.TabIndex = 2;
-            AutoLoadPlugins_CheckBox.Text = "Auto Load Plugins";
-            AutoLoadPlugins_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(71, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Plugin Path:";
-            // 
-            // PluginPath_TextBox
-            // 
-            PluginPath_TextBox.Location = new Point(6, 37);
-            PluginPath_TextBox.Name = "PluginPath_TextBox";
-            PluginPath_TextBox.Size = new Size(100, 23);
-            PluginPath_TextBox.TabIndex = 0;
-            // 
-            // groupBox3
-            // 
-            groupBox3.Controls.Add(AllowMultiInstance_CB);
-            groupBox3.Controls.Add(label2);
-            groupBox3.Controls.Add(Archive_TextBox);
-            groupBox3.Location = new Point(326, 12);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(151, 160);
-            groupBox3.TabIndex = 3;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Better Load";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(6, 19);
-            label2.Name = "label2";
-            label2.Size = new Size(82, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Archive Name";
-            // 
-            // Archive_TextBox
-            // 
-            Archive_TextBox.Location = new Point(6, 37);
-            Archive_TextBox.Name = "Archive_TextBox";
-            Archive_TextBox.Size = new Size(100, 23);
-            Archive_TextBox.TabIndex = 0;
-            // 
-            // BTN_CONFIG_OnSave
-            // 
-            BTN_CONFIG_OnSave.Location = new Point(398, 178);
-            BTN_CONFIG_OnSave.Name = "BTN_CONFIG_OnSave";
-            BTN_CONFIG_OnSave.Size = new Size(75, 23);
-            BTN_CONFIG_OnSave.TabIndex = 4;
-            BTN_CONFIG_OnSave.Text = "Save";
-            BTN_CONFIG_OnSave.UseVisualStyleBackColor = true;
-            BTN_CONFIG_OnSave.Click += BTN_CONFIG_OnSave_Click;
-            // 
-            // AllowMultiInstance_CB
-            // 
-            AllowMultiInstance_CB.AutoSize = true;
-            AllowMultiInstance_CB.Location = new Point(6, 66);
-            AllowMultiInstance_CB.Name = "AllowMultiInstance_CB";
-            AllowMultiInstance_CB.Size = new Size(139, 19);
-            AllowMultiInstance_CB.TabIndex = 2;
-            AllowMultiInstance_CB.Text = "Allow Multi Instances";
-            AllowMultiInstance_CB.UseVisualStyleBackColor = true;
-            // 
-            // DisableJanken_CB
-            // 
-            DisableJanken_CB.AutoSize = true;
-            DisableJanken_CB.Location = new Point(6, 122);
-            DisableJanken_CB.Name = "DisableJanken_CB";
-            DisableJanken_CB.Size = new Size(103, 19);
-            DisableJanken_CB.TabIndex = 4;
-            DisableJanken_CB.Text = "Disable Janken";
-            DisableJanken_CB.UseVisualStyleBackColor = true;
-            // 
+            //
+            // topPanel
+            //
+            topPanel.Controls.Add(filterBox);
+            topPanel.Controls.Add(filterLabel);
+            topPanel.Controls.Add(browseButton);
+            topPanel.Controls.Add(pathBox);
+            topPanel.Dock = DockStyle.Top;
+            topPanel.Location = new Point(0, 0);
+            topPanel.Name = "topPanel";
+            topPanel.Size = new Size(1180, 76);
+            topPanel.TabIndex = 0;
+            //
+            // pathBox
+            //
+            pathBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pathBox.Location = new Point(12, 9);
+            pathBox.Name = "pathBox";
+            pathBox.ReadOnly = true;
+            pathBox.Size = new Size(1075, 23);
+            pathBox.TabIndex = 0;
+            //
+            // browseButton
+            //
+            browseButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            browseButton.Location = new Point(1093, 8);
+            browseButton.Name = "browseButton";
+            browseButton.Size = new Size(75, 25);
+            browseButton.TabIndex = 1;
+            browseButton.Text = "Browse...";
+            browseButton.UseVisualStyleBackColor = true;
+            browseButton.Click += browseButton_Click;
+            //
+            // filterLabel
+            //
+            filterLabel.AutoSize = true;
+            filterLabel.Location = new Point(12, 46);
+            filterLabel.Name = "filterLabel";
+            filterLabel.Size = new Size(36, 15);
+            filterLabel.Text = "Filter:";
+            //
+            // filterBox
+            //
+            filterBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            filterBox.Location = new Point(54, 43);
+            filterBox.Name = "filterBox";
+            filterBox.PlaceholderText = "Type a plugin, a setting or a word from its help";
+            filterBox.Size = new Size(1114, 23);
+            filterBox.TabIndex = 2;
+            filterBox.TextChanged += filterBox_TextChanged;
+            //
+            // split
+            //
+            split.Dock = DockStyle.Fill;
+            split.Location = new Point(0, 76);
+            split.Name = "split";
+            split.Orientation = Orientation.Horizontal;
+            split.Panel1.Controls.Add(grid);
+            split.Panel2.Controls.Add(helpText);
+            split.Panel2.Controls.Add(helpTitle);
+            split.Size = new Size(1180, 560);
+            split.SplitterDistance = 400;
+            split.TabIndex = 1;
+            //
+            // grid
+            //
+            grid.AllowUserToAddRows = false;
+            grid.AllowUserToDeleteRows = false;
+            grid.AllowUserToResizeRows = false;
+            grid.BackgroundColor = SystemColors.Window;
+            grid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grid.Columns.AddRange(new DataGridViewColumn[] { colSection, colSetting, colValue, colDefault, colInFile });
+            grid.Dock = DockStyle.Fill;
+            grid.EditMode = DataGridViewEditMode.EditOnEnter;
+            grid.MultiSelect = false;
+            grid.Name = "grid";
+            grid.RowHeadersVisible = false;
+            grid.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            grid.TabIndex = 0;
+            grid.CellValueChanged += grid_CellValueChanged;
+            grid.CurrentCellDirtyStateChanged += grid_CurrentCellDirtyStateChanged;
+            grid.DataError += grid_DataError;
+            grid.SelectionChanged += grid_SelectionChanged;
+            //
+            // colSection
+            //
+            colSection.HeaderText = "Plugin";
+            colSection.Name = "colSection";
+            colSection.ReadOnly = true;
+            colSection.Width = 200;
+            //
+            // colSetting
+            //
+            colSetting.HeaderText = "Setting";
+            colSetting.Name = "colSetting";
+            colSetting.ReadOnly = true;
+            colSetting.Width = 200;
+            //
+            // colValue
+            //
+            colValue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            colValue.HeaderText = "Value";
+            colValue.Name = "colValue";
+            //
+            // colDefault
+            //
+            colDefault.HeaderText = "Default";
+            colDefault.Name = "colDefault";
+            colDefault.ReadOnly = true;
+            colDefault.Width = 140;
+            //
+            // colInFile
+            //
+            colInFile.HeaderText = "Set in Config.ini";
+            colInFile.Name = "colInFile";
+            colInFile.ReadOnly = true;
+            colInFile.Width = 110;
+            //
+            // helpTitle
+            //
+            helpTitle.Dock = DockStyle.Top;
+            helpTitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            helpTitle.Name = "helpTitle";
+            helpTitle.Padding = new Padding(6, 6, 0, 2);
+            helpTitle.Size = new Size(1180, 26);
+            //
+            // helpText
+            //
+            helpText.BorderStyle = BorderStyle.None;
+            helpText.Dock = DockStyle.Fill;
+            helpText.Multiline = true;
+            helpText.Name = "helpText";
+            helpText.ReadOnly = true;
+            helpText.Font = new Font("Segoe UI", 10F);
+            helpText.ScrollBars = ScrollBars.Vertical;
+            helpText.TabIndex = 1;
+            //
+            // bottomPanel
+            //
+            bottomPanel.Controls.Add(statusLabel);
+            bottomPanel.Controls.Add(resetButton);
+            bottomPanel.Controls.Add(reloadButton);
+            bottomPanel.Controls.Add(saveButton);
+            bottomPanel.Dock = DockStyle.Bottom;
+            bottomPanel.Location = new Point(0, 636);
+            bottomPanel.Name = "bottomPanel";
+            bottomPanel.Size = new Size(1180, 44);
+            bottomPanel.TabIndex = 2;
+            //
+            // statusLabel
+            //
+            statusLabel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            statusLabel.Location = new Point(12, 12);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new Size(790, 18);
+            //
+            // resetButton
+            //
+            resetButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            resetButton.Location = new Point(808, 9);
+            resetButton.Name = "resetButton";
+            resetButton.Size = new Size(120, 25);
+            resetButton.Text = "Reset to default";
+            resetButton.UseVisualStyleBackColor = true;
+            resetButton.Click += resetButton_Click;
+            //
+            // reloadButton
+            //
+            reloadButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            reloadButton.Location = new Point(934, 9);
+            reloadButton.Name = "reloadButton";
+            reloadButton.Size = new Size(110, 25);
+            reloadButton.Text = "Discard changes";
+            reloadButton.UseVisualStyleBackColor = true;
+            reloadButton.Click += reloadButton_Click;
+            //
+            // saveButton
+            //
+            saveButton.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            saveButton.Location = new Point(1050, 9);
+            saveButton.Name = "saveButton";
+            saveButton.Size = new Size(118, 25);
+            saveButton.Text = "Save";
+            saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
+            //
             // Config
-            // 
+            //
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(485, 206);
-            Controls.Add(BTN_CONFIG_OnSave);
-            Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            MaximizeBox = false;
-            MinimizeBox = false;
+            ClientSize = new Size(1200, 720);
+            Controls.Add(split);
+            Controls.Add(bottomPanel);
+            Controls.Add(topPanel);
+            MinimumSize = new Size(800, 520);
             Name = "Config";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Config Editor";
             Load += Config_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
+            topPanel.ResumeLayout(false);
+            topPanel.PerformLayout();
+            split.Panel1.ResumeLayout(false);
+            split.Panel2.ResumeLayout(false);
+            split.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)split).EndInit();
+            split.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)grid).EndInit();
+            bottomPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private GroupBox groupBox1;
-        private CheckBox UseJP_CheckBox;
-        private CheckBox AutoPause_CheckBox;
-        private CheckBox NoBan_CheckBox;
-        private CheckBox FreeStore_CheckBox;
-        private GroupBox groupBox2;
-        private Label label1;
-        private TextBox PluginPath_TextBox;
-        private CheckBox AutoLoadPlugins_CheckBox;
-        private GroupBox groupBox3;
-        private Label label2;
-        private TextBox Archive_TextBox;
-        private Button BTN_CONFIG_OnSave;
-        private CheckBox DisableJanken_CB;
-        private CheckBox AllowMultiInstance_CB;
+        private Panel topPanel;
+        private TextBox filterBox;
+        private Label filterLabel;
+        private Button browseButton;
+        private TextBox pathBox;
+        private SplitContainer split;
+        private DataGridView grid;
+        private DataGridViewTextBoxColumn colSection;
+        private DataGridViewTextBoxColumn colSetting;
+        private DataGridViewTextBoxColumn colValue;
+        private DataGridViewTextBoxColumn colDefault;
+        private DataGridViewTextBoxColumn colInFile;
+        private TextBox helpText;
+        private Label helpTitle;
+        private Panel bottomPanel;
+        private Label statusLabel;
+        private Button saveButton;
+        private Button resetButton;
+        private Button reloadButton;
     }
 }
