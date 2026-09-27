@@ -46,6 +46,17 @@ void SortPluginsByMods()
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
+    // "--wait <pid>": the game asked to be restarted; let that process finish closing first.
+    if (lpCmdLine && strncmp(lpCmdLine, "--wait ", 7) == 0)
+    {
+        HANDLE previous = OpenProcess(SYNCHRONIZE, FALSE, static_cast<DWORD>(atoi(lpCmdLine + 7)));
+        if (previous)
+        {
+            WaitForSingleObject(previous, 30000);
+            CloseHandle(previous);
+        }
+    }
+
     Game::Locate();
     Game::CreateConfig("Config.ini");
     Game::LookForPlugins();
