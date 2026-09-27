@@ -11,7 +11,7 @@ namespace WolfEx
     /// Yu-Gi-Oh-Ex/unlocks.json: cards the player owns at least N copies of, from the start and in every save.
     /// Works for the game's own cards and for cards added in cards.json.
     /// </summary>
-    internal sealed class UnlocksPanel : UserControl, IContentPanel
+    internal sealed partial class UnlocksPanel : UserControl, IContentPanel
     {
         // The game's own card ids run from 3900 to 14968; the save can hold ids up to 19999.
         private const int MinId = 1;
@@ -20,40 +20,52 @@ namespace WolfEx
         private sealed class Row
         {
             public int Id { get; set; }
+            public string Name => WolfX.Types.CardCatalog.NameOf(Id);
             public int Copies { get; set; } = 3;
         }
 
         private readonly BindingList<Row> _rows = [];
-        private readonly DataGridView _grid = new()
-        {
-            Dock = DockStyle.Fill,
-            AutoGenerateColumns = false,
-            AllowUserToAddRows = false,
-            SelectionMode = DataGridViewSelectionMode.FullRowSelect,
-        };
-        private readonly Label _info = new() { AutoSize = true, Padding = new Padding(4, 6, 0, 0), Dock = DockStyle.Bottom };
-        private readonly CheckBox _replace = new() { Text = "Replace the game's default unlocks (a new save starts with only these cards)", AutoSize = true, Checked = true };
         private string _gameFolder = "";
 
         public string Title => "Unlocks";
 
         public UnlocksPanel()
         {
-            _grid.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = nameof(Row.Id), HeaderText = "Card id", Width = 120 });
-            _grid.Columns.Add(new DataGridViewTextBoxColumn { DataPropertyName = nameof(Row.Copies), HeaderText = "Owned at least (0 - 3)", Width = 170 });
+            InitializeComponent();
             _grid.DataSource = _rows;
-
-            var buttons = new FlowLayoutPanel { Dock = DockStyle.Top, Height = 38, Padding = new Padding(4) };
-            buttons.Controls.Add(MakeButton("Add", (_, _) => _rows.Add(new Row { Id = MinId })));
-            buttons.Controls.Add(MakeButton("Remove selected", (_, _) => RemoveSelected()));
-            buttons.Controls.Add(MakeButton("Add from game data", (_, _) => ImportFromGame()));
-            buttons.Controls.Add(MakeButton("Import JSON...", (_, _) => ImportFile()));
-            buttons.Controls.Add(_replace);
-
-            Controls.Add(_grid);
-            Controls.Add(_info);
-            Controls.Add(buttons);
             _info.Text = "Ids 3900-14968 are the game's cards, 14969-19999 are new cards. \"Add from game data\" lists what a new profile starts with.";
+        }
+
+        private void btnAddByName_Click(object? sender, EventArgs e) => AddByName();
+
+        private void btnAddById_Click(object? sender, EventArgs e) => _rows.Add(new Row { Id = MinId });
+
+        private void btnRemove_Click(object? sender, EventArgs e) => RemoveSelected();
+
+        private void btnAddFromGame_Click(object? sender, EventArgs e) => ImportFromGame();
+
+        private void btnImport_Click(object? sender, EventArgs e) => ImportFile();
+
+        private void AddByName()
+        {
+            var database = WolfX.Types.CardCatalog.Get(this);
+            if (database == null)
+                return;
+
+            using var picker = new WolfX.Types.CardPickerDialog(database, "Add cards to the unlocks");
+            if (picker.ShowDialog(this) != DialogResult.OK)
+                return;
+
+            _grid.EndEdit();
+            foreach (var (card, copies) in picker.Result)
+            {
+                var row = _rows.FirstOrDefault(existing => existing.Id == card.Id);
+                if (row == null)
+                    _rows.Add(new Row { Id = card.Id, Copies = Math.Min(copies, 3) });
+                else
+                    row.Copies = Math.Min(copies, 3);
+            }
+            _rows.ResetBindings();
         }
 
         public void LoadFrom(string extraCardsFolder, string gameFolder)
@@ -190,11 +202,5 @@ namespace WolfEx
             }
         }
 
-        private static Button MakeButton(string text, EventHandler onClick)
-        {
-            var button = new Button { Text = text, AutoSize = true };
-            button.Click += onClick;
-            return button;
-        }
     }
 }

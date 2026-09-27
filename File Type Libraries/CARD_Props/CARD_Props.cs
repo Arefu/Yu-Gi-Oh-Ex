@@ -84,7 +84,7 @@ namespace Types
             //21?
             Xyz = 22,
 
-            Xyz_Efffect = 23,
+            Xyz_Effect = 23,
             Flip_Effect = 24,
             Pendulum = 25,
             Pendulum_Effect = 26,

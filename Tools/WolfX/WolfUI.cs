@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using WolfX.Types;
 using WolfX.WolfX.File_Type_UI;
 
 namespace WolfX
@@ -8,6 +9,7 @@ namespace WolfX
         public WolfUI()
         {
             InitializeComponent();
+            CardCatalog.DefaultFolder = () => State.Path;
         }
 
         private void WOLFUI_TOOLITEM_LoadGame_Click(object sender, EventArgs e)

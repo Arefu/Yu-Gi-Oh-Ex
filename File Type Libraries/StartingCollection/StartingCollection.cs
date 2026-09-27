@@ -12,6 +12,9 @@ namespace StartingCollection
     {
         public List<string> Roots { get; } = [];
 
+        /// <summary>YGO_2020.toc / .dat in the game folder: where the files are when nothing has been extracted (null if there isn't one).</summary>
+        public TocArchive? Toc { get; private set; }
+
         public GameFiles(IEnumerable<string> roots)
         {
             Roots.AddRange(roots.Where(Directory.Exists));
@@ -24,7 +27,17 @@ namespace StartingCollection
             Path.Combine(gameFolder, "YGO_2020"),
             Path.Combine(gameFolder, "MODS", "OVERRIDES", "REQ"),
             Path.Combine(gameFolder, "Remaining Files"),
-        ]);
+        ])
+        {
+            Toc = TocArchive.TryOpen(Path.Combine(gameFolder, "YGO_2020.toc")),
+        };
+
+        /// <summary>The file's bytes: a loose file in one of the folders if there is one, otherwise the copy inside YGO_2020.dat.</summary>
+        public byte[]? ReadBytes(string relativePath)
+        {
+            string? path = Find(relativePath);
+            return path != null ? System.IO.File.ReadAllBytes(path) : Toc?.Read(relativePath);
+        }
 
         public string? Find(string relativePath)
         {
@@ -97,7 +110,7 @@ namespace StartingCollection
 
         public const int MaxCopies = 3;
 
-        private const int FirstKonamiId = 3900;
+        public const int FirstKonamiId = 3900;
         private const int LastKonamiId = 14968;
 
         /// <summary>Reads the game files and works out what a new profile owns.</summary>

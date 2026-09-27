@@ -17,4 +17,13 @@
     <ProjectReference Include="..\..\File Type Libraries\PackDef\PackDef.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- The card picker is shared with WolfX: search by name, tick many cards, paste a list of names. -->
+    <Compile Include="..\WolfX\WolfX\File Type UI\CardCatalog.cs" Link="CardCatalog.cs" />
+    <Compile Include="..\WolfX\WolfX\File Type UI\CardPickerDialog.cs" Link="CardPickerDialog.cs" />
+    <Compile Include="..\WolfX\WolfX\File Type UI\CardPickerDialog.Designer.cs" Link="CardPickerDialog.Designer.cs" />
+    <Compile Include="..\WolfX\WolfX\File Type UI\PasteNamesDialog.cs" Link="PasteNamesDialog.cs" />
+    <Compile Include="..\WolfX\WolfX\File Type UI\PasteNamesDialog.Designer.cs" Link="PasteNamesDialog.Designer.cs" />
+  </ItemGroup>
+
 </Project>

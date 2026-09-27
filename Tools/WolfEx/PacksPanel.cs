@@ -12,7 +12,7 @@ namespace WolfEx
     /// Yu-Gi-Oh-Ex/packs.json: cards added to the shop's reward packs. The pack list comes from the game's own
     /// packdefdata; nothing in the game files is changed, the plugin adds the cards when the game starts.
     /// </summary>
-    internal sealed class PacksPanel : UserControl, IContentPanel
+    internal sealed partial class PacksPanel : UserControl, IContentPanel
     {
         private const int MinId = 1;
         private const int MaxId = 19999;
@@ -32,11 +32,6 @@ namespace WolfEx
         }
 
         private readonly List<PackEntry> _packs = [];
-        private readonly ListBox _list = new() { Dock = DockStyle.Fill, IntegralHeight = false };
-        private readonly TextBox _common = new() { Multiline = true, Height = 120, ScrollBars = ScrollBars.Vertical };
-        private readonly TextBox _rare = new() { Multiline = true, Height = 120, ScrollBars = ScrollBars.Vertical };
-        private readonly Label _info = new() { AutoSize = true, Padding = new Padding(0, 6, 0, 6) };
-        private readonly CheckBox _replace = new() { Text = "Replace the game's cards in this pack (instead of adding to them)", AutoSize = true, Padding = new Padding(0, 8, 0, 0) };
         private bool _replaceAll; // packs.json "replaceDefaults", kept as it was read
         private bool _binding;
 
@@ -44,25 +39,36 @@ namespace WolfEx
 
         public PacksPanel()
         {
-            var right = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, Padding = new Padding(8), AutoScroll = true };
-            right.Controls.Add(_info);
-            right.Controls.Add(new Label { Text = "Extra common cards (card ids, separated by commas or spaces):", AutoSize = true });
-            right.Controls.Add(_common);
-            right.Controls.Add(new Label { Text = "Extra rare cards:", AutoSize = true, Padding = new Padding(0, 8, 0, 0) });
-            right.Controls.Add(_rare);
-            right.Controls.Add(_replace);
-            _common.Dock = _rare.Dock = DockStyle.Top;
-
-            var split = new SplitContainer { Dock = DockStyle.Fill, FixedPanel = FixedPanel.Panel1, SplitterDistance = 340 };
-            split.Panel1.Controls.Add(_list);
-            split.Panel2.Controls.Add(right);
-            Controls.Add(split);
-
-            _list.SelectedIndexChanged += (_, _) => BindSelected();
-            _common.TextChanged += (_, _) => Commit();
-            _rare.TextChanged += (_, _) => Commit();
-            _replace.CheckedChanged += (_, _) => Commit();
+            InitializeComponent();
             SetEditorEnabled(false);
+        }
+
+        private void List_SelectedIndexChanged(object? sender, EventArgs e) => BindSelected();
+
+        private void Editor_Changed(object? sender, EventArgs e) => Commit();
+
+        private void btnCommonByName_Click(object? sender, EventArgs e) => PickInto(_common);
+
+        private void btnRareByName_Click(object? sender, EventArgs e) => PickInto(_rare);
+
+        /// <summary>Opens the card picker and appends the chosen ids to the box.</summary>
+        private void PickInto(TextBox box)
+        {
+            var database = WolfX.Types.CardCatalog.Get(this);
+            if (database == null)
+                return;
+
+            using var picker = new WolfX.Types.CardPickerDialog(database, "Add cards to the pack", askCopies: false);
+            if (picker.ShowDialog(this) != DialogResult.OK || picker.Result.Count == 0)
+                return;
+
+            var existing = box.Text.Split([',', ' ', ';', '\r', '\n', '\t'], StringSplitOptions.RemoveEmptyEntries).ToList();
+            foreach (var (card, _) in picker.Result)
+            {
+                if (!existing.Contains(card.Id.ToString()))
+                    existing.Add(card.Id.ToString());
+            }
+            box.Text = string.Join(", ", existing);
         }
 
         private PackEntry? Selected => _list.SelectedIndex >= 0 ? _packs[_list.SelectedIndex] : null;
@@ -218,6 +224,10 @@ namespace WolfEx
 
         private void BindSelected()
         {
+            // Committing a change swaps the list item, which raises this again: don't rebind (that would reset the box being typed in).
+            if (_binding)
+                return;
+
             var pack = Selected;
             SetEditorEnabled(pack != null);
             if (pack == null)

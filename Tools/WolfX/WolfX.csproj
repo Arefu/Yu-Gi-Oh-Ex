@@ -32,6 +32,9 @@
     <ProjectReference Include="..\..\File Type Libraries\Packdefdata\PackData.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\PDLimits\PDLimits.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\savegame\savegame.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\DeckData\DeckData.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\PackDef\PackDef.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\StartingCollection\StartingCollection.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\YDC\YDC.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\ZIB\ZIB.csproj" />
     <ProjectReference Include="..\Yami-Yugi\Yami-Yugi.csproj" />
