@@ -34,15 +34,15 @@ inline void* ResolveVA(uintptr_t va)
 // populated by LoadConfig() before anything else touches them.
 // ---------------------------------------------------------------------
 
-static float kCustomAtkX = 135.0f;
-static float kCustomAtkY = 507.0f;
-static float kCustomDefX = 250.0f;
-static float kCustomDefY = 500.0f;
+static float kCustomAtkX = 167.0f;
+static float kCustomAtkY = 545.0f;
+static float kCustomDefX = 240.0f;
+static float kCustomDefY = 545.0f;
 
-static float kAtkTextScale = 2.5f;
-static float kDefTextScale = 2.5f;
+static float kAtkTextScale = 3.10;
+static float kDefTextScale = 3.40;
 
-static float kCardArtScale = 1.3f;
+static float kCardArtScale = 1.4f;
 static float kCardArtOffsetX = 0.0f;   // positive = right, negative = left
 static float kCardArtOffsetY = -50.0f; // positive = down, negative = up
 
@@ -63,6 +63,16 @@ inline bool NearlyEqual(float a, float b)
 }
 
 constexpr uint32_t kAtkDefCombinedFontId = 35;
+
+// The ATK/DEF numbers are drawn from bitmap font atlases (fontbin/*.fbin + .png), then enlarged by the
+// AtkTextScale / DefTextScale matrix scale below. FONT_ID_CARD_ATKDEF (35) and the DEF font are 18 px
+// glyphs, so a 3x enlargement is soft. FONT_ID_CARD_ATKDEF_SCALE (36) is the same typeface at 32 px:
+// drawing with it and scaling by 18/32 less gives the same size on the card with much sharper digits.
+// The font's own native size is read from the loaded font (its first float, at +40), so a larger
+// replacement fbin/png (see Tools/FontGen) is picked up without changing the plugin.
+constexpr uint32_t kLargeAtkDefFontId = 36;
+constexpr float kAtkDefNativeSize = 18.0f;
+static bool kUseLargeAtkDefFont = true;
 constexpr uint32_t kFontSentinel = 0xFFFFFFFFu;
 
 using fn_sub_1408795A0 = void(__fastcall*)(void*, float, float, float, float, float, float, float, float, int, int);
@@ -260,6 +270,22 @@ inline bool IsAbilityWrapFont(uint32_t fontId)
     return false;
 }
 
+using fn_Get_FontById = void* (__fastcall*)(unsigned int);
+static fn_Get_FontById orig_Get_FontById = nullptr; // sub_140872C60: the loaded font for an id, or null
+
+// True when the 32 px ATK/DEF font is loaded and should replace the 18 px ones.
+inline bool UseLargeAtkDefFont()
+{
+    return kUseLargeAtkDefFont && orig_Get_FontById && orig_Get_FontById(kLargeAtkDefFontId) != nullptr;
+}
+
+// Native pixel size of the large ATK/DEF font, from the fbin the game loaded.
+inline float LargeAtkDefNativeSize()
+{
+    float size = *reinterpret_cast<const float*>(static_cast<const char*>(orig_Get_FontById(kLargeAtkDefFontId)) + 40);
+    return size > 1.0f ? size : 32.0f;
+}
+
 using fn_sub_140766540 = __int64(__fastcall*)(__int64, __int64, __int64, float, int, unsigned int, const unsigned short*, int, int, int);
 using fn_sub_140877EC0 = void* (__fastcall*)(void*, float, float, float);
 using fn_YGO_Get_EffectiveDefFromFullCardProps = unsigned int(__fastcall*)(unsigned short);
@@ -289,7 +315,8 @@ extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, flo
         unsigned int atk = orig_YGO_Get_EffectiveDefFromFullCardProps(g_currentCardId);
         static wchar_t buf[16];
         swprintf(buf, 16, L"%u", atk);
-        return orig_sub_140766540(slotPtr, x, y, boxWidth, color, fontId,
+        return orig_sub_140766540(slotPtr, x, y, boxWidth, color,
+            UseLargeAtkDefFont() ? kLargeAtkDefFontId : fontId,
             (const unsigned short*)buf, count, flags, arg10);
     }
 
@@ -310,7 +337,8 @@ extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, flo
         unsigned int def = orig_sub_14081A610(g_currentCardId);
         static wchar_t buf[16];
         swprintf(buf, 16, L"%u", def);
-        return orig_sub_140766540(slotPtr, x, y, boxWidth, color, fontId,
+        return orig_sub_140766540(slotPtr, x, y, boxWidth, color,
+            UseLargeAtkDefFont() ? kLargeAtkDefFontId : fontId,
             (const unsigned short*)buf, count, flags, arg10);
     }
 
@@ -340,6 +368,10 @@ extern "C" void* Hook_sub_140877EC0(void* out, float x, float y, float z)
     }
 
     void* result = orig_sub_140877EC0(out, tx, ty, z);
+
+    // The larger font is already bigger on the atlas, so less enlargement gives the same size on the card.
+    if (UseLargeAtkDefFont())
+        scale *= kAtkDefNativeSize / LargeAtkDefNativeSize();
 
     if (scale != 1.0f)
     {
@@ -406,7 +438,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         cfgEnd = nullptr; float vCustomSTIconY = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCustomSTIconY = vCustomSTIconY;
 
+        kUseLargeAtkDefFont = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "UseLargeAtkDefFont", 1, ".\\Config.ini") != 0;
+
         p_g_bIsJpVersion = (bool*)ResolveVA(0x14332A348);
+        orig_Get_FontById = (fn_Get_FontById)ResolveVA(0x140872C60);
 
         orig_sub_140766540 = (fn_sub_140766540)ResolveVA(0x140766540);
         orig_sub_140877EC0 = (fn_sub_140877EC0)ResolveVA(0x140877EC0);
