@@ -7,6 +7,7 @@
 #include <string>
 #include <detours.h>
 #include <iostream>
+#include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Log.h"
 
 typedef DWORD(WINAPI* _tGetTickCount)(void);
 typedef ULONGLONG(WINAPI* _tGetTickCount64)(void);
@@ -61,8 +62,7 @@ __int64 __fastcall _hProcessAnimations(int a1, int a2, unsigned int a3, int a4)
 
 void __fastcall sub_1407A3140(__int64 a1, const char* Movie)
 {
-    std::cout << a1 << std::endl;
-    std::cout << Movie << std::endl;
+    YGO::Log("Movie " + std::to_string(a1) + ": " + Movie, "Yu-Gi-Oh-SpeedHacks", 69);
 
     ((void(__fastcall*)(__int64, const char*))MovieHNDLE)(a1, Movie);
 }
@@ -185,9 +185,11 @@ extern "C" _declspec(dllexport) void ProcessConfig()
     no_anims = GetPrivateProfileIntA("Yu-Gi-Oh-SpeedHacks", "NoAnimations", 1, ".\\Config.ini");
     no_movies = GetPrivateProfileIntA("Yu-Gi-Oh-SpeedHacks", "NoMovies", 1, ".\\Config.ini");
 
-    std::cout << "[Yu-Gi-Oh-SpeedHacks] Speed: " << speed << std::endl;
-    std::cout << "[Yu-Gi-Oh-SpeedHacks] No Animations: " << (bool)no_anims << std::endl;
-    std::cout << "[Yu-Gi-Oh-SpeedHacks] No Movies: " << (bool)no_movies << std::endl;
+    using WriteLogFn = void(__cdecl*)(std::string, std::string, int);
+    const auto writeLog = reinterpret_cast<WriteLogFn>(GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-Console.dll"), "WriteLog"));
+    if (writeLog)
+        writeLog("Speed " + std::to_string(speed) + ", no animations " + std::to_string((int)no_anims) + ", no movies " + std::to_string((int)no_movies),
+            "Yu-Gi-Oh-SpeedHacks", 69);
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
