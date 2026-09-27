@@ -1,21 +1,11 @@
-#pragma once
-#include <vector>
-#include <string>
+﻿#pragma once
 #include <windows.h>
-#include <unordered_map>
 
+// Draws and feeds input to the plugins in Plugins\YGO-Ex. Loading and starting them is Yu-Gi-Oh-Core's job (it works without this plugin);
+// this only hands them the ImGui context, calls their ProcessWindow every frame and forwards input.
 class PluginManager
 {
 public:
-    static void Load();
-    static std::vector<std::string> ScanForPlugins();
-
-    static void ProcessDetours();
-    static void ProcessConfigForPlugin();
     static void ProcessInput(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
     static void ProcessGui();
-
-    static bool _IsLoaded;
-    static std::unordered_map<std::string, bool> m_PluginEnabled;
-    static CHAR PluginPath[MAX_PATH];
 };
