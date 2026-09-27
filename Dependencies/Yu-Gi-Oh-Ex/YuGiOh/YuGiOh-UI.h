@@ -17,7 +17,7 @@ namespace YGO
         inline int& g_iCurrentDuelAnimation = *reinterpret_cast<int*>(0x1427D0C18);
         inline int& g_iPreviousDuelAnimation = *reinterpret_cast<int*>(0x1427D0C1C);
 
-        const char* g_sPendulumEffectE = reinterpret_cast<const char*>(0x140A52068);
+        inline const char* g_sPendulumEffectE = reinterpret_cast<const char*>(0x140A52068);
 
 
         namespace RIX

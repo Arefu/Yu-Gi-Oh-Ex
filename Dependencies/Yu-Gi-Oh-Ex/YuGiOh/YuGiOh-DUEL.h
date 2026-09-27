@@ -1,4 +1,4 @@
-namespace YGO
+﻿namespace YGO
 {
     namespace DUEL
     {
@@ -14,7 +14,7 @@ namespace YGO
         inline auto Get_IsTutorialDuel = reinterpret_cast<short(*)()>(0x1407694F0);
         inline auto Set_IsTutorialDuel = reinterpret_cast<bool(*)(bool IsTutorialDuel)>(0x140769B00);
 
-        inline auto Get_StartingLifePoints = reinterpret_cast<int(*)()>(0x140768E30);
+        inline auto Get_StartingLifePoints = reinterpret_cast<int(*)()>(0x140768DC0);
         inline auto Set_StartingLifePoints = reinterpret_cast<void(*)(int LifePoints)>(0x140769710);
 
         inline auto Get_StartingPlayer = reinterpret_cast<int(*)()>(0x140768DE0);
