@@ -48,8 +48,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         DetourUpdateThread(GetCurrentThread());
         DetourAttach(&(PVOID&)orig_Setup_CardPropTable, Hook_Setup_CardPropTable);
         DetourTransactionCommit();
-
-        Save::Install();
         break;
     }
     }
