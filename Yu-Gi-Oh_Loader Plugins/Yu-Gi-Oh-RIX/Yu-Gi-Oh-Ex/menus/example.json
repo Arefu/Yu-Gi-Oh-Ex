@@ -1,0 +1,24 @@
+{
+  "buttons": [
+    {
+      "key": "example.credits",
+      "menu": "main",
+      "page": "main",
+      "label": "Credits",
+      "description": "Jump straight to the credits.",
+      "look": "helpAndOptions",
+      "action": { "goto": "credits" }
+    },
+    {
+      "key": "example.options",
+      "menu": "options",
+      "label": "Debug Tools",
+      "description": "Show the Funky debug window.",
+      "look": "settings",
+      "action": { "call": "funky.toggleTools" }
+    }
+  ],
+  "edit": [
+    { "item": "quitGame", "label": "Exit to Desktop", "description": "Close the game." }
+  ]
+}
