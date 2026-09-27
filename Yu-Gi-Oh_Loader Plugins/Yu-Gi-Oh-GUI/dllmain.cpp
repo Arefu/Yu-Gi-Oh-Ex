@@ -1,4 +1,4 @@
-#include <d3d11.h>
+﻿#include <d3d11.h>
 #include <detours.h>
 #include <dxgi.h>
 #include <fstream>
@@ -12,6 +12,7 @@
 #include <windows.h>
 
 #include "Logger.h"
+#include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Log.h"
 #include "Plugins.h"
 #include "YuGiOh/YuGiOh-CARDS.h"
 #include "YuGiOh/YuGiOh-GAME.h"
@@ -43,9 +44,6 @@ static ImGuiContext* _ImGuiContext = nullptr;
 Player g_Player1 = Player(PLAYER_ONE);
 Player g_Player2 = Player(PLAYER_TWO);
 
-bool PluginManager::_IsLoaded;
-std::unordered_map<std::string, bool> PluginManager::m_PluginEnabled;
-
 static bool DoIStart = false;
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
@@ -61,9 +59,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
         case VK_F1:
             bShowMenu = !bShowMenu;
             if (bShowMenu)
-                std::cout << "[Yu-Gi-Oh-GUI] Menu Opened" << std::endl;
+                YGO::Log("Menu opened", "Yu-Gi-Oh-GUI", 69);
             else
-                std::cout << "[Yu-Gi-Oh-GUI] Menu Closed" << std::endl;
+                YGO::Log("Menu closed", "Yu-Gi-Oh-GUI", 69);
             break;
         case VK_F8:
             bShowDemo = !bShowDemo;
@@ -215,50 +213,7 @@ HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, U
 
         ImGui::Separator();
 
-        ImGui::BeginGroup();
-        if (ImGui::CollapsingHeader("Debug Mode", ImGuiTreeNodeFlags_DefaultOpen))
-        {
-            static bool bPluginsInitialized = false;
-            if (!bPluginsInitialized)
-            {
-                bPluginsInitialized = true;
-                CHAR lastLoaded[1024];
-                GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "LoadedPlugins", "", lastLoaded, 1024, ".\\Config.ini");
-                std::string lastLoadedStr(lastLoaded);
-                for (auto& Plugin : PluginManager::ScanForPlugins())
-                {
-                    std::string search = " " + Plugin + " ";
-                    std::string padded = " " + lastLoadedStr + " ";
-                    PluginManager::m_PluginEnabled[Plugin] = (padded.find(search) != std::string::npos);
-                }
-            }
-
-            for (auto& Plugin : PluginManager::ScanForPlugins())
-                ImGui::Checkbox(Plugin.c_str(), &PluginManager::m_PluginEnabled[Plugin]);
-
-            if (ImGui::Button("Load Plugins"))
-            {
-                if (!PluginManager::_IsLoaded)
-                {
-                    std::string enabledList;
-                    for (auto& [name, enabled] : PluginManager::m_PluginEnabled)
-                    {
-                        if (enabled)
-                        {
-                            if (!enabledList.empty()) enabledList += " ";
-                            enabledList += name;
-                        }
-                    }
-                    WritePrivateProfileStringA("Yu-Gi-Oh-GUI", "LoadedPlugins", enabledList.c_str(), ".\\Config.ini");
-                    PluginManager::Load();
-                    PluginManager::ProcessConfigForPlugin();
-                    PluginManager::ProcessDetours();
-                }
-            }
-        }
-        ImGui::EndGroup();
-
-        ImGui::Separator();
+        // The plugin list (which plugins are on) is not here: it is the in-game Plugins menu (Help & Options), WolfX and Yu-Gi-Oh-Core's Config.ini list.
         ImGui::BeginGroup();
         if (ImGui::CollapsingHeader("UI Witchcraft"))
         {

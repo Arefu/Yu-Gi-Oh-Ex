@@ -1,122 +1,95 @@
-#include "imgui.h"
+﻿#include "imgui.h"
+#include "imgui_internal.h"
 #include "Logger.h"
 #include "Plugins.h"
-#include "Yu-Gi-Oh-Ex.h"
-#include <chrono>
-#include <iostream>
+#include "Yu-Gi-Oh-Core.h"
+#include <set>
 #include <string>
-#include <thread>
 #include <Windows.h>
 
-CHAR PluginManager::PluginPath[MAX_PATH];
-
-void PluginManager::Load()
+// A plugin that faults must not take the game down with it: its entry points are called guarded (SEH), and the failure is logged.
+static bool CallGuarded(FARPROC entry)
 {
-    if (_IsLoaded)
-        return;
-
-    for (auto& Plugin : PluginManager::m_PluginEnabled)
+    __try
     {
-        if (Plugin.second == false) continue;
-
-        Logger::WriteLog("Loading Plugin: " + Plugin.first, MODULE_NAME, 0);
-
-        auto hModule = LoadLibraryA((std::string(PluginManager::PluginPath) + "\\YGO-Ex\\" + Plugin.first).c_str());
-        auto SetImGuiContextForPlugin = GetProcAddress(hModule, "SetContext");
-        if (SetImGuiContextForPlugin)
-            reinterpret_cast<void(__stdcall*)(ImGuiContext*)>(SetImGuiContextForPlugin)(ImGui::GetCurrentContext());
+        reinterpret_cast<void(__stdcall*)()>(entry)();
+        return true;
     }
-
-    _IsLoaded = true;
+    __except (EXCEPTION_EXECUTE_HANDLER)
+    {
+        return false;
+    }
 }
+
+static bool CallInputGuarded(FARPROC entry, HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+    __try
+    {
+        reinterpret_cast<void(__stdcall*)(HWND, UINT, WPARAM, LPARAM)>(entry)(hWnd, msg, wParam, lParam);
+        return true;
+    }
+    __except (EXCEPTION_EXECUTE_HANDLER)
+    {
+        return false;
+    }
+}
+
+static std::set<HMODULE> g_HaveContext;   // plugins that were handed the ImGui context
+static std::set<HMODULE> g_Failed;        // plugins that faulted and are not called any more
 
 void PluginManager::ProcessGui()
 {
-    if (PluginManager::_IsLoaded == false)
+    if (!Core::Load())
         return;
 
-    for (auto& Plugin : PluginManager::m_PluginEnabled)
+    ImGuiContext* context = ImGui::GetCurrentContext();
+    const int count = Core::Functions().GetPluginCount();
+    for (int i = 0; i < count; ++i)
     {
-        if (Plugin.second == false)
+        CorePluginInfo info = {};
+        info.Size = sizeof(info);
+        if (!Core::Functions().GetPluginInfo(i, &info) || !info.Gui || !info.Loaded || !info.Module || g_Failed.count(info.Module))
             continue;
 
-        auto hModule = LoadLibraryA((std::string(PluginManager::PluginPath) + "\\YGO-Ex\\" + Plugin.first).c_str());
-        auto DrawImGui = GetProcAddress(hModule, "ProcessWindow");
-        if (DrawImGui)
-            reinterpret_cast<void(__stdcall*)()>(DrawImGui)();
-    }
-}
+        if (g_HaveContext.insert(info.Module).second)
+        {
+            if (auto SetContext = GetProcAddress(info.Module, "SetContext"))
+                reinterpret_cast<void(__stdcall*)(ImGuiContext*)>(SetContext)(context);
+        }
 
-void PluginManager::ProcessDetours()
-{
-    if (PluginManager::_IsLoaded == false)
-        return;
-
-    for (auto& Plugin : PluginManager::m_PluginEnabled)
-    {
-        if (Plugin.second == false)
+        auto Entry = GetProcAddress(info.Module, "ProcessWindow");
+        if (!Entry)
             continue;
 
-        auto hModule = LoadLibraryA((std::string(PluginManager::PluginPath) + "\\YGO-Ex\\" + Plugin.first).c_str());
-        auto ProcessDetours = GetProcAddress(hModule, "ProcessDetours");
-        if (ProcessDetours)
-            reinterpret_cast<void(__stdcall*)()>(ProcessDetours)();
-
-        std::cout << "Processing Detours for: " << Plugin.first << std::endl;
+        const int depth = context->CurrentWindowStack.Size;
+        if (!CallGuarded(Entry))
+        {
+            // Close whatever windows it left open so the frame can still end, then stop calling it.
+            while (context->CurrentWindowStack.Size > depth)
+                ImGui::End();
+            Logger::WriteLog(std::string(info.Name) + " crashed while drawing its window and is not drawn any more", MODULE_NAME, 2);
+            g_Failed.insert(info.Module);
+        }
     }
 }
 
 void PluginManager::ProcessInput(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
-    if (PluginManager::_IsLoaded == false)
+    if (!Core::Load())
         return;
 
-    for (auto& Plugin : PluginManager::m_PluginEnabled)
+    const int count = Core::Functions().GetPluginCount();
+    for (int i = 0; i < count; ++i)
     {
-        if (Plugin.second == false)
+        CorePluginInfo info = {};
+        info.Size = sizeof(info);
+        if (!Core::Functions().GetPluginInfo(i, &info) || !info.Gui || !info.Loaded || !info.Module || g_Failed.count(info.Module))
             continue;
 
-        auto hModule = LoadLibraryA((std::string(PluginManager::PluginPath) + "\\YGO-Ex\\" + Plugin.first).c_str());
-        auto ProcessInput = GetProcAddress(hModule, "ProcessInput");
-        if (ProcessInput)
-            reinterpret_cast<void(__stdcall*)(HWND, UINT, WPARAM, LPARAM)>(ProcessInput)(hWnd, msg, wParam, lParam);
+        if (auto Entry = GetProcAddress(info.Module, "ProcessInput"))
+        {
+            if (!CallInputGuarded(Entry, hWnd, msg, wParam, lParam))
+                g_Failed.insert(info.Module);
+        }
     }
-}
-
-void PluginManager::ProcessConfigForPlugin()
-{
-    if (PluginManager::_IsLoaded == false)
-        return;
-    for (auto& Plugin : PluginManager::m_PluginEnabled)
-    {
-        if (Plugin.second == false)
-            continue;
-
-        auto hModule = LoadLibraryA((std::string(PluginManager::PluginPath) + "\\YGO-Ex\\" + Plugin.first).c_str());
-        auto ProcessConfig = GetProcAddress(hModule, "ProcessConfig");
-        if (ProcessConfig)
-            reinterpret_cast<void(__stdcall*)()>(ProcessConfig)();
-    }
-}
-
-std::vector<std::string> PluginManager::ScanForPlugins()
-{
-    GetPrivateProfileStringA("Yu-Gi-Oh-GUI", "PluginsPath", "", PluginManager::PluginPath, MAX_PATH, ".\\Config.ini");
-    std::vector<std::string> DLLs;
-
-    WIN32_FIND_DATAA FindFileData;
-    HANDLE hFind = FindFirstFileA((std::string(PluginManager::PluginPath) + "\\YGO-Ex\\*.dll").c_str(), &FindFileData);
-    if (hFind == INVALID_HANDLE_VALUE)
-    {
-        MessageBoxA(NULL, "PluginsPath is empty! Check your Config.ini", "Plugin Path", MB_OK);
-        exit(ERROR_FILE_NOT_FOUND);
-    }
-
-    do
-    {
-        DLLs.push_back(FindFileData.cFileName);
-    } while (FindNextFileA(hFind, &FindFileData) != 0);
-    FindClose(hFind);
-
-    return DLLs;
 }
