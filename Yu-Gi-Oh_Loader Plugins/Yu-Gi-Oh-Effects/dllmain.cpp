@@ -1,4 +1,4 @@
-#include <Windows.h>
+﻿#include <Windows.h>
 #include <detours.h>
 #include <iostream>
 #include <vector>
@@ -9,6 +9,8 @@
 #include "CardsThatMakeYouDraw.h"
 
 #include "Effects.h"
+#include "Fusion.h"
+#include "EffectDispatch.h"
 #include "Logger.h"
 #include "Config.h"
 #include "File.h"
@@ -42,6 +44,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         //CardsThatMakeYouDraw::Setup(std::format("{}{}", Path, "\\CardsThatMakeYouDraw\\CardsThatMakeYouDraw.json"));
 
         Effects_FunctionTable::InsertRedirects();
+        Fusion::Setup();
+        EffectDispatch::Setup();
         DetourTransactionCommit();
 
         break;;
