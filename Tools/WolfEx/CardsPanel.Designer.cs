@@ -55,6 +55,10 @@ namespace WolfEx
             _limitation = new ComboBox();
             lblCopies = new Label();
             _copies = new NumericUpDown();
+            lblArchetypes = new Label();
+            archRow = new TableLayoutPanel();
+            _archetypes = new TextBox();
+            btnArchetypes = new Button();
             lblArt = new Label();
             artRow = new TableLayoutPanel();
             _artPath = new TextBox();
@@ -66,6 +70,7 @@ namespace WolfEx
             leftButtons.SuspendLayout();
             form.SuspendLayout();
             artRow.SuspendLayout();
+            archRow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)split).BeginInit();
             split.Panel1.SuspendLayout();
             split.Panel2.SuspendLayout();
@@ -78,7 +83,7 @@ namespace WolfEx
             split.Panel2.Controls.Add(right);
             split.Dock = DockStyle.Fill;
             split.FixedPanel = FixedPanel.Panel1;
-            split.SplitterDistance = 260;
+            split.SplitterDistance = 340;
             split.Name = "split";
             // 
             // left
@@ -163,18 +168,22 @@ namespace WolfEx
             form.Controls.Add(_limitation, 1, 10);
             form.Controls.Add(lblCopies, 0, 11);
             form.Controls.Add(_copies, 1, 11);
-            form.Controls.Add(lblArt, 0, 12);
-            form.Controls.Add(artRow, 1, 12);
-            form.Controls.Add(_preview, 1, 13);
-            form.Controls.Add(_artInfo, 1, 14);
+            form.Controls.Add(lblArchetypes, 0, 12);
+            form.Controls.Add(archRow, 1, 12);
+            form.Controls.Add(lblArt, 0, 13);
+            form.Controls.Add(artRow, 1, 13);
+            form.Controls.Add(_preview, 2, 0);
+            form.SetRowSpan(_preview, 8);
+            form.Controls.Add(_artInfo, 2, 8);
+            form.SetRowSpan(_artInfo, 6);
             form.AutoSize = true;
-            form.ColumnCount = 2;
+            form.ColumnCount = 3;
             form.Dock = DockStyle.Top;
             form.Padding = new Padding(8);
-            form.RowCount = 15;
+            form.RowCount = 14;
             form.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
             form.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            form.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            form.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 260F));
             form.RowStyles.Add(new RowStyle(SizeType.AutoSize));
             form.RowStyles.Add(new RowStyle(SizeType.AutoSize));
             form.RowStyles.Add(new RowStyle(SizeType.AutoSize));
@@ -203,9 +212,9 @@ namespace WolfEx
             // 
             _id.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _id.Margin = new Padding(3);
-            _id.Minimum = new decimal(new int[] { 14969, 0, 0, 0 });
+            _id.Minimum = new decimal(new int[] { 15300, 0, 0, 0 });
             _id.Maximum = new decimal(new int[] { 19999, 0, 0, 0 });
-            _id.Value = new decimal(new int[] { 14969, 0, 0, 0 });
+            _id.Value = new decimal(new int[] { 15300, 0, 0, 0 });
             _id.Name = "_id";
             _id.ValueChanged += Editor_Changed;
             // 
@@ -406,6 +415,46 @@ namespace WolfEx
             _copies.Name = "_copies";
             _copies.ValueChanged += Editor_Changed;
             // 
+            // lblArchetypes
+            //
+            lblArchetypes.Text = "Archetypes (one or many):";
+            lblArchetypes.AutoSize = true;
+            lblArchetypes.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            lblArchetypes.Padding = new Padding(0, 6, 8, 0);
+            lblArchetypes.Name = "lblArchetypes";
+            //
+            // archRow
+            //
+            archRow.Controls.Add(_archetypes, 0, 0);
+            archRow.Controls.Add(btnArchetypes, 1, 0);
+            archRow.AutoSize = true;
+            archRow.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            archRow.ColumnCount = 2;
+            archRow.RowCount = 1;
+            archRow.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            archRow.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+            archRow.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            archRow.Name = "archRow";
+            //
+            // _archetypes
+            //
+            _archetypes.ReadOnly = true;
+            _archetypes.Multiline = true;
+            _archetypes.WordWrap = true;
+            _archetypes.Height = 58;
+            _archetypes.ScrollBars = ScrollBars.Vertical;
+            _archetypes.Dock = DockStyle.Fill;
+            _archetypes.Name = "_archetypes";
+            //
+            // btnArchetypes
+            //
+            btnArchetypes.Text = "Choose archetypes...";
+            btnArchetypes.AutoSize = true;
+            btnArchetypes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnArchetypes.UseVisualStyleBackColor = true;
+            btnArchetypes.Name = "btnArchetypes";
+            btnArchetypes.Click += btnArchetypes_Click;
+            //
             // lblArt
             // 
             lblArt.Text = "Art (png / jpg):";
@@ -445,7 +494,7 @@ namespace WolfEx
             // 
             _preview.SizeMode = PictureBoxSizeMode.Zoom;
             _preview.BorderStyle = BorderStyle.FixedSingle;
-            _preview.Size = new Size(200, 200);
+            _preview.Size = new Size(244, 244);
             _preview.Margin = new Padding(3);
             _preview.TabStop = false;
             _preview.Name = "_preview";
@@ -453,6 +502,7 @@ namespace WolfEx
             // _artInfo
             // 
             _artInfo.AutoSize = true;
+            _artInfo.MaximumSize = new Size(244, 0);
             _artInfo.Name = "_artInfo";
             // 
             // this
@@ -465,6 +515,8 @@ namespace WolfEx
             split.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)split).EndInit();
             split.ResumeLayout(false);
+            archRow.ResumeLayout(false);
+            archRow.PerformLayout();
             artRow.ResumeLayout(false);
             artRow.PerformLayout();
             form.ResumeLayout(false);
@@ -514,6 +566,10 @@ namespace WolfEx
         private ComboBox _limitation;
         private Label lblCopies;
         private NumericUpDown _copies;
+        private Label lblArchetypes;
+        private TableLayoutPanel archRow;
+        private TextBox _archetypes;
+        private Button btnArchetypes;
         private Label lblArt;
         private TableLayoutPanel artRow;
         private TextBox _artPath;

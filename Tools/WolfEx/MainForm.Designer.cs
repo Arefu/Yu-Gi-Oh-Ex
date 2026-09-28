@@ -1,4 +1,4 @@
-#nullable disable
+﻿#nullable disable
 
 namespace WolfEx
 {
@@ -26,10 +26,12 @@ namespace WolfEx
             _status = new Label();
             top = new TableLayoutPanel();
             tabCards = new TabPage();
+            tabEffects = new TabPage();
             tabUnlocks = new TabPage();
             tabPacks = new TabPage();
             tabMenus = new TabPage();
             cardsPanel = new CardsPanel();
+            effectsPanel = new EffectsPanel();
             unlocksPanel = new UnlocksPanel();
             packsPanel = new PacksPanel();
             menusPanel = new MenusPanel();
@@ -41,14 +43,16 @@ namespace WolfEx
             _tabs.SuspendLayout();
             top.SuspendLayout();
             tabCards.SuspendLayout();
+            tabEffects.SuspendLayout();
             tabUnlocks.SuspendLayout();
             tabPacks.SuspendLayout();
             tabMenus.SuspendLayout();
             SuspendLayout();
-            // 
+            //
             // _tabs
-            // 
+            //
             _tabs.Controls.Add(tabCards);
+            _tabs.Controls.Add(tabEffects);
             _tabs.Controls.Add(tabUnlocks);
             _tabs.Controls.Add(tabPacks);
             _tabs.Controls.Add(tabMenus);
@@ -89,9 +93,16 @@ namespace WolfEx
             tabCards.Text = "New cards";
             tabCards.UseVisualStyleBackColor = true;
             tabCards.Name = "tabCards";
-            // 
+            //
+            // tabEffects
+            //
+            tabEffects.Controls.Add(effectsPanel);
+            tabEffects.Text = "Effects";
+            tabEffects.UseVisualStyleBackColor = true;
+            tabEffects.Name = "tabEffects";
+            //
             // tabUnlocks
-            // 
+            //
             tabUnlocks.Controls.Add(unlocksPanel);
             tabUnlocks.Text = "Unlocks";
             tabUnlocks.UseVisualStyleBackColor = true;
@@ -115,9 +126,14 @@ namespace WolfEx
             // 
             cardsPanel.Dock = DockStyle.Fill;
             cardsPanel.Name = "cardsPanel";
-            // 
+            //
+            // effectsPanel
+            //
+            effectsPanel.Dock = DockStyle.Fill;
+            effectsPanel.Name = "effectsPanel";
+            //
             // unlocksPanel
-            // 
+            //
             unlocksPanel.Dock = DockStyle.Fill;
             unlocksPanel.Name = "unlocksPanel";
             // 
@@ -175,7 +191,7 @@ namespace WolfEx
             Controls.Add(top);
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1084, 721);
+            ClientSize = new Size(1400, 820);
             Text = "WolfEx - new content for Legacy of the Duelist";
             Name = "MainForm";
             tabMenus.ResumeLayout(false);
@@ -186,6 +202,7 @@ namespace WolfEx
             tabUnlocks.PerformLayout();
             tabCards.ResumeLayout(false);
             tabCards.PerformLayout();
+            tabEffects.ResumeLayout(false);
             top.ResumeLayout(false);
             top.PerformLayout();
             _tabs.ResumeLayout(false);
@@ -199,10 +216,12 @@ namespace WolfEx
         private Label _status;
         private TableLayoutPanel top;
         private TabPage tabCards;
+        private TabPage tabEffects;
         private TabPage tabUnlocks;
         private TabPage tabPacks;
         private TabPage tabMenus;
         private CardsPanel cardsPanel;
+        private EffectsPanel effectsPanel;
         private UnlocksPanel unlocksPanel;
         private PacksPanel packsPanel;
         private MenusPanel menusPanel;

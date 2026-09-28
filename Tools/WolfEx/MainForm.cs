@@ -24,9 +24,25 @@
         {
             InitializeComponent();
 
-            // The pages are the tabs in the designer, in the same order.
+            // The pages are the tabs in the designer, in the same order. Effects is not in this list: it
+            // has no file of its own - it edits the same CardModel instances cardsPanel owns, which is
+            // the only one of these that actually writes cards.json.
             _panels = [cardsPanel, unlocksPanel, packsPanel, menusPanel];
             cardsPanel.Warning += SetStatus;
+            effectsPanel.Attach(cardsPanel);
+
+            // The Effect library is a read-only reference (the game's cards written in EffectScript); "Use as template" hands a script to the Effects tab.
+            var libraryPanel = new EffectLibraryPanel { Dock = DockStyle.Fill };
+            var tabLibrary = new TabPage("Effect library") { UseVisualStyleBackColor = true };
+            tabLibrary.Controls.Add(libraryPanel);
+            _tabs.TabPages.Add(tabLibrary);
+            libraryPanel.UseTemplate = script =>
+            {
+                if (!effectsPanel.ApplyTemplate(script))
+                    return false;
+                _tabs.SelectedTab = tabEffects;
+                return true;
+            };
 
             string? saved = ReadRemembered();
             if (saved != null && Directory.Exists(saved))
@@ -94,7 +110,8 @@
             {
                 if (!panel.SaveTo(ExtraCardsFolder))
                 {
-                    _tabs.SelectedIndex = _panels.IndexOf(panel);
+                    if (((Control)panel).Parent is TabPage page)
+                        _tabs.SelectedTab = page;
                     SetStatus($"Not saved: fix the {panel.Title} page first.");
                     return;
                 }

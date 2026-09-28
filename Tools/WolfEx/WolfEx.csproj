@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -15,6 +15,21 @@
   <ItemGroup>
     <ProjectReference Include="..\..\File Type Libraries\StartingCollection\StartingCollection.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\PackDef\PackDef.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CARD_Named.bin\CARD_Named.bin.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- EffectScriptGenerated\ is ANTLR-generated from Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4
+         (the same grammar the C++ side's proof-of-concept parser uses) - regenerate with:
+         java -jar Dependencies\ANTLR\antlr-4.13.2-complete.jar -Dlanguage=CSharp -visitor -no-listener -package WolfEx.EffectScriptGenerated -o Tools\WolfEx\EffectScriptGenerated "Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4" -->
+    <PackageReference Include="Antlr4.Runtime.Standard" Version="4.13.1" />
+    <PackageReference Include="Scintilla.NET" Version="5.3.2.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The Effect library tab reads this; made by docs\effect-scripts\build_effect_reference.py -->
+    <None Include="effect_reference.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="trigger_sources.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>
