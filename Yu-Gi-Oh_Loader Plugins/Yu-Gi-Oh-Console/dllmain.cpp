@@ -3,6 +3,10 @@
 #include <mutex>
 #include <sstream>
 #include <string>
+#include <string_view>
+
+#include <Windows.h>
+#include <detours.h>
 
 #include "conmanip.h"
 using namespace conmanip;
@@ -139,10 +143,79 @@ namespace
     }
 }
 
+// Anything on the console that did not come through WriteLog is dropped. The game and Steam print things of their own (Steam's "Setting breakpad
+// minidump AppID" and "Steam_SetMinidumpSteamID: Caching Steam ID: ..." lines, which give away the user's Steam ID, are two) and they would
+// otherwise mix with the log. WriteLog marks its own thread while it writes; the console write calls (WriteFile / WriteConsole on a character
+// device) are hooked and refuse everything else. Files and pipes are never touched, and each thread has its own mark, so output from another
+// thread while WriteLog runs is still dropped.
+namespace
+{
+    thread_local bool t_InWriteLog = false;
+
+    bool IsConsoleHandle(HANDLE handle)
+    {
+        return GetFileType(handle) == FILE_TYPE_CHAR;
+    }
+
+    decltype(&WriteFile) orig_WriteFile = WriteFile;
+    decltype(&WriteConsoleA) orig_WriteConsoleA = WriteConsoleA;
+    decltype(&WriteConsoleW) orig_WriteConsoleW = WriteConsoleW;
+
+    BOOL WINAPI Hook_WriteFile(HANDLE file, LPCVOID buffer, DWORD count, LPDWORD written, LPOVERLAPPED overlapped)
+    {
+        if (!t_InWriteLog && IsConsoleHandle(file))
+        {
+            if (written)
+                *written = count;
+            return TRUE;
+        }
+        return orig_WriteFile(file, buffer, count, written, overlapped);
+    }
+
+    BOOL WINAPI Hook_WriteConsoleA(HANDLE console, const VOID* buffer, DWORD count, LPDWORD written, LPVOID reserved)
+    {
+        if (!t_InWriteLog)
+        {
+            if (written)
+                *written = count;
+            return TRUE;
+        }
+        return orig_WriteConsoleA(console, buffer, count, written, reserved);
+    }
+
+    BOOL WINAPI Hook_WriteConsoleW(HANDLE console, const VOID* buffer, DWORD count, LPDWORD written, LPVOID reserved)
+    {
+        if (!t_InWriteLog)
+        {
+            if (written)
+                *written = count;
+            return TRUE;
+        }
+        return orig_WriteConsoleW(console, buffer, count, written, reserved);
+    }
+
+    void HideForeignConsoleOutput()
+    {
+        DetourTransactionBegin();
+        DetourUpdateThread(GetCurrentThread());
+        DetourAttach(&(PVOID&)orig_WriteFile, Hook_WriteFile);
+        DetourAttach(&(PVOID&)orig_WriteConsoleA, Hook_WriteConsoleA);
+        DetourAttach(&(PVOID&)orig_WriteConsoleW, Hook_WriteConsoleW);
+        DetourTransactionCommit();
+    }
+
+    struct WriteLogMark
+    {
+        WriteLogMark() { t_InWriteLog = true; }
+        ~WriteLogMark() { t_InWriteLog = false; }
+    };
+}
+
 extern "C" __declspec(dllexport)
 void WriteLog(std::string Message, std::string Module, int LogLevel)
 {
     std::lock_guard<std::mutex> guard(g_Lock);
+    WriteLogMark mark;
 
     const int rank = RankOf(LogLevel);
     const bool toConsole = rank >= g_MinRank;
@@ -231,6 +304,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         freopen_s(&consoleOut, "CONIN$", "r", stdin);
 
         SetWindowText(GetConsoleWindow(), L"Yu-Gi-Oh! Console");
+        HideForeignConsoleOutput();
 
         WriteLog("Ready!", MODULE_NAME, 0);
 
