@@ -376,7 +376,16 @@ Binaries/*/Tools/YGO_2020/
 Screenshot*.png
 
 # C++ build intermediates (MSVC module scan output etc.)
+# NOTE: x64/ is bare/unanchored, so it matches ANY directory named x64
+# anywhere in the tree -- including Binaries/build/x64/, which is where
+# ScintillaNET's native DLL has to ship for WolfEx to run at all (see
+# ScintillaNET.Scintilla.LocateNativeDllDirectory()). That's what was
+# causing "Unable to locate the Scintilla.NET satellite assemblies" --
+# the folder was being stripped out of every commit, shipped Binaries/
+# snapshot included. Carve it back out explicitly.
 x64/
+!Binaries/build/x64/
+!Binaries/build/x64/**
 *.dt.d.json
 *.dt.module.json
 *.command
