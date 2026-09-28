@@ -386,6 +386,11 @@ Screenshot*.png
 x64/
 !Binaries/build/x64/
 !Binaries/build/x64/**
+!Binaries/Debug/Tools/x64
+!Binaries/Debug/Tools/x86
+!Binaries/Release/Tools/x64
+!Binaries/Release/Tools/x86
+
 *.dt.d.json
 *.dt.module.json
 *.command
