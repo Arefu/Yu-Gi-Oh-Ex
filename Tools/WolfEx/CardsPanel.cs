@@ -78,12 +78,15 @@ namespace WolfEx
         };
 
         // The plugin accepts ids from the first one after the game's own to the last one the save can hold.
-        private const int MinId = 14969;
+        private const int MinId = 15300;   // the game has effect data for ids 14969-15234; see docs/EffectSystem.md
         private const int MaxId = 19999;
 
         private static readonly string[] ImageExtensions = [".png", ".jpg", ".jpeg"];
 
-        private sealed class CardModel
+        // internal, not private: the Effects tab (EffectsPanel) edits EffectSource/Effect on these same
+        // instances directly - there is one writer of cards.json (this panel's SaveTo), so every other tab
+        // that touches a card's data shares this model rather than keeping its own copy to save separately.
+        internal sealed class CardModel
         {
             public int Id = MinId;
             public string Name = "New Card";
@@ -99,6 +102,31 @@ namespace WolfEx
             public int Def;
             public string Limitation = "Unlimited";
             public int Copies = 3;
+            public string EffectSource = "";     // EffectScript source (Effects tab) - not read by the game
+            public JsonObject? Effect;            // compiled from EffectSource (Effects tab): the card's "effectClone" object, what Yu-Gi-Oh-Effects runs
+            // Every property of the card's cards.json entry this editor has no field for (konamiId, password, archetypes,
+            // frameType, card_sets, ... everything YGOPRODeck gave it). Kept as it is and written back on save, so
+            // saving here never drops data.
+            public JsonObject? Extra;
+
+            /// <summary>The archetype codes of this card (the "archetypes" list in cards.json, kept in Extra): one or many.</summary>
+            public List<int> Archetypes
+            {
+                get => Extra?["archetypes"] is JsonArray array ? array.Select(node => node!.GetValue<int>()).ToList() : [];
+                set
+                {
+                    if (value.Count == 0)
+                    {
+                        Extra?.Remove("archetypes");
+                        return;
+                    }
+                    Extra ??= [];
+                    var array = new JsonArray();
+                    foreach (int code in value)
+                        array.Add(code);
+                    Extra["archetypes"] = array;
+                }
+            }
 
             public bool IsSpellOrTrap => Kind is "Spell" or "Trap";
             public override string ToString() => $"{Id} - {Name}";
@@ -107,6 +135,12 @@ namespace WolfEx
         private readonly List<CardModel> _cards = [];
         private string _folder = "";
         private bool _binding;
+
+        /// <summary>The Effects tab edits these same instances directly; refreshed after every LoadFrom/add/delete.</summary>
+        internal IReadOnlyList<CardModel> Cards => _cards;
+
+        /// <summary>Fires after the card list changes shape (loaded, added, duplicated, deleted) so another tab can refresh its own view of it.</summary>
+        public event Action? CardsChanged;
 
         /// <summary>Something the user should know about the card being edited (shown in the status bar).</summary>
         public event Action<string>? Warning;
@@ -138,11 +172,26 @@ namespace WolfEx
 
         private void btnChooseArt_Click(object? sender, EventArgs e) => ChooseArt();
 
+        private void btnArchetypes_Click(object? sender, EventArgs e)
+        {
+            var card = Selected;
+            if (card == null)
+                return;
+
+            using var dialog = new ArchetypeDialog(card.Name, card.Archetypes);
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+                return;
+
+            card.Archetypes = dialog.Result;
+            _archetypes.Text = ArchetypeCatalog.Describe(card.Archetypes);
+        }
+
         // ---------------------------------------------------------------- IContentPanel
 
         public void LoadFrom(string extraCardsFolder, string gameFolder)
         {
             _folder = extraCardsFolder;
+            ArchetypeCatalog.Load(extraCardsFolder);
             _cards.Clear();
             _list.Items.Clear();
 
@@ -170,6 +219,8 @@ namespace WolfEx
                 _list.SelectedIndex = 0;
             else
                 BindSelected();
+
+            CardsChanged?.Invoke();
         }
 
         public bool SaveTo(string extraCardsFolder)
@@ -239,7 +290,7 @@ namespace WolfEx
 
         private void SetEditorEnabled(bool enabled)
         {
-            foreach (var control in new Control[] { _id, _name, _desc, _kind, _type, _attribute, _icon, _level, _atk, _def, _limitation, _copies })
+            foreach (var control in new Control[] { _id, _name, _desc, _kind, _type, _attribute, _icon, _level, _atk, _def, _limitation, _copies, btnArchetypes })
                 control.Enabled = enabled;
 
             if (enabled)
@@ -280,6 +331,7 @@ namespace WolfEx
                 _def.Value = Math.Clamp(card.Def, 0, 9990);
                 Select(_limitation, card.Limitation);
                 _copies.Value = Math.Clamp(card.Copies, 0, 3);
+                _archetypes.Text = ArchetypeCatalog.Describe(card.Archetypes);
                 ApplyKindRules();
                 RefreshArt(card);
             }
@@ -336,6 +388,7 @@ namespace WolfEx
             _cards.Add(card);
             _list.Items.Add(card);
             _list.SelectedIndex = _list.Items.Count - 1;
+            CardsChanged?.Invoke();
         }
 
         private void DuplicateCard()
@@ -365,6 +418,7 @@ namespace WolfEx
                 _list.SelectedIndex = Math.Min(index, _list.Items.Count - 1);
             else
                 BindSelected();
+            CardsChanged?.Invoke();
         }
 
         // ---------------------------------------------------------------- art
@@ -492,7 +546,31 @@ namespace WolfEx
             Def = ReadInt(json, "def", 0),
             Limitation = ReadEnum(json, "limitation", Limitations, "Unlimited"),
             Copies = ReadInt(json, "copies", 3),
+            EffectSource = ReadString(json, "effectScript"),
+            // DeepClone: a JsonNode can only have one parent, and this one's parent is `json` (the array
+            // element being read) - it must be detached before it can be attached to a card's own tree later.
+            Effect = json["effectClone"] is JsonObject effect ? effect.DeepClone().AsObject() : null,
+            Extra = ReadExtra(json),
         };
+
+        private static readonly HashSet<string> EditedKeys = new(StringComparer.Ordinal)
+        {
+            "id", "name", "description", "image", "kind", "type", "attribute", "icon", "level", "atk", "def",
+            "limitation", "copies", "effectScript", "effect", "effectClone",
+        };
+
+        private static JsonObject? ReadExtra(JsonObject json)
+        {
+            JsonObject? extra = null;
+            foreach (var pair in json)
+            {
+                if (EditedKeys.Contains(pair.Key))
+                    continue;
+                extra ??= [];
+                extra[pair.Key] = pair.Value?.DeepClone();   // DeepClone: a node has one parent, and this one belongs to `json`
+            }
+            return extra;
+        }
 
         private static JsonObject WriteCard(CardModel card)
         {
@@ -523,6 +601,21 @@ namespace WolfEx
 
             json["limitation"] = card.Limitation;
             json["copies"] = card.Copies;
+
+            if (!string.IsNullOrEmpty(card.EffectSource))
+                json["effectScript"] = card.EffectSource;
+            if (card.Effect != null)
+                json["effectClone"] = card.Effect.DeepClone();   // DeepClone: see the matching note in ReadCard
+
+            if (card.Extra != null)
+            {
+                foreach (var pair in card.Extra)
+                {
+                    if (!json.ContainsKey(pair.Key))
+                        json[pair.Key] = pair.Value?.DeepClone();
+                }
+            }
+
             return json;
         }
     }

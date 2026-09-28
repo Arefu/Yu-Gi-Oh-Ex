@@ -33,7 +33,7 @@ namespace WolfEx
         {
             InitializeComponent();
             _grid.DataSource = _rows;
-            _info.Text = "Ids 3900-14968 are the game's cards, 14969-19999 are new cards. \"Add from game data\" lists what a new profile starts with.";
+            _info.Text = "Ids 3900-14968 are the game's cards, 15300-19999 are new cards. \"Add from game data\" lists what a new profile starts with.";
         }
 
         private void btnAddByName_Click(object? sender, EventArgs e) => AddByName();
