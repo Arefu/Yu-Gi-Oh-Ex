@@ -336,147 +336,11 @@ namespace
 
     // ---- window ----
 
-    // Ready made setups: what to put in the hand and the extra deck to try a card. Ids are Konami ids (the custom ones are from cards.json).
-    struct Preset { const char* Name; std::vector<int> Hand, Extra; };
-    const std::vector<Preset> kPresets =
-    {
-        { "Fusion: Elemental HERO Flame Wingman (Avian + Burstinatrix)", { 4837, 6310, 6311 }, { 6344 } },
-        { "Fusion: Thousand Dragon (Baby Dragon + Time Wizard)", { 4837, 4010, 4022 }, { 4075 } },
-        { "Fusion: Dark Paladin (Dark Magician + Buster Blader)", { 4837, 4041, 4983 }, { 5628 } },
-        { "Fusion: Gate Guardian (Sanga + Kazejin + Suijin)", { 4837, 4377, 4378, 4379 }, { 4380 } },
-        { "Fusion: Blue-Eyes Ultimate Dragon (3 Blue-Eyes White Dragon)", { 4837, 4007, 4007, 4007 }, { 4386 } },
-        // The "NEW fusion" presets that used to live here (ids 15384/15388/15420-15423) referenced the old
-        // 245-card cards.json, which had "fusion" recipe arrays for its custom cards. That file was replaced
-        // by the 4166-card ygoprodeck delta (ids 15542-19707), which carried no fusion recipes at all - those
-        // ids and recipes no longer exist. Regenerated from the new delta's own description text (see
-        // gen_fusion_recipes.py in this session's scratchpad and fusion_recipes_report.txt on the Desktop):
-        // only 11 of 225 Fusion-kind cards have a fully specific material list the game's fixed-id-list recipe
-        // system can represent - the rest need a real card-effect/condition engine (generic materials like
-        // "1 Dragon monster" or "2 Warrior monsters with different Attributes"), which does not exist yet.
-        { "NEW fusion: Elemental HERO Neos Kluger (Neos + Yubel)", { 4837, 6653, 7409 }, { 15646 } },
-        { "NEW fusion: Red-Eyes Dark Dragoon (Dark Magician + Red-Eyes B. Dragon)", { 4837, 4041, 4088 }, { 15652 } },
-        { "NEW fusion: Armityle the Chaos Phantasm (Uria + Hamon + Raviel)", { 4837, 6563, 6564, 6565 }, { 16020 } },
-        { "NEW fusion: Cyberdark End Dragon (Cyberdark Dragon + Cyber End Dragon)", { 4837, 6833, 6397 }, { 16554 } },
-        { "NEW fusion: Gate Guardian of Thunder and Wind (Sanga + Kazejin)", { 4837, 4377, 4378 }, { 17677 } },
-        { "NEW fusion: Gate Guardian of Water and Thunder (Suijin + Sanga)", { 4837, 4379, 4377 }, { 17678 } },
-        { "NEW fusion: Gate Guardian of Wind and Water (Kazejin + Suijin)", { 4837, 4378, 4379 }, { 17679 } },
-        { "NEW fusion: Gate Guardians Combined (Sanga + Kazejin + Suijin)", { 4837, 4377, 4378, 4379 }, { 17680 } },
-        { "NEW fusion: Ultimate Flame Swordsman (Flame Swordsman + Fighting Flame Dragon)", { 4837, 4021, 18156 }, { 18165 } },
-        { "NEW fusion: Enlightenment Dragon (Judgment Dragon + Punishment Dragon)", { 4837, 7599, 13067 }, { 18181 } },
-        { "NEW fusion: XYZ-Hyper Dragon Cannon (X-Cross Cannon + Y-Yare Head + Z-Zillion Tank)", { 4837, 18381, 18383, 18384 }, { 18382 } },
-    };
-
-    char g_Search[64]{};
-    int g_TypedId = 15300;
-
-    // ---- new cards browser: cards.json's new monsters, for trying one on a player (including the AI) ----
-    // Covers every monster kind except plain Effect/Spell/Trap-less-condition ones, since those need real
-    // per-card effect code that does not exist yet (see the "conditional Special Summon" CSV audit). What IS
-    // included here mirrors it: Normal (always fine - no effect at all) plus every extra-deck kind (Fusion,
-    // Synchro, Xyz, Link, Ritual, and their *Effect/Pendulum variants) - those are believed to be summoned
-    // generically off Kind + Level/Rank/LinkRating/LinkArrows, the same fields Yu-Gi-Oh-Cards already writes
-    // for every custom card, with no per-card script needed for the summon itself (only for what the card DOES
-    // afterwards, which is separately unimplemented). Putting one of these in the extra deck list below and
-    // giving the AI qualifying material monsters (matching Level for Synchro, matching Rank for Xyz, etc, via
-    // the search box above) is the actual test of that theory - this browser existing does not by itself prove
-    // the summon works, only that Cards will not reject the card outright.
-    struct NewCard { int Id; std::string Name; std::string Kind; bool IsExtraDeck; int Level; };
-    std::vector<NewCard> g_NewCards;
-    bool g_NewCardsLoaded = false;
-    std::string g_NewCardsError;
-
-    bool IsExtraDeckKindName(const std::string& kind)
-    {
-        static const char* kExtraDeckKinds[] = {
-            "Fusion", "Fusion Effect", "Fusion Tuner", "Fusion Pendulum Effect",
-            "Synchro", "Synchro Effect", "Synchro Tuner Effect", "Synchro Pendulum Effect",
-            "Xyz", "Xyz Effect", "Xyz Pendulum Effect",
-            "Link", "Link Effect",
-            "Ritual", "Ritual Effect", "Ritual Spirit Effect",
-        };
-        for (const char* k : kExtraDeckKinds)
-            if (kind == k)
-                return true;
-        return false;
-    }
-
-    bool IsXyzKindName(const std::string& kind)
-    {
-        return kind == "Xyz" || kind == "Xyz Effect" || kind == "Xyz Pendulum Effect";
-    }
-
-    // Two ordinary vanilla monsters per Level 1-12 (Normal where one exists, otherwise a plain Effect
-    // monster; nothing with its own summoning restriction like the Egyptian Gods), used as ready-made Xyz
-    // material: an Xyz monster of Rank N needs monsters whose Level equals N, not N-1 like Synchro/Fusion
-    // count math might suggest. Picked from the vanilla card list (Desktop\New folder\Cards\Game Cards.json,
-    // cross-checked against real levels), not guessed. Index 0 is unused (Rank 0 does not exist).
-    constexpr int kXyzMaterialByLevel[13][2] =
-    {
-        { 0, 0 },
-        { 4015, 4023 },  // Level 1: Shadow Specter, Right Leg of the Forbidden One
-        { 4014, 4056 },  // Level 2: Mushroom Man, Basic Insect
-        { 4010, 4011 },  // Level 3: Baby Dragon, Ryu-Kishin
-        { 4008, 4009 },  // Level 4: Mystical Elf, Hitotsu-Me Giant
-        { 4020, 4045 },  // Level 5: Battle Steer, Curse of Dragon
-        { 4017, 4028 },  // Level 6: Sword Arm of Dragon, Summoned Skull
-        { 4041, 4044 },  // Level 7: Dark Magician, Gaia The Fierce Knight
-        { 4007, 4709 },  // Level 8: Blue-Eyes White Dragon, Sengenjin
-        { 5045, 6368 },  // Level 9: Moisture Creature, Infernal Flame Emperor
-        { 5666, 6087 },  // Level 10: Ultimate Obedient Fiend, Andro Sphinx
-        { 12556, 12723 }, // Level 11: Flower Cardian Willow, Darklord Morningstar
-        { 12557, 12557 }, // Level 12: Flower Cardian Paulownia (only one known, used twice)
-    };
-
-    std::string CardsJsonPath()
-    {
-        char exe[MAX_PATH]{};
-        GetModuleFileNameA(nullptr, exe, MAX_PATH);
-        std::string folder = exe;
-        folder.resize(folder.find_last_of("\\/") + 1);
-        return folder + "Yu-Gi-Oh-Ex\\cards.json";
-    }
-
-    void LoadNewNormalCards()
-    {
-        g_NewCards.clear();
-        g_NewCardsError.clear();
-
-        const std::string path = CardsJsonPath();
-        std::ifstream file(path);
-        if (!file)
-        {
-            g_NewCardsError = "Could not open " + path;
-            return;
-        }
-
-        nlohmann::json root = nlohmann::json::parse(file, nullptr, false, true);
-        if (root.is_discarded())
-        {
-            g_NewCardsError = path + " is not valid JSON";
-            return;
-        }
-
-        const nlohmann::json& list = root.is_array() ? root : root["cards"];
-        if (!list.is_array())
-            return;
-
-        for (const auto& entry : list)
-        {
-            if (!entry.is_object() || !entry.contains("id") || !entry["id"].is_number_integer())
-                continue;
-            std::string kind = entry.value("kind", std::string());
-            const bool extraDeck = IsExtraDeckKindName(kind);
-            // A Ritual monster needs a Ritual Spell to be Ritual Summoned with - a Spell-kind card with
-            // icon "Ritual" is one. It goes to hand like any other spell (IsExtraDeck stays false), shown
-            // as its own kind so it is easy to tell apart from the monster it might pair with.
-            const bool isRitualSpell = kind == "Spell" && entry.value("icon", std::string()) == "Ritual";
-            if (kind != "Normal" && !extraDeck && !isRitualSpell)
-                continue;
-            g_NewCards.push_back({ entry["id"].get<int>(), entry.value("name", std::string("Unnamed Card")),
-                isRitualSpell ? "Ritual Spell" : kind, extraDeck, entry.value("level", 0) });
-        }
-        std::sort(g_NewCards.begin(), g_NewCards.end(), [](const NewCard& a, const NewCard& b) { return a.Name < b.Name; });
-    }
+    // Cards are picked by hand (ids or names, below) - there are no ready-made setups: the custom ids change whenever
+    // cards.json is regenerated, so a hardcoded list only ever pointed at the wrong cards.
+    // Adds every card in `text` (ids and/or names, separated by commas or new lines) to `list`. A number is a Konami
+    // id; anything else is a name: an exact match wins, otherwise the first card whose name contains it.
+    std::string AddByText(const char* text, std::vector<int>& list);
 
     void DrawList(const char* label, std::vector<int>& ids)
     {
@@ -507,6 +371,144 @@ namespace
     }
 }
 
+namespace
+{
+    std::string AddByText(const char* text, std::vector<int>& list)
+    {
+        std::string report;
+        const std::string all = text;
+        size_t start = 0;
+        while (start <= all.size())
+        {
+            size_t end = all.find_first_of(",\n", start);
+            if (end == std::string::npos)
+                end = all.size();
+            std::string token = all.substr(start, end - start);
+            start = end + 1;
+
+            const size_t first = token.find_first_not_of(" \t\r");
+            if (first == std::string::npos)
+                continue;
+            token = token.substr(first, token.find_last_not_of(" \t\r") - first + 1);
+
+            int found = 0;
+            if (token.find_first_not_of("0123456789") == std::string::npos)
+            {
+                const int id = atoi(token.c_str());
+                if (id >= 1 && id <= kMaxCardId && *CardName(id))
+                    found = id;
+            }
+            else
+            {
+                auto lower = [](std::wstring w) { for (auto& c : w) c = static_cast<wchar_t>(towlower(c)); return w; };
+                const std::wstring needle = lower(ToWide(token.c_str()));
+                int contains = 0;
+                for (int id = 1; id <= kMaxCardId && !found; ++id)
+                {
+                    const wchar_t* name = CardName(id);
+                    if (!*name)
+                        continue;
+                    const std::wstring hay = lower(name);
+                    if (hay == needle)
+                        found = id;
+                    else if (!contains && hay.find(needle) != std::wstring::npos)
+                        contains = id;
+                }
+                if (!found)
+                    found = contains;
+            }
+
+            if (found)
+            {
+                list.push_back(found);
+                report += "added " + std::to_string(found) + " " + ToUtf8(CardName(found)) + "\n";
+            }
+            else
+                report += "no card matches \"" + token + "\"\n";
+        }
+        return report;
+    }
+}
+
+namespace
+{
+    // The game's archetype test (Is_CardInNamedArchetype_Thunk 0x1407EB9E0): is the card (Konami id) a member of archetype `code`.
+    // Yu-Gi-Oh-Cards hooks the function under it, so custom cards and custom archetypes (419 and up) answer too.
+    using IsInArchetype_t = int(__fastcall*)(unsigned int, int);
+    const IsInArchetype_t kIsInArchetype = reinterpret_cast<IsInArchetype_t>(0x1407EB9E0);
+
+    // <game folder>\Yu-Gi-Oh-Ex\Archetypes.json ({ "archetypes": [ { "code": 397, "name": "Dark World" } ] }): a name is looked up here.
+    int ArchetypeCodeFromText(const std::string& text, std::string& name)
+    {
+        if (!text.empty() && text.find_first_not_of("0123456789") == std::string::npos)
+            return atoi(text.c_str());
+
+        char exe[MAX_PATH]{};
+        GetModuleFileNameA(nullptr, exe, MAX_PATH);
+        std::string folder = exe;
+        folder.resize(folder.find_last_of("\\/") + 1);
+        std::ifstream file(folder + "Yu-Gi-Oh-Ex\\Archetypes.json");
+        if (!file)
+            return 0;
+        nlohmann::json root = nlohmann::json::parse(file, nullptr, false, true);
+        if (root.is_discarded() || !root.contains("archetypes") || !root["archetypes"].is_array())
+            return 0;
+
+        auto lower = [](std::string v) { for (auto& c : v) c = static_cast<char>(tolower(static_cast<unsigned char>(c))); return v; };
+        const std::string needle = lower(text);
+        int contains = 0;
+        for (const auto& entry : root["archetypes"])
+        {
+            const std::string entryName = entry.value("name", std::string());
+            const int code = entry.value("code", 0);
+            if (lower(entryName) == needle)
+            {
+                name = entryName;
+                return code;
+            }
+            if (!contains && lower(entryName).find(needle) != std::string::npos)
+            {
+                contains = code;
+                name = entryName;
+            }
+        }
+        return contains;
+    }
+
+    // Adds up to `limit` cards of the archetype (a code or a name from Archetypes.json) to `list`, in id order.
+    std::string AddArchetypeMembers(const char* text, std::vector<int>& list, int limit)
+    {
+        std::string trimmed = text;
+        const size_t first = trimmed.find_first_not_of(" \t\r\n");
+        if (first == std::string::npos)
+            return "type an archetype name or code\n";
+        trimmed = trimmed.substr(first, trimmed.find_last_not_of(" \t\r\n") - first + 1);
+
+        std::string name;
+        const int code = ArchetypeCodeFromText(trimmed, name);
+        if (code <= 0)
+            return "no archetype matches \"" + trimmed + "\" (Yu-Gi-Oh-Ex\\Archetypes.json lists the names)\n";
+
+        std::vector<int> members;
+        for (int id = 1; id <= kMaxCardId; ++id)
+        {
+            if (*CardName(id) && kIsInArchetype(static_cast<unsigned int>(id), code))
+                members.push_back(id);
+        }
+        int added = 0;
+        for (int id : members)
+        {
+            if (added >= limit)
+                break;
+            if (std::find(list.begin(), list.end(), id) != list.end())
+                continue;
+            list.push_back(id);
+            ++added;
+        }
+        return std::format("archetype {} {}: {} member(s) in the game, added {}\n", code, name, members.size(), added);
+    }
+}
+
 void DuelTest::Install()
 {
     Load();
@@ -520,174 +522,71 @@ void DuelTest::Install()
 
 void DuelTest::Draw()
 {
-    if (ImGui::Checkbox("Stack the opening hand for the next duel", &g_Enabled))
-        Save();
-    if (ImGui::Checkbox("Add these cards to the deck when it does not have them", &g_AddMissing))
-        Save();
-    ImGui::SetNextItemWidth(120);
-    if (ImGui::Combo("Player", &g_Player, "You\0Opponent\0"))
-        Save();
-    ImGui::TextWrapped("A card above id 16383 borrows a real vanilla card's id for the duel (Yu-Gi-Oh-Cards handles this); it still plays correctly, it just is not guaranteed to end up in the front of the draw if Yu-Gi-Oh-Cards is not loaded. The listed cards are put at both ends of the shuffled deck so they are drawn first (a hand holds 5). Cards for the extra deck are added to it (15 at most). Applies to the next duel you start.");
+    static char g_Bulk[512]{};
+    static char g_Archetype[64]{};
+    static int g_ArchetypeLimit = 8;
+    static std::string g_Result;
 
-    ImGui::TextDisabled("Last duel setup: %d call(s), player %d, %s, deck %u/%u cards before, %d stacked, first cards %s",
-        g_Last.Calls, g_Last.Player, g_Last.Applied ? "applied" : "not applied", g_Last.MainBefore, g_Last.ExtraBefore, g_Last.Stacked, g_Last.FirstIds.c_str());
+    // -- what the next duel does --
+    if (ImGui::Checkbox("Stack the opening hand", &g_Enabled))
+        Save();
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(110);
+    if (ImGui::Combo("for", &g_Player, "you the opponent "))
+        Save();
+    if (ImGui::Checkbox("Add cards the deck does not have", &g_AddMissing))
+        Save();
+    ImGui::TextDisabled("Applies to the next duel. The cards go on top of the shuffled deck (a hand holds 5); extra deck cards are added to it (15 at most).");
 
+    // -- pick cards --
     ImGui::Separator();
-    if (ImGui::BeginCombo("Preset", "Load a preset..."))
+    ImGui::TextUnformatted("Cards (ids or names, separated by commas)");
+    ImGui::SetNextItemWidth(-1);
+    ImGui::InputText("##bulk", g_Bulk, sizeof(g_Bulk));
+    if (ImGui::Button("Add to hand"))
     {
-        for (const Preset& preset : kPresets)
-        {
-            if (ImGui::Selectable(preset.Name))
-            {
-                g_Hand = preset.Hand;
-                g_Extra = preset.Extra;
-                g_Enabled = true;
-                Save();
-            }
-        }
-        ImGui::EndCombo();
+        g_Result = AddByText(g_Bulk, g_Hand);
+        g_Enabled = true;
+        Save();
     }
+    ImGui::SameLine();
+    if (ImGui::Button("Add to extra deck"))
+    {
+        g_Result = AddByText(g_Bulk, g_Extra);
+        g_Enabled = true;
+        Save();
+    }
+
+    ImGui::TextUnformatted("Archetype (name from Archetypes.json, or its code)");
+    ImGui::SetNextItemWidth(220);
+    ImGui::InputText("##archetype", g_Archetype, sizeof(g_Archetype));
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(50);
+    ImGui::InputInt("max", &g_ArchetypeLimit, 0, 0);
+    ImGui::SameLine();
+    if (ImGui::Button("Add to hand##archetype"))
+    {
+        g_Result = AddArchetypeMembers(g_Archetype, g_Hand, (std::max)(1, (std::min)(g_ArchetypeLimit, 20)));
+        g_Enabled = true;
+        Save();
+    }
+    if (!g_Result.empty())
+        ImGui::TextWrapped("%s", g_Result.c_str());
+
+    // -- what is chosen --
+    ImGui::Separator();
     DrawList("Hand", g_Hand);
     ImGui::Spacing();
     DrawList("Extra deck", g_Extra);
-    if (ImGui::Button("Clear both"))
+    if (ImGui::Button("Clear all"))
     {
         g_Hand.clear();
         g_Extra.clear();
+        g_Result.clear();
         Save();
     }
 
     ImGui::Separator();
-    ImGui::SetNextItemWidth(200);
-    ImGui::InputText("Search by name", g_Search, sizeof(g_Search));
-    ImGui::SetNextItemWidth(120);
-    ImGui::InputInt("or Konami id", &g_TypedId, 0, 0);
-
-    auto addButtons = [](int id)
-    {
-        ImGui::PushID(id);
-        if (ImGui::SmallButton("+ hand"))
-        {
-            g_Hand.push_back(id);
-            Save();
-        }
-        ImGui::SameLine();
-        if (ImGui::SmallButton("+ extra"))
-        {
-            g_Extra.push_back(id);
-            Save();
-        }
-        ImGui::SameLine();
-        ImGui::Text("%d  %s", id, ToUtf8(CardName(id)).c_str());
-        ImGui::PopID();
-    };
-
-    if (g_TypedId >= 1 && g_TypedId <= kMaxCardId && *CardName(g_TypedId))
-        addButtons(g_TypedId);
-
-    // The search runs when the text changes, not every frame.
-    static std::string lastSearch;
-    static std::vector<int> found;
-    if (lastSearch != g_Search)
-    {
-        lastSearch = g_Search;
-        found.clear();
-        const std::wstring query = ToWide(g_Search);
-        if (query.size() >= 2)
-        {
-            auto lower = [](std::wstring s) { std::transform(s.begin(), s.end(), s.begin(), [](wchar_t c) { return static_cast<wchar_t>(towlower(c)); }); return s; };
-            const std::wstring needle = lower(query);
-            for (int id = 1; id <= kMaxCardId && found.size() < 31; ++id)
-            {
-                const wchar_t* name = CardName(id);
-                if (*name && lower(name).find(needle) != std::wstring::npos)
-                    found.push_back(id);
-            }
-        }
-    }
-    for (size_t i = 0; i < found.size() && i < 30; ++i)
-        addButtons(found[i]);
-    if (found.size() > 30)
-        ImGui::TextDisabled("More than 30 cards match: type more of the name.");
-
-    ImGui::Separator();
-    ImGui::TextUnformatted("New cards - give the AI one to see if it plays it correctly");
-    ImGui::TextWrapped("Normal monsters have no effect at all, so they are guaranteed to behave like any other card. "
-        "The extra-deck kinds (Fusion/Synchro/Xyz/Link/Ritual, plain or *Effect/Pendulum) are believed to be summoned "
-        "generically off Kind + Level/Rank/LinkRating/LinkArrows - the same fields Cards already writes for every "
-        "custom card - with no per-card script needed for the summon itself, only for what the card does afterwards "
-        "(not implemented yet, so it will just sit there doing nothing once summoned). Use +extra for those, +hand "
-        "for Normal. The AI still needs qualifying material monsters (matching Level for Synchro, matching Rank for "
-        "Xyz, etc) in hand/field via the search box above to actually attempt the summon - add one here to see "
-        "whether Cards even lets the AI consider it, then check whether the summon itself goes through. A new "
-        "Ritual monster also needs a Ritual Spell in hand: new custom ones are listed here too (kind shown as "
-        "'Ritual Spell'), or add a vanilla generic one (Advanced Ritual Art, Preparation of Rites, Ritual "
-        "Sanctuary...) via the search box - a generic spell should accept any Ritual monster of the right Level, "
-        "a specific one (Black Luster Ritual etc) only its own named monster.");
-    if (ImGui::Button("Reload from cards.json") || !g_NewCardsLoaded)
-    {
-        LoadNewNormalCards();
-        g_NewCardsLoaded = true;
-    }
-    if (!g_NewCardsError.empty())
-        ImGui::TextColored(ImVec4(1.0f, 0.4f, 0.3f, 1.0f), "%s", g_NewCardsError.c_str());
-    ImGui::Text("%d new monster(s) in cards.json (Normal + extra-deck kinds)", static_cast<int>(g_NewCards.size()));
-
-    static char newCardFilter[64]{};
-    ImGui::SetNextItemWidth(200);
-    ImGui::InputText("Filter by name or kind", newCardFilter, sizeof(newCardFilter));
-    ImGui::BeginChild("NewNormalCards", ImVec2(0, 220), true);
-    for (const NewCard& card : g_NewCards)
-    {
-        if (newCardFilter[0])
-        {
-            std::string name = card.Name, kind = card.Kind, filter = newCardFilter;
-            auto toLower = [](std::string& s) { std::transform(s.begin(), s.end(), s.begin(), [](char c) { return static_cast<char>(tolower(static_cast<unsigned char>(c))); }); };
-            toLower(name);
-            toLower(kind);
-            toLower(filter);
-            if (name.find(filter) == std::string::npos && kind.find(filter) == std::string::npos)
-                continue;
-        }
-        ImGui::PushID(card.Id);
-        if (ImGui::SmallButton("+ hand"))
-        {
-            g_Hand.push_back(card.Id);
-            Save();
-        }
-        ImGui::SameLine();
-        if (ImGui::SmallButton("+ extra"))
-        {
-            g_Extra.push_back(card.Id);
-            Save();
-        }
-        // Xyz materials are just "N monsters of the right Level", not a specific list like Fusion - so unlike
-        // Fusion/Synchro/Link/Ritual there is a fixed, always-correct pair of vanilla monsters to hand over
-        // for any Rank (kXyzMaterialByLevel). One button adds the Xyz monster and both materials in one go.
-        if (IsXyzKindName(card.Kind))
-        {
-            ImGui::SameLine();
-            if (card.Level >= 1 && card.Level <= 12)
-            {
-                if (ImGui::SmallButton("+ extra + materials"))
-                {
-                    g_Extra.push_back(card.Id);
-                    g_Hand.push_back(kXyzMaterialByLevel[card.Level][0]);
-                    g_Hand.push_back(kXyzMaterialByLevel[card.Level][1]);
-                    Save();
-                }
-            }
-            else
-            {
-                ImGui::TextDisabled("(no known Rank %d materials)", card.Level);
-            }
-        }
-        ImGui::SameLine();
-        if (card.IsExtraDeck)
-            ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), "%d  %s  [%s]", card.Id, card.Name.c_str(), card.Kind.c_str());
-        else
-            ImGui::Text("%d  %s  [%s]", card.Id, card.Name.c_str(), card.Kind.c_str());
-        ImGui::PopID();
-    }
-    ImGui::EndChild();
+    ImGui::TextDisabled("Last duel: player %d, %s, deck %u/%u cards before, %d stacked, first %s",
+        g_Last.Player, g_Last.Applied ? "applied" : "not applied", g_Last.MainBefore, g_Last.ExtraBefore, g_Last.Stacked, g_Last.FirstIds.c_str());
 }
