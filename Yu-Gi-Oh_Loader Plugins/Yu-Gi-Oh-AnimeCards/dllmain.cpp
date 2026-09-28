@@ -27,6 +27,13 @@ inline void* ResolveVA(uintptr_t va)
 // ---------------------------------------------------------------------
 // Config.ini loading
 //
+// Level / rank stars are laid out as one row centred on StarsX, StarsY: by default the middle of the frame's coloured band between the
+// art (its grey border ends at y 434) and the ATK/DEF boxes (y 497). StarsY < 0 keeps the game's height (y 83). The attribute circle
+// starts at x 324 on the same line, so a row wider than StarsMaxWidth (about 8 stars) is shrunk to fit.
+static float kStarsX = 200.0f;
+static float kStarsY = 465.5f;
+static float kStarsMaxWidth = 240.0f;
+
 // The following tunables are read from Config.ini, section
 // [Yu-Gi-Oh-AnimeCards], falling back to the defaults below if the file,
 // section, or key is missing. These can no longer be constexpr since
@@ -34,10 +41,21 @@ inline void* ResolveVA(uintptr_t va)
 // populated by LoadConfig() before anything else touches them.
 // ---------------------------------------------------------------------
 
-static float kCustomAtkX = 167.0f;
-static float kCustomAtkY = 545.0f;
-static float kCustomDefX = 240.0f;
-static float kCustomDefY = 545.0f;
+// ATK and DEF are laid out centred on these points (see kCentredAlign): the centres of the two boxes at the bottom of the anime frames
+// (x 31-184 and 215-368, y 497-556). On Link cards the right-hand box is the red rating box and shows the Link rating.
+static float kCustomAtkX = 107.5f;
+static float kCustomAtkY = 526.5f;
+static float kCustomDefX = 291.5f;
+static float kCustomDefY = 526.5f;
+
+// The attribute icon goes in the frame's circle: bottom right on monster frames, bottom middle on the Link frame. Spell and Trap frames
+// have their symbol drawn into the frame, so their attribute icon is not drawn at all.
+static float kAttributeX = 346.0f;
+static float kAttributeY = 469.5f;
+static float kLinkAttributeX = 198.5f;
+static float kLinkAttributeY = 469.0f;
+// The frame's circle is 45 px across; the icon is drawn from the 48 px sprites (see Hook_IconId_Attribute) so it stays sharp.
+static float kAttributeSize = 48.0f;
 
 static float kAtkTextScale = 3.10;
 static float kDefTextScale = 3.40;
@@ -104,12 +122,76 @@ constexpr float kSTIconX0 = 343.0f;
 constexpr float kSTIconY0_NonJp = 83.0f;
 constexpr float kSTIconY0_Jp = 86.0f;
 
+// The card being built (set by Hook_sub_14074E7D0, defined further down) and the game's getters for it (FULL_CARD_PROPS, see
+// docs/CardRendering.md): +0x1C IsMonster, +0x31 IsLink, +0x88 Link rating.
+extern unsigned short g_currentCardId;
+using fn_CardValue = int(__fastcall*)(unsigned short);
+static fn_CardValue game_IsMonster = nullptr;    // 0x14081A410
+static fn_CardValue game_IsLink = nullptr;       // 0x14081A470
+static fn_CardValue game_LinkRating = nullptr;   // 0x14081A6D0
+
+// The attribute icon: CardFace_Build centres it on 353.5, 45.5 (size 37). The atlas trims its sprites, so the quad is only roughly
+// centred there; nothing else is drawn in that corner.
+inline bool IsAttributeIcon(float x0, float y0, float x1, float y1)
+{
+    const float cx = (x0 + x1) * 0.5f;
+    const float cy = (y0 + y1) * 0.5f;
+    return cx > 330.0f && cx < 377.0f && cy > 22.0f && cy < 69.0f;
+}
+
+// The stars of the card being built, set by Hook_sub_14074E7D0. CardFace_Build draws level stars right to left from x 346, 28 apart
+// (27 when there are more than 11), and rank stars left to right from x 54, 28 apart, all at size 28 on y 83 (see the loop at
+// 0x14074FF80). Each star quad is re-placed at its index in a row centred on kStarsX, so 1, 2 or 3 stars all sit in the middle.
+static thread_local int g_starCount = 0;
+static thread_local int g_starIndex = 0;
+static thread_local float g_starStep = 28.0f;
+
+inline bool IsStarQuad(float x0, float y0, float x1, float y1)
+{
+    const float size = std::fmax(x1 - x0, y1 - y0);
+    const float cy = (y0 + y1) * 0.5f;
+    return g_starIndex < g_starCount && size > 24.0f && size < 32.0f && cy > 70.0f && cy < 125.0f;
+}
+
 extern "C" void Hook_sub_1408795A0(void* a1, float x0, float y0, float x1, float y1,
     float u0, float v0, float u1, float v1, int a10, int color)
 {
+    if (IsAttributeIcon(x0, y0, x1, y1))
+    {
+        // Spell and Trap frames have their symbol drawn in; monsters get the icon in the frame's circle.
+        if ((game_IsMonster(g_currentCardId) & 0xFF) == 0)
+            return;
+        const bool link = (game_IsLink(g_currentCardId) & 0xFF) != 0;
+        const float cx = link ? kLinkAttributeX : kAttributeX;
+        const float cy = link ? kLinkAttributeY : kAttributeY;
+        const float scale = kAttributeSize / std::fmax(x1 - x0, y1 - y0);
+        const float halfW = (x1 - x0) * scale * 0.5f;
+        const float halfH = (y1 - y0) * scale * 0.5f;
+        orig_sub_1408795A0(a1, cx - halfW, cy - halfH, cx + halfW, cy + halfH, u0, v0, u1, v1, a10, color);
+        return;
+    }
+
+    if (IsStarQuad(x0, y0, x1, y1))
+    {
+        const float rowWidth = (g_starCount - 1) * g_starStep + (x1 - x0);
+        const float fit = rowWidth > kStarsMaxWidth ? kStarsMaxWidth / rowWidth : 1.0f;
+        const float w = (x1 - x0) * fit;
+        const float h = (y1 - y0) * fit;
+        const float left = kStarsX - rowWidth * fit * 0.5f;
+        const float nx0 = left + g_starIndex * g_starStep * fit;
+        const float ny0 = kStarsY < 0.0f ? y0 : kStarsY - h * 0.5f;
+        ++g_starIndex;
+        orig_sub_1408795A0(a1, nx0, ny0, nx0 + w, ny0 + h, u0, v0, u1, v1, a10, color);
+        return;
+    }
+
     if (NearlyEqual(x0, kLineX0) && NearlyEqual(x1, kLineX1) &&
         NearlyEqual(y0, kLineY0) && NearlyEqual(y1, kLineY1))
     {
+        // Hide the line above ATK/DEF, but still emit its 6 vertices. CardFace_Build hard-codes the line batch's
+        // vertex count to 6 (0x14074FAFE), so skipping the quad made that batch draw the next quad (the attribute
+        // icon) with the builtin white texture: a solid white square behind the icon.
+        orig_sub_1408795A0(a1, x0, y0, x0, y0, u0, v0, u1, v1, a10, 0);
         return;
     }
 
@@ -206,17 +288,21 @@ extern "C" int Hook_Get_RawDefFromFullCardProps(unsigned short cardId)
     return orig_Get_RawDefFromFullCardProps(cardId);
 }
 
-extern "C" int Hook_sub_14081A670(unsigned short cardId)
-{
-  //  if (IsTrapSpellCard(cardId)) return 0;
+// True on the loader thread while CardFace_Build (Hook_sub_14074E7D0) runs. The getters below are the game's own and are also used outside
+// drawing (deck rules, duels...), so they only change their answer for the card face being built.
+static thread_local bool g_buildingFace = false;
 
-    return orig_sub_14081A670(cardId);
-}
+// IconId_Attribute (0x1407FD320) picks the card's attribute icon from pdui/STEAM_icons: attribute + 129 = the 37 px ICON_ID_ATTR_L_* sprites,
+// drawn 1:1 at the game's 37 px. Drawn larger in the frame's circle they would be stretched and soft, so card faces use the 48 px
+// ICON_ID_ATTR_* sprites of the same attributes instead (attribute + 119), which are shrunk slightly and stay sharp.
+constexpr int kLargeAttributeIconOffset = -10;
+using fn_IconId = int(__fastcall*)(int);
+static fn_IconId orig_IconId_Attribute = nullptr;
 
-extern "C" int Hook_sub_14081A730(unsigned short cardId)
+extern "C" int Hook_IconId_Attribute(int attribute)
 {
-    if (IsTrapSpellCard(cardId)) return 0;
-    return orig_sub_14081A730(cardId);
+    const int id = orig_IconId_Attribute(attribute);
+    return g_buildingFace ? id + kLargeAttributeIconOffset : id;
 }
 
 // In sub_14074E7D0, the entire ST-icon build+draw block is gated on
@@ -238,7 +324,7 @@ constexpr int kMonsterSTIconPropertyId = 1; // TODO: verify this maps to the ico
 
 extern "C" int Hook_Get_SpellTrapCardPropertyFromFullCardProps(unsigned short cardId)
 {
-    if (!IsTrapSpellCard(cardId)) // per IsTrapSpellCard's (inverted-named) logic, false == monster
+    if (g_buildingFace && !IsTrapSpellCard(cardId)) // per IsTrapSpellCard's (inverted-named) logic, false == Spell, Trap or Link
     {
         return kMonsterSTIconPropertyId;
     }
@@ -259,13 +345,14 @@ inline const FontTable& GetFontTable()
     return *p_g_bIsJpVersion ? *jp : *nonJp;
 }
 
+// The card text fonts: entries 3..8 of the table, ending at -1 (30..34 non-JP, 24..26 JP). CardFace_Build tries them largest first.
 inline bool IsAbilityWrapFont(uint32_t fontId)
 {
     const FontTable& fonts = GetFontTable();
     for (int i = 3; i <= 8; ++i)
     {
-        if (fonts.v[7] == kFontSentinel) break;
-        if (fonts.v[3] == fontId) return true;
+        if (fonts.v[i] == kFontSentinel) break;
+        if (fonts.v[i] == fontId) return true;
     }
     return false;
 }
@@ -303,8 +390,26 @@ unsigned short g_currentCardId = 0xFFFF;
 extern "C" char Hook_sub_14074E7D0(__int64 a1, unsigned short cardId)
 {
     g_currentCardId = cardId;
-    return orig_sub_14074E7D0(a1, cardId);
+
+    // Same choice as CardFace_Build: StarCount level stars (0x14081A670), or RankStars rank stars (0x14081A730) when that is 0.
+    const int level = orig_sub_14081A670(cardId);
+    const int rank = level > 0 ? 0 : orig_sub_14081A730(cardId);
+    g_starCount = level > 0 ? level : (rank > 0 ? rank : 0);
+    g_starStep = (level > 11) ? 27.0f : 28.0f;
+    g_starIndex = 0;
+
+    g_buildingFace = true;
+    const char result = orig_sub_14074E7D0(a1, cardId);
+    g_buildingFace = false;
+    g_starCount = 0;
+    return result;
 }
+
+// TextSlot_Layout's align argument (Layout_FinishLine / Layout_Build): 1 left, 2 centre, 4 right; 8 top, 0x10 centre, 0x20 bottom. The game
+// lays ATK/DEF out bottom-right (36) and the card text top-left (9), so the same y put ATK and DEF at different heights. Both numbers are
+// laid out centred instead, unwrapped (0x100), so they sit exactly on the points given for them.
+constexpr int kCentredAlign = 0x10 | 0x2;
+constexpr int kNoWrap = 0x100;
 
 extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, float boxWidth,
     int color, unsigned int fontId,
@@ -314,14 +419,28 @@ extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, flo
     {
         unsigned int atk = orig_YGO_Get_EffectiveDefFromFullCardProps(g_currentCardId);
         static wchar_t buf[16];
-        swprintf(buf, 16, L"%u", atk);
-        return orig_sub_140766540(slotPtr, x, y, boxWidth, color,
+        if (atk == 0xFFFF)
+            swprintf(buf, 16, L"?");
+        else
+            swprintf(buf, 16, L"%u", atk);
+        return orig_sub_140766540(slotPtr, x, y, 0.0f, color,
             UseLargeAtkDefFont() ? kLargeAtkDefFontId : fontId,
-            (const unsigned short*)buf, count, flags, arg10);
+            (const unsigned short*)buf, kCentredAlign, flags | kNoWrap, arg10);
     }
 
     if (IsAbilityWrapFont(fontId))
     {
+        // The card text slot shows the right-hand number: DEF, or the rating on a Link monster (its box is the red one).
+        const bool link = (game_IsLink(g_currentCardId) & 0xFF) != 0;
+        if (link)
+        {
+            static wchar_t rating[16];
+            swprintf(rating, 16, L"%d", game_LinkRating(g_currentCardId));
+            return orig_sub_140766540(slotPtr, x, y, 0.0f, color,
+                UseLargeAtkDefFont() ? kLargeAtkDefFontId : fontId,
+                (const unsigned short*)rating, kCentredAlign, flags | kNoWrap, arg10);
+        }
+
         if (!IsTrapSpellCard(g_currentCardId))
         {
             // Was `return 0;` - dropped the call entirely and left the
@@ -336,10 +455,13 @@ extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, flo
 
         unsigned int def = orig_sub_14081A610(g_currentCardId);
         static wchar_t buf[16];
-        swprintf(buf, 16, L"%u", def);
-        return orig_sub_140766540(slotPtr, x, y, boxWidth, color,
+        if (def == 0xFFFF)
+            swprintf(buf, 16, L"?");
+        else
+            swprintf(buf, 16, L"%u", def);
+        return orig_sub_140766540(slotPtr, x, y, 0.0f, color,
             UseLargeAtkDefFont() ? kLargeAtkDefFontId : fontId,
-            (const unsigned short*)buf, count, flags, arg10);
+            (const unsigned short*)buf, kCentredAlign, flags | kNoWrap, arg10);
     }
 
     static const unsigned short kBlank[2] = { L' ', 0 };
@@ -369,9 +491,10 @@ extern "C" void* Hook_sub_140877EC0(void* out, float x, float y, float z)
 
     void* result = orig_sub_140877EC0(out, tx, ty, z);
 
-    // The larger font is already bigger on the atlas, so less enlargement gives the same size on the card.
+    // Fonts are plain bitmaps at one pixel size (see docs/CardRendering.md), so any scale above 1 blurs them. With the 32 px font the
+    // numbers are drawn at its native size, unscaled; AtkTextScale / DefTextScale only apply to the 18 px fonts.
     if (UseLargeAtkDefFont())
-        scale *= kAtkDefNativeSize / LargeAtkDefNativeSize();
+        scale = 1.0f;
 
     if (scale != 1.0f)
     {
@@ -394,21 +517,55 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         char cfgBuf[64];
         char* cfgEnd = nullptr;
 
-        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomAtkX", "135", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        // Positions are the centres of the numbers (they are laid out centred), defaulting to the frame's two boxes.
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomAtkX", "107.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
         cfgEnd = nullptr; float vCustomAtkX = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCustomAtkX = vCustomAtkX;
 
-        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomAtkY", "507", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomAtkY", "526.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
         cfgEnd = nullptr; float vCustomAtkY = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCustomAtkY = vCustomAtkY;
 
-        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomDefX", "250", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomDefX", "291.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
         cfgEnd = nullptr; float vCustomDefX = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCustomDefX = vCustomDefX;
 
-        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomDefY", "500", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomDefY", "526.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
         cfgEnd = nullptr; float vCustomDefY = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCustomDefY = vCustomDefY;
+
+        // The attribute icon: centre on monster frames, centre on the Link frame, and its size (the circles are 45 px across).
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "AttributeX", "346", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vAttributeX = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kAttributeX = vAttributeX;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "AttributeY", "469.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vAttributeY = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kAttributeY = vAttributeY;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "LinkAttributeX", "198.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vLinkAttributeX = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kLinkAttributeX = vLinkAttributeX;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "LinkAttributeY", "469", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vLinkAttributeY = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kLinkAttributeY = vLinkAttributeY;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "AttributeSize", "48", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vAttributeSize = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kAttributeSize = vAttributeSize;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "StarsX", "200", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vStarsX = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kStarsX = vStarsX;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "StarsY", "465.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vStarsY = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf) kStarsY = vStarsY;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "StarsMaxWidth", "240", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vStarsMaxWidth = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf && vStarsMaxWidth > 0.0f) kStarsMaxWidth = vStarsMaxWidth;
 
         GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "AtkTextScale", "2.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
         cfgEnd = nullptr; float vAtkTextScale = std::strtof(cfgBuf, &cfgEnd);
@@ -442,6 +599,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 
         p_g_bIsJpVersion = (bool*)ResolveVA(0x14332A348);
         orig_Get_FontById = (fn_Get_FontById)ResolveVA(0x140872C60);
+        game_IsMonster = (fn_CardValue)ResolveVA(0x14081A410);
+        game_IsLink = (fn_CardValue)ResolveVA(0x14081A470);
+        game_LinkRating = (fn_CardValue)ResolveVA(0x14081A6D0);
+        orig_IconId_Attribute = (fn_IconId)ResolveVA(0x1407FD320);
 
         orig_sub_140766540 = (fn_sub_140766540)ResolveVA(0x140766540);
         orig_sub_140877EC0 = (fn_sub_140877EC0)ResolveVA(0x140877EC0);
@@ -470,8 +631,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         DetourAttach(&(PVOID&)orig_sub_1408795A0, Hook_sub_1408795A0);
         DetourAttach(&(PVOID&)orig_sub_14074E7D0, Hook_sub_14074E7D0);
         DetourAttach(&(PVOID&)orig_Get_RawDefFromFullCardProps, Hook_Get_RawDefFromFullCardProps);
-        DetourAttach(&(PVOID&)orig_sub_14081A670, Hook_sub_14081A670);
-        DetourAttach(&(PVOID&)orig_sub_14081A730, Hook_sub_14081A730);
+        DetourAttach(&(PVOID&)orig_IconId_Attribute, Hook_IconId_Attribute);
          DetourAttach(&(PVOID&)orig_Get_SpellTrapCardPropertyFromFullCardProps,Hook_Get_SpellTrapCardPropertyFromFullCardProps); // uncomment once RVA above is fixed
         LONG err = DetourTransactionCommit();
         (void)err;
