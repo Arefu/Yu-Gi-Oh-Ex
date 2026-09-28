@@ -7,9 +7,10 @@
 
 #include "Limit.h"
 
-// Custom cards live between the last vanilla Konami id (14968) and the end of the
-// table the game saves card ownership in (0x4E20 entries, indexed by Konami id).
-constexpr int kFirstExtraCardId = 0x3A79;
+// Custom cards live between kFirstExtraCardId and the end of the table the game saves card ownership in (0x4E20 entries, indexed by Konami id).
+// The last vanilla Konami id is 14968, but the game ships effect rows and id lists for 14969-15234 (cards it has no data for): a custom card
+// numbered there inherits a ghost card's effect, hand-effect flag and trigger entries. Numbering starts at 15300, past all of them.
+constexpr int kFirstExtraCardId = 0x3BC4;   // 15300
 constexpr int kLastExtraCardId = 0x4E1F;
 
 constexpr uintptr_t kInternalCardPropsAddress = 0x1427D0C30;
@@ -42,7 +43,7 @@ namespace Card
         Insect = 0xA, Beast = 0xB, BeastWarrior = 0xC, Plant = 0xD, Aqua = 0xE,
         Warrior = 0xF, WingedBeast = 0x10, Fairy = 0x11, Spellcaster = 0x12,
         Thunder = 0x13, Reptile = 0x14, Psychic = 0x15, Wyrm = 0x16,
-        Cyberse = 0x17, DivineBeast = 0x18, CreatorGod = 0x19,
+        Cyberse = 0x17, DivineBeast = 0x18, CreatorGod = 0x19, Illusion = 0x1A,
         Spell = 0x1E, Trap = 0x1F,
     };
 
@@ -84,6 +85,11 @@ namespace Card
         std::vector<unsigned char> ImageBytes; // read on first request
         bool ImageTried = false;
         int Copies = 3;                        // copies granted to the profile (0..3)
+        // Named-archetype codes this card belongs to ("archetypes": [217, ...] in cards.json). The codes are
+        // the game's own: the index into bin/CARD_Named.bin, e.g. 217 Nekroz, 357 Salamangreat (see
+        // Is_CardInNamedArchetype in IDA and the ygo-effects-moonshot-plan memory). Codes >= 419 are new
+        // archetypes that exist only for custom cards.
+        std::vector<int> Archetypes;
         IN_MEMORY_CARD_PROP Props{};
     };
 

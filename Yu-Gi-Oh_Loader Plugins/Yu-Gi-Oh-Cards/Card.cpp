@@ -114,7 +114,7 @@ namespace
         { "Spellcaster", Card::Spellcaster }, { "Thunder", Card::Thunder },
         { "Reptile", Card::Reptile }, { "Psychic", Card::Psychic }, { "Wyrm", Card::Wyrm },
         { "Cyberse", Card::Cyberse }, { "DivineBeast", Card::DivineBeast },
-        { "CreatorGod", Card::CreatorGod }, { "Spell", Card::Spell }, { "Trap", Card::Trap },
+        { "CreatorGod", Card::CreatorGod }, { "Illusion", Card::Illusion }, { "Spell", Card::Spell }, { "Trap", Card::Trap },
     };
     const NamedValue IconNames[] = {
         { "Normal", Card::I_Normal }, { "Counter", Card::I_Counter }, { "Field", Card::I_Field },
@@ -240,7 +240,7 @@ namespace
         int id = j["id"].get<int>();
         if (id < kFirstExtraCardId || id > kLastExtraCardId)
         {
-            why = std::format("\"id\" must be between {} and {} (the game owns ids below, its save has no room above)", kFirstExtraCardId, kLastExtraCardId);
+            why = std::format("\"id\" must be between {} and {} (the game and its unused card data own ids below, its save has no room above)", kFirstExtraCardId, kLastExtraCardId);
             return false;
         }
 
@@ -248,6 +248,17 @@ namespace
         c.Name = Utf8ToWide(j.value("name", std::string("Unnamed Card")));
         c.Description = Utf8ToWide(j.value("description", std::string()));
         c.Copies = std::clamp(j.value("copies", 3), 0, 3);
+
+        if (j.contains("archetypes") && j["archetypes"].is_array())
+        {
+            for (const auto& a : j["archetypes"])
+            {
+                if (a.is_number_integer() && a.get<int>() >= 1 && a.get<int>() <= 0xFFFF)
+                    c.Archetypes.push_back(a.get<int>());
+                else
+                    Logger::WriteLog(std::format("Card {}: \"archetypes\" entry ignored (needs an integer archetype code, 1 or more)", id), MODULE_NAME, 1);
+            }
+        }
 
         std::string image = j.value("image", std::string());
         if (!image.empty())
@@ -375,12 +386,21 @@ namespace Card
     // the "trunk load chugs" the user reported. Rebuilt whenever ExtraCards is (re)loaded.
     static std::unordered_map<uint16_t, size_t> g_ExtraCardIndex;
 
+    // archetype code -> custom card ids in it, for the Is_CardInNamedArchetype hook (hot: called per candidate card
+    // per timing check inside duels, so it is a hash lookup, not a scan of ExtraCards).
+    static std::unordered_map<int, std::unordered_set<uint16_t>> g_ArchetypeMembers;
+
     static void RebuildExtraCardIndex()
     {
         g_ExtraCardIndex.clear();
         g_ExtraCardIndex.reserve(ExtraCards.size());
+        g_ArchetypeMembers.clear();
         for (size_t i = 0; i < ExtraCards.size(); ++i)
+        {
             g_ExtraCardIndex[ExtraCards[i].ID] = i;
+            for (int code : ExtraCards[i].Archetypes)
+                g_ArchetypeMembers[code].insert(ExtraCards[i].ID);
+        }
     }
 
     static ExtraCard* FindExtraCard(uint16_t id)
@@ -863,6 +883,15 @@ extern "C" __declspec(dllexport) unsigned short __cdecl Card_ResolveDuelSessionI
     return Card::ResolveDuelSessionId(id);
 }
 
+// The reverse of the above, for anything that receives an id FROM the engine during a duel (Yu-Gi-Oh-Effects looks up a
+// card's effect handlers by the id the engine holds): if `id` is currently a vanilla id borrowed for a custom card above
+// 16383, returns that custom card's real id; otherwise 0 (it is a real card's own id, or no duel is running).
+extern "C" __declspec(dllexport) unsigned short __cdecl Card_GetRealIdForBorrowed(unsigned short id)
+{
+    auto it = g_BorrowedToHigh.find(id);
+    return it != g_BorrowedToHigh.end() ? it->second : 0;
+}
+
 // ---------------------------------------------------------------------
 // Patches
 // ---------------------------------------------------------------------
@@ -1206,16 +1235,19 @@ unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
     if (saved)
     {
         std::string removed;
+        int removedCount = 0;
         for (int id = kFirstExtraCardId; id < static_cast<int>(kSavedCardTableSize); ++id)
         {
             if (saved[id] != 0 && !Card::ExtraLoadIDs.contains(static_cast<uint16_t>(id)))
             {
                 saved[id] = 0;
-                removed += (removed.empty() ? "" : ", ") + std::to_string(id);
+                if (++removedCount <= 10)
+                    removed += (removed.empty() ? "" : ", ") + std::to_string(id);
             }
         }
-        if (!removed.empty())
-            Logger::WriteLog(std::format("Dropped custom card(s) the profile owned that cards.json does not have: {}", removed), MODULE_NAME, 1);
+        // A copy of the Steam save can carry marks for a whole run of unused ids: say how many, and only the first few.
+        if (removedCount > 0)
+            Logger::WriteLog(std::format("Dropped {} custom card(s) the profile owned that cards.json does not have: {}{}", removedCount, removed, removedCount > 10 ? ", ..." : ""), MODULE_NAME, 1);
     }
 
     // The player owns at least `copies` of a card. The count is kept in the save's card table, under the
@@ -1457,6 +1489,38 @@ void __fastcall Hook_FinishAndUpdateSave(int64_t a1, uint32_t* a2, int a3)
 }
 
 // ----------------------------------------------------------------------
+// named archetypes
+//
+// Is_CardInNamedArchetype (IDA 0x14076CFF0) answers "is this card in archetype N" for every effect condition
+// and special-summon search in the duel engine, by binary-searching bin/CARD_Named.bin. Custom cards are not in
+// that file, so this adds them ("archetypes" in cards.json), and lets codes >= 419 (which the original rejects)
+// name archetypes that only custom cards have. Signature (id, code) -> bool as int64.
+// ----------------------------------------------------------------------
+
+static uintptr_t orig_Is_CardInNamedArchetype = 0x14076CFF0;
+constexpr int kVanillaArchetypeCount = 419;
+
+int64_t __fastcall Hook_Is_CardInNamedArchetype(uint16_t id, int code)
+{
+    // In a duel a custom card above 16383 is a borrowed vanilla id: the original would answer for the vanilla
+    // card that owns that id, which is wrong for the whole duel, so a borrowed id is only ever the custom card.
+    auto borrowed = g_BorrowedToHigh.find(id);
+    const bool isBorrowed = borrowed != g_BorrowedToHigh.end();
+    const uint16_t realId = isBorrowed ? borrowed->second : id;
+
+    if (!Card::g_ArchetypeMembers.empty())
+    {
+        auto members = Card::g_ArchetypeMembers.find(code);
+        if (members != Card::g_ArchetypeMembers.end() && members->second.contains(realId))
+            return 1;
+    }
+
+    if (isBorrowed || code >= kVanillaArchetypeCount || realId >= kFirstExtraCardId)
+        return 0;
+    return reinterpret_cast<int64_t(__fastcall*)(uint16_t, int)>(orig_Is_CardInNamedArchetype)(id, code);
+}
+
+// ----------------------------------------------------------------------
 // starting cards
 //
 // RebuildLiveUnlockCounts grants the cards of the starter decks through GrantDeckTemplateCards(profile, deck,
@@ -1635,6 +1699,7 @@ void Card::Install()
     DetourAttach(&(PVOID&)orig_Duel_LoadDeck, Hook_Duel_LoadDeck);
     DetourAttach(&(PVOID&)orig_DuelSetup_ClearState, Hook_DuelSetup_ClearState);
     DetourAttach(&(PVOID&)orig_FinishAndUpdateSave, Hook_FinishAndUpdateSave);
+    DetourAttach(&(PVOID&)orig_Is_CardInNamedArchetype, Hook_Is_CardInNamedArchetype);
 
     LONG err = DetourTransactionCommit();
     Logger::WriteLog(std::format("Card hooks attached: {}", err), MODULE_NAME, err == 0 ? 0 : 2);
