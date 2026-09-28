@@ -45,12 +45,12 @@ namespace WolfX
             CARDS_CB_CardKind.DataSource = CARDS_Cards.Cards.Select(Select => Select.Kind).Distinct().ToList();
             CARDS_CB_CardAttribute.DataSource = CARDS_Cards.Cards.Select(Select => Select.Attribute).Distinct().ToList();
             CARDS_CB_CardType.DataSource = CARDS_Cards.Cards.Select(Select => Select.Type).Distinct().ToList();
-            CARDS_CB_CardArchetypeNumberOne.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
-            CARDS_CB_CardArchetypeNumberTwo.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
-            CARDS_CB_CardArchetypeNumberThree.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
-            CARDS_CB_CardArchetypeNumberFour.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
-            CARDS_CB_CardArchetypeNumberFive.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
-            CARDS_CB_CardArchetypeNumberSix.DataSource = Card_Named.CardsInArchetype.Keys.Distinct().ToList();
+            foreach (var combo in ArchetypeCombos())
+            {
+                combo.DisplayMember = nameof(ArchetypeChoice.Text);
+                combo.ValueMember = nameof(ArchetypeChoice.Code);
+                combo.DataSource = ArchetypeChoices();
+            }
         }
 
         private void CARDS_BTN_SaveCard_Click(object sender, EventArgs e)
@@ -240,51 +240,75 @@ namespace WolfX
             CARDS_TB_Kana.Text = Card_Kana._Kana.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
             CARDS_TB_CardNumber.Text = Card_PackID._CardNumbers.ElementAt(CARDS_CB_CardID.SelectedIndex).ToString();
 
-            var cardArchetypes = Card_Named.CardsInArchetype.Where(card => card.Value.Contains(Convert.ToInt32(CARDS_CB_CardID.Text))).ToList();
-
-            var archetypeCombos = new ComboBox[]
-            {
-                CARDS_CB_CardArchetypeNumberOne,
-                CARDS_CB_CardArchetypeNumberTwo,
-                CARDS_CB_CardArchetypeNumberThree,
-                CARDS_CB_CardArchetypeNumberFour,
-                CARDS_CB_CardArchetypeNumberFive,
-                CARDS_CB_CardArchetypeNumberSix
-            };
-            for (int i = 0; i < archetypeCombos.Length; i++)
-            {
-                if (i < cardArchetypes.Count)
-                    archetypeCombos[i].SelectedIndex = archetypeCombos[i].Items.IndexOf(cardArchetypes[i].Key);
-                else
-                    archetypeCombos[i].SelectedIndex = -1;
-            }
+            ShowArchetypes(Convert.ToInt32(CARDS_CB_CardID.Text));
         }
 
         #region CARD_EDIT_CHANGE_SAVE_FUNCTIONS
 
-        private void CARDS_CB_CardArchetypeNumberOne_SelectedIndexChanged(object sender, EventArgs e)
+        // ---- archetypes -------------------------------------------------------------------------------------------------
+        // A card can be in any number of archetypes: each of the six boxes holds one, "(none)" leaves it empty. A card in more
+        // than six keeps the ones past the sixth untouched.
+
+        private sealed record ArchetypeChoice(int Code, string Text);
+
+        private bool _showingArchetypes;
+
+        private ComboBox[] ArchetypeCombos() =>
+        [
+            CARDS_CB_CardArchetypeNumberOne, CARDS_CB_CardArchetypeNumberTwo, CARDS_CB_CardArchetypeNumberThree,
+            CARDS_CB_CardArchetypeNumberFour, CARDS_CB_CardArchetypeNumberFive, CARDS_CB_CardArchetypeNumberSix,
+        ];
+
+        private static List<ArchetypeChoice> ArchetypeChoices()
         {
+            var choices = new List<ArchetypeChoice> { new(0, "(none)") };
+            choices.AddRange(Card_Named.CardsInArchetype.Keys.Where(code => code > 0).OrderBy(code => code)
+                .Select(code => new ArchetypeChoice(code, $"{code} - {Card_Named.NameOf(code)}")));
+            return choices;
         }
 
-        private void CARDS_CB_CardArchetypeNumberTwo_SelectedIndexChanged(object sender, EventArgs e)
+        private void ShowArchetypes(int konamiId)
         {
+            var codes = Card_Named.ArchetypesOf(konamiId);
+            _showingArchetypes = true;
+            try
+            {
+                var combos = ArchetypeCombos();
+                for (int i = 0; i < combos.Length; i++)
+                    combos[i].SelectedValue = i < codes.Count ? codes[i] : 0;
+            }
+            finally { _showingArchetypes = false; }
         }
 
-        private void CARDS_CB_CardArchetypeNumberThree_SelectedIndexChanged(object sender, EventArgs e)
+        private void ArchetypeCombo_Changed()
         {
+            if (_showingArchetypes || !int.TryParse(CARDS_CB_CardID.Text, out int konamiId))
+                return;
+
+            var current = Card_Named.ArchetypesOf(konamiId);
+            var wanted = ArchetypeCombos().Select(combo => combo.SelectedValue is int code ? code : 0).Where(code => code > 0).ToHashSet();
+            foreach (int extra in current.Skip(6))
+                wanted.Add(extra);
+
+            foreach (var (code, list) in Card_Named.CardsInArchetype)
+            {
+                bool has = list.BinarySearch(konamiId) >= 0;
+                if (wanted.Contains(code) && !has)
+                {
+                    list.Add(konamiId);
+                    list.Sort();
+                }
+                else if (!wanted.Contains(code) && has)
+                    list.Remove(konamiId);
+            }
         }
 
-        private void CARDS_CB_CardArchetypeNumberFour_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void CARDS_CB_CardArchetypeNumberFive_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void CARDS_CB_CardArchetypeNumberSix_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
+        private void CARDS_CB_CardArchetypeNumberOne_SelectedIndexChanged(object sender, EventArgs e) => ArchetypeCombo_Changed();
+        private void CARDS_CB_CardArchetypeNumberTwo_SelectedIndexChanged(object sender, EventArgs e) => ArchetypeCombo_Changed();
+        private void CARDS_CB_CardArchetypeNumberThree_SelectedIndexChanged(object sender, EventArgs e) => ArchetypeCombo_Changed();
+        private void CARDS_CB_CardArchetypeNumberFour_SelectedIndexChanged(object sender, EventArgs e) => ArchetypeCombo_Changed();
+        private void CARDS_CB_CardArchetypeNumberFive_SelectedIndexChanged(object sender, EventArgs e) => ArchetypeCombo_Changed();
+        private void CARDS_CB_CardArchetypeNumberSix_SelectedIndexChanged(object sender, EventArgs e) => ArchetypeCombo_Changed();
 
         /// <summary>
         /// Updates the Card's Name in CARD_Props ready for calling Save.
