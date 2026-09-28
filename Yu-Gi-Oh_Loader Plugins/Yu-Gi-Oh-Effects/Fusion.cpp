@@ -23,7 +23,7 @@ namespace
     // scratch-pool id, not this file's own g_Recipes key. Hook_Get_FusionMaterialCount/Material/
     // UsingMaterial must resolve every id they receive (and are keyed by) through the real<->borrowed
     // mapping once it exists, not compare against g_Recipes' ids directly.
-    constexpr int kFirstExtraCardId = 0x3A79;
+    constexpr int kFirstExtraCardId = 0x3BC4;   // 15300, as in Yu-Gi-Oh-Cards/Card.h
     constexpr int kLastExtraCardId = 0x4E1F;
     constexpr size_t kMinMaterials = 2;
     constexpr size_t kMaxMaterials = 5; // the game's 4+ table has five slots

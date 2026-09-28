@@ -33,7 +33,7 @@
 // once we start actually reacting to these calls rather than just logging them.
 namespace
 {
-    constexpr int kFirstExtraCardId = 0x3A79;
+    constexpr int kFirstExtraCardId = 0x3BC4;   // 15300, as in Yu-Gi-Oh-Cards/Card.h
 
     using CheckUsable_t = int64_t(__fastcall*)(uint16_t*, uint32_t, int, int);
     CheckUsable_t orig_CheckUsable = reinterpret_cast<CheckUsable_t>(0x1400679F0);
