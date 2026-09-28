@@ -1,177 +1,105 @@
-﻿namespace CARD_Named
+﻿using System.Text.Json;
+
+namespace CARD_Named
 {
+    /// <summary>
+    /// bin/CARD_Named.bin: the game's archetypes. A code (1..418 in the game) is the index of a list of Konami ids; the engine's
+    /// Is_CardInNamedArchetype(id, code) is a binary search of that list (see the ygo-effects-moonshot-plan memory).
+    /// Layout, all u16: [0] archetype count, [1] total ids, then per archetype (offset, length) into the pool that follows.
+    /// Lists are sorted ascending. A card can be in any number of archetypes.
+    /// </summary>
     public static class Card_Named
     {
-        public static int NUMBER_OF_ARCHETYPES;
-        public static int NUMBER_OF_CARDS_WITH_ARCHETYPES;
+        /// <summary>Archetype code -> the Konami ids in it (sorted).</summary>
+        public static Dictionary<int, List<int>> CardsInArchetype = [];
 
-        public static Dictionary<int, List<short>> _CardIDsAndArchetype = [];
+        /// <summary>The game's archetype count as read (its highest code + 1); codes from here up are custom archetypes.</summary>
+        public static int ArchetypeCount;
 
-        public enum Archetype
+        private static Dictionary<int, Dictionary<string, string>>? _names;
+
+        /// <summary>
+        /// Code -> language ("E" English, "F", "G", "I", "S", "J") -> name, from the embedded Archetypes.json (made by Archetypes.ps1
+        /// from the game's own files: each list is named by the YGOPRODeck archetype most of its cards have, and the per-language
+        /// names are the game's "Related to: ..." tags in taginfo_&lt;lang&gt;.bin). Codes nobody could name are "Archetype N".
+        /// </summary>
+        public static Dictionary<int, Dictionary<string, string>> Names
         {
-            None = 0,
-            Toon = 1,
-            Archfiend = 2,
-            Gravekeeper = 3,
-            Guardian = 4,
-            DarkScorpion = 5,
-            Amazoness = 6,
-            Ninja = 7,
-            LV = 8,
-            ElementalHero = 9,
-            DestinyHero = 10,
-            Neos = 11,
-            NeoSpacianWithSubArchetype = 12,
-            ElementalHeroNeo = 13,
-            Ojama = 14,
-            Batteryman = 15,
-            DarkWorld = 16,
-            BES = 17,
-            AncientGear = 18,
-            Sphinx = 19,
-            Machina = 20,
-            Harpie = 21,
-            Roid = 22,
-            Vehicroid = 23,
-            NeoSpacian = 24,
-            Chrysalis = 25,
-            Alien = 26,
-            PhantomBeast = 27,
-            Hero = 28,
-            AllureQueen = 29,
-            Gadget = 30,
-            SixSamurai = 31,
-            CrystalBeast = 32,
-            Volcanic = 33,
-            BlazeAccelerator = 34,
-            Venom = 35,
-            Cloudian = 36,
-            GladiatorBeast = 37,
-            GladiatorBeastsBattle = 38,
-            BambooSword = 39,
-            EvilHero = 40,
+            get
+            {
+                if (_names != null)
+                    return _names;
 
-            //41
-            ArcanaForce = 42,
-
-            //43
-            Skyblaster = 44,
-
-            Exodia = 45,
-            UltimateCrystal = 46,
-            CyberDragonFusionRequirement = 47,
-            IceBarrier = 48,
-            AllyOfJustice = 49,
-            Saber = 50,
-            Worm = 51,
-            Lightsworn = 52,
-            Frog = 53,
-            NitroWarrior = 54,
-            Genex = 55,
-            MistValley = 56,
-            Flamvell = 57,
-            AllHero = 58,
-            Morphtronic = 59,
-            IronChain = 61,
-            Naturia = 62,
-            Clear = 63,
-            RedEyes = 64,
-            Blackwing = 65,
-            SlashAssaultMode = 66,
-            Fabled = 67,
-            Jurrac = 68,
-
-            Kuriboh = 287,
-
-            //390
-            Mathmech = 391,
-
-            Dragonmaid = 392,
-            Generaider = 393,
-            Ignister = 394,
-            Ai = 395,
-            AncientWarriors = 396,
-            Megalith = 397,
-            Palladium = 398,
-            Onomat = 399,
-            UtopicFuture = 400,
-            Rose = 401,
-            Rebellion = 402,
-            Barbaros = 405,
-            Phantasm = 412,
-            SacredBeast = 413,
-            SpiralSpearStrike = 414,
-            Potan = 417
+                _names = [];
+                using var stream = typeof(Card_Named).Assembly.GetManifestResourceStream("CARD_Named.Archetypes.json");
+                if (stream != null)
+                {
+                    using var doc = JsonDocument.Parse(stream);
+                    foreach (var entry in doc.RootElement.GetProperty("archetypes").EnumerateArray())
+                    {
+                        int code = entry.GetProperty("code").GetInt32();
+                        var names = new Dictionary<string, string> { ["E"] = entry.GetProperty("name").GetString() ?? $"Archetype {code}" };
+                        if (entry.TryGetProperty("names", out var localized))
+                        {
+                            foreach (var pair in localized.EnumerateObject())
+                                names[pair.Name] = pair.Value.GetString() ?? names["E"];
+                        }
+                        _names[code] = names;
+                    }
+                }
+                return _names;
+            }
         }
 
-        public static Dictionary<Archetype, List<int>> CardsInArchetype = new Dictionary<Archetype, List<int>>();
+        /// <summary>The archetype's name in a language (falls back to English).</summary>
+        public static string NameOf(int code, string language = "E") =>
+            Names.TryGetValue(code, out var names) ? (names.TryGetValue(language, out var name) ? name : names["E"]) : $"Archetype {code}";
+
+        /// <summary>Every archetype code this Konami id is in (one or many).</summary>
+        public static List<int> ArchetypesOf(int konamiId) =>
+            CardsInArchetype.Where(pair => pair.Value.BinarySearch(konamiId) >= 0).Select(pair => pair.Key).OrderBy(code => code).ToList();
 
         public static void Load(string path)
         {
-            var Reader = new BinaryReader(File.Open(path, FileMode.Open, FileAccess.Read));
+            var bytes = File.ReadAllBytes(path);
+            var u16 = new ushort[bytes.Length / 2];
+            Buffer.BlockCopy(bytes, 0, u16, 0, u16.Length * 2);
 
-            var Archetypes = Reader.ReadUInt16();
-            var NumberOfCards = Reader.ReadUInt16();
-
-            //Advance Reader.
-            Reader.BaseStream.Position = 0x6;
-            var CountOfCardsInArchetypes = new List<ushort>();
-            for (var Archetype = 0; Archetype < Archetypes; Archetype++)
+            ArchetypeCount = u16[0];
+            CardsInArchetype = [];
+            for (int code = 0; code < ArchetypeCount; code++)
             {
-                var NumberOfCardsInArchetype = Reader.ReadUInt16();
-                var SumOfCards = Reader.ReadUInt16();
-
-                CountOfCardsInArchetypes.Add(NumberOfCardsInArchetype);
-
-                if (SumOfCards == NumberOfCards)
-                    break;
-            }
-
-            Reader.ReadUInt16();
-
-            for (ushort Archetype = 0; Archetype < CountOfCardsInArchetypes.Count; Archetype++)
-            {
-                var TempList = new List<int>();
-
-                for (var Card = 0; Card < CountOfCardsInArchetypes[Archetype]; Card++)
-                {
-                    TempList.Add(Reader.ReadUInt16());
-                }
-
-                CardsInArchetype.Add((Archetype)Archetype, TempList);
+                int offset = u16[2 + 2 * code];
+                int length = u16[3 + 2 * code];
+                int start = 2 + 2 * ArchetypeCount + offset;
+                CardsInArchetype[code] = u16.Skip(start).Take(length).Select(id => (int)id).ToList();
             }
         }
 
-        public static void Save()
+        /// <summary>Writes the file back in the game's layout (an unchanged file round-trips byte for byte).</summary>
+        public static void Save(string path = "CARD_Named.bin")
         {
-            using var Writer = new BinaryWriter(File.Open("CARD_Named.bin", FileMode.Create, FileAccess.Write));
-            ushort archetypeCount = (ushort)CardsInArchetype.Count;
-            ushort totalCards = (ushort)CardsInArchetype.Sum(kv => kv.Value.Count);
+            int count = CardsInArchetype.Count == 0 ? 0 : CardsInArchetype.Keys.Max() + 1;
+            count = Math.Max(count, ArchetypeCount);
 
-            Writer.Write((ushort)(archetypeCount + 1));
-            Writer.Write(totalCards);
+            using var writer = new BinaryWriter(File.Open(path, FileMode.Create, FileAccess.Write));
+            writer.Write((ushort)count);
+            writer.Write((ushort)CardsInArchetype.Values.Sum(list => list.Count));
 
-            Writer.BaseStream.Position = 0x6;
-
-            ushort runningSum = 0;
-            foreach (var kv in CardsInArchetype)
+            ushort offset = 0;
+            for (int code = 0; code < count; code++)
             {
-                ushort cardsInArchetype = (ushort)kv.Value.Count;
-                runningSum += cardsInArchetype;
-
-                Writer.Write(cardsInArchetype);
-                Writer.Write(runningSum);
-
-                if (runningSum == totalCards)
-                    break;
+                ushort length = (ushort)(CardsInArchetype.TryGetValue(code, out var list) ? list.Count : 0);
+                writer.Write(offset);
+                writer.Write(length);
+                offset += length;
             }
-
-            Writer.Write((ushort)0);
-
-            foreach (var kv in CardsInArchetype)
+            for (int code = 0; code < count; code++)
             {
-                foreach (var cardId in kv.Value)
-                    Writer.Write((ushort)cardId);
+                if (!CardsInArchetype.TryGetValue(code, out var list))
+                    continue;
+                foreach (int id in list.OrderBy(id => id))
+                    writer.Write((ushort)id);
             }
         }
     }

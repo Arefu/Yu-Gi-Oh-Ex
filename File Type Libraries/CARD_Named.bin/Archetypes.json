@@ -1,0 +1,6706 @@
+{
+  "note": "Archetypes: code -> name (and its name per language from the game's taginfo files). Codes below 419 are the game's (CARD_Named.bin); 419 and up are custom. Made by Archetypes.ps1; Delta.ps1 and WolfEx add custom ones.",
+  "archetypes": [
+    {
+      "code": 1,
+      "name": "Toon",
+      "names": {
+        "E": "Toon",
+        "F": "Toon",
+        "G": "Toon",
+        "I": "Toon",
+        "S": "Toon",
+        "J": "トゥーン"
+      }
+    },
+    {
+      "code": 2,
+      "name": "Archfiend",
+      "names": {
+        "E": "Archfiend",
+        "F": "Archdémon",
+        "G": "Erzunterweltler",
+        "I": "Arcidemone",
+        "S": "Archidemonio",
+        "J": "デーモン"
+      }
+    },
+    {
+      "code": 3,
+      "name": "Gravekeeper's",
+      "names": {
+        "E": "Gravekeeper's"
+      }
+    },
+    {
+      "code": 4,
+      "name": "Guardian",
+      "names": {
+        "E": "Guardian",
+        "F": "Gardien",
+        "G": "Wächter",
+        "I": "Guardiano",
+        "S": "Guardián",
+        "J": "ガーディアン"
+      }
+    },
+    {
+      "code": 5,
+      "name": "Dark Scorpion",
+      "names": {
+        "E": "Dark Scorpion",
+        "F": "Scorpion Noir",
+        "G": "Dunkler Skorpion",
+        "I": "Dark Scorpion",
+        "S": "Escorpión Oscuro",
+        "J": "黒(くろ)蠍(さそり)"
+      }
+    },
+    {
+      "code": 6,
+      "name": "Amazoness",
+      "names": {
+        "E": "Amazoness",
+        "F": "Amazonesse",
+        "G": "Amazonische",
+        "I": "Amazoness",
+        "S": "Amazoness",
+        "J": "アマゾネス"
+      }
+    },
+    {
+      "code": 7,
+      "name": "Ninja",
+      "names": {
+        "E": "Ninja",
+        "F": "Ninja",
+        "G": "Ninja",
+        "I": "Ninja",
+        "S": "Ninja",
+        "J": "忍(にん)者(じゃ)"
+      }
+    },
+    {
+      "code": 8,
+      "name": "Archetype 8"
+    },
+    {
+      "code": 9,
+      "name": "Elemental HERO",
+      "names": {
+        "E": "Elemental HERO",
+        "F": "HÉROS Élémentaire",
+        "G": "Elementar-HELD",
+        "I": "EROE Elementale",
+        "S": "HÉROE Elemental",
+        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+      }
+    },
+    {
+      "code": 10,
+      "name": "Destiny HERO",
+      "names": {
+        "E": "Destiny HERO",
+        "F": "HÉROS de la Destinée",
+        "G": "Schicksals-HELD",
+        "I": "EROE del Destino",
+        "S": "HÉROE del Destino",
+        "J": "Ｄ－ＨＥＲＯ(デステニーヒーロー)"
+      }
+    },
+    {
+      "code": 11,
+      "name": "Elemental HERO",
+      "names": {
+        "E": "Elemental HERO",
+        "F": "HÉROS Élémentaire",
+        "G": "Elementar-HELD",
+        "I": "EROE Elementale",
+        "S": "HÉROE Elemental",
+        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+      }
+    },
+    {
+      "code": 12,
+      "name": "Elemental HERO",
+      "names": {
+        "E": "Elemental HERO",
+        "F": "HÉROS Élémentaire",
+        "G": "Elementar-HELD",
+        "I": "EROE Elementale",
+        "S": "HÉROE Elemental",
+        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+      }
+    },
+    {
+      "code": 13,
+      "name": "Elemental HERO",
+      "names": {
+        "E": "Elemental HERO",
+        "F": "HÉROS Élémentaire",
+        "G": "Elementar-HELD",
+        "I": "EROE Elementale",
+        "S": "HÉROE Elemental",
+        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+      }
+    },
+    {
+      "code": 14,
+      "name": "Ojama",
+      "names": {
+        "E": "Ojama",
+        "F": "Ojama",
+        "G": "Ojama",
+        "I": "Ojama",
+        "S": "Ojama",
+        "J": "おジャマ"
+      }
+    },
+    {
+      "code": 15,
+      "name": "Batteryman",
+      "names": {
+        "E": "Batteryman",
+        "F": "Homme-Batterie",
+        "G": "Batteriemann",
+        "I": "Uomo Batteria",
+        "S": "Hombre Pila",
+        "J": "電(でん)池(ち)メン"
+      }
+    },
+    {
+      "code": 16,
+      "name": "Dark World",
+      "names": {
+        "E": "Dark World",
+        "F": "Monde Ténèbreux",
+        "G": "Finsteren Welt",
+        "I": "Mondo Oscuro",
+        "S": "Mundo Oscuro",
+        "J": "暗(あん)黒(こく)界(かい)"
+      }
+    },
+    {
+      "code": 17,
+      "name": "B.E.S.",
+      "names": {
+        "E": "B.E.S.",
+        "F": "B.E.S.",
+        "G": "B.E.S.",
+        "I": "B.E.S.",
+        "S": "B.E.S.",
+        "J": "巨(きょ)大(だい)戦(せん)艦(かん)"
+      }
+    },
+    {
+      "code": 18,
+      "name": "Ancient Gear",
+      "names": {
+        "E": "Ancient Gear",
+        "F": "Rouages Ancients",
+        "G": "Antiker Antrieb",
+        "I": "Ingranaggio Antico",
+        "S": "Mecanismo Antiguo",
+        "J": "古代(アンティーク)"
+      }
+    },
+    {
+      "code": 19,
+      "name": "Sphinx",
+      "names": {
+        "E": "Sphinx",
+        "F": "Sphinx",
+        "G": "Sphinx",
+        "I": "Sfinge",
+        "S": "Esfinge",
+        "J": "スフィンクス"
+      }
+    },
+    {
+      "code": 20,
+      "name": "Machina",
+      "names": {
+        "E": "Machina",
+        "F": "Méchabot",
+        "G": "Maschinenwesen",
+        "I": "Mek",
+        "S": "Maquinaria",
+        "J": "マシンナーズ"
+      }
+    },
+    {
+      "code": 21,
+      "name": "Harpie",
+      "names": {
+        "E": "Harpie",
+        "F": "Harpie",
+        "G": "Harpyie",
+        "I": "Arpia",
+        "S": "Arpía",
+        "J": "ハーピィ"
+      }
+    },
+    {
+      "code": 22,
+      "name": "Roid",
+      "names": {
+        "E": "Roid",
+        "F": "Roid",
+        "G": "Roid",
+        "I": "Roid",
+        "S": "Roid",
+        "J": "ロイド"
+      }
+    },
+    {
+      "code": 23,
+      "name": "Roid",
+      "names": {
+        "E": "Roid",
+        "F": "Roid",
+        "G": "Roid",
+        "I": "Roid",
+        "S": "Roid",
+        "J": "ロイド"
+      }
+    },
+    {
+      "code": 24,
+      "name": "Neo-Spacian",
+      "names": {
+        "E": "Neo-Spacian",
+        "F": "Néo-Spacien",
+        "G": "Neo-Weltraum",
+        "I": "Neo-Spaziale",
+        "S": "Neo Espacial",
+        "J": "Ｎ(ネオスペーシアン)"
+      }
+    },
+    {
+      "code": 25,
+      "name": "Chrysalis",
+      "names": {
+        "E": "Chrysalis"
+      }
+    },
+    {
+      "code": 26,
+      "name": "Alien",
+      "names": {
+        "E": "Alien",
+        "F": "Alien",
+        "G": "Außerirdischer",
+        "I": "Alieno",
+        "S": "Alienígena",
+        "J": "エーリアン"
+      }
+    },
+    {
+      "code": 27,
+      "name": "Mecha Phantom Beast",
+      "names": {
+        "E": "Mecha Phantom Beast",
+        "F": "Bête Fantôme Méca",
+        "G": "Mecha-Phantomungeheuer",
+        "I": "Bestia Fantasma Meccanica",
+        "S": "Mecha Bestia Fantasma",
+        "J": "幻(げん)獣(じゅう)機(き)"
+      }
+    },
+    {
+      "code": 28,
+      "name": "Archetype 28"
+    },
+    {
+      "code": 29,
+      "name": "Allure Queen",
+      "names": {
+        "E": "Allure Queen",
+        "F": "Reine Charmeuse",
+        "G": "Verlockende Königin",
+        "I": "Regina della Seduzione",
+        "S": "Reina del Encanto",
+        "J": "魅惑の女王(アリュール・クィーン)"
+      }
+    },
+    {
+      "code": 30,
+      "name": "Gadget",
+      "names": {
+        "E": "Gadget",
+        "F": "Gadget",
+        "G": "Apparat",
+        "I": "Congegno",
+        "S": "Artilugio",
+        "J": "ガジェット"
+      }
+    },
+    {
+      "code": 31,
+      "name": "Six Samurai",
+      "names": {
+        "E": "Six Samurai",
+        "F": "Six Samouraïs",
+        "G": "Sechs Samurai",
+        "I": "Sei Samurai",
+        "S": "Seis Samuráis",
+        "J": "六(ろく)武(ぶ)衆(しゅう)"
+      }
+    },
+    {
+      "code": 32,
+      "name": "Crystal Beast",
+      "names": {
+        "E": "Crystal Beast",
+        "F": "Bête Cristalline",
+        "G": "Kristallungeheuer",
+        "I": "Bestia Cristallo",
+        "S": "Bestia de Cristal",
+        "J": "宝(ほう)玉(ぎょく)獣(じゅう)"
+      }
+    },
+    {
+      "code": 33,
+      "name": "Volcanic",
+      "names": {
+        "E": "Volcanic",
+        "F": "Volcanique",
+        "G": "Vulkanisch",
+        "I": "Vulcanico",
+        "S": "Volcánico",
+        "J": "ヴォルカニック"
+      }
+    },
+    {
+      "code": 34,
+      "name": "Blaze Accelerator",
+      "names": {
+        "E": "Blaze Accelerator"
+      }
+    },
+    {
+      "code": 35,
+      "name": "Venom",
+      "names": {
+        "E": "Venom",
+        "F": "Venin",
+        "G": "Gift",
+        "I": "Veleno",
+        "S": "Venenoso/a",
+        "J": "ヴェノム"
+      }
+    },
+    {
+      "code": 36,
+      "name": "Cloudian",
+      "names": {
+        "E": "Cloudian",
+        "F": "Nuagien",
+        "G": "Wolkian",
+        "I": "Nubiano",
+        "S": "Cloudian",
+        "J": "雲魔物(クラウディアン)"
+      }
+    },
+    {
+      "code": 37,
+      "name": "Gladiator Beast",
+      "names": {
+        "E": "Gladiator Beast",
+        "F": "Bête Gladiateur",
+        "G": "Gladiatorungeheuer",
+        "I": "Gladiatore Bestia",
+        "S": "Bestia Gladiador",
+        "J": "剣闘獣(グラディアルビースト)"
+      }
+    },
+    {
+      "code": 38,
+      "name": "Gladiator Beast",
+      "names": {
+        "E": "Gladiator Beast",
+        "F": "Bête Gladiateur",
+        "G": "Gladiatorungeheuer",
+        "I": "Gladiatore Bestia",
+        "S": "Bestia Gladiador",
+        "J": "剣闘獣(グラディアルビースト)"
+      }
+    },
+    {
+      "code": 39,
+      "name": "Bamboo Sword",
+      "names": {
+        "E": "Bamboo Sword",
+        "F": "Épée de Bambou",
+        "G": "Bambusschwert",
+        "I": "Spada di Bambù",
+        "S": "Espada de Bambú",
+        "J": "竹(たけ)光(みつ)"
+      }
+    },
+    {
+      "code": 40,
+      "name": "Evil HERO",
+      "names": {
+        "E": "Evil HERO",
+        "F": "HÉROS du Mal",
+        "G": "Böser HELD",
+        "I": "EROE Malvagio",
+        "S": "HÉROE Malvado",
+        "J": "Ｅ－ＨＥＲＯ(イービルヒーロー)"
+      }
+    },
+    {
+      "code": 42,
+      "name": "Arcana Force",
+      "names": {
+        "E": "Arcana Force",
+        "F": "Force Arcane",
+        "G": "Arkane Macht",
+        "I": "Energia Arcana",
+        "S": "Fuerza Arcana",
+        "J": "アルカナフォース"
+      }
+    },
+    {
+      "code": 44,
+      "name": "Archetype 44"
+    },
+    {
+      "code": 45,
+      "name": "Exodia",
+      "names": {
+        "E": "Exodia the Forbidden One",
+        "F": "Éxodia l'Interdit",
+        "G": "Exodia, die Verbotene",
+        "I": "Exodia il Proibito",
+        "S": "Exodia, el Prohibido",
+        "J": "封(ふう)印(いん)されしエクゾディア"
+      }
+    },
+    {
+      "code": 46,
+      "name": "Crystal Beast",
+      "names": {
+        "E": "Crystal Beast",
+        "F": "Bête Cristalline",
+        "G": "Kristallungeheuer",
+        "I": "Bestia Cristallo",
+        "S": "Bestia de Cristal",
+        "J": "宝(ほう)玉(ぎょく)獣(じゅう)"
+      }
+    },
+    {
+      "code": 47,
+      "name": "Archetype 47"
+    },
+    {
+      "code": 48,
+      "name": "Ice Barrier",
+      "names": {
+        "E": "Ice Barrier",
+        "F": "Barrière de Glace",
+        "G": "Eisbarriere",
+        "I": "Barriera di Ghiaccio",
+        "S": "Barrera de Hielo",
+        "J": "氷(ひょう)結(けっ)界(かい)"
+      }
+    },
+    {
+      "code": 49,
+      "name": "Ally of Justice",
+      "names": {
+        "E": "Ally of Justice",
+        "F": "Allié de la Justice",
+        "G": "Verbündeter der Gerechtigkeit",
+        "I": "Alleato della Giustizia",
+        "S": "Aliado de la Justicia",
+        "J": "Ａ・Ｏ・Ｊ(アーリー・オブ・ジャスティス)"
+      }
+    },
+    {
+      "code": 50,
+      "name": "X-Saber",
+      "names": {
+        "E": "X-Saber",
+        "F": "Sabre X",
+        "G": "X-Säbel",
+        "I": "Sciabola-X",
+        "S": "Sable-X",
+        "J": "Ｘ(エックス)－セイバー"
+      }
+    },
+    {
+      "code": 51,
+      "name": "Worm",
+      "names": {
+        "E": "Worm",
+        "F": "Ver",
+        "G": "Wurm",
+        "I": "Verme",
+        "S": "Gusano",
+        "J": "ワーム"
+      }
+    },
+    {
+      "code": 52,
+      "name": "Lightsworn",
+      "names": {
+        "E": "Lightsworn",
+        "F": "Seigneur Lumière",
+        "G": "Lichtverpflichtet",
+        "I": "Fedele della Luce",
+        "S": "Luminoso/a",
+        "J": "ライトロード"
+      }
+    },
+    {
+      "code": 53,
+      "name": "Frog",
+      "names": {
+        "E": "Frog",
+        "F": "Grenouille",
+        "G": "Frosch",
+        "I": "Rana",
+        "S": "Rana",
+        "J": "ガエル"
+      }
+    },
+    {
+      "code": 54,
+      "name": "Archetype 54"
+    },
+    {
+      "code": 55,
+      "name": "Genex",
+      "names": {
+        "E": "Genex",
+        "F": "Genex",
+        "G": "Genex",
+        "I": "Genex",
+        "S": "Genex",
+        "J": "ジェネクス"
+      }
+    },
+    {
+      "code": 56,
+      "name": "Mist Valley",
+      "names": {
+        "E": "Mist Valley",
+        "F": "Vallée de Brume",
+        "G": "Nebeltal",
+        "I": "Valle delle Nebbie",
+        "S": "Valle Brumoso",
+        "J": "霞の谷(ミスト・バレー)"
+      }
+    },
+    {
+      "code": 57,
+      "name": "Flamvell",
+      "names": {
+        "E": "Flamvell",
+        "F": "Cloche de Feu",
+        "G": "Flamvell",
+        "I": "Flamvell",
+        "S": "Flamvell",
+        "J": "フレムベル"
+      }
+    },
+    {
+      "code": 58,
+      "name": "Archetype 58"
+    },
+    {
+      "code": 59,
+      "name": "Morphtronic",
+      "names": {
+        "E": "Morphtronic",
+        "F": "Morphtronique",
+        "G": "Morphtronisch",
+        "I": "Morfotronico",
+        "S": "Morfotrónico/a",
+        "J": "Ｄ(ディフォーマー)"
+      }
+    },
+    {
+      "code": 60,
+      "name": "Iron Chain",
+      "names": {
+        "E": "Iron Chain",
+        "F": "Chaîne de Fer",
+        "G": "Eisenketten",
+        "I": "Catena di Ferro",
+        "S": "Cadena de Hierro",
+        "J": "Ｃ(チェーン)"
+      }
+    },
+    {
+      "code": 61,
+      "name": "Naturia",
+      "names": {
+        "E": "Naturia",
+        "F": "Naturia",
+        "G": "Naturia",
+        "I": "Naturia",
+        "S": "Naturia",
+        "J": "ナチュル"
+      }
+    },
+    {
+      "code": 62,
+      "name": "Archetype 62"
+    },
+    {
+      "code": 63,
+      "name": "Red-Eyes",
+      "names": {
+        "E": "Red-Eyes B. Dragon",
+        "F": "Dragon Noir aux Yeux Rouges",
+        "G": "Rotäugiger schwarzer Drache",
+        "I": "Drago Nero Occhi Rossi",
+        "S": "Dragón Negro de Ojos Rojos",
+        "J": "真紅眼の黒竜(レッドアイズ・ブラックドラゴン)"
+      }
+    },
+    {
+      "code": 64,
+      "name": "Blackwing",
+      "names": {
+        "E": "Blackwing",
+        "F": "Aile Noire",
+        "G": "Schwarzflügel",
+        "I": "Alanera",
+        "S": "Alanegra",
+        "J": "ＢＦ(ブラックフェザー)"
+      }
+    },
+    {
+      "code": 65,
+      "name": "Assault Mode",
+      "names": {
+        "E": "Assault Mode"
+      }
+    },
+    {
+      "code": 66,
+      "name": "Fabled",
+      "names": {
+        "E": "Fabled",
+        "F": "Mythologique",
+        "G": "Sagenhafter",
+        "I": "Favoloso",
+        "S": "Fabuloso/a",
+        "J": "魔(ま)轟(ごう)神(しん)"
+      }
+    },
+    {
+      "code": 67,
+      "name": "Jurrac",
+      "names": {
+        "E": "Jurrac",
+        "F": "Préhistorique",
+        "G": "Jurassier",
+        "I": "Jurrac",
+        "S": "Jurrac",
+        "J": "ジュラック"
+      }
+    },
+    {
+      "code": 68,
+      "name": "Genex",
+      "names": {
+        "E": "Genex",
+        "F": "Genex",
+        "G": "Genex",
+        "I": "Genex",
+        "S": "Genex",
+        "J": "ジェネクス"
+      }
+    },
+    {
+      "code": 69,
+      "name": "Earthbound",
+      "names": {
+        "E": "Earthbound Immortal",
+        "F": "Esprit de la Terre Immortel",
+        "G": "Erdgebundener Unsterblicher",
+        "I": "Immortale Terrestre",
+        "S": "Inmortal Terrestre",
+        "J": "地(じ)縛(ばく)神(しん)"
+      }
+    },
+    {
+      "code": 70,
+      "name": "Koa'ki Meiru",
+      "names": {
+        "E": "Koa'ki Meiru",
+        "F": "Koa'ki Meiru",
+        "G": "Koa'ki Meiru",
+        "I": "Koa'ki Meiru",
+        "S": "Koa'ki Meiru",
+        "J": "コアキメイル"
+      }
+    },
+    {
+      "code": 71,
+      "name": "Infernity",
+      "names": {
+        "E": "Infernity",
+        "F": "Enfernité",
+        "G": "Ewig infernal",
+        "I": "Demoneterno",
+        "S": "Inférnico/a",
+        "J": "インフェルニティ"
+      }
+    },
+    {
+      "code": 72,
+      "name": "X-Saber",
+      "names": {
+        "E": "X-Saber",
+        "F": "Sabre X",
+        "G": "X-Säbel",
+        "I": "Sciabola-X",
+        "S": "Sable-X",
+        "J": "Ｘ(エックス)－セイバー"
+      }
+    },
+    {
+      "code": 73,
+      "name": "Fortune Lady",
+      "names": {
+        "E": "Fortune Lady",
+        "F": "Demoiselle de Fortune",
+        "G": "Schicksalsdame",
+        "I": "Signora della Fortuna",
+        "S": "Adivinadora",
+        "J": "フォーチュンレディ"
+      }
+    },
+    {
+      "code": 74,
+      "name": "Dragunity",
+      "names": {
+        "E": "Dragunity",
+        "F": "Dragunité",
+        "G": "Dracheneinheit",
+        "I": "Dragunità",
+        "S": "Dracounidad",
+        "J": "ドラグニティ－"
+      }
+    },
+    {
+      "code": 75,
+      "name": "Fortune Fairy",
+      "names": {
+        "E": "Fortune Fairy"
+      }
+    },
+    {
+      "code": 76,
+      "name": "Synchron",
+      "names": {
+        "E": "Synchron",
+        "F": "Synchronique",
+        "G": "Synchron",
+        "I": "Synchron",
+        "S": "Sincrón",
+        "J": "シンクロン"
+      }
+    },
+    {
+      "code": 77,
+      "name": "Archetype 77"
+    },
+    {
+      "code": 78,
+      "name": "Reptilianne",
+      "names": {
+        "E": "Reptilianne",
+        "F": "Reptilia",
+        "G": "Reptilianisch",
+        "I": "Rettiliano",
+        "S": "Reptílico/a",
+        "J": "レプティレス"
+      }
+    },
+    {
+      "code": 79,
+      "name": "Six Samurai",
+      "names": {
+        "E": "Six Samurai",
+        "F": "Six Samouraïs",
+        "G": "Sechs Samurai",
+        "I": "Sei Samurai",
+        "S": "Seis Samuráis",
+        "J": "六(ろく)武(ぶ)衆(しゅう)"
+      }
+    },
+    {
+      "code": 80,
+      "name": "Junk",
+      "names": {
+        "E": "Junk",
+        "F": "Robot",
+        "G": "Gerümpel",
+        "I": "Rottame",
+        "S": "Basura",
+        "J": "ジャンク"
+      }
+    },
+    {
+      "code": 81,
+      "name": "Archetype 81"
+    },
+    {
+      "code": 82,
+      "name": "Malefic",
+      "names": {
+        "E": "Malefic",
+        "F": "Corrompu",
+        "G": "Niederträchtig",
+        "I": "Maligno",
+        "S": "Malicioso",
+        "J": "Ｓｉｎ(シン)"
+      }
+    },
+    {
+      "code": 83,
+      "name": "Gem-",
+      "names": {
+        "E": "Gem-"
+      }
+    },
+    {
+      "code": 84,
+      "name": "Gem-",
+      "names": {
+        "E": "Gem-"
+      }
+    },
+    {
+      "code": 85,
+      "name": "Laval",
+      "names": {
+        "E": "Laval",
+        "F": "Laval",
+        "G": "Laval",
+        "I": "Laval",
+        "S": "Laval",
+        "J": "ラヴァル"
+      }
+    },
+    {
+      "code": 86,
+      "name": "Vylon",
+      "names": {
+        "E": "Vylon",
+        "F": "Vylon",
+        "G": "Vylon",
+        "I": "Vylon",
+        "S": "Vylon",
+        "J": "ヴァイロン"
+      }
+    },
+    {
+      "code": 87,
+      "name": "Scrap",
+      "names": {
+        "E": "Scrap",
+        "F": "Ferraille",
+        "G": "Schrott",
+        "I": "Frammento",
+        "S": "Chatarra",
+        "J": "スクラップ"
+      }
+    },
+    {
+      "code": 88,
+      "name": "Watt",
+      "names": {
+        "E": "Watt",
+        "F": "Électro",
+        "G": "Watt",
+        "I": "Watt",
+        "S": "Watt",
+        "J": "エレキ"
+      }
+    },
+    {
+      "code": 89,
+      "name": "Archetype 89"
+    },
+    {
+      "code": 90,
+      "name": "Meklord",
+      "names": {
+        "E": "Meklord",
+        "F": "Meklord",
+        "G": "Meklord",
+        "I": "Meklord",
+        "S": "Meklord",
+        "J": "機(き)皇(こう)"
+      }
+    },
+    {
+      "code": 91,
+      "name": "Meklord",
+      "names": {
+        "E": "Meklord",
+        "F": "Meklord",
+        "G": "Meklord",
+        "I": "Meklord",
+        "S": "Meklord",
+        "J": "機(き)皇(こう)"
+      }
+    },
+    {
+      "code": 92,
+      "name": "T.G.",
+      "names": {
+        "E": "T.G.",
+        "F": "T.G.",
+        "G": "T.G.",
+        "I": "T.G.",
+        "S": "T.G.",
+        "J": "ＴＧ(テックジーナス)"
+      }
+    },
+    {
+      "code": 93,
+      "name": "Karakuri",
+      "names": {
+        "E": "Karakuri",
+        "F": "Karakuri",
+        "G": "Karakuri",
+        "I": "Karakuri",
+        "S": "Karakuri",
+        "J": "カラクリ"
+      }
+    },
+    {
+      "code": 94,
+      "name": "Gishki",
+      "names": {
+        "E": "Gishki",
+        "F": "Gishki",
+        "G": "Gishki",
+        "I": "Gishki",
+        "S": "Gishki",
+        "J": "リチュア"
+      }
+    },
+    {
+      "code": 95,
+      "name": "Gusto",
+      "names": {
+        "E": "Gusto",
+        "F": "Gusto",
+        "G": "Gusto",
+        "I": "Gusto",
+        "S": "Gusto",
+        "J": "ガスタ"
+      }
+    },
+    {
+      "code": 96,
+      "name": "Steelswarm",
+      "names": {
+        "E": "Steelswarm",
+        "F": "Colonie de Chrome",
+        "G": "Stahlschar",
+        "I": "Brancoacciaio",
+        "S": "Horda de Acero",
+        "J": "インヴェルズ"
+      }
+    },
+    {
+      "code": 97,
+      "name": "Archetype 97"
+    },
+    {
+      "code": 98,
+      "name": "The Agent",
+      "names": {
+        "E": "The Agent"
+      }
+    },
+    {
+      "code": 99,
+      "name": "Nordic",
+      "names": {
+        "E": "Nordic",
+        "F": "Nordique",
+        "G": "Nordisch",
+        "I": "Nordic",
+        "S": "Nórdico/a",
+        "J": "極(きょく)星(せい)"
+      }
+    },
+    {
+      "code": 100,
+      "name": "Nordic",
+      "names": {
+        "E": "Nordic",
+        "F": "Nordique",
+        "G": "Nordisch",
+        "I": "Nordic",
+        "S": "Nórdico/a",
+        "J": "極(きょく)星(せい)"
+      }
+    },
+    {
+      "code": 101,
+      "name": "Nordic",
+      "names": {
+        "E": "Nordic",
+        "F": "Nordique",
+        "G": "Nordisch",
+        "I": "Nordic",
+        "S": "Nórdico/a",
+        "J": "極(きょく)星(せい)"
+      }
+    },
+    {
+      "code": 102,
+      "name": "Nordic",
+      "names": {
+        "E": "Nordic",
+        "F": "Nordique",
+        "G": "Nordisch",
+        "I": "Nordic",
+        "S": "Nórdico/a",
+        "J": "極(きょく)星(せい)"
+      }
+    },
+    {
+      "code": 103,
+      "name": "Aesir",
+      "names": {
+        "E": "Aesir"
+      }
+    },
+    {
+      "code": 104,
+      "name": "Aesir",
+      "names": {
+        "E": "Aesir"
+      }
+    },
+    {
+      "code": 105,
+      "name": "Symphonic Warrior",
+      "names": {
+        "E": "Symphonic Warrior",
+        "F": "Guerrier Symphonique",
+        "G": "Symphonischer Krieger",
+        "I": "Guerriero Sinfonico",
+        "S": "Guerrero Sinfónico",
+        "J": "音響戦士(サウンドウォリアー)"
+      }
+    },
+    {
+      "code": 106,
+      "name": "Resonator",
+      "names": {
+        "E": "Resonator",
+        "F": "Diapason",
+        "G": "Resonator",
+        "I": "Diapason",
+        "S": "Resonador",
+        "J": "リゾネーター"
+      }
+    },
+    {
+      "code": 107,
+      "name": "Masked HERO",
+      "names": {
+        "E": "Masked HERO"
+      }
+    },
+    {
+      "code": 108,
+      "name": "Vision HERO",
+      "names": {
+        "E": "Vision HERO",
+        "F": "HÉROS Vision",
+        "G": "Visions-HELD",
+        "I": "EROE Vision",
+        "S": "HÉROE Visión",
+        "J": "V・HERO(ヴィジョンヒーロー)"
+      }
+    },
+    {
+      "code": 109,
+      "name": "Meklord",
+      "names": {
+        "E": "Meklord",
+        "F": "Meklord",
+        "G": "Meklord",
+        "I": "Meklord",
+        "S": "Meklord",
+        "J": "機(き)皇(こう)"
+      }
+    },
+    {
+      "code": 110,
+      "name": "Meklord",
+      "names": {
+        "E": "Meklord",
+        "F": "Meklord",
+        "G": "Meklord",
+        "I": "Meklord",
+        "S": "Meklord",
+        "J": "機(き)皇(こう)"
+      }
+    },
+    {
+      "code": 111,
+      "name": "Meklord",
+      "names": {
+        "E": "Meklord",
+        "F": "Meklord",
+        "G": "Meklord",
+        "I": "Meklord",
+        "S": "Meklord",
+        "J": "機(き)皇(こう)"
+      }
+    },
+    {
+      "code": 112,
+      "name": "Wind-Up",
+      "names": {
+        "E": "Wind-Up",
+        "F": "Automate",
+        "G": "Aufzieh",
+        "I": "a Molla",
+        "S": "de Cuerda",
+        "J": "ゼンマイ"
+      }
+    },
+    {
+      "code": 113,
+      "name": "Penguin",
+      "names": {
+        "E": "Penguin",
+        "F": "Pingouin",
+        "G": "Pinguin",
+        "I": "Pinguino",
+        "S": "Pingüino",
+        "J": "ペンギン"
+      }
+    },
+    {
+      "code": 114,
+      "name": "Evolsaur",
+      "names": {
+        "E": "Evolsaur"
+      }
+    },
+    {
+      "code": 115,
+      "name": "Evolsaur",
+      "names": {
+        "E": "Evolsaur"
+      }
+    },
+    {
+      "code": 116,
+      "name": "Hole",
+      "names": {
+        "E": "Hole"
+      }
+    },
+    {
+      "code": 117,
+      "name": "Timelord",
+      "names": {
+        "E": "Timelord",
+        "F": "Seigneur du Temps",
+        "G": "Zeitherrscher",
+        "I": "Signore del Tempo",
+        "S": "Señor del Tiempo",
+        "J": "時(じ)械(かい)神(しん)"
+      }
+    },
+    {
+      "code": 118,
+      "name": "Constellar",
+      "names": {
+        "E": "Constellar",
+        "F": "Constellée",
+        "G": "Sternzeichen-Kundler",
+        "I": "Costellazione",
+        "S": "Constelación",
+        "J": "セイクリッド"
+      }
+    },
+    {
+      "code": 119,
+      "name": "Archetype 119"
+    },
+    {
+      "code": 120,
+      "name": "Archetype 120"
+    },
+    {
+      "code": 121,
+      "name": "Gagaga",
+      "names": {
+        "E": "Gagaga",
+        "F": "Gagaga",
+        "G": "Gagaga",
+        "I": "Gagaga",
+        "S": "Gagaga",
+        "J": "ガガガ"
+      }
+    },
+    {
+      "code": 122,
+      "name": "Gogogo",
+      "names": {
+        "E": "Gogogo",
+        "F": "Gogogo",
+        "G": "Gogogo",
+        "I": "Gogogo",
+        "S": "Gogogo",
+        "J": "ゴゴゴ"
+      }
+    },
+    {
+      "code": 123,
+      "name": "Photon",
+      "names": {
+        "E": "Photon"
+      }
+    },
+    {
+      "code": 124,
+      "name": "Ninja",
+      "names": {
+        "E": "Ninja",
+        "F": "Ninja",
+        "G": "Ninja",
+        "I": "Ninja",
+        "S": "Ninja",
+        "J": "忍(にん)者(じゃ)"
+      }
+    },
+    {
+      "code": 125,
+      "name": "Inzektor",
+      "names": {
+        "E": "Inzektor"
+      }
+    },
+    {
+      "code": 126,
+      "name": "Infestation",
+      "names": {
+        "E": "Infestation"
+      }
+    },
+    {
+      "code": 127,
+      "name": "Bounzer",
+      "names": {
+        "E": "Bounzer",
+        "F": "Bounzer",
+        "G": "Rausschmeißer",
+        "I": "Buttafuori",
+        "S": "Rebotador",
+        "J": "バウンサー"
+      }
+    },
+    {
+      "code": 128,
+      "name": "Butterspy",
+      "names": {
+        "E": "Butterspy",
+        "F": "Espillon",
+        "G": "Spionling",
+        "I": "Farfallospia",
+        "S": "Maripospía",
+        "J": "幻(げん)蝶(ちょう)"
+      }
+    },
+    {
+      "code": 129,
+      "name": "Hieratic",
+      "names": {
+        "E": "Hieratic Dragon",
+        "F": "Dragon Hiératique",
+        "G": "Priesterlicher Drache",
+        "I": "Drago Ieratico",
+        "S": "Dragón Hierático",
+        "J": "聖(せい)刻(こく)龍(りゅう)"
+      }
+    },
+    {
+      "code": 130,
+      "name": "Djinn",
+      "names": {
+        "E": "Djinn"
+      }
+    },
+    {
+      "code": 131,
+      "name": "Heroic",
+      "names": {
+        "E": "Heroic",
+        "F": "Héroïque",
+        "G": "Heroisch",
+        "I": "Eroico",
+        "S": "Heroico",
+        "J": "Ｈ(ヒロイック)"
+      }
+    },
+    {
+      "code": 132,
+      "name": "Chronomaly",
+      "names": {
+        "E": "Chronomaly",
+        "F": "Chronomal",
+        "G": "Chronomal",
+        "I": "Cronomalia",
+        "S": "Cronómalo/a",
+        "J": "先史遺産(オーパーツ)"
+      }
+    },
+    {
+      "code": 133,
+      "name": "Spellbook",
+      "names": {
+        "E": "Spellbook"
+      }
+    },
+    {
+      "code": 134,
+      "name": "Madolche",
+      "names": {
+        "E": "Madolche",
+        "F": "Magidolce",
+        "G": "Magidolce",
+        "I": "Magidolce",
+        "S": "Magidulce",
+        "J": "マドルチェ"
+      }
+    },
+    {
+      "code": 135,
+      "name": "Geargia",
+      "names": {
+        "E": "Geargia",
+        "F": "Geargia",
+        "G": "Getriebria",
+        "I": "Ingranaggian",
+        "S": "Engranaji",
+        "J": "ギアギア"
+      }
+    },
+    {
+      "code": 136,
+      "name": "Archetype 136"
+    },
+    {
+      "code": 137,
+      "name": "Atlantean",
+      "names": {
+        "E": "Atlantean",
+        "F": "Atlantide",
+        "G": "Atlantischer",
+        "I": "Atlantico",
+        "S": "Atlantis",
+        "J": "海(かい)皇(おう)"
+      }
+    },
+    {
+      "code": 138,
+      "name": "Mermail",
+      "names": {
+        "E": "Mermail",
+        "F": "Sirènemure",
+        "G": "Nixenrüstung",
+        "I": "Sirenide",
+        "S": "Sirenarmado/a",
+        "J": "水精鱗(マーメイル)"
+      }
+    },
+    {
+      "code": 139,
+      "name": "Mermail",
+      "names": {
+        "E": "Mermail",
+        "F": "Sirènemure",
+        "G": "Nixenrüstung",
+        "I": "Sirenide",
+        "S": "Sirenarmado/a",
+        "J": "水精鱗(マーメイル)"
+      }
+    },
+    {
+      "code": 140,
+      "name": "Spellbook",
+      "names": {
+        "E": "Spellbook"
+      }
+    },
+    {
+      "code": 141,
+      "name": "Nimble",
+      "names": {
+        "E": "Nimble",
+        "F": "Agile",
+        "G": "Flinker",
+        "I": "L'Agile",
+        "S": "Ágil",
+        "J": "素(す)早(ばや)い"
+      }
+    },
+    {
+      "code": 142,
+      "name": "Duston",
+      "names": {
+        "E": "Duston",
+        "F": "Poussièron",
+        "G": "Staubon",
+        "I": "Polverello",
+        "S": "Particulines",
+        "J": "ダストン"
+      }
+    },
+    {
+      "code": 143,
+      "name": "Heraldic",
+      "names": {
+        "E": "Heraldic Beast",
+        "F": "Bête Héraldique",
+        "G": "Wappenungeheuer",
+        "I": "Bestia Araldica",
+        "S": "Bestia Heráldica",
+        "J": "紋(もん)章(しょう)獣(じゅう)"
+      }
+    },
+    {
+      "code": 144,
+      "name": "Noble Knight",
+      "names": {
+        "E": "Noble Knight",
+        "F": "Chevalier Noble",
+        "G": "Edler Ritter",
+        "I": "Nobile Cavaliere",
+        "S": "Noble Caballero",
+        "J": "聖(せい)騎(き)士(し)"
+      }
+    },
+    {
+      "code": 145,
+      "name": "Fire King",
+      "names": {
+        "E": "Fire King",
+        "F": "Roi du Feu",
+        "G": "Feuerkönig",
+        "I": "Re del Fuoco",
+        "S": "Rey de Fuego",
+        "J": "炎(えん)王(おう)"
+      }
+    },
+    {
+      "code": 146,
+      "name": "Archetype 146"
+    },
+    {
+      "code": 147,
+      "name": "Noble Knight",
+      "names": {
+        "E": "Noble Knight",
+        "F": "Chevalier Noble",
+        "G": "Edler Ritter",
+        "I": "Nobile Cavaliere",
+        "S": "Noble Caballero",
+        "J": "聖(せい)騎(き)士(し)"
+      }
+    },
+    {
+      "code": 148,
+      "name": "Fire Fist",
+      "names": {
+        "E": "Fire Fist",
+        "F": "Confrérie du Poing de Feu",
+        "G": "Bruderschaft der Feuerfaust",
+        "I": "Pugno di Fuoco",
+        "S": "Hermandad del Puño de Fuego",
+        "J": "炎(えん)星(せい)"
+      }
+    },
+    {
+      "code": 149,
+      "name": "Fire Formation",
+      "names": {
+        "E": "Fire Formation"
+      }
+    },
+    {
+      "code": 150,
+      "name": "Hazy",
+      "names": {
+        "E": "Hazy Flame",
+        "F": "Flamme Chimérique",
+        "G": "Trübe Flamme",
+        "I": "Fiamma Chimerica",
+        "S": "Llama Quimérica",
+        "J": "陽炎獣(ヘイズビースト)"
+      }
+    },
+    {
+      "code": 151,
+      "name": "Hazy",
+      "names": {
+        "E": "Hazy Flame",
+        "F": "Flamme Chimérique",
+        "G": "Trübe Flamme",
+        "I": "Fiamma Chimerica",
+        "S": "Llama Quimérica",
+        "J": "陽炎獣(ヘイズビースト)"
+      }
+    },
+    {
+      "code": 152,
+      "name": "Utopia",
+      "names": {
+        "E": "Utopia",
+        "F": "Utopie",
+        "G": "Utopia",
+        "I": "Utopia",
+        "S": "Utopía",
+        "J": "希(き)望(ぼう)皇(おう)ホープ"
+      }
+    },
+    {
+      "code": 153,
+      "name": "Utopia",
+      "names": {
+        "E": "Utopia",
+        "F": "Utopie",
+        "G": "Utopia",
+        "I": "Utopia",
+        "S": "Utopía",
+        "J": "希(き)望(ぼう)皇(おう)ホープ"
+      }
+    },
+    {
+      "code": 154,
+      "name": "Gimmick Puppet",
+      "names": {
+        "E": "Gimmick Puppet",
+        "F": "Poupée Truquée",
+        "G": "Gimmick-Marionette",
+        "I": "Burattino Arnese",
+        "S": "Marioneta Trucada",
+        "J": "ギミック・パペット"
+      }
+    },
+    {
+      "code": 155,
+      "name": "Dododo",
+      "names": {
+        "E": "Dododo",
+        "F": "Dododo",
+        "G": "Dododo",
+        "I": "Dododo",
+        "S": "Dododo",
+        "J": "ドドド"
+      }
+    },
+    {
+      "code": 156,
+      "name": "Battlin' Boxer",
+      "names": {
+        "E": "Battlin' Boxer",
+        "F": "Boxeur Indomptable",
+        "G": "Unermüdlicher Boxer",
+        "I": "Pugile Indomito",
+        "S": "Boxeador Indómito",
+        "J": "ＢＫ(バーニングナックラー)"
+      }
+    },
+    {
+      "code": 157,
+      "name": "Mecha Phantom Beast",
+      "names": {
+        "E": "Mecha Phantom Beast",
+        "F": "Bête Fantôme Méca",
+        "G": "Mecha-Phantomungeheuer",
+        "I": "Bestia Fantasma Meccanica",
+        "S": "Mecha Bestia Fantasma",
+        "J": "幻(げん)獣(じゅう)機(き)"
+      }
+    },
+    {
+      "code": 158,
+      "name": "Fire King",
+      "names": {
+        "E": "Fire King",
+        "F": "Roi du Feu",
+        "G": "Feuerkönig",
+        "I": "Re del Fuoco",
+        "S": "Rey de Fuego",
+        "J": "炎(えん)王(おう)"
+      }
+    },
+    {
+      "code": 159,
+      "name": "Archetype 159"
+    },
+    {
+      "code": 160,
+      "name": "CXyz",
+      "names": {
+        "E": "CXyz monster",
+        "F": "Monstre CXyz",
+        "G": "CXyz-Monster",
+        "I": "Mostro CXyz",
+        "S": "CMonstruo Xyz",
+        "J": "ＣＸ(カオスエクシーズ)"
+      }
+    },
+    {
+      "code": 161,
+      "name": "Geargia",
+      "names": {
+        "E": "Geargia",
+        "F": "Geargia",
+        "G": "Getriebria",
+        "I": "Ingranaggian",
+        "S": "Engranaji",
+        "J": "ギアギア"
+      }
+    },
+    {
+      "code": 162,
+      "name": "Super Defense Robot",
+      "names": {
+        "E": "Super Defense Robot",
+        "F": "Super Défense",
+        "G": "Superverteidigungsroboter",
+        "I": "Super Robot da Difesa",
+        "S": "Súper Robot de Defensa",
+        "J": "ＳＤ(スーパーディフェンス)ロボ"
+      }
+    },
+    {
+      "code": 163,
+      "name": "Super Defense Robot",
+      "names": {
+        "E": "Super Defense Robot",
+        "F": "Super Défense",
+        "G": "Superverteidigungsroboter",
+        "I": "Super Robot da Difesa",
+        "S": "Súper Robot de Defensa",
+        "J": "ＳＤ(スーパーディフェンス)ロボ"
+      }
+    },
+    {
+      "code": 164,
+      "name": "Umbral Horror",
+      "names": {
+        "E": "Umbral Horror"
+      }
+    },
+    {
+      "code": 165,
+      "name": "Star Seraph",
+      "names": {
+        "E": "Star Seraph",
+        "F": "Séraphin Étoile",
+        "G": "Sternenseraph",
+        "I": "Serafino delle Stelle",
+        "S": "Serafín Estelar",
+        "J": "光天使(ホーリー・ライトニング)"
+      }
+    },
+    {
+      "code": 166,
+      "name": "Bujin",
+      "names": {
+        "E": "Bujin",
+        "F": "Bujin",
+        "G": "Bujin",
+        "I": "Bujin",
+        "S": "Bujin",
+        "J": "武(ぶ)神(じん)"
+      }
+    },
+    {
+      "code": 167,
+      "name": "Traptrix",
+      "names": {
+        "E": "Traptrix"
+      }
+    },
+    {
+      "code": 168,
+      "name": "Hole",
+      "names": {
+        "E": "Hole"
+      }
+    },
+    {
+      "code": 169,
+      "name": "Utopia",
+      "names": {
+        "E": "Utopia",
+        "F": "Utopie",
+        "G": "Utopia",
+        "I": "Utopia",
+        "S": "Utopía",
+        "J": "希(き)望(ぼう)皇(おう)ホープ"
+      }
+    },
+    {
+      "code": 170,
+      "name": "Heroic",
+      "names": {
+        "E": "Heroic",
+        "F": "Héroïque",
+        "G": "Heroisch",
+        "I": "Eroico",
+        "S": "Heroico",
+        "J": "Ｈ(ヒロイック)"
+      }
+    },
+    {
+      "code": 171,
+      "name": "Malicevorous",
+      "names": {
+        "E": "Malicevorous",
+        "F": "Malicevore",
+        "G": "Bosheitsfresser",
+        "I": "Divoramalizia",
+        "S": "Málfago",
+        "J": "マリスボラス"
+      }
+    },
+    {
+      "code": 172,
+      "name": "Ghostrick",
+      "names": {
+        "E": "Ghostrick",
+        "F": "Fantôruse",
+        "G": "Geistertrick",
+        "I": "Fantasmatrucco",
+        "S": "Fantastruco",
+        "J": "ゴーストリック"
+      }
+    },
+    {
+      "code": 173,
+      "name": "Vampire",
+      "names": {
+        "E": "Vampire",
+        "F": "Vampire",
+        "G": "Vampir",
+        "I": "Vampiro",
+        "S": "Vampiro",
+        "J": "ヴァンパイア"
+      }
+    },
+    {
+      "code": 175,
+      "name": "Cyber Dragon",
+      "names": {
+        "E": "Cyber Dragon",
+        "F": "Cyber Dragon",
+        "G": "Cyber Drache",
+        "I": "Cyber Drago",
+        "S": "Ciber Dragón",
+        "J": "サイバー・ドラゴン"
+      }
+    },
+    {
+      "code": 176,
+      "name": "Archetype 176"
+    },
+    {
+      "code": 177,
+      "name": "Sylvan",
+      "names": {
+        "E": "Sylvan",
+        "F": "Sylvan",
+        "G": "Sylvan",
+        "I": "Silvan",
+        "S": "Silvano/a",
+        "J": "森(しん)羅(ら)"
+      }
+    },
+    {
+      "code": 178,
+      "name": "Gravekeeper's",
+      "names": {
+        "E": "Gravekeeper's"
+      }
+    },
+    {
+      "code": 179,
+      "name": "Archetype 179"
+    },
+    {
+      "code": 180,
+      "name": "Fishborg",
+      "names": {
+        "E": "Fishborg",
+        "F": "Poissonborg",
+        "G": "Fischborg",
+        "I": "Pesce Cyborg",
+        "S": "Pezborg",
+        "J": "フィッシュボーグ"
+      }
+    },
+    {
+      "code": 181,
+      "name": "Archetype 181"
+    },
+    {
+      "code": 182,
+      "name": "Heraldic",
+      "names": {
+        "E": "Heraldic Beast",
+        "F": "Bête Héraldique",
+        "G": "Wappenungeheuer",
+        "I": "Bestia Araldica",
+        "S": "Bestia Heráldica",
+        "J": "紋(もん)章(しょう)獣(じゅう)"
+      }
+    },
+    {
+      "code": 183,
+      "name": "Artifact",
+      "names": {
+        "E": "Artifact",
+        "F": "Artéfact",
+        "G": "Artefakt",
+        "I": "Artefatto",
+        "S": "Artefacto",
+        "J": "アーティファクト"
+      }
+    },
+    {
+      "code": 184,
+      "name": "Evolzar",
+      "names": {
+        "E": "Evolzar"
+      }
+    },
+    {
+      "code": 185,
+      "name": "Galaxy-Eyes",
+      "names": {
+        "E": "Galaxy-Eyes"
+      }
+    },
+    {
+      "code": 186,
+      "name": "Galaxy-Eyes",
+      "names": {
+        "E": "Galaxy-Eyes"
+      }
+    },
+    {
+      "code": 187,
+      "name": "Archetype 187"
+    },
+    {
+      "code": 188,
+      "name": "Magician",
+      "names": {
+        "E": "Magician"
+      }
+    },
+    {
+      "code": 189,
+      "name": "Odd-Eyes",
+      "names": {
+        "E": "Odd-Eyes",
+        "F": "Yeux Impairs",
+        "G": "Buntäugig",
+        "I": "Occhi Diversi",
+        "S": "Ojos Anómalos",
+        "J": "オッドアイズ"
+      }
+    },
+    {
+      "code": 190,
+      "name": "Legendary Knight",
+      "names": {
+        "E": "Legendary Knight"
+      }
+    },
+    {
+      "code": 191,
+      "name": "Legendary Knight",
+      "names": {
+        "E": "Legendary Knight"
+      }
+    },
+    {
+      "code": 192,
+      "name": "Kuriboh",
+      "names": {
+        "E": "Kuriboh",
+        "F": "Kuriboh",
+        "G": "Kuriboh",
+        "I": "Kuriboh",
+        "S": "Kuriboh",
+        "J": "クリボー"
+      }
+    },
+    {
+      "code": 193,
+      "name": "Stardust",
+      "names": {
+        "E": "Stardust",
+        "F": "Poussière d'Étoile",
+        "G": "Sternenstaub",
+        "I": "Polvere di Stelle",
+        "S": "Polvo de Estrellas",
+        "J": "スターダスト"
+      }
+    },
+    {
+      "code": 194,
+      "name": "Sylvan",
+      "names": {
+        "E": "Sylvan",
+        "F": "Sylvan",
+        "G": "Sylvan",
+        "I": "Silvan",
+        "S": "Silvano/a",
+        "J": "森(しん)羅(ら)"
+      }
+    },
+    {
+      "code": 195,
+      "name": "Noble Knight",
+      "names": {
+        "E": "Noble Knight",
+        "F": "Chevalier Noble",
+        "G": "Edler Ritter",
+        "I": "Nobile Cavaliere",
+        "S": "Noble Caballero",
+        "J": "聖(せい)騎(き)士(し)"
+      }
+    },
+    {
+      "code": 196,
+      "name": "Noble Knight",
+      "names": {
+        "E": "Noble Knight",
+        "F": "Chevalier Noble",
+        "G": "Edler Ritter",
+        "I": "Nobile Cavaliere",
+        "S": "Noble Caballero",
+        "J": "聖(せい)騎(き)士(し)"
+      }
+    },
+    {
+      "code": 197,
+      "name": "Superheavy",
+      "names": {
+        "E": "Superheavy Samurai",
+        "F": "Samouraï Supralourd",
+        "G": "Superstarker Samurai",
+        "I": "Samurai Superpesante",
+        "S": "Samurai Superpesado",
+        "J": "超(ちょう)重(じゅう)"
+      }
+    },
+    {
+      "code": 198,
+      "name": "Melodious",
+      "names": {
+        "E": "Melodious",
+        "F": "Musique",
+        "G": "Musikalisch",
+        "I": "Melodiosa",
+        "S": "Melodiosa",
+        "J": "幻(げん)奏(そう)"
+      }
+    },
+    {
+      "code": 199,
+      "name": "Tellarknight",
+      "names": {
+        "E": "Tellarknight",
+        "F": "Tellchevalier",
+        "G": "Sternritter",
+        "I": "Tellcavaliere",
+        "S": "Telcaballero",
+        "J": "テラナイト"
+      }
+    },
+    {
+      "code": 200,
+      "name": "Shaddoll",
+      "names": {
+        "E": "Shaddoll",
+        "F": "Marionnette de l'Ombre",
+        "G": "Schattenpuppe",
+        "I": "Bambolaombra",
+        "S": "Sombrañeca",
+        "J": "シャドール"
+      }
+    },
+    {
+      "code": 201,
+      "name": "Yang Zing",
+      "names": {
+        "E": "Yang Zing",
+        "F": "Yang Zing",
+        "G": "Yang Zing",
+        "I": "Yang Zing",
+        "S": "Yang Zing",
+        "J": "竜(りゅう)星(せい)"
+      }
+    },
+    {
+      "code": 202,
+      "name": "Performapal",
+      "names": {
+        "E": "Performapal",
+        "F": "Potartiste",
+        "G": "Künstlerkumpel",
+        "I": "Artistamico",
+        "S": "Artistamigo",
+        "J": "ＥＭ(エンタメイト)"
+      }
+    },
+    {
+      "code": 203,
+      "name": "Archetype 203"
+    },
+    {
+      "code": 204,
+      "name": "Burning Abyss",
+      "names": {
+        "E": "Burning Abyss",
+        "F": "Abysses Ardents",
+        "G": "Brennenden Abgrund",
+        "I": "Abisso Bruciante",
+        "S": "Abismo Ardiente",
+        "J": "彼(ひ)岸(がん)"
+      }
+    },
+    {
+      "code": 205,
+      "name": "U.A.",
+      "names": {
+        "E": "U.A.",
+        "F": "U.A.",
+        "G": "U.A.",
+        "I": "U.A.",
+        "S": "U.A.",
+        "J": "Ｕ．Ａ．(ウルトラアスリート)"
+      }
+    },
+    {
+      "code": 206,
+      "name": "D/D",
+      "names": {
+        "E": "D/D"
+      }
+    },
+    {
+      "code": 207,
+      "name": "D/D",
+      "names": {
+        "E": "D/D"
+      }
+    },
+    {
+      "code": 208,
+      "name": "Fluffal",
+      "names": {
+        "E": "Fluffal",
+        "F": "Peluchimal",
+        "G": "Kuscheltier",
+        "I": "Fluffal",
+        "S": "Peluchanimal",
+        "J": "ファーニマル"
+      }
+    },
+    {
+      "code": 209,
+      "name": "Archetype 209"
+    },
+    {
+      "code": 210,
+      "name": "Qli",
+      "names": {
+        "E": "Qli",
+        "F": "Qli",
+        "G": "Qli",
+        "I": "Qli",
+        "S": "Qli",
+        "J": "クリフォート"
+      }
+    },
+    {
+      "code": 211,
+      "name": "Deskbot",
+      "names": {
+        "E": "Deskbot",
+        "F": "Robobureau",
+        "G": "Büroboter",
+        "I": "Deskbot",
+        "S": "Escritoriobot",
+        "J": "ブンボーグ"
+      }
+    },
+    {
+      "code": 212,
+      "name": "Archetype 212"
+    },
+    {
+      "code": 213,
+      "name": "Archetype 213"
+    },
+    {
+      "code": 214,
+      "name": "D/D",
+      "names": {
+        "E": "D/D"
+      }
+    },
+    {
+      "code": 215,
+      "name": "X-Saber",
+      "names": {
+        "E": "X-Saber",
+        "F": "Sabre X",
+        "G": "X-Säbel",
+        "I": "Sciabola-X",
+        "S": "Sable-X",
+        "J": "Ｘ(エックス)－セイバー"
+      }
+    },
+    {
+      "code": 216,
+      "name": "Yosenju",
+      "names": {
+        "E": "Yosenju",
+        "F": "Yosenju",
+        "G": "Yosenju",
+        "I": "Yosenju",
+        "S": "Yosenju",
+        "J": "妖(よう)仙(せん)獣(じゅう)"
+      }
+    },
+    {
+      "code": 217,
+      "name": "Nekroz",
+      "names": {
+        "E": "Nekroz",
+        "F": "Nékroz",
+        "G": "Nekroz",
+        "I": "Nekroz",
+        "S": "Necroz",
+        "J": "影霊衣(ネクロス)"
+      }
+    },
+    {
+      "code": 218,
+      "name": "Ritual Beast",
+      "names": {
+        "E": "Ritual Beast",
+        "F": "Bête Spirituelle",
+        "G": "Geistungeheuer",
+        "I": "Bestia Spirito",
+        "S": "Espíritu Bestia",
+        "J": "霊(れい)獣(じゅう)"
+      }
+    },
+    {
+      "code": 219,
+      "name": "Ritual Beast",
+      "names": {
+        "E": "Ritual Beast",
+        "F": "Bête Spirituelle",
+        "G": "Geistungeheuer",
+        "I": "Bestia Spirito",
+        "S": "Espíritu Bestia",
+        "J": "霊(れい)獣(じゅう)"
+      }
+    },
+    {
+      "code": 220,
+      "name": "Ritual Beast",
+      "names": {
+        "E": "Ritual Beast",
+        "F": "Bête Spirituelle",
+        "G": "Geistungeheuer",
+        "I": "Bestia Spirito",
+        "S": "Espíritu Bestia",
+        "J": "霊(れい)獣(じゅう)"
+      }
+    },
+    {
+      "code": 221,
+      "name": "Raidraptor",
+      "names": {
+        "E": "Raidraptor",
+        "F": "Raidraptor",
+        "G": "Überfallraptor",
+        "I": "Raidraptor",
+        "S": "Asaltorrapaz",
+        "J": "ＲＲ(レイド・ラプターズ)"
+      }
+    },
+    {
+      "code": 222,
+      "name": "Infernoid",
+      "names": {
+        "E": "Infernoid",
+        "F": "Infernoid",
+        "G": "Infernoid",
+        "I": "Infernoid",
+        "S": "Infiernoid",
+        "J": "インフェルノイド"
+      }
+    },
+    {
+      "code": 223,
+      "name": "Jinzo",
+      "names": {
+        "E": "Jinzo",
+        "F": "Jinzo",
+        "G": "Jinzo",
+        "I": "Jinzo",
+        "S": "Jinzo",
+        "J": "人(じん)造(ぞう)人(にん)間(げん)－サイコ・ショッカー"
+      }
+    },
+    {
+      "code": 224,
+      "name": "Gaia The Fierce Knight",
+      "names": {
+        "E": "Gaia the Fierce Knight",
+        "F": "Gaïa le Chevalier Implacable",
+        "G": "Gaia, zorniger Ritter",
+        "I": "Gaia il Cavaliere",
+        "S": "Gaia el Caballero Feroz",
+        "J": "暗(あん)黒(こく)騎(き)士(し)ガイア"
+      }
+    },
+    {
+      "code": 225,
+      "name": "Monarch",
+      "names": {
+        "E": "Monarch",
+        "F": "Monarque",
+        "G": "Monarch",
+        "I": "Monarca",
+        "S": "Monarca",
+        "J": "帝(てい)"
+      }
+    },
+    {
+      "code": 226,
+      "name": "Charmer",
+      "names": {
+        "E": "Charmer",
+        "F": "Charmeuse",
+        "G": "Verzaubererin",
+        "I": "Ammaliatore/Ammaliatrice",
+        "S": "Encantador/a",
+        "J": "霊(れい)使(つか)い"
+      }
+    },
+    {
+      "code": 227,
+      "name": "Charmer",
+      "names": {
+        "E": "Charmer",
+        "F": "Charmeuse",
+        "G": "Verzaubererin",
+        "I": "Ammaliatore/Ammaliatrice",
+        "S": "Encantador/a",
+        "J": "霊(れい)使(つか)い"
+      }
+    },
+    {
+      "code": 228,
+      "name": "Crystal Beast",
+      "names": {
+        "E": "Crystal Beast",
+        "F": "Bête Cristalline",
+        "G": "Kristallungeheuer",
+        "I": "Bestia Cristallo",
+        "S": "Bestia de Cristal",
+        "J": "宝(ほう)玉(ぎょく)獣(じゅう)"
+      }
+    },
+    {
+      "code": 229,
+      "name": "Archetype 229"
+    },
+    {
+      "code": 230,
+      "name": "Power Tool",
+      "names": {
+        "E": "Power Tool Dragon",
+        "F": "Dragon Électromécanique",
+        "G": "Werkzeugdrache",
+        "I": "Drago Utensile",
+        "S": "Dragón Taladro",
+        "J": "パワー・ツール・ドラゴン"
+      }
+    },
+    {
+      "code": 231,
+      "name": "Dark Magician",
+      "names": {
+        "E": "Dark Magician",
+        "F": "Magicien Sombre",
+        "G": "Dunkler Magier",
+        "I": "Mago Nero",
+        "S": "Mago Oscuro",
+        "J": "ブラック・マジシャン"
+      }
+    },
+    {
+      "code": 232,
+      "name": "Edge Imp",
+      "names": {
+        "E": "Edge Imp"
+      }
+    },
+    {
+      "code": 233,
+      "name": "Archetype 233"
+    },
+    {
+      "code": 234,
+      "name": "Melodious",
+      "names": {
+        "E": "Melodious",
+        "F": "Musique",
+        "G": "Musikalisch",
+        "I": "Melodiosa",
+        "S": "Melodiosa",
+        "J": "幻(げん)奏(そう)"
+      }
+    },
+    {
+      "code": 235,
+      "name": "Ritual Beast",
+      "names": {
+        "E": "Ritual Beast",
+        "F": "Bête Spirituelle",
+        "G": "Geistungeheuer",
+        "I": "Bestia Spirito",
+        "S": "Espíritu Bestia",
+        "J": "霊(れい)獣(じゅう)"
+      }
+    },
+    {
+      "code": 236,
+      "name": "Stellarknight",
+      "names": {
+        "E": "Stellarknight"
+      }
+    },
+    {
+      "code": 237,
+      "name": "Infernoid",
+      "names": {
+        "E": "Infernoid",
+        "F": "Infernoid",
+        "G": "Infernoid",
+        "I": "Infernoid",
+        "S": "Infiernoid",
+        "J": "インフェルノイド"
+      }
+    },
+    {
+      "code": 238,
+      "name": "Performage",
+      "names": {
+        "E": "Performage",
+        "F": "Mageartiste",
+        "G": "Künstlerzauberer",
+        "I": "Artistamagus",
+        "S": "Artilusionista",
+        "J": "Ｅｍ(エンタメイジ)"
+      }
+    },
+    {
+      "code": 239,
+      "name": "Dracoslayer",
+      "names": {
+        "E": "Dracoslayer",
+        "F": "Dracossassin",
+        "G": "Drachobezwinger",
+        "I": "Dracoassassino",
+        "S": "Dracoasesino",
+        "J": "竜(りゅう)剣(けん)士(し)"
+      }
+    },
+    {
+      "code": 240,
+      "name": "Igknight",
+      "names": {
+        "E": "Igknight",
+        "F": "Chevaliardent",
+        "G": "Feueritter",
+        "I": "Fuocavaliere",
+        "S": "Caballerígneo",
+        "J": "イグナイト"
+      }
+    },
+    {
+      "code": 241,
+      "name": "Aroma",
+      "names": {
+        "E": "Aroma",
+        "F": "Arôma",
+        "G": "Aroma",
+        "I": "Aroma",
+        "S": "Arobru",
+        "J": "アロマ"
+      }
+    },
+    {
+      "code": 242,
+      "name": "Empowered Warrior",
+      "names": {
+        "E": "Empowered",
+        "F": "Éveillé",
+        "G": "Ermächtigte",
+        "I": "Potenziato",
+        "S": "Fortalecido",
+        "J": "魔(ま)装(そう)戦(せん)士(し)"
+      }
+    },
+    {
+      "code": 243,
+      "name": "Archetype 243"
+    },
+    {
+      "code": 244,
+      "name": "Prediction Princess",
+      "names": {
+        "E": "Prediction Princess",
+        "F": "Princesse de la Prédiction",
+        "G": "Wahrsageprinzessin",
+        "I": "Principessa Premonitrice",
+        "S": "Princesa de la Predicción",
+        "J": "占(せん)術(じゅつ)姫(き)"
+      }
+    },
+    {
+      "code": 245,
+      "name": "Aquaactress",
+      "names": {
+        "E": "Aquaactress",
+        "F": "Aquactrice",
+        "G": "Aquaschauspielerin",
+        "I": "Acquattrice",
+        "S": "Acuactriz",
+        "J": "アクアアクトレス"
+      }
+    },
+    {
+      "code": 246,
+      "name": "Aquaactress",
+      "names": {
+        "E": "Aquaactress",
+        "F": "Aquactrice",
+        "G": "Aquaschauspielerin",
+        "I": "Acquattrice",
+        "S": "Acuactriz",
+        "J": "アクアアクトレス"
+      }
+    },
+    {
+      "code": 247,
+      "name": "Black Luster Soldier",
+      "names": {
+        "E": "Black Luster Soldier",
+        "F": "Soldat du Lustre Noir",
+        "G": "Schwarz Glänzender Soldat",
+        "I": "Glorioso Soldato Nero",
+        "S": "Soldado del Brillo Negro",
+        "J": "カオス・ソルジャー"
+      }
+    },
+    {
+      "code": 248,
+      "name": "Majespecter",
+      "names": {
+        "E": "Majespecter",
+        "F": "Majesspectre",
+        "G": "Majespenst",
+        "I": "Maestospettro",
+        "S": "Majespectro",
+        "J": "マジェスペクター"
+      }
+    },
+    {
+      "code": 249,
+      "name": "Graydle",
+      "names": {
+        "E": "Graydle",
+        "F": "Berceau-Gris",
+        "G": "Graulien",
+        "I": "Reticulliano",
+        "S": "Cunagrís",
+        "J": "グレイドル"
+      }
+    },
+    {
+      "code": 250,
+      "name": "Kozmo",
+      "names": {
+        "E": "Kozmo",
+        "F": "Kozmo",
+        "G": "Kozmo",
+        "I": "Kozmo",
+        "S": "Kozmo",
+        "J": "Ｋｏｚｍｏ(コズモ)"
+      }
+    },
+    {
+      "code": 251,
+      "name": "Kaiju",
+      "names": {
+        "E": "Kaiju",
+        "F": "Kaiju",
+        "G": "Kaiju",
+        "I": "Kaiju",
+        "S": "Kaiju",
+        "J": "壊(かい)獣(じゅう)"
+      }
+    },
+    {
+      "code": 252,
+      "name": "Roid",
+      "names": {
+        "E": "Roid",
+        "F": "Roid",
+        "G": "Roid",
+        "I": "Roid",
+        "S": "Roid",
+        "J": "ロイド"
+      }
+    },
+    {
+      "code": 253,
+      "name": "PSY-Frame",
+      "names": {
+        "E": "PSY-Frame",
+        "F": "Structure-PSY",
+        "G": "PSI-Hüllen",
+        "I": "PSI-Struttura",
+        "S": "Armazón-PSÍ",
+        "J": "ＰＳＹ(サイ)フレーム"
+      }
+    },
+    {
+      "code": 254,
+      "name": "Archfiend",
+      "names": {
+        "E": "Archfiend",
+        "F": "Archdémon",
+        "G": "Erzunterweltler",
+        "I": "Arcidemone",
+        "S": "Archidemonio",
+        "J": "デーモン"
+      }
+    },
+    {
+      "code": 255,
+      "name": "Paleozoic",
+      "names": {
+        "E": "Paleozoic",
+        "F": "Paléozoïque",
+        "G": "Paläozoischer",
+        "I": "Paleozoica",
+        "S": "Paleozoico",
+        "J": "バージェストマ"
+      }
+    },
+    {
+      "code": 256,
+      "name": "Burning Abyss",
+      "names": {
+        "E": "Burning Abyss",
+        "F": "Abysses Ardents",
+        "G": "Brennenden Abgrund",
+        "I": "Abisso Bruciante",
+        "S": "Abismo Ardiente",
+        "J": "彼(ひ)岸(がん)"
+      }
+    },
+    {
+      "code": 257,
+      "name": "Archetype 257"
+    },
+    {
+      "code": 258,
+      "name": "Destruction Sword",
+      "names": {
+        "E": "Destruction Sword"
+      }
+    },
+    {
+      "code": 259,
+      "name": "Dinomist",
+      "names": {
+        "E": "Dinomist",
+        "F": "Dinobrume",
+        "G": "Dinonebel",
+        "I": "Dinofoschia",
+        "S": "Dinoniebla",
+        "J": "ダイナミスト"
+      }
+    },
+    {
+      "code": 260,
+      "name": "Shiranui",
+      "names": {
+        "E": "Shiranui",
+        "F": "Shiranui",
+        "G": "Shiranui",
+        "I": "Shiranui",
+        "S": "Shiranui",
+        "J": "不知火(しらぬい)"
+      }
+    },
+    {
+      "code": 261,
+      "name": "Dracoverlord",
+      "names": {
+        "E": "Dracoverlord"
+      }
+    },
+    {
+      "code": 262,
+      "name": "Exodia",
+      "names": {
+        "E": "Exodia the Forbidden One",
+        "F": "Éxodia l'Interdit",
+        "G": "Exodia, die Verbotene",
+        "I": "Exodia il Proibito",
+        "S": "Exodia, el Prohibido",
+        "J": "封(ふう)印(いん)されしエクゾディア"
+      }
+    },
+    {
+      "code": 263,
+      "name": "Phantom Knights",
+      "names": {
+        "E": "The Phantom Knights",
+        "F": "Les Chevaliers Fantômes",
+        "G": "Die Phantomritter",
+        "I": "I Cavalieri Fantasma",
+        "S": "Los Caballeros Fantasma",
+        "J": "幻影騎士団(ファントム・ナイツ)"
+      }
+    },
+    {
+      "code": 264,
+      "name": "Phantom Knights",
+      "names": {
+        "E": "The Phantom Knights",
+        "F": "Les Chevaliers Fantômes",
+        "G": "Die Phantomritter",
+        "I": "I Cavalieri Fantasma",
+        "S": "Los Caballeros Fantasma",
+        "J": "幻影騎士団(ファントム・ナイツ)"
+      }
+    },
+    {
+      "code": 265,
+      "name": "Super Quant",
+      "names": {
+        "E": "Super Quant",
+        "F": "Super Quant",
+        "G": "Superquant",
+        "I": "Super Quant",
+        "S": "Súper Cuant",
+        "J": "超(ちょう)量(りょう)"
+      }
+    },
+    {
+      "code": 266,
+      "name": "Super Quant",
+      "names": {
+        "E": "Super Quant",
+        "F": "Super Quant",
+        "G": "Superquant",
+        "I": "Super Quant",
+        "S": "Súper Cuant",
+        "J": "超(ちょう)量(りょう)"
+      }
+    },
+    {
+      "code": 267,
+      "name": "Super Quant",
+      "names": {
+        "E": "Super Quant",
+        "F": "Super Quant",
+        "G": "Superquant",
+        "I": "Super Quant",
+        "S": "Súper Cuant",
+        "J": "超(ちょう)量(りょう)"
+      }
+    },
+    {
+      "code": 268,
+      "name": "Blue-Eyes",
+      "names": {
+        "E": "Blue-Eyes White Dragon",
+        "F": "Dragon Blanc aux Yeux Bleus",
+        "G": "Blauäugiger w. Drache",
+        "I": "Drago Bianco Occhi Blu",
+        "S": "Dragón Blanco de Ojos Azules",
+        "J": "青眼の白龍(ブルーアイズ・ホワイト・ドラゴン)"
+      }
+    },
+    {
+      "code": 269,
+      "name": "Utopia",
+      "names": {
+        "E": "Utopia",
+        "F": "Utopie",
+        "G": "Utopia",
+        "I": "Utopia",
+        "S": "Utopía",
+        "J": "希(き)望(ぼう)皇(おう)ホープ"
+      }
+    },
+    {
+      "code": 270,
+      "name": "Lunalight",
+      "names": {
+        "E": "Lunalight",
+        "F": "Clair de Lune",
+        "G": "Lunalicht",
+        "I": "Lucelunare",
+        "S": "Lunaluz",
+        "J": "月光蒼猫(ムーンライト)"
+      }
+    },
+    {
+      "code": 271,
+      "name": "Amorphage",
+      "names": {
+        "E": "Amorphage",
+        "F": "Amorphage",
+        "G": "Amorphage",
+        "I": "Amorfago",
+        "S": "Amórfago",
+        "J": "アモルファージ"
+      }
+    },
+    {
+      "code": 272,
+      "name": "Celtic Guard",
+      "names": {
+        "E": "Celtic Guard",
+        "F": "Celte",
+        "G": "Keltischer Wärter",
+        "I": "Celtico",
+        "S": "Celta",
+        "J": "エルフの剣(けん)士(し)"
+      }
+    },
+    {
+      "code": 273,
+      "name": "Magician Girl",
+      "names": {
+        "E": "Magician Girl",
+        "F": "Magicienne",
+        "G": "Magier-Mädchen",
+        "I": "Ragazza Maga",
+        "S": "Chica Maga",
+        "J": "マジシャン・ガール"
+      }
+    },
+    {
+      "code": 274,
+      "name": "Dark Magician",
+      "names": {
+        "E": "Dark Magician",
+        "F": "Magicien Sombre",
+        "G": "Dunkler Magier",
+        "I": "Mago Nero",
+        "S": "Mago Oscuro",
+        "J": "ブラック・マジシャン"
+      }
+    },
+    {
+      "code": 275,
+      "name": "Metalfoes",
+      "names": {
+        "E": "Metalfoes",
+        "F": "Métalphose",
+        "G": "Metallfose",
+        "I": "Metalfosi",
+        "S": "Metalmórfico",
+        "J": "メタルフォーゼ"
+      }
+    },
+    {
+      "code": 276,
+      "name": "Triamid",
+      "names": {
+        "E": "Triamid",
+        "F": "Triamid",
+        "G": "Triamid",
+        "I": "Triamide",
+        "S": "Trirámide",
+        "J": "トラミッド"
+      }
+    },
+    {
+      "code": 277,
+      "name": "Blackwing",
+      "names": {
+        "E": "Blackwing",
+        "F": "Aile Noire",
+        "G": "Schwarzflügel",
+        "I": "Alanera",
+        "S": "Alanegra",
+        "J": "ＢＦ(ブラックフェザー)"
+      }
+    },
+    {
+      "code": 278,
+      "name": "Cubic",
+      "names": {
+        "E": "Cubic",
+        "F": "Cubique",
+        "G": "Kubisch",
+        "I": "Cubico",
+        "S": "Cúbico",
+        "J": "方(ほう)界(かい)"
+      }
+    },
+    {
+      "code": 279,
+      "name": "Archetype 279"
+    },
+    {
+      "code": 280,
+      "name": "Cyber Angel",
+      "names": {
+        "E": "Cyber Angel",
+        "F": "Ange Cyber",
+        "G": "Cyberengel",
+        "I": "Cyber Angelo",
+        "S": "Ciber Ángel",
+        "J": "サイバー・エンジェル"
+      }
+    },
+    {
+      "code": 281,
+      "name": "Cipher",
+      "names": {
+        "E": "Cipher",
+        "F": "Cipher",
+        "G": "Cipher",
+        "I": "Cipher",
+        "S": "Cifrado",
+        "J": "光波(サイファー)"
+      }
+    },
+    {
+      "code": 282,
+      "name": "Flower Cardian",
+      "names": {
+        "E": "Flower Cardian",
+        "F": "Fleur Cardian",
+        "G": "Blumen-Kartian",
+        "I": "Fiore Cardian",
+        "S": "Flor Cardian",
+        "J": "花札衛(カーディアン)"
+      }
+    },
+    {
+      "code": 283,
+      "name": "Silent Swordsman",
+      "names": {
+        "E": "Silent Swordsman",
+        "F": "Spadassin Silencieux",
+        "G": "Schweigsamer Schwertkämpfer",
+        "I": "Spadaccino Silente",
+        "S": "Espadachín Silencioso",
+        "J": "サイレント・ソードマン"
+      }
+    },
+    {
+      "code": 284,
+      "name": "Silent Magician",
+      "names": {
+        "E": "Silent Magician",
+        "F": "Magicien Silencieux",
+        "G": "Schweigsamer Magier",
+        "I": "Mago Silente",
+        "S": "Mago Silencioso",
+        "J": "サイレント・マジシャン"
+      }
+    },
+    {
+      "code": 285,
+      "name": "Archetype 285"
+    },
+    {
+      "code": 286,
+      "name": "Dark Magician",
+      "names": {
+        "E": "Dark Magician",
+        "F": "Magicien Sombre",
+        "G": "Dunkler Magier",
+        "I": "Mago Nero",
+        "S": "Mago Oscuro",
+        "J": "ブラック・マジシャン"
+      }
+    },
+    {
+      "code": 287,
+      "name": "Kuriboh",
+      "names": {
+        "E": "Kuriboh",
+        "F": "Kuriboh",
+        "G": "Kuriboh",
+        "I": "Kuriboh",
+        "S": "Kuriboh",
+        "J": "クリボー"
+      }
+    },
+    {
+      "code": 288,
+      "name": "Crystron",
+      "names": {
+        "E": "Crystron",
+        "F": "Crystron",
+        "G": "Kristron",
+        "I": "Crystron",
+        "S": "Cristron",
+        "J": "水晶機巧(クリストロン)"
+      }
+    },
+    {
+      "code": 289,
+      "name": "Chemicritter",
+      "names": {
+        "E": "Chemicritter",
+        "F": "Chimicréa",
+        "G": "Chemiwesen",
+        "I": "Chimicreatura",
+        "S": "Quimicriatura",
+        "J": "化(か)合(ごう)獣(じゅう)"
+      }
+    },
+    {
+      "code": 290,
+      "name": "Apoqliphort",
+      "names": {
+        "E": "Apoqliphort"
+      }
+    },
+    {
+      "code": 291,
+      "name": "Subterror",
+      "names": {
+        "E": "Subterror",
+        "F": "Subterreur",
+        "G": "Unterterror",
+        "I": "Subterrore",
+        "S": "Subterror",
+        "J": "サブテラー"
+      }
+    },
+    {
+      "code": 292,
+      "name": "Subterror",
+      "names": {
+        "E": "Subterror",
+        "F": "Subterreur",
+        "G": "Unterterror",
+        "I": "Subterrore",
+        "S": "Subterror",
+        "J": "サブテラー"
+      }
+    },
+    {
+      "code": 293,
+      "name": "SPYRAL",
+      "names": {
+        "E": "SPYRAL",
+        "F": "ESPIRALE",
+        "G": "SPIORAL",
+        "I": "SPIARALE",
+        "S": "E.S.P.I.R.A.L.",
+        "J": "ＳＰＹＲＡＬ(スパイラル)"
+      }
+    },
+    {
+      "code": 294,
+      "name": "SPYRAL",
+      "names": {
+        "E": "SPYRAL",
+        "F": "ESPIRALE",
+        "G": "SPIORAL",
+        "I": "SPIARALE",
+        "S": "E.S.P.I.R.A.L.",
+        "J": "ＳＰＹＲＡＬ(スパイラル)"
+      }
+    },
+    {
+      "code": 295,
+      "name": "Abyss Actor",
+      "names": {
+        "E": "Abyss Actor",
+        "F": "Acteur des Abysses",
+        "G": "Abgrundschauspieler",
+        "I": "Attore dell'Abisso",
+        "S": "Actor del Abismo",
+        "J": "魔(ま)界(かい)劇(げき)団(だん)"
+      }
+    },
+    {
+      "code": 296,
+      "name": "Abyss Actor",
+      "names": {
+        "E": "Abyss Actor",
+        "F": "Acteur des Abysses",
+        "G": "Abgrundschauspieler",
+        "I": "Attore dell'Abisso",
+        "S": "Actor del Abismo",
+        "J": "魔(ま)界(かい)劇(げき)団(だん)"
+      }
+    },
+    {
+      "code": 297,
+      "name": "Darklord",
+      "names": {
+        "E": "Darklord",
+        "F": "Ange Déchu",
+        "G": "Finsterlord",
+        "I": "Signore Oscuro",
+        "S": "Señoroscuro",
+        "J": "堕(だ)天(てん)使(し)"
+      }
+    },
+    {
+      "code": 298,
+      "name": "Windwitch",
+      "names": {
+        "E": "Windwitch",
+        "F": "Sorcièrevent",
+        "G": "Windhexe",
+        "I": "Ventostrega",
+        "S": "Vientobruja",
+        "J": "ＷＷ(ウィンド・ウィッチ)"
+      }
+    },
+    {
+      "code": 299,
+      "name": "Zoodiac",
+      "names": {
+        "E": "Zoodiac",
+        "F": "Zoodiaque",
+        "G": "Zoodiak",
+        "I": "Zoodiaco",
+        "S": "Zoodíaco",
+        "J": "十(じゅう)二(に)獣(しし)"
+      }
+    },
+    {
+      "code": 300,
+      "name": "Archetype 300"
+    },
+    {
+      "code": 301,
+      "name": "SPYRAL",
+      "names": {
+        "E": "SPYRAL",
+        "F": "ESPIRALE",
+        "G": "SPIORAL",
+        "I": "SPIARALE",
+        "S": "E.S.P.I.R.A.L.",
+        "J": "ＳＰＹＲＡＬ(スパイラル)"
+      }
+    },
+    {
+      "code": 302,
+      "name": "Predaplant",
+      "names": {
+        "E": "Predaplant",
+        "F": "Prédaplante",
+        "G": "Raubpflanze",
+        "I": "Predapianta",
+        "S": "Predaplanta",
+        "J": "捕食植物(プレデター・プランツ)"
+      }
+    },
+    {
+      "code": 303,
+      "name": "Predaplant",
+      "names": {
+        "E": "Predaplant",
+        "F": "Prédaplante",
+        "G": "Raubpflanze",
+        "I": "Predapianta",
+        "S": "Predaplanta",
+        "J": "捕食植物(プレデター・プランツ)"
+      }
+    },
+    {
+      "code": 304,
+      "name": "Superheavy",
+      "names": {
+        "E": "Superheavy Samurai",
+        "F": "Samouraï Supralourd",
+        "G": "Superstarker Samurai",
+        "I": "Samurai Superpesante",
+        "S": "Samurai Superpesado",
+        "J": "超(ちょう)重(じゅう)"
+      }
+    },
+    {
+      "code": 305,
+      "name": "Invoked",
+      "names": {
+        "E": "Invoked",
+        "F": "Invokhé",
+        "G": "Beschworen",
+        "I": "Invokato",
+        "S": "Invokado",
+        "J": "召(しょう)喚(かん)獣(じゅう)"
+      }
+    },
+    {
+      "code": 306,
+      "name": "Archetype 306"
+    },
+    {
+      "code": 307,
+      "name": "Archetype 307"
+    },
+    {
+      "code": 308,
+      "name": "Archetype 308"
+    },
+    {
+      "code": 309,
+      "name": "Magician",
+      "names": {
+        "E": "Magician"
+      }
+    },
+    {
+      "code": 310,
+      "name": "Elemental HERO",
+      "names": {
+        "E": "Elemental HERO",
+        "F": "HÉROS Élémentaire",
+        "G": "Elementar-HELD",
+        "I": "EROE Elementale",
+        "S": "HÉROE Elemental",
+        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+      }
+    },
+    {
+      "code": 311,
+      "name": "Archetype 311"
+    },
+    {
+      "code": 312,
+      "name": "Lyrilusc",
+      "names": {
+        "E": "Lyrilusc",
+        "F": "Lyrilusc",
+        "G": "Lyrikliedervogel",
+        "I": "Lirilusc",
+        "S": "Lirilusc",
+        "J": "ＬＬ(リリカル・ルスキニア)"
+      }
+    },
+    {
+      "code": 313,
+      "name": "Supreme King",
+      "names": {
+        "E": "Supreme King",
+        "F": "Roi Suprême",
+        "G": "Oberster König",
+        "I": "Re Supremo",
+        "S": "Rey Supremo",
+        "J": "覇(は)王(おう)"
+      }
+    },
+    {
+      "code": 314,
+      "name": "Supreme King",
+      "names": {
+        "E": "Supreme King",
+        "F": "Roi Suprême",
+        "G": "Oberster König",
+        "I": "Re Supremo",
+        "S": "Rey Supremo",
+        "J": "覇(は)王(おう)"
+      }
+    },
+    {
+      "code": 315,
+      "name": "True Draco",
+      "names": {
+        "E": "True Draco"
+      }
+    },
+    {
+      "code": 316,
+      "name": "Phantasm Spiral",
+      "names": {
+        "E": "Phantasm Spiral",
+        "F": "Spirale Spectre",
+        "G": "Phantasmaspiral",
+        "I": "Spirale Fantasmatica",
+        "S": "Fantasma Espiral",
+        "J": "幻(げん)煌(おう)龍(りゅう)"
+      }
+    },
+    {
+      "code": 317,
+      "name": "Archetype 317"
+    },
+    {
+      "code": 318,
+      "name": "Gandora",
+      "names": {
+        "E": "Gandora",
+        "F": "Gandora",
+        "G": "Gandora",
+        "I": "Gandora",
+        "S": "Gandora",
+        "J": "ガンドラ"
+      }
+    },
+    {
+      "code": 319,
+      "name": "Trickstar",
+      "names": {
+        "E": "Trickstar",
+        "F": "Farstar",
+        "G": "Trickstar",
+        "I": "Truccastella",
+        "S": "Bromiestrella",
+        "J": "トリックスター"
+      }
+    },
+    {
+      "code": 320,
+      "name": "Gouki",
+      "names": {
+        "E": "Gouki",
+        "F": "Gouki",
+        "G": "Gouki",
+        "I": "Gouki",
+        "S": "Gouki",
+        "J": "剛(ごう)鬼(き)"
+      }
+    },
+    {
+      "code": 321,
+      "name": "World Chalice",
+      "names": {
+        "E": "World Chalice",
+        "F": "Calice du Monde",
+        "G": "Weltkelch",
+        "I": "Calice del Mondo",
+        "S": "Cáliz Mundial",
+        "J": "星(せい)杯(はい)"
+      }
+    },
+    {
+      "code": 322,
+      "name": "World Legacy",
+      "names": {
+        "E": "World Legacy",
+        "F": "Héritage du Monde",
+        "G": "Weltvermächtnis",
+        "I": "Eredità del Mondo",
+        "S": "Legado Mundial",
+        "J": "星(せい)遺(い)物(ぶつ)"
+      }
+    },
+    {
+      "code": 323,
+      "name": "Clear Wing",
+      "names": {
+        "E": "Clear Wing",
+        "F": "Aile Claire",
+        "G": "Glasflügel",
+        "I": "Ala Chiara",
+        "S": "Ala Transparente",
+        "J": "クリアウィング"
+      }
+    },
+    {
+      "code": 324,
+      "name": "Archetype 324"
+    },
+    {
+      "code": 325,
+      "name": "Cyberdark",
+      "names": {
+        "E": "Cyberdark",
+        "F": "Cyberténébreux",
+        "G": "Cyberfinsternis",
+        "I": "Cyberoscur",
+        "S": "Ciberoscur",
+        "J": "サイバー・ダーク"
+      }
+    },
+    {
+      "code": 326,
+      "name": "Bonding",
+      "names": {
+        "E": "Bonding"
+      }
+    },
+    {
+      "code": 327,
+      "name": "Code Talker",
+      "names": {
+        "E": "Code Talker",
+        "F": "Codeur Bavard",
+        "G": "Kodier-Sprecher",
+        "I": "Codificatore Trasmittente",
+        "S": "Codificador Hablador",
+        "J": "コード・トーカー"
+      }
+    },
+    {
+      "code": 328,
+      "name": "Rokket",
+      "names": {
+        "E": "Rokket",
+        "F": "Rokkette",
+        "G": "Rakkete",
+        "I": "Mizzile",
+        "S": "Cohette",
+        "J": "ヴァレット"
+      }
+    },
+    {
+      "code": 329,
+      "name": "Altergeist",
+      "names": {
+        "E": "Altergeist",
+        "F": "Altergeist",
+        "G": "Altergeist",
+        "I": "Altergeist",
+        "S": "Altergeist",
+        "J": "オルターガイスト"
+      }
+    },
+    {
+      "code": 330,
+      "name": "Krawler",
+      "names": {
+        "E": "Krawler",
+        "F": "Krawler",
+        "G": "Krawler",
+        "I": "Krawler",
+        "S": "Krawler",
+        "J": "クローラー"
+      }
+    },
+    {
+      "code": 331,
+      "name": "Metaphys",
+      "names": {
+        "E": "Metaphys",
+        "F": "Métaphysique",
+        "G": "Metaphysischer",
+        "I": "Metafisico",
+        "S": "Metafis",
+        "J": "メタファイズ"
+      }
+    },
+    {
+      "code": 332,
+      "name": "Vendread",
+      "names": {
+        "E": "Vendread",
+        "F": "Vendetterreur",
+        "G": "Venschrecken",
+        "I": "Venterrore",
+        "S": "Vengamiedo",
+        "J": "ヴェンデット"
+      }
+    },
+    {
+      "code": 333,
+      "name": "F.A.",
+      "names": {
+        "E": "F.A.",
+        "F": "F.A.",
+        "G": "F.A.",
+        "I": "F.A.",
+        "S": "F.A.",
+        "J": "Ｆ．Ａ．(フォーミュラアスリート)"
+      }
+    },
+    {
+      "code": 334,
+      "name": "Magical Musket",
+      "names": {
+        "E": "Magical Musket"
+      }
+    },
+    {
+      "code": 335,
+      "name": "The Weather",
+      "names": {
+        "E": "The Weather",
+        "F": "Météorologique",
+        "G": "Witterung",
+        "I": "Metereologico",
+        "S": "Meteorológico",
+        "J": "天(てん)気(き)"
+      }
+    },
+    {
+      "code": 336,
+      "name": "Parshath",
+      "names": {
+        "E": "Parshath",
+        "F": "Parshath",
+        "G": "Parshath",
+        "I": "Parshath",
+        "S": "Parsath",
+        "J": "パーシアス"
+      }
+    },
+    {
+      "code": 337,
+      "name": "Secret Six Samurai",
+      "names": {
+        "E": "Secret Six Samurai",
+        "F": "Six Samouraïs Secrets",
+        "G": "Geheime Sechs Samurai",
+        "I": "Sei Samurai Segreto",
+        "S": "Seis Samuráis Secretos",
+        "J": "影(かげ)六(ろく)武(ぶ)衆(しゅう)"
+      }
+    },
+    {
+      "code": 338,
+      "name": "Tindangle",
+      "names": {
+        "E": "Tindangle",
+        "F": "Tindangle",
+        "G": "Tinwinkel",
+        "I": "Tindangolo",
+        "S": "Tindángulo",
+        "J": "ティンダングル"
+      }
+    },
+    {
+      "code": 339,
+      "name": "Mekk-Knight",
+      "names": {
+        "E": "Mekk-Knight",
+        "F": "Mekk-Chevalier",
+        "G": "Mekk-Ritter",
+        "I": "Meck-Cavaliere",
+        "S": "Mekk-Caballero",
+        "J": "機界騎士(ジャックナイツ)"
+      }
+    },
+    {
+      "code": 340,
+      "name": "Mythical Beast",
+      "names": {
+        "E": "Mythical Beast",
+        "F": "Bête Mythique",
+        "G": "Mythisches Ungeheuer",
+        "I": "Mitica Bestia",
+        "S": "Bestia Mítica",
+        "J": "魔導獣(マジックビースト)"
+      }
+    },
+    {
+      "code": 341,
+      "name": "Archetype 341"
+    },
+    {
+      "code": 342,
+      "name": "Borrel",
+      "names": {
+        "E": "Borrel"
+      }
+    },
+    {
+      "code": 343,
+      "name": "Eyes Restrict",
+      "names": {
+        "E": "Eyes Restrict"
+      }
+    },
+    {
+      "code": 344,
+      "name": "Armed Dragon",
+      "names": {
+        "E": "Armed Dragon",
+        "F": "Dragon Armé",
+        "G": "Bewaffneter Drache",
+        "I": "Drago Armato",
+        "S": "Dragón Armado",
+        "J": "アームド・ドラゴン"
+      }
+    },
+    {
+      "code": 345,
+      "name": "Ancient Gear",
+      "names": {
+        "E": "Ancient Gear",
+        "F": "Rouages Ancients",
+        "G": "Antiker Antrieb",
+        "I": "Ingranaggio Antico",
+        "S": "Mecanismo Antiguo",
+        "J": "古代(アンティーク)"
+      }
+    },
+    {
+      "code": 346,
+      "name": "Knightmare",
+      "names": {
+        "E": "Knightmare",
+        "F": "Chevalier du Cauchemar",
+        "G": "Albtraumritter",
+        "I": "Cavaliere dell'Incubo",
+        "S": "Caballero de Pesadilla",
+        "J": "トロイメア"
+      }
+    },
+    {
+      "code": 347,
+      "name": "Elementsaber",
+      "names": {
+        "E": "Elementsaber"
+      }
+    },
+    {
+      "code": 348,
+      "name": "Elemental Lord",
+      "names": {
+        "E": "Elemental Lord",
+        "F": "Seigneur Élémentaire",
+        "G": "Elementarherrscher",
+        "I": "Signore Elementale",
+        "S": "Señor Elemental",
+        "J": "霊(れい)神(しん)"
+      }
+    },
+    {
+      "code": 349,
+      "name": "Fur Hire",
+      "names": {
+        "E": "Fur Hire",
+        "F": "Mercefourrure",
+        "G": "Fellsöldner",
+        "I": "Pelliccia Mercenaria",
+        "S": "Mascota a Sueldo",
+        "J": "空牙団(くうがだん)"
+      }
+    },
+    {
+      "code": 350,
+      "name": "Sky Striker",
+      "names": {
+        "E": "Sky Striker",
+        "F": "Assaut de l'Air",
+        "G": "Himmelsjäger",
+        "I": "Assaltatrice del Cielo",
+        "S": "Caza del Cielo",
+        "J": "閃(せん)刀(とう)"
+      }
+    },
+    {
+      "code": 351,
+      "name": "Sky Striker",
+      "names": {
+        "E": "Sky Striker",
+        "F": "Assaut de l'Air",
+        "G": "Himmelsjäger",
+        "I": "Assaltatrice del Cielo",
+        "S": "Caza del Cielo",
+        "J": "閃(せん)刀(とう)"
+      }
+    },
+    {
+      "code": 352,
+      "name": "Crusadia",
+      "names": {
+        "E": "Crusadia",
+        "F": "Croisédia",
+        "G": "Crusadia",
+        "I": "Crociatia",
+        "S": "Cruzadia",
+        "J": "パラディオン"
+      }
+    },
+    {
+      "code": 353,
+      "name": "Impcantation",
+      "names": {
+        "E": "Impcantation",
+        "F": "Lutincantation",
+        "G": "Mantrawichtel",
+        "I": "Impcantesimo",
+        "S": "Diablihechizo",
+        "J": "魔神儀(デビリチャル)"
+      }
+    },
+    {
+      "code": 354,
+      "name": "Blue-Eyes",
+      "names": {
+        "E": "Blue-Eyes White Dragon",
+        "F": "Dragon Blanc aux Yeux Bleus",
+        "G": "Blauäugiger w. Drache",
+        "I": "Drago Bianco Occhi Blu",
+        "S": "Dragón Blanco de Ojos Azules",
+        "J": "青眼の白龍(ブルーアイズ・ホワイト・ドラゴン)"
+      }
+    },
+    {
+      "code": 355,
+      "name": "Golden Castle of Stromberg",
+      "names": {
+        "E": "Golden Castle of Stromberg",
+        "F": "Château Doré de Stromberg",
+        "G": "Goldenes Schloss von Stromberg",
+        "I": "Castello Dorato di Stromberg",
+        "S": "Castillo Dorado de Stromberg",
+        "J": "シュトロームベルクの金(きん)の城(しろ)"
+      }
+    },
+    {
+      "code": 356,
+      "name": "Archetype 356"
+    },
+    {
+      "code": 357,
+      "name": "Salamangreat",
+      "names": {
+        "E": "Salamangreat",
+        "F": "Salamangrande",
+        "G": "Grosalamander",
+        "I": "Salamagna",
+        "S": "Salamangrande",
+        "J": "サラマングレイト"
+      }
+    },
+    {
+      "code": 358,
+      "name": "Dinowrestler",
+      "names": {
+        "E": "Dinowrestler",
+        "F": "Dinolutteur",
+        "G": "Dinowrestler",
+        "I": "Dinowrestler",
+        "S": "Dinoluchador",
+        "J": "ダイナレスラー"
+      }
+    },
+    {
+      "code": 359,
+      "name": "Orcust",
+      "names": {
+        "E": "Orcust",
+        "F": "Orcust",
+        "G": "Orcust",
+        "I": "Orcusestra",
+        "S": "Orcust",
+        "J": "オルフェゴール"
+      }
+    },
+    {
+      "code": 360,
+      "name": "Thunder Dragon",
+      "names": {
+        "E": "Thunder Dragon",
+        "F": "Dragon du Tonnerre",
+        "G": "Donnerdrache",
+        "I": "Drago del Tuono",
+        "S": "Dragón de Trueno",
+        "J": "サンダー・ドラゴン"
+      }
+    },
+    {
+      "code": 361,
+      "name": "Forbidden",
+      "names": {
+        "E": "Forbidden spell card",
+        "F": "Carte Magie Interdite",
+        "G": "Verbotene Zauberkarte",
+        "I": "Carta Magia Proibita",
+        "S": "Carta mágica prohibida",
+        "J": "禁(きん)じられた魔法(まほう)カード"
+      }
+    },
+    {
+      "code": 362,
+      "name": "Danger!",
+      "names": {
+        "E": "Danger!",
+        "F": "Danger !",
+        "G": "Gefahr!",
+        "I": "Pericolo!",
+        "S": "¡Peligro!",
+        "J": "未界域(みかいいき)"
+      }
+    },
+    {
+      "code": 363,
+      "name": "Archetype 363"
+    },
+    {
+      "code": 364,
+      "name": "Nephthys",
+      "names": {
+        "E": "Nephthys",
+        "F": "Nephtys",
+        "G": "Nephthys",
+        "I": "Nephtys",
+        "S": "Nephtys",
+        "J": "ネフティス"
+      }
+    },
+    {
+      "code": 365,
+      "name": "Prank-Kids",
+      "names": {
+        "E": "Prank Kids",
+        "F": "Farce-Gamins",
+        "G": "Streichbuben",
+        "I": "Ragazzi-Birichini",
+        "S": "Brominiños",
+        "J": "プランキッズ"
+      }
+    },
+    {
+      "code": 366,
+      "name": "Mayakashi",
+      "names": {
+        "E": "Mayakashi",
+        "F": "Mayakashi",
+        "G": "Mayakashi",
+        "I": "Mayakashi",
+        "S": "Mayakashi",
+        "J": "魔妖(まやかし)"
+      }
+    },
+    {
+      "code": 367,
+      "name": "Valkyrie",
+      "names": {
+        "E": "Valkyrie",
+        "F": "Valkyrie",
+        "G": "Walküre",
+        "I": "Valkyria",
+        "S": "Valquiria",
+        "J": "ワルキューレ"
+      }
+    },
+    {
+      "code": 368,
+      "name": "Shiranui",
+      "names": {
+        "E": "Shiranui",
+        "F": "Shiranui",
+        "G": "Shiranui",
+        "I": "Shiranui",
+        "S": "Shiranui",
+        "J": "不知火(しらぬい)"
+      }
+    },
+    {
+      "code": 369,
+      "name": "Elemental HERO",
+      "names": {
+        "E": "Elemental HERO",
+        "F": "HÉROS Élémentaire",
+        "G": "Elementar-HELD",
+        "I": "EROE Elementale",
+        "S": "HÉROE Elemental",
+        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+      }
+    },
+    {
+      "code": 370,
+      "name": "Harpie",
+      "names": {
+        "E": "Harpie",
+        "F": "Harpie",
+        "G": "Harpyie",
+        "I": "Arpia",
+        "S": "Arpía",
+        "J": "ハーピィ"
+      }
+    },
+    {
+      "code": 371,
+      "name": "Cyber Angel",
+      "names": {
+        "E": "Cyber Angel",
+        "F": "Ange Cyber",
+        "G": "Cyberengel",
+        "I": "Cyber Angelo",
+        "S": "Ciber Ángel",
+        "J": "サイバー・エンジェル"
+      }
+    },
+    {
+      "code": 372,
+      "name": "Rose Dragon",
+      "names": {
+        "E": "Rose Dragon"
+      }
+    },
+    {
+      "code": 373,
+      "name": "Archetype 373"
+    },
+    {
+      "code": 374,
+      "name": "Six Samurai",
+      "names": {
+        "E": "Six Samurai",
+        "F": "Six Samouraïs",
+        "G": "Sechs Samurai",
+        "I": "Sei Samurai",
+        "S": "Seis Samuráis",
+        "J": "六(ろく)武(ぶ)衆(しゅう)"
+      }
+    },
+    {
+      "code": 375,
+      "name": "Archetype 375"
+    },
+    {
+      "code": 376,
+      "name": "Assault Mode",
+      "names": {
+        "E": "Assault Mode"
+      }
+    },
+    {
+      "code": 377,
+      "name": "Time Thief",
+      "names": {
+        "E": "Time Thief",
+        "F": "Voleurs de Temps",
+        "G": "Zeitdieb",
+        "I": "Ladro del Tempo",
+        "S": "Ladrón del Tiempo",
+        "J": "クロノダイバー"
+      }
+    },
+    {
+      "code": 378,
+      "name": "Infinitrack",
+      "names": {
+        "E": "Infinitrack",
+        "F": "Chenillinfini",
+        "G": "Endloskette",
+        "I": "Infinicingoli",
+        "S": "Infinitrack",
+        "J": "無限起動(むげんきどう)"
+      }
+    },
+    {
+      "code": 379,
+      "name": "Witchcrafter",
+      "names": {
+        "E": "Witchcrafter",
+        "F": "Artisanesorcière",
+        "G": "Hexwerker",
+        "I": "Stregartigiana",
+        "S": "Artibruja",
+        "J": "ウィッチクラフト"
+      }
+    },
+    {
+      "code": 380,
+      "name": "Evil Eye",
+      "names": {
+        "E": "Evil Eye",
+        "F": "Œil Maléfique",
+        "G": "Bösauge",
+        "I": "Malocchio",
+        "S": "Ojo Maligno",
+        "J": "呪眼(じゅがん)"
+      }
+    },
+    {
+      "code": 381,
+      "name": "Endymion",
+      "names": {
+        "E": "Endymion",
+        "F": "Endymion",
+        "G": "Endymion",
+        "I": "Endymion",
+        "S": "Endimión",
+        "J": "エンディミオン"
+      }
+    },
+    {
+      "code": 382,
+      "name": "Marincess",
+      "names": {
+        "E": "Marincess",
+        "F": "Marincesse",
+        "G": "Marinzessin",
+        "I": "Marincipessa",
+        "S": "Marincesa",
+        "J": "マリンセス"
+      }
+    },
+    {
+      "code": 383,
+      "name": "Tenyi",
+      "names": {
+        "E": "Tenyi",
+        "F": "Tenyi",
+        "G": "Tenyi",
+        "I": "Tenyi",
+        "S": "Tenyi",
+        "J": "天威(てんい)"
+      }
+    },
+    {
+      "code": 384,
+      "name": "Simorgh",
+      "names": {
+        "E": "Simorgh",
+        "F": "Simorgh",
+        "G": "Simorgh",
+        "I": "Simorgh",
+        "S": "Simorgh",
+        "J": "神鳥(シムルグ)"
+      }
+    },
+    {
+      "code": 385,
+      "name": "Battlewasp",
+      "names": {
+        "E": "Battlewasp",
+        "F": "Guêpe de Bataille",
+        "G": "Kampfwespe",
+        "I": "Vespabattaglia",
+        "S": "Avispabatalla",
+        "J": "甲虫装機(インゼクター)"
+      }
+    },
+    {
+      "code": 386,
+      "name": "Spirit Message",
+      "names": {
+        "E": "Spirit Message"
+      }
+    },
+    {
+      "code": 387,
+      "name": "Evil HERO",
+      "names": {
+        "E": "Evil HERO",
+        "F": "HÉROS du Mal",
+        "G": "Böser HELD",
+        "I": "EROE Malvagio",
+        "S": "HÉROE Malvado",
+        "J": "Ｅ－ＨＥＲＯ(イービルヒーロー)"
+      }
+    },
+    {
+      "code": 388,
+      "name": "Unchained",
+      "names": {
+        "E": "Unchained",
+        "F": "Désenchaîné",
+        "G": "Losgekettete",
+        "I": "Svincolato",
+        "S": "Desencadenado",
+        "J": "破械神(はかいしん)"
+      }
+    },
+    {
+      "code": 389,
+      "name": "Unchained",
+      "names": {
+        "E": "Unchained",
+        "F": "Désenchaîné",
+        "G": "Losgekettete",
+        "I": "Svincolato",
+        "S": "Desencadenado",
+        "J": "破械神(はかいしん)"
+      }
+    },
+    {
+      "code": 391,
+      "name": "Mathmech",
+      "names": {
+        "E": "Mathmech",
+        "F": "Mathmech",
+        "G": "Mathemech",
+        "I": "Matemech",
+        "S": "Matemecha",
+        "J": "斬機(ザンキ)"
+      }
+    },
+    {
+      "code": 392,
+      "name": "Dragonmaid",
+      "names": {
+        "E": "Dragonmaid",
+        "F": "Dragonirène",
+        "G": "Drachenmädchen",
+        "I": "Dragonzella",
+        "S": "Geneincursor/a",
+        "J": "ドラゴンメイド"
+      }
+    },
+    {
+      "code": 393,
+      "name": "Generaider",
+      "names": {
+        "E": "Generaider",
+        "F": "Genèraideur",
+        "G": "Generaid",
+        "I": "Generaider",
+        "S": "Geneincursor/a",
+        "J": "ジェネレイド"
+      }
+    },
+    {
+      "code": 394,
+      "name": "@Ignister",
+      "names": {
+        "E": "@Ignister",
+        "F": "@Ignister",
+        "G": "@Ignister",
+        "I": "@Ignister",
+        "S": "@Ignister",
+        "J": "＠(アット)イグニスター"
+      }
+    },
+    {
+      "code": 395,
+      "name": "@Ignister",
+      "names": {
+        "E": "@Ignister",
+        "F": "@Ignister",
+        "G": "@Ignister",
+        "I": "@Ignister",
+        "S": "@Ignister",
+        "J": "＠(アット)イグニスター"
+      }
+    },
+    {
+      "code": 396,
+      "name": "Ancient Warriors",
+      "names": {
+        "E": "Ancient Warriors"
+      }
+    },
+    {
+      "code": 397,
+      "name": "Megalith",
+      "names": {
+        "E": "Megalith",
+        "F": "Mégalithe",
+        "G": "Megalith",
+        "I": "Megalito",
+        "S": "Megalítico/a",
+        "J": "メガリス"
+      }
+    },
+    {
+      "code": 398,
+      "name": "Dark Magician",
+      "names": {
+        "E": "Dark Magician",
+        "F": "Magicien Sombre",
+        "G": "Dunkler Magier",
+        "I": "Mago Nero",
+        "S": "Mago Oscuro",
+        "J": "ブラック・マジシャン"
+      }
+    },
+    {
+      "code": 399,
+      "name": "Archetype 399"
+    },
+    {
+      "code": 400,
+      "name": "Archetype 400"
+    },
+    {
+      "code": 401,
+      "name": "Rose Dragon",
+      "names": {
+        "E": "Rose Dragon"
+      }
+    },
+    {
+      "code": 402,
+      "name": "Archetype 402"
+    },
+    {
+      "code": 405,
+      "name": "Barbaros",
+      "names": {
+        "E": "Barbaros"
+      }
+    },
+    {
+      "code": 412,
+      "name": "Chaos Phantom",
+      "names": {
+        "E": "Chaos Phantom"
+      }
+    },
+    {
+      "code": 413,
+      "name": "Archetype 413"
+    },
+    {
+      "code": 414,
+      "name": "Gaia The Fierce Knight",
+      "names": {
+        "E": "Gaia the Fierce Knight",
+        "F": "Gaïa le Chevalier Implacable",
+        "G": "Gaia, zorniger Ritter",
+        "I": "Gaia il Cavaliere",
+        "S": "Gaia el Caballero Feroz",
+        "J": "暗(あん)黒(こく)騎(き)士(し)ガイア"
+      }
+    },
+    {
+      "code": 417,
+      "name": "Archetype 417"
+    },
+    {
+      "code": 419,
+      "name": "K9",
+      "names": {
+        "E": "K9"
+      }
+    },
+    {
+      "code": 420,
+      "name": "Infernoble Arms",
+      "names": {
+        "E": "Infernoble Arms"
+      }
+    },
+    {
+      "code": 422,
+      "name": "Raise Moon",
+      "names": {
+        "E": "Raise Moon"
+      }
+    },
+    {
+      "code": 423,
+      "name": "Zenet",
+      "names": {
+        "E": "Zenet"
+      }
+    },
+    {
+      "code": 424,
+      "name": "A-to-Z",
+      "names": {
+        "E": "A-to-Z"
+      }
+    },
+    {
+      "code": 425,
+      "name": "A.I.",
+      "names": {
+        "E": "A.I."
+      }
+    },
+    {
+      "code": 427,
+      "name": "Signature move",
+      "names": {
+        "E": "Signature move"
+      }
+    },
+    {
+      "code": 430,
+      "name": "Abyss Script",
+      "names": {
+        "E": "Abyss Script"
+      }
+    },
+    {
+      "code": 431,
+      "name": "Abyss-",
+      "names": {
+        "E": "Abyss-"
+      }
+    },
+    {
+      "code": 434,
+      "name": "Despia",
+      "names": {
+        "E": "Despia"
+      }
+    },
+    {
+      "code": 435,
+      "name": "Adamancipator",
+      "names": {
+        "E": "Adamancipator"
+      }
+    },
+    {
+      "code": 436,
+      "name": "Advanced Crystal Beast",
+      "names": {
+        "E": "Advanced Crystal Beast"
+      }
+    },
+    {
+      "code": 437,
+      "name": "Atlantis, City of the Sea Dragon",
+      "names": {
+        "E": "Atlantis, City of the Sea Dragon"
+      }
+    },
+    {
+      "code": 438,
+      "name": "Exchange of the Spirit",
+      "names": {
+        "E": "Exchange of the Spirit"
+      }
+    },
+    {
+      "code": 440,
+      "name": "Winter Raven",
+      "names": {
+        "E": "Winter Raven"
+      }
+    },
+    {
+      "code": 441,
+      "name": "Magistus",
+      "names": {
+        "E": "Magistus"
+      }
+    },
+    {
+      "code": 442,
+      "name": "Ashtra",
+      "names": {
+        "E": "Ashtra"
+      }
+    },
+    {
+      "code": 443,
+      "name": "Albaz Dragon",
+      "names": {
+        "E": "Albaz Dragon"
+      }
+    },
+    {
+      "code": 444,
+      "name": "Branded",
+      "names": {
+        "E": "Branded"
+      }
+    },
+    {
+      "code": 446,
+      "name": "Ogdoadic",
+      "names": {
+        "E": "Ogdoadic"
+      }
+    },
+    {
+      "code": 447,
+      "name": "Aleister",
+      "names": {
+        "E": "Aleister"
+      }
+    },
+    {
+      "code": 448,
+      "name": "Rescue-ACE",
+      "names": {
+        "E": "Rescue-ACE"
+      }
+    },
+    {
+      "code": 449,
+      "name": "Zera",
+      "names": {
+        "E": "Zera"
+      }
+    },
+    {
+      "code": 452,
+      "name": "Dark Time Wizard",
+      "names": {
+        "E": "Dark Time Wizard"
+      }
+    },
+    {
+      "code": 454,
+      "name": "Attraction",
+      "names": {
+        "E": "Attraction"
+      }
+    },
+    {
+      "code": 455,
+      "name": "Amazement",
+      "names": {
+        "E": "Amazement"
+      }
+    },
+    {
+      "code": 457,
+      "name": "Mitsurugi",
+      "names": {
+        "E": "Mitsurugi"
+      }
+    },
+    {
+      "code": 458,
+      "name": "Bugroth",
+      "names": {
+        "E": "Bugroth"
+      }
+    },
+    {
+      "code": 461,
+      "name": "Ancient Fairy Dragon",
+      "names": {
+        "E": "Ancient Fairy Dragon"
+      }
+    },
+    {
+      "code": 464,
+      "name": "Trap Monster",
+      "names": {
+        "E": "Trap Monster"
+      }
+    },
+    {
+      "code": 465,
+      "name": "Angelechy",
+      "names": {
+        "E": "Angelechy"
+      }
+    },
+    {
+      "code": 466,
+      "name": "Noble Arms",
+      "names": {
+        "E": "Noble Arms"
+      }
+    },
+    {
+      "code": 467,
+      "name": "Vaalmonica",
+      "names": {
+        "E": "Vaalmonica"
+      }
+    },
+    {
+      "code": 470,
+      "name": "Anotherverse",
+      "names": {
+        "E": "Anotherverse"
+      }
+    },
+    {
+      "code": 471,
+      "name": "GMX",
+      "names": {
+        "E": "GMX"
+      }
+    },
+    {
+      "code": 472,
+      "name": "Temple of the Kings",
+      "names": {
+        "E": "Temple of the Kings"
+      }
+    },
+    {
+      "code": 473,
+      "name": "Apophis",
+      "names": {
+        "E": "Apophis"
+      }
+    },
+    {
+      "code": 474,
+      "name": "Appliancer",
+      "names": {
+        "E": "Appliancer"
+      }
+    },
+    {
+      "code": 475,
+      "name": "Aqua Jet",
+      "names": {
+        "E": "Aqua Jet"
+      }
+    },
+    {
+      "code": 476,
+      "name": "Mikanko",
+      "names": {
+        "E": "Mikanko"
+      }
+    },
+    {
+      "code": 480,
+      "name": "Nemeses",
+      "names": {
+        "E": "Nemeses"
+      }
+    },
+    {
+      "code": 481,
+      "name": "Argostars",
+      "names": {
+        "E": "Argostars"
+      }
+    },
+    {
+      "code": 482,
+      "name": "Labrynth",
+      "names": {
+        "E": "Labrynth"
+      }
+    },
+    {
+      "code": 483,
+      "name": "Ghoti",
+      "names": {
+        "E": "Ghoti"
+      }
+    },
+    {
+      "code": 484,
+      "name": "Vaylantz",
+      "names": {
+        "E": "Vaylantz"
+      }
+    },
+    {
+      "code": 486,
+      "name": "Neos",
+      "names": {
+        "E": "Neos"
+      }
+    },
+    {
+      "code": 489,
+      "name": "Xyz",
+      "names": {
+        "E": "Xyz"
+      }
+    },
+    {
+      "code": 493,
+      "name": "Ars Magna",
+      "names": {
+        "E": "Ars Magna"
+      }
+    },
+    {
+      "code": 495,
+      "name": "Artmage",
+      "names": {
+        "E": "Artmage"
+      }
+    },
+    {
+      "code": 496,
+      "name": "Ashened",
+      "names": {
+        "E": "Ashened"
+      }
+    },
+    {
+      "code": 497,
+      "name": "Ancient Treasure",
+      "names": {
+        "E": "Ancient Treasure"
+      }
+    },
+    {
+      "code": 499,
+      "name": "Assault Blackwing",
+      "names": {
+        "E": "Assault Blackwing"
+      }
+    },
+    {
+      "code": 500,
+      "name": "Warrior",
+      "names": {
+        "E": "Warrior"
+      }
+    },
+    {
+      "code": 502,
+      "name": "Yummy",
+      "names": {
+        "E": "Yummy"
+      }
+    },
+    {
+      "code": 503,
+      "name": "White Forest",
+      "names": {
+        "E": "White Forest"
+      }
+    },
+    {
+      "code": 504,
+      "name": "Utopic",
+      "names": {
+        "E": "Utopic"
+      }
+    },
+    {
+      "code": 506,
+      "name": "Cyber",
+      "names": {
+        "E": "Cyber"
+      }
+    },
+    {
+      "code": 508,
+      "name": "Season",
+      "names": {
+        "E": "Season"
+      }
+    },
+    {
+      "code": 510,
+      "name": "Crystal",
+      "names": {
+        "E": "Crystal"
+      }
+    },
+    {
+      "code": 511,
+      "name": "Possessed",
+      "names": {
+        "E": "Possessed"
+      }
+    },
+    {
+      "code": 512,
+      "name": "Azamina",
+      "names": {
+        "E": "Azamina"
+      }
+    },
+    {
+      "code": 513,
+      "name": "Daedalus",
+      "names": {
+        "E": "Daedalus"
+      }
+    },
+    {
+      "code": 517,
+      "name": "Nouvelles",
+      "names": {
+        "E": "Nouvelles"
+      }
+    },
+    {
+      "code": 519,
+      "name": "Trap Hole",
+      "names": {
+        "E": "Trap Hole"
+      }
+    },
+    {
+      "code": 520,
+      "name": "Barian's",
+      "names": {
+        "E": "Barian's"
+      }
+    },
+    {
+      "code": 521,
+      "name": "Fleur",
+      "names": {
+        "E": "Fleur"
+      }
+    },
+    {
+      "code": 522,
+      "name": "Gun Dragon",
+      "names": {
+        "E": "Gun Dragon"
+      }
+    },
+    {
+      "code": 523,
+      "name": "Voiceless Voice",
+      "names": {
+        "E": "Voiceless Voice"
+      }
+    },
+    {
+      "code": 524,
+      "name": "Rose",
+      "names": {
+        "E": "Rose"
+      }
+    },
+    {
+      "code": 530,
+      "name": "Battlin' Boxing",
+      "names": {
+        "E": "Battlin' Boxing"
+      }
+    },
+    {
+      "code": 531,
+      "name": "Beetrooper",
+      "names": {
+        "E": "Beetrooper"
+      }
+    },
+    {
+      "code": 532,
+      "name": "Chimera",
+      "names": {
+        "E": "Chimera"
+      }
+    },
+    {
+      "code": 534,
+      "name": "Light and Darkness Ritual",
+      "names": {
+        "E": "Light and Darkness Ritual"
+      }
+    },
+    {
+      "code": 537,
+      "name": "Plunder Patroll",
+      "names": {
+        "E": "Plunder Patroll"
+      }
+    },
+    {
+      "code": 540,
+      "name": "Blitzclique",
+      "names": {
+        "E": "Blitzclique"
+      }
+    },
+    {
+      "code": 543,
+      "name": "Boot-Up",
+      "names": {
+        "E": "Boot-Up"
+      }
+    },
+    {
+      "code": 545,
+      "name": "Adventurer",
+      "names": {
+        "E": "Adventurer"
+      }
+    },
+    {
+      "code": 546,
+      "name": "Tistina",
+      "names": {
+        "E": "Tistina"
+      }
+    },
+    {
+      "code": 550,
+      "name": "Bunnillin",
+      "names": {
+        "E": "Bunnillin"
+      }
+    },
+    {
+      "code": 551,
+      "name": "Xenovader△",
+      "names": {
+        "E": "Xenovader△"
+      }
+    },
+    {
+      "code": 553,
+      "name": "Bystial",
+      "names": {
+        "E": "Bystial"
+      }
+    },
+    {
+      "code": 556,
+      "name": "Cataclysmic",
+      "names": {
+        "E": "Cataclysmic"
+      }
+    },
+    {
+      "code": 557,
+      "name": "Centur-Ion",
+      "names": {
+        "E": "Centur-Ion"
+      }
+    },
+    {
+      "code": 563,
+      "name": "Dragon Ruler",
+      "names": {
+        "E": "Dragon Ruler"
+      }
+    },
+    {
+      "code": 564,
+      "name": "Recipe",
+      "names": {
+        "E": "Recipe"
+      }
+    },
+    {
+      "code": 565,
+      "name": "Hunting Scout of the Deep Forest",
+      "names": {
+        "E": "Hunting Scout of the Deep Forest"
+      }
+    },
+    {
+      "code": 568,
+      "name": "Magikey",
+      "names": {
+        "E": "Magikey"
+      }
+    },
+    {
+      "code": 569,
+      "name": "Clear",
+      "names": {
+        "E": "Clear"
+      }
+    },
+    {
+      "code": 572,
+      "name": "Clown Crew",
+      "names": {
+        "E": "Clown Crew"
+      }
+    },
+    {
+      "code": 573,
+      "name": "Codebreaker",
+      "names": {
+        "E": "Codebreaker"
+      }
+    },
+    {
+      "code": 574,
+      "name": "Saber",
+      "names": {
+        "E": "Saber"
+      }
+    },
+    {
+      "code": 576,
+      "name": "Golden Land",
+      "names": {
+        "E": "Golden Land"
+      }
+    },
+    {
+      "code": 578,
+      "name": "Void",
+      "names": {
+        "E": "Void"
+      }
+    },
+    {
+      "code": 580,
+      "name": "Cosmic Synchro Monster",
+      "names": {
+        "E": "Cosmic Synchro Monster"
+      }
+    },
+    {
+      "code": 582,
+      "name": "Infernoble Knight",
+      "names": {
+        "E": "Infernoble Knight"
+      }
+    },
+    {
+      "code": 587,
+      "name": "Cupid",
+      "names": {
+        "E": "Cupid"
+      }
+    },
+    {
+      "code": 588,
+      "name": "Diabell",
+      "names": {
+        "E": "Diabell"
+      }
+    },
+    {
+      "code": 589,
+      "name": "Curse of Dragon",
+      "names": {
+        "E": "Curse of Dragon"
+      }
+    },
+    {
+      "code": 590,
+      "name": "Eldlich",
+      "names": {
+        "E": "Eldlich"
+      }
+    },
+    {
+      "code": 595,
+      "name": "Rikka",
+      "names": {
+        "E": "Rikka"
+      }
+    },
+    {
+      "code": 596,
+      "name": "Circular",
+      "names": {
+        "E": "Circular"
+      }
+    },
+    {
+      "code": 597,
+      "name": "Cynet",
+      "names": {
+        "E": "Cynet"
+      }
+    },
+    {
+      "code": 602,
+      "name": "Ra",
+      "names": {
+        "E": "Ra"
+      }
+    },
+    {
+      "code": 603,
+      "name": "Contact",
+      "names": {
+        "E": "Contact"
+      }
+    },
+    {
+      "code": 606,
+      "name": "Light and Darkness Dragon",
+      "names": {
+        "E": "Light and Darkness Dragon"
+      }
+    },
+    {
+      "code": 607,
+      "name": "Flame Swordsman",
+      "names": {
+        "E": "Flame Swordsman"
+      }
+    },
+    {
+      "code": 610,
+      "name": "Shining Sarcophagus",
+      "names": {
+        "E": "Shining Sarcophagus"
+      }
+    },
+    {
+      "code": 613,
+      "name": "Dark Tuner",
+      "names": {
+        "E": "Dark Tuner"
+      }
+    },
+    {
+      "code": 614,
+      "name": "Sinful Spoils",
+      "names": {
+        "E": "Sinful Spoils"
+      }
+    },
+    {
+      "code": 615,
+      "name": "Deep Sea",
+      "names": {
+        "E": "Deep Sea"
+      }
+    },
+    {
+      "code": 616,
+      "name": "Enneacraft",
+      "names": {
+        "E": "Enneacraft"
+      }
+    },
+    {
+      "code": 618,
+      "name": "Diabellstar",
+      "names": {
+        "E": "Diabellstar"
+      }
+    },
+    {
+      "code": 623,
+      "name": "Dinomorphia",
+      "names": {
+        "E": "Dinomorphia"
+      }
+    },
+    {
+      "code": 625,
+      "name": "Divine Dragon",
+      "names": {
+        "E": "Divine Dragon"
+      }
+    },
+    {
+      "code": 627,
+      "name": "Serket",
+      "names": {
+        "E": "Serket"
+      }
+    },
+    {
+      "code": 628,
+      "name": "Snake-Eye",
+      "names": {
+        "E": "Snake-Eye"
+      }
+    },
+    {
+      "code": 632,
+      "name": "Dogmatika",
+      "names": {
+        "E": "Dogmatika"
+      }
+    },
+    {
+      "code": 633,
+      "name": "Doll",
+      "names": {
+        "E": "Doll"
+      }
+    },
+    {
+      "code": 634,
+      "name": "Doll Monster",
+      "names": {
+        "E": "Doll Monster"
+      }
+    },
+    {
+      "code": 635,
+      "name": "Dominus",
+      "names": {
+        "E": "Dominus"
+      }
+    },
+    {
+      "code": 637,
+      "name": "Doodle Beast",
+      "names": {
+        "E": "Doodle Beast"
+      }
+    },
+    {
+      "code": 638,
+      "name": "Doodlebook",
+      "names": {
+        "E": "Doodlebook"
+      }
+    },
+    {
+      "code": 640,
+      "name": "DoomZ",
+      "names": {
+        "E": "DoomZ"
+      }
+    },
+    {
+      "code": 642,
+      "name": "Solfachord",
+      "names": {
+        "E": "Solfachord"
+      }
+    },
+    {
+      "code": 643,
+      "name": "Fusion",
+      "names": {
+        "E": "Fusion"
+      }
+    },
+    {
+      "code": 644,
+      "name": "Adventurer Token",
+      "names": {
+        "E": "Adventurer Token"
+      }
+    },
+    {
+      "code": 645,
+      "name": "Dracotail",
+      "names": {
+        "E": "Dracotail"
+      }
+    },
+    {
+      "code": 646,
+      "name": "Gem Dragon",
+      "names": {
+        "E": "Gem Dragon"
+      }
+    },
+    {
+      "code": 647,
+      "name": "25th Anniversary Monsters",
+      "names": {
+        "E": "25th Anniversary Monsters"
+      }
+    },
+    {
+      "code": 650,
+      "name": "Dream Mirror",
+      "names": {
+        "E": "Dream Mirror"
+      }
+    },
+    {
+      "code": 651,
+      "name": "Nemurelia",
+      "names": {
+        "E": "Nemurelia"
+      }
+    },
+    {
+      "code": 652,
+      "name": "Nemleria",
+      "names": {
+        "E": "Nemleria"
+      }
+    },
+    {
+      "code": 653,
+      "name": "Drytron",
+      "names": {
+        "E": "Drytron"
+      }
+    },
+    {
+      "code": 654,
+      "name": "Dual Avatar",
+      "names": {
+        "E": "Dual Avatar"
+      }
+    },
+    {
+      "code": 655,
+      "name": "Horus",
+      "names": {
+        "E": "Horus"
+      }
+    },
+    {
+      "code": 657,
+      "name": "Ecclesia",
+      "names": {
+        "E": "Ecclesia"
+      }
+    },
+    {
+      "code": 664,
+      "name": "Eldlixir",
+      "names": {
+        "E": "Eldlixir"
+      }
+    },
+    {
+      "code": 667,
+      "name": "Elfnote",
+      "names": {
+        "E": "Elfnote"
+      }
+    },
+    {
+      "code": 668,
+      "name": "Elvennotes",
+      "names": {
+        "E": "Elvennotes"
+      }
+    },
+    {
+      "code": 669,
+      "name": "Emblema",
+      "names": {
+        "E": "Emblema"
+      }
+    },
+    {
+      "code": 670,
+      "name": "Neo Space",
+      "names": {
+        "E": "Neo Space"
+      }
+    },
+    {
+      "code": 674,
+      "name": "Purrely",
+      "names": {
+        "E": "Purrely"
+      }
+    },
+    {
+      "code": 676,
+      "name": "Favorite",
+      "names": {
+        "E": "Favorite"
+      }
+    },
+    {
+      "code": 678,
+      "name": "Dragon Card",
+      "names": {
+        "E": "Dragon Card"
+      }
+    },
+    {
+      "code": 680,
+      "name": "Evil★Twin",
+      "names": {
+        "E": "Evil★Twin"
+      }
+    },
+    {
+      "code": 681,
+      "name": "Evol",
+      "names": {
+        "E": "Evol"
+      }
+    },
+    {
+      "code": 685,
+      "name": "Exosister",
+      "names": {
+        "E": "Exosister"
+      }
+    },
+    {
+      "code": 686,
+      "name": "Ryzeal",
+      "names": {
+        "E": "Ryzeal"
+      }
+    },
+    {
+      "code": 687,
+      "name": "Exodd",
+      "names": {
+        "E": "Exodd"
+      }
+    },
+    {
+      "code": 689,
+      "name": "Polymerization",
+      "names": {
+        "E": "Polymerization"
+      }
+    },
+    {
+      "code": 690,
+      "name": "Fairy Tail",
+      "names": {
+        "E": "Fairy Tail"
+      }
+    },
+    {
+      "code": 691,
+      "name": "The Sanctuary in the Sky",
+      "names": {
+        "E": "The Sanctuary in the Sky"
+      }
+    },
+    {
+      "code": 692,
+      "name": "Piece Golem",
+      "names": {
+        "E": "Piece Golem"
+      }
+    },
+    {
+      "code": 693,
+      "name": "Millennium",
+      "names": {
+        "E": "Millennium"
+      }
+    },
+    {
+      "code": 694,
+      "name": "Fiendsmith",
+      "names": {
+        "E": "Fiendsmith"
+      }
+    },
+    {
+      "code": 697,
+      "name": "Firewall",
+      "names": {
+        "E": "Firewall"
+      }
+    },
+    {
+      "code": 698,
+      "name": "Celebration",
+      "names": {
+        "E": "Celebration"
+      }
+    },
+    {
+      "code": 701,
+      "name": "Metalmorph",
+      "names": {
+        "E": "Metalmorph"
+      }
+    },
+    {
+      "code": 703,
+      "name": "Gladiator",
+      "names": {
+        "E": "Gladiator"
+      }
+    },
+    {
+      "code": 704,
+      "name": "Fossil",
+      "names": {
+        "E": "Fossil"
+      }
+    },
+    {
+      "code": 705,
+      "name": "Floowandereeze",
+      "names": {
+        "E": "Floowandereeze"
+      }
+    },
+    {
+      "code": 708,
+      "name": "Aquamirror",
+      "names": {
+        "E": "Aquamirror"
+      }
+    },
+    {
+      "code": 710,
+      "name": "Ritual Art",
+      "names": {
+        "E": "Ritual Art"
+      }
+    },
+    {
+      "code": 711,
+      "name": "Runick",
+      "names": {
+        "E": "Runick"
+      }
+    },
+    {
+      "code": 713,
+      "name": "G Golem",
+      "names": {
+        "E": "G Golem"
+      }
+    },
+    {
+      "code": 716,
+      "name": "P.U.N.K.",
+      "names": {
+        "E": "P.U.N.K."
+      }
+    },
+    {
+      "code": 717,
+      "name": "Gaia Knight",
+      "names": {
+        "E": "Gaia Knight"
+      }
+    },
+    {
+      "code": 718,
+      "name": "Galaxy",
+      "names": {
+        "E": "Galaxy"
+      }
+    },
+    {
+      "code": 722,
+      "name": "Garbage",
+      "names": {
+        "E": "Garbage"
+      }
+    },
+    {
+      "code": 724,
+      "name": "Gearfried",
+      "names": {
+        "E": "Gearfried"
+      }
+    },
+    {
+      "code": 725,
+      "name": "Ryu-Ge",
+      "names": {
+        "E": "Ryu-Ge"
+      }
+    },
+    {
+      "code": 726,
+      "name": "Underworld",
+      "names": {
+        "E": "Underworld"
+      }
+    },
+    {
+      "code": 729,
+      "name": "Corn",
+      "names": {
+        "E": "Corn"
+      }
+    },
+    {
+      "code": 730,
+      "name": "Mimighoul",
+      "names": {
+        "E": "Mimighoul"
+      }
+    },
+    {
+      "code": 731,
+      "name": "Star",
+      "names": {
+        "E": "Star"
+      }
+    },
+    {
+      "code": 732,
+      "name": "Spright",
+      "names": {
+        "E": "Spright"
+      }
+    },
+    {
+      "code": 733,
+      "name": "Sun God",
+      "names": {
+        "E": "Sun God"
+      }
+    },
+    {
+      "code": 736,
+      "name": "Glacial Beast",
+      "names": {
+        "E": "Glacial Beast"
+      }
+    },
+    {
+      "code": 738,
+      "name": "Goblin",
+      "names": {
+        "E": "Goblin"
+      }
+    },
+    {
+      "code": 739,
+      "name": "Gold Pride",
+      "names": {
+        "E": "Gold Pride"
+      }
+    },
+    {
+      "code": 744,
+      "name": "Spiritual Art",
+      "names": {
+        "E": "Spiritual Art"
+      }
+    },
+    {
+      "code": 745,
+      "name": "GranSolfachord",
+      "names": {
+        "E": "GranSolfachord"
+      }
+    },
+    {
+      "code": 748,
+      "name": "Jar",
+      "names": {
+        "E": "Jar"
+      }
+    },
+    {
+      "code": 749,
+      "name": "Wedju",
+      "names": {
+        "E": "Wedju"
+      }
+    },
+    {
+      "code": 750,
+      "name": "Morganite",
+      "names": {
+        "E": "Morganite"
+      }
+    },
+    {
+      "code": 751,
+      "name": "Springans",
+      "names": {
+        "E": "Springans"
+      }
+    },
+    {
+      "code": 752,
+      "name": "Gunkan",
+      "names": {
+        "E": "Gunkan"
+      }
+    },
+    {
+      "code": 757,
+      "name": "Indestructible Insect",
+      "names": {
+        "E": "Indestructible Insect"
+      }
+    },
+    {
+      "code": 760,
+      "name": "Hecahands",
+      "names": {
+        "E": "Hecahands"
+      }
+    },
+    {
+      "code": 767,
+      "name": "Roland",
+      "names": {
+        "E": "Roland"
+      }
+    },
+    {
+      "code": 768,
+      "name": "Death",
+      "names": {
+        "E": "Death"
+      }
+    },
+    {
+      "code": 769,
+      "name": "Rank-Up-Magic",
+      "names": {
+        "E": "Rank-Up-Magic"
+      }
+    },
+    {
+      "code": 771,
+      "name": "Icejade",
+      "names": {
+        "E": "Icejade"
+      }
+    },
+    {
+      "code": 776,
+      "name": "Dragon Mech",
+      "names": {
+        "E": "Dragon Mech"
+      }
+    },
+    {
+      "code": 778,
+      "name": "Kewl Tune",
+      "names": {
+        "E": "Kewl Tune"
+      }
+    },
+    {
+      "code": 779,
+      "name": "Melffy",
+      "names": {
+        "E": "Melffy"
+      }
+    },
+    {
+      "code": 781,
+      "name": "Power Patron",
+      "names": {
+        "E": "Power Patron"
+      }
+    },
+    {
+      "code": 783,
+      "name": "Kairyu-Shin",
+      "names": {
+        "E": "Kairyu-Shin"
+      }
+    },
+    {
+      "code": 784,
+      "name": "Kashtira",
+      "names": {
+        "E": "Kashtira"
+      }
+    },
+    {
+      "code": 785,
+      "name": "Heart",
+      "names": {
+        "E": "Heart"
+      }
+    },
+    {
+      "code": 787,
+      "name": "Paladins of Dragons",
+      "names": {
+        "E": "Paladins of Dragons"
+      }
+    },
+    {
+      "code": 790,
+      "name": "Labyrinth Wall",
+      "names": {
+        "E": "Labyrinth Wall"
+      }
+    },
+    {
+      "code": 793,
+      "name": "Libromancer",
+      "names": {
+        "E": "Libromancer"
+      }
+    },
+    {
+      "code": 795,
+      "name": "Lil-la",
+      "names": {
+        "E": "Lil-la"
+      }
+    },
+    {
+      "code": 796,
+      "name": "Live☆Twin",
+      "names": {
+        "E": "Live☆Twin"
+      }
+    },
+    {
+      "code": 797,
+      "name": "Ki-sikil",
+      "names": {
+        "E": "Ki-sikil"
+      }
+    },
+    {
+      "code": 798,
+      "name": "Yokai",
+      "names": {
+        "E": "Yokai"
+      }
+    },
+    {
+      "code": 799,
+      "name": "Tachyon",
+      "names": {
+        "E": "Tachyon"
+      }
+    },
+    {
+      "code": 807,
+      "name": "Blue Tears",
+      "names": {
+        "E": "Blue Tears"
+      }
+    },
+    {
+      "code": 809,
+      "name": "Hyperion",
+      "names": {
+        "E": "Hyperion"
+      }
+    },
+    {
+      "code": 811,
+      "name": "Maliss",
+      "names": {
+        "E": "Maliss"
+      }
+    },
+    {
+      "code": 812,
+      "name": "Mannadium",
+      "names": {
+        "E": "Mannadium"
+      }
+    },
+    {
+      "code": 818,
+      "name": "Materiactor",
+      "names": {
+        "E": "Materiactor"
+      }
+    },
+    {
+      "code": 820,
+      "name": "Fortress Whale",
+      "names": {
+        "E": "Fortress Whale"
+      }
+    },
+    {
+      "code": 823,
+      "name": "Memento",
+      "names": {
+        "E": "Memento"
+      }
+    },
+    {
+      "code": 825,
+      "name": "Man-Eater Bug",
+      "names": {
+        "E": "Man-Eater Bug"
+      }
+    },
+    {
+      "code": 826,
+      "name": "Mirror Trap",
+      "names": {
+        "E": "Mirror Trap"
+      }
+    },
+    {
+      "code": 828,
+      "name": "Rites",
+      "names": {
+        "E": "Rites"
+      }
+    },
+    {
+      "code": 829,
+      "name": "Mischief",
+      "names": {
+        "E": "Mischief"
+      }
+    },
+    {
+      "code": 830,
+      "name": "Wight",
+      "names": {
+        "E": "Wight"
+      }
+    },
+    {
+      "code": 831,
+      "name": "Mokey Mokey",
+      "names": {
+        "E": "Mokey Mokey"
+      }
+    },
+    {
+      "code": 833,
+      "name": "Motor",
+      "names": {
+        "E": "Motor"
+      }
+    },
+    {
+      "code": 834,
+      "name": "From the Underworld",
+      "names": {
+        "E": "From the Underworld"
+      }
+    },
+    {
+      "code": 835,
+      "name": "Mulcharmy",
+      "names": {
+        "E": "Mulcharmy"
+      }
+    },
+    {
+      "code": 836,
+      "name": "Attribute Summoner",
+      "names": {
+        "E": "Attribute Summoner"
+      }
+    },
+    {
+      "code": 837,
+      "name": "Myutant",
+      "names": {
+        "E": "Myutant"
+      }
+    },
+    {
+      "code": 841,
+      "name": "Numeron",
+      "names": {
+        "E": "Numeron"
+      }
+    },
+    {
+      "code": 842,
+      "name": "Masquerade",
+      "names": {
+        "E": "Masquerade"
+      }
+    },
+    {
+      "code": 847,
+      "name": "Synchro",
+      "names": {
+        "E": "Synchro"
+      }
+    },
+    {
+      "code": 849,
+      "name": "hunder",
+      "names": {
+        "E": "hunder"
+      }
+    },
+    {
+      "code": 850,
+      "name": "Overlay",
+      "names": {
+        "E": "Overlay"
+      }
+    },
+    {
+      "code": 852,
+      "name": "Teleport",
+      "names": {
+        "E": "Teleport"
+      }
+    },
+    {
+      "code": 853,
+      "name": "Patissciel",
+      "names": {
+        "E": "Patissciel"
+      }
+    },
+    {
+      "code": 854,
+      "name": "Broken World",
+      "names": {
+        "E": "Broken World"
+      }
+    },
+    {
+      "code": 855,
+      "name": "Moth",
+      "names": {
+        "E": "Moth"
+      }
+    },
+    {
+      "code": 861,
+      "name": "Magna Warrior",
+      "names": {
+        "E": "Magna Warrior"
+      }
+    },
+    {
+      "code": 862,
+      "name": "Familiar-Possessed",
+      "names": {
+        "E": "Familiar-Possessed"
+      }
+    },
+    {
+      "code": 867,
+      "name": "Primite",
+      "names": {
+        "E": "Primite"
+      }
+    },
+    {
+      "code": 868,
+      "name": "Scareclaw",
+      "names": {
+        "E": "Scareclaw"
+      }
+    },
+    {
+      "code": 869,
+      "name": "Puppet",
+      "names": {
+        "E": "Puppet"
+      }
+    },
+    {
+      "code": 871,
+      "name": "R.B.",
+      "names": {
+        "E": "R.B."
+      }
+    },
+    {
+      "code": 873,
+      "name": "Radiant Typhoon",
+      "names": {
+        "E": "Radiant Typhoon"
+      }
+    },
+    {
+      "code": 874,
+      "name": "Ragnaraika",
+      "names": {
+        "E": "Ragnaraika"
+      }
+    },
+    {
+      "code": 877,
+      "name": "Rainbow Bridge",
+      "names": {
+        "E": "Rainbow Bridge"
+      }
+    },
+    {
+      "code": 879,
+      "name": "Seventh",
+      "names": {
+        "E": "Seventh"
+      }
+    },
+    {
+      "code": 880,
+      "name": "King",
+      "names": {
+        "E": "King"
+      }
+    },
+    {
+      "code": 881,
+      "name": "Potan",
+      "names": {
+        "E": "Potan"
+      }
+    },
+    {
+      "code": 884,
+      "name": "Regenesis",
+      "names": {
+        "E": "Regenesis"
+      }
+    },
+    {
+      "code": 886,
+      "name": "Reindsurm",
+      "names": {
+        "E": "Reindsurm"
+      }
+    },
+    {
+      "code": 887,
+      "name": "Relinquished",
+      "names": {
+        "E": "Relinquished"
+      }
+    },
+    {
+      "code": 891,
+      "name": "Vanquish Soul",
+      "names": {
+        "E": "Vanquish Soul"
+      }
+    },
+    {
+      "code": 892,
+      "name": "End of the World",
+      "names": {
+        "E": "End of the World"
+      }
+    },
+    {
+      "code": 893,
+      "name": "S-Force",
+      "names": {
+        "E": "S-Force"
+      }
+    },
+    {
+      "code": 894,
+      "name": "Salamandra",
+      "names": {
+        "E": "Salamandra"
+      }
+    },
+    {
+      "code": 895,
+      "name": "Sangen",
+      "names": {
+        "E": "Sangen"
+      }
+    },
+    {
+      "code": 897,
+      "name": "Scrap-Iron",
+      "names": {
+        "E": "Scrap-Iron"
+      }
+    },
+    {
+      "code": 898,
+      "name": "Sea Stealth",
+      "names": {
+        "E": "Sea Stealth"
+      }
+    },
+    {
+      "code": 905,
+      "name": "Six Strike",
+      "names": {
+        "E": "Six Strike"
+      }
+    },
+    {
+      "code": 906,
+      "name": "Felgrand",
+      "names": {
+        "E": "Felgrand"
+      }
+    },
+    {
+      "code": 907,
+      "name": "Skilled Magician",
+      "names": {
+        "E": "Skilled Magician"
+      }
+    },
+    {
+      "code": 908,
+      "name": "Sky Scourge",
+      "names": {
+        "E": "Sky Scourge"
+      }
+    },
+    {
+      "code": 911,
+      "name": "Swamp",
+      "names": {
+        "E": "Swamp"
+      }
+    },
+    {
+      "code": 912,
+      "name": "Spell Card",
+      "names": {
+        "E": "Spell Card"
+      }
+    },
+    {
+      "code": 915,
+      "name": "with Eyes of Blue",
+      "names": {
+        "E": "with Eyes of Blue"
+      }
+    },
+    {
+      "code": 918,
+      "name": "Starry Knight",
+      "names": {
+        "E": "Starry Knight"
+      }
+    },
+    {
+      "code": 919,
+      "name": "Holy Knight",
+      "names": {
+        "E": "Holy Knight"
+      }
+    },
+    {
+      "code": 920,
+      "name": "Starving Venom",
+      "names": {
+        "E": "Starving Venom"
+      }
+    },
+    {
+      "code": 921,
+      "name": "Stealth Kragen",
+      "names": {
+        "E": "Stealth Kragen"
+      }
+    },
+    {
+      "code": 922,
+      "name": "Schoolwork",
+      "names": {
+        "E": "Schoolwork"
+      }
+    },
+    {
+      "code": 923,
+      "name": "Sunavalon",
+      "names": {
+        "E": "Sunavalon"
+      }
+    },
+    {
+      "code": 924,
+      "name": "Sunseed",
+      "names": {
+        "E": "Sunseed"
+      }
+    },
+    {
+      "code": 925,
+      "name": "Sunvine",
+      "names": {
+        "E": "Sunvine"
+      }
+    },
+    {
+      "code": 926,
+      "name": "Superheavy Samurai",
+      "names": {
+        "E": "Superheavy Samurai"
+      }
+    },
+    {
+      "code": 928,
+      "name": "Swarm of",
+      "names": {
+        "E": "Swarm of"
+      }
+    },
+    {
+      "code": 929,
+      "name": "Swordsoul",
+      "names": {
+        "E": "Swordsoul"
+      }
+    },
+    {
+      "code": 932,
+      "name": "Tearlaments",
+      "names": {
+        "E": "Tearlaments"
+      }
+    },
+    {
+      "code": 933,
+      "name": "Tenpai Dragon",
+      "names": {
+        "E": "Tenpai Dragon"
+      }
+    },
+    {
+      "code": 934,
+      "name": "Test",
+      "names": {
+        "E": "Test"
+      }
+    },
+    {
+      "code": 935,
+      "name": "Toy",
+      "names": {
+        "E": "Toy"
+      }
+    },
+    {
+      "code": 936,
+      "name": "Timaeus",
+      "names": {
+        "E": "Timaeus"
+      }
+    },
+    {
+      "code": 937,
+      "name": "Uniform Nomenclature",
+      "names": {
+        "E": "Uniform Nomenclature"
+      }
+    },
+    {
+      "code": 940,
+      "name": "Theorealize",
+      "names": {
+        "E": "Theorealize"
+      }
+    },
+    {
+      "code": 941,
+      "name": "Medius",
+      "names": {
+        "E": "Medius"
+      }
+    },
+    {
+      "code": 942,
+      "name": "Therion",
+      "names": {
+        "E": "Therion"
+      }
+    },
+    {
+      "code": 944,
+      "name": "Tiki",
+      "names": {
+        "E": "Tiki"
+      }
+    },
+    {
+      "code": 948,
+      "name": "Topologic",
+      "names": {
+        "E": "Topologic"
+      }
+    },
+    {
+      "code": 949,
+      "name": "Transcendosaurus",
+      "names": {
+        "E": "Transcendosaurus"
+      }
+    },
+    {
+      "code": 951,
+      "name": "Tri-Brigade",
+      "names": {
+        "E": "Tri-Brigade"
+      }
+    },
+    {
+      "code": 954,
+      "name": "Trirealm Rift",
+      "names": {
+        "E": "Trirealm Rift"
+      }
+    },
+    {
+      "code": 956,
+      "name": "Ursarctic",
+      "names": {
+        "E": "Ursarctic"
+      }
+    },
+    {
+      "code": 961,
+      "name": "Veda",
+      "names": {
+        "E": "Veda"
+      }
+    },
+    {
+      "code": 962,
+      "name": "Vernusylph",
+      "names": {
+        "E": "Vernusylph"
+      }
+    },
+    {
+      "code": 963,
+      "name": "Virtual World",
+      "names": {
+        "E": "Virtual World"
+      }
+    },
+    {
+      "code": 964,
+      "name": "Visas",
+      "names": {
+        "E": "Visas"
+      }
+    },
+    {
+      "code": 965,
+      "name": "P",
+      "names": {
+        "E": "P"
+      }
+    },
+    {
+      "code": 966,
+      "name": "WAKE CUP!",
+      "names": {
+        "E": "WAKE CUP!"
+      }
+    },
+    {
+      "code": 967,
+      "name": "War Rock",
+      "names": {
+        "E": "War Rock"
+      }
+    },
+    {
+      "code": 969,
+      "name": "White Knight",
+      "names": {
+        "E": "White Knight"
+      }
+    },
+    {
+      "code": 972,
+      "name": "Gottoms",
+      "names": {
+        "E": "Gottoms"
+      }
+    },
+    {
+      "code": 974,
+      "name": "Zexal",
+      "names": {
+        "E": "Zexal"
+      }
+    },
+    {
+      "code": 975,
+      "name": "Zubaba",
+      "names": {
+        "E": "Zubaba"
+      }
+    },
+    {
+      "code": 976,
+      "name": "Phantasm",
+      "names": {
+        "E": "Phantasm"
+      }
+    },
+    {
+      "code": 977,
+      "name": "Lady of Lament",
+      "names": {
+        "E": "Lady of Lament"
+      }
+    },
+    {
+      "code": 978,
+      "name": "Egyptian God",
+      "names": {
+        "E": "Egyptian God"
+      }
+    },
+    {
+      "code": 979,
+      "name": "White",
+      "names": {
+        "E": "White"
+      }
+    },
+    {
+      "code": 980,
+      "name": "Knight",
+      "names": {
+        "E": "Knight"
+      }
+    },
+    {
+      "code": 981,
+      "name": "Sacred Beast",
+      "names": {
+        "E": "Sacred Beast"
+      }
+    },
+    {
+      "code": 982,
+      "name": "Prophecy",
+      "names": {
+        "E": "Prophecy"
+      }
+    },
+    {
+      "code": 983,
+      "name": "Call of the Haunted",
+      "names": {
+        "E": "Call of the Haunted"
+      }
+    },
+    {
+      "code": 984,
+      "name": "Spider",
+      "names": {
+        "E": "Spider"
+      }
+    },
+    {
+      "code": 985,
+      "name": "Battleguard",
+      "names": {
+        "E": "Battleguard"
+      }
+    },
+    {
+      "code": 986,
+      "name": "Pendulum",
+      "names": {
+        "E": "Pendulum"
+      }
+    },
+    {
+      "code": 987,
+      "name": "/Assault Mode",
+      "names": {
+        "E": "/Assault Mode"
+      }
+    },
+    {
+      "code": 988,
+      "name": "Book of",
+      "names": {
+        "E": "Book of"
+      }
+    },
+    {
+      "code": 989,
+      "name": "Phantom Beast",
+      "names": {
+        "E": "Phantom Beast"
+      }
+    },
+    {
+      "code": 990,
+      "name": "Mystical Beast of the Forest",
+      "names": {
+        "E": "Mystical Beast of the Forest"
+      }
+    },
+    {
+      "code": 991,
+      "name": "Chaos",
+      "names": {
+        "E": "Chaos"
+      }
+    },
+    {
+      "code": 992,
+      "name": "Majestic",
+      "names": {
+        "E": "Majestic"
+      }
+    },
+    {
+      "code": 993,
+      "name": "Shark",
+      "names": {
+        "E": "Shark"
+      }
+    },
+    {
+      "code": 994,
+      "name": "D.D.",
+      "names": {
+        "E": "D.D."
+      }
+    },
+    {
+      "code": 995,
+      "name": "Dark Contract",
+      "names": {
+        "E": "Dark Contract"
+      }
+    },
+    {
+      "code": 996,
+      "name": "Fan-Made Cards",
+      "names": {
+        "E": "Fan-Made Cards"
+      }
+    },
+    {
+      "code": 997,
+      "name": "Digital Bug",
+      "names": {
+        "E": "Digital Bug"
+      }
+    },
+    {
+      "code": 998,
+      "name": "Wicked God",
+      "names": {
+        "E": "Wicked God"
+      }
+    },
+    {
+      "code": 999,
+      "name": "Herald",
+      "names": {
+        "E": "Herald"
+      }
+    },
+    {
+      "code": 1000,
+      "name": "Umi",
+      "names": {
+        "E": "Umi"
+      }
+    },
+    {
+      "code": 1001,
+      "name": "Change",
+      "names": {
+        "E": "Change"
+      }
+    },
+    {
+      "code": 1002,
+      "name": "Slime",
+      "names": {
+        "E": "Slime"
+      }
+    },
+    {
+      "code": 1003,
+      "name": "Doriado",
+      "names": {
+        "E": "Doriado"
+      }
+    },
+    {
+      "code": 1004,
+      "name": "Magnet Warrior",
+      "names": {
+        "E": "Magnet Warrior"
+      }
+    },
+    {
+      "code": 1005,
+      "name": "Train",
+      "names": {
+        "E": "Train"
+      }
+    },
+    {
+      "code": 1006,
+      "name": "Heraldry",
+      "names": {
+        "E": "Heraldry"
+      }
+    },
+    {
+      "code": 1007,
+      "name": "Frightfur",
+      "names": {
+        "E": "Frightfur"
+      }
+    },
+    {
+      "code": 1008,
+      "name": "Gate Guardian",
+      "names": {
+        "E": "Gate Guardian"
+      }
+    },
+    {
+      "code": 1009,
+      "name": "Gizmek",
+      "names": {
+        "E": "Gizmek"
+      }
+    },
+    {
+      "code": 1010,
+      "name": "Madoor",
+      "names": {
+        "E": "Madoor"
+      }
+    },
+    {
+      "code": 1011,
+      "name": "Gorgonic",
+      "names": {
+        "E": "Gorgonic"
+      }
+    },
+    {
+      "code": 1012,
+      "name": "Konami Arcade Games",
+      "names": {
+        "E": "Konami Arcade Games"
+      }
+    },
+    {
+      "code": 1013,
+      "name": "Martial Art Spirit",
+      "names": {
+        "E": "Martial Art Spirit"
+      }
+    },
+    {
+      "code": 1014,
+      "name": "Counter Fairy",
+      "names": {
+        "E": "Counter Fairy"
+      }
+    },
+    {
+      "code": 1015,
+      "name": "Cyclone",
+      "names": {
+        "E": "Cyclone"
+      }
+    },
+    {
+      "code": 1016,
+      "name": "Speedroid",
+      "names": {
+        "E": "Speedroid"
+      }
+    },
+    {
+      "code": 1017,
+      "name": "Zombie counterpart",
+      "names": {
+        "E": "Zombie counterpart"
+      }
+    },
+    {
+      "code": 1018,
+      "name": "Greed",
+      "names": {
+        "E": "Greed"
+      }
+    },
+    {
+      "code": 1019,
+      "name": "Magnet",
+      "names": {
+        "E": "Magnet"
+      }
+    },
+    {
+      "code": 1020,
+      "name": "HERO",
+      "names": {
+        "E": "HERO"
+      }
+    },
+    {
+      "code": 1021,
+      "name": "Ninjitsu Art",
+      "names": {
+        "E": "Ninjitsu Art"
+      }
+    },
+    {
+      "code": 1022,
+      "name": "Number",
+      "names": {
+        "E": "Number"
+      }
+    },
+    {
+      "code": 1023,
+      "name": "-Eyes Dragon",
+      "names": {
+        "E": "-Eyes Dragon"
+      }
+    },
+    {
+      "code": 1024,
+      "name": "Predap",
+      "names": {
+        "E": "Predap"
+      }
+    },
+    {
+      "code": 1025,
+      "name": "Rescue Squad",
+      "names": {
+        "E": "Rescue Squad"
+      }
+    },
+    {
+      "code": 1026,
+      "name": "Shinobird",
+      "names": {
+        "E": "Shinobird"
+      }
+    },
+    {
+      "code": 1027,
+      "name": "\"C\"",
+      "names": {
+        "E": "\"C\""
+      }
+    },
+    {
+      "code": 1028,
+      "name": "Solemn",
+      "names": {
+        "E": "Solemn"
+      }
+    },
+    {
+      "code": 1029,
+      "name": "Yubel",
+      "names": {
+        "E": "Yubel"
+      }
+    },
+    {
+      "code": 1030,
+      "name": "ABC",
+      "names": {
+        "E": "ABC"
+      }
+    },
+    {
+      "code": 1031,
+      "name": "Field Searcher",
+      "names": {
+        "E": "Field Searcher"
+      }
+    },
+    {
+      "code": 1032,
+      "name": "Skyblaster",
+      "names": {
+        "E": "Skyblaster"
+      }
+    }
+  ]
+}
