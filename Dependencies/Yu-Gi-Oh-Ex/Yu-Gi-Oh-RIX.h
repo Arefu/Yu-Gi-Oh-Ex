@@ -6,6 +6,8 @@
     Nothing here needs the game's headers: the functions are plain C exports, so any language that can call a DLL can use them.
 
       - Two menus can be extended: the main menu (RIX_MENU_MAIN) and the Help & Options menu (RIX_MENU_OPTIONS).
+      - The game's own main menu buttons can be given a new action (RIX_SetMainMenuItemAction), and a pages of your own (menus or your own widgets)
+        can be shown on the Battle Pack screen's background (RIX_OpenPage).
       - A button added BEFORE the main menu is first built (at plugin start-up) appears the first time the menu opens.
       - A button added later appears the next time the game builds the main menu again (a restart is always enough).
       - Changing or removing a button takes effect straight away, on the next frame of the main menu.
@@ -27,7 +29,7 @@
 extern "C" {
 #endif
 
-#define RIX_API_VERSION 3
+#define RIX_API_VERSION 4
 
 /* The plugin itself defines RIX_EXPORTS; everyone else only declares the functions (and normally uses RIX::Load below instead). */
 #ifdef RIX_EXPORTS
@@ -160,6 +162,53 @@ RIX_API int __cdecl RIX_GetCurrentScreenId(void);
 /* Changes screen with the game's fade. Best called from a button callback (the game's thread). */
 RIX_API int __cdecl RIX_GotoScreen(int ScreenId);
 
+/* Makes one of the 13 buttons the game ships (RIX_ITEM_*) run Callback instead of what it normally does. A locked button (Duelist
+   Challenge, Battle Pack, Card Shop before they are unlocked) still shows the game's "locked" message. Callback NULL restores the game's action. */
+RIX_API int __cdecl RIX_SetMainMenuItemAction(int Item, RIX_ButtonCallback Callback, void* User);
+
+/* Pages: screens of your own, shown on the Battle Pack screen (its background and look). A page is a menu (a header and up to
+   RIX_PAGE_MAX_BUTTONS buttons), a page of your own widgets (ButtonCount 0: you build them on the Screen handed to OnShow, and
+   OnFrame runs every frame with the input), or both (your widgets with buttons under them: the buttons take confirm and Back, OnFrame
+   gets the input first; take a mouse click yourself only when it is on one of your widgets). Opening a page from a page puts it on top, in place; Back (Esc / Backspace / the pad's cancel)
+   closes the top page, and closing the last one returns to the screen the first was opened from. A screen opened from a page (with
+   RIX_GotoScreen) comes back to that page. */
+#define RIX_PAGE_MAX_BUTTONS 4
+
+typedef struct RIX_PageButton
+{
+    const wchar_t* Label;           /* copied */
+    const wchar_t* Description;     /* shown while the button is highlighted (copied); may be NULL */
+    RIX_ButtonCallback OnPress;     /* ButtonId is the button's index; may be NULL */
+    void* User;
+} RIX_PageButton;
+
+/* Screen is the game's screen object the page is on (RIX::ScreenBattlePackStore). Your widgets hang off its root node (see YuGiOh-RIX.h). */
+typedef void(__cdecl* RIX_PageCallback)(void* Screen, void* User);
+/* Pressed: buttons pressed this frame (with auto-repeat), Held: buttons held; masks as the game uses them (1 up, 2 down, 4 left, 8 right,
+   0x1000 confirm). Seconds: the frame time. Cancel is handled by RIX (it closes the page) and never reaches OnFrame. */
+typedef void(__cdecl* RIX_PageFrameCallback)(void* Screen, int Pressed, int Held, float Seconds, void* User);
+
+typedef struct RIX_PageDesc
+{
+    uint32_t Size;                  /* sizeof(RIX_PageDesc) */
+    const wchar_t* Header;          /* the title at the top (copied) */
+    int32_t ButtonCount;            /* 1..RIX_PAGE_MAX_BUTTONS for a menu, 0 for a page of your own widgets */
+    RIX_PageButton Buttons[RIX_PAGE_MAX_BUTTONS];
+    RIX_PageCallback OnShow;        /* the page is showing (again): build your widgets the first time, show them; may be NULL */
+    RIX_PageCallback OnHide;        /* covered by another page, closed, or the screen is left: hide them; may be NULL */
+    RIX_PageFrameCallback OnFrame;  /* every frame while the page is on top; may be NULL */
+    void* User;                     /* handed to the three callbacks */
+    float ButtonsY;                 /* where the first button is (screen pixels, 1080 high); 0 = the buttons centred on the screen */
+    float ButtonsX;                 /* the buttons' centre (screen pixels, 1920 wide); 0 = the middle of the screen */
+} RIX_PageDesc;
+
+/* Opens a page (1) or fails (0). From a main menu button (or any screen) it goes to the Battle Pack screen; from a page's button or
+   callback it opens on top of that page. Call it on the game's thread (a callback). */
+RIX_API int __cdecl RIX_OpenPage(const RIX_PageDesc* Page);
+
+/* Closes the top page, like Back (1), or 0 when no page is open. */
+RIX_API int __cdecl RIX_ClosePage(void);
+
 #ifdef __cplusplus
 }
 
@@ -183,6 +232,9 @@ namespace RIX
         int(__cdecl* IsMainMenuOpen)() = nullptr;
         int(__cdecl* GetCurrentScreenId)() = nullptr;
         int(__cdecl* GotoScreen)(int) = nullptr;
+        int(__cdecl* SetMainMenuItemAction)(int, RIX_ButtonCallback, void*) = nullptr;
+        int(__cdecl* OpenPage)(const RIX_PageDesc*) = nullptr;
+        int(__cdecl* ClosePage)() = nullptr;
     };
 
     inline Api& Functions()
@@ -220,6 +272,9 @@ namespace RIX
         RIX_BIND(IsMainMenuOpen);
         RIX_BIND(GetCurrentScreenId);
         RIX_BIND(GotoScreen);
+        RIX_BIND(SetMainMenuItemAction);
+        RIX_BIND(OpenPage);
+        RIX_BIND(ClosePage);
 #undef RIX_BIND
         return true;
     }

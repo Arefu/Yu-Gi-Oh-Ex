@@ -1,5 +1,7 @@
+#pragma once
 #include <cstddef>
 #include <cstdint>
+#include <intrin.h>
 #include <functional>
 
 // The game's UI framework ("RIX"): a screen manager that switches between screens (ScreenMainMenu, ScreenHelp...) and a small widget
@@ -224,6 +226,152 @@ namespace YGO
             {
                 reinterpret_cast<int64_t(__fastcall*)(ScreenMainMenu*, char)>(LayoutPage)(Screen, Animate);
             }
+        }
+
+        // ---- more MenuKit menu functions (menu = the object a ScreenBaseMenu or ScreenBattlePackStore owns)
+        namespace MenuKit
+        {
+            inline auto ClearVisible = reinterpret_cast<void(__fastcall*)(void* Menu)>(0x14080A4C0);        // empties the visible list (menu+88)
+            inline auto Layout = reinterpret_cast<void(__fastcall*)(void* Menu)>(0x14080A930);              // hides every item, then shows and labels the visible ones
+            inline auto SelectIndex = reinterpret_cast<void(__fastcall*)(void* Menu, unsigned int Index)>(0x14080A5D0);
+            inline auto ResetItems = reinterpret_cast<void(__fastcall*)(void* Menu)>(0x14080A000);          // resets the item animations, then Layout
+        }
+
+        // RIX::Screen::GoBack: back to the screen this one was entered from (screen+60). RIX::Screen::SetHeaderText: the title at the top.
+        inline auto GoBack = reinterpret_cast<void(__fastcall*)(void* Screen)>(0x140822750);
+
+        // RIX::Screen::ShowMessageText: the screen's message box with a text (kept by the caller while the box is open). Sfx -1 = none (71 is
+        // the game's error sound). OnOk is a std::function<void()>* the game takes over (moves from):
+        //  - a real one (MSVC's std::function is 64 bytes with its callable at +56, the same in the game and our builds) adds an OK button
+        //    (text 901) that highlights under the mouse and runs the function when pressed; Back also closes the box;
+        //  - an empty one (EmptyFunction: 64 zero bytes) adds no button: the box shows OK as a prompt only, and any confirm / cancel / click
+        //    closes it (the game's own locked-button messages are like that - nothing highlights).
+        // Screen::Tick sends the input to the box while it is open, so the screen's own Update is paused.
+        struct EmptyFunction
+        {
+            uint8_t Storage[56] = {};
+            void* Impl = nullptr;
+        };
+        static_assert(sizeof(std::function<void()>) == sizeof(EmptyFunction), "std::function is not the layout the game uses");
+        inline auto ShowMessageText = reinterpret_cast<void(__fastcall*)(void* Screen, int Sfx, const wchar_t* Text, void* OnOk)>(0x140822BA0);
+        inline auto SetHeaderText = reinterpret_cast<void(__fastcall*)(void* Screen, int64_t Text)>(0x140822F00);
+
+        // ---- input (the object is InputState). Masks: 1 up, 2 down, 4 left, 8 right, 0x1000 confirm, 0x2000 cancel.
+        namespace Input
+        {
+            inline auto GetPressed = reinterpret_cast<int(__fastcall*)(void* Input)>(0x1408001B0);    // pressed this frame
+            inline auto GetRepeat = reinterpret_cast<int(__fastcall*)(void* Input)>(0x140800290);     // auto-repeat of held directions
+            inline auto GetHeld = reinterpret_cast<int(__fastcall*)(void* Input)>(0x140800340);       // held (the trunk and card info take it as their second mask)
+            inline auto HelpBarPressed = reinterpret_cast<int(__fastcall*)(void* Help)>(0x14089F410);  // a prompt on the help bar (screen+264) was clicked
+
+            // The mouse as the game keeps it (in InputState): x and y (two ints) at +0x60, "the mouse is in use" at +0x68 (the game selects what
+            // is under it then - hover, not a click), a click this frame at bit 0 of +0x6C.
+            inline int64_t MousePosition() { return *reinterpret_cast<int64_t*>(0x142924070); }
+            inline bool MouseActive() { return *reinterpret_cast<int*>(0x142924078) != 0; }
+            inline bool MouseClickPending() { return (*reinterpret_cast<uint8_t*>(0x14292407C) & 1) != 0; }
+            // Returns Mask when the mouse was clicked this frame and consumes the click (menus use it with 0x1000 as "confirm by mouse").
+            inline auto TakeMouseClick = reinterpret_cast<int(__fastcall*)(void* Input, unsigned int Mask)>(0x1408006B0);
+        }
+
+        // ---- widgets. Every widget is built the same way: construct it in memory of your own (zeroed, 16 byte aligned, kept while the screen
+        // lives), then CreateFromLayout(widget, &parent, z, owner, x, y[, screenData]) where parent is a counted copy of the screen's root node (the
+        // shared_ptr at screen+72), owner is screen+88 and screenData screen+120. Nothing is read from a layout file
+        // (RIX::widget_Base::CreateNode, 0x14087C030). vftable slot 1 = SetFocused(bool) (highlight), slot 3 = SetVisible(bool).
+        struct SharedNode
+        {
+            void* Node;
+            void* Control;
+        };
+
+        // The parent is a std::shared_ptr passed BY VALUE: CreateFromLayout releases it before returning, exactly as the game's callers expect
+        // (they always pass a fresh copy). So never pass the screen's own shared_ptr - pass a copy from ParentRef (one reference each call),
+        // or the screen's root loses a reference per widget and is freed while in use (heap corruption, found 2026-09-28).
+        inline SharedNode* ScreenRoot(void* Screen) { return reinterpret_cast<SharedNode*>(static_cast<char*>(Screen) + 72); }
+        inline SharedNode ParentRef(const SharedNode* Parent)
+        {
+            SharedNode copy = *Parent;
+            if (copy.Control)
+                _InterlockedIncrement(reinterpret_cast<volatile long*>(static_cast<char*>(copy.Control) + 8));   // the use count
+            return copy;
+        }
+        inline void* ScreenOwner(void* Screen) { return static_cast<char*>(Screen) + 88; }
+        inline void* ScreenData(void* Screen) { return static_cast<char*>(Screen) + 120; }
+
+        // A scene node's position (RIX::Node::SetX / SetY / SetPosition: floats at node+88 / +92, relative to its parent).
+        inline auto NodeSetX = reinterpret_cast<void(__fastcall*)(void* Node, float X)>(0x14075A2F0);
+        inline auto NodeSetY = reinterpret_cast<void(__fastcall*)(void* Node, float Y)>(0x14075A310);
+        inline auto NodeSetPosition = reinterpret_cast<void(__fastcall*)(void* Node, float X, float Y)>(0x14075A300);
+
+        inline void WidgetSetFocused(void* Widget, bool On) { (*reinterpret_cast<void(__fastcall***)(void*, char)>(Widget))[1](Widget, On); }
+        inline void WidgetSetVisible(void* Widget, bool On) { (*reinterpret_cast<void(__fastcall***)(void*, char)>(Widget))[3](Widget, On); }
+
+        // The card trunk (RIX::widget_TrunkZone): the deck editor's grid of cards with its filter bar. Only the deck editor has one (at +9984).
+        namespace Trunk
+        {
+            constexpr size_t Size = 1632;
+            inline auto Construct = reinterpret_cast<void*(__fastcall*)(void* Trunk)>(0x1408BE760);
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Trunk, SharedNode* Parent, int Z, void* Owner, float X, float Y)>(0x1408BF050);
+            inline auto SetDeckInfo = reinterpret_cast<void(__fastcall*)(void* Trunk, void* DeckInfo)>(0x1408C01B0);   // where the grid reads in-deck counts
+            inline auto ProcessInput = reinterpret_cast<char(__fastcall*)(void* Trunk, int Pressed, int Held, int* Action, int* Kind, char* Flag)>(0x1408BEB30);
+            inline auto Update = reinterpret_cast<void(__fastcall*)(void* Trunk)>(0x1408C0860);           // every frame
+            inline auto GetSelectedCardId = reinterpret_cast<uint16_t(__fastcall*)(void* Trunk)>(0x1408BF000);
+
+            // The list is built the way TrunkView_BuildCardList (0x1408BFEF0) does it: entries {u16 card id, u32 count, u32 0} in the vector at +1576,
+            // the vector<int> at +1552 maps (card id - 3900) to an entry; then ApplyFilter, SortAndFillGrid, Refresh.
+            constexpr size_t Entries = 1576;
+            constexpr size_t IdToEntry = 1552;
+            constexpr size_t Grid = 56;
+            constexpr int FirstCardId = 3900;
+            struct Entry
+            {
+                uint16_t CardId;
+                uint16_t Pad;
+                uint32_t Count;
+                uint32_t Unused;
+            };
+            static_assert(sizeof(Entry) == 12);
+            inline auto GridReset = reinterpret_cast<void(__fastcall*)(void* Grid, int)>(0x14088FA40);    // (trunk+56, 0), then GridSetMode(trunk+56, 10)
+            inline auto GridSetMode = reinterpret_cast<void(__fastcall*)(void* Grid, int)>(0x14088F610);
+            inline auto IntVectorResizeFill = reinterpret_cast<void(__fastcall*)(Vector* Vec, size_t Size, const int* Value)>(0x14088CE10);
+            inline auto EntryVectorEmplace = reinterpret_cast<void(__fastcall*)(Vector* Vec, void* Where, const Entry* Value)>(0x1408BE270);
+            inline auto ApplyFilter = reinterpret_cast<void(__fastcall*)(void* Trunk)>(0x1408BF9E0);
+            inline auto SortAndFillGrid = reinterpret_cast<void(__fastcall*)(void* Trunk)>(0x1408BFC30);
+            inline auto Refresh = reinterpret_cast<void(__fastcall*)(void* Trunk)>(0x1408C08D0);
+
+            // Immediates in TrunkView_BuildCardList: the internal id loop bound (cmp ebx, imm32 at 0x1408C0061) and the size of the id -> entry
+            // vector (mov ebx, imm32 at 0x1408BFF49). Yu-Gi-Oh-Cards raises both for its extra cards, so they are read, not assumed.
+            inline uint32_t InternalIdLimit() { return *reinterpret_cast<uint32_t*>(0x1408C0063); }
+            inline uint32_t IdToEntrySize() { return *reinterpret_cast<uint32_t*>(0x1408BFF4A); }
+        }
+
+        // RIX::DeckStateHelper: a deck's contents. An empty one is enough for the trunk grid when there is no deck.
+        namespace DeckState
+        {
+            constexpr size_t Size = 52 + 0x567A;
+            inline auto Construct = reinterpret_cast<void*(__fastcall*)(void* Helper)>(0x140755DE0);
+        }
+
+        // RIX::widget_CardInfo: the deck editor's card picture + ATK / DEF / level panel (editor +41488).
+        namespace CardInfo
+        {
+            constexpr size_t Size = 928;
+            inline auto Construct = reinterpret_cast<void*(__fastcall*)(void* Info)>(0x140883380);
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Info, SharedNode* Parent, int Z, void* Owner, float X, float Y)>(0x140883BA0);
+            inline auto SetWidth = reinterpret_cast<void(__fastcall*)(void* Info, float Width)>(0x140884AA0);
+            inline auto SetCard = reinterpret_cast<void(__fastcall*)(void* Info, uint16_t CardId)>(0x140884300);   // 0xFFFF = none
+            inline auto Update = reinterpret_cast<void(__fastcall*)(void* Info, float Seconds, int Held, int)>(0x140884ED0);
+        }
+
+        // One digit wheel of the player match code entry (widget_EntryDigit: a number in a box, an arrow above and below).
+        namespace EntryDigit
+        {
+            constexpr size_t Size = 184;
+            constexpr size_t Value = 176;       // int, 0..9
+            inline auto Construct = reinterpret_cast<void(__fastcall*)(void* Digit)>(0x140853240);
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Digit, SharedNode* Parent, int Z, void* Owner, float X, float Y, void* ScreenData)>(0x14089DE70);
+            inline auto SetSelected = reinterpret_cast<void(__fastcall*)(void* Digit, char Selected)>(0x14089E150);
+            inline auto SetValue = reinterpret_cast<void(__fastcall*)(void* Digit, int Value)>(0x14089E220);     // stores Value % 10
+            inline auto HitTest = reinterpret_cast<int(__fastcall*)(void* Digit, int64_t Mouse)>(0x14089DAC0);  // 0 upper arrow, 1 lower arrow, 2 box, -1 none
         }
     }
 }
