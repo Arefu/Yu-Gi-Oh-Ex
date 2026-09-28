@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <!-- Made by Archetypes.ps1 (copy of the file Archetypes.ps1 writes) from the game's own files. -->
+    <EmbeddedResource Include="Archetypes.json" LogicalName="CARD_Named.Archetypes.json" />
+  </ItemGroup>
+
 </Project>
