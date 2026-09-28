@@ -59,7 +59,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Dear ImGui;$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\Yu-Gi-Oh-Ex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\Yu-Gi-Oh-Ex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -80,7 +80,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Dear ImGui;$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\Yu-Gi-Oh-Ex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\Detours;$(SolutionDir)Dependencies\Yu-Gi-Oh-Ex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -92,24 +92,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui.cpp" />
-    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_demo.cpp" />
-    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_draw.cpp" />
-    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_impl_dx11.cpp" />
-    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_impl_win32.cpp" />
-    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_tables.cpp" />
-    <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_widgets.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="StorePages.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Dependencies\Dear ImGui\imconfig.h" />
-    <ClInclude Include="..\..\Dependencies\Dear ImGui\imgui.h" />
-    <ClInclude Include="..\..\Dependencies\Dear ImGui\imgui_impl_dx11.h" />
-    <ClInclude Include="..\..\Dependencies\Dear ImGui\imgui_impl_win32.h" />
-    <ClInclude Include="..\..\Dependencies\Dear ImGui\imgui_internal.h" />
-    <ClInclude Include="..\..\Dependencies\Dear ImGui\imstb_rectpack.h" />
-    <ClInclude Include="..\..\Dependencies\Dear ImGui\imstb_textedit.h" />
-    <ClInclude Include="..\..\Dependencies\Dear ImGui\imstb_truetype.h" />
+    <ClInclude Include="StorePages.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
