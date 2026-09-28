@@ -27,6 +27,9 @@ namespace Menu
     // page when the menu is built; there is no way to bring one back without restarting.
     void EditVanilla(int Item, const std::wstring* Label, const std::wstring* Description, bool Hidden);
 
+    // Gives one of the game's 13 buttons a new action (null = the game's own again). Locked buttons keep showing the game's "locked" message.
+    bool SetVanillaAction(int Item, RIX_ButtonCallback Callback, void* User);
+
     // A pinned button stays visible while the menu is exclusive. Exclusive mode lists ONLY the pinned buttons (the game's own and everyone
     // else's are taken off the pages, and put back when it ends): a whole menu of your own on the main menu screen.
     void Pin(int Id);
@@ -55,6 +58,8 @@ namespace Menu
     // options button), null otherwise. The game changes screen FROM a screen object (RIX::Screen::GotoScreen), which is how the new
     // screen learns where its Back button leads, so screen changes made by a callback must use it.
     void* CallbackSource();
+    // For callbacks run from other screens (Pages): the screen object they were pressed on, null afterwards.
+    void SetCallbackSource(void* Screen);
 
     bool IsOpen();
     bool Press(int Item);

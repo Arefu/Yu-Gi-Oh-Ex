@@ -4,6 +4,7 @@
 
 #define RIX_EXPORTS
 #include "Yu-Gi-Oh-RIX.h"
+#include "Pages.h"
 #include "Logger.h"
 #include "MainMenu.h"
 
@@ -58,5 +59,20 @@ extern "C"
         }
 
         return YGO::RIX::NavigateToScreen(YGO::RIX::GetUI(), screenId, 0.15, 273, 1) ? 1 : 0;
+    }
+
+    int __cdecl RIX_SetMainMenuItemAction(int item, RIX_ButtonCallback callback, void* user)
+    {
+        return Menu::SetVanillaAction(item, callback, user) ? 1 : 0;
+    }
+
+    int __cdecl RIX_OpenPage(const RIX_PageDesc* page)
+    {
+        return page && Pages::Open(*page) ? 1 : 0;
+    }
+
+    int __cdecl RIX_ClosePage(void)
+    {
+        return Pages::Close() ? 1 : 0;
     }
 }

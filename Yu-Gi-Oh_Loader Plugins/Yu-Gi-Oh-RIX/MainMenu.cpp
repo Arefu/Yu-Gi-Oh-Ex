@@ -13,6 +13,7 @@
 
 #include "Logger.h"
 #include "YuGiOh/YuGiOh-RIX.h"
+#include "YuGiOh/YuGiOh-SAVE.h"
 
 using namespace YGO::RIX;
 
@@ -60,6 +61,14 @@ namespace
     };
     VanillaEdit g_Vanilla[MMI_VANILLA_COUNT];
     bool g_HasVanillaEdits = false;
+
+    // A new action for one of the game's own buttons (RIX_SetMainMenuItemAction).
+    struct VanillaAction
+    {
+        RIX_ButtonCallback OnPress = nullptr;
+        void* User = nullptr;
+    };
+    VanillaAction g_VanillaActions[MMI_VANILLA_COUNT];
 
     void (*g_FrameCallback)() = nullptr;     // run on every frame of the main menu, on the game's thread
     void (*g_BuildCallback)() = nullptr;     // run once, just before the main menu is first extended (buttons added by it are in the first build)
@@ -340,8 +349,39 @@ namespace
         MainMenu::SetEnabled(*reinterpret_cast<void**>(reinterpret_cast<char*>(screen) + 1296), 1);
     }
 
+    // ActivateItem checks these unlock bits (PlayerSection + 2964) itself and shows a "locked" message when one is missing.
+    bool Unlocked(int item)
+    {
+        uint32_t bit = item == MMI_DUELIST_CHALLENGE ? 1 : item == MMI_BATTLE_PACK ? 2 : item == MMI_CARD_SHOP ? 4 : 0;
+        if (!bit)
+            return true;
+        uint8_t* section = YGO::SAVE::Get_PlayerSection(YGO::SAVE::CURRENT_PROFILE);
+        return section && (*reinterpret_cast<uint32_t*>(section + YGO::SAVE::PlayerSection::MenuUnlockFlags) & bit) != 0;
+    }
+
     void __fastcall Hook_ActivateItem(ScreenMainMenu* screen, int item, char fromInput)
     {
+        if (item >= 0 && item < MMI_VANILLA_COUNT)
+        {
+            VanillaAction action;
+            {
+                std::lock_guard<std::mutex> guard(g_Lock);
+                action = g_VanillaActions[item];
+            }
+            // A locked button is left to the game, which shows its "locked" message.
+            if (!action.OnPress || !Unlocked(item))
+            {
+                orig_ActivateItem(screen, item, fromInput);
+                return;
+            }
+
+            YGO::RIX::PlayUISound(39);
+            g_CallbackSource = screen;
+            action.OnPress(item, action.User);
+            g_CallbackSource = nullptr;
+            FinishPress(screen);
+            return;
+        }
         if (item < MMI_VANILLA_COUNT)
         {
             orig_ActivateItem(screen, item, fromInput);
@@ -616,6 +656,17 @@ namespace Menu
         g_Dirty = true;
     }
 
+    bool SetVanillaAction(int item, RIX_ButtonCallback callback, void* user)
+    {
+        if (item < 0 || item >= MMI_VANILLA_COUNT)
+            return false;
+
+        std::lock_guard<std::mutex> guard(g_Lock);
+        g_VanillaActions[item] = { callback, user };
+        Logger::WriteLog(std::format("Game button {} {}", item, callback ? "now runs a plugin's action" : "does what the game does again"), MODULE_NAME, 0);
+        return true;
+    }
+
     void* MainScreen()
     {
         std::lock_guard<std::mutex> guard(g_Lock);
@@ -661,6 +712,11 @@ namespace Menu
     void* CallbackSource()
     {
         return g_CallbackSource;
+    }
+
+    void SetCallbackSource(void* screen)
+    {
+        g_CallbackSource = screen;
     }
 
     bool IsOpen()

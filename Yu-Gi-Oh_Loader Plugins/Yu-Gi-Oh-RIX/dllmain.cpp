@@ -1,5 +1,6 @@
 ﻿#include <Windows.h>
 
+#include "Pages.h"
 #include "Logger.h"
 #include "MainMenu.h"
 #include "PluginMenu.h"
@@ -15,6 +16,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         Menu::LoadMenuFiles();
         PluginMenu::Install();
         VideoScreen::Install();
+        Pages::Install();
         break;
     }
     return TRUE;
