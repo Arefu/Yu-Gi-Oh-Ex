@@ -12,9 +12,7 @@ namespace WolfX.Types
     public sealed partial class PackDefPage : UserControl
     {
         private BindingList<PackDefRecord> _records = [];
-        private string? _path;
         private ZibArchive? _archive;
-        private string? _zibPath;
         private readonly HashSet<string> _changed = [];
         private PackDefRecord? _shown;
         private bool _binding;
@@ -23,7 +21,13 @@ namespace WolfX.Types
         {
             InitializeComponent();
             SetEditable(false);
+            btnOpen.Text = "Reload";
+            btnBrowseZib.Visible = false;
+            Wolf.Editors.GameFolderFiles.CurrentChanged += () => { if (IsHandleCreated) Open(); };
+            HandleCreated += (_, _) => Open();
         }
+
+        private static string FilePath => Path.Combine("main", $"packdefdata_{(char)State.Language}.bin");
 
         private PackDefRecord? SelectedRecord => _grid.CurrentRow?.DataBoundItem as PackDefRecord;
 
@@ -33,7 +37,7 @@ namespace WolfX.Types
 
         private void btnSave_Click(object? sender, EventArgs e) => Save();
 
-        private void btnBrowseZib_Click(object? sender, EventArgs e) => PickZib();
+        private void btnBrowseZib_Click(object? sender, EventArgs e) { }
 
         private void _grid_SelectionChanged(object? sender, EventArgs e)
         {
@@ -44,86 +48,52 @@ namespace WolfX.Types
 
         private void Contents_Changed(object? sender, EventArgs e) => Commit();
 
-        // ---- file ----
+        // ---- file: the open game data (Wolf.Editors.GameFolderFiles.Current) ----
 
         private void Open()
         {
-            using var dialog = new OpenFileDialog { Filter = "packdefdata (*.bin)|*.bin|All files|*.*", Title = "Pack definitions" };
-            if (dialog.ShowDialog() != DialogResult.OK)
+            var files = Wolf.Editors.GameFolderFiles.Current;
+            if (files?.Available != true || files.Read(FilePath) is not { } data)
+            {
+                _pathBox.Text = files == null ? "Open the game folder or an extracted YGO_2020 folder." : $"{FilePath} isn't in the open data.";
                 return;
-
+            }
             try
             {
-                CardCatalog.Get(this); // names for the cards (asks for a folder once)
-                _records = new BindingList<PackDefRecord>(PackDefFile.Load(dialog.FileName).Records) { AllowNew = true, AllowRemove = true };
-                _path = dialog.FileName;
-                _pathBox.Text = _path;
+                _records = new BindingList<PackDefRecord>(PackDefFile.Parse(data).Records) { AllowNew = true, AllowRemove = true };
+                _pathBox.Text = $"{FilePath} ({files.Describe(FilePath)})";
                 _changed.Clear();
-
-                string? zib = RecordFileHelpers.FindArchive(_path, "packs.zib");
-                if (zib != null)
-                    UseZib(zib);
-
+                _archive = files.Read("packs.zib") is { } zib ? ZibArchive.Parse(zib) : null;
+                _zibBox.Text = _archive != null ? $"packs.zib ({files.Describe("packs.zib")})" : "packs.zib isn't in the open data.";
                 _grid.DataSource = _records;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Could not open the file:\n{ex.Message}", "Pack definitions", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Could not open {FilePath}:\n{ex.Message}", "Pack definitions", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Save()
         {
-            if (_path == null)
+            var files = Wolf.Editors.GameFolderFiles.Current;
+            if (files == null || _grid.DataSource == null)
                 return;
 
             try
             {
                 _grid.EndEdit();
-                RecordFileHelpers.Backup(_path);
-
                 var file = new PackDefFile();
                 file.Records.AddRange(_records);
-                File.WriteAllBytes(_path, file.ToBytes());
-
-                if (_archive != null && _zibPath != null && _changed.Count > 0)
-                {
-                    RecordFileHelpers.Backup(_zibPath);
-                    _archive.Save(_zibPath);
-                    _changed.Clear();
-                }
-                MessageBox.Show($"Saved {_path}\n(originals are kept as .bak next to them)", "Pack definitions", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var write = new Dictionary<string, byte[]> { [FilePath] = file.ToBytes() };
+                if (_archive != null && _changed.Count > 0)
+                    write["packs.zib"] = _archive.ToBytes();
+                files.Write(write);
+                _changed.Clear();
+                MessageBox.Show($"Saved {string.Join(" and ", write.Keys)} into {files.Describe(FilePath)}.", "Pack definitions", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Could not save:\n{ex.Message}", "Pack definitions", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void PickZib()
-        {
-            using var dialog = new OpenFileDialog { Filter = "packs.zib|*.zib|All files|*.*", Title = "packs.zib" };
-            if (dialog.ShowDialog() != DialogResult.OK)
-                return;
-
-            UseZib(dialog.FileName);
-            RecordSelected(SelectedRecord);
-        }
-
-        private void UseZib(string path)
-        {
-            try
-            {
-                _archive = ZibArchive.Load(path);
-                _zibPath = path;
-                _zibBox.Text = path;
-            }
-            catch (Exception ex)
-            {
-                _archive = null;
-                _zibPath = null;
-                _zibBox.Text = "";
-                MessageBox.Show($"Could not read packs.zib:\n{ex.Message}", "Pack definitions", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -158,7 +128,7 @@ namespace WolfX.Types
                 if (data == null)
                 {
                     SetEditable(false);
-                    _note.Text = _archive == null ? "Pick packs.zib to see and edit this pack's cards." : $"{record.ContentsFile} isn't in packs.zib.";
+                    _note.Text = _archive == null ? "packs.zib isn't in the open data, so the cards can't be shown." : $"{record.ContentsFile} isn't in packs.zib.";
                     return;
                 }
 

@@ -1,252 +1,128 @@
-﻿using Types;
-using WolfX.WolfX.File_Type_UI;
+﻿using Wolf.Editors;
+using WolfX.Types;
+using Limits = PDLimits.PDLimits;
 
 namespace WolfX
 {
+    /// <summary>
+    /// The Forbidden &amp; Limited page: bin\pd_limits.bin from the open game data, saved back into it. Names come from the card catalog,
+    /// pictures (when "Load images" is ticked) from the art .zib, both through the open data.
+    /// </summary>
     public partial class WolfUI
     {
+        private bool _limitsOpen;
+
+        private (ListView List, List<ushort> Cards, Label Count)[] LimitLists =>
+        [
+            (PDL_LV_ForbiddenCards, Limits.GetForbidden(), PDL_LBL_NumOfForbidden),
+            (PDL_LV_LimitedCards, Limits.GetLimited(), PDL_LBL_NumOfLimited),
+            (PDL_LV_SemiLimitedCards, Limits.GetSemiLimited(), PDL_LBL_NumOfSemiLimited),
+        ];
+
         private void PDL_BTN_OpenPDL_Click(object sender, EventArgs e)
         {
-            PDL_LV_ForbiddenCards.Items.Clear();
-            PDL_LV_LimitedCards.Items.Clear();
-            PDL_LV_SemiLimitedCards.Items.Clear();
-
-            if (PDL_CB_LoadImages.Checked)
+            if (GameFolderFiles.Current is not { } files || files.Read(Limits.GamePath) is not { } data)
             {
-                State.Images.ImageSize = new Size(64, 64);
-                PDL_LV_ForbiddenCards.View = View.LargeIcon;
-                PDL_LV_ForbiddenCards.LargeImageList = State.Images;
-
-                PDL_LV_LimitedCards.View = View.LargeIcon;
-                PDL_LV_LimitedCards.LargeImageList = State.Images;
-
-                PDL_LV_SemiLimitedCards.View = View.LargeIcon;
-                PDL_LV_SemiLimitedCards.LargeImageList = State.Images;
+                MessageBox.Show(this, GameFolderFiles.Current == null ? "Open the game folder or an extracted YGO_2020 folder first (File > Open)." : $"The open data has no {Limits.GamePath}.",
+                    "Forbidden & Limited", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
+            Limits.Parse(data);
+            _limitsOpen = true;
+            FillLimits();
+            PDL_BTN_SavePDL.Enabled = PDL_BTN_AddCardToList.Enabled = true;
+            SetStatus($"{Limits.GamePath} from {files.Describe(Limits.GamePath)}: {Limits.GetForbiddenCount()} forbidden, {Limits.GetLimitedCount()} limited, {Limits.GetSemiLimitedCount()} semi-limited.");
+        }
 
-            var Limits = "-1";
-            if (State.Path == null || State.Path == "")
+        private void FillLimits()
+        {
+            State.Images.Images.Clear();
+            State.Images.ImageSize = new Size(64, 64);
+            foreach (var (list, cards, count) in LimitLists)
             {
-                Limits = Utility.Get_UserSelectedFile("Select PDLimits.bin", "pd_limits.bin|pd_limits.bin");
-                if (Limits == "-1")
-                    return;
+                list.BeginUpdate();
+                list.Items.Clear();
+                list.View = PDL_CB_LoadImages.Checked ? View.LargeIcon : View.List;
+                list.LargeImageList = State.Images;
+                foreach (ushort card in cards)
+                    list.Items.Add(LimitItem(card));
+                list.EndUpdate();
+                count.Text = cards.Count.ToString();
             }
-            else
-                Limits = State.Path + "\\bin\\pd_limits.bin";
+        }
 
-            PDLimits.PDLimits.Load(Limits);
-            if (PDLimits.PDLimits.GetForbiddenCount() > 0)
-            {
-                foreach (short i in PDLimits.PDLimits.GetForbidden())
-                {
-                    if (PDL_CB_LoadImages.Checked)
-                        Utility.Add_ItemToStateImageList(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
-
-                    if (!PDL_CB_UseCardID.Checked)
-                        PDL_LV_ForbiddenCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
-                    else
-                        PDL_LV_ForbiddenCards.Items.Add(i.ToString(), i.ToString());
-                }
-            }
-
-            if (PDLimits.PDLimits.GetLimitedCount() > 0)
-            {
-                foreach (short i in PDLimits.PDLimits.GetLimited())
-                {
-                    if (PDL_CB_LoadImages.Checked)
-                        Utility.Add_ItemToStateImageList(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
-
-                    if (!PDL_CB_UseCardID.Checked)
-                        PDL_LV_LimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
-                    else
-                        PDL_LV_LimitedCards.Items.Add(i.ToString(), i.ToString());
-                }
-            }
-
-            if (PDLimits.PDLimits.GetSemiLimitedCount() > 0)
-            {
-                foreach (short i in PDLimits.PDLimits.GetSemiLimited())
-                {
-                    if (PDL_CB_LoadImages.Checked)
-                        Utility.Add_ItemToStateImageList(i.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{i}.jpg")));
-
-                    if (!PDL_CB_UseCardID.Checked)
-                        PDL_LV_SemiLimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID(i), i.ToString());
-                    else
-                        PDL_LV_SemiLimitedCards.Items.Add(i.ToString(), i.ToString());
-                }
-            }
-
-            PDL_LBL_NumOfForbidden.Text = PDLimits.PDLimits.GetForbiddenCount().ToString();
-            PDL_LBL_NumOfLimited.Text = PDLimits.PDLimits.GetLimitedCount().ToString();
-            PDL_LBL_NumOfSemiLimited.Text = PDLimits.PDLimits.GetSemiLimitedCount().ToString();
-
-            PDL_BTN_SavePDL.Enabled = true;
-            PDL_BTN_AddCardToList.Enabled = true;
+        private ListViewItem LimitItem(ushort card)
+        {
+            string key = card.ToString();
+            if (PDL_CB_LoadImages.Checked && !State.Images.Images.ContainsKey(key) && CardArt.Get(card) is { } art)
+                State.Images.Images.Add(key, art);
+            return new ListViewItem(PDL_CB_UseCardID.Checked ? key : CardCatalog.NameOf(card), key) { Tag = card };
         }
 
         private void PDL_BTN_SavePDL_Click(object sender, EventArgs e)
         {
-            PDLimits.PDLimits.Save();
+            if (GameFolderFiles.Current is not { } files || !_limitsOpen)
+                return;
+            try
+            {
+                files.Write(Limits.GamePath, Limits.ToBytes());
+                SetStatus($"Saved {Limits.GamePath} into {files.Describe(Limits.GamePath)}.");
+            }
+            catch (Exception ex) when (ex is IOException or InvalidOperationException or UnauthorizedAccessException)
+            {
+                MessageBox.Show(this, ex.Message, "Forbidden & Limited", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void PDL_CB_LoadImages_CheckedChanged(object sender, EventArgs e)
         {
-            if (PDL_CB_LoadImages.Checked)
-            {
-                if (State.Path != null)
-                {
-                    ZIB.Load($"{State.Path}\\2020.full.illust_j.jpg.zib");
-                    PDL_LV_ForbiddenCards.View = View.LargeIcon;
-                    PDL_LV_LimitedCards.View = View.LargeIcon;
-                    PDL_LV_SemiLimitedCards.View = View.LargeIcon;
-                }
-                else
-                {
-                    ZIB.Load(Utility.Get_UserSelectedFile("Open ZIB Archive", "ZIB Archive (*.zib)|*.zib"));
-                    PDL_LV_ForbiddenCards.View = View.LargeIcon;
-                    PDL_LV_LimitedCards.View = View.LargeIcon;
-                    PDL_LV_SemiLimitedCards.View = View.LargeIcon;
-                }
-            }
-            else
-            {
-                PDL_LV_ForbiddenCards.View = View.List;
-                PDL_LV_LimitedCards.View = View.List;
-                PDL_LV_SemiLimitedCards.View = View.List;
-            }
+            if (_limitsOpen)
+                FillLimits();
         }
 
         private void PDL_CB_UseCardID_CheckedChanged(object sender, EventArgs e)
         {
-            if (PDL_CB_UseCardID.Checked == false)
-            {
-                if (State.Path != null)
-                {
-                    CARDS_Cards.Setup_CardBinder($"{State.Path}\\bin\\CARD_Indx_{State.Language.ToString()[0]}.bin", (CARDS_INFO.CARD_Language)State.Language);
-                    CARDS_Cards.LoadCardInfo();
-                    CARDS_Cards.LoadCardProps();
-                }
-                else
-                {
-                    if (CARDS_Cards.Setup_CardBinder(Utility.Get_UserSelectedFile("Open Cards Indx File", $"{State.Language} Card Indx File|CarD_Indx_{State.Language.ToString()[0]}.bin|All Indx Files (*.bin)|*.bin"), (CARDS_INFO.CARD_Language)State.Language) == false)
-                    {
-                        MessageBox.Show("Failed to Setup Card Binder\nCheck Yu-Gi-Oh-Ex Wiki!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    CARDS_Cards.LoadCardInfo();
-                    CARDS_Cards.LoadCardProps();
-                }
-            }
+            if (_limitsOpen)
+                FillLimits();
         }
 
-        private void PDL_LV_ItemSelectionChanged(object sender, EventArgs e)
-        {
-            if (PDL_LV_ForbiddenCards.SelectedItems.Count > 0 || PDL_LV_LimitedCards.SelectedItems.Count > 0 || PDL_LV_SemiLimitedCards.SelectedItems.Count > 0)
-                PDL_BTN_RemoveCardFromList.Enabled = true;
-            else
-                PDL_BTN_RemoveCardFromList.Enabled = false;
-        }
+        private void PDL_LV_ItemSelectionChanged(object sender, EventArgs e) =>
+            PDL_BTN_RemoveCardFromList.Enabled = LimitLists.Any(l => l.List.SelectedItems.Count > 0);
 
         private void PDL_BTN_RemoveCardFromList_Click(object sender, EventArgs e)
         {
-            if (PDL_LV_ForbiddenCards.SelectedItems.Count > 0)
+            foreach (var (list, cards, count) in LimitLists)
             {
-                foreach (ListViewItem i in PDL_LV_ForbiddenCards.SelectedItems)
+                foreach (ListViewItem item in list.SelectedItems.Cast<ListViewItem>().ToList())
                 {
-                    PDLimits.PDLimits.Remove_CardFromForbidden(Convert.ToUInt16(i.ImageKey));
-                    PDL_LV_ForbiddenCards.Items.Remove(i);
-                    PDL_LBL_NumOfForbidden.Text = PDLimits.PDLimits.GetForbiddenCount().ToString();
+                    cards.Remove((ushort)item.Tag!);
+                    list.Items.Remove(item);
                 }
-            }
-            if (PDL_LV_LimitedCards.SelectedItems.Count > 0)
-            {
-                foreach (ListViewItem i in PDL_LV_LimitedCards.SelectedItems)
-                {
-                    PDLimits.PDLimits.Remove_CardFromLimited(Convert.ToUInt16(i.ImageKey));
-                    PDL_LV_LimitedCards.Items.Remove(i);
-                    PDL_LBL_NumOfLimited.Text = PDLimits.PDLimits.GetLimitedCount().ToString();
-                }
-            }
-            else if (PDL_LV_SemiLimitedCards.SelectedItems.Count > 0)
-            {
-                foreach (ListViewItem i in PDL_LV_SemiLimitedCards.SelectedItems)
-                {
-                    PDLimits.PDLimits.Remove_CardFromSemiLimited(Convert.ToUInt16(i.ImageKey));
-                    PDL_LV_SemiLimitedCards.Items.Remove(i);
-                    PDL_LBL_NumOfSemiLimited.Text = PDLimits.PDLimits.GetSemiLimitedCount().ToString();
-                }
+                count.Text = cards.Count.ToString();
             }
         }
 
+        /// <summary>Adds cards (picked by name) to the list on the open tab.</summary>
         private void PDL_BTN_AddCardToList_Click(object sender, EventArgs e)
         {
-            if (PDL_CB_IsUsingSimpleAddBox.Checked)
+            var target = tabControl2.SelectedTab?.Text switch
             {
-                var SimpleAdder = new SimpleCardAdd();
-                var Result = SimpleAdder.ShowDialog();
-
-                if (Result == DialogResult.OK)
-                {
-                    switch (tabControl2.SelectedTab.Text)
-                    {
-                        case "Forbidden":
-                            foreach (var Card in SimpleAdder.CardIDs)
-                            {
-                                if (PDL_CB_LoadImages.Checked)
-                                    Utility.Add_ItemToStateImageList(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
-
-                                if (!PDL_CB_UseCardID.Checked)
-                                    PDL_LV_ForbiddenCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
-                                else
-                                    PDL_LV_ForbiddenCards.Items.Add(Card.ToString(), Card.ToString());
-
-                                PDLimits.PDLimits.Add_CardToForbidden((ushort)Card);
-                            }
-
-                            PDL_LBL_NumOfForbidden.Text = SimpleAdder.CardIDs.Count.ToString();
-                            break;
-
-                        case "Semi-Limited":
-                            foreach (var Card in SimpleAdder.CardIDs)
-                            {
-                                if (PDL_CB_LoadImages.Checked)
-                                    Utility.Add_ItemToStateImageList(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
-
-                                if (!PDL_CB_UseCardID.Checked)
-                                    PDL_LV_SemiLimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
-                                else
-                                    PDL_LV_SemiLimitedCards.Items.Add(Card.ToString(), Card.ToString());
-
-                                PDLimits.PDLimits.Add_CardToSemiLimited((ushort)Card);
-                            }
-
-                            PDL_LBL_NumOfSemiLimited.Text = SimpleAdder.CardIDs.Count.ToString();
-                            break;
-
-                        case "Limited":
-                            foreach (var Card in SimpleAdder.CardIDs)
-                            {
-                                if (PDL_CB_LoadImages.Checked)
-                                    Utility.Add_ItemToStateImageList(Card.ToString(), Image.FromStream(ZIB.Get_SpecificItemFromArchive($"{Card}.jpg")));
-
-                                if (!PDL_CB_UseCardID.Checked)
-                                    PDL_LV_LimitedCards.Items.Add(CARDS_Cards.Get_CardNameFromID((short)Card), Card.ToString());
-                                else
-                                    PDL_LV_LimitedCards.Items.Add(Card.ToString(), Card.ToString());
-
-                                PDLimits.PDLimits.Add_CardToLimited((ushort)Card);
-                            }
-
-                            PDL_LBL_NumOfLimited.Text = SimpleAdder.CardIDs.Count.ToString();
-                            break;
-                    }
-                }
-            }
-            else
+                "Forbidden" => LimitLists[0],
+                "Limited" => LimitLists[1],
+                _ => LimitLists[2],
+            };
+            using var picker = new CardPickerDialog(CardCatalog.Get(this), $"Add to {tabControl2.SelectedTab?.Text}", askCopies: false, maxCopies: 1);
+            if (picker.ShowDialog(this) != DialogResult.OK)
+                return;
+            foreach (int id in picker.Result.Select(r => r.Card.Id).Where(id => id is > 0 and <= ushort.MaxValue))
             {
+                ushort card = (ushort)id;
+                if (LimitLists.Any(l => l.Cards.Contains(card)))
+                    continue;   // a card is on one list only
+                target.Cards.Add(card);
+                target.List.Items.Add(LimitItem(card));
             }
+            target.Count.Text = target.Cards.Count.ToString();
         }
     }
 }
