@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Effect blocks</title>
+  <!-- Blockly (Apache 2.0, LICENSE-blockly.txt), shipped with WolfX: the page works offline. -->
+  <script src="blockly_compressed.js"></script>
+  <script src="en.js"></script>
+  <script src="effect-blocks.js"></script>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; font-family: "Segoe UI", sans-serif; }
+    #blocks { position: absolute; inset: 0; }
+    #note {
+      display: none; position: absolute; left: 50%; top: 10px; transform: translateX(-50%); z-index: 10; max-width: 70%;
+      background: #fff6d6; border: 1px solid #d9b44a; border-radius: 6px; padding: 8px 12px; font-size: 13px; color: #5a4300;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+    }
+  </style>
+</head>
+<body>
+  <div id="blocks"></div>
+  <div id="note"></div>
+</body>
+</html>
