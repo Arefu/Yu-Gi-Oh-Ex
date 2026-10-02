@@ -11,9 +11,12 @@ namespace PluginManifest
         [JsonPropertyName("enforced")] public bool Enforced { get; set; }
         [JsonPropertyName("requires")] public List<string> Requires { get; set; } = new();
         [JsonPropertyName("dlls")] public List<string> Dlls { get; set; } = new();
+        /// <summary>The Yu-Gi-Oh-Ex files this plugin applies ("cards.json", a folder as "pages" + backslash); WolfX writes content.json from it.</summary>
+        [JsonPropertyName("content")] public List<string> Content { get; set; } = new();
 
         private static readonly JsonSerializerOptions Options = new()
         {
+            TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(),
             WriteIndented = true,
             PropertyNameCaseInsensitive = true,
             ReadCommentHandling = JsonCommentHandling.Skip,
@@ -44,6 +47,7 @@ namespace PluginManifest
             if (Enforced) fields["enforced"] = true;
             if (Requires.Count > 0) fields["requires"] = Requires;
             if (Dlls.Count > 0) fields["dlls"] = Dlls;
+            if (Content.Count > 0) fields["content"] = Content;
             return JsonSerializer.Serialize(fields, Options) + Environment.NewLine;
         }
     }

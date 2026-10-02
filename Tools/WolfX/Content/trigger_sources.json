@@ -1,0 +1,395 @@
+{
+ "note": "Made by build_effect_reference.py: for each trigger and action, the game cards (exactly that one effect) a custom card can borrow from. First entry is used.",
+ "sources": {
+  "battle_damage": {
+   "draw": [
+    {
+     "id": 4226,
+     "name": "Masked Sorcerer"
+    }
+   ],
+   "burn": [
+    {
+     "id": 8077,
+     "name": "Rose, Warrior of Revenge"
+    }
+   ],
+   "revive": [
+    {
+     "id": 13399,
+     "name": "Grappler Angler"
+    }
+   ]
+  },
+  "flip": {
+   "burn": [
+    {
+     "id": 5413,
+     "name": "Poison Mummy"
+    },
+    {
+     "id": 4496,
+     "name": "Needle Ball"
+    },
+    {
+     "id": 5198,
+     "name": "Lady Assailant of Flames"
+    },
+    {
+     "id": 5199,
+     "name": "Fire Sorcerer"
+    }
+   ],
+   "draw": [
+    {
+     "id": 4546,
+     "name": "Skelengel"
+    }
+   ],
+   "search": [
+    {
+     "id": 5769,
+     "name": "Iron Blacksmith Kotetsu"
+    },
+    {
+     "id": 6303,
+     "name": "Machina Defender"
+    },
+    {
+     "id": 9162,
+     "name": "Gishki Ariel"
+    },
+    {
+     "id": 9441,
+     "name": "Gem-Turtle"
+    },
+    {
+     "id": 7545,
+     "name": "Worm Cartaros"
+    }
+   ],
+   "revive": [
+    {
+     "id": 10565,
+     "name": "Magical Undertaker"
+    },
+    {
+     "id": 6037,
+     "name": "Spirit Caller"
+    }
+   ],
+   "destroy_target": [
+    {
+     "id": 11145,
+     "name": "Green Turtle Summoner"
+    },
+    {
+     "id": 11140,
+     "name": "Hydrotortoise, the Empowered Warrior"
+    },
+    {
+     "id": 6334,
+     "name": "White Ninja"
+    }
+   ],
+   "destroy_all": [
+    {
+     "id": 7439,
+     "name": "Magnetic Mosquito"
+    }
+   ],
+   "send_to_grave": [
+    {
+     "id": 10164,
+     "name": "Dust Knight"
+    }
+   ]
+  },
+  "sent_to_grave": {
+   "gain_lp": [
+    {
+     "id": 4770,
+     "name": "Skull-Mark Ladybug"
+    }
+   ],
+   "search": [
+    {
+     "id": 7850,
+     "name": "The White Stone of Legend"
+    },
+    {
+     "id": 10243,
+     "name": "Stoic of Prophecy"
+    }
+   ]
+  },
+  "destroyed_by_battle": {
+   "search": [
+    {
+     "id": 5021,
+     "name": "Birdface"
+    },
+    {
+     "id": 8265,
+     "name": "Ojama Blue"
+    },
+    {
+     "id": 6506,
+     "name": "Scarr, Scout of Dark World"
+    },
+    {
+     "id": 6597,
+     "name": "Gokipon"
+    },
+    {
+     "id": 8082,
+     "name": "Rai-Mei"
+    }
+   ],
+   "revive": [
+    {
+     "id": 9734,
+     "name": "Evoltile Gephyro"
+    },
+    {
+     "id": 5485,
+     "name": "Lord Poison"
+    },
+    {
+     "id": 8631,
+     "name": "Fire Ant Ascator"
+    }
+   ],
+   "burn": [
+    {
+     "id": 6327,
+     "name": "Mine Golem"
+    }
+   ],
+   "send_to_grave": [
+    {
+     "id": 8899,
+     "name": "Laval Miller"
+    },
+    {
+     "id": 7486,
+     "name": "Skreech"
+    }
+   ],
+   "draw": [
+    {
+     "id": 7527,
+     "name": "Blizzed, Defender of the Ice Barrier"
+    }
+   ]
+  },
+  "summoned": {
+   "burn": [
+    {
+     "id": 5510,
+     "name": "Gravekeeper's Curse"
+    }
+   ],
+   "send_to_grave": [
+    {
+     "id": 7423,
+     "name": "Armageddon Knight"
+    }
+   ]
+  },
+  "standby_phase": {
+   "burn": [
+    {
+     "id": 5687,
+     "name": "Bowganian"
+    }
+   ],
+   "gain_lp": [
+    {
+     "id": 7609,
+     "name": "Golden Ladybug"
+    }
+   ]
+  },
+  "special_summoned": {
+   "draw": [
+    {
+     "id": 5883,
+     "name": "Sacred Crane"
+    }
+   ],
+   "search": [
+    {
+     "id": 8104,
+     "name": "Genex Blastfan"
+    }
+   ]
+  },
+  "normal_or_special_summoned": {
+   "search": [
+    {
+     "id": 6151,
+     "name": "Green Gadget"
+    },
+    {
+     "id": 6156,
+     "name": "Yellow Gadget"
+    },
+    {
+     "id": 6155,
+     "name": "Red Gadget"
+    },
+    {
+     "id": 9811,
+     "name": "Constellar Zubeneschamali"
+    }
+   ],
+   "send_to_grave": [
+    {
+     "id": 11823,
+     "name": "Infernoid Decatron"
+    }
+   ]
+  },
+  "destroys_by_battle": {
+   "burn": [
+    {
+     "id": 7039,
+     "name": "Masked Chopper"
+    },
+    {
+     "id": 7338,
+     "name": "Fossil Tusker"
+    }
+   ],
+   "revive": [
+    {
+     "id": 9169,
+     "name": "Windaar, Sage of Gusto"
+    }
+   ],
+   "destroy_target": [
+    {
+     "id": 10063,
+     "name": "Nomadic Force"
+    }
+   ],
+   "search": [
+    {
+     "id": 13403,
+     "name": "Desmanian Devil"
+    },
+    {
+     "id": 12134,
+     "name": "Dinomist Pteran"
+    }
+   ]
+  },
+  "normal_summoned": {
+   "revive": [
+    {
+     "id": 11127,
+     "name": "Guiding Light"
+    },
+    {
+     "id": 12049,
+     "name": "Speedroid Double Yoyo"
+    },
+    {
+     "id": 8862,
+     "name": "Synchron Explorer"
+    },
+    {
+     "id": 10736,
+     "name": "Malicevorous Knife"
+    },
+    {
+     "id": 13070,
+     "name": "Motivating Captain"
+    }
+   ],
+   "search": [
+    {
+     "id": 8897,
+     "name": "Gem-Armadillo"
+    },
+    {
+     "id": 9807,
+     "name": "Constellar Sheratan"
+    },
+    {
+     "id": 12889,
+     "name": "Brohunder"
+    },
+    {
+     "id": 10999,
+     "name": "Geargiauger"
+    },
+    {
+     "id": 8246,
+     "name": "R-Genex Turbo"
+    }
+   ],
+   "send_to_grave": [
+    {
+     "id": 10694,
+     "name": "Gimmick Puppet Scissor Arms"
+    }
+   ]
+  },
+  "end_phase": {
+   "revive": [
+    {
+     "id": 8726,
+     "name": "General Gantala of the Ice Barrier"
+    }
+   ],
+   "burn": [
+    {
+     "id": 5974,
+     "name": "Solar Flare Dragon"
+    }
+   ]
+  },
+  "ignition": {
+   "draw": [
+    {
+     "id": 9168,
+     "name": "Caam, Serenity of Gusto"
+    }
+   ],
+   "search": [
+    {
+     "id": 11916,
+     "name": "Aquaactress Tetra"
+    },
+    {
+     "id": 11918,
+     "name": "Aquaactress Arowana"
+    }
+   ]
+  },
+  "attack_declared": {
+   "compose": [
+    {
+     "id": 11688,
+     "name": "Edge Imp Chain"
+    }
+   ]
+  },
+  "sent_from_field_to_grave": {
+   "search": [
+    {
+     "id": 7892,
+     "name": "Botanical Girl"
+    }
+   ],
+   "revive": [
+    {
+     "id": 11950,
+     "name": "Superheavy Samurai Drum"
+    }
+   ]
+  }
+ }
+}

@@ -20,6 +20,17 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\File Type Libraries\Animslist\Animlist.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\HowToPlay\HowToPlay.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\Tutorial\Tutorial.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\TextTable\TextTable.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CardSort\CardSort.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CardIntId\CardIntId.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CardLink\CardLink.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\RelatedCards\RelatedCards.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CardGenre\CardGenre.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CharData\CharData.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\DuelData\DuelData.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\ScriptData\ScriptData.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\BND\BND.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\CARD_Kana.bin\CARD_Kana.bin.csproj" />
     <ProjectReference Include="..\..\File Type Libraries\CARD_Named.bin\CARD_Named.bin.csproj" />
@@ -46,8 +57,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="WolfX\Events\PACKDEF Events.cs" />
-    <Compile Update="WolfX\Events\Cards Events.cs" />
     <Compile Update="WolfX\Events\Strings Events.cs" />
     <Compile Update="WolfX\Events\PDLimits Events.cs" />
     <Compile Update="WolfX\Events\Save Events.cs">
@@ -65,6 +74,32 @@
 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Content\EffectScriptGenerated\ is ANTLR-generated from Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4
+         (the same grammar the C++ side's proof-of-concept parser uses) - regenerate with:
+         java -jar Dependencies\ANTLR\antlr-4.13.2-complete.jar -Dlanguage=CSharp -visitor -no-listener -package WolfEx.EffectScriptGenerated -o Tools\WolfX\Content\EffectScriptGenerated "Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4" -->
+    <PackageReference Include="Antlr4.Runtime.Standard" Version="4.13.1" />
+    <PackageReference Include="Scintilla.NET" Version="5.3.2.9" />
+    <!-- The Effects page's block editor: Blockly (Content\Blocks) in a WebView2 -->
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3967.48" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The Effect library page reads these; made by docs\effect-scripts\build_effect_reference.py -->
+    <None Include="Content\effect_reference.json" Link="effect_reference.json" CopyToOutputDirectory="PreserveNewest" />
+    <!-- The block editor's page and Blockly (Apache 2.0), served from Blocks\ next to WolfX.exe -->
+    <None Include="Content\Blocks\**" Link="Blocks\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Content\trigger_sources.json" Link="trigger_sources.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Content\card_names.json" Link="card_names.json" CopyToOutputDirectory="PreserveNewest" />
+    <!-- Vanilla archetype code -> member Konami ids (CARD_Named.bin): FusionMaterialText finds an archetype by its members' names. -->
+    <None Include="Content\archetype_members.json" Link="archetype_members.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The editors in Tools/Shared/Editors -->
+    <Compile Include="..\Shared\Editors\*.cs" Link="Shared\Editors\%(Filename)%(Extension)" />
   </ItemGroup>
 
 </Project>
