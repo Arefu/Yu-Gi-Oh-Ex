@@ -24,8 +24,22 @@ jobs:
       - name: Build solution
         run: msbuild WolfX.sln /p:Configuration=Release
 
+      - name: Verify Mods folder
+        run: |
+          if (-not (Test-Path "Mods")) {
+            throw "Mods folder was not found at the repository root."
+          }
+          $modFiles = Get-ChildItem "Mods" -Recurse -File
+          if ($modFiles.Count -eq 0) {
+            throw "Mods folder is empty."
+          }
+          Write-Host "Found $($modFiles.Count) files in Mods"
+
       - name: Zip Binaries folder
         run: Compress-Archive -Path Binaries\* -DestinationPath YuGiOhEX.zip
+
+      - name: Zip Mods folder
+        run: Compress-Archive -Path Mods -DestinationPath Mods.zip
 
       - name: Create or update canary release
         uses: softprops/action-gh-release@v2
@@ -35,9 +49,12 @@ jobs:
           body: |
             Canary build for commit ${{ github.sha }}
             Triggered by ${{ github.actor }} on branch ${{ github.ref_name }}
+
+            `Mods.zip` contains the `Mods` folder on its own, for updating mods without re-downloading the full game.
           draft: false
           prerelease: true
           files: |
             YuGiOhEX.zip
+            Mods.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
