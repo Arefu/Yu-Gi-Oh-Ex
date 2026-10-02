@@ -1,4 +1,11 @@
 {
   "title": "More Cards",
-  "description": "Custom cards, unlocks and packs."
+  "description": "Custom cards, unlocks, card genres, related cards and text tables (packs moved to Better Card Shop).",
+  "content": [
+    "cards.json",
+    "unlocks.json",
+    "genres.json",
+    "relatedcards.json",
+    "text.json"
+  ]
 }

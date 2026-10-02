@@ -1,6 +1,26 @@
 {
  "note": "Made by build_effect_reference.py: for each trigger and action, the game cards (exactly that one effect) a custom card can borrow from. First entry is used.",
  "sources": {
+  "battle_damage": {
+   "draw": [
+    {
+     "id": 4226,
+     "name": "Masked Sorcerer"
+    }
+   ],
+   "burn": [
+    {
+     "id": 8077,
+     "name": "Rose, Warrior of Revenge"
+    }
+   ],
+   "revive": [
+    {
+     "id": 13399,
+     "name": "Grappler Angler"
+    }
+   ]
+  },
   "flip": {
    "burn": [
     {
@@ -85,6 +105,24 @@
     }
    ]
   },
+  "sent_to_grave": {
+   "gain_lp": [
+    {
+     "id": 4770,
+     "name": "Skull-Mark Ladybug"
+    }
+   ],
+   "search": [
+    {
+     "id": 7850,
+     "name": "The White Stone of Legend"
+    },
+    {
+     "id": 10243,
+     "name": "Stoic of Prophecy"
+    }
+   ]
+  },
   "destroyed_by_battle": {
    "search": [
     {
@@ -102,6 +140,10 @@
     {
      "id": 6597,
      "name": "Gokipon"
+    },
+    {
+     "id": 8082,
+     "name": "Rai-Mei"
     }
    ],
    "revive": [
@@ -118,10 +160,26 @@
      "name": "Fire Ant Ascator"
     }
    ],
+   "burn": [
+    {
+     "id": 6327,
+     "name": "Mine Golem"
+    }
+   ],
    "send_to_grave": [
     {
      "id": 8899,
      "name": "Laval Miller"
+    },
+    {
+     "id": 7486,
+     "name": "Skreech"
+    }
+   ],
+   "draw": [
+    {
+     "id": 7527,
+     "name": "Blizzed, Defender of the Ice Barrier"
     }
    ]
   },
@@ -139,11 +197,31 @@
     }
    ]
   },
+  "standby_phase": {
+   "burn": [
+    {
+     "id": 5687,
+     "name": "Bowganian"
+    }
+   ],
+   "gain_lp": [
+    {
+     "id": 7609,
+     "name": "Golden Ladybug"
+    }
+   ]
+  },
   "special_summoned": {
    "draw": [
     {
      "id": 5883,
      "name": "Sacred Crane"
+    }
+   ],
+   "search": [
+    {
+     "id": 8104,
+     "name": "Genex Blastfan"
     }
    ]
   },
@@ -173,6 +251,40 @@
     }
    ]
   },
+  "destroys_by_battle": {
+   "burn": [
+    {
+     "id": 7039,
+     "name": "Masked Chopper"
+    },
+    {
+     "id": 7338,
+     "name": "Fossil Tusker"
+    }
+   ],
+   "revive": [
+    {
+     "id": 9169,
+     "name": "Windaar, Sage of Gusto"
+    }
+   ],
+   "destroy_target": [
+    {
+     "id": 10063,
+     "name": "Nomadic Force"
+    }
+   ],
+   "search": [
+    {
+     "id": 13403,
+     "name": "Desmanian Devil"
+    },
+    {
+     "id": 12134,
+     "name": "Dinomist Pteran"
+    }
+   ]
+  },
   "normal_summoned": {
    "revive": [
     {
@@ -198,10 +310,6 @@
    ],
    "search": [
     {
-     "id": 9648,
-     "name": "Poki Draco"
-    },
-    {
      "id": 8897,
      "name": "Gem-Armadillo"
     },
@@ -216,6 +324,10 @@
     {
      "id": 10999,
      "name": "Geargiauger"
+    },
+    {
+     "id": 8246,
+     "name": "R-Genex Turbo"
     }
    ],
    "send_to_grave": [
@@ -225,15 +337,57 @@
     }
    ]
   },
-  "sent_to_grave": {
+  "end_phase": {
+   "revive": [
+    {
+     "id": 8726,
+     "name": "General Gantala of the Ice Barrier"
+    }
+   ],
+   "burn": [
+    {
+     "id": 5974,
+     "name": "Solar Flare Dragon"
+    }
+   ]
+  },
+  "ignition": {
+   "draw": [
+    {
+     "id": 9168,
+     "name": "Caam, Serenity of Gusto"
+    }
+   ],
    "search": [
     {
-     "id": 7850,
-     "name": "The White Stone of Legend"
+     "id": 11916,
+     "name": "Aquaactress Tetra"
     },
     {
-     "id": 10243,
-     "name": "Stoic of Prophecy"
+     "id": 11918,
+     "name": "Aquaactress Arowana"
+    }
+   ]
+  },
+  "attack_declared": {
+   "compose": [
+    {
+     "id": 11688,
+     "name": "Edge Imp Chain"
+    }
+   ]
+  },
+  "sent_from_field_to_grave": {
+   "search": [
+    {
+     "id": 7892,
+     "name": "Botanical Girl"
+    }
+   ],
+   "revive": [
+    {
+     "id": 11950,
+     "name": "Superheavy Samurai Drum"
     }
    ]
   }

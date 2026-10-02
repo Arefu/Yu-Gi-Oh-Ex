@@ -1,8 +1,11 @@
 {
   "title": "Better Card Shop",
-  "description": "The main menu's Card Shop opens the Card Store: booster packs, every card in the game, and card passwords.",
+  "description": "The main menu's Card Shop opens the Card Store: booster packs, every card in the game, and card passwords. Also the booster packs from Yu-Gi-Oh-Ex/packs.json: cards added to the game's packs, and new packs.",
   "requires": [
     "Yu-Gi-Oh-Core",
     "Yu-Gi-Oh-RIX"
+  ],
+  "content": [
+    "packs.json"
   ]
 }
