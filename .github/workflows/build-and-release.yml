@@ -36,6 +36,17 @@ jobs:
           Write-Host "Found $($files.Count) files:"
           $files | ForEach-Object { Write-Host "  $($_.FullName.Substring($PWD.Path.Length + 1))" }
 
+      - name: Verify Mods folder
+        run: |
+          if (-not (Test-Path "Mods")) {
+            throw "Mods folder was not found at the repository root."
+          }
+          $modFiles = Get-ChildItem "Mods" -Recurse -File
+          if ($modFiles.Count -eq 0) {
+            throw "Mods folder is empty."
+          }
+          Write-Host "Found $($modFiles.Count) files in Mods"
+
       - name: Stage release contents
         run: |
           $stage = "staging\YuGiOhEX"
@@ -56,8 +67,16 @@ jobs:
           # Invoke-WebRequest -Uri "https://aka.ms/vs/17/release/vc_redist.x86.exe" `
           #   -OutFile "$stage\Redist\vc_redist.x86.exe"
 
+      - name: Stage Mods folder
+        run: |
+          $modsStage = "staging\ModsPackage\Mods"
+          New-Item -ItemType Directory -Force -Path $modsStage | Out-Null
+          Copy-Item "Mods\*" -Destination $modsStage -Recurse
+
       - name: Zip release
-        run: Compress-Archive -Path "staging\YuGiOhEX\*" -DestinationPath YuGiOhEX.zip
+        run: |
+          Compress-Archive -Path "staging\YuGiOhEX\*" -DestinationPath YuGiOhEX.zip
+          Compress-Archive -Path "staging\ModsPackage\Mods" -DestinationPath Mods.zip
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -69,10 +88,13 @@ jobs:
             Built from commit ${{ github.sha }}
 
             If the game fails to start, install the runtimes in the `Redist` folder first.
+
+            `Mods.zip` contains the `Mods` folder on its own, for updating mods without re-downloading the full game.
           generate_release_notes: true
           draft: false
           prerelease: false
           files: |
             YuGiOhEX.zip
+            Mods.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
