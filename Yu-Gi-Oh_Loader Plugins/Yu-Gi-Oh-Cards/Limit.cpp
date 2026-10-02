@@ -34,46 +34,65 @@ namespace
             ApplyBytePatch(patch);
     }
 
-    // mov <reg>, imm64 ; ret - a stub that hands a pointer to our table to a `call` site.
-    void EmplacePointerStub(uintptr_t at, const void* ptr, uint8_t regOpcodeByte)
+    // Each id table site is a 7-byte `lea <reg>, [game table]` (checked in the IDB). It is detoured (Detours, like every other hook)
+    // to a stub in memory this DLL owns - mov <reg>, imm64 (our table) ; jmp qword ptr [rip+0] ; dq site + 7 - so the register
+    // gets our table and execution carries on after the lea. The trampoline Detours builds is never used. Earlier versions wrote a
+    // `mov reg, imm64 ; ret` over the start of the game's own table and patched the lea into a call to it, which the game undid
+    // whenever it reloaded the table.
+    constexpr size_t kLeaLength = 7;
+
+    uint8_t* NewStub(size_t size)
     {
-        unsigned char stub[11];
-        stub[0] = 0x48;
-        stub[1] = regOpcodeByte;
-        std::memcpy(&stub[2], &ptr, sizeof(void*));
-        stub[10] = 0xC3;
-
-        void* target = reinterpret_cast<void*>(at);
-        DWORD oldProtect = 0;
-        if (!VirtualProtect(target, sizeof(stub), PAGE_EXECUTE_READWRITE, &oldProtect))
-            return;
-
-        std::memcpy(target, stub, sizeof(stub));
+        static uint8_t* page = nullptr;
+        static size_t used = 0;
+        if (!page || used + size > 0x1000)
+        {
+            page = static_cast<uint8_t*>(VirtualAlloc(nullptr, 0x1000, MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE));
+            used = 0;
+            if (!page)
+                return nullptr;
+        }
+        uint8_t* stub = page + used;
+        used += (size + 15) & ~static_cast<size_t>(15);
+        return stub;
     }
 
-    // Only use this on a genuine CALL site (E8 xx xx xx xx).
-    void PatchCallTarget(uintptr_t at, uintptr_t dest)
+    bool DetourLeaToTable(uintptr_t site, const void* table, uint8_t movRegOpcode)
     {
-        void* target = reinterpret_cast<void*>(at);
-        DWORD oldProtect = 0;
-        if (!VirtualProtect(target, 7, PAGE_EXECUTE_READWRITE, &oldProtect))
-            return;
+        uint8_t* stub = NewStub(24);
+        if (!stub)
+            return false;
+        const uintptr_t resume = site + kLeaLength;
+        stub[0] = 0x48;                 // REX.W
+        stub[1] = movRegOpcode;         // B8+reg: mov reg, imm64
+        std::memcpy(&stub[2], &table, sizeof(void*));
+        stub[10] = 0xFF;                // jmp qword ptr [rip+0]
+        stub[11] = 0x25;
+        std::memset(&stub[12], 0, 4);
+        std::memcpy(&stub[16], &resume, sizeof(resume));
+        FlushInstructionCache(GetCurrentProcess(), stub, 24);
 
-        int32_t rel = static_cast<int32_t>(dest - (at + 5));
-        unsigned char callBytes[7];
-        callBytes[0] = 0xE8;
-        std::memcpy(&callBytes[1], &rel, sizeof(rel));
-        callBytes[5] = 0x90;
-        callBytes[6] = 0x90;
-        std::memcpy(target, callBytes, sizeof(callBytes));
+        void* target = reinterpret_cast<void*>(site);
+        DetourTransactionBegin();
+        DetourUpdateThread(GetCurrentThread());
+        LONG error = DetourAttach(&target, stub);
+        if (error == NO_ERROR)
+            error = DetourTransactionCommit();
+        else
+            DetourTransactionAbort();
+        Logger::WriteLog(std::format("id table site 0x{:X} -> our table: {}", site, error == NO_ERROR ? "ok" : std::format("Detours error {}", error)),
+            MODULE_NAME, error == NO_ERROR ? 0 : 2);
+        return error == NO_ERROR;
     }
 }
 
+// lea rcx, g_iInternalIDs sites (the id lookups).
 static const uintptr_t InternalIdCallSites[] = {
     0x14076D11E, 0x14076D09E, 0x14076D44B, 0x14076D4B5,
     0x14076D5D8, 0x14076D668, 0x14076D6B8,
 };
 
+// lea rdi, g_KonamiIds site (Setup_CardPropTable clears and fills the table through rdi).
 static const uintptr_t KonamiIdCallSites[] = {
     0x14076C0A9,
 };
@@ -92,35 +111,25 @@ int64_t __fastcall Limits::Get_KonamiIndexLookup(unsigned int a1)
 
 void Limits::RedirectInternalIDTable()
 {
-    Logger::WriteLog("RedirectInternalIDTable: writing stub and patching call sites", MODULE_NAME, 0);
-
-    EmplacePointerStub(kInternalCardIdLocation, Limits::InternalIDTable, 0xB9);
-
+    static bool attached = false;   // the stubs live in our memory, so once is enough even when the game reloads its tables
+    if (attached)
+        return;
+    attached = true;
     for (uintptr_t site : InternalIdCallSites)
-    {
-        PatchCallTarget(site, kInternalCardIdLocation);
-        Logger::WriteLog(std::format("patched internal id call site 0x{:X}", site), MODULE_NAME, 0);
-    }
+        DetourLeaToTable(site, Limits::InternalIDTable, 0xB9);   // mov rcx, imm64
 }
 
 void Limits::RedirectKonamiIDTable()
 {
-    Logger::WriteLog("RedirectKonamiIDTable: writing stub and patching call sites", MODULE_NAME, 0);
-
-    EmplacePointerStub(kKonamiCardIdLocation, Limits::KonamiIDTable, 0xBF);
-
-    for (uintptr_t site : KonamiIdCallSites)
-    {
-        PatchCallTarget(site, kKonamiCardIdLocation);
-        Logger::WriteLog(std::format("patched konami id call site 0x{:X}", site), MODULE_NAME, 0);
-    }
-
-    // The stubs are rewritten every time the game reloads its tables; the hook is attached once.
+    // Attached once (the stubs and the lookup detour live in this DLL).
     static bool hooked = false;
     if (hooked)
         return;
 
     hooked = true;
+    for (uintptr_t site : KonamiIdCallSites)
+        DetourLeaToTable(site, Limits::KonamiIDTable, 0xBF);   // mov rdi, imm64
+
     DetourTransactionBegin();
     DetourUpdateThread(GetCurrentThread());
     LONG err = DetourAttach(&(PVOID&)orig_Get_KonamiIdFromInternalId, Limits::Get_KonamiIndexLookup);
