@@ -405,6 +405,50 @@ extern "C" char Hook_sub_14074E7D0(__int64 a1, unsigned short cardId)
     return result;
 }
 
+// The duel's level/rank badge (a star or rank icon plus the number) drawn over a card view - the cards in your hand. The anime
+// frames show the stars on the card itself, so the badge is hidden. DuelCardView_UpdateLevelBadge (0x1407C6980, this) reads the
+// view's card data (this+0x30): +292 kind (1 level -> icon sprite 0x20, 2 rank -> 0x21, else icon and number off), +284 the number,
+// +164 its location (side | zone << 1 | index << 6; zone 13 = hand). The kind is filled by 0x1407CBBC0 / 0x1407CBDA0. It is set to 0
+// only for the call, so nothing else sees the change. Its one caller (0x1407C67CA) reloads every register after the call, so a plain
+// detour is safe here (see Yu-Gi-Oh-MP/Stubs.h on the game's register assumptions).
+// Config HideLevelBadge: 0 = show it (vanilla), 1 = hide it in the hand (default), 2 = hide it everywhere.
+//
+// The big number over each monster in your hand is drawn separately: DuelHand_Draw (0x1407B8570) formats data+284 with "%d"
+// for kind 1/2 and draws it with DuelHand_DrawLevelNumber (0x14078B0B0; floats x, 36, 32, 48 in xmm0-3, colours and the text
+// on the stack). That is its only caller, and the caller reloads its registers and ignores the result, so the hook just
+// returns without drawing when HideLevelBadge is on (1 or 2: this renderer only draws the hand).
+using fn_DuelHand_DrawLevelNumber = void(__fastcall*)();
+static fn_DuelHand_DrawLevelNumber orig_DuelHand_DrawLevelNumber = nullptr;
+
+extern "C" void Hook_DuelHand_DrawLevelNumber()
+{
+}
+
+using fn_DuelCardView_UpdateLevelBadge = void(__fastcall*)(__int64);
+static fn_DuelCardView_UpdateLevelBadge orig_DuelCardView_UpdateLevelBadge = nullptr;
+static int kHideLevelBadge = 1;
+
+extern "C" void Hook_DuelCardView_UpdateLevelBadge(__int64 view)
+{
+    auto* data = view ? *reinterpret_cast<unsigned char**>(view + 0x30) : nullptr;
+    if (kHideLevelBadge == 0 || data == nullptr)
+    {
+        orig_DuelCardView_UpdateLevelBadge(view);
+        return;
+    }
+    const unsigned zone = (*reinterpret_cast<unsigned short*>(data + 164) >> 1) & 0x1F;
+    if (kHideLevelBadge == 1 && zone != 13)
+    {
+        orig_DuelCardView_UpdateLevelBadge(view);
+        return;
+    }
+    int& kind = *reinterpret_cast<int*>(data + 292);
+    const int saved = kind;
+    kind = 0;
+    orig_DuelCardView_UpdateLevelBadge(view);
+    kind = saved;
+}
+
 // TextSlot_Layout's align argument (Layout_FinishLine / Layout_Build): 1 left, 2 centre, 4 right; 8 top, 0x10 centre, 0x20 bottom. The game
 // lays ATK/DEF out bottom-right (36) and the card text top-left (9), so the same y put ATK and DEF at different heights. Both numbers are
 // laid out centred instead, unwrapped (0x100), so they sit exactly on the points given for them.
@@ -596,6 +640,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         if (cfgEnd != cfgBuf) kCustomSTIconY = vCustomSTIconY;
 
         kUseLargeAtkDefFont = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "UseLargeAtkDefFont", 1, ".\\Config.ini") != 0;
+        kHideLevelBadge = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "HideLevelBadge", 1, ".\\Config.ini");
+        orig_DuelCardView_UpdateLevelBadge = (fn_DuelCardView_UpdateLevelBadge)ResolveVA(0x1407C6980);
 
         p_g_bIsJpVersion = (bool*)ResolveVA(0x14332A348);
         orig_Get_FontById = (fn_Get_FontById)ResolveVA(0x140872C60);
@@ -632,6 +678,13 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         DetourAttach(&(PVOID&)orig_sub_14074E7D0, Hook_sub_14074E7D0);
         DetourAttach(&(PVOID&)orig_Get_RawDefFromFullCardProps, Hook_Get_RawDefFromFullCardProps);
         DetourAttach(&(PVOID&)orig_IconId_Attribute, Hook_IconId_Attribute);
+        DetourAttach(&(PVOID&)orig_DuelCardView_UpdateLevelBadge, Hook_DuelCardView_UpdateLevelBadge);
+        if (kHideLevelBadge != 0)
+        {
+            // Only attached when hiding: the hook never calls the original, so it needs none of its arguments.
+            orig_DuelHand_DrawLevelNumber = (fn_DuelHand_DrawLevelNumber)ResolveVA(0x14078B0B0);
+            DetourAttach(&(PVOID&)orig_DuelHand_DrawLevelNumber, Hook_DuelHand_DrawLevelNumber);
+        }
          DetourAttach(&(PVOID&)orig_Get_SpellTrapCardPropertyFromFullCardProps,Hook_Get_SpellTrapCardPropertyFromFullCardProps); // uncomment once RVA above is fixed
         LONG err = DetourTransactionCommit();
         (void)err;
