@@ -9,9 +9,18 @@
           "description": "Faster game.",             one short line shown under it (default: nothing)
           "enforced": true,                          it can not be turned off (default: false)
           "requires": [ "Yu-Gi-Oh-Core", "Yu-Gi-Oh-GUI" ],  DLL names (no .dll) that have to be on for this one to load
-          "dlls": [ "Yu-Gi-Oh-FooHelper" ]           more DLLs (same folder) that belong to this plugin: they are not listed on their own,
+          "dlls": [ "Yu-Gi-Oh-FooHelper" ],          more DLLs (same folder) that belong to this plugin: they are not listed on their own,
                                                      and they load with it, just before it
+          "content": [ "cards.json", "pages\\" ]       the files in <game>\Yu-Gi-Oh-Ex this plugin applies to the game ("x\\" = a folder);
+                                                     WolfX reads it to write Yu-Gi-Oh-Ex\content.json
         }
+
+    <game>\Yu-Gi-Oh-Ex\content.json (written by WolfX whenever the content changes) lists the content there and the plugins it needs:
+
+        { "content": [ { "file": "genres.json", "plugins": [ "Yu-Gi-Oh-MoreCards" ] }, ... ] }
+
+    The loader switches those plugins on (and what they require) before it injects anything (ApplyContent below), and says which
+    are not installed, so content made on one PC tells another what it needs.
 
     The loader, Yu-Gi-Oh-Core and Yu-Gi-Oh-RIX all include this file, so they agree on what "can load" means:
       - an enforced plugin is always on;
@@ -40,6 +49,7 @@ namespace YGO
             bool Enforced = false;
             std::vector<std::string> Requires;   // DLL names without ".dll"
             std::vector<std::string> Dlls;       // more DLLs that belong to this plugin (names without ".dll")
+            std::vector<std::string> Content;    // the Yu-Gi-Oh-Ex files it applies ("cards.json", "pages\\")
             bool Found = false;                  // a manifest file was read
         };
 
@@ -119,6 +129,18 @@ namespace YGO
                     }
                 }
             }
+            for (const char* key : { "content", "Content" })
+            {
+                auto it = root.find(key);
+                if (it != root.end() && it->is_array())
+                {
+                    for (const auto& item : *it)
+                    {
+                        if (item.is_string())
+                            info.Content.push_back(item.get<std::string>());
+                    }
+                }
+            }
             for (const char* key : { "dlls", "Dlls" })
             {
                 auto it = root.find(key);
@@ -171,6 +193,74 @@ namespace YGO
                     kept.push_back(std::move(plugins[i]));
             }
             plugins = std::move(kept);
+        }
+
+        // One line of Yu-Gi-Oh-Ex\content.json: a content file and the plugins (DLL names) it needs.
+        struct ContentNeed
+        {
+            std::string File;
+            std::vector<std::string> Plugins;
+        };
+
+        // <game>\Yu-Gi-Oh-Ex\content.json, or nothing when there is none (or it can't be read).
+        inline std::vector<ContentNeed> ReadContent(const std::string& gameFolder)
+        {
+            std::vector<ContentNeed> needs;
+            std::ifstream file(gameFolder + "\\Yu-Gi-Oh-Ex\\content.json");
+            if (!file)
+                return needs;
+            nlohmann::json root = nlohmann::json::parse(file, nullptr, false, true);
+            if (root.is_discarded() || !root.is_object() || !root.contains("content") || !root["content"].is_array())
+                return needs;
+            for (const auto& entry : root["content"])
+            {
+                if (!entry.is_object() || !entry.contains("file") || !entry["file"].is_string())
+                    continue;
+                ContentNeed need;
+                need.File = entry["file"].get<std::string>();
+                if (entry.contains("plugins") && entry["plugins"].is_array())
+                {
+                    for (const auto& plugin : entry["plugins"])
+                    {
+                        if (plugin.is_string())
+                            need.Plugins.push_back(StripDll(plugin.get<std::string>()));
+                    }
+                }
+                needs.push_back(std::move(need));
+            }
+            return needs;
+        }
+
+        // Switches on every plugin the content needs, and everything those require (call before Resolve). Returns the lines
+        // "<file> needs <plugin>" for plugins that are not installed.
+        inline std::vector<std::string> ApplyContent(std::vector<Plugin>& plugins, const std::vector<ContentNeed>& needs)
+        {
+            std::vector<std::string> missing;
+            std::vector<std::string> pending;
+            for (const ContentNeed& need : needs)
+            {
+                for (const std::string& name : need.Plugins)
+                {
+                    if (Find(plugins, name))
+                        pending.push_back(name);
+                    else
+                        missing.push_back(need.File + " needs " + name);
+                }
+            }
+            while (!pending.empty())
+            {
+                std::string name = pending.back();
+                pending.pop_back();
+                for (Plugin& plugin : plugins)
+                {
+                    if (!SameName(plugin.Name, name) || plugin.Enabled)
+                        continue;
+                    plugin.Enabled = true;
+                    for (const std::string& required : plugin.Details.Requires)
+                        pending.push_back(required);
+                }
+            }
+            return missing;
         }
 
         // Fills Active and Problem from Enabled (and Enforced, which forces a plugin on).

@@ -25,7 +25,10 @@ namespace YGO
             enum ScreenID : int
             {
                 SCREEN_TITLE_SCREEN = 0x5,
-                SCREEN_MAIN_MENU = 0x6,
+                SCREEN_SIGN_IN = 0x6,               // RIX::ScreenSignIn: Play on the title goes here; it reads the save, then opens the main menu
+                SCREEN_COMMON_BG = 0x7,             // draws every screen's backdrop (by the current screen's ScreenType)
+                SCREEN_MAIN_MENU = 0x8,             // RIX::ScreenMainMenu (was listed as 6, which is SignIn)
+                SCREEN_SAVE_SELECT = 100,           // Yu-Gi-Oh-Core's save-select screen (not the game's)
                 SCREEN_LOADING_SCREEN = 0x9,
                 SCREEN_CAMPAIGN_SELECTION = 0xA,
                 SCREEN_HELP_AND_OPTIONS = 12,
