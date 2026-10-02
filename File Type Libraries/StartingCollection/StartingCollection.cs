@@ -32,9 +32,17 @@ namespace StartingCollection
             Toc = TocArchive.TryOpen(Path.Combine(gameFolder, "YGO_2020.toc")),
         };
 
+        /// <summary>
+        /// WolfX sets this to the game data it has open (the game folder's .dat or an extracted folder of any name), so everything that reads
+        /// the game's files here reads the same files the editors do. Null elsewhere (DuelIt).
+        /// </summary>
+        public static Func<string, byte[]?>? OpenData { get; set; }
+
         /// <summary>The file's bytes: a loose file in one of the folders if there is one, otherwise the copy inside YGO_2020.dat.</summary>
         public byte[]? ReadBytes(string relativePath)
         {
+            if (OpenData?.Invoke(relativePath) is { } open)
+                return open;
             string? path = Find(relativePath);
             return path != null ? System.IO.File.ReadAllBytes(path) : Toc?.Read(relativePath);
         }
@@ -93,6 +101,7 @@ namespace StartingCollection
 
         private static readonly JsonSerializerOptions JsonOptions = new()
         {
+            TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(),
             WriteIndented = true,
             DefaultIgnoreCondition = JsonIgnoreCondition.Never,
         };
@@ -118,23 +127,24 @@ namespace StartingCollection
         {
             var result = new StartingCollectionData { Language = language };
 
-            string? deckDataPath = files.Find(Path.Combine("main", $"deckdata_{language}.bin"));
-            string? decksArchive = files.Find("decks.zib");
-            string? internalIdPath = files.Find(Path.Combine("bin", "CARD_IntID.bin")) ?? files.Find(Path.Combine("bin", "CARD_INTID.bin"));
+            string deckDataPath = Path.Combine("main", $"deckdata_{language}.bin");
+            byte[]? deckDataBytes = files.ReadBytes(deckDataPath);
+            byte[]? decksArchive = files.ReadBytes("decks.zib");
+            byte[]? internalIdBytes = files.ReadBytes(Path.Combine("bin", "CARD_IntID.bin"));
 
-            if (deckDataPath == null) result.Warnings.Add($"main/deckdata_{language}.bin was not found.");
+            if (deckDataBytes == null) result.Warnings.Add($"main/deckdata_{language}.bin was not found.");
             if (decksArchive == null) result.Warnings.Add("decks.zib was not found.");
-            if (internalIdPath == null) result.Warnings.Add("bin/CARD_IntID.bin was not found.");
-            if (deckDataPath == null || decksArchive == null || internalIdPath == null)
+            if (internalIdBytes == null) result.Warnings.Add("bin/CARD_IntID.bin was not found.");
+            if (deckDataBytes == null || decksArchive == null || internalIdBytes == null)
                 return result;
 
             result.Sources["deckdata"] = deckDataPath;
-            result.Sources["decks"] = decksArchive;
-            result.Sources["internalIds"] = internalIdPath;
+            result.Sources["decks"] = "decks.zib";
+            result.Sources["internalIds"] = Path.Combine("bin", "CARD_IntID.bin");
 
-            var deckData = DeckDataFile.Load(deckDataPath);
-            ZIB.Load(decksArchive);
-            ushort[] internalIds = ReadInternalIds(internalIdPath);
+            var deckData = DeckDataFile.Parse(deckDataBytes);
+            var decks = ZibArchive.Parse(decksArchive);
+            ushort[] internalIds = ReadInternalIds(internalIdBytes);
 
             var copies = new Dictionary<int, int>();          // internal id -> copies
             var canonicalId = new Dictionary<int, int>();     // internal id -> Konami id
@@ -154,14 +164,14 @@ namespace StartingCollection
                     continue;
                 }
 
-                using var stream = ZIB.Get_SpecificItemFromArchive(record.FileName.ToLowerInvariant() + ".ydc");
-                if (stream == null)
+                byte[]? ydc = decks.Entries.FirstOrDefault(entry => entry.Name.Equals(record.FileName + ".ydc", StringComparison.OrdinalIgnoreCase))?.Data;
+                if (ydc == null)
                 {
                     result.Warnings.Add($"{record.FileName}.ydc is not in decks.zib.");
                     continue;
                 }
 
-                var deck = YdcDeck.Parse(stream.ToArray());
+                var deck = YdcDeck.Parse(ydc);
                 result.StarterDecks.Add(new StartingDeck
                 {
                     Id = deckId,
@@ -197,9 +207,8 @@ namespace StartingCollection
         }
 
         /// <summary>bin/CARD_IntID.bin is a plain table of 16 bit internal ids, indexed by Konami id - 3900.</summary>
-        public static ushort[] ReadInternalIds(string path)
+        public static ushort[] ReadInternalIds(byte[] data)
         {
-            byte[] data = System.IO.File.ReadAllBytes(path);
             var ids = new ushort[data.Length / 2];
             for (int i = 0; i < ids.Length; i++)
                 ids[i] = BinaryPrimitives.ReadUInt16LittleEndian(data.AsSpan(i * 2));

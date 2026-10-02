@@ -1,150 +1,78 @@
-﻿namespace PDLimits
+namespace PDLimits
 {
+    /// <summary>
+    /// bin\pd_limits.bin, the Forbidden / Limited / Semi-Limited list: three blocks of a u16 count followed by that many u16 Konami ids.
+    /// </summary>
     public static class PDLimits
     {
-        private static BinaryReader _Reader;
+        public const string GamePath = @"bin\pd_limits.bin";
+
         private static List<ushort> _Forbidden = [];
         private static List<ushort> _Limited = [];
         private static List<ushort> _SemiLimited = [];
 
-        private static int _ForbiddenCount;
-        private static int _LimitedCount;
-        private static int _SemiLimitedCount;
+        public static void Load(string path) => Parse(File.ReadAllBytes(path));
 
-        public static void Load(string PDLimtits)
+        public static void Parse(byte[] data)
         {
-            // Load the PDLimits file
+            _Forbidden = [];
+            _Limited = [];
+            _SemiLimited = [];
+            using var reader = new BinaryReader(new MemoryStream(data));
             try
             {
-                _Reader = new BinaryReader(File.Open(PDLimtits, FileMode.Open, FileAccess.Read, FileShare.Read));
-                _ForbiddenCount = _Reader.ReadUInt16();
-
-                //Read _ForbiddenCount*2 bytes and store each value in _Forbidden
-                _Forbidden = new List<ushort>();
-                for (int i = 0; i < _ForbiddenCount; i++)
+                foreach (var list in new[] { _Forbidden, _Limited, _SemiLimited })
                 {
-                    _Forbidden.Add(_Reader.ReadUInt16());
-                }
-
-                _LimitedCount = _Reader.ReadUInt16();
-
-                //Read _LimitedCount*2 bytes and store each value in _Limited
-                _Limited = new List<ushort>();
-                for (int i = 0; i < _LimitedCount; i++)
-                {
-                    _Limited.Add(_Reader.ReadUInt16());
-                }
-
-                _SemiLimitedCount = _Reader.ReadUInt16();
-
-                //Read _SemiLimitedCount*2 bytes and store each value in _SemiLimited
-                _SemiLimited = new List<ushort>();
-                for (int i = 0; i < _SemiLimitedCount; i++)
-                {
-                    _SemiLimited.Add(_Reader.ReadUInt16());
+                    int count = reader.ReadUInt16();
+                    for (int i = 0; i < count; i++)
+                        list.Add(reader.ReadUInt16());
                 }
             }
             catch (EndOfStreamException)
             {
-                //PDLimits is either broken, or they have an empty one.
+                // a cut-short file (or an empty one): keep what was read
             }
-            finally
+        }
+
+        public static byte[] ToBytes()
+        {
+            using var stream = new MemoryStream();
+            using (var writer = new BinaryWriter(stream))
             {
-                _Reader.Close();
+                foreach (var list in new[] { _Forbidden, _Limited, _SemiLimited })
+                {
+                    writer.Write((ushort)list.Count);
+                    foreach (ushort card in list)
+                        writer.Write(card);
+                }
             }
+            return stream.ToArray();
         }
 
-        public static List<ushort> GetForbidden()
-        {
-            return _Forbidden;
-        }
+        public static void Save(string path) => File.WriteAllBytes(path, ToBytes());
 
-        public static List<ushort> GetLimited()
-        {
-            return _Limited;
-        }
+        public static List<ushort> GetForbidden() => _Forbidden;
 
-        public static List<ushort> GetSemiLimited()
-        {
-            return _SemiLimited;
-        }
+        public static List<ushort> GetLimited() => _Limited;
 
-        public static int GetForbiddenCount()
-        {
-            return _ForbiddenCount;
-        }
+        public static List<ushort> GetSemiLimited() => _SemiLimited;
 
-        public static int GetLimitedCount()
-        {
-            return _LimitedCount;
-        }
+        public static int GetForbiddenCount() => _Forbidden.Count;
 
-        public static int GetSemiLimitedCount()
-        {
-            return _SemiLimitedCount;
-        }
+        public static int GetLimitedCount() => _Limited.Count;
 
-        public static void Remove_CardFromSemiLimited(ushort CardID)
-        {
-            _SemiLimited.Remove(CardID);
-            _SemiLimitedCount--;
-        }
+        public static int GetSemiLimitedCount() => _SemiLimited.Count;
 
-        public static void Remove_CardFromForbidden(ushort CardID)
-        {
-            _Forbidden.Remove(CardID);
-            _ForbiddenCount--;
-        }
+        public static void Remove_CardFromSemiLimited(ushort CardID) => _SemiLimited.Remove(CardID);
 
-        public static void Remove_CardFromLimited(ushort CardID)
-        {
-            _Limited.Remove(CardID);
-            _LimitedCount--;
-        }
+        public static void Remove_CardFromForbidden(ushort CardID) => _Forbidden.Remove(CardID);
 
-        public static void Save()
-        {
-            // Save the PDLimits file
-            File.Delete("pd_limits.bin");
-            var _Writer = new BinaryWriter(File.Open("pd_limits.bin", FileMode.CreateNew, FileAccess.Write, FileShare.Read));
-            _Writer.Write((ushort)_ForbiddenCount);
+        public static void Remove_CardFromLimited(ushort CardID) => _Limited.Remove(CardID);
 
-            //Write each value in _Forbidden as a 2 byte value
-            for (int i = 0; i < _ForbiddenCount; i++)
-            {
-                _Writer.Write((ushort)_Forbidden[i]);
-            }
-            _Writer.Write((ushort)_LimitedCount);
-            //Write each value in _Limited as a 2 byte value
-            for (int i = 0; i < _LimitedCount; i++)
-            {
-                _Writer.Write((ushort)_Limited[i]);
-            }
-            _Writer.Write((ushort)_SemiLimitedCount);
-            //Write each value in _SemiLimited as a 2 byte value
-            for (int i = 0; i < _SemiLimitedCount; i++)
-            {
-                _Writer.Write((ushort)_SemiLimited[i]);
-            }
-            _Writer.Close();
-        }
+        public static void Add_CardToSemiLimited(ushort CardID) => _SemiLimited.Add(CardID);
 
-        public static void Add_CardToSemiLimited(ushort CardID)
-        {
-            _SemiLimited.Add(CardID);
-            _SemiLimitedCount++;
-        }
+        public static void Add_CardToForbidden(ushort CardID) => _Forbidden.Add(CardID);
 
-        public static void Add_CardToForbidden(ushort CardID)
-        {
-            _Forbidden.Add(CardID);
-            _ForbiddenCount++;
-        }
-
-        public static void Add_CardToLimited(ushort CardID)
-        {
-            _Limited.Add(CardID);
-            _LimitedCount++;
-        }
+        public static void Add_CardToLimited(ushort CardID) => _Limited.Add(CardID);
     }
 }
