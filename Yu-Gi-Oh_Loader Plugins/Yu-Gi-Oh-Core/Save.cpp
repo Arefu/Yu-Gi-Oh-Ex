@@ -1,4 +1,5 @@
 ﻿#include <Windows.h>
+#include <array>
 #include <cstring>
 #include <filesystem>
 #include <format>
@@ -52,8 +53,103 @@ struct GameBuffer
     unsigned char* Capacity;
 };
 
+// g_SavePath is the file the game reads and writes now; Save slots (SaveSlots.cpp) switch it. g_PrimarySavePath is the file
+// GameSaveName names (slot 1), the only one that is ever seeded from the Steam save. The path is read on the game's save thread
+// and changed on the UI thread, so it is only touched under g_PathLock.
 static std::filesystem::path g_SavePath;
+static std::filesystem::path g_PrimarySavePath;
+static std::mutex g_PathLock;
 static std::string g_IniPath;
+
+static std::filesystem::path CurrentPath()
+{
+    std::lock_guard<std::mutex> guard(g_PathLock);
+    return g_SavePath;
+}
+
+// ---------------------------------------------------------------------
+// Volume shared by every save slot
+// ---------------------------------------------------------------------
+
+// The settings block at 0x14: +0 music volume, +4 sound effects / ambient volume (both 0..10, what ApplySavedAudioSettings reads),
+// +8 and +12 unknown (left per slot). The volume of the last save read or written is put into every save the game reads, so it
+// carries across slots. The header's checksum is at 12 (CRC-32, table 0xEDB88320, start 0xFFFFFFFF, no final inversion, over the
+// file with the field zeroed).
+constexpr uint32_t kSaveMagic = 0x54CE29F9;
+constexpr size_t kChecksumOffset = 12;
+constexpr size_t kVolumeOffset = 0x14;
+constexpr size_t kVolumeSize = 8;
+
+static std::mutex g_VolumeLock;
+static bool g_VolumeKnown = false;
+static unsigned char g_Volume[kVolumeSize];
+
+static bool IsSave(const unsigned char* data, size_t size)
+{
+    uint32_t magic;
+    std::memcpy(&magic, data, sizeof(magic));
+    return size == kSaveSize && magic == kSaveMagic;
+}
+
+static uint32_t SaveChecksum(const unsigned char* data, size_t size)
+{
+    static const auto table = []
+    {
+        std::array<uint32_t, 256> t{};
+        for (uint32_t i = 0; i < 256; ++i)
+        {
+            uint32_t c = i;
+            for (int k = 0; k < 8; ++k)
+                c = (c & 1) ? (c >> 1) ^ 0xEDB88320u : c >> 1;
+            t[i] = c;
+        }
+        return t;
+    }();
+
+    uint32_t crc = 0xFFFFFFFF;
+    for (size_t i = 0; i < size; ++i)
+    {
+        const unsigned char b = (i >= kChecksumOffset && i < kChecksumOffset + 4) ? 0 : data[i];
+        crc = (crc >> 8) ^ table[(crc ^ b) & 0xFF];
+    }
+    return crc;
+}
+
+static void RememberVolume(const unsigned char* save)
+{
+    std::lock_guard<std::mutex> guard(g_VolumeLock);
+    std::memcpy(g_Volume, save + kVolumeOffset, kVolumeSize);
+    g_VolumeKnown = true;
+}
+
+// A save file about to be handed to the game: the first one read sets the shared volume, later ones get it (and a new checksum).
+static void ShareVolume(std::vector<unsigned char>& file)
+{
+    if (!IsSave(file.data(), file.size()))
+        return;
+
+    std::lock_guard<std::mutex> guard(g_VolumeLock);
+    if (!g_VolumeKnown)
+    {
+        std::memcpy(g_Volume, file.data() + kVolumeOffset, kVolumeSize);
+        g_VolumeKnown = true;
+        return;
+    }
+    if (std::memcmp(file.data() + kVolumeOffset, g_Volume, kVolumeSize) == 0)
+        return;
+
+    std::memcpy(file.data() + kVolumeOffset, g_Volume, kVolumeSize);
+    const uint32_t crc = SaveChecksum(file.data(), file.size());
+    std::memcpy(file.data() + kChecksumOffset, &crc, sizeof(crc));
+    Logger::WriteLog("Volume carried over from the last save", MODULE_NAME, 0);
+}
+
+void Save::ApplySharedVolume(unsigned char* blob)
+{
+    std::lock_guard<std::mutex> guard(g_VolumeLock);
+    if (blob && g_VolumeKnown)
+        std::memcpy(blob + kVolumeOffset, g_Volume, kVolumeSize);
+}
 
 // A setting from [Yu-Gi-Oh-Core], or from [Yu-Gi-Oh-MoreCards] where it used to be, or the default.
 static int ReadIntSetting(const char* key, int fallback)
@@ -129,9 +225,9 @@ static bool ReadSteamSave(std::vector<unsigned char>& data)
 // The local save
 // ---------------------------------------------------------------------
 
-static bool WriteLocalSave(const unsigned char* data, size_t size)
+static bool WriteLocalSave(const std::filesystem::path& path, const unsigned char* data, size_t size)
 {
-    std::filesystem::path temp = g_SavePath;
+    std::filesystem::path temp = path;
     temp += ".tmp";
 
     {
@@ -141,13 +237,13 @@ static bool WriteLocalSave(const unsigned char* data, size_t size)
     }
 
     std::error_code error;
-    std::filesystem::rename(temp, g_SavePath, error);
+    std::filesystem::rename(temp, path, error);
     return !error;
 }
 
-static bool ReadLocalSave(std::vector<unsigned char>& data)
+static bool ReadLocalSave(const std::filesystem::path& path, std::vector<unsigned char>& data)
 {
-    std::ifstream file(g_SavePath, std::ios::binary | std::ios::ate);
+    std::ifstream file(path, std::ios::binary | std::ios::ate);
     if (!file)
         return false;
 
@@ -161,36 +257,41 @@ static bool ReadLocalSave(std::vector<unsigned char>& data)
 }
 
 // The first time the local save is asked for and doesn't exist, it starts as a copy of the
-// Steam save (if there is one). After that the two are never synced.
+// Steam save (if there is one). After that the two are never synced. Only slot 1 (the GameSaveName file)
+// is seeded: the other save slots start as new profiles.
 static void SeedFromSteamOnce()
 {
     std::lock_guard<std::mutex> guard(g_SeedLock);
     if (g_Seeded)
         return;
+
+    const std::filesystem::path path = CurrentPath();
+    if (path != g_PrimarySavePath)
+        return;   // not seeded yet: slot 1 can still be seeded if it is picked later
     g_Seeded = true;
 
     std::error_code error;
-    if (std::filesystem::exists(g_SavePath, error))
+    if (std::filesystem::exists(path, error))
         return;
 
     // SeedFromGameSave=0 (optional) starts the local save as a brand-new profile instead of a copy of the Steam save.
     if (ReadIntSetting("SeedFromGameSave", 1) == 0)
     {
-        Logger::WriteLog(std::format("SeedFromGameSave=0: {} will start as a new profile", g_SavePath.string()), MODULE_NAME, 0);
+        Logger::WriteLog(std::format("SeedFromGameSave=0: {} will start as a new profile", path.string()), MODULE_NAME, 0);
         return;
     }
 
     std::vector<unsigned char> steamSave;
     if (!ReadSteamSave(steamSave))
     {
-        Logger::WriteLog(std::format("No Steam save to copy, {} will start as a new profile made by the game", g_SavePath.string()), MODULE_NAME, 0);
+        Logger::WriteLog(std::format("No Steam save to copy, {} will start as a new profile made by the game", path.string()), MODULE_NAME, 0);
         return;
     }
 
-    if (WriteLocalSave(steamSave.data(), steamSave.size()))
-        Logger::WriteLog(std::format("Copied the Steam save ({} bytes) to {}", steamSave.size(), g_SavePath.string()), MODULE_NAME, 0);
+    if (WriteLocalSave(path, steamSave.data(), steamSave.size()))
+        Logger::WriteLog(std::format("Copied the Steam save ({} bytes) to {}", steamSave.size(), path.string()), MODULE_NAME, 0);
     else
-        Logger::WriteLog(std::format("Could not write {}", g_SavePath.string()), MODULE_NAME, 2);
+        Logger::WriteLog(std::format("Could not write {}", path.string()), MODULE_NAME, 2);
 }
 
 // ---------------------------------------------------------------------
@@ -203,7 +304,7 @@ static void __fastcall Hook_QuerySaveFileExists(int64_t manager)
     SeedFromSteamOnce();
 
     std::error_code error;
-    if (std::filesystem::exists(g_SavePath, error))
+    if (std::filesystem::exists(CurrentPath(), error))
     {
         SetPendingOp(manager, 1);
         SetResultCode(manager, 0);
@@ -218,13 +319,15 @@ static void __fastcall Hook_ReadSaveFile(int64_t manager)
 {
     SeedFromSteamOnce();
 
+    const std::filesystem::path path = CurrentPath();
     std::vector<unsigned char> file;
-    if (!ReadLocalSave(file))
+    if (!ReadLocalSave(path, file))
     {
         SetResultCode(manager, kResultNoFile);
         SetPendingOp(manager, 0);
         return;
     }
+    ShareVolume(file);
 
     GameBuffer buffer{};
     reinterpret_cast<void(__fastcall*)(GameBuffer*, size_t)>(AllocReadBuffer)(&buffer, file.size());
@@ -235,7 +338,7 @@ static void __fastcall Hook_ReadSaveFile(int64_t manager)
     SetPendingOp(manager, 0);
 
     FreeGameBuffer(buffer);
-    Logger::WriteLog(std::format("Read {} ({} bytes), result {}", g_SavePath.string(), file.size(), result), MODULE_NAME, 0);
+    Logger::WriteLog(std::format("Read {} ({} bytes), result {}", path.string(), file.size(), result), MODULE_NAME, 0);
 }
 
 static void __fastcall Hook_WriteSaveFile(int64_t manager)
@@ -246,13 +349,36 @@ static void __fastcall Hook_WriteSaveFile(int64_t manager)
     // The blob sits 20 bytes into the manager; FinalizeChecksum bumps the save counter and stores the CRC32.
     unsigned char* blob = reinterpret_cast<unsigned char*>(manager + 20);
     reinterpret_cast<void(__fastcall*)(void*)>(FinalizeChecksum)(blob);
+    RememberVolume(blob);   // a volume change in Settings is saved like this; it is what the next slot gets
 
-    bool ok = WriteLocalSave(blob, kSaveSize);
+    const std::filesystem::path path = CurrentPath();
+    bool ok = WriteLocalSave(path, blob, kSaveSize);
     SetResultCode(manager, ok ? kResultOk : kResultWriteFailed);
     SetPendingOp(manager, 0);
 
     if (!ok)
-        Logger::WriteLog(std::format("Could not write {}", g_SavePath.string()), MODULE_NAME, 2);
+        Logger::WriteLog(std::format("Could not write {}", path.string()), MODULE_NAME, 2);
+}
+
+const std::filesystem::path& Save::PrimarySavePath()
+{
+    return g_PrimarySavePath;
+}
+
+std::filesystem::path Save::CurrentSavePath()
+{
+    return CurrentPath();
+}
+
+void Save::SetSavePath(const std::filesystem::path& path)
+{
+    {
+        std::lock_guard<std::mutex> guard(g_PathLock);
+        if (g_SavePath == path)
+            return;
+        g_SavePath = path;
+    }
+    Logger::WriteLog(std::format("The game now reads and writes {}", path.string()), MODULE_NAME, 0);
 }
 
 const std::string& Save::GameFolder()
@@ -274,7 +400,8 @@ bool Save::Install()
     GetPrivateProfileStringA(kIniSection, "GameSaveName", "", name, MAX_PATH, g_IniPath.c_str());
     if (!name[0])
         GetPrivateProfileStringA(kLegacyIniSection, "GameSaveName", "savegame-ex.dat", name, MAX_PATH, g_IniPath.c_str());
-    g_SavePath = std::filesystem::path(Save::GameFolder()) / (name[0] ? name : "savegame-ex.dat");
+    g_PrimarySavePath = std::filesystem::path(Save::GameFolder()) / (name[0] ? name : "savegame-ex.dat");
+    g_SavePath = g_PrimarySavePath;
 
     DetourTransactionBegin();
     DetourUpdateThread(GetCurrentThread());
@@ -284,6 +411,6 @@ bool Save::Install()
     DetourAttach(&(PVOID&)orig_WriteSaveFile, Hook_WriteSaveFile);
 
     LONG err = DetourTransactionCommit();
-    Logger::WriteLog(std::format("Using local save {} (Steam save untouched): {}", g_SavePath.string(), err), MODULE_NAME, err == 0 ? 0 : 2);
+    Logger::WriteLog(std::format("Using local save {} (Steam save untouched): {}", g_PrimarySavePath.string(), err), MODULE_NAME, err == 0 ? 0 : 2);
     return err == 0;
 }

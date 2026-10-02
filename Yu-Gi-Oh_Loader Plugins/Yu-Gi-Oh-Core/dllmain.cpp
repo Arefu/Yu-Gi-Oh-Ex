@@ -2,10 +2,13 @@
 #include <format>
 #include <string>
 
+#include "Credits.h"
 #include "Detours.h"
 #include "Host.h"
 #include "Logger.h"
 #include "Save.h"
+#include "SaveScreen.h"
+#include "SaveSlots.h"
 #include "Yu-Gi-Oh-Core.h"
 
 // The exports (see Yu-Gi-Oh-Core.h).
@@ -27,6 +30,8 @@ extern "C"
     CORE_API int __cdecl Core_SetPluginEnabled(const char* Key, int Enabled) { return Host::SetEnabled(Key, Enabled != 0); }
 
     CORE_API int __cdecl Core_StartPlugins(void) { return Host::StartPlugins(); }
+
+    CORE_API void __cdecl Core_AddCredits(const char* Heading, const char* Lines) { Credits::Add(Heading ? Heading : "", Lines ? Lines : ""); }
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
@@ -49,6 +54,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             *reinterpret_cast<volatile unsigned char*>(0x140C8D1C9) = rules2020 ? 1 : 0;
             Logger::WriteLog(std::format("Duel engine rules set to {} (byte 0x140C8D1C9 = {})", rules2020 ? "2020" : "2019", rules2020 ? 1 : 0), MODULE_NAME, 0);
         }
+        // Credits: the built-in thanks, Yu-Gi-Oh-Ex\credits.json, what plugins add and the plugin list, then the game's own credits (Credits.h).
+        Credits::Install();
+
         // Core is what keeps the base game unaltered: if the save could not be redirected the game would write the Steam save, so the player is asked.
         if (!Save::Install())
         {
@@ -58,6 +66,12 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
                 "If you continue, the game can write to your real Steam save and you could lose progress.\n\n"
                 "Close the game?", "Yu-Gi-Oh-Core", MB_ICONWARNING | MB_YESNO) == IDYES)
                 TerminateProcess(GetCurrentProcess(), 1);
+        }
+        else
+        {
+            // Save slots: which file the game starts on, and the save-select screen between the title and the main menu.
+            SaveSlots::Install();
+            SaveScreen::Install();
         }
         break;
     }
