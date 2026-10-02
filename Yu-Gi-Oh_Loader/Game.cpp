@@ -162,6 +162,17 @@ void Game::LookForPlugins()
     }
 
     YGO::Manifest::ClaimOwned(plugins);
+
+    // Content made with WolfX (Yu-Gi-Oh-Ex\content.json) switches on the plugins it needs, and says which are not installed.
+    const std::vector<std::string> missing = YGO::Manifest::ApplyContent(plugins, YGO::Manifest::ReadContent(gGamePath));
+    if (!missing.empty())
+    {
+        std::string text = "The content in the Yu-Gi-Oh-Ex folder needs plugins that are not installed, so it won't show up in the game:\n\n";
+        for (const std::string& line : missing)
+            text += "  " + line + "\n";
+        text += "\nPut those plugins in the Plugins folder (or remove that content).";
+        MessageBoxA(nullptr, text.c_str(), "Yu-Gi-Oh-Ex", MB_OK | MB_ICONWARNING);
+    }
     YGO::Manifest::Resolve(plugins);
 
     for (const YGO::Manifest::Plugin& plugin : plugins)
