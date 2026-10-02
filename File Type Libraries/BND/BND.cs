@@ -1,4 +1,5 @@
-﻿using System.Text;
+using System.Buffers.Binary;
+using System.Text;
 
 namespace Types
 {
@@ -16,80 +17,49 @@ namespace Types
         }
     }
 
+    /// <summary>
+    /// strings\Strings_STEAM_&lt;lang&gt;.BND, the UI strings: a big-endian u32 count, then a big-endian u32 offset per string, then the strings
+    /// one after another in UTF-16BE, each with a terminating 0. A string runs to the next one's offset (the last one to the end of the file).
+    /// </summary>
     public static class BND
     {
-        internal static string? Path { get; set; }
+        public static string GamePath(char language) => $@"strings\Strings_STEAM_{char.ToUpperInvariant(language)}.BND";
 
-        private static uint SwapBytes(uint Number)
+        public static List<BNDString> Load(string path) => Parse(File.ReadAllBytes(path));
+
+        public static List<BNDString> Parse(byte[] data)
         {
-            Number = (Number >> 16) | (Number << 16);
-            return ((Number & 0xFF00FF00) >> 8) | ((Number & 0x00FF00FF) << 8);
-        }
-
-        public static long GetEncodedSizeOfString(byte[] Bytes)
-        {
-            var HexString = new StringBuilder(Bytes.Length * 2);
-            foreach (var Byte in Bytes) HexString.Append(Byte == 0x00 ? '.' : Convert.ToChar(Byte));
-
-            return HexString.ToString().Length;
-        }
-
-        public static List<BNDString> Load(string Path)
-        {
-            BND.Path = new FileInfo(Path).Name;
-
-            using var Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
-            var Strings = new List<BNDString>();
-
-            Reader.ReadBytes(4); //000004BD - NUM OF Entries.
-            int BreakOut = 0x0;
-            bool FirstIteration = true;
-
-            do
+            var strings = new List<BNDString>();
+            if (data.Length < 8)
+                return strings;
+            int first = (int)BinaryPrimitives.ReadUInt32BigEndian(data.AsSpan(4));
+            int count = Math.Max(0, (first - 4) / 4);
+            for (int i = 0; i < count; i++)
             {
-                var Start = int.Parse(BitConverter.ToString(Reader.ReadBytes(4)).Replace("-", "").TrimStart('0'), System.Globalization.NumberStyles.HexNumber);
-                var CurrentPosition = Reader.BaseStream.Position;
-                var NextFile = int.Parse(BitConverter.ToString(Reader.ReadBytes(4)).Replace("-", "").TrimStart('0'), System.Globalization.NumberStyles.HexNumber);
-                var Length = NextFile - Start;
-
-                if (FirstIteration)
-                {
-                    BreakOut = Start;
-                    FirstIteration = false;
-                }
-
-                Reader.BaseStream.Position = Start;
-
-                var String = Encoding.BigEndianUnicode.GetString(Reader.ReadBytes(Length)).TrimEnd('\0');
-
-                Strings.Add(new BNDString(Start, Length, String));
-
-                Reader.BaseStream.Position = CurrentPosition;
-            } while ((Reader.BaseStream.Position < BreakOut));
-            return Strings;
-        }
-
-        public static void Save(List<BNDString> BNDStrings)
-        {
-            if (Path == null)
-                return;
-
-            uint CurrentSize = (uint)BNDStrings.Count * 4 + 4;
-
-            using var Writer = new BinaryWriter(File.Open(Path, FileMode.OpenOrCreate, FileAccess.Write));
-            {
-                var NumberOfItemsInHex = BitConverter.GetBytes(SwapBytes((uint)BNDStrings.Count));
-                Writer.Write(NumberOfItemsInHex);
-                foreach (var String in BNDStrings)
-                {
-                    Writer.Write(SwapBytes(CurrentSize));
-                    CurrentSize = (uint)(CurrentSize + GetEncodedSizeOfString(Encoding.BigEndianUnicode.GetBytes($"{String.String}\0")));
-                }
-                foreach (var String in BNDStrings)
-                {
-                    Writer.Write(Encoding.BigEndianUnicode.GetBytes($"{String.String}\0"));
-                }
+                int start = (int)BinaryPrimitives.ReadUInt32BigEndian(data.AsSpan(4 + i * 4));
+                int end = i + 1 < count ? (int)BinaryPrimitives.ReadUInt32BigEndian(data.AsSpan(8 + i * 4)) : data.Length;
+                start = Math.Clamp(start, 0, data.Length);
+                end = Math.Clamp(end, start, data.Length);
+                strings.Add(new BNDString(start, end - start, Encoding.BigEndianUnicode.GetString(data, start, end - start).TrimEnd('\0')));
             }
+            return strings;
         }
+
+        public static byte[] ToBytes(List<BNDString> strings)
+        {
+            var encoded = strings.Select(s => Encoding.BigEndianUnicode.GetBytes(s.String + "\0")).ToList();
+            var data = new byte[4 + strings.Count * 4 + encoded.Sum(e => e.Length)];
+            BinaryPrimitives.WriteUInt32BigEndian(data, (uint)strings.Count);
+            int at = 4 + strings.Count * 4;
+            for (int i = 0; i < encoded.Count; i++)
+            {
+                BinaryPrimitives.WriteUInt32BigEndian(data.AsSpan(4 + i * 4), (uint)at);
+                encoded[i].CopyTo(data, at);
+                at += encoded[i].Length;
+            }
+            return data;
+        }
+
+        public static void Save(string path, List<BNDString> strings) => File.WriteAllBytes(path, ToBytes(strings));
     }
 }
