@@ -54,6 +54,9 @@ namespace Menu
     // Reads Yu-Gi-Oh-Ex/menus/*.json next to the game (see docs/MenuFiles.md) and adds what they describe.
     void LoadMenuFiles();
 
+    // Opens Yu-Gi-Oh-Ex/pages/<name>.json (made in the WolfEx page designer, docs/PageDesigner.md) as a RIX page; read again when the file changed.
+    bool OpenPage(const std::string& Name);
+
     // While one of our buttons' callbacks runs: the screen object the button was pressed on (the ScreenMainMenu, or the ScreenHelp for an
     // options button), null otherwise. The game changes screen FROM a screen object (RIX::Screen::GotoScreen), which is how the new
     // screen learns where its Back button leads, so screen changes made by a callback must use it.

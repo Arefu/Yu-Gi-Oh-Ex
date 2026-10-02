@@ -5,7 +5,12 @@
 //                    "look": "helpAndOptions", "action": { "goto": "credits" } } ],
 //     "edit":    [ { "item": "quit", "label": "Exit to Desktop", "hidden": false } ]
 //   }
+//
+// Pages made in the WolfEx page designer live in <game folder>\Yu-Gi-Oh-Ex\pages\<name>.json and are opened by the action
+// { "page": "<name>" } (see docs/PageDesigner.md). The file is read again when it changed, so a page can be edited and re-opened
+// without restarting the game.
 #include "MainMenu.h"
+#include "Pages.h"
 
 #include <Windows.h>
 #include <algorithm>
@@ -14,6 +19,7 @@
 #include <format>
 #include <fstream>
 #include <map>
+#include <memory>
 #include <mutex>
 #include <string>
 #include <vector>
@@ -95,13 +101,15 @@ namespace
 
     struct Step
     {
-        enum Kind { Goto, Press, Call, Quit } Type = Goto;
+        enum Kind { Goto, Press, Call, Quit, Page } Type = Goto;
         int Id = 0;             // screen or main menu item
-        std::string Name;       // named action
+        std::string Name;       // named action, or page
     };
     using Action = std::vector<Step>;
 
     std::deque<Action> g_Actions;   // what a button's callback points at; never shrinks
+
+    bool OpenPageFile(const std::string& name);
 
     struct Registered { RIX_ButtonCallback Callback; void* User; };
     std::map<std::string, Registered> g_Registry;
@@ -126,6 +134,9 @@ namespace
                 if (!Menu::RunAction(step.Name))
                     Logger::WriteLog(std::format("Menu action '{}' is not registered by any plugin", step.Name), MODULE_NAME, 1);
                 break;
+            case Step::Page:
+                OpenPageFile(step.Name);
+                break;
             }
         }
     }
@@ -134,7 +145,7 @@ namespace
     {
         if (!node.is_object() || node.size() != 1)
         {
-            problem = "an action is an object with one of goto, press, call or quit";
+            problem = "an action is an object with one of goto, press, call, page or quit";
             return false;
         }
 
@@ -165,9 +176,14 @@ namespace
             step.Type = Step::Call;
             step.Name = node["call"].get<std::string>();
         }
+        else if (node.contains("page") && node["page"].is_string())
+        {
+            step.Type = Step::Page;
+            step.Name = node["page"].get<std::string>();
+        }
         else
         {
-            problem = "an action is goto, press, call or quit";
+            problem = "an action is goto, press, call, page or quit";
             return false;
         }
         return true;
@@ -199,6 +215,271 @@ namespace
     {
         auto it = node.find(key);
         return it != node.end() && it->is_string() ? it->get<std::string>() : std::string();
+    }
+
+    // ---- pages (the WolfEx page designer) ----
+
+    std::filesystem::path ContentFolder(const char* name)
+    {
+        char exe[MAX_PATH]{};
+        GetModuleFileNameA(nullptr, exe, MAX_PATH);
+        return std::filesystem::path(exe).parent_path() / "Yu-Gi-Oh-Ex" / name;
+    }
+
+    // A picture on a page: one sprite of a sheet (the designer's "image" element), top-left at X, Y, stretched to Width x Height.
+    struct PageImage
+    {
+        std::string Resource, Sprite;
+        float X = 0, Y = 0, Width = 0, Height = 0;
+        int Z = 0;
+    };
+
+    // Text on a page (the designer's "text" element): the box's top-left at X, Y, Width wide (0 = one line), TextSize pixels high.
+    struct PageText
+    {
+        std::wstring Text;      // the node keeps a pointer to it: PageFile (and so this) lives as long as the game
+        float X = 0, Y = 0, Width = 0, TextSize = 30;
+        int Z = 0;
+        YGO::RIX::Dfx::TextAlign Align = YGO::RIX::Dfx::TextAlign::Left;
+        uint32_t Colour = 0xFFFFFFFF;
+    };
+
+    // "#RRGGBB" or "#AARRGGBB" -> ARGB (white when missing or unreadable).
+    uint32_t ParseColour(const std::string& text)
+    {
+        if (text.size() != 7 && text.size() != 9 || text[0] != '#')
+            return 0xFFFFFFFF;
+        uint32_t value = 0;
+        for (size_t i = 1; i < text.size(); ++i)
+        {
+            const char c = static_cast<char>(std::tolower(static_cast<unsigned char>(text[i])));
+            const int digit = c >= '0' && c <= '9' ? c - '0' : c >= 'a' && c <= 'f' ? c - 'a' + 10 : -1;
+            if (digit < 0)
+                return 0xFFFFFFFF;
+            value = value * 16 + static_cast<uint32_t>(digit);
+        }
+        return text.size() == 7 ? 0xFF000000 | value : value;
+    }
+
+    // One page file as RIX builds it: the header, the first "buttonList" element's buttons, the images and the texts. Every other element is only
+    // the designer's preview (docs/PageDesigner.md lists what is built). Never freed: an open page's buttons point at Actions.
+    struct PageFile
+    {
+        std::filesystem::file_time_type Written;
+        std::wstring Header;
+        std::vector<std::wstring> Labels, Descriptions;
+        std::deque<Action> Actions;
+        float ButtonsX = 0.0f, ButtonsY = 0.0f;
+        std::vector<PageImage> Images;
+        std::vector<PageText> Texts;
+    };
+
+    // One opening of a page (the same page can be open twice, one on top of the other): the nodes it put on the screen while it shows.
+    struct OpenedPage
+    {
+        std::string Name;
+        std::shared_ptr<PageFile> File;
+        std::vector<YGO::RIX::SharedNode> Nodes;
+        void* Screen = nullptr;
+    };
+    std::deque<OpenedPage> g_Opened;   // never shrinks: RIX hands the pointer back to OnShow / OnHide until the page is gone
+
+    // Page elements go above the Battle Pack screen's own background and panels (BetterCardShop's widgets use 12 to 20).
+    constexpr int kElementZBase = 20;
+
+    void __cdecl ShowPageElements(void* screen, void* user)
+    {
+        auto* opened = static_cast<OpenedPage*>(user);
+        if (!opened->Nodes.empty())
+            return;
+        opened->Screen = screen;
+        auto* root = YGO::RIX::ScreenRoot(screen);
+        for (const PageImage& image : opened->File->Images)
+        {
+            auto node = YGO::RIX::Dfx::AddImage(root, image.Resource.c_str(), image.Sprite.c_str(), kElementZBase + image.Z, image.X, image.Y, image.Width, image.Height);
+            if (node.Node)
+                opened->Nodes.push_back(node);
+            else
+                Logger::WriteLog(std::format("Page '{}': sprite '{}' of '{}' was not found", opened->Name, image.Sprite, image.Resource), MODULE_NAME, 1);
+        }
+        for (const PageText& text : opened->File->Texts)
+        {
+            auto node = YGO::RIX::Dfx::AddText(root, text.Text.c_str(), kElementZBase + text.Z, text.X, text.Y, text.Width, text.TextSize, text.Align, text.Colour);
+            if (node.Node)
+                opened->Nodes.push_back(node);
+        }
+    }
+
+    void __cdecl HidePageElements(void* screen, void* user)
+    {
+        auto* opened = static_cast<OpenedPage*>(user);
+        auto* root = YGO::RIX::ScreenRoot(opened->Screen ? opened->Screen : screen);
+        for (auto& node : opened->Nodes)
+            YGO::RIX::Dfx::RemoveImage(root, node);
+        opened->Nodes.clear();
+    }
+
+    std::map<std::string, std::shared_ptr<PageFile>> g_PageFiles;   // by lower-case name: the newest read of each file
+    std::vector<std::shared_ptr<PageFile>> g_OldPageFiles;          // replaced reads (a page opened from one may still be showing)
+
+    constexpr float kButtonSpacing = 100.0f;    // RIX pages put their buttons 100 px apart (Pages.cpp kSpacing)
+
+    std::shared_ptr<PageFile> ReadPageFile(const std::string& name)
+    {
+        std::string key = name;
+        std::transform(key.begin(), key.end(), key.begin(), [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+        if (key.empty() || key.find_first_of("/\\:") != std::string::npos)
+        {
+            Logger::WriteLog(std::format("Page '{}': not a page name", name), MODULE_NAME, 2);
+            return nullptr;
+        }
+
+        const std::filesystem::path path = ContentFolder("pages") / (name + ".json");
+        std::error_code error;
+        const auto written = std::filesystem::last_write_time(path, error);
+        if (error)
+        {
+            Logger::WriteLog(std::format("Page '{}': {} was not found", name, path.string()), MODULE_NAME, 2);
+            return nullptr;
+        }
+
+        auto cached = g_PageFiles.find(key);
+        if (cached != g_PageFiles.end() && cached->second->Written == written)
+            return cached->second;
+
+        json root;
+        try
+        {
+            std::ifstream stream(path);
+            root = json::parse(stream, nullptr, true, true);
+        }
+        catch (const std::exception& e)
+        {
+            Logger::WriteLog(std::format("Page '{}': {}", name, e.what()), MODULE_NAME, 2);
+            return nullptr;
+        }
+
+        auto page = std::make_shared<PageFile>();
+        page->Written = written;
+        page->Header = Wide(Text(root, "header"));
+
+        const json* elements = root.contains("elements") && root["elements"].is_array() ? &root["elements"] : nullptr;
+        bool haveButtons = false;
+        for (size_t i = 0; elements && i < elements->size(); ++i)
+        {
+            const json& element = (*elements)[i];
+            const std::string kind = Text(element, "kind");
+            if (kind == "header" && !Text(element, "text").empty())
+            {
+                page->Header = Wide(Text(element, "text"));
+            }
+            else if (kind == "image")
+            {
+                PageImage image;
+                image.Resource = Text(element, "resource");
+                image.Sprite = Text(element, "sprite");
+                image.X = element.value("x", 0.0f);
+                image.Y = element.value("y", 0.0f);
+                image.Width = element.value("width", 0.0f);
+                image.Height = element.value("height", 0.0f);
+                image.Z = element.value("z", 0);
+                if (image.Resource.empty() || image.Sprite.empty())
+                    Logger::WriteLog(std::format("Page '{}': an image needs a \"resource\" and a \"sprite\"", name), MODULE_NAME, 1);
+                else
+                    page->Images.push_back(std::move(image));
+            }
+            else if (kind == "text" && !Text(element, "text").empty())
+            {
+                PageText text;
+                text.Text = Wide(Text(element, "text"));
+                text.X = element.value("x", 0.0f);
+                text.Y = element.value("y", 0.0f);
+                text.Width = element.value("width", 0.0f);
+                text.Z = element.value("z", 0);
+                if (element.contains("textSize") && element["textSize"].is_number())
+                    text.TextSize = element["textSize"].get<float>();
+                const std::string align = Text(element, "align");
+                text.Align = align == "center" || align == "centre" ? YGO::RIX::Dfx::TextAlign::Centre
+                           : align == "right" ? YGO::RIX::Dfx::TextAlign::Right : YGO::RIX::Dfx::TextAlign::Left;
+                text.Colour = ParseColour(Text(element, "colour"));
+                page->Texts.push_back(std::move(text));
+            }
+            else if (kind == "buttonList" && !haveButtons && element.contains("buttons") && element["buttons"].is_array())
+            {
+                haveButtons = true;
+                const json& buttons = element["buttons"];
+                const size_t count = (std::min)(buttons.size(), static_cast<size_t>(RIX_PAGE_MAX_BUTTONS));
+                if (buttons.size() > count)
+                    Logger::WriteLog(std::format("Page '{}': only the first {} buttons are used", name, RIX_PAGE_MAX_BUTTONS), MODULE_NAME, 1);
+                for (size_t b = 0; b < count; ++b)
+                {
+                    const json& button = buttons[b];
+                    Action action;
+                    if (button.contains("action") && !button["action"].is_null())
+                    {
+                        std::string problem;
+                        if (!ParseAction(button["action"], action, problem))
+                        {
+                            Logger::WriteLog(std::format("Page '{}' button {}: {}", name, b + 1, problem), MODULE_NAME, 2);
+                            action.clear();
+                        }
+                    }
+                    page->Labels.push_back(Wide(Text(button, "label")));
+                    page->Descriptions.push_back(Wide(Text(button, "description")));
+                    page->Actions.push_back(std::move(action));
+                }
+
+                // The designer's box is x, y, width, height (top left, 1920 x 1080). RIX wants the buttons' centre line and the first
+                // button's y; the designer draws each button 100 px high, so the first one's middle is 50 px below the top.
+                const float x = element.value("x", 0.0f), y = element.value("y", 0.0f), width = element.value("width", 0.0f);
+                page->ButtonsX = x + width / 2.0f;
+                page->ButtonsY = y + kButtonSpacing / 2.0f;
+            }
+        }
+        if (page->Header.empty())
+            page->Header = Wide(name);
+
+        if (cached != g_PageFiles.end())
+            g_OldPageFiles.push_back(cached->second);
+        g_PageFiles[key] = page;
+        Logger::WriteLog(std::format("Page '{}' read: {} button(s), {} image(s), {} text(s)", name, page->Labels.size(), page->Images.size(), page->Texts.size()), MODULE_NAME, 0);
+        return page;
+    }
+
+    bool OpenPageFile(const std::string& name)
+    {
+        std::shared_ptr<PageFile> page = ReadPageFile(name);
+        if (!page)
+            return false;
+
+        RIX_PageDesc desc{};
+        desc.Size = sizeof(desc);
+        desc.Header = page->Header.c_str();
+        desc.ButtonCount = static_cast<int32_t>(page->Labels.size());
+        for (int i = 0; i < desc.ButtonCount; ++i)
+        {
+            desc.Buttons[i].Label = page->Labels[i].c_str();
+            desc.Buttons[i].Description = page->Descriptions[i].c_str();
+            desc.Buttons[i].OnPress = &RunButtonAction;
+            desc.Buttons[i].User = &page->Actions[i];
+        }
+        desc.ButtonsX = page->ButtonsX;
+        desc.ButtonsY = page->ButtonsY;
+        if (!page->Images.empty() || !page->Texts.empty())
+        {
+            OpenedPage& opened = g_Opened.emplace_back();
+            opened.Name = name;
+            opened.File = page;
+            desc.OnShow = &ShowPageElements;
+            desc.OnHide = &HidePageElements;
+            desc.User = &opened;
+        }
+        if (!Pages::Open(desc))
+        {
+            Logger::WriteLog(std::format("Page '{}' could not be opened", name), MODULE_NAME, 2);
+            return false;
+        }
+        return true;
     }
 
     void LoadButton(const json& node, const std::string& file, size_t index)
@@ -317,11 +598,14 @@ namespace Menu
         return true;
     }
 
+    bool OpenPage(const std::string& name)
+    {
+        return OpenPageFile(name);
+    }
+
     void LoadMenuFiles()
     {
-        char exe[MAX_PATH]{};
-        GetModuleFileNameA(nullptr, exe, MAX_PATH);
-        const std::filesystem::path folder = std::filesystem::path(exe).parent_path() / "Yu-Gi-Oh-Ex" / "menus";
+        const std::filesystem::path folder = ContentFolder("menus");
 
         std::error_code error;
         if (!std::filesystem::is_directory(folder, error))
