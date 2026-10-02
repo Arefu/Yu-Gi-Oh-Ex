@@ -90,6 +90,9 @@ namespace Card
         // Is_CardInNamedArchetype in IDA and the ygo-effects-moonshot-plan memory). Codes >= 419 are new
         // archetypes that exist only for custom cards.
         std::vector<int> Archetypes;
+        // The vanilla card whose effect this card borrows ("effectClone": { "from": N } in cards.json, applied by Yu-Gi-Oh-Effects).
+        // In a duel the card plays under that id when it is free (see BorrowSourceId), so every id-keyed rule of the engine treats it as the source.
+        uint16_t CloneFrom = 0;
         IN_MEMORY_CARD_PROP Props{};
     };
 
@@ -188,22 +191,6 @@ namespace Card
     // false in the file to keep them and only add to them).
     extern bool ReplaceDefaultUnlocks;
 
-    // Cards added to one of the shop packs.
-    struct PackAddition
-    {
-        std::string Pack;                // the pack's file name, e.g. "1_1"
-        bool Replace = false;            // true = the lists below are the pack's whole contents, not additions
-        std::vector<uint16_t> Common;
-        std::vector<uint16_t> Rare;
-    };
-
-    // Read from packs.json, next to cards.json.
-    extern std::vector<PackAddition> PackAdditions;
-
-    // Reads packs.json ({"replaceDefaults": false, "packs": [{"pack": "1_1", "common": [15000], "rare": [], "replace": false}]}).
-    // "replaceDefaults" (default false) makes every listed pack use its lists as the whole contents;
-    // a pack's own "replace" overrides it. A list that would end up empty keeps the game's cards instead.
-    size_t LoadPacksFromJson(const std::string& path);
 
     // Registers the extra cards and, the first time it runs, applies the patches and hooks.
     // Runs after every card table setup, since the game rebuilds its tables on a language change.

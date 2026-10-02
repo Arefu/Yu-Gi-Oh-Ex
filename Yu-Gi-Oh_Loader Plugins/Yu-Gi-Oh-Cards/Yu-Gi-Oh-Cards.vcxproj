@@ -102,6 +102,9 @@
     <ClCompile Include="Limit.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Save.cpp" />
+    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="Genres.cpp" />
+    <ClCompile Include="Related.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Yu-Gi-Oh.def" />
@@ -111,6 +114,9 @@
     <ClInclude Include="Limit.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Save.h" />
+    <ClInclude Include="Text.h" />
+    <ClInclude Include="Genres.h" />
+    <ClInclude Include="Related.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

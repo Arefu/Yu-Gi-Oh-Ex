@@ -3,9 +3,12 @@
 
 #include "Card.h"
 #include "Detours.h"
+#include "Genres.h"
 #include "Limit.h"
 #include "Logger.h"
+#include "Related.h"
 #include "Save.h"
+#include "Text.h"
 
 typedef char(__fastcall* Setup_CardPropTable_t)(const int* a1, int language);
 static uintptr_t orig_Setup_CardPropTable = 0x14076BFC0;
@@ -29,7 +32,11 @@ char __fastcall Hook_Setup_CardPropTable(const int* a1, int language)
         reinterpret_cast<Card::IN_MEMORY_CARD_PROP*>(kInternalCardPropsAddress),
         reinterpret_cast<Card::IN_MEMORY_CARD_PROP*>(kInternalCardPropsAddress) + kVanillaCardPropCount);
 
+    Genres::Load();          // before Install: WriteGameTableEntry gives custom cards their genres
     Card::Install();
+    Genres::ApplyToGameCards();
+    Text::Load();
+    Related::Load();
 
     return result;
 }
@@ -47,6 +54,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         DetourTransactionBegin();
         DetourUpdateThread(GetCurrentThread());
         DetourAttach(&(PVOID&)orig_Setup_CardPropTable, Hook_Setup_CardPropTable);
+        Text::Attach();
+        Related::Attach();
         DetourTransactionCommit();
         break;
     }

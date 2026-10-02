@@ -13,6 +13,7 @@
 
 #include "Card.h"
 #include "Detours.h"
+#include "Genres.h"
 #include "Logger.h"
 #include "Save.h"
 
@@ -260,6 +261,14 @@ namespace
             }
         }
 
+        // The effect source (Yu-Gi-Oh-Effects reads the rest of "effectClone"): the card is lent this id in a duel when it is free.
+        if (j.contains("effectClone") && j["effectClone"].is_object() && j["effectClone"].contains("from") && j["effectClone"]["from"].is_number_integer())
+        {
+            const int from = j["effectClone"]["from"].get<int>();
+            if (from >= static_cast<int>(kVanillaKonamiIdBase) && from < static_cast<int>(kVanillaKonamiIdBase + kVanillaKonamiIdCount))
+                c.CloneFrom = static_cast<uint16_t>(from);
+        }
+
         std::string image = j.value("image", std::string());
         if (!image.empty())
             c.ImagePath = ExtraCardsDirectory() + image;
@@ -499,7 +508,6 @@ namespace Card
 
     std::vector<Unlock> Unlocks;
     bool ReplaceDefaultUnlocks = false;
-    std::vector<PackAddition> PackAdditions;
 
     size_t LoadUnlocksFromJson(const std::string& path)
     {
@@ -549,64 +557,6 @@ namespace Card
         return Unlocks.size();
     }
 
-    size_t LoadPacksFromJson(const std::string& path)
-    {
-        std::ifstream file(path);
-        if (!file)
-            return 0; // packs.json is optional
-
-        nlohmann::json root;
-        try
-        {
-            root = nlohmann::json::parse(file, nullptr, true, true);
-        }
-        catch (const std::exception& e)
-        {
-            Logger::WriteLog(std::format("Parse error in {}: {}", path, e.what()), MODULE_NAME, 2);
-            return 0;
-        }
-
-        const nlohmann::json& list = root.is_array() ? root : root["packs"];
-        if (!list.is_array())
-        {
-            Logger::WriteLog(path + " needs a \"packs\" array", MODULE_NAME, 2);
-            return 0;
-        }
-
-        auto readIds = [](const nlohmann::json& entry, const char* key, std::vector<uint16_t>& out)
-        {
-            auto it = entry.find(key);
-            if (it == entry.end() || !it->is_array())
-                return;
-
-            for (const auto& value : *it)
-            {
-                if (value.is_number_integer() && value.get<int>() >= 1 && value.get<int>() <= kLastExtraCardId)
-                    out.push_back(static_cast<uint16_t>(value.get<int>()));
-            }
-        };
-
-        const bool replaceAll = root.is_object() && root.value("replaceDefaults", false);
-
-        PackAdditions.clear();
-        for (size_t i = 0; i < list.size(); ++i)
-        {
-            const nlohmann::json& entry = list[i];
-            if (!entry.contains("pack") || !entry["pack"].is_string())
-            {
-                Logger::WriteLog(std::format("Skipped pack entry #{}: missing \"pack\" name", i), MODULE_NAME, 2);
-                continue;
-            }
-
-            PackAddition addition;
-            addition.Pack = entry["pack"].get<std::string>();
-            readIds(entry, "common", addition.Common);
-            readIds(entry, "rare", addition.Rare);
-            addition.Replace = entry.value("replace", replaceAll);
-            PackAdditions.push_back(std::move(addition));
-        }
-        return PackAdditions.size();
-    }
 }
 
 // ---------------------------------------------------------------------
@@ -619,7 +569,7 @@ namespace
     {
         bool ExistsOnDuel; char pad0[7];
         wchar_t* Name; wchar_t* Description;
-        uint16_t TrunkID; char pad1[2];
+        uint16_t NameSortRank; char pad1[2];   // +0x18: place in the language's name order (CARD_Sort_#, YGO::CARDS::Get_NameSortRank)
         bool IsMonster, IsSpell, IsTrap, IsFieldSpell, IsNormalMonster, IsEffectMonster,
             IsFusion, IsSynchro; char pad2;
         bool IsXyz, IsExtraMonster, IsRitual, IsToken; char pad3;
@@ -653,6 +603,40 @@ namespace
         ApplyBytePatch(address, reinterpret_cast<const unsigned char*>(&value), sizeof(value));
     }
 
+    // A custom card's place in the name order. The game sorts the trunk by name with each card's rank (FULL_CARD_PROPS +0x18, from
+    // CARD_Sort_#); CARD_Sort2_# (card database +0x50 size, +0x58 data) lists the internal ids in that order, case-insensitive
+    // alphabetical (Japanese by reading). A custom card takes the rank of the first game card whose name comes after its own, so it
+    // sorts in among them; without this it kept rank 0 and sorted before every card.
+    uint16_t NameSortRankFor(const std::wstring& name)
+    {
+        constexpr uintptr_t kCardDatabase = 0x140C8D3A0;               // pointer to the card database (stru_140C8D3A0.pvoid0)
+        using KonamiFromInternal_t = int64_t(__fastcall*)(unsigned int);
+        using NameFromKonami_t = const wchar_t*(__fastcall*)(int);
+        auto konamiFromInternal = reinterpret_cast<KonamiFromInternal_t>(0x14076D7F0);   // YGO::CARDS::Get_KonamiIdFromInternalId
+        auto nameFromKonami = reinterpret_cast<NameFromKonami_t>(0x14076D0F0);           // YGO::CARDS::Get_CardNameFromKonamiId
+
+        auto* db = *reinterpret_cast<const uint8_t* const*>(kCardDatabase);
+        if (!db)
+            return 0;
+        const uint64_t bytes = *reinterpret_cast<const uint64_t*>(db + 0x50);
+        const auto* order = *reinterpret_cast<const uint16_t* const*>(db + 0x58);
+        if (!order || bytes < 4)
+            return 0;
+
+        // position 0 is internal id 0 (no card); binary search 1..count for the first name after ours
+        size_t lo = 1, hi = static_cast<size_t>(bytes / 2);
+        while (lo < hi)
+        {
+            size_t mid = (lo + hi) / 2;
+            const wchar_t* other = nameFromKonami(static_cast<int>(konamiFromInternal(order[mid])));
+            if (_wcsicmp(other ? other : L"", name.c_str()) <= 0)
+                lo = mid + 1;
+            else
+                hi = mid;
+        }
+        return static_cast<uint16_t>(lo);
+    }
+
     void WriteGameTableEntry(const Card::ExtraCard& c)
     {
         auto* gc = reinterpret_cast<GameCard*>(kFullCardPropsAddress + static_cast<uintptr_t>(c.ID) * kFullCardPropsStride);
@@ -664,6 +648,7 @@ namespace
 
         gc->Name = const_cast<wchar_t*>(c.Name.c_str());
         gc->Description = const_cast<wchar_t*>(c.Description.c_str());
+        gc->NameSortRank = NameSortRankFor(c.Name);
 
         // IsMonster/IsSpell/IsTrap/IsFusion/IsSynchro/IsXyz/IsExtraMonster/IsRitual/IsToken/IsToon/IsSpirit/IsGemini/IsPendulum/IsLink
         // are not set here: the kFlagFunctions/kLateFlagFunctions loop below overwrites those exact bytes with the game's own
@@ -688,6 +673,9 @@ namespace
         gc->LinkArrows = IsLinkKind(kind) ? static_cast<uint32_t>(props.ArrowsOrDefense10) : 0; // bit order unconfirmed, see ParseLinkMarkers
         gc->Valid = 1;
         gc->Frame = frame;
+        // Setup_FullCardProps gave ids past the card tables entry 0's genres (none); a borrowed duel id still has the vanilla card's, which
+        // BorrowScratchId replaces with the custom card's own afterwards (this copy's ID is the borrowed one).
+        gc->Genre = Genres::MaskFor(c.ID, c.ID >= kFirstExtraCardId ? 0 : gc->Genre);
 
         // Setup_FullCardProps computed every derived flag while this id was still outside the card tables: Is_ValidCardId is false for
         // ids >= 14969 and the card type came from entry 0 (a token), so the duel treated the card as a token with no "Show Info".
@@ -750,6 +738,39 @@ namespace
     // frame - via WriteGameTableEntry), and returns it. The same custom id always gets the same borrowed id
     // for the rest of the duel. Returns the card's own (too-high) id, unchanged, if there is truly nothing
     // free to borrow (should not happen: a duel uses on the order of 100-200 unique ids out of 10166 vanilla ones).
+    // The engine treats a borrowed id exactly like the vanilla card that owns it in every hard-coded id test, so the lent id must be one nothing
+    // special-cases. 3900..4006 are Tokens (3901 Kuriboh Token / 3902.. Sheep Tokens "cannot be used as a Tribute": a custom monster lent 3901
+    // could not be Tributed, 2026-10-01) and 4007 is Blue-Eyes White Dragon, which support cards name. First choice: these 51 Normal monsters that
+    // appear nowhere in the exe - no effect table row, no id list or table, no deck/filter row param, no code immediate (found by scanning
+    // YuGiOh.exe, docs/EffectSystem.md section 29). After them: any id from 4008 up that is not a Token.
+    constexpr uint16_t kSafeBorrowIds[] = {
+        4034, 4037, 4085, 4127, 4186, 4219, 4266, 4289, 4357, 4359, 4442, 4450, 4455, 4523, 4593, 4627, 4633, 4638, 4709, 4711, 4741, 4882, 5004,
+        5018, 5086, 5144, 5337, 5349, 5508, 5641, 5643, 5813, 5946, 6021, 6175, 6383, 6413, 6497, 7191, 7540, 7821, 9719, 9813, 9863, 10024,
+        11785, 13057, 13058, 13192, 13570, 13989 };
+    constexpr uint32_t kFirstFallbackBorrowId = 4008;   // after the Tokens (3900..4006) and Blue-Eyes White Dragon (4007)
+    constexpr int kTokenKind = 10;
+
+    // Makes vanilla id `id16` look exactly like `card` for this duel (name, art, stats, frame, genres) and records the borrow.
+    uint16_t BorrowInto(uint16_t customId, const Card::ExtraCard& card, uint16_t id16)
+    {
+        auto* gc = reinterpret_cast<GameCard*>(kFullCardPropsAddress + static_cast<uintptr_t>(id16) * kFullCardPropsStride);
+        auto& saved = g_SavedVanillaBytes[id16];
+        saved.assign(reinterpret_cast<unsigned char*>(gc), reinterpret_cast<unsigned char*>(gc) + kFullCardPropsStride);
+
+        // WriteGameTableEntry points gc->Name/Description at this copy's own strings, so the copy must
+        // live at least as long as the borrow does - g_BorrowedCopy, not a local, is what keeps it alive.
+        Card::ExtraCard& temp = g_BorrowedCopy[id16] = card;
+        temp.ID = id16;
+        WriteGameTableEntry(temp);
+        gc->Genre = Genres::MaskFor(customId, 0);   // the custom card's genres, not the borrowed vanilla card's (the duel AI checks them)
+
+        g_HighToBorrowed[customId] = id16;
+        g_BorrowedToHigh[id16] = customId;
+        g_IdsInUseThisDuel.insert(id16);
+        Logger::WriteLog(std::format("Duel: card {} borrows vanilla id {} for this duel{}", customId, id16, id16 == card.CloneFrom ? " (its effect source)" : ""), MODULE_NAME, 1);
+        return id16;
+    }
+
     uint16_t BorrowScratchId(uint16_t highId)
     {
         auto already = g_HighToBorrowed.find(highId);
@@ -760,31 +781,36 @@ namespace
         if (!card)
             return highId; // not one of ours (or cards.json no longer has it) - nothing we can do here
 
-        for (uint32_t candidate = kVanillaKonamiIdBase; candidate < kVanillaKonamiIdBase + kVanillaKonamiIdCount; ++candidate)
+        std::vector<uint16_t> candidates(std::begin(kSafeBorrowIds), std::end(kSafeBorrowIds));
+        for (uint32_t id = kFirstFallbackBorrowId; id < kVanillaKonamiIdBase + kVanillaKonamiIdCount; ++id)
+            candidates.push_back(static_cast<uint16_t>(id));
+
+        for (const uint16_t id16 : candidates)
         {
-            const uint16_t id16 = static_cast<uint16_t>(candidate);
             if (g_IdsInUseThisDuel.contains(id16))
                 continue;
-
-            auto* gc = reinterpret_cast<GameCard*>(kFullCardPropsAddress + static_cast<uintptr_t>(id16) * kFullCardPropsStride);
-            auto& saved = g_SavedVanillaBytes[id16];
-            saved.assign(reinterpret_cast<unsigned char*>(gc), reinterpret_cast<unsigned char*>(gc) + kFullCardPropsStride);
-
-            // WriteGameTableEntry points gc->Name/Description at this copy's own strings, so the copy must
-            // live at least as long as the borrow does - g_BorrowedCopy, not a local, is what keeps it alive.
-            Card::ExtraCard& temp = g_BorrowedCopy[id16] = *card;
-            temp.ID = id16;
-            WriteGameTableEntry(temp);
-
-            g_HighToBorrowed[highId] = id16;
-            g_BorrowedToHigh[id16] = highId;
-            g_IdsInUseThisDuel.insert(id16);
-            Logger::WriteLog(std::format("Duel: card {} borrows vanilla id {} for this duel", highId, id16), MODULE_NAME, 1);
-            return id16;
+            if (static_cast<int>(reinterpret_cast<GameCard*>(kFullCardPropsAddress + static_cast<uintptr_t>(id16) * kFullCardPropsStride)->Kind) == kTokenKind)
+                continue;
+            return BorrowInto(highId, *card, id16);
         }
 
         Logger::WriteLog(std::format("Duel: no free id left to borrow for card {}, it will not be correct this duel", highId), MODULE_NAME, 2);
         return highId;
+    }
+
+    // A clone of a vanilla card ("effectClone": { "from": N }) plays under N itself when N is in neither deck and no other custom card took it:
+    // every id-keyed rule of the engine (about 290 id lists, per-card ladders, phase tables, continuous effect tables, the AI's knowledge) then
+    // treats it as the source with no hook at all, while it shows its own name, art and stats. Yu-Gi-Oh-Effects still maps the id back to the
+    // custom card (Card_GetRealIdForBorrowed) for its parameter overrides. Returns 0 when N is not free (the caller falls back to the usual path).
+    uint16_t BorrowSourceId(uint16_t customId, const Card::ExtraCard& card)
+    {
+        auto already = g_HighToBorrowed.find(customId);
+        if (already != g_HighToBorrowed.end())
+            return already->second;
+        const uint16_t source = card.CloneFrom;
+        if (!source || g_IdsInUseThisDuel.contains(source) || g_BorrowedToHigh.contains(source))
+            return 0;
+        return BorrowInto(customId, card, source);
     }
 
     // Changes the game's own entry for a card (both the display table and the card props the game reads), listed fields only.
@@ -848,6 +874,11 @@ namespace
 
 uint16_t Card::ResolveDuelSessionId(uint16_t id)
 {
+    if (const Card::ExtraCard* card = Card::FindExtraCard(id); card && card->CloneFrom)
+    {
+        if (const uint16_t source = BorrowSourceId(id, *card))
+            return source;
+    }
     if (id <= kDuelIdLimit)
     {
         g_IdsInUseThisDuel.insert(id); // a real (or already-resolved) id in a deck: keep future borrows away from it
@@ -900,9 +931,9 @@ namespace
 {
     // The game keeps one { u32 refcount; i32 cacheIndex } image slot per internal card id,
     // inline in its image table object at obj + 0xC0 + 8 * id, for 10166 ids. Four sites
-    // compute that address; each is replaced with a jmp into a small cave that keeps the
+    // compute that address; each is detoured (Detours) into a small cave that keeps the
     // game's own computation for vanilla ids and uses Card::ImageSlotTable for the rest.
-    // The cave is allocated within 2GB of the exe so a rel32 jmp reaches it.
+    // The cave is allocated within 2GB of the exe so its rel32 jmp back reaches the game.
     constexpr uint32_t kVanillaImageSlots = 10166;
 
     uint8_t* AllocNearExe(size_t size)
@@ -924,7 +955,7 @@ namespace
     struct SlotSite
     {
         uintptr_t address;    // first byte replaced
-        size_t length;        // bytes replaced (the rest becomes NOP)
+        size_t length;        // bytes the cave takes over (Detours jumps to it from the first instruction; the rest is skipped via resume)
         uintptr_t resume;     // where the cave jumps back to
         uint8_t movabs[2];    // REX + opcode of `movabs reg, imm64`
         uint8_t leaExtra[4];  // lea reg, [reg + rax*8]
@@ -996,17 +1027,17 @@ namespace
 
         std::memcpy(cave, code, n);
 
-        uint8_t stub[32];
-        std::memset(stub, 0x90, sizeof(stub));
-        const int64_t rel = static_cast<int64_t>(reinterpret_cast<uintptr_t>(cave)) - static_cast<int64_t>(site.address + 5);
-        if (rel > INT32_MAX || rel < INT32_MIN)
-            return false;
-
-        const int32_t rel32 = static_cast<int32_t>(rel);
-        stub[0] = 0xE9;
-        std::memcpy(&stub[1], &rel32, sizeof(rel32));
-        ApplyBytePatch(site.address, stub, site.length);
-        return true;
+        // Installed with Detours like every other hook: it replaces the site's first instruction (cmp eax, 27B6h) with a jump to the cave.
+        // The cave ends by jumping to site.resume, past everything it replaces, so the trampoline Detours builds is never used.
+        void* target = reinterpret_cast<void*>(site.address);
+        DetourTransactionBegin();
+        DetourUpdateThread(GetCurrentThread());
+        LONG error = DetourAttach(&target, cave);
+        if (error == NO_ERROR)
+            error = DetourTransactionCommit();
+        else
+            DetourTransactionAbort();
+        return error == NO_ERROR;
     }
 
     void ApplyImageSlotPatches()
@@ -1425,8 +1456,38 @@ using FinishAndUpdateSave_t = void(__fastcall*)(int64_t, uint32_t*, int);
 // Called once per player, in order (player 0 then player 1), from DuelSetup_InitEngine, before the deck is
 // shuffled or drawn from. Rewrites every id above kDuelIdLimit in the deck struct to a borrowed vanilla id
 // before handing the deck to the game's own loader, so the duel engine never sees anything it can't hold.
+// Records every vanilla card of a deck struct as in use, so no custom card is lent its id (BorrowSourceId lends a clone its source's id).
+static void ReserveVanillaIds(const int32_t* deck)
+{
+    if (!deck)
+        return;
+    const auto* bytes = reinterpret_cast<const uint8_t*>(deck);
+    const uint32_t mainCount = *reinterpret_cast<const uint32_t*>(bytes + 0), extraCount = *reinterpret_cast<const uint32_t*>(bytes + 8);
+    const auto* mainIds = reinterpret_cast<const uint16_t*>(bytes + 12);
+    const auto* extraIds = reinterpret_cast<const uint16_t*>(bytes + 162);
+    auto reserve = [](uint16_t id) {
+        if (id && id <= kDuelIdLimit && !Card::FindExtraCard(id))
+            g_IdsInUseThisDuel.insert(id);
+    };
+    for (uint32_t i = 0; mainCount <= 75 && i < mainCount; ++i)
+        reserve(mainIds[i]);
+    for (uint32_t i = 0; extraCount <= 15 && i < extraCount; ++i)
+        reserve(extraIds[i]);
+}
+
 int64_t __fastcall Hook_Duel_LoadDeck(char player, int32_t* deck)
 {
+    // DuelSetup_InitEngine loads player 0's deck (Duel_DuelEngine + 0x2A) then player 1's (+ 0x236); both are filled before the first call.
+    // Reserve the vanilla cards of BOTH decks first, so a clone in player 0's deck is never lent the id of a card player 1 actually plays.
+    if ((player & 1) == 0)
+    {
+        constexpr uintptr_t kDuelEngine = 0x143330280;
+        ReserveVanillaIds(deck);
+        ReserveVanillaIds(reinterpret_cast<const int32_t*>(kDuelEngine + 0x236));
+    }
+    else
+        ReserveVanillaIds(deck);
+
     // Unconditional, unlike the rest of this function's logging: this is the only proof that this hook (and
     // therefore the duel-session id remap) ran at all for this call. A card above 16383 that never gets a
     // matching "resolved N id(s) above 16383" here did not go through this hook - check the DLL/hook chain,
@@ -1538,93 +1599,6 @@ int* __fastcall Hook_GrantDeckTemplateCards(unsigned int profile, void* deckTemp
     return reinterpret_cast<int*(__fastcall*)(unsigned int, void*, char)>(orig_GrantDeckTemplateCards)(profile, deckTemplate, isStarter);
 }
 
-// ----------------------------------------------------------------------
-// shop packs
-//
-// LoadPackDefinitions fills the 128 pack records (104 bytes each at 0x1429241C0). For a reward pack ('R') the
-// pointer at +0x18 leads to u16 commonCount, u16 rareCount, the common ids, then the rare ids, and that list
-// is what the pack draws from. For the packs in packs.json the pointer is replaced by a longer list that also
-// holds the extra cards.
-// ----------------------------------------------------------------------
-
-static uintptr_t orig_LoadPackDefinitions = 0x14080E3C0;
-constexpr uintptr_t kPackRecords = 0x1429241C0;
-constexpr size_t kPackRecordSize = 0x68;
-constexpr size_t kPackRecordCount = 128;
-constexpr uint32_t kRewardPackKind = 'R';
-
-static void ApplyPackAdditions()
-{
-    // The game may be reading an old list while packs reload, so old lists are never freed.
-    static std::deque<std::vector<uint16_t>> lists;
-
-    for (size_t i = 0; i < kPackRecordCount; ++i)
-    {
-        uint8_t* record = reinterpret_cast<uint8_t*>(kPackRecords + i * kPackRecordSize);
-        const char* name = *reinterpret_cast<const char**>(record + 0x10);
-        uint16_t* contents = *reinterpret_cast<uint16_t**>(record + 0x18);
-        if (!name || !contents || *reinterpret_cast<uint32_t*>(record + 0xC) != kRewardPackKind)
-            continue;
-
-        for (const Card::PackAddition& addition : Card::PackAdditions)
-        {
-            if (addition.Pack != name)
-                continue;
-
-            const size_t commonCount = contents[0];
-            const size_t rareCount = contents[1];
-            std::vector<uint16_t> common(contents + 2, contents + 2 + commonCount);
-            std::vector<uint16_t> rare(contents + 2 + commonCount, contents + 2 + commonCount + rareCount);
-
-            // A replaced list that is empty would leave the game drawing from nothing, so it keeps the game's cards.
-            if (addition.Replace)
-            {
-                if (addition.Common.empty() || addition.Rare.empty())
-                    Logger::WriteLog(std::format("Pack {}: replacing with an empty {} list, keeping the game's", name,
-                        addition.Common.empty() ? "common" : "rare"), MODULE_NAME, 1);
-                if (!addition.Common.empty())
-                    common.clear();
-                if (!addition.Rare.empty())
-                    rare.clear();
-            }
-
-            auto append = [](std::vector<uint16_t>& list, const std::vector<uint16_t>& extra)
-            {
-                for (uint16_t id : extra)
-                {
-                    if (std::find(list.begin(), list.end(), id) == list.end())
-                        list.push_back(id);
-                }
-            };
-            append(common, addition.Common);
-            append(rare, addition.Rare);
-
-            std::vector<uint16_t>& list = lists.emplace_back();
-            list.reserve(2 + common.size() + rare.size());
-            list.push_back(static_cast<uint16_t>(common.size()));
-            list.push_back(static_cast<uint16_t>(rare.size()));
-            list.insert(list.end(), common.begin(), common.end());
-            list.insert(list.end(), rare.begin(), rare.end());
-
-            *reinterpret_cast<uint16_t**>(record + 0x18) = list.data();
-            if (addition.Replace)
-                Logger::WriteLog(std::format("Pack {}: replaced with {} common and {} rare cards", name, common.size(), rare.size()), MODULE_NAME, 0);
-            else
-                Logger::WriteLog(std::format("Pack {}: {} common and {} rare cards ({} added)", name, common.size(), rare.size(),
-                    common.size() + rare.size() - commonCount - rareCount), MODULE_NAME, 0);
-        }
-    }
-}
-
-char __fastcall Hook_LoadPackDefinitions()
-{
-    char result = reinterpret_cast<char(__fastcall*)()>(orig_LoadPackDefinitions)();
-    if (result && !Card::PackAdditions.empty())
-        ApplyPackAdditions();
-
-    return result;
-}
-
 // ---------------------------------------------------------------------
 // Install
 // ---------------------------------------------------------------------
@@ -1646,10 +1620,6 @@ void Card::Install()
             Logger::WriteLog(std::format("Loaded {} unlock(s) from unlocks.json", unlocks), MODULE_NAME, 0);
         if (unlocks && ReplaceDefaultUnlocks)
             Logger::WriteLog("unlocks.json replaces the game's starting cards", MODULE_NAME, 0);
-
-        size_t packs = LoadPacksFromJson(ExtraCardsDirectory() + "packs.json");
-        if (packs)
-            Logger::WriteLog(std::format("Loaded {} pack change(s) from packs.json", packs), MODULE_NAME, 0);
 
         // An unloaded slot is { refcount 0, cacheIndex -1 }.
         for (auto& slot : ImageSlotTable)
@@ -1695,7 +1665,6 @@ void Card::Install()
     DetourAttach(&(PVOID&)orig_Deck_RebuildCardCountTables, Hook_Deck_RebuildCardCountTables);
     DetourAttach(&(PVOID&)orig_Deck_RebuildCardCountTables_Alt, Hook_Deck_RebuildCardCountTables_Alt);
     DetourAttach(&(PVOID&)orig_GrantDeckTemplateCards, Hook_GrantDeckTemplateCards);
-    DetourAttach(&(PVOID&)orig_LoadPackDefinitions, Hook_LoadPackDefinitions);
     DetourAttach(&(PVOID&)orig_Duel_LoadDeck, Hook_Duel_LoadDeck);
     DetourAttach(&(PVOID&)orig_DuelSetup_ClearState, Hook_DuelSetup_ClearState);
     DetourAttach(&(PVOID&)orig_FinishAndUpdateSave, Hook_FinishAndUpdateSave);
@@ -1703,9 +1672,4 @@ void Card::Install()
 
     LONG err = DetourTransactionCommit();
     Logger::WriteLog(std::format("Card hooks attached: {}", err), MODULE_NAME, err == 0 ? 0 : 2);
-
-    // The game loads its pack definitions (with the rest of the language content) before card setup runs, so
-    // the hook above only sees later reloads. The first load has already happened: change those packs now.
-    if (!PackAdditions.empty())
-        ApplyPackAdditions();
 }
