@@ -1,5 +1,7 @@
 #include <fstream>
 #include <iostream>
+#include <map>
+#include <memory>
 #include <mutex>
 #include <sstream>
 #include <string>
@@ -38,6 +40,21 @@ namespace
     // made that look like the game had hung. Flush in batches instead, and immediately for errors so a crash doesn't lose them.
     constexpr int kFlushEvery = 200;
     int g_UnflushedFile = 0, g_UnflushedConsole = 0;
+
+    // Split logs (WriteLogTo): a plugin that wants its own file (a duel record, a diagnostic trace) names it, and gets
+    // <name>.log next to console.log. These are appended to, not cleared, so they keep history across runs; each run
+    // starts with a "session" line. Nothing written here goes to the console window or console.log.
+    // They are flushed in batches like console.log, and also whenever a line comes kSplitFlushMs or more after the last flush:
+    // a split log is usually a slow record (a duel), and a game that's closed or killed mid-duel lost everything since the
+    // last batch. That caps it at two flushes a second, so bursts stay cheap.
+    constexpr unsigned long long kSplitFlushMs = 500;
+    struct SplitLog
+    {
+        std::ofstream File;
+        int Unflushed = 0;
+        unsigned long long LastFlush = 0;
+    };
+    std::map<std::string, std::unique_ptr<SplitLog>> g_SplitLogs;
 
     int RankOf(int level)
     {
@@ -290,6 +307,101 @@ void WriteLog(std::string Message, std::string Module, int LogLevel)
     }
 }
 
+namespace
+{
+    std::string ExeFolder()
+    {
+        char exe[MAX_PATH];
+        GetModuleFileNameA(nullptr, exe, MAX_PATH);
+        std::string folder = exe;
+        return folder.substr(0, folder.find_last_of("\\/") + 1);
+    }
+
+    // "Duels" -> "Duels.log". Only a plain file name is allowed (no folders), so a plugin can't write outside the game folder.
+    std::string SplitLogFileName(std::string name)
+    {
+        for (char& c : name)
+            if (c == '\\' || c == '/' || c == ':' || c == '*' || c == '?' || c == '"' || c == '<' || c == '>' || c == '|')
+                c = '_';
+        if (name.empty())
+            name = "unnamed";
+        if (name.find('.') == std::string::npos)
+            name += ".log";
+        return name;
+    }
+
+    SplitLog* OpenSplitLog(const std::string& name)
+    {
+        const std::string file = SplitLogFileName(name);
+        auto& slot = g_SplitLogs[file];
+        if (!slot)
+        {
+            slot = std::make_unique<SplitLog>();
+            slot->File.open(ExeFolder() + file, std::ios::out | std::ios::app);
+            SYSTEMTIME now;
+            GetLocalTime(&now);
+            char date[64];
+            snprintf(date, sizeof(date), "%04d-%02d-%02d %02d:%02d:%02d", now.wYear, now.wMonth, now.wDay, now.wHour, now.wMinute, now.wSecond);
+            if (slot->File.is_open())
+                slot->File << Timestamp() << " INFO  [" << MODULE_NAME << "] session " << date << "\n";
+        }
+        return slot->File.is_open() ? slot.get() : nullptr;
+    }
+}
+
+// Writes a line to <File>.log next to console.log instead of the console (see g_SplitLogs). Same line format as console.log,
+// every level is written. Levels as WriteLog.
+extern "C" __declspec(dllexport)
+void WriteLogTo(std::string File, std::string Message, std::string Module, int LogLevel)
+{
+    std::lock_guard<std::mutex> guard(g_Lock);
+    SplitLog* log = OpenSplitLog(File);
+    if (!log)
+        return;
+
+    if (Module.empty())
+        Module = "(unknown)";
+    const LevelStyle style = StyleFor(LogLevel);
+    const size_t prefixWidth = Timestamp().length() + 1 + 5 + 1 + 1 + Module.length() + 2;
+
+    std::istringstream lines(Message);
+    std::string line;
+    bool first = true;
+    while (std::getline(lines, line) || first)
+    {
+        if (!line.empty() && line.back() == '\r')
+            line.pop_back();
+        if (first)
+            log->File << Timestamp() << " " << style.Tag << " [" << Module << "] " << line << "\n";
+        else
+            log->File << std::string(prefixWidth, ' ') << line << "\n";
+        first = false;
+        if (lines.eof())
+            break;
+    }
+
+    const unsigned long long now = GetTickCount64();
+    if (++log->Unflushed >= kFlushEvery || RankOf(LogLevel) >= 3 || now - log->LastFlush >= kSplitFlushMs)
+    {
+        log->File.flush();
+        log->Unflushed = 0;
+        log->LastFlush = now;
+    }
+}
+
+// Flushes <File>.log now, e.g. at the end of a duel so a viewer opened while the game runs sees all of it.
+extern "C" __declspec(dllexport)
+void FlushLogTo(std::string File)
+{
+    std::lock_guard<std::mutex> guard(g_Lock);
+    auto it = g_SplitLogs.find(SplitLogFileName(File));
+    if (it != g_SplitLogs.end() && it->second)
+    {
+        it->second->File.flush();
+        it->second->Unflushed = 0;
+    }
+}
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
     switch (ul_reason_for_call)
@@ -315,6 +427,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     case DLL_PROCESS_DETACH:
         if (g_File.is_open())
             g_File.flush();
+        for (auto& entry : g_SplitLogs)
+            if (entry.second)
+                entry.second->File.flush();
         break;
     }
     return TRUE;
