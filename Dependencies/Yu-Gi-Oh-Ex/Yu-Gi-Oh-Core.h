@@ -66,6 +66,12 @@ CORE_API int __cdecl Core_SetPluginEnabled(const char* Key, int Enabled);
    that faults while starting is logged and left off. Called by Yu-Gi-Oh-RIX once the main menu is up, and by the GUI's "Load Plugins". */
 CORE_API int __cdecl Core_StartPlugins(void);
 
+/* Adds a section to the game's Credits screen, before the game's own credits (see Credits.h in Yu-Gi-Oh-Core for the whole order). Heading may be
+   NULL or empty (no heading); Lines are separated by '
+'. Both UTF-8. Kept until the game closes and shown every time Credits is opened, so call it
+   once (at start-up). Added after version 1 shipped without changing CORE_API_VERSION: Core::Functions().AddCredits is NULL with an older Core. */
+CORE_API void __cdecl Core_AddCredits(const char* Heading, const char* Lines);
+
 #ifdef __cplusplus
 }
 
@@ -81,6 +87,7 @@ namespace Core
         int(__cdecl* GetPluginInfo)(int, CorePluginInfo*) = nullptr;
         int(__cdecl* SetPluginEnabled)(const char*, int) = nullptr;
         int(__cdecl* StartPlugins)() = nullptr;
+        void(__cdecl* AddCredits)(const char*, const char*) = nullptr;   // NULL with a Core that predates it
     };
 
     inline Api& Functions()
@@ -113,6 +120,7 @@ namespace Core
         CORE_BIND(GetPluginInfo);
         CORE_BIND(SetPluginEnabled);
         CORE_BIND(StartPlugins);
+        CORE_BIND(AddCredits);
 #undef CORE_BIND
         return true;
     }

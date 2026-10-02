@@ -3,6 +3,7 @@
 #include <cstdint>
 #include <intrin.h>
 #include <functional>
+#include <iterator>
 
 // The game's UI framework ("RIX"): a screen manager that switches between screens (ScreenMainMenu, ScreenHelp...) and a small widget
 // kit (MenuKit) the menus are made of. Everything here was traced in YuGiOh.exe.i64 (names and types are in the IDB too).
@@ -301,6 +302,147 @@ namespace YGO
         inline auto NodeSetX = reinterpret_cast<void(__fastcall*)(void* Node, float X)>(0x14075A2F0);
         inline auto NodeSetY = reinterpret_cast<void(__fastcall*)(void* Node, float Y)>(0x14075A310);
         inline auto NodeSetPosition = reinterpret_cast<void(__fastcall*)(void* Node, float X, float Y)>(0x14075A300);
+
+        // Drops one reference of a shared_ptr the plugin owns (what std::shared_ptr's destructor does: use count at control+8, weak at +12).
+        inline void ReleaseRef(SharedNode& Ref)
+        {
+            if (auto* control = static_cast<char*>(Ref.Control))
+            {
+                auto** vftable = *reinterpret_cast<void(__fastcall***)(void*)>(control);
+                if (_InterlockedExchangeAdd(reinterpret_cast<volatile long*>(control + 8), -1) == 1)
+                {
+                    vftable[0](control);   // destroy the object
+                    if (_InterlockedExchangeAdd(reinterpret_cast<volatile long*>(control + 12), -1) == 1)
+                        vftable[1](control);   // free the control block
+                }
+            }
+            Ref = {};
+        }
+
+        // ---- plain pictures: a DFX::TLayerAnimoo (one sprite of a sheet) inside a DFX::TBase node, the way the game builds its own
+        // (RIX::LayerAnimoo_CreateFromDesc 0x140785190). The sheet is a resource name ("pdui/doShared" = pdui\doShared.png + .dfymoo; loaded on
+        // first use by DFX::Resource_FindOrLoad) and the sprite a name in it. Every shared_ptr argument marked "consumed" is taken BY VALUE by
+        // the game: pass a counted copy (ParentRef), never a pointer you still own.
+        namespace Dfx
+        {
+            inline auto MakeLayerAnimoo = reinterpret_cast<SharedNode*(__fastcall*)(SharedNode* Out)>(0x14075B580);
+            inline auto LayerSetResource = reinterpret_cast<void(__fastcall*)(void* Layer, const char* Resource)>(0x14075BAB0);
+            inline auto LayerSelectByName = reinterpret_cast<void(__fastcall*)(void* Layer, const char* Sprite)>(0x14075BB00);
+            inline auto LayerGetPlayer = reinterpret_cast<char*(__fastcall*)(void* Layer)>(0x14075B970);   // +16 sprite index, +48 alignment bits
+            // (out, parent consumed, content consumed, z, x, y): a new TBase under parent holding content, at x, y. Out holds one reference.
+            inline auto MakeChildWithContent = reinterpret_cast<SharedNode*(__fastcall*)(SharedNode* Out, SharedNode* Parent, SharedNode* Content, int Z, float X, float Y)>(0x140744A10);
+            inline auto RemoveChild = reinterpret_cast<void(__fastcall*)(void* Parent, SharedNode* Child)>(0x140759DD0);   // child consumed
+            inline auto SetScaleXY = reinterpret_cast<void(__fastcall*)(void* Node, float X, float Y)>(0x14075A350);
+            inline auto SetAlpha = reinterpret_cast<void(__fastcall*)(void* Node, float Alpha)>(0x14075A1E0);
+            inline auto SetFlag = reinterpret_cast<void(__fastcall*)(void* Node, unsigned Mask, char On)>(0x14075A2A0);
+            constexpr unsigned FlagVisible = 0x8;
+
+            // The sprite a layer shows: its full (untrimmed) size, or false when the sheet or the name was not found.
+            inline bool LayerSpriteSize(void* Layer, int& Width, int& Height)
+            {
+                auto* resource = *reinterpret_cast<char**>(static_cast<char*>(Layer) + 152);
+                if (!resource)
+                    return false;
+                const int index = *reinterpret_cast<int*>(LayerGetPlayer(Layer) + 16);
+                const uint32_t count = *reinterpret_cast<uint32_t*>(resource);
+                if (index < 0 || static_cast<uint32_t>(index) >= count)
+                    return false;
+                const char* entry = *reinterpret_cast<char**>(resource + 8) + 56 * index;
+                Width = *reinterpret_cast<const int*>(entry + 24);
+                Height = *reinterpret_cast<const int*>(entry + 28);
+                return Width > 0 && Height > 0;
+            }
+
+            // Puts one sprite on a node (normally ScreenRoot(screen)) with its top-left at X, Y, stretched to Width x Height (0 = its own size).
+            // Returns the node holding it (the caller owns one reference: take it off with RemoveImage), or an empty SharedNode when the
+            // sheet or sprite does not exist.
+            inline SharedNode AddImage(const SharedNode* Parent, const char* Resource, const char* Sprite, int Z, float X, float Y, float Width = 0, float Height = 0)
+            {
+                SharedNode layer{};
+                MakeLayerAnimoo(&layer);
+                if (!layer.Node)
+                    return {};
+                LayerSetResource(layer.Node, Resource);
+                LayerSelectByName(layer.Node, Sprite);
+                *reinterpret_cast<int*>(LayerGetPlayer(layer.Node) + 48) = 0;   // top-left anchored (no alignment bits)
+
+                int w = 0, h = 0;
+                if (!LayerSpriteSize(layer.Node, w, h))
+                {
+                    ReleaseRef(layer);
+                    return {};
+                }
+
+                SharedNode parent = ParentRef(Parent);
+                SharedNode node{};
+                MakeChildWithContent(&node, &parent, &layer, Z, X, Y);   // parent and layer consumed
+                if (node.Node && (Width > 0 || Height > 0))
+                    SetScaleXY(node.Node, Width > 0 ? Width / w : 1.0f, Height > 0 ? Height / h : 1.0f);
+                return node;
+            }
+
+            // ---- text: a DFX::TLayerText in a TBase node. Its style (DFX::TTextSpec) is at layer+152: +8/+12 colour (ARGB), +24 flags
+            // (0x100 no wrap), +28 wrap width, +32 font id, +40 align (1 left 2 centre 4 right: lines sit around x = 0; 8 top). Glyphs are
+            // drawn at the font's own pixel size, so bigger text = a bigger font or the node scaled.
+            inline auto MakeLayerText = reinterpret_cast<SharedNode*(__fastcall*)(SharedNode* Out)>(0x14075DC60);
+            // Text: a string id (1..1213) or a wchar_t* that must stay valid while the node lives (the game re-reads it on every rebuild).
+            inline auto LayerSetText = reinterpret_cast<void(__fastcall*)(void* Layer, int64_t IdOrText)>(0x14075E000);
+
+            enum class TextAlign { Left, Centre, Right };
+
+            // The game's UI face (FONT_ID_PD_*): font ids 0..7 at these pixel sizes.
+            inline constexpr int PdFontSizes[] = { 88, 44, 32, 23, 20, 16, 14, 12 };
+
+            // Puts text on a node: the box's top-left at X, Y (Width 0 = no box: X is the text's left / centre / right edge), PixelSize high,
+            // aligned in the box, wrapped to the box's width when it has one. Text must outlive the node. Returns the node (caller owns one
+            // reference, take it off with RemoveImage).
+            inline SharedNode AddText(const SharedNode* Parent, const wchar_t* Text, int Z, float X, float Y, float Width, float PixelSize,
+                                      TextAlign Align = TextAlign::Left, uint32_t Colour = 0xFFFFFFFF)
+            {
+                if (!Text || PixelSize <= 0)
+                    return {};
+                // the smallest PD font that is at least as big (scaling down stays sharp), else the biggest
+                int font = 0;
+                for (int i = 0; i < static_cast<int>(std::size(PdFontSizes)); ++i)
+                    if (PdFontSizes[i] >= PixelSize)
+                        font = i;
+                const float scale = PixelSize / PdFontSizes[font];
+
+                SharedNode layer{};
+                MakeLayerText(&layer);
+                if (!layer.Node)
+                    return {};
+                char* style = static_cast<char*>(layer.Node) + 152;
+                *reinterpret_cast<uint32_t*>(style + 8) = Colour;
+                *reinterpret_cast<uint32_t*>(style + 12) = Colour;
+                *reinterpret_cast<uint32_t*>(style + 24) = Width > 0 ? 0 : 0x100;
+                *reinterpret_cast<float*>(style + 28) = Width > 0 ? Width / scale : 0.0f;
+                *reinterpret_cast<int*>(style + 32) = font;
+                *reinterpret_cast<int*>(style + 40) = 8 | (Align == TextAlign::Left ? 1 : Align == TextAlign::Centre ? 2 : 4);
+                LayerSetText(layer.Node, reinterpret_cast<int64_t>(Text));
+
+                const float x = Align == TextAlign::Left ? X : Align == TextAlign::Centre ? X + Width / 2 : X + Width;
+                SharedNode parent = ParentRef(Parent);
+                SharedNode node{};
+                MakeChildWithContent(&node, &parent, &layer, Z, x, Y);   // parent and layer consumed
+                if (node.Node && scale != 1.0f)
+                    SetScaleXY(node.Node, scale, scale);
+                return node;
+            }
+
+            // Takes a node made by AddImage or AddText off its parent and drops the caller's reference.
+            inline void RemoveImage(const SharedNode* Parent, SharedNode& Node)
+            {
+                if (!Node.Node)
+                    return;
+                if (Parent && Parent->Node)
+                {
+                    SharedNode child = ParentRef(&Node);
+                    RemoveChild(Parent->Node, &child);   // consumed
+                }
+                ReleaseRef(Node);
+            }
+        }
 
         inline void WidgetSetFocused(void* Widget, bool On) { (*reinterpret_cast<void(__fastcall***)(void*, char)>(Widget))[1](Widget, On); }
         inline void WidgetSetVisible(void* Widget, bool On) { (*reinterpret_cast<void(__fastcall***)(void*, char)>(Widget))[3](Widget, On); }
