@@ -59,13 +59,16 @@ namespace CARD_Named
         public static List<int> ArchetypesOf(int konamiId) =>
             CardsInArchetype.Where(pair => pair.Value.BinarySearch(konamiId) >= 0).Select(pair => pair.Key).OrderBy(code => code).ToList();
 
-        public static void Load(string path)
+        public const string GamePath = @"bin\CARD_Named.bin";
+
+        public static void Load(string path) => Parse(File.ReadAllBytes(path));
+
+        public static void Parse(byte[] bytes)
         {
-            var bytes = File.ReadAllBytes(path);
             var u16 = new ushort[bytes.Length / 2];
             Buffer.BlockCopy(bytes, 0, u16, 0, u16.Length * 2);
 
-            ArchetypeCount = u16[0];
+            ArchetypeCount = u16.Length > 0 ? u16[0] : 0;
             CardsInArchetype = [];
             for (int code = 0; code < ArchetypeCount; code++)
             {
@@ -76,31 +79,37 @@ namespace CARD_Named
             }
         }
 
-        /// <summary>Writes the file back in the game's layout (an unchanged file round-trips byte for byte).</summary>
-        public static void Save(string path = "CARD_Named.bin")
+        /// <summary>The file in the game's layout (an unchanged file round-trips byte for byte).</summary>
+        public static byte[] ToBytes()
         {
             int count = CardsInArchetype.Count == 0 ? 0 : CardsInArchetype.Keys.Max() + 1;
             count = Math.Max(count, ArchetypeCount);
 
-            using var writer = new BinaryWriter(File.Open(path, FileMode.Create, FileAccess.Write));
-            writer.Write((ushort)count);
-            writer.Write((ushort)CardsInArchetype.Values.Sum(list => list.Count));
+            using var stream = new MemoryStream();
+            using (var writer = new BinaryWriter(stream))
+            {
+                writer.Write((ushort)count);
+                writer.Write((ushort)CardsInArchetype.Values.Sum(list => list.Count));
 
-            ushort offset = 0;
-            for (int code = 0; code < count; code++)
-            {
-                ushort length = (ushort)(CardsInArchetype.TryGetValue(code, out var list) ? list.Count : 0);
-                writer.Write(offset);
-                writer.Write(length);
-                offset += length;
+                ushort offset = 0;
+                for (int code = 0; code < count; code++)
+                {
+                    ushort length = (ushort)(CardsInArchetype.TryGetValue(code, out var list) ? list.Count : 0);
+                    writer.Write(offset);
+                    writer.Write(length);
+                    offset += length;
+                }
+                for (int code = 0; code < count; code++)
+                {
+                    if (!CardsInArchetype.TryGetValue(code, out var list))
+                        continue;
+                    foreach (int id in list.OrderBy(id => id))
+                        writer.Write((ushort)id);
+                }
             }
-            for (int code = 0; code < count; code++)
-            {
-                if (!CardsInArchetype.TryGetValue(code, out var list))
-                    continue;
-                foreach (int id in list.OrderBy(id => id))
-                    writer.Write((ushort)id);
-            }
+            return stream.ToArray();
         }
+
+        public static void Save(string path) => File.WriteAllBytes(path, ToBytes());
     }
 }

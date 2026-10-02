@@ -18,13 +18,22 @@ namespace DeckData
         /// <summary>0 to 5 for the story decks (looks like the series), 0xFFFFFFFF for the starter decks.</summary>
         public uint Type { get; set; }
 
-        public ushort Field12 { get; set; }
-        public ushort Field14 { get; set; }
+        /// <summary>
+        /// The deck's signature card (a Konami card id), shown by name on the deck's info panel; 0xFFFF for none (the
+        /// starter decks). The game copies only these 16 bits.
+        /// </summary>
+        public ushort SignatureCard { get; set; }
 
-        /// <summary>What the deck costs in the shop.</summary>
-        public uint Price { get; set; }
+        /// <summary>Never read by the game: 0, or 0xFFFF on the starter decks (their +12 was written as a 32 bit -1).</summary>
+        public ushort Padding14 { get; set; }
 
-        /// <summary>The content pack (SKU) the deck belongs to, or -1 for the base game.</summary>
+        /// <summary>
+        /// The character (duelist) the deck belongs to, an index into the game's character table (chardata, below 240).
+        /// The deck list sorts by this character's name and the unlock message reads "&lt;character&gt;'s &lt;title&gt;".
+        /// </summary>
+        public uint CharacterId { get; set; }
+
+        /// <summary>The content pack (SKU) the deck belongs to; the game turns -1 into 1, the base game (skudata "LAUNCH").</summary>
         public int Sku { get; set; }
 
         /// <summary>The name of the .ydc in decks.zib, without the extension.</summary>
@@ -66,9 +75,9 @@ namespace DeckData
                     Id = BinaryPrimitives.ReadUInt32LittleEndian(record),
                     Slot = BinaryPrimitives.ReadUInt32LittleEndian(record[4..]),
                     Type = BinaryPrimitives.ReadUInt32LittleEndian(record[8..]),
-                    Field12 = BinaryPrimitives.ReadUInt16LittleEndian(record[12..]),
-                    Field14 = BinaryPrimitives.ReadUInt16LittleEndian(record[14..]),
-                    Price = BinaryPrimitives.ReadUInt32LittleEndian(record[16..]),
+                    SignatureCard = BinaryPrimitives.ReadUInt16LittleEndian(record[12..]),
+                    Padding14 = BinaryPrimitives.ReadUInt16LittleEndian(record[14..]),
+                    CharacterId = BinaryPrimitives.ReadUInt32LittleEndian(record[16..]),
                     Sku = BinaryPrimitives.ReadInt32LittleEndian(record[20..]),
                     FileName = ReadAscii(data, BinaryPrimitives.ReadUInt64LittleEndian(record[24..])),
                     Title = ReadUtf16(data, BinaryPrimitives.ReadUInt64LittleEndian(record[32..])),
@@ -112,9 +121,9 @@ namespace DeckData
                 writer.Write(record.Id);
                 writer.Write(record.Slot);
                 writer.Write(record.Type);
-                writer.Write(record.Field12);
-                writer.Write(record.Field14);
-                writer.Write(record.Price);
+                writer.Write(record.SignatureCard);
+                writer.Write(record.Padding14);
+                writer.Write(record.CharacterId);
                 writer.Write(record.Sku);
                 foreach (ulong pointer in pointers[i])
                     writer.Write(pointer);
