@@ -118,6 +118,24 @@ namespace Types
         public List<TutorialStep> Steps { get; } = [];
         public List<string> Texts { get; } = [];
 
+        // A new tutorial's place in Help > Tutorial, applied by Yu-Gi-Oh-Campaign (Tutorials.cpp). Only in the JSON form: the game's .bin
+        // has no such fields (the exe's own tutorials take them from fixed tables, see MenuList / ArenaIds below).
+
+        /// <summary>The name in the Help > Tutorial list (this language's file gives this language's name). Null = "Tutorial NN".</summary>
+        public string? MenuTitle { get; set; }
+
+        /// <summary>The arena it is played in (an arenadata id). Null = Classic (1).</summary>
+        public int? MenuArena { get; set; }
+
+        /// <summary>False keeps it out of Help > Tutorial (it can still be started some other way).</summary>
+        public bool InMenu { get; set; } = true;
+
+        /// <summary>The first number the game has no tutorial for: new tutorials go from here to <see cref="MaxNumber"/>.</summary>
+        public const int FirstNewNumber = 27;
+
+        /// <summary>The highest number the game's file name (steam_tutorial_%02d) can hold.</summary>
+        public const int MaxNumber = 99;
+
         public static string FileName(int number, char language) => $"steam_tutorial_{number:00}_{char.ToUpperInvariant(language)}.bin";
 
         public static string GamePath(int number, char language) => Path.Combine(GameFolder, FileName(number, language));
@@ -335,7 +353,9 @@ namespace Types
             int series = Array.IndexOf(CampaignSeriesTutorial, number);
             if (series >= 0)
                 return $"first duel of campaign series {series} ({SeriesName(series)})";
-            return "nowhere yet (needs a plugin to add it to the menu)";
+            if (number >= FirstNewNumber && number <= MaxNumber)
+                return "Help > Tutorial, after the game's own (Yu-Gi-Oh-Campaign adds it)";
+            return "nowhere (16 is the game's unlisted tag duel tutorial)";
         }
 
         public static string SeriesName(int series) => series switch
@@ -382,12 +402,13 @@ namespace Types
         /// <summary>
         /// The tutorial as JSON a person can read and edit:
         ///
-        ///   { "tutorial": 5, "language": "E",
+        ///   { "tutorial": 27, "language": "E", "title": "My tutorial", "arena": 1, "menu": false,
         ///     "steps": [ { "id": 3, "op": "Message", "text": "Hello there!\nThis is IN4-M8!" },
         ///                { "id": 5, "op": "ShowCard", "p2": 6310 }, ..., { "op": "End" } ] }
         ///
         /// Ops by name (unknown ones as "0x08"), parameters left out when 0, the text inline (each step with text gets its own entry in
         /// step order, as in the game's files, so it converts back byte for byte). "id" is left out when it's the next number (and on End).
+        /// "title" / "arena" / "menu" (false = not listed) place a new tutorial in Help > Tutorial; each is left out when not set.
         /// </summary>
         public string ToJson(int number, char language)
         {
@@ -416,8 +437,14 @@ namespace Types
             {
                 ["tutorial"] = number,
                 ["language"] = char.ToUpperInvariant(language).ToString(),
-                ["steps"] = steps,
             };
+            if (!string.IsNullOrEmpty(MenuTitle))
+                root["title"] = MenuTitle;
+            if (MenuArena is int arena)
+                root["arena"] = arena;
+            if (!InMenu)
+                root["menu"] = false;
+            root["steps"] = steps;
             return root.ToJsonString(JsonOptions);
         }
 
@@ -438,7 +465,12 @@ namespace Types
             string? letter = root["language"]?.GetValue<string>();
             language = string.IsNullOrEmpty(letter) ? 'E' : char.ToUpperInvariant(letter[0]);
 
-            var file = new TutorialFile();
+            var file = new TutorialFile
+            {
+                MenuTitle = root["title"]?.GetValue<string>(),
+                MenuArena = root["arena"]?.GetValue<int>(),
+                InMenu = root["menu"]?.GetValue<bool>() ?? true,
+            };
             int nextId = 0, index = 0;
             foreach (var item in root["steps"] as System.Text.Json.Nodes.JsonArray ?? [])
             {

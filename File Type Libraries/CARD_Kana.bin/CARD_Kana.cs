@@ -1,58 +1,61 @@
-﻿namespace CARD_Kana
+namespace Types
 {
-    public static class Card_Kana
+    /// <summary>
+    /// bin/CARD_Kana1_#.bin, CARD_Kana2_#.bin and CARD_Kana3_#.bin (one set per language, E F G I J R S): the first, second and third
+    /// character of each card's reading, one UTF-16 char per INTERNAL id (10166 x 2 bytes, internal id 0 = no card). Together they are the
+    /// card's first three "index" letters: kana of the reading in Japanese, letters of the name elsewhere ("IKS" ...).
+    ///
+    /// The exe loads only CARD_Kana1_# (Setup_CardPropTable, g_CardDataFiles +0xF0; for languages 5 and 6 it maps voiced kana to plain ones
+    /// through word_140A51A20). Get_CardIndexInitialFromKonamiId (0x14076D480) gives a card's index initial (FULL_CARD_PROPS +0x1A) from it,
+    /// but ONLY in the Japanese build (g_bIsJpVersion); the other builds use the first character of the card's name. Kana2 and Kana3 are
+    /// never read. See docs/CardKana.md.
+    /// </summary>
+    public sealed class CardKanaTable
     {
-        public static List<string> _Kana = [];
+        public static readonly char[] Languages = ['E', 'F', 'G', 'I', 'J', 'R', 'S'];
 
-        public static void Load(string Path, string Language)
+        /// <summary>The archive path of one of the three files (n = 1, 2 or 3).</summary>
+        public static string KanaPath(int n, char language) => $@"bin\CARD_Kana{n}_{language}.bin";
+
+        /// <summary>Per internal id: up to three characters (Kana1, Kana2, Kana3; a 0 char ends it).</summary>
+        public List<string> Readings { get; } = [];
+
+        public static CardKanaTable Parse(byte[] kana1, byte[] kana2, byte[] kana3)
         {
-            var Kana = new List<string>();
-
-            if (File.Exists(Path.Replace("CARD_Kana1", "CARD_Kana2")) == false && File.Exists(Path.Replace("CARD_Kana1", "CARD_Kana3")) == false)
+            if (kana1.Length % 2 != 0 || kana1.Length != kana2.Length || kana1.Length != kana3.Length)
+                throw new InvalidDataException($"CARD_Kana1/2/3 must be the same even size (one char per card); they are {kana1.Length}, {kana2.Length} and {kana3.Length} bytes.");
+            var table = new CardKanaTable();
+            for (int offset = 0; offset < kana1.Length; offset += 2)
             {
-                return;
+                // kept exactly (a 0 in the middle too) so ToBytes gives the same bytes back
+                char a = (char)BitConverter.ToUInt16(kana1, offset), b = (char)BitConverter.ToUInt16(kana2, offset), c = (char)BitConverter.ToUInt16(kana3, offset);
+                table.Readings.Add(new string([a, b, c]).TrimEnd('\0'));
             }
-
-            using var Kana1Reader = new BinaryReader(File.Open(Path, FileMode.Open, FileAccess.Read));
-            using var Kana2Reader = new BinaryReader(File.Open(Path.Replace($"CARD_Kana1_", $"CARD_Kana2_"), FileMode.Open, FileAccess.Read));
-            using var Kana3Reader = new BinaryReader(File.Open(Path.Replace($"CARD_Kana1_", $"CARD_Kana3_"), FileMode.Open, FileAccess.Read));
-
-            while (Kana1Reader.BaseStream.Position != Kana1Reader.BaseStream.Length)
-            {
-                if (Kana2Reader.BaseStream.Position == Kana2Reader.BaseStream.Length)
-                    break;
-                if (Kana3Reader.BaseStream.Position == Kana3Reader.BaseStream.Length)
-                    break;
-
-                char[] rawKana1 = Kana1Reader.ReadChars(2);
-                char[] rawKana2 = Kana2Reader.ReadChars(2);
-                char[] rawKana3 = Kana3Reader.ReadChars(2);
-
-                string Kana1 = new string(rawKana1).TrimEnd('\0');
-                string Kana2 = new string(rawKana2).TrimEnd('\0');
-                string Kana3 = new string(rawKana3).TrimEnd('\0');
-                Kana.Add($"{Kana1}{Kana2}{Kana3}");
-            }
-
-            _Kana = Kana;
+            return table;
         }
 
-        public static void Save(char Language)
+        public (byte[] Kana1, byte[] Kana2, byte[] Kana3) ToBytes()
         {
-            using var Kana1Writer = new BinaryWriter(File.Open($"CARD_Kana1_{Language}.bin", FileMode.Create, FileAccess.Write));
-            using var Kana2Writer = new BinaryWriter(File.Open($"CARD_Kana2_{Language}.bin", FileMode.Create, FileAccess.Write));
-            using var Kana3Writer = new BinaryWriter(File.Open($"CARD_Kana3_{Language}.bin", FileMode.Create, FileAccess.Write));
-
-            foreach (var combined in _Kana)
+            var files = new[] { new byte[Readings.Count * 2], new byte[Readings.Count * 2], new byte[Readings.Count * 2] };
+            for (int i = 0; i < Readings.Count; i++)
             {
-                string kana1 = combined.Length >= 2 ? combined.Substring(0, 2) : combined.PadRight(2, '\0');
-                string kana2 = combined.Length >= 4 ? combined.Substring(2, 2) : combined.Length > 2 ? combined.Substring(2).PadRight(2, '\0') : "\0\0";
-                string kana3 = combined.Length >= 6 ? combined.Substring(4, 2) : combined.Length > 4 ? combined.Substring(4).PadRight(2, '\0') : "\0\0";
-
-                Kana1Writer.Write(kana1.ToCharArray());
-                Kana2Writer.Write(kana2.ToCharArray());
-                Kana3Writer.Write(kana3.ToCharArray());
+                string reading = Readings[i];
+                for (int n = 0; n < 3; n++)
+                    BitConverter.TryWriteBytes(files[n].AsSpan(i * 2), (ushort)(n < reading.Length ? reading[n] : '\0'));
             }
+            return (files[0], files[1], files[2]);
+        }
+
+        /// <summary>
+        /// The three letters a name gives: its first three characters as written, which is what the game's non-Japanese files hold (all but a
+        /// few dozen cards; Japanese readings have to be typed).
+        /// </summary>
+        public static string FromName(string name)
+        {
+            // a Japanese name may start with ruby markup: $R<kanji>(<reading>) - the game skips to after the '('
+            if (name.StartsWith("$R") && name.IndexOf('(') is int open and > 0)
+                name = name[(open + 1)..];
+            return name.Length <= 3 ? name : name[..3];
         }
     }
 }

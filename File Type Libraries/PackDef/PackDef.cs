@@ -182,4 +182,59 @@ namespace PackDef
             return output.ToArray();
         }
     }
+
+    /// <summary>
+    /// The card list of a battle pack (packs.zib/bpack_&lt;name&gt;.bin): one pool per <b>slot</b> of an opened pack, each card of the pack
+    /// drawn from its slot's pool. A card listed several times in a pool comes up that much more often (the game's weights). Layout
+    /// (little endian): u64 slot count, a u64 offset per slot, then each slot: u16 count and that many u16 Konami ids.
+    /// </summary>
+    public sealed class BattlePackContents
+    {
+        public List<List<ushort>> Slots { get; } = [];
+
+        public static BattlePackContents Parse(byte[] data)
+        {
+            if (data.Length < 8)
+                throw new InvalidDataException("A battle pack list is at least 8 bytes.");
+            long count = BinaryPrimitives.ReadInt64LittleEndian(data);
+            if (count < 0 || count > 64 || 8 + count * 8 > data.Length)
+                throw new InvalidDataException($"A battle pack list with {count} slots doesn't fit in {data.Length} bytes.");
+
+            var contents = new BattlePackContents();
+            for (int slot = 0; slot < count; slot++)
+            {
+                long offset = BinaryPrimitives.ReadInt64LittleEndian(data.AsSpan(8 + slot * 8));
+                if (offset < 0 || offset + 2 > data.Length)
+                    throw new InvalidDataException($"Slot {slot + 1} starts past the end of the file.");
+                int cards = BinaryPrimitives.ReadUInt16LittleEndian(data.AsSpan((int)offset));
+                if (offset + 2 + cards * 2 > data.Length)
+                    throw new InvalidDataException($"Slot {slot + 1} ({cards} cards) runs past the end of the file.");
+                var ids = new List<ushort>(cards);
+                for (int i = 0; i < cards; i++)
+                    ids.Add(BinaryPrimitives.ReadUInt16LittleEndian(data.AsSpan((int)offset + 2 + i * 2)));
+                contents.Slots.Add(ids);
+            }
+            return contents;
+        }
+
+        public byte[] ToBytes()
+        {
+            var output = new MemoryStream();
+            var writer = new BinaryWriter(output);
+            writer.Write((long)Slots.Count);
+            long offset = 8 + Slots.Count * 8L;
+            foreach (var slot in Slots)
+            {
+                writer.Write(offset);
+                offset += 2 + slot.Count * 2;
+            }
+            foreach (var slot in Slots)
+            {
+                writer.Write((ushort)slot.Count);
+                foreach (ushort card in slot)
+                    writer.Write(card);
+            }
+            return output.ToArray();
+        }
+    }
 }

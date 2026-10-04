@@ -171,6 +171,7 @@ namespace StartingCollection
         /// * A file's previous copy is free again after the save, so saving the same file again reuses that space: the .dat only grows by
         ///   about twice the size of the files you edit, and is cut back when the end is free.
         /// </summary>
+        [Obsolete("Writes into the game's own .dat. WolfX saves into its patch archive (WritePatch) so the game's archive stays as shipped.")]
         public void Write(IReadOnlyDictionary<string, byte[]> files)
         {
             if (files.Count == 0)
@@ -211,6 +212,90 @@ namespace StartingCollection
             }
             SaveBinaryToc();
             TrimDat(protectedEnd);
+        }
+
+        /// <summary>
+        /// Writes a whole <b>patch archive</b>: a .dat holding just these files (each padded to 4 bytes) and its binary .toc ("UB"). WolfX
+        /// keeps every change to the game's files in one (YGO_2020-Ex.toc / .dat next to the game's), and Yu-Gi-Oh-Core serves the game a
+        /// file from it when it lists that file, so the game's own YGO_2020.dat / .toc are never written. Both files are written to
+        /// temporary names first and moved into place, the .toc last. No files = both are deleted.
+        /// </summary>
+        public static void WritePatch(string tocPath, IReadOnlyDictionary<string, byte[]> files) =>
+            WritePatch(tocPath, files.ToDictionary(file => file.Key, file => PatchSource.Of(file.Value), StringComparer.OrdinalIgnoreCase));
+
+        /// <summary>
+        /// One file of a patch being written: its bytes, or something that writes it to the .dat (for files too big to hold, such as the
+        /// card art .zib files, or files copied over from the previous patch).
+        /// </summary>
+        public sealed class PatchSource
+        {
+            private readonly Func<Stream, long> _write;
+
+            private PatchSource(Func<Stream, long> write) => _write = write;
+
+            public static PatchSource Of(byte[] data) => new(stream => { stream.Write(data); return data.Length; });
+
+            /// <summary><paramref name="write"/> writes the file and returns how many bytes it wrote.</summary>
+            public static PatchSource Streamed(Func<Stream, long> write) => new(write);
+
+            /// <summary>A file of an archive, copied across in pieces.</summary>
+            public static PatchSource From(TocArchive archive, string path) => new(stream => archive.CopyTo(path, stream));
+
+            public long WriteTo(Stream stream) => _write(stream);
+        }
+
+        /// <summary>Copies a file of this archive to a stream in pieces; returns its size (0 when the archive doesn't have it).</summary>
+        public long CopyTo(string path, Stream output)
+        {
+            if (!_items.TryGetValue(Normalize(path), out var item))
+                return 0;
+            using var stream = new FileStream(DatPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            stream.Position = item.Offset;
+            var buffer = new byte[1 << 20];
+            for (long left = item.Size; left > 0;)
+            {
+                int count = stream.Read(buffer, 0, (int)Math.Min(buffer.Length, left));
+                if (count <= 0)
+                    throw new EndOfStreamException($"{path} is cut short in {DatPath}.");
+                output.Write(buffer, 0, count);
+                left -= count;
+            }
+            return item.Size;
+        }
+
+        /// <inheritdoc cref="WritePatch(string, IReadOnlyDictionary{string, byte[]})"/>
+        public static void WritePatch(string tocPath, IReadOnlyDictionary<string, PatchSource> files)
+        {
+            string datPath = Path.ChangeExtension(tocPath, ".dat");
+            if (files.Count == 0)
+            {
+                File.Delete(tocPath);
+                File.Delete(datPath);
+                return;
+            }
+            using var toc = new MemoryStream();
+            toc.Write("UB\n"u8);
+            string datTemp = datPath + ".saving";
+            using (var dat = new FileStream(datTemp, FileMode.Create, FileAccess.Write, FileShare.None, 1 << 20))
+            using (var writer = new BinaryWriter(toc, Encoding.ASCII, leaveOpen: true))
+            {
+                foreach (var (rawPath, source) in files.OrderBy(file => file.Key, StringComparer.OrdinalIgnoreCase))
+                {
+                    long offset = dat.Position;
+                    long size = source.WriteTo(dat);
+                    dat.Write(new byte[Padded(size) - size]);   // the game reads the padding too
+                    byte[] name = Encoding.ASCII.GetBytes(Normalize(rawPath));
+                    writer.Write(name.Length);
+                    writer.Write(name);
+                    writer.Write(size);
+                    writer.Write(offset);
+                }
+                dat.Flush(flushToDisk: true);
+            }
+            File.Move(datTemp, datPath, overwrite: true);
+            string tocTemp = tocPath + ".saving";
+            File.WriteAllBytes(tocTemp, toc.ToArray());
+            File.Move(tocTemp, tocPath, overwrite: true);
         }
 
         /// <summary>The first gap at or after start (ends of used ranges, sorted) that holds size bytes, else the end of everything.</summary>
