@@ -28,6 +28,7 @@
 
 #include "Logger.h"
 #include "YuGiOh/YuGiOh-RIX.h"
+#include "Yu-Gi-Oh-Mods.h"
 
 namespace
 {
@@ -334,7 +335,10 @@ namespace
             return nullptr;
         }
 
-        const std::filesystem::path path = ContentFolder("pages") / (name + ".json");
+        // the copy that wins: the game folder's, else the last mod that has the page (Yu-Gi-Oh-Mods.h)
+        std::filesystem::path path = YGO::Mods::Find("pages\\" + name + ".json");
+        if (path.empty())
+            path = ContentFolder("pages") / (name + ".json");   // for the message below
         std::error_code error;
         const auto written = std::filesystem::last_write_time(path, error);
         if (error)
@@ -605,19 +609,12 @@ namespace Menu
 
     void LoadMenuFiles()
     {
-        const std::filesystem::path folder = ContentFolder("menus");
-
-        std::error_code error;
-        if (!std::filesystem::is_directory(folder, error))
-            return;
-
-        std::vector<std::filesystem::path> files;
-        for (const auto& entry : std::filesystem::directory_iterator(folder, error))
+        // menus\*.json of every mod and the game folder (Yu-Gi-Oh-Mods.h); a later folder's file replaces one with the same name
+        std::vector<std::filesystem::path> files = YGO::Mods::FilesIn("menus", L".json");
+        std::sort(files.begin(), files.end(), [](const std::filesystem::path& a, const std::filesystem::path& b)
         {
-            if (entry.is_regular_file() && entry.path().extension() == ".json")
-                files.push_back(entry.path());
-        }
-        std::sort(files.begin(), files.end());
+            return _wcsicmp(a.filename().c_str(), b.filename().c_str()) < 0;
+        });
 
         for (const auto& file : files)
             LoadFile(file);

@@ -309,10 +309,15 @@ namespace
         if (YGO::RIX::InputCancelPressed(input, kCancel))
             pressed |= kCancel;
 
+        // Reading cancel (InputCancelPressed) and the help bar's Back prompt (HelpBarPressed) consumes them, so the screen's update below
+        // would never see Back: it is handled here for pages with buttons too, the same way the menu's Back item is.
         const bool withButtons = page->ButtonCount > 0;
-        if ((pressed & kCancel) && !withButtons)
+        if (pressed & kCancel)
         {
-            CloseTop(screen, true);
+            if (withButtons)
+                Hook_HandleItem(screen, kBack, 1);
+            else
+                CloseTop(screen, true);
             return;
         }
 
