@@ -7,6 +7,9 @@
 #include <algorithm>
 #include <cstdint>
 #include <cstdio>
+#include <cstring>
+#include <filesystem>
+#include <shellapi.h>
 #include <format>
 #include <fstream>
 #include <string>
@@ -172,6 +175,202 @@ namespace
         g_Extra = Split(buffer);
     }
 
+    // ---- test decks (.ydc) ----
+    // A .ydc chosen for a seat replaces that seat's deck for every duel until it is cleared: 8 header bytes, then main / extra / side as a
+    // u16 count + u16 Konami ids (File Type Libraries\DeckData YdcDeck; the same layout Yu-Gi-Oh-TagDuel reads for partner decks).
+    std::string g_DeckPath[2];        // UTF-8; empty = the seat plays its own deck
+    bool g_KeepOrder = true;          // the test deck is not shuffled: the file's main deck order is the draw order (the first 5 = the opening hand)
+    bool g_PendingOrder[2]{};         // set when a test deck was loaded, used by the first shuffle after it (not by shuffles during the duel)
+    std::string g_BrowseDir;          // UTF-8
+
+    struct Ydc
+    {
+        std::vector<uint16_t> Main, Extra, Side;
+        std::string Error;
+    };
+
+    std::filesystem::path PathOf(const std::string& utf8) { return std::filesystem::path(ToWide(utf8.c_str())); }
+
+    std::string Utf8Of(const std::filesystem::path& path) { return ToUtf8(path.wstring().c_str()); }
+
+    std::string GameFolder()
+    {
+        wchar_t exe[MAX_PATH]{};
+        GetModuleFileNameW(nullptr, exe, MAX_PATH);
+        return Utf8Of(std::filesystem::path(exe).parent_path());
+    }
+
+    std::string TestDeckFolder() { return GameFolder() + "\\Yu-Gi-Oh-Ex\\TestDecks"; }
+
+    Ydc ReadYdc(const std::string& path)
+    {
+        Ydc deck;
+        std::ifstream file(PathOf(path), std::ios::binary);
+        if (!file)
+        {
+            deck.Error = "cannot open the file";
+            return deck;
+        }
+        std::vector<char> data((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+        if (data.size() < 10)
+        {
+            deck.Error = "not a .ydc (too short)";
+            return deck;
+        }
+        size_t at = 8;
+        std::vector<uint16_t>* sections[3] = { &deck.Main, &deck.Extra, &deck.Side };
+        for (auto* section : sections)
+        {
+            if (at + 2 > data.size())
+                break;   // a file may stop after the main or extra deck
+            uint16_t count;
+            std::memcpy(&count, &data[at], 2);
+            at += 2;
+            if (at + 2 * static_cast<size_t>(count) > data.size())
+            {
+                deck.Error = "a section runs past the end of the file";
+                return deck;
+            }
+            section->resize(count);
+            // data.data() + at, not &data[at]: an empty last section (WriteYdc always ends with one) leaves at == size, and indexing there
+            // trips the Debug runtime's "vector subscript out of range" when the Duel tab lists the test decks
+            if (count != 0)
+                std::memcpy(section->data(), data.data() + at, 2 * static_cast<size_t>(count));
+            at += 2 * static_cast<size_t>(count);
+        }
+        return deck;
+    }
+
+    bool WriteYdc(const std::string& path, const std::vector<int>& main, const std::vector<int>& extra, std::string& error)
+    {
+        std::ofstream file(PathOf(path), std::ios::binary | std::ios::trunc);
+        if (!file)
+        {
+            error = "cannot write " + path;
+            return false;
+        }
+        const char header[8]{};
+        file.write(header, 8);
+        auto section = [&](const std::vector<int>& ids) {
+            const uint16_t count = static_cast<uint16_t>(ids.size());
+            file.write(reinterpret_cast<const char*>(&count), 2);
+            for (int id : ids)
+            {
+                const uint16_t v = static_cast<uint16_t>(id);
+                file.write(reinterpret_cast<const char*>(&v), 2);
+            }
+        };
+        section(main);
+        section(extra);
+        section({});
+        return static_cast<bool>(file);
+    }
+
+    // DuelSetup_InitEngine's deck structs: player 0 at Duel_DuelEngine + 0x2A, player 1 at + 0x236 (Yu-Gi-Oh-MoreCards Card.cpp, Hook_Duel_LoadDeck).
+    constexpr uintptr_t kDuelEngine = 0x143330280;
+
+    // Writes the seat's test deck into a deck struct, with the cards' own ids: the outer hook runs before Yu-Gi-Oh-MoreCards' resolves them
+    // (and before it reserves the vanilla ids of both decks for source-id lending), so they go through it like a normal deck.
+    void WriteTestDeck(int seat, int32_t* deck)
+    {
+        if (g_DeckPath[seat].empty() || !deck)
+            return;
+        const Ydc ydc = ReadYdc(g_DeckPath[seat]);
+        if (!ydc.Error.empty())
+        {
+            Log(std::format("Test deck for seat {} ({}): {}, the seat plays its own deck", seat, g_DeckPath[seat], ydc.Error), 2);
+            return;
+        }
+        auto* bytes = reinterpret_cast<uint8_t*>(deck);
+        auto& mainCount = *reinterpret_cast<uint32_t*>(bytes + kMainCountOffset);
+        auto& extraCount = *reinterpret_cast<uint32_t*>(bytes + kExtraCountOffset);
+        auto* mainIds = reinterpret_cast<uint16_t*>(bytes + kMainIdsOffset);
+        auto* extraIds = reinterpret_cast<uint16_t*>(bytes + kExtraIdsOffset);
+        std::memset(mainIds, 0, 2 * kMainCapacity);
+        std::memset(extraIds, 0, 2 * kExtraCapacity);
+        uint32_t main = 0, extra = 0, skipped = 0;
+        for (uint16_t id : ydc.Main)
+        {
+            if (!*CardName(id)) { ++skipped; continue; }
+            if (main < kMainCapacity) mainIds[main++] = id;
+        }
+        for (uint16_t id : ydc.Extra)
+        {
+            if (!*CardName(id)) { ++skipped; continue; }
+            if (extra < kExtraCapacity) extraIds[extra++] = id;
+        }
+        mainCount = main;
+        extraCount = extra;
+        g_PendingOrder[seat] = g_KeepOrder;
+        Log(std::format("Test deck for seat {}: {} ({} main, {} extra{})", seat, g_DeckPath[seat], main, extra,
+            skipped ? std::format(", {} id(s) the game does not have skipped", skipped) : std::string()));
+    }
+
+    // The OUTER Duel_LoadDeck hook, attached late (LateInstall, on the first frame) so it wraps Yu-Gi-Oh-MoreCards' hook. Player 0's call
+    // writes both seats: MoreCards reserves the vanilla ids of BOTH deck structs on player 0's call.
+    LoadDeck_t orig_LoadDeckOuter = reinterpret_cast<LoadDeck_t>(0x1400822F0);
+
+    int64_t __fastcall Hook_LoadDeckOuter(char player, int32_t* deck)
+    {
+        if ((player & 1) == 0)
+        {
+            WriteTestDeck(0, deck);
+            WriteTestDeck(1, reinterpret_cast<int32_t*>(kDuelEngine + 0x236));
+        }
+        else
+            WriteTestDeck(1, deck);
+        return orig_LoadDeckOuter(player, deck);
+    }
+
+    // After the first shuffle of a test deck: the engine's deck (index 0 = the top, Draw_ExecuteDraw 0x1400A1C10 draws from there) takes
+    // the file's order. The engine holds the ids each card plays under (a custom card may be lent a vanilla id), so they are compared that way.
+    void ApplyFileOrder(int player)
+    {
+        const Ydc ydc = ReadYdc(g_DeckPath[player & 1]);
+        const uintptr_t offset = static_cast<uintptr_t>(player & 1) * kPlayerStride;
+        const uint32_t count = *reinterpret_cast<uint32_t*>(kEngineDeckCount + offset);
+        auto* deck = reinterpret_cast<uint32_t*>(kEngineDeckCards + offset);
+        if (!ydc.Error.empty() || count == 0 || count > kEngineDeckMax)
+            return;
+        std::vector<bool> used(count, false);
+        std::vector<uint32_t> order;
+        for (uint16_t id : ydc.Main)
+        {
+            const int want = ActiveDuelSessionId(id);
+            for (uint32_t i = 0; i < count; ++i)
+                if (!used[i] && static_cast<int>(deck[i] & 0x3FFF) == want)
+                {
+                    used[i] = true;
+                    order.push_back(deck[i]);
+                    break;
+                }
+        }
+        for (uint32_t i = 0; i < count; ++i)
+            if (!used[i])
+                order.push_back(deck[i]);
+        std::copy(order.begin(), order.end(), deck);
+    }
+
+    void SaveDecks()
+    {
+        WritePrivateProfileStringA(kSection, "DuelTestDeckYou", g_DeckPath[0].c_str(), kIni);
+        WritePrivateProfileStringA(kSection, "DuelTestDeckOpponent", g_DeckPath[1].c_str(), kIni);
+        WritePrivateProfileStringA(kSection, "DuelTestKeepOrder", g_KeepOrder ? "1" : "0", kIni);
+        WritePrivateProfileStringA(kSection, "DuelTestBrowseDir", g_BrowseDir.c_str(), kIni);
+    }
+
+    void LoadDecks()
+    {
+        char buffer[1024]{};
+        GetPrivateProfileStringA(kSection, "DuelTestDeckYou", "", buffer, sizeof(buffer), kIni);
+        g_DeckPath[0] = buffer;
+        GetPrivateProfileStringA(kSection, "DuelTestDeckOpponent", "", buffer, sizeof(buffer), kIni);
+        g_DeckPath[1] = buffer;
+        GetPrivateProfileStringA(kSection, "DuelTestBrowseDir", "", buffer, sizeof(buffer), kIni);
+        g_BrowseDir = buffer;
+        g_KeepOrder = GetPrivateProfileIntA(kSection, "DuelTestKeepOrder", 1, kIni) != 0;
+    }
+
     // ---- the detours ----
 
     // Adds the chosen ids the deck does not hold, so a test card does not have to be in the deck being played. Every chosen hand card is added
@@ -326,6 +525,15 @@ namespace
     int64_t __fastcall Hook_ShuffleDeck(int player)
     {
         int64_t result = orig_ShuffleDeck(player);
+        if (g_PendingOrder[player & 1])
+        {
+            g_PendingOrder[player & 1] = false;
+            if (!g_DeckPath[player & 1].empty())
+            {
+                ApplyFileOrder(player);
+                Log(std::format("Duel_ShuffleDeck(player {}): test deck kept in file order", player & 1));
+            }
+        }
         if (g_Enabled && (player & 1) == g_Player)
         {
             StackDeck(player);
@@ -368,6 +576,186 @@ namespace
         if (ids.empty())
             ImGui::TextDisabled("(none)");
         ImGui::PopID();
+    }
+
+    // ---- the test deck browser ----
+
+    struct Entry
+    {
+        std::string Name, Path;
+        bool Folder = false;
+        std::string Summary;   // "40 main, 3 extra: first cards ..." for a .ydc
+    };
+
+    std::vector<Entry> g_Entries;
+    std::string g_ListedDir;
+
+    void ListFolder()
+    {
+        g_Entries.clear();
+        g_ListedDir = g_BrowseDir;
+        std::error_code ec;
+        std::vector<Entry> folders, files;
+        for (const auto& item : std::filesystem::directory_iterator(PathOf(g_BrowseDir), std::filesystem::directory_options::skip_permission_denied, ec))
+        {
+            Entry e;
+            e.Name = Utf8Of(item.path().filename());
+            e.Path = Utf8Of(item.path());
+            if (item.is_directory(ec))
+            {
+                e.Folder = true;
+                folders.push_back(e);
+                continue;
+            }
+            std::wstring ext = item.path().extension().wstring();
+            for (auto& c : ext) c = static_cast<wchar_t>(towlower(c));
+            if (ext != L".ydc")
+                continue;
+            const Ydc ydc = ReadYdc(e.Path);
+            if (!ydc.Error.empty())
+                e.Summary = ydc.Error;
+            else
+            {
+                e.Summary = std::format("{} main, {} extra", ydc.Main.size(), ydc.Extra.size());
+                for (size_t i = 0; i < ydc.Main.size() && i < 5; ++i)
+                    e.Summary += std::string(i ? ", " : "\nfirst: ") + ToUtf8(CardName(ydc.Main[i]));
+            }
+            files.push_back(e);
+        }
+        g_Entries = folders;
+        g_Entries.insert(g_Entries.end(), files.begin(), files.end());
+    }
+
+    void DrawBrowser()
+    {
+        if (g_BrowseDir.empty())
+        {
+            g_BrowseDir = TestDeckFolder();
+            std::error_code ec;
+            std::filesystem::create_directories(PathOf(g_BrowseDir), ec);
+        }
+        if (g_ListedDir != g_BrowseDir)
+            ListFolder();
+
+        static char typed[512]{};
+        if (ImGui::Button("Up"))
+        {
+            const auto parent = PathOf(g_BrowseDir).parent_path();
+            if (!parent.empty() && parent != PathOf(g_BrowseDir))
+                g_BrowseDir = Utf8Of(parent);
+            SaveDecks();
+        }
+        ImGui::SameLine();
+        if (ImGui::Button("Test decks folder"))
+        {
+            g_BrowseDir = TestDeckFolder();
+            std::error_code ec;
+            std::filesystem::create_directories(PathOf(g_BrowseDir), ec);
+            SaveDecks();
+        }
+        ImGui::SameLine();
+        if (ImGui::Button("Refresh"))
+            ListFolder();
+        ImGui::SameLine();
+        if (ImGui::Button("Open in Explorer"))
+            ShellExecuteW(nullptr, L"open", PathOf(g_BrowseDir).c_str(), nullptr, nullptr, SW_SHOWNORMAL);
+        ImGui::SetNextItemWidth(-60);
+        if (ImGui::InputTextWithHint("##goto", "type a folder and press Go", typed, sizeof(typed), ImGuiInputTextFlags_EnterReturnsTrue) || (ImGui::SameLine(), ImGui::Button("Go")))
+        {
+            std::error_code ec;
+            if (typed[0] && std::filesystem::is_directory(PathOf(typed), ec))
+            {
+                g_BrowseDir = typed;
+                SaveDecks();
+            }
+        }
+        ImGui::TextDisabled("%s", g_BrowseDir.c_str());
+
+        ImGui::BeginChild("files", ImVec2(0, 160), true);
+        for (size_t i = 0; i < g_Entries.size(); ++i)
+        {
+            const Entry& e = g_Entries[i];
+            ImGui::PushID(static_cast<int>(i));
+            if (e.Folder)
+            {
+                if (ImGui::Selectable(("[" + e.Name + "]").c_str()))
+                {
+                    g_BrowseDir = e.Path;
+                    SaveDecks();
+                    ImGui::PopID();
+                    break;
+                }
+            }
+            else
+            {
+                if (ImGui::SmallButton("You"))
+                {
+                    g_DeckPath[0] = e.Path;
+                    SaveDecks();
+                }
+                ImGui::SameLine();
+                if (ImGui::SmallButton("Opponent"))
+                {
+                    g_DeckPath[1] = e.Path;
+                    SaveDecks();
+                }
+                ImGui::SameLine();
+                ImGui::TextUnformatted(e.Name.c_str());
+                if (ImGui::IsItemHovered())
+                    ImGui::SetTooltip("%s", e.Summary.c_str());
+            }
+            ImGui::PopID();
+        }
+        if (g_Entries.empty())
+            ImGui::TextDisabled("(no folders or .ydc files here)");
+        ImGui::EndChild();
+    }
+
+    // ---- the engine's deck during a duel: put a card on top (the next draw) ----
+
+    void DrawDeckOrder()
+    {
+        static int seat = 0;
+        static char filter[64]{};
+        ImGui::SetNextItemWidth(120);
+        ImGui::Combo("deck##order", &seat, "yours\0the opponent's\0");
+        ImGui::SameLine();
+        ImGui::SetNextItemWidth(-1);
+        ImGui::InputTextWithHint("##orderfilter", "filter by name or id", filter, sizeof(filter));
+
+        const uintptr_t offset = static_cast<uintptr_t>(seat) * kPlayerStride;
+        const uint32_t count = *reinterpret_cast<uint32_t*>(kEngineDeckCount + offset);
+        auto* deck = reinterpret_cast<uint32_t*>(kEngineDeckCards + offset);
+        if (count == 0 || count > kEngineDeckMax)
+        {
+            ImGui::TextDisabled("No duel running (the deck is empty).");
+            return;
+        }
+        ImGui::TextDisabled("%u cards, top first. \"Top\" makes a card the next one drawn (use it while the game waits for you).", count);
+        auto lower = [](std::string v) { for (auto& c : v) c = static_cast<char>(tolower(static_cast<unsigned char>(c))); return v; };
+        const std::string needle = lower(filter);
+        ImGui::BeginChild("deckorder", ImVec2(0, 180), true);
+        for (uint32_t i = 0; i < count; ++i)
+        {
+            const int id = static_cast<int>(deck[i] & 0x3FFF);
+            const std::string name = ToUtf8(CardName(id));
+            if (!needle.empty() && lower(name).find(needle) == std::string::npos && std::to_string(id).find(needle) == std::string::npos)
+                continue;
+            ImGui::PushID(static_cast<int>(i));
+            if (i > 0 && ImGui::SmallButton("Top"))
+            {
+                const uint32_t card = deck[i];
+                std::memmove(deck + 1, deck, sizeof(uint32_t) * i);
+                deck[0] = card;
+                Log(std::format("Deck order: {} {} moved to the top of player {}'s deck", id, name, seat));
+            }
+            else if (i == 0)
+                ImGui::TextDisabled("next");
+            ImGui::SameLine();
+            ImGui::Text("%2u  %5d  %s", i + 1, id, name.c_str());
+            ImGui::PopID();
+        }
+        ImGui::EndChild();
     }
 }
 
@@ -509,9 +897,23 @@ namespace
     }
 }
 
+void DuelTest::LateInstall()
+{
+    static bool done = false;
+    if (done)
+        return;
+    done = true;
+    DetourTransactionBegin();
+    DetourUpdateThread(GetCurrentThread());
+    DetourAttach(&(PVOID&)orig_LoadDeckOuter, Hook_LoadDeckOuter);
+    if (DetourTransactionCommit() != NO_ERROR)
+        Log("Could not attach the test deck hook: test decks are off", 2);
+}
+
 void DuelTest::Install()
 {
     Load();
+    LoadDecks();
 
     DetourTransactionBegin();
     DetourUpdateThread(GetCurrentThread());
@@ -527,6 +929,59 @@ void DuelTest::Draw()
     static int g_ArchetypeLimit = 8;
     static std::string g_Result;
 
+    // -- test decks --
+    if (ImGui::CollapsingHeader("Test decks (.ydc)", ImGuiTreeNodeFlags_DefaultOpen))
+    {
+        for (int seat = 0; seat < 2; ++seat)
+        {
+            ImGui::PushID(seat);
+            ImGui::Text("%s:", seat == 0 ? "You" : "Opponent");
+            ImGui::SameLine();
+            if (g_DeckPath[seat].empty())
+                ImGui::TextDisabled("own deck");
+            else
+            {
+                ImGui::TextUnformatted(Utf8Of(PathOf(g_DeckPath[seat]).filename()).c_str());
+                ImGui::SameLine();
+                if (ImGui::SmallButton("Clear"))
+                {
+                    g_DeckPath[seat].clear();
+                    SaveDecks();
+                }
+            }
+            ImGui::PopID();
+        }
+        if (ImGui::Checkbox("Keep the file's order (no shuffle: its first 5 cards are the opening hand)", &g_KeepOrder))
+            SaveDecks();
+        DrawBrowser();
+
+        static char deckName[64] = "test";
+        static bool pad = true;
+        static std::string saveResult;
+        ImGui::SetNextItemWidth(160);
+        ImGui::InputText("##deckname", deckName, sizeof(deckName));
+        ImGui::SameLine();
+        if (ImGui::Button("Save the card lists below as <name>.ydc here"))
+        {
+            std::vector<int> main = g_Hand;
+            if (pad && !main.empty())
+                for (size_t i = 0; main.size() < 40; ++i)
+                    main.push_back(g_Hand[i % g_Hand.size()]);   // 40 cards, so the duel is not lost to an empty deck
+            const std::string path = g_BrowseDir + "\\" + deckName + ".ydc";
+            std::string error;
+            saveResult = WriteYdc(path, main, g_Extra, error) ? "saved " + path : error;
+            ListFolder();
+        }
+        ImGui::SameLine();
+        ImGui::Checkbox("fill to 40", &pad);
+        if (!saveResult.empty())
+            ImGui::TextWrapped("%s", saveResult.c_str());
+    }
+
+    if (ImGui::CollapsingHeader("Deck order (during a duel)"))
+        DrawDeckOrder();
+
+    ImGui::Separator();
     // -- what the next duel does --
     if (ImGui::Checkbox("Stack the opening hand", &g_Enabled))
         Save();

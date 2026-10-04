@@ -17,6 +17,7 @@
 #include "YuGiOh/YuGiOh-UTIL.h"
 #include "YuGiOh/YuGiOh-UI.h"
 #include "DuelTest.h"
+#include "UiWitchcraft.h"
 
 namespace
 {
@@ -437,6 +438,7 @@ namespace DebugTools
 
     void Draw()
     {
+        DuelTest::LateInstall();   // once; every frame calls Draw, the window or not
         if (!g_ShowTools)
             return;
 
@@ -452,6 +454,7 @@ namespace DebugTools
                 if (ImGui::BeginTabItem("Cards")) { DrawCardFunctions(); ImGui::EndTabItem(); }
                 if (ImGui::BeginTabItem("UI")) { DrawUiFunctions(); ImGui::EndTabItem(); }
                 if (ImGui::BeginTabItem("Globals")) { DrawGlobals(); ImGui::EndTabItem(); }
+                if (ImGui::BeginTabItem("UI Witchcraft")) { UiWitchcraft::Draw(); ImGui::EndTabItem(); }
                 ImGui::EndTabBar();
             }
         }
