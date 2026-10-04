@@ -9,7 +9,7 @@ namespace Wolf.Editors
     /// The grid shows every language; the box below edits the selected cell, with a preview of its @ colours.
     /// Opens the game's tables with Yu-Gi-Oh-Ex/text.json on top. Changes to the game's entries are saved into the game's own files;
     /// entries added after them (for custom card kinds, types or prompts, in every language at once) go to text.json, which
-    /// Yu-Gi-Oh-MoreCards serves to the game.
+    /// Yu-Gi-Oh-Core serves to the game (MoreCards did until 2026-10-02).
     /// </summary>
     public sealed class TextTableEditor : UserControl, IGameEditor
     {
@@ -43,7 +43,7 @@ namespace Wolf.Editors
         public IReadOnlyCollection<string> Files =>
             [.. TextTable.Languages.SelectMany(l => new[] { TextTable.IndexGamePath(_current, l), TextTable.TextGamePath(_current, l) })];
 
-        public string SavesTo => $"Standard: bin\\WORD_ / DLG_ Indx + Text files (changes to the game's entries). Additional (entries added after them): Yu-Gi-Oh-Ex\\{TextTableJson.FileName} (needs Yu-Gi-Oh-MoreCards).";
+        public string SavesTo => $"Standard: bin\\WORD_ / DLG_ Indx + Text files (changes to the game's entries). Additional (entries added after them): Yu-Gi-Oh-Ex\\{TextTableJson.FileName} (Yu-Gi-Oh-Core, always on).";
 
         private string SectionJson() => TextTableJson.Section(_tables, _baseline).ToJsonString();
 
@@ -231,7 +231,7 @@ namespace Wolf.Editors
                 _savedJson = section.ToJsonString();
                 FillGrid();
                 SetStatus((write.Count > 0 ? $"Saved {TextTable.Prefix(_current)} for {write.Count / 2} languages into {_gameFiles.Describe(TextTable.IndexGamePath(_current, 'E'))}" : $"The game's {TextTable.Prefix(_current)} entries are unchanged") +
-                    (section.Count > 0 ? $"; {section.Count} added entries to {JsonPath} (Yu-Gi-Oh-MoreCards reads it)." : "."));
+                    (section.Count > 0 ? $"; {section.Count} added entries to {JsonPath} (Yu-Gi-Oh-Core reads it)." : "."));
                 return true;
             }
             catch (Exception ex) when (ex is IOException or InvalidOperationException or UnauthorizedAccessException)

@@ -21,7 +21,7 @@ namespace Wolf.Editors
     public sealed class StoryDuelEditor : UserControl, IGameEditor
     {
         private readonly ToolStrip _tools = new() { GripStyle = ToolStripGripStyle.Hidden };
-        private readonly ToolStripButton _save, _newDuel, _duplicate;
+        private readonly ToolStripButton _save, _newDuel, _duplicate, _deleteDuel;
         private readonly ToolStripComboBox _language = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 45 };
         private readonly ToolStripComboBox _filter = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 130 };
         private readonly ToolStripTextBox _find = new() { Width = 170, ToolTipText = "Id, key, part of a title or a character name" };
@@ -34,14 +34,14 @@ namespace Wolf.Editors
         private readonly ComboBox _series = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 160 };
         private readonly NumericUpDown _order = new() { Minimum = 1, Maximum = StoryDuelTable.MaxOrder, Width = 60 };
         private readonly Label _orderInfo = new() { AutoSize = true, Margin = new Padding(6, 7, 3, 3) };
-        private readonly NumericUpDown[] _character = [new() { Minimum = 0, Maximum = 239, Width = 60 }, new() { Minimum = 0, Maximum = 239, Width = 60 }];
+        private readonly IdCombo[] _character = [new(220), new(220)];
         private readonly Label[] _characterInfo = [new() { AutoSize = true, Margin = new Padding(6, 7, 3, 3) }, new() { AutoSize = true, Margin = new Padding(6, 7, 3, 3) }];
-        private readonly NumericUpDown[] _deck = [new() { Minimum = 0, Maximum = 699, Width = 60 }, new() { Minimum = 0, Maximum = 699, Width = 60 }];
+        private readonly IdCombo[] _deck = [new(260), new(260)];
         private readonly Label[] _deckInfo = [new() { AutoSize = true, Margin = new Padding(6, 7, 3, 3) }, new() { AutoSize = true, Margin = new Padding(6, 7, 3, 3) }];
         private readonly TextBox[] _costume = [new() { Width = 100 }, new() { Width = 100 }];
-        private readonly NumericUpDown _arena = new() { Minimum = -1, Maximum = 999, Width = 60 };
-        private readonly NumericUpDown _rewardPack = new() { Minimum = -1, Maximum = 127, Width = 60 };
-        private readonly NumericUpDown _sku = new() { Minimum = -1, Maximum = 999, Width = 60 };
+        private readonly IdCombo _arena = new(220);
+        private readonly IdCombo _rewardPack = new(260);
+        private readonly IdCombo _sku = new(220);
         private readonly CheckBox _exclude = new() { Text = "Not needed to unlock the opponent's own deck (the game's two crossover duels)", AutoSize = true };
         private readonly DataGridView _texts = new()
         {
@@ -84,6 +84,7 @@ namespace Wolf.Editors
             _removeScene = Button("Remove scene", "Remove the scene on the open tab (the duel then plays without it)", RemoveScene);
             _newDuel = Button("New duel", "Add a duel in the next free id, at the end of the shown series (the game has 226 slots)", () => NewDuel(null));
             _duplicate = Button("Duplicate", "Add a copy of the selected duel in the next free id, at the end of its series", () => NewDuel(Selected()));
+            _deleteDuel = Button("Delete duel...", "Delete a duel you added (New duel / Duplicate), with its scenes. The game's own duels can't be deleted", DeleteDuel);
             _tools.Items.AddRange([_save, new ToolStripSeparator(), new ToolStripLabel("Language:")]);
             foreach (char language in StoryDuelTable.AllLanguages)
                 _language.Items.Add(language.ToString());
@@ -93,6 +94,7 @@ namespace Wolf.Editors
                 foreach (var scene in _scenes)
                     scene.Language = Language;
                 _list.Invalidate();
+                FillNames();
                 ShowSelected();
             };
             _tools.Items.Add(_language);
@@ -107,7 +109,7 @@ namespace Wolf.Editors
             _find.TextChanged += (_, _) => Refill();
             _tools.Items.Add(_find);
             _tools.Items.Add(new ToolStripSeparator());
-            _tools.Items.AddRange([_newDuel, _duplicate, _removeScene]);
+            _tools.Items.AddRange([_newDuel, _duplicate, _deleteDuel, _removeScene]);
 
             _list.Columns.Add("Id", 40);
             _list.Columns.Add("Series", 90);
@@ -137,12 +139,12 @@ namespace Wolf.Editors
             Row("Series:", _series);
             Row($"Order in the series (1-{StoryDuelTable.MaxOrder}):", _order, _orderInfo);
             Row("Player character:", _character[0], _characterInfo[0]);
-            Row("Player deck (deckdata id):", _deck[0], _deckInfo[0], Small("costume:"), _costume[0]);
+            Row("Player deck:", _deck[0], _deckInfo[0], Small("costume:"), _costume[0]);
             Row("Opponent character:", _character[1], _characterInfo[1]);
-            Row("Opponent deck (deckdata id):", _deck[1], _deckInfo[1], Small("costume:"), _costume[1]);
+            Row("Opponent deck:", _deck[1], _deckInfo[1], Small("costume:"), _costume[1]);
             Row("Arena:", _arena);
-            Row("Reward pack (first win, -1 none):", _rewardPack);
-            Row("Content pack (sku, -1/1 = base game):", _sku);
+            Row("Reward pack (first win):", _rewardPack);
+            Row("Content pack (sku):", _sku);
             Row("", _exclude);
             _texts.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Language", ReadOnly = true, FillWeight = 9 });
             _texts.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Title", FillWeight = 21 });
@@ -161,6 +163,7 @@ namespace Wolf.Editors
                 switch (control)
                 {
                     case TextBox box: box.TextChanged += (_, _) => Edited(); break;
+                    case IdCombo id: id.ValueChanged += (_, _) => Edited(); break;
                     case ComboBox combo: combo.SelectedIndexChanged += (_, _) => Edited(); break;
                     case NumericUpDown number: number.ValueChanged += (_, _) => Edited(); break;
                     case CheckBox check: check.CheckedChanged += (_, _) => Edited(); break;
@@ -233,6 +236,7 @@ namespace Wolf.Editors
         private void SetEditable(bool editable)
         {
             _save.Enabled = _newDuel.Enabled = _duplicate.Enabled = editable;
+            _deleteDuel.Enabled = editable && IsAdded(_shown);
             _removeScene.Enabled = editable && _scripts != null && _pages.SelectedIndex > 0;
         }
 
@@ -259,7 +263,21 @@ namespace Wolf.Editors
             return false;
         }
 
-        private string DeckTitle(int id) => _decks?.Find((uint)Math.Max(0, id)) is DeckRecord deck ? $"\"{deck.Title}\"" : _decks == null ? "" : "not a deck in deckdata";
+        private IGameFiles? _names;
+
+        /// <summary>The dropdowns' names: characters (in the shown language), decks, packs, arenas, content packs.</summary>
+        private void FillNames()
+        {
+            foreach (var combo in _character)
+                combo.SetItems(GameNames.Characters(_characters, Language));
+            foreach (var combo in _deck)
+                combo.SetItems(GameNames.Decks(_decks));
+            _arena.SetItems(GameNames.Arenas(_names));
+            _rewardPack.SetItems(GameNames.Packs(_names));
+            _sku.SetItems(GameNames.ContentPacks(_names));
+        }
+
+        private string DeckTitle(int id) => _decks == null || _decks.Find((uint)Math.Max(0, id)) != null ? "" : "not a deck in deckdata";
 
         private string Note(StoryDuel d)
         {
@@ -303,6 +321,8 @@ namespace Wolf.Editors
                 int scenesFromJson = _scripts != null ? StoryScriptJson.Apply(StoryScriptJson.Load(ScriptJsonPath), _scripts) : 0;
                 foreach (var scene in _scenes)
                     scene.UseFiles(pictures, _characters?.Characters.Select(c => c.Key) ?? [], _characters?.Find(139)?.Name(Language) ?? "");
+                _names = pictures;
+                FillNames();
                 _changed = false;
                 SetEditable(true);
                 Refill();
@@ -429,6 +449,7 @@ namespace Wolf.Editors
             var d = Selected();
             _shown = d?.Id;
             _editor.Enabled = d != null;
+            _deleteDuel.Enabled = _save.Enabled && IsAdded(_shown);
             if (d == null)
             {
                 _heading.Text = _table == null ? "" : "Pick a story duel.";
@@ -445,13 +466,13 @@ namespace Wolf.Editors
                 _order.Value = Math.Clamp(d.Order, 1, StoryDuelTable.MaxOrder);
                 for (int side = 0; side < 2; side++)
                 {
-                    _character[side].Value = Math.Clamp(d.Characters[side], 0, 239);
-                    _deck[side].Value = Math.Clamp(d.Decks[side], 0, 699);
+                    _character[side].Value = d.Characters[side];
+                    _deck[side].Value = d.Decks[side];
                     _costume[side].Text = d.Costumes[side];
                 }
-                _arena.Value = Math.Clamp(d.Arena, -1, 999);
-                _rewardPack.Value = Math.Clamp(d.RewardPack, -1, 127);
-                _sku.Value = Math.Clamp(d.Sku, -1, 999);
+                _arena.Value = d.Arena;
+                _rewardPack.Value = d.RewardPack;
+                _sku.Value = d.Sku;
                 _exclude.Checked = d.ExcludeFromDeckUnlock != 0;
                 for (int i = 0; i < StoryDuelTable.AllLanguages.Length; i++)
                 {
@@ -520,11 +541,39 @@ namespace Wolf.Editors
             _list.Invalidate();
         }
 
+        /// <summary>A duel added here (New duel / Duplicate, or one from storyduels.json): one the game's own file doesn't have.</summary>
+        private bool IsAdded(int? id) => id is int value && _table?.Find(value) != null && _baseline?.Find(value) == null;
+
+        /// <summary>Deletes an added duel and its scenes (a scene another duel also uses, by the same key, stays).</summary>
+        private void DeleteDuel()
+        {
+            if (_table == null || _shown is not int id || _table.Find(id) is not StoryDuel d)
+                return;
+            if (!IsAdded(id))
+            {
+                _status.Text = $"Duel {id} is one of the game's own: only duels you added can be deleted (change or blank this one instead).";
+                return;
+            }
+            if (MessageBox.Show(this, $"Delete duel {id} \"{d.Titles.GetValueOrDefault('E', d.Key)}\" and its scenes?", "Delete duel",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                return;
+            int row = _rows.IndexOf(d);
+            _table.Duels.Remove(d);
+            if (_scripts != null && !_table.Duels.Any(o => o.Key.Equals(d.Key, StringComparison.OrdinalIgnoreCase)))
+                for (int i = 0; i < StoryScriptTable.SceneSuffixes.Length; i++)
+                    if (_scripts.Find(SceneName(d, i)) is StoryScript scene)
+                        _scripts.Scripts.Remove(scene);
+            _changed = true;
+            var next = _rows.Where(o => o != d).ElementAtOrDefault(Math.Max(0, row - 1));
+            Refill(next?.Id);
+            _status.Text = $"Duel {id} deleted (saved when you press Save).";
+        }
+
         private void ShowInfo(StoryDuel d)
         {
             for (int side = 0; side < 2; side++)
             {
-                _characterInfo[side].Text = _characters == null ? "" : _characters.Find(d.Characters[side]) is Character c ? c.Name(Language) : "not a character";
+                _characterInfo[side].Text = _characters == null || _characters.Find(d.Characters[side]) != null ? "" : "not a character";
                 _deckInfo[side].Text = DeckTitle(d.Decks[side]);
             }
             var clash = _table?.Duels.FirstOrDefault(o => o != d && o.Series == d.Series && o.Order == d.Order);
@@ -549,13 +598,13 @@ namespace Wolf.Editors
             d.Order = (int)_order.Value;
             for (int side = 0; side < 2; side++)
             {
-                d.Characters[side] = (int)_character[side].Value;
-                d.Decks[side] = (int)_deck[side].Value;
+                d.Characters[side] = _character[side].Value;
+                d.Decks[side] = _deck[side].Value;
                 d.Costumes[side] = _costume[side].Text.Trim();
             }
-            d.Arena = (int)_arena.Value;
-            d.RewardPack = (int)_rewardPack.Value;
-            d.Sku = (int)_sku.Value;
+            d.Arena = _arena.Value;
+            d.RewardPack = _rewardPack.Value;
+            d.Sku = _sku.Value;
             d.ExcludeFromDeckUnlock = _exclude.Checked ? 1 : 0;
             for (int i = 0; i < StoryDuelTable.AllLanguages.Length; i++)
             {

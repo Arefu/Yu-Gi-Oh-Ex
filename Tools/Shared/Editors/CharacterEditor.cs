@@ -25,11 +25,11 @@ namespace Wolf.Editors
         private readonly Label _heading = new() { Dock = DockStyle.Top, Height = 22, TextAlign = ContentAlignment.MiddleLeft, Font = new Font("Segoe UI", 9.5f, FontStyle.Bold) };
         private readonly TextBox _key = new() { Width = 200 };
         private readonly ComboBox _series = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 200 };
-        private readonly NumericUpDown _deck = new() { Minimum = -1, Maximum = 699, Width = 70 };
+        private readonly IdCombo _deck = new(260);
         private readonly Label _deckInfo = new() { AutoSize = true, Margin = new Padding(6, 7, 3, 3) };
         private readonly CheckBox _selectable = new() { Text = "Selectable (Free Duel opponent, counted in the collection)", AutoSize = true };
-        private readonly NumericUpDown _sku = new() { Minimum = -1, Maximum = 999, Width = 70 };
-        private readonly NumericUpDown _arena = new() { Minimum = -1, Maximum = 999, Width = 70 };
+        private readonly IdCombo _sku = new(220);
+        private readonly IdCombo _arena = new(220);
         private readonly CheckBox _unlocked = new() { Text = "Unlocked (a new character; Yu-Gi-Oh-Campaign sets it in the save)", AutoSize = true };
         private readonly DataGridView _texts = new()
         {
@@ -107,9 +107,9 @@ namespace Wolf.Editors
             }
             Row("Key (portrait \"<key>_neutral\"):", _key);
             Row("Series tab:", _series);
-            Row("Deck (deckdata id, -1 none):", _deck, _deckInfo);
+            Row("Deck:", _deck, _deckInfo);
             Row("", _selectable);
-            Row("Content pack (sku, -1/1 = base game):", _sku);
+            Row("Content pack (sku):", _sku);
             Row("Arena:", _arena);
             Row("", _unlocked);
             _texts.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Language", ReadOnly = true, FillWeight = 10 });
@@ -128,6 +128,7 @@ namespace Wolf.Editors
                 switch (control)
                 {
                     case TextBox box: box.TextChanged += (_, _) => Edited(); break;
+                    case IdCombo id: id.ValueChanged += (_, _) => Edited(); break;
                     case ComboBox combo: combo.SelectedIndexChanged += (_, _) => Edited(); break;
                     case NumericUpDown number: number.ValueChanged += (_, _) => Edited(); break;
                     case CheckBox check: check.CheckedChanged += (_, _) => Edited(); break;
@@ -221,6 +222,9 @@ namespace Wolf.Editors
                 _baseline = _table.Clone();
                 _unlockedFlags.Clear();
                 int fromJson = CharacterJson.Apply(CharacterJson.Load(JsonPath), _table, _unlockedFlags);
+                _deck.SetItems(GameNames.Decks(_decks).Prepend((-1, "none")));
+                _sku.SetItems(GameNames.ContentPacks(_gameFiles));
+                _arena.SetItems(GameNames.Arenas(_gameFiles, "none"));
                 _changed = false;
                 SetEditable(true);
                 Refill();
@@ -329,10 +333,10 @@ namespace Wolf.Editors
                 _heading.Text = $"{c.Name(Language)} ({c.Id}){(isNew ? " - new" : "")}";
                 _key.Text = c.Key;
                 _series.SelectedIndex = Math.Clamp(c.Series + 1, 0, SeriesNames.Length - 1);
-                _deck.Value = Math.Clamp(c.Deck, -1, 699);
+                _deck.Value = c.Deck;
                 _selectable.Checked = c.Selectable != 0;
-                _sku.Value = Math.Clamp(c.Sku, -1, 999);
-                _arena.Value = Math.Clamp(c.Arena, -1, 999);
+                _sku.Value = c.Sku;
+                _arena.Value = c.Arena;
                 _unlocked.Visible = isNew;
                 _unlocked.Checked = !_unlockedFlags.TryGetValue(c.Id, out bool u) || u;
                 for (int i = 0; i < CharacterTable.AllLanguages.Length; i++)
@@ -358,8 +362,8 @@ namespace Wolf.Editors
             }
             var deck = _decks?.Find((uint)c.Deck);
             _deckInfo.Text = deck == null ? (_decks == null ? "" : "not a deck in deckdata")
-                : deck.CharacterId == c.Id ? $"\"{deck.Title}\" (owned by this character)"
-                : $"\"{deck.Title}\" belongs to character {deck.CharacterId}: Free Duel won't list this one";
+                : deck.CharacterId == c.Id ? "(owned by this character)"
+                : $"belongs to character {deck.CharacterId}: Free Duel won't list this one";
         }
 
         private void Edited()
@@ -368,10 +372,10 @@ namespace Wolf.Editors
                 return;
             c.Key = _key.Text.Trim();
             c.Series = _series.SelectedIndex - 1;
-            c.Deck = (int)_deck.Value;
+            c.Deck = _deck.Value;
             c.Selectable = _selectable.Checked ? 1 : 0;
-            c.Sku = (int)_sku.Value;
-            c.Arena = (int)_arena.Value;
+            c.Sku = _sku.Value;
+            c.Arena = _arena.Value;
             if (_unlocked.Visible)
                 _unlockedFlags[id] = _unlocked.Checked;
             for (int i = 0; i < CharacterTable.AllLanguages.Length; i++)

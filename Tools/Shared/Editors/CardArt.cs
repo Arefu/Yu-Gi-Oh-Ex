@@ -58,6 +58,27 @@ namespace Wolf.Editors
             _cache.Clear();
         }
 
+        /// <summary>Forget the pictures and the .zib lists too: after the art .zib files were written.</summary>
+        public static void Reset()
+        {
+            _indexes.Clear();
+            Clear();
+        }
+
+        /// <summary>True when this art .zib (<see cref="CensoredZib"/> / <see cref="UncensoredZib"/>) of the open data has the card's picture.</summary>
+        public static bool Has(string zib, int konamiId)
+        {
+            if (GameFolderFiles.Current is not { } files)
+                return false;
+            if (files != _files)
+            {
+                _files = files;
+                _indexes.Clear();
+                Clear();
+            }
+            return Index(files, zib).ContainsKey(konamiId);
+        }
+
         private static Dictionary<int, (long Start, int Size)> Index(GameFolderFiles files, string zib)
         {
             if (_indexes.TryGetValue(zib, out var index))
@@ -77,6 +98,127 @@ namespace Wolf.Editors
                     index[id] = (start, size);
             }
             return index;
+        }
+    }
+
+    /// <summary>
+    /// Changing a game card's pictures. A card has a censored picture in <see cref="CardArt.CensoredZib"/> (every card) and some also an
+    /// uncensored one in <see cref="CardArt.UncensoredZib"/>; each is changed on its own (the Card Manager shows both). They are written
+    /// back into those .zib files as standard content. In the game folder that is WolfX's patch archive, YGO_2020-Ex.dat: the game's own
+    /// YGO_2020.dat / .toc are never written (GameFolderFiles refuses a patch named like the game's archive). The censored .zib is 600 MB, so
+    /// it is rewritten by streaming (<see cref="Types.ZibArchive.Rewrite"/>), never held in memory.
+    ///
+    /// The game opens the art .zib files as streams (YGO::CARDS::CardArt_OpenZibs 0x14086CD60 -> Zib_OpenStream -> Stream_Open ->
+    /// Archive_OpenEntry), not through the whole-file loader, so Yu-Gi-Oh-Core serves the patch's copy by redirecting Archive_OpenEntry
+    /// to the patch archive (Core Patch.h). CardArt_OpenZibs lists every "&lt;Konami id&gt;.jpg" in both, so an uncensored picture added
+    /// for a card is used too. Pictures are 304 x 304 baseline JPEG.
+    /// </summary>
+    public static class VanillaArt
+    {
+        public const int Size = 304;
+
+        /// <summary>"Censored" or "Uncensored", for an art .zib.</summary>
+        public static string Describe(string zib) => zib.Equals(CardArt.UncensoredZib, StringComparison.OrdinalIgnoreCase) ? "Uncensored" : "Censored";
+
+        /// <summary>The picture as the game ships it (from YGO_2020.dat, before any change), or null.</summary>
+        public static byte[]? Original(GameFolderFiles files, int konamiId, string zib = CardArt.CensoredZib)
+        {
+            using var reader = files.OpenGameRange(zib);
+            if (reader == null)
+                return null;
+            var entry = Types.ZibArchive.ReadIndex(reader.Read).FirstOrDefault(e => e.Name.Equals(konamiId + ".jpg", StringComparison.OrdinalIgnoreCase));
+            return entry == null ? null : reader.Read(entry.Start, (int)entry.Size);
+        }
+
+        /// <summary>The picture the game loads now (the patch's or a loose .zib when there is one), as its JPEG bytes, or null.</summary>
+        public static byte[]? Current(GameFolderFiles files, int konamiId, string zib = CardArt.CensoredZib)
+        {
+            using var reader = files.OpenRange(zib);
+            if (reader == null)
+                return null;
+            var entry = Types.ZibArchive.ReadIndex(reader.Read).FirstOrDefault(e => e.Name.Equals(konamiId + ".jpg", StringComparison.OrdinalIgnoreCase));
+            return entry == null ? null : reader.Read(entry.Start, (int)entry.Size);
+        }
+
+        /// <summary>
+        /// True when the open data's copy of this card's picture in that .zib isn't the one in YGO_2020.dat (changed, added or taken out, and saved).
+        /// </summary>
+        public static bool IsChanged(GameFolderFiles files, int konamiId, string zib = CardArt.CensoredZib)
+        {
+            if (files.IsExtracted || files.SourceOf(zib) is "archive" or null)
+                return false;
+            byte[]? current = Current(files, konamiId, zib), original = Original(files, konamiId, zib);
+            return current == null || original == null ? current != original : !original.AsSpan().SequenceEqual(current);
+        }
+
+        /// <summary>
+        /// A picture made into what the game expects: square (the middle of a wide or tall picture), 304 x 304, 24 bit baseline JPEG. A file
+        /// that already is that is used as it is, so it isn't compressed twice.
+        /// </summary>
+        public static byte[] ToGameJpeg(byte[] picture)
+        {
+            using (var probe = new MemoryStream(picture))
+            using (var image = Image.FromStream(probe))
+            {
+                if (image.RawFormat.Guid == System.Drawing.Imaging.ImageFormat.Jpeg.Guid && image.Width == Size && image.Height == Size &&
+                    Image.GetPixelFormatSize(image.PixelFormat) == 24)
+                    return picture;
+            }
+            using var source = new MemoryStream(picture);
+            using var input = Image.FromStream(source);
+            int side = Math.Min(input.Width, input.Height);
+            var crop = new Rectangle((input.Width - side) / 2, (input.Height - side) / 2, side, side);
+            using var art = new Bitmap(Size, Size, System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+            using (var g = Graphics.FromImage(art))
+            {
+                g.Clear(Color.Black);   // under a transparent picture
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+                g.DrawImage(input, new Rectangle(0, 0, Size, Size), crop, GraphicsUnit.Pixel);
+            }
+            var codec = System.Drawing.Imaging.ImageCodecInfo.GetImageEncoders().First(c => c.FormatID == System.Drawing.Imaging.ImageFormat.Jpeg.Guid);
+            using var parameters = new System.Drawing.Imaging.EncoderParameters(1);
+            parameters.Param[0] = new System.Drawing.Imaging.EncoderParameter(System.Drawing.Imaging.Encoder.Quality, 95L);
+            using var output = new MemoryStream();
+            art.Save(output, codec, parameters);
+            return output.ToArray();
+        }
+
+        /// <summary>
+        /// Writes the pictures into the art .zib files, each into the one it is for: (.zib, Konami id) -> game JPEG, or null to take the
+        /// card's picture out of that .zib (an uncensored picture that was added). Only the .zib files with a change are written, into the
+        /// copy the game loads (the patch, never YGO_2020.dat). Throws like
+        /// <see cref="GameFolderFiles.Write(IReadOnlyDictionary{string, StartingCollection.TocArchive.PatchSource})"/> (the game must be closed).
+        /// Returns the .zib files written.
+        /// </summary>
+        public static List<string> Save(GameFolderFiles files, IReadOnlyDictionary<(string Zib, int Id), byte[]?> pictures)
+        {
+            var write = new Dictionary<string, StartingCollection.TocArchive.PatchSource>(StringComparer.OrdinalIgnoreCase);
+            foreach (var group in pictures.GroupBy(p => p.Key.Zib, StringComparer.OrdinalIgnoreCase))
+            {
+                string zib = group.Key;
+                if (!files.Exists(zib))
+                    throw new InvalidOperationException($"The open data has no {zib}.");
+                var replace = new Dictionary<string, byte[]>(StringComparer.OrdinalIgnoreCase);
+                var remove = new List<string>();
+                foreach (var ((_, id), jpeg) in group)
+                {
+                    if (jpeg != null)
+                        replace[id + ".jpg"] = jpeg;
+                    else
+                        remove.Add(id + ".jpg");
+                }
+                // the reader is opened and closed inside: the file it reads may be the one being replaced
+                write[zib] = StartingCollection.TocArchive.PatchSource.Streamed(stream =>
+                {
+                    using var reader = files.OpenRange(zib) ?? throw new InvalidOperationException($"{zib} couldn't be opened.");
+                    return Types.ZibArchive.Rewrite(reader.Read, replace, stream, remove);
+                });
+            }
+            if (write.Count > 0)
+                files.Write(write);
+            CardArt.Reset();
+            return [.. write.Keys];
         }
     }
 

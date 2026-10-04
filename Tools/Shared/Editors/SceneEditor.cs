@@ -457,6 +457,8 @@ namespace Wolf.Editors
         private readonly SplitContainer _main = new() { Dock = DockStyle.Fill };
         private readonly System.Windows.Forms.Timer _player = new();
         private ToolStripButton _play = null!;
+        private readonly ToolStripComboBox _speed = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 60, ToolTipText = "How fast Play goes" };
+        private static readonly double[] Speeds = [1, 1.5, 2, 3];
 
         private StoryScript? _script;
         private string _sceneName = "";
@@ -532,6 +534,10 @@ namespace Wolf.Editors
             Tool("◀ Prev", "The previous step (Page Up)", () => { StopPlaying(); SelectStep(SelectedIndex() - 1); });
             _play = Tool("▶ Play", "Play the scene from the selected step, line by line, as the game shows it (Space on the step list)", TogglePlay);
             Tool("Next ▶", "The next step (Page Down)", () => { StopPlaying(); SelectStep(SelectedIndex() + 1); });
+            foreach (double speed in Speeds)
+                _speed.Items.Add($"{speed}x");
+            _speed.SelectedIndex = 1;   // 1.5x
+            _tools.Items.Add(_speed);
             _steps.KeyDown += (_, e) =>
             {
                 if (e.KeyCode == Keys.Space)
@@ -699,9 +705,13 @@ namespace Wolf.Editors
             _player.Interval = Hold(SelectedLine());
         }
 
-        /// <summary>How long a step stays up: a moment for a background or prop, longer for a line with more to read.</summary>
-        private int Hold(ScriptLine? line) =>
-            line == null || line.IsCommand ? 600 : Math.Clamp(1200 + line.Text(Language).Length * 45, 1800, 8000);
+        /// <summary>How long a step stays up: a moment for a background or prop, longer for a line with more to read; divided by the speed picked.</summary>
+        private int Hold(ScriptLine? line)
+        {
+            int ms = line == null || line.IsCommand ? 350 : Math.Clamp(800 + line.Text(Language).Length * 30, 1200, 5500);
+            double speed = Speeds[Math.Clamp(_speed.SelectedIndex, 0, Speeds.Length - 1)];
+            return Math.Max(100, (int)(ms / speed));
+        }
 
         private string WhoText(ScriptLine line) =>
             line.IsCommand ? "▣ command" : line.IsNarrator ? "✎ narrator" : line.Speaker;

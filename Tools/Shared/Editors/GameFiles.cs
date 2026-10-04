@@ -17,9 +17,11 @@ namespace Wolf.Editors
     /// <summary>
     /// The game data WolfX works on, one for the whole app (<see cref="Current"/>): every editor reads and saves through it.
     /// Two kinds of folder open:
-    /// * the game folder (YGO_2020.toc / .dat): files are read straight out of the .dat, and a loose file in &lt;game&gt;\YGO_2020\&lt;path&gt;
-    ///   wins (that is how mods such as the Anime Frames replace pictures). Saving writes into the .dat in place (<see cref="TocArchive.Write"/>),
-    ///   or into the loose file when there is one, since that is the one the game uses.
+    /// * the game folder (YGO_2020.toc / .dat): files are read straight out of the .dat, a changed one out of WolfX's <b>patch archive</b>
+    ///   (YGO_2020-Ex.toc / .dat, <see cref="PatchName"/>), and a loose file in &lt;game&gt;\YGO_2020\&lt;path&gt; wins over both (that is how mods
+    ///   such as the Anime Frames replace pictures). Saving writes the patch archive (<see cref="TocArchive.WritePatch"/>), or the loose file
+    ///   when there is one; the game's own YGO_2020.dat / .toc are never written. Yu-Gi-Oh-Core (always on) serves the game the patch's files
+    ///   whenever they exist ([Yu-Gi-Oh-Core] PatchArchive), and deleting the two patch files undoes everything.
     /// * an extracted YGO_2020 folder (any name): files are read and saved there.
     /// Standard content (changes to things the game already has) is saved here in the game's own formats. Additional content (new cards,
     /// packs, ...) goes to the Yu-Gi-Oh-Ex folder (<see cref="ExFolder"/>) as JSON, which the launcher plugins apply.
@@ -42,14 +44,94 @@ namespace Wolf.Editors
         ];
 
         private readonly TocArchive? _archive;
+        private TocArchive? _patch;
         private readonly string? _extracted;
+
+        /// <summary>The name of the game's own archive (<c>[Yu-Gi-Oh-Core] Archive</c>, YGO_2020 when not set), without .toc.</summary>
+        public string ArchiveName { get; } = "YGO_2020";
 
         /// <summary>The game folder (the one with YuGiOh.exe and YGO_2020.toc).</summary>
         public GameFolderFiles(string gameFolder)
         {
             GameFolder = gameFolder;
-            _archive = TocArchive.TryOpen(Path.Combine(gameFolder, "YGO_2020.toc"));
+            // the archive the game opens: [Yu-Gi-Oh-Core] Archive, YGO_2020 when it isn't set
+            string archive = LoadSetting("Archive", "YGO_2020");
+            ArchiveName = archive.Length > 0 ? archive : "YGO_2020";
+            _archive = TocArchive.TryOpen(Path.Combine(gameFolder, (archive.Length > 0 ? archive : "YGO_2020") + ".toc"))
+                       ?? TocArchive.TryOpen(Path.Combine(gameFolder, "YGO_2020.toc"));
+            ReloadSettings();
         }
+
+        // ---- how the game picks a file (Yu-Gi-Oh-Core Patch.h): the same settings, so WolfX shows and saves what the game loads ----
+
+        private string _patchName = "YGO_2020-Ex", _looseFolderName = "YGO_2020";
+        private bool _looseActive, _patchFirst;
+
+        private string Ini => Path.Combine(GameFolder, "Config.ini");
+
+        private string IniText(string section, string key, string fallback)
+        {
+            var value = new System.Text.StringBuilder(260);
+            GetPrivateProfileString(section, key, fallback, value, value.Capacity, Ini);
+            return value.ToString().Trim();
+        }
+
+        /// <summary>
+        /// Reads the settings again ([Yu-Gi-Oh-Core] PatchArchive / FileOrder / LooseLoading / FolderName) and reopens the patch archive. Called when the data is
+        /// opened and when the Game files page changes them.
+        /// </summary>
+        public void ReloadSettings()
+        {
+            if (_extracted != null)
+                return;
+            string name = LoadSetting("PatchArchive", "YGO_2020-Ex");
+            _patchName = name.Length > 0 ? name : "YGO_2020-Ex";
+            _patchFirst = LoadSetting("FileOrder", "loose").Equals("patch", StringComparison.OrdinalIgnoreCase);
+            string folder = LoadSetting("FolderName", "YGO_2020");
+            _looseFolderName = folder.Length > 0 ? folder : "YGO_2020";
+            _looseActive = LoadSetting("LooseLoading", "0") == "1";
+            // the game's own archive is never taken for the patch (PatchArchive=YGO_2020): it would be read as "changed" and written over
+            bool isGame = string.Equals(_patchName, "YGO_2020", StringComparison.OrdinalIgnoreCase) || string.Equals(_patchName, ArchiveName, StringComparison.OrdinalIgnoreCase);
+            _patch = isGame ? null : TocArchive.TryOpen(PatchToc);
+        }
+
+        /// <summary>A [Yu-Gi-Oh-Core] setting, else fallback (as Core's Loading::Setting).</summary>
+        public string LoadSetting(string key, string fallback) => IniText("Yu-Gi-Oh-Core", key, fallback);
+
+        /// <summary>True when the game takes loose files from <see cref="OverrideFolder"/> ([Yu-Gi-Oh-Core] LooseLoading=1); always for an extracted folder.</summary>
+        public bool LooseLoading => _extracted != null || _looseActive;
+
+        /// <summary>[Yu-Gi-Oh-Core] FileOrder = patch: WolfX's patch wins over loose files (default: loose files win).</summary>
+        public bool PatchFirst => _patchFirst;
+
+        /// <summary>
+        /// The patch archive's name, without extension: [Yu-Gi-Oh-Core] PatchArchive in the game's Config.ini (Core reads the same key),
+        /// "YGO_2020-Ex" when it isn't set.
+        /// </summary>
+        public string PatchName => _patchName;
+
+        [System.Runtime.InteropServices.DllImport("kernel32", CharSet = System.Runtime.InteropServices.CharSet.Unicode)]
+        private static extern int GetPrivateProfileString(string section, string key, string fallback, System.Text.StringBuilder value, int size, string file);
+
+        private string PatchToc => Path.Combine(GameFolder, PatchName + ".toc");
+
+        /// <summary>
+        /// Throws when the patch would be the game's own archive ([..] PatchArchive set to YGO_2020, or to the Archive the game opens):
+        /// writing the patch replaces its .toc / .dat, and the game's own data is never written.
+        /// </summary>
+        private void GuardPatchIsNotTheGame()
+        {
+            string patch = Path.GetFullPath(PatchToc);
+            foreach (string game in new[] { Path.Combine(GameFolder, "YGO_2020.toc"), Path.Combine(GameFolder, ArchiveName + ".toc"), _archive?.TocPath ?? "" })
+                if (game.Length > 0 && string.Equals(patch, Path.GetFullPath(game), StringComparison.OrdinalIgnoreCase))
+                    throw new InvalidOperationException($"PatchArchive is \"{PatchName}\", the game's own archive: WolfX never writes that. Set PatchArchive to YGO_2020-Ex (Files > Game files & loading).");
+        }
+
+        /// <summary>WolfX's patch archive, when it has any files (game folder only).</summary>
+        public TocArchive? Patch => _patch;
+
+        /// <summary>The files the patch archive holds (what WolfX changed in the game's archive).</summary>
+        public IReadOnlyList<string> PatchedFiles => _patch?.Paths.ToList() ?? [];
 
         private GameFolderFiles(string extractedFolder, string exParent)
         {
@@ -100,8 +182,8 @@ namespace Wolf.Editors
         /// <summary>What was opened: the extracted folder or the game folder.</summary>
         public string Folder => _extracted ?? GameFolder;
 
-        /// <summary>Where loose files go: the extracted folder, or &lt;game&gt;\YGO_2020.</summary>
-        public string OverrideFolder => _extracted ?? Path.Combine(GameFolder, "YGO_2020");
+        /// <summary>Where loose files are: the extracted folder, or &lt;game&gt;\&lt;FolderName&gt; (default YGO_2020).</summary>
+        public string OverrideFolder => _extracted ?? Path.Combine(GameFolder, _looseFolderName);
 
         public bool Available => _archive != null || _extracted != null;
 
@@ -116,29 +198,52 @@ namespace Wolf.Editors
         /// <summary>A file in the Yu-Gi-Oh-Ex folder ("tutorials\steam_tutorial_05_E.json").</summary>
         public string ExPath(string relative) => Path.Combine(ExFolder, relative.Replace('/', '\\'));
 
-        public bool IsOverridden(string path) => _extracted == null && File.Exists(LoosePath(path));
+        public bool IsOverridden(string path) => _extracted == null && HasLoose(path);
+
+        /// <summary>A loose file the game would use for this path (loose loading on and the file there).</summary>
+        private bool HasLoose(string path) => LooseLoading && File.Exists(LoosePath(path));
+
+        /// <summary>Which copy of a file the game loads: "loose", "patch" or "archive" (null: none).</summary>
+        public string? SourceOf(string path)
+        {
+            path = path.Replace('/', '\\');
+            if (_extracted != null)
+                return File.Exists(LoosePath(path)) ? "loose" : null;
+            bool loose = HasLoose(path), patched = _patch?.Contains(path) == true;
+            if (_patchFirst && patched)
+                return "patch";
+            if (loose)
+                return "loose";
+            if (patched)
+                return "patch";
+            return _archive?.Contains(path) == true ? "archive" : null;
+        }
 
         /// <summary>The required files this data doesn't have, with what they are for.</summary>
         public List<string> MissingRequired() =>
             RequiredFiles.Where(file => !Exists(file.Path)).Select(file => $"{file.Path} ({file.What})").ToList();
 
-        public bool Exists(string path) => File.Exists(LoosePath(path)) || (_archive?.Contains(path) ?? false);
+        public bool Exists(string path) => SourceOf(path) != null;
 
         public byte[]? Read(string path)
         {
             path = path.Replace('/', '\\');
-            string loose = LoosePath(path);
-            if (File.Exists(loose))
-                return File.ReadAllBytes(loose);
-            return _archive?.Read(path);
+            return SourceOf(path) switch
+            {
+                "loose" => File.ReadAllBytes(LoosePath(path)),
+                "patch" => _patch!.Read(path),
+                "archive" => _archive!.Read(path),
+                _ => null,
+            };
         }
 
         /// <summary>Part of a file (the art .zib files are hundreds of MB).</summary>
         public byte[]? Read(string path, long start, int count)
         {
             string loose = LoosePath(path);
-            if (!File.Exists(loose))
-                return _archive?.Read(path, start, count);
+            string? source = SourceOf(path);
+            if (source != "loose")
+                return source == "patch" ? _patch!.Read(path, start, count) : _archive?.Read(path, start, count);
             using var stream = new FileStream(loose, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             if (start < 0 || start >= stream.Length)
                 return null;
@@ -148,15 +253,71 @@ namespace Wolf.Editors
             return data;
         }
 
+        /// <summary>
+        /// Reads parts of one file through a single open handle (for walking a whole .zib): read(start, count) clamps to the file and
+        /// returns null past its end. Null when the data has no such file. Dispose it when done.
+        /// </summary>
+        public RangeReader? OpenRange(string path)
+        {
+            path = path.Replace('/', '\\');
+            string? source = SourceOf(path);
+            if (source == "loose")
+            {
+                string loose = LoosePath(path);
+                return new RangeReader(loose, 0, new FileInfo(loose).Length);
+            }
+            var archive = source == "patch" ? _patch : source == "archive" ? _archive : null;
+            return archive?.Find(path) is { } item ? new RangeReader(archive.DatPath, item.Offset, item.Size) : null;
+        }
+
+        /// <summary>Like <see cref="OpenRange"/>, but the game's own copy in YGO_2020.dat (what the file was before any change).</summary>
+        public RangeReader? OpenGameRange(string path) =>
+            _archive?.Find(path.Replace('/', '\\')) is { } item ? new RangeReader(_archive.DatPath, item.Offset, item.Size) : null;
+
+        /// <summary>A file inside another (or on its own) read in parts; see <see cref="OpenRange"/>.</summary>
+        public sealed class RangeReader : IDisposable
+        {
+            private readonly FileStream _stream;
+            private readonly long _offset;
+
+            internal RangeReader(string file, long offset, long size)
+            {
+                _stream = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, 1 << 20);
+                _offset = offset;
+                Size = size;
+            }
+
+            public long Size { get; }
+
+            public byte[]? Read(long start, int count)
+            {
+                if (start < 0 || start >= Size)
+                    return null;
+                var data = new byte[Math.Min(count, Size - start)];
+                _stream.Position = _offset + start;
+                _stream.ReadExactly(data);
+                return data;
+            }
+
+            public void Dispose() => _stream.Dispose();
+        }
+
         /// <summary>Where a file is read from, for status lines: "YGO_2020.dat" or the loose file.</summary>
-        public string Describe(string path) => File.Exists(LoosePath(path)) ? LoosePath(path) : _archive != null ? "YGO_2020.dat" : LoosePath(path);
+        public string Describe(string path) => SourceOf(path) switch
+        {
+            "loose" => LoosePath(path),
+            "patch" => $"{PatchName}.dat (WolfX's patch)",
+            "archive" => "YGO_2020.dat",
+            _ => _archive != null ? $"{PatchName}.dat (WolfX's patch)" : LoosePath(path),
+        };
 
         public IEnumerable<string> Paths
         {
             get
             {
                 var all = new HashSet<string>(_archive?.Paths ?? [], StringComparer.OrdinalIgnoreCase);
-                if (Directory.Exists(OverrideFolder))
+                all.UnionWith(_patch?.Paths ?? []);
+                if (LooseLoading && Directory.Exists(OverrideFolder))
                 {
                     foreach (string file in Directory.EnumerateFiles(OverrideFolder, "*", SearchOption.AllDirectories))
                         all.Add(Path.GetRelativePath(OverrideFolder, file));
@@ -175,41 +336,75 @@ namespace Wolf.Editors
 
         /// <summary>
         /// Saves files in the game's own formats: a loose file stays a loose file (the extracted folder, or &lt;game&gt;\YGO_2020\...), the rest
-        /// goes into YGO_2020.dat in place. Throws <see cref="InvalidOperationException"/> while the game is running.
+        /// goes into the patch archive (YGO_2020-Ex.dat / .toc, rewritten with every file it already had plus these). The game's YGO_2020.dat
+        /// is not written. Throws <see cref="InvalidOperationException"/> while the game is running (it has the patch open).
         /// </summary>
-        public void Write(IReadOnlyDictionary<string, byte[]> files)
+        public void Write(IReadOnlyDictionary<string, byte[]> files) =>
+            Write(files.ToDictionary(file => file.Key, file => TocArchive.PatchSource.Of(file.Value)));
+
+        /// <summary>
+        /// <see cref="Write(IReadOnlyDictionary{string, byte[]})"/> for files written by a callback (it writes the file to the stream and
+        /// returns its size), for the ones too big to hold in memory: the card art .zib files are 600 MB.
+        /// </summary>
+        public void Write(IReadOnlyDictionary<string, TocArchive.PatchSource> files)
         {
-            var intoArchive = new Dictionary<string, byte[]>(StringComparer.OrdinalIgnoreCase);
-            foreach (var (rawPath, data) in files)
+            var intoArchive = new Dictionary<string, TocArchive.PatchSource>(StringComparer.OrdinalIgnoreCase);
+            foreach (var (rawPath, source) in files)
             {
                 string path = rawPath.Replace('/', '\\');
                 string loose = LoosePath(path);
-                if (_archive == null || File.Exists(loose))
+                // into the copy the game loads: the loose file when it wins, otherwise the patch (an extracted folder is all loose files)
+                if (_archive == null || SourceOf(path) == "loose")
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(loose)!);
                     if (File.Exists(loose) && !File.Exists(loose + ".bak"))
                         File.Copy(loose, loose + ".bak");   // the first version, once
-                    File.WriteAllBytes(loose, data);
+                    // written next to it first: a source may still be reading the old file (a .zib rewritten from itself)
+                    string temp = loose + ".saving";
+                    using (var stream = new FileStream(temp, FileMode.Create, FileAccess.Write, FileShare.None, 1 << 20))
+                        source.WriteTo(stream);
+                    File.Move(temp, loose, overwrite: true);
                 }
                 else
-                    intoArchive[path] = data;
+                    intoArchive[path] = source;
             }
             if (intoArchive.Count > 0)
             {
                 if (GameRunning)
-                    throw new InvalidOperationException("Close the game first: it has YGO_2020.dat open.");
-                _archive!.Write(intoArchive);
+                    throw new InvalidOperationException($"Close the game first: it has {PatchName}.dat open.");
+                GuardPatchIsNotTheGame();
+                // the patch keeps every file changed so far (copied across from the old patch, never held in memory); this save's files
+                // replace their earlier versions. The new patch is written under a temporary name, so the old one can be read meanwhile.
+                var patch = new Dictionary<string, TocArchive.PatchSource>(StringComparer.OrdinalIgnoreCase);
+                if (_patch is { } old)
+                    foreach (string path in old.Paths)
+                        patch[path] = TocArchive.PatchSource.From(old, path);
+                foreach (var (path, source) in intoArchive)
+                    patch[path] = source;
+                TocArchive.WritePatch(PatchToc, patch);
+                _patch = TocArchive.TryOpen(PatchToc);
             }
             Written?.Invoke(files.Keys.ToList());
         }
 
-        /// <summary>Puts the game's original YGO_2020.toc back and cuts the .dat back: undoes every save into the archive.</summary>
+        /// <summary>True when there is something to undo: a patch archive, or the in-place saves older WolfX versions made into YGO_2020.dat.</summary>
+        public bool HasChanges => _patch != null || _archive?.IsModified == true;
+
+        /// <summary>
+        /// Back to the game's own data: deletes the patch archive, and undoes in-place saves an older WolfX made into YGO_2020.dat (puts the
+        /// original .toc back and cuts the .dat to its size).
+        /// </summary>
         public void RestoreOriginal()
         {
             if (GameRunning)
-                throw new InvalidOperationException("Close the game first: it has YGO_2020.dat open.");
-            _archive?.RestoreOriginal();
-            Written?.Invoke(_archive?.Paths.ToList() ?? []);
+                throw new InvalidOperationException("Close the game first: it has the archives open.");
+            GuardPatchIsNotTheGame();   // an empty patch is written by deleting its .toc / .dat
+            var changed = (_patch?.Paths ?? []).Concat(_archive?.IsModified == true ? _archive.Paths : []).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+            TocArchive.WritePatch(PatchToc, new Dictionary<string, byte[]>());
+            _patch = null;
+            if (_archive?.IsModified == true)
+                _archive.RestoreOriginal();
+            Written?.Invoke(changed);
         }
     }
 

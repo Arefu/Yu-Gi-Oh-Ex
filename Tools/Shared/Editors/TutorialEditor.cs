@@ -14,7 +14,8 @@ namespace Wolf.Editors
     /// Script - the whole tutorial as text, one step a line, for bulk edits.
     /// "Open from game" opens the game's tutorials (or your Yu-Gi-Oh-Ex\tutorials\*.json). Save puts a tutorial the game has (its number
     /// exists in any language) back into the game data; a new number is saved as JSON there (TutorialFile.ToJson) for a plugin, since only
-    /// a plugin can list it in the menu (docs/Tutorials.md). Open... / Save as... work on .bin files anywhere on disk.
+    /// a plugin can list it in the menu (Yu-Gi-Oh-Campaign does, with the title / arena / listed fields shown for such a number; docs/Tutorials.md).
+    /// Open... / Save as... work on .bin files anywhere on disk.
     /// </summary>
     public sealed class TutorialEditor : UserControl, IGameEditor
     {
@@ -26,6 +27,13 @@ namespace Wolf.Editors
         private readonly ToolStripComboBox _language = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 130 };
         private readonly ToolStripButton _openFromGame;
         private readonly ToolStripLabel _where = new() { ForeColor = SystemColors.GrayText };
+
+        // a new number's place in Help > Tutorial (JSON only, applied by Yu-Gi-Oh-Campaign)
+        private readonly ToolStrip _menuTools = new() { GripStyle = ToolStripGripStyle.Hidden, Visible = false };
+        private readonly ToolStripTextBox _menuTitle = new() { Width = 280, ToolTipText = "The name in Help > Tutorial for this language (empty = \"Tutorial NN\")" };
+        private readonly IdCombo _menuArena = new(200);
+        private readonly CheckBox _menuListed = new() { Text = "Listed in Help > Tutorial", Checked = true, AutoSize = true, BackColor = Color.Transparent };
+        private string _savedMenu = "";
         private readonly TabControl _tabs = new() { Dock = DockStyle.Fill };
         private readonly ListView _steps = new()
         {
@@ -105,6 +113,32 @@ namespace Wolf.Editors
             _tools.Items.Add(Button("New tutorial...", "Start a new tutorial (a blank one or a copy of this one) under a number", NewTutorial));
             _tools.Items.Add(Button("Copy to languages...", "Write this tutorial as the other languages' files too (e.g. a new tutorial, before it's translated)", CopyToLanguages));
             _tools.Items.Add(_where);
+
+            _menuTools.Items.Add(new ToolStripLabel("Help > Tutorial:"));
+            _menuTools.Items.Add(new ToolStripControlHost(_menuListed) { Margin = new Padding(4, 2, 8, 0) });
+            _menuTools.Items.Add(new ToolStripLabel("Title:"));
+            _menuTools.Items.Add(_menuTitle);
+            _menuTools.Items.Add(new ToolStripLabel("Arena:"));
+            _menuTools.Items.Add(new ToolStripControlHost(_menuArena));
+            _menuTools.Items.Add(new ToolStripLabel("(the arena and listing are shared by every language; the English file's win)") { ForeColor = SystemColors.GrayText });
+            _menuArena.SetItems(GameNames.Arenas(null, null));
+            _menuTitle.TextChanged += (_, _) =>
+            {
+                if (!_syncing)
+                    _file.MenuTitle = _menuTitle.Text.Length > 0 ? _menuTitle.Text : null;
+            };
+            _menuArena.ValueChanged += (_, _) =>
+            {
+                if (_syncing)
+                    return;
+                _file.MenuArena = _menuArena.Value;
+                ShowWhere();
+            };
+            _menuListed.CheckedChanged += (_, _) =>
+            {
+                if (!_syncing)
+                    _file.InMenu = _menuListed.Checked;
+            };
 
             var add = new ToolStripDropDownButton("Add step") { ToolTipText = "Insert a step after the selected one" };
             foreach (TutorialOp op in Enum.GetValues<TutorialOp>())
@@ -232,6 +266,7 @@ namespace Wolf.Editors
             var status = new StatusStrip { SizingGrip = false };
             status.Items.Add(_status);
             Controls.Add(_tabs);
+            Controls.Add(_menuTools);
             Controls.Add(_tools);
             Controls.Add(status);
             Load += (_, _) =>
@@ -253,6 +288,7 @@ namespace Wolf.Editors
         {
             _gameFiles = files;
             _openFromGame.Visible = files.Available;
+            _menuArena.SetItems(GameNames.Arenas(files, null));
             if (files.Available && (_diskFile == null || _file.Steps.Count == 0))
                 OpenFromGame(_number, _gameLanguage);
         }
@@ -261,12 +297,19 @@ namespace Wolf.Editors
 
         public IReadOnlyCollection<string> Files => _fromGame ? [TutorialFile.GamePath(_number, _gameLanguage)] : [];
 
-        public string SavesTo => "Standard: duel\\tutorial\\steam_tutorial_NN_<lang>.bin for the game's tutorials. Additional (new numbers): Yu-Gi-Oh-Ex\\tutorials\\*.json (no plugin lists them yet).";
+        public string SavesTo => "Standard: duel\\tutorial\\steam_tutorial_NN_<lang>.bin for the game's tutorials. Additional (new numbers 27-99): Yu-Gi-Oh-Ex\\tutorials\\*.json (needs Yu-Gi-Oh-Campaign).";
 
         /// <summary>True when the game has this tutorial number in any language: it is saved into the game data, not as JSON.</summary>
         private bool IsGameTutorial(int number) => _gameFiles != null && ShippedLanguages.Any(l => _gameFiles.Exists(TutorialFile.GamePath(number, l)));
 
-        public bool Dirty => _file.Steps.Count > 0 && !_file.ToBytes().AsSpan().SequenceEqual(_savedBytes);
+        public bool Dirty => _file.Steps.Count > 0 && (!_file.ToBytes().AsSpan().SequenceEqual(_savedBytes) || MenuState() != _savedMenu);
+
+        /// <summary>The Help > Tutorial fields as one string, to tell whether they changed since the last save.</summary>
+        private string MenuState() => $"{_file.MenuTitle}\u0001{_file.MenuArena}\u0001{_file.InMenu}";
+
+        /// <summary>A number only the JSON holds (27-99, not in the game): it gets the Help > Tutorial fields.</summary>
+        private bool IsNewNumber => _fromGame && _gameFiles != null && _number >= TutorialFile.FirstNewNumber && _number <= TutorialFile.MaxNumber &&
+                                    !IsGameTutorial(_number);
 
         private static ToolStripButton Button(string text, string tip, Action click)
         {
@@ -348,6 +391,7 @@ namespace Wolf.Editors
             StopPlaying();
             _file = file;
             _savedBytes = file.ToBytes();
+            _savedMenu = MenuState();
             _cards ??= CardCatalog.Get(this);
             FillTutorials();
             FillLanguages();
@@ -363,8 +407,19 @@ namespace Wolf.Editors
 
         private void ShowWhere()
         {
-            int arena = _number >= 0 && _number < TutorialFile.ArenaIds.Length ? TutorialFile.ArenaIds[_number] : -1;
+            bool isNew = IsNewNumber;
+            int arena = isNew ? _file.MenuArena ?? 1 : _number >= 0 && _number < TutorialFile.ArenaIds.Length ? TutorialFile.ArenaIds[_number] : -1;
             _where.Text = $"  {TutorialFile.WhereUsed(_number)}" + (arena >= 0 ? $", arena {arena}" : "");
+
+            _menuTools.Visible = isNew;
+            if (!isNew)
+                return;
+            bool syncing = _syncing;
+            _syncing = true;
+            _menuListed.Checked = _file.InMenu;
+            _menuTitle.Text = _file.MenuTitle ?? "";
+            _menuArena.Value = _file.MenuArena ?? 1;
+            _syncing = syncing;
         }
 
         public void OpenFile(string path)
@@ -552,7 +607,7 @@ namespace Wolf.Editors
                 }
                 Directory.CreateDirectory(Path.GetDirectoryName(json)!);
                 File.WriteAllText(json, _file.ToJson(number, language));
-                return $"{json} (a new tutorial: no plugin lists it yet)";
+                return $"{json} (a new tutorial: Yu-Gi-Oh-Campaign adds it to Help > Tutorial)";
             }
             string disk = Path.Combine(_diskFile != null ? Path.GetDirectoryName(_diskFile)! : "", TutorialFile.FileName(number, language));
             File.WriteAllBytes(disk, _file.ToBytes());
@@ -574,6 +629,7 @@ namespace Wolf.Editors
                 {
                     string where = Write(_number, _gameLanguage);
                     _savedBytes = bytes;
+                    _savedMenu = MenuState();
                     if (unused > 0)
                         FillSteps(SelectedIndex());
                     FillTutorials();
@@ -609,6 +665,7 @@ namespace Wolf.Editors
             Directory.CreateDirectory(Path.GetDirectoryName(target)!);
             File.WriteAllBytes(target, bytes);
             _savedBytes = bytes;
+            _savedMenu = MenuState();
             if (!_fromGame || saveAs)
             {
                 _diskFile = target;

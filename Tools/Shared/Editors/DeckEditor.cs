@@ -27,11 +27,11 @@ namespace Wolf.Editors
         private readonly Label _heading = new() { Dock = DockStyle.Top, Height = 22, TextAlign = ContentAlignment.MiddleLeft, Font = new Font("Segoe UI", 9.5f, FontStyle.Bold) };
         private readonly TextBox _file = new() { Width = 220 };
         private readonly ComboBox _series = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 160 };
-        private readonly NumericUpDown _owner = new() { Minimum = 0, Maximum = 239, Width = 60 };
+        private readonly IdCombo _owner = new(220);
         private readonly Label _ownerInfo = new() { AutoSize = true, Margin = new Padding(6, 7, 3, 3) };
         private readonly Button _signature = new() { AutoSize = true, Text = "(none)" };
         private readonly Button _noSignature = new() { AutoSize = true, Text = "None" };
-        private readonly NumericUpDown _sku = new() { Minimum = -1, Maximum = 999, Width = 60 };
+        private readonly IdCombo _sku = new(220);
         private readonly CheckBox _unlocked = new() { Text = "Unlocked (a new deck; Yu-Gi-Oh-Campaign marks it unlocked in the save)", AutoSize = true };
         private readonly Label _usedBy = new() { AutoSize = true, MaximumSize = new Size(700, 0), Margin = new Padding(3, 4, 3, 6), ForeColor = Color.DimGray };
         private readonly DataGridView _texts = new()
@@ -80,7 +80,7 @@ namespace Wolf.Editors
             foreach (char language in DeckDataTable.AllLanguages)
                 _language.Items.Add(language.ToString());
             _language.SelectedIndex = 0;
-            _language.SelectedIndexChanged += (_, _) => { _list.Invalidate(); ShowSelected(); };
+            _language.SelectedIndexChanged += (_, _) => { _list.Invalidate(); _owner.SetItems(GameNames.Characters(_characters, Language)); ShowSelected(); };
             _tools.Items.Add(_language);
             _tools.Items.Add(new ToolStripLabel("Show:"));
             _filter.Items.Add("All decks");
@@ -121,7 +121,7 @@ namespace Wolf.Editors
             Row("Owner (character):", _owner, _ownerInfo);
             Row("Series:", _series);
             Row("Signature card:", _signature, _noSignature);
-            Row("Content pack (sku, -1/1 = base game):", _sku);
+            Row("Content pack (sku):", _sku);
             Row("", _unlocked);
             Row("Used by:", _usedBy);
             _texts.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Language", ReadOnly = true, FillWeight = 10 });
@@ -268,6 +268,8 @@ namespace Wolf.Editors
                 // the other content's JSON, for "Used by"
                 if (_characters != null) CharacterJson.Apply(CharacterJson.Load(_gameFiles!.ExPath(CharacterJson.FileName)), _characters);
                 if (_duels != null) StoryDuelJson.Apply(StoryDuelJson.Load(_gameFiles!.ExPath(StoryDuelJson.FileName)), _duels);
+                _owner.SetItems(GameNames.Characters(_characters, Language));
+                _sku.SetItems(GameNames.ContentPacks(_gameFiles));
                 _changed = false;
                 SetEditable(true);
                 Refill();
@@ -395,9 +397,9 @@ namespace Wolf.Editors
                 bool isNew = _baseline?.Find(d.Id) == null;
                 _heading.Text = $"{d.Title(Language)} ({d.Id}){(isNew ? " - new" : "")}";
                 _file.Text = d.FileName;
-                _owner.Value = Math.Clamp(d.CharacterId, 0, 239);
+                _owner.Value = (int)d.CharacterId;
                 _series.SelectedIndex = Math.Clamp(d.Series + 1, 0, SeriesChoices.Length - 1);
-                _sku.Value = Math.Clamp(d.Sku, -1, 999);
+                _sku.Value = d.Sku;
                 _unlocked.Visible = isNew;
                 _unlocked.Checked = _unlockedFlags.TryGetValue(d.Id, out bool u) && u;
                 for (int i = 0; i < DeckDataTable.AllLanguages.Length; i++)
@@ -425,7 +427,7 @@ namespace Wolf.Editors
 
         private void ShowInfo(Deck d)
         {
-            _ownerInfo.Text = _characters == null ? "" : _characters.Find((int)d.CharacterId) is Character c ? c.Name(Language) : "not a character";
+            _ownerInfo.Text = _characters == null || _characters.Find((int)d.CharacterId) != null ? "" : "not a character";
             _signature.Text = d.SignatureCard == 0xFFFF ? "(none)" : $"{CardCatalog.NameOf(d.SignatureCard)} ({d.SignatureCard})";
             _usedBy.Text = UsedBy(d);
         }
@@ -437,9 +439,9 @@ namespace Wolf.Editors
             if (_binding || Shown() is not Deck d)
                 return;
             d.FileName = _file.Text.Trim();
-            d.CharacterId = (uint)_owner.Value;
+            d.CharacterId = (uint)Math.Max(0, _owner.Value);
             d.Series = _series.SelectedIndex - 1;
-            d.Sku = (int)_sku.Value;
+            d.Sku = _sku.Value;
             if (_unlocked.Visible)
                 _unlockedFlags[d.Id] = _unlocked.Checked;
             for (int i = 0; i < DeckDataTable.AllLanguages.Length; i++)
