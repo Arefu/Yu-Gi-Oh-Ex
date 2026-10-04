@@ -15,6 +15,7 @@
 #include <json.hpp>
 
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Log.h"
+#include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Mods.h"
 
 namespace
 {
@@ -102,14 +103,6 @@ namespace
     std::deque<NewPack> g_newPacks;       // deque: records point into Name/Contents
     std::unordered_set<uint32_t> g_ours;  // ids of the new packs
 
-    std::string ExFolder()
-    {
-        char path[MAX_PATH]{};
-        GetModuleFileNameA(nullptr, path, MAX_PATH);
-        std::string full(path);
-        return full.substr(0, full.find_last_of('\\') + 1) + "Yu-Gi-Oh-Ex\\";
-    }
-
     void ReadIds(const nlohmann::json& entry, const char* key, std::vector<uint16_t>& out)
     {
         auto it = entry.find(key);
@@ -137,14 +130,17 @@ namespace
 
     void Load()
     {
-        const std::string path = ExFolder() + "packs.json";
-        std::ifstream file(path);
-        if (!file)
+        // every mod's packs.json and the game folder's, merged (Yu-Gi-Oh-Mods.h): pack changes apply in load order
+        std::vector<std::string> problems;
+        const nlohmann::json root = YGO::Mods::ReadMerged("packs.json", nullptr, &problems);
+        for (const std::string& problem : problems)
+            YGO::Log(problem + ", its packs are left out", MODULE_NAME, 2);
+        if (root.is_null())
             return; // packs.json is optional
 
         try
         {
-            Parse(nlohmann::json::parse(file, nullptr, true, true));
+            Parse(root);
         }
         catch (const std::exception& e)
         {
@@ -363,6 +359,22 @@ namespace
 
 namespace Packs
 {
+    std::unordered_set<uint16_t> RareCards()
+    {
+        std::unordered_set<uint16_t> rares;
+        for (uint32_t i = 0; i < kPackCount; ++i)
+        {
+            const PackRecord* record = Record(i);
+            if (record->Kind != kRewardPack || !record->Contents)
+                continue;
+            const uint16_t commons = record->Contents[0];
+            const uint16_t count = record->Contents[1];
+            const uint16_t* ids = record->Contents + 2 + commons;
+            rares.insert(ids, ids + count);
+        }
+        return rares;
+    }
+
     void Install()
     {
         Load();

@@ -1,4 +1,6 @@
 #pragma once
+#include <cstdint>
+#include <unordered_set>
 
 // The shop's booster packs, from Yu-Gi-Oh-Ex/packs.json (written by WolfEx's Packs tab; moved here from Yu-Gi-Oh-Cards):
 //
@@ -19,6 +21,10 @@
 // shop tab is built and are kept in the save (a game without this plugin ignores them: the slot is empty there).
 namespace Packs
 {
+    // The cards in a rare slot of any booster pack loaded now (the game's packs with packs.json applied). Every card the game has is in
+    // exactly one rarity: 2,094 rares and 7,933 commons, none in both.
+    std::unordered_set<uint16_t> RareCards();
+
     // Reads packs.json, hooks the pack loader, art and shop list, and applies everything to the packs the game has already loaded.
     // Call once from ProcessDetours; needs nothing else (no RIX).
     void Install();

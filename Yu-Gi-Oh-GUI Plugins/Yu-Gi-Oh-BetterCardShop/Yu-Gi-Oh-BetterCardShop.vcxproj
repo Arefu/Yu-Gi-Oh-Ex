@@ -97,10 +97,12 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="StorePages.cpp" />
     <ClCompile Include="Packs.cpp" />
+    <ClCompile Include="Prices.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StorePages.h" />
     <ClInclude Include="Packs.h" />
+    <ClInclude Include="Prices.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,6 +13,7 @@
 #include "../../Dependencies/Yu-Gi-Oh-Ex/YuGiOh/YuGiOh-PASS.h"
 #include "../../Dependencies/Yu-Gi-Oh-Ex/YuGiOh/YuGiOh-RIX.h"
 #include "../../Dependencies/Yu-Gi-Oh-Ex/YuGiOh/YuGiOh-SAVE.h"
+#include "Prices.h"
 
 // The game's own widgets, built on the Battle Pack screen the pages live on (see "widgets" in YuGiOh-RIX.h). They are made the first time a
 // page shows, kept for the rest of the game (the screen object lives as long as the game does) and shown / hidden with their page.
@@ -25,7 +26,8 @@ namespace
     constexpr int kTokenKind = 10;          // CARD_PROPS::Kind of a token; the trunk leaves them out
     constexpr int kDigits = 8;              // a card password
     constexpr int kUp = 1, kDown = 2, kLeft = 4, kRight = 8, kConfirm = 0x1000;
-    constexpr uint64_t kUnlockCost = 1000;  // DP for unlocking a card with its password (whatever the card)
+    constexpr int kFullSet = 3;             // copies the save holds at most
+    constexpr int kSoundError = 71, kSoundBought = 52;
 
     // Memory for a game widget: zeroed (some fields are only read, never set by the constructors) and aligned like the game's own.
     void* NewObject(size_t size)
@@ -62,6 +64,32 @@ namespace
         }
     }
 
+    // 1000 -> "1,000"
+    std::wstring Dp(uint64_t value)
+    {
+        std::wstring text = std::to_wstring(value);
+        for (int i = static_cast<int>(text.size()) - 3; i > 0; i -= 3)
+            text.insert(static_cast<size_t>(i), L",");
+        return text;
+    }
+
+    std::wstring WideName(uint16_t id)
+    {
+        const wchar_t* name = reinterpret_cast<const wchar_t*>(YGO::CARDS::Get_CardNameFromKonamiId(static_cast<short>(id)));
+        return name && *name ? name : std::to_wstring(id);
+    }
+
+    // The game's message box with a real OK button (it highlights under the mouse; an empty function would give a prompt-only box). The
+    // text is kept here while the box is open.
+    std::wstring g_Message;
+    void ShowMessage(void* screen, int sound, std::wstring text)
+    {
+        g_Message = std::move(text);
+        std::function<void()> ok = [] {};   // the game moves it into the button; closing the box is the game's job
+        if (screen)
+            W::ShowMessageText(screen, sound, g_Message.c_str(), &ok);
+    }
+
     std::string CardName(uint16_t id)
     {
         const wchar_t* name = reinterpret_cast<const wchar_t*>(YGO::CARDS::Get_CardNameFromKonamiId(static_cast<short>(id)));
@@ -80,11 +108,40 @@ namespace
     void* g_DeckState = nullptr;
     void* g_CardInfo = nullptr;
     uint16_t g_ShownCard = 0xFFFF;
+    void* g_ShopScreen = nullptr;
+    uint16_t g_BuyCard = 0xFFFF;        // the card the Yes / No box is asking about
+
+    // [Yu-Gi-Oh-BetterCardShop] BetterShop-ShowOwnedCards=1 also lists the cards the profile has a full set of (they can't be bought).
+    bool ShowOwnedCards()
+    {
+        return GetPrivateProfileIntA("Yu-Gi-Oh-BetterCardShop", "BetterShop-ShowOwnedCards", 0, ".\\Config.ini") != 0;
+    }
+
+    // The number on each card is the grid's own copy of the counts, which the game fills through a function that answers 0 for ids above
+    // 14968 and only when the list is rebuilt. So the save's counts are written into that copy and into the cells on screen directly.
+    void RefreshOwnedCounts(char* trunk)
+    {
+        const uint8_t* owned = SaveCardTable();
+        auto ownedOf = [owned](uint16_t id) { return owned && id < kSaveCardCount ? owned[id] & 7 : 0; };
+
+        auto* counts = reinterpret_cast<W::Vector*>(trunk + W::Trunk::GridCounts);
+        for (auto* count = static_cast<W::Trunk::GridCount*>(counts->Begin); count && count < counts->End; ++count)
+            count->Owned = ownedOf(count->CardId);
+
+        auto* cells = reinterpret_cast<W::Vector*>(trunk + W::Trunk::GridCells);
+        for (char* cell = static_cast<char*>(cells->Begin); cell && cell < cells->End; cell += W::Trunk::CellSize)
+        {
+            const uint16_t id = *reinterpret_cast<uint16_t*>(cell + W::Trunk::CellCardId);
+            if (id != 0xFFFF)
+                W::Trunk::CellSetOwned(cell, ownedOf(id));
+        }
+    }
 
     // Every card, the way TrunkView_BuildCardList lists the owned ones (internal ids 1 up to the bound the game currently uses, no tokens),
-    // with the copies the profile owns as the count.
+    // with the copies the profile owns as the count. Full sets are left out unless BetterShop-ShowOwnedCards is on.
     void FillAllCards(char* trunk)
     {
+        const bool showFullSets = ShowOwnedCards();
         W::Trunk::GridReset(trunk + W::Trunk::Grid, 0);
         W::Trunk::GridSetMode(trunk + W::Trunk::Grid, 10);
 
@@ -114,6 +171,8 @@ namespace
             W::Trunk::Entry entry{};
             entry.CardId = id;
             entry.Count = owned && id < kSaveCardCount ? (owned[id] & 7) : 0;
+            if (entry.Count >= kFullSet && !showFullSets)
+                continue;
             ids[slot] = static_cast<int>((static_cast<char*>(entries->End) - static_cast<char*>(entries->Begin)) / sizeof(W::Trunk::Entry));
             if (entries->End == entries->Capacity)
                 W::Trunk::EntryVectorEmplace(entries, entries->End, &entry);
@@ -126,6 +185,7 @@ namespace
 
         W::Trunk::ApplyFilter(trunk);
         W::Trunk::SortAndFillGrid(trunk);
+        RefreshOwnedCounts(trunk);
         W::Trunk::Refresh(trunk);
 
         const size_t count = (static_cast<char*>(entries->End) - static_cast<char*>(entries->Begin)) / sizeof(W::Trunk::Entry);
@@ -158,6 +218,8 @@ namespace
 
     void __cdecl ShopShow(void* screen, void*)
     {
+        g_ShopScreen = screen;
+        Prices::Reset();   // the packs (and so the rarities) may have changed since last time
         if (!g_Trunk && !BuildShop(screen))
         {
             YGO::Log("Card Shop: out of memory for the widgets", MODULE_NAME, 2);
@@ -181,6 +243,78 @@ namespace
         W::WidgetSetVisible(g_CardInfo, false);
     }
 
+    // The copies shown for a card in the list, changed in place so the list keeps its scroll and selection.
+    void SetListedCount(uint16_t id, uint32_t count)
+    {
+        char* trunk = static_cast<char*>(g_Trunk);
+        auto* index = reinterpret_cast<W::Vector*>(trunk + W::Trunk::IdToEntry);
+        auto* entries = reinterpret_cast<W::Vector*>(trunk + W::Trunk::Entries);
+        const size_t slots = (static_cast<char*>(index->End) - static_cast<char*>(index->Begin)) / sizeof(int);
+        const size_t slot = static_cast<size_t>(id) - W::Trunk::FirstCardId;
+        if (id < W::Trunk::FirstCardId || slot >= slots)
+            return;
+        const int entry = static_cast<int*>(index->Begin)[slot];
+        const size_t listed = (static_cast<char*>(entries->End) - static_cast<char*>(entries->Begin)) / sizeof(W::Trunk::Entry);
+        if (entry < 0 || static_cast<size_t>(entry) >= listed)
+            return;
+        static_cast<W::Trunk::Entry*>(entries->Begin)[entry].Count = count;
+        RefreshOwnedCounts(trunk);   // the number on the card goes up now, not when the list is next rebuilt
+        W::Trunk::Refresh(g_Trunk);
+    }
+
+    // Yes in the buy box: one copy for the card's price (checked again, the box may have been open a while).
+    void OnBuyConfirmed()
+    {
+        const uint16_t id = g_BuyCard;
+        uint8_t* table = SaveCardTable();
+        uint64_t* wallet = Wallet();
+        if (id == 0xFFFF || !table || !wallet || id >= kSaveCardCount)
+            return;
+        const uint64_t price = Prices::CardPrice(id);
+        const int owned = table[id] & 7;
+        if (owned >= kFullSet || *wallet < price)
+            return;
+
+        *wallet -= price;
+        table[id] = static_cast<uint8_t>((table[id] & ~7) | (owned + 1) | 8);   // one more copy, and marked as seen
+        SetListedCount(id, static_cast<uint32_t>(owned + 1));
+        W::PlayUISound(kSoundBought);
+        YGO::Log("Card Shop: bought " + CardName(id) + " (" + std::to_string(id) + ") for " + std::to_string(price) + " DP, now " +
+                 std::to_string(owned + 1) + " copies", MODULE_NAME, 0);
+    }
+
+    // A card was picked: say why it can't be bought, or ask.
+    void OfferCard(uint16_t id)
+    {
+        uint8_t* table = SaveCardTable();
+        uint64_t* wallet = Wallet();
+        if (id == 0xFFFF || !table || !wallet || id >= kSaveCardCount)
+        {
+            ShowMessage(g_ShopScreen, kSoundError, L"No profile is loaded, so cards can not be bought.");
+            return;
+        }
+
+        const std::wstring name = WideName(id);
+        const uint64_t price = Prices::CardPrice(id);
+        const int owned = table[id] & 7;
+        if (owned >= kFullSet)
+        {
+            ShowMessage(g_ShopScreen, -1, L"You already have 3 copies of " + name + L".");
+            return;
+        }
+        if (*wallet < price)
+        {
+            ShowMessage(g_ShopScreen, kSoundError, name + L" costs " + Dp(price) + L" DP. You have " + Dp(*wallet) + L" DP.");
+            return;
+        }
+
+        g_BuyCard = id;
+        g_Message = L"Buy " + name + L" for " + Dp(price) + L" DP? You have " + Dp(*wallet) + L" DP and " + std::to_wstring(owned) +
+                    (owned == 1 ? L" copy." : L" copies.");
+        std::function<void()> onYes = &OnBuyConfirmed;   // a plain function: fits the small buffer, the game takes it over
+        W::ShowYesNo(g_ShopScreen, -1, g_Message.c_str(), &onYes);
+    }
+
     void __cdecl ShopFrame(void*, int pressed, int held, float seconds, void*)
     {
         if (!g_Trunk)
@@ -191,6 +325,7 @@ namespace
         char flag = 0;
         W::Trunk::ProcessInput(g_Trunk, pressed, held, &action, &kind, &flag);
         W::Trunk::Update(g_Trunk);
+        RefreshOwnedCounts(static_cast<char*>(g_Trunk));   // sorting / filtering rebuilds the grid's counts from the game's (custom ids = 0)
 
         const uint16_t selected = W::Trunk::GetSelectedCardId(g_Trunk);
         if (selected != g_ShownCard)
@@ -200,11 +335,11 @@ namespace
         }
         W::CardInfo::Update(g_CardInfo, seconds, held, 0);
 
-        // A card was confirmed (clicked, or confirm on the highlighted one). Buying comes later.
+        // A card was confirmed (clicked, or confirm on the highlighted one).
         if (action == 0 && kind == 3)
         {
             W::PlayUISound(39);
-            YGO::Log("Card Shop: picked " + CardName(selected) + " (" + std::to_string(selected) + ")", MODULE_NAME, 0);
+            OfferCard(selected);
         }
     }
 
@@ -216,14 +351,12 @@ namespace
     constexpr float kInfoY = 120.0f;
     constexpr float kDigitsX = 960.0f;      // centre of the eight digits, and of the Unlock button
     constexpr float kDigitSpacing = 170.0f;
-    constexpr int kFullSet = 3;             // a password gives a full set of the card
 
     void* g_Digits[kDigits] = {};
     void* g_PasswordInfo = nullptr;     // the unlocked card's details
     bool g_InfoUntilClosed = false;     // hide the details when the message box closes (the page's frame only runs again then)
     int g_Selected = 0;
     void* g_PasswordScreen = nullptr;   // for the message box
-    std::wstring g_Message;             // the message box shows it from here while it is open
 
     int DigitValue(int i)
     {
@@ -257,7 +390,8 @@ namespace
             return false;
         W::CardInfo::Construct(g_PasswordInfo);
         W::SharedNode parent = W::ParentRef(W::ScreenRoot(screen));
-        W::CardInfo::CreateFromLayout(g_PasswordInfo, &parent, 12, W::ScreenOwner(screen), kInfoX, kInfoY);
+        // z above the digits (20): the leftmost digits sit under the panel, and the unlocked card must cover them while it is shown.
+        W::CardInfo::CreateFromLayout(g_PasswordInfo, &parent, 30, W::ScreenOwner(screen), kInfoX, kInfoY);
         W::CardInfo::SetWidth(g_PasswordInfo, 486.5f);
         YGO::Log("Password widgets built", MODULE_NAME, 0);
         return true;
@@ -276,6 +410,7 @@ namespace
     void __cdecl PasswordShow(void* screen, void*)
     {
         g_PasswordScreen = screen;
+        Prices::Reset();   // prices.json may have changed
         if (!g_Digits[0] && !BuildPassword(screen))
         {
             YGO::Log("Enter Password: out of memory for the widgets", MODULE_NAME, 2);
@@ -323,17 +458,9 @@ namespace
         return password;
     }
 
-    // The game's message box with a real OK button (it highlights under the mouse; an empty function would give a prompt-only box).
-    void ShowMessage(int sound, std::wstring text)
-    {
-        g_Message = std::move(text);
-        std::function<void()> ok = [] {};   // the game moves it into the button; closing the box is the game's job
-        if (g_PasswordScreen)
-            W::ShowMessageText(g_PasswordScreen, sound, g_Message.c_str(), &ok);
-    }
-
-    // Unlock: the card whose password this is (bin\CARD_Pass.bin, see YuGiOh-PASS.h) costs kUnlockCost DP, is topped up to a full set (three
-    // copies) in the profile's card table and is shown in the details panel while the message is up.
+    // Unlock: the card whose password this is (bin\CARD_Pass.bin, see YuGiOh-PASS.h) costs the password price (prices.json's "password" for it, else
+    // BetterShop-PasswordCost, 1,000 DP by default), is topped up to a full set (three copies) in the profile's card table and is shown in the details
+    // panel while the message is up.
     void __cdecl OnUnlock(int, void*)
     {
         const uint32_t password = EnteredPassword();
@@ -342,37 +469,37 @@ namespace
         if (id == 0)
         {
             YGO::Log("Enter Password: " + digits + " is not a card's password", MODULE_NAME, 0);
-            ShowMessage(71, L"This password is not for a card.");
+            ShowMessage(g_PasswordScreen, kSoundError, L"This password is not for a card.");
             return;
         }
 
-        const wchar_t* name = reinterpret_cast<const wchar_t*>(YGO::CARDS::Get_CardNameFromKonamiId(static_cast<short>(id)));
-        const std::wstring cardName = name && *name ? name : std::to_wstring(id);
+        const std::wstring cardName = WideName(id);
+        const uint64_t cost = Prices::PasswordCost(id);
         uint8_t* table = SaveCardTable();
         uint64_t* wallet = Wallet();
         if (!table || !wallet || id >= kSaveCardCount)
         {
-            ShowMessage(71, L"No profile is loaded, so the card can not be unlocked.");
+            ShowMessage(g_PasswordScreen, kSoundError, L"No profile is loaded, so the card can not be unlocked.");
             return;
         }
 
         if ((table[id] & 7) >= kFullSet)
         {
-            ShowMessage(-1, L"You already have 3 copies of " + cardName + L".");
+            ShowMessage(g_PasswordScreen, -1, L"You already have 3 copies of " + cardName + L".");
             return;
         }
 
-        if (*wallet < kUnlockCost)
+        if (*wallet < cost)
         {
-            ShowMessage(71, L"Unlocking a card costs 1,000 DP. You have " + std::to_wstring(*wallet) + L" DP.");
+            ShowMessage(g_PasswordScreen, kSoundError, L"Unlocking a card costs " + Dp(cost) + L" DP. You have " + Dp(*wallet) + L" DP.");
             return;
         }
 
-        *wallet -= kUnlockCost;
+        *wallet -= cost;
         table[id] = static_cast<uint8_t>((table[id] & ~7) | kFullSet | 8);   // three copies, and marked as seen
         ShowPasswordCard(id);   // only for a card that was just unlocked
-        YGO::Log("Enter Password: " + digits + " unlocked " + CardName(id) + " (" + std::to_string(id) + ") x3 for 1000 DP", MODULE_NAME, 0);
-        ShowMessage(52, cardName + L" is unlocked");
+        YGO::Log("Enter Password: " + digits + " unlocked " + CardName(id) + " (" + std::to_string(id) + ") x3 for " + std::to_string(cost) + " DP", MODULE_NAME, 0);
+        ShowMessage(g_PasswordScreen, kSoundBought, cardName + L" is unlocked");
     }
 
     // Like widget_EntryCode::ProcessInput, for eight digits: up / down change the digit, left / right move. The mouse only acts on a click
@@ -462,7 +589,7 @@ namespace
         store.Header = L"Card Store";
         store.ButtonCount = 3;
         store.Buttons[0] = { L"Booster Packs", L"Buy booster packs of random cards.", &OnBoosterPacks, nullptr };
-        store.Buttons[1] = { L"Card Shop", L"Buy the single cards you want.", &OnCardShop, nullptr };
+        store.Buttons[1] = { L"Card Shop", L"Buy the single cards you want, one copy at a time.", &OnCardShop, nullptr };
         store.Buttons[2] = { L"Enter Password", L"Enter a card's eight digit password.", &OnEnterPassword, nullptr };
         if (!RIX::Functions().OpenPage(&store))
             YGO::Log("Could not open the Card Store", MODULE_NAME, 2);
