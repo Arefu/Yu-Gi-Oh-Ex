@@ -9,6 +9,7 @@
 
 #include "Game.h"
 #include "Yu-Gi-Oh-Manifest.h"
+#include "Yu-Gi-Oh-Mods.h"
 
 TCHAR Game::gGamePath[MAX_PATH];
 TCHAR Game::gGameLocation[MAX_PATH];
@@ -40,15 +41,25 @@ BOOL Game::Locate()
         return FALSE;
 }
 
+// The folder this loader runs from (no trailing slash). Its Plugins\ folder is the one the game uses: the loader injects from it and writes it
+// to Config.ini on every start (PluginsPath), so moving the loader - or starting it from a shortcut in another folder - never leaves the game
+// on an old copy (2026-10-02: PluginsPath still named a Downloads copy and Core started its old YGO-Ex plugins).
+static std::string LoaderFolder()
+{
+    char exe[MAX_PATH] = {};
+    GetModuleFileNameA(NULL, exe, MAX_PATH);
+    std::string folder = exe;
+    const size_t slash = folder.find_last_of("\\/");
+    return slash == std::string::npos ? std::string(".") : folder.substr(0, slash);
+}
+
 // The game restarts itself (the plugin list asks "restart now?") by running this loader again, so it is told where the loader is.
 static void ExportLoaderPath()
 {
     char exe[MAX_PATH] = {};
     GetModuleFileNameA(NULL, exe, MAX_PATH);
-    char dir[MAX_PATH] = {};
-    GetCurrentDirectoryA(MAX_PATH, dir);
     SetEnvironmentVariableA("YGOEX_LOADER", exe);
-    SetEnvironmentVariableA("YGOEX_LOADER_DIR", dir);
+    SetEnvironmentVariableA("YGOEX_LOADER_DIR", LoaderFolder().c_str());
 }
 
 // The loader is not a mod, so it can run the game without Yu-Gi-Oh-Core, but Core is what keeps the game's save away from Steam Cloud (and what the
@@ -117,13 +128,12 @@ static std::vector<std::string> DllsIn(const std::string& folder)
 
 void Game::LookForPlugins()
 {
-    char current[MAX_PATH];
-    GetCurrentDirectoryA(MAX_PATH, current);
-    const std::string pluginsFolder = std::string(current) + "\\Plugins\\";
+    const std::string pluginsFolder = LoaderFolder() + "\\Plugins\\";
     const std::string guiFolder = pluginsFolder + "YGO-Ex\\";
 
-    // [Yu-Gi-Oh-RIX] in the game's Config.ini is the plugin list, one line per plugin: Name=1 (on) or Name=0 (off). It is what the in-game
-    // Plugins menu (Yu-Gi-Oh-RIX) and WolfX edit.
+    // [Yu-Gi-Oh-Core] in the game's Config.ini holds the plugin list (next to Core's own settings), one line per plugin: Name=1 (on) or
+    // Name=0 (off). Core owns the list: this loader writes it and injects the plugins, Core keeps it while the game runs and exposes the
+    // on/off toggles (Yu-Gi-Oh-Core.h) that RIX's in-game Plugins menu and WolfX use. RIX only draws that menu.
     //   Yu-Gi-Oh-Cards=1        a plugin in Plugins\: injected here when it is on.
     //   YGO-Ex/Yu-Gi-Oh-Funky=0 a plugin in Plugins\YGO-Ex\: not injected, Yu-Gi-Oh-Core starts the ones that are on.
     // A plugin that is not listed yet is added as 0 (everything is off until it is switched on), except the enforced ones. A plugin's
@@ -134,13 +144,9 @@ void Game::LookForPlugins()
     ConfigPath[MAX_PATH - 1] = 0;
     strncat(ConfigPath, "\\Config.ini", MAX_PATH - strlen(ConfigPath) - 1);
 
-    const char* Section = "Yu-Gi-Oh-RIX";
-    // 0 or 1 as written, or 2 when the plugin is not listed. An older build kept the list in [Yu-Gi-Oh-Plugins]; that is read as a fallback.
-    auto ReadFlag = [&](const std::string& key)
-    {
-        UINT value = GetPrivateProfileIntA(Section, key.c_str(), 2, ConfigPath);
-        return value != 2 ? value : GetPrivateProfileIntA("Yu-Gi-Oh-Plugins", key.c_str(), 2, ConfigPath);
-    };
+    const char* Section = "Yu-Gi-Oh-Core";
+    // 0 or 1 as written, or 2 when the plugin is not listed. (Older builds used [Yu-Gi-Oh-RIX] and [Plugins]; they are not read.)
+    auto ReadFlag = [&](const std::string& key) { return GetPrivateProfileIntA(Section, key.c_str(), 2, ConfigPath); };
 
     std::vector<YGO::Manifest::Plugin> plugins;
     for (bool gui : { false, true })
@@ -163,14 +169,32 @@ void Game::LookForPlugins()
 
     YGO::Manifest::ClaimOwned(plugins);
 
-    // Content made with WolfX (Yu-Gi-Oh-Ex\content.json) switches on the plugins it needs, and says which are not installed.
-    const std::vector<std::string> missing = YGO::Manifest::ApplyContent(plugins, YGO::Manifest::ReadContent(gGamePath));
+    // Content made with WolfX (Yu-Gi-Oh-Ex\content.json) switches on the plugins it needs, and says which are not installed. So do the
+    // mods that are on (<game>\Mods, Yu-Gi-Oh-Mods.h): their own content.json and the plugins their mod.json "requires" (with a link).
+    std::vector<std::string> missing = YGO::Manifest::ApplyContent(plugins, YGO::Manifest::ReadContent(gGamePath));
+    for (const YGO::Mods::Mod& mod : YGO::Mods::Active(std::filesystem::path(gGamePath)))
+    {
+        std::vector<YGO::Manifest::ContentNeed> needs = YGO::Manifest::ReadContentFile((mod.Folder / L"Yu-Gi-Oh-Ex" / L"content.json").wstring());
+        for (YGO::Manifest::ContentNeed& need : needs)
+            need.File = "Mod \"" + mod.Name + "\" (" + need.File + ")";
+        YGO::Manifest::ContentNeed required{ "Mod \"" + mod.Name + "\"", {} };
+        for (const YGO::Mods::Requirement& need : mod.Requires)
+        {
+            if (YGO::Manifest::Find(plugins, need.Plugin))
+                required.Plugins.push_back(need.Plugin);
+            else
+                missing.push_back(required.File + " needs " + need.Plugin + (need.Url.empty() ? "" : " - get it from " + need.Url));
+        }
+        needs.push_back(std::move(required));
+        for (std::string& line : YGO::Manifest::ApplyContent(plugins, needs))
+            missing.push_back(std::move(line));
+    }
     if (!missing.empty())
     {
-        std::string text = "The content in the Yu-Gi-Oh-Ex folder needs plugins that are not installed, so it won't show up in the game:\n\n";
+        std::string text = "Some content (the Yu-Gi-Oh-Ex folder or a mod) needs plugins that are not installed, so it won't show up in the game:\n\n";
         for (const std::string& line : missing)
             text += "  " + line + "\n";
-        text += "\nPut those plugins in the Plugins folder (or remove that content).";
+        text += "\nPut those plugins in the Plugins folder, or switch the mod off in the Mod Manager.";
         MessageBoxA(nullptr, text.c_str(), "Yu-Gi-Oh-Ex", MB_OK | MB_ICONWARNING);
     }
     YGO::Manifest::Resolve(plugins);
@@ -195,9 +219,6 @@ void Game::LookForPlugins()
     }
     for (const std::string& dll : gDlls)
         gPlugins.push_back(dll.c_str());
-
-    // Everything from the old section now lives in [Yu-Gi-Oh-RIX].
-    WritePrivateProfileStringA("Yu-Gi-Oh-Plugins", NULL, NULL, ConfigPath);
 }
 
 void Game::Set_GamePath(LPWSTR Path)
@@ -224,16 +245,10 @@ void Game::CreateConfig(LPCSTR ConfigName)
     strncat(ConfigPath, "\\", sizeof("\\"));
     strncat(ConfigPath, ConfigName, strlen(ConfigName));
 
-    if (PathFileExistsA(ConfigPath) == FALSE)
-    {
-        std::ofstream ConfigFile(ConfigPath);
-
-        char CurrentDir[MAX_PATH];
-        GetCurrentDirectoryA(MAX_PATH, CurrentDir);
-        ConfigFile << "[Yu-Gi-Oh-Core]" << std::endl;
-        ConfigFile << "PluginsPath=" << CurrentDir << "\\Plugins\\" << std::endl;
-        ConfigFile.close();
-    }
+    // Every start: the game's plugins are the ones next to this loader (Core starts the YGO-Ex ones and the plugins find their folders
+    // from this key). The rest of Config.ini is kept; a missing file is created with just this.
+    const std::string plugins = LoaderFolder() + "\\Plugins\\";
+    WritePrivateProfileStringA("Yu-Gi-Oh-Core", "PluginsPath", plugins.c_str(), ConfigPath);
 }
 
 void Game::CheckForLoadOrder()
