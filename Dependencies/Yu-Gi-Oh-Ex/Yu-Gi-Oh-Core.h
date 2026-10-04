@@ -72,6 +72,11 @@ CORE_API int __cdecl Core_StartPlugins(void);
    once (at start-up). Added after version 1 shipped without changing CORE_API_VERSION: Core::Functions().AddCredits is NULL with an older Core. */
 CORE_API void __cdecl Core_AddCredits(const char* Heading, const char* Lines);
 
+/* The file name (no folder, UTF-8) of the save the game reads and writes now: savegame-ex.dat, or savegame-ex-N.dat for save slot N. For plugins
+   that keep something per save outside it. Returns its length, or 0 when Out is NULL or Size is too small. Added after version 1 like
+   AddCredits: Core::Functions().GetSaveFile is NULL with an older Core. */
+CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size);
+
 #ifdef __cplusplus
 }
 
@@ -88,6 +93,7 @@ namespace Core
         int(__cdecl* SetPluginEnabled)(const char*, int) = nullptr;
         int(__cdecl* StartPlugins)() = nullptr;
         void(__cdecl* AddCredits)(const char*, const char*) = nullptr;   // NULL with a Core that predates it
+        int(__cdecl* GetSaveFile)(char*, int) = nullptr;                 // NULL with a Core that predates it
     };
 
     inline Api& Functions()
@@ -121,6 +127,7 @@ namespace Core
         CORE_BIND(SetPluginEnabled);
         CORE_BIND(StartPlugins);
         CORE_BIND(AddCredits);
+        CORE_BIND(GetSaveFile);
 #undef CORE_BIND
         return true;
     }

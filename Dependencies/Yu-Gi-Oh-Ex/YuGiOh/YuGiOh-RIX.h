@@ -484,6 +484,23 @@ namespace YGO
             // vector (mov ebx, imm32 at 0x1408BFF49). Yu-Gi-Oh-Cards raises both for its extra cards, so they are read, not assumed.
             inline uint32_t InternalIdLimit() { return *reinterpret_cast<uint32_t*>(0x1408C0063); }
             inline uint32_t IdToEntrySize() { return *reinterpret_cast<uint32_t*>(0x1408BFF4A); }
+
+            // The grid (widget_CardGrid at trunk+720) keeps its own copy of the counts: a vector of {u16 card id, int owned, int in deck} at
+            // grid+528, filled only by SetCards (RIX::widget_CardGrid::UpdateCounts, 0x14088C690, through the trunk's count function, which
+            // returns 0 for ids above 14968). Its cells (272 bytes each, vector at grid+232; card id at +256) print owned - in deck.
+            constexpr size_t GridCounts = 720 + 528;
+            constexpr size_t GridCells = 720 + 232;
+            constexpr size_t CellSize = 272;
+            constexpr size_t CellCardId = 256;
+            struct GridCount
+            {
+                uint16_t CardId;
+                uint16_t Pad;
+                int32_t Owned;
+                int32_t InDeck;
+            };
+            static_assert(sizeof(GridCount) == 12);
+            inline auto CellSetOwned = reinterpret_cast<void(__fastcall*)(void* Cell, int Owned)>(0x140882D60);   // redraws the number when it changed
         }
 
         // RIX::DeckStateHelper: a deck's contents. An empty one is enough for the trunk grid when there is no deck.

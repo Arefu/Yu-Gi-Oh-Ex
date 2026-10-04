@@ -202,11 +202,12 @@ namespace YGO
             std::vector<std::string> Plugins;
         };
 
-        // <game>\Yu-Gi-Oh-Ex\content.json, or nothing when there is none (or it can't be read).
-        inline std::vector<ContentNeed> ReadContent(const std::string& gameFolder)
+        // A content.json (<game>\Yu-Gi-Oh-Ex\content.json, or a mod's Mods\<id>\Yu-Gi-Oh-Ex\content.json), or nothing when there is none
+        // (or it can't be read).
+        inline std::vector<ContentNeed> ReadContentFile(const std::wstring& path)
         {
             std::vector<ContentNeed> needs;
-            std::ifstream file(gameFolder + "\\Yu-Gi-Oh-Ex\\content.json");
+            std::ifstream file(path);
             if (!file)
                 return needs;
             nlohmann::json root = nlohmann::json::parse(file, nullptr, false, true);
@@ -229,6 +230,17 @@ namespace YGO
                 needs.push_back(std::move(need));
             }
             return needs;
+        }
+
+        // <game>\Yu-Gi-Oh-Ex\content.json.
+        inline std::vector<ContentNeed> ReadContent(const std::string& gameFolder)
+        {
+            const std::string path = gameFolder + "\\Yu-Gi-Oh-Ex\\content.json";   // ANSI, as the loader has it
+            std::wstring wide(MultiByteToWideChar(CP_ACP, 0, path.c_str(), -1, nullptr, 0), L'\0');
+            MultiByteToWideChar(CP_ACP, 0, path.c_str(), -1, wide.data(), static_cast<int>(wide.size()));
+            if (!wide.empty())
+                wide.pop_back();   // the terminator
+            return ReadContentFile(wide);
         }
 
         // Switches on every plugin the content needs, and everything those require (call before Resolve). Returns the lines
