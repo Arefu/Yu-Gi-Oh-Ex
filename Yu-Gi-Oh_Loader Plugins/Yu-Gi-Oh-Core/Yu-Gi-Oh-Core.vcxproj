@@ -100,6 +100,8 @@
     <ClCompile Include="Credits.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Host.cpp" />
+    <ClCompile Include="Loading.cpp" />
+    <ClCompile Include="Patch.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Save.cpp" />
     <ClCompile Include="SaveScreen.cpp" />
@@ -113,6 +115,8 @@
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Manifest.h" />
     <ClInclude Include="Credits.h" />
     <ClInclude Include="Host.h" />
+    <ClInclude Include="Loading.h" />
+    <ClInclude Include="Patch.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Save.h" />
     <ClInclude Include="SaveScreen.h" />

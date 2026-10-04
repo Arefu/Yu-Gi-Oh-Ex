@@ -5,7 +5,9 @@
 #include "Credits.h"
 #include "Detours.h"
 #include "Host.h"
+#include "Loading.h"
 #include "Logger.h"
+#include "Patch.h"
 #include "Save.h"
 #include "SaveScreen.h"
 #include "SaveSlots.h"
@@ -32,6 +34,16 @@ extern "C"
     CORE_API int __cdecl Core_StartPlugins(void) { return Host::StartPlugins(); }
 
     CORE_API void __cdecl Core_AddCredits(const char* Heading, const char* Lines) { Credits::Add(Heading ? Heading : "", Lines ? Lines : ""); }
+
+    CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size)
+    {
+        const std::u8string name = Save::CurrentSavePath().filename().u8string();
+        if (!Out || Size <= static_cast<int>(name.size()))
+            return 0;
+        memcpy(Out, name.data(), name.size());
+        Out[name.size()] = '\0';
+        return static_cast<int>(name.size());
+    }
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
@@ -44,6 +56,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     {
         DetourRestoreAfterWith();
         Host::SetModule(hModule);
+
+        // Where the game's data comes from (was Yu-Gi-Oh-BetterLoad): the archive's name and multi-instance (Loading.h), then WolfX's patch
+        // archive whenever it exists and loose files when LooseLoading is on (Patch.h). Before the game mounts its archive, so first.
+        Loading::Install();
+        Patch::Install();
 
         // The duel engine reads g_bEngineRules (0x140C8D1C9) every time a duel starts: 1 = "Engine_Init() 2020 Rules" (Master Rule 5, sets the 0x80 bit
         // of Duel_DuelEngine.Rules), 0 = "2019 Rules" (Master Rule 4). Nothing else writes it, so writing it here, when Core is injected (before the game's

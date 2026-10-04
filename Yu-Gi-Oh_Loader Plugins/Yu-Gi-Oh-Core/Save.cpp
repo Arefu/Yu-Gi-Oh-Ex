@@ -18,7 +18,6 @@
 constexpr size_t kSaveSize = 44008;
 
 constexpr const char* kIniSection = "Yu-Gi-Oh-Core";
-constexpr const char* kLegacyIniSection = "Yu-Gi-Oh-MoreCards";   // where these two settings lived before Yu-Gi-Oh-Core; still read
 constexpr const char* kSteamSaveName = "savegame.dat";
 
 constexpr uintptr_t kSteamContextInitIat = 0x1409F9930;    // SteamInternal_ContextInit (import)
@@ -151,14 +150,10 @@ void Save::ApplySharedVolume(unsigned char* blob)
         std::memcpy(blob + kVolumeOffset, g_Volume, kVolumeSize);
 }
 
-// A setting from [Yu-Gi-Oh-Core], or from [Yu-Gi-Oh-MoreCards] where it used to be, or the default.
+// A setting from [Yu-Gi-Oh-Core], or the default.
 static int ReadIntSetting(const char* key, int fallback)
 {
-    const int missing = -0x7FFFFFFF;
-    int value = static_cast<int>(GetPrivateProfileIntA(kIniSection, key, static_cast<UINT>(missing), g_IniPath.c_str()));
-    if (value == missing)
-        value = static_cast<int>(GetPrivateProfileIntA(kLegacyIniSection, key, static_cast<UINT>(fallback), g_IniPath.c_str()));
-    return value;
+    return static_cast<int>(GetPrivateProfileIntA(kIniSection, key, static_cast<UINT>(fallback), g_IniPath.c_str()));
 }
 static std::mutex g_SeedLock;
 static bool g_Seeded = false;
@@ -397,9 +392,7 @@ bool Save::Install()
 {
     g_IniPath = Save::GameFolder() + "Config.ini";
     char name[MAX_PATH];
-    GetPrivateProfileStringA(kIniSection, "GameSaveName", "", name, MAX_PATH, g_IniPath.c_str());
-    if (!name[0])
-        GetPrivateProfileStringA(kLegacyIniSection, "GameSaveName", "savegame-ex.dat", name, MAX_PATH, g_IniPath.c_str());
+    GetPrivateProfileStringA(kIniSection, "GameSaveName", "savegame-ex.dat", name, MAX_PATH, g_IniPath.c_str());
     g_PrimarySavePath = std::filesystem::path(Save::GameFolder()) / (name[0] ? name : "savegame-ex.dat");
     g_SavePath = g_PrimarySavePath;
 

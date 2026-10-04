@@ -13,7 +13,7 @@
 
 namespace
 {
-    constexpr const char* kSection = "Yu-Gi-Oh-RIX";   // the plugin list lives in this section of Config.ini (the loader writes it)
+    constexpr const char* kSection = "Yu-Gi-Oh-Core";   // the plugin list lives in Core's own section of Config.ini (the loader writes it)
     constexpr const char* kGuiPrefix = "YGO-Ex/";
 
     using YGO::Manifest::Plugin;

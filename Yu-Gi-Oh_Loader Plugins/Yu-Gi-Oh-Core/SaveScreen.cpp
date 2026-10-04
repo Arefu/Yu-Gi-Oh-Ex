@@ -212,7 +212,8 @@ namespace
                 view.DetailText[0] = std::format(L"{} DP", Grouped(summary.Wallet));
                 view.DetailText[1] = std::format(L"{} cards", Grouped(summary.CardsOwned));
                 view.DetailText[2] = std::format(L"{} wins / {} duels", Grouped(summary.Wins), Grouped(summary.Duels));
-                view.DetailText[3] = summary.LastPlayed;
+                // no "last played" date: the game's text box wrapped "2026-10-02 14:33" and drew it over the line above. The screen
+                // opens on the last slot played anyway (SaveSlots::LastSlot).
             }
 
             view.Frame = R::Dfx::AddImage(root, "pdui/doShared", "characterframe_large", 10, view.X, kFrameTop);

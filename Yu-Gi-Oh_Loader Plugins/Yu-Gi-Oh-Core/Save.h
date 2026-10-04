@@ -8,7 +8,7 @@ namespace Save
     // working directory, so they are right however the game was started.
     const std::string& GameFolder();
 
-    // Reads [Yu-Gi-Oh-Core] from Config.ini (GameSaveName, SeedFromGameSave; [Yu-Gi-Oh-MoreCards] is still read for them).
+    // Reads [Yu-Gi-Oh-Core] from Config.ini (GameSaveName, SeedFromGameSave).
     // The game's save file I/O is always
     // redirected to savegame-ex.dat in the game folder (GameSaveName can rename it), in the exact
     // same format the game writes to Steam Cloud. If it doesn't exist the first run copies the

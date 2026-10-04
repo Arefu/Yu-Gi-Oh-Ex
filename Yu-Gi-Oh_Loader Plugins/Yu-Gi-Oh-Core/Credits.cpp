@@ -13,6 +13,7 @@
 #include "Host.h"
 #include "Logger.h"
 #include "Save.h"
+#include "Yu-Gi-Oh-Mods.h"
 
 using json = nlohmann::json;
 
@@ -88,23 +89,14 @@ namespace
         return lines;
     }
 
-    std::filesystem::path JsonPath()
-    {
-        return std::filesystem::path(Save::GameFolder()) / "Yu-Gi-Oh-Ex" / "credits.json";
-    }
-
+    // Every mod's credits.json and the game folder's, merged (Yu-Gi-Oh-Mods.h): their sections in load order.
     json ReadJson()
     {
-        std::ifstream file(JsonPath(), std::ios::binary);
-        if (!file)
-            return json::object();
-        json parsed = json::parse(file, nullptr, false);
-        if (!parsed.is_object())
-        {
-            Logger::WriteLog(std::format("{} is not valid JSON, it is left out of the credits", JsonPath().string()), MODULE_NAME, 1);
-            return json::object();
-        }
-        return parsed;
+        std::vector<std::string> problems;
+        json merged = YGO::Mods::ReadMerged("credits.json", nullptr, &problems);
+        for (const std::string& problem : problems)
+            Logger::WriteLog(problem + ", it is left out of the credits", MODULE_NAME, 1);
+        return merged.is_object() ? merged : json::object();
     }
 
     void AppendSection(std::wstring& out, const Section& section)
