@@ -9,6 +9,7 @@
 #include "DuelRecorder.h"
 #include "Logger.h"
 #include "Stubs.h"
+#include "YuGiOh/YuGiOh-DUELSTATE.h"
 
 // Game addresses (YuGiOh.exe.i64; the exe is not relocated). Duel::PlayerState and the getters are documented in
 // docs/EffectSystem.md section 28 and docs/MultiplayerSystem.md.
@@ -16,17 +17,12 @@ namespace
 {
     constexpr const char* kLogFile = "Duels";
 
-    constexpr uintptr_t kPlayerState = 0x143497C40;   // Duel::PlayerState, two 0xD94-byte player blocks
-    constexpr uintptr_t kPlayerBlock = 0xD94;
-    constexpr uintptr_t kLpXorKey = 0x143330280;      // Duel_DuelEngine.field_0, a u16: LP (u32) is stored XORed with it
-    constexpr uintptr_t kMsgQueue = 0x14332FA40;      // g_DuelMsgQueue (DuelMsgQueue): Front at +0, Entries[256] at +0x10, Count at +0x810
-    constexpr uintptr_t kRngOffset = 0x3768;          // PlayerState.field_3768: the duel RNG (MSVC LCG)
-    constexpr uintptr_t kWinnerOffset = 0x3792;       // PlayerState.field_3792: 1/2 = a side won, 3 = draw
-    constexpr uintptr_t kLastWinReason = 0x1433305B4; // g_LastDuelWinReason (DuelWinReason)
+    // The duel state's layout is shared with Yu-Gi-Oh-GUI and AntiCheat (YuGiOh-DUELSTATE.h).
+    namespace DS = YGO::DUELSTATE;
 
-    // Duel::PlayerState::Player counts at +0x0C (hand, deck, grave, extra, banished) and the packed card arrays.
-    struct Pile { const char* Name; uintptr_t CountOffset; uintptr_t ArrayOffset; };
-    constexpr Pile kHand = { "hand", 0x0C, 0x19C }, kDeck = { "deck", 0x10, 0x37C }, kExtra = { "extra", 0x18, 0x55C };
+    // The zone names Duels.log uses (DuelIt reads them), with the shared pile layout.
+    struct Pile { const char* Name; const DS::Pile& Layout; };
+    constexpr Pile kHand = { "hand", DS::Hand }, kDeck = { "deck", DS::Deck }, kExtra = { "extra", DS::ExtraDeck };
 
     template <typename R> R CallGame(uintptr_t address) { return reinterpret_cast<R(__fastcall*)()>(address)(); }
     bool IsDuelMultiplayer() { return CallGame<uint8_t>(0x1407691D0) != 0; }
@@ -43,7 +39,7 @@ namespace
     int LifePoints(int side)
     {
         // The key is 16 bits (movzx in Duel__Msg__Handle_25_LP_Set, 0x1401264D0); the word after it is unrelated.
-        return static_cast<int>(Read<uint32_t>(kPlayerState + kPlayerBlock * (side & 1)) ^ Read<uint16_t>(kLpXorKey));
+        return DS::LifePoints(side);
     }
 
     std::string LpPair() { return std::format("{}/{}", LifePoints(0), LifePoints(1)); }
@@ -76,19 +72,18 @@ namespace
 
     std::string CardList(int side, const Pile& pile)
     {
-        const uintptr_t block = kPlayerState + kPlayerBlock * (side & 1);
-        const uint32_t count = Read<uint32_t>(block + pile.CountOffset);
+        const uint32_t count = DS::PileCount(side, pile.Layout);
         std::string out;
         for (uint32_t i = 0; i < count && i < 256; ++i)
         {
             // Packed card word: low 14 bits = card id, bit 14 + bits 23-30 = the card's slot (its index for the whole duel).
-            const uint32_t word = Read<uint32_t>(block + pile.ArrayOffset + 4 * i);
-            const uint32_t slot = ((word >> 14) & 1) | (((word >> 23) & 0xFF) << 1);
-            if ((word & 0x3FFF) == 0)   // the hand count is already 5 at Engine_Init but its entries are still empty
+            const uint32_t word = DS::PileWord(side, pile.Layout, static_cast<int>(i));
+            const uint32_t slot = DS::InstanceOf(word);
+            if (DS::CardIdOf(word) == 0)   // the hand count is already 5 at Engine_Init but its entries are still empty
                 continue;
             if (!out.empty())
                 out += ',';
-            out += std::format("{}:{}", slot, RealCardId(static_cast<uint16_t>(word & 0x3FFF)));
+            out += std::format("{}:{}", slot, RealCardId(DS::CardIdOf(word)));
         }
         return out;
     }
@@ -110,7 +105,7 @@ namespace
             now.wYear, now.wMonth, now.wDay, now.wHour, now.wMinute, now.wSecond, index,
             now.wYear, now.wMonth, now.wDay, now.wHour, now.wMinute, now.wSecond,
             mode, online ? 1 : 0, IsTagDuel() ? 1 : 0, match, IsRoundBased() ? 1 : 0, seat, seat & 1, g_StartSide.load(),
-            Read<uint32_t>(kPlayerState + kRngOffset)));
+            Read<uint32_t>(DS::PlayerState + DS::RngOffset)));
 
         {
             std::lock_guard lock(g_SeatLock);
@@ -143,12 +138,12 @@ void DuelRecorder::Tap_PumpAndMirror(const u64*, size_t, bool after, u64)
     static DuelMsg first{};
     static uint16_t high[3]{};
 
-    const uint32_t count = Read<uint32_t>(kMsgQueue + 0x810);
+    const uint32_t count = Read<uint32_t>(DS::MsgQueueCount);
     if (!after)
     {
         countBefore = count;
         if (count)
-            first = *reinterpret_cast<const DuelMsg*>(kMsgQueue + 0x10);
+            first = *reinterpret_cast<const DuelMsg*>(DS::MsgQueue + 0x10);
         return;
     }
     if (!g_InDuel || countBefore == 0 || count >= countBefore)
@@ -225,7 +220,7 @@ namespace
 void DuelRecorder::Tap_OnDuelEnd(const u64* a, size_t, bool after, u64)
 {
     if (!after)
-        EndDuel(static_cast<int32_t>(a[0]), Read<uint8_t>(kPlayerState + kWinnerOffset), static_cast<int>(Read<uint32_t>(kLastWinReason)), "OnDuelEnd");
+        EndDuel(static_cast<int32_t>(a[0]), Read<uint8_t>(DS::PlayerState + DS::WinnerOffset), static_cast<int>(Read<uint32_t>(DS::LastWinReason)), "OnDuelEnd");
 }
 
 void DuelRecorder::Tap_SetRoundResult(const u64* a, size_t, bool after, u64)

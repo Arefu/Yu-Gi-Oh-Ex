@@ -11,6 +11,7 @@
 
 #include "AntiCheat.h"
 #include "Logger.h"
+#include "YuGiOh/YuGiOh-DUELSTATE.h"
 
 namespace
 {
@@ -116,8 +117,8 @@ namespace
     bool TryReadPlayerStateHash(uint64_t& outHash)
     {
         // See the UNVERIFIED warning in AntiCheat.h. Player block size/stride from ygo-playerstate-struct-map-2026-09-30.
-        constexpr uintptr_t kPlayerStateBase = 0x143497C40;
-        constexpr size_t kPlayerBlockSize = 0xD94;
+        constexpr uintptr_t kPlayerStateBase = YGO::DUELSTATE::PlayerState;
+        constexpr size_t kPlayerBlockSize = YGO::DUELSTATE::PlayerBlock;
         constexpr int kPlayerCount = 2;
 
         uint64_t hash = 0xcbf29ce484222325ULL;   // FNV-1a 64-bit offset basis
