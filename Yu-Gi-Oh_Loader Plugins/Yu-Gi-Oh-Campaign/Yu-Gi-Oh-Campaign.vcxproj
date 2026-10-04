@@ -102,6 +102,7 @@
     <ClCompile Include="Decks.cpp" />
     <ClCompile Include="StoryDuels.cpp" />
     <ClCompile Include="StoryScripts.cpp" />
+    <ClCompile Include="Tutorials.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Logger.h" />
@@ -110,6 +111,7 @@
     <ClInclude Include="Decks.h" />
     <ClInclude Include="StoryDuels.h" />
     <ClInclude Include="StoryScripts.h" />
+    <ClInclude Include="Tutorials.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Yu-Gi-Oh.def" />

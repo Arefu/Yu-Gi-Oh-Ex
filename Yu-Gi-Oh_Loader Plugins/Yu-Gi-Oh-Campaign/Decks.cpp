@@ -16,6 +16,7 @@
 
 #include "Detours.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Mods.h"
 
 namespace
 {
@@ -98,12 +99,15 @@ namespace
 
     void Load()
     {
-        std::ifstream file(GameFolder() + "Yu-Gi-Oh-Ex\\decks.json");
-        if (!file)
+        // every mod's copy and the game folder's, merged (Yu-Gi-Oh-Mods.h): later mods win for the same id
+        std::vector<std::string> problems;
+        auto root = YGO::Mods::ReadMerged("decks.json", nullptr, &problems);
+        for (const std::string& problem : problems)
+            Logger::WriteLog(problem + ", it is left out", MODULE_NAME, 2);
+        if (root.is_null())
             return; // decks.json is optional
         try
         {
-            auto root = nlohmann::json::parse(file, nullptr, true, true);
             auto list = root.find("decks");
             if (list == root.end() || !list->is_array())
                 return;

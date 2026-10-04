@@ -513,8 +513,14 @@ extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, flo
         kBlank, 1, flags, arg10);
 }
 
+// Matrix4_Translation is shared: besides CardFace_Build it is called by DFX::TLayerAnimoo::Render (via 0x140746EA0, every animated UI
+// layer's offset) and two duel functions (0x1407D4290, 0x1407D67F0). Without the g_buildingFace gate any UI layer offset at x 32 was
+// moved to the DEF box position and scaled, which threw menus and duel widgets out of place.
 extern "C" void* Hook_sub_140877EC0(void* out, float x, float y, float z)
 {
+    if (!g_buildingFace)
+        return orig_sub_140877EC0(out, x, y, z);
+
     float scale = 1.0f;
     float tx = x, ty = y;
 
