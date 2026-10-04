@@ -9,6 +9,7 @@
 #include "Card.h"
 #include "Genres.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Mods.h"
 
 namespace
 {
@@ -67,13 +68,15 @@ namespace Genres
     void Load()
     {
         g_masks.clear();
-        const std::string path = ExtraCardsDirectory() + "genres.json";
-        std::ifstream file(path);
-        if (!file)
+        // every mod's copy and the game folder's, merged (Yu-Gi-Oh-Mods.h): a later mod's genres for a card replace an earlier one's
+        std::vector<std::string> problems;
+        auto root = YGO::Mods::ReadMerged("genres.json", nullptr, &problems);
+        for (const std::string& problem : problems)
+            Logger::Log(problem + ", its genres are left out", MODULE_NAME, 3);
+        if (root.is_null())
             return; // genres.json is optional
         try
         {
-            auto root = nlohmann::json::parse(file, nullptr, true, true);
             auto cards = root.find("cards");
             if (cards == root.end() || !cards->is_array())
                 return;

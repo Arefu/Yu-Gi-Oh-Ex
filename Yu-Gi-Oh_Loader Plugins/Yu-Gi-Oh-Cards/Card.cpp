@@ -7,6 +7,7 @@
 #include <fstream>
 #include <intrin.h>
 #include <mutex>
+#include <unordered_map>
 #include <unordered_set>
 
 #include <json.hpp>
@@ -16,6 +17,7 @@
 #include "Genres.h"
 #include "Logger.h"
 #include "Save.h"
+#include "Yu-Gi-Oh-Mods.h"
 
 // The game's card id window: Konami ids 3900..14968 index its fixed-size tables.
 constexpr uint32_t kVanillaKonamiIdBase = 3900;
@@ -269,9 +271,11 @@ namespace
                 c.CloneFrom = static_cast<uint16_t>(from);
         }
 
+        // the art is relative to the content folder the card came from (a mod's Yu-Gi-Oh-Ex or the game's)
+        c.Folder = YGO::Mods::FolderOf(j);
         std::string image = j.value("image", std::string());
         if (!image.empty())
-            c.ImagePath = ExtraCardsDirectory() + image;
+            c.ImagePath = c.Folder + image;
 
         int kind = K_Normal, attribute = LIGHT, type = Warrior, icon = I_Normal, limitation = Unlimited;
         if (!ParseEnum(j, "kind", KindNames, kind)) { why = Unknown("kind"); return false; }
@@ -294,7 +298,22 @@ namespace
         p.Icon = icon;
         p.Limitation = static_cast<Status>(limitation);
         p.PendulumScale = IsPendulumKind(kind) ? j.value("scale", 0) : 0;
-        p.ID2 = p.ID3 = static_cast<short>(c.ID);
+        // "sameName": { "card": N, "always": true } (or just N, always): the props' identity id (+0x2C) and second id (+0x2E), filled the
+        // way Setup_CardPropTable fills them from bin/CARD_Same.bin for the game's cards (docs/CardSame.md).
+        if (j.contains("sameName"))
+        {
+            const auto& same = j["sameName"];
+            const nlohmann::json* card = same.is_object() && same.contains("card") ? &same["card"] : same.is_number_integer() ? &same : nullptr;
+            if (card && card->is_number_integer() && card->get<int>() >= 1 && card->get<int>() <= 0xFFFF && card->get<int>() != id)
+            {
+                c.SameName = static_cast<uint16_t>(card->get<int>());
+                c.SameNameAlways = !same.is_object() || !same.contains("always") || !same["always"].is_boolean() || same["always"].get<bool>();
+            }
+            else
+                Logger::WriteLog(std::format("Card {}: \"sameName\" ignored (needs {{ \"card\": id, \"always\": true/false }} with another card's id)", id), MODULE_NAME, 1);
+        }
+        p.ID2 = static_cast<short>(c.SameName && c.SameNameAlways ? c.SameName : c.ID);
+        p.ID3 = static_cast<short>(c.SameName ? c.SameName : c.ID);
 
         if (isSpell || isTrap)
         {
@@ -440,26 +459,18 @@ namespace Card
 
     size_t LoadCardsFromJson(const std::string& path)
     {
-        std::ifstream file(path);
-        if (!file)
+        // Every mod's copy and the game folder's, merged (Yu-Gi-Oh-Mods.h); either {"cards": [...]} or a bare array.
+        std::vector<std::string> problems;
+        nlohmann::json root = YGO::Mods::ReadMerged(path, "cards", &problems);
+        for (const std::string& problem : problems)
+            Logger::WriteLog(problem + ", its cards are left out", MODULE_NAME, 2);
+        if (root.is_null())
         {
-            Logger::WriteLog("Could not open " + path, MODULE_NAME, 2);
+            Logger::WriteLog("No " + path + " in Yu-Gi-Oh-Ex or a mod", MODULE_NAME, 1);
             return 0;
         }
 
-        nlohmann::json root;
-        try
-        {
-            root = nlohmann::json::parse(file, nullptr, true, true);
-        }
-        catch (const std::exception& e)
-        {
-            Logger::WriteLog(std::format("Parse error in {}: {}", path, e.what()), MODULE_NAME, 2);
-            return 0;
-        }
-
-        // Accept either {"cards": [...]} or a bare array.
-        const nlohmann::json& list = root.is_array() ? root : root["cards"];
+        const nlohmann::json& list = root["cards"];
         if (!list.is_array())
         {
             Logger::WriteLog(path + " needs a \"cards\" array", MODULE_NAME, 2);
@@ -470,7 +481,8 @@ namespace Card
         ExtraCards.reserve(list.size());
         Overrides.clear();
         Overrides.reserve(list.size());
-        std::unordered_set<uint16_t> seenIds; // O(1) duplicate check; a linear scan per card here made loading a few thousand cards visibly chug
+        // id -> place in ExtraCards: O(1) duplicate check (a linear scan per card here made loading a few thousand cards visibly chug)
+        std::unordered_map<uint16_t, size_t> seenIds;
         seenIds.reserve(list.size());
         for (size_t i = 0; i < list.size(); ++i)
         {
@@ -494,12 +506,23 @@ namespace Card
                 continue;
             }
 
-            if (!seenIds.insert(c.ID).second)
+            // The same id twice: in one file it is a mistake (the first stays); from a later mod (or the game folder over a mod) the later one
+            // wins, the way every other mod file works. The Mod Manager warns about it before the game starts.
+            if (auto seen = seenIds.find(c.ID); seen != seenIds.end())
             {
-                Logger::WriteLog(std::format("Skipped card {}: duplicate id {}", CardLabel(i, list[i]), c.ID), MODULE_NAME, 2);
+                const std::string& earlier = ExtraCards[seen->second].Folder;
+                if (earlier == c.Folder)
+                {
+                    Logger::WriteLog(std::format("Skipped card {}: duplicate id {}", CardLabel(i, list[i]), c.ID), MODULE_NAME, 2);
+                    continue;
+                }
+                Logger::WriteLog(std::format("Card id {} from {} replaces the one from {} (two mods use the same id)", c.ID, c.Folder, earlier),
+                                 MODULE_NAME, 2);
+                ExtraCards[seen->second] = std::move(c);
                 continue;
             }
 
+            seenIds.emplace(c.ID, ExtraCards.size());
             ExtraCards.push_back(std::move(c));
         }
         RebuildExtraCardIndex();
@@ -511,22 +534,15 @@ namespace Card
 
     size_t LoadUnlocksFromJson(const std::string& path)
     {
-        std::ifstream file(path);
-        if (!file)
+        // every mod's copy and the game folder's, merged (Yu-Gi-Oh-Mods.h)
+        std::vector<std::string> problems;
+        nlohmann::json root = YGO::Mods::ReadMerged(path, "cards", &problems);
+        for (const std::string& problem : problems)
+            Logger::WriteLog(problem + ", its unlocks are left out", MODULE_NAME, 2);
+        if (root.is_null())
             return 0; // unlocks.json is optional
 
-        nlohmann::json root;
-        try
-        {
-            root = nlohmann::json::parse(file, nullptr, true, true);
-        }
-        catch (const std::exception& e)
-        {
-            Logger::WriteLog(std::format("Parse error in {}: {}", path, e.what()), MODULE_NAME, 2);
-            return 0;
-        }
-
-        const nlohmann::json& list = root.is_array() ? root : root["cards"];
+        const nlohmann::json& list = root["cards"];
         if (!list.is_array())
         {
             Logger::WriteLog(path + " needs a \"cards\" array", MODULE_NAME, 2);
@@ -569,7 +585,8 @@ namespace
     {
         bool ExistsOnDuel; char pad0[7];
         wchar_t* Name; wchar_t* Description;
-        uint16_t NameSortRank; char pad1[2];   // +0x18: place in the language's name order (CARD_Sort_#, YGO::CARDS::Get_NameSortRank)
+        uint16_t NameSortRank;                 // +0x18: place in the language's name order (CARD_Sort_#, YGO::CARDS::Get_NameSortRank)
+        wchar_t IndexInitial;                  // +0x1A: the name's first letter (Get_CardIndexInitialFromKonamiId; CARD_Kana1_# in the Japanese build)
         bool IsMonster, IsSpell, IsTrap, IsFieldSpell, IsNormalMonster, IsEffectMonster,
             IsFusion, IsSynchro; char pad2;
         bool IsXyz, IsExtraMonster, IsRitual, IsToken; char pad3;
@@ -649,6 +666,15 @@ namespace
         gc->Name = const_cast<wchar_t*>(c.Name.c_str());
         gc->Description = const_cast<wchar_t*>(c.Description.c_str());
         gc->NameSortRank = NameSortRankFor(c.Name);
+        // Setup_FullCardProps ran before the card had a name, so it has no index initial; the game's rule outside the Japanese build: the name's
+        // first character, after a leading $R...( ruby block (docs/CardKana.md)
+        {
+            size_t start = 0;
+            if (c.Name.starts_with(L"$R"))
+                if (size_t open = c.Name.find(L'('); open != std::wstring::npos)
+                    start = open + 1;
+            gc->IndexInitial = start < c.Name.size() ? c.Name[start] : L'\0';
+        }
 
         // IsMonster/IsSpell/IsTrap/IsFusion/IsSynchro/IsXyz/IsExtraMonster/IsRitual/IsToken/IsToon/IsSpirit/IsGemini/IsPendulum/IsLink
         // are not set here: the kFlagFunctions/kLateFlagFunctions loop below overwrites those exact bytes with the game's own
@@ -664,7 +690,10 @@ namespace
         gc->Kind = kind;
         gc->Level = (props.StarTypeValue == Card::ST_Level) ? props.LevelOrLinkRatingOrRank : 0;
         gc->Limitation = props.Limitation;
-        gc->ID1 = gc->ID2 = gc->ID3 = c.ID;
+        // ID2/ID3 = FULL_CARD_PROPS +0x6C/+0x70, the copies Setup_FullCardProps makes of the props' identity / same-name ids ("sameName")
+        gc->ID1 = c.ID;
+        gc->ID2 = c.SameName && c.SameNameAlways ? c.SameName : c.ID;
+        gc->ID3 = c.SameName ? c.SameName : c.ID;
         gc->Rank = IsXyzKind(kind) ? props.LevelOrLinkRatingOrRank : 0;
         gc->LeftPendulumScale = gc->RightPendulumScale = IsPendulumKind(kind) ? props.PendulumScale : 0;
         gc->LevelOrLinkRatingOrRank = props.LevelOrLinkRatingOrRank;
@@ -1612,10 +1641,10 @@ void Card::Install()
 
     if (firstRun)
     {
-        size_t count = LoadCardsFromJson(ExtraCardsDirectory() + "cards.json");
+        size_t count = LoadCardsFromJson("cards.json");
         Logger::WriteLog(std::format("Loaded {} card(s) from cards.json", count), MODULE_NAME, 0);
 
-        size_t unlocks = LoadUnlocksFromJson(ExtraCardsDirectory() + "unlocks.json");
+        size_t unlocks = LoadUnlocksFromJson("unlocks.json");
         if (unlocks)
             Logger::WriteLog(std::format("Loaded {} unlock(s) from unlocks.json", unlocks), MODULE_NAME, 0);
         if (unlocks && ReplaceDefaultUnlocks)

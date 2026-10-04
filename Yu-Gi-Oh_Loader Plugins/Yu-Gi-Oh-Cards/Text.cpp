@@ -11,6 +11,7 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Text.h"
+#include "Yu-Gi-Oh-Mods.h"
 
 namespace
 {
@@ -106,9 +107,12 @@ namespace Text
     void Load()
     {
         std::lock_guard guard(g_lock);
-        const std::string path = ExtraCardsDirectory() + "text.json";
-        std::ifstream file(path);
-        if (!file)
+        // every mod's copy and the game folder's, merged (Yu-Gi-Oh-Mods.h): a later mod's entry for an index replaces an earlier one's
+        std::vector<std::string> problems;
+        auto root = YGO::Mods::ReadMerged("text.json", nullptr, &problems);
+        for (const std::string& problem : problems)
+            Logger::Log(problem + ", its text is left out", MODULE_NAME, 3);
+        if (root.is_null())
         {
             g_word.clear();
             g_dlg.clear();
@@ -116,7 +120,6 @@ namespace Text
         }
         try
         {
-            auto root = nlohmann::json::parse(file, nullptr, true, true);
             ReadTable(root, "word", g_word);
             ReadTable(root, "dlg", g_dlg);
             Logger::Log("text.json: " + std::to_string(g_word.size()) + " WORD and " + std::to_string(g_dlg.size()) + " DLG entries", MODULE_NAME, 1);

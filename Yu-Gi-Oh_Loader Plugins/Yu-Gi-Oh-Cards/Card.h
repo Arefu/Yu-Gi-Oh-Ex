@@ -81,6 +81,7 @@ namespace Card
         uint16_t ID;
         std::wstring Name;
         std::wstring Description;
+        std::string Folder;                    // the content folder its cards.json is in (a mod's Yu-Gi-Oh-Ex or the game's; Yu-Gi-Oh-Mods.h)
         std::string ImagePath;
         std::vector<unsigned char> ImageBytes; // read on first request
         bool ImageTried = false;
@@ -93,6 +94,12 @@ namespace Card
         // The vanilla card whose effect this card borrows ("effectClone": { "from": N } in cards.json, applied by Yu-Gi-Oh-Effects).
         // In a duel the card plays under that id when it is free (see BorrowSourceId), so every id-keyed rule of the engine treats it as the source.
         uint16_t CloneFrom = 0;
+        // The card whose name this one is treated as ("sameName": { "card": N, "always": true } in cards.json; 0 = its own name). The game's
+        // own cards get theirs from bin/CARD_Same.bin in Setup_CardPropTable, which never reads ids past 14968 (docs/CardSame.md). Always:
+        // the identity id (props +0x2C, what Card_IsSameName compares in duels) becomes N. Not always ("while an effect says so"): only
+        // the second id (+0x2E) does, as the game does for Cyber Dragon Zwei.
+        uint16_t SameName = 0;
+        bool SameNameAlways = true;
         IN_MEMORY_CARD_PROP Props{};
     };
 
@@ -171,7 +178,8 @@ namespace Card
     // see Card_GetActiveDuelSessionId in Card.cpp and Yu-Gi-Oh-Funky's DuelTest.cpp for the caller.
     uint16_t GetActiveDuelSessionId(uint16_t id);
 
-    // Reads cards.json; bad entries are logged and skipped. Returns the number loaded.
+    // Reads every copy of cards.json (path = the name in the content folders: each mod's and the game's, Yu-Gi-Oh-Mods.h); bad entries are
+    // logged and skipped. Returns the number loaded.
     size_t LoadCardsFromJson(const std::string& path);
 
     // A card the player owns at least `Copies` of, whatever the save says.

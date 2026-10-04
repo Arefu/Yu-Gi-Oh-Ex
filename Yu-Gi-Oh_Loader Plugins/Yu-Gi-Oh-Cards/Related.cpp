@@ -15,6 +15,7 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Related.h"
+#include "Yu-Gi-Oh-Mods.h"
 #include "Text.h"
 
 namespace
@@ -208,13 +209,15 @@ namespace Related
         g_tags.clear();
         g_strings.clear();
 
-        const std::string path = ExtraCardsDirectory() + "relatedcards.json";
-        std::ifstream file(path);
-        if (!file)
+        // every mod's copy and the game folder's, merged (Yu-Gi-Oh-Mods.h): each mod's add/remove lists apply in load order
+        std::vector<std::string> problems;
+        auto root = YGO::Mods::ReadMerged("relatedcards.json", nullptr, &problems);
+        for (const std::string& problem : problems)
+            Logger::Log(problem + ", its related cards are left out", MODULE_NAME, 3);
+        if (root.is_null())
             return; // relatedcards.json is optional
         try
         {
-            auto root = nlohmann::json::parse(file, nullptr, true, true);
             size_t newTags = 0, changedTags = 0;
             if (auto tags = root.find("tags"); tags != root.end() && tags->is_array())
                 for (auto& json : *tags)
