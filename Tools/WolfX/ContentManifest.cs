@@ -22,13 +22,14 @@ namespace WolfX
             ("cards.json", "Yu-Gi-Oh-MoreCards"), ("unlocks.json", "Yu-Gi-Oh-MoreCards"), ("genres.json", "Yu-Gi-Oh-MoreCards"),
             ("relatedcards.json", "Yu-Gi-Oh-MoreCards"), ("text.json", "Yu-Gi-Oh-MoreCards"),
             ("characters.json", "Yu-Gi-Oh-Campaign"), ("decks.json", "Yu-Gi-Oh-Campaign"), ("storyduels.json", "Yu-Gi-Oh-Campaign"),
-            ("storyscripts.json", "Yu-Gi-Oh-Campaign"),
+            ("storyscripts.json", "Yu-Gi-Oh-Campaign"), (@"tutorials\", "Yu-Gi-Oh-Campaign"),
             ("packs.json", "Yu-Gi-Oh-BetterCardShop"),
+            ("summoning.json", "Yu-Gi-Oh-Effects"),
             (@"pages\", "Yu-Gi-Oh-RIX"), (@"menus\", "Yu-Gi-Oh-RIX"),
         ];
 
         /// <summary>What WolfX saves that no plugin applies yet: listed (with no plugins) so people can see it isn't used in the game.</summary>
-        private static readonly string[] NotAppliedYet = ["cardlinks.json", @"tutorials\", @"howtoplay\", @"sprites\", @"animlists\"];
+        private static readonly string[] NotAppliedYet = ["cardlinks.json", @"howtoplay\", @"sprites\", @"animlists\"];
 
         private static readonly JsonSerializerOptions WriteOptions = new()
         {
@@ -143,6 +144,7 @@ namespace WolfX
                         File.Delete(path);
                     return entries;
                 }
+                Directory.CreateDirectory(files.ExFolder);
                 var list = new JsonArray();
                 foreach (var (file, plugins) in entries)
                 {

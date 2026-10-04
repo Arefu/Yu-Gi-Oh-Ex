@@ -31,7 +31,7 @@ namespace WolfX
         private readonly Label _pageSaves = new() { Dock = DockStyle.Top, Height = 20, ForeColor = SystemColors.GrayText, TextAlign = ContentAlignment.MiddleLeft, Padding = new Padding(8, 0, 0, 0), AutoEllipsis = true };
         private readonly ToolStripStatusLabel _status = new() { Spring = true, TextAlign = ContentAlignment.MiddleLeft };
         private readonly ToolStripStatusLabel _missing = new() { IsLink = true, LinkColor = Color.DarkGoldenrod, Visible = false, ToolTipText = "Which files, and what they are for" };
-        private readonly ToolStripStatusLabel _restore = new("Restore the original archive...") { IsLink = true, Visible = false, ToolTipText = "Undo everything WolfX saved into YGO_2020.dat" };
+        private readonly ToolStripStatusLabel _restore = new("Remove WolfX's patch...") { IsLink = true, Visible = false, ToolTipText = "Back to the game's own data: deletes YGO_2020-Ex.dat / .toc" };
         private readonly ToolStripMenuItem _recent = new("Open &recent");
         private readonly StartScreen _start = new() { Dock = DockStyle.Fill };
         private Page? _shown;
@@ -94,7 +94,7 @@ namespace WolfX
                 ShortcutKeys = Keys.Control | Keys.Shift | Keys.O, ToolTipText = "A folder with the files taken out of YGO_2020.dat (any name): saved as loose files there",
             };
             var saveAll = new ToolStripMenuItem("&Save all", null, (_, _) => SaveAll()) { ShortcutKeys = Keys.Control | Keys.Shift | Keys.S };
-            var restore = new ToolStripMenuItem("Restore the original &archive...", null, (_, _) => RestoreOriginal());
+            var restore = new ToolStripMenuItem("Remove WolfX's &patch (back to the game's own data)...", null, (_, _) => RestoreOriginal());
             var folder = new ToolStripMenuItem("Show the open &folder", null, (_, _) => ShowFolder(GameFolderFiles.Current?.Folder));
             var exFolder = new ToolStripMenuItem("Show the &Yu-Gi-Oh-Ex folder", null, (_, _) => ShowFolder(GameFolderFiles.Current?.ExFolder));
             var exit = new ToolStripMenuItem("E&xit", null, (_, _) => Close());
@@ -102,7 +102,7 @@ namespace WolfX
                                          restore, new ToolStripSeparator(), exit]);
             file.DropDownOpening += (_, _) =>
             {
-                restore.Enabled = GameFolderFiles.Current?.Archive?.IsModified == true;
+                restore.Enabled = GameFolderFiles.Current?.HasChanges == true;
                 folder.Enabled = exFolder.Enabled = GameFolderFiles.Current != null;
                 FillRecent();
             };
@@ -192,23 +192,29 @@ namespace WolfX
 
             // Shop
             Add("Shop", "Packs", PackDefinitionsEditor, null, "Standard: main\\packdefdata_<lang>.bin and the packs' cards in packs.zib.");
-            Content("Shop", "New packs", new PacksPanel(), "Additional: Yu-Gi-Oh-Ex\\packs.json, cards added to packs and new packs (needs Yu-Gi-Oh-BetterCardShop).");
+            Content("Shop", "New packs", new PacksPanel(), "Additional: Yu-Gi-Oh-Ex\\packs.json, new packs for the shop (needs Yu-Gi-Oh-BetterCardShop). The game's own packs are on Packs.");
             Content("Shop", "Unlocks", new UnlocksPanel(), "Additional: Yu-Gi-Oh-Ex\\unlocks.json, cards every profile owns (needs Yu-Gi-Oh-MoreCards).");
 
             // Text
             Editor("Text", "Text tables", new TextTableEditor());
-            Designed("Text", Page_BNDManager, "Strings", "Standard: strings\\Strings_STEAM_<lang>.BND and main\\ui\\credits\\credits.dat.");
+            Editor("Text", "Strings", new StringsEditor());
             Editor("Text", "How to Play", new HowToPlayEditor());
 
             // Art and menus
             Editor("Art & menus", "Sprite sheets", new SpriteSheetEditor());
             Editor("Art & menus", "Animlists", new AnimListEditor());
+            Editor("Art & menus", "Fonts", new FontEditor());
             Content("Art & menus", "Pages", new WolfEx.Designer.PagesPanel(), "Additional: Yu-Gi-Oh-Ex\\pages\\*.json (needs Yu-Gi-Oh-RIX).");
             Content("Art & menus", "Menus", new MenusPanel(), "Additional: Yu-Gi-Oh-Ex\\menus\\menus.json (needs Yu-Gi-Oh-RIX).");
 
+            // Sound
+            Editor("Sound", "Music", new MusicEditor());
+            Editor("Sound", "Voice Over", new VoiceEditor());
+
             // Files
-            Designed("Files", Page_ZibManager, "Archives (.zib)", "Opens and repacks .zib archives.");
-            Designed("Files", Page_YDCManager, "Deck files (.ydc)", "Your own .ydc deck files.");
+            Editor("Files", "Game files & loading", new GameFilesPage());
+            Editor("Files", "Archives (.zib)", new ArchivesPage());
+            Editor("Files", "Deck files (.ydc)", new DeckFilesPage());
             Add("Files", "Save editor", SaveEditorFull, null, "Your savegame.dat / savegame-ex.dat.");
 
             WolfX_TabManager.Dispose();
@@ -223,7 +229,7 @@ namespace WolfX
             _nav.ExpandAll();
             Select(StartPage ?? "Card Manager");
             FormLayout.ApplyReadingTabOrder(this);
-            PDL_BTN_OpenPDL.Text = STRMAN_BTN_OpenStrings.Text = "Reload";
+            PDL_BTN_OpenPDL.Text = "Reload";
             PDL_CB_UseCardID.Checked = false;   // names, from the card catalog
         }
 
@@ -437,11 +443,6 @@ namespace WolfX
             // the designer-made pages that read the game data open it straight away too
             if (files.Exists(PDLimits.PDLimits.GamePath))
                 PDL_BTN_OpenPDL_Click(this, EventArgs.Empty);
-            if (files.Exists(global::Types.BND.GamePath((char)State.Language)))
-            {
-                CREDITS_CheckB_IsCredit.Checked = false;
-                STRMAN_BTN_OpenStrings_Click(this, EventArgs.Empty);
-            }
 
             WatchContent(files);
             UpdateContentManifest();
@@ -449,11 +450,11 @@ namespace WolfX
             var missing = files.MissingRequired();
             _missing.Text = $"{missing.Count} required file{(missing.Count == 1 ? "" : "s")} missing";
             _missing.Visible = missing.Count > 0;
-            _restore.Visible = files.Archive?.IsModified == true;
+            _restore.Visible = files.HasChanges;
             UpdateTitle(files);
             SetStatus(files.IsExtracted
                 ? $"Opened the extracted folder {files.Folder}: changes are saved as files there. New content goes to {files.ExFolder}."
-                : $"Opened YGO_2020.dat: changes are saved into it (File > Restore undoes them). New content goes to {files.ExFolder}.");
+                : $"Opened YGO_2020.dat (never written): changes go to {files.PatchName}.dat, which Yu-Gi-Oh-Core loads over it. New content goes to {files.ExFolder}.");
             if (_shown == null)
             {
                 // the start screen was up: show the page that was picked
@@ -495,20 +496,23 @@ namespace WolfX
         /// <summary>Another page saved files: the pages that show any of them read them again (unless they have changes of their own).</summary>
         private void Reopen(GameFolderFiles files, IReadOnlyCollection<string> written)
         {
+            UpdateContentManifest();
             var set = new HashSet<string>(written.Select(p => p.Replace('/', '\\')), StringComparer.OrdinalIgnoreCase);
             if (set.Any(p => p.StartsWith("bin\\CARD_", StringComparison.OrdinalIgnoreCase)))
                 CardCatalog.Reload();
             foreach (var page in _pages)
                 if (page.Editor is { Dirty: false } editor && editor.Files.Any(f => set.Contains(f.Replace('/', '\\'))))
                     editor.Open(files);
-            _restore.Visible = files.Archive?.IsModified == true;
+            _restore.Visible = files.HasChanges;
             UpdateTitle(files);
         }
 
         /// <summary>The title bar says what is open: "WolfX - YGO_2020.dat (edited) - C:\...\Game" or "WolfX - extracted folder - D:\Data".</summary>
         private void UpdateTitle(GameFolderFiles files)
         {
-            string what = files.IsExtracted ? "extracted folder" : files.Archive?.IsModified == true ? "YGO_2020.dat (edited by WolfX)" : "YGO_2020.dat";
+            string what = files.IsExtracted ? "extracted folder" :
+                files.Patch != null ? $"YGO_2020.dat + {files.PatchName} ({files.PatchedFiles.Count} files changed)" :
+                files.Archive?.IsModified == true ? "YGO_2020.dat (edited in place by an older WolfX)" : "YGO_2020.dat";
             Text = $"WolfX - {what} - {files.Folder}";
         }
 
@@ -562,22 +566,25 @@ namespace WolfX
 
         private void RestoreOriginal()
         {
-            if (GameFolderFiles.Current is not { Archive.IsModified: true } files)
+            if (GameFolderFiles.Current is not { HasChanges: true } files)
                 return;
-            if (MessageBox.Show(this, "Put the game's original YGO_2020.toc back and cut YGO_2020.dat back to its original size?\n\n" +
-                    "Everything WolfX saved into the archive is undone. Your Yu-Gi-Oh-Ex JSON files are not touched.",
-                    "Restore the original archive", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
+            string list = string.Join("\n", files.PatchedFiles.Take(15)) + (files.PatchedFiles.Count > 15 ? $"\n... and {files.PatchedFiles.Count - 15} more" : "");
+            if (MessageBox.Show(this, $"Delete {files.PatchName}.dat / .toc, so the game uses its own data again?\n\n" +
+                    (files.PatchedFiles.Count > 0 ? $"The patch changes:\n{list}\n\n" : "") +
+                    (files.Archive?.IsModified == true ? "An older WolfX also saved into YGO_2020.dat itself: that is undone too.\n\n" : "") +
+                    "Your Yu-Gi-Oh-Ex JSON files are not touched.",
+                    "Remove WolfX's patch", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK)
                 return;
             try
             {
                 files.RestoreOriginal();
                 GameFolderFiles.SetCurrent(files);
                 UpdateTitle(files);
-                SetStatus("The archive is the game's original again.");
+                SetStatus("The patch is gone: the game uses its own data again.");
             }
             catch (Exception ex) when (ex is IOException or InvalidOperationException or UnauthorizedAccessException)
             {
-                MessageBox.Show(this, ex.Message, "Restore the original archive", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, ex.Message, "Remove WolfX's patch", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

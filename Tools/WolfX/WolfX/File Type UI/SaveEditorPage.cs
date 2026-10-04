@@ -41,7 +41,51 @@ namespace WolfX.Types
 
         // ---- events wired in the designer ----
 
-        private void btnOpen_Click(object? sender, EventArgs e) => Open();
+        /// <summary>Open...: the saves found on this PC (Steam's, and the save slots in the game folder), or browse for one.</summary>
+        private void btnOpen_Click(object? sender, EventArgs e)
+        {
+            var menu = new ContextMenuStrip();
+            foreach (var (path, what) in FindSaves())
+            {
+                var info = new FileInfo(path);
+                menu.Items.Add($"{what}: {info.Name}  ({info.LastWriteTime:yyyy-MM-dd HH:mm}, {info.Length / 1024} KB)", null, (_, _) => Open(path)).ToolTipText = path;
+            }
+            if (menu.Items.Count > 0)
+                menu.Items.Add(new ToolStripSeparator());
+            menu.Items.Add("Browse...", null, (_, _) => Open(null));
+            menu.Show(btnOpen, new Point(0, btnOpen.Height));
+        }
+
+        /// <summary>
+        /// The game's saves: Steam keeps them in &lt;Steam&gt;\userdata\&lt;account&gt;\1150640\remote (savegame.dat; Steam Cloud may put its own copy
+        /// back while Steam runs), and Yu-Gi-Oh-Core's extra save slots are savegame-ex*.dat in the game folder.
+        /// </summary>
+        private static List<(string Path, string What)> FindSaves()
+        {
+            var found = new List<(string, string)>();
+            try
+            {
+                if (Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Valve\Steam", "SteamPath", null) is string steam &&
+                    Directory.Exists(Path.Combine(steam, "userdata")))
+                {
+                    foreach (string account in Directory.EnumerateDirectories(Path.Combine(steam, "userdata")))
+                    {
+                        string remote = Path.Combine(account, "1150640", "remote");
+                        if (Directory.Exists(remote))
+                            foreach (string file in Directory.EnumerateFiles(remote, "*.dat"))
+                                found.Add((file, $"Steam account {Path.GetFileName(account)}"));
+                    }
+                }
+                if (Wolf.Editors.GameFolderFiles.Current?.GameFolder is { } game && Directory.Exists(game))
+                    foreach (string file in Directory.EnumerateFiles(game, "savegame*.dat"))
+                        found.Add((file, "Game folder"));
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or System.Security.SecurityException)
+            {
+                // nothing found is fine: Browse is still there
+            }
+            return found;
+        }
 
         private void btnSave_Click(object? sender, EventArgs e) => Save(_path);
 
@@ -96,17 +140,23 @@ namespace WolfX.Types
 
         // ---- file ----
 
-        private void Open()
+        private void Open(string? path)
         {
-            using var dialog = new OpenFileDialog { Filter = "Save files (*.dat)|*.dat|All files|*.*", Title = "Open savegame.dat or savegame-ex.dat" };
-            if (dialog.ShowDialog() != DialogResult.OK)
-                return;
+            if (path == null)
+            {
+                using var dialog = new OpenFileDialog { Filter = "Save files (*.dat)|*.dat|All files|*.*", Title = "Open savegame.dat or savegame-ex.dat" };
+                if (FindSaves().FirstOrDefault().Path is { } first)
+                    dialog.InitialDirectory = Path.GetDirectoryName(first);
+                if (dialog.ShowDialog() != DialogResult.OK)
+                    return;
+                path = dialog.FileName;
+            }
 
             try
             {
-                _save = SaveFile.Load(dialog.FileName);
+                _save = SaveFile.Load(path);
                 CardCatalog.Get(this); // names for the cards (asks for a folder once)
-                _path = dialog.FileName;
+                _path = path;
                 _pathBox.Text = _path;
                 Bind();
                 _tabs.Enabled = true;

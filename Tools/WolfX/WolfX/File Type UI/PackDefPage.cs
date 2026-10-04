@@ -6,8 +6,9 @@ using Types;
 namespace WolfX.Types
 {
     /// <summary>
-    /// main/packdefdata_#.bin (the packs: name, cost, kind, texts) plus the cards inside each reward pack, which live in packs.zib as
-    /// packdata_&lt;name&gt;.bin. Both are editable, so vanilla packs can be changed without adding any new card.
+    /// main/packdefdata_#.bin (the packs: name, cost, kind, texts) plus the cards inside each pack, which live in packs.zib: a reward pack's
+    /// common and rare lists (packdata_&lt;name&gt;.bin), or a battle pack's slots (bpack_&lt;name&gt;.bin: one pool per card of an opened pack,
+    /// a card listed more often coming up more often). All editable, so vanilla packs can be changed without adding any new card.
     /// </summary>
     public sealed partial class PackDefPage : UserControl
     {
@@ -15,7 +16,10 @@ namespace WolfX.Types
         private ZibArchive? _archive;
         private readonly HashSet<string> _changed = [];
         private PackDefRecord? _shown;
+        private BattlePackContents? _battle;
         private bool _binding;
+        private readonly FlowLayoutPanel _slotBar = new() { Dock = DockStyle.Top, Height = 30, Visible = false, WrapContents = false };
+        private readonly ComboBox _slot = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 220 };
 
         public PackDefPage()
         {
@@ -23,6 +27,16 @@ namespace WolfX.Types
             SetEditable(false);
             btnOpen.Text = "Reload";
             btnBrowseZib.Visible = false;
+            // a battle pack: pick the slot, its pool is shown in the first list (repeats allowed: they are the odds)
+            _slotBar.Controls.Add(new Label { Text = "Slot:", AutoSize = true, Margin = new Padding(3, 7, 3, 3) });
+            _slotBar.Controls.Add(_slot);
+            _slotBar.Controls.Add(new Label
+            {
+                Text = "Each card of an opened battle pack is drawn from its slot's list; a card listed more often comes up more often.",
+                AutoSize = true, ForeColor = SystemColors.GrayText, Margin = new Padding(8, 7, 3, 3),
+            });
+            _detailsPanel.Controls.Add(_slotBar);
+            _slot.SelectedIndexChanged += (_, _) => ShowSlot();
             Wolf.Editors.GameFolderFiles.CurrentChanged += () => { if (IsHandleCreated) Open(); };
             HandleCreated += (_, _) => Open();
         }
@@ -101,6 +115,32 @@ namespace WolfX.Types
 
         private void SetEditable(bool editable) => _common.Enabled = _rare.Enabled = editable;
 
+        /// <summary>Reward pack: common + rare, each card once. Battle pack: the slot picker and one list, repeats allowed.</summary>
+        private void UseLayout(bool battle)
+        {
+            _slotBar.Visible = battle;
+            _rare.Visible = !battle;
+            _common.AllowDuplicates = battle;
+            _common.MaxCopies = battle ? 20 : 3;
+            if (!battle)
+                _common.Title = "Common cards:";
+        }
+
+        private void ShowSlot()
+        {
+            if (_battle == null || _slot.SelectedIndex < 0 || _slot.SelectedIndex >= _battle.Slots.Count)
+                return;
+            bool was = _binding;
+            _binding = true;
+            try
+            {
+                var pool = _battle.Slots[_slot.SelectedIndex];
+                _common.Title = $"Slot {_slot.SelectedIndex + 1}: {pool.Count} entries, {pool.Distinct().Count()} different cards";
+                _common.Ids = pool;
+            }
+            finally { _binding = was; }
+        }
+
         private void RecordSelected(PackDefRecord? record)
         {
             _shown = record;
@@ -117,21 +157,32 @@ namespace WolfX.Types
                     return;
                 }
 
-                if (!record.IsReward)
-                {
-                    SetEditable(false);
-                    _note.Text = "Battle pack contents (bpack files) can't be edited yet.";
-                    return;
-                }
-
+                _battle = null;
                 byte[]? data = _archive?.Get(record.ContentsFile);
                 if (data == null)
                 {
+                    UseLayout(false);
                     SetEditable(false);
                     _note.Text = _archive == null ? "packs.zib isn't in the open data, so the cards can't be shown." : $"{record.ContentsFile} isn't in packs.zib.";
                     return;
                 }
 
+                if (!record.IsReward)
+                {
+                    _battle = BattlePackContents.Parse(data);
+                    UseLayout(true);
+                    _slot.Items.Clear();
+                    for (int i = 0; i < _battle.Slots.Count; i++)
+                        _slot.Items.Add($"Slot {i + 1} ({_battle.Slots[i].Distinct().Count()} cards)");
+                    if (_slot.Items.Count > 0)
+                        _slot.SelectedIndex = 0;
+                    ShowSlot();
+                    SetEditable(true);
+                    _note.Text = $"{record.ContentsFile} (battle pack, {_battle.Slots.Count} slots): saved into packs.zib when you press Save.";
+                    return;
+                }
+
+                UseLayout(false);
                 var contents = PackContents.Parse(data);
                 _common.Ids = contents.Common;
                 _rare.Ids = contents.Rare;
@@ -143,8 +194,18 @@ namespace WolfX.Types
 
         private void Commit()
         {
-            if (_binding || _shown == null || _archive == null || !_shown.IsReward)
+            if (_binding || _shown == null || _archive == null)
                 return;
+            if (!_shown.IsReward)
+            {
+                if (_battle == null || _slot.SelectedIndex < 0)
+                    return;
+                _battle.Slots[_slot.SelectedIndex] = _common.Ids;
+                _slot.Items[_slot.SelectedIndex] = $"Slot {_slot.SelectedIndex + 1} ({_common.Ids.Distinct().Count()} cards)";
+                _archive.Set(_shown.ContentsFile, _battle.ToBytes());
+                _changed.Add(_shown.ContentsFile);
+                return;
+            }
 
             var contents = new PackContents();
             contents.Common.AddRange(_common.Ids);

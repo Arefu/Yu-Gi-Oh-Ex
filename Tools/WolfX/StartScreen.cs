@@ -26,9 +26,9 @@ namespace WolfX
             _flow.SuspendLayout();
             _flow.Controls.Clear();
             if (steamInstall != null)
-                _flow.Controls.Add(Choice("Open the Steam install", $"Found {Path.Combine(steamInstall, "YGO_2020.dat")}. Changes are saved into it; " +
-                                          "File > Restore the original archive undoes them.", () => OpenPath?.Invoke(steamInstall), main: true));
-            _flow.Controls.Add(Choice("Open YGO_2020.dat...", "The game's archive, in the game folder. Everything is read from it and saved back into it.",
+                _flow.Controls.Add(Choice("Open the Steam install", $"Found {Path.Combine(steamInstall, "YGO_2020.dat")}. It is never written: changes go to a small patch " +
+                                          "archive next to it (YGO_2020-Ex), which Yu-Gi-Oh-Core loads over it.", () => OpenPath?.Invoke(steamInstall), main: true));
+            _flow.Controls.Add(Choice("Open YGO_2020.dat...", "The game's archive, in the game folder. Everything is read from it; changes go to the YGO_2020-Ex patch next to it.",
                 () => OpenArchive?.Invoke(), main: steamInstall == null));
             _flow.Controls.Add(Choice("Open an extracted folder...", "A copy of the files taken out of YGO_2020.dat (bin, main, the .zib archives...), any folder " +
                                       "name. Changes are saved as files there.", () => OpenExtracted?.Invoke(), main: false));

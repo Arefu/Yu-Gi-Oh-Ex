@@ -1,6 +1,9 @@
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
+using System.Text.RegularExpressions;
+using Types;
+using Wolf.Editors;
 
 namespace WolfEx
 {
@@ -12,6 +15,8 @@ namespace WolfEx
     /// Everything is editable, as script or as blocks: changing a game card's script, or adding an entry of your own, is kept in
     /// %APPDATA%\WolfX\effect_library.json ("Save to my library", Ctrl+S); effect_reference.json is never written, so "Revert" gives the
     /// generated script back. The library is a tool for writing effects: nothing in it reaches the game until it is used on a card.
+    /// The entries are a tree: "What it does" groups them by genre (the game's own effect categories, bin\CARD_Genre.bin of the open game data -
+    /// a card with several genres is under each of them), "Script action" by what the script does first (search, revive, draw ...).
     /// </summary>
     internal sealed class EffectLibraryPanel : UserControl
     {
@@ -24,6 +29,8 @@ namespace WolfEx
             public bool Complete;
             public string[] Notes = [];
             public Origin Origin;
+            public string Action = "";   // the script's main action ("search", "destroy" ...)
+            public ulong Genres;          // CARD_Genre bits of the game card (0 = none or no game data)
 
             public override string ToString() =>
                 (Origin == Origin.Mine ? "★ " : Origin == Origin.Edited ? "✎ " : "") + (Complete || Origin == Origin.Mine ? "" : "~ ") + Name;
@@ -37,7 +44,9 @@ namespace WolfEx
         private readonly CheckBox _onlyComplete = new() { Text = "Only cards that are exactly this effect", Dock = DockStyle.Top, AutoSize = true };
         private readonly CheckBox _spellsOnly = new() { Text = "Spells and Traps only", Dock = DockStyle.Top, AutoSize = true };
         private readonly CheckBox _mineOnly = new() { Text = "Only mine and edited ones", Dock = DockStyle.Top, AutoSize = true };
-        private readonly ListBox _list = new() { Dock = DockStyle.Fill, IntegralHeight = false };
+        private GameFolderFiles? _genreSource;   // the game data the genres were read from
+        // root (grouping) -> category -> entries; a category's entries are added when it is opened
+        private readonly TreeView _tree = new() { Dock = DockStyle.Fill, HideSelection = false, ShowLines = true };
         private readonly TextBox _name = new() { Dock = DockStyle.Fill, Font = new Font("Segoe UI", 11F, FontStyle.Bold), BorderStyle = BorderStyle.None };
         private readonly Label _origin = new() { AutoSize = true, ForeColor = SystemColors.GrayText, Anchor = AnchorStyles.Right };
         private readonly TextBox _text = new() { Multiline = true, ScrollBars = ScrollBars.Vertical, Dock = DockStyle.Fill };
@@ -71,7 +80,7 @@ namespace WolfEx
 
             var split = new SplitContainer { Dock = DockStyle.Fill, FixedPanel = FixedPanel.Panel1 };
             var left = new Panel { Dock = DockStyle.Fill };
-            left.Controls.Add(_list);
+            left.Controls.Add(_tree);
             left.Controls.Add(_mineOnly);
             left.Controls.Add(_spellsOnly);
             left.Controls.Add(_onlyComplete);
@@ -105,13 +114,31 @@ namespace WolfEx
             _onlyComplete.CheckedChanged += (_, _) => Refill();
             _spellsOnly.CheckedChanged += (_, _) => Refill();
             _mineOnly.CheckedChanged += (_, _) => Refill();
-            _list.SelectedIndexChanged += (_, _) => Show(Current);
+            _tree.BeforeExpand += (_, e) => FillCategory(e.Node);
+            // WolfX opens the last game data after the pages are made (and File > Open changes it): read its genres each time
+            Action dataChanged = () =>
+            {
+                if (GameFolderFiles.Current != _genreSource)
+                    FillCategories();
+            };
+            GameFolderFiles.CurrentChanged += dataChanged;
+            Disposed += (_, _) => GameFolderFiles.CurrentChanged -= dataChanged;
+            VisibleChanged += (_, _) =>
+            {
+                if (Visible && GameFolderFiles.Current != null)
+                    FillCategories();   // genres saved on the Card genres page since (the open, picked entry and filters are kept)
+            };
+            _tree.AfterSelect += (_, _) =>
+            {
+                if (!_filling)
+                    Show(Current);
+            };
             _script.TextChanged += (_, _) => Edited(entry => entry.Script = _script.Text);
             _name.TextChanged += (_, _) => Edited(entry => entry.Name = _name.Text, mineOnly: true);
             _text.TextChanged += (_, _) => Edited(entry => entry.Text = _text.Text, mineOnly: true);
 
             LoadLibrary();
-            Refill();
+            FillCategories();
         }
 
         private static ToolStripButton Button(string text, string tip, Action click)
@@ -131,7 +158,7 @@ namespace WolfEx
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private Entry? Current => _list.SelectedItem as Entry;
+        private Entry? Current => _tree.SelectedNode?.Tag as Entry;
 
         // ---- reading and writing ----
 
@@ -153,6 +180,7 @@ namespace WolfEx
                                 Id = node["id"]?.GetValue<int>() ?? 0, Name = node["name"]?.GetValue<string>() ?? "", Kind = node["kind"]?.GetValue<string>() ?? "",
                                 Text = node["text"]?.GetValue<string>() ?? "", Script = script, GameScript = script, Complete = node["complete"]?.GetValue<bool>() ?? false,
                                 Notes = (node["notes"] as JsonArray)?.Select(n => n?.GetValue<string>() ?? "").ToArray() ?? [], Origin = Origin.Game,
+                                Action = node["action"]?.GetValue<string>() ?? ActionOf(script),
                             });
                         }
                 }
@@ -173,7 +201,7 @@ namespace WolfEx
                             _all.Insert(0, new Entry
                             {
                                 Name = node["name"]?.GetValue<string>() ?? "", Kind = node["kind"]?.GetValue<string>() ?? "", Text = node["text"]?.GetValue<string>() ?? "",
-                                Script = script, Complete = true, Origin = Origin.Mine,
+                                Script = script, Complete = true, Origin = Origin.Mine, Action = ActionOf(script),
                             });
                         else if (_all.FirstOrDefault(e => e.Origin == Origin.Game && e.Id == (node["id"]?.GetValue<int>() ?? -1)) is { } game)
                         {
@@ -215,34 +243,188 @@ namespace WolfEx
             }
         }
 
+        // ---- categories ----
+
+        /// <summary>One category node: its name and which entries belong to it.</summary>
+        private sealed record Category(string Name, Func<Entry, bool> Match);
+
+        private const string GenreRoot = "What it does", ActionRoot = "Script action";
+        private readonly List<(string Root, Category Category)> _categories = [];
+        private bool _filling;
+
+        // the script's first action: "on summon: search(deck, ...)" -> "search"; as("Card") -> "as (clone)"
+        private static readonly Regex FirstCall = new(@"(?:^|[;:]\s*)(?!on\b|once_per_turn\b|cost\b|if\b)(?<name>[a-z_]+)\s*\(", RegexOptions.Compiled | RegexOptions.Multiline);
+
+        private static string ActionOf(string script)
+        {
+            string code = string.Join("\n", script.Split('\n').Where(line => !line.TrimStart().StartsWith("//")));
+            var match = FirstCall.Match(code);
+            return !match.Success ? "" : match.Groups["name"].Value == "as" ? "as (clone)" : match.Groups["name"].Value;
+        }
+
+        /// <summary>Reads each game card's genres from the open game data (bin\CARD_Genre.bin by CARD_IntID.bin); none without game data.</summary>
+        private bool ReadGenres()
+        {
+            var files = GameFolderFiles.Current;
+            _genreSource = files;
+            foreach (var entry in _all)
+                entry.Genres = 0;
+            if (files == null)
+                return false;
+            try
+            {
+                if (files.Read(CardGenreTable.GamePath) is not { } genreBytes || files.Read(CardIdMap.GamePath) is not { } idBytes)
+                    return false;
+                var genres = CardGenreTable.Parse(genreBytes);
+                var ids = CardIdMap.Parse(idBytes);
+                foreach (var entry in _all)
+                {
+                    int id = entry.Id;
+                    if (entry.Origin == Origin.Mine || id <= 0)
+                        continue;
+                    int index = ids.InternalOf(id);
+                    if (index > 0 && index < genres.Masks.Length)
+                        entry.Genres = genres.Masks[index] & ~CardGenreTable.HiddenMask;
+                }
+                return true;
+            }
+            catch (Exception e) when (e is IOException or InvalidDataException or ArgumentException)
+            {
+                _status.Text = "Could not read the genres: " + e.Message;
+                return false;
+            }
+        }
+
+        /// <summary>The categories of both groupings, biggest first (genres need the game data: read again when it changes).</summary>
+        private void FillCategories()
+        {
+            _categories.Clear();
+            if (ReadGenres())
+            {
+                var genres = new List<Category>();
+                foreach (var genre in CardGenreTable.Genres.Where(g => !g.Hidden && !g.Unused))
+                {
+                    ulong bit = 1UL << genre.Bit;
+                    if (_all.Any(e => (e.Genres & bit) != 0))
+                        genres.Add(new Category(genre.Name, e => (e.Genres & bit) != 0));
+                }
+                foreach (var category in genres.OrderByDescending(c => _all.Count(c.Match)))
+                    _categories.Add((GenreRoot, category));
+                if (_all.Any(e => e.Genres == 0))
+                    _categories.Add((GenreRoot, new Category("No genre", e => e.Genres == 0)));
+            }
+            foreach (var group in _all.GroupBy(e => e.Action).OrderByDescending(g => g.Count()))
+            {
+                string action = group.Key;
+                _categories.Add((ActionRoot, new Category(action.Length == 0 ? "(no action)" : action, e => e.Action == action)));
+            }
+            Refill();
+        }
+
         // ---- the list ----
 
+        private bool Passes(Entry entry)
+        {
+            string filter = _filter.Text.Trim();
+            if (_onlyComplete.Checked && !entry.Complete)
+                return false;
+            if (_spellsOnly.Checked && entry.Kind != "Spell" && entry.Kind != "Trap")
+                return false;
+            if (_mineOnly.Checked && entry.Origin == Origin.Game)
+                return false;
+            return filter.Length == 0 || entry.Name.Contains(filter, StringComparison.OrdinalIgnoreCase) || entry.Text.Contains(filter, StringComparison.OrdinalIgnoreCase)
+                   || entry.Script.Contains(filter, StringComparison.OrdinalIgnoreCase);
+        }
+
+        private static string PathOf(TreeNode? node) => node == null ? "" : node.Parent == null ? node.Name : PathOf(node.Parent) + "/" + node.Name;
+
+        /// <summary>Adds a category's entries the first time it is opened (its placeholder child goes).</summary>
+        private void FillCategory(TreeNode node)
+        {
+            if (node.Tag is not Category category || node.Nodes.Count != 1 || node.Nodes[0].Tag != null)
+                return;
+            _tree.BeginUpdate();
+            node.Nodes.Clear();
+            foreach (var entry in _all.Where(e => category.Match(e) && Passes(e)))
+                node.Nodes.Add(new TreeNode(entry.ToString()) { Tag = entry, Name = entry.GetHashCode().ToString() });
+            _tree.EndUpdate();
+        }
+
+        /// <summary>Builds the tree again (filters changed), keeping what was open and the picked entry where it was.</summary>
         private void Refill(Entry? select = null)
         {
             select ??= Current;
-            string filter = _filter.Text.Trim();
-            _list.BeginUpdate();
-            _list.Items.Clear();
-            foreach (var entry in _all)
+            string selectedPath = PathOf(_tree.SelectedNode?.Tag is Entry ? _tree.SelectedNode.Parent : _tree.SelectedNode);
+            var open = new HashSet<string>();
+            foreach (TreeNode root in _tree.Nodes)
             {
-                if (_onlyComplete.Checked && !entry.Complete)
-                    continue;
-                if (_spellsOnly.Checked && entry.Kind != "Spell" && entry.Kind != "Trap")
-                    continue;
-                if (_mineOnly.Checked && entry.Origin == Origin.Game)
-                    continue;
-                if (filter.Length > 0 && !entry.Name.Contains(filter, StringComparison.OrdinalIgnoreCase) && !entry.Text.Contains(filter, StringComparison.OrdinalIgnoreCase)
-                    && !entry.Script.Contains(filter, StringComparison.OrdinalIgnoreCase))
-                    continue;
-                _list.Items.Add(entry);
+                if (root.IsExpanded)
+                    open.Add(PathOf(root));
+                foreach (TreeNode category in root.Nodes)
+                    if (category.IsExpanded)
+                        open.Add(PathOf(category));
             }
-            _list.EndUpdate();
-            if (select != null && _list.Items.Contains(select))
-                _list.SelectedItem = select;
-            else if (_list.Items.Count > 0)
-                _list.SelectedIndex = 0;
+            bool first = _tree.Nodes.Count == 0;
+            bool filtering = _filter.Text.Trim().Length > 0;
+
+            _filling = true;
+            _tree.BeginUpdate();
+            try
+            {
+                _tree.Nodes.Clear();
+                var all = _all.Where(Passes).ToList();
+                foreach (string rootName in new[] { GenreRoot, ActionRoot })
+                {
+                    var root = _tree.Nodes.Add(rootName, rootName);
+                    var categories = _categories.Where(c => c.Root == rootName).ToList();
+                    if (categories.Count == 0)
+                        root.Nodes.Add(rootName == GenreRoot ? "(no genres: the game data has no bin\\CARD_Genre.bin)" : "(no entries)");
+                    foreach (var (_, category) in categories)
+                    {
+                        int count = all.Count(category.Match);
+                        if (count == 0 && (filtering || _onlyComplete.Checked || _spellsOnly.Checked || _mineOnly.Checked))
+                            continue;   // empty because of the filters: hidden
+                        var node = root.Nodes.Add(category.Name, $"{category.Name} ({count})");
+                        node.Tag = category;
+                        node.Nodes.Add(new TreeNode("...") { Tag = null });   // placeholder: filled on opening
+                        if (open.Contains(PathOf(node)) || (filtering && count > 0) || PathOf(node) == selectedPath)
+                        {
+                            FillCategory(node);
+                            node.Expand();
+                        }
+                    }
+                    if (first || open.Contains(PathOf(root)) || filtering)
+                        root.Expand();
+                }
+            }
+            finally
+            {
+                _tree.EndUpdate();
+                _filling = false;
+            }
+
+            // the picked entry: where it was, else its first place in the tree
+            TreeNode? target = null;
+            if (select != null)
+            {
+                var categoryNode = _tree.Nodes.Find(selectedPath.Split('/').LastOrDefault() ?? "", true)
+                    .FirstOrDefault(n => PathOf(n) == selectedPath && n.Tag is Category);
+                if (categoryNode == null)
+                    categoryNode = _tree.Nodes.Cast<TreeNode>().SelectMany(r => r.Nodes.Cast<TreeNode>())
+                        .FirstOrDefault(n => n.Tag is Category c && c.Match(select) && Passes(select));
+                if (categoryNode != null)
+                {
+                    FillCategory(categoryNode);
+                    target = categoryNode.Nodes.Cast<TreeNode>().FirstOrDefault(n => n.Tag == select);
+                }
+            }
+            if (target != null)
+            {
+                _tree.SelectedNode = target;
+                target.EnsureVisible();
+            }
             else
-                Show(null);
+                Show(Current);
         }
 
         private void Show(Entry? entry)
@@ -289,19 +471,21 @@ namespace WolfEx
                 entry.Origin = Origin.Game;
             _unsaved.Add(entry);
             _revert.Enabled = entry.Origin != Origin.Game;
-            int index = _list.SelectedIndex;
-            _binding = true;
-            try { _list.Items[index] = entry; }   // redraws its name and mark
-            finally { _binding = false; }
+            // its name and mark, wherever it is in the tree
+            string text = entry.ToString();
+            foreach (var node in _tree.Nodes.Find(entry.GetHashCode().ToString(), true).Where(n => n.Tag == entry))
+                node.Text = text;
             _status.Text = "Changed: Save to my library (Ctrl+S) keeps it.";
         }
 
         private void NewEntry()
         {
             var entry = new Entry { Name = "My effect", Kind = "Spell", Text = "What the effect does, in words.", Script = Current?.Script ?? "draw(1);", Complete = true, Origin = Origin.Mine };
+            entry.Action = ActionOf(entry.Script);
             _all.Insert(0, entry);
             _unsaved.Add(entry);
             _filter.Text = "";
+            FillCategories();
             Refill(entry);
             _name.Focus();
             _name.SelectAll();
@@ -316,9 +500,10 @@ namespace WolfEx
             {
                 if (MessageBox.Show(this, $"Delete \"{entry.Name}\" from your library?", "Effect library", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
                     return;
-                int index = _list.SelectedIndex;
+                var next = _tree.SelectedNode?.NextNode?.Tag as Entry;
                 _all.Remove(entry);
-                Refill(_list.Items.Count > index + 1 ? (Entry)_list.Items[index + 1] : null);
+                FillCategories();   // its action may have been the only one of its kind
+                Refill(next);
             }
             else
             {

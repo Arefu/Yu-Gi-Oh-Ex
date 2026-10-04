@@ -3,6 +3,7 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using Wolf.Editors;
 using WolfX;
+using WolfX.Types;
 
 namespace WolfEx
 {
@@ -149,6 +150,39 @@ namespace WolfEx
                 }
             }
 
+            /// <summary>
+            /// The card whose name this one is treated as ("sameName": { "card": 4068, "always": true } in cards.json, kept in Extra; 0 = its
+            /// own name). Yu-Gi-Oh-MoreCards puts it in the card's identity ids, as bin\CARD_Same.bin does for the game's cards (docs/CardSame.md).
+            /// </summary>
+            public int SameNameCard
+            {
+                get => Extra?["sameName"] switch
+                {
+                    JsonObject same when same["card"] is JsonValue value && value.TryGetValue<int>(out int card) => card,
+                    JsonValue value when value.TryGetValue<int>(out int card) => card,
+                    _ => 0,
+                };
+                set => SetSameName(value, SameNameAlways);
+            }
+
+            /// <summary>True: always treated as <see cref="SameNameCard"/> (Harpie Lady 1); false: only while an effect says so (Cyber Dragon Zwei).</summary>
+            public bool SameNameAlways
+            {
+                get => Extra?["sameName"] is not JsonObject same || same["always"] is not JsonValue value || !value.TryGetValue<bool>(out bool always) || always;
+                set => SetSameName(SameNameCard, value);
+            }
+
+            private void SetSameName(int card, bool always)
+            {
+                if (card <= 0)
+                {
+                    Extra?.Remove("sameName");
+                    return;
+                }
+                Extra ??= [];
+                Extra["sameName"] = new JsonObject { ["card"] = card, ["always"] = always };
+            }
+
             public bool IsSpellOrTrap => Kind is "Spell" or "Trap";
             public override string ToString() => $"{Id} - {Name}";
 
@@ -235,6 +269,8 @@ namespace WolfEx
             if (sender == _kind)
                 ApplyKindRules();
             Commit();
+            if (!_binding && (sender == _kind || sender == _icon))
+                BindRequired();   // the Required cards tab follows the kind (Fusion, Ritual) and the icon (a Ritual Spell)
         }
 
         private void btnAdd_Click(object? sender, EventArgs e) => AddCard(null);
@@ -244,6 +280,45 @@ namespace WolfEx
         private void btnDelete_Click(object? sender, EventArgs e) => DeleteCard();
 
         private void btnChooseArt_Click(object? sender, EventArgs e) => ChooseArt();
+
+        private void ShowSameName(CardModel card)
+        {
+            int same = card.SameNameCard;
+            _sameName.Text = same == 0 ? "(its own)" : $"{CardCatalog.NameOf(same)} ({same})";
+            _sameMode.SelectedIndex = card.SameNameAlways ? 0 : 1;
+            _sameMode.Enabled = btnSameClear.Enabled = same != 0;
+        }
+
+        private void btnSamePick_Click(object? sender, EventArgs e)
+        {
+            if (Selected is not { } card)
+                return;
+            using var picker = new CardPickerDialog(CardCatalog.Get(this), $"{card.Name}'s name is treated as", askCopies: false, maxCopies: 1);
+            if (picker.ShowDialog(this) != DialogResult.OK || picker.Result.Count == 0)
+                return;
+            int target = picker.Result[0].Card.Id;
+            if (target == card.Id)
+                return;
+            if (target >= global::Types.CardSameTable.CardLimit)
+                _status.Text = "A custom card as the target: the game compares ids, so only cards treated as the same custom card match each other.";
+            card.SameNameCard = target;
+            ShowSameName(card);
+        }
+
+        private void btnSameClear_Click(object? sender, EventArgs e)
+        {
+            if (Selected is not { } card)
+                return;
+            card.SameNameCard = 0;
+            ShowSameName(card);
+        }
+
+        private void SameMode_Changed(object? sender, EventArgs e)
+        {
+            if (_binding || Selected is not { } card || card.SameNameCard == 0)
+                return;
+            card.SameNameAlways = _sameMode.SelectedIndex == 0;
+        }
 
         private void btnArchetypes_Click(object? sender, EventArgs e)
         {
@@ -432,6 +507,7 @@ namespace WolfEx
             SetEditorEnabled(card != null);
             if (card == null)
             {
+                BindRequired();
                 ShowSummary();
                 return;
             }
@@ -454,8 +530,10 @@ namespace WolfEx
                 Select(_limitation, card.Limitation);
                 _copies.Value = Math.Clamp(card.Copies, 0, 3);
                 _archetypes.Text = ArchetypeCatalog.Describe(card.Archetypes);
+                ShowSameName(card);
                 ApplyKindRules();
                 RefreshArt(card);
+                BindRequired();
             }
             finally { _binding = false; }
             ShowSummary();

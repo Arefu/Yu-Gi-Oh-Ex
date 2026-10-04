@@ -238,7 +238,7 @@ namespace WolfEx
                     // The game's cost functions borrowed from a card that pays exactly this cost (slot 3), with this card's own amount.
                     compiled["cost"] = cost2.discardCost() is { } discard
                         ? new JsonObject { ["from"] = DiscardCostSource, ["amount"] = int.Parse(discard.NUMBER().GetText()) }
-                        : new JsonObject { ["from"] = PayCostSource, ["amount"] = int.Parse(cost2.payCost().NUMBER().GetText()) };
+                        : new JsonObject { ["from"] = PayCostSource, ["amount"] = int.Parse(cost2.payCost().NUMBER().GetText()), ["check"] = "always" };   // Delinquent Duo's own condition is "the opponent has a card in hand"
                 }
                 if (body.trigger() is { } trigger)
                 {

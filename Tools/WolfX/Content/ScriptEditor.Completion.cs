@@ -5,7 +5,8 @@ namespace WolfEx
 {
     /// <summary>
     /// Ctrl+Space IntelliSense for the EffectScript editor: a list of what can come next at the caret (worked out from the text before it) and a
-    /// hint next to the highlighted entry saying what it does. Typing two letters offers the list on its own.
+    /// hint above the line saying what the highlighted entry does. Typing two letters offers the fitting words on their own; Ctrl+Space also
+    /// lists every other word after them. An icon marks each entry's kind (Action, Keyword, Trigger, Field, Value, "text", operator).
     /// </summary>
     internal sealed partial class ScriptEditor
     {
@@ -86,13 +87,48 @@ namespace WolfEx
         private static readonly string[] EqualsOnly = { "=" };
         private static readonly string[] Comparisons = { "=", "<=", ">=", "<", ">" };
 
+        // The icon in front of each entry of the list (the number after the type separator picks it), like Visual Studio's.
+        private const char TypeSeparator = '\u001F';
+        private const int IconAction = 1, IconKeyword = 2, IconTrigger = 3, IconField = 4, IconValue = 5, IconText = 6, IconOperator = 7;
+
+        private static int IconOf(string item) =>
+            item.StartsWith('"') ? IconText
+            : Actions.Contains(item) ? IconAction
+            : Triggers.Contains(item) ? IconTrigger
+            : Fields.Contains(item) ? IconField
+            : Values.Contains(item) ? IconValue
+            : Comparisons.Contains(item) ? IconOperator
+            : IconKeyword;
+
+        /// <summary>Every word EffectScript knows: Ctrl+Space lists these after the ones that fit at the caret.</summary>
+        private static IEnumerable<string> Everything =>
+            Actions.Concat(Keywords).Concat(Triggers).Concat(Fields).Concat(Kinds).Concat(Values).Concat(Docs.Keys).Distinct(StringComparer.OrdinalIgnoreCase);
+
+        private void RegisterIcons()
+        {
+            foreach (var info in KindInfo)
+            {
+                using var bitmap = IconBitmap(info.Kind);
+                RegisterRgbaImage(info.Kind, bitmap);
+            }
+        }
+
         private void InitCompletion()
         {
             AutoCSeparator = '\n';
+            AutoCTypeSeparator = TypeSeparator;
             AutoCIgnoreCase = true;
-            AutoCSelectionChange += (_, e) => ShowHint(e.Text);
-            AutoCCancelled += (_, _) => CallTipCancel();
-            AutoCCompleted += (_, _) => CallTipCancel();
+            AutoCOrder = Order.Custom;   // the entries that fit at the caret first, then everything else
+            AutoCMaxHeight = 14;
+            AutoCMaxWidth = 0;
+            CallTipSetPosition(true);    // the word hint goes above the line, clear of the list
+            RegisterIcons();
+            // Scintilla's call tip closes the completion list (CallTipShow cancels it), so the hint for the highlighted entry is a tooltip of its own
+            AutoCSelectionChange += (_, e) => ShowListHint(e.Text);
+            AutoCCancelled += (_, _) => HideListHint();
+            AutoCCompleted += (_, _) => HideListHint();
+            LostFocus += (_, _) => HideListHint();
+            UpdateUI += (_, _) => ShowWordHint();
             KeyDown += (_, e) =>
             {
                 if (e.Control && e.KeyCode == Keys.Space)
@@ -104,16 +140,59 @@ namespace WolfEx
             };
         }
 
-        private void ShowHint(string item)
+        private static string? HintFor(string item)
         {
-            string key = item.Trim('"');
-            string? hint = Docs.TryGetValue(key, out var d) ? d : ValueDocs.TryGetValue(key, out var v) && v.Length > 0 ? v : Comparisons.Contains(key) ? "Comparison." : null;
-            if (hint == null)
+            int separator = item.IndexOf(TypeSeparator);
+            string key = (separator >= 0 ? item[..separator] : item).Trim('"');
+            return Docs.TryGetValue(key, out var d) ? d : ValueDocs.TryGetValue(key, out var v) && v.Length > 0 ? v : Comparisons.Contains(key) ? "Comparison." : null;
+        }
+
+        private readonly ToolTip _listHint = new() { UseAnimation = false, UseFading = false };
+        private int _listLeft, _listWidth;
+
+        /// <summary>The hint for the entry highlighted in the list, to the right of the list.</summary>
+        private void ShowListHint(string item)
+        {
+            if (HintFor(item) is not { } hint)
             {
-                CallTipCancel();
+                HideListHint();
                 return;
             }
-            CallTipShow(CurrentPosition, hint);
+            var list = ListScreenBounds();
+            _listHint.Show(hint, this, PointToClient(new Point(list.Right + 4, list.Top)));
+        }
+
+        private void HideListHint()
+        {
+            _listHint.Hide(this);
+            HideStrip();
+        }
+
+        private string _wordHinted = "";
+
+        /// <summary>With no list open: the caret on a word EffectScript knows shows what it does above the line.</summary>
+        private void ShowWordHint()
+        {
+            if (AutoCActive)
+                return;
+            if (_strip?.Visible == true)
+                HideListHint();   // the list closed without an event (the caret moved off it)
+            int position = CurrentPosition;
+            int start = WordStartPosition(position, true), end = WordEndPosition(position, true);
+            string word = end > start ? GetTextRange(start, end) : "";
+            string? hint = word.Length > 0 && InCode() ? HintFor(word) : null;
+            if (hint == null)
+            {
+                if (_wordHinted.Length > 0 || CallTipActive)
+                    CallTipCancel();
+                _wordHinted = "";
+                return;
+            }
+            string key = $"{start}:{word}";
+            if (key == _wordHinted && CallTipActive)
+                return;
+            _wordHinted = key;
+            CallTipShow(start, hint);
         }
 
         /// <summary>What can follow at the caret, judged from the text before it. The second value is the part of the word already typed.</summary>
@@ -211,10 +290,47 @@ namespace WolfEx
             var (items, typed, _) = Suggest();
             if (automatic && typed < 2)
                 return;
-            var filtered = items.Where(i => typed == 0 || i.Trim('"').StartsWith(GetTextRange(CurrentPosition - typed, typed), StringComparison.OrdinalIgnoreCase)).ToList();
+            var ordered = items.OrderBy(i => i, StringComparer.OrdinalIgnoreCase).ToList();
+            // Ctrl+Space in code (not in a comment or a string): every word follows the ones that fit here, so nothing is out of reach
+            if (!automatic && InCode())
+                ordered.AddRange(Everything.Where(w => !items.Contains(w, StringComparer.OrdinalIgnoreCase)).OrderBy(w => w, StringComparer.OrdinalIgnoreCase));
+            string prefix = GetTextRange(CurrentPosition - typed, typed);
+            var filtered = ordered.Where(i => typed == 0 || i.Trim('"').StartsWith(prefix, StringComparison.OrdinalIgnoreCase)).ToList();
             if (filtered.Count == 0)
                 return;
-            AutoCShow(typed, string.Join("\n", filtered.OrderBy(i => i, StringComparer.OrdinalIgnoreCase)));
+            // inside a string the entries are archetype names
+            bool code = InCode();
+            filtered = filtered.Distinct(StringComparer.Ordinal).ToList();
+            var kinds = filtered.ToDictionary(i => i, i => code ? IconOf(i) : IconText, StringComparer.Ordinal);
+            var present = kinds.Values.Distinct().ToList();
+            // the kinds picked on the filter strip (ScriptEditor.Filters.cs): only those, or everything when none is picked
+            var shown = _onlyKinds.Count == 0 ? filtered : filtered.Where(i => _onlyKinds.Contains(kinds[i])).ToList();
+            if (shown.Count == 0)
+            {
+                _onlyKinds.Clear();   // typing left none of the picked kinds: show everything again
+                shown = filtered;
+            }
+            CallTipCancel();
+            _wordHinted = "";
+            _lastAutomatic = automatic;
+            // where the list opens (under the word being typed) and about how wide it is, used when its window can't be found
+            _listLeft = PointXFromPosition(CurrentPosition - typed);
+            using (var font = new Font(Styles[Style.Default].Font, Styles[Style.Default].SizeF))
+                _listWidth = shown.Max(i => TextRenderer.MeasureText(i, font).Width) + 40;
+            AutoCShow(typed, string.Join("\n", shown.Select(i => $"{i}{TypeSeparator}{kinds[i]}")));
+            if (!AutoCActive)
+                return;
+            ShowStrip(present);
+            if (AutoCCurrent >= 0 && AutoCCurrent < shown.Count)
+                ShowListHint(shown[AutoCCurrent]);   // the first entry is highlighted without a selection-change event
+        }
+
+        /// <summary>The caret is in code: not in a // comment or an open string.</summary>
+        private bool InCode()
+        {
+            string before = GetTextRange(0, CurrentPosition);
+            string line = before[(before.LastIndexOf('\n') + 1)..];
+            return !line.Contains("//") && line.Count(c => c == '"') % 2 == 0;
         }
     }
 }

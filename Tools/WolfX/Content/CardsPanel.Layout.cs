@@ -37,6 +37,9 @@ namespace WolfEx
         private readonly Label _levelLabel = new() { Text = "Level:", AutoSize = true, Anchor = AnchorStyles.Left, Margin = new Padding(3, 7, 3, 3) };
         private readonly Label _archetypes = new() { AutoSize = true, MaximumSize = new Size(420, 0), Margin = new Padding(3, 6, 3, 3) };
         private readonly Button btnArchetypes = new() { Text = "Edit archetypes...", AutoSize = true };
+        private readonly Label _sameName = new() { AutoSize = true, MaximumSize = new Size(300, 0), Margin = new Padding(3, 7, 3, 3) };
+        private readonly ComboBox _sameMode = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 170, Items = { "always", "while an effect says so" } };
+        private readonly Button btnSamePick = new() { Text = "Pick card...", AutoSize = true }, btnSameClear = new() { Text = "Own name", AutoSize = true };
 
         private readonly TextBox _name = new() { Dock = DockStyle.Top };
         private readonly TextBox _desc = new() { Dock = DockStyle.Fill, Multiline = true, AcceptsReturn = true, ScrollBars = ScrollBars.Vertical, Font = new Font("Segoe UI", 10f) };
@@ -112,6 +115,7 @@ namespace WolfEx
             _tabs.TabPages.Add(PropertiesTab());
             _tabs.TabPages.Add(TextTab());
             _tabs.TabPages.Add(ArtTab());
+            _tabs.TabPages.Add(RequiredTab());
             upright.Panel2.Controls.Add(_tabs);
             var right = new Panel { Dock = DockStyle.Fill };
             right.Controls.Add(upright);
@@ -142,6 +146,10 @@ namespace WolfEx
             _arrows.Changed += () => Editor_Changed(_arrows, EventArgs.Empty);
             _desc.TextChanged += Editor_Changed;
             btnArchetypes.Click += btnArchetypes_Click;
+            btnSamePick.Click += btnSamePick_Click;
+            btnSameClear.Click += btnSameClear_Click;
+            _sameMode.SelectedIndex = 0;
+            _sameMode.SelectedIndexChanged += SameMode_Changed;
             btnChooseArt.Click += btnChooseArt_Click;
         }
 
@@ -177,6 +185,7 @@ namespace WolfEx
                 (Caption("Card id:"), _id), (Caption("Kind:"), _kind), (Caption("Attribute:"), _attribute), (Caption("Type:"), _type),
                 (_levelLabel, _level), (Caption("ATK:"), _atk), (Caption("DEF:"), _def), (Caption("Spell / Trap icon:"), _icon),
                 (Caption("Link arrows:"), _arrows), (Caption("Pendulum scale:"), _scale), (Caption("Archetypes:"), Row(_archetypes, btnArchetypes)),
+                (Caption("Same name as:"), Row(_sameName, _sameMode, btnSamePick, btnSameClear)),
                 (Caption("Limitation:"), _limitation), (Caption("Owned from the start:"), _copies),
             };
             for (int row = 0; row < rows.Length; row++)

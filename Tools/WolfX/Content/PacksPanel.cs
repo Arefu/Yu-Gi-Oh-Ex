@@ -42,15 +42,16 @@ namespace WolfEx
             public Dictionary<string, string> Texts = [];
 
             public bool HasChanges => IsNew || ExtraCommon.Trim().Length > 0 || ExtraRare.Trim().Length > 0;
-            public override string ToString() => IsNew
-                ? $"+ {Name}  -  {Titles.GetValueOrDefault("E", "(new pack)")}  (new, id {Id})"
-                : (HasChanges ? "* " : "  ") + $"{Name}  -  {Title}";
+            public override string ToString() => $"{Name}  -  {Titles.GetValueOrDefault("E", "(new pack)")}  (id {Id})";
         }
 
         private readonly List<PackEntry> _packs = [];
         private readonly HashSet<int> _gameIds = [];
         private readonly Dictionary<int, string> _seriesNames = [];   // series -> the titles of its first packs, to recognise the tab
         private bool _replaceAll; // packs.json "replaceDefaults", kept as it was read
+        // packs.json entries that add to (or replace) a game pack's cards: kept as they are and written back, but not listed here any more -
+        // the game's packs are edited on the Packs page, straight in packs.zib
+        private Dictionary<string, (string Common, string Rare, bool Replace)> _kept = [];
         private bool _binding;
 
         // the new-pack editor (built in code, under the designer's controls)
@@ -187,34 +188,14 @@ namespace WolfEx
                     foreach (var record in records)
                         _gameIds.Add((int)record.Id);
 
+                    // the game's packs are only read for what a new pack needs: taken ids and names, the shop tabs, art and unlock choices
                     foreach (var record in records.Where(record => record.IsReward).OrderBy(record => record.Series).ThenBy(record => record.Id))
                     {
-                        var entry = new PackEntry { Name = record.Name, Title = record.Title };
                         _gamePackNames.Add(record.Name);
                         if (!_seriesNames.ContainsKey((int)record.Series))
                             _seriesNames[(int)record.Series] = record.Title;
                         else if (!_seriesNames[(int)record.Series].Contains(','))
                             _seriesNames[(int)record.Series] += ", " + record.Title + "...";
-
-                        if (archive != null)
-                        {
-                            var packData = archive.Entries.FirstOrDefault(e => e.Name.Equals(record.ContentsFile, StringComparison.OrdinalIgnoreCase))?.Data;
-                            if (packData != null)
-                            {
-                                var contents = PackContents.Parse(packData);
-                                entry.Common = contents.Common.Count;
-                                entry.Rare = contents.Rare.Count;
-                            }
-                        }
-
-                        if (additions.TryGetValue(record.Name, out var extra))
-                        {
-                            entry.ExtraCommon = extra.Common;
-                            entry.ExtraRare = extra.Rare;
-                            entry.Replace = extra.Replace;
-                            additions.Remove(record.Name);
-                        }
-                        _packs.Add(entry);
                     }
                 }
             }
@@ -223,9 +204,7 @@ namespace WolfEx
                 MessageBox.Show($"Could not read the game's packs:\n{ex.Message}", "Packs", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            // Packs in packs.json the game data does not list are kept, so nothing is lost on save.
-            foreach (var (name, extra) in additions)
-                _packs.Add(new PackEntry { Name = name, Title = "(not in the game data)", ExtraCommon = extra.Common, ExtraRare = extra.Rare, Replace = extra.Replace });
+            _kept = additions;
 
             _packs.AddRange(ReadNewPacks(jsonPath));
 
@@ -255,16 +234,16 @@ namespace WolfEx
             var problems = new List<string>();
             var array = new JsonArray();
 
-            foreach (var pack in _packs.Where(pack => !pack.IsNew && pack.HasChanges))
+            foreach (var (name, kept) in _kept)
             {
-                var common = ParseIds(pack.ExtraCommon, problems, pack.Name);
-                var rare = ParseIds(pack.ExtraRare, problems, pack.Name);
+                var common = ParseIds(kept.Common, problems, name);
+                var rare = ParseIds(kept.Rare, problems, name);
                 array.Add(new JsonObject
                 {
-                    ["pack"] = pack.Name,
+                    ["pack"] = name,
                     ["common"] = new JsonArray(common.Select(id => (JsonNode)id).ToArray()),
                     ["rare"] = new JsonArray(rare.Select(id => (JsonNode)id).ToArray()),
-                    ["replace"] = pack.Replace,
+                    ["replace"] = kept.Replace,
                 });
             }
 
@@ -464,7 +443,7 @@ namespace WolfEx
         {
             if (Selected is not { IsNew: true } pack)
             {
-                MessageBox.Show("Pick a new pack (+) to remove; the game's packs stay.", "Packs", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pick a new pack to remove.", "New packs", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             int index = _list.SelectedIndex;
@@ -487,10 +466,11 @@ namespace WolfEx
             var pack = Selected;
             SetEditorEnabled(pack != null);
             _newBox.Visible = pack?.IsNew == true;
-            _replace.Visible = pack?.IsNew != true;
+            _replace.Visible = false;   // only meant something for the game's packs, which are edited on the Packs page now
             if (pack == null)
             {
-                _info.Text = "The game's packs are listed when the game folder is set.";
+                _info.Text = "No new packs yet: New pack adds one. (The cards in the game's own packs are edited on the Packs page.)" +
+                             (_kept.Count > 0 ? $" packs.json also changes {_kept.Count} of the game's packs; that is kept as it is." : "");
                 return;
             }
 

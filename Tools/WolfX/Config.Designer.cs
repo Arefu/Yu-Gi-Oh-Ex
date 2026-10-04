@@ -23,6 +23,8 @@ namespace WolfX.WolfX.File_Type_UI
             browseButton = new Button();
             pathBox = new TextBox();
             split = new SplitContainer();
+            listSplit = new SplitContainer();
+            sectionTree = new TreeView();
             grid = new DataGridView();
             colSection = new DataGridViewTextBoxColumn();
             colSetting = new DataGridViewTextBoxColumn();
@@ -41,6 +43,10 @@ namespace WolfX.WolfX.File_Type_UI
             split.Panel1.SuspendLayout();
             split.Panel2.SuspendLayout();
             split.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)listSplit).BeginInit();
+            listSplit.Panel1.SuspendLayout();
+            listSplit.Panel2.SuspendLayout();
+            listSplit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
             bottomPanel.SuspendLayout();
             SuspendLayout();
@@ -101,12 +107,35 @@ namespace WolfX.WolfX.File_Type_UI
             split.Location = new Point(0, 76);
             split.Name = "split";
             split.Orientation = Orientation.Horizontal;
-            split.Panel1.Controls.Add(grid);
+            split.Panel1.Controls.Add(listSplit);
             split.Panel2.Controls.Add(helpText);
             split.Panel2.Controls.Add(helpTitle);
             split.Size = new Size(1180, 560);
             split.SplitterDistance = 400;
             split.TabIndex = 1;
+            //
+            // listSplit
+            //
+            listSplit.Dock = DockStyle.Fill;
+            listSplit.FixedPanel = FixedPanel.Panel1;
+            listSplit.Name = "listSplit";
+            listSplit.Panel1.Controls.Add(sectionTree);
+            listSplit.Panel1MinSize = 150;
+            listSplit.Panel2.Controls.Add(grid);
+            listSplit.Size = new Size(1180, 400);
+            listSplit.SplitterDistance = 260;
+            listSplit.TabIndex = 0;
+            //
+            // sectionTree
+            //
+            sectionTree.Dock = DockStyle.Fill;
+            sectionTree.FullRowSelect = true;
+            sectionTree.HideSelection = false;
+            sectionTree.ItemHeight = 20;
+            sectionTree.Name = "sectionTree";
+            sectionTree.ShowLines = false;
+            sectionTree.TabIndex = 0;
+            sectionTree.AfterSelect += sectionTree_AfterSelect;
             //
             // grid
             //
@@ -122,7 +151,7 @@ namespace WolfX.WolfX.File_Type_UI
             grid.Name = "grid";
             grid.RowHeadersVisible = false;
             grid.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            grid.TabIndex = 0;
+            grid.TabIndex = 1;
             grid.CellValueChanged += grid_CellValueChanged;
             grid.CurrentCellDirtyStateChanged += grid_CurrentCellDirtyStateChanged;
             grid.DataError += grid_DataError;
@@ -133,6 +162,7 @@ namespace WolfX.WolfX.File_Type_UI
             colSection.HeaderText = "Plugin";
             colSection.Name = "colSection";
             colSection.ReadOnly = true;
+            colSection.Visible = false;   // the plugin list on the left says which plugin the rows belong to
             colSection.Width = 200;
             //
             // colSetting
@@ -241,7 +271,7 @@ namespace WolfX.WolfX.File_Type_UI
             MinimumSize = new Size(800, 520);
             Name = "Config";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Config Editor";
+            Text = "Plugin Settings (Config.ini)";
             Load += Config_Load;
             topPanel.ResumeLayout(false);
             topPanel.PerformLayout();
@@ -251,6 +281,10 @@ namespace WolfX.WolfX.File_Type_UI
             ((System.ComponentModel.ISupportInitialize)split).EndInit();
             split.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)grid).EndInit();
+            listSplit.Panel1.ResumeLayout(false);
+            listSplit.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)listSplit).EndInit();
+            listSplit.ResumeLayout(false);
             bottomPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -263,6 +297,8 @@ namespace WolfX.WolfX.File_Type_UI
         private Button browseButton;
         private TextBox pathBox;
         private SplitContainer split;
+        private SplitContainer listSplit;
+        private TreeView sectionTree;
         private DataGridView grid;
         private DataGridViewTextBoxColumn colSection;
         private DataGridViewTextBoxColumn colSetting;
