@@ -99,6 +99,10 @@
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Fusion.cpp" />
+    <ClCompile Include="Ritual.cpp" />
+    <ClCompile Include="SynchroXyz.cpp" />
+    <ClCompile Include="SummonJson.cpp" />
+    <ClCompile Include="CodePatch.cpp" />
     <ClCompile Include="EffectDispatch.cpp" />
     <ClCompile Include="EffectClone.cpp" />
     <ClCompile Include="Logger.cpp" />
@@ -109,6 +113,10 @@
   <ItemGroup>
     <ClInclude Include="Config.h" />
     <ClInclude Include="Fusion.h" />
+    <ClInclude Include="Ritual.h" />
+    <ClInclude Include="SynchroXyz.h" />
+    <ClInclude Include="SummonJson.h" />
+    <ClInclude Include="CodePatch.h" />
     <ClInclude Include="EffectDispatch.h" />
     <ClInclude Include="EffectClone.h" />
     <ClInclude Include="Logger.h" />

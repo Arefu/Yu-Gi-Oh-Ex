@@ -6,6 +6,8 @@
 
 
 #include "Fusion.h"
+#include "Ritual.h"
+#include "SynchroXyz.h"
 #include "EffectClone.h"
 #include "EffectDispatch.h"
 #include "Logger.h"
@@ -36,6 +38,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         // cave) was removed: it zeroed the tables the lookup needs and had a wrong size. It is in git history if it is ever wanted.
 
         Fusion::Setup();
+        Ritual::Setup();
+        SynchroXyz::Setup();
         EffectClone::Setup();
         EffectDispatch::Setup();
         DetourTransactionCommit();

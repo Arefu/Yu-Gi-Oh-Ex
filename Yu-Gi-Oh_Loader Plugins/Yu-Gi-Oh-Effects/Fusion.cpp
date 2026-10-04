@@ -12,6 +12,7 @@
 #include <json.hpp>
 
 #include "Fusion.h"
+#include "SummonJson.h"
 #include "Logger.h"
 
 namespace
@@ -386,56 +387,16 @@ namespace
         return count;
     }
 
-    std::string CardsJsonPath()
-    {
-        char exe[MAX_PATH]{};
-        GetModuleFileNameA(nullptr, exe, MAX_PATH);
-        std::string folder = exe;
-        folder.resize(folder.find_last_of("\\/") + 1);
-        return folder + "Yu-Gi-Oh-Ex\\cards.json";
-    }
-
     void LoadRecipes()
     {
-        const std::string path = CardsJsonPath();
-        std::ifstream file(path);
-        if (!file)
+        for (const SummonJson::Entry& source : SummonJson::Entries())
         {
-            Logger::WriteLog(std::format("No {}, no custom fusion recipes", path), MODULE_NAME, 0);
-            return;
-        }
-
-        nlohmann::json root = nlohmann::json::parse(file, nullptr, false, true);
-        if (root.is_discarded())
-        {
-            Logger::WriteLog(std::format("{} is not valid JSON, no custom fusion recipes", path), MODULE_NAME, 2);
-            return;
-        }
-
-        const nlohmann::json& list = root.is_array() ? root : root["cards"];
-        if (!list.is_array())
-            return;
-
-        for (size_t i = 0; i < list.size(); ++i)
-        {
-            const nlohmann::json& entry = list[i];
-            if (!entry.is_object() || !entry.contains("fusion"))
+            const nlohmann::json& entry = *source.card;
+            if (!entry.contains("fusion"))
                 continue;
-
-            const std::string label = std::format("cards.json entry {} (\"{}\")", i, entry.value("name", std::string()));
-            if (!entry.contains("id") || !entry["id"].is_number_integer())
-            {
-                Logger::WriteLog(std::format("{}: has \"fusion\" but no integer \"id\", skipped", label), MODULE_NAME, 2);
-                continue;
-            }
-
-            // Ids below 14969 are the game's cards: a recipe for one replaces the game's, so that is allowed too.
-            const int id = entry["id"].get<int>();
-            if (id < 1 || id > kLastExtraCardId)
-            {
-                Logger::WriteLog(std::format("{}: fusion id {} is out of range, skipped", label, id), MODULE_NAME, 2);
-                continue;
-            }
+            const std::string& label = source.label;
+            // Ids below 14969 are the game's cards: a recipe for one replaces the game's (summoning.json, or cards.json).
+            const int id = source.id;
 
             const nlohmann::json& materials = entry["fusion"];
             if (!materials.is_array() || materials.size() < kMinMaterials || materials.size() > kMaxMaterials)
@@ -468,6 +429,11 @@ namespace
             g_Recipes[id] = std::move(ids);
         }
     }
+}
+
+int Fusion::MaterialCodeOf(const std::string& word)
+{
+    return MaterialCode(word);
 }
 
 size_t Fusion::Count()

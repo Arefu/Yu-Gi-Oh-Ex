@@ -22,6 +22,7 @@
 
 #include "EffectClone.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Mods.h"
 
 namespace
 {
@@ -158,6 +159,18 @@ namespace
         case 15: return trigger == "battle_damage";
         case 18: case 19: return trigger == "attack_declared";
         case 22: return trigger == "destroys_by_battle";
+        default: return false;
+        }
+    }
+
+    // The events TriggerFitsEvent knows. A clone compiled for one trigger has no effect on the OTHER known events, even when its source card
+    // has one there (Black Mamba borrows Edge Imp Chain for "declares an attack", and Edge Imp Chain also searches when sent to the GY:
+    // in-duel 2026-10-02 the clone searched from the GY too). Other events (0 = no event: activation checks) are left alone.
+    bool IsKnownTriggerEvent(uint16_t event)
+    {
+        switch (event)
+        {
+        case 2: case 6: case 7: case 8: case 9: case 13: case 15: case 18: case 19: case 21: case 22: case 31: case 32: case 33: return true;
         default: return false;
         }
     }
@@ -445,7 +458,16 @@ namespace
             {
                 bool ignore;
                 if (Clone* clone = Find(static_cast<uint16_t>(id), ignore))
-                    { int64_t best = 0; for (Clone* part : AllParts(*clone)) best = (std::max)(best, Orig(part->From)); return best; }   // any effect of the card answers yes
+                {
+                    // Kind_IsFlipMonster (743030) reads the card's kind from FULL_CARD_PROPS, and under source-id lending the source's entry
+                    // holds the CUSTOM card's kind for the duel: a FLIP clone of kind "Effect" was answered "not a FLIP monster" and its FLIP was
+                    // never offered (in-duel 2026-10-02: Baby Spider, Bunny Ear Enthusiast). A card with a "flip" effect is a FLIP monster.
+                    if constexpr (N == 6)
+                        for (Clone* part : AllParts(*clone))
+                            if (part->Trigger == "flip")
+                                return 1;
+                    int64_t best = 0; for (Clone* part : AllParts(*clone)) best = (std::max)(best, Orig(part->From)); return best;   // any effect of the card answers yes
+                }
                 if (IsPlainCustomId(static_cast<uint16_t>(id)))
                     return 0;
             }
@@ -1122,6 +1144,16 @@ namespace
         if (g_Clones.empty())
             return orig_GetEntry(effect);
 
+        // A composed effect runs its action card's slots impersonating that card, but the record still names the ROW's table (word4): a
+        // machine that looks its own row up again (Armoroid's banish-all 0x140157050 for its target slot, Check_TargetStillValid 0x1400DFEE0)
+        // found no row for the action card in that table - the banish-all then used mask -1 and banished every card on the field, Spell/Traps
+        // included (in-duel 2026-10-02). The action card's (and cost card's) own row answers.
+        if (g_Active && effect && ((g_Active->ActionFrom && effect[0] == g_Active->ActionFrom) || (g_Active->CostFrom && effect[0] == g_Active->CostFrom)))
+            if (void* own = orig_GetEntry(effect))
+                return own;
+            else
+                return const_cast<Row*>(ActionRow(effect[0]));
+
         bool borrowedWithoutClone;
         Clone* clone = RouteByRow(Find(effect[0], borrowedWithoutClone), effect);
         {
@@ -1145,6 +1177,9 @@ namespace
             return nullptr;
         if (!clone)
             return IsPlainCustomId(effect[0]) ? nullptr : orig_GetEntry(effect);
+
+        if (!clone->Trigger.empty() && clone->Trigger != "ignition" && IsKnownTriggerEvent(effect[3]) && !TriggerFitsEvent(clone->Trigger, effect[3]))
+            return nullptr;   // the source's effect for another event (see IsKnownTriggerEvent)
 
         Announce(*clone, effect[0]);
         LogLookup(effect);
@@ -1205,11 +1240,15 @@ namespace
     //             "flags": <raw>, "param": <raw> }  - see docs/EffectSystem.md section 11. Returns false if nothing usable was given.
     bool BuildFilter(const nlohmann::json& f, Clone& c, std::string& error)
     {
-        uint32_t flags = 0x1014;   // occupied, monster-zone class, face-up style check: what the vanilla "destroy all X" rows use
+        // 0x4 is "face-up" (the zone's byte +3, not "occupied": the card is checked separately), 0x10 the Monster Zones. Vanilla "destroy all
+        // <race>" rows carry 0x4 (a face-down card shows no race); "target 1 monster" rows do not (Green Turtle Summoner 0x1410). Without a
+        // property test the clone's filter no longer asks for face-up: in-duel 2026-10-02 Adamancipator Crystal's FLIP found no target,
+        // probably the opponent's Set monster. "faceUp": true asks for it.
+        uint32_t flags = 0x1010;
         // "target": true = the player picks ONE card ("Target 1 X; destroy it" rows such as Shield Crush / Remove Trap): adds the targetable
         // check (0x400); "kind": "spelltrap" uses the Spell & Trap zones (Mystical Space Typhoon's flags 0x41440) instead of the monsters'.
         if (f.value("target", false))
-            flags = f.value("kind", std::string("monster")) == "spelltrap" ? 0x41440 : 0x1414;
+            flags = f.value("kind", std::string("monster")) == "spelltrap" ? 0x41440 : 0x1410;
         uint32_t param = 0;
         const std::string side = f.value("side", std::string("any"));
         if (side == "own") flags |= 1;
@@ -1270,6 +1309,8 @@ namespace
         chosen += kind("level_max", 0x50000000);
         chosen += kind("level_min", 0x60000000);
         if (chosen > 1) { error = "give only one of archetype/card/kindCategory/race/attribute/level_max/level_min"; return false; }
+        if ((chosen && (flags & 0x70) == 0x10) || f.value("faceUp", false))
+            flags |= 0x4;
         if (f.contains("flags") && f["flags"].is_number_integer())
             flags = f["flags"].get<uint32_t>();
         if (f.contains("param") && f["param"].is_number_integer())
@@ -1311,7 +1352,56 @@ namespace
 
     Clone* DeckFilterClone(uint16_t id)
     {
-        return (g_Active && g_Active->HasDeckFilter && (id == g_Active->From || (g_Active->ActionFrom && id == g_Active->ActionFrom))) ? g_Active : nullptr;
+        if (g_Active)
+            return (g_Active->HasDeckFilter && (id == g_Active->From || (g_Active->ActionFrom && id == g_Active->ActionFrom))) ? g_Active : nullptr;
+        // Outside a slot: a source id lent to a clone for this duel (no one else plays it) answers with the clone's filter - the game asks
+        // before any slot runs (the leave-field offer counts revive candidates for Superheavy Samurai Drum's row; Flint Cragger was never offered).
+        if (BorrowedRealId(id) == 0)
+            return nullptr;
+        bool ignore;
+        if (Clone* clone = Find(id, ignore))
+            for (Clone* part : AllParts(*clone))
+                if (part->HasDeckFilter && part->From == id)
+                    return part;
+        return nullptr;
+    }
+
+    // The deck filter table (YGO_Effects_DeckFilterTable 0x140AD2A80, 5924 rows of 24 bytes) is not only read through Collect / Count: about
+    // 58 callers take a row index from Get_DeckFilterIndexForEffect (0x1400C01B0) and run the row's scan function themselves - Magnet Circle
+    // LV2's "a matching monster is in the hand" check sub_1400C0710 does, so Barian's Hope was only playable with a Level 2 Machine in hand
+    // (in-duel 2026-10-02). So the row the index points at is overwritten with the clone's own row (its id kept) while the clone owns that
+    // id - inside its slots, or for the duel when the id is lent to it - and the vanilla bytes are put back at the next lookup that is not
+    // the clone's (the table is made writable at setup, only when some clone has a "deck" filter).
+    constexpr uintptr_t kDeckFilterTable = 0x140AD2A80;
+    constexpr int kDeckFilterRows = 5924;
+    using DeckFilterIndex_t = int64_t(__fastcall*)(int, int, uint32_t);
+    DeckFilterIndex_t orig_DeckFilterIndex = reinterpret_cast<DeckFilterIndex_t>(0x1400C01B0);
+    std::unordered_map<int64_t, std::array<uint8_t, 24>> g_PatchedDeckRows;   // index -> the vanilla row
+
+    int64_t __fastcall Hook_DeckFilterIndex(int player, int id, uint32_t k)
+    {
+        const int64_t index = orig_DeckFilterIndex(player, id, k);
+        if (index < 0 || index >= kDeckFilterRows)
+            return index;
+        auto* row = reinterpret_cast<uint8_t*>(kDeckFilterTable + static_cast<uintptr_t>(index) * 24);
+        Clone* clone = id > 0 && id <= 0xFFFF ? DeckFilterClone(static_cast<uint16_t>(id)) : nullptr;
+        auto patched = g_PatchedDeckRows.find(index);
+        if (clone)
+        {
+            if (patched == g_PatchedDeckRows.end())
+            {
+                std::array<uint8_t, 24> vanilla;
+                memcpy(vanilla.data(), row, 24);
+                g_PatchedDeckRows.emplace(index, vanilla);
+            }
+            memcpy(row + 2, clone->DeckRow + 2, 22);   // everything but the id the table is sorted by
+        }
+        else if (patched != g_PatchedDeckRows.end())
+        {
+            memcpy(row, patched->second.data(), 24);
+            g_PatchedDeckRows.erase(patched);
+        }
+        return index;
     }
 
     void RunDeckScan(const Clone& clone, int player)
@@ -1435,15 +1525,6 @@ namespace
         return true;
     }
 
-    std::string CardsJsonPath()
-    {
-        char exe[MAX_PATH]{};
-        GetModuleFileNameA(nullptr, exe, MAX_PATH);
-        std::string folder = exe;
-        folder.resize(folder.find_last_of("\\/") + 1);
-        return folder + "Yu-Gi-Oh-Ex\\cards.json";
-    }
-
     // One step of an effect: "from" plus the optional draw / filter / lp / deck parameters.
     // "This card is in the hand": the zone byte of the card's position (sub_140044480(card instance) >> 8, as Special Summon-this-card 0x140161E20
     // reads it; 13 = hand). The hand-only summon donor (Watch Cat) would otherwise also be offered from the GY, where its machine does nothing.
@@ -1481,6 +1562,9 @@ namespace
             { "inHand", reinterpret_cast<uint64_t>(&Check_InHand) },   // this card is in the hand (the plugin's own check, see Check_InHand)
             { "canDetach", 0x1400FBFF0 },                // this Xyz Monster has enough materials to detach ("detach" of them; Thunder End Dragon)
             { "canTributeOne", reinterpret_cast<uint64_t>(&Check_CanTributeOne) },   // you control a monster that can be Tributed
+            // No check (Slot_ReturnConst2). For "pay N LP": the LP cost card's own condition is card-specific (Delinquent Duo 0x140251110 =
+            // "the opponent has a card in hand") and the LP total is not mapped yet, so the payment itself is not checked.
+            { "always", 0x1400DE060 },
         };
         for (const auto& [n, address] : checks)
             if (name == n)
@@ -1596,16 +1680,12 @@ namespace
 
     void LoadClones()
     {
-        const std::string path = CardsJsonPath();
-        std::ifstream file(path);
-        if (!file)
+        // every mod's cards.json and the game folder's, merged (Yu-Gi-Oh-Mods.h)
+        nlohmann::json root = YGO::Mods::ReadMerged("cards.json", "cards");
+        if (!root.is_object())
             return;
 
-        nlohmann::json root = nlohmann::json::parse(file, nullptr, false, true);
-        if (root.is_discarded())
-            return;
-
-        const nlohmann::json& list = root.is_array() ? root : root["cards"];
+        const nlohmann::json& list = root["cards"];
         if (!list.is_array())
             return;
 
@@ -1705,6 +1785,18 @@ void EffectClone::Setup()
     DetourAttach(&(PVOID&)orig_DiscardCount, Hook_DiscardCount);
     DetourAttach(&(PVOID&)orig_LpCost, Hook_LpCost);
     DetourAttach(&(PVOID&)orig_DetachCount, Hook_DetachCount);
+    bool anyDeckFilter = false;
+    for (auto& [id, clone] : g_Clones)
+        for (Clone* part : AllParts(clone))
+            anyDeckFilter |= part->HasDeckFilter;
+    if (anyDeckFilter)
+    {
+        DWORD old;
+        if (VirtualProtect(reinterpret_cast<void*>(kDeckFilterTable), kDeckFilterRows * 24, PAGE_READWRITE, &old))
+            DetourAttach(&(PVOID&)orig_DeckFilterIndex, Hook_DeckFilterIndex);
+        else
+            Logger::WriteLog("Deck filter table could not be made writable: \"deck\" filters only apply through Collect / Count", MODULE_NAME, 2);
+    }
     bool anyNegate = false;
     for (auto& [id, clone] : g_Clones)
         for (Clone* part : AllParts(clone))

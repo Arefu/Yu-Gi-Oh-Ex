@@ -1,5 +1,6 @@
 #pragma once
 #include <cstddef>
+#include <string>
 
 // Custom Fusion recipes.
 //
@@ -16,6 +17,10 @@ namespace Fusion
 {
     // Reads the recipes and attaches the detours. Call between DetourTransactionBegin and DetourTransactionCommit.
     void Setup();
+
+    // A readable material word ("Dragon", "DARK", "archetype:12", "normal", ...) -> the game's material code, 0 = unknown. Also used by
+    // SynchroXyz.cpp: the Synchro and Xyz tables use the same codes.
+    int MaterialCodeOf(const std::string& word);
 
     // Number of custom recipes loaded.
     size_t Count();
