@@ -33,6 +33,9 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Inspector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Plugins.cpp">
       <Filter>Source Files\Plugins</Filter>
     </ClCompile>
@@ -104,6 +107,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-GAME.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMemory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inspector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Logger.h">

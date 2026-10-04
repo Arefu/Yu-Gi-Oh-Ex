@@ -11,11 +11,10 @@
 #include <unordered_map>
 #include <windows.h>
 
+#include "Inspector.h"
 #include "Logger.h"
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Log.h"
 #include "Plugins.h"
-#include "YuGiOh/YuGiOh-CARDS.h"
-#include "YuGiOh/YuGiOh-GAME.h"
 #include "Yu-Gi-Oh-Ex.h"
 
 typedef __int64 Address;
@@ -41,14 +40,53 @@ static bool bShowDemo = false;
 static bool b_IsImGuiInitialized = false;
 static ImGuiContext* _ImGuiContext = nullptr;
 
-Player g_Player1 = Player(PLAYER_ONE);
-Player g_Player2 = Player(PLAYER_TWO);
+// The game renders into a fixed-size back buffer (e.g. 1920x1080) and DXGI stretches it onto
+// the window. ImGui must lay out and draw in back-buffer pixels, so window (client) mouse
+// coordinates have to be scaled into that space or the hit-test drifts from what is drawn.
+static bool GetBackBufferScale(HWND hWnd, float& sx, float& sy, float& bw, float& bh)
+{
+    if (!pSwapChain)
+        return false;
+    DXGI_SWAP_CHAIN_DESC sd;
+    RECT rect;
+    if (FAILED(pSwapChain->GetDesc(&sd)) || !GetClientRect(hWnd, &rect))
+        return false;
+    const LONG cw = rect.right - rect.left, ch = rect.bottom - rect.top;
+    if (cw <= 0 || ch <= 0 || sd.BufferDesc.Width == 0 || sd.BufferDesc.Height == 0)
+        return false;
+    bw = (float)sd.BufferDesc.Width;
+    bh = (float)sd.BufferDesc.Height;
+    sx = bw / (float)cw;
+    sy = bh / (float)ch;
+    return true;
+}
 
-static bool DoIStart = false;
+static LPARAM ScaleMouseLParam(HWND hWnd, UINT msg, LPARAM lParam)
+{
+    switch (msg)
+    {
+    case WM_MOUSEMOVE:
+    case WM_LBUTTONDOWN: case WM_LBUTTONUP: case WM_LBUTTONDBLCLK:
+    case WM_RBUTTONDOWN: case WM_RBUTTONUP: case WM_RBUTTONDBLCLK:
+    case WM_MBUTTONDOWN: case WM_MBUTTONUP: case WM_MBUTTONDBLCLK:
+    case WM_XBUTTONDOWN: case WM_XBUTTONUP: case WM_XBUTTONDBLCLK:
+    {
+        float sx, sy, bw, bh;
+        if (!GetBackBufferScale(hWnd, sx, sy, bw, bh))
+            return lParam;
+        const int x = (int)((short)LOWORD(lParam) * sx);
+        const int y = (int)((short)HIWORD(lParam) * sy);
+        return MAKELPARAM((WORD)(short)x, (WORD)(short)y);
+    }
+    default:
+        return lParam;
+    }
+}
 
 LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
-    if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
+    // Only ImGui sees the scaled coordinates; the game keeps its own client-space lParam.
+    if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, ScaleMouseLParam(hWnd, msg, lParam)))
         return true;
 
     switch (msg)
@@ -115,222 +153,29 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 HRESULT __stdcall YGOGUIPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)
 {
-    RECT rect;
-    if (GetClientRect(g_hWnd, &rect))  // see note below
+    ImGui_ImplWin32_NewFrame();
+
+    // ImGui_ImplWin32_NewFrame sets DisplaySize to the client rect; override it with the
+    // back-buffer size so the DX11 viewport covers the whole buffer DXGI stretches.
+    float sx, sy, bw, bh;
+    if (GetBackBufferScale(g_hWnd, sx, sy, bw, bh))
     {
         ImGuiIO& io = ImGui::GetIO();
-        io.DisplaySize = ImVec2((float)(rect.right - rect.left), (float)(rect.bottom - rect.top));
+        io.DisplaySize = ImVec2(bw, bh);
+
+        // The Win32 backend's GetCursorPos fallback (mouse captured/outside the window) queues
+        // unscaled client coordinates; re-queue the scaled position so the last event wins.
+        POINT pos;
+        if (GetForegroundWindow() == g_hWnd && GetCursorPos(&pos) && ScreenToClient(g_hWnd, &pos))
+            io.AddMousePosEvent(pos.x * sx, pos.y * sy);
     }
 
-    ImGui_ImplWin32_NewFrame();
     ImGui_ImplDX11_NewFrame();
     ImGui::NewFrame();
 
     if (bShowMenu)
     {
-        ImGui::Begin("Yu-Gi-Oh!", &bShowMenu);
-        ImGui::Text("Yu-Gi-Oh-Ex: WolfX");
-        ImGui::Separator();
-
-        if (ImGui::Button("Quit Game"))
-            YuGiOhEx::g_bIsQuitReady = true;
-
-        ImGui::BeginGroup();
-        if (ImGui::CollapsingHeader("Player One"))
-        {
-            ImGui::Text("Number of Cards in Hand: %d", g_Player1.Get_NumberOfCardsInHand());
-            if (ImGui::TreeNodeEx("Cards in Hand"))
-            {
-                for (int i = 0; i < g_Player1.Get_NumberOfCardsInHand(); i++)
-                {
-                    ImGui::Text("Card %d: %ls (%d)", i,
-                        YuGiOhEx::Get_CardNameFromKonamiID(g_Player1.Get_CardInHand(i)),
-                        g_Player1.Get_CardInHand(i));
-                    if (ImGui::IsItemHovered())
-                    {
-                        ImGui::BeginTooltip();
-                        ImGui::PushTextWrapPos(ImGui::GetFontSize() * 35.0f);
-                        ImGui::TextWrapped("%ls", YuGiOhEx::Get_CardDescFromKonamiID(g_Player1.Get_CardInHand(i)));
-                        ImGui::PopTextWrapPos();
-                        ImGui::EndTooltip();
-                    }
-                }
-                ImGui::TreePop();
-            }
-
-            ImGui::Text("Number of Cards in Deck: %d", g_Player1.Get_NumberOfCardsInDeck());
-            if (ImGui::TreeNodeEx("Cards in Deck"))
-            {
-                for (int i = 0; i < g_Player1.Get_NumberOfCardsInDeck(); i++)
-                {
-                    auto Get_CardNameFromID = reinterpret_cast<LPCTSTR(__fastcall*)(short)>(0x14076D0F0);
-                    LPCTSTR name = Get_CardNameFromID(g_Player1.Get_CardInDeck(i));
-                    ImGui::Text("Card %d: %ls (%d)", i, name, g_Player1.Get_CardInDeck(i));
-                }
-                ImGui::TreePop();
-            }
-
-            ImGui::Text("Number Of Cards in Grave Yard: %d", g_Player1.Get_NumberOfCardsInGraveYard());
-            if (ImGui::TreeNodeEx("Cards in Grave Yard"))
-            {
-                for (int i = 0; i < g_Player1.Get_NumberOfCardsInGraveYard(); i++)
-                    ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInGraveYard(i));
-                ImGui::TreePop();
-            }
-
-            ImGui::Text("Number Of Cards in Discard Pile: %d", g_Player1.Get_NumberOfDiscardPile());
-            if (ImGui::TreeNodeEx("Cards in Discard Pile"))
-            {
-                for (int i = 0; i < g_Player1.Get_NumberOfDiscardPile(); i++)
-                    ImGui::Text("Card %d: %d", i, g_Player1.Get_CardInDiscardPile(i));
-                ImGui::TreePop();
-            }
-        }
-
-        if (ImGui::CollapsingHeader("Duel Manipulation"))
-        {
-            if (ImGui::TreeNode("Deck List"))
-            {
-                for (int i = 1; i < 700; i++)
-                {
-                    auto Deck = YGO::GAME::Get_DeckTemplateAtIndex(i);
-                    if (!Deck) continue;
-
-                    ImGui::Text("Name: %ls", Deck->Name);
-                    ImGui::Text("Number of Cards in Main Deck: %d", Deck->NumberOfCardsInMainDeck);
-                    ImGui::Text("Number of Cards in Extra Deck: %d", Deck->NumberOfCardsInExtraDeck);
-                    ImGui::Text("Number of Cards in Side Deck: %d", Deck->NumberOfCardsInSideDeck);
-                    if (ImGui::CollapsingHeader("Main Deck Cards"))
-                    {
-                        for (int j = 0; j < Deck->NumberOfCardsInMainDeck; j++)
-                            ImGui::Text("Card %ws", YGO::CARDS::Get_CardNameFromKonamiId(Deck->CardsInMainDeck[j]));
-                    }
-                }
-                ImGui::TreePop();
-            }
-        }
-        ImGui::EndGroup();
-
-        ImGui::Separator();
-
-        // The plugin list (which plugins are on) is not here: it is the in-game Plugins menu (Help & Options), WolfX and Yu-Gi-Oh-Core's Config.ini list.
-        ImGui::BeginGroup();
-        if (ImGui::CollapsingHeader("UI Witchcraft"))
-        {
-            uintptr_t base = (uintptr_t)GetModuleHandle(NULL);
-            uintptr_t App = *(uintptr_t*)(base + 0x29275D8);
-            uintptr_t MainContext = *(uintptr_t*)(App + 0x1F0);
-
-            if (MainContext == 0)
-            {
-                ImGui::TextColored(ImVec4(1, 0, 0, 1), "MainContext not ready yet");
-            }
-            else
-            {
-                // String lookup helper
-                auto GetString = [](int id) -> wchar_t*
-                    {
-                        uintptr_t langIndex = *(int*)0x14332A344;
-                        uintptr_t bundleBase = *(uintptr_t*)(0x143329E80 + langIndex * 8);
-                        uintptr_t offsetTable = *(uintptr_t*)(bundleBase + 8);
-                        return *(wchar_t**)(offsetTable + 8 * id - 8);
-                    };
-
-                // Scan for menu button labels - try ranges around what we know
-                if (ImGui::CollapsingHeader("String Scanner"))
-                {
-                    static int scanStart = 800;
-                    static int scanEnd = 850;
-                    ImGui::InputInt("Start", &scanStart);
-                    ImGui::InputInt("End", &scanEnd);
-
-                    for (int i = scanStart; i < scanEnd; i++)
-                    {
-                        {
-                            wchar_t* str = GetString(i);
-                            if (str && str[0] != L'\0')
-                                ImGui::Text("%d: %ls", i, str);
-                        }
-                    }
-                }
-
-                uintptr_t ScreenMainMenu = *(uintptr_t*)(MainContext + 0x088);
-                uintptr_t ScreenPause = *(uintptr_t*)(MainContext + 0x138);
-                uintptr_t ScreenSwitcher = *(uintptr_t*)(MainContext + 0x18);
-
-                ImGui::Text("MainContext:    0x%llX", MainContext);
-                ImGui::Text("ScreenMainMenu: 0x%llX", ScreenMainMenu);
-                ImGui::Text("ScreenPause:    0x%llX", ScreenPause);
-                ImGui::Text("ScreenSwitcher: 0x%llX", ScreenSwitcher);
-
-                if (ScreenSwitcher)
-                {
-                    ImGui::Text("Is Transitioning: %d", *(int*)(ScreenSwitcher + 88));
-                    ImGui::Text("Transition State: %d", *(int*)(ScreenSwitcher + 120));
-                    ImGui::Text("Duration:         %.3f", *(float*)(ScreenSwitcher + 72));
-                }
-
-                ImGui::Separator();
-
-                auto NavigateToScreen = reinterpret_cast<char(__fastcall*)(__int64, int, double, int, char)>
-                    (0x1408087A0);
-                auto OnMenuItemSelected = reinterpret_cast<void(__fastcall*)(__int64, __int64, char)>
-                    (0x140856C40);
-
-                if (ScreenMainMenu)
-                {
-                    if (ScreenMainMenu)
-                    {
-                        uintptr_t arrayData = *(uintptr_t*)(ScreenMainMenu + 0x2E0);
-                        uintptr_t arrayWrite = *(uintptr_t*)(ScreenMainMenu + 0x2E8);
-                        uintptr_t arrayEnd = *(uintptr_t*)(ScreenMainMenu + 0x2F0);
-
-                        int currentCount = (arrayWrite - arrayData) / 24;
-                        int allocatedSlots = (arrayEnd - arrayData) / 24;
-
-                        ImGui::Text("Button count:     %d", currentCount);
-                        ImGui::Text("Allocated slots:  %d", allocatedSlots);
-                    }
-                    if (ScreenMainMenu)
-                    {
-                        int currentPage = *(int*)(ScreenMainMenu + 832);
-                        ImGui::Text("Current page: %d", currentPage);
-
-                        uintptr_t arr1Data = *(uintptr_t*)(ScreenMainMenu + 0x2F8);
-                        uintptr_t arr1Write = *(uintptr_t*)(ScreenMainMenu + 0x300);
-                        uintptr_t arr2Data = *(uintptr_t*)(ScreenMainMenu + 0x310);
-                        uintptr_t arr2Write = *(uintptr_t*)(ScreenMainMenu + 0x318);
-                        uintptr_t arr3Data = *(uintptr_t*)(ScreenMainMenu + 0x328);
-                        uintptr_t arr3Write = *(uintptr_t*)(ScreenMainMenu + 0x330);
-
-                        ImGui::Text("Array 1 count: %d", (arr1Write - arr1Data) / 4);
-                        ImGui::Text("Array 2 count: %d", (arr2Write - arr2Data) / 4);
-                        ImGui::Text("Array 3 count: %d", (arr3Write - arr3Data) / 4);
-                    }
-                    ImGui::Text("ScreenMainMenu Case Tester");
-                    for (int i = 0; i <= 11; i++)
-                    {
-                        char label[32];
-                        sprintf_s(label, "Case %d", i);
-                        if (ImGui::Button(label))
-                            OnMenuItemSelected(ScreenMainMenu, i, 1);
-                        if (i % 2 == 0) ImGui::SameLine();
-                    }
-
-                    ImGui::Separator();
-                    ImGui::Text("Custom Navigation");
-
-                    if (ImGui::Button("Home Screen (18)"))
-                        NavigateToScreen(MainContext, 18, 0.15, 273, 1);
-
-                    if (ImGui::Button("Test Custom Button (13)"))
-                        OnMenuItemSelected(ScreenMainMenu, 13, 1);
-                }
-            }
-        }
-        ImGui::EndGroup();
-
-        ImGui::End();
+        Inspector::Draw(&bShowMenu);
         PluginManager::ProcessGui();
     }
 
