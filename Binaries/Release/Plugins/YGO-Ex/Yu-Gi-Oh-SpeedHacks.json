@@ -3,5 +3,31 @@
   "description": "Faster game, no animations or movies.",
   "requires": [
     "Yu-Gi-Oh-Core"
+  ],
+  "settings": [
+    {
+      "key": "Speed",
+      "title": "Speed",
+      "kind": "number",
+      "default": "2",
+      "help": "Duel speed multiplier. 1 is normal.",
+      "min": 1,
+      "max": 10,
+      "step": 1
+    },
+    {
+      "key": "NoAnimations",
+      "title": "No animations",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Skip card and monster animations in duels."
+    },
+    {
+      "key": "NoMovies",
+      "title": "No movies",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Skip the cutscene movies."
+    }
   ]
 }

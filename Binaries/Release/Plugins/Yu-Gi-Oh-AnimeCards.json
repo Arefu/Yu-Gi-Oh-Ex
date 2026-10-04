@@ -1,4 +1,213 @@
 {
   "title": "Anime Cards",
-  "description": "Makes the anime style cards draw properly."
+  "description": "Makes the anime style cards draw properly.",
+  "settings": [
+    {
+      "key": "HideLevelBadge",
+      "title": "Hide level badge",
+      "kind": "choice",
+      "default": "1",
+      "help": "The level/rank number the duel draws over the monsters in your hand (and the badge on other card views). 0 = show it (vanilla), 1 = hide it in the hand, 2 = hide it everywhere. The anime frames already show the stars on the card. Restart the game after changing it.",
+      "choices": [
+        "0",
+        "1",
+        "2"
+      ],
+      "labels": {
+        "0": "Show it",
+        "1": "Hide in the hand",
+        "2": "Hide everywhere"
+      },
+      "hidden": true
+    },
+    {
+      "key": "UseLargeAtkDefFont",
+      "title": "Use large atk def font",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Draw ATK/DEF with the game's larger (32 px) number font, so the scaled numbers stay sharper.",
+      "hidden": true
+    },
+    {
+      "key": "CustomAtkX",
+      "title": "Custom atk x",
+      "kind": "number",
+      "default": "107.5",
+      "help": "ATK number: centre X on the 400 x 580 card face (the left box).",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "CustomAtkY",
+      "title": "Custom atk y",
+      "kind": "number",
+      "default": "526.5",
+      "help": "ATK number: centre Y on the card face.",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "CustomDefX",
+      "title": "Custom def x",
+      "kind": "number",
+      "default": "291.5",
+      "help": "DEF number (Link rating on Link monsters): centre X (the right box).",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "CustomDefY",
+      "title": "Custom def y",
+      "kind": "number",
+      "default": "526.5",
+      "help": "DEF number: centre Y on the card face.",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "AtkTextScale",
+      "title": "Atk text scale",
+      "kind": "number",
+      "default": "2.5",
+      "help": "Size of the ATK text.",
+      "min": 0.5,
+      "max": 6,
+      "step": 0.1,
+      "hidden": true
+    },
+    {
+      "key": "DefTextScale",
+      "title": "Def text scale",
+      "kind": "number",
+      "default": "2.5",
+      "help": "Size of the DEF text.",
+      "min": 0.5,
+      "max": 6,
+      "step": 0.1,
+      "hidden": true
+    },
+    {
+      "key": "AttributeX",
+      "title": "Attribute x",
+      "kind": "number",
+      "default": "346",
+      "help": "Attribute icon: centre X, in the frame's circle (monster frames).",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "AttributeY",
+      "title": "Attribute y",
+      "kind": "number",
+      "default": "469.5",
+      "help": "Attribute icon: centre Y.",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "LinkAttributeX",
+      "title": "Link attribute x",
+      "kind": "number",
+      "default": "198.5",
+      "help": "Attribute icon on the Link frame: centre X.",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "LinkAttributeY",
+      "title": "Link attribute y",
+      "kind": "number",
+      "default": "469",
+      "help": "Attribute icon on the Link frame: centre Y.",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "AttributeSize",
+      "title": "Attribute size",
+      "kind": "number",
+      "default": "48",
+      "help": "Attribute icon size in pixels on the card face (48 covers the frame's 45 px circle).",
+      "min": 8,
+      "max": 128,
+      "step": 1,
+      "hidden": true
+    },
+    {
+      "key": "StarsX",
+      "title": "Stars x",
+      "kind": "number",
+      "default": "200",
+      "help": "Level/rank stars: the row is centred on this X.",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "StarsY",
+      "title": "Stars y",
+      "kind": "number",
+      "default": "465.5",
+      "help": "Level/rank stars: centre Y (the band between the art and the ATK/DEF boxes). Below 0 keeps the game's own height.",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "StarsMaxWidth",
+      "title": "Stars max width",
+      "kind": "number",
+      "default": "240",
+      "help": "Widest the star row may be before it's shrunk to fit (keeps it clear of the attribute circle).",
+      "min": 40,
+      "max": 400,
+      "step": 5,
+      "hidden": true
+    },
+    {
+      "key": "CardArtScale",
+      "title": "Card art scale",
+      "kind": "number",
+      "default": "1.3",
+      "help": "Size of the card art.",
+      "min": 0.5,
+      "max": 3,
+      "step": 0.05,
+      "hidden": true
+    },
+    {
+      "key": "CardArtOffsetX",
+      "title": "Card art offset x",
+      "kind": "number",
+      "default": "0",
+      "help": "Card art horizontal offset.",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "CardArtOffsetY",
+      "title": "Card art offset y",
+      "kind": "number",
+      "default": "-50",
+      "help": "Card art vertical offset.",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "CustomSTIconX",
+      "title": "Custom ST icon x",
+      "kind": "number",
+      "default": "500",
+      "help": "Spell/Trap icon X position.",
+      "step": 0.5,
+      "hidden": true
+    },
+    {
+      "key": "CustomSTIconY",
+      "title": "Custom ST icon y",
+      "kind": "number",
+      "default": "183",
+      "help": "Spell/Trap icon Y position.",
+      "step": 0.5,
+      "hidden": true
+    }
+  ]
 }

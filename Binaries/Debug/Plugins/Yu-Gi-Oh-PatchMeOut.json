@@ -1,4 +1,51 @@
 {
   "title": "Patch Me Out",
-  "description": "Small tweaks, free shop, no banlist, and a crash log."
+  "description": "Small tweaks, free shop, no banlist, and a crash log.",
+  "settings": [
+    {
+      "key": "FreeStore",
+      "title": "Free store",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Card shop packs cost nothing."
+    },
+    {
+      "key": "NoBan",
+      "title": "No ban",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Remove the Forbidden/Limited card restrictions (banlist)."
+    },
+    {
+      "key": "AutoPause",
+      "title": "Auto pause",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Pause the game when its window loses focus."
+    },
+    {
+      "key": "UseJP",
+      "title": "Use JP",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Use the Japanese rules and card data where the game has them."
+    },
+    {
+      "key": "NoJanken",
+      "title": "No janken",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Skip rock-paper-scissors at the start of a duel."
+    },
+    {
+      "key": "StartingLP",
+      "title": "Starting LP",
+      "kind": "number",
+      "default": "8000",
+      "help": "Life points each duelist starts a duel with.",
+      "min": 500,
+      "max": 100000,
+      "step": 500
+    }
+  ]
 }

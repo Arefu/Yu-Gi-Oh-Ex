@@ -4,5 +4,89 @@
   "requires": [
     "Yu-Gi-Oh-Core",
     "Yu-Gi-Oh-GUI"
+  ],
+  "settings": [
+    {
+      "key": "DemoMenuButtons",
+      "title": "Demo menu buttons",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Add the demo buttons to the game's menus (Debug Tools and Credits on the main menu, Funky Tools in options). Needs Yu-Gi-Oh-RIX."
+    },
+    {
+      "key": "DuelTestEnabled",
+      "title": "Duel test enabled",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Stack the chosen hand cards on top of the deck at the start of a duel."
+    },
+    {
+      "key": "DuelTestAddMissing",
+      "title": "Duel test add missing",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Add chosen cards the deck does not have."
+    },
+    {
+      "key": "DuelTestPlayer",
+      "title": "Duel test player",
+      "kind": "choice",
+      "default": "0",
+      "help": "Whose opening hand is stacked: 0 = you, 1 = the opponent.",
+      "choices": [
+        "0",
+        "1"
+      ],
+      "labels": {
+        "0": "You",
+        "1": "The opponent"
+      }
+    },
+    {
+      "key": "DuelTestHand",
+      "title": "Duel test hand",
+      "kind": "text",
+      "default": "",
+      "help": "Card ids for the opening hand, comma separated."
+    },
+    {
+      "key": "DuelTestExtra",
+      "title": "Duel test extra",
+      "kind": "text",
+      "default": "",
+      "help": "Card ids added to the extra deck, comma separated."
+    },
+    {
+      "key": "DuelTestDeckYou",
+      "title": "Duel test deck you",
+      "kind": "path",
+      "default": "",
+      "help": "A .ydc test deck that replaces your deck in every duel. Empty = your own deck.",
+      "from": "files:Yu-Gi-Oh-Ex\\TestDecks\\*.ydc",
+      "empty": "Your own deck"
+    },
+    {
+      "key": "DuelTestDeckOpponent",
+      "title": "Duel test deck opponent",
+      "kind": "path",
+      "default": "",
+      "help": "A .ydc test deck that replaces the opponent's deck in every duel. Empty = their own deck.",
+      "from": "files:Yu-Gi-Oh-Ex\\TestDecks\\*.ydc",
+      "empty": "Their own deck"
+    },
+    {
+      "key": "DuelTestKeepOrder",
+      "title": "Duel test keep order",
+      "kind": "toggle",
+      "default": "1",
+      "help": "A test deck is not shuffled: the file's order is the draw order (its first 5 cards are the opening hand)."
+    },
+    {
+      "key": "DuelTestBrowseDir",
+      "title": "Duel test browse dir",
+      "kind": "path",
+      "default": "",
+      "help": "The folder the test deck browser shows. Empty = Yu-Gi-Oh-Ex\\TestDecks."
+    }
   ]
 }

@@ -6,6 +6,79 @@
     "Yu-Gi-Oh-RIX"
   ],
   "content": [
-    "packs.json"
+    "packs.json",
+    "prices.json"
+  ],
+  "settings": [
+    {
+      "key": "BetterShop-PasswordCost",
+      "title": "Password price",
+      "kind": "number",
+      "default": "1000",
+      "help": "DP to unlock a card with its password (three copies). Yu-Gi-Oh-Ex\\prices.json can set a card's own password price. Sacred Cards and Nightmare Troubadour charged 1,000 per password too.",
+      "min": 0,
+      "max": 100000,
+      "step": 100
+    },
+    {
+      "key": "BetterShop-MonsterPrice",
+      "title": "Monster prices",
+      "kind": "choice",
+      "default": "attack",
+      "help": "How the Card Shop prices one copy of a monster. attack = ATK x 1.8 / 5 (Blue-Eyes 1,080 DP). classic = Forbidden Memories' price curve, doubling every ~590 ATK+DEF (commons ~200 DP, Blue-Eyes ~7,540 DP). custom = Monster formula. flat = the flat price. Monsters with ? ATK are priced like spells and traps by rarity. Never below 100 DP. Yu-Gi-Oh-Ex\\prices.json can set a card's own price.",
+      "choices": [
+        "attack",
+        "classic",
+        "custom",
+        "flat"
+      ],
+      "labels": {
+        "attack": "By ATK",
+        "classic": "Classic curve",
+        "custom": "Custom formula",
+        "flat": "Flat price"
+      }
+    },
+    {
+      "key": "BetterShop-MonsterFormula",
+      "title": "Monster formula",
+      "kind": "text",
+      "default": "ATK * 1.8 / 5",
+      "help": "Used when Monster prices is custom. Names: ATK, DEF (a Link monster's is 0.8 x ATK), LEVEL, RARE (1 or 0), LINK (1 or 0). + - * / ^ and brackets; min, max, exp, log, sqrt, round, floor, ceil. Example: max(300, (ATK + DEF) / 5) + 300 * RARE"
+    },
+    {
+      "key": "BetterShop-SpellTrapPrice",
+      "title": "Spell/Trap prices",
+      "kind": "choice",
+      "default": "rarity",
+      "help": "How the Card Shop prices spells and traps. rarity = what a typical monster of the same pack rarity costs (the game's packs mark every card common or rare). custom = Spell/Trap formula. flat = the flat price.",
+      "choices": [
+        "rarity",
+        "custom",
+        "flat"
+      ],
+      "labels": {
+        "rarity": "By rarity",
+        "custom": "Custom formula",
+        "flat": "Flat price"
+      }
+    },
+    {
+      "key": "BetterShop-SpellTrapFormula",
+      "title": "Spell/Trap formula",
+      "kind": "text",
+      "default": "500 + 500 * RARE",
+      "help": "Used when Spell/Trap prices is custom. RARE is 1 for a card in a pack's rare slot, else 0 (ATK, DEF, LEVEL and LINK are 0 here)."
+    },
+    {
+      "key": "BetterShop-Cost",
+      "title": "Flat price",
+      "kind": "number",
+      "default": "500",
+      "help": "DP for one copy when a price setting is Flat price.",
+      "min": 0,
+      "max": 100000,
+      "step": 50
+    }
   ]
 }

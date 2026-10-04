@@ -1,4 +1,13 @@
 {
   "title": "Multiplayer",
-  "description": "Logs the online duel system. For reverse engineering."
+  "description": "Logs the online duel system. For reverse engineering.",
+  "settings": [
+    {
+      "key": "ServerUrl",
+      "title": "Server url",
+      "kind": "text",
+      "default": "",
+      "help": "Base URL of the multiplayer server (sign-in, event reports). Empty = offline: the duel recorder (Duels.log) and logging still work."
+    }
+  ]
 }

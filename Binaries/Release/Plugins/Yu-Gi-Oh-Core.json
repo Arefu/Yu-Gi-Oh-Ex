@@ -1,5 +1,107 @@
 {
   "title": "Core",
-  "description": "Shared code for every plugin, and the save. Always on.",
-  "enforced": true
+  "description": "The save, plugin list and game data loading. Always on.",
+  "enforced": true,
+  "content": [
+    "credits.json"
+  ],
+  "settings": [
+    {
+      "key": "EngineRules2020",
+      "title": "Engine rules 2020",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Duel rules: on = the game's own 2020 rules (Master Rule 5), off = 2019 rules (Master Rule 4). Core sets the engine's rules byte when the game starts, so restart after changing it."
+    },
+    {
+      "key": "PluginsPath",
+      "title": "Plugins path",
+      "kind": "path",
+      "default": "",
+      "help": "The loader's Plugins folder, e.g. <repo>\\Binaries\\Debug\\Plugins\\. The Effects plugin reads its files from a folder named Effects inside it. Must end with a backslash.",
+      "hidden": true
+    },
+    {
+      "key": "SeedFromGameSave",
+      "title": "Seed from game save",
+      "kind": "toggle",
+      "default": "1",
+      "help": "The first time savegame-ex.dat is created, copy your Steam save into it so your progress carries over."
+    },
+    {
+      "key": "GameSaveName",
+      "title": "Game save name",
+      "kind": "text",
+      "default": "savegame-ex.dat",
+      "help": "File name of the save the game always uses (Yu-Gi-Oh-Core is always loaded). Your original savegame.dat is never touched."
+    },
+    {
+      "key": "SaveSlot",
+      "title": "Save slot",
+      "kind": "number",
+      "default": "0",
+      "help": "0 = after the title screen, pick a save slot on the save-select screen. 1 to 5 = always load that slot and skip the screen. Slot 1 is the GameSaveName file, slot N the same name with -N (savegame-ex-2.dat); names and avatars are in Yu-Gi-Oh-Ex\\saves.json.",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "labels": {
+        "0": "Pick at start",
+        "1": "Slot 1",
+        "2": "Slot 2",
+        "3": "Slot 3",
+        "4": "Slot 4",
+        "5": "Slot 5"
+      }
+    },
+    {
+      "key": "Archive",
+      "title": "Archive",
+      "kind": "text",
+      "default": "YGO_2020",
+      "help": "Name of the game's .toc/.dat archive pair the game opens.",
+      "from": "archives"
+    },
+    {
+      "key": "AllowMultiInstance",
+      "title": "Allow multi instance",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Allow more than one copy of the game to run at once."
+    },
+    {
+      "key": "LooseLoading",
+      "title": "Loose loading",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Load files from a folder next to the game (FolderName) instead of the archive's, so extracted or modified files win (see FileOrder for WolfX's patch)."
+    },
+    {
+      "key": "FolderName",
+      "title": "Folder name",
+      "kind": "text",
+      "default": "YGO_2020",
+      "help": "The folder LooseLoading reads from.",
+      "from": "folders"
+    },
+    {
+      "key": "PatchArchive",
+      "title": "Patch archive",
+      "kind": "text",
+      "default": "YGO_2020-Ex",
+      "help": "WolfX's patch archive (<name>.toc / .dat next to YGO_2020.dat): the game's files WolfX changed. Core loads them over the game's own archive whenever they exist, which is never written. Empty = off (the game's own data only). WolfX saves into the same name.",
+      "from": "archives",
+      "empty": "Off (no patch)"
+    },
+    {
+      "key": "FileOrder",
+      "title": "File order",
+      "kind": "choice",
+      "default": "loose",
+      "help": "Which copy of a game file wins when both exist: loose = a loose file (LooseLoading, FolderName) wins over WolfX's patch archive; patch = WolfX's patch wins. Either way the game's own YGO_2020.dat comes last. WolfX follows the same setting.",
+      "choices": [
+        "loose",
+        "patch"
+      ]
+    }
+  ]
 }
