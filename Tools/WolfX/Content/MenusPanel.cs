@@ -14,7 +14,7 @@ namespace WolfEx
         private static readonly string[] Screens =
         [
             "title", "signIn", "commonBg", "mainMenu", "loading", "gameBegin", "exGameDuel", "helpAndOptions", "settings", "videoSettings", "credits",
-            "controllerSettings", "howToPlay", "statistics", "voices", "pauseMenu", "duelistChallenge", "campaignDialog", "campaignSelectDeck",
+            "controllerSettings", "howToPlay", "statistics", "voices", "pauseMenu", "duelistChallenge", "freeDuel", "campaignDialog", "campaignSelectDeck",
             "tutorialList", "deckEditor", "swapCards", "matchResult", "gameResult", "cardShop", "battlePack", "battlePackDraft", "battlePackEdit",
             "playerMatch", "liveSetting", "liveSession", "liveLobby", "liveLoading", "leaderboard", "inviteLanding", "safetyZone", "duelSelect",
             "selectRung", "scoreReview",

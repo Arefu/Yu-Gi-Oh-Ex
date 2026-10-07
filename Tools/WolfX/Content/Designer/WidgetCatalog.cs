@@ -298,6 +298,10 @@ namespace WolfEx.Designer
                 Placeholder("sessionInfo", "Lobby session info", Category_Lists, "RIX::widget_SessionInfo", new(600, 300)),
                 Placeholder("rungBody", "Ladder rung", Category_Lists, "RIX::ScreenSelectRung::widget_Body", new(600, 300)),
                 Placeholder("tutorialItem", "Tutorial item", Category_Lists, "RIX::ScreenSelectTutorial::widget_Item", new(59, 51), "pdui/tut_item_frame"),
+                // Free Duel (screen 21, RIX::ScreenHardChallenge): series tabs (+656) -> opponent list (+904) -> deck picker (+1456) with the two
+                // deck panels (+2864 yours, +3448 the opponent's). YuGiOh-RIX.h YGO::RIX::FreeDuel / DeckSelectList / DeckInfoPanel.
+                Placeholder("deckSelectList", "Deck picker (tabs)", Category_Lists, "DeckSelectList (Free Duel +1456, campaign deck +664)", new(900, 600), "pdui/menuframe"),
+                Placeholder("deckInfoPanel", "Deck info panel", Category_Lists, "DeckInfoPanel (Free Duel +2864 / +3448, campaign deck +2072)", new(480, 600), "pdui/menuframe"),
                 Placeholder("pickCharacter", "Character picker", Category_Lists, "RIX::widget_pickCharacter", new(900, 400)),
                 Placeholder("pickCharacterItem", "Character", Category_Lists, "RIX::widget_pickCharacter::widget_Item", new(146, 197), "pdui/shared/opponentframe_normal"),
                 Placeholder("pickSeries", "Series picker", Category_Lists, "RIX::widget_pickSeries", new(400, 397), "pdui/SeriesLogo", "logo_vrains"),
