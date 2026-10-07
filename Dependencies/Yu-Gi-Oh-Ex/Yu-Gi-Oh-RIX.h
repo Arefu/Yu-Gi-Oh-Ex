@@ -29,7 +29,7 @@
 extern "C" {
 #endif
 
-#define RIX_API_VERSION 4
+#define RIX_API_VERSION 5   /* 5: pages hold 5 buttons (RIX_PageDesc grew), RIX_UpdatePageButton */
 
 /* The plugin itself defines RIX_EXPORTS; everyone else only declares the functions (and normally uses RIX::Load below instead). */
 #ifdef RIX_EXPORTS
@@ -87,7 +87,8 @@ extern "C" {
 #define RIX_SCREEN_STATISTICS 18
 #define RIX_SCREEN_VOICES 19
 #define RIX_SCREEN_PAUSE_MENU 20
-#define RIX_SCREEN_DUELIST_CHALLENGE 21     /* ScreenHardChallenge */
+#define RIX_SCREEN_DUELIST_CHALLENGE 21     /* ScreenHardChallenge: the Free Duel picker (series, opponent, deck); challenge mode only when the main menu opens it */
+#define RIX_SCREEN_FREE_DUEL 21             /* the same screen; open it with every duel mode off for a plain free duel */
 #define RIX_SCREEN_CAMPAIGN_DIALOG 22
 #define RIX_SCREEN_CAMPAIGN_SELECT_DECK 23
 #define RIX_SCREEN_TUTORIAL_LIST 24         /* ScreenSelectTutorial */
@@ -172,7 +173,7 @@ RIX_API int __cdecl RIX_SetMainMenuItemAction(int Item, RIX_ButtonCallback Callb
    gets the input first; take a mouse click yourself only when it is on one of your widgets). Opening a page from a page puts it on top, in place; Back (Esc / Backspace / the pad's cancel)
    closes the top page, and closing the last one returns to the screen the first was opened from. A screen opened from a page (with
    RIX_GotoScreen) comes back to that page. */
-#define RIX_PAGE_MAX_BUTTONS 4
+#define RIX_PAGE_MAX_BUTTONS 5
 
 typedef struct RIX_PageButton
 {
@@ -209,6 +210,10 @@ RIX_API int __cdecl RIX_OpenPage(const RIX_PageDesc* Page);
 /* Closes the top page, like Back (1), or 0 when no page is open. */
 RIX_API int __cdecl RIX_ClosePage(void);
 
+/* Changes button Index (0-based) of the top page - label, description, callback - and redraws it, keeping that button highlighted (1), or 0
+   when no page is open or there is no such button. For toggles such as "Partner: AI" -> "Partner: Human". Call it on the game's thread. */
+RIX_API int __cdecl RIX_UpdatePageButton(int Index, const RIX_PageButton* Button);
+
 #ifdef __cplusplus
 }
 
@@ -235,6 +240,7 @@ namespace RIX
         int(__cdecl* SetMainMenuItemAction)(int, RIX_ButtonCallback, void*) = nullptr;
         int(__cdecl* OpenPage)(const RIX_PageDesc*) = nullptr;
         int(__cdecl* ClosePage)() = nullptr;
+        int(__cdecl* UpdatePageButton)(int, const RIX_PageButton*) = nullptr;
     };
 
     inline Api& Functions()
@@ -275,6 +281,7 @@ namespace RIX
         RIX_BIND(SetMainMenuItemAction);
         RIX_BIND(OpenPage);
         RIX_BIND(ClosePage);
+        RIX_BIND(UpdatePageButton);
 #undef RIX_BIND
         return true;
     }
