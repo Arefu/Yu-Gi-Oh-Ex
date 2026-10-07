@@ -24,6 +24,18 @@ namespace TagDuel
     void SetSeatControllers(const int (&controllers)[4]);
     void ClearSeatControllers();
 
+    // Who plays each seat in a local (offline) tag duel, when no plugin set the seat controllers - the Local seat screen's four toggles.
+    // Every human seat is played on this machine (hot-seat). A human on the opponent's team keeps the game's leftover local-versus mode
+    // (g_bUseSeatControllerTable) on for the whole duel: with it the game takes input for, and shows the hand of, any human's side.
+    enum Role : int { RoleYou = 0, RolePartner = 1, RoleOpponent = 2, RoleOpponentPartner = 3 };
+    void SetSeatHuman(Role role, bool human);
+    bool IsSeatHuman(Role role);
+
+    // Free Duel's partner picks (Yu-Gi-Oh-Campaign): characters (g_CharacterRecords index) and game deck ids (0-31 save decks, 32+
+    // deckdata). Arms the NEXT duel only: tag mode is used only for a duel armed this way, so campaign/story duels stay 1v1. A deck
+    // of -1 = PartnerDeck / OpponentPartnerDeck setting, else a copy of the teammate's deck.
+    void SetPartners(int yourCharacter, int yourDeck, int opponentCharacter, int opponentDeck);
+
     // Online duels. The game's online setup turns tag off and only knows 2 seats, so a tag duel in an online match would put the two
     // games out of step: TagDuel stays out of online duels unless a multiplayer plugin (Yu-Gi-Oh-MP) says it handles them, and then
     // that plugin sets the seat controllers (one machine runs each AI seat, the other sees it as Network).
