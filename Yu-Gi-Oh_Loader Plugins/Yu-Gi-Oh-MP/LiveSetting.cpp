@@ -10,6 +10,7 @@
 #include "YuGiOh/YuGiOh-RIX.h"
 
 #include <cstdlib>
+#include <cstring>
 #include <functional>
 #include <malloc.h>
 #include <map>
@@ -64,10 +65,25 @@ namespace
     const auto IsLiveHost = reinterpret_cast<uint8_t(__fastcall*)()>(0x1407691E0);                // YGO__DUEL__Get_IsLiveHost
 
     const char* GetLobbyData(uint64_t lobby, const char* key) { return Steam::GetLobbyData(lobby, key); }
+    // Writes a lobby value only when it differs, like QNet__PublishHostLobbyData does: every Steam write fires LobbyDataUpdate, which makes
+    // the game publish again, so writing unchanged values looped forever (the host stuck on "Creating session", 2026-10-07).
     void SetLobbyData(uint64_t lobby, const char* key, const char* value)
     {
+        const char* current = GetLobbyData(lobby, key);
+        if (current && std::strcmp(current, value) == 0)
+            return;
         if (!Steam::SetLobbyData(lobby, key, value))
             Logger::WriteLog("Could not write the ban list setting to the lobby (Steam not ready)", MODULE_NAME, 1);
+    }
+
+    // Our "exmp" member mark, once per lobby (member data changes fire an update too).
+    uint64_t g_MarkedLobby = 0;
+    void MarkMember(uint64_t lobby)
+    {
+        if (g_MarkedLobby == lobby)
+            return;
+        g_MarkedLobby = lobby;
+        Steam::SetLobbyMemberData(lobby, "exmp", "1");
     }
 
     // The game's own vector growth (its allocator): std::vector<Option>::_Emplace_reallocate and std::vector<int>::_Emplace_reallocate.
@@ -408,7 +424,7 @@ namespace
         for (size_t i = 0; i < parts; ++i)
             SetLobbyData(lobby, (kLobbyListPrefix + std::to_string(i)).c_str(), list.substr(i * kLobbyChunk, kLobbyChunk).c_str());
         SetLobbyData(lobby, kLobbyParts, std::to_string(parts).c_str());
-        Steam::SetLobbyMemberData(lobby, kMemberMark, "1");
+        MarkMember(lobby);
         g_HostLobby = lobby;
     }
 
@@ -418,7 +434,7 @@ namespace
         if (ioFailure || !lobbyEnter || IsLiveHost())
             return;
         const uint64_t lobby = *static_cast<uint64_t*>(lobbyEnter);
-        Steam::SetLobbyMemberData(lobby, kMemberMark, "1");   // tells the host this player runs Yu-Gi-Oh-MP
+        MarkMember(lobby);   // tells the host this player runs Yu-Gi-Oh-MP
         const char* mode = GetLobbyData(lobby, kLobbyMode);
         const std::string value = mode ? mode : "";
         BanList::UseGame();   // until the player accepts the host's list
@@ -454,6 +470,7 @@ namespace
         orig_LeaveLobby(qnet, lobby);
         g_Pending = {};
         g_HostLobby = 0;
+        g_MarkedLobby = 0;
         g_FirstSeen.clear();
         g_Reported.clear();
         BanList::UseGame();
