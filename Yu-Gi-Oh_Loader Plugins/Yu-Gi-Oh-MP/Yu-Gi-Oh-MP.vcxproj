@@ -127,6 +127,9 @@
   <ItemGroup>
     <None Include="Yu-Gi-Oh.def" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="LICENSE" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
