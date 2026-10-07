@@ -19,13 +19,18 @@ namespace WolfX
         /// </summary>
         private void InitLimitsExtras()
         {
-            groupBox16.Height = 160;
-            var saveMp = new Button { Text = "Save as MP list...", Location = new Point(6, 88), Size = new Size(120, 25), Enabled = false };
-            var openMp = new Button { Text = "Open MP list...", Location = new Point(6, 119), Size = new Size(120, 25) };
+            // Its own box beside the others (same size, same button placement), so the game file and the MP lists stay apart.
+            var box = new GroupBox { Text = "MP ban list", Location = new Point(groupBox15.Right + 6, groupBox15.Top), Size = groupBox15.Size };
+            var saveMp = new Button { Text = "Save as...", Location = new Point(6, 22), Size = new Size(110, 25), Enabled = false };
+            var openMp = new Button { Text = "Open...", Location = new Point(6, 53), Size = new Size(110, 25) };
+            var tip = new ToolTip();
+            tip.SetToolTip(saveMp, "Save this list to Yu-Gi-Oh-Ex\banlists for the Yu-Gi-Oh-MP plugin (a host picks it as the lobby's ban list)");
+            tip.SetToolTip(openMp, "Open a list from Yu-Gi-Oh-Ex\banlists; Save then writes it as the game's own list");
             saveMp.Click += (_, _) => SaveMpBanList();
             openMp.Click += (_, _) => OpenMpBanList();
-            groupBox16.Controls.Add(saveMp);
-            groupBox16.Controls.Add(openMp);
+            box.Controls.Add(saveMp);
+            box.Controls.Add(openMp);
+            groupBox15.Parent!.Controls.Add(box);
             PDL_BTN_SavePDL.EnabledChanged += (_, _) => saveMp.Enabled = PDL_BTN_SavePDL.Enabled;
         }
 

@@ -76,14 +76,27 @@ namespace
             Logger::WriteLog("Could not write the ban list setting to the lobby (Steam not ready)", MODULE_NAME, 1);
     }
 
-    // Our "exmp" member mark, once per lobby (member data changes fire an update too).
+    // Our "exmp" member mark. Written only while Steam doesn't show it on us (member data changes fire an update too, so an unconditional
+    // write loops), and re-checked every second while in a lobby: a write made right after entering could be lost, and the host then
+    // reported a modded player as a Vanilla Client (2026-10-07).
     uint64_t g_MarkedLobby = 0;
+    ULONGLONG g_NextMarkCheck = 0;
     void MarkMember(uint64_t lobby)
     {
-        if (g_MarkedLobby == lobby)
-            return;
         g_MarkedLobby = lobby;
+        const char* mark = Steam::GetLobbyMemberData(lobby, Steam::Get_SteamId64(), "exmp");
+        if (mark && mark[0] == '1')
+            return;
         Steam::SetLobbyMemberData(lobby, "exmp", "1");
+    }
+
+    void KeepMemberMark()
+    {
+        const ULONGLONG now = GetTickCount64();
+        if (!g_MarkedLobby || now < g_NextMarkCheck)
+            return;
+        g_NextMarkCheck = now + 1000;
+        MarkMember(g_MarkedLobby);
     }
 
     // The game's own vector growth (its allocator): std::vector<Option>::_Emplace_reallocate and std::vector<int>::_Emplace_reallocate.
@@ -353,7 +366,7 @@ namespace
     }
 
     // ---- the host is told when a player without Yu-Gi-Oh-MP joins ("Vanilla Client"): they can't see this lobby's ban list and play with
-    // the game's own, so the host can kick them. A member without the "exmp" mark 4 seconds after we first saw them is reported once.
+    // the game's own, so the host can kick them. A member without the "exmp" mark 8 seconds after we first saw them is reported once.
     uint64_t g_HostLobby = 0;
     std::map<uint64_t, ULONGLONG> g_FirstSeen;
     std::map<uint64_t, bool> g_Reported;
@@ -389,7 +402,7 @@ namespace
                 g_Reported[member] = true;   // runs Yu-Gi-Oh-MP
                 continue;
             }
-            if (now - seen->second < 4000)
+            if (now - seen->second < 8000)
                 continue;
             g_Reported[member] = true;
             const std::wstring name = Wide(Steam::PersonaName(member));
@@ -407,6 +420,7 @@ namespace
     void __fastcall Hook_LobbyUpdate(char* screen, void* ui, float seconds)
     {
         orig_LobbyUpdate(screen, ui, seconds);
+        KeepMemberMark();
         if (g_Pending.Ask && !IsLiveHost())
             AskForBanList(screen);
         else if (IsLiveHost())
