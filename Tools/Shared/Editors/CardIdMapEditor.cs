@@ -60,6 +60,7 @@ namespace Wolf.Editors
             _list.Columns.Add("", 380);
             _list.RetrieveVirtualItem += (_, e) =>
             {
+                if (e.ItemIndex >= _rows.Count) { e.Item = new ListViewItem(new string[_list.Columns.Count]); return; }   // stale index while the list shrinks
                 var row = _rows[e.ItemIndex];
                 e.Item = new ListViewItem([row.KonamiId.ToString(), row.InternalId == 0 ? "" : row.InternalId.ToString(), Name(row.KonamiId), row.Note]);
             };

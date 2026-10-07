@@ -15,7 +15,7 @@ namespace WolfEx
         public string Description { get; init; } = "";
         /// <summary>Level, or Rank for an Xyz Monster.</summary>
         public int Level { get; init; }
-        /// <summary>The keys: "fusion", "ritualSpell", "ritualMonsters", "synchro", "xyz" (a custom card's Extra, or a game card's summoning.json entry).</summary>
+        /// <summary>The keys: "fusion", "ritualSpell", "ritualMonsters", "synchro", "xyz", "link" (a custom card's Extra, or a game card's summoning.json entry).</summary>
         public required JsonObject Data { get; init; }
         /// <summary>A game card: its requirements start as the game's and changes go to summoning.json.</summary>
         public bool GameCard { get; init; }
@@ -29,7 +29,7 @@ namespace WolfEx
     /// <summary>
     /// The Summoning tab, the same on the New cards page and the Card Manager: what a Fusion Monster is made from ("fusion", Yu-Gi-Oh-Effects
     /// Fusion.cpp), the Ritual Spell of a Ritual Monster and the Ritual Monsters of a Ritual Spell ("ritualSpell" / "ritualMonsters", Ritual.cpp),
-    /// and a Synchro or Xyz Monster's materials ("synchro" / "xyz", SynchroXyz.cpp). docs/EffectSystem.md sections 36, 40, 41.
+    /// and a Synchro, Xyz or Link Monster's materials ("synchro" / "xyz" / "link", SynchroXyz.cpp). docs/EffectSystem.md sections 36, 40, 41, 42.
     /// </summary>
     internal sealed class SummonEditor : UserControl
     {
@@ -81,6 +81,12 @@ namespace WolfEx
         private readonly MaterialCodePicker _xyzMaterial = new(synchro: false);
         private readonly NumericUpDown _xyzCount = new() { Minimum = 1, Maximum = 20, Width = 60 };
         private readonly Label _xyzState = new() { AutoSize = true, MaximumSize = new Size(560, 0), Margin = new Padding(3, 8, 3, 3) };
+
+        // Link: g_LinkMaterialRequirements' three codes (two every material must meet, one at least one must)
+        private readonly Panel _linkBox = new() { Dock = DockStyle.Fill, Padding = new Padding(6) };
+        private readonly MaterialCodePicker _linkCondition = new(MaterialCodePicker.Mode.LinkEach), _linkMaterial = new(MaterialCodePicker.Mode.LinkEach);
+        private readonly MaterialCodePicker _linkIncluding = new(MaterialCodePicker.Mode.LinkIncluding);
+        private readonly Label _linkState = new() { AutoSize = true, MaximumSize = new Size(560, 0), Margin = new Padding(3, 8, 3, 3) };
 
         private bool _binding;
 
@@ -163,6 +169,18 @@ namespace WolfEx
             _xyzMaterial.ValueChanged += XyzEdited;
             _xyzCount.ValueChanged += XyzEdited;
 
+            // Link: the number of materials is the Link Rating's business (the game's generic rule), the table only says what they must be
+            var linkFlow = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true, FlowDirection = FlowDirection.TopDown, WrapContents = false };
+            linkFlow.Controls.Add(Row(Caption("\"N+ ...\" / \"except ...\" - every material is:"), _linkCondition));
+            linkFlow.Controls.Add(Row(Caption("\"exactly N ...\" - every material is:"), _linkMaterial));
+            linkFlow.Controls.Add(Row(Caption("Including at least one:"), _linkIncluding));
+            linkFlow.Controls.Add(Row(SmallButton("Read card text", LinkFromText), SmallButton("Any monsters", SetLinkAny)));
+            linkFlow.Controls.Add(_linkState);
+            _linkBox.Controls.Add(linkFlow);
+            _linkCondition.ValueChanged += LinkEdited;
+            _linkMaterial.ValueChanged += LinkEdited;
+            _linkIncluding.ValueChanged += LinkEdited;
+
             _gameBar.Controls.Add(_gameState);
             _gameBar.Controls.Add(SmallButton("Use the game's", () => { if (_target != null) ResetToGame?.Invoke(_target); }));
 
@@ -171,6 +189,7 @@ namespace WolfEx
             Controls.Add(_ritualSpellBox);
             Controls.Add(_synchroBox);
             Controls.Add(_xyzBox);
+            Controls.Add(_linkBox);
             Controls.Add(_note);
             Controls.Add(_gameBar);
         }
@@ -194,7 +213,8 @@ namespace WolfEx
             _ritualSpellBox.Visible = section == Section.RitualSpell;
             _synchroBox.Visible = section == Section.Synchro;
             _xyzBox.Visible = section == Section.Xyz;
-            _gameBar.Visible = target is { GameCard: true } && section is not (Section.None or Section.Link);
+            _linkBox.Visible = section == Section.Link;
+            _gameBar.Visible = target is { GameCard: true } && section is not Section.None;
             if (target != null)
             {
                 _gameState.Text = target.Changed ? "Changed: saved to Yu-Gi-Oh-Ex\\summoning.json (Yu-Gi-Oh-Effects applies it)." : "The game's own requirements.";
@@ -213,9 +233,10 @@ namespace WolfEx
                                    "an archetype, a kind or (Tuner/non-Tuner) one named card. Saved as \"synchro\"; without it the game's generic rule applies.",
                 Section.Xyz => $"Monsters of the card's Rank ({target!.Level}) as their Level, optionally all of a Type, Attribute, archetype or kind. " +
                                "Saved as \"xyz\"; without it the game's generic rule applies (2 materials).",
-                Section.Link => "Link Monsters use the game's generic rule (Link Rating = materials). Their material conditions are not table driven, " +
-                                "so there is nothing to pick here yet.",
-                _ => "Only Fusion, Ritual, Synchro and Xyz Monsters and Ritual Spells (a Spell with the Ritual icon) have requirements to pick here.",
+                Section.Link => "What the Link Materials must be. Konami puts \"2+ Effect Monsters\" / \"except Tokens\" in the first slot and " +
+                                "\"1 Normal Monster\" / \"2 Spellcaster monsters\" in the second; the game tests both on EVERY material (how many is the " +
+                                "Link Rating's business). The third holds for at least one (\"including a Link Monster\"). Saved as \"link\"; without it any monsters.",
+                _ => "Only Fusion, Ritual, Synchro, Xyz and Link Monsters and Ritual Spells (a Spell with the Ritual icon) have requirements to pick here.",
             };
             if (target == null)
                 return;
@@ -245,6 +266,9 @@ namespace WolfEx
                         break;
                     case Section.Xyz:
                         BindXyz(target);
+                        break;
+                    case Section.Link:
+                        BindLink(target);
                         break;
                 }
             }
@@ -548,6 +572,67 @@ namespace WolfEx
             _xyzState.Text = XyzText(xyz, _target.Level);
         }
 
+        // ---------------------------------------------------------------- Link
+
+        private void BindLink(SummonTarget target)
+        {
+            var link = target.Data["link"] as JsonObject;
+            _linkCondition.CardName = _linkMaterial.CardName = _linkIncluding.CardName = CardName;
+            _linkCondition.Value = link?["condition"];
+            _linkMaterial.Value = link?["material"];
+            _linkIncluding.Value = link?["including"];
+            _linkState.Text = link == null
+                ? "No requirements set: any monsters can be its materials. Change anything above to set them."
+                : LinkText(link);
+        }
+
+        private string LinkText(JsonObject link)
+        {
+            string condition = MaterialCodePicker.Describe(link["condition"], CardName);
+            string material = MaterialCodePicker.Describe(link["material"], CardName);
+            string including = MaterialCodePicker.Describe(link["including"], CardName);
+            var each = new[] { condition, material }.Where(t => t != "any").ToList();
+            string text = "Reads: " + (each.Count == 0 ? "any monsters" : string.Join(" ", each) + " monsters");
+            if (including != "any")
+                text += $", including a {including} monster";
+            return text + ".";
+        }
+
+        private void LinkEdited(object? sender, EventArgs e)
+        {
+            if (_binding || _target == null)
+                return;
+            var link = new JsonObject();
+            if (_linkCondition.Value is { } condition)
+                link["condition"] = condition.DeepClone();
+            if (_linkMaterial.Value is { } material)
+                link["material"] = material.DeepClone();
+            if (_linkIncluding.Value is { } including)
+                link["including"] = including.DeepClone();
+            _target.Data["link"] = link;
+            Changed();
+            _linkState.Text = LinkText(link);
+        }
+
+        /// <summary>Any monsters: a new card simply has no "link"; a game card keeps an empty one, which takes away the game's row.</summary>
+        private void SetLinkAny() => SetKey("link", _target?.GameCard == true ? new JsonObject() : null);
+
+        private void LinkFromText()
+        {
+            if (_target is not { } target)
+                return;
+            var read = ExtraDeckMaterialText.Link(target.Description, CardIdByName, name => FusionMaterialText.ArchetypeCodesFor(name, CustomCards()), out string why);
+            if (read == null)
+            {
+                MessageBox.Show(this, $"The text's material line can't be read as Link Materials ({why}). Set them by hand.", "Read card text",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            SetKey("link", read);
+            if (why.Length > 0)
+                _linkState.Text += $"\r\nLeft out: {why}";
+        }
+
         private void SynchroFromText()
         {
             if (_target is not { } target)
@@ -584,9 +669,9 @@ namespace WolfEx
     }
 
     /// <summary>
-    /// One Synchro or Xyz material condition, the way the game's tables hold it: any monster, a Type, an Attribute, an archetype (the game's,
-    /// up to 418), a kind (Normal, Gemini, Pendulum; Synchro for Synchro Monsters) or - Synchro only - one named card. Codes the pickers
-    /// cannot say (the game's own rules, e.g. 97) are kept and shown as they are.
+    /// One Synchro, Xyz or Link material condition, the way the game's tables hold it: any monster, a Type, an Attribute, an archetype (the
+    /// game's, up to 418), a kind, a Level (Link) or one named card (Synchro, Link "including"). Each mode offers what that check knows
+    /// (SynchroXyz.cpp AllowedCode / AllowedLinkCode). Codes the pickers cannot say (the game's own rules, e.g. 97) are kept as they are.
     /// </summary>
     internal sealed class MaterialCodePicker : FlowLayoutPanel
     {
@@ -595,10 +680,14 @@ namespace WolfEx
             public override string ToString() => Text;
         }
 
-        private static readonly string[] Categories = ["Any monster", "Type", "Attribute", "Archetype", "Kind", "Card"];
-        private const string GameRule = "Game rule";
+        /// <summary>Which check the value is for: what it can be differs (Link_CardIsValidMaterial knows Levels and more kinds).</summary>
+        public enum Mode { Synchro, Xyz, LinkEach, LinkIncluding }
 
-        private readonly bool _synchro;
+        private const string GameRule = "Game rule";
+        private const string NotToken = "notToken";   // code 96, read by SynchroXyz.cpp's Link parser
+
+        private readonly Mode _mode;
+        private bool AllowsCard => _mode is Mode.Synchro or Mode.LinkIncluding;
         private readonly ComboBox _category = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 120 };
         private readonly ComboBox _value = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 260 };
         private readonly System.Windows.Forms.Button _pick = new() { Text = "Pick card...", AutoSize = true };
@@ -609,13 +698,18 @@ namespace WolfEx
         public event EventHandler? ValueChanged;
         public Func<int, string> CardName { get; set; } = CardCatalog.NameOf;
 
-        public MaterialCodePicker(bool synchro)
+        public MaterialCodePicker(bool synchro) : this(synchro ? Mode.Synchro : Mode.Xyz)
         {
-            _synchro = synchro;
+        }
+
+        public MaterialCodePicker(Mode mode)
+        {
+            _mode = mode;
             AutoSize = true;
             WrapContents = false;
             Margin = new Padding(0);
-            _category.Items.AddRange(synchro ? Categories : Categories[..^1]);
+            _category.Items.AddRange(new List<string> { "Any monster", "Type", "Attribute", "Archetype", "Kind" }
+                .Concat(mode == Mode.LinkEach ? ["Level"] : []).Concat(AllowsCard ? ["Card"] : []).ToArray<object>());
             _category.SelectedIndexChanged += (_, _) =>
             {
                 if (_filling)
@@ -635,14 +729,41 @@ namespace WolfEx
                 ValueChanged?.Invoke(this, EventArgs.Empty);
         }
 
-        private static IEnumerable<Choice> KindChoices(bool synchro)
+        private static IEnumerable<Choice> KindChoices(Mode mode)
         {
+            if (mode == Mode.LinkEach)
+            {
+                yield return new Choice(JsonValue.Create("effect"), "Effect");
+                yield return new Choice(JsonValue.Create(NotToken), "not a Token");
+                yield return new Choice(JsonValue.Create("normal"), "Normal");
+                yield return new Choice(JsonValue.Create("pendulum"), "Pendulum");
+                yield return new Choice(JsonValue.Create("xyz"), "Xyz");
+                yield return new Choice(JsonValue.Create("link"), "Link");
+                yield break;
+            }
+            if (mode == Mode.LinkIncluding)
+            {
+                yield return new Choice(JsonValue.Create("link"), "Link");
+                yield return new Choice(JsonValue.Create("synchro"), "Synchro");
+                yield return new Choice(JsonValue.Create("tuner"), "Tuner");
+                yield break;
+            }
             yield return new Choice(JsonValue.Create("normal"), "Normal");
             yield return new Choice(JsonValue.Create("gemini"), "Gemini");
             yield return new Choice(JsonValue.Create("pendulum"), "Pendulum");
             yield return new Choice(JsonValue.Create(94), "DARK Pendulum");
-            if (synchro)
+            if (mode == Mode.Synchro)
                 yield return new Choice(JsonValue.Create("synchro"), "Synchro");
+        }
+
+        private static IEnumerable<Choice> LevelChoices()
+        {
+            for (int level = 1; level <= 12; level++)
+            {
+                yield return new Choice(JsonValue.Create($"level:{level}"), $"Level {level}");
+                yield return new Choice(JsonValue.Create($"level>={level}"), $"Level {level} or higher");
+                yield return new Choice(JsonValue.Create($"level<={level}"), $"Level {level} or lower");
+            }
         }
 
         private void FillValues()
@@ -656,7 +777,8 @@ namespace WolfEx
                 "Archetype" => ArchetypeCatalog.Codes().Where(code => code < ArchetypeCatalog.FirstCustomCode)
                     .Select(code => new Choice(JsonValue.Create($"archetype:{code}"), $"{ArchetypeCatalog.NameOf(code)} ({code})"))
                     .OrderBy(c => c.Text, StringComparer.OrdinalIgnoreCase),
-                "Kind" => KindChoices(_synchro),
+                "Kind" => KindChoices(_mode),
+                "Level" => LevelChoices(),
                 "Card" => _card is JsonValue v && v.TryGetValue<int>(out int id) ? [new Choice(_card, $"{CardName(id)} ({id})")] : [],
                 GameRule => _raw != null ? [new Choice(_raw, MaterialCodePicker.Describe(_raw, CardName))] : [],
                 _ => [],
@@ -692,11 +814,15 @@ namespace WolfEx
                     string? word = null;
                     if (value is JsonValue v && v.TryGetValue<int>(out int code))
                     {
-                        if (code >= 3000 && _synchro)
+                        if (code == 96 && _mode == Mode.LinkEach)
+                            value = JsonValue.Create(NotToken);   // the game's code, shown as its word
+                        if (code >= 3000 && AllowsCard)
                         {
                             _card = value;
                             category = "Card";
                         }
+                        else if (code == 96 && _mode == Mode.LinkEach)
+                            word = NotToken;
                         else if (code != 0)
                             word = MaterialCondition.WordOfCode(code) ?? (code == 94 ? "94" : null);
                         if (code != 0 && word == null && category != "Card")
@@ -707,12 +833,14 @@ namespace WolfEx
 
                     if (word != null)
                     {
-                        category = word == "94" ? "Kind" : MaterialCondition.Parse(word)?.Category switch
+                        category = word == "94" || IsNotToken(word) ? "Kind" : MaterialCondition.Parse(word)?.Category switch
                         {
                             MaterialCondition.Category.Type => "Type",
                             MaterialCondition.Category.Attribute => "Attribute",
                             MaterialCondition.Category.Archetype => "Archetype",
                             MaterialCondition.Category.Kind => "Kind",
+                            MaterialCondition.Category.Level or MaterialCondition.Category.LevelOrHigher or MaterialCondition.Category.LevelOrLower
+                                when _mode == Mode.LinkEach => "Level",
                             _ => GameRule,
                         };
                         if (category == GameRule)
@@ -726,9 +854,10 @@ namespace WolfEx
                     FillValues();
                     if (word != null && category != GameRule)
                     {
-                        var parsed = word == "94" ? null : MaterialCondition.Parse(word);
+                        var parsed = word == "94" || IsNotToken(word) ? null : MaterialCondition.Parse(word);
                         int index = _value.Items.Cast<Choice>().ToList().FindIndex(c =>
                             word == "94" ? c.Value is JsonValue cv && cv.TryGetValue<int>(out int n) && n == 94
+                            : IsNotToken(word) ? c.Value is JsonValue cv3 && cv3.TryGetValue<string>(out string? t) && IsNotToken(t)
                             : c.Value is JsonValue cv2 && cv2.TryGetValue<string>(out string? w) && parsed != null && MaterialCondition.Parse(w) == parsed with { Not = false });
                         if (index >= 0)
                             _value.SelectedIndex = index;
@@ -750,10 +879,14 @@ namespace WolfEx
             }
         }
 
+        private static bool IsNotToken(string? word) =>
+            word != null && System.Text.RegularExpressions.Regex.Replace(word, "[ _-]", "").ToLowerInvariant() is "nottoken" or "excepttoken" or "excepttokens";
+
         /// <summary>A material value for the summary lines: "any", "DARK", "\"Blackwing\"", "Junk Synchron (7687)".</summary>
         public static string Describe(JsonNode? value, Func<int, string> cardName) => value switch
         {
             null => "any",
+            JsonValue v when v.TryGetValue<string>(out string? t) && IsNotToken(t) => "non-Token",
             JsonValue v when v.TryGetValue<int>(out int code) => code == 0 ? "any" : code >= 3000 ? $"{cardName(code)} ({code})" : MaterialCondition.DescribeCode(code),
             JsonValue v when v.TryGetValue<string>(out string? text) => string.Equals(text, "any", StringComparison.OrdinalIgnoreCase) ? "any" : MaterialCondition.Describe(text),
             _ => value.ToJsonString(),

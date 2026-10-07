@@ -41,6 +41,15 @@ namespace WolfEx
         private readonly ComboBox _sameMode = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 170, Items = { "always", "while an effect says so" } };
         private readonly Button btnSamePick = new() { Text = "Pick card...", AutoSize = true }, btnSameClear = new() { Text = "Own name", AutoSize = true };
 
+        private readonly CheckBox _atkUnknown = new() { Text = "?", AutoSize = true, Margin = new Padding(6, 6, 3, 3) },
+            _defUnknown = new() { Text = "?", AutoSize = true, Margin = new Padding(6, 6, 3, 3) };
+        private readonly NumericUpDown _password = new() { Maximum = 99999999, Width = 110 };
+
+        // the Text tab's language: English is the card's own name and text, the others "text": { "F": { ... } } in cards.json
+        private readonly ComboBox _language = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 140 };
+        private readonly TextBox _kana = new() { Width = 70, MaxLength = 3, Font = new Font("Segoe UI", 10f) };
+        private readonly Button _kanaFromName = new() { Text = "From name", AutoSize = true };
+        private readonly TextBox _sortAs = new() { Width = 260 };
         private readonly TextBox _name = new() { Dock = DockStyle.Top };
         private readonly TextBox _desc = new() { Dock = DockStyle.Fill, Multiline = true, AcceptsReturn = true, ScrollBars = ScrollBars.Vertical, Font = new Font("Segoe UI", 10f) };
 
@@ -89,6 +98,7 @@ namespace WolfEx
             _list.Columns.Add("Kind", 90);
             _list.RetrieveVirtualItem += (_, e) =>
             {
+                if (e.ItemIndex >= _rows.Count) { e.Item = new ListViewItem(new string[_list.Columns.Count]); return; }   // stale index while the list shrinks
                 var card = _rows[e.ItemIndex];
                 e.Item = new ListViewItem([card.Id.ToString(), card.Name, card.Kind]);
             };
@@ -104,7 +114,7 @@ namespace WolfEx
             _tools.Items.Add(_duplicate = Button("Duplicate", "Add a copy of this card with the next free id", DuplicateCard));
             _tools.Items.Add(_delete = Button("Delete...", "Remove this card from cards.json (its art file stays)", DeleteCard));
             _tools.Items.Add(new ToolStripSeparator());
-            _tools.Items.Add(_inManager = Button("Genres, related cards, links...", "Show this card in the Card Manager, which has those tabs", () =>
+            _tools.Items.Add(_inManager = Button("In Card Manager", "Show this card in the Card Manager", () =>
             {
                 if (Selected is { } card)
                     ShowInCardManager?.Invoke(card.Id);
@@ -140,11 +150,25 @@ namespace WolfEx
 
             foreach (var combo in new[] { _kind, _type, _attribute, _icon, _limitation })
                 combo.SelectedIndexChanged += Editor_Changed;
-            foreach (var number in new[] { _id, _level, _atk, _def, _scale, _copies })
+            foreach (var number in new[] { _id, _level, _atk, _def, _scale, _copies, _password })
                 number.ValueChanged += Editor_Changed;
-            _name.TextChanged += Editor_Changed;
+            _atkUnknown.CheckedChanged += Editor_Changed;
+            _defUnknown.CheckedChanged += Editor_Changed;
+            _name.TextChanged += TextEdited;
             _arrows.Changed += () => Editor_Changed(_arrows, EventArgs.Empty);
-            _desc.TextChanged += Editor_Changed;
+            _desc.TextChanged += TextEdited;
+            _kana.TextChanged += TextEdited;
+            _sortAs.TextChanged += TextEdited;
+            _kanaFromName.Click += (_, _) => _kana.Text = global::Types.CardKanaTable.FromName(_name.Text.Length > 0 ? _name.Text : _name.PlaceholderText);
+            foreach (char language in global::Types.CardTextTable.Languages)
+                _language.Items.Add(new Named(language.ToString(), $"{(global::Types.HowToPlayFile.LanguageName(language))} ({language})"));
+            _language.SelectedIndex = 0;
+            _language.SelectedIndexChanged += (_, _) =>
+            {
+                if (Selected is { } card)
+                    ShowText(card);
+                ShowSummary();   // the face shows the language being edited
+            };
             btnArchetypes.Click += btnArchetypes_Click;
             btnSamePick.Click += btnSamePick_Click;
             btnSameClear.Click += btnSameClear_Click;
@@ -183,9 +207,10 @@ namespace WolfEx
             {
                 // the Card Manager's fields in its order, then what only a new card has
                 (Caption("Card id:"), _id), (Caption("Kind:"), _kind), (Caption("Attribute:"), _attribute), (Caption("Type:"), _type),
-                (_levelLabel, _level), (Caption("ATK:"), _atk), (Caption("DEF:"), _def), (Caption("Spell / Trap icon:"), _icon),
+                (_levelLabel, _level), (Caption("ATK:"), Row(_atk, _atkUnknown)), (Caption("DEF:"), Row(_def, _defUnknown)), (Caption("Spell / Trap icon:"), _icon),
                 (Caption("Link arrows:"), _arrows), (Caption("Pendulum scale:"), _scale), (Caption("Archetypes:"), Row(_archetypes, btnArchetypes)),
                 (Caption("Same name as:"), Row(_sameName, _sameMode, btnSamePick, btnSameClear)),
+                (Caption("Password:"), Row(_password, new Label { Text = "(0 = none; Enter Password in the Card Shop unlocks it)", AutoSize = true, ForeColor = SystemColors.GrayText, Margin = new Padding(6, 7, 3, 3) })),
                 (Caption("Limitation:"), _limitation), (Caption("Owned from the start:"), _copies),
             };
             for (int row = 0; row < rows.Length; row++)
@@ -193,21 +218,96 @@ namespace WolfEx
                 grid.Controls.Add(rows[row].Label, 0, row);
                 grid.Controls.Add(rows[row].Field, 1, row);
             }
-            var tab = Tab("Properties", grid, Note($"Saved to Yu-Gi-Oh-Ex\\cards.json (Yu-Gi-Oh-MoreCards). Ids {MinId}-{MaxId}; ATK and DEF in steps of 10. " +
-                                                    "\"Owned from the start\": copies every profile has."));
+            var tab = Tab("Properties", grid, Note($"Saved to Yu-Gi-Oh-Ex\\cards.json (Yu-Gi-Oh-MoreCards) with everything else about the card, its genres, related cards " +
+                                                    $"and links tabs too. Ids {MinId}-{MaxId}; ATK and DEF in steps of 10, \"?\" is the game's unknown value. \"Owned from the start\": copies every profile has."));
             return tab;
         }
 
         private TabPage TextTab()
         {
+            var bar = new FlowLayoutPanel { Dock = DockStyle.Top, Height = 32, WrapContents = false };
+            bar.Controls.Add(new Label { Text = "Language:", AutoSize = true, Margin = new Padding(3, 7, 3, 3) });
+            bar.Controls.Add(_language);
+            bar.Controls.Add(new Label
+            {
+                Text = "English is the card's own name and text; another language left empty shows the English one.", AutoSize = true,
+                ForeColor = SystemColors.GrayText, Margin = new Padding(12, 7, 3, 3),
+            });
             var fields = new Panel { Dock = DockStyle.Fill, Padding = new Padding(6) };
             fields.Controls.Add(_desc);
             fields.Controls.Add(new Label { Text = "Text:", Dock = DockStyle.Top, Height = 20 });
+            var sortRow = new FlowLayoutPanel { Dock = DockStyle.Top, Height = 34, WrapContents = false };
+            sortRow.Controls.Add(new Label { Text = "Sort as:", AutoSize = true, Margin = new Padding(0, 8, 3, 3) });
+            sortRow.Controls.Add(_sortAs);
+            sortRow.Controls.Add(new Label
+            {
+                Text = "The name the deck editor sorts it under (empty: its name). Yu-Gi-Oh-MoreCards places it among the game's cards by this.",
+                AutoSize = true, ForeColor = SystemColors.GrayText, Margin = new Padding(8, 8, 3, 3),
+            });
+            fields.Controls.Add(sortRow);
+            var kanaRow = new FlowLayoutPanel { Dock = DockStyle.Top, Height = 34, WrapContents = false };
+            kanaRow.Controls.Add(new Label { Text = "Index letters:", AutoSize = true, Margin = new Padding(0, 8, 3, 3) });
+            kanaRow.Controls.Add(_kana);
+            kanaRow.Controls.Add(_kanaFromName);
+            kanaRow.Controls.Add(new Label
+            {
+                Text = "First 3 letters of the name (Japanese: of its reading, in hiragana); empty: from the name. Only the Japanese build reads them.",
+                AutoSize = true, ForeColor = SystemColors.GrayText, Margin = new Padding(8, 8, 3, 3),
+            });
+            fields.Controls.Add(kanaRow);
             fields.Controls.Add(_name);
             fields.Controls.Add(new Label { Text = "Name:", Dock = DockStyle.Top, Height = 20 });
             var tab = new TabPage("Text") { UseVisualStyleBackColor = true };
             tab.Controls.Add(fields);
+            tab.Controls.Add(bar);
             return tab;
+        }
+
+        /// <summary>The Text tab's language letter.</summary>
+        private char Language => _language.SelectedItem is Named { Name.Length: > 0 } language ? language.Name[0] : 'E';
+
+        /// <summary>The card's name, text, index letters and sort name in the Text tab's language (another language shows the English as a hint).</summary>
+        private void ShowText(CardModel card)
+        {
+            bool was = _binding;
+            _binding = true;
+            try
+            {
+                char language = Language;
+                _name.Text = card.TextOf(language, "name");
+                _desc.Text = card.TextOf(language, "description").Replace("\r\n", "\n").Replace("\n", "\r\n");
+                _kana.Text = card.TextOf(language, "indexLetters");
+                _sortAs.Text = card.TextOf(language, "sortAs");
+                _name.PlaceholderText = language == 'E' ? "" : card.Name;
+                _desc.PlaceholderText = language == 'E' ? "" : "(the English text)";
+                ShowTextHints(card);
+            }
+            finally
+            {
+                _binding = was;
+            }
+        }
+
+        /// <summary>What empty index letters / sort name mean: the ones from the name.</summary>
+        private void ShowTextHints(CardModel card)
+        {
+            string name = _name.Text.Length > 0 ? _name.Text : card.Name;
+            _kana.PlaceholderText = global::Types.CardKanaTable.FromName(name);
+            _sortAs.PlaceholderText = name;
+        }
+
+        private void TextEdited(object? sender, EventArgs e)
+        {
+            if (_binding || Selected is not { } card)
+                return;
+            char language = Language;
+            card.SetText(language, "name", _name.Text);
+            card.SetText(language, "description", _desc.Text.Replace("\r\n", "\n"));
+            card.SetText(language, "indexLetters", _kana.Text);
+            card.SetText(language, "sortAs", _sortAs.Text);
+            ShowTextHints(card);
+            _list.Invalidate();
+            ShowSummary();
         }
 
         private TabPage ArtTab()

@@ -158,6 +158,26 @@ namespace Types
             };
         }
 
+        /// <summary>A custom card's genres as its cards.json entry keeps them ("genres": [ "DRAW", "SPSUMMON" ]); null when it has none.</summary>
+        public static JsonArray? ToCardJson(ulong mask)
+        {
+            if (mask == 0)
+                return null;
+            var genres = new JsonArray();
+            foreach (string key in CardGenreTable.Keys(mask))
+                genres.Add(key);
+            return genres;
+        }
+
+        /// <summary>A cards.json "genres" list (keys, game names or bit numbers) as a mask.</summary>
+        public static ulong FromCardJson(JsonNode? node, List<string>? unknown = null) =>
+            CardGenreTable.FromKeys((node as JsonArray ?? []).Select(item => item switch
+            {
+                JsonValue value when value.TryGetValue(out string? text) => text,
+                JsonValue value when value.TryGetValue(out int bit) => bit.ToString(),
+                _ => null,
+            }).OfType<string>(), unknown);
+
         /// <summary>Sets each listed card's mask. Returns how many cards it changed; unknown genre names go in <paramref name="unknown"/>.</summary>
         public static int Apply(JsonObject root, IDictionary<int, ulong> cards, List<string>? unknown = null)
         {

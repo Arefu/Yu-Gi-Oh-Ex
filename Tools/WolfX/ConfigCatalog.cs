@@ -120,7 +120,9 @@
             new("Yu-Gi-Oh-PatchMeOut", "NoBan", SettingKind.Toggle, "1", "Remove the Forbidden/Limited card restrictions (banlist)."),
             new("Yu-Gi-Oh-PatchMeOut", "AutoPause", SettingKind.Toggle, "1", "Pause the game when its window loses focus."),
             new("Yu-Gi-Oh-PatchMeOut", "UseJP", SettingKind.Toggle, "0", "Use the Japanese rules and card data where the game has them."),
-            new("Yu-Gi-Oh-PatchMeOut", "NoJanken", SettingKind.Toggle, "1", "Skip rock-paper-scissors at the start of a duel."),
+            new("Yu-Gi-Oh-PatchMeOut", "NoJanken", SettingKind.Toggle, "1", "Skip rock-paper-scissors at the start of a duel (offline duels; online duels still play it)."),
+            new("Yu-Gi-Oh-PatchMeOut", "JankenFirst", SettingKind.Choice, "random",
+                "Who goes first when NoJanken skips rock-paper-scissors: P1 = you, P2 = your opponent, random = either.", ["random", "P1", "P2"]),
             new("Yu-Gi-Oh-PatchMeOut", "StartingLP", SettingKind.Number, "8000", "Life points each duelist starts a duel with."),
 
             new("Yu-Gi-Oh-Core", "SeedFromGameSave", SettingKind.Toggle, "1",

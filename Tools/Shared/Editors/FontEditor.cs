@@ -85,7 +85,7 @@ namespace Wolf.Editors
             _list.Columns.Add("Size", 58);
             _list.Columns.Add("Offset", 70);
             _list.Columns.Add("Advance", 60);
-            _list.RetrieveVirtualItem += (_, e) => e.Item = Row(_rows[e.ItemIndex]);
+            _list.RetrieveVirtualItem += (_, e) => e.Item = e.ItemIndex < _rows.Count ? Row(_rows[e.ItemIndex]) : new ListViewItem(new string[_list.Columns.Count]);   // stale index while the list shrinks
             _list.SelectedIndexChanged += (_, _) => ShowSelected(fromAtlas: false);
 
             _font.SelectedIndexChanged += (_, _) => ShowFont();

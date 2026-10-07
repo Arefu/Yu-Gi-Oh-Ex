@@ -186,6 +186,86 @@ namespace WolfEx
             public bool IsSpellOrTrap => Kind is "Spell" or "Trap";
             public override string ToString() => $"{Id} - {Name}";
 
+            /// <summary>"?" ATK / DEF ("atk": "?" in cards.json): the game's unknown value (511 in the props; shown as ?, counts as 0).</summary>
+            public bool AtkUnknown, DefUnknown;
+
+            /// <summary>
+            /// The card's password ("password" in cards.json, kept in Extra; 0 = none): Yu-Gi-Oh-BetterCardShop's Enter Password page unlocks
+            /// it with these 8 digits, as bin\CARD_Pass.bin does for the game's cards.
+            /// </summary>
+            public int Password
+            {
+                get => Extra?["password"] is JsonValue value && value.TryGetValue<int>(out int password) ? password : 0;
+                set
+                {
+                    if (value <= 0)
+                        Extra?.Remove("password");
+                    else
+                    {
+                        Extra ??= [];
+                        Extra["password"] = value;
+                    }
+                }
+            }
+
+            /// <summary>
+            /// One of the card's texts in a language: "name", "description", "indexLetters" (the first 3 index letters; Japanese: of the
+            /// reading, in hiragana) or "sortAs" (the name it is sorted under in the deck editor). English is the card's own name and
+            /// description plus top-level "indexLetters" / "sortAs"; another language is "text": { "F": { ... } } in cards.json (kept in
+            /// Extra). "" = not given: the game shows the English one (index letters and sorting follow the name).
+            /// </summary>
+            public string TextOf(char language, string field)
+            {
+                if (language == 'E')
+                    return field switch
+                    {
+                        "name" => Name,
+                        "description" => Description,
+                        _ => Extra?[field] is JsonValue value && value.TryGetValue<string>(out string? text) ? text : "",
+                    };
+                return Extra?["text"]?[language.ToString()]?[field] is JsonValue other && other.TryGetValue<string>(out string? found) ? found : "";
+            }
+
+            public void SetText(char language, string field, string text)
+            {
+                if (language == 'E')
+                {
+                    switch (field)
+                    {
+                        case "name": Name = text; break;
+                        case "description": Description = text; break;
+                        default:
+                            if (text.Length == 0)
+                                Extra?.Remove(field);
+                            else
+                                (Extra ??= [])[field] = text;
+                            break;
+                    }
+                    return;
+                }
+                string key = language.ToString();
+                var texts = Extra?["text"] as JsonObject;
+                var entry = texts?[key] as JsonObject;
+                if (text.Length == 0)
+                {
+                    entry?.Remove(field);
+                    if (entry is { Count: 0 })
+                        texts!.Remove(key);
+                    if (texts is { Count: 0 })
+                        Extra!.Remove("text");
+                    return;
+                }
+                Extra ??= [];
+                if (texts == null)
+                    Extra["text"] = texts = [];
+                if (entry == null)
+                    texts[key] = entry = [];
+                entry[field] = text;
+            }
+
+            /// <summary>The languages the card has its own name or text in (besides English).</summary>
+            public IEnumerable<char> TextLanguages => (Extra?["text"] as JsonObject)?.Select(pair => pair.Key).Where(key => key.Length > 0).Select(key => char.ToUpperInvariant(key[0])) ?? [];
+
             /// <summary>The Link arrows ("linkmarkers" in cards.json, kept in Extra): bit 0 top-left .. 7 bottom-right, as the plugin reads them.</summary>
             public int LinkMarkers
             {
@@ -216,16 +296,18 @@ namespace WolfEx
             }
 
             /// <summary>The card as the game would print it (the Card Manager's preview draws it the same way as a game card).</summary>
-            public GameCard ToGameCard()
+            public GameCard ToGameCard(char language = 'E')
             {
                 int kind = Kinds.FirstOrDefault(k => k.Name == Kind).Value;
                 bool link = GameCardPainter.FrameOf(kind) == 18;
+                string name = TextOf(language, "name"), text = TextOf(language, "description");
                 return new GameCard
                 {
-                    Name = Name, Kind = kind, Attribute = Attributes.FirstOrDefault(a => a.Name == Attribute).Value,
-                    Race = CardNames.RaceName(Types.FirstOrDefault(t => t.Name == Type).Value), Level = Level, Atk = Atk, Def = link ? 0 : Def,
+                    Name = name.Length > 0 ? name : Name, Kind = kind, Attribute = Attributes.FirstOrDefault(a => a.Name == Attribute).Value,
+                    Race = CardNames.RaceName(Types.FirstOrDefault(t => t.Name == Type).Value), Level = Level,
+                    Atk = AtkUnknown ? -1 : Atk, Def = link ? 0 : DefUnknown ? -1 : Def,
                     LinkArrows = link ? LinkMarkers : 0, Scale = Scale, Icon = Icons.FirstOrDefault(i => i.Name == Icon).Value,
-                    Text = Description,
+                    Text = text.Length > 0 ? text : Description,
                 };
             }
         }
@@ -266,7 +348,7 @@ namespace WolfEx
         /// <summary>Every field of the card: Kind also decides which of the others apply.</summary>
         private void Editor_Changed(object? sender, EventArgs e)
         {
-            if (sender == _kind)
+            if (sender == _kind || sender == _atkUnknown || sender == _defUnknown)
                 ApplyKindRules();
             Commit();
             if (!_binding && (sender == _kind || sender == _icon))
@@ -369,6 +451,7 @@ namespace WolfEx
             Refill(_cards.FirstOrDefault());
             _status.Text = _cards.Count == 0 ? $"No custom cards yet in {path}: New card adds one." : $"{_cards.Count} custom cards in {path}.";
             CardsChanged?.Invoke();
+            StoreChanged();
         }
 
         public bool SaveTo(string extraCardsFolder)
@@ -376,14 +459,18 @@ namespace WolfEx
             var problems = new List<string>();
             foreach (var group in _cards.GroupBy(card => card.Id).Where(g => g.Count() > 1))
                 problems.Add($"ID {group.Key} is used by more than one card.");
+            foreach (var group in _cards.Where(card => card.Password > 0).GroupBy(card => card.Password).Where(g => g.Count() > 1))
+                problems.Add($"Password {group.Key:00000000} is used by more than one card: {string.Join(", ", group.Select(card => card.Name))}.");
             foreach (var card in _cards)
             {
                 if (card.Id < MinId || card.Id > MaxId)
                     problems.Add($"\"{card.Name}\": the ID must be between {MinId} and {MaxId}.");
                 if (string.IsNullOrWhiteSpace(card.Name))
                     problems.Add($"ID {card.Id}: the name is empty.");
-                if (!card.IsSpellOrTrap && (card.Atk % 10 != 0 || card.Def % 10 != 0))
+                if (!card.IsSpellOrTrap && ((!card.AtkUnknown && card.Atk % 10 != 0) || (!card.DefUnknown && card.Def % 10 != 0)))
                     problems.Add($"\"{card.Name}\": ATK and DEF must be multiples of 10.");
+                if (card.Password is int password and > 99999999)
+                    problems.Add($"\"{card.Name}\": a password has at most 8 digits.");
             }
 
             if (problems.Count > 0)
@@ -469,14 +556,16 @@ namespace WolfEx
                 return;
             }
             string? art = ResolveArt(card);
-            _summary.ShowCard(card.ToGameCard(),
-                $"Konami id {card.Id}   custom card (cards.json)" + (card.PendingArt != null ? "   new art, copied when saved" : ""),
+            _summary.ShowCard(card.ToGameCard(Language),
+                $"Konami id {card.Id}   custom card (cards.json)" + (card.Password > 0 ? $"   password {card.Password:00000000}" : "") +
+                (card.PendingArt != null ? "   new art, copied when saved" : ""),
                 art != null ? Imaging.Load(art) : null, ownsPicture: true);
         }
 
         private void SetEditorEnabled(bool enabled)
         {
-            foreach (var control in new Control[] { _id, _name, _desc, _kind, _type, _attribute, _icon, _level, _atk, _def, _scale, _limitation, _copies, btnArchetypes, btnChooseArt })
+            foreach (var control in new Control[] { _id, _name, _desc, _kind, _type, _attribute, _icon, _level, _atk, _def, _scale, _limitation, _copies, btnArchetypes, btnChooseArt,
+                         _atkUnknown, _defUnknown, _password, _language, _kana, _kanaFromName, _sortAs })
                 control.Enabled = enabled;
             _duplicate.Enabled = _delete.Enabled = _inManager.Enabled = enabled;
 
@@ -489,8 +578,10 @@ namespace WolfEx
         {
             string kind = NameOf(_kind);
             bool spellOrTrap = kind is "Spell" or "Trap";
-            _type.Enabled = _attribute.Enabled = _level.Enabled = _atk.Enabled = !spellOrTrap;
-            _def.Enabled = !spellOrTrap && !kind.StartsWith("Link");
+            _type.Enabled = _attribute.Enabled = _level.Enabled = _atkUnknown.Enabled = !spellOrTrap;
+            _defUnknown.Enabled = !spellOrTrap && !kind.StartsWith("Link");
+            _atk.Enabled = _atkUnknown.Enabled && !_atkUnknown.Checked;
+            _def.Enabled = _defUnknown.Enabled && !_defUnknown.Checked;
             _arrows.Enabled = kind.StartsWith("Link");   // a Link has arrows ("linkmarkers") instead of DEF
             _icon.Enabled = spellOrTrap;
             _levelLabel.Text = kind.StartsWith("Xyz") ? "Rank:" : kind.StartsWith("Link") ? "Link rating:" : "Level:";
@@ -516,8 +607,7 @@ namespace WolfEx
             try
             {
                 _id.Value = Math.Clamp(card.Id, MinId, MaxId);
-                _name.Text = card.Name;
-                _desc.Text = card.Description;
+                ShowText(card);
                 Select(_kind, card.Kind);
                 Select(_type, card.Type);
                 Select(_attribute, card.Attribute);
@@ -525,6 +615,9 @@ namespace WolfEx
                 _level.Value = Math.Clamp(card.Level, 1, 12);
                 _atk.Value = Math.Clamp(card.Atk, 0, 9990);
                 _def.Value = Math.Clamp(card.Def, 0, 9990);
+                _atkUnknown.Checked = card.AtkUnknown;
+                _defUnknown.Checked = card.DefUnknown;
+                _password.Value = Math.Clamp(card.Password, 0, (int)_password.Maximum);
                 _scale.Value = Math.Clamp(card.Scale, 0, 13);
                 _arrows.Value = card.LinkMarkers;
                 Select(_limitation, card.Limitation);
@@ -537,6 +630,7 @@ namespace WolfEx
             }
             finally { _binding = false; }
             ShowSummary();
+            AttachEmbedded();
         }
 
         private static void Select(ComboBox box, string name)
@@ -553,9 +647,8 @@ namespace WolfEx
             if (_binding || card == null)
                 return;
 
+            bool renumbered = card.Id != (int)_id.Value;
             card.Id = (int)_id.Value;
-            card.Name = _name.Text;
-            card.Description = _desc.Text;
             card.Kind = NameOf(_kind);
             card.Type = NameOf(_type);
             card.Attribute = NameOf(_attribute);
@@ -563,6 +656,9 @@ namespace WolfEx
             card.Level = (int)_level.Value;
             card.Atk = (int)_atk.Value;
             card.Def = (int)_def.Value;
+            card.AtkUnknown = _atkUnknown.Checked;
+            card.DefUnknown = _defUnknown.Checked && !card.Kind.StartsWith("Link");
+            card.Password = (int)_password.Value;
             card.Limitation = NameOf(_limitation);
             card.Scale = card.Kind.Contains("Pendulum") ? (int)_scale.Value : 0;
             card.LinkMarkers = card.Kind.StartsWith("Link") ? _arrows.Value : 0;
@@ -573,6 +669,8 @@ namespace WolfEx
 
             _list.Invalidate();
             ShowSummary();
+            if (renumbered)
+                StoreChanged();   // its genres, related cards and links moved with its entry
         }
 
         private int NextFreeId()
@@ -609,6 +707,7 @@ namespace WolfEx
             Refill(card);
             _tabs.SelectedIndex = 0;
             CardsChanged?.Invoke();
+            StoreChanged();
         }
 
         private void DuplicateCard()
@@ -622,7 +721,17 @@ namespace WolfEx
                 Name = source.Name + " (copy)", Description = source.Description, Kind = source.Kind, Type = source.Type,
                 Attribute = source.Attribute, Icon = source.Icon, Level = source.Level, Atk = source.Atk, Def = source.Def,
                 Limitation = source.Limitation, Copies = source.Copies, PendingArt = source.PendingArt ?? ResolveArt(source),
+                AtkUnknown = source.AtkUnknown, DefUnknown = source.DefUnknown, Extra = CopyExtra(source.Extra),
             });
+        }
+
+        /// <summary>A duplicate's Extra: archetypes, genres, related cards, links, other languages... but not the password (one card's only).</summary>
+        private static JsonObject? CopyExtra(JsonObject? extra)
+        {
+            if (extra?.DeepClone() is not JsonObject copy)
+                return null;
+            copy.Remove("password");
+            return copy.Count > 0 ? copy : null;
         }
 
         private void DeleteCard()
@@ -636,6 +745,7 @@ namespace WolfEx
             _rows.Remove(card);
             Refill(_rows.Count > 0 ? _rows[Math.Min(index, _rows.Count - 1)] : null);
             CardsChanged?.Invoke();
+            StoreChanged();
         }
 
         // ---------------------------------------------------------------- art
@@ -750,6 +860,9 @@ namespace WolfEx
         private static string ReadString(JsonObject json, string key) =>
             json[key] is JsonValue value && value.TryGetValue<string>(out var text) ? text : "";
 
+        /// <summary>"atk": "?" - the game's unknown ATK / DEF.</summary>
+        private static bool IsUnknown(JsonNode? node) => node is JsonValue value && value.TryGetValue<string>(out string? text) && text.Trim() == "?";
+
         private static CardModel ReadCard(JsonObject json) => new()
         {
             Id = ReadInt(json, "id", MinId),
@@ -763,6 +876,8 @@ namespace WolfEx
             Level = ReadInt(json, "level", 1),
             Atk = ReadInt(json, "atk", 0),
             Def = ReadInt(json, "def", 0),
+            AtkUnknown = IsUnknown(json["atk"]),
+            DefUnknown = IsUnknown(json["def"]),
             Limitation = ReadEnum(json, "limitation", Limitations, "Unlimited"),
             Copies = ReadInt(json, "copies", 3),
             EffectSource = ReadString(json, "effectScript"),
@@ -814,8 +929,8 @@ namespace WolfEx
                 json["type"] = card.Type;
                 json["attribute"] = card.Attribute;
                 json["level"] = card.Level;
-                json["atk"] = card.Atk;
-                json["def"] = card.Def;
+                json["atk"] = card.AtkUnknown ? "?" : card.Atk;
+                json["def"] = card.DefUnknown ? "?" : card.Def;
             }
 
             json["limitation"] = card.Limitation;

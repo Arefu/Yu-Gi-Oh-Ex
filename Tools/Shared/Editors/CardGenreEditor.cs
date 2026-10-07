@@ -9,7 +9,9 @@ namespace Wolf.Editors
     /// ("Recover LP", "Special Summon"...), which the duel code (AI) also checks. Left: the cards; right: the selected card's genres as check
     /// boxes. The file is indexed by internal id, so CARD_IntID.bin is needed to know which card is which.
     /// Opens the game's genres with Yu-Gi-Oh-Ex\genres.json on top. Saving puts every card the game has (CARD_IntID.bin) into CARD_Genre.bin
-    /// and only the cards it has no place for (custom cards) into genres.json, which Yu-Gi-Oh-MoreCards applies.
+    /// and only the cards it has no place for into genres.json, which Yu-Gi-Oh-MoreCards applies. A custom card in cards.json keeps its genres in
+    /// its own entry there ("genres", <see cref="CustomCards"/>): an edit goes straight into that entry, and genres.json only keeps ids
+    /// cards.json doesn't have (older genres.json entries for custom cards move into cards.json on the next save).
     /// </summary>
     public sealed class CardGenreEditor : UserControl, IGameEditor, ICardFocus
     {
@@ -36,6 +38,8 @@ namespace Wolf.Editors
         private CardGenreTable? _table;                           // as read
         private Dictionary<int, ulong> _cards = [], _baseline = [];
         private readonly HashSet<int> _newCards = [];
+        private HashSet<int> _customIds = [];                     // the cards.json cards whose genres were read from there
+        private ICustomCardStore? _store;
         private List<Row> _rows = [];
         private GameFolderFiles? _gameFiles;
         private bool _changed, _showing;
@@ -47,7 +51,7 @@ namespace Wolf.Editors
 
         public IReadOnlyCollection<string> Files => [CardGenreTable.GamePath, CardIdMap.GamePath];
 
-        public string SavesTo => $"Standard: {CardGenreTable.GamePath}. Additional (cards the game doesn't have): Yu-Gi-Oh-Ex\\{CardGenreJson.FileName} (needs Yu-Gi-Oh-MoreCards).";
+        public string SavesTo => $"Standard: {CardGenreTable.GamePath}. Additional: a custom card's genres in its cards.json entry, other cards the game doesn't have in Yu-Gi-Oh-Ex\\{CardGenreJson.FileName} (needs Yu-Gi-Oh-MoreCards).";
 
         public CardGenreEditor()
         {
@@ -74,6 +78,7 @@ namespace Wolf.Editors
             _list.Columns.Add("", 90);
             _list.RetrieveVirtualItem += (_, e) =>
             {
+                if (e.ItemIndex >= _rows.Count) { e.Item = new ListViewItem(new string[_list.Columns.Count]); return; }   // stale index while the list shrinks
                 var row = _rows[e.ItemIndex];
                 e.Item = new ListViewItem([row.Card.ToString(), CardCatalog.NameOf(row.Card), CardGenreTable.Describe(row.Mask), row.Note]);
             };
@@ -176,6 +181,8 @@ namespace Wolf.Editors
                 _baseline = new Dictionary<int, ulong>(_cards);   // the game's, before genres.json
                 var unknown = new List<string>();
                 int fromJson = CardGenreJson.Apply(CardGenreJson.Load(JsonPath), _cards, unknown);
+                _customIds = [];
+                ReadCustomCards();
                 _newCards.Clear();
                 _changed = false;
                 SetEditable(true);
@@ -215,18 +222,28 @@ namespace Wolf.Editors
                     _gameFiles.Write(CardGenreTable.GamePath, bytes);
                 _table = table;
 
-                var root = CardGenreJson.Diff(inBin, _cards, id => CardCatalog.NameOf(id));
+                // cards.json's cards keep theirs in their own entry; genres.json gets the rest
+                var inJson = _cards.Where(c => !CustomCards.Has(c.Key)).ToDictionary(c => c.Key, c => c.Value);
+                var root = CardGenreJson.Diff(inBin.Where(c => !CustomCards.Has(c.Key)).ToDictionary(c => c.Key, c => c.Value), inJson, id => CardCatalog.NameOf(id));
                 int custom = ((System.Text.Json.Nodes.JsonArray)root["cards"]!).Count;
                 if (custom > 0)
                     CardGenreJson.Save(JsonPath, root);
                 else if (File.Exists(JsonPath))
                     File.Delete(JsonPath);
+                int inCards = 0;
+                foreach (int id in _cards.Keys.Where(CustomCards.Has))
+                {
+                    PushCustom(id);
+                    inCards++;
+                }
+                bool cardsSaved = CustomCards.Store?.Save() ?? true;
                 _baseline = new Dictionary<int, ulong>(_cards);
                 _changed = false;
                 Refill();
                 _status.Text = (binChanged ? $"Saved {CardGenreTable.GamePath} into {_gameFiles.Describe(CardGenreTable.GamePath)}" : "CARD_Genre.bin unchanged") +
-                    (custom > 0 ? $"; {custom} custom cards to {JsonPath} (Yu-Gi-Oh-MoreCards applies it)." : ".");
-                return true;
+                    (custom > 0 ? $"; {custom} cards cards.json doesn't have to {JsonPath} (Yu-Gi-Oh-MoreCards applies it)" : "") +
+                    (inCards > 0 ? $"; {inCards} custom cards' genres are in cards.json" + (cardsSaved ? "" : " (cards.json NOT saved: see the New cards page)") : "") + ".";
+                return cardsSaved;
             }
             catch (Exception ex) when (ex is IOException or InvalidOperationException or UnauthorizedAccessException)
             {
@@ -234,6 +251,52 @@ namespace Wolf.Editors
                 return false;
             }
         }
+
+        // ---- custom cards (cards.json "genres") ----
+
+        /// <summary>
+        /// The cards.json cards' genres from their entries (a card without "genres" keeps what genres.json gave it, which moves into cards.json
+        /// on the next save). Runs on open and whenever cards.json's card list changes.
+        /// </summary>
+        private void ReadCustomCards()
+        {
+            if (!ReferenceEquals(_store, CustomCards.Store))
+            {
+                if (_store != null)
+                    _store.Changed -= CustomCardsChanged;
+                _store = CustomCards.Store;
+                if (_store != null)
+                    _store.Changed += CustomCardsChanged;
+            }
+            var now = _store?.Ids.ToHashSet() ?? [];
+            foreach (int gone in _customIds.Where(id => !now.Contains(id)))
+            {
+                _cards.Remove(gone);   // deleted or renumbered on New cards: its genres went with its entry
+                _baseline.Remove(gone);
+            }
+            foreach (int id in now)
+            {
+                if (_store!.Get(id, "genres") is { } genres)
+                    _cards[id] = CardGenreJson.FromCardJson(genres);
+                else if (_customIds.Contains(id))
+                    _cards.Remove(id);
+                if (_cards.TryGetValue(id, out ulong mask))
+                    _baseline[id] = mask;   // cards.json is saved on its own: not a change of this page
+            }
+            _customIds = now;
+        }
+
+        private void CustomCardsChanged()
+        {
+            if (_table == null)
+                return;
+            ReadCustomCards();
+            Refill();
+        }
+
+        /// <summary>Puts a custom card's genres into its cards.json entry.</summary>
+        private void PushCustom(int card) =>
+            CustomCards.SetIfChanged(card, "genres", CardGenreJson.ToCardJson(_cards.GetValueOrDefault(card)));
 
         // ---- list ----
 
@@ -298,7 +361,13 @@ namespace Wolf.Editors
                 return;
             var genre = CardGenreTable.Genres[index];
             _cards[card] = CardGenreTable.With(_cards.GetValueOrDefault(card), genre.Bit, on);
-            _changed = true;
+            if (CustomCards.Has(card))
+            {
+                PushCustom(card);   // a custom card: its cards.json entry (saved with cards.json)
+                _baseline[card] = _cards[card];
+            }
+            else
+                _changed = true;
             _status.Text = $"{CardCatalog.NameOf(card)}: {(on ? "added" : "removed")} {genre.Name}." +
                 (genre.Hidden ? " (The game clears this bit when it reads the file.)" : "");
             int at = _rows.FindIndex(row => row.Card == card);

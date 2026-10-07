@@ -55,6 +55,8 @@ namespace Wolf.Editors
         private TagInfoTable? _tags, _baseTags;
         private Dictionary<int, List<RelatedCard>> _cards = [], _baseCards = [];
         private readonly HashSet<int> _newCards = [];
+        private HashSet<int> _customIds = [];                    // the cards.json cards whose related cards were read from there
+        private ICustomCardStore? _store;
         private List<CardRow> _cardRows = [];
         private List<int> _tagRows = [];
         private Dictionary<int, int> _tagUse = [];
@@ -68,7 +70,7 @@ namespace Wolf.Editors
         public IReadOnlyCollection<string> Files =>
             [RelatedCards.TagDataPath, CardIdMap.GamePath, .. RelatedCards.Languages.Select(RelatedCards.TagInfoPath)];
 
-        public string SavesTo => $"Standard: {RelatedCards.TagDataPath} and taginfo_<lang>.bin. Additional (new tags, custom cards): Yu-Gi-Oh-Ex\\{RelatedCardsJson.FileName} (needs Yu-Gi-Oh-MoreCards).";
+        public string SavesTo => $"Standard: {RelatedCards.TagDataPath} and taginfo_<lang>.bin. Additional: a custom card's related cards in its cards.json entry, new tags and other cards in Yu-Gi-Oh-Ex\\{RelatedCardsJson.FileName} (needs Yu-Gi-Oh-MoreCards).";
 
         private char Language => _language.SelectedItem is string text && text.Length > 0 ? text[0] : 'E';
 
@@ -178,6 +180,7 @@ namespace Wolf.Editors
             _cardList.Columns.Add("", 110);
             _cardList.RetrieveVirtualItem += (_, e) =>
             {
+                if (e.ItemIndex >= _cardRows.Count) { e.Item = new ListViewItem(new string[_cardList.Columns.Count]); return; }   // stale index while the list shrinks
                 var row = _cardRows[e.ItemIndex];
                 e.Item = new ListViewItem([row.Card.ToString(), CardName(row.Card), row.Count.ToString(), row.Note]);
             };
@@ -231,6 +234,7 @@ namespace Wolf.Editors
             _tagList.Columns.Add("Cards", 55);
             _tagList.RetrieveVirtualItem += (_, e) =>
             {
+                if (e.ItemIndex >= _tagRows.Count) { e.Item = new ListViewItem(new string[_tagList.Columns.Count]); return; }   // stale index while the list shrinks
                 int id = _tagRows[e.ItemIndex];
                 var tag = _tags!.Tags[id];
                 e.Item = new ListViewItem([id.ToString(), tag.Group.ToString(), tag.Key, tag.Describe(Language), _tagUse.GetValueOrDefault(id).ToString()]);
@@ -354,6 +358,8 @@ namespace Wolf.Editors
                 _baseTags = _tags.Clone();
                 _baseCards = _cards.ToDictionary(c => c.Key, c => c.Value.ToList());
                 int fromJson = RelatedCardsJson.Apply(RelatedCardsJson.Load(JsonPath), _tags, _cards);
+                _customIds = [];
+                ReadCustomCards();
                 _newCards.Clear();
                 _changed = false;
                 SetEditable(true);
@@ -417,19 +423,25 @@ namespace Wolf.Editors
                     _gameFiles.Write(write);
                 _tagData = data;
 
-                var root = RelatedCardsJson.Diff(standardTags, _tags, inBin, _cards, id => CardName(id));
+                // cards.json's cards keep theirs in their own entry; relatedcards.json gets the tags and the rest
+                var root = RelatedCardsJson.Diff(standardTags, _tags, inBin.Where(c => !CustomCards.Has(c.Key)).ToDictionary(c => c.Key, c => c.Value),
+                    _cards.Where(c => !CustomCards.Has(c.Key)).ToDictionary(c => c.Key, c => c.Value), id => CardName(id));
                 int tags = ((System.Text.Json.Nodes.JsonArray)root["tags"]!).Count, cards = ((System.Text.Json.Nodes.JsonArray)root["cards"]!).Count;
                 if (tags + cards > 0)
                     RelatedCardsJson.Save(JsonPath, root);
                 else if (File.Exists(JsonPath))
                     File.Delete(JsonPath);
+                foreach (int id in _cards.Keys.Where(CustomCards.Has).ToList())
+                    PushCustom(id);
+                bool cardsSaved = CustomCards.Store?.Save() ?? true;
                 _baseTags = _tags.Clone();
                 _baseCards = _cards.ToDictionary(c => c.Key, c => c.Value.ToList());
                 _changed = false;
                 RefillCards();
                 _status.Text = (write.Count > 0 ? $"Saved {string.Join(", ", write.Keys.Select(Path.GetFileName))} into {_gameFiles.Describe(RelatedCards.TagDataPath)}" : "The game's files are unchanged") +
-                    (tags + cards > 0 ? $"; {tags} new tags and {cards} cards to {JsonPath} (Yu-Gi-Oh-MoreCards applies it)." : ".");
-                return true;
+                    (tags + cards > 0 ? $"; {tags} new tags and {cards} cards to {JsonPath} (Yu-Gi-Oh-MoreCards applies it)" : "") +
+                    (cardsSaved ? "; custom cards' related cards are in cards.json." : "; cards.json NOT saved (see the New cards page).");
+                return cardsSaved;
             }
             catch (Exception ex) when (ex is IOException or InvalidOperationException or UnauthorizedAccessException)
             {
@@ -443,6 +455,66 @@ namespace Wolf.Editors
             _changed = true;
             _status.Text = message;
         }
+
+        /// <summary>A card's related cards changed: a custom card's go straight into its cards.json entry, a game card's wait for Save.</summary>
+        private void CardChanged(int card, string message)
+        {
+            if (CustomCards.Has(card))
+            {
+                PushCustom(card);
+                _baseCards[card] = [.. ListOf(card)];   // cards.json is saved on its own: not a change of this page
+                _status.Text = message + " (cards.json)";
+            }
+            else
+                Changed(message);
+            RefillCards(card);
+        }
+
+        // ---- custom cards (cards.json "related") ----
+
+        /// <summary>
+        /// The cards.json cards' related cards from their entries (a card without "related" keeps what relatedcards.json gave it, which moves
+        /// into cards.json on the next save). Runs on open and whenever cards.json's card list changes.
+        /// </summary>
+        private void ReadCustomCards()
+        {
+            if (!ReferenceEquals(_store, CustomCards.Store))
+            {
+                if (_store != null)
+                    _store.Changed -= CustomCardsChanged;
+                _store = CustomCards.Store;
+                if (_store != null)
+                    _store.Changed += CustomCardsChanged;
+            }
+            var now = _store?.Ids.ToHashSet() ?? [];
+            foreach (int gone in _customIds.Where(id => !now.Contains(id)))
+            {
+                _cards.Remove(gone);   // deleted or renumbered on New cards: its related cards went with its entry
+                _baseCards.Remove(gone);
+            }
+            foreach (int id in now)
+            {
+                if (_store!.Get(id, "related") is { } related)
+                    _cards[id] = RelatedCardsJson.FromCardJson(related);
+                else if (_customIds.Contains(id))
+                    _cards.Remove(id);
+                if (_cards.TryGetValue(id, out var list))
+                    _baseCards[id] = [.. list];
+            }
+            _customIds = now;
+        }
+
+        private void CustomCardsChanged()
+        {
+            if (_tags == null)
+                return;
+            ReadCustomCards();
+            RefillCards();
+        }
+
+        /// <summary>Puts a custom card's related cards into its cards.json entry.</summary>
+        private void PushCustom(int card) =>
+            CustomCards.SetIfChanged(card, "related", RelatedCardsJson.ToCardJson(_cards.GetValueOrDefault(card) ?? [], id => CardName(id)));
 
         // ---- cards page ----
 
@@ -568,8 +640,7 @@ namespace Wolf.Editors
                 list.Add(related);
                 added++;
             }
-            RefillCards(card);
-            Changed($"Added {added} related cards to {CardName(card)} with tag {tag}.");
+            CardChanged(card, $"Added {added} related cards to {CardName(card)} with tag {tag}.");
         }
 
         private void ChangeTag()
@@ -585,8 +656,7 @@ namespace Wolf.Editors
                 if (at >= 0)
                     list[at] = related with { TagId = tag };
             }
-            RefillCards(card);
-            Changed($"{selected.Count} related cards of {CardName(card)} now use tag {tag}.");
+            CardChanged(card, $"{selected.Count} related cards of {CardName(card)} now use tag {tag}.");
         }
 
         private void RemoveRelated()
@@ -595,8 +665,7 @@ namespace Wolf.Editors
                 return;
             var list = ListOf(card);
             int removed = selected.Count(related => list.Remove(related));
-            RefillCards(card);
-            Changed($"Removed {removed} related cards from {CardName(card)}.");
+            CardChanged(card, $"Removed {removed} related cards from {CardName(card)}.");
         }
 
         private void ShowSelectedTag()

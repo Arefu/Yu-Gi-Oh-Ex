@@ -137,6 +137,7 @@ namespace WolfEx
         /// <summary>A code below 3000 the words cannot say: what it is.</summary>
         public static string DescribeCode(int code) => WordOfCode(code) is { } word ? Describe(word)
             : code == 94 ? "DARK Pendulum"
+            : code == 96 ? "non-Token"
             : code == 97 ? "a rule in the game's code for this card (97)"
             : $"game material code {code}";
     }

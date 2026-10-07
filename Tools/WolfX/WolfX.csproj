@@ -101,6 +101,8 @@
   <ItemGroup>
     <!-- The editors in Tools/Shared/Editors -->
     <Compile Include="..\Shared\Editors\*.cs" Link="Shared\Editors\%(Filename)%(Extension)" />
+    <!-- Mods: File > Export as mod (the Mod Manager compiles the same files) -->
+    <Compile Include="..\Shared\Mods\*.cs" Link="Shared\Mods\%(Filename)%(Extension)" />
   </ItemGroup>
 
 </Project>

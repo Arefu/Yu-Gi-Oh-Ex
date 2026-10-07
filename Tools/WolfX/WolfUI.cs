@@ -97,13 +97,19 @@ namespace WolfX
             var restore = new ToolStripMenuItem("Remove WolfX's &patch (back to the game's own data)...", null, (_, _) => RestoreOriginal());
             var folder = new ToolStripMenuItem("Show the open &folder", null, (_, _) => ShowFolder(GameFolderFiles.Current?.Folder));
             var exFolder = new ToolStripMenuItem("Show the &Yu-Gi-Oh-Ex folder", null, (_, _) => ShowFolder(GameFolderFiles.Current?.ExFolder));
+            // Mods (docs/Mods.md): pack what is saved into a .zip others install with the Mod Manager (Tools\ModManager, same code: Tools\Shared\Mods)
+            var exportMod = new ToolStripMenuItem("Export as &mod...", null, (_, _) => ExportMod())
+            {
+                ToolTipText = "Pack what you saved (the Yu-Gi-Oh-Ex content and the changed game files) into a .zip people install with the Mod Manager",
+            };
+            var modManager = new ToolStripMenuItem("Open the Mod Ma&nager", null, (_, _) => OpenModManager());
             var exit = new ToolStripMenuItem("E&xit", null, (_, _) => Close());
             file.DropDownItems.AddRange([openArchive, openExtracted, _recent, new ToolStripSeparator(), saveAll, new ToolStripSeparator(), folder, exFolder,
-                                         restore, new ToolStripSeparator(), exit]);
+                                         restore, new ToolStripSeparator(), exportMod, modManager, new ToolStripSeparator(), exit]);
             file.DropDownOpening += (_, _) =>
             {
                 restore.Enabled = GameFolderFiles.Current?.HasChanges == true;
-                folder.Enabled = exFolder.Enabled = GameFolderFiles.Current != null;
+                folder.Enabled = exFolder.Enabled = exportMod.Enabled = GameFolderFiles.Current != null;
                 FillRecent();
             };
             MenuBar.Items.Insert(0, file);
@@ -148,6 +154,8 @@ namespace WolfX
             var related = new RelatedCardsEditor();
             var links = new CardLinkEditor();
             var cards = new CardsPanel();
+            CustomCards.Store = cards;   // a custom card's genres, related cards and links live in its cards.json entry
+            cards.ShowEditors(("Genres", genres), ("Related cards", related), ("Links", links));
             var manager = new CardManager(genres, related, links, cards);
             manager.OpenCustomCard = id =>
             {
@@ -167,7 +175,7 @@ namespace WolfX
             cards.SaveRequested = () => _pages.First(page => page.Content == cards).Editor!.Save();
             var effects = new EffectsPanel();
             effects.Attach(cards);
-            Add("Cards", "Effects", effects, null, "Additional: the cards' effects, saved with cards.json (needs Yu-Gi-Oh-MoreCards and Yu-Gi-Oh-Effects).");
+            Content("Cards", "Effects", effects, "Additional: new cards' effects are saved with cards.json (needs Yu-Gi-Oh-MoreCards); game cards' changed effects in Yu-Gi-Oh-Ex\\effects.json (\"overridden\"). Both need Yu-Gi-Oh-Effects.");
             var library = new EffectLibraryPanel();
             library.UseTemplate = script =>
             {
@@ -405,6 +413,36 @@ namespace WolfX
         {
             if (folder != null && Directory.Exists(folder))
                 System.Diagnostics.Process.Start("explorer.exe", $"\"{folder}\"");
+        }
+
+        /// <summary>File > Export as mod: what is saved in the game folder (Yu-Gi-Oh-Ex, YGO_2020-Ex) as a mod .zip (docs/Mods.md).</summary>
+        private void ExportMod()
+        {
+            if (GameFolderFiles.Current is not { } files)
+                return;
+            if (MessageBox.Show(this, "The mod is made from what is saved. Save everything first?", "Export as mod",
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                SaveAll();
+            using var form = new Wolf.Mods.CreateModForm(files.GameFolder);
+            form.ShowDialog(this);
+        }
+
+        /// <summary>File > Open the Mod Manager (ModManager.exe next to WolfX.exe), on the open game.</summary>
+        private void OpenModManager()
+        {
+            string exe = Path.Combine(AppContext.BaseDirectory, "ModManager.exe");
+            if (!File.Exists(exe))
+            {
+                MessageBox.Show(this, "ModManager.exe isn't next to WolfX.exe; build the ModManager project.", "Mod Manager", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            var start = new System.Diagnostics.ProcessStartInfo(exe) { UseShellExecute = false };
+            if (GameFolderFiles.Current is { } files)
+            {
+                start.ArgumentList.Add("--game");
+                start.ArgumentList.Add(files.GameFolder);
+            }
+            System.Diagnostics.Process.Start(start);
         }
 
         private void FillRecent()

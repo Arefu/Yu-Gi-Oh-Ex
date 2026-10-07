@@ -30,7 +30,7 @@ namespace WolfEx
             }
         }
 
-        /// <summary>The game's requirements of this card as cards.json keys ("fusion", "ritualSpell", "ritualMonsters", "synchro", "xyz").</summary>
+        /// <summary>The game's requirements of this card as cards.json keys ("fusion", "ritualSpell", "ritualMonsters", "synchro", "xyz", "link").</summary>
         public static JsonObject For(int id)
         {
             var data = new JsonObject();
@@ -67,6 +67,14 @@ namespace WolfEx
                         copy[name] = value?.DeepClone();
                 data["xyz"] = copy;
             }
+            if (Root["link"]?[key] is JsonObject link)
+            {
+                var copy = new JsonObject();
+                foreach (var (name, value) in link)
+                    if (!(value is JsonValue v && v.TryGetValue<int>(out int n) && n == 0))
+                        copy[name] = value?.DeepClone();
+                data["link"] = copy;
+            }
             return data;
         }
     }
@@ -78,7 +86,7 @@ namespace WolfEx
     internal sealed class SummoningFile
     {
         public const string FileName = "summoning.json";
-        private static readonly string[] Keys = ["fusion", "fusionLooser", "ritualSpell", "ritualMonsters", "synchro", "xyz"];
+        private static readonly string[] Keys = ["fusion", "fusionLooser", "ritualSpell", "ritualMonsters", "synchro", "xyz", "link"];
 
         private readonly string _path;
         private readonly SortedDictionary<int, JsonObject> _cards = [];

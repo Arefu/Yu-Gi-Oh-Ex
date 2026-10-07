@@ -216,11 +216,6 @@ namespace WolfX
 
         private void YDC_BTN_RemoveCard_Click(object sender, EventArgs e)
         {
-            if (YDC_LV_MainDeckCards.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("No Card Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             var deckName = YDC_TC_CardsInDeck.SelectedTab?.Text ?? string.Empty;
             if (string.IsNullOrEmpty(deckName))
                 return;
@@ -249,16 +244,22 @@ namespace WolfX
                     return; // unknown deck type
             }
 
+            if (targetListView.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("No Card Selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             foreach (ListViewItem item in targetListView.SelectedItems.Cast<ListViewItem>().ToList())
             {
                 targetListView.Items.Remove(item);
                 short selectedItemId = Convert.ToInt16(item.Tag ?? item.Text);
-
-                if (deckName == "Main Deck")
-                    YDC.CardsInMainDeck.Remove(selectedItemId);
+                targetDeck.Remove(selectedItemId);
             }
 
             YDC_LBL_NumOfCardInMain.Text = YDC_LV_MainDeckCards.Items.Count.ToString();
+            YDC_LBL_NumOfCardsInSide.Text = YDC_LV_SideDeckCards.Items.Count.ToString();
+            YDC_LBL_NumOfCardsInExtra.Text = YDC_LV_ExtraDeckCards.Items.Count.ToString();
         }
     }
 }

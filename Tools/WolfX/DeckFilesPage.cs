@@ -56,6 +56,7 @@ namespace WolfX
             _list.Columns.Add("Used by", 260);
             _list.RetrieveVirtualItem += (_, e) =>
             {
+                if (e.ItemIndex >= _rows.Count) { e.Item = new ListViewItem(new string[_list.Columns.Count]); return; }   // stale index while the list shrinks
                 var entry = _rows[e.ItemIndex];
                 var deck = Parse(entry);
                 e.Item = new ListViewItem([entry.Name, $"{deck?.Main.Count}", $"{deck?.Extra.Count}", $"{deck?.Side.Count}", UsedBy(entry)])

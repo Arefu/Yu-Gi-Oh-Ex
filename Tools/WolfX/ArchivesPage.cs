@@ -55,6 +55,7 @@ namespace WolfX
             _items.Columns.Add("What", 260);
             _items.RetrieveVirtualItem += (_, e) =>
             {
+                if (e.ItemIndex >= _rows.Count) { e.Item = new ListViewItem(new string[_items.Columns.Count]); return; }   // stale index while the list shrinks
                 var item = _rows[e.ItemIndex];
                 e.Item = new ListViewItem([item.Name, Size(item.Size), Describe(item)])
                 {

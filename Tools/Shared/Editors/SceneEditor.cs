@@ -505,6 +505,7 @@ namespace Wolf.Editors
             _steps.Columns.Add("Text", 300);
             _steps.RetrieveVirtualItem += (_, e) =>
             {
+                if (e.ItemIndex >= _script!.Lines.Count) { e.Item = new ListViewItem(new string[_steps.Columns.Count]); return; }   // stale index while the list shrinks
                 var line = _script!.Lines[e.ItemIndex];
                 e.Item = new ListViewItem([(e.ItemIndex + 1).ToString(), WhoText(line), line.Position, line.Expression, line.Text(Language)]);
                 if (line.IsCommand)

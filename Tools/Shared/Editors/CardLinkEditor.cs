@@ -50,7 +50,7 @@ namespace Wolf.Editors
 
         public IReadOnlyCollection<string> Files => [CardLinkTable.GamePath];
 
-        public string SavesTo => $"Standard: {CardLinkTable.GamePath}. Additional (links with custom cards or archetypes): Yu-Gi-Oh-Ex\\{CardLinkJson.FileName} (no plugin reads it yet; neither does the game).";
+        public string SavesTo => $"Standard: {CardLinkTable.GamePath}. Additional: a custom card's links in its cards.json entry, other links with custom cards or archetypes in Yu-Gi-Oh-Ex\\{CardLinkJson.FileName} (no plugin reads it yet; neither does the game).";
 
         public CardLinkEditor()
         {
@@ -75,6 +75,7 @@ namespace Wolf.Editors
             _cards.Columns.Add("", 120);
             _cards.RetrieveVirtualItem += (_, e) =>
             {
+                if (e.ItemIndex >= _rows.Count) { e.Item = new ListViewItem(new string[_cards.Columns.Count]); return; }   // stale index while the list shrinks
                 var row = _rows[e.ItemIndex];
                 e.Item = new ListViewItem([row.Card.ToString(), CardName(row.Card), row.Count.ToString(), row.Note]);
             };
@@ -114,7 +115,15 @@ namespace Wolf.Editors
             _status.Text = "Open the game data (File > Open).";
         }
 
-        public bool Dirty => _table != null && !_table.ToBytes().AsSpan().SequenceEqual(_saved);
+        public bool Dirty => _table != null && !PageBytes().AsSpan().SequenceEqual(_saved);
+
+        /// <summary>The links this page saves itself (a custom card's are in cards.json, saved with it): what Dirty compares.</summary>
+        private byte[] PageBytes()
+        {
+            var table = new CardLinkTable();
+            table.Links.AddRange(_table!.Links.Where(link => !CustomCards.Has(link.Card)));
+            return table.ToBytes();
+        }
 
         private static ToolStripButton Button(string text, string tip, Action click)
         {
@@ -201,8 +210,9 @@ namespace Wolf.Editors
 
         private void Opened(string from, int fromJson)
         {
-            _saved = _table!.ToBytes();
-            _openedProblems = [.. _table.Problems()];
+            ReadCustomCards();
+            _saved = PageBytes();
+            _openedProblems = [.. _table!.Problems()];
             _newCards.Clear();
             SetEditable(true);
             Refill();
@@ -244,17 +254,24 @@ namespace Wolf.Editors
                     _gameFiles.Write(CardLinkTable.GamePath, bytes);
                 _baseline = standard;
 
-                var root = CardLinkJson.Diff(standard, _table, TargetName);
+                // cards.json's cards keep theirs in their own entry; cardlinks.json gets the rest
+                var others = new CardLinkTable();
+                others.Links.AddRange(_table.Links.Where(link => !CustomCards.Has(link.Card)));
+                var root = CardLinkJson.Diff(standard, others, TargetName);
                 int cards = ((System.Text.Json.Nodes.JsonArray)root["cards"]!).Count;
                 if (cards > 0)
                     CardLinkJson.Save(JsonPath, root);
                 else if (File.Exists(JsonPath))
                     File.Delete(JsonPath);
-                _saved = _table.ToBytes();
+                foreach (int id in _table.Cards().Where(CustomCards.Has))
+                    PushCustom(id);
+                bool cardsSaved = CustomCards.Store?.Save() ?? true;
+                _saved = PageBytes();
                 Refill();
                 _status.Text = (binChanged ? $"Saved {CardLinkTable.GamePath} into {_gameFiles.Describe(CardLinkTable.GamePath)}" : "CARD_Link.bin unchanged") +
-                    (cards > 0 ? $"; links of {cards} cards with custom cards or archetypes to {JsonPath}." : ".");
-                return true;
+                    (cards > 0 ? $"; links of {cards} cards with custom cards or archetypes to {JsonPath}" : "") +
+                    (cardsSaved ? "; custom cards' links are in cards.json." : "; cards.json NOT saved (see the New cards page).");
+                return cardsSaved;
             }
             catch (Exception ex) when (ex is IOException or InvalidOperationException or UnauthorizedAccessException)
             {
@@ -380,9 +397,62 @@ namespace Wolf.Editors
 
         private void Changed(int card, string message)
         {
+            bool custom = CustomCards.Has(card);
+            if (custom)
+                PushCustom(card);   // a custom card: its cards.json entry (saved with cards.json)
             Refill(card);
-            _status.Text = message;
+            _status.Text = message + (custom ? " (cards.json)" : "");
         }
+
+        // ---- custom cards (cards.json "links") ----
+
+        private HashSet<int> _customIds = [];   // the cards.json cards whose links were read from there
+        private ICustomCardStore? _store;
+
+        /// <summary>
+        /// The cards.json cards' links from their entries (a card without "links" keeps what cardlinks.json gave it, which moves into
+        /// cards.json on the next save). Runs on open and whenever cards.json's card list changes.
+        /// </summary>
+        private void ReadCustomCards()
+        {
+            if (!ReferenceEquals(_store, CustomCards.Store))
+            {
+                if (_store != null)
+                    _store.Changed -= CustomCardsChanged;
+                _store = CustomCards.Store;
+                if (_store != null)
+                    _store.Changed += CustomCardsChanged;
+            }
+            if (_table == null)
+                return;
+            var now = _store?.Ids.ToHashSet() ?? [];
+            foreach (int gone in _customIds.Where(id => !now.Contains(id)))
+                _table.RemoveCard(gone);   // deleted or renumbered on New cards: its links went with its entry
+            foreach (int id in now)
+            {
+                if (_store!.Get(id, "links") is { } links)
+                {
+                    _table.RemoveCard(id);
+                    foreach (int target in CardLinkJson.FromCardJson(links))
+                        _table.Add(id, target);
+                }
+                else if (_customIds.Contains(id))
+                    _table.RemoveCard(id);
+            }
+            _customIds = now;
+        }
+
+        private void CustomCardsChanged()
+        {
+            if (_table == null)
+                return;
+            ReadCustomCards();   // only custom cards' links change, and Dirty leaves those out
+            Refill();
+        }
+
+        /// <summary>Puts a custom card's links into its cards.json entry.</summary>
+        private void PushCustom(int card) =>
+            CustomCards.SetIfChanged(card, "links", CardLinkJson.ToCardJson(card, _table?.TargetsOf(card) ?? [], TargetName));
 
         private void AddCards()
         {

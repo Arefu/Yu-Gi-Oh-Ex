@@ -301,7 +301,7 @@ namespace Wolf.Mods
             ("characters.json", "Yu-Gi-Oh-Campaign"), ("decks.json", "Yu-Gi-Oh-Campaign"), ("storyduels.json", "Yu-Gi-Oh-Campaign"),
             ("storyscripts.json", "Yu-Gi-Oh-Campaign"),
             ("packs.json", "Yu-Gi-Oh-BetterCardShop"), ("prices.json", "Yu-Gi-Oh-BetterCardShop"),
-            ("summoning.json", "Yu-Gi-Oh-Effects"),
+            ("summoning.json", "Yu-Gi-Oh-Effects"), ("effects.json", "Yu-Gi-Oh-Effects"),
             ("music.json", "Yu-Gi-Oh-Music"), ("voices.json", "Yu-Gi-Oh-Music"),
             (@"pages\", "Yu-Gi-Oh-RIX"), (@"menus\", "Yu-Gi-Oh-RIX"),
         ];
@@ -358,6 +358,13 @@ namespace Wolf.Mods
 
         // ---- the list ----
 
+        /// <summary>
+        /// True when a folder in Mods is a mod: it has a mod.json (Install writes one for a zip without it). Anything else is left alone:
+        /// people keep other things there (copies of YGO_2020.toc/.dat, extracted files). Same rule as Yu-Gi-Oh-Mods.h IsModFolder.
+        /// </summary>
+        public static bool IsModFolder(string folder) =>
+            !folder.EndsWith(".installing", StringComparison.OrdinalIgnoreCase) && File.Exists(Path.Combine(folder, ModInfo.FileName));
+
         /// <summary>Every mod in &lt;game&gt;\Mods in load order, switched on or off as modlist.json says.</summary>
         public static List<Mod> Load(string gameFolder)
         {
@@ -365,6 +372,7 @@ namespace Wolf.Mods
             if (!Directory.Exists(root))
                 return [];
             var found = Directory.GetDirectories(root)
+                .Where(IsModFolder)
                 .Order(StringComparer.OrdinalIgnoreCase)
                 .Select(folder => new Mod { Id = Path.GetFileName(folder), Folder = folder, Info = ModInfo.Read(folder, Path.GetFileName(folder)) })
                 .ToList();
@@ -675,7 +683,7 @@ namespace Wolf.Mods
                 try
                 {
                     ini.ExtractToFile(temp, overwrite: true);
-                    info = ModInfo.Read(Path.GetDirectoryName(temp)!, fallback) is var _ ? ReadIni(temp, fallback) : null!;
+                    info = ReadIni(temp, fallback);
                 }
                 finally
                 {
@@ -712,7 +720,6 @@ namespace Wolf.Mods
         public static List<Mod> Install(string gameFolder, Package package, string id, bool installPlugins, string? pluginsFolder)
         {
             string target = Path.Combine(ModsFolder(gameFolder), id);
-            string fullTarget = Path.GetFullPath(target) + Path.DirectorySeparatorChar;
             List<Mod> mods = Load(gameFolder);
 
             // unpack next to it first, so a broken zip doesn't leave half a mod
@@ -750,7 +757,6 @@ namespace Wolf.Mods
             if (Directory.Exists(target))
                 Directory.Delete(target, recursive: true);
             Directory.Move(staging, target);
-            _ = fullTarget;
 
             if (installPlugins && pluginsFolder != null)
                 CopyPlugins(Path.Combine(target, "Plugins"), pluginsFolder);

@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 namespace WolfEx
 {
     /// <summary>
-    /// Reads a Synchro or Xyz Monster's material line into the "synchro" / "xyz" objects Yu-Gi-Oh-Effects SynchroXyz.cpp reads:
+    /// Reads a Synchro, Xyz or Link Monster's material line into the "synchro" / "xyz" / "link" objects Yu-Gi-Oh-Effects SynchroXyz.cpp reads:
     /// "1 DARK Tuner + 1+ non-Tuner Dragon monsters", "\"Junk Synchron\" + 1+ non-Tuner monsters", "1 Tuner + 2 non-Tuner monsters",
     /// "3 Level 4 LIGHT monsters", "2+ Level 6 \"Zoodiac\" monsters". Each side is one condition (the game's tables hold one code per side);
     /// what else the text says is reported in why.
@@ -107,6 +107,91 @@ namespace WolfEx
                 synchro["exactly"] = true;
             why = string.Join("; ", dropped);
             return synchro;
+        }
+
+        // Link kinds the check knows on every material (Link_CardIsValidMaterial): word in the text -> word SynchroXyz.cpp reads
+        private static readonly (string Text, string Word)[] LinkKinds = [("Effect", "effect"), ("Normal", "normal"), ("Pendulum", "pendulum"), ("Xyz", "xyz"), ("Link", "link")];
+
+        /// <summary>
+        /// "2+ Effect Monsters", "2 Spellcaster monsters", "2 Level 4 or lower Cyberse monsters", "2 monsters, except Tokens",
+        /// "2+ monsters, including a \"Trickstar\" monster" -> {"condition", "material", "including"}: what an "N+" line names goes in condition,
+        /// what an exact "N" line names in material (as Konami's table does: Decode Talker 74 first, Link Spider 73 second); "except Tokens" and a
+        /// Level take the first slot. Both hold for every material; "including" for one of them. The count is the Link Rating's.
+        /// </summary>
+        public static JsonObject? Link(string description, Func<string, int> cardId, Func<string, List<int>> archetypeCodes, out string why)
+        {
+            why = "";
+            string line = FusionMaterialText.MaterialLine(description).Trim().TrimEnd('.');
+            var count = CountPrefix.Match(line);
+            if (!count.Success)
+            {
+                why = "no \"N monsters\" line";
+                return null;
+            }
+            line = line[count.Length..];
+            // Konami's placement: "2+ Effect Monsters" -> the first slot, "1 Normal Monster" / "2 Spellcaster monsters" -> the second.
+            // "except Tokens" and a Level go first; the game tests both slots on every material either way.
+            string main = count.Groups["plus"].Success ? "condition" : "material";
+            var dropped = new List<string>();
+            var link = new JsonObject();
+            void Put(string key, JsonNode value, string what)
+            {
+                string other = key == "condition" ? "material" : "condition";
+                if (link[key] == null)
+                    link[key] = value;
+                else if (link[other] == null)
+                    link[other] = value;
+                else
+                    dropped.Add($"{what} (the game holds two conditions for every material)");
+            }
+
+            string? including = null;
+            int at = line.IndexOf("including", StringComparison.OrdinalIgnoreCase);
+            if (at >= 0)
+            {
+                including = line[(at + "including".Length)..].Trim();
+                line = line[..at].TrimEnd(',', ' ');
+            }
+            if (Regex.IsMatch(line, "except Tokens?", RegexOptions.IgnoreCase))
+            {
+                Put("condition", "notToken", "except Tokens");
+                line = Regex.Replace(line, ",?\\s*except Tokens?", "", RegexOptions.IgnoreCase);
+            }
+            var level = Regex.Match(line, "Level (?<n>\\d+)(?<how> or (?:lower|higher))?", RegexOptions.IgnoreCase);
+            if (level.Success)
+            {
+                string how = level.Groups["how"].Value.Trim().ToLowerInvariant();
+                string word = how.EndsWith("lower") ? $"level<={level.Groups["n"].Value}" : how.EndsWith("higher") ? $"level>={level.Groups["n"].Value}" : $"level:{level.Groups["n"].Value}";
+                Put("condition", word, level.Value);
+                line = line.Remove(level.Index, level.Length);
+            }
+            foreach (var (text, word) in LinkKinds)
+            {
+                var kind = Regex.Match(line, $"\\b{text}\\b");
+                if (!kind.Success)
+                    continue;
+                Put(main, word, text);
+                line = line.Remove(kind.Index, kind.Length);
+            }
+            if (Condition(line, null, archetypeCodes, dropped) is { } material)
+                Put(main, material, material.ToJsonString());
+
+            if (including != null)
+            {
+                string part = Regex.Replace(including, "^(at least )?(a|an|1)\\s+", "", RegexOptions.IgnoreCase).Trim();
+                var kind = Regex.Match(part, "\\b(Link|Synchro|Tuner)\\b");
+                if (kind.Success)
+                {
+                    link["including"] = kind.Value.ToLowerInvariant();
+                    part = part.Remove(kind.Index, kind.Length);
+                    if (Regex.Replace(part, "\\b(monsters?|Monsters?)\\b", "").Trim().Length > 0)
+                        dropped.Add($"including: {part.Trim()}");
+                }
+                else if (Condition(part, cardId, archetypeCodes, dropped) is { } one)
+                    link["including"] = one;
+            }
+            why = string.Join("; ", dropped);
+            return link;
         }
 
         public static JsonObject? Xyz(string description, Func<string, List<int>> archetypeCodes, out int level, out string why)

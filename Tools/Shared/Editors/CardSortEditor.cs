@@ -60,7 +60,7 @@ namespace Wolf.Editors
             _list.Columns.Add("Konami id", 80);
             _list.Columns.Add("Name", 420);
             _list.Columns.Add("", 120);
-            _list.RetrieveVirtualItem += (_, e) => e.Item = Row(e.ItemIndex);
+            _list.RetrieveVirtualItem += (_, e) => e.Item = e.ItemIndex < _tables[_current].Count ? Row(e.ItemIndex) : new ListViewItem(new string[_list.Columns.Count]);   // stale index while the list shrinks
 
             var status = new StatusStrip { SizingGrip = false };
             status.Items.Add(_status);

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>$(SolutionDir)Binaries\$(Configuration)\Tools\</OutputPath>
+    <RootNamespace>ModManager</RootNamespace>
+    <AssemblyName>ModManager</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\File Type Libraries\StartingCollection\StartingCollection.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Shared with WolfX (File > Export as mod) -->
+    <Compile Include="..\Shared\Mods\*.cs" Link="Shared\Mods\%(Filename)%(Extension)" />
+    <Compile Include="..\WolfX\GameLocator.cs" Link="Shared\GameLocator.cs" />
+  </ItemGroup>
+
+</Project>

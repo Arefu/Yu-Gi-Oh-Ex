@@ -249,6 +249,19 @@ namespace Types
             return changed;
         }
 
+        /// <summary>
+        /// A custom card's links as its cards.json entry keeps them ("links": [ { "target": 4007, "kind": "card", "name": "..." } ]); null when
+        /// it has none. Only "target" is read back.
+        /// </summary>
+        public static JsonArray? ToCardJson(int card, IEnumerable<int> targets, Func<int, CardLinkTargetKind, string?>? nameOf = null)
+        {
+            var links = targets.Select(target => new CardLink(card, target)).ToList();
+            return links.Count == 0 ? null : Targets(links, nameOf);
+        }
+
+        /// <summary>The targets of a cards.json "links" list (numbers, or objects with target / card / archetype / counter).</summary>
+        public static List<int> FromCardJson(JsonNode? node) => [.. ReadTargets(node)];
+
         private static IEnumerable<int> ReadTargets(JsonNode? node)
         {
             foreach (var item in node as JsonArray ?? [])

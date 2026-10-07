@@ -583,6 +583,16 @@ namespace Types
             return changed;
         }
 
+        /// <summary>A custom card's related cards as its cards.json entry keeps them ("related": [ { "card": 4007, "tag": 12, "name": "..." } ]); null when none.</summary>
+        public static JsonArray? ToCardJson(IEnumerable<RelatedCard> units, Func<int, string?>? cardName = null)
+        {
+            var list = TagDataTable.Sorted(units);
+            return list.Count == 0 ? null : Units(list, cardName);
+        }
+
+        /// <summary>The related cards of a cards.json "related" list.</summary>
+        public static List<RelatedCard> FromCardJson(JsonNode? node) => [.. ReadUnits(node)];
+
         private static IEnumerable<RelatedCard> ReadUnits(JsonNode? node)
         {
             foreach (var unit in (node as JsonArray ?? []).OfType<JsonObject>())

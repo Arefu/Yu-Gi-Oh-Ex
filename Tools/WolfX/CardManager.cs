@@ -21,7 +21,8 @@ namespace WolfX
     /// only this card while they are here.</item>
     /// </list>
     /// Standard content: everything about a game card is saved into the game's files. Custom cards' stats and text are cards.json (the
-    /// New cards page, one click away); their genres, related cards and links go to Yu-Gi-Oh-Ex JSON like any other page's.
+    /// New cards page, one click away), and so are their genres, related cards and links: those tabs write into the card's cards.json entry
+    /// (<see cref="Wolf.Editors.CustomCards"/>).
     /// </summary>
     internal sealed class CardManager : UserControl, IGameEditor
     {
@@ -122,6 +123,7 @@ namespace WolfX
             _list.Columns.Add("Kind", 80);
             _list.RetrieveVirtualItem += (_, e) =>
             {
+                if (e.ItemIndex >= _rows.Count) { e.Item = new ListViewItem(new string[_list.Columns.Count]); return; }   // stale index while the list shrinks
                 var card = _rows[e.ItemIndex];
                 e.Item = new ListViewItem([card.Id.ToString(), NameOf(card.Id), KindText(card.Id)])
                 {
@@ -498,7 +500,7 @@ namespace WolfX
             $@"{CardNameSort.GameFolder}\{(second ? CardNameSort.Sort2Name(language) : CardNameSort.SortName(language))}";
 
         public string SavesTo => "Standard: a game card's stats, text, password, archetypes and same-name card into bin\\CARD_*, its art into the art .zib files. Additional: custom cards are cards.json (New cards); " +
-                                 "a game card's changed summoning requirements are Yu-Gi-Oh-Ex\\summoning.json (Yu-Gi-Oh-Effects); genres, related cards and links follow their own pages' rules.";
+                                 "a game card's changed summoning requirements are Yu-Gi-Oh-Ex\\summoning.json (Yu-Gi-Oh-Effects); genres, related cards and links follow their own pages' rules (a custom card's are in its cards.json entry).";
 
         public void Open(GameFolderFiles files)
         {
@@ -607,8 +609,6 @@ namespace WolfX
                     _summoning.Save();
                     pages++;
                 }
-                if (_customCards.Dirty && _customCards.SaveRequested?.Invoke() == true)
-                    pages++;   // a custom card's requirements changed here: cards.json
                 foreach (var (_, editor) in _embedded)
                 {
                     if (editor is IGameEditor { Dirty: true } page)
@@ -618,6 +618,9 @@ namespace WolfX
                         pages++;
                     }
                 }
+                // a custom card's requirements, genres, related cards or links changed here: all of them are its cards.json entry
+                if (_customCards.Dirty && _customCards.SaveRequested?.Invoke() == true)
+                    pages++;
                 _status.Text = (write.Count > 0 ? $"Saved {write.Count} files into {_files.Describe(CardPropTable.GamePath)}" : "No card files changed") +
                                (art > 0 ? $"; {art} card picture{(art == 1 ? "" : "s")} into {_files.Describe(CardArt.CensoredZib)}" : "") +
                                (pages > 0 ? $"; saved {pages} of summoning.json, cards.json and the genres / related cards / links pages." : ".");
