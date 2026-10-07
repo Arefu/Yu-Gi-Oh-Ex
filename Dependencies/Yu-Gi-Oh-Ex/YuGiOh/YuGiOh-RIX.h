@@ -571,5 +571,28 @@ namespace YGO
         {
             inline auto ShowDeck = reinterpret_cast<void(__fastcall*)(void* Panel, const unsigned int* DeckId)>(0x1408AB9C0);  // null = empty
         }
+
+        // ---- Free Duel (decoded 2026-10-07): screen 21, RIX::ScreenHardChallenge (vtable 0x140A740F0). The main menu opens it as
+        // Duelist Challenge (item 2: challenge mode on, unlock bit 2964&1); with every mode flag off it is a plain free duel (any
+        // character, their normal deck) - Yu-Gi-Oh-TagDuel opens it that way. NOT screen 41 (the campaign). A state machine at +4064:
+        //   0 series tabs (+656), 1 opponent list (+904), 2 your deck (DeckSelectList +1456, panels +2864 yours / +3448 the opponent's),
+        //   3 start: Set_DuelSideCharacter/Deck(0) from your deck (character = the deck's RecordSlot), (1) from the opponent list
+        //   (deck = character's deck + 32), arena from the character, then Screen_GotoDuel. 5 leaving.
+        // Back on the list = SetState(0); SetState(1) is the game's own way back to the list (rebuilds it). The duel's seats are then
+        // made by AssignSeatDecksAndDuelists from g_DuelSideCharacters/g_DuelSideDecks (int[4] at 0x140C8D1F8/0x140C8D208) - all 4
+        // seats when tag is on (Yu-Gi-Oh-TagDuel uses this for partners).
+        namespace FreeDuel
+        {
+            constexpr size_t State = 4064;
+            enum : int { StateSeries = 0, StateOpponents = 1, StateYourDeck = 2, StateStart = 3, StateLeaving = 5 };
+            constexpr size_t SeriesTabs = 656, OpponentList = 904, DeckList = 1456, YourDeckPanel = 2864, OpponentDeckPanel = 3448;
+            inline auto HandleInput = reinterpret_cast<void(__fastcall*)(void* Screen, void* UI)>(0x140840B10);
+            inline auto SetState = reinterpret_cast<void(__fastcall*)(void* Screen, int State)>(0x140841700);
+            inline auto BuildOpponentList = reinterpret_cast<void(__fastcall*)(void* Screen)>(0x140841900);
+            inline auto UpdateHelpBar = reinterpret_cast<void(__fastcall*)(void* Screen)>(0x140841A40);
+            // The opponent list (+904): the highlighted character (g_CharacterRecords index; 0 = none / locked).
+            inline auto GetSelectedCharacter = reinterpret_cast<unsigned int(__fastcall*)(void* List)>(0x1408A52A0);
+            inline int* const OpponentDeckId = reinterpret_cast<int*>(0x140C8E818);   // g_FreeDuelOpponentDeckId, shown in +3448
+        }
     }
 }
