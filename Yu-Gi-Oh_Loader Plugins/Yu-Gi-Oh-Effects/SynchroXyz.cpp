@@ -1,6 +1,7 @@
 #include <Windows.h>
 #include <algorithm>
 #include <array>
+#include <cctype>
 #include <cstdint>
 #include <cstring>
 #include <format>
@@ -96,6 +97,20 @@ namespace
         { 0x14007C9A0, 0x14007CA40, 0x14007CB40, 0x14007D4B0, 0x14007EF20 },
     };
 
+    // g_LinkMaterialRequirements, 281 rows of {i16 Link Monster, i16 Requirement[3]} (named in the IDB). The player's check
+    // Link_CardIsValidMaterial reads it through the image base (IDA lists no xref there), the AI through Link_GetMaterialRequirement.
+    Table g_Link{
+        "Link", 0x140BCA0D0, 281, 4,
+        {
+            { 0x1405B1E78, SiteKind::RipLea, 3 },     // Link_GetMaterialRequirement (0x1405B1E60)
+            { 0x1405B1E81, SiteKind::Bound, 2 },
+            { 0x1405B259E, SiteKind::Bound, 2 },      // Link_CardIsValidMaterial (0x1405B2500)
+            { 0x1405B25C6, SiteKind::ImageRva, 5 },
+            { 0x1405B25EB, SiteKind::ImageRva, 3 },
+        },
+        { 0x1405B1E60, 0x1405B2500 },
+    };
+
     uintptr_t SiteTarget(const Site& site)
     {
         switch (site.kind)
@@ -188,8 +203,8 @@ namespace
             const uint16_t engineId = o.custom ? SummonJson::EngineId(o.id) : o.id;
             if (!o.hasRow)
             {
-                if (engineId != o.id)
-                    rows.erase(static_cast<int16_t>(engineId));   // a borrowed id's own requirements are not this card's
+                if (engineId != o.id || !o.custom)
+                    rows.erase(static_cast<int16_t>(engineId));   // a borrowed id's own requirements are not this card's; a game card set to none
                 continue;
             }
             Row row = o.row;
@@ -216,6 +231,7 @@ namespace
 
     void __cdecl RefreshXyz() { Rebuild(g_Xyz); }
     void __cdecl RefreshSynchro() { Rebuild(g_Synchro); }
+    void __cdecl RefreshLink() { Rebuild(g_Link); }
 
     // ---------------------------------------------------------------- JSON
 
@@ -255,6 +271,51 @@ namespace
         return true;
     }
 
+    // Link_CardIsValidMaterial (0x1405B2500): "condition" and "material" are tested on every material, "including" on the whole selection
+    // when its last material is picked (one of them must match). Codes the check knows, anything else in "including" can never be met.
+    bool AllowedLinkCode(int code, bool including)
+    {
+        if (code == 0 || (code >= 1 && code <= 31) || (code >= 98 && code <= 516) || code == 95 || code == 97)
+            return true;
+        if (including)
+            return code == 75 || code == 90 || code >= kFirstCardCode;           // Synchro, Tuner, a card by name
+        return (code >= 32 && code <= 67) || code == 73 || code == 74 || code == 82 || code == 83 || code == 96;   // Levels, Normal, Effect, Xyz, Pendulum, not a Token
+    }
+
+    bool ParseLinkCode(const nlohmann::json& entry, const char* key, bool including, int16_t& out, std::string& error)
+    {
+        out = 0;
+        if (!entry.contains(key) || entry[key].is_null())
+            return true;
+        const nlohmann::json& value = entry[key];
+        int code = -1;
+        if (value.is_number_integer())
+            code = value.get<int>();
+        else if (value.is_string())
+        {
+            const std::string word = value.get<std::string>();
+            std::string squashed;
+            for (char c : word)
+                if (c != ' ' && c != '-' && c != '_')
+                    squashed.push_back(static_cast<char>(std::tolower(static_cast<unsigned char>(c))));
+            if (squashed.empty() || squashed == "any")
+                code = 0;
+            else if (squashed == "nottoken" || squashed == "excepttoken" || squashed == "excepttokens")
+                code = 96;
+            else
+                code = Fusion::MaterialCodeOf(word) > 0 ? Fusion::MaterialCodeOf(word) : -1;
+        }
+        if (code < 0 || code > SummonJson::kLastExtraCardId || !AllowedLinkCode(code, including))
+        {
+            error = std::format("\"{}\" {} is not a material the game's Link check knows ({})", key, value.dump(),
+                including ? "race, attribute, archetype up to 418, link, synchro, tuner, a card" :
+                            "race, attribute, archetype up to 418, level, normal, effect, xyz, pendulum, link, notToken");
+            return false;
+        }
+        out = static_cast<int16_t>(code);
+        return true;
+    }
+
     int ParseCount(const nlohmann::json& entry, int fallback)
     {
         return entry.contains("materials") && entry["materials"].is_number_integer() ? entry["materials"].get<int>() : fallback;
@@ -262,7 +323,7 @@ namespace
 
     void Load()
     {
-        std::map<int, size_t> xyzAt, synchroAt;   // id -> index in overrides: a later entry (summoning.json) replaces an earlier one
+        std::map<int, size_t> xyzAt, synchroAt, linkAt;   // id -> index in overrides: a later entry (summoning.json) replaces an earlier one
         auto put = [](Table& table, std::map<int, size_t>& at, const Table::Override& o)
         {
             if (auto it = at.find(o.id); it != at.end())
@@ -318,6 +379,22 @@ namespace
             }
             else if (source.custom && kind.find("Synchro") != std::string::npos)
                 put(g_Synchro, synchroAt, Table::Override{ id, true, false, {} });
+
+            if (entry.contains("link") && entry["link"].is_object())
+            {
+                const nlohmann::json& link = entry["link"];
+                Table::Override o{ id, source.custom, true, {} };
+                std::string error;
+                if (!ParseLinkCode(link, "condition", false, o.row[1], error) || !ParseLinkCode(link, "material", false, o.row[2], error) ||
+                    !ParseLinkCode(link, "including", true, o.row[3], error))
+                    Logger::WriteLog(std::format("{}: {}, skipped", source.label, error), MODULE_NAME, 2);
+                else if (o.row[1] == 0 && o.row[2] == 0 && o.row[3] == 0)
+                    put(g_Link, linkAt, Table::Override{ id, source.custom, false, {} });   // "any monsters": no row
+                else
+                    put(g_Link, linkAt, o);
+            }
+            else if (source.custom && kind.find("Link") != std::string::npos)
+                put(g_Link, linkAt, Table::Override{ id, true, false, {} });
         }
     }
 
@@ -366,4 +443,5 @@ void SynchroXyz::Setup()
     Load();
     Install(g_Xyz, RefreshXyz);
     Install(g_Synchro, RefreshSynchro);
+    Install(g_Link, RefreshLink);
 }

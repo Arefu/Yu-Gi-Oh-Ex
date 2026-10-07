@@ -114,19 +114,36 @@ namespace
         }
     }
 
-    // The same name always gets the same colour.
-    console_text_colors ModuleColor(const std::string& module)
+    // Each module name gets its own 24-bit colour the first time it logs (the 16 console colours ran out and names shared one). The hues
+    // walk the colour wheel by the golden ratio from a random start each run, so every new name lands far from the ones before it.
+    // Called under g_Lock.
+    std::string ModuleColor(const std::string& module)
     {
-        static const console_text_colors palette[] =
-        {
-            console_text_colors::light_green, console_text_colors::light_blue, console_text_colors::light_magenta,
-            console_text_colors::cyan, console_text_colors::green, console_text_colors::magenta,
-        };
+        static std::map<std::string, std::string> colors;
+        static double hue = (GetTickCount64() % 1000) / 1000.0;
+        auto found = colors.find(module);
+        if (found != colors.end())
+            return found->second;
 
-        size_t hash = 5381;
-        for (unsigned char c : module)
-            hash = hash * 33 + c;
-        return palette[hash % (sizeof(palette) / sizeof(palette[0]))];
+        hue = hue + 0.61803398875;
+        hue -= static_cast<int>(hue);
+        // HSV (hue, 0.6, 1.0) to RGB: bright and readable on the black console.
+        const double h = hue * 6.0, s = 0.6, v = 1.0;
+        const int sector = static_cast<int>(h) % 6;
+        const double fraction = h - static_cast<int>(h);
+        const double p = v * (1 - s), q = v * (1 - s * fraction), t = v * (1 - s * (1 - fraction));
+        double r = v, g = t, b = p;
+        switch (sector)
+        {
+        case 1: r = q; g = v; b = p; break;
+        case 2: r = p; g = v; b = t; break;
+        case 3: r = p; g = q; b = v; break;
+        case 4: r = t; g = p; b = v; break;
+        case 5: r = v; g = p; b = q; break;
+        }
+        std::string code = "\x1b[38;2;" + std::to_string(static_cast<int>(r * 255)) + ";" + std::to_string(static_cast<int>(g * 255)) + ";" +
+            std::to_string(static_cast<int>(b * 255)) + "m";
+        return colors.emplace(module, std::move(code)).first->second;
     }
 
     std::string Timestamp()
@@ -154,7 +171,7 @@ namespace
                 std::cout << settextcolor(rainbow[i % 7]) << module[i];
         }
         else
-            std::cout << settextcolor(ModuleColor(module)) << module;
+            std::cout << ModuleColor(module) << module << "\x1b[0m";
 
         std::cout << settextcolor(console_text_colors::white) << "] ";
     }
@@ -416,6 +433,13 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         freopen_s(&consoleOut, "CONIN$", "r", stdin);
 
         SetWindowText(GetConsoleWindow(), L"Yu-Gi-Oh! Console");
+        {
+            // 24-bit colour escapes for the module names (ModuleColor).
+            HANDLE output = GetStdHandle(STD_OUTPUT_HANDLE);
+            DWORD mode = 0;
+            if (GetConsoleMode(output, &mode))
+                SetConsoleMode(output, mode | ENABLE_VIRTUAL_TERMINAL_PROCESSING);
+        }
         HideForeignConsoleOutput();
 
         WriteLog("Ready!", MODULE_NAME, 0);

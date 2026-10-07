@@ -11,6 +11,7 @@
 // to or removed from the game's list; each unit is (related card, tag that explains why). The game reads bin/tagdata.bin by internal id, so
 // custom cards had no list; the hooks answer by Konami id instead: YGO::CARDS::Get_RelatedCardCount (0x14076D640), Get_RelatedCardList
 // (0x14076D690) and Get_TagInfoRecord (0x14076DF60), all MS Detours.
+// A custom card's own "related": [ { "card": 4007, "tag": 12 } ] in cards.json (Card.cpp) is its whole list, over relatedcards.json's.
 namespace Related
 {
     // Reads relatedcards.json (again) and builds the merged lists. Call after each card setup (the game's tables are reloaded then).

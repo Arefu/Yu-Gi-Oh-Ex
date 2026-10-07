@@ -111,6 +111,17 @@ namespace
         return text;
     }
 
+    // Big numbers short ("100.0M", "1.2B") from 10 million, as PatchMeOut does for the game's own DP text: "100,024,485 DP" wrapped
+    // in the slot's text box.
+    std::wstring Short(uint64_t value)
+    {
+        if (value < 10000000ull)
+            return Grouped(value);
+        if (value >= 1000000000ull)
+            return std::format(L"{}.{}B", value / 1000000000ull, (value / 100000000ull) % 10);
+        return std::format(L"{}.{}M", value / 1000000ull, (value / 100000ull) % 10);
+    }
+
     // The current screen record of the main channel: +0 current id, +8 pending id (taken next frame).
     int* MainRecord(int64_t ui)
     {
@@ -209,8 +220,8 @@ namespace
             }
             else
             {
-                view.DetailText[0] = std::format(L"{} DP", Grouped(summary.Wallet));
-                view.DetailText[1] = std::format(L"{} cards", Grouped(summary.CardsOwned));
+                view.DetailText[0] = std::format(L"{} DP", Short(summary.Wallet));
+                view.DetailText[1] = std::format(L"{} cards", Short(summary.CardsOwned));
                 view.DetailText[2] = std::format(L"{} wins / {} duels", Grouped(summary.Wins), Grouped(summary.Duels));
                 // no "last played" date: the game's text box wrapped "2026-10-02 14:33" and drew it over the line above. The screen
                 // opens on the last slot played anyway (SaveSlots::LastSlot).

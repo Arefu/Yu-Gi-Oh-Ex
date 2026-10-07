@@ -28,6 +28,9 @@ namespace
 {
     constexpr int kFirstExtraCardId = 0x3BC4;   // 15300, as in Yu-Gi-Oh-Cards/Card.h
     constexpr int kLastExtraCardId = 0x4E1F;
+    // A game card whose effect is overridden with none ("overridden": true and no "effectClone" in effects.json) clones this card:
+    // Blue-Eyes White Dragon is a Normal Monster, in no effect table, id list, ladder or phase table, so every lookup answers "nothing".
+    constexpr int kNoEffectSource = 4007;
 
     struct Clone
     {
@@ -78,6 +81,9 @@ namespace
     };
 
     std::unordered_map<uint16_t, Clone> g_Clones;
+    // Game cards (ids below 15300) whose own effect is replaced: Yu-Gi-Oh-Ex\effects.json, entries with "overridden": true. They are clones
+    // keyed by their own id, so every hook that serves a custom clone serves them too (docs/EffectSystem.md section 43).
+    std::set<uint16_t> g_Overridden;
 
     using GetEntry_t = void*(__fastcall*)(uint16_t*);
     using GetDraw_t = int64_t(__fastcall*)(uint16_t*);
@@ -124,10 +130,28 @@ namespace
     // Debug tracing (call stacks of lookups, source rows, type classes) is off unless a file named trace.txt exists in the plugin's Effects folder.
     bool g_Trace = false;
 
+    Clone* g_Active = nullptr;     // the clone whose slot function is running (the draw hook needs its parameters)
+    // The clone whose resolution (slot 0) is between steps: an interactive step (a "pick a card" screen) returns a next step and the game
+    // runs the screen's per-card test OUTSIDE the slot, asking by the id the slot showed (the source / action card). Cleared when slot 0
+    // returns 0 (resolved).
+    Clone* g_Resolving = nullptr;
+    uint16_t g_ShowingSource = 0;  // the source id a ladder / evaluator hook is showing the engine for a clone, while it runs
+
+    // While a clone runs as its source card (a slot, ladder or evaluator shows the source id), a lookup of that source is the GAME's card:
+    // when the source is itself an overridden game card its override must not answer, or a clone of it would run the override's source.
+    bool ShownAsSource(uint16_t id)
+    {
+        if (!g_Overridden.contains(id))
+            return false;
+        return id == g_ShowingSource || (g_Active && (id == g_Active->From || id == g_Active->ActionFrom || id == g_Active->CostFrom));
+    }
+
     Clone* Find(uint16_t id, bool& borrowedWithoutClone)
     {
         borrowedWithoutClone = false;
         const unsigned short real = BorrowedRealId(id);
+        if (!real && ShownAsSource(id))
+            return nullptr;
         const uint16_t key = real ? real : id;
         auto it = g_Clones.find(key);
         if (it != g_Clones.end())
@@ -233,7 +257,8 @@ namespace
         if (clone.Announced)
             return;
         clone.Announced = true;
-        Logger::WriteLog(std::format("Custom card {} borrows the effect of vanilla card {}", id, clone.From), MODULE_NAME, 0);
+        Logger::WriteLog(g_Overridden.contains(id) ? std::format("Game card {} plays with its overridden effect (from card {})", id, clone.From)
+                                                   : std::format("Custom card {} borrows the effect of vanilla card {}", id, clone.From), MODULE_NAME, 0);
         if (g_Trace)
         {
             // Card type class of the custom card vs its source: many engine gates index small per-type tables with it (word_140BF7820 + 12 * type).
@@ -265,8 +290,6 @@ namespace
         void* Slot[5];
     };
     static_assert(sizeof(Row) == 48, "effect table rows are 48 bytes");
-
-    Clone* g_Active = nullptr;   // the clone whose slot function is running (the draw hook needs its parameters)
 
     // Draw and life point effects resolve completely within a single call (no player interaction), so they can be run back to back.
     bool IsImmediate(const Clone& c)
@@ -397,6 +420,8 @@ namespace
         }
         g_Active = previous;
         effect[0] = saved;
+        if constexpr (SlotIndex == 0)
+            g_Resolving = (result & 0xFF) ? clone : (g_Resolving == clone ? nullptr : g_Resolving);
         static std::unordered_map<uint64_t, int> calls;
         if (++calls[(static_cast<uint64_t>(saved) << 8) | SlotIndex] <= 3)
             Logger::WriteLog(std::format("Slot {} of custom id {} (source {}) called: step variable {}, result {}", SlotIndex, saved, clone->From,
@@ -423,8 +448,11 @@ namespace
                 if (Clone* clone = RouteByRow(Find(effect[0], ignore), effect))
                 {
                     const uint16_t saved = effect[0];
+                    const uint16_t previousShown = g_ShowingSource;
                     effect[0] = static_cast<uint16_t>(clone->From);
+                    g_ShowingSource = effect[0];
                     const uint64_t result = Orig(effect, a2, a3, a4);
+                    g_ShowingSource = previousShown;
                     effect[0] = saved;
                     return result;
                 }
@@ -526,7 +554,12 @@ namespace
         if (g_Swap.Active && static_cast<uint16_t>(ref) == g_Swap.From)
         {
             ref = (ref & ~0xFFFFu) | g_Swap.Raw;
+            // The offer is for the card itself (its wrapped row), not the source being shown: matters when a game card's override
+            // takes its own card as the source (same id), see ShownAsSource.
+            const uint16_t previousShown = g_ShowingSource;
+            g_ShowingSource = 0;
             const int64_t result = orig_OfferByRef(ref, a2, a3);
+            g_ShowingSource = previousShown;
             ++g_Swap.Offers;
             g_Swap.OfferResult = result;
             return result;
@@ -589,7 +622,10 @@ namespace
                 replaced[replacedCount++] = i;
             }
         }
+        const uint16_t previousShown = g_ShowingSource;
+        g_ShowingSource = g_Swap.From;
         orig_EventEvaluator(eventType);
+        g_ShowingSource = previousShown;
         for (int k = 0; k < replacedCount; ++k)
             *reinterpret_cast<uint16_t*>(record + replaced[k]) = raw;
         g_Swap.Active = false;
@@ -628,7 +664,10 @@ namespace
         g_Swap = { true, raw, static_cast<uint16_t>(clone->From) };
         const uint32_t saved = instance;
         instance = (instance & ~0x3FFFu) | (static_cast<uint32_t>(clone->From) & 0x3FFF);
+        const uint16_t previousShown = g_ShowingSource;
+        g_ShowingSource = g_Swap.From;
         orig_MoveEvaluator(eventType, ref, a3, a4);
+        g_ShowingSource = previousShown;
         instance = saved;
         g_Swap.Active = false;
         if (logged <= 20)
@@ -753,6 +792,8 @@ namespace
     // The id a custom card plays under in the current duel (its own id, or the vanilla id it borrowed).
     uint16_t EngineIdFor(uint16_t customId)
     {
+        if (customId < kFirstExtraCardId)
+            return customId;   // an overridden game card plays under its own id
         if (!g_ActiveId)
         {
             if (HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-MoreCards.dll"))
@@ -1354,6 +1395,10 @@ namespace
     {
         if (g_Active)
             return (g_Active->HasDeckFilter && (id == g_Active->From || (g_Active->ActionFrom && id == g_Active->ActionFrom))) ? g_Active : nullptr;
+        // Between the steps of a clone's resolution: a selection screen's per-card test asks by the id the slot showed (Magnet Circle LV2's
+        // hand pick sub_14015FA70 for Beetrooper Scale Bomber, which plays under the lent id 11127 but resolves as 6572; in-duel 2026-10-04).
+        if (g_Resolving && g_Resolving->HasDeckFilter && (id == g_Resolving->From || (g_Resolving->ActionFrom && id == g_Resolving->ActionFrom)))
+            return g_Resolving;
         // Outside a slot: a source id lent to a clone for this duel (no one else plays it) answers with the clone's filter - the game asks
         // before any slot runs (the leave-field offer counts revive candidates for Superheavy Samurai Drum's row; Flint Cragger was never offered).
         if (BorrowedRealId(id) == 0)
@@ -1378,13 +1423,32 @@ namespace
     DeckFilterIndex_t orig_DeckFilterIndex = reinterpret_cast<DeckFilterIndex_t>(0x1400C01B0);
     std::unordered_map<int64_t, std::array<uint8_t, 24>> g_PatchedDeckRows;   // index -> the vanilla row
 
+    // A clone's card asked by its OWN id outside its slots: a selection screen's per-card test runs after the slot returned, when the effect
+    // record holds the custom id again - Magnet Circle LV2's "pick a monster from the hand" callback sub_14015FA70 -> sub_1400C0320 asks
+    // with the record's id, and a custom id has no row, so no hand card was selectable (Barian's Hope, in-duel 2026-10-04). The row of the
+    // card whose machine runs (ActionFrom for a composed effect, else From) is used, with the clone's filter.
+    Clone* OwnIdDeckFilterClone(uint16_t id)
+    {
+        if (g_Active)
+            return nullptr;
+        bool ignore;
+        Clone* clone = Find(id, ignore);
+        if (!clone)
+            return nullptr;
+        for (Clone* part : AllParts(*clone))
+            if (part->HasDeckFilter)
+                return part;
+        return nullptr;
+    }
+
     int64_t __fastcall Hook_DeckFilterIndex(int player, int id, uint32_t k)
     {
-        const int64_t index = orig_DeckFilterIndex(player, id, k);
+        Clone* own = id > 0 && id <= 0xFFFF ? OwnIdDeckFilterClone(static_cast<uint16_t>(id)) : nullptr;
+        const int64_t index = own ? orig_DeckFilterIndex(player, own->ActionFrom ? own->ActionFrom : own->From, k) : orig_DeckFilterIndex(player, id, k);
         if (index < 0 || index >= kDeckFilterRows)
             return index;
         auto* row = reinterpret_cast<uint8_t*>(kDeckFilterTable + static_cast<uintptr_t>(index) * 24);
-        Clone* clone = id > 0 && id <= 0xFFFF ? DeckFilterClone(static_cast<uint16_t>(id)) : nullptr;
+        Clone* clone = own ? own : id > 0 && id <= 0xFFFF ? DeckFilterClone(static_cast<uint16_t>(id)) : nullptr;
         auto patched = g_PatchedDeckRows.find(index);
         if (clone)
         {
@@ -1395,6 +1459,10 @@ namespace
                 g_PatchedDeckRows.emplace(index, vanilla);
             }
             memcpy(row + 2, clone->DeckRow + 2, 22);   // everything but the id the table is sorted by
+            static int logged = 0;
+            if (!g_Active && ++logged <= 5)
+                Logger::WriteLog(std::format("Deck filter row {} asked by id {} outside a slot: answered with the filter of the clone of {}", index, id,
+                    clone->From), MODULE_NAME, 0);
         }
         else if (patched != g_PatchedDeckRows.end())
         {
@@ -1678,20 +1746,48 @@ namespace
         return true;
     }
 
+    // An "effectClone" object: its main step, "before" steps and "parts". False (logged) when it cannot be used.
+    bool ParseEffect(const nlohmann::json& clone, Clone& c, const std::string& label)
+    {
+        if (!ParseStep(clone, c, label))
+            return false;
+        if (clone.contains("before") && clone["before"].is_array())
+        {
+            for (const nlohmann::json& stepJson : clone["before"])
+            {
+                Clone step;
+                if (!ParseStep(stepJson, step, label) || !IsImmediate(step))
+                {
+                    Logger::WriteLog(std::format("{}: \"before\" steps must be draw / life point effects, skipped", label), MODULE_NAME, 2);
+                    return false;
+                }
+                c.Pre.push_back(step);
+            }
+        }
+        // A card's further effects: "parts": [ { "from": ..., "trigger": ..., ... }, ... ] (each one step, its own source; see Clone::Parts).
+        if (clone.contains("parts") && clone["parts"].is_array())
+        {
+            for (const nlohmann::json& partJson : clone["parts"])
+            {
+                Clone part;
+                if (ParseStep(partJson, part, label))
+                    c.Parts.push_back(std::move(part));
+            }
+            Logger::WriteLog(std::format("{}: {} effect(s) ({} borrowed from {})", label, 1 + c.Parts.size(), c.From,
+                [&] { std::string s; for (const Clone& p : c.Parts) s += std::format(", {}", p.From); return s; }()), MODULE_NAME, 0);
+        }
+        return true;
+    }
+
     void LoadClones()
     {
         // every mod's cards.json and the game folder's, merged (Yu-Gi-Oh-Mods.h)
         nlohmann::json root = YGO::Mods::ReadMerged("cards.json", "cards");
-        if (!root.is_object())
-            return;
+        const nlohmann::json* list = root.is_object() && root.contains("cards") && root["cards"].is_array() ? &root["cards"] : nullptr;
 
-        const nlohmann::json& list = root["cards"];
-        if (!list.is_array())
-            return;
-
-        for (size_t i = 0; i < list.size(); ++i)
+        for (size_t i = 0; list && i < list->size(); ++i)
         {
-            const nlohmann::json& entry = list[i];
+            const nlohmann::json& entry = (*list)[i];
             if (!entry.is_object() || !entry.contains("effectClone"))
                 continue;
 
@@ -1713,38 +1809,45 @@ namespace
             }
 
             Clone c;
-            if (!ParseStep(clone, c, label))
+            if (ParseEffect(clone, c, label))
+                g_Clones[static_cast<uint16_t>(id)] = std::move(c);
+        }
+
+        // The game's own cards with a changed effect: Yu-Gi-Oh-Ex\effects.json (WolfX, Effects page, "Game cards"), merged over the mods.
+        //   {"cards": [{"id": <game card id>, "name": "...", "overridden": true, "effectScript": "...", "effectClone": {...}}]}
+        // "overridden": true is what makes an entry count (an entry without it is only kept for the editor). No "effectClone" (or null) = the
+        // card has no effect at all. The card keeps its own id in duels, so lists that name the card itself (its own triggers in the engine's
+        // per-id ladders that no hook covers) can still answer for it; the four effect tables, the hooked ladders, id tests, trigger lists and
+        // evaluators answer with the override.
+        nlohmann::json overrides = YGO::Mods::ReadMerged("effects.json", "cards");
+        const nlohmann::json* games = overrides.is_object() && overrides.contains("cards") && overrides["cards"].is_array() ? &overrides["cards"] : nullptr;
+        for (size_t i = 0; games && i < games->size(); ++i)
+        {
+            const nlohmann::json& entry = (*games)[i];
+            if (!entry.is_object() || !entry.value("overridden", false))
                 continue;
-            bool chainOk = true;
-            if (clone.contains("before") && clone["before"].is_array())
+            const std::string label = std::format("effects.json entry {} (\"{}\")", i, entry.value("name", std::string()));
+            if (!entry.contains("id") || !entry["id"].is_number_integer())
             {
-                for (const nlohmann::json& stepJson : clone["before"])
-                {
-                    Clone step;
-                    if (!ParseStep(stepJson, step, label) || !IsImmediate(step))
-                    {
-                        Logger::WriteLog(std::format("{}: \"before\" steps must be draw / life point effects, skipped", label), MODULE_NAME, 2);
-                        chainOk = false;
-                        break;
-                    }
-                    c.Pre.push_back(step);
-                }
-            }
-            if (!chainOk)
+                Logger::WriteLog(std::format("{}: needs an integer \"id\", skipped", label), MODULE_NAME, 2);
                 continue;
-            // A card's further effects: "parts": [ { "from": ..., "trigger": ..., ... }, ... ] (each one step, its own source; see Clone::Parts).
-            if (clone.contains("parts") && clone["parts"].is_array())
-            {
-                for (const nlohmann::json& partJson : clone["parts"])
-                {
-                    Clone part;
-                    if (ParseStep(partJson, part, label))
-                        c.Parts.push_back(std::move(part));
-                }
-                Logger::WriteLog(std::format("{}: {} effect(s) ({} borrowed from {})", label, 1 + c.Parts.size(), c.From,
-                    [&] { std::string s; for (const Clone& p : c.Parts) s += std::format(", {}", p.From); return s; }()), MODULE_NAME, 0);
             }
+            const int id = entry["id"].get<int>();
+            if (id < 1 || id >= kFirstExtraCardId)
+            {
+                Logger::WriteLog(std::format("{}: id {} is not a game card (new cards keep their effect in cards.json), skipped", label, id), MODULE_NAME, 2);
+                continue;
+            }
+            Clone c;
+            const nlohmann::json clone = entry.contains("effectClone") ? entry["effectClone"] : nlohmann::json();
+            if (clone.is_null())
+                c.From = kNoEffectSource;
+            else if (!ParseEffect(clone, c, label))
+                continue;
             g_Clones[static_cast<uint16_t>(id)] = std::move(c);
+            g_Overridden.insert(static_cast<uint16_t>(id));
+            Logger::WriteLog(clone.is_null() ? std::format("{}: game card {} has no effect now", label, id)
+                                             : std::format("{}: game card {} now plays the effect of card {}", label, id, g_Clones[static_cast<uint16_t>(id)].From), MODULE_NAME, 0);
         }
     }
 }
@@ -1760,7 +1863,7 @@ void EffectClone::Setup()
     if (g_Trace)
         Logger::WriteLog("trace.txt found: effect lookup tracing is on", MODULE_NAME, 0);
     LoadClones();
-    Logger::WriteLog(std::format("Loaded {} custom effect clone(s)", g_Clones.size()), MODULE_NAME, 0);
+    Logger::WriteLog(std::format("Loaded {} custom effect clone(s) and {} overridden game card effect(s)", g_Clones.size() - g_Overridden.size(), g_Overridden.size()), MODULE_NAME, 0);
     if (g_Clones.empty())
         return;
     for (auto& [id, clone] : g_Clones)

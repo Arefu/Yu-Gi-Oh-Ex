@@ -17,6 +17,7 @@
 #include "Genres.h"
 #include "Logger.h"
 #include "Save.h"
+#include "Text.h"
 #include "Yu-Gi-Oh-Mods.h"
 
 // The game's card id window: Konami ids 3900..14968 index its fixed-size tables.
@@ -230,6 +231,8 @@ namespace
         return false;
     }
 
+    constexpr int kUnknownStat10 = 511;   // "?" ATK / DEF in the props (9 bits all set)
+
     bool ParseCard(const nlohmann::json& j, Card::ExtraCard& c, std::string& why)
     {
         using namespace Card;
@@ -315,6 +318,59 @@ namespace
         p.ID2 = static_cast<short>(c.SameName && c.SameNameAlways ? c.SameName : c.ID);
         p.ID3 = static_cast<short>(c.SameName ? c.SameName : c.ID);
 
+        // "genres": [ "DRAW", ... ] - its own, over anything genres.json says for this id
+        if (j.contains("genres"))
+        {
+            int unknown = 0;
+            c.Genres = Genres::FromJson(j["genres"], &unknown);
+            if (unknown)
+                Logger::WriteLog(std::format("Card {}: {} unknown genre name(s) in \"genres\" skipped", id, unknown), MODULE_NAME, 1);
+        }
+        // "related": [ { "card": 4007, "tag": 12 } ] - its Related cards list, over relatedcards.json's for this id (Related.cpp)
+        if (j.contains("related") && j["related"].is_array())
+        {
+            std::vector<uint32_t> units;
+            for (const auto& unit : j["related"])
+            {
+                if (!unit.is_object())
+                    continue;
+                const int card = unit.value("card", 0), tag = unit.value("tag", -1);
+                if (card >= 1 && card <= 0xFFFF && tag >= 0 && tag <= 0xFFFF)
+                    units.push_back(static_cast<uint32_t>(card) | static_cast<uint32_t>(tag) << 16);
+            }
+            std::stable_sort(units.begin(), units.end(), [](uint32_t a, uint32_t b) { return (a & 0xFFFF) < (b & 0xFFFF); });   // the game's order
+            c.Related = std::move(units);
+        }
+        // "password": 8 digits (Yu-Gi-Oh-BetterCardShop's Enter Password page, through Card_FindByPassword)
+        if (j.contains("password") && j["password"].is_number_integer() && j["password"].get<int64_t>() > 0 && j["password"].get<int64_t>() <= 99999999)
+            c.Password = static_cast<uint32_t>(j["password"].get<int64_t>());
+        // the texts per language: English's index letters / sort name at the top, the other languages under "text"
+        auto readText = [](const nlohmann::json& from, ExtraCard::LanguageText& to, bool names)
+        {
+            auto text = [&](const char* key) { return from.contains(key) && from[key].is_string() ? Utf8ToWide(from[key].get<std::string>()) : std::wstring(); };
+            if (names)
+            {
+                to.Name = text("name");
+                to.Description = text("description");
+            }
+            to.IndexLetters = text("indexLetters");
+            to.SortAs = text("sortAs");
+        };
+        {
+            ExtraCard::LanguageText english;
+            readText(j, english, false);
+            if (!english.IndexLetters.empty() || !english.SortAs.empty())
+                c.Texts['E'] = std::move(english);
+        }
+        if (j.contains("text") && j["text"].is_object())
+            for (const auto& [letter, entry] : j["text"].items())
+                if (!letter.empty() && entry.is_object())
+                {
+                    const char language = static_cast<char>(std::toupper(static_cast<unsigned char>(letter[0])));
+                    if (language != 'E')
+                        readText(entry, c.Texts[language], true);
+                }
+
         if (isSpell || isTrap)
         {
             p.StarTypeValue = ST_None;
@@ -323,11 +379,13 @@ namespace
         }
         else
         {
-            // The game stores ATK/DEF divided by 10.
-            p.Attack10 = j.value("atk", 0) / 10;
+            // The game stores ATK/DEF divided by 10; "?" is 511 (the 9 bits all set, as in bin/CARD_Prop.bin: Get_RawAttackFromKonamiId
+            // reads it as 0xFFFF, Get_EffectiveAttackFromKonamiId as 0).
+            auto stat = [&](const char* key) { return j.contains(key) && j[key].is_string() && j[key].get<std::string>() == "?" ? kUnknownStat10 : j.value(key, 0) / 10; };
+            p.Attack10 = stat("atk");
             // Link monsters have no DEF: this field doubles as the LinkArrows bitmask for them (the game reuses
             // the same 9 bits either way, per KONAMI_ID_CARD_PROPS's bit-packed CARD_Prop.bin layout).
-            p.ArrowsOrDefense10 = IsLinkKind(kind) ? static_cast<int>(ParseLinkMarkers(j)) : j.value("def", 0) / 10;
+            p.ArrowsOrDefense10 = IsLinkKind(kind) ? static_cast<int>(ParseLinkMarkers(j)) : stat("def");
             p.StarTypeValue = IsXyzKind(kind) ? ST_Rank : IsLinkKind(kind) ? ST_LinkRating : ST_Level;
             p.LevelOrLinkRatingOrRank = j.value("level", 1);
         }
@@ -663,17 +721,42 @@ namespace
         int16_t frame = *reinterpret_cast<int16_t*>(kFrameTableAddress + 0xC * static_cast<uintptr_t>(kind));
         uint16_t subKind = *reinterpret_cast<uint16_t*>(kSubKindTableAddress + 0xC * static_cast<uintptr_t>(kind));
 
-        gc->Name = const_cast<wchar_t*>(c.Name.c_str());
-        gc->Description = const_cast<wchar_t*>(c.Description.c_str());
-        gc->NameSortRank = NameSortRankFor(c.Name);
-        // Setup_FullCardProps ran before the card had a name, so it has no index initial; the game's rule outside the Japanese build: the name's
-        // first character, after a leading $R...( ruby block (docs/CardKana.md)
+        // the game's current language: its own name / text when cards.json gives them ("text"), else the English ones
+        const Card::ExtraCard::LanguageText* own = nullptr;
+        const Card::ExtraCard::LanguageText* english = nullptr;
+        if (auto it = c.Texts.find(Text::CurrentLanguage()); it != c.Texts.end() && it->first != 'E')
+            own = &it->second;
+        if (auto it = c.Texts.find('E'); it != c.Texts.end())
+            english = &it->second;
+        const bool ownName = own && !own->Name.empty();
+        const std::wstring& name = ownName ? own->Name : c.Name;
+        const std::wstring& description = own && !own->Description.empty() ? own->Description : c.Description;
+        // "sortAs" / "indexLetters" of that language; a language with its own name but none of those goes by its name, else English's
+        auto pick = [&](std::wstring Card::ExtraCard::LanguageText::*field) -> const std::wstring*
+        {
+            if (own && !(own->*field).empty())
+                return &(own->*field);
+            if (!ownName && english && !(english->*field).empty())
+                return &(english->*field);
+            return nullptr;
+        };
+        const std::wstring* sortAs = pick(&Card::ExtraCard::LanguageText::SortAs);
+        const std::wstring* indexLetters = pick(&Card::ExtraCard::LanguageText::IndexLetters);
+
+        gc->Name = const_cast<wchar_t*>(name.c_str());
+        gc->Description = const_cast<wchar_t*>(description.c_str());
+        gc->NameSortRank = NameSortRankFor(sortAs ? *sortAs : name);
+        // Setup_FullCardProps ran before the card had a name, so it has no index initial: "indexLetters" when given, else the game's rule outside
+        // the Japanese build, the name's first character after a leading $R...( ruby block (docs/CardKana.md)
+        if (indexLetters)
+            gc->IndexInitial = (*indexLetters)[0];
+        else
         {
             size_t start = 0;
-            if (c.Name.starts_with(L"$R"))
-                if (size_t open = c.Name.find(L'('); open != std::wstring::npos)
+            if (name.starts_with(L"$R"))
+                if (size_t open = name.find(L'('); open != std::wstring::npos)
                     start = open + 1;
-            gc->IndexInitial = start < c.Name.size() ? c.Name[start] : L'\0';
+            gc->IndexInitial = start < name.size() ? name[start] : L'\0';
         }
 
         // IsMonster/IsSpell/IsTrap/IsFusion/IsSynchro/IsXyz/IsExtraMonster/IsRitual/IsToken/IsToon/IsSpirit/IsGemini/IsPendulum/IsLink
@@ -683,9 +766,15 @@ namespace
         gc->IsNormalMonster = subKind == Card::SK_Normal;
         gc->IsEffectMonster = subKind == Card::SK_Effect;
 
-        gc->Attack1 = gc->Attack2 = props.Attack10 * 10;
+        // Attack1/Defense1 = effective (FULL_CARD_PROPS +0x44/+0x50), Attack2/Defense2 = raw (+0x48/+0x54); "?" (511) is 0 and 0xFFFF as
+        // Get_EffectiveAttackFromKonamiId / Get_RawAttackFromKonamiId make it for the game's cards
+        auto effective = [](int stat10) { return stat10 == kUnknownStat10 ? 0 : stat10 * 10; };
+        auto raw = [](int stat10) { return stat10 == kUnknownStat10 ? 0xFFFF : stat10 * 10; };
+        gc->Attack1 = effective(props.Attack10);
+        gc->Attack2 = raw(props.Attack10);
         gc->CardAttribute = props.Attribute;
-        gc->Defense1 = gc->Defense2 = IsLinkKind(kind) ? 0 : props.ArrowsOrDefense10 * 10; // Link monsters have no DEF
+        gc->Defense1 = IsLinkKind(kind) ? 0 : effective(props.ArrowsOrDefense10); // Link monsters have no DEF
+        gc->Defense2 = IsLinkKind(kind) ? 0 : raw(props.ArrowsOrDefense10);
         gc->Icon = props.Icon;
         gc->Kind = kind;
         gc->Level = (props.StarTypeValue == Card::ST_Level) ? props.LevelOrLinkRatingOrRank : 0;
@@ -704,7 +793,7 @@ namespace
         gc->Frame = frame;
         // Setup_FullCardProps gave ids past the card tables entry 0's genres (none); a borrowed duel id still has the vanilla card's, which
         // BorrowScratchId replaces with the custom card's own afterwards (this copy's ID is the borrowed one).
-        gc->Genre = Genres::MaskFor(c.ID, c.ID >= kFirstExtraCardId ? 0 : gc->Genre);
+        gc->Genre = c.Genres ? *c.Genres : Genres::MaskFor(c.ID, c.ID >= kFirstExtraCardId ? 0 : gc->Genre);
 
         // Setup_FullCardProps computed every derived flag while this id was still outside the card tables: Is_ValidCardId is false for
         // ids >= 14969 and the card type came from entry 0 (a token), so the duel treated the card as a token with no "Show Info".
@@ -791,7 +880,7 @@ namespace
         Card::ExtraCard& temp = g_BorrowedCopy[id16] = card;
         temp.ID = id16;
         WriteGameTableEntry(temp);
-        gc->Genre = Genres::MaskFor(customId, 0);   // the custom card's genres, not the borrowed vanilla card's (the duel AI checks them)
+        gc->Genre = card.Genres ? *card.Genres : Genres::MaskFor(customId, 0);   // the custom card's genres, not the borrowed vanilla card's (the duel AI checks them)
 
         g_HighToBorrowed[customId] = id16;
         g_BorrowedToHigh[id16] = customId;
@@ -941,6 +1030,23 @@ extern "C" __declspec(dllexport) unsigned short __cdecl Card_GetActiveDuelSessio
 extern "C" __declspec(dllexport) unsigned short __cdecl Card_ResolveDuelSessionId(unsigned short id)
 {
     return Card::ResolveDuelSessionId(id);
+}
+
+uint16_t Card::FindByPassword(uint32_t password)
+{
+    if (password == 0)
+        return 0;
+    for (const ExtraCard& card : ExtraCards)
+        if (card.Password == password)
+            return card.ID;
+    return 0;
+}
+
+// A custom card's password ("password" in cards.json): YuGiOh-PASS.h's FindCardByPassword asks this when bin/CARD_Pass.bin has no card
+// with it (that file is indexed by internal id and ends with the game's cards). 0 = no custom card has it.
+extern "C" __declspec(dllexport) unsigned short __cdecl Card_FindByPassword(unsigned int password)
+{
+    return Card::FindByPassword(password);
 }
 
 // The reverse of the above, for anything that receives an id FROM the engine during a duel (Yu-Gi-Oh-Effects looks up a
@@ -1506,13 +1612,13 @@ static void ReserveVanillaIds(const int32_t* deck)
 
 int64_t __fastcall Hook_Duel_LoadDeck(char player, int32_t* deck)
 {
-    // DuelSetup_InitEngine loads player 0's deck (Duel_DuelEngine + 0x2A) then player 1's (+ 0x236); both are filled before the first call.
+    // DuelSetup_InitEngine loads player 0's deck (Duel_DuelEngine + 0x2C) then player 1's (+ 0xEC, 0x14333036C); both are filled before the first call.
     // Reserve the vanilla cards of BOTH decks first, so a clone in player 0's deck is never lent the id of a card player 1 actually plays.
     if ((player & 1) == 0)
     {
         constexpr uintptr_t kDuelEngine = 0x143330280;
         ReserveVanillaIds(deck);
-        ReserveVanillaIds(reinterpret_cast<const int32_t*>(kDuelEngine + 0x236));
+        ReserveVanillaIds(reinterpret_cast<const int32_t*>(kDuelEngine + 0xEC));
     }
     else
         ReserveVanillaIds(deck);

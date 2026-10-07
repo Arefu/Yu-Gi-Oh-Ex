@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include "imgui.h"
 
+#include <cstdio>
 #include <cstring>
 #include <map>
 #include <string>
@@ -11,6 +12,7 @@
 #include "Yu-Gi-Oh-RIX.h"
 #include "YuGiOh/YuGiOh-CARDS.h"
 #include "YuGiOh/YuGiOh-DUEL.h"
+#include "YuGiOh/YuGiOh-DUELSTATE.h"
 #include "YuGiOh/YuGiOh-RIX.h"
 #include "YuGiOh/YuGiOh-SAVE.h"
 #include "YuGiOh/YuGiOh-GAME.h"
@@ -375,31 +377,114 @@ namespace
     }
     }
 
-    void DrawUiFunctions()
+    const char* DuelAnimUseText(YGO::UI::DuelAnimUse use)
     {
-    ImGui::InputInt("Animation ID", &g_AnimationId, 1, 0x1);
-    ImGui::InputInt("Argument One", &g_AnimationArg, 1, 0x1);
-    ImGui::InputInt("a3", &g_AnimationA3, 1, 0x1);
-    ImGui::InputInt("a4", &g_AnimationA4, 1, 0x1);
-    if (ImGui::Button("YGO::UI::DrawDuelAnimation()"))
-        YGO::UI::Draw_DuelAnimationFromId(static_cast<YGO::UI::Animations>(g_AnimationId), g_AnimationArg, g_AnimationA3, g_AnimationA4);
-    if (ImGui::IsItemHovered())
-    {
-        switch (g_AnimationId)
+        switch (use)
         {
-        case YGO::UI::Animations::DUEL:
-
-            ImGui::SetTooltip("Plays the DUEL animation that plays at the start of a duel");
-            break;
-        case YGO::UI::Animations::YOU_WIN:
-            ImGui::SetTooltip("Plays the YOU WIN/LOSE/DRAW animation that plays at the end of a duel and ends the duel, use ArgumentOne to select which plays");
-            break;
-        default:
-            ImGui::SetTooltip("Unknown Animation ID");
-            break;
+        case YGO::UI::DuelAnimUse::Play: return "plays";
+        case YGO::UI::DuelAnimUse::PlayWithCare: return "plays, changes state";
+        case YGO::UI::DuelAnimUse::NeedsCards: return "needs live cards";
+        case YGO::UI::DuelAnimUse::WaitsForInput: return "waits for input";
+        case YGO::UI::DuelAnimUse::ChangesState: return "no animation";
+        case YGO::UI::DuelAnimUse::WritesSave: return "writes the save";
         }
+        return "";
     }
 
+    bool IsPlayable(const YGO::UI::DuelAnimInfo& info)
+    {
+        return info.Use == YGO::UI::DuelAnimUse::Play || info.Use == YGO::UI::DuelAnimUse::PlayWithCare;
+    }
+
+    // The effect handles only draw on the duel screen; outside a duel the deck and hand counts are zero.
+    bool IsDuelRunning()
+    {
+        using namespace YGO::DUELSTATE;
+        const uint32_t cards = PileCount(0, Deck) + PileCount(0, Hand);
+        return cards > 0 && cards <= static_cast<uint32_t>(Deck.Max + Hand.Max);
+    }
+
+    void DrawUiFunctions()
+    {
+    static bool showAll = false;
+    ImGui::Checkbox("List the ids that can't be played from here", &showAll);
+    if (ImGui::IsItemHovered())
+        ImGui::SetTooltip("Every id the game's dispatcher (0x1407C1450) handles is named. Only the cosmetic ones can be fired by hand;\n"
+                          "the rest need live cards, wait for an answer, or write the save. docs/DuelAnimations.md has them all.");
+
+    const YGO::UI::DuelAnimInfo* selected = YGO::UI::FindDuelAnim(g_AnimationId);
+    if (selected == nullptr || (!showAll && !IsPlayable(*selected)))
+        selected = &YGO::UI::DuelAnims[0];
+    char preview[96];
+    snprintf(preview, sizeof(preview), "%d  %s", selected->Id, selected->Name);
+    if (ImGui::BeginCombo("Animation", preview))
+    {
+        for (const auto& info : YGO::UI::DuelAnims)
+        {
+            const bool playable = IsPlayable(info);
+            if (!showAll && !playable)
+                continue;
+            char label[128];
+            snprintf(label, sizeof(label), "%d  %s  (%s)", info.Id, info.Name, DuelAnimUseText(info.Use));
+            if (!playable)
+                ImGui::PushStyleColor(ImGuiCol_Text, ImGui::GetStyleColorVec4(ImGuiCol_TextDisabled));
+            if (ImGui::Selectable(label, info.Id == selected->Id))
+            {
+                g_AnimationId = info.Id;
+                selected = &info;
+                g_AnimationArg = g_AnimationA3 = g_AnimationA4 = 0;
+                if (info.Id == YGO::UI::DuelAnim_DuelEnd)
+                    g_AnimationArg = 1;
+                else if (info.Id == YGO::UI::DuelAnim_Dice || info.Id == YGO::UI::DuelAnim_Yujyo)
+                    g_AnimationA3 = 1;
+                else if (info.Id == YGO::UI::DuelAnim_ShowCardInfo)
+                    g_AnimationArg = g_TestKonamiId;
+                else if (info.Id == YGO::UI::DuelAnim_Coin)
+                    g_AnimationA3 = g_TestKonamiId;
+            }
+            if (!playable)
+                ImGui::PopStyleColor();
+        }
+        ImGui::EndCombo();
+    }
+    g_AnimationId = selected->Id;
+
+    // One input per argument the animation reads; the labels come from the catalog.
+    const std::string args = selected->Args;
+    int* values[3] = { &g_AnimationArg, &g_AnimationA3, &g_AnimationA4 };
+    size_t start = 0;
+    for (int i = 0; i < 3; i++)
+    {
+        const size_t bar = args.find('|', start);
+        const std::string label = args.substr(start, bar == std::string::npos ? std::string::npos : bar - start);
+        start = bar == std::string::npos ? args.size() : bar + 1;
+        if (label.empty())
+            continue;
+        ImGui::InputInt((label + "##animarg" + std::to_string(i)).c_str(), values[i], 1, 0x10);
+    }
+
+    ImGui::TextDisabled("%s", DuelAnimUseText(selected->Use));
+    if (selected->Note[0] != '\0')
+        ImGui::TextWrapped("%s", selected->Note);
+
+    const bool playable = IsPlayable(*selected);
+    const bool inDuel = IsDuelRunning();
+    ImGui::BeginDisabled(!playable || !inDuel);
+    if (ImGui::Button("Play"))
+        YGO::UI::Draw_DuelAnimationFromId(selected->Id, g_AnimationArg, g_AnimationA3, g_AnimationA4);
+    ImGui::EndDisabled();
+    if (!playable)
+    {
+        ImGui::SameLine();
+        ImGui::TextDisabled("Only the engine can send this one.");
+    }
+    else if (!inDuel)
+    {
+        ImGui::SameLine();
+        ImGui::TextDisabled("Start a duel first.");
+    }
+
+    ImGui::Separator();
     ImGui::Text("g_iCurrentDuelAnimation %d", YGO::UI::g_iCurrentDuelAnimation);
     ImGui::Text("g_iPreviousDuelAnimation %d", YGO::UI::g_iPreviousDuelAnimation);
     ImGui::Text("g_iActiveDuelAnimation %d", YGO::UI::g_iActiveDuelAnimation);

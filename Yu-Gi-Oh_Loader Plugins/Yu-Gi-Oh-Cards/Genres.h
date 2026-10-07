@@ -1,6 +1,8 @@
 #pragma once
 #include <cstdint>
 
+#include <json.hpp>
+
 // Card genres from Yu-Gi-Oh-Ex/genres.json (written by WolfEx's Card genres tab, docs/CardGenre.md):
 //
 //   { "cards": [ { "card": 15300, "genres": [ "DRAW", "SPSUMMON", "LINK" ] } ] }
@@ -13,6 +15,10 @@ namespace Genres
 {
     // Reads genres.json (again). Call before Card::Install on every card setup.
     void Load();
+
+    // A "genres" list (keys, the game's names or bit numbers) as a mask, bits 39-45 cleared; `unknown` counts names it doesn't know.
+    // cards.json's custom cards use it for their own "genres" (which win over genres.json).
+    uint64_t FromJson(const nlohmann::json& genres, int* unknown = nullptr);
 
     // The genres genres.json gives this Konami id, or `fallback` if it doesn't list it.
     uint64_t MaskFor(int konamiId, uint64_t fallback);

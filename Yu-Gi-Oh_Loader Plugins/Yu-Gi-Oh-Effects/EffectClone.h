@@ -12,6 +12,10 @@
 // pointers. The tables are sorted and their sizes are baked into the code, so instead of growing them this hooks the
 // lookup: for a custom card it presents the source card's id to the original function and hands back the source's entry.
 // Parameter tables keyed by id are hooked the same way, one at a time (draw count: Get_NumberOfCardsToDraw).
+//
+// The game's own cards can have their effect changed the same way: Yu-Gi-Oh-Ex\effects.json (WolfX Effects page, "Game cards"),
+//   {"cards": [{"id": 4041, "name": "...", "overridden": true, "effectClone": { "from": 4844, "draw": 3 }}]}
+// "overridden": true marks the entry as live; without "effectClone" the card has no effect. docs/EffectSystem.md section 43.
 namespace EffectClone
 {
     void Setup();

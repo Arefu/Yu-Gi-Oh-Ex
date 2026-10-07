@@ -1,7 +1,7 @@
 #pragma once
 #include <cstddef>
 
-// Synchro and Xyz Summon requirements (docs/EffectSystem.md section 41).
+// Synchro, Xyz and Link Summon requirements (docs/EffectSystem.md sections 41-42).
 //
 // The game keeps them in two sorted, read-only tables that every reader binary-searches by card id:
 //   XyzSummonRequirements      0x140ACF2E0, 219 rows of {i16 Xyz Monster, i16 material code, i16 number of materials}
@@ -17,6 +17,12 @@
 // (a custom card that borrows a vanilla id takes that id's row; one without requirements removes it, so it gets the generic rule).
 //   "xyz":     {"material": <code or word>, "materials": 3}
 //   "synchro": {"tuner": <code, word or card id>, "nonTuner": <...>, "materials": 2, "exactly": false}
+//
+// Link (added 2026-10-04): g_LinkMaterialRequirements 0x140BCA0D0 (file offset 0xBC94D0), 281 rows of {i16 Link Monster, i16 Requirement[3]},
+// read by the player's check Link_CardIsValidMaterial 0x1405B2500 and the AI's Link_GetMaterialRequirement 0x1405B1E60. Requirement 1 and 2
+// must hold for every material (1 is usually a kind: Effect, not a Token, Level <= 4...; 2 a Type / Attribute / archetype: "2 Spellcaster
+// monsters"), 3 for at least one of them ("including"). No row = any monsters. The number of materials is not in the table (Link Rating).
+//   "link":    {"condition": "effect" | "notToken" | "level<=4" ..., "material": "Spellcaster" ..., "including": <code, word or card id>}
 namespace SynchroXyz
 {
     // Reads the requirements, moves the tables and attaches the entry stubs. Call between DetourTransactionBegin and DetourTransactionCommit.

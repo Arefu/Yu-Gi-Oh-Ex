@@ -30,6 +30,7 @@ namespace
         std::string Key;          // the line in Config.ini: the DLL's name, or "YGO-Ex/<name>" for the ones Core starts
         bool On = false;
         bool Blocked = false;     // on, but something it requires is off or missing
+        bool Loaded = false;      // in memory right now (On is Config.ini, i.e. the next start; they differ after a toggle or a failed load)
         std::wstring Title;
         std::wstring Description; // the manifest's description, or why it is blocked
     };
@@ -87,10 +88,12 @@ namespace
             plugin.Key = info.Key;
             plugin.On = info.Enabled != 0;
             plugin.Blocked = info.Enabled && !info.Active;
+            plugin.Loaded = info.Loaded != 0;
             plugin.Title = FromUtf8(info.Title);
             plugin.Description = FromUtf8(info.Description);
             if (plugin.Blocked)
                 plugin.Description = L"Not loaded: it " + FromUtf8(info.Problem) + L".";
+            g_AtStart.emplace(plugin.Key, plugin.On);   // first sight = how it was when the game started (later toggles don't overwrite)
             g_Plugins.push_back(std::move(plugin));
         }
     }
@@ -100,8 +103,6 @@ namespace
         g_PerPage = std::clamp(static_cast<int>(GetPrivateProfileIntA(kSection, kPerPageKey, kDefaultPerPage, kConfig)), kMinPerPage, kMaxSlots);
 
         LoadPlugins();
-        for (const Plugin& plugin : g_Plugins)
-            g_AtStart[plugin.Key] = plugin.On;
         if (g_Plugins.empty())
             Logger::WriteLog("No plugin list: Yu-Gi-Oh-Core is not loaded or found no plugins", MODULE_NAME, 1);
     }
@@ -144,8 +145,14 @@ namespace
             }
 
             const Plugin& plugin = g_Plugins[index];
-            std::wstring label = plugin.Title + (plugin.Blocked ? L": Blocked" : plugin.On ? L": On" : L": Off");
-            const std::wstring& description = plugin.Description;   // empty when the plugin has no manifest
+            // What runs now and what the next start does: Config.ini alone said "On" for a plugin that failed to load, and kept saying "Off"
+            // for one still in memory after it crashed while starting or was switched off this run.
+            std::wstring state = plugin.Blocked ? L"Blocked" : plugin.On == plugin.Loaded ? (plugin.On ? L"On" : L"Off")
+                : plugin.On ? (g_AtStart[plugin.Key] ? L"Not loaded" : L"On after restart") : L"Off after restart";
+            std::wstring label = plugin.Title + L": " + state;
+            std::wstring description = plugin.Description;   // empty when the plugin has no manifest
+            if (!plugin.Blocked && plugin.On && !plugin.Loaded && g_AtStart[plugin.Key])
+                description = L"Switched on, but it is not loaded: it failed to load or start (see the log).";
             RIX_ButtonDesc desc = Describe(label.c_str(), description.c_str(), &OnToggle, reinterpret_cast<void*>(static_cast<intptr_t>(slot)));
             Menu::Update(g_SlotIds[slot], desc);
         }
@@ -186,6 +193,7 @@ namespace
     {
         g_Open = true;
         g_Page = 0;
+        LoadPlugins();   // read it now: the list made at start-up came before Core started the YGO-Ex plugins
         Menu::SetExclusive(true);
         Refresh(true);
         if (!RIX_GotoScreen(RIX_SCREEN_MAIN_MENU))

@@ -100,6 +100,20 @@ namespace Card
         // the second id (+0x2E) does, as the game does for Cyber Dragon Zwei.
         uint16_t SameName = 0;
         bool SameNameAlways = true;
+        // Everything else about the card is in its cards.json entry too (WolfX's New cards page writes it; docs/CustomCards.md):
+        // "genres": its genres (FULL_CARD_PROPS +0x38, used over genres.json); "related": its Related cards units (u16 card | u16 tag << 16,
+        // used over relatedcards.json); "password": 8 digits Yu-Gi-Oh-BetterCardShop's Enter Password page unlocks it with (Card_FindByPassword).
+        std::optional<uint64_t> Genres;
+        std::optional<std::vector<uint32_t>> Related;
+        uint32_t Password = 0;
+        // Per language (letter E F G I J R S): "text": { "F": { "name", "description", "indexLetters", "sortAs" } }; English's indexLetters /
+        // sortAs are top-level keys (its name and description are Name / Description). Empty = not given. The game table points into these,
+        // so they never change after loading; WriteGameTableEntry picks the game's current language each card setup.
+        struct LanguageText
+        {
+            std::wstring Name, Description, IndexLetters, SortAs;
+        };
+        std::unordered_map<char, LanguageText> Texts;
         IN_MEMORY_CARD_PROP Props{};
     };
 
@@ -113,6 +127,9 @@ namespace Card
         std::optional<int> Attack, Defense, Level, Attribute, Type, Kind, Icon;
     };
     extern std::vector<CardOverride> Overrides;
+
+    // The custom card with this password ("password" in cards.json), or 0. Exported as Card_FindByPassword for YuGiOh-PASS.h.
+    uint16_t FindByPassword(uint32_t password);
 
     // Filled by LoadCardsFromJson() before Install(). The game table keeps pointers into
     // each card's Name/Description, so it must not change afterwards.

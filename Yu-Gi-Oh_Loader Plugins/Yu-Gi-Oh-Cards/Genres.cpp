@@ -88,17 +88,7 @@ namespace Genres
                 const int id = entry["card"].get<int>();
                 if (id < 1 || id > kLastExtraCardId)
                     continue;
-                uint64_t mask = 0;
-                if (auto genres = entry.find("genres"); genres != entry.end() && genres->is_array())
-                    for (auto& genre : *genres)
-                    {
-                        const int bit = BitOf(genre);
-                        if (bit < 0)
-                            ++unknown;
-                        else
-                            mask |= 1ULL << bit;
-                    }
-                g_masks[id] = mask & ~kHiddenGenreBits;
+                g_masks[id] = entry.contains("genres") ? FromJson(entry["genres"], &unknown) : 0;
             }
             Logger::Log("genres.json: genres for " + std::to_string(g_masks.size()) + " card(s)" +
                 (unknown ? ", " + std::to_string(unknown) + " unknown genre name(s) skipped" : ""), MODULE_NAME, unknown ? 2 : 1);
@@ -108,6 +98,25 @@ namespace Genres
             g_masks.clear();
             Logger::Log(std::string("genres.json couldn't be read: ") + ex.what(), MODULE_NAME, 3);
         }
+    }
+
+    uint64_t FromJson(const nlohmann::json& genres, int* unknown)
+    {
+        uint64_t mask = 0;
+        if (!genres.is_array())
+            return 0;
+        for (auto& genre : genres)
+        {
+            const int bit = BitOf(genre);
+            if (bit < 0)
+            {
+                if (unknown)
+                    ++*unknown;
+            }
+            else
+                mask |= 1ULL << bit;
+        }
+        return mask & ~kHiddenGenreBits;
     }
 
     uint64_t MaskFor(int konamiId, uint64_t fallback)

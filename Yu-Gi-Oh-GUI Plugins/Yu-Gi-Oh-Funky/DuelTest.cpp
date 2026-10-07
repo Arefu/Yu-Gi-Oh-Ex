@@ -266,7 +266,9 @@ namespace
         return static_cast<bool>(file);
     }
 
-    // DuelSetup_InitEngine's deck structs: player 0 at Duel_DuelEngine + 0x2A, player 1 at + 0x236 (Yu-Gi-Oh-MoreCards Card.cpp, Hook_Duel_LoadDeck).
+    // DuelSetup_InitEngine's deck structs (192 bytes each, the calls at 0x14005FDDB / 0x14005FDEC): player 0 at Duel_DuelEngine + 0x2C
+    // (0x1433302AC), player 1 at + 0xEC (0x14333036C). The old + 0x236 was wrong: a test deck written there overwrote tag seat 3's deck
+    // count and the duel crashed at its first read (sub_1407BD610, 2026-10-04).
     constexpr uintptr_t kDuelEngine = 0x143330280;
 
     // Writes the seat's test deck into a deck struct, with the cards' own ids: the outer hook runs before Yu-Gi-Oh-MoreCards' resolves them
@@ -315,7 +317,7 @@ namespace
         if ((player & 1) == 0)
         {
             WriteTestDeck(0, deck);
-            WriteTestDeck(1, reinterpret_cast<int32_t*>(kDuelEngine + 0x236));
+            WriteTestDeck(1, reinterpret_cast<int32_t*>(kDuelEngine + 0xEC));
         }
         else
             WriteTestDeck(1, deck);

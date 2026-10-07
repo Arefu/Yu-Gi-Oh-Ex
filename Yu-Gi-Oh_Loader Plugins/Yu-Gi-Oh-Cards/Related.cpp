@@ -209,6 +209,17 @@ namespace Related
         g_tags.clear();
         g_strings.clear();
 
+        // cards.json's custom cards with their own "related" list: theirs, whatever relatedcards.json says for them
+        std::unordered_map<uint16_t, bool> ownLists;
+        for (const Card::ExtraCard& card : Card::ExtraCards)
+            if (card.Related)
+            {
+                g_lists[card.ID] = *card.Related;
+                ownLists[card.ID] = true;
+            }
+        if (!ownLists.empty())
+            Logger::Log("cards.json: related cards for " + std::to_string(ownLists.size()) + " custom card(s)", MODULE_NAME, 1);
+
         // every mod's copy and the game folder's, merged (Yu-Gi-Oh-Mods.h): each mod's add/remove lists apply in load order
         std::vector<std::string> problems;
         auto root = YGO::Mods::ReadMerged("relatedcards.json", nullptr, &problems);
@@ -241,6 +252,8 @@ namespace Related
                     if (card < 1 || card > kLastExtraCardId)
                         continue;
                     const uint16_t id = static_cast<uint16_t>(card);
+                    if (ownLists.contains(id))
+                        continue;   // its cards.json entry has its list
 
                     auto& list = g_lists[id];
                     if (list.empty() && card < kFirstExtraCardId)   // start from the game's list (custom cards have none)
