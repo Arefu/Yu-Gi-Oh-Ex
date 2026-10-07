@@ -612,6 +612,68 @@ A material is absent/"any", a word Fusion.cpp reads (race, attribute, `archetype
 
 **summoning.json (game cards).** `Yu-Gi-Oh-Ex\summoning.json` = `{"cards": [{"id": <game id>, "name", <the cards.json keys>}]}`, read after cards.json by Fusion.cpp, Ritual.cpp and SynchroXyz.cpp (later wins). So a game card's Fusion recipe, Ritual pairing, Synchro or Xyz requirements change the same way a new card's are set. Listed in content.json under Yu-Gi-Oh-Effects.
 
-**WolfX.** `Content/SummonEditor.cs`: one "Summoning" tab used by the New cards page (`CardsPanel.Summon.cs`, the card's Extra) and the Card Manager (game cards: starts from the game's requirements, `summon_tables.json` made by `docs/effect-scripts/build_summon_tables.py`; the first change copies them into summoning.json; "Use the game's" drops the entry). Synchro: Tuner / non-Tuner pickers (any, Type, Attribute, archetype, kind, card), total materials, "exactly"; Xyz: material picker and count; both "Read card text" (`ExtraDeckMaterialText.cs`) and "Use the generic rule". A game code the pickers cannot name (97) is kept and shown as "Game rule". Link Monsters: nothing to pick (not table driven, not looked at).
+**WolfX.** `Content/SummonEditor.cs`: one "Summoning" tab used by the New cards page (`CardsPanel.Summon.cs`, the card's Extra) and the Card Manager (game cards: starts from the game's requirements, `summon_tables.json` made by `docs/effect-scripts/build_summon_tables.py`; the first change copies them into summoning.json; "Use the game's" drops the entry). Synchro: Tuner / non-Tuner pickers (any, Type, Attribute, archetype, kind, card), total materials, "exactly"; Xyz: material picker and count; both "Read card text" (`ExtraDeckMaterialText.cs`) and "Use the generic rule". A game code the pickers cannot name (97) is kept and shown as "Game rule". Link Monsters: see section 42 (they ARE table driven).
 
 Not tested in a duel. Tests to run: a custom Xyz with `"xyz": {"materials": 3}` (2 materials must no longer be offered); a custom Synchro with `"tuner": "DARK"`; a game Synchro changed in the Card Manager. Console lines: "Xyz: table moved", "Synchro: table moved".
+
+## 42. Link material requirements table (2026-10-04)
+
+The user found it: file offset 0xBC94D0 = `g_LinkMaterialRequirements` 0x140BCA0D0, 281 sorted rows of `{i16 TargetLinkId, i16 Requirement[3]}`
+(type `LinkMaterialRequirement` in the IDB). No row = any monsters; the number of materials is the Link Rating's business (not in the table).
+
+| slot | meaning (Link_CardIsValidMaterial 0x1405B2500) | examples |
+|---|---|---|
+| Requirement[0] "condition" | every material must match | Decode Talker 74 (Effect) = "2+ Effect Monsters"; 96 = "except Tokens"; Link Disciple 59 = Level 4 or lower |
+| Requirement[1] "material" | every material must match too (same test) | Day-Breaker 14445 = 18 ("2 Spellcaster monsters"); Honeybot 23 Cyberse; Link Spider 73 Normal |
+| Requirement[2] "including" | when the last material is picked, at least one of the selection must match | "including a Link Monster" (95), an archetype, a card name |
+
+Konami's placement (from the user, matches every row checked): what an "N+" line names goes in slot 0 ("2+ Effect Monsters" = Decode Talker 74),
+what an exact "N" line names in slot 1 ("1 Normal Monster" = Link Spider 73, "2 Spellcaster monsters" = Day-Breaker 18); "except Tokens" and
+Levels in slot 0. The check itself tests both slots the same way on every material - the "+" / exact count is not in the table (Link Rating
+rule). WolfX's captions and "Read card text" follow that placement.
+
+Codes are the Fusion space: 1-24 Type, 26-31 Attribute, 32-43 Level =, 44-55 Level >=, 56-67 Level <=, 73 Normal, 74 Effect, 82 Xyz, 83
+Pendulum, 95 Link, 96 not a Token, 97 per-card `if` ladder, 98-516 archetype; in "including" also 75 Synchro, 90 Tuner, >= 3000 a card by name.
+Any other code in "including" can never be met (the card becomes unsummonable), so the plugin refuses it.
+
+**Why IDA missed it at first:** the player's check reads the table through the image base (`lea r11, image base` then
+`movsx edx, word [rcx+r11+0BCA0D0h]`), which IDA does not list as a cross-reference; only the AI's reader `Link_GetMaterialRequirement`
+0x1405B1E60 (rip-relative lea) showed. A capstone scan of every instruction for operands into the table found both. AI users:
+`AI_ExtraDeck_GetMaterialTargetBits` 0x1404FBE00 and the Extra Deck planner sub_140485830 via `MaterialCode_ToTargetBits` 0x140294360.
+
+**Yu-Gi-Oh-Effects `SynchroXyz.cpp`** moves it like the Synchro/Xyz tables (third `Table`, sites: rip lea 0x1405B1E78, bounds 0x1405B1E81 and
+0x1405B259E, image-base disp32 at 0x1405B25C6 (+5) and 0x1405B25EB (+3); entry stubs on both readers). cards.json / summoning.json:
+
+    "link": {"condition": "effect" | "notToken" | "level<=4" | "xyz" ..., "material": "Spellcaster" | "LIGHT" | "archetype:12" ...,
+             "including": "link" | "synchro" | "tuner" | "Cyberse" | "archetype:N" | <card id>}
+
+An empty object (or all three "any") on a game card takes its row away (any monsters); a custom Link without "link" gets no row.
+
+**WolfX** Summoning tab, Link section: "Every material is" / "Every material is also" / "Including at least one" pickers (`MaterialCodePicker`
+modes LinkEach / LinkIncluding: Level choices, Effect / not a Token / Xyz / Link kinds, a card for "including"), "Read card text"
+(`ExtraDeckMaterialText.Link`), "Any monsters", and "Use the game's" for game cards (summon_tables.json now has "link", from
+build_summon_tables.py). Not tested in a duel: Day-Breaker with 2 non-Spellcasters must not be offered; a game Link changed in the Card Manager.
+
+## 43. Overriding a game card's effect (2026-10-04)
+
+`Yu-Gi-Oh-Ex\effects.json` (merged over the mods like every other file), read by Yu-Gi-Oh-Effects `EffectClone.cpp` after cards.json:
+
+    {"cards": [{"id": 4041, "name": "...", "overridden": true, "effectScript": "...", "effectClone": {"from": 4844, "draw": 3}}]}
+
+- `"overridden": true` is what makes an entry live; an entry without it is ignored by the game.
+- `"effectClone"` is exactly a new card's (from / draw / filter / parts / before / cost ... everything in sections 22-39). No `effectClone`
+  (or null) = the card has **no effect**: it clones Blue-Eyes White Dragon 4007 (a Normal Monster, in no table, list or ladder).
+- The card is a clone keyed by its **own** id (`g_Clones`, plus `g_Overridden`), so every hook that serves a custom clone serves it: the four
+  effect tables (Hook_GetEntry wraps the source's row), the hooked ladders and id tests, the trigger lists, the summon / move evaluators,
+  phase handlers and named-card offers (`EngineIdFor` returns a game id as it is). There is no source-id lending: the card keeps its id.
+- **Guard:** while a clone runs as its source (slot thunk `g_Active`, ladder / evaluator `g_ShowingSource`), a lookup of that source is the
+  game's card even when the source is itself overridden (`ShownAsSource` in `Find`); `Hook_OfferByRef` clears it so an override whose source
+  is the card itself still offers its own wrapped row.
+- **Limits:** lists and ladders that name the card itself and that no hook covers (EffectCondition_CheckCardUsableAtTiming's inline branches,
+  continuous effect tables, AI tables) still answer for the card's own effect; a known trigger event that does not fit the override's trigger
+  is refused (as for clones). Not tested in a duel.
+
+**WolfX** Effects page, "Show": new cards (cards.json, as before) / game cards / game cards I changed. A game card shows its own effect as
+the Effect library reads it (effect_reference.json); Compile overrides it (an empty script asks, then means no effect); "Use the game's
+effect" drops the entry. The Effect library's "Use" fills the selected game card too. The page is now an IContentPanel saving effects.json
+(`GameEffectsFile`, `GameEffectCard` in Content\GameEffects.cs); content.json / mods map effects.json to Yu-Gi-Oh-Effects.
