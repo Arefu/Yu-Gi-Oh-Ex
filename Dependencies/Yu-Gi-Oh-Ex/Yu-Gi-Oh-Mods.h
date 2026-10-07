@@ -150,6 +150,17 @@ namespace YGO
             return mod;
         }
 
+        // True when a folder in Mods is a mod: it has a mod.json. Anything else is left alone: people keep other things there (copies of
+        // YGO_2020.toc/.dat, extracted files). Same rule as the Mod Manager (ModLibrary.IsModFolder).
+        inline bool IsModFolder(const std::filesystem::path& folder)
+        {
+            const std::wstring name = folder.filename().wstring();
+            if (name.size() >= 11 && _wcsicmp(name.c_str() + name.size() - 11, L".installing") == 0)
+                return false;   // the Mod Manager's half-unpacked copy
+            std::error_code error;
+            return std::filesystem::is_regular_file(folder / L"mod.json", error);
+        }
+
         // Every mod in <game>\Mods, in load order (modlist.json's order, then unlisted folders by name), switched on or off as listed.
         inline std::vector<Mod> Installed(const std::filesystem::path& gameFolder)
         {
@@ -158,7 +169,7 @@ namespace YGO
             std::error_code error;
             for (std::filesystem::directory_iterator it(root, error), end; !error && it != end; it.increment(error))
             {
-                if (it->is_directory(error))
+                if (it->is_directory(error) && IsModFolder(it->path()))
                     found.push_back(ReadMod(it->path()));
             }
             std::sort(found.begin(), found.end(), [](const Mod& a, const Mod& b)
