@@ -127,8 +127,8 @@ namespace
 
         hue = hue + 0.61803398875;
         hue -= static_cast<int>(hue);
-        // HSV (hue, 0.6, 1.0) to RGB: bright and readable on the black console.
-        const double h = hue * 6.0, s = 0.6, v = 1.0;
+        // HSV (hue, 0.6, 1.0) to RGB: bright and readable on the black console. Hues within ~40 degrees of red are skipped: red reads as an error.
+        const double h = (0.11 + hue * 0.78) * 6.0, s = 0.6, v = 1.0;
         const int sector = static_cast<int>(h) % 6;
         const double fraction = h - static_cast<int>(h);
         const double p = v * (1 - s), q = v * (1 - s * fraction), t = v * (1 - s * (1 - fraction));

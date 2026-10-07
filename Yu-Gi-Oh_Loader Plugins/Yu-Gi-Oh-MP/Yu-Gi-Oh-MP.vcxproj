@@ -103,7 +103,9 @@
     <ClCompile Include="DuelRecorder.cpp" />
     <ClCompile Include="EngineHooks.cpp" />
     <ClCompile Include="Http.cpp" />
+    <ClCompile Include="LiveSetting.cpp" />
     <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="BanList.cpp" />
     <ClCompile Include="P2P.cpp" />
     <ClCompile Include="Session.cpp" />
     <ClCompile Include="Steam.cpp" />

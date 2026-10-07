@@ -12,6 +12,79 @@ namespace WolfX
     {
         private bool _limitsOpen;
 
+        /// <summary>
+        /// MP ban lists: Yu-Gi-Oh-Ex\banlists\&lt;file&gt;.json, { "name": "...", "forbidden": [ids], "limited": [ids], "semiLimited": [ids] }
+        /// (Konami ids; unlisted cards are unlimited). The Yu-Gi-Oh-MP plugin offers each one as a "Ban list" choice when hosting and sends it
+        /// to the lobby. The game's own list (pd_limits.bin, Save) is what plays everywhere else, and ships in the patch DAT.
+        /// </summary>
+        private void InitLimitsExtras()
+        {
+            groupBox16.Height = 160;
+            var saveMp = new Button { Text = "Save as MP list...", Location = new Point(6, 88), Size = new Size(120, 25), Enabled = false };
+            var openMp = new Button { Text = "Open MP list...", Location = new Point(6, 119), Size = new Size(120, 25) };
+            saveMp.Click += (_, _) => SaveMpBanList();
+            openMp.Click += (_, _) => OpenMpBanList();
+            groupBox16.Controls.Add(saveMp);
+            groupBox16.Controls.Add(openMp);
+            PDL_BTN_SavePDL.EnabledChanged += (_, _) => saveMp.Enabled = PDL_BTN_SavePDL.Enabled;
+        }
+
+        private string? BanListFolder() =>
+            GameFolderFiles.Current is { } files ? Path.Combine(files.ExFolder, "banlists") : null;
+
+        private static System.Text.Json.Nodes.JsonArray IdArray(IEnumerable<ushort> ids) =>
+            new(ids.Select(id => (System.Text.Json.Nodes.JsonNode?)(int)id).ToArray());
+
+        private void SaveMpBanList()
+        {
+            if (BanListFolder() is not { } folder || !_limitsOpen)
+                return;
+            Directory.CreateDirectory(folder);
+            using var dialog = new SaveFileDialog { InitialDirectory = folder, Filter = "MP ban list (*.json)|*.json", FileName = "My ban list.json", Title = "Save as MP ban list" };
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+                return;
+            var json = new System.Text.Json.Nodes.JsonObject
+            {
+                ["name"] = Path.GetFileNameWithoutExtension(dialog.FileName),
+                ["forbidden"] = IdArray(Limits.GetForbidden()),
+                ["limited"] = IdArray(Limits.GetLimited()),
+                ["semiLimited"] = IdArray(Limits.GetSemiLimited()),
+            };
+            File.WriteAllText(dialog.FileName, json.ToJsonString(new System.Text.Json.JsonSerializerOptions { WriteIndented = true }));
+            SetStatus($"Saved the MP ban list {dialog.FileName} (the Yu-Gi-Oh-MP plugin offers it when hosting).");
+        }
+
+        private void OpenMpBanList()
+        {
+            if (BanListFolder() is not { } folder)
+                return;
+            using var dialog = new OpenFileDialog { InitialDirectory = Directory.Exists(folder) ? folder : "", Filter = "MP ban list (*.json)|*.json", Title = "Open MP ban list" };
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+                return;
+            try
+            {
+                var json = System.Text.Json.Nodes.JsonNode.Parse(File.ReadAllText(dialog.FileName));
+                List<ushort> Ids(string key) => json?[key] is System.Text.Json.Nodes.JsonArray list
+                    ? list.Select(n => (ushort)(n?.GetValue<int>() ?? 0)).Where(id => id != 0).Distinct().ToList() : [];
+                var forbidden = Ids("forbidden");
+                var limited = Ids("limited").Except(forbidden).ToList();
+                var semi = Ids("semiLimited").Except(forbidden).Except(limited).ToList();
+                foreach (var (list, ids) in new[] { (Limits.GetForbidden(), forbidden), (Limits.GetLimited(), limited), (Limits.GetSemiLimited(), semi) })
+                {
+                    list.Clear();
+                    list.AddRange(ids);
+                }
+                _limitsOpen = true;
+                FillLimits();
+                PDL_BTN_SavePDL.Enabled = PDL_BTN_AddCardToList.Enabled = GameFolderFiles.Current != null;
+                SetStatus($"Opened {dialog.FileName}: {forbidden.Count} forbidden, {limited.Count} limited, {semi.Count} semi-limited. Save writes it as the game's own list.");
+            }
+            catch (Exception ex) when (ex is IOException or System.Text.Json.JsonException or InvalidOperationException or FormatException)
+            {
+                MessageBox.Show(this, ex.Message, "Open MP ban list", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private (ListView List, List<ushort> Cards, Label Count)[] LimitLists =>
         [
             (PDL_LV_ForbiddenCards, Limits.GetForbidden(), PDL_LBL_NumOfForbidden),

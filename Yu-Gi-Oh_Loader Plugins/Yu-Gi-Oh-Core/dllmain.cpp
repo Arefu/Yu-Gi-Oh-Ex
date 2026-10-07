@@ -2,6 +2,7 @@
 #include <format>
 #include <string>
 
+#include "Crash.h"
 #include "Credits.h"
 #include "Detours.h"
 #include "Host.h"
@@ -9,6 +10,7 @@
 #include "Logger.h"
 #include "Patch.h"
 #include "Save.h"
+#include "Tweaks.h"
 #include "SaveScreen.h"
 #include "SaveSlots.h"
 #include "Yu-Gi-Oh-Core.h"
@@ -56,6 +58,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     {
         DetourRestoreAfterWith();
         Host::SetModule(hModule);
+
+        // crash_log.txt + crash.dmp for any plugin's crash (Crash.h), then the small game tweaks (Tweaks.h).
+        Crash::Install();
+        Tweaks::Install();
 
         // Where the game's data comes from (was Yu-Gi-Oh-BetterLoad): the archive's name and multi-instance (Loading.h), then WolfX's patch
         // archive whenever it exists and loose files when LooseLoading is on (Patch.h). Before the game mounts its archive, so first.

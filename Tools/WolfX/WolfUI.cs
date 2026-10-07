@@ -53,6 +53,7 @@ namespace WolfX
             InitializeComponent();
             BuildShell();
             BuildPages();
+            InitLimitsExtras();
 
             GameFolderFiles.CurrentChanged += DataChanged;
             _contentTimer.Tick += (_, _) => { _contentTimer.Stop(); UpdateContentManifest(); };
@@ -102,14 +103,19 @@ namespace WolfX
             {
                 ToolTipText = "Pack what you saved (the Yu-Gi-Oh-Ex content and the changed game files) into a .zip people install with the Mod Manager",
             };
+            var exportPatch = new ToolStripMenuItem("Export changed game &files (DAT)...", null, (_, _) => ExportPatch())
+            {
+                ToolTipText = "Copy WolfX's patch archive (every game file you changed, e.g. the ban list or card art) as a .toc / .dat pair to share",
+            };
             var modManager = new ToolStripMenuItem("Open the Mod Ma&nager", null, (_, _) => OpenModManager());
             var exit = new ToolStripMenuItem("E&xit", null, (_, _) => Close());
             file.DropDownItems.AddRange([openArchive, openExtracted, _recent, new ToolStripSeparator(), saveAll, new ToolStripSeparator(), folder, exFolder,
-                                         restore, new ToolStripSeparator(), exportMod, modManager, new ToolStripSeparator(), exit]);
+                                         restore, new ToolStripSeparator(), exportMod, exportPatch, modManager, new ToolStripSeparator(), exit]);
             file.DropDownOpening += (_, _) =>
             {
                 restore.Enabled = GameFolderFiles.Current?.HasChanges == true;
                 folder.Enabled = exFolder.Enabled = exportMod.Enabled = GameFolderFiles.Current != null;
+                exportPatch.Enabled = GameFolderFiles.Current?.HasChanges == true;
                 FillRecent();
             };
             MenuBar.Items.Insert(0, file);
@@ -425,6 +431,28 @@ namespace WolfX
                 SaveAll();
             using var form = new Wolf.Mods.CreateModForm(files.GameFolder);
             form.ShowDialog(this);
+        }
+
+        /// <summary>
+        /// File > Export changed game files: WolfX's patch archive (YGO_2020-Ex.toc / .dat, or [Yu-Gi-Oh-Core] PatchArchive) copied under a
+        /// name of your choice. Players drop the pair next to the game (named as their PatchArchive) or install it inside a mod.
+        /// </summary>
+        private void ExportPatch()
+        {
+            if (GameFolderFiles.Current is not { } files)
+                return;
+            string toc = Path.Combine(files.GameFolder, files.PatchName + ".toc"), dat = Path.ChangeExtension(toc, ".dat");
+            if (!File.Exists(toc) || !File.Exists(dat))
+            {
+                MessageBox.Show(this, "There is no patch archive yet: save a change to a game file first.", "Export changed game files", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            using var dialog = new SaveFileDialog { Filter = "Patch archive (*.toc + *.dat)|*.toc", FileName = files.PatchName + ".toc", Title = "Export changed game files" };
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+                return;
+            File.Copy(toc, dialog.FileName, overwrite: true);
+            File.Copy(dat, Path.ChangeExtension(dialog.FileName, ".dat"), overwrite: true);
+            SetStatus($"Exported {Path.GetFileName(dialog.FileName)} and its .dat.");
         }
 
         /// <summary>File > Open the Mod Manager (ModManager.exe next to WolfX.exe), on the open game.</summary>

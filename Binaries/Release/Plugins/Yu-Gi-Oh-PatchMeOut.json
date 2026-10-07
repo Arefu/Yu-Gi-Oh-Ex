@@ -1,35 +1,7 @@
 {
   "title": "Patch Me Out",
-  "description": "Small tweaks, free shop, no banlist, and a crash log.",
+  "description": "Quick duels: skip rock-paper-scissors (and choose who goes first), and set the starting LP.",
   "settings": [
-    {
-      "key": "FreeStore",
-      "title": "Free store",
-      "kind": "toggle",
-      "default": "1",
-      "help": "Card shop packs cost nothing."
-    },
-    {
-      "key": "NoBan",
-      "title": "No ban",
-      "kind": "toggle",
-      "default": "1",
-      "help": "Remove the Forbidden/Limited card restrictions (banlist)."
-    },
-    {
-      "key": "AutoPause",
-      "title": "Auto pause",
-      "kind": "toggle",
-      "default": "1",
-      "help": "Pause the game when its window loses focus."
-    },
-    {
-      "key": "UseJP",
-      "title": "Use JP",
-      "kind": "toggle",
-      "default": "0",
-      "help": "Use the Japanese rules and card data where the game has them."
-    },
     {
       "key": "NoJanken",
       "title": "No janken",

@@ -1,6 +1,6 @@
 {
   "title": "Core",
-  "description": "The save, plugin list and game data loading. Always on.",
+  "description": "The save, plugin list, game data loading, the crash log and small game tweaks. Always on.",
   "enforced": true,
   "content": [
     "credits.json"
@@ -102,6 +102,20 @@
         "loose",
         "patch"
       ]
+    },
+    {
+      "key": "PauseInBackground",
+      "title": "Pause in background",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Pause the game when its window loses focus (off = it keeps running)."
+    },
+    {
+      "key": "JapaneseVersion",
+      "title": "Japanese version",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Act as the Japanese release of the game (its logo and Japanese-only text layouts)."
     }
   ]
 }

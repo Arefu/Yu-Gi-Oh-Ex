@@ -97,7 +97,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Crash.cpp" />
     <ClCompile Include="Credits.cpp" />
+    <ClCompile Include="Tweaks.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Host.cpp" />
     <ClCompile Include="Loading.cpp" />

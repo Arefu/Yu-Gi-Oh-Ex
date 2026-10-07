@@ -96,6 +96,8 @@
             new("Yu-Gi-Oh-Console", "FileLogLevel", SettingKind.Choice, "debug",
                 "Lowest severity written to console.log. Separate from LogLevel, so the file can keep debug lines the window hides.", LogLevels),
 
+            new("Yu-Gi-Oh-Core", "PauseInBackground", SettingKind.Toggle, "0", "Pause the game when its window loses focus (off = it keeps running)."),
+            new("Yu-Gi-Oh-Core", "JapaneseVersion", SettingKind.Toggle, "0", "Act as the Japanese release of the game (its logo and Japanese-only text layouts)."),
             new("Yu-Gi-Oh-Core", "EngineRules2020", SettingKind.Toggle, "0",
                 "Duel rules: on = the game's own 2020 rules (Master Rule 5), off = 2019 rules (Master Rule 4). Core sets the engine's rules byte when the game starts, so restart after changing it."),
 
@@ -116,10 +118,6 @@
             new("Yu-Gi-Oh-Core", "FileOrder", SettingKind.Choice, "loose",
                 "Which copy of a game file wins when both exist: loose = a loose file (LooseLoading, FolderName) wins over WolfX's patch archive; patch = WolfX's patch wins. Either way the game's own YGO_2020.dat comes last. WolfX follows the same setting.", ["loose", "patch"]),
 
-            new("Yu-Gi-Oh-PatchMeOut", "FreeStore", SettingKind.Toggle, "1", "Card shop packs cost nothing."),
-            new("Yu-Gi-Oh-PatchMeOut", "NoBan", SettingKind.Toggle, "1", "Remove the Forbidden/Limited card restrictions (banlist)."),
-            new("Yu-Gi-Oh-PatchMeOut", "AutoPause", SettingKind.Toggle, "1", "Pause the game when its window loses focus."),
-            new("Yu-Gi-Oh-PatchMeOut", "UseJP", SettingKind.Toggle, "0", "Use the Japanese rules and card data where the game has them."),
             new("Yu-Gi-Oh-PatchMeOut", "NoJanken", SettingKind.Toggle, "1", "Skip rock-paper-scissors at the start of a duel (offline duels; online duels still play it)."),
             new("Yu-Gi-Oh-PatchMeOut", "JankenFirst", SettingKind.Choice, "random",
                 "Who goes first when NoJanken skips rock-paper-scissors: P1 = you, P2 = your opponent, random = either.", ["random", "P1", "P2"]),

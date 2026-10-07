@@ -82,7 +82,10 @@
     },
     {
       "code": 8,
-      "name": "Archetype 8"
+      "name": "LV",
+      "names": {
+        "E": "LV"
+      }
     },
     {
       "code": 9,
@@ -110,38 +113,23 @@
     },
     {
       "code": 11,
-      "name": "Elemental HERO",
+      "name": "Neos",
       "names": {
-        "E": "Elemental HERO",
-        "F": "HÉROS Élémentaire",
-        "G": "Elementar-HELD",
-        "I": "EROE Elementale",
-        "S": "HÉROE Elemental",
-        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+        "E": "Neos"
       }
     },
     {
       "code": 12,
-      "name": "Elemental HERO",
+      "name": "Neos Fusions",
       "names": {
-        "E": "Elemental HERO",
-        "F": "HÉROS Élémentaire",
-        "G": "Elementar-HELD",
-        "I": "EROE Elementale",
-        "S": "HÉROE Elemental",
-        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+        "E": "Neos Fusions"
       }
     },
     {
       "code": 13,
-      "name": "Elemental HERO",
+      "name": "Neo",
       "names": {
-        "E": "Elemental HERO",
-        "F": "HÉROS Élémentaire",
-        "G": "Elementar-HELD",
-        "I": "EROE Elementale",
-        "S": "HÉROE Elemental",
-        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+        "E": "Neo"
       }
     },
     {
@@ -242,9 +230,9 @@
     },
     {
       "code": 22,
-      "name": "Roid",
+      "name": "roid",
       "names": {
-        "E": "Roid",
+        "E": "roid",
         "F": "Roid",
         "G": "Roid",
         "I": "Roid",
@@ -254,14 +242,9 @@
     },
     {
       "code": 23,
-      "name": "Roid",
+      "name": "Vehicroid",
       "names": {
-        "E": "Roid",
-        "F": "Roid",
-        "G": "Roid",
-        "I": "Roid",
-        "S": "Roid",
-        "J": "ロイド"
+        "E": "Vehicroid"
       }
     },
     {
@@ -297,19 +280,17 @@
     },
     {
       "code": 27,
-      "name": "Mecha Phantom Beast",
+      "name": "Phantom Beast",
       "names": {
-        "E": "Mecha Phantom Beast",
-        "F": "Bête Fantôme Méca",
-        "G": "Mecha-Phantomungeheuer",
-        "I": "Bestia Fantasma Meccanica",
-        "S": "Mecha Bestia Fantasma",
-        "J": "幻(げん)獣(じゅう)機(き)"
+        "E": "Phantom Beast"
       }
     },
     {
       "code": 28,
-      "name": "Archetype 28"
+      "name": "HERO",
+      "names": {
+        "E": "HERO"
+      }
     },
     {
       "code": 29,
@@ -416,14 +397,9 @@
     },
     {
       "code": 38,
-      "name": "Gladiator Beast",
+      "name": "Gladiator Beast's Battle",
       "names": {
-        "E": "Gladiator Beast",
-        "F": "Bête Gladiateur",
-        "G": "Gladiatorungeheuer",
-        "I": "Gladiatore Bestia",
-        "S": "Bestia Gladiador",
-        "J": "剣闘獣(グラディアルビースト)"
+        "E": "Gladiator Beast's Battle"
       }
     },
     {
@@ -464,35 +440,31 @@
     },
     {
       "code": 44,
-      "name": "Archetype 44"
+      "name": "Skyblaster",
+      "names": {
+        "E": "Skyblaster"
+      }
     },
     {
       "code": 45,
-      "name": "Exodia",
+      "name": "Forbidden One",
       "names": {
-        "E": "Exodia the Forbidden One",
-        "F": "Éxodia l'Interdit",
-        "G": "Exodia, die Verbotene",
-        "I": "Exodia il Proibito",
-        "S": "Exodia, el Prohibido",
-        "J": "封(ふう)印(いん)されしエクゾディア"
+        "E": "Forbidden One"
       }
     },
     {
       "code": 46,
-      "name": "Crystal Beast",
+      "name": "Ultimate Crystal",
       "names": {
-        "E": "Crystal Beast",
-        "F": "Bête Cristalline",
-        "G": "Kristallungeheuer",
-        "I": "Bestia Cristallo",
-        "S": "Bestia de Cristal",
-        "J": "宝(ほう)玉(ぎょく)獣(じゅう)"
+        "E": "Ultimate Crystal"
       }
     },
     {
       "code": 47,
-      "name": "Archetype 47"
+      "name": "Cyber Dragon Fusions",
+      "names": {
+        "E": "Cyber Dragon Fusions"
+      }
     },
     {
       "code": 48,
@@ -520,14 +492,9 @@
     },
     {
       "code": 50,
-      "name": "X-Saber",
+      "name": "Saber",
       "names": {
-        "E": "X-Saber",
-        "F": "Sabre X",
-        "G": "X-Säbel",
-        "I": "Sciabola-X",
-        "S": "Sable-X",
-        "J": "Ｘ(エックス)－セイバー"
+        "E": "Saber"
       }
     },
     {
@@ -568,7 +535,10 @@
     },
     {
       "code": 54,
-      "name": "Archetype 54"
+      "name": "Nitro Synchron Synchros",
+      "names": {
+        "E": "Nitro Synchron Synchros"
+      }
     },
     {
       "code": 55,
@@ -608,7 +578,10 @@
     },
     {
       "code": 58,
-      "name": "Archetype 58"
+      "name": "HERO support",
+      "names": {
+        "E": "HERO support"
+      }
     },
     {
       "code": 59,
@@ -648,7 +621,10 @@
     },
     {
       "code": 62,
-      "name": "Archetype 62"
+      "name": "Clear",
+      "names": {
+        "E": "Clear"
+      }
     },
     {
       "code": 63,
@@ -707,26 +683,16 @@
     },
     {
       "code": 68,
-      "name": "Genex",
+      "name": "R-Genex",
       "names": {
-        "E": "Genex",
-        "F": "Genex",
-        "G": "Genex",
-        "I": "Genex",
-        "S": "Genex",
-        "J": "ジェネクス"
+        "E": "R-Genex"
       }
     },
     {
       "code": 69,
-      "name": "Earthbound",
+      "name": "Earthbound Immortal",
       "names": {
-        "E": "Earthbound Immortal",
-        "F": "Esprit de la Terre Immortel",
-        "G": "Erdgebundener Unsterblicher",
-        "I": "Immortale Terrestre",
-        "S": "Inmortal Terrestre",
-        "J": "地(じ)縛(ばく)神(しん)"
+        "E": "Earthbound Immortal"
       }
     },
     {
@@ -810,7 +776,10 @@
     },
     {
       "code": 77,
-      "name": "Archetype 77"
+      "name": "Majestic",
+      "names": {
+        "E": "Majestic"
+      }
     },
     {
       "code": 78,
@@ -826,14 +795,9 @@
     },
     {
       "code": 79,
-      "name": "Six Samurai",
+      "name": "Shien",
       "names": {
-        "E": "Six Samurai",
-        "F": "Six Samouraïs",
-        "G": "Sechs Samurai",
-        "I": "Sei Samurai",
-        "S": "Seis Samuráis",
-        "J": "六(ろく)武(ぶ)衆(しゅう)"
+        "E": "Shien"
       }
     },
     {
@@ -850,7 +814,10 @@
     },
     {
       "code": 81,
-      "name": "Archetype 81"
+      "name": "Inmato",
+      "names": {
+        "E": "Inmato"
+      }
     },
     {
       "code": 82,
@@ -873,9 +840,9 @@
     },
     {
       "code": 84,
-      "name": "Gem-",
+      "name": "Gem-Knight",
       "names": {
-        "E": "Gem-"
+        "E": "Gem-Knight"
       }
     },
     {
@@ -928,30 +895,23 @@
     },
     {
       "code": 89,
-      "name": "Archetype 89"
+      "name": "Fusion",
+      "names": {
+        "E": "Fusion"
+      }
     },
     {
       "code": 90,
-      "name": "Meklord",
+      "name": "Meklord Infinity",
       "names": {
-        "E": "Meklord",
-        "F": "Meklord",
-        "G": "Meklord",
-        "I": "Meklord",
-        "S": "Meklord",
-        "J": "機(き)皇(こう)"
+        "E": "Meklord Infinity"
       }
     },
     {
       "code": 91,
-      "name": "Meklord",
+      "name": "Meklord Emperor & Army",
       "names": {
-        "E": "Meklord",
-        "F": "Meklord",
-        "G": "Meklord",
-        "I": "Meklord",
-        "S": "Meklord",
-        "J": "機(き)皇(こう)"
+        "E": "Meklord Emperor & Army"
       }
     },
     {
@@ -1016,7 +976,10 @@
     },
     {
       "code": 97,
-      "name": "Archetype 97"
+      "name": "Reactor",
+      "names": {
+        "E": "Reactor"
+      }
     },
     {
       "code": 98,
@@ -1039,45 +1002,30 @@
     },
     {
       "code": 100,
-      "name": "Nordic",
+      "name": "Nordic Beast",
       "names": {
-        "E": "Nordic",
-        "F": "Nordique",
-        "G": "Nordisch",
-        "I": "Nordic",
-        "S": "Nórdico/a",
-        "J": "極(きょく)星(せい)"
+        "E": "Nordic Beast"
       }
     },
     {
       "code": 101,
-      "name": "Nordic",
+      "name": "Nordic Alfar",
       "names": {
-        "E": "Nordic",
-        "F": "Nordique",
-        "G": "Nordisch",
-        "I": "Nordic",
-        "S": "Nórdico/a",
-        "J": "極(きょく)星(せい)"
+        "E": "Nordic Alfar"
       }
     },
     {
       "code": 102,
-      "name": "Nordic",
+      "name": "Nordic Ascendant",
       "names": {
-        "E": "Nordic",
-        "F": "Nordique",
-        "G": "Nordisch",
-        "I": "Nordic",
-        "S": "Nórdico/a",
-        "J": "極(きょく)星(せい)"
+        "E": "Nordic Ascendant"
       }
     },
     {
       "code": 103,
-      "name": "Aesir",
+      "name": "Nordic Relic",
       "names": {
-        "E": "Aesir"
+        "E": "Nordic Relic"
       }
     },
     {
@@ -1132,26 +1080,16 @@
     },
     {
       "code": 109,
-      "name": "Meklord",
+      "name": "Meklord Emperor",
       "names": {
-        "E": "Meklord",
-        "F": "Meklord",
-        "G": "Meklord",
-        "I": "Meklord",
-        "S": "Meklord",
-        "J": "機(き)皇(こう)"
+        "E": "Meklord Emperor"
       }
     },
     {
       "code": 110,
-      "name": "Meklord",
+      "name": "Meklord Army",
       "names": {
-        "E": "Meklord",
-        "F": "Meklord",
-        "G": "Meklord",
-        "I": "Meklord",
-        "S": "Meklord",
-        "J": "機(き)皇(こう)"
+        "E": "Meklord Army"
       }
     },
     {
@@ -1192,9 +1130,9 @@
     },
     {
       "code": 114,
-      "name": "Evolsaur",
+      "name": "Evoltile",
       "names": {
-        "E": "Evolsaur"
+        "E": "Evoltile"
       }
     },
     {
@@ -1206,9 +1144,9 @@
     },
     {
       "code": 116,
-      "name": "Hole",
+      "name": "Trap Hole",
       "names": {
-        "E": "Hole"
+        "E": "Trap Hole"
       }
     },
     {
@@ -1237,11 +1175,17 @@
     },
     {
       "code": 119,
-      "name": "Archetype 119"
+      "name": "lswarm",
+      "names": {
+        "E": "lswarm"
+      }
     },
     {
       "code": 120,
-      "name": "Archetype 120"
+      "name": "Number",
+      "names": {
+        "E": "Number"
+      }
     },
     {
       "code": 121,
@@ -1276,14 +1220,9 @@
     },
     {
       "code": 124,
-      "name": "Ninja",
+      "name": "Ninjitsu Art",
       "names": {
-        "E": "Ninja",
-        "F": "Ninja",
-        "G": "Ninja",
-        "I": "Ninja",
-        "S": "Ninja",
-        "J": "忍(にん)者(じゃ)"
+        "E": "Ninjitsu Art"
       }
     },
     {
@@ -1400,7 +1339,10 @@
     },
     {
       "code": 136,
-      "name": "Archetype 136"
+      "name": "Xyz",
+      "names": {
+        "E": "Xyz"
+      }
     },
     {
       "code": 137,
@@ -1428,21 +1370,16 @@
     },
     {
       "code": 139,
-      "name": "Mermail",
+      "name": "Abyss-",
       "names": {
-        "E": "Mermail",
-        "F": "Sirènemure",
-        "G": "Nixenrüstung",
-        "I": "Sirenide",
-        "S": "Sirenarmado/a",
-        "J": "水精鱗(マーメイル)"
+        "E": "Abyss-"
       }
     },
     {
       "code": 140,
-      "name": "Spellbook",
+      "name": "Prophecy",
       "names": {
-        "E": "Spellbook"
+        "E": "Prophecy"
       }
     },
     {
@@ -1471,14 +1408,9 @@
     },
     {
       "code": 143,
-      "name": "Heraldic",
+      "name": "Heraldic Beast",
       "names": {
-        "E": "Heraldic Beast",
-        "F": "Bête Héraldique",
-        "G": "Wappenungeheuer",
-        "I": "Bestia Araldica",
-        "S": "Bestia Heráldica",
-        "J": "紋(もん)章(しょう)獣(じゅう)"
+        "E": "Heraldic Beast"
       }
     },
     {
@@ -1507,18 +1439,16 @@
     },
     {
       "code": 146,
-      "name": "Archetype 146"
+      "name": "Galaxy",
+      "names": {
+        "E": "Galaxy"
+      }
     },
     {
       "code": 147,
-      "name": "Noble Knight",
+      "name": "Noble Arms",
       "names": {
-        "E": "Noble Knight",
-        "F": "Chevalier Noble",
-        "G": "Edler Ritter",
-        "I": "Nobile Cavaliere",
-        "S": "Noble Caballero",
-        "J": "聖(せい)騎(き)士(し)"
+        "E": "Noble Arms"
       }
     },
     {
@@ -1542,14 +1472,9 @@
     },
     {
       "code": 150,
-      "name": "Hazy",
+      "name": "Hazy Flame",
       "names": {
-        "E": "Hazy Flame",
-        "F": "Flamme Chimérique",
-        "G": "Trübe Flamme",
-        "I": "Fiamma Chimerica",
-        "S": "Llama Quimérica",
-        "J": "陽炎獣(ヘイズビースト)"
+        "E": "Hazy Flame"
       }
     },
     {
@@ -1566,14 +1491,9 @@
     },
     {
       "code": 152,
-      "name": "Utopia",
+      "name": "ZW -",
       "names": {
-        "E": "Utopia",
-        "F": "Utopie",
-        "G": "Utopia",
-        "I": "Utopia",
-        "S": "Utopía",
-        "J": "希(き)望(ぼう)皇(おう)ホープ"
+        "E": "ZW -"
       }
     },
     {
@@ -1638,19 +1558,17 @@
     },
     {
       "code": 158,
-      "name": "Fire King",
+      "name": "Fire King Avatar",
       "names": {
-        "E": "Fire King",
-        "F": "Roi du Feu",
-        "G": "Feuerkönig",
-        "I": "Re del Fuoco",
-        "S": "Rey de Fuego",
-        "J": "炎(えん)王(おう)"
+        "E": "Fire King Avatar"
       }
     },
     {
       "code": 159,
-      "name": "Archetype 159"
+      "name": "Number C",
+      "names": {
+        "E": "Number C"
+      }
     },
     {
       "code": 160,
@@ -1666,14 +1584,9 @@
     },
     {
       "code": 161,
-      "name": "Geargia",
+      "name": "Geargiano",
       "names": {
-        "E": "Geargia",
-        "F": "Geargia",
-        "G": "Getriebria",
-        "I": "Ingranaggian",
-        "S": "Engranaji",
-        "J": "ギアギア"
+        "E": "Geargiano"
       }
     },
     {
@@ -1690,14 +1603,9 @@
     },
     {
       "code": 163,
-      "name": "Super Defense Robot",
+      "name": "Orbital",
       "names": {
-        "E": "Super Defense Robot",
-        "F": "Super Défense",
-        "G": "Superverteidigungsroboter",
-        "I": "Super Robot da Difesa",
-        "S": "Súper Robot de Defensa",
-        "J": "ＳＤ(スーパーディフェンス)ロボ"
+        "E": "Orbital"
       }
     },
     {
@@ -1747,26 +1655,16 @@
     },
     {
       "code": 169,
-      "name": "Utopia",
+      "name": "Utopia Ray",
       "names": {
-        "E": "Utopia",
-        "F": "Utopie",
-        "G": "Utopia",
-        "I": "Utopia",
-        "S": "Utopía",
-        "J": "希(き)望(ぼう)皇(おう)ホープ"
+        "E": "Utopia Ray"
       }
     },
     {
       "code": 170,
-      "name": "Heroic",
+      "name": "Heroic Challenger",
       "names": {
-        "E": "Heroic",
-        "F": "Héroïque",
-        "G": "Heroisch",
-        "I": "Eroico",
-        "S": "Heroico",
-        "J": "Ｈ(ヒロイック)"
+        "E": "Heroic Challenger"
       }
     },
     {
@@ -1819,7 +1717,10 @@
     },
     {
       "code": 176,
-      "name": "Archetype 176"
+      "name": "Cyber",
+      "names": {
+        "E": "Cyber"
+      }
     },
     {
       "code": 177,
@@ -1835,14 +1736,17 @@
     },
     {
       "code": 178,
-      "name": "Gravekeeper's",
+      "name": "Necrovalley",
       "names": {
-        "E": "Gravekeeper's"
+        "E": "Necrovalley"
       }
     },
     {
       "code": 179,
-      "name": "Archetype 179"
+      "name": "Zubaba",
+      "names": {
+        "E": "Zubaba"
+      }
     },
     {
       "code": 180,
@@ -1858,18 +1762,16 @@
     },
     {
       "code": 181,
-      "name": "Archetype 181"
+      "name": "Rank-Up-Magic",
+      "names": {
+        "E": "Rank-Up-Magic"
+      }
     },
     {
       "code": 182,
-      "name": "Heraldic",
+      "name": "Heraldry",
       "names": {
-        "E": "Heraldic Beast",
-        "F": "Bête Héraldique",
-        "G": "Wappenungeheuer",
-        "I": "Bestia Araldica",
-        "S": "Bestia Heráldica",
-        "J": "紋(もん)章(しょう)獣(じゅう)"
+        "E": "Heraldry"
       }
     },
     {
@@ -1900,14 +1802,17 @@
     },
     {
       "code": 186,
-      "name": "Galaxy-Eyes",
+      "name": "Galaxy-Eyes Tachyon Dragon",
       "names": {
-        "E": "Galaxy-Eyes"
+        "E": "Galaxy-Eyes Tachyon Dragon"
       }
     },
     {
       "code": 187,
-      "name": "Archetype 187"
+      "name": "Over-Hundred Number",
+      "names": {
+        "E": "Over-Hundred Number"
+      }
     },
     {
       "code": 188,
@@ -1930,9 +1835,9 @@
     },
     {
       "code": 190,
-      "name": "Legendary Knight",
+      "name": "Legendary Dragon",
       "names": {
-        "E": "Legendary Knight"
+        "E": "Legendary Dragon"
       }
     },
     {
@@ -1944,14 +1849,9 @@
     },
     {
       "code": 192,
-      "name": "Kuriboh",
+      "name": "Winged Kuriboh",
       "names": {
-        "E": "Kuriboh",
-        "F": "Kuriboh",
-        "G": "Kuriboh",
-        "I": "Kuriboh",
-        "S": "Kuriboh",
-        "J": "クリボー"
+        "E": "Winged Kuriboh"
       }
     },
     {
@@ -1968,50 +1868,30 @@
     },
     {
       "code": 194,
-      "name": "Sylvan",
+      "name": "Sprout",
       "names": {
-        "E": "Sylvan",
-        "F": "Sylvan",
-        "G": "Sylvan",
-        "I": "Silvan",
-        "S": "Silvano/a",
-        "J": "森(しん)羅(ら)"
+        "E": "Sprout"
       }
     },
     {
       "code": 195,
-      "name": "Noble Knight",
+      "name": "Artorigus",
       "names": {
-        "E": "Noble Knight",
-        "F": "Chevalier Noble",
-        "G": "Edler Ritter",
-        "I": "Nobile Cavaliere",
-        "S": "Noble Caballero",
-        "J": "聖(せい)騎(き)士(し)"
+        "E": "Artorigus"
       }
     },
     {
       "code": 196,
-      "name": "Noble Knight",
+      "name": "Laundsallyn",
       "names": {
-        "E": "Noble Knight",
-        "F": "Chevalier Noble",
-        "G": "Edler Ritter",
-        "I": "Nobile Cavaliere",
-        "S": "Noble Caballero",
-        "J": "聖(せい)騎(き)士(し)"
+        "E": "Laundsallyn"
       }
     },
     {
       "code": 197,
-      "name": "Superheavy",
+      "name": "Superheavy Samurai",
       "names": {
-        "E": "Superheavy Samurai",
-        "F": "Samouraï Supralourd",
-        "G": "Superstarker Samurai",
-        "I": "Samurai Superpesante",
-        "S": "Samurai Superpesado",
-        "J": "超(ちょう)重(じゅう)"
+        "E": "Superheavy Samurai"
       }
     },
     {
@@ -2028,9 +1908,9 @@
     },
     {
       "code": 199,
-      "name": "Tellarknight",
+      "name": "tellarknight",
       "names": {
-        "E": "Tellarknight",
+        "E": "tellarknight",
         "F": "Tellchevalier",
         "G": "Sternritter",
         "I": "Tellcavaliere",
@@ -2076,7 +1956,10 @@
     },
     {
       "code": 203,
-      "name": "Archetype 203"
+      "name": "Change",
+      "names": {
+        "E": "Change"
+      }
     },
     {
       "code": 204,
@@ -2111,9 +1994,9 @@
     },
     {
       "code": 207,
-      "name": "D/D",
+      "name": "D/D/D",
       "names": {
-        "E": "D/D"
+        "E": "D/D/D"
       }
     },
     {
@@ -2130,7 +2013,10 @@
     },
     {
       "code": 209,
-      "name": "Archetype 209"
+      "name": "Frightfur",
+      "names": {
+        "E": "Frightfur"
+      }
     },
     {
       "code": 210,
@@ -2158,29 +2044,30 @@
     },
     {
       "code": 212,
-      "name": "Archetype 212"
+      "name": "Goblin",
+      "names": {
+        "E": "Goblin"
+      }
     },
     {
       "code": 213,
-      "name": "Archetype 213"
+      "name": "Entity",
+      "names": {
+        "E": "Entity"
+      }
     },
     {
       "code": 214,
-      "name": "D/D",
+      "name": "Dark Contract",
       "names": {
-        "E": "D/D"
+        "E": "Dark Contract"
       }
     },
     {
       "code": 215,
-      "name": "X-Saber",
+      "name": "Gottoms",
       "names": {
-        "E": "X-Saber",
-        "F": "Sabre X",
-        "G": "X-Säbel",
-        "I": "Sciabola-X",
-        "S": "Sable-X",
-        "J": "Ｘ(エックス)－セイバー"
+        "E": "Gottoms"
       }
     },
     {
@@ -2221,26 +2108,16 @@
     },
     {
       "code": 219,
-      "name": "Ritual Beast",
+      "name": "Ritual Beast Tamer",
       "names": {
-        "E": "Ritual Beast",
-        "F": "Bête Spirituelle",
-        "G": "Geistungeheuer",
-        "I": "Bestia Spirito",
-        "S": "Espíritu Bestia",
-        "J": "霊(れい)獣(じゅう)"
+        "E": "Ritual Beast Tamer"
       }
     },
     {
       "code": 220,
-      "name": "Ritual Beast",
+      "name": "Spiritual Beast",
       "names": {
-        "E": "Ritual Beast",
-        "F": "Bête Spirituelle",
-        "G": "Geistungeheuer",
-        "I": "Bestia Spirito",
-        "S": "Espíritu Bestia",
-        "J": "霊(れい)獣(じゅう)"
+        "E": "Spiritual Beast"
       }
     },
     {
@@ -2317,31 +2194,24 @@
     },
     {
       "code": 227,
-      "name": "Charmer",
+      "name": "Familiar-Possessed",
       "names": {
-        "E": "Charmer",
-        "F": "Charmeuse",
-        "G": "Verzaubererin",
-        "I": "Ammaliatore/Ammaliatrice",
-        "S": "Encantador/a",
-        "J": "霊(れい)使(つか)い"
+        "E": "Familiar-Possessed"
       }
     },
     {
       "code": 228,
-      "name": "Crystal Beast",
+      "name": "Crystal",
       "names": {
-        "E": "Crystal Beast",
-        "F": "Bête Cristalline",
-        "G": "Kristallungeheuer",
-        "I": "Bestia Cristallo",
-        "S": "Bestia de Cristal",
-        "J": "宝(ほう)玉(ぎょく)獣(じゅう)"
+        "E": "Crystal"
       }
     },
     {
       "code": 229,
-      "name": "Archetype 229"
+      "name": "Warrior",
+      "names": {
+        "E": "Warrior"
+      }
     },
     {
       "code": 230,
@@ -2357,14 +2227,9 @@
     },
     {
       "code": 231,
-      "name": "Dark Magician",
+      "name": "Dark Magician Girl",
       "names": {
-        "E": "Dark Magician",
-        "F": "Magicien Sombre",
-        "G": "Dunkler Magier",
-        "I": "Mago Nero",
-        "S": "Mago Oscuro",
-        "J": "ブラック・マジシャン"
+        "E": "Dark Magician Girl"
       }
     },
     {
@@ -2376,30 +2241,23 @@
     },
     {
       "code": 233,
-      "name": "Archetype 233"
+      "name": "Zefra",
+      "names": {
+        "E": "Zefra"
+      }
     },
     {
       "code": 234,
-      "name": "Melodious",
+      "name": "Melodious Maestra",
       "names": {
-        "E": "Melodious",
-        "F": "Musique",
-        "G": "Musikalisch",
-        "I": "Melodiosa",
-        "S": "Melodiosa",
-        "J": "幻(げん)奏(そう)"
+        "E": "Melodious Maestra"
       }
     },
     {
       "code": 235,
-      "name": "Ritual Beast",
+      "name": "Ritual Beast Ulti",
       "names": {
-        "E": "Ritual Beast",
-        "F": "Bête Spirituelle",
-        "G": "Geistungeheuer",
-        "I": "Bestia Spirito",
-        "S": "Espíritu Bestia",
-        "J": "霊(れい)獣(じゅう)"
+        "E": "Ritual Beast Ulti"
       }
     },
     {
@@ -2411,14 +2269,9 @@
     },
     {
       "code": 237,
-      "name": "Infernoid",
+      "name": "Void",
       "names": {
-        "E": "Infernoid",
-        "F": "Infernoid",
-        "G": "Infernoid",
-        "I": "Infernoid",
-        "S": "Infiernoid",
-        "J": "インフェルノイド"
+        "E": "Void"
       }
     },
     {
@@ -2483,7 +2336,10 @@
     },
     {
       "code": 243,
-      "name": "Archetype 243"
+      "name": "Empowering Dragon",
+      "names": {
+        "E": "Empowering Dragon"
+      }
     },
     {
       "code": 244,
@@ -2511,14 +2367,9 @@
     },
     {
       "code": 246,
-      "name": "Aquaactress",
+      "name": "Aquarium",
       "names": {
-        "E": "Aquaactress",
-        "F": "Aquactrice",
-        "G": "Aquaschauspielerin",
-        "I": "Acquattrice",
-        "S": "Acuactriz",
-        "J": "アクアアクトレス"
+        "E": "Aquarium"
       }
     },
     {
@@ -2583,14 +2434,9 @@
     },
     {
       "code": 252,
-      "name": "Roid",
+      "name": "Speedroid",
       "names": {
-        "E": "Roid",
-        "F": "Roid",
-        "G": "Roid",
-        "I": "Roid",
-        "S": "Roid",
-        "J": "ロイド"
+        "E": "Speedroid"
       }
     },
     {
@@ -2607,14 +2453,9 @@
     },
     {
       "code": 254,
-      "name": "Archfiend",
+      "name": "Red Dragon Archfiend",
       "names": {
-        "E": "Archfiend",
-        "F": "Archdémon",
-        "G": "Erzunterweltler",
-        "I": "Arcidemone",
-        "S": "Archidemonio",
-        "J": "デーモン"
+        "E": "Red Dragon Archfiend"
       }
     },
     {
@@ -2631,19 +2472,17 @@
     },
     {
       "code": 256,
-      "name": "Burning Abyss",
+      "name": "Dante",
       "names": {
-        "E": "Burning Abyss",
-        "F": "Abysses Ardents",
-        "G": "Brennenden Abgrund",
-        "I": "Abisso Bruciante",
-        "S": "Abismo Ardiente",
-        "J": "彼(ひ)岸(がん)"
+        "E": "Dante"
       }
     },
     {
       "code": 257,
-      "name": "Archetype 257"
+      "name": "Buster Blader",
+      "names": {
+        "E": "Buster Blader"
+      }
     },
     {
       "code": 258,
@@ -2697,26 +2536,16 @@
     },
     {
       "code": 263,
-      "name": "Phantom Knights",
+      "name": "The Phantom Knights",
       "names": {
-        "E": "The Phantom Knights",
-        "F": "Les Chevaliers Fantômes",
-        "G": "Die Phantomritter",
-        "I": "I Cavalieri Fantasma",
-        "S": "Los Caballeros Fantasma",
-        "J": "幻影騎士団(ファントム・ナイツ)"
+        "E": "The Phantom Knights"
       }
     },
     {
       "code": 264,
-      "name": "Phantom Knights",
+      "name": "Phantom Knights' Spells & Traps",
       "names": {
-        "E": "The Phantom Knights",
-        "F": "Les Chevaliers Fantômes",
-        "G": "Die Phantomritter",
-        "I": "I Cavalieri Fantasma",
-        "S": "Los Caballeros Fantasma",
-        "J": "幻影騎士団(ファントム・ナイツ)"
+        "E": "Phantom Knights' Spells & Traps"
       }
     },
     {
@@ -2733,26 +2562,16 @@
     },
     {
       "code": 266,
-      "name": "Super Quant",
+      "name": "Super Quantum",
       "names": {
-        "E": "Super Quant",
-        "F": "Super Quant",
-        "G": "Superquant",
-        "I": "Super Quant",
-        "S": "Súper Cuant",
-        "J": "超(ちょう)量(りょう)"
+        "E": "Super Quantum"
       }
     },
     {
       "code": 267,
-      "name": "Super Quant",
+      "name": "Super Quantal Mech Beast",
       "names": {
-        "E": "Super Quant",
-        "F": "Super Quant",
-        "G": "Superquant",
-        "I": "Super Quant",
-        "S": "Súper Cuant",
-        "J": "超(ちょう)量(りょう)"
+        "E": "Super Quantal Mech Beast"
       }
     },
     {
@@ -2769,14 +2588,9 @@
     },
     {
       "code": 269,
-      "name": "Utopia",
+      "name": "Utopic",
       "names": {
-        "E": "Utopia",
-        "F": "Utopie",
-        "G": "Utopia",
-        "I": "Utopia",
-        "S": "Utopía",
-        "J": "希(き)望(ぼう)皇(おう)ホープ"
+        "E": "Utopic"
       }
     },
     {
@@ -2829,14 +2643,9 @@
     },
     {
       "code": 274,
-      "name": "Dark Magician",
+      "name": "Dark Magician Spells & Traps",
       "names": {
-        "E": "Dark Magician",
-        "F": "Magicien Sombre",
-        "G": "Dunkler Magier",
-        "I": "Mago Nero",
-        "S": "Mago Oscuro",
-        "J": "ブラック・マジシャン"
+        "E": "Dark Magician Spells & Traps"
       }
     },
     {
@@ -2865,14 +2674,9 @@
     },
     {
       "code": 277,
-      "name": "Blackwing",
+      "name": "Assault Blackwing",
       "names": {
-        "E": "Blackwing",
-        "F": "Aile Noire",
-        "G": "Schwarzflügel",
-        "I": "Alanera",
-        "S": "Alanegra",
-        "J": "ＢＦ(ブラックフェザー)"
+        "E": "Assault Blackwing"
       }
     },
     {
@@ -2889,7 +2693,10 @@
     },
     {
       "code": 279,
-      "name": "Archetype 279"
+      "name": "Chaos",
+      "names": {
+        "E": "Chaos"
+      }
     },
     {
       "code": 280,
@@ -2953,7 +2760,10 @@
     },
     {
       "code": 285,
-      "name": "Archetype 285"
+      "name": "Magnet Warrior",
+      "names": {
+        "E": "Magnet Warrior"
+      }
     },
     {
       "code": 286,
@@ -3024,14 +2834,9 @@
     },
     {
       "code": 292,
-      "name": "Subterror",
+      "name": "Subterror Behemoth",
       "names": {
-        "E": "Subterror",
-        "F": "Subterreur",
-        "G": "Unterterror",
-        "I": "Subterrore",
-        "S": "Subterror",
-        "J": "サブテラー"
+        "E": "Subterror Behemoth"
       }
     },
     {
@@ -3048,14 +2853,9 @@
     },
     {
       "code": 294,
-      "name": "SPYRAL",
+      "name": "SPYRAL GEAR",
       "names": {
-        "E": "SPYRAL",
-        "F": "ESPIRALE",
-        "G": "SPIORAL",
-        "I": "SPIARALE",
-        "S": "E.S.P.I.R.A.L.",
-        "J": "ＳＰＹＲＡＬ(スパイラル)"
+        "E": "SPYRAL GEAR"
       }
     },
     {
@@ -3072,14 +2872,9 @@
     },
     {
       "code": 296,
-      "name": "Abyss Actor",
+      "name": "Abyss Script",
       "names": {
-        "E": "Abyss Actor",
-        "F": "Acteur des Abysses",
-        "G": "Abgrundschauspieler",
-        "I": "Attore dell'Abisso",
-        "S": "Actor del Abismo",
-        "J": "魔(ま)界(かい)劇(げき)団(だん)"
+        "E": "Abyss Script"
       }
     },
     {
@@ -3120,30 +2915,23 @@
     },
     {
       "code": 300,
-      "name": "Archetype 300"
+      "name": "Pendulum Dragon",
+      "names": {
+        "E": "Pendulum Dragon"
+      }
     },
     {
       "code": 301,
-      "name": "SPYRAL",
+      "name": "SPYRAL MISSION",
       "names": {
-        "E": "SPYRAL",
-        "F": "ESPIRALE",
-        "G": "SPIORAL",
-        "I": "SPIARALE",
-        "S": "E.S.P.I.R.A.L.",
-        "J": "ＳＰＹＲＡＬ(スパイラル)"
+        "E": "SPYRAL MISSION"
       }
     },
     {
       "code": 302,
-      "name": "Predaplant",
+      "name": "Predap",
       "names": {
-        "E": "Predaplant",
-        "F": "Prédaplante",
-        "G": "Raubpflanze",
-        "I": "Predapianta",
-        "S": "Predaplanta",
-        "J": "捕食植物(プレデター・プランツ)"
+        "E": "Predap"
       }
     },
     {
@@ -3160,14 +2948,9 @@
     },
     {
       "code": 304,
-      "name": "Superheavy",
+      "name": "Superheavy Samurai Soul",
       "names": {
-        "E": "Superheavy Samurai",
-        "F": "Samouraï Supralourd",
-        "G": "Superstarker Samurai",
-        "I": "Samurai Superpesante",
-        "S": "Samurai Superpesado",
-        "J": "超(ちょう)重(じゅう)"
+        "E": "Superheavy Samurai Soul"
       }
     },
     {
@@ -3184,38 +2967,45 @@
     },
     {
       "code": 306,
-      "name": "Archetype 306"
+      "name": "Rebellion Xyz Dragon",
+      "names": {
+        "E": "Rebellion Xyz Dragon"
+      }
     },
     {
       "code": 307,
-      "name": "Archetype 307"
+      "name": "Wing Synchro Dragon",
+      "names": {
+        "E": "Wing Synchro Dragon"
+      }
     },
     {
       "code": 308,
-      "name": "Archetype 308"
+      "name": "Venom Fusion Dragon",
+      "names": {
+        "E": "Venom Fusion Dragon"
+      }
     },
     {
       "code": 309,
-      "name": "Magician",
+      "name": "Pendulumgraph",
       "names": {
-        "E": "Magician"
+        "E": "Pendulumgraph"
       }
     },
     {
       "code": 310,
-      "name": "Elemental HERO",
+      "name": "Skyscraper",
       "names": {
-        "E": "Elemental HERO",
-        "F": "HÉROS Élémentaire",
-        "G": "Elementar-HELD",
-        "I": "EROE Elementale",
-        "S": "HÉROE Elemental",
-        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+        "E": "Skyscraper"
       }
     },
     {
       "code": 311,
-      "name": "Archetype 311"
+      "name": "Magician's Hand",
+      "names": {
+        "E": "Magician's Hand"
+      }
     },
     {
       "code": 312,
@@ -3231,26 +3021,16 @@
     },
     {
       "code": 313,
-      "name": "Supreme King",
+      "name": "Supreme King Gate",
       "names": {
-        "E": "Supreme King",
-        "F": "Roi Suprême",
-        "G": "Oberster König",
-        "I": "Re Supremo",
-        "S": "Rey Supremo",
-        "J": "覇(は)王(おう)"
+        "E": "Supreme King Gate"
       }
     },
     {
       "code": 314,
-      "name": "Supreme King",
+      "name": "Supreme King Dragon",
       "names": {
-        "E": "Supreme King",
-        "F": "Roi Suprême",
-        "G": "Oberster König",
-        "I": "Re Supremo",
-        "S": "Rey Supremo",
-        "J": "覇(は)王(おう)"
+        "E": "Supreme King Dragon"
       }
     },
     {
@@ -3274,7 +3054,10 @@
     },
     {
       "code": 317,
-      "name": "Archetype 317"
+      "name": "Pendulum",
+      "names": {
+        "E": "Pendulum"
+      }
     },
     {
       "code": 318,
@@ -3350,7 +3133,10 @@
     },
     {
       "code": 324,
-      "name": "Archetype 324"
+      "name": "Starving Venom",
+      "names": {
+        "E": "Starving Venom"
+      }
     },
     {
       "code": 325,
@@ -3536,7 +3322,10 @@
     },
     {
       "code": 341,
-      "name": "Archetype 341"
+      "name": "Evolution Pill",
+      "names": {
+        "E": "Evolution Pill"
+      }
     },
     {
       "code": 342,
@@ -3566,14 +3355,9 @@
     },
     {
       "code": 345,
-      "name": "Ancient Gear",
+      "name": "Ancient Gear Golem support",
       "names": {
-        "E": "Ancient Gear",
-        "F": "Rouages Ancients",
-        "G": "Antiker Antrieb",
-        "I": "Ingranaggio Antico",
-        "S": "Mecanismo Antiguo",
-        "J": "古代(アンティーク)"
+        "E": "Ancient Gear Golem support"
       }
     },
     {
@@ -3621,14 +3405,9 @@
     },
     {
       "code": 350,
-      "name": "Sky Striker",
+      "name": "Sky Striker Ace",
       "names": {
-        "E": "Sky Striker",
-        "F": "Assaut de l'Air",
-        "G": "Himmelsjäger",
-        "I": "Assaltatrice del Cielo",
-        "S": "Caza del Cielo",
-        "J": "閃(せん)刀(とう)"
+        "E": "Sky Striker Ace"
       }
     },
     {
@@ -3669,14 +3448,9 @@
     },
     {
       "code": 354,
-      "name": "Blue-Eyes",
+      "name": "Blue-Eyes White Dragon support",
       "names": {
-        "E": "Blue-Eyes White Dragon",
-        "F": "Dragon Blanc aux Yeux Bleus",
-        "G": "Blauäugiger w. Drache",
-        "I": "Drago Bianco Occhi Blu",
-        "S": "Dragón Blanco de Ojos Azules",
-        "J": "青眼の白龍(ブルーアイズ・ホワイト・ドラゴン)"
+        "E": "Blue-Eyes White Dragon support"
       }
     },
     {
@@ -3693,7 +3467,10 @@
     },
     {
       "code": 356,
-      "name": "Archetype 356"
+      "name": "Cynet",
+      "names": {
+        "E": "Cynet"
+      }
     },
     {
       "code": 357,
@@ -3769,7 +3546,10 @@
     },
     {
       "code": 363,
-      "name": "Archetype 363"
+      "name": "Photon & Galaxy",
+      "names": {
+        "E": "Photon & Galaxy"
+      }
     },
     {
       "code": 364,
@@ -3821,50 +3601,30 @@
     },
     {
       "code": 368,
-      "name": "Shiranui",
+      "name": "Shiranui Spectralsword",
       "names": {
-        "E": "Shiranui",
-        "F": "Shiranui",
-        "G": "Shiranui",
-        "I": "Shiranui",
-        "S": "Shiranui",
-        "J": "不知火(しらぬい)"
+        "E": "Shiranui Spectralsword"
       }
     },
     {
       "code": 369,
-      "name": "Elemental HERO",
+      "name": "Neos support",
       "names": {
-        "E": "Elemental HERO",
-        "F": "HÉROS Élémentaire",
-        "G": "Elementar-HELD",
-        "I": "EROE Elementale",
-        "S": "HÉROE Elemental",
-        "J": "Ｅ・ＨＥＲＯ(エレメンタルヒーロー)"
+        "E": "Neos support"
       }
     },
     {
       "code": 370,
-      "name": "Harpie",
+      "name": "Harpie Lady support",
       "names": {
-        "E": "Harpie",
-        "F": "Harpie",
-        "G": "Harpyie",
-        "I": "Arpia",
-        "S": "Arpía",
-        "J": "ハーピィ"
+        "E": "Harpie Lady support"
       }
     },
     {
       "code": 371,
-      "name": "Cyber Angel",
+      "name": "Machine Angel",
       "names": {
-        "E": "Cyber Angel",
-        "F": "Ange Cyber",
-        "G": "Cyberengel",
-        "I": "Cyber Angelo",
-        "S": "Ciber Ángel",
-        "J": "サイバー・エンジェル"
+        "E": "Machine Angel"
       }
     },
     {
@@ -3876,29 +3636,30 @@
     },
     {
       "code": 373,
-      "name": "Archetype 373"
+      "name": "Sanctuary in the Sky support",
+      "names": {
+        "E": "Sanctuary in the Sky support"
+      }
     },
     {
       "code": 374,
-      "name": "Six Samurai",
+      "name": "Bushido Counter",
       "names": {
-        "E": "Six Samurai",
-        "F": "Six Samouraïs",
-        "G": "Sechs Samurai",
-        "I": "Sei Samurai",
-        "S": "Seis Samuráis",
-        "J": "六(ろく)武(ぶ)衆(しゅう)"
+        "E": "Bushido Counter"
       }
     },
     {
       "code": 375,
-      "name": "Archetype 375"
+      "name": "Smile",
+      "names": {
+        "E": "Smile"
+      }
     },
     {
       "code": 376,
-      "name": "Assault Mode",
+      "name": "Assault Mode support",
       "names": {
-        "E": "Assault Mode"
+        "E": "Assault Mode support"
       }
     },
     {
@@ -4018,14 +3779,9 @@
     },
     {
       "code": 387,
-      "name": "Evil HERO",
+      "name": "Evil HERO support",
       "names": {
-        "E": "Evil HERO",
-        "F": "HÉROS du Mal",
-        "G": "Böser HELD",
-        "I": "EROE Malvagio",
-        "S": "HÉROE Malvado",
-        "J": "Ｅ－ＨＥＲＯ(イービルヒーロー)"
+        "E": "Evil HERO support"
       }
     },
     {
@@ -4042,14 +3798,9 @@
     },
     {
       "code": 389,
-      "name": "Unchained",
+      "name": "Unchained Soul",
       "names": {
-        "E": "Unchained",
-        "F": "Désenchaîné",
-        "G": "Losgekettete",
-        "I": "Svincolato",
-        "S": "Desencadenado",
-        "J": "破械神(はかいしん)"
+        "E": "Unchained Soul"
       }
     },
     {
@@ -4102,14 +3853,9 @@
     },
     {
       "code": 395,
-      "name": "@Ignister",
+      "name": "A.I.",
       "names": {
-        "E": "@Ignister",
-        "F": "@Ignister",
-        "G": "@Ignister",
-        "I": "@Ignister",
-        "S": "@Ignister",
-        "J": "＠(アット)イグニスター"
+        "E": "A.I."
       }
     },
     {
@@ -4133,34 +3879,38 @@
     },
     {
       "code": 398,
-      "name": "Dark Magician",
+      "name": "Palladium Oracle",
       "names": {
-        "E": "Dark Magician",
-        "F": "Magicien Sombre",
-        "G": "Dunkler Magier",
-        "I": "Mago Nero",
-        "S": "Mago Oscuro",
-        "J": "ブラック・マジシャン"
+        "E": "Palladium Oracle"
       }
     },
     {
       "code": 399,
-      "name": "Archetype 399"
+      "name": "Onomato",
+      "names": {
+        "E": "Onomato"
+      }
     },
     {
       "code": 400,
-      "name": "Archetype 400"
+      "name": "Utopic Future",
+      "names": {
+        "E": "Utopic Future"
+      }
     },
     {
       "code": 401,
-      "name": "Rose Dragon",
+      "name": "Rose",
       "names": {
-        "E": "Rose Dragon"
+        "E": "Rose"
       }
     },
     {
       "code": 402,
-      "name": "Archetype 402"
+      "name": "Rebellion",
+      "names": {
+        "E": "Rebellion"
+      }
     },
     {
       "code": 405,
@@ -4171,30 +3921,31 @@
     },
     {
       "code": 412,
-      "name": "Chaos Phantom",
+      "name": "Phantasm",
       "names": {
-        "E": "Chaos Phantom"
+        "E": "Phantasm"
       }
     },
     {
       "code": 413,
-      "name": "Archetype 413"
+      "name": "Sacred Beast",
+      "names": {
+        "E": "Sacred Beast"
+      }
     },
     {
       "code": 414,
-      "name": "Gaia The Fierce Knight",
+      "name": "Spiral Spear",
       "names": {
-        "E": "Gaia the Fierce Knight",
-        "F": "Gaïa le Chevalier Implacable",
-        "G": "Gaia, zorniger Ritter",
-        "I": "Gaia il Cavaliere",
-        "S": "Gaia el Caballero Feroz",
-        "J": "暗(あん)黒(こく)騎(き)士(し)ガイア"
+        "E": "Spiral Spear"
       }
     },
     {
       "code": 417,
-      "name": "Archetype 417"
+      "name": "Potan",
+      "names": {
+        "E": "Potan"
+      }
     },
     {
       "code": 419,

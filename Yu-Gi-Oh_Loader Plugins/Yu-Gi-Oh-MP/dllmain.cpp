@@ -8,6 +8,9 @@
 #include "Config.h"
 #include "EngineHooks.h"
 #include "Logger.h"
+#include "LiveSetting.h"
+#include "BanList.h"
+#include "Detours.h"
 #include "P2P.h"
 #include "Session.h"
 #include "Steam.h"
@@ -108,6 +111,18 @@ extern "C" __declspec(dllexport) unsigned long long __cdecl MP_ComputeStateHash(
     return AntiCheat::ComputeStateHash();
 }
 
+// No ban list (every card at 3 copies): the host's "Ban list" lobby setting (LiveSetting.cpp; this export only does Off - custom lists are chosen there). Not saved: the game's list at every start.
+extern "C" __declspec(dllexport) void __cdecl MP_SetNoBanList(bool on)
+{
+    LogCall(std::format("MP_SetNoBanList({})", on));
+    on ? BanList::UseOff() : BanList::UseGame();
+}
+
+extern "C" __declspec(dllexport) bool __cdecl MP_GetNoBanList()
+{
+    return BanList::CurrentMode() != BanList::Mode::Game;
+}
+
 // Debug-only: flips the game's own g_bIsDuelMultiplayer so Duel__LiveManager_TransportReceive/Send actually fire
 // (see EngineHooks.h) - nothing in the shipped UI ever sets this, so there's no other way to exercise those two hooks
 // short of the real lobby/transport wiring. Not part of the real launch flow.
@@ -131,11 +146,17 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         if (Steam::Setup())
             Logger::WriteLog(std::format("Steam identity ready (SteamID64 {})", Steam::Get_SteamId64()), MODULE_NAME, 0);
         else
-            Logger::WriteLog("Steam identity not available yet (steam_api64.dll not loaded/initialised) - MP_TryAuthenticate will retry", MODULE_NAME, 1);
+            Logger::WriteLog("Steam is not started yet (the plugin loads before the game's SteamAPI_Init); it is looked up when first needed", MODULE_NAME, 0);
 
         // Hooks game addresses directly, same as Yu-Gi-Oh-Effects' DllMain does - the loader only injects this DLL
         // once the game process (and its .text) already exists, so this is safe here (see EngineHooks.cpp).
         EngineHooks::Setup();
+
+        DetourTransactionBegin();
+        DetourUpdateThread(GetCurrentThread());
+        BanList::Attach();
+        LiveSetting::Attach();
+        DetourTransactionCommit();
         break;
     }
     return TRUE;

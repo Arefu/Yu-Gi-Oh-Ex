@@ -1442,6 +1442,37 @@ unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
         grant(id, static_cast<int>(internalId), card ? card->Copies : 0);
     }
 
+    // A custom card in one of the profile's 32 saved decks is owned: at least as many copies as one deck uses. Save editors that rebuild
+    // the card table from the vanilla list (an "unlock all") zero the custom ids, and the trunk then hid those cards while the decks still
+    // had them (user, 2026-10-07). The game's own deck slots: Deck_FromId(profile, 0-31) = YGO::SAVE::DeckListItem (main 60 / extra 15 /
+    // side 15 Konami ids after the 33-character name and the three u16 counts).
+    {
+        struct SavedDeck { wchar_t Name[33]; uint16_t MainCount, ExtraCount, SideCount; uint16_t Cards[90]; };
+        const auto DeckFromId = reinterpret_cast<const SavedDeck*(__fastcall*)(unsigned int profile, unsigned int deckId)>(0x14081AB40);
+        std::unordered_map<uint16_t, int> usedInDeck;
+        for (unsigned int deck = 0; deck < 32; ++deck)
+        {
+            const SavedDeck* saved = DeckFromId(profile, deck);
+            if (!saved || saved->MainCount > 60 || saved->ExtraCount > 15 || saved->SideCount > 15)
+                continue;
+            std::unordered_map<uint16_t, int> copies;
+            auto count = [&](int start, int n) { for (int i = 0; i < n; ++i) ++copies[saved->Cards[start + i]]; };
+            count(0, saved->MainCount);
+            count(60, saved->ExtraCount);
+            count(75, saved->SideCount);
+            for (const auto& [id, n] : copies)
+                if (Card::ExtraLoadIDs.contains(id))
+                    usedInDeck[id] = (std::max)(usedInDeck[id], (std::min)(n, 3));
+        }
+        for (const auto& [id, n] : usedInDeck)
+        {
+            const int before = saved && id < kSavedCardTableSize ? (saved[id] & 7) : 0;
+            grant(id, static_cast<int>(Card::ExtraLoadIDs.at(id)), n);
+            if (before < n)
+                Logger::WriteLog(std::format("Custom card {} is in a saved deck but the save had {} cop{}: restored to {}", id, before, before == 1 ? "y" : "ies", n), MODULE_NAME, 1);
+        }
+    }
+
     for (const Card::Unlock& unlock : Card::Unlocks)
     {
         int internalId = 0;

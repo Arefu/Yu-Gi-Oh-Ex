@@ -1,6 +1,7 @@
 #include <Windows.h>
 #include <format>
 
+#include "AiDeck.h"
 #include "Characters.h"
 #include "Decks.h"
 #include "Detours.h"
@@ -16,6 +17,7 @@
 //   storyscripts.json -> the story scenes' dialog (StoryScripts.cpp)
 //   tutorials\*.json   -> new tutorials (27-99) in Help > Tutorial (Tutorials.cpp)
 // Free Duel uses the same character and deck data.
+// AI deck: the opponent plays a deck you pick on the deck picker, keeping their portrait (AiDeck.cpp).
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
@@ -34,6 +36,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         StoryDuels::Attach();
         StoryScripts::Attach();
         Tutorials::Attach();
+        AiDeck::Attach();
         LONG error = DetourTransactionCommit();
         Logger::WriteLog(std::format("Campaign hooks attached: {}", error), MODULE_NAME, error == 0 ? 0 : 2);
 

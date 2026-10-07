@@ -172,6 +172,7 @@ Under the hood they call `Clear 0x1408987F0`, `SetMode 0x1408988A0` (0 message, 
 | `widget_TrunkZone`, `widget_TrunkBookmark`, `widget_TrunkFilterBar`, `widget_TrunkFilterCategory/Categories` | Card collection ("trunk") and its filter bar. |
 | `widget_TrunkFilterMaskOption(s)` | Bitmask filter options (attribute, type, ...). Probably the closest thing to a multi-select tick list, but not decoded, so treat that as a guess. |
 | `widget_TrunkFilterNumOption(s)` | Numeric range filter options. |
+| DeckSelectList + DeckInfoPanel (decoded 2026-10-07) | The deck picker with category tabs (Free Duel screen+1456, campaign deck screen+664) and the deck panel beside it. Deck ids: 0-31 save, 32+n deckdata n, 732-736 battle pack. Ids per tab are game `std::vector<u32>` at +1208 (24 bytes each, tab 0 = all; fill tab 0, then RebuildTabs + Refresh(false)). Functions in `YuGiOh-RIX.h` (`YGO::RIX::DeckSelectList`, `DeckInfoPanel`); used by Campaign AiDeck.cpp. |
 
 ## Duel widgets (YGO_FRONT)
 

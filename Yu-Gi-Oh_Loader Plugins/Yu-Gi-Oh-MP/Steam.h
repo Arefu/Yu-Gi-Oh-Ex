@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include <string>
 #include <vector>
 
 // Player identity for the MP service: the game already links and initialises steam_api64.dll (SteamAPI_Init, confirmed in
@@ -13,7 +14,7 @@
 namespace Steam
 {
     // Resolves the exports; safe to call more than once, cheap after the first. False if steam_api64.dll isn't loaded
-    // yet or doesn't export what's needed (e.g. running before the host's own SteamAPI_Init, or a non-Steam build).
+    // yet or doesn't export what's needed, or the game's SteamAPI_Init hasn't run yet (everything below retries then).
     bool Setup();
 
     bool IsAvailable();
@@ -22,4 +23,14 @@ namespace Steam
     // The session ticket to send to the MP service's /auth/steam endpoint for it to verify with Steam's Web API
     // (ISteamUserAuth::AuthenticateUserTicket). Empty if unavailable. The ticket is opaque bytes, not a string.
     std::vector<uint8_t> Get_AuthSessionTicket();
+
+    // Steam lobby data (ISteamMatchmaking, the version the game uses). Null / false when Steam isn't ready.
+    const char* GetLobbyData(uint64_t lobby, const char* key);
+    bool SetLobbyData(uint64_t lobby, const char* key, const char* value);
+
+    // Lobby members (ISteamMatchmaking) and a player's Steam name (ISteamFriends, the version the game uses). Empty / 0 when not ready.
+    void SetLobbyMemberData(uint64_t lobby, const char* key, const char* value);
+    const char* GetLobbyMemberData(uint64_t lobby, uint64_t member, const char* key);
+    std::vector<uint64_t> LobbyMembers(uint64_t lobby);
+    std::string PersonaName(uint64_t player);
 }

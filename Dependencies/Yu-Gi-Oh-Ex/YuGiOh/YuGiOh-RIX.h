@@ -532,5 +532,44 @@ namespace YGO
             inline auto SetValue = reinterpret_cast<void(__fastcall*)(void* Digit, int Value)>(0x14089E220);     // stores Value % 10
             inline auto HitTest = reinterpret_cast<int(__fastcall*)(void* Digit, int64_t Mouse)>(0x14089DAC0);  // 0 upper arrow, 1 lower arrow, 2 box, -1 none
         }
+
+        // ---- the deck picker (DeckSelectList): the grid of decks with category tabs used by Free Duel (screen+1456) and the campaign's
+        // "choose your deck" (screen+664), and the deck info panel next to it (DeckInfoPanel: Free Duel +2864 yours / +3448 the opponent's,
+        // campaign +2072). Deck ids: 0-31 a save deck, 32 + n deckdata deck n, 732-736 a battle pack slot (DeckId_Decode 0x1407F9150).
+        namespace DeckSelectList
+        {
+            constexpr size_t TabCount = 8;                // +392 the tabs; tab 0 = every deck, 1-7 the categories (RebuildTabs fills them)
+            constexpr size_t IdsOffset = 1208;            // Vector of uint32 deck ids per tab (24 bytes each)
+            inline Vector* Ids(void* List, size_t Tab = 0) { return reinterpret_cast<Vector*>(static_cast<char*>(List) + IdsOffset + 24 * Tab); }
+
+            inline auto FillPlayerDecks = reinterpret_cast<void(__fastcall*)(void* List)>(0x1408ADB70);              // the player's decks (save + owned)
+            inline auto RebuildTabs = reinterpret_cast<void(__fastcall*)(void* List)>(0x1408AE5B0);                  // tabs 1-7 from tab 0, then lays out
+            inline auto Refresh = reinterpret_cast<void(__fastcall*)(void* List, bool Refill)>(0x1408AE190);         // Refill = the owned list again
+            inline auto SelectDeckId = reinterpret_cast<bool(__fastcall*)(void* List, int DeckId)>(0x1408AE2F0);     // false: not in the list
+            inline auto GetSelectedDeckId = reinterpret_cast<int(__fastcall*)(void* List)>(0x1408ADBC0);             // -1 none
+            inline auto GetSelectedDeckIdPtr = reinterpret_cast<unsigned int*(__fastcall*)(void* List)>(0x1408AE130);
+            inline auto Tick = reinterpret_cast<void(__fastcall*)(void* List)>(0x1408AE480);                         // every frame, before HandleInput
+            // Navigation and tabs. Mask: the frame's buttons plus TabButtons(); Clicked gets the index clicked with the mouse (-1 none).
+            // Returns true when the selection moved.
+            inline auto HandleInput = reinterpret_cast<bool(__fastcall*)(void* List, int Mask, int* Clicked)>(0x1408AD4E0);
+            // The tab switch buttons (L/R) as a mask, what the game ORs into HandleInput's mask.
+            inline int TabButtons(void* Input) { return reinterpret_cast<int(__fastcall*)(void*, int, unsigned int, unsigned int)>(0x140800940)(Input, 0, 0x20000000u, 0x40000000u); }
+            // Appends to a game vector of uint32 (its own allocator: never free or grow these with ours).
+            inline auto VectorPushU32 = reinterpret_cast<void(__fastcall*)(Vector* Vec, void* Where, const unsigned int* Value)>(0x14081A840);
+            inline void Push(Vector* Vec, unsigned int Value)
+            {
+                if (Vec->End == Vec->Capacity)
+                    VectorPushU32(Vec, Vec->End, &Value);
+                else
+                {
+                    *static_cast<unsigned int*>(Vec->End) = Value;
+                    Vec->End = static_cast<unsigned int*>(Vec->End) + 1;
+                }
+            }
+        }
+        namespace DeckInfoPanel
+        {
+            inline auto ShowDeck = reinterpret_cast<void(__fastcall*)(void* Panel, const unsigned int* DeckId)>(0x1408AB9C0);  // null = empty
+        }
     }
 }

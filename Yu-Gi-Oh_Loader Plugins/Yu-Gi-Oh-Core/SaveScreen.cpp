@@ -44,10 +44,9 @@ namespace
     constexpr uintptr_t kGlobalInstance = 0x1429275D8;   // YGOInstance: +0x1F0 the UI, +0x200 the main screen scheduler
     constexpr size_t kMainScheduler = 0x200;
 
-    constexpr uintptr_t kHelpSelect = 0x140A7A1A0;  // the game's own help bar entries (confirm "Select", cancel "Back")
-    constexpr uintptr_t kHelpBack = 0x140A7A190;
+    constexpr uintptr_t kHelpSelect = 0x140A7A1A0;  // the game's own help bar entry (confirm "Select")
 
-    constexpr int kUp = 1, kDown = 2, kLeft = 4, kRight = 8, kConfirm = 0x1000, kCancel = 0x2000;
+    constexpr int kUp = 1, kDown = 2, kLeft = 4, kRight = 8, kConfirm = 0x1000;
     constexpr int kSoundConfirm = 39;            // what the title plays on Play
     constexpr int kSoundError = 71;
 
@@ -247,7 +246,6 @@ namespace
         void* help = static_cast<char*>(g_Screen) + 264;
         R::HelpClear(help);
         R::HelpAdd(help, reinterpret_cast<const R::HelpEntry*>(kHelpSelect), 1);
-        R::HelpAdd(help, reinterpret_cast<const R::HelpEntry*>(kHelpBack), 1);
         R::HelpLayout(help);
     }
 
@@ -343,8 +341,6 @@ namespace
 
         int pressed = R::Input::GetPressed(R::InputState) | R::Input::GetRepeat(R::InputState);
         pressed |= R::Input::HelpBarPressed(static_cast<char*>(g_Screen) + 264);
-        if (R::InputCancelPressed(R::InputState, kCancel))
-            pressed |= kCancel;
 
         int selected = g_Selected;
         if (R::Input::MouseActive())
@@ -369,9 +365,7 @@ namespace
         }
 
         if (pressed & kConfirm)
-            Choose(g_Selected + 1);
-        else if (pressed & kCancel)
-            R::GotoScreenFrom(g_Screen, kScreenTitle);
+            Choose(g_Selected + 1);   // no Back: the title just sends you here again, so cancel bounced between the two
     }
 
     // ---- building the screen
