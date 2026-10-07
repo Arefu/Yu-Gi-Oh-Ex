@@ -116,7 +116,9 @@ namespace
     int* const g_FreeDuelOpponentDeckId = reinterpret_cast<int*>(0x140C8E818);   // what the opponent's deck panel (+3448) shows
 
     // The picker's steps after your deck. Partner steps only in a tag duel.
-    enum Step { kStepOpponent, kStepPartner, kStepOpponentPartner };
+    // kStepReview: a tag Free Duel's last step - TagDuel draws the four seats on this screen, confirm starts the duel, Back returns to the
+    // opponent's partner's deck (no list on that step: kSteps has no entry for it).
+    enum Step { kStepOpponent, kStepPartner, kStepOpponentPartner, kStepReview };
     struct StepText { const wchar_t* Title; const wchar_t* Help; };
     const StepText kSteps[] = {
         { L"Opponent's Deck", L"Choose the deck your opponent plays. They keep their portrait and name." },
@@ -325,6 +327,72 @@ namespace
             *reinterpret_cast<int*>(p.Screen + kFreeState) = kFreeStart;   // FreeDuel_HandleInput starts it next frame
     }
 
+    // ---- the review step (tag Free Duel): TagDuel's exports draw it; this screen keeps the input.
+
+    template <typename T> T TagDuelExport(const char* name) { return reinterpret_cast<T>(GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll"), name)); }
+    const auto SetWidgetEnabled = reinterpret_cast<void(__fastcall*)(void* widget, bool enabled)>(0x14075A490);   // RIX::widget_Base::SetEnabled
+    constexpr size_t kFreeDeckArea = 1440;   // the deck step's widgets (list + both panels): FreeDuel_SetState(2) enables it, Back from it disables it
+    const R::HelpEntry kHelpLetsDuel{ kConfirm, 0, reinterpret_cast<int64_t>(L"Let's Duel!") };
+
+    void ShowDeckArea(char* screen, bool show)
+    {
+        if (void* area = *reinterpret_cast<void**>(screen + kFreeDeckArea))
+            SetWidgetEnabled(area, show);
+    }
+
+    // Returns false when TagDuel can't show it (older TagDuel): the caller starts the duel straight away.
+    bool EnterReview()
+    {
+        static auto show = TagDuelExport<void(__cdecl*)(void*, int, int, int, int)>("TagDuel_ShowReview");
+        if (!show)
+            return false;
+        Picker& p = g_Picker;
+        p.Step = kStepReview;
+        ShowDeckArea(p.Screen, false);
+        show(p.Screen, p.PlayerDeck, g_YourCharacter, p.Character, p.OpponentDeck);
+        SetTitle(p.Screen, L"Tag Duel");
+        void* help = p.Screen + kHelpBar;
+        R::HelpClear(help);
+        R::HelpAdd(help, &kHelpLetsDuel, 1);
+        R::HelpAdd(help, &kHelpBack, 1);
+        SetDescription(help, reinterpret_cast<int64_t>(L"Start the tag duel, or go back to change a pick."));
+        R::HelpLayout(help);
+        return true;
+    }
+
+    void LeaveReview()
+    {
+        static auto hide = TagDuelExport<void(__cdecl*)()>("TagDuel_HideReview");
+        if (hide)
+            hide();
+        Picker& p = g_Picker;
+        ShowDeckArea(p.Screen, true);
+        p.Step = kStepOpponentPartner;
+        ShowStep();
+    }
+
+    void ReviewFrame(int pressed)
+    {
+        Picker& p = g_Picker;
+        if (pressed & kConfirm)
+        {
+            static auto start = TagDuelExport<void(__cdecl*)()>("TagDuel_StartReviewedDuel");
+            R::PlayUISound(kSoundDecide);
+            g_Remembered[p.Character] = static_cast<unsigned int>(p.OpponentDeck);
+            p.Active = false;
+            g_PendingCharacter = -1;   // TagDuel sets both sides itself
+            RestoreTitle(p.Screen);
+            *reinterpret_cast<int*>(p.Screen + kFreeState) = 5;   // leaving: FreeDuel_HandleInput does nothing in state 5
+            if (start)
+                start();
+        }
+        else if (pressed & kCancel)
+        {
+            R::PlayUISound(kSoundCancel);
+            LeaveReview();
+        }
+    }
+
     void PickerFrame()
     {
         Picker& p = g_Picker;
@@ -332,6 +400,8 @@ namespace
         pressed |= R::Input::HelpBarPressed(p.Screen + kHelpBar);
         if (R::InputCancelPressed(R::InputState, kCancel))
             pressed |= kCancel;
+        if (p.Step == kStepReview)
+            return ReviewFrame(pressed);
 
         List::Tick(p.List);
         int clicked = -1;
@@ -363,16 +433,7 @@ namespace
             else if (p.Step == kStepOpponentPartner)
             {
                 SetTagPartners(g_PartnerCharacters[0], p.PartnerDeck, g_PartnerCharacters[1], deck);
-                // TagDuel's review page (all four seats, "Let's Duel!" starts it, Back comes back to Free Duel); without it, start here.
-                static auto review = reinterpret_cast<bool(__cdecl*)(int, int, int, int)>(GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll"), "TagDuel_Review"));
-                g_Remembered[p.Character] = static_cast<unsigned int>(p.OpponentDeck);
-                if (review && review(p.PlayerDeck, g_YourCharacter, p.Character, p.OpponentDeck))
-                {
-                    p.Active = false;
-                    g_PendingCharacter = -1;   // TagDuel sets seat 1's deck itself
-                    RestoreTitle(p.Screen);
-                }
-                else
+                if (!EnterReview())   // the review step on this screen; without TagDuel's review, start here
                     StartDuel(static_cast<unsigned int>(p.OpponentDeck));
             }
             else
@@ -410,25 +471,6 @@ namespace
     {
         char* s = static_cast<char*>(screen);
         int& state = *reinterpret_cast<int*>(s + kFreeState);
-
-        // Back on TagDuel's review page: return to the last deck step (Opponent's Partner's Deck) with every pick kept, so Back keeps
-        // stepping back the way the picks came (deck steps, your deck, the three characters, then the Local seat screen).
-        static auto takeCancelled = reinterpret_cast<bool(__cdecl*)()>(GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll"), "TagDuel_TakeReviewCancelled"));
-        if (takeCancelled && takeCancelled() && g_TagOpponent >= 0)
-        {
-            orig_FreeDuelSetState(screen, kFreeOpponentList);   // the list the character steps walk (g_CharacterStep is still on the last pick)
-            orig_FreeDuelSetState(screen, kFreeChoosingDeck);
-            Picker& p = g_Picker;
-            p.Campaign = false;
-            p.Screen = s;
-            p.List = s + kFreeList;
-            p.Panel = s + kFreeOpponentPanel;
-            p.Active = true;
-            p.Step = kStepOpponentPartner;
-            ShowStep();
-            Logger::WriteLog("Tag Free Duel: back from the review - Opponent's Partner's Deck again", MODULE_NAME, 69);
-            return;
-        }
 
         if (g_Picker.Active && g_Picker.Screen == s)
         {
@@ -558,11 +600,8 @@ namespace
         {
             Logger::WriteLog(std::format("Tag Free Duel: seat 1 = opponent {} ({}) (the list ended on {} ({}))", g_TagOpponent, CharacterName(g_TagOpponent),
                 character, CharacterName(character)), MODULE_NAME, 69);
-            character = g_TagOpponent;
+            character = g_TagOpponent;   // the deck is already theirs: TagDuel_StartReviewedDuel set side 1's deck
             SetDuelSideCharacter(1, static_cast<unsigned int>(character));
-            if (const int own = CharacterDeck(character); own >= 0)
-                if (DeckCards* ownDeck = DeckFromId(kCurrentProfile, static_cast<unsigned int>(own)); ownDeck && ownDeck->MainCount > 0)
-                    deck = ownDeck;   // replaced below when another deck was picked for them
         }
         if (seat == 1 && character == g_PendingCharacter && !IsMultiplayer() && !IsBattlePack() && !IsChallenge() && !IsTutorial())
         {
