@@ -13,6 +13,13 @@
 typedef char(__fastcall* Setup_CardPropTable_t)(const int* a1, int language);
 static uintptr_t orig_Setup_CardPropTable = 0x14076BFC0;
 
+// CardSearch_BuildIndex (0x14076DD60): the deck editor's name/text search index. For every Konami id 0..0xFFFF it copies
+// FULL_CARD_PROPS Name + Description, case folded, into static buffers; the trunk filter (CardSearch_MatchesText, 0x1407BBD70)
+// wcsstr's those copies, never the live names. Setup_CardPropTable calls it before returning - before Card::Install - so custom
+// cards (and renamed game cards) were indexed empty. Safe to re-run: it only rewrites its own buffers.
+typedef void(__fastcall* CardSearch_BuildIndex_t)();
+static const auto CardSearch_BuildIndex = reinterpret_cast<CardSearch_BuildIndex_t>(0x14076DD60);
+
 char __fastcall Hook_Setup_CardPropTable(const int* a1, int language)
 {
     // The game skips the whole setup when the language hasn't changed; the tables are then
@@ -37,6 +44,8 @@ char __fastcall Hook_Setup_CardPropTable(const int* a1, int language)
     Genres::ApplyToGameCards();
     Text::Load();
     Related::Load();
+
+    CardSearch_BuildIndex(); // after Install: the game built it from the vanilla names
 
     return result;
 }
