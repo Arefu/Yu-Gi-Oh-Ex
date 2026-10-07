@@ -25,6 +25,24 @@ extern "C" __declspec(dllexport) bool __cdecl TagDuel_IsEnabled()
     return TagDuel::IsEnabled();
 }
 
+// Who plays each of the 4 seats (0 human, 1 AI, 2 network); nullptr = back to the engine's own choice.
+extern "C" __declspec(dllexport) void __cdecl TagDuel_SetSeatControllers(const int* controllers)
+{
+    if (!controllers)
+    {
+        TagDuel::ClearSeatControllers();
+        return;
+    }
+    const int seats[4] = { controllers[0], controllers[1], controllers[2], controllers[3] };
+    TagDuel::SetSeatControllers(seats);
+}
+
+// For Yu-Gi-Oh-MP: true = it handles tag duels in online matches (and sets the seat controllers); until then TagDuel stays out of them.
+extern "C" __declspec(dllexport) void __cdecl TagDuel_AllowInMultiplayer(bool on)
+{
+    TagDuel::AllowInMultiplayer(on);
+}
+
 namespace
 {
     void __cdecl OnTagDuelButtonPressed(int buttonId, void* user)
@@ -60,6 +78,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         Logger::WriteLog("Yu-Gi-Oh-TagDuel starting", MODULE_NAME, 0);
         TagDuel::Setup();
         AddMenuButton();
+        if (TagDuel::MultiplayerPluginLoaded())
+            Logger::WriteLog("Yu-Gi-Oh-MP is loaded: online duels stay 1v1 until it takes tag duels on (TagDuel_AllowInMultiplayer)", MODULE_NAME, 0);
         break;
     }
     return TRUE;

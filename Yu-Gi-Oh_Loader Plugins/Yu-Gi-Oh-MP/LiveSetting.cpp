@@ -9,6 +9,8 @@
 #include "Steam.h"
 #include "YuGiOh/YuGiOh-RIX.h"
 
+#include <algorithm>
+#include <set>
 #include <cstdlib>
 #include <cstring>
 #include <functional>
@@ -220,22 +222,27 @@ namespace
         }
     }
 
-    void __fastcall Hook_RowsInput(char* screen, int pressed)
+    char __fastcall Hook_ChangeOption(char* screen, int64_t pressed);
+
+    // Applies the row's choice whenever it differs from the list in use, however it was changed (keys, a mouse click on the arrows, which
+    // doesn't move the cursor to the row): checking the cursor slot first missed clicks (2026-10-07).
+    void SyncChoice(char* screen)
     {
-        if (*reinterpret_cast<int*>(screen + kMode) == 1 && CursorSlot(screen) == kSlot && (pressed & (kLeft | kRight)))
-        {
-            orig_ChangeOption(screen, pressed & (kLeft | kRight));
-            pressed &= ~(kLeft | kRight);
-        }
-        orig_RowsInput(screen, pressed);
+        const int chosen = Chosen(screen, kSlot);
+        if (chosen != OptionForCurrent())
+            UseOption(chosen);
     }
 
-    // Applies the choice as soon as it changes, so the deck list and the deck check on this screen follow it.
+    void __fastcall Hook_RowsInput(char* screen, int pressed)
+    {
+        orig_RowsInput(screen, pressed);
+        SyncChoice(screen);
+    }
+
     char __fastcall Hook_ChangeOption(char* screen, int64_t pressed)
     {
         const char result = orig_ChangeOption(screen, pressed);
-        if (CursorSlot(screen) == kSlot)
-            UseOption(Chosen(screen, kSlot));
+        SyncChoice(screen);
         return result;
     }
 
@@ -255,13 +262,17 @@ namespace
     const auto NodeIsVisible = reinterpret_cast<bool(__fastcall*)(void* node)>(0x140759AE0);
 
     constexpr size_t kInfoLines = 192, kLineSize = 240, kInfoLineCount = 5;
-    std::map<char*, char*> g_BanLines;   // SessionInfo widget -> our row
-    std::wstring g_LineValue;            // the row's value text (kept while shown)
+    std::map<char*, char*> g_BanLines;       // SessionInfo widget -> our "Ban list" row
+    std::map<char*, char*> g_VanillaLines;   // SessionInfo widget -> our "No Yu-Gi-Oh-MP" row (host only)
+    std::wstring g_LineValue;                // the rows' value texts (kept while shown)
+    std::wstring g_VanillaValue;
+    std::vector<std::string> g_VanillaNames; // members of the hosted lobby without the "exmp" mark
+    char* g_LastInfo = nullptr;              // the lobby's SessionInfo widget, to update the rows when members change
 
-    char* BanLine(char* info)
+    char* MakeLine(char* info, std::map<char*, char*>& lines, const wchar_t* label)
     {
-        auto found = g_BanLines.find(info);
-        if (found != g_BanLines.end())
+        auto found = lines.find(info);
+        if (found != lines.end())
             return found->second;
         auto* line = static_cast<char*>(_aligned_malloc(kLineSize, 16));
         if (!line)
@@ -269,10 +280,13 @@ namespace
         LineConstruct(nullptr, line, 1);
         YGO::RIX::SharedNode parent = YGO::RIX::ParentRef(reinterpret_cast<YGO::RIX::SharedNode*>(info + 16));   // consumed by CreatePart2
         LineCreate(line, &parent, 7, *reinterpret_cast<void**>(info + 32), 259.0f, 133.0f, 0, 0.0f, 1139736576);   // as SessionInfo makes its rows
-        LineSetLabel(line, reinterpret_cast<int64_t>(L"Ban list"));
-        g_BanLines[info] = line;
+        LineSetLabel(line, reinterpret_cast<int64_t>(label));
+        lines[info] = line;
         return line;
     }
+
+    char* BanLine(char* info) { return MakeLine(info, g_BanLines, L"Ban list"); }
+    char* VanillaLine(char* info) { return MakeLine(info, g_VanillaLines, L"No Yu-Gi-Oh-MP"); }
 
     void SetVisible(char* widget, bool visible)
     {
@@ -280,26 +294,49 @@ namespace
         (*reinterpret_cast<SetVisible_t**>(widget))[3](widget, visible);   // vftable slot 3 = SetVisible
     }
 
-    void __fastcall Hook_SessionInfoShow(char* info, void* settings)
+    // Shows/places our rows under the game's visible ones: "Ban list" (unless the game's list), then "No Yu-Gi-Oh-MP: <names>".
+    void LayoutExtraLines(char* info)
     {
-        orig_SessionInfoShow(info, settings);
-        const bool show = BanList::CurrentMode() != BanList::Mode::Game;
-        if (!show && g_BanLines.find(info) == g_BanLines.end())
-            return;
-        char* line = BanLine(info);
-        if (!line)
-            return;
-        SetVisible(line, show);
-        if (!show)
-            return;
-        g_LineValue = BanList::CurrentMode() == BanList::Mode::Off ? L"Off" : Wide(BanList::CurrentList().Name);
-        LineSetValue(line, g_LineValue.c_str());
         int visible = 0;
         char* rows = *reinterpret_cast<char**>(info + kInfoLines);
         for (size_t i = 0; rows && i < kInfoLineCount; ++i)
             if (void* node = *reinterpret_cast<void**>(rows + i * kLineSize + 16); node && NodeIsVisible(node))
                 ++visible;
-        YGO::RIX::NodeSetY(*reinterpret_cast<void**>(line + 16), visible * 130.0f + 133.0f);
+
+        const bool showBan = BanList::CurrentMode() != BanList::Mode::Game;
+        if (showBan || g_BanLines.contains(info))
+            if (char* line = BanLine(info))
+            {
+                SetVisible(line, showBan);
+                if (showBan)
+                {
+                    g_LineValue = BanList::CurrentMode() == BanList::Mode::Off ? L"Off" : Wide(BanList::CurrentList().Name);
+                    LineSetValue(line, g_LineValue.c_str());
+                    YGO::RIX::NodeSetY(*reinterpret_cast<void**>(line + 16), visible++ * 130.0f + 133.0f);
+                }
+            }
+
+        const bool showVanilla = !g_VanillaNames.empty();
+        if (showVanilla || g_VanillaLines.contains(info))
+            if (char* line = VanillaLine(info))
+            {
+                SetVisible(line, showVanilla);
+                if (showVanilla)
+                {
+                    g_VanillaValue.clear();
+                    for (const auto& name : g_VanillaNames)
+                        g_VanillaValue += (g_VanillaValue.empty() ? L"" : L", ") + Wide(name);
+                    LineSetValue(line, g_VanillaValue.c_str());
+                    YGO::RIX::NodeSetY(*reinterpret_cast<void**>(line + 16), visible++ * 130.0f + 133.0f);
+                }
+            }
+    }
+
+    void __fastcall Hook_SessionInfoShow(char* info, void* settings)
+    {
+        orig_SessionInfoShow(info, settings);
+        g_LastInfo = info;
+        LayoutExtraLines(info);
     }
 
     // Leaving the screen without hosting: the ban list is back (it is only ever off for a lobby).
@@ -325,6 +362,22 @@ namespace
     LobbyUpdate_t orig_LobbyUpdate = reinterpret_cast<LobbyUpdate_t>(0x1408CFAA0);   // RIX::ScreenLiveLobby::Update
     const auto LobbyExit = reinterpret_cast<void(__fastcall*)(char* screen)>(0x1408CF990);   // RIX::ScreenLiveLobby::ExitToMenu
 
+    // The buttons only record what comes next: a button's callback runs while the game is still closing the box, so the next box (a page of
+    // the list, the question again) or leaving is done from the lobby screen's update once the dialog is closed (screen+48 back to 0).
+    // Button labels: widget_Dialog item labels above 2214 are taken as a wchar_t* (sub_1408988F0), so ours are plain strings.
+    enum class PromptStep { None, Ask, Page, Leave };
+    PromptStep g_Next = PromptStep::None;
+    size_t g_Page = 0;
+    void* g_JoinQnet = nullptr;     // QNet and lobby from OnLobbyEnter, to leave the lobby on No
+    uint64_t g_JoinedLobby = 0;
+    ULONGLONG g_LeaveAt = 0;        // No: the "declined" mark goes out first, the leave a second later so the host sees it
+    constexpr size_t kNamesPerPage = 10;
+    constexpr const wchar_t* kViewLabel = L"View list";
+    constexpr const wchar_t* kNextLabel = L"Next page";
+    constexpr const wchar_t* kBackLabel = L"Back";
+    constexpr const char* kMemberBan = "exban";   // member data: "declined" = this joiner said No to the host's list and is leaving
+    const auto CardName = reinterpret_cast<const wchar_t*(__fastcall*)(short konamiId)>(0x14076D0F0);   // Get_CardNameFromKonamiId
+
     void OnAccept()
     {
         if (g_Asked.Mode == BanList::Mode::Off)
@@ -334,12 +387,91 @@ namespace
         Logger::WriteLog("Accepted the host's ban list", MODULE_NAME, 0);
     }
 
-    void OnDecline()
+    void OnDecline() { g_Next = PromptStep::Leave; }
+    void OnView() { g_Page = 0; g_Next = PromptStep::Page; }
+    void OnNextPage() { ++g_Page; g_Next = PromptStep::Page; }
+    void OnBack() { g_Next = PromptStep::Ask; }
+
+    void ShowDialog(char* screen, const std::wstring& text, std::initializer_list<std::pair<int64_t, void(*)()>> items)
     {
-        Logger::WriteLog("Declined the host's ban list: leaving the lobby", MODULE_NAME, 0);
-        BanList::UseGame();
-        if (g_PromptScreen)
-            LobbyExit(g_PromptScreen);
+        char* dialog = screen + 432;
+        YGO::RIX::DialogClear(dialog);
+        YGO::RIX::DialogSetMode(dialog, 1);
+        YGO::RIX::DialogSetText(dialog, text.c_str());
+        for (const auto& [label, callback] : items)
+        {
+            std::function<void()> press = callback;   // plain function pointers fit the small buffer; the game takes them over
+            YGO::RIX::DialogAddItem(dialog, label, &press, -1);
+        }
+        using SetVisible_t = void(__fastcall*)(char* self, bool visible);
+        (*reinterpret_cast<SetVisible_t**>(dialog))[3](dialog, true);
+        *reinterpret_cast<int*>(screen + 48) = 1;   // the screen sends its input to the dialog
+    }
+
+    void ShowQuestion(char* screen)
+    {
+        if (g_Asked.Mode == BanList::Mode::Off)
+        {
+            g_PromptText = L"The host plays with the ban list off: every card can be used at 3 copies.\n\nPlay with it?";
+            ShowDialog(screen, g_PromptText, { { YGO::RIX::DialogLabelYes, &OnAccept }, { YGO::RIX::DialogLabelNo, &OnDecline } });
+            return;
+        }
+        g_PromptText = L"The host plays with the ban list \"" + Wide(g_Asked.List.Name) + L"\" (" + std::to_wstring(g_Asked.List.Forbidden.size()) +
+            L" forbidden, " + std::to_wstring(g_Asked.List.Limited.size()) + L" limited, " + std::to_wstring(g_Asked.List.SemiLimited.size()) +
+            L" semi-limited).\n\nPlay with it?";
+        ShowDialog(screen, g_PromptText, { { YGO::RIX::DialogLabelYes, &OnAccept }, { YGO::RIX::DialogLabelNo, &OnDecline },
+            { reinterpret_cast<int64_t>(kViewLabel), &OnView } });
+    }
+
+    void ShowPage(char* screen)
+    {
+        std::vector<std::pair<const wchar_t*, uint16_t>> entries;
+        for (uint16_t id : g_Asked.List.Forbidden) entries.emplace_back(L"Forbidden", id);
+        for (uint16_t id : g_Asked.List.Limited) entries.emplace_back(L"Limited", id);
+        for (uint16_t id : g_Asked.List.SemiLimited) entries.emplace_back(L"Semi-Limited", id);
+        const size_t pages = (std::max<size_t>)(1, (entries.size() + kNamesPerPage - 1) / kNamesPerPage);
+        g_Page = (std::min)(g_Page, pages - 1);
+        g_PromptText = L"\"" + Wide(g_Asked.List.Name) + L"\", page " + std::to_wstring(g_Page + 1) + L" of " + std::to_wstring(pages) + L"\n";
+        if (entries.empty())
+            g_PromptText += L"\nNo limits: every card at 3 copies.";
+        for (size_t i = g_Page * kNamesPerPage; i < entries.size() && i < (g_Page + 1) * kNamesPerPage; ++i)
+        {
+            const wchar_t* name = CardName(static_cast<short>(entries[i].second));
+            g_PromptText += L"\n" + std::wstring(entries[i].first) + L": " + (name && *name ? std::wstring(name) : L"#" + std::to_wstring(entries[i].second));
+        }
+        if (g_Page + 1 < pages)
+            ShowDialog(screen, g_PromptText, { { reinterpret_cast<int64_t>(kNextLabel), &OnNextPage }, { reinterpret_cast<int64_t>(kBackLabel), &OnBack } });
+        else
+            ShowDialog(screen, g_PromptText, { { reinterpret_cast<int64_t>(kBackLabel), &OnBack } });
+    }
+
+    void LeaveNow(char* screen);
+
+    // Runs every lobby update on a joiner: shows the next box once the last one is closed, and leaves after a No.
+    void RunPrompt(char* screen)
+    {
+        if (g_LeaveAt && GetTickCount64() >= g_LeaveAt)
+        {
+            g_LeaveAt = 0;
+            LeaveNow(screen);
+            return;
+        }
+        if (g_Next == PromptStep::None || *reinterpret_cast<int*>(screen + 48) != 0)
+            return;
+        const PromptStep step = g_Next;
+        g_Next = PromptStep::None;
+        if (step == PromptStep::Ask)
+            ShowQuestion(screen);
+        else if (step == PromptStep::Page)
+            ShowPage(screen);
+        else if (step == PromptStep::Leave)
+        {
+            Logger::WriteLog("Declined the host's ban list: leaving the lobby", MODULE_NAME, 0);
+            BanList::UseGame();
+            if (g_JoinedLobby)
+                Steam::SetLobbyMemberData(g_JoinedLobby, kMemberBan, "declined");
+            g_LeaveAt = GetTickCount64() + 1000;
+        }
     }
 
     void AskForBanList(char* screen)
@@ -347,51 +479,46 @@ namespace
         g_Asked = g_Pending;
         g_Pending.Ask = false;
         g_PromptScreen = screen;
-        if (g_Asked.Mode == BanList::Mode::Off)
-            g_PromptText = L"The host plays with the ban list off: every card can be used at 3 copies.\n\nPlay with it?";
-        else
-            g_PromptText = L"The host plays with the ban list \"" + Wide(g_Asked.List.Name) + L"\" (" + std::to_wstring(g_Asked.List.Forbidden.size()) +
-                L" forbidden, " + std::to_wstring(g_Asked.List.Limited.size()) + L" limited, " + std::to_wstring(g_Asked.List.SemiLimited.size()) +
-                L" semi-limited).\n\nPlay with it?";
-        char* dialog = screen + 432;
-        YGO::RIX::DialogClear(dialog);
-        YGO::RIX::DialogSetMode(dialog, 1);
-        YGO::RIX::DialogSetText(dialog, g_PromptText.c_str());
-        std::function<void()> yes = &OnAccept, no = &OnDecline;   // plain function pointers fit the small buffer; the game takes them over
-        YGO::RIX::DialogAddItem(dialog, YGO::RIX::DialogLabelYes, &yes, -1);
-        YGO::RIX::DialogAddItem(dialog, YGO::RIX::DialogLabelNo, &no, -1);
-        using SetVisible_t = void(__fastcall*)(char* self, bool visible);
-        (*reinterpret_cast<SetVisible_t**>(dialog))[3](dialog, true);
-        *reinterpret_cast<int*>(screen + 48) = 1;   // the screen sends its input to the dialog
+        ShowQuestion(screen);
     }
 
-    // ---- the host is told when a player without Yu-Gi-Oh-MP joins ("Vanilla Client"): they can't see this lobby's ban list and play with
-    // the game's own, so the host can kick them. A member without the "exmp" mark 8 seconds after we first saw them is reported once.
+    // ---- the host sees which players don't run Yu-Gi-Oh-MP: they can't see this lobby's ban list and play with the game's own. A member
+    // without the "exmp" mark 8 seconds after we first saw them gets a console line and is listed on the settings panel's
+    // "No Yu-Gi-Oh-MP" row (no popup), so the host can kick them. Members who leave drop off the row.
     uint64_t g_HostLobby = 0;
     std::map<uint64_t, ULONGLONG> g_FirstSeen;
     std::map<uint64_t, bool> g_Reported;
+    std::map<uint64_t, std::string> g_Vanilla;   // member -> name, still in the lobby
+    std::set<uint64_t> g_Declined;               // members who said No to the ban list (reported once)
     ULONGLONG g_NextCheck = 0;
-    std::wstring g_VanillaText;
-    YGO::RIX::EmptyFunction g_NoCallback;
 
-    std::wstring BanListDescription()
-    {
-        switch (BanList::CurrentMode())
-        {
-        case BanList::Mode::Off: return L"the ban list off";
-        case BanList::Mode::Custom: return L"the ban list \"" + Wide(BanList::CurrentList().Name) + L"\"";
-        default: return L"the game's ban list";
-        }
-    }
-
-    void CheckForVanillaClients(char* screen)
+    void CheckForVanillaClients()
     {
         const ULONGLONG now = GetTickCount64();
-        if (!g_HostLobby || now < g_NextCheck || *reinterpret_cast<int*>(screen + 48) != 0)   // +48: a box is already open
+        if (!g_HostLobby || now < g_NextCheck)
             return;
         g_NextCheck = now + 1000;
         const uint64_t self = Steam::Get_SteamId64();
-        for (uint64_t member : Steam::LobbyMembers(g_HostLobby))
+        const std::vector<uint64_t> members = Steam::LobbyMembers(g_HostLobby);
+        for (uint64_t member : members)
+            if (member != self && !g_Declined.contains(member))
+                if (const char* ban = Steam::GetLobbyMemberData(g_HostLobby, member, kMemberBan); ban && std::strcmp(ban, "declined") == 0)
+                {
+                    g_Declined.insert(member);
+                    Logger::WriteLog(Steam::PersonaName(member) + " declined the ban list and is leaving", MODULE_NAME, 1);
+                }
+        bool changed = false;
+        for (auto it = g_Vanilla.begin(); it != g_Vanilla.end();)
+            if (std::find(members.begin(), members.end(), it->first) == members.end())
+            {
+                g_Reported.erase(it->first);
+                g_FirstSeen.erase(it->first);
+                it = g_Vanilla.erase(it);
+                changed = true;
+            }
+            else
+                ++it;
+        for (uint64_t member : members)
         {
             if (member == 0 || member == self || g_Reported[member])
                 continue;
@@ -405,15 +532,17 @@ namespace
             if (now - seen->second < 8000)
                 continue;
             g_Reported[member] = true;
-            const std::wstring name = Wide(Steam::PersonaName(member));
-            Logger::WriteLog("Vanilla Client: " + Steam::PersonaName(member) + " joined without Yu-Gi-Oh-MP", MODULE_NAME, 1);
-            g_VanillaText = L"Vanilla Client: " + name + L" joined without Yu-Gi-Oh-MP.\n\n";
-            g_VanillaText += BanList::CurrentMode() == BanList::Mode::Game
-                ? L"They play with the game's ban list, like you."
-                : L"This lobby plays with " + BanListDescription() + L", but they can't see it and play with the game's own list. Kick them if that matters.";
-            g_NoCallback = {};
-            YGO::RIX::ShowMessageText(screen, -1, g_VanillaText.c_str(), &g_NoCallback);
-            return;   // one box at a time
+            g_Vanilla[member] = Steam::PersonaName(member);
+            Logger::WriteLog(g_Vanilla[member] + " does not use Yu-Gi-Oh-MP", MODULE_NAME, 1);
+            changed = true;
+        }
+        if (changed)
+        {
+            g_VanillaNames.clear();
+            for (const auto& [id, name] : g_Vanilla)
+                g_VanillaNames.push_back(name);
+            if (g_LastInfo)
+                LayoutExtraLines(g_LastInfo);
         }
     }
 
@@ -421,10 +550,14 @@ namespace
     {
         orig_LobbyUpdate(screen, ui, seconds);
         KeepMemberMark();
-        if (g_Pending.Ask && !IsLiveHost())
-            AskForBanList(screen);
-        else if (IsLiveHost())
-            CheckForVanillaClients(screen);
+        if (IsLiveHost())
+            CheckForVanillaClients();
+        else
+        {
+            if (g_Pending.Ask)
+                AskForBanList(screen);
+            RunPrompt(screen);
+        }
     }
 
     // The host tells the lobby. Players without Yu-Gi-Oh-MP never read the key: their own ban list applies to their own deck.
@@ -448,6 +581,10 @@ namespace
         if (ioFailure || !lobbyEnter || IsLiveHost())
             return;
         const uint64_t lobby = *static_cast<uint64_t*>(lobbyEnter);
+        g_JoinQnet = qnet;
+        g_JoinedLobby = lobby;
+        g_Next = PromptStep::None;
+        g_LeaveAt = 0;
         MarkMember(lobby);   // tells the host this player runs Yu-Gi-Oh-MP
         const char* mode = GetLobbyData(lobby, kLobbyMode);
         const std::string value = mode ? mode : "";
@@ -487,14 +624,49 @@ namespace
         g_MarkedLobby = 0;
         g_FirstSeen.clear();
         g_Reported.clear();
+        g_Vanilla.clear();
+        g_VanillaNames.clear();
+        g_Declined.clear();
+        g_JoinedLobby = 0;
+        g_Next = PromptStep::None;
+        g_LeaveAt = 0;
+        if (g_LastInfo && g_VanillaLines.contains(g_LastInfo))
+            SetVisible(g_VanillaLines[g_LastInfo], false);
         BanList::UseGame();
+    }
+
+    // No: really leave the Steam lobby (ExitToMenu alone only changes screen, so the host still had the player), then go back to the menu.
+    void LeaveNow(char* screen)
+    {
+        if (g_JoinQnet && g_JoinedLobby)
+            Hook_LeaveLobby(g_JoinQnet, g_JoinedLobby);
+        LobbyExit(screen);
     }
 }
 
 namespace LiveSetting
 {
+    // LiveSetting_RowsInput only sends left/right to ChangeOption on rows 0-4 ("cmp dword [r9+r8*4], 5; jb" at 0x1408542D6): our row 5
+    // never got the keys (the key state is polled inside the function, not passed in, so the hook can't see them). Raise the bound to 6;
+    // 6+ are the Create/Join buttons.
+    void PatchKeyboardBound()
+    {
+        auto* imm = reinterpret_cast<unsigned char*>(0x1408542DA);
+        if (imm[-4] != 0x43 || imm[-3] != 0x83 || *imm != 5)   // 43 83 3C 81 05
+        {
+            Logger::WriteLog("Ban list row: unexpected bytes at 0x1408542D6, left/right keys not enabled", MODULE_NAME, 1);
+            return;
+        }
+        DWORD old;
+        VirtualProtect(imm, 1, PAGE_EXECUTE_READWRITE, &old);
+        *imm = 6;
+        VirtualProtect(imm, 1, old, &old);
+        FlushInstructionCache(GetCurrentProcess(), imm, 1);
+    }
+
     void Attach()
     {
+        PatchKeyboardBound();
         DetourAttach(&reinterpret_cast<PVOID&>(orig_BuildOptions), Hook_BuildOptions);
         DetourAttach(&reinterpret_cast<PVOID&>(orig_BuildRows), Hook_BuildRows);
         DetourAttach(&reinterpret_cast<PVOID&>(orig_RowsInput), Hook_RowsInput);

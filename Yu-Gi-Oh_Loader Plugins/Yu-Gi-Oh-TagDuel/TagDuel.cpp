@@ -150,10 +150,28 @@ namespace
     LoadEngineFromFrontBlock_t orig_LoadEngineFromFrontBlock = reinterpret_cast<LoadEngineFromFrontBlock_t>(0x140082960);
 
     std::atomic<bool> g_SharedThisDuel = false;
+    std::atomic<bool> g_AllowInMultiplayer = false;
+    bool g_HasSeatControllers = false;
+    int g_SeatControllers[4] = { TagDuel::Human, TagDuel::AI, TagDuel::AI, TagDuel::AI };
+
+    // YGO::DUEL::Get_IsDuelMultiplayer (0x1407691D0)
+    using GetIsMultiplayer_t = bool(__fastcall*)();
+    GetIsMultiplayer_t Call_GetIsDuelMultiplayer = reinterpret_cast<GetIsMultiplayer_t>(0x1407691D0);
+
+    // The engine's own per-seat controller table (a leftover debug mode, YuGiOh.exe.i64): when g_bUseSeatControllerTable is set,
+    // Engine_Init gives seat i the controller g_SeatControllerTable[i] instead of "local seat human, the rest AI / network". Set only
+    // around our Engine_Init call and put back after, so nothing else in the game sees it.
+    auto* const g_bUseSeatControllerTable = reinterpret_cast<uint8_t*>(0x140C8D1E9);
+    auto* const g_SeatControllerTable = reinterpret_cast<int*>(0x140C8D218);
 
     char __fastcall Hook_EngineInit()
     {
         g_SharedThisDuel = false;
+        if (g_Enabled && Call_GetIsDuelMultiplayer() && !g_AllowInMultiplayer)
+        {
+            Logger::WriteLog("TagDuel: online duel - left as the game set it up (no multiplayer plugin handles tag duels yet)", MODULE_NAME, 1);
+            return orig_EngineInit();
+        }
         if (g_Enabled)
         {
             Call_SetIsTagDuel(true);
@@ -170,6 +188,20 @@ namespace
                 const int opponent = 1 - local;
                 FillPartnerDeck(local + 2, local, "PartnerDeck", "your partner");
                 FillPartnerDeck(opponent + 2, opponent, "OpponentPartnerDeck", "the opponent's partner");
+            }
+            if (g_HasSeatControllers)
+            {
+                const uint8_t useTable = *g_bUseSeatControllerTable;
+                int table[4];
+                std::memcpy(table, g_SeatControllerTable, sizeof(table));
+                std::memcpy(g_SeatControllerTable, g_SeatControllers, sizeof(table));
+                *g_bUseSeatControllerTable = 1;
+                Logger::WriteLog(std::format("TagDuel: seat controllers {} {} {} {} (0 human, 1 AI, 2 network)", g_SeatControllers[0], g_SeatControllers[1],
+                    g_SeatControllers[2], g_SeatControllers[3]), MODULE_NAME, 0);
+                const char result = orig_EngineInit();
+                std::memcpy(g_SeatControllerTable, table, sizeof(table));
+                *g_bUseSeatControllerTable = useTable;
+                return result;
             }
         }
         return orig_EngineInit();
@@ -203,4 +235,26 @@ void TagDuel::SetEnabled(bool on)
 bool TagDuel::IsEnabled()
 {
     return g_Enabled;
+}
+
+void TagDuel::SetSeatControllers(const int (&controllers)[4])
+{
+    std::memcpy(g_SeatControllers, controllers, sizeof(g_SeatControllers));
+    g_HasSeatControllers = true;
+}
+
+void TagDuel::ClearSeatControllers()
+{
+    g_HasSeatControllers = false;
+}
+
+void TagDuel::AllowInMultiplayer(bool on)
+{
+    Logger::WriteLog(std::format("TagDuel::AllowInMultiplayer({})", on), MODULE_NAME, 0);
+    g_AllowInMultiplayer = on;
+}
+
+bool TagDuel::MultiplayerPluginLoaded()
+{
+    return GetModuleHandleA("Yu-Gi-Oh-MP.dll") != nullptr;
 }

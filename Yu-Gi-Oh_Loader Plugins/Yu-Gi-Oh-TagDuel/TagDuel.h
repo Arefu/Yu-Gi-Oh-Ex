@@ -17,4 +17,16 @@ namespace TagDuel
     // lobby, anything else that reaches Engine_Init) is a tag duel while this is true.
     void SetEnabled(bool on);
     bool IsEnabled();
+
+    // Who plays each seat (0 & 2 one team, 1 & 3 the other), as the engine's controller types. Unset = the engine's own choice:
+    // the local seat is human, every other seat AI (a local tag duel: you + an AI partner against two AI).
+    enum Controller : int { Human = 0, AI = 1, Network = 2 };
+    void SetSeatControllers(const int (&controllers)[4]);
+    void ClearSeatControllers();
+
+    // Online duels. The game's online setup turns tag off and only knows 2 seats, so a tag duel in an online match would put the two
+    // games out of step: TagDuel stays out of online duels unless a multiplayer plugin (Yu-Gi-Oh-MP) says it handles them, and then
+    // that plugin sets the seat controllers (one machine runs each AI seat, the other sees it as Network).
+    void AllowInMultiplayer(bool on);
+    bool MultiplayerPluginLoaded();   // Yu-Gi-Oh-MP.dll is in the game
 }
