@@ -35,7 +35,19 @@
       "title": "No janken",
       "kind": "toggle",
       "default": "1",
-      "help": "Skip rock-paper-scissors at the start of a duel."
+      "help": "Skip rock-paper-scissors at the start of a duel (offline duels; online duels still play it)."
+    },
+    {
+      "key": "JankenFirst",
+      "title": "Who goes first",
+      "kind": "choice",
+      "default": "random",
+      "help": "Who goes first when NoJanken skips rock-paper-scissors: P1 = you, P2 = your opponent, random = either.",
+      "choices": [
+        "random",
+        "P1",
+        "P2"
+      ]
     },
     {
       "key": "StartingLP",
