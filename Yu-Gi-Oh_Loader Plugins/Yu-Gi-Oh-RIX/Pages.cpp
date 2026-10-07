@@ -38,7 +38,9 @@ namespace
     constexpr float kSpacing = 100.0f;
     constexpr int kMenuNode = 7840;                   // the menu's root node (its x is what OnEnter sets to 960)
     constexpr float kCentreX = 960.0f;
-    constexpr int kItems[RIX_PAGE_MAX_BUTTONS] = { 1, 2, 10, 8 }; // menu items used for page buttons, top to bottom (1 and 2 are the top level's own)
+    // Menu items used for page buttons, top to bottom (1 and 2 are the top level's own). g_BattlePackMenuItemTable (0x140A72140) lays its
+    // items out bottom-up in table order (3, 4, 5, 6, 7, 11, 9, 8, 10, 2, 1), so 9 sits under 8.
+    constexpr int kItems[RIX_PAGE_MAX_BUTTONS] = { 1, 2, 10, 8, 9 };
     constexpr int kBack = -2;
     constexpr int kCancel = 0x2000;
 
@@ -388,6 +390,34 @@ namespace Pages
         if (g_Stack.empty() || !g_Screen)
             return false;
         CloseTop(g_Screen, true);
+        return true;
+    }
+
+    // Relabels (and rewires) one button of the top page and redraws the menu with that button still highlighted.
+    bool UpdateButton(int index, const RIX_PageButton& from)
+    {
+        Page* page = Top();
+        if (!page || !g_Screen || index < 0 || index >= page->ButtonCount)
+            return false;
+        Button& button = page->Buttons[index];
+        // The menu item still points at the old text until Relabel: keep the old strings alive with the retired pages.
+        auto old = std::make_unique<Page>();
+        old->Buttons[0].Label = std::move(button.Label);
+        old->Buttons[0].Description = std::move(button.Description);
+        g_Retired.push_back(std::move(old));
+        button.Label = from.Label ? from.Label : L"";
+        button.Description = from.Description ? from.Description : L"";
+        button.OnPress = from.OnPress;
+        button.User = from.User;
+
+        Relabel(g_Screen, page);
+        void* menu = g_Screen + kMenu;
+        YGO::RIX::MenuKit::ClearVisible(menu);
+        for (int i = 0; i < page->ButtonCount; ++i)
+            YGO::RIX::MenuKit::ShowItemNow(menu, kItems[i]);
+        YGO::RIX::MenuKit::Layout(menu);
+        YGO::RIX::MenuKit::SelectIndex(menu, index);
+        YGO::RIX::MenuKit::ResetItems(menu);
         return true;
     }
 

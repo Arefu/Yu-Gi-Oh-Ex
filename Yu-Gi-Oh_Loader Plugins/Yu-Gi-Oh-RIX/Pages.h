@@ -5,7 +5,7 @@
 // a header and a MenuKit menu, so instead of registering a new screen class the real screen is borrowed while pages are open, and pages
 // are a stack switched in place on it:
 //  - OnEnter is hooked to make the screen think it came from the main menu (so it shows its top level, not the pack details), then the top
-//    page is applied: header, the menu items relabelled and shown (items 1, 2, 10, 8 of g_BattlePackMenuItemTable), or the menu hidden for a
+//    page is applied: header, the menu items relabelled and shown (items 1, 2, 10, 8, 9 of g_BattlePackMenuItemTable), or the menu hidden for a
 //    page of the plugin's own widgets;
 //  - Screen::SetHeaderText is hooked so the game's own "Battle Pack" (text 475) never replaces the page's header;
 //  - HandleItem (the screen's button switch) runs the page's callbacks, and Back closes the top page;
@@ -15,5 +15,6 @@ namespace Pages
 {
     bool Open(const RIX_PageDesc& Desc);
     bool Close();
+    bool UpdateButton(int Index, const RIX_PageButton& Button);
     void Install();
 }

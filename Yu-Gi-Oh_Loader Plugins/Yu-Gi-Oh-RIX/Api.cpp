@@ -75,4 +75,9 @@ extern "C"
     {
         return Pages::Close() ? 1 : 0;
     }
+
+    int __cdecl RIX_UpdatePageButton(int index, const RIX_PageButton* button)
+    {
+        return button && Pages::UpdateButton(index, *button) ? 1 : 0;
+    }
 }

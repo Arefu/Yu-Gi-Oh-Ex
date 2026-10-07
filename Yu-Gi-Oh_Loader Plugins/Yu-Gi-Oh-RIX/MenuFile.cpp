@@ -41,7 +41,7 @@ namespace
     {
         { "title", 5 }, { "signIn", 6 }, { "commonBg", 7 }, { "mainMenu", 8 }, { "loading", 9 }, { "gameBegin", 10 }, { "exGameDuel", 11 },
         { "helpAndOptions", 12 }, { "settings", 13 }, { "videoSettings", 14 }, { "credits", 15 }, { "controllerSettings", 16 },
-        { "howToPlay", 17 }, { "statistics", 18 }, { "voices", 19 }, { "pauseMenu", 20 }, { "duelistChallenge", 21 }, { "campaignDialog", 22 },
+        { "howToPlay", 17 }, { "statistics", 18 }, { "voices", 19 }, { "pauseMenu", 20 }, { "duelistChallenge", 21 }, { "freeDuel", 21 }, { "campaignDialog", 22 },
         { "campaignSelectDeck", 23 }, { "tutorialList", 24 }, { "deckEditor", 25 }, { "swapCards", 26 }, { "matchResult", 27 },
         { "gameResult", 28 }, { "cardShop", 29 }, { "battlePack", 30 }, { "battlePackDraft", 31 }, { "battlePackEdit", 32 },
         { "playerMatch", 33 }, { "liveSetting", 34 }, { "liveSession", 35 }, { "liveLobby", 36 }, { "liveLoading", 37 },
