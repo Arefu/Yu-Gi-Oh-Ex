@@ -24,6 +24,15 @@ jobs:
       - name: Build solution
         run: msbuild WolfX.sln /p:Configuration=Release
 
+      # The File Type Libraries build into Binaries\Release\Libraries, but every tool that uses one gets its own copy in Tools
+      # (project references copy locally) and nothing loads from Libraries, so the folder would only duplicate them in the zip.
+      - name: Drop the separate Libraries folder
+        run: |
+          if (Test-Path "Binaries\Release\Libraries") {
+            Remove-Item "Binaries\Release\Libraries" -Recurse -Force
+            Write-Host "Removed Binaries\Release\Libraries"
+          }
+
       - name: Verify build output
         run: |
           if (-not (Test-Path "Binaries\Release")) {

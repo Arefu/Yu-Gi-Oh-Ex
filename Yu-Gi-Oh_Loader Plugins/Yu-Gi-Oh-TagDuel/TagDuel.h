@@ -35,6 +35,9 @@ namespace TagDuel
     // deckdata). Arms the NEXT duel only: tag mode is used only for a duel armed this way, so campaign/story duels stay 1v1. A deck
     // of -1 = PartnerDeck / OpponentPartnerDeck setting, else a copy of the teammate's deck.
     void SetPartners(int yourCharacter, int yourDeck, int opponentCharacter, int opponentDeck);
+    // What SetPartners stored, by side of the table: [0] your partner, [1] the opponent's partner.
+    int PartnerCharacter(int which);
+    int PartnerDeck(int which);
 
     // Online duels. The game's online setup turns tag off and only knows 2 seats, so a tag duel in an online match would put the two
     // games out of step: TagDuel stays out of online duels unless a multiplayer plugin (Yu-Gi-Oh-MP) says it handles them, and then

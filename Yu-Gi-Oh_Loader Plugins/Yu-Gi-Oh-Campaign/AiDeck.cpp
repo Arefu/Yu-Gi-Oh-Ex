@@ -92,10 +92,14 @@ namespace
 
     // The opponent list's steps in a tag Free Duel: your partner, the opponent, the opponent's partner. The game reads the list's last
     // pick (the opponent's partner) as seat 1 when the duel starts, so Hook_SetupSeat puts g_TagOpponent back in seat 1.
-    enum CharacterStep { kPickYourPartner, kPickOpponent, kPickOpponentPartner };
-    const wchar_t* const kCharacterTitles[] = { L"Your Partner", L"Opponent", L"Opponent's Partner" };
-    int g_CharacterStep = kPickYourPartner;
+    enum CharacterStep { kPickYou, kPickYourPartner, kPickOpponent, kPickOpponentPartner };
+    const wchar_t* const kCharacterTitles[] = { L"Step 1 of 4", L"Step 2 of 4", L"Step 3 of 4", L"Step 4 of 4" };
+    const wchar_t* const kCharacterHelp[] = { L"Select your character.", L"Select your partner.", L"Select your opponent.",
+                                              L"Select your opponent's partner." };
+    int g_CharacterStep = kPickYou;
+    int g_YourCharacter = -1;                   // your own portrait / name in a tag Free Duel
     int g_PartnerCharacters[2] = { -1, -1 };   // [0] your partner, [1] the opponent's partner
+    int g_HelpShownForStep = -1;                // the step the help line was last written for
     int g_TagOpponent = -1;                     // the opponent picked on the list (-1 = not a tag Free Duel)
 
     // YGO::GAME::Get_CharacterName (0x1407FEC70), as UTF-8 for the log.
@@ -359,7 +363,17 @@ namespace
             else if (p.Step == kStepOpponentPartner)
             {
                 SetTagPartners(g_PartnerCharacters[0], p.PartnerDeck, g_PartnerCharacters[1], deck);
-                StartDuel(static_cast<unsigned int>(p.OpponentDeck));
+                // TagDuel's review page (all four seats, "Let's Duel!" starts it, Back comes back to Free Duel); without it, start here.
+                static auto review = reinterpret_cast<bool(__cdecl*)(int, int, int, int)>(GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll"), "TagDuel_Review"));
+                g_Remembered[p.Character] = static_cast<unsigned int>(p.OpponentDeck);
+                if (review && review(p.PlayerDeck, g_YourCharacter, p.Character, p.OpponentDeck))
+                {
+                    p.Active = false;
+                    g_PendingCharacter = -1;   // TagDuel sets seat 1's deck itself
+                    RestoreTitle(p.Screen);
+                }
+                else
+                    StartDuel(static_cast<unsigned int>(p.OpponentDeck));
             }
             else
                 StartDuel(static_cast<unsigned int>(deck));
@@ -396,6 +410,26 @@ namespace
     {
         char* s = static_cast<char*>(screen);
         int& state = *reinterpret_cast<int*>(s + kFreeState);
+
+        // Back on TagDuel's review page: return to the last deck step (Opponent's Partner's Deck) with every pick kept, so Back keeps
+        // stepping back the way the picks came (deck steps, your deck, the three characters, then the Local seat screen).
+        static auto takeCancelled = reinterpret_cast<bool(__cdecl*)()>(GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll"), "TagDuel_TakeReviewCancelled"));
+        if (takeCancelled && takeCancelled() && g_TagOpponent >= 0)
+        {
+            orig_FreeDuelSetState(screen, kFreeOpponentList);   // the list the character steps walk (g_CharacterStep is still on the last pick)
+            orig_FreeDuelSetState(screen, kFreeChoosingDeck);
+            Picker& p = g_Picker;
+            p.Campaign = false;
+            p.Screen = s;
+            p.List = s + kFreeList;
+            p.Panel = s + kFreeOpponentPanel;
+            p.Active = true;
+            p.Step = kStepOpponentPartner;
+            ShowStep();
+            Logger::WriteLog("Tag Free Duel: back from the review - Opponent's Partner's Deck again", MODULE_NAME, 69);
+            return;
+        }
+
         if (g_Picker.Active && g_Picker.Screen == s)
         {
             if (state == kFreeChoosingDeck)
@@ -408,18 +442,18 @@ namespace
         const int highlighted = before == kFreeOpponentList ? static_cast<int>(OpponentListSelected(s + kFreeOpponents)) : 0;
         orig_FreeDuelInput(screen, ui);
 
-        // Tag Free Duel: the opponent list is walked three times (your partner, the opponent, the opponent's partner). Confirm on the
-        // first two goes back to the list (FreeDuel_SetState(1) is the game's own way back to it); Back steps back a pick.
+        // Tag Free Duel: the opponent list is walked four times (you, your partner, the opponent, the opponent's partner). Confirm on the
+        // first three goes back to the list (FreeDuel_SetState(1) is the game's own way back to it); Back steps back a pick.
         if (before == kFreeOpponentList && TagDuelOn() && !IsMultiplayer())
         {
             if (state == kFreeChoosingDeck)
             {
                 const int picked = highlighted;
-                static const char* const kWho[] = { "your partner", "opponent", "opponent's partner" };
-                Logger::WriteLog(std::format("Tag Free Duel: {} = character {} ({}), title was \"{}\"", kWho[g_CharacterStep], picked, CharacterName(picked),
-                    g_CharacterStep == kPickYourPartner ? "Your Partner" : g_CharacterStep == kPickOpponent ? "Opponent" : "Opponent's Partner"),
-                    MODULE_NAME, 0);
-                if (g_CharacterStep == kPickYourPartner)
+                static const char* const kWho[] = { "you", "your partner", "opponent", "opponent's partner" };
+                Logger::WriteLog(std::format("Tag Free Duel: {} = character {} ({})", kWho[g_CharacterStep], picked, CharacterName(picked)), MODULE_NAME, 69);
+                if (g_CharacterStep == kPickYou)
+                    g_YourCharacter = picked;
+                else if (g_CharacterStep == kPickYourPartner)
                     g_PartnerCharacters[0] = picked;
                 else if (g_CharacterStep == kPickOpponent)
                     g_TagOpponent = picked;
@@ -438,18 +472,29 @@ namespace
                     R::DeckInfoPanel::ShowDeck(s + kFreeOpponentPanel, *g_FreeDuelOpponentDeckId >= 0 ? reinterpret_cast<unsigned int*>(g_FreeDuelOpponentDeckId) : nullptr);
                 }
             }
-            else if (state < kFreeOpponentList && g_CharacterStep > kPickYourPartner)
+            else if (state < kFreeOpponentList && g_CharacterStep > kPickYou)
             {
                 --g_CharacterStep;
                 orig_FreeDuelSetState(screen, kFreeOpponentList);
             }
         }
         if (state == kFreeOpponentList && TagDuelOn() && !IsMultiplayer())
+        {
             SetTitle(s, kCharacterTitles[g_CharacterStep]);
+            // The help line says who this step picks. Rewritten when the step changes (SetState rebuilds the help bar, so after every pick
+            // and every Back).
+            if (g_HelpShownForStep != g_CharacterStep || before != kFreeOpponentList)
+            {
+                SetDescription(s + kHelpBar, reinterpret_cast<int64_t>(kCharacterHelp[g_CharacterStep]));
+                R::HelpLayout(s + kHelpBar);
+                g_HelpShownForStep = g_CharacterStep;
+            }
+        }
         else if (state < kFreeOpponentList)
         {
-            g_CharacterStep = kPickYourPartner;   // left the list: start the picks over next time
+            g_CharacterStep = kPickYou;   // left the list: start the picks over next time
             g_TagOpponent = -1;
+            g_HelpShownForStep = -1;
         }
 
         if (before == kFreeChoosingDeck && state == kFreeStart && !IsMultiplayer())
@@ -512,7 +557,7 @@ namespace
         if (seat == 1 && g_TagOpponent >= 0 && TagDuelOn() && !IsMultiplayer() && !IsChallenge())
         {
             Logger::WriteLog(std::format("Tag Free Duel: seat 1 = opponent {} ({}) (the list ended on {} ({}))", g_TagOpponent, CharacterName(g_TagOpponent),
-                character, CharacterName(character)), MODULE_NAME, 0);
+                character, CharacterName(character)), MODULE_NAME, 69);
             character = g_TagOpponent;
             SetDuelSideCharacter(1, static_cast<unsigned int>(character));
             if (const int own = CharacterDeck(character); own >= 0)

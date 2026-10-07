@@ -293,7 +293,7 @@ namespace
             if (const auto wide = reinterpret_cast<const wchar_t*(__fastcall*)(int)>(0x1407FEC70)(character))   // YGO::GAME::Get_CharacterName
                 WideCharToMultiByte(CP_UTF8, 0, wide, -1, name, sizeof(name) - 1, nullptr, nullptr);
             Logger::WriteLog(std::format("TagDuel: seat {} ({}) = character {} ({}), deck {}", seat, i == 0 ? "your partner" : "opponent's partner",
-                character, name, deck), MODULE_NAME, 0);
+                character, name, deck), MODULE_NAME, 69);
         }
         g_SeatsSetThisDuel = true;
         orig_AssignSeatDecks();
@@ -347,7 +347,7 @@ namespace
             std::memcpy(g_SeatControllerTable, controllers, sizeof(controllers));
             *g_bUseSeatControllerTable = 1;
             Logger::WriteLog(std::format("TagDuel: seat controllers {} {} {} {} (0 human, 1 AI, 2 network)", controllers[0], controllers[1],
-                controllers[2], controllers[3]), MODULE_NAME, 0);
+                controllers[2], controllers[3]), MODULE_NAME, 69);
             const char result = orig_EngineInit();
 
             const int opponent = 1 - (Call_GetLocalSeat() & 1);
@@ -385,9 +385,9 @@ namespace
             return 0;
         const int before = HandCount(side);
         Logger::WriteLog(std::format("TagDuel: partner swap side {} starting (turn counter {}, rules {:#x}, hand {})", side, *g_DuelTurnCounter,
-            *g_DuelRules & 0xFF0F, before), MODULE_NAME, 0);
+            *g_DuelRules & 0xFF0F, before), MODULE_NAME, 69);
         const __int64 result = orig_LoadEngineFromFrontBlock(side);
-        Logger::WriteLog(std::format("TagDuel: partner swap side {} done: hand {} -> {}", side, before, HandCount(side)), MODULE_NAME, 0);
+        Logger::WriteLog(std::format("TagDuel: partner swap side {} done: hand {} -> {}", side, before, HandCount(side)), MODULE_NAME, 69);
         return result;
     }
 }
@@ -434,6 +434,19 @@ void TagDuel::SetPartners(int yourCharacter, int yourDeck, int opponentCharacter
     g_PickedPartnerDeck[0] = yourDeck;
     g_PickedPartnerDeck[1] = opponentDeck;
     g_Armed = true;
+}
+
+int TagDuel::PartnerCharacter(int which)
+{
+    return which == 0 || which == 1 ? g_PartnerCharacter[which].load() : -1;
+}
+
+int TagDuel::PartnerDeck(int which)
+{
+    if (which != 0 && which != 1)
+        return -1;
+    const int deck = g_PickedPartnerDeck[which];
+    return deck >= 0 ? deck : CharacterDeck(g_PartnerCharacter[which]);
 }
 
 void TagDuel::SetSeatHuman(Role role, bool human)
