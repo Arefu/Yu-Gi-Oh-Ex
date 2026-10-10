@@ -10,8 +10,9 @@
 
 #include "Detours.h"
 #include "Logger.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
-constexpr uintptr_t kImageBase = 0x140000000;
+constexpr uintptr_t kImageBase = YGO::Addr::ImageBase;
 
 inline uintptr_t GameBase()
 {
@@ -649,7 +650,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         kHideLevelBadge = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "HideLevelBadge", 1, ".\\Config.ini");
         orig_DuelCardView_UpdateLevelBadge = (fn_DuelCardView_UpdateLevelBadge)ResolveVA(0x1407C6980);
 
-        p_g_bIsJpVersion = (bool*)ResolveVA(0x14332A348);
+        p_g_bIsJpVersion = (bool*)ResolveVA(YGO::Addr::g_bIsJpVersion);
         orig_Get_FontById = (fn_Get_FontById)ResolveVA(0x140872C60);
         game_IsMonster = (fn_CardValue)ResolveVA(0x14081A410);
         game_IsLink = (fn_CardValue)ResolveVA(0x14081A470);
@@ -666,7 +667,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         orig_Get_RawDefFromFullCardProps = (fn_Get_RawDefFromFullCardProps)ResolveVA(0x14081A5D0);
         orig_sub_14081A670 = (fn_sub_14081A670)ResolveVA(0x14081A670);
         orig_sub_14081A730 = (fn_sub_14081A730)ResolveVA(0x14081A730);
-        orig_Get_CardTypeFromFullCardPropsByKonamiId = (fn_Get_CardTypeFromFullCardPropsByKonamiId)ResolveVA(0x14081A650);
+        orig_Get_CardTypeFromFullCardPropsByKonamiId = (fn_Get_CardTypeFromFullCardPropsByKonamiId)ResolveVA(YGO::Addr::Card_GetTypeFromFullCardPropsByKonamiId);
 
         // TODO: fill in the real RVA for Get_SpellTrapCardPropertyFromFullCardProps
         // (only seen as thunk j_YGO::CARDS::Get_SpellTrapCardPropertyFromFullCardProps
