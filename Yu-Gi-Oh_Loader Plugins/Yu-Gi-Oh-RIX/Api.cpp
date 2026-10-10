@@ -1,6 +1,9 @@
 // The functions other plugins call, declared in Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-RIX.h. Plain C so any language can use them.
 #include <Windows.h>
+#include <cstdint>
 #include <format>
+#include <memory>
+#include <string>
 
 #define RIX_EXPORTS
 #include "Yu-Gi-Oh-RIX.h"
@@ -79,5 +82,43 @@ extern "C"
     int __cdecl RIX_UpdatePageButton(int index, const RIX_PageButton* button)
     {
         return button && Pages::UpdateButton(index, *button) ? 1 : 0;
+    }
+
+    // ---- widgets on a screen: one handle per node, owning the node's reference and (for text) the string the game keeps reading.
+    struct WidgetHandle
+    {
+        YGO::RIX::SharedNode Node{};
+        void* Screen = nullptr;
+        std::wstring Text;
+    };
+
+    void* __cdecl RIX_AddImage(void* screen, const char* resource, const char* sprite, int z, float x, float y, float width, float height)
+    {
+        if (!screen || !resource || !sprite)
+            return nullptr;
+        auto handle = std::make_unique<WidgetHandle>();
+        handle->Screen = screen;
+        handle->Node = YGO::RIX::Dfx::AddImage(YGO::RIX::ScreenRoot(screen), resource, sprite, z, x, y, width, height);
+        return handle->Node.Node ? handle.release() : nullptr;
+    }
+
+    void* __cdecl RIX_AddText(void* screen, const wchar_t* text, int z, float x, float y, float width, float pixelSize, int align, uint32_t colour)
+    {
+        if (!screen || !text)
+            return nullptr;
+        auto handle = std::make_unique<WidgetHandle>();
+        handle->Screen = screen;
+        handle->Text = text;
+        const auto alignment = align == RIX_ALIGN_CENTRE ? YGO::RIX::Dfx::TextAlign::Centre
+                             : align == RIX_ALIGN_RIGHT ? YGO::RIX::Dfx::TextAlign::Right : YGO::RIX::Dfx::TextAlign::Left;
+        handle->Node = YGO::RIX::Dfx::AddText(YGO::RIX::ScreenRoot(screen), handle->Text.c_str(), z, x, y, width, pixelSize, alignment, colour);
+        return handle->Node.Node ? handle.release() : nullptr;
+    }
+
+    void __cdecl RIX_RemoveNode(void* node)
+    {
+        std::unique_ptr<WidgetHandle> handle(static_cast<WidgetHandle*>(node));
+        if (handle)
+            YGO::RIX::Dfx::RemoveImage(YGO::RIX::ScreenRoot(handle->Screen), handle->Node);
     }
 }

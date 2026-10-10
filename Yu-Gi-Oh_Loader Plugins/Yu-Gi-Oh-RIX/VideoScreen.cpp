@@ -8,8 +8,10 @@
 #include <format>
 
 #include "Logger.h"
+#include "Yu-Gi-Oh-Memory.h"
 #include "PluginMenu.h"
 #include "YuGiOh/YuGiOh-RIX.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // Traced in YuGiOh.exe.i64 (ScreenHelpVideo, vftable 0x140A75A18). The screen keeps its widgets as 32 byte "entries" (two shared_ptrs: [0..1] the
 // positioned wrapper, [2..3] the text widget or sprite) at fixed offsets:
@@ -24,7 +26,7 @@ namespace
     constexpr uintptr_t kUpdate = 0x14084FB60;          // input
     constexpr uintptr_t kUpdateVisuals = 0x140850790;   // highlights, values, arrow positions, the buttons' positions (tables with four rows)
     constexpr uintptr_t kSelectionNav = 0x140868460;    // the selection object's up / down handling (shared by every screen)
-    constexpr uintptr_t kDescription = 0x14089F6E0;     // MenuKit description text: the game reads the row's text id from a four row table
+    constexpr uintptr_t kDescription = YGO::Addr::WidgetDescription_SetTextById;     // MenuKit description text: the game reads the row's text id from a four row table
     constexpr uintptr_t kRowCountPatch = 0x14084ECFC;   // constructor: mov edx, 4 (the row count, also the page size)
     constexpr uintptr_t kTextTemplate = 0x140C8E958;    // the 48 byte template the label loop fills; the statics in it are kept
     constexpr uintptr_t kTemplateColor = 0x140C8E950;
@@ -83,11 +85,11 @@ namespace
     RowHit_t orig_RowHit = reinterpret_cast<RowHit_t>(kRowHit);
 
     const CreateText_t CreateText = reinterpret_cast<CreateText_t>(0x14077A110);
-    const SetText_t SetText = reinterpret_cast<SetText_t>(0x14075E000);
+    const SetText_t SetText = reinterpret_cast<SetText_t>(YGO::Addr::WidgetText_SetTextById);
     const Style_t StyleFor = reinterpret_cast<Style_t>(0x140869E80);
     const Move_t Move = reinterpret_cast<Move_t>(0x14075A300);
     const MoveY_t MoveY = reinterpret_cast<MoveY_t>(0x14075A310);
-    const SetEnabled_t SetEnabled = reinterpret_cast<SetEnabled_t>(0x14075A490);
+    const SetEnabled_t SetEnabled = reinterpret_cast<SetEnabled_t>(YGO::Addr::Widget_SetEnabled);
     const Changed_t SelectionChanged = reinterpret_cast<Changed_t>(0x140868710);
     const Events_t EventsA = reinterpret_cast<Events_t>(0x1408001B0);   // left / right pressed this frame (bits 4 / 8)
     const Events_t EventsB = reinterpret_cast<Events_t>(0x140800290);
@@ -351,26 +353,16 @@ namespace VideoScreen
     void Install()
     {
         // The row count: `mov edx, 4` (BA 04 00 00 00); the same register is the page size argument.
-        uint8_t* patch = reinterpret_cast<uint8_t*>(kRowCountPatch);
-        if (patch[0] != 0xBA || patch[1] != 4)
-        {
-            Logger::WriteLog("Video settings: the game's code is not what was expected, the extra row was not added", MODULE_NAME, 1);
+        if (!YGO::Memory::PatchBytes(kRowCountPatch, { 0xBA, 0x04, 0x00, 0x00, 0x00 }, { 0xBA, static_cast<uint8_t>(kRow + 1), 0x00, 0x00, 0x00 },
+                "Video settings extra row"))
             return;
-        }
-        DWORD old;
-        VirtualProtect(patch, 5, PAGE_EXECUTE_READWRITE, &old);
-        patch[1] = kRow + 1;
-        VirtualProtect(patch, 5, old, &old);
 
         // The arrows follow Resolution (330) and Display Mode (570) up with their rows; only touched when the table is what was expected.
-        float* arrowY = reinterpret_cast<float*>(kArrowYTable);
+        const float* arrowY = reinterpret_cast<const float*>(kArrowYTable);
         if (arrowY[0] == 330.0f && arrowY[12] == 570.0f)
         {
-            DWORD protect;
-            VirtualProtect(arrowY, 13 * sizeof(float), PAGE_READWRITE, &protect);
-            arrowY[0] -= kRaiseResolution;
-            arrowY[12] -= kRaiseMode;
-            VirtualProtect(arrowY, 13 * sizeof(float), protect, &protect);
+            YGO::Memory::WriteValue(kArrowYTable, arrowY[0] - kRaiseResolution);
+            YGO::Memory::WriteValue(kArrowYTable + 12 * sizeof(float), arrowY[12] - kRaiseMode);
         }
 
         DetourTransactionBegin();

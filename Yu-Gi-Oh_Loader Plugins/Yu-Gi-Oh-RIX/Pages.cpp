@@ -12,6 +12,7 @@
 #include "Logger.h"
 #include "MainMenu.h"
 #include "YuGiOh/YuGiOh-RIX.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // Traced in YuGiOh.exe.i64 (RIX::ScreenBattlePackStore, vftable 0x140A72030; the constructor's comment has the layout):
 //   +264 help bar, +7688 the MenuKit menu (definition g_BattlePackMenuItemTable), +7856 the state (0 = top level), +7860 the item pressed.
@@ -24,7 +25,7 @@ namespace
     constexpr uintptr_t kHandleItem = 0x140828710;    // RIX::ScreenBattlePackStore::HandleItem(screen, id, fromInput)
     constexpr uintptr_t kUpdate = 0x14082A890;        // RIX::ScreenBattlePackStore::Update(screen, ui, seconds)
     constexpr uintptr_t kSetHeaderText = 0x140822F00; // RIX::Screen::SetHeaderText(screen, text), shared by every screen
-    constexpr uintptr_t kHelpSelect = 0x140A7A1A0;    // the two help bar prompts the screen's top level shows
+    constexpr uintptr_t kHelpSelect = YGO::Addr::HelpEntry_Select;    // the two help bar prompts the screen's top level shows
     constexpr uintptr_t kHelpBack = 0x140A7A190;
     constexpr int64_t kHeaderText = 475;              // "Battle Pack"
     constexpr int kHelp = 264;

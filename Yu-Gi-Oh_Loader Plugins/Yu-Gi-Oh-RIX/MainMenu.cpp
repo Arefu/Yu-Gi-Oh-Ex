@@ -12,6 +12,7 @@
 #include <vector>
 
 #include "Logger.h"
+#include "Yu-Gi-Oh-Memory.h"
 #include "YuGiOh/YuGiOh-RIX.h"
 #include "YuGiOh/YuGiOh-SAVE.h"
 
@@ -107,10 +108,7 @@ namespace
 
     void WriteBytes(uintptr_t address, const void* data, size_t size)
     {
-        DWORD old;
-        VirtualProtect(reinterpret_cast<void*>(address), size, PAGE_EXECUTE_READWRITE, &old);
-        memcpy(reinterpret_cast<void*>(address), data, size);
-        VirtualProtect(reinterpret_cast<void*>(address), size, old, &old);
+        YGO::Memory::WriteBytes(address, data, size);
     }
 
     // The widget creation loop of SetupWidgets ends with `cmp r15d, 13`: the number of buttons is that immediate.
