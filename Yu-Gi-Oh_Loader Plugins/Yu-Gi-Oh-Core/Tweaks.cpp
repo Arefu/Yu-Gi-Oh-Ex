@@ -6,6 +6,7 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Save.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -18,7 +19,7 @@ namespace
 
     void __fastcall Hook_UseJPLogo(__int64)
     {
-        *reinterpret_cast<volatile unsigned char*>(0x14332A348) = 255;   // g_bIsJpVersion
+        *reinterpret_cast<volatile unsigned char*>(YGO::Addr::g_bIsJpVersion) = 255;
     }
 }
 

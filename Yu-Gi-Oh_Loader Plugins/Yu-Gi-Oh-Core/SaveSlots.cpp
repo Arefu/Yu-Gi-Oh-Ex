@@ -11,6 +11,7 @@
 #include "Logger.h"
 #include "Save.h"
 #include "SaveSlots.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 using json = nlohmann::json;
 
@@ -35,7 +36,7 @@ namespace
     constexpr int kWinStats[] = { 13, 16, 17, 22 };
 
     // The game's character table (chardata): 240 records of 104 bytes, +0x20 = the ASCII key the portrait is named after.
-    constexpr uintptr_t kCharacterRecords = 0x142913470;
+    constexpr uintptr_t kCharacterRecords = YGO::Addr::g_CharacterRecords;
     constexpr int kCharacterCount = 240;
 
     struct Slot

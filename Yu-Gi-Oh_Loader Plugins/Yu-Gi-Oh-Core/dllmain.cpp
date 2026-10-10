@@ -1,4 +1,4 @@
-﻿#include <Windows.h>
+#include <Windows.h>
 #include <format>
 #include <string>
 
@@ -14,6 +14,7 @@
 #include "SaveScreen.h"
 #include "SaveSlots.h"
 #include "Yu-Gi-Oh-Core.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // The exports (see Yu-Gi-Oh-Core.h).
 extern "C"
@@ -74,7 +75,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         {
             const std::string ini = Save::GameFolder() + "Config.ini";
             const bool rules2020 = GetPrivateProfileIntA("Yu-Gi-Oh-Core", "EngineRules2020", 0, ini.c_str()) != 0;
-            *reinterpret_cast<volatile unsigned char*>(0x140C8D1C9) = rules2020 ? 1 : 0;
+            *reinterpret_cast<volatile unsigned char*>(YGO::Addr::g_bEngineRules) = rules2020 ? 1 : 0;
             Logger::WriteLog(std::format("Duel engine rules set to {} (byte 0x140C8D1C9 = {})", rules2020 ? "2020" : "2019", rules2020 ? 1 : 0), MODULE_NAME, 0);
         }
         // Credits: the built-in thanks, Yu-Gi-Oh-Ex\credits.json, what plugins add and the plugin list, then the game's own credits (Credits.h).

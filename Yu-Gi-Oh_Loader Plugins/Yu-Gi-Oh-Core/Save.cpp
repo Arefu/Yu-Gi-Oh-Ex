@@ -10,6 +10,7 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Save.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // The save is a 44008 byte blob. The game writes it to Steam Cloud as "savegame.dat" and reads
 // it back through ISteamRemoteStorage. The three functions that do that are always replaced with
@@ -21,7 +22,7 @@ constexpr const char* kIniSection = "Yu-Gi-Oh-Core";
 constexpr const char* kSteamSaveName = "savegame.dat";
 
 constexpr uintptr_t kSteamContextInitIat = 0x1409F9930;    // SteamInternal_ContextInit (import)
-constexpr uintptr_t kSteamRemoteStorageContext = 0x140C8EA50;
+constexpr uintptr_t kSteamRemoteStorageContext = YGO::Addr::g_SteamRemoteStorageContext;
 
 // ISteamRemoteStorage vtable slots (byte offsets 8, 104 and 120).
 constexpr size_t kFileReadSlot = 1;

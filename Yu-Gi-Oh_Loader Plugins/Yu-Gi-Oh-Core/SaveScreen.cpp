@@ -13,6 +13,7 @@
 #include "SaveSlots.h"
 #include "YuGiOh/YuGiOh-RIX.h"
 #include "YuGiOh/YuGiOh-SAVE.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // How the game's screens work (all traced in YuGiOh.exe.i64, see docs/SaveSlots.md):
 //  - a screen is a RIX::ScreenBase (656 bytes) with its own vftable (22 slots, base RIX::ScreenBase2 at 0x140A716B8);
@@ -44,7 +45,7 @@ namespace
     constexpr uintptr_t kGlobalInstance = 0x1429275D8;   // YGOInstance: +0x1F0 the UI, +0x200 the main screen scheduler
     constexpr size_t kMainScheduler = 0x200;
 
-    constexpr uintptr_t kHelpSelect = 0x140A7A1A0;  // the game's own help bar entry (confirm "Select")
+    constexpr uintptr_t kHelpSelect = YGO::Addr::HelpEntry_Select;  // the game's own help bar entry (confirm "Select")
 
     constexpr int kUp = 1, kDown = 2, kLeft = 4, kRight = 8, kConfirm = 0x1000;
     constexpr int kSoundConfirm = 39;            // what the title plays on Play

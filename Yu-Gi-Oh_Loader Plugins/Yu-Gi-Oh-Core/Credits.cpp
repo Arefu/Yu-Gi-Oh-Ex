@@ -14,6 +14,7 @@
 #include "Logger.h"
 #include "Save.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 using json = nlohmann::json;
 
@@ -42,7 +43,7 @@ namespace
     };
 
     auto orig_ParseCredits = reinterpret_cast<void(__fastcall*)(uint8_t*)>(0x140845400);
-    auto GameWString_Assign = reinterpret_cast<GameWString*(__fastcall*)(GameWString*, const wchar_t*, size_t)>(0x140751310);
+    auto GameWString_Assign = reinterpret_cast<GameWString*(__fastcall*)(GameWString*, const wchar_t*, size_t)>(YGO::Addr::WString_Assign);
 
     struct Section
     {
