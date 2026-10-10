@@ -9,7 +9,7 @@
 #include "TagDuel.h"
 
 #include "Yu-Gi-Oh-RIX.h"
-#include "YuGiOh/YuGiOh-RIX.h"   // the game's widgets (Dfx::AddImage / AddText) for the review page
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // Yu-Gi-Oh-TagDuel: forces the game's own (otherwise unreachable on PC) tag-duel mode on for the next duel -
 // see TagDuel.h/docs/MultiplayerSystem.md. Two ways in:
@@ -62,6 +62,23 @@ extern "C" __declspec(dllexport) void __cdecl TagDuel_SetPartners(int yourCharac
     TagDuel::SetPartners(yourCharacter, yourDeck, opponentCharacter, opponentDeck);
 }
 
+// Handicap: 0 two on two, 1 you play alone (1 vs 2), 2 the opponent plays alone (2 vs 1). Yu-Gi-Oh-Campaign skips a solo side's partner picks.
+extern "C" __declspec(dllexport) int __cdecl TagDuel_GetSoloSide()
+{
+    return static_cast<int>(TagDuel::GetFormat());
+}
+
+extern "C" __declspec(dllexport) void __cdecl TagDuel_SetFormat(int format)
+{
+    TagDuel::SetFormat(static_cast<TagDuel::Format>(format));
+}
+
+// The starting LP of the side that plays alone (the team keeps the duel's normal LP).
+extern "C" __declspec(dllexport) void __cdecl TagDuel_SetSoloLifePoints(int lp)
+{
+    TagDuel::SetSoloLifePoints(lp);
+}
+
 namespace
 {
     // The Free Duel picker (series -> opponent -> your deck, YGO::UI::FreeDuel_*) is screen 21, RIX::ScreenHardChallenge. The main menu
@@ -78,12 +95,12 @@ namespace
         reinterpret_cast<SetFlag_t>(0x140769590)(false);   // YGO__DUEL__Set_IsBattlePackMode
         reinterpret_cast<SetFlag_t>(0x140769630)(false);   // YGO__DUEL__Set_IsCampaignMode
         reinterpret_cast<SetFlag_t>(0x1407696A0)(false);   // YGO__DUEL__Set_IsChallengeMode
-        reinterpret_cast<SetFlag_t>(0x140769720)(false);   // YGO::DUEL::Set_IsDuelMultiplayer
-        reinterpret_cast<SetFlag_t>(0x1407696C0)(false);   // YGO__DUEL__Set_IsLiveSession
+        reinterpret_cast<SetFlag_t>(YGO::Addr::Duel_Set_IsDuelMultiplayer)(false);   // YGO::DUEL::Set_IsDuelMultiplayer
+        reinterpret_cast<SetFlag_t>(YGO::Addr::Duel_Set_IsLiveSession)(false);   // YGO__DUEL__Set_IsLiveSession
         reinterpret_cast<SetFlag_t>(0x140769B00)(false);   // YGO::DUEL::Set_IsTutorialDuel
         reinterpret_cast<SetFlag_t>(0x140769AD0)(false);   // Duel_Set_UseSeatControllerTable
-        reinterpret_cast<Void_t>(0x140769500)();           // YGO__DUEL__ResetMatchResults
-        reinterpret_cast<Void_t>(0x1407696E0)();           // YGO::DuelSetup::Setup_RuleAndLP
+        reinterpret_cast<Void_t>(YGO::Addr::Duel_ResetMatchResults)();           // YGO__DUEL__ResetMatchResults
+        reinterpret_cast<Void_t>(YGO::Addr::DuelSetup_Setup_RuleAndLP)();           // YGO::DuelSetup::Setup_RuleAndLP
         reinterpret_cast<Void_t>(0x14083CBB0)();           // YGO__Stats__ResetForNewSession
     }
 
@@ -106,8 +123,18 @@ namespace
 
     void __cdecl OnSeatPressed(int buttonId, void* user);
 
+    // The partner seat of a side that plays alone (handicap): nobody to choose.
+    bool SeatUnused(TagDuel::Role role)
+    {
+        return (role == TagDuel::RolePartner && TagDuel::GetFormat() == TagDuel::YouAlone) ||
+               (role == TagDuel::RoleOpponentPartner && TagDuel::GetFormat() == TagDuel::OpponentAlone);
+    }
+
     RIX_PageButton SeatButton(TagDuel::Role role)
     {
+        if (SeatUnused(role))
+            return { role == TagDuel::RolePartner ? L"Your Partner: none (you play alone)" : L"Opponent's Partner: none (they play alone)",
+                     L"In this handicap duel that side plays alone.", &OnSeatPressed, reinterpret_cast<void*>(static_cast<intptr_t>(role)) };
         const bool human = TagDuel::IsSeatHuman(role);
         return { human ? kSeatText[role].Human : kSeatText[role].AI, kSeatHelp, &OnSeatPressed, reinterpret_cast<void*>(static_cast<intptr_t>(role)) };
     }
@@ -116,6 +143,11 @@ namespace
     void __cdecl OnSeatPressed(int buttonId, void* user)
     {
         const auto role = static_cast<TagDuel::Role>(reinterpret_cast<intptr_t>(user));
+        if (SeatUnused(role))
+        {
+            reinterpret_cast<void(__fastcall*)(int)>(0x14086C280)(71);   // the "unable" sound
+            return;
+        }
         TagDuel::SetSeatHuman(role, !TagDuel::IsSeatHuman(role));
         const RIX_PageButton button = SeatButton(role);
         RIX::Functions().UpdatePageButton(static_cast<int>(role), &button);
@@ -131,16 +163,70 @@ namespace
         StartFreeDuelFlow();
     }
 
-    void __cdecl OnLocalPressed(int buttonId, void* user)
+    void OpenSeatPage()
     {
         RIX_PageDesc page{};
         page.Size = sizeof(page);
-        page.Header = L"Local Tag Duel";
+        page.Header = TagDuel::GetFormat() == TagDuel::YouAlone ? L"Handicap Duel: 1 vs 2" : TagDuel::GetFormat() == TagDuel::OpponentAlone
+            ? L"Handicap Duel: 2 vs 1" : L"Local Tag Duel";
         page.ButtonCount = 5;
         for (int role = TagDuel::RoleYou; role <= TagDuel::RoleOpponentPartner; ++role)
             page.Buttons[role] = SeatButton(static_cast<TagDuel::Role>(role));
         page.Buttons[4] = { L"Continue", L"Pick the characters and decks for each seat.", &OnContinuePressed, nullptr };
         RIX::Functions().OpenPage(&page);   // from a page button: opens on top, Back returns here
+    }
+
+    // ---- the format page: 2 vs 2, or a handicap duel where one side plays alone, and that side's starting LP.
+
+    constexpr int kSoloLifePoints[] = { 8000, 12000, 16000, 24000 };
+
+    std::wstring SoloLpText()
+    {
+        return std::format(L"Solo LP: {}", TagDuel::GetSoloLifePoints());
+    }
+
+    void __cdecl OnSoloLpPressed(int buttonId, void* user);
+
+    RIX_PageButton SoloLpButton()
+    {
+        static std::wstring text;   // the page keeps the pointer
+        text = SoloLpText();
+        return { text.c_str(), L"The starting LP of the side that plays alone (press to change). The team starts with the normal LP.",
+                 &OnSoloLpPressed, nullptr };
+    }
+
+    void __cdecl OnSoloLpPressed(int buttonId, void* user)
+    {
+        const int current = TagDuel::GetSoloLifePoints();
+        int next = kSoloLifePoints[0];
+        for (size_t i = 0; i < std::size(kSoloLifePoints); ++i)
+            if (kSoloLifePoints[i] == current)
+                next = kSoloLifePoints[(i + 1) % std::size(kSoloLifePoints)];
+        TagDuel::SetSoloLifePoints(next);
+        const RIX_PageButton button = SoloLpButton();
+        RIX::Functions().UpdatePageButton(3, &button);
+    }
+
+    // user = the TagDuel::Format
+    void __cdecl OnFormatPressed(int buttonId, void* user)
+    {
+        TagDuel::SetFormat(static_cast<TagDuel::Format>(reinterpret_cast<intptr_t>(user)));
+        OpenSeatPage();
+    }
+
+    void __cdecl OnLocalPressed(int buttonId, void* user)
+    {
+        RIX_PageDesc page{};
+        page.Size = sizeof(page);
+        page.Header = L"Local Tag Duel";
+        page.ButtonCount = 4;
+        page.Buttons[0] = { L"2 vs 2", L"Two teams of two.", &OnFormatPressed, reinterpret_cast<void*>(static_cast<intptr_t>(TagDuel::TwoOnTwo)) };
+        page.Buttons[1] = { L"Handicap: 1 vs 2", L"You play alone against a team of two: you take every one of your side's turns.",
+                            &OnFormatPressed, reinterpret_cast<void*>(static_cast<intptr_t>(TagDuel::YouAlone)) };
+        page.Buttons[2] = { L"Handicap: 2 vs 1", L"You and a partner against one duelist who plays alone.",
+                            &OnFormatPressed, reinterpret_cast<void*>(static_cast<intptr_t>(TagDuel::OpponentAlone)) };
+        page.Buttons[3] = SoloLpButton();
+        RIX::Functions().OpenPage(&page);
     }
 
     // Co-op isn't ready: the game's "unable" sound (YGO::UI::PlayUISound 0x14086C280, slot 71) and nothing else.
@@ -153,9 +239,9 @@ namespace
 
     struct Review { int YourDeck = -1; int YourCharacter = -1; int OpponentCharacter = -1; int OpponentDeck = -1; } g_Review;
 
-    const auto CharacterName = reinterpret_cast<const wchar_t*(__fastcall*)(int)>(0x1407FEC70);          // YGO::GAME::Get_CharacterName
+    const auto CharacterName = reinterpret_cast<const wchar_t*(__fastcall*)(int)>(YGO::Addr::Game_Get_CharacterName);          // YGO::GAME::Get_CharacterName
     // Deck_FromId (0x14081AB40) -> YGO::SAVE::DeckListItem: +0 name (wchar_t[33]), +0x120 RecordSlot (the deck's character).
-    const auto DeckFromId = reinterpret_cast<const char*(__fastcall*)(unsigned int profile, unsigned int deck)>(0x14081AB40);
+    const auto DeckFromId = reinterpret_cast<const char*(__fastcall*)(unsigned int profile, unsigned int deck)>(YGO::Addr::Deck_FromId);
     constexpr unsigned int kCurrentProfile = 0xFFFFFFFD;
 
     std::wstring DeckName(int deck)
@@ -178,37 +264,39 @@ namespace
     void StartReviewedDuel()
     {
         using SetSide_t = void(__fastcall*)(int side, unsigned int value);
-        const auto setCharacter = reinterpret_cast<SetSide_t>(0x140769670);                            // Set_DuelSideCharacter
+        const auto setCharacter = reinterpret_cast<SetSide_t>(YGO::Addr::Duel_Set_DuelSideCharacter);                            // Set_DuelSideCharacter
         const auto setDeck = reinterpret_cast<SetSide_t>(0x140769690);                                 // Set_DuelSideDeck
         ClearDuelModes();   // a plain free duel (and the match results reset, as Free Duel's own start does)
         setCharacter(0, static_cast<unsigned int>(YourCharacter()));
         setDeck(0, static_cast<unsigned int>(g_Review.YourDeck));
         reinterpret_cast<void(__fastcall*)(unsigned int)>(0x140769A20)(static_cast<unsigned int>(g_Review.YourDeck));   // remember it as last used
         if (g_Review.OpponentCharacter >= 0 && g_Review.OpponentCharacter < 240)                      // g_CharacterRecords +0x14 = arena
-            reinterpret_cast<void(__fastcall*)(int)>(0x140769540)(*reinterpret_cast<const int*>(0x142913470 + 0x68 * g_Review.OpponentCharacter + 0x14));
+            reinterpret_cast<void(__fastcall*)(int)>(YGO::Addr::Duel_Set_CurrentArenaId)(*reinterpret_cast<const int*>(YGO::Addr::g_CharacterRecords + 0x68 * g_Review.OpponentCharacter + 0x14));
         setCharacter(1, static_cast<unsigned int>(g_Review.OpponentCharacter));
         setDeck(1, static_cast<unsigned int>(g_Review.OpponentDeck));
 
         Logger::WriteLog("Tag Duel review: Let's Duel!", MODULE_NAME, 0);
-        void* ui = reinterpret_cast<void*(__fastcall*)()>(0x1408121B0)();                              // RIX::App::GetUI
-        void* scheduler = reinterpret_cast<void*(__fastcall*)(void*)>(0x140807F60)(ui);                // RIX::UI::GetScheduler
-        reinterpret_cast<char(__fastcall*)(void*, void*, int)>(0x14083CA10)(scheduler, ui, 0);        // Screen_GotoDuel
+        void* ui = reinterpret_cast<void*(__fastcall*)()>(YGO::Addr::App_GetUI)();                              // RIX::App::GetUI
+        void* scheduler = reinterpret_cast<void*(__fastcall*)(void*)>(YGO::Addr::UI_GetScheduler)(ui);                // RIX::UI::GetScheduler
+        reinterpret_cast<char(__fastcall*)(void*, void*, int)>(YGO::Addr::Screen_GotoDuel)(scheduler, ui, 0);        // Screen_GotoDuel
     }
 
     // The review's widgets, lobby style: the two teams side by side (blue yours, red the opponent's), each seat a portrait
     // (pdui/chars "<character key>_neutral", as YGO::GAME::Character_GetPortraitName builds it) over its name and deck. Drawn on the
-    // screen Yu-Gi-Oh-Campaign hands over (Free Duel, screen 21) - its last step - and taken off again (YuGiOh-RIX.h YGO::RIX::Dfx).
-    namespace Dfx = YGO::RIX::Dfx;
+    // screen Yu-Gi-Oh-Campaign hands over (Free Duel, screen 21) - its last step - and taken off again, through Yu-Gi-Oh-RIX's widget API
+    // (RIX_AddImage / RIX_AddText / RIX_RemoveNode).
 
     struct ReviewSeat
     {
         std::wstring Name, Role, Deck, Control;
         std::string Portrait;   // sprite in pdui/chars
+        std::wstring LifePoints; // shown under the deck for a side that plays alone
+        bool Hidden = false;     // the partner seat of a side that plays alone
         bool Blue = true;
         float X = 0;            // left edge of the seat's column
     };
     ReviewSeat g_Seats[4];
-    std::vector<YGO::RIX::SharedNode> g_ReviewNodes;
+    std::vector<void*> g_ReviewNodes;   // RIX widget handles
     void* g_ReviewScreen = nullptr;
 
     // Layout (1920 x 1080): each team is a 600 px block of two 280 px columns 40 apart; the blocks sit either side of a 200 px "VS" gap
@@ -239,65 +327,76 @@ namespace
         }
         seat.Deck = DeckName(deck);
         if (character >= 0 && character < 240)
-            if (const char* key = *reinterpret_cast<const char* const*>(0x142913470 + 0x68 * character + 0x20))   // CharacterRecord.Key
+            if (const char* key = *reinterpret_cast<const char* const*>(YGO::Addr::g_CharacterRecords + 0x68 * character + 0x20))   // CharacterRecord.Key
                 seat.Portrait = std::string(key) + "_neutral";
         seat.Blue = blue;
         seat.X = x;
         return seat;
     }
 
-    void AddNode(YGO::RIX::SharedNode node)
+    void AddNode(void* node)
     {
-        if (node.Node)
+        if (node)
             g_ReviewNodes.push_back(node);
+    }
+
+    void* AddText(const wchar_t* text, int z, float x, float y, float width, float size, int align, uint32_t colour)
+    {
+        return RIX::Functions().AddText(g_ReviewScreen, text, z, x, y, width, size, align, colour);
+    }
+
+    void* AddImage(const char* resource, const char* sprite, int z, float x, float y, float width, float height)
+    {
+        return RIX::Functions().AddImage(g_ReviewScreen, resource, sprite, z, x, y, width, height);
     }
 
     // One line of text centred on a seat's column, never wrapped: Width 0 = no box, X is the centre. Long text gets a smaller size so it
     // fits the column - the game's PD font is wide, about 1.0 x the pixel size per character (measured on the review: "Yami Yugi" at 32).
-    void AddFittedLine(const YGO::RIX::SharedNode* root, const std::wstring& text, float columnX, float y, float size, uint32_t colour)
+    void AddFittedLine(const std::wstring& text, float columnX, float y, float size, uint32_t colour)
     {
         constexpr float kCharWidth = 1.0f, kMinSize = 14.0f;
         const float fit = 0.95f * kColumnWidth / (kCharWidth * static_cast<float>((std::max)(text.size(), size_t{ 1 })));
         const float fitted = (std::max)(kMinSize, (std::min)(size, fit));
-        AddNode(Dfx::AddText(root, text.c_str(), kZ + 1, columnX + kColumnWidth / 2, y + (size - fitted) / 2, 0.0f, fitted, Dfx::TextAlign::Centre,
-            colour));
+        AddNode(AddText(text.c_str(), kZ + 1, columnX + kColumnWidth / 2, y + (size - fitted) / 2, 0.0f, fitted, RIX_ALIGN_CENTRE, colour));
     }
 
     void __cdecl ShowReview(void* screen, void* user)
     {
-        if (!g_ReviewNodes.empty())
+        if (!g_ReviewNodes.empty() || !RIX::Functions().AddText)
             return;
         g_ReviewScreen = screen;
-        const YGO::RIX::SharedNode* root = YGO::RIX::ScreenRoot(screen);
         constexpr uint32_t kBlue = 0xFF7FC4FF, kRed = 0xFFFF7F7F, kWhite = 0xFFFFFFFF, kGrey = 0xFFC8C8C8;
 
-        AddNode(Dfx::AddText(root, L"VS", kZ, 960.0f - kCentreGap / 2, kPortraitY + kPortraitSize / 2 - 44, kCentreGap, 88, Dfx::TextAlign::Centre, kWhite));
+        AddNode(AddText(L"VS", kZ, 960.0f - kCentreGap / 2, kPortraitY + kPortraitSize / 2 - 44, kCentreGap, 88, RIX_ALIGN_CENTRE, kWhite));
 
         for (const ReviewSeat& seat : g_Seats)
         {
-            AddNode(Dfx::AddText(root, seat.Control.c_str(), kZ + 1, seat.X, kPortraitY - 64, kColumnWidth, 32, Dfx::TextAlign::Centre,
+            if (seat.Hidden)
+                continue;
+            AddNode(AddText(seat.Control.c_str(), kZ + 1, seat.X, kPortraitY - 64, kColumnWidth, 32, RIX_ALIGN_CENTRE,
                 seat.Control != L"AI" ? 0xFFFFE066 : kGrey));   // gold for a human seat
             if (!seat.Portrait.empty())
             {
-                const YGO::RIX::SharedNode face = Dfx::AddImage(root, "pdui/chars", seat.Portrait.c_str(), kZ, seat.X + (kColumnWidth - kPortraitSize) / 2,
-                    kPortraitY, kPortraitSize, kPortraitSize);
-                if (!face.Node)
+                void* face = AddImage("pdui/chars", seat.Portrait.c_str(), kZ, seat.X + (kColumnWidth - kPortraitSize) / 2, kPortraitY, kPortraitSize,
+                    kPortraitSize);
+                if (!face)
                     Logger::WriteLog(std::format("Tag Duel review: portrait {} not found in pdui/chars", seat.Portrait), MODULE_NAME, 1);
                 AddNode(face);
             }
             // The name plate the game uses for player names, blue or red by team (text only when the sheet lacks it).
-            AddNode(Dfx::AddImage(root, "pdui/shared", seat.Blue ? "gamertag_blue" : "gamertag_red", kZ, seat.X, kPlateY, kColumnWidth, kPlateHeight));
+            AddNode(AddImage("pdui/shared", seat.Blue ? "gamertag_blue" : "gamertag_red", kZ, seat.X, kPlateY, kColumnWidth, kPlateHeight));
             // Name, then the deck a fixed 56 px below it: each one line, shrunk to fit when long.
-            AddFittedLine(root, seat.Name, seat.X, kPlateY + (kPlateHeight - 32) / 2, 32.0f, kWhite);
-            AddFittedLine(root, seat.Deck, seat.X, kPlateY + (kPlateHeight - 32) / 2 + 56, 23.0f, kGrey);
+            AddFittedLine(seat.Name, seat.X, kPlateY + (kPlateHeight - 32) / 2, 32.0f, kWhite);
+            AddFittedLine(seat.Deck, seat.X, kPlateY + (kPlateHeight - 32) / 2 + 56, 23.0f, kGrey);
+            if (!seat.LifePoints.empty())
+                AddFittedLine(seat.LifePoints, seat.X, kPlateY + (kPlateHeight - 32) / 2 + 96, 26.0f, 0xFFFFE066);
         }
     }
 
     void RemoveReviewNodes(void* screen)
     {
-        const YGO::RIX::SharedNode* root = YGO::RIX::ScreenRoot(g_ReviewScreen ? g_ReviewScreen : screen);
-        for (auto& node : g_ReviewNodes)
-            Dfx::RemoveImage(root, node);
+        for (void* node : g_ReviewNodes)
+            RIX::Functions().RemoveNode(node);
         g_ReviewNodes.clear();
         g_ReviewScreen = nullptr;
     }
@@ -310,6 +409,16 @@ namespace
         g_Seats[2] = MakeSeat(L"Opponent", TagDuel::RoleOpponent, g_Review.OpponentCharacter, g_Review.OpponentDeck, false, kRedX);
         g_Seats[3] = MakeSeat(L"Opponent's Partner", TagDuel::RoleOpponentPartner, TagDuel::PartnerCharacter(1), TagDuel::PartnerDeck(1), false,
             kRedX + kColumnWidth + kColumnGap);
+
+        // Handicap: the side that plays alone is one seat, centred in its team's block, with its starting LP.
+        const TagDuel::Format format = TagDuel::GetFormat();
+        if (format != TagDuel::TwoOnTwo)
+        {
+            ReviewSeat& lead = g_Seats[format == TagDuel::YouAlone ? 0 : 2];
+            g_Seats[format == TagDuel::YouAlone ? 1 : 3].Hidden = true;
+            lead.X = (format == TagDuel::YouAlone ? kBlueX : kRedX) + (kBlockWidth - kColumnWidth) / 2;
+            lead.LifePoints = std::format(L"{} LP", TagDuel::GetSoloLifePoints());
+        }
     }
 
     // The main menu's Tag Duel button: Local (the seat screen, then Free Duel) or Co-Op (online, not ready).
@@ -319,7 +428,8 @@ namespace
         page.Size = sizeof(page);
         page.Header = L"Tag Duel";
         page.ButtonCount = 2;
-        page.Buttons[0] = { L"Local", L"Two-on-two on this machine: choose who is AI and who is human.", &OnLocalPressed, nullptr };
+        page.Buttons[0] = { L"Local", L"Two on two, or a handicap duel (1 vs 2 / 2 vs 1), on this machine: choose who is AI and who is human.",
+                            &OnLocalPressed, nullptr };
         page.Buttons[1] = { L"Co-Op (Coming Soon)", L"Coming soon: tag duels with other players.", &OnComingSoonPressed, nullptr };
         const int opened = RIX::Functions().OpenPage(&page);
         Logger::WriteLog(std::format("Tag Duel page {}", opened ? "opened" : "FAILED to open"), MODULE_NAME, opened ? 0 : 2);

@@ -39,6 +39,14 @@ namespace TagDuel
     int PartnerCharacter(int which);
     int PartnerDeck(int which);
 
+    // Handicap: one side plays alone against a team. The solo duelist plays every one of their side's turns with one hand and deck (the
+    // partner seat mirrors them and is never swapped in) and starts with SoloLifePoints; the team starts with the duel's normal LP.
+    enum Format : int { TwoOnTwo = 0, YouAlone = 1, OpponentAlone = 2 };   // YouAlone = 1 vs 2, OpponentAlone = 2 vs 1
+    void SetFormat(Format format);
+    Format GetFormat();
+    void SetSoloLifePoints(int lp);
+    int GetSoloLifePoints();
+
     // Online duels. The game's online setup turns tag off and only knows 2 seats, so a tag duel in an online match would put the two
     // games out of step: TagDuel stays out of online duels unless a multiplayer plugin (Yu-Gi-Oh-MP) says it handles them, and then
     // that plugin sets the seat controllers (one machine runs each AI seat, the other sees it as Network).

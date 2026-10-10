@@ -12,6 +12,7 @@
 
 #include "TagDuel.h"
 #include "Logger.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // How the engine runs a tag duel (YuGiOh.exe.i64, docs/MultiplayerSystem.md "Tag duel"):
 //
@@ -60,11 +61,11 @@ namespace
 
     // YGO::DUEL::Set_IsTagDuel (0x140769AC0)
     using SetIsTagDuel_t = void(__fastcall*)(bool);
-    SetIsTagDuel_t Call_SetIsTagDuel = reinterpret_cast<SetIsTagDuel_t>(0x140769AC0);
+    SetIsTagDuel_t Call_SetIsTagDuel = reinterpret_cast<SetIsTagDuel_t>(YGO::Addr::Duel_Set_IsTagDuel);
 
     // YGO__DUEL__Get_LocalPlayerSeat (0x140768F80)
     using GetLocalSeat_t = int(__fastcall*)();
-    GetLocalSeat_t Call_GetLocalSeat = reinterpret_cast<GetLocalSeat_t>(0x140768F80);
+    GetLocalSeat_t Call_GetLocalSeat = reinterpret_cast<GetLocalSeat_t>(YGO::Addr::Duel_Get_LocalPlayerSeat);
 
     // Duel_PlayerRecords (0x142793578): one 0x4820-byte record per seat. Its deck (what Engine_CopySeatDeckFromRecord reads) is
     // u16s at +0x40: [33] main count, [34] extra count, [35] side count, [36..95] main ids, [96..110] extra, [111..125] side.
@@ -126,7 +127,7 @@ namespace
     // Deck_FromId (0x14081AB40) -> YGO::SAVE::DeckListItem. From +0x42 it has the seat record's layout: the three counts, then main 60,
     // extra 15, side 15 - words 33..125 of both.
     using DeckFromId_t = const uint16_t*(__fastcall*)(unsigned int profile, unsigned int deckId);
-    DeckFromId_t Call_DeckFromId = reinterpret_cast<DeckFromId_t>(0x14081AB40);
+    DeckFromId_t Call_DeckFromId = reinterpret_cast<DeckFromId_t>(YGO::Addr::Deck_FromId);
     constexpr unsigned int kCurrentProfile = 0xFFFFFFFD;
 
     bool CopyPickedDeck(uint16_t* deck, int deckId)
@@ -172,12 +173,12 @@ namespace
 
     // YGO::DUEL::Engine_Init (0x1407BC4C0) - takes no arguments, returns a status byte.
     using EngineInit_t = char(__fastcall*)();
-    EngineInit_t orig_EngineInit = reinterpret_cast<EngineInit_t>(0x1407BC4C0);
+    EngineInit_t orig_EngineInit = reinterpret_cast<EngineInit_t>(YGO::Addr::Duel_Engine_Init);
 
     // YGO::DUEL::Duel_LoadEngineFromFrontBlock (0x140082960): the partner swap. Both callers (the NextTurn handler) reload their
     // registers after the call, so a plain detour is safe.
     using LoadEngineFromFrontBlock_t = __int64(__fastcall*)(int);
-    LoadEngineFromFrontBlock_t orig_LoadEngineFromFrontBlock = reinterpret_cast<LoadEngineFromFrontBlock_t>(0x140082960);
+    LoadEngineFromFrontBlock_t orig_LoadEngineFromFrontBlock = reinterpret_cast<LoadEngineFromFrontBlock_t>(YGO::Addr::Duel_LoadEngineFromFrontBlock);
 
     std::atomic<bool> g_SharedThisDuel = false;
     std::atomic<bool> g_AllowInMultiplayer = false;
@@ -186,7 +187,7 @@ namespace
 
     // YGO::DUEL::Get_IsDuelMultiplayer (0x1407691D0)
     using GetIsMultiplayer_t = bool(__fastcall*)();
-    GetIsMultiplayer_t Call_GetIsDuelMultiplayer = reinterpret_cast<GetIsMultiplayer_t>(0x1407691D0);
+    GetIsMultiplayer_t Call_GetIsDuelMultiplayer = reinterpret_cast<GetIsMultiplayer_t>(YGO::Addr::Duel_Get_IsDuelMultiplayer);
 
     // The engine's own per-seat controller table (a leftover debug mode, YuGiOh.exe.i64): when g_bUseSeatControllerTable is set,
     // Engine_Init gives seat i the controller g_SeatControllerTable[i] instead of "local seat human, the rest AI / network". Set only
@@ -196,6 +197,20 @@ namespace
 
     // The Local seat screen's toggles, by TagDuel::Role.
     std::atomic<bool> g_SeatHuman[4] = { true, false, false, false };
+
+    // Handicap (TagDuel::Format) and the solo side's starting LP. g_SoloParity: the side (seat parity) playing alone in THIS duel, -1 none;
+    // set in Engine_Init for an armed tag duel. g_LpPending: the solo side's LP still to be applied at the duel's opening LP set.
+    std::atomic<int> g_Format = TagDuel::TwoOnTwo;
+    std::atomic<int> g_SoloLifePoints = 8000;
+    std::atomic<int> g_SoloParity = -1;
+    std::atomic<bool> g_LpPending = false;
+
+    // Which seat parity plays alone for the current format (-1 none): you = the local seat's side.
+    int SoloParityFor(int format)
+    {
+        const int you = Call_GetLocalSeat() & 1;
+        return format == TagDuel::YouAlone ? you : format == TagDuel::OpponentAlone ? 1 - you : -1;
+    }
 
     // Seats pair by parity: 0 & 2 are one team, 1 & 3 the other.
     void ControllersFromRoles(int (&out)[4])
@@ -207,6 +222,8 @@ namespace
         out[you + 2] = of(TagDuel::RolePartner);
         out[opponent] = of(TagDuel::RoleOpponent);
         out[opponent + 2] = of(TagDuel::RoleOpponentPartner);
+        if (const int solo = SoloParityFor(g_Format); solo >= 0)
+            out[solo + 2] = out[solo];   // the mirrored partner seat of a side playing alone
     }
 
     // A human on the opponent's team needs the game's local-versus mode for the whole duel: with g_bUseSeatControllerTable set,
@@ -245,8 +262,8 @@ namespace
     // gives seats 0..Get_NumberOfPlayers()-1 Duel_SetupSeat(seat, g_DuelSideCharacters[seat], Deck_FromId(g_DuelSideDecks[seat])) -
     // 4 seats once tag is on. So for an armed Free Duel the game sets the partners up itself (portrait, name, deck in the seat record).
     using Void_t = void(__fastcall*)();
-    Void_t orig_AssignSeatDecks = reinterpret_cast<Void_t>(0x14081E530);
-    const auto Call_SetSideCharacter = reinterpret_cast<void(__fastcall*)(int side, unsigned int character)>(0x140769670);   // Set_DuelSideCharacter
+    Void_t orig_AssignSeatDecks = reinterpret_cast<Void_t>(YGO::Addr::DuelSetup_AssignSeatDecksAndDuelists);
+    const auto Call_SetSideCharacter = reinterpret_cast<void(__fastcall*)(int side, unsigned int character)>(YGO::Addr::Duel_Set_DuelSideCharacter);   // Set_DuelSideCharacter
     const auto Call_SetSideDeck = reinterpret_cast<void(__fastcall*)(int side, unsigned int deck)>(0x140769690);             // Set_DuelSideDeck
     auto* const g_DuelSideDecks = reinterpret_cast<const int*>(0x140C8D208);                                              // int[4]
 
@@ -255,7 +272,7 @@ namespace
     {
         if (character < 0 || character >= 240)
             return -1;
-        const int index = *reinterpret_cast<const int*>(0x142913470 + 0x68 * static_cast<uintptr_t>(character) + 8);
+        const int index = *reinterpret_cast<const int*>(YGO::Addr::g_CharacterRecords + 0x68 * static_cast<uintptr_t>(character) + 8);
         return index >= 0 ? index + 32 : -1;
     }
 
@@ -272,14 +289,24 @@ namespace
         Call_SetIsTagDuel(true);   // Get_NumberOfPlayers() = 4 from here
         const int you = Call_GetLocalSeat() & 1;
         const int teams[2] = { you, 1 - you };
+        const int soloParity = SoloParityFor(g_Format);
         for (int i = 0; i < 2; ++i)
         {
             const int seat = teams[i] + 2;
+            if (teams[i] == soloParity)
+            {
+                // Plays alone: the partner seat mirrors the lead (it is never swapped in, but the engine still wants a full seat).
+                const unsigned int character = reinterpret_cast<const unsigned int*>(YGO::Addr::g_DuelSideCharacters)[teams[i]];
+                Call_SetSideCharacter(seat, character);
+                Call_SetSideDeck(seat, static_cast<unsigned int>(g_DuelSideDecks[teams[i]]));
+                Logger::WriteLog(std::format("TagDuel: seat {} mirrors seat {} (that side plays alone, handicap)", seat, teams[i]), MODULE_NAME, 69);
+                continue;
+            }
             int character = g_PartnerCharacter[i];
             if (character <= 0)
             {
                 // Character 0 would become 105 (the default avatar) in Set_DuelSideCharacter: use the teammate's character instead.
-                character = static_cast<int>(reinterpret_cast<const unsigned int*>(0x140C8D1F8)[teams[i]]);   // g_DuelSideCharacters
+                character = static_cast<int>(reinterpret_cast<const unsigned int*>(YGO::Addr::g_DuelSideCharacters)[teams[i]]);   // g_DuelSideCharacters
                 Logger::WriteLog(std::format("TagDuel: no character picked for seat {} - using its teammate's ({})", seat, character), MODULE_NAME, 1);
             }
             int deck = g_PickedPartnerDeck[i];
@@ -290,7 +317,7 @@ namespace
             Call_SetSideCharacter(seat, static_cast<unsigned int>(character));
             Call_SetSideDeck(seat, static_cast<unsigned int>(deck));
             char name[128]{};
-            if (const auto wide = reinterpret_cast<const wchar_t*(__fastcall*)(int)>(0x1407FEC70)(character))   // YGO::GAME::Get_CharacterName
+            if (const auto wide = reinterpret_cast<const wchar_t*(__fastcall*)(int)>(YGO::Addr::Game_Get_CharacterName)(character))   // YGO::GAME::Get_CharacterName
                 WideCharToMultiByte(CP_UTF8, 0, wide, -1, name, sizeof(name) - 1, nullptr, nullptr);
             Logger::WriteLog(std::format("TagDuel: seat {} ({}) = character {} ({}), deck {}", seat, i == 0 ? "your partner" : "opponent's partner",
                 character, name, deck), MODULE_NAME, 69);
@@ -303,6 +330,8 @@ namespace
     {
         ReleaseHeldFlag("new duel");
         g_SharedThisDuel = false;
+        g_SoloParity = -1;
+        g_LpPending = false;
         if (g_Enabled && Call_GetIsDuelMultiplayer() && !g_AllowInMultiplayer)
         {
             Logger::WriteLog("TagDuel: online duel - left as the game set it up (no multiplayer plugin handles tag duels yet)", MODULE_NAME, 1);
@@ -320,6 +349,13 @@ namespace
         if (g_Enabled)
         {
             Call_SetIsTagDuel(true);
+            if (!online)
+            {
+                g_SoloParity = SoloParityFor(g_Format);
+                g_LpPending = g_SoloParity >= 0;
+                if (g_SoloParity >= 0)
+                    Logger::WriteLog(std::format("TagDuel: handicap - side {} plays alone ({} LP)", g_SoloParity.load(), g_SoloLifePoints.load()), MODULE_NAME, 0);
+            }
             const DeckMode mode = ReadDeckMode();
             if (mode == DeckMode::Shared)
             {
@@ -375,7 +411,7 @@ namespace
     // stru_143497C40.PlayerOne.iNumberOfCardsInHand, one PlayerState (869 dwords) per side
     int HandCount(int side)
     {
-        const auto* hand = reinterpret_cast<const int*>(0x143497C40) + 869 * (side & 1);
+        const auto* hand = reinterpret_cast<const int*>(YGO::Addr::Duel_PlayerStates) + 869 * (side & 1);
         return hand[0xC / 4];
     }
 
@@ -383,12 +419,39 @@ namespace
     {
         if (g_SharedThisDuel)
             return 0;
+        if ((side & 1) == g_SoloParity)
+        {
+            Logger::WriteLog(std::format("TagDuel: side {} plays alone - no partner swap (turn counter {})", side, *g_DuelTurnCounter), MODULE_NAME, 69);
+            return 0;
+        }
         const int before = HandCount(side);
         Logger::WriteLog(std::format("TagDuel: partner swap side {} starting (turn counter {}, rules {:#x}, hand {})", side, *g_DuelTurnCounter,
             *g_DuelRules & 0xFF0F, before), MODULE_NAME, 69);
         const __int64 result = orig_LoadEngineFromFrontBlock(side);
         Logger::WriteLog(std::format("TagDuel: partner swap side {} done: hand {} -> {}", side, before, HandCount(side)), MODULE_NAME, 69);
         return result;
+    }
+
+    // The opening LP: Draw_DuelAnimationFromId's LP case writes Get_StartingLifePoints() into each side's (XOR-encoded) LP and then calls
+    // DuelAnim__LP_SetShown(side, lp) (0x1407BD0F0) for the counter. For the side playing alone that first call is redone with its own LP,
+    // in the PlayerState (what the engine reads) and on the counter. Only the first time after Engine_Init, and only with the starting value.
+    using LpSetShown_t = __int64(__fastcall*)(int, unsigned int);
+    LpSetShown_t orig_LpSetShown = reinterpret_cast<LpSetShown_t>(0x1407BD0F0);
+    const auto Call_GetStartingLifePoints = reinterpret_cast<int(__fastcall*)()>(0x140768DC0);   // YGO::DUEL::Get_StartingLifePoints
+    auto* const g_LpXorKey = reinterpret_cast<const uint16_t*>(0x143330280);   // Duel_DuelEngine.LpXorKey (u16, +0; YuGiOh-DUELSTATE.h)
+
+    __int64 __fastcall Hook_LpSetShown(int side, unsigned int lp)
+    {
+        if (g_LpPending && (side & 1) == g_SoloParity && static_cast<int>(lp) == Call_GetStartingLifePoints())
+        {
+            g_LpPending = false;
+            const int solo = g_SoloLifePoints;
+            auto* stored = reinterpret_cast<uint32_t*>(YGO::Addr::Duel_PlayerStates) + 869 * (side & 1);   // PlayerState +0: LP ^ key
+            *stored = static_cast<uint32_t>(solo) ^ *g_LpXorKey;
+            Logger::WriteLog(std::format("TagDuel: side {} (alone) starts with {} LP", side, solo), MODULE_NAME, 0);
+            return orig_LpSetShown(side, static_cast<unsigned int>(solo));
+        }
+        return orig_LpSetShown(side, lp);
     }
 }
 
@@ -400,6 +463,7 @@ void TagDuel::Setup()
     DetourAttach(&(PVOID&)orig_LoadEngineFromFrontBlock, Hook_LoadEngineFromFrontBlock);
     DetourAttach(&(PVOID&)orig_GameResultOnEnter, Hook_GameResultOnEnter);
     DetourAttach(&(PVOID&)orig_AssignSeatDecks, Hook_AssignSeatDecks);
+    DetourAttach(&(PVOID&)orig_LpSetShown, Hook_LpSetShown);
     const LONG error = DetourTransactionCommit();
     Logger::WriteLog(std::format("TagDuel: hooks {} (Engine_Init, Duel_LoadEngineFromFrontBlock, ScreenGameResult OnEnter) - the Tag Duel menu buttons or TagDuel_SetEnabled(true) turn it on",
         error == NO_ERROR ? "attached" : std::format("FAILED (Detours error {})", error)), MODULE_NAME, error == NO_ERROR ? 0 : 2);
@@ -459,6 +523,29 @@ void TagDuel::SetSeatHuman(Role role, bool human)
 bool TagDuel::IsSeatHuman(Role role)
 {
     return role >= RoleYou && role <= RoleOpponentPartner && g_SeatHuman[role];
+}
+
+void TagDuel::SetFormat(Format format)
+{
+    if (format < TwoOnTwo || format > OpponentAlone)
+        return;
+    Logger::WriteLog(std::format("TagDuel::SetFormat({})", static_cast<int>(format)), MODULE_NAME, 0);
+    g_Format = format;
+}
+
+TagDuel::Format TagDuel::GetFormat()
+{
+    return static_cast<Format>(g_Format.load());
+}
+
+void TagDuel::SetSoloLifePoints(int lp)
+{
+    g_SoloLifePoints = (std::clamp)(lp, 100, 99999999);
+}
+
+int TagDuel::GetSoloLifePoints()
+{
+    return g_SoloLifePoints;
 }
 
 void TagDuel::AllowInMultiplayer(bool on)
