@@ -38,9 +38,10 @@ card up with `List_BinarySearchRowByKonamiId` (0x14076C340). That is a **binary 
   Xyz checks, effect filters. A mode-0 card therefore *is* its target in every duel name test.
 * `Setup_FullCardProps` copies the two ids to `FULL_CARD_PROPS` +0x6C (`Get_CardIdentityIdFromKonamiId`, 0x14076D5F0) and +0x70
   (`Get_CardSameFromKonamiId`, 0x14076D610).
-* **Open question:** no reader of the same-name id (+0x2E / FULL_CARD_PROPS +0x70) has been found yet. The "while on the field" part
-  of mode 0x100 probably comes from the card's own effect rows. So changing a mode-0x100 row may do nothing until that reader is
-  found. Mode 0 works through `Card_IsSameName`.
+* **Mode 0x100 does nothing in the exe (checked 2026-10-11).** Nothing reads the same-name id after load: not CardProps +0x2E, not
+  FULL_CARD_PROPS +0x70 (no xrefs to 0x142927670), not the raw `CardDataFiles.CardSame` buffer (it is only used inside
+  Setup_CardPropTable). The "while on the field / in the GY" name of Cyber Dragon Zwei and the like comes from the card's own effect
+  rows. The rows are still kept and editable, but only **always** (mode 0) changes how duels treat a card.
 * **The chain is not followed.** A target that has its own row is still compared by its own id.
 * Ids 14969 and up (custom cards) are never looked up. A row for a custom card is ignored, which is why custom cards use cards.json.
 

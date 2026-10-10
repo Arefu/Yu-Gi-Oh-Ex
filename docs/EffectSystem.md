@@ -677,3 +677,44 @@ build_summon_tables.py). Not tested in a duel: Day-Breaker with 2 non-Spellcaste
 the Effect library reads it (effect_reference.json); Compile overrides it (an empty script asks, then means no effect); "Use the game's
 effect" drops the entry. The Effect library's "Use" fills the selected game card too. The page is now an IContentPanel saving effects.json
 (`GameEffectsFile`, `GameEffectCard` in Content\GameEffects.cs); content.json / mods map effects.json to Yu-Gi-Oh-Effects.
+
+## 44. Continuous locks: Jinzo, Royal Decree, Spell Canceller, Skill Drain (2026-10-11)
+
+Jinzo (4758) "Trap Cards, and their effects on the field, cannot be activated. Negate all Trap effects on the field." has no row in any effect table. The
+engine rebuilds a **lock state** (an int struct on the caller's stack) whenever it needs it, in `Duel_BuildContinuousLockState` (0x14010EAA0), from
+**hard-coded card ids**. Six callers use it, among them:
+
+* `Duel_IsActivationLocked` (0x140111690, player, zone, card): the card can't be activated.
+* `Duel_ApplyLockNegatedBits` (0x140111440): sets or clears each zone's "negated" bit (UNK_02 0x80). Monsters go through
+  `Duel_IsMonsterEffectNegatedByLocks` (0x1401103A0) and Spell/Trap zones through `Duel_IsSpellTrapNegatedByLocks` (0x140110B50).
+
+| Slot | Meaning | Vanilla cards that set it |
+|---|---|---|
+| +0 / +4 | player 0 / 1's **Traps** can't be activated and are negated. 1 = all; a larger value = only cards activated after that activation number | Jinzo 4758 face-up in a Monster Zone (both players; with Amplifier 4819 equipped only the opponent), Royal Decree 4866 (threshold), 7580, 7114 face-up, 5984, markers 8223 / 9592 |
+| +12 / +16 | player 0 / 1's **Spells**, the same way | Spell Canceller 5594, Silent Swordsman LV7 6166, S/T 4960 / 5989 |
+| +20/+24, +28/+32 | player 0 / 1's **monster effects** negated (compared with each card's activation number) | Skill Drain 5740 |
+| +88 / +92 / +96 / +100 | Continuous Traps / Continuous Spells / Field Spells / Equip Spells can't be activated (no side) | 6598, markers 4945..4942 |
+| +108 | everything except Normal / Ritual Spells, and monster effects in some zones | 10298 |
+| +112 / +116 | player 0 / 1 may activate anyway (exemption) | 11274 |
+| +52..+84 | narrower monster locks: counters (6801), DARK (8179), archetype 70 (8313), Fusion/Synchro/Xyz (12316), Extra Monster Zone (14476), The Monarchs Erupt | |
+
+A lock card counts only while it is face-up, isn't marked disabled, and `Duel_IsCardExemptFromLocks` (0x14010E0E0) is 0. That check lists the
+per-card immunities.
+
+**Built (Yu-Gi-Oh-Effects `Lock.cpp`, untested in a duel):** a hook on the builder runs the game's version, then adds every card with a lock that
+is face-up in its zone and not exempt.
+
+* **Where a lock comes from:**
+  * `"lock"` on a cards.json entry, or inside its compiled `"effectClone"` (the script statement);
+  * effects.json: a `"lock"` of its own (the game card keeps its effect), or inside an overridden card's `"effectClone"`.
+* **Keys:** `{ "traps", "spells", "monsters", "continuousTraps", "continuousSpells", "fieldSpells", "equipSpells", "side": "both|opponent|you", "zone": "monster|spelltrap|any" }`.
+  * "traps" defaults to true.
+  * side is relative to the card's controller.
+
+**Language:** `lock(trap);` (Jinzo), `lock(spell);` (Spell Canceller), `lock(monster, spelltrap_zone);` (Skill Drain), `lock(trap, opponent);`,
+`lock(continuous_trap, field_spell);`.
+* Words: trap, spell, monster, continuous_trap, continuous_spell, field_spell, equip_spell; both, opponent, own; monster_zone, spelltrap_zone, any_zone.
+* One lock per card. It goes before or after any effect, and a script may be only a lock.
+
+**WolfX:** a "Lock" block category, and a **Lock...** button on the Effects page. The button's dialog has presets (Jinzo, Spell Canceller,
+Skill Drain) and writes the script line. For a game card that keeps its own effect, the lock goes into effects.json as `"lock"` instead.

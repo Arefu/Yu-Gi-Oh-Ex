@@ -99,3 +99,20 @@ A self cost already says where the effect is activated, so it takes no `on ...:`
 **From card text:** the Effects tab's "Attach from card text..." (`CardTextTranslator.cs`) writes these scripts from a card's real text, every effect it can, and keeps the rest in `effectNotImplemented` / `effectLooser`.
 
 Also (section 38): `cost detach(N):` (Xyz Monster ignition), `cost tribute(1):`, `return_to_hand(target, own | opponent | any, selector)`.
+
+## Locks (2026-10-11, EffectSystem.md section 44)
+
+`lock(...)` is a continuous effect that sits beside the card's other effects. While the card is face-up in its zone and not negated, the
+chosen cards can't be activated and are negated on the field:
+
+    lock(trap);                       // Jinzo
+    lock(spell);                      // Spell Canceller
+    lock(monster, spelltrap_zone);    // Skill Drain
+    lock(trap, opponent);             // only the opponent's Traps
+    lock(continuous_trap, field_spell, any_zone);
+
+* What it locks: trap, spell, monster (monster effects), continuous_trap, continuous_spell, field_spell, equip_spell.
+* Whose cards: both (the default), opponent, own.
+* Where this card has to be: monster_zone (the default), spelltrap_zone, any_zone.
+
+A card has one lock. It compiles to `"lock"` in the card's JSON, which Yu-Gi-Oh-Effects Lock.cpp reads.

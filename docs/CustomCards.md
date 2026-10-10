@@ -19,6 +19,7 @@ Game cards are unchanged: their edits go into the game's files (WolfX patch arch
 | `"sortAs"` | `"Dark Magician"` | CARD_Sort / Sort2 | MoreCards `NameSortRankFor` (default: the name) |
 | `"indexLetters"` | `"DAR"` | CARD_Kana1/2/3 | MoreCards `IndexInitial` (first letter; default: from the name) |
 | `"text"` | `{"F": {"name": "...", "description": "...", "indexLetters": "...", "sortAs": "..."}}` | CARD_Name/Desc/Kana/Sort per language | MoreCards picks the game's current language each card setup; empty = English |
+| `"imageUncensored"` | `"15300_uncensored.jpg"` | the uncensored art zib (2020.full.illust_j) | MoreCards `Hook_Get_IllustrationData`: served while `g_bIsJpVersion` is set (the game in Japanese), else `"image"` |
 
 Genre keys / tag conditions / link targets: docs/CardGenre.md, docs/RelatedCards.md, docs/CardLink.md.
 
@@ -30,6 +31,9 @@ Genre keys / tag conditions / link targets: docs/CardGenre.md, docs/RelatedCards
   cards.json doesn't have. An older entry there for a custom card is still shown, and moves into cards.json when that page is saved.
 * New cards page tabs: Properties (+ password, "?" ATK/DEF), Text (language picker, index letters, sort as), Art, Required cards,
   Genres, Related cards, Links (the same editor instances as their pages and the Card Manager's tabs).
-* Not covered: the "other 4 bits" after the Pendulum Scale (meaning unknown), an uncensored second picture (custom art is one file).
+* Nothing left uncovered (2026-10-11). The "other 4 bits" after the Pendulum Scale are bits 27-30 of CARD_Prop's second word: bits 27-28
+  are the star type (1 Level, 2 Rank, 3 Link; the Rank / Link getters return 0 without it), which MoreCards sets from the kind;
+  the exe drops bits 29-30 when it loads. The Card Manager no longer shows them and sets the star type from the kind too.
+  The uncensored picture is `"imageUncensored"` (New cards > Art).
 
 Untested in game (2026-10-04): built only.
