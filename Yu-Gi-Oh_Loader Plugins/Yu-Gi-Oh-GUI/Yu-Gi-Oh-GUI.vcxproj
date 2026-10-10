@@ -106,7 +106,6 @@
     <ClCompile Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Ex.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Inspector.cpp" />
-    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Plugins.cpp" />
   </ItemGroup>
   <ItemGroup>

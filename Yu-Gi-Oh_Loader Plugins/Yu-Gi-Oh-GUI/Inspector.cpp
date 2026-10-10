@@ -14,6 +14,7 @@
 #include "GameMemory.h"
 #include "YuGiOh/YuGiOh-DUELSTATE.h"
 #include "Yu-Gi-Oh-Ex.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 using GameMemory::Read;
 
@@ -32,7 +33,7 @@ namespace
     constexpr uintptr_t kPlayerRecord = DS::PlayerRecordSize;
     constexpr uintptr_t kMsgQueue = DS::MsgQueue;
     constexpr uintptr_t kIsTagDuel = DS::TagDuelFlag;
-    constexpr uintptr_t kDeckTemplates = 0x14275AC50;  // YGO::GAME::DeckTemplateList: 700 x 0x130, filled from decks.zib
+    constexpr uintptr_t kDeckTemplates = YGO::Addr::DeckTemplateList;  // YGO::GAME::DeckTemplateList: 700 x 0x130, filled from decks.zib
 
     constexpr uintptr_t kLifePoints = DS::LifePointsOffset;
     constexpr uintptr_t kMonsterZones = DS::MonsterZones;
@@ -46,7 +47,7 @@ namespace
     constexpr Pile kExtra = DS::ExtraDeck;
     constexpr Pile kBanished = DS::Banished;
 
-    constexpr uintptr_t kGetCardName = 0x14076D0F0;
+    constexpr uintptr_t kGetCardName = YGO::Addr::Card_GetNameFromKonamiId;
     constexpr uintptr_t kGetCardDesc = 0x14076D070;
 
     // The memory viewer's address, so other tabs can send it somewhere.
@@ -503,7 +504,7 @@ namespace
         { "YGO::DUEL::g_bIsRoundBasedDuel", 0x140C8D35C, Kind::Bool, "Match (best of three) instead of a single duel." },
         { "YGO::DUEL::g_bIsTagDuel", 0x140C8D35D, Kind::Bool, "Tag duel: 4 seats, 2 teams sharing a PlayerState block each." },
         { "YGO::DuelSetup::InitialRules", 0x140C8D360, Kind::I32, "Rules value handed to the engine at setup." },
-        { "g_bEngineRules", 0x140C8D1C9, Kind::Bool, "Dead: written, never read by the duel." },
+        { "g_bEngineRules", YGO::Addr::g_bEngineRules, Kind::Bool, "Dead: written, never read by the duel." },
         { "YGO::DUEL::g_bSetPlayerFlagBit29", 0x140C8D1C8, Kind::Bool, "" },
         { "YGO::DUEL::g_bSetDuelStuck", 0x140D4FCFB, Kind::Bool, "Set_DuelStuck freezes the duel." },
         { "g_bIsReadyDuelModule", 0x1429275D1, Kind::Bool, "" },
@@ -511,19 +512,19 @@ namespace
 
     constexpr Global kDuelSettings[] =
     {
-        { "YGO::DUEL::g_iStartLifePoints", 0x140C8D370, Kind::I32, "Starting LP for the next duel." },
+        { "YGO::DUEL::g_iStartLifePoints", YGO::Addr::g_iStartLifePoints, Kind::I32, "Starting LP for the next duel." },
         { "YGO::DUEL::g_iDuelTimeLimt", 0x140C8D368, Kind::I32, "Time limit in milliseconds, 0 = none." },
         { "YGO::DUEL::g_iTimerIncrement", 0x140C8D364, Kind::I32, "" },
         { "g_iStartingPlayer", 0x140C8D384, Kind::I32, "Who goes first (0/1)." },
         { "g_MatchRoundIndex", 0x140C8D374, Kind::I32, "Duel number inside a match." },
-        { "g_CurrentArenaId", 0x140C8D1F0, Kind::I32, "Arena (duel field backdrop); folder from g_ArenaFolderTable." },
+        { "g_CurrentArenaId", YGO::Addr::g_CurrentArenaId, Kind::I32, "Arena (duel field backdrop); folder from g_ArenaFolderTable." },
         { "g_LastDuelWinReason", 0x1433305B4, Kind::I32, "DuelWinReason of the last duel." },
         { "g_DuelBaseMusicSlot", 0x140C8D1B8, Kind::I32, "Music slot picked by Duel_StartMusic." },
     };
 
     constexpr Global kEngineGlobals[] =
     {
-        { "Duel_Engine.LpXorKey", 0x143330280, Kind::U16, "LP in PlayerState is stored XORed with this." },
+        { "Duel_Engine.LpXorKey", YGO::Addr::Duel_DuelEngine, Kind::U16, "LP in PlayerState is stored XORed with this." },
         { "Duel_Engine.field_4 (local seat parity)", 0x143330284, Kind::I32, "Read all over the engine." },
         { "Duel_Engine.StartingPlayer", 0x1433302A8, Kind::I32, "" },
         { "PlayerState RNG (+0x3768)", kPlayerState + 0x3768, Kind::U32, "The duel's random number generator state (MSVC LCG)." },
@@ -561,7 +562,7 @@ namespace
         { "g_ISteamNetworking_Ctx", 0x140D32840, Kind::Ptr, "P2P channels: 2 = lobby, 3 = duel action sync." },
         { "g_ISteamMatchmaking_Ctx", 0x140C8E648, Kind::Ptr, "" },
         { "g_ISteamUserStats_Ctx", 0x140C8E588, Kind::Ptr, "Stats and leaderboards." },
-        { "g_SteamRemoteStorageContext", 0x140C8EA50, Kind::Ptr, "" },
+        { "g_SteamRemoteStorageContext", YGO::Addr::g_SteamRemoteStorageContext, Kind::Ptr, "" },
     };
 
     constexpr Global kWindow[] =
@@ -584,19 +585,19 @@ namespace
 
     constexpr Global kAudio[] =
     {
-        { "g_MusicVolume", 0x143329748, Kind::F32, "" },
+        { "g_MusicVolume", YGO::Addr::g_MusicVolume, Kind::F32, "" },
         { "g_MusicVolumeLevel", 0x14332974C, Kind::I32, "Options menu step." },
-        { "g_SfxVolume", 0x143329750, Kind::F32, "" },
+        { "g_SfxVolume", YGO::Addr::g_SfxVolume, Kind::F32, "" },
         { "g_SfxVolumeLevel", 0x143329754, Kind::I32, "Options menu step." },
-        { "g_CurrentMusicSlot", 0x14332975C, Kind::I32, "Slot PlayMusicSlot last started." },
+        { "g_CurrentMusicSlot", YGO::Addr::g_CurrentMusicSlot, Kind::I32, "Slot PlayMusicSlot last started." },
         { "g_LastUISoundSlot", 0x1433294F0, Kind::I32, "" },
-        { "g_bSoundSlotsReady", 0x143329758, Kind::Bool, "" },
+        { "g_bSoundSlotsReady", YGO::Addr::g_bSoundSlotsReady, Kind::Bool, "" },
     };
 
     constexpr Global kText[] =
     {
-        { "g_iGameLanguageID", 0x14332A344, Kind::I32, "Selects the string bundle and card text files." },
-        { "g_bIsJpVersion", 0x14332A348, Kind::Bool, "Japanese logo / build." },
+        { "g_iGameLanguageID", YGO::Addr::g_iGameLanguageID, Kind::I32, "Selects the string bundle and card text files." },
+        { "g_bIsJpVersion", YGO::Addr::g_bIsJpVersion, Kind::Bool, "Japanese logo / build." },
         { "g_FontMissingGlyphCount", 0x140D4FCD4, Kind::I32, "Characters the fonts could not draw (shown as _)." },
         { "g_TextBadMarkupCount", 0x140D4FCF4, Kind::I32, "" },
     };
@@ -605,12 +606,12 @@ namespace
     {
         { "YGO::GAME::g_bIsGameContentLoaded", 0x1427D0560, Kind::Bool, "LoadGameContentOnce has run." },
         { "g_ArchiveCount", 0x1429241A8, Kind::I32, "Mounted .dat/.toc archives." },
-        { "g_Archives", 0x1429241A0, Kind::Ptr, "" },
-        { "g_pCardDataFiles", 0x140C8D3A0, Kind::Ptr, "" },
+        { "g_Archives", YGO::Addr::g_Archives, Kind::Ptr, "" },
+        { "g_pCardDataFiles", YGO::Addr::g_pCardDataFiles, Kind::Ptr, "" },
         { "g_pDeckDataFile", 0x1428FC070, Kind::Ptr, "deckdata" },
         { "g_CharDataFileData", 0x142913460, Kind::Ptr, "chardata" },
         { "g_pStoryDuelFile", 0x142919D90, Kind::Ptr, "dueldata" },
-        { "g_pStoryScriptFile", 0x140D4DEF0, Kind::Ptr, "scriptdata" },
+        { "g_pStoryScriptFile", YGO::Addr::g_pStoryScriptFile, Kind::Ptr, "scriptdata" },
         { "g_SkuDataFileBuffer", 0x142923900, Kind::Ptr, "skudata" },
         { "g_PackDefFileData", 0x1429241B0, Kind::Ptr, "packdefdata" },
         { "g_ArenaDataFileBuffer", 0x1428FC048, Kind::Ptr, "arenadata (loaded, never read)" },
@@ -633,17 +634,17 @@ namespace
         { "g_LiveSeatsDuelSnapshot", 0x140D4FE50, Kind::Block, "", 192 },
         { "g_SelectedLiveDeck", 0x140C8D22C, Kind::Block, "", 42 },
         { "YGO::GAME::DeckTemplateList", kDeckTemplates, Kind::Block, "700 decks from decks.zib.", 212800 },
-        { "g_KonamiIds", 0x140D50510, Kind::Block, "", 20336 },
-        { "YGO::CARDS::g_iInternalIDs", 0x140D55480, Kind::Block, "", 22144 },
-        { "YGO::CARDS::FULL_CARD_PROPS", 0x142927600, Kind::Block, "Per Konami id, written by the Cards plugin for custom cards.", 10485760 },
-        { "YGO::CARDS::KONAMI_ID_CARD_PROPS", 0x142847E50, Kind::Block, "", 718512 },
-        { "YGO::CARDS::INTERNAL_ID_CARD_PROPS", 0x1427D0C30, Kind::Block, "", 487968 },
+        { "g_KonamiIds", YGO::Addr::g_KonamiIds, Kind::Block, "", 20336 },
+        { "YGO::CARDS::g_iInternalIDs", YGO::Addr::g_iInternalIDs, Kind::Block, "", 22144 },
+        { "YGO::CARDS::FULL_CARD_PROPS", YGO::Addr::FULL_CARD_PROPS, Kind::Block, "Per Konami id, written by the Cards plugin for custom cards.", 10485760 },
+        { "YGO::CARDS::KONAMI_ID_CARD_PROPS", YGO::Addr::KONAMI_ID_CARD_PROPS, Kind::Block, "", 718512 },
+        { "YGO::CARDS::INTERNAL_ID_CARD_PROPS", YGO::Addr::INTERNAL_ID_CARD_PROPS, Kind::Block, "", 487968 },
         { "g_CardDataFiles", 0x14275AB00, Kind::Block, "", 320 },
-        { "g_PackRecords", 0x1429241C0, Kind::Block, "Card shop packs.", 13312 },
-        { "g_CharacterRecords", 0x142913470, Kind::Block, "", 24960 },
-        { "g_StoryDuelRecords", 0x142919DA0, Kind::Block, "", 39776 },
+        { "g_PackRecords", YGO::Addr::g_PackRecords, Kind::Block, "Card shop packs.", 13312 },
+        { "g_CharacterRecords", YGO::Addr::g_CharacterRecords, Kind::Block, "", 24960 },
+        { "g_StoryDuelRecords", YGO::Addr::g_StoryDuelRecords, Kind::Block, "", 39776 },
         { "g_SkuRecords", 0x142923910, Kind::Block, "Content-pack ownership.", 1736 },
-        { "g_SoundSlots", 0x143329500, Kind::Block, "", 584 },
+        { "g_SoundSlots", YGO::Addr::g_SoundSlots, Kind::Block, "", 584 },
         { "YGOInstance", 0x14332D428, Kind::Block, "", 1208 },
         { "YGOFront_UNK", 0x14278EE68, Kind::Block, "", 10824 },
     };
