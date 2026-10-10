@@ -16,6 +16,7 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -48,7 +49,7 @@ namespace
         ScriptEntry Scripts[1];
     };
 
-    constexpr uintptr_t kStoryScriptFile = 0x140D4DEF0;    // g_pStoryScriptFile
+    constexpr uintptr_t kStoryScriptFile = YGO::Addr::g_pStoryScriptFile;    // g_pStoryScriptFile
     ScriptFile*& StoryScriptFile() { return *reinterpret_cast<ScriptFile**>(kStoryScriptFile); }
 
     using LoadStoryScriptData_t = void(__fastcall*)();

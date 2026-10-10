@@ -17,6 +17,7 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -39,7 +40,7 @@ namespace
     };
     static_assert(sizeof(CharacterRecord) == 0x68, "CharacterRecord layout drifted");
 
-    constexpr uintptr_t kCharacterRecords = 0x142913470;   // g_CharacterRecords[240]
+    constexpr uintptr_t kCharacterRecords = YGO::Addr::g_CharacterRecords;   // g_CharacterRecords[240]
     constexpr uint32_t kCharacterSlots = 240;
     constexpr size_t kUnlockedCharacters = 0x18;           // player section: 240-bit set, bit = character id
 

@@ -16,6 +16,7 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -63,7 +64,7 @@ namespace
 #pragma pack(pop)
     static_assert(sizeof(StoryDuelFileRecord) == 0x5C, "StoryDuelFileRecord layout drifted");
 
-    constexpr uintptr_t kStoryDuelRecords = 0x142919DA0;   // g_StoryDuelRecords[226]
+    constexpr uintptr_t kStoryDuelRecords = YGO::Addr::g_StoryDuelRecords;   // g_StoryDuelRecords[226]
     constexpr uint32_t kStoryDuelSlots = 226;
     constexpr int kMaxOrder = 48;                          // the save keeps 24 bytes per (series, order) in 1208 per series
     constexpr int kDeckSlots = 700;                        // Get_DeckRecord returns null past this and the game writes through it

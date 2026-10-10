@@ -98,7 +98,6 @@
   <ItemGroup>
     <ClCompile Include="AiDeck.cpp" />
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Characters.cpp" />
     <ClCompile Include="Decks.cpp" />
     <ClCompile Include="StoryDuels.cpp" />

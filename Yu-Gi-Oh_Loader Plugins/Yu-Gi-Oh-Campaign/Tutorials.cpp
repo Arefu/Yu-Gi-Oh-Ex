@@ -22,6 +22,7 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Yu-Gi-Oh-Core.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 #pragma intrinsic(_ReturnAddress)
 
@@ -47,10 +48,10 @@ namespace
     const auto GetTutorialDuelIndex = reinterpret_cast<GetInt_t>(0x140769180);   // YGO::DUEL::Get_TutorialDuelIndex
     const auto VectorEmplaceInt = reinterpret_cast<EmplaceInt_t>(0x140862EA0);   // std::vector<int> grow + insert (the game's heap)
     const auto SetRowMark = reinterpret_cast<SetMark_t>(0x14089FD60);            // a list row's icon (-1 = none)
-    const auto SetTextById = reinterpret_cast<SetText_t>(0x14075E000);           // RIX::widget_Text::SetTextById
+    const auto SetTextById = reinterpret_cast<SetText_t>(YGO::Addr::WidgetText_SetTextById);           // RIX::widget_Text::SetTextById
 
     uintptr_t orig_LoadScriptFile = 0x1408709D0;   // YGO::TUTORIAL::LoadScriptFile(path): loads + fixes up the step file
-    uintptr_t orig_SetCurrentArenaId = 0x140769540;
+    uintptr_t orig_SetCurrentArenaId = YGO::Addr::Duel_Set_CurrentArenaId;
     uintptr_t orig_OnEnter = 0x1408643F0;          // RIX::ScreenSelectTutorial::OnEnter
     uintptr_t orig_RefreshItems = 0x140864560;     // RIX::ScreenSelectTutorial::RefreshItems
 

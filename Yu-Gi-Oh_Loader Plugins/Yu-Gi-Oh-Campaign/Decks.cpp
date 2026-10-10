@@ -17,6 +17,7 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -57,7 +58,7 @@ namespace
     static_assert(sizeof(DeckTemplate) == 0x130, "DeckTemplate layout drifted");
 
     constexpr uintptr_t kDeckRecords = 0x1428FC080;        // g_DeckRecords[700]
-    constexpr uintptr_t kDeckTemplates = 0x14275AC50;      // YGO::GAME::DeckTemplateList[700]
+    constexpr uintptr_t kDeckTemplates = YGO::Addr::DeckTemplateList;      // YGO::GAME::DeckTemplateList[700]
     constexpr uint32_t kDeckSlots = 700;
     constexpr size_t kDeckStates = 0x38;                   // player section: u32 per deck id, 1 = unlocked
 

@@ -9,7 +9,9 @@
 
 #include "Detours.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Memory.h"
 #include "YuGiOh/YuGiOh-RIX.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -37,7 +39,7 @@ namespace
 
     struct CharacterRecord { uint32_t Id; int32_t Series; int32_t Deck; uint8_t Rest[0x68 - 12]; };   // g_CharacterRecords entry (0x68)
     static_assert(sizeof(CharacterRecord) == 0x68, "CharacterRecord layout drifted");
-    constexpr uintptr_t kCharacterRecords = 0x142913470;
+    constexpr uintptr_t kCharacterRecords = YGO::Addr::g_CharacterRecords;
     constexpr int kCharacterCount = 240;
 
     struct DeckCards { wchar_t Name[33]; int16_t MainCount; };   // the start of YGO::SAVE::DeckListItem
@@ -51,7 +53,7 @@ namespace
     FreeInput_t orig_FreeDuelInput = reinterpret_cast<FreeInput_t>(0x140840B10);              // YGO::UI::FreeDuel_HandleInput
     FreeSetState_t orig_FreeDuelSetState = reinterpret_cast<FreeSetState_t>(0x140841700);     // YGO::UI::FreeDuel_SetState
     CampaignInput_t orig_CampaignInput = reinterpret_cast<CampaignInput_t>(0x140831490);      // CampaignDeck_HandleInput
-    GotoDuel_t orig_GotoDuel = reinterpret_cast<GotoDuel_t>(0x14083CA10);                     // Screen_GotoDuel: fade to screen 9
+    GotoDuel_t orig_GotoDuel = reinterpret_cast<GotoDuel_t>(YGO::Addr::Screen_GotoDuel);                     // Screen_GotoDuel: fade to screen 9
     SetupSeat_t orig_SetupSeat = reinterpret_cast<SetupSeat_t>(0x14076A7B0);                  // Duel_SetupSeat
 
     const auto FreeDuelHelp = reinterpret_cast<void(__fastcall*)(void* screen)>(0x140841A40);        // FreeDuel_UpdateHelpBar
@@ -60,16 +62,16 @@ namespace
     const auto OpponentListSelected = reinterpret_cast<unsigned int(__fastcall*)(void* list)>(0x1408A52A0);
     const auto StoryDuelSideCharacter = reinterpret_cast<int(__fastcall*)(int side)>(0x1407FF430);   // CurrentStoryDuel_GetSideCharacter
     const auto StoryDuelSideDeck = reinterpret_cast<int(__fastcall*)(int side)>(0x1407FF650);        // CurrentStoryDuel_GetSideDeck (deckdata index)
-    const auto DeckFromId = reinterpret_cast<DeckCards*(__fastcall*)(unsigned int profile, unsigned int deckId)>(0x14081AB40);
+    const auto DeckFromId = reinterpret_cast<DeckCards*(__fastcall*)(unsigned int profile, unsigned int deckId)>(YGO::Addr::Deck_FromId);
     const auto DeckIsDefined = reinterpret_cast<bool(__fastcall*)(int index)>(0x1407FE4D0);
-    const auto SetDescription = reinterpret_cast<void(__fastcall*)(void* help, int64_t text)>(0x14089F6E0);   // widget_Description::SetTextById
-    const auto GetUI = reinterpret_cast<void*(__fastcall*)()>(0x1408121B0);                         // RIX::App::GetUI
-    const auto UIScheduler = reinterpret_cast<void*(__fastcall*)(void* ui)>(0x140807F60);
+    const auto SetDescription = reinterpret_cast<void(__fastcall*)(void* help, int64_t text)>(YGO::Addr::WidgetDescription_SetTextById);   // widget_Description::SetTextById
+    const auto GetUI = reinterpret_cast<void*(__fastcall*)()>(YGO::Addr::App_GetUI);                         // RIX::App::GetUI
+    const auto UIScheduler = reinterpret_cast<void*(__fastcall*)(void* ui)>(YGO::Addr::UI_GetScheduler);
 
     template <typename T> T CallGame(uintptr_t address) { return reinterpret_cast<T(__fastcall*)()>(address)(); }
-    bool IsMultiplayer() { return CallGame<uint8_t>(0x1407691D0) != 0; }
-    bool IsBattlePack() { return CallGame<uint8_t>(0x140769190) != 0; }
-    bool IsChallenge() { return CallGame<uint8_t>(0x1407691B0) != 0; }
+    bool IsMultiplayer() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsDuelMultiplayer) != 0; }
+    bool IsBattlePack() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsBattlePackMode) != 0; }
+    bool IsChallenge() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsChallengeMode) != 0; }
     bool IsTutorial() { return CallGame<uint8_t>(0x1407694F0) != 0; }
 
     const wchar_t* const kTitlePlayer = L"Your Deck";
@@ -93,9 +95,53 @@ namespace
     // The opponent list's steps in a tag Free Duel: your partner, the opponent, the opponent's partner. The game reads the list's last
     // pick (the opponent's partner) as seat 1 when the duel starts, so Hook_SetupSeat puts g_TagOpponent back in seat 1.
     enum CharacterStep { kPickYou, kPickYourPartner, kPickOpponent, kPickOpponentPartner };
-    const wchar_t* const kCharacterTitles[] = { L"Step 1 of 4", L"Step 2 of 4", L"Step 3 of 4", L"Step 4 of 4" };
     const wchar_t* const kCharacterHelp[] = { L"Select your character.", L"Select your partner.", L"Select your opponent.",
                                               L"Select your opponent's partner." };
+
+    // Handicap tag duels (TagDuel_GetSoloSide): 0 two on two, 1 you play alone (1 vs 2), 2 the opponent plays alone (2 vs 1). A side that
+    // plays alone has no partner to pick, neither the character nor the deck.
+    int SoloSide()
+    {
+        static auto get = reinterpret_cast<int(__cdecl*)()>(GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll"), "TagDuel_GetSoloSide"));
+        return get ? get() : 0;
+    }
+
+    bool CharacterStepUsed(int step)
+    {
+        return !(step == kPickYourPartner && SoloSide() == 1) && !(step == kPickOpponentPartner && SoloSide() == 2);
+    }
+
+    int NextCharacterStep(int step)   // past kPickOpponentPartner: the picks are done
+    {
+        do
+            ++step;
+        while (step <= kPickOpponentPartner && !CharacterStepUsed(step));
+        return step;
+    }
+
+    int PreviousCharacterStep(int step)
+    {
+        do
+            --step;
+        while (step > kPickYou && !CharacterStepUsed(step));
+        return step;
+    }
+
+    // "Step n of N" over the steps this format uses (kept alive: the title widget keeps the pointer).
+    const wchar_t* CharacterTitle(int step)
+    {
+        static std::wstring title;
+        int number = 0, count = 0;
+        for (int s = kPickYou; s <= kPickOpponentPartner; ++s)
+            if (CharacterStepUsed(s))
+            {
+                ++count;
+                if (s <= step)
+                    ++number;
+            }
+        title = std::format(L"Step {} of {}", number, count);
+        return title.c_str();
+    }
     int g_CharacterStep = kPickYou;
     int g_YourCharacter = -1;                   // your own portrait / name in a tag Free Duel
     int g_PartnerCharacters[2] = { -1, -1 };   // [0] your partner, [1] the opponent's partner
@@ -105,14 +151,14 @@ namespace
     // YGO::GAME::Get_CharacterName (0x1407FEC70), as UTF-8 for the log.
     std::string CharacterName(int character)
     {
-        const auto name = reinterpret_cast<const wchar_t*(__fastcall*)(int)>(0x1407FEC70)(character);
+        const auto name = reinterpret_cast<const wchar_t*(__fastcall*)(int)>(YGO::Addr::Game_Get_CharacterName)(character);
         if (!name)
             return "?";
         char out[128]{};
         WideCharToMultiByte(CP_UTF8, 0, name, -1, out, sizeof(out) - 1, nullptr, nullptr);
         return out;
     }
-    const auto SetDuelSideCharacter = reinterpret_cast<void(__fastcall*)(int side, unsigned int character)>(0x140769670);
+    const auto SetDuelSideCharacter = reinterpret_cast<void(__fastcall*)(int side, unsigned int character)>(YGO::Addr::Duel_Set_DuelSideCharacter);
     int* const g_FreeDuelOpponentDeckId = reinterpret_cast<int*>(0x140C8E818);   // what the opponent's deck panel (+3448) shows
 
     // The picker's steps after your deck. Partner steps only in a tag duel.
@@ -149,7 +195,30 @@ namespace
         int Step = kStepOpponent;
         int OpponentDeck = -1;          // picked on the opponent's step (tag duels go on from there)
         int PartnerDeck = -1;           // picked on your partner's step
+        int OpponentPartnerDeck = -1;   // picked on the opponent's partner's step
     } g_Picker;
+
+    // The deck steps a tag Free Duel uses after the opponent's: a side playing alone (SoloSide) has no partner's deck step.
+    // kStepReview after the last one.
+    int NextDeckStep(int step)
+    {
+        int next = step + 1;
+        if (next == kStepPartner && SoloSide() == 1)
+            ++next;
+        if (next == kStepOpponentPartner && SoloSide() == 2)
+            ++next;
+        return next;
+    }
+
+    int PreviousDeckStep(int step)
+    {
+        int previous = step - 1;
+        if (previous == kStepOpponentPartner && SoloSide() == 2)
+            --previous;
+        if (previous == kStepPartner && SoloSide() == 1)
+            --previous;
+        return previous;
+    }
 
     int64_t g_SavedTitle = 0;           // the screen's own title, put back when its deck steps are left
     char* g_TitledScreen = nullptr;
@@ -330,7 +399,7 @@ namespace
     // ---- the review step (tag Free Duel): TagDuel's exports draw it; this screen keeps the input.
 
     template <typename T> T TagDuelExport(const char* name) { return reinterpret_cast<T>(GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll"), name)); }
-    const auto SetWidgetEnabled = reinterpret_cast<void(__fastcall*)(void* widget, bool enabled)>(0x14075A490);   // RIX::widget_Base::SetEnabled
+    const auto SetWidgetEnabled = reinterpret_cast<void(__fastcall*)(void* widget, bool enabled)>(YGO::Addr::Widget_SetEnabled);   // RIX::widget_Base::SetEnabled
     constexpr size_t kFreeDeckArea = 1440;   // the deck step's widgets (list + both panels): FreeDuel_SetState(2) enables it, Back from it disables it
     const R::HelpEntry kHelpLetsDuel{ kConfirm, 0, reinterpret_cast<int64_t>(L"Let's Duel!") };
 
@@ -367,7 +436,7 @@ namespace
             hide();
         Picker& p = g_Picker;
         ShowDeckArea(p.Screen, true);
-        p.Step = kStepOpponentPartner;
+        p.Step = PreviousDeckStep(kStepReview);
         ShowStep();
     }
 
@@ -418,21 +487,25 @@ namespace
                 return;
             }
             R::PlayUISound(kSoundDecide);
-            if (p.Step == kStepOpponent && !p.Campaign && TagDuelOn())
+            if (!p.Campaign && TagDuelOn())
             {
-                p.OpponentDeck = deck;
-                p.Step = kStepPartner;
-                ShowStep();
-            }
-            else if (p.Step == kStepPartner)
-            {
-                p.PartnerDeck = deck;
-                p.Step = kStepOpponentPartner;
-                ShowStep();
-            }
-            else if (p.Step == kStepOpponentPartner)
-            {
-                SetTagPartners(g_PartnerCharacters[0], p.PartnerDeck, g_PartnerCharacters[1], deck);
+                if (p.Step == kStepOpponent)
+                    p.OpponentDeck = deck;
+                else if (p.Step == kStepPartner)
+                    p.PartnerDeck = deck;
+                else
+                    p.OpponentPartnerDeck = deck;
+                const int next = NextDeckStep(p.Step);
+                if (next != kStepReview)
+                {
+                    p.Step = next;
+                    ShowStep();
+                    return;
+                }
+                // a side playing alone passes -1: TagDuel gives its partner seat the lead's own character and deck
+                const int solo = SoloSide();
+                SetTagPartners(solo == 1 ? -1 : g_PartnerCharacters[0], solo == 1 ? -1 : p.PartnerDeck,
+                               solo == 2 ? -1 : g_PartnerCharacters[1], solo == 2 ? -1 : p.OpponentPartnerDeck);
                 if (!EnterReview())   // the review step on this screen; without TagDuel's review, start here
                     StartDuel(static_cast<unsigned int>(p.OpponentDeck));
             }
@@ -444,7 +517,7 @@ namespace
             R::PlayUISound(kSoundCancel);
             if (p.Step > kStepOpponent)
             {
-                --p.Step;
+                p.Step = PreviousDeckStep(p.Step);
                 ShowStep();
             }
             else
@@ -501,10 +574,14 @@ namespace
                     g_TagOpponent = picked;
                 else
                     g_PartnerCharacters[1] = picked;
+                if (SoloSide() == 1)
+                    g_PartnerCharacters[0] = -1;   // a side playing alone has no partner
+                if (SoloSide() == 2)
+                    g_PartnerCharacters[1] = -1;
 
-                if (g_CharacterStep < kPickOpponentPartner)
+                if (NextCharacterStep(g_CharacterStep) <= kPickOpponentPartner)
                 {
-                    ++g_CharacterStep;
+                    g_CharacterStep = NextCharacterStep(g_CharacterStep);
                     orig_FreeDuelSetState(screen, kFreeOpponentList);
                 }
                 else
@@ -516,13 +593,13 @@ namespace
             }
             else if (state < kFreeOpponentList && g_CharacterStep > kPickYou)
             {
-                --g_CharacterStep;
+                g_CharacterStep = PreviousCharacterStep(g_CharacterStep);
                 orig_FreeDuelSetState(screen, kFreeOpponentList);
             }
         }
         if (state == kFreeOpponentList && TagDuelOn() && !IsMultiplayer())
         {
-            SetTitle(s, kCharacterTitles[g_CharacterStep]);
+            SetTitle(s, CharacterTitle(g_CharacterStep));
             // The help line says who this step picks. Rewritten when the step changes (SetState rebuilds the help bar, so after every pick
             // and every Back).
             if (g_HelpShownForStep != g_CharacterStep || before != kFreeOpponentList)
@@ -620,14 +697,10 @@ namespace
         static const wchar_t* const storyText = L"You and your opponent use the story's decks.";
         static const wchar_t* const customLabel = L"Custom Decks";
         static const wchar_t* const customText = L"Choose your deck, then the deck your opponent plays.";
-        auto* items = reinterpret_cast<int64_t*>(kCampaignMenuItems);   // {id, label, description} x2, then id -1
-        DWORD old = 0;
-        if (!VirtualProtect(items, 6 * sizeof(int64_t), PAGE_READWRITE, &old))
-            return;
-        items[2] = reinterpret_cast<int64_t>(storyText);
-        items[4] = reinterpret_cast<int64_t>(customLabel);
-        items[5] = reinterpret_cast<int64_t>(customText);
-        VirtualProtect(items, 6 * sizeof(int64_t), old, &old);
+        // {id, label, description} x2, then id -1
+        YGO::Memory::WriteValue(kCampaignMenuItems + 2 * sizeof(int64_t), reinterpret_cast<int64_t>(storyText));
+        YGO::Memory::WriteValue(kCampaignMenuItems + 4 * sizeof(int64_t), reinterpret_cast<int64_t>(customLabel));
+        YGO::Memory::WriteValue(kCampaignMenuItems + 5 * sizeof(int64_t), reinterpret_cast<int64_t>(customText));
     }
 }
 

@@ -8,6 +8,7 @@
 #include <string>
 
 #include <json.hpp>
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // Helpers and game layouts shared by the Campaign plugin's content (Characters.cpp, StoryDuels.cpp).
 namespace Campaign
@@ -25,14 +26,14 @@ namespace Campaign
     using WStringAssign_t = void*(__fastcall*)(GameWString* self, const wchar_t* text, size_t count);
     using GetPlayerSection_t = uint8_t*(__fastcall*)(unsigned int profile);
 
-    inline const auto WStringAssign = reinterpret_cast<WStringAssign_t>(0x140751310);        // the game's std::wstring::assign (its allocator)
-    inline const auto GetPlayerSection = reinterpret_cast<GetPlayerSection_t>(0x1407F80A0);  // YGO::SAVE::Get_PlayerSection(0xFFFFFFFD = current)
+    inline const auto WStringAssign = reinterpret_cast<WStringAssign_t>(YGO::Addr::WString_Assign);        // the game's std::wstring::assign (its allocator)
+    inline const auto GetPlayerSection = reinterpret_cast<GetPlayerSection_t>(YGO::Addr::Save_Get_PlayerSection);  // YGO::SAVE::Get_PlayerSection(0xFFFFFFFD = current)
 
     // The game's language as its file letter (E F G I J S...): g_iGameLanguageID looked up in the {int id, char letter} table.
     inline char CurrentLanguage()
     {
-        const int language = *reinterpret_cast<const int*>(0x14332A344);
-        for (auto entry = reinterpret_cast<const int*>(0x140A51D30); entry[0] != -1; entry += 2)
+        const int language = *reinterpret_cast<const int*>(YGO::Addr::g_iGameLanguageID);
+        for (auto entry = reinterpret_cast<const int*>(YGO::Addr::LanguageLetterTable); entry[0] != -1; entry += 2)
             if (entry[0] == language)
                 return static_cast<char>(std::toupper(static_cast<unsigned char>(entry[1] & 0xFF)));
         return 'E';
