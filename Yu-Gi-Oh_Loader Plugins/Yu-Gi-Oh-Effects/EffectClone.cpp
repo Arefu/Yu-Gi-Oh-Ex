@@ -22,7 +22,9 @@
 
 #include "EffectClone.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Memory.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -264,8 +266,8 @@ namespace
             // Card type class of the custom card vs its source: many engine gates index small per-type tables with it (word_140BF7820 + 12 * type).
             for (const unsigned cardId : { static_cast<unsigned>(BorrowedRealId(id) ? BorrowedRealId(id) : id), static_cast<unsigned>(clone.From) })
             {
-                const int type = reinterpret_cast<int(__fastcall*)(int)>(0x14081A650)(static_cast<int>(cardId));
-                const uint16_t* w = reinterpret_cast<const uint16_t*>(0x140BF7820 + 12 * static_cast<uintptr_t>(type));
+                const int type = reinterpret_cast<int(__fastcall*)(int)>(YGO::Addr::Card_GetTypeFromFullCardPropsByKonamiId)(static_cast<int>(cardId));
+                const uint16_t* w = reinterpret_cast<const uint16_t*>(YGO::Addr::CardFrameTable + 12 * static_cast<uintptr_t>(type));
                 Logger::WriteLog(std::format("  card {} type class {}: table words {} {} {} {} {} {}", cardId, type, w[0], w[1], w[2], w[3], w[4], w[5]), MODULE_NAME, 0);
                 // The engine's per-id yes/no tests that decide what the hand offers for a monster (Get_... 0x140108610 uses them): is it a monster type,
                 // has a hand effect (743FA0 = 743F40 or 744080 or a 349-entry list). A custom id should answer no to the hand ones.
@@ -1793,6 +1795,9 @@ namespace
 
             const std::string label = std::format("cards.json entry {} (\"{}\")", i, entry.value("name", std::string()));
             const nlohmann::json& clone = entry["effectClone"];
+            // A script that is only lock(...) compiles to {"lock": {...}}: no effect to clone (Lock.cpp plays the lock).
+            if (clone.is_object() && !clone.contains("from") && clone.contains("lock"))
+                continue;
             if (!entry.contains("id") || !entry["id"].is_number_integer() || !clone.is_object()
                 || !clone.contains("from") || !clone["from"].is_number_integer())
             {
@@ -1840,8 +1845,8 @@ namespace
             }
             Clone c;
             const nlohmann::json clone = entry.contains("effectClone") ? entry["effectClone"] : nlohmann::json();
-            if (clone.is_null())
-                c.From = kNoEffectSource;
+            if (clone.is_null() || (clone.is_object() && !clone.contains("from") && clone.contains("lock")))
+                c.From = kNoEffectSource;   // no effect at all (a lock-only override keeps just its lock, Lock.cpp)
             else if (!ParseEffect(clone, c, label))
                 continue;
             g_Clones[static_cast<uint16_t>(id)] = std::move(c);
@@ -1894,8 +1899,7 @@ void EffectClone::Setup()
             anyDeckFilter |= part->HasDeckFilter;
     if (anyDeckFilter)
     {
-        DWORD old;
-        if (VirtualProtect(reinterpret_cast<void*>(kDeckFilterTable), kDeckFilterRows * 24, PAGE_READWRITE, &old))
+        if (YGO::Memory::MakeWritable(kDeckFilterTable, kDeckFilterRows * 24))
             DetourAttach(&(PVOID&)orig_DeckFilterIndex, Hook_DeckFilterIndex);
         else
             Logger::WriteLog("Deck filter table could not be made writable: \"deck\" filters only apply through Collect / Count", MODULE_NAME, 2);
@@ -1907,8 +1911,7 @@ void EffectClone::Setup()
     if (anyNegate)
     {
         // NegateTable lives in .rdata; Hook_NegateCheck writes a source's row for the length of a call.
-        DWORD old;
-        if (VirtualProtect(kNegateTable, kNegateRows * 6, PAGE_READWRITE, &old))
+        if (YGO::Memory::MakeWritable(reinterpret_cast<uintptr_t>(kNegateTable), kNegateRows * 6))
             DetourAttach(&(PVOID&)orig_NegateCheck, Hook_NegateCheck);
         else
             Logger::WriteLog("NegateTable could not be made writable: \"negate\" is not applied", MODULE_NAME, 2);

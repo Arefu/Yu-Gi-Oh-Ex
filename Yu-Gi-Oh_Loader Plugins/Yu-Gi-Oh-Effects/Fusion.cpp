@@ -14,6 +14,7 @@
 #include "Fusion.h"
 #include "SummonJson.h"
 #include "Logger.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -58,9 +59,9 @@ namespace
     const Kind_IsMonster_t Kind_IsMonster = reinterpret_cast<Kind_IsMonster_t>(0x140742DF0);
     using Get_CardProp_t = int(__fastcall*)(int);
     const Get_CardProp_t Get_MonsterType = reinterpret_cast<Get_CardProp_t>(0x14081A7B0);
-    const Get_CardProp_t Get_CardKind = reinterpret_cast<Get_CardProp_t>(0x14081A650);
+    const Get_CardProp_t Get_CardKind = reinterpret_cast<Get_CardProp_t>(YGO::Addr::Card_GetTypeFromFullCardPropsByKonamiId);
     using Is_CardInNamedArchetype_t = int64_t(__fastcall*)(uint16_t, int);
-    const Is_CardInNamedArchetype_t Is_CardInNamedArchetype = reinterpret_cast<Is_CardInNamedArchetype_t>(0x14076CFF0);
+    const Is_CardInNamedArchetype_t Is_CardInNamedArchetype = reinterpret_cast<Is_CardInNamedArchetype_t>(YGO::Addr::Card_IsInNamedArchetype);
     constexpr uintptr_t kCardInstances = 0x143499798; // 8 bytes per duel card instance, id = low 14 bits
     constexpr int kArchetypeCodeBase = 98;
     constexpr int kLastGameMaterialCode = 516;

@@ -1,12 +1,13 @@
 #pragma once
 #include <cstddef>
 #include <cstdint>
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // Shared by the table movers (Ritual.cpp, SynchroXyz.cpp): memory the game's image-relative operands can reach, operand writes, and entry
 // stubs that run a refresh function before a game function without changing anything the caller can see.
 namespace CodePatch
 {
-    constexpr uintptr_t kImageBase = 0x140000000;
+    constexpr uintptr_t kImageBase = YGO::Addr::ImageBase;
 
     // Memory within +2 GB of the image, so image-base-relative and rip-relative operands can reach it. nullptr when there is none.
     void* AllocNearImage(size_t size);

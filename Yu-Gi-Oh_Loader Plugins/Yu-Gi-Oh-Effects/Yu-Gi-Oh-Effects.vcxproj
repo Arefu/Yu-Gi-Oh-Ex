@@ -105,7 +105,7 @@
     <ClCompile Include="CodePatch.cpp" />
     <ClCompile Include="EffectDispatch.cpp" />
     <ClCompile Include="EffectClone.cpp" />
-    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Lock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Yu-Gi-Oh.def" />
@@ -119,6 +119,7 @@
     <ClInclude Include="CodePatch.h" />
     <ClInclude Include="EffectDispatch.h" />
     <ClInclude Include="EffectClone.h" />
+    <ClInclude Include="Lock.h" />
     <ClInclude Include="Logger.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -33,6 +33,8 @@
 //   cost pay_lp(1000): negate(trap);              // "When a Trap Card is activated: Pay 1000 LP; negate the activation, and if you do, destroy it"
 //   negate(spell, opponent, equip);              // "When your opponent activates an Equip Spell Card: Negate ..."
 //   cost tribute_self: negate(any, opponent);    // a monster's Quick Effect: "You can Tribute this card; negate the activation"
+//   lock(trap);                                  // Jinzo: "Trap Cards, and their effects on the field, cannot be activated. Negate all Trap effects"
+//   lock(spell, opponent);                       // only the opponent's Spells; lock(monster, spelltrap_zone) = Skill Drain
 //
 // Regenerate the C# parser (from the repo root; the WolfX project compiles the output):
 //   java -jar Dependencies\ANTLR\antlr-4.13.2-complete.jar -Dlanguage=CSharp -visitor -no-listener -package WolfEx.EffectScriptGenerated -o Tools\WolfX\Content\EffectScriptGenerated "Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4"
@@ -41,7 +43,13 @@ grammar EffectScript;
 // The wrapper is optional: "on flip: burn(500);" is a whole script, "effect \"Name\" { on flip: burn(500); }" means the same.
 // Several effects on one card: several effect { } blocks, or bodies joined with 'also' (each borrows its own game card; the runtime routes
 // every lookup to the effect whose source answers it, docs/EffectSystem.md section 33).
-script     : effect+ EOF | effectBody ('also' effectBody)* EOF | asScript EOF ;
+script     : lockStatement* (effect+ | effectBody ('also' effectBody)* | asScript)? lockStatement* EOF ;
+
+// A continuous lock while this card is face-up and its effects aren't negated (Yu-Gi-Oh-Effects Lock.cpp, docs/EffectSystem.md section 44).
+// Words (checked by the compiler): what - trap, spell, monster (monster effects negated), continuous_trap, continuous_spell, field_spell,
+// equip_spell; who - both (default), opponent, own; where this card must be - monster_zone (default), spelltrap_zone, any_zone.
+lockStatement : 'lock' '(' lockArg (',' lockArg)* ')' ';'? ;
+lockArg       : IDENT | kind | 'opponent' | 'own' | 'any' | 'field' | 'equip' ;
 
 // The whole behaviour of one game card (by its Konami id, or a name from the effect library), optionally with this card's own stat amounts.
 asScript   : 'as' '(' (NUMBER | STRING) ')' ('with' statPart (',' statPart)*)? ';'? ;

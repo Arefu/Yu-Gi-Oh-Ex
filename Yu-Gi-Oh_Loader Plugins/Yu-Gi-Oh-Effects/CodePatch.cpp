@@ -5,6 +5,7 @@
 
 #include "CodePatch.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Memory.h"
 
 void* CodePatch::AllocNearImage(size_t size)
 {
@@ -21,13 +22,7 @@ void* CodePatch::AllocNearImage(size_t size)
 
 bool CodePatch::WriteBytes(uintptr_t address, const void* bytes, size_t size)
 {
-    DWORD old = 0;
-    if (!VirtualProtect(reinterpret_cast<void*>(address), size, PAGE_EXECUTE_READWRITE, &old))
-        return false;
-    std::memcpy(reinterpret_cast<void*>(address), bytes, size);
-    VirtualProtect(reinterpret_cast<void*>(address), size, old, &old);
-    FlushInstructionCache(GetCurrentProcess(), reinterpret_cast<void*>(address), size);
-    return true;
+    return YGO::Memory::WriteBytes(address, bytes, size);
 }
 
 namespace

@@ -10,6 +10,7 @@
 #include "SynchroXyz.h"
 #include "EffectClone.h"
 #include "EffectDispatch.h"
+#include "Lock.h"
 #include "Logger.h"
 #include "Config.h"
 
@@ -42,6 +43,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         SynchroXyz::Setup();
         EffectClone::Setup();
         EffectDispatch::Setup();
+        Lock::Setup();
         DetourTransactionCommit();
 
         break;;
