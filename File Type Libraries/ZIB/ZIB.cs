@@ -24,6 +24,8 @@ namespace Types
         public static readonly List<Item> _Items = [];
         public static bool _ImageArchive = false;
         public static string _Archive = "";
+        /// <summary>Set when the archive is an extracted folder (<see cref="ZibFolder.Find"/>): items are read from its files.</summary>
+        public static string? _Folder;
 
         private static readonly int FILE_INDEX_SIZE = 0x40;
         private static readonly int READ_SIZE = 0x4;
@@ -41,6 +43,16 @@ namespace Types
                 return null;
 
             _Items.Clear();
+            _Folder = ZibFolder.Find(Archive);
+            if (_Folder != null)
+            {
+                foreach (string file in Directory.EnumerateFiles(_Folder, "*", SearchOption.AllDirectories).Order(StringComparer.Ordinal))
+                    _Items.Add(new Item(0, new FileInfo(file).Length, Path.GetRelativePath(_Folder, file).Replace('\\', '/')));
+                _ImageArchive = _Items.Any(item => item.Name.EndsWith(".jpg") || item.Name.EndsWith(".png"));
+                _Loaded = true;
+                _Archive = Archive;
+                return _Items;
+            }
             Reader = new BinaryReader(File.Open($"{Archive}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
 
             var DataStart = long.MaxValue;
@@ -77,6 +89,8 @@ namespace Types
                 var _Item = _Items.Where(_Item => _Item.Name == Item).FirstOrDefault();
                 if (_Item == null)
                     return null;
+                if (_Folder != null)
+                    return new MemoryStream(File.ReadAllBytes(Path.Combine(_Folder, _Item.Name)));
 
                 Reader = new BinaryReader(File.Open($"{_Archive}", FileMode.Open, FileAccess.Read, FileShare.ReadWrite));
                 Reader.BaseStream.Position = _Item.Start;

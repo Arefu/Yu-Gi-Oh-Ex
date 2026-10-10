@@ -48,6 +48,9 @@ namespace WolfX
             _tools.Items.Add(Button("Export .ydc...", "Save the picked deck file to disk", Export));
             _tools.Items.Add(Button("Replace from .ydc...", "Replace the picked deck's cards with a .ydc file's", ReplaceFrom));
             _tools.Items.Add(Button("Add .ydc...", "Add .ydc files to decks.zib (a deck uses one when its file name is set on the Decks page)", AddFiles));
+            _tools.Items.Add(new ToolStripSeparator());
+            _tools.Items.Add(Button("Unpack ZIB...", "Write every deck file of decks.zib (with unsaved changes) into a folder", Unpack));
+            _tools.Items.Add(Button("Repack ZIB...", "Rebuild decks.zib from a folder of .ydc files (Save writes it into the game data)", Repack));
 
             _list.Columns.Add("File", 200);
             _list.Columns.Add("Main", 46, HorizontalAlignment.Right);
@@ -280,6 +283,87 @@ namespace WolfX
                 }
             }
             Refill();
+        }
+
+        // ---- unpack / repack: decks.zib <-> a folder of .ydc files (WolfX and the other tools also read such a folder as decks.zib when the
+        // .zib itself isn't there: Types.ZibFolder)
+
+        private void Unpack()
+        {
+            if (_archive == null)
+                return;
+            using var dialog = new FolderBrowserDialog { Description = $"Unpack the {_archive.Entries.Count} deck files of decks.zib into:", UseDescriptionForTitle = true };
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+                return;
+            try
+            {
+                foreach (var entry in _archive.Entries)
+                {
+                    string target = Path.Combine(dialog.SelectedPath, entry.Name.Replace('/', '\\'));
+                    Directory.CreateDirectory(Path.GetDirectoryName(target)!);
+                    File.WriteAllBytes(target, entry.Data);
+                }
+                _status.Text = $"Unpacked {_archive.Entries.Count} deck file(s) to {dialog.SelectedPath}." + (_changed.Count > 0 ? " (Unsaved changes included.)" : "");
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+            {
+                _status.Text = "Not unpacked: " + ex.Message;
+            }
+        }
+
+        private void Repack()
+        {
+            if (_archive == null)
+                return;
+            using var dialog = new FolderBrowserDialog { Description = "Repack decks.zib from the .ydc files in:", UseDescriptionForTitle = true };
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+                return;
+
+            global::Types.ZibArchive folder;
+            try
+            {
+                folder = global::Types.ZibArchive.Parse(new global::Types.ZibFolder(dialog.SelectedPath).ToBytes());
+            }
+            catch (Exception ex) when (ex is IOException or InvalidDataException or UnauthorizedAccessException)
+            {
+                _status.Text = "Couldn't read the folder: " + ex.Message;
+                return;
+            }
+            var bad = new List<string>();
+            foreach (var entry in folder.Entries.Where(e => e.Name.EndsWith(".ydc", StringComparison.OrdinalIgnoreCase)))
+            {
+                try { YdcDeck.Parse(entry.Data); }
+                catch (Exception ex) when (ex is InvalidDataException or ArgumentException) { bad.Add($"{entry.Name}: {ex.Message}"); }
+            }
+            if (folder.Entries.Count == 0 || bad.Count > 0)
+            {
+                MessageBox.Show(this, folder.Entries.Count == 0 ? "The folder has no files." : "These aren't deck files the game can read:\n" + string.Join("\n", bad.Take(20)),
+                    "Repack decks.zib", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var inFolder = folder.Entries.Select(e => e.Name).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var removed = _archive.Entries.Where(e => !inFolder.Contains(e.Name)).Select(e => e.Name).ToList();
+            int changed = folder.Entries.Count(e => _archive.Find(e.Name) is not { } old || !old.Data.AsSpan().SequenceEqual(e.Data));
+            if (removed.Count > 0 && MessageBox.Show(this,
+                    $"{removed.Count} deck file(s) of decks.zib aren't in the folder and will be taken out (e.g. {string.Join(", ", removed.Take(5))}). Go on?",
+                    "Repack decks.zib", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                return;
+
+            // existing files keep their place in the archive, new ones are added after them
+            _archive.Entries.RemoveAll(e => !inFolder.Contains(e.Name));
+            foreach (var entry in folder.Entries)
+            {
+                if (_archive.Find(entry.Name) is { } old && old.Data.AsSpan().SequenceEqual(entry.Data))
+                    continue;
+                _archive.Set(entry.Name, entry.Data);
+                _changed.Add(entry.Name);
+            }
+            if (removed.Count > 0)
+                _changed.Add("(removed)");   // nothing to colour, but the page is unsaved
+            _shown = null;
+            Refill();
+            _status.Text = $"Repacked from {dialog.SelectedPath}: {changed} changed or new, {removed.Count} removed. Save to write decks.zib.";
         }
 
         public bool Save()

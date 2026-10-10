@@ -99,6 +99,10 @@ namespace WolfEx
             public string Description = "";
             public string Image = "";            // file name inside the Yu-Gi-Oh-Ex folder
             public string? PendingArt;           // newly picked file, copied on save
+            // The second picture the game shows when it runs in Japanese (g_bIsJpVersion), as the game's uncensored art zib does for its cards.
+            public string ImageUncensored = "";  // "imageUncensored" in cards.json, a file next to it
+            public string? PendingUncensored;    // newly picked file, copied on save as <id>_uncensored.<ext>
+            public bool DropUncensored;          // Remove pressed: the file is deleted on save
             public string Kind = "Effect";
             public string Type = "Warrior";
             public string Attribute = "Light";
@@ -501,6 +505,27 @@ namespace WolfEx
                     card.PendingArt = null;
                 }
 
+                // the uncensored picture: <id>_uncensored.<ext>, replaced or removed the same way
+                foreach (var card in _cards.Where(card => card.PendingUncensored != null || card.DropUncensored))
+                {
+                    string? extension = card.PendingUncensored is { } pending ? Path.GetExtension(pending).ToLowerInvariant() : null;
+                    string? name = extension == null ? null : card.Id + "_uncensored" + (extension == ".jpeg" ? ".jpg" : extension);
+                    foreach (string old in ImageExtensions.Select(ext => Path.Combine(extraCardsFolder, card.Id + "_uncensored" + ext)))
+                    {
+                        if (File.Exists(old) && !string.Equals(Path.GetFileName(old), name, StringComparison.OrdinalIgnoreCase))
+                            File.Delete(old);
+                    }
+                    if (name != null)
+                    {
+                        string target = Path.Combine(extraCardsFolder, name);
+                        if (!string.Equals(Path.GetFullPath(card.PendingUncensored!), Path.GetFullPath(target), StringComparison.OrdinalIgnoreCase))
+                            File.Copy(card.PendingUncensored!, target, overwrite: true);
+                    }
+                    card.ImageUncensored = name ?? "";
+                    card.PendingUncensored = null;
+                    card.DropUncensored = false;
+                }
+
                 var array = new JsonArray();
                 foreach (var card in _cards.OrderBy(card => card.Id))
                     array.Add(WriteCard(card));
@@ -626,6 +651,7 @@ namespace WolfEx
                 ShowSameName(card);
                 ApplyKindRules();
                 RefreshArt(card);
+                ShowUncensored(card);
                 BindRequired();
             }
             finally { _binding = false; }
@@ -721,6 +747,7 @@ namespace WolfEx
                 Name = source.Name + " (copy)", Description = source.Description, Kind = source.Kind, Type = source.Type,
                 Attribute = source.Attribute, Icon = source.Icon, Level = source.Level, Atk = source.Atk, Def = source.Def,
                 Limitation = source.Limitation, Copies = source.Copies, PendingArt = source.PendingArt ?? ResolveArt(source),
+                PendingUncensored = ResolveUncensored(source),
                 AtkUnknown = source.AtkUnknown, DefUnknown = source.DefUnknown, Extra = CopyExtra(source.Extra),
             });
         }
@@ -760,6 +787,50 @@ namespace WolfEx
 
             string path = Path.Combine(_folder, card.Image);
             return File.Exists(path) ? path : null;
+        }
+
+        private string? ResolveUncensored(CardModel card)
+        {
+            if (card.DropUncensored)
+                return null;
+            if (card.PendingUncensored != null)
+                return card.PendingUncensored;
+            if (string.IsNullOrEmpty(card.ImageUncensored) || string.IsNullOrEmpty(_folder))
+                return null;
+            string path = Path.Combine(_folder, card.ImageUncensored);
+            return File.Exists(path) ? path : null;
+        }
+
+        private void ShowUncensored(CardModel card)
+        {
+            string? path = ResolveUncensored(card);
+            _uncensoredPath.Text = path != null ? path + (card.PendingUncensored != null ? "  - copied when saved" : "")
+                                 : !card.DropUncensored && !string.IsNullOrEmpty(card.ImageUncensored) ? card.ImageUncensored + "  (file missing)"
+                                 : "(none: the normal picture is shown in Japanese too)";
+            btnRemoveUncensored.Enabled = path != null || (!card.DropUncensored && !string.IsNullOrEmpty(card.ImageUncensored));
+        }
+
+        private void btnChooseUncensored_Click(object? sender, EventArgs e)
+        {
+            if (Selected is not { } card)
+                return;
+            using var dialog = new OpenFileDialog { Title = "Choose the uncensored picture", Filter = "Images (*.png;*.jpg;*.jpeg)|*.png;*.jpg;*.jpeg" };
+            if (dialog.ShowDialog() != DialogResult.OK)
+                return;
+            card.PendingUncensored = dialog.FileName;
+            card.DropUncensored = false;
+            ShowUncensored(card);
+            ShowSummary();
+        }
+
+        private void btnRemoveUncensored_Click(object? sender, EventArgs e)
+        {
+            if (Selected is not { } card)
+                return;
+            card.PendingUncensored = null;
+            card.DropUncensored = true;
+            ShowUncensored(card);
+            ShowSummary();
         }
 
         private void ChooseArt()
@@ -869,6 +940,7 @@ namespace WolfEx
             Name = ReadString(json, "name"),
             Description = ReadString(json, "description"),
             Image = ReadString(json, "image"),
+            ImageUncensored = ReadString(json, "imageUncensored"),
             Kind = ReadEnum(json, "kind", Kinds, "Normal"),
             Type = ReadEnum(json, "type", Types, "Warrior"),
             Attribute = ReadEnum(json, "attribute", Attributes, "Light"),
@@ -890,7 +962,7 @@ namespace WolfEx
         private static readonly HashSet<string> EditedKeys = new(StringComparer.Ordinal)
         {
             "id", "name", "description", "image", "kind", "type", "attribute", "icon", "level", "atk", "def",
-            "limitation", "copies", "effectScript", "effect", "effectClone",
+            "limitation", "copies", "effectScript", "effect", "effectClone", "imageUncensored",
         };
 
         private static JsonObject? ReadExtra(JsonObject json)
@@ -917,6 +989,8 @@ namespace WolfEx
 
             if (!string.IsNullOrEmpty(card.Image))
                 json["image"] = card.Image;
+            if (!string.IsNullOrEmpty(card.ImageUncensored))
+                json["imageUncensored"] = card.ImageUncensored;
             json["kind"] = card.Kind;
 
             if (card.IsSpellOrTrap)

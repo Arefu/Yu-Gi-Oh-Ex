@@ -51,7 +51,7 @@ namespace WolfX
 
         private readonly ComboBox _kind = Combo(220), _attribute = Combo(120), _type = Combo(150), _icon = Combo(120), _language = Combo(140);
         private readonly NumericUpDown _level = Number(0, 13, 1), _atk = Number(0, 5100, 50), _def = Number(0, 5100, 50),
-            _scaleLeft = Number(0, 13, 1), _scaleRight = Number(0, 13, 1), _password = Number(0, 99999999, 1);
+            _scaleLeft = Number(0, 13, 1), _password = Number(0, 99999999, 1);
         private readonly CheckBox _atkUnknown = new() { Text = "?", AutoSize = true }, _defUnknown = new() { Text = "?", AutoSize = true };
         private readonly LinkArrowPicker _arrows = new();
         private readonly Label _arrowCount = new() { AutoSize = true, ForeColor = SystemColors.GrayText, Margin = new Padding(8, 30, 3, 3) };
@@ -306,7 +306,6 @@ namespace WolfX
                 (Caption("Link arrows:"), Row(_arrows, _arrowCount)),
                 // the game has one Pendulum Scale per card; the 4 bits after it are something else (0-3 on the game's cards, meaning not known yet)
                 (Caption("Pendulum scale:"), _scaleLeft),
-                (Caption("Other 4 bits:"), Row(_scaleRight, new Label { Text = "(not a scale; use not known yet)", AutoSize = true, ForeColor = SystemColors.GrayText, Margin = new Padding(6, 7, 3, 3) })),
                 (Caption("Password:"), _password),
                 (Caption("Archetypes:"), Row(_archetypes, _editArchetypes)),
                 (Caption("Same name as:"), Row(_sameName, _sameMode, _pickSame, _clearSame)),
@@ -331,7 +330,7 @@ namespace WolfX
 
             foreach (var combo in new[] { _kind, _attribute, _type, _icon })
                 combo.SelectedIndexChanged += (_, _) => PropertyEdited();
-            foreach (var number in new[] { _level, _atk, _def, _scaleLeft, _scaleRight })
+            foreach (var number in new[] { _level, _atk, _def, _scaleLeft })
                 number.ValueChanged += (_, _) => PropertyEdited();
             _atkUnknown.CheckedChanged += (_, _) => PropertyEdited();
             _defUnknown.CheckedChanged += (_, _) => PropertyEdited();
@@ -721,7 +720,6 @@ namespace WolfX
                     _def.Value = isLink ? 0 : Math.Clamp(Math.Max(0, record.Def), 0, (int)_def.Maximum);   // a Link's DEF bits are its arrows (shown below)
                     _def.Text = isLink ? "" : _def.Value.ToString();
                     _scaleLeft.Value = Math.Clamp(record.ScaleLeft, 0, 13);
-                    _scaleRight.Value = Math.Clamp(record.ScaleRight, 0, 13);
                     _arrows.Value = CardNames.FrameOf((int)record.Kind) == CardFrame.Link ? record.LinkArrows : 0;
                     int i = InternalOf(card!.Id);
                     _password.Value = i < _passwords.Count ? Math.Clamp(_passwords[i], 0, (int)_password.Maximum) : 0;
@@ -835,7 +833,15 @@ namespace WolfX
             if (CardNames.FrameOf((int)record.Kind) == CardFrame.Link)
                 record.LinkArrows = _arrows.Value;   // in place of DEF
             record.ScaleLeft = (int)_scaleLeft.Value;
-            record.ScaleRight = (int)_scaleRight.Value;
+            // What Level means follows the kind (as Yu-Gi-Oh-MoreCards does for custom cards): without it an Xyz shows Rank 0, a Link rating 0.
+            record.StarType = CardNames.FrameOf((int)record.Kind) switch
+            {
+                CardFrame.Xyz => 2,
+                CardFrame.Link => 3,
+                CardFrame.Unknown => record.StarType,
+                CardFrame.Spell or CardFrame.Trap => record.StarType is 2 or 3 ? 0 : record.StarType,
+                _ => record.StarType is 2 or 3 ? 1 : record.StarType,   // left as the game has it unless it was a Rank / Link one
+            };
             UpdateFieldStates(record);
             Changed(id, CardPropTable.GamePath);
         }

@@ -366,7 +366,7 @@ namespace Wolf.Editors
                 RefillCards();
                 RefillTags();
                 _status.Text = $"{from}: {_cards.Count} cards with related cards ({_cards.Values.Sum(l => l.Count)} links), {_tags.Tags.Count} tags, " +
-                    $"languages {string.Join("", _tags.Languages)}" + (fromJson > 0 ? $"; {fromJson} changes from {RelatedCardsJson.FileName}" : "") + ".";
+                    $"languages {string.Join("", _tags.Languages)}" + (fromJson > 0 ? $"; {fromJson} changes from {RelatedCardsJson.FileName}" : "") + "." + LanguageWarnings.Describe(_tags.Warnings);
                 return true;
             }
             catch (InvalidDataException ex)

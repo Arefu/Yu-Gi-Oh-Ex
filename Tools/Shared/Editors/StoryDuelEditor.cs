@@ -330,7 +330,8 @@ namespace Wolf.Editors
                 _status.Text = $"{from}: {_baseline.Duels.Count} story duels (of {StoryDuelTable.SlotCount - 1} ids), languages {string.Join("", _table.Languages)}" +
                     (_scripts != null ? $", {_scripts.Scripts.Count} scenes" : "; no scriptdata, so no scenes") +
                     (fromJson + scenesFromJson > 0 ? $"; {fromJson} duels from {StoryDuelJson.FileName}, {scenesFromJson} scenes from {StoryScriptJson.FileName}" : "") +
-                    (_characters == null ? "; no chardata, so no character names" : "") + (_decks == null ? "; no deckdata_E.bin, so no deck titles" : "") + ".";
+                    (_characters == null ? "; no chardata, so no character names" : "") + (_decks == null ? "; no deckdata_E.bin, so no deck titles" : "") + "." +
+                    LanguageWarnings.Describe([.. _table.Warnings, .. _scripts?.Warnings ?? []]);
                 return true;
             }
             catch (InvalidDataException ex)

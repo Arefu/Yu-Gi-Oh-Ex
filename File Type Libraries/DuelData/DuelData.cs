@@ -113,6 +113,12 @@ namespace Types
         public List<char> Languages { get; } = [];
         public uint HeaderPad { get; set; }
 
+        /// <summary>
+        /// What didn't line up between the language files. Parse doesn't refuse them: a mod may edit only English. The first file (English
+        /// when present) is the list; another language's texts are matched to it, and what that language lacks shows the English text.
+        /// </summary>
+        public List<string> Warnings { get; } = [];
+
         public static StoryDuelTable Parse(IDictionary<char, byte[]> files)
         {
             var table = new StoryDuelTable();
@@ -127,17 +133,25 @@ namespace Types
                 }
                 else
                 {
+                    string first = FileName(table.Languages[0]);
                     if (records.Count != table.Duels.Count)
-                        throw new InvalidDataException($"{FileName(lang)} has {records.Count} duels, {FileName(table.Languages[0])} has {table.Duels.Count}.");
-                    for (int i = 0; i < records.Count; i++)
+                        table.Warnings.Add($"{FileName(lang)} has {records.Count} duels, {first} has {table.Duels.Count}: matched by id, the rest show the {first} text.");
+                    var byId = new Dictionary<int, StoryDuel>();
+                    foreach (var d in table.Duels)
+                        byId.TryAdd(d.Id, d);
+                    int differ = 0;
+                    foreach (var b in records)
                     {
-                        var (a, b) = (table.Duels[i], records[i]);
+                        if (!byId.TryGetValue(b.Id, out var a))
+                            continue;
                         if (!a.SameNumbers(b))
-                            throw new InvalidDataException($"Story duel {a.Id} differs between {FileName(table.Languages[0])} and {FileName(lang)} (only the texts may).");
+                            differ++;
                         a.Titles[lang] = b.Titles[lang];
                         a.Descriptions[lang] = b.Descriptions[lang];
                         a.Tips[lang] = b.Tips[lang];
                     }
+                    if (differ > 0)
+                        table.Warnings.Add($"{differ} story duel(s) differ between {first} and {FileName(lang)} beyond the texts: {first}'s are kept.");
                 }
                 table.Languages.Add(lang);
             }

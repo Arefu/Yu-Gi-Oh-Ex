@@ -27,7 +27,8 @@ namespace Types
 
         public List<Entry> Entries { get; } = [];
 
-        public static ZibArchive Load(string path) => Parse(File.ReadAllBytes(path));
+        /// <summary>The .zib file, or the folder it was extracted to when the file isn't there (<see cref="ZibFolder.Find"/>).</summary>
+        public static ZibArchive Load(string path) => Parse(ZibFolder.Open(path) is { } folder ? folder.ToBytes() : File.ReadAllBytes(path));
 
         public static ZibArchive Parse(byte[] data)
         {

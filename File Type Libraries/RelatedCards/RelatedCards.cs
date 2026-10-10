@@ -262,6 +262,12 @@ namespace Types
         public List<char> Languages { get; } = [];
 
         /// <summary>Reads every language given. Throws if the languages disagree on the records (the game's never do).</summary>
+        /// <summary>
+        /// What didn't line up between the taginfo language files (Parse doesn't refuse them: a mod may edit only English). Tags have no id,
+        /// so another language's texts are matched by position as far as both files go; the rest show the English text.
+        /// </summary>
+        public List<string> Warnings { get; } = [];
+
         public static TagInfoTable Parse(IDictionary<char, byte[]> files)
         {
             var table = new TagInfoTable();
@@ -280,16 +286,20 @@ namespace Types
                 else
                 {
                     if (records.Count != table.Tags.Count)
-                        throw new InvalidDataException($"taginfo_{lang}.bin has {records.Count} tags, taginfo_{table.Languages[0]}.bin has {table.Tags.Count}.");
-                    for (int i = 0; i < records.Count; i++)
+                        table.Warnings.Add($"taginfo_{lang}.bin has {records.Count} tags, taginfo_{table.Languages[0]}.bin has {table.Tags.Count}: " +
+                                           $"matched by position, the rest show the taginfo_{table.Languages[0]}.bin text.");
+                    int differ = 0;
+                    for (int i = 0; i < Math.Min(records.Count, table.Tags.Count); i++)
                     {
                         var (record, text) = records[i];
                         var tag = table.Tags[i];
                         if (record.Group != tag.Group || record.Flag1 != tag.Flag1 || record.HasNumber != tag.HasNumber || record.Pad3 != tag.Pad3 ||
                             record.Key != tag.Key || !record.Conditions.SequenceEqual(tag.Conditions))
-                            throw new InvalidDataException($"Tag {i} differs between taginfo_{table.Languages[0]}.bin and taginfo_{lang}.bin (only the text may differ).");
+                            differ++;
                         tag.Texts[lang] = text;
                     }
+                    if (differ > 0)
+                        table.Warnings.Add($"{differ} tag(s) differ between taginfo_{table.Languages[0]}.bin and taginfo_{lang}.bin beyond the text: the first file's are kept.");
                 }
                 table.Languages.Add(lang);
             }

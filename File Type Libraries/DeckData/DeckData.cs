@@ -70,7 +70,24 @@ namespace DeckData
             for (int i = 0; i < count; i++)
             {
                 var record = data.AsSpan(HeaderSize + i * RecordSize, RecordSize);
-                file.Records.Add(new DeckRecord
+                try
+                {
+                    file.Records.Add(ReadRecord(data, record));
+                }
+                catch (Exception ex) when (ex is ArgumentException or IndexOutOfRangeException or OverflowException or DecoderFallbackException)
+                {
+                    // which record, where, and the string offsets it points at - so a broken or hand-made file says what is wrong
+                    throw new InvalidDataException($"deckdata record {i} of {count} (at byte {HeaderSize + i * RecordSize}, id " +
+                        $"{BinaryPrimitives.ReadUInt32LittleEndian(record)}): {ex.Message} String offsets: file {BinaryPrimitives.ReadUInt64LittleEndian(record[24..])}, " +
+                        $"title {BinaryPrimitives.ReadUInt64LittleEndian(record[32..])}, text2 {BinaryPrimitives.ReadUInt64LittleEndian(record[40..])}, " +
+                        $"text3 {BinaryPrimitives.ReadUInt64LittleEndian(record[48..])}; the file is {data.Length} bytes.", ex);
+                }
+            }
+            return file;
+        }
+
+        private static DeckRecord ReadRecord(byte[] data, ReadOnlySpan<byte> record) =>
+                new DeckRecord
                 {
                     Id = BinaryPrimitives.ReadUInt32LittleEndian(record),
                     Slot = BinaryPrimitives.ReadUInt32LittleEndian(record[4..]),
@@ -83,10 +100,7 @@ namespace DeckData
                     Title = ReadUtf16(data, BinaryPrimitives.ReadUInt64LittleEndian(record[32..])),
                     Text2 = ReadUtf16(data, BinaryPrimitives.ReadUInt64LittleEndian(record[40..])),
                     Text3 = ReadUtf16(data, BinaryPrimitives.ReadUInt64LittleEndian(record[48..])),
-                });
-            }
-            return file;
-        }
+                };
 
         public DeckRecord? Find(uint id) => Records.FirstOrDefault(record => record.Id == id);
 

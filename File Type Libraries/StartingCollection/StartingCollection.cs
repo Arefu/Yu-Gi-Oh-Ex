@@ -44,7 +44,20 @@ namespace StartingCollection
             if (OpenData?.Invoke(relativePath) is { } open)
                 return open;
             string? path = Find(relativePath);
-            return path != null ? System.IO.File.ReadAllBytes(path) : Toc?.Read(relativePath);
+            return path != null ? System.IO.File.ReadAllBytes(path) : FindZibFolder(relativePath)?.ToBytes() ?? Toc?.Read(relativePath);
+        }
+
+        /// <summary>A .zib extracted to a folder ("decks.zib\" or "decks\") in one of the folders, when no loose .zib file is there.</summary>
+        public ZibFolder? FindZibFolder(string relativePath)
+        {
+            if (Find(relativePath) != null)
+                return null;
+            foreach (string root in Roots)
+            {
+                if (ZibFolder.Open(Path.Combine(root, relativePath)) is { } folder)
+                    return folder;
+            }
+            return null;
         }
 
         public string? Find(string relativePath)

@@ -29,7 +29,17 @@ namespace Types
         public int Icon { get; set; }
         public CARDS_INFO.CARD_Type Type { get; set; }
         public int ScaleLeft { get; set; }
+        /// <summary>Bits 27-30 of the second word. The low 2 bits are the <see cref="StarType"/>; the game drops the top 2 when it loads the
+        /// file (Setup_CardPropTable), so they are only kept for a byte-exact round trip.</summary>
         public int ScaleRight { get; set; }
+
+        /// <summary>What the Level number is (bits 27-28, CardProps +0x28 in the exe): 0 none (Spell/Trap), 1 Level, 2 Rank, 3 Link rating.
+        /// The exe's Rank / Link rating / Link arrows getters return 0 unless this matches, so it must follow the kind.</summary>
+        public int StarType
+        {
+            get => ScaleRight & 3;
+            set => ScaleRight = ScaleRight & ~3 | value & 3;
+        }
         /// <summary>Bit 0 of the second word: set on most cards; its meaning isn't known, it is kept as it is.</summary>
         public bool Flag { get; set; }
         /// <summary>Bit 31 of the second word, kept as it is.</summary>

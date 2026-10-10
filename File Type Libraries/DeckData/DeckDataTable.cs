@@ -92,13 +92,32 @@ namespace DeckData
         public List<Deck> Decks { get; } = [];
         public List<char> Languages { get; } = [];
 
+        /// <summary>
+        /// What didn't line up between the language files (Parse no longer refuses them): a language with more or fewer decks than the first
+        /// (English when present), or a deck whose non-text fields differ. The first file's decks are the list; another language's texts are
+        /// matched to them by deck id, and a deck it lacks shows the English text (the game shows a language file's own decks only).
+        /// </summary>
+        public List<string> Warnings { get; } = [];
+
         public static DeckDataTable Parse(IDictionary<char, byte[]> files)
         {
             var table = new DeckDataTable();
             foreach (var (language, data) in files.OrderBy(f => f.Key == 'E' ? 0 : 1).ThenBy(f => f.Key))
             {
                 char lang = char.ToUpperInvariant(language);
-                var records = DeckDataFile.Parse(data).Records;
+                List<DeckRecord> records;
+                try
+                {
+                    records = DeckDataFile.Parse(data).Records;
+                }
+                catch (Exception ex) when (ex is InvalidDataException or ArgumentException or OverflowException or IndexOutOfRangeException)
+                {
+                    // the first language is the list itself: it has to read; another one is skipped with the reason
+                    if (table.Languages.Count == 0)
+                        throw new InvalidDataException($"{FileName(lang)} ({data.Length} bytes): {ex.Message}", ex);
+                    table.Warnings.Add($"{FileName(lang)} ({data.Length} bytes) skipped: {ex.Message}");
+                    continue;
+                }
                 if (table.Languages.Count == 0)
                 {
                     foreach (var r in records)
@@ -109,17 +128,35 @@ namespace DeckData
                         });
                 }
                 else if (records.Count != table.Decks.Count)
-                    throw new InvalidDataException($"{FileName(lang)} has {records.Count} decks, {FileName(table.Languages[0])} has {table.Decks.Count}.");
-                for (int i = 0; i < records.Count; i++)
+                    table.Warnings.Add($"{FileName(lang)} has {records.Count} decks, {FileName(table.Languages[0])} has {table.Decks.Count}: " +
+                                       $"its texts are matched by deck id, decks it lacks show the {FileName(table.Languages[0])} text.");
+
+                var byId = new Dictionary<uint, Deck>();
+                foreach (var d in table.Decks)
+                    byId.TryAdd(d.Id, d);
+                int differ = 0, extra = 0;
+                foreach (var r in records)
                 {
-                    var (d, r) = (table.Decks[i], records[i]);
-                    if (d.Id != r.Id || d.Slot != r.Slot || d.Series != unchecked((int)r.Type) || d.SignatureCard != r.SignatureCard || d.Padding14 != r.Padding14 ||
-                        d.CharacterId != r.CharacterId || d.Sku != r.Sku || d.FileName != r.FileName)
-                        throw new InvalidDataException($"Deck {d.Id} differs between {FileName(table.Languages.FirstOrDefault(lang))} and {FileName(lang)} (only the texts may).");
+                    if (!byId.TryGetValue(r.Id, out var d))
+                    {
+                        extra++;
+                        continue;
+                    }
+                    if (table.Languages.Count > 0 && (d.Slot != r.Slot || d.Series != unchecked((int)r.Type) || d.SignatureCard != r.SignatureCard ||
+                        d.Padding14 != r.Padding14 || d.CharacterId != r.CharacterId || d.Sku != r.Sku || d.FileName != r.FileName))
+                    {
+                        if (differ++ < 5)
+                            table.Warnings.Add($"Deck {d.Id} differs between {FileName(table.Languages[0])} and {FileName(lang)} (only the texts may): " +
+                                               $"{FileName(table.Languages[0])}'s is kept.");
+                    }
                     d.Titles[lang] = r.Title;
                     d.Texts2[lang] = r.Text2;
                     d.Texts3[lang] = r.Text3;
                 }
+                if (differ > 5)
+                    table.Warnings.Add($"... {differ - 5} more decks differ in {FileName(lang)}.");
+                if (extra > 0)
+                    table.Warnings.Add($"{FileName(lang)} has {extra} deck(s) {FileName(table.Languages[0])} doesn't: ignored (the list comes from {FileName(table.Languages[0])}).");
                 table.Languages.Add(lang);
             }
             return table;

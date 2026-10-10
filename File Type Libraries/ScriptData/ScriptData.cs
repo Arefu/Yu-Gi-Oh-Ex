@@ -80,6 +80,12 @@ namespace Types
         public List<StoryScript> Scripts { get; } = [];
         public List<char> Languages { get; } = [];
 
+        /// <summary>
+        /// What didn't line up between the language files. Parse doesn't refuse them: a mod may edit only English. The first file (English
+        /// when present) is the list; another language's texts are matched to it, and what that language lacks shows the English text.
+        /// </summary>
+        public List<string> Warnings { get; } = [];
+
         public static StoryScriptTable Parse(IDictionary<char, byte[]> files)
         {
             var table = new StoryScriptTable();
@@ -91,21 +97,29 @@ namespace Types
                     table.Scripts.AddRange(scripts);
                 else
                 {
+                    string first = FileName(table.Languages[0]);
                     if (scripts.Count != table.Scripts.Count)
-                        throw new InvalidDataException($"{FileName(lang)} has {scripts.Count} scripts, {FileName(table.Languages[0])} has {table.Scripts.Count}.");
-                    for (int i = 0; i < scripts.Count; i++)
+                        table.Warnings.Add($"{FileName(lang)} has {scripts.Count} scripts, {first} has {table.Scripts.Count}: matched by name, the rest show the {first} text.");
+                    var byName = new Dictionary<string, StoryScript>(StringComparer.OrdinalIgnoreCase);   // the game looks scenes up ignoring case
+                    foreach (var s in table.Scripts)
+                        byName.TryAdd(s.Name, s);
+                    int differ = 0;
+                    foreach (var b in scripts)
                     {
-                        var (a, b) = (table.Scripts[i], scripts[i]);
-                        if (a.Name != b.Name || a.Lines.Count != b.Lines.Count)
-                            throw new InvalidDataException($"Script {a.Name} differs between {FileName(table.Languages[0])} and {FileName(lang)}.");
-                        for (int j = 0; j < a.Lines.Count; j++)
+                        if (!byName.TryGetValue(b.Name, out var a))
+                            continue;
+                        bool same = a.Lines.Count == b.Lines.Count;
+                        for (int j = 0; j < Math.Min(a.Lines.Count, b.Lines.Count); j++)
                         {
                             var (x, y) = (a.Lines[j], b.Lines[j]);
-                            if (x.Speaker != y.Speaker || x.Position != y.Position || x.Expression != y.Expression)
-                                throw new InvalidDataException($"Script {a.Name} line {j} differs between {FileName(table.Languages[0])} and {FileName(lang)} (only the text may).");
+                            same &= x.Speaker == y.Speaker && x.Position == y.Position && x.Expression == y.Expression;
                             x.Texts[lang] = y.Texts[lang];
                         }
+                        if (!same)
+                            differ++;
                     }
+                    if (differ > 0)
+                        table.Warnings.Add($"{differ} scene(s) differ between {first} and {FileName(lang)} beyond the text (lines, speakers or poses): {first}'s are kept.");
                 }
                 table.Languages.Add(lang);
             }

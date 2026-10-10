@@ -55,6 +55,8 @@ namespace WolfEx
 
         private readonly TextBox _artPath = new() { ReadOnly = true, Width = 420 };
         private readonly Button btnChooseArt = new() { Text = "Choose art...", AutoSize = true };
+        private readonly TextBox _uncensoredPath = new() { ReadOnly = true, Width = 420 };
+        private readonly Button btnChooseUncensored = new() { Text = "Choose...", AutoSize = true }, btnRemoveUncensored = new() { Text = "Remove", AutoSize = true };
         private readonly Label _artInfo = new() { AutoSize = true, MaximumSize = new Size(520, 0), Margin = new Padding(3, 8, 3, 3) };
         private readonly PictureBox _preview = new() { Size = new Size(228, 228), SizeMode = PictureBoxSizeMode.Zoom, BorderStyle = BorderStyle.FixedSingle, Margin = new Padding(3, 8, 3, 3) };
 
@@ -175,6 +177,8 @@ namespace WolfEx
             _sameMode.SelectedIndex = 0;
             _sameMode.SelectedIndexChanged += SameMode_Changed;
             btnChooseArt.Click += btnChooseArt_Click;
+            btnChooseUncensored.Click += btnChooseUncensored_Click;
+            btnRemoveUncensored.Click += btnRemoveUncensored_Click;
         }
 
         private static Label Caption(string text) => new() { Text = text, AutoSize = true, Anchor = AnchorStyles.Left, Margin = new Padding(3, 7, 3, 3) };
@@ -316,7 +320,10 @@ namespace WolfEx
             flow.Controls.Add(Row(_artPath, btnChooseArt));
             flow.Controls.Add(_artInfo);
             flow.Controls.Add(_preview);
-            return Tab("Art", flow, Note("A 304 x 304 JPG, 24 bit, is what the game expects. The picture is copied next to cards.json as <id>.jpg / .png when you save."));
+            flow.Controls.Add(new Label { Text = "Uncensored picture (optional, shown when the game runs in Japanese, like the game's own uncensored art):", AutoSize = true, Margin = new Padding(3, 12, 3, 3) });
+            flow.Controls.Add(Row(_uncensoredPath, btnChooseUncensored, btnRemoveUncensored));
+            return Tab("Art", flow, Note("A 304 x 304 JPG, 24 bit, is what the game expects. The picture is copied next to cards.json as <id>.jpg / .png when you save " +
+                                         "(the uncensored one as <id>_uncensored.jpg, \"imageUncensored\" in cards.json)."));
         }
     }
 }

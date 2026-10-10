@@ -230,7 +230,7 @@ namespace Wolf.Editors
                 SetEditable(true);
                 Refill();
                 _status.Text = $"{from}: {_baseline.Characters.Count} characters (of {CharacterTable.SlotCount} slots), languages {string.Join("", _table.Languages)}" +
-                    (fromJson > 0 ? $"; {fromJson} from {CharacterJson.FileName}" : "") + (_decks == null ? "; no deckdata_E.bin, so no deck names" : "") + ".";
+                    (fromJson > 0 ? $"; {fromJson} from {CharacterJson.FileName}" : "") + (_decks == null ? "; no deckdata_E.bin, so no deck names" : "") + "." + LanguageWarnings.Describe(_table.Warnings);
                 return true;
             }
             catch (InvalidDataException ex)

@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Drawing.Imaging;
 using StartingCollection;
+using Types;
 
 namespace Wolf.Editors
 {
@@ -201,14 +202,20 @@ namespace Wolf.Editors
         public bool IsOverridden(string path) => _extracted == null && HasLoose(path);
 
         /// <summary>A loose file the game would use for this path (loose loading on and the file there).</summary>
-        private bool HasLoose(string path) => LooseLoading && File.Exists(LoosePath(path));
+        private bool HasLoose(string path) => LooseLoading && LooseExists(path);
+
+        /// <summary>The loose file, or for a .zib the folder it was extracted to (decks.zib\ or decks\, see <see cref="ZibFolder"/>).</summary>
+        private bool LooseExists(string path) => File.Exists(LoosePath(path)) || LooseZibFolder(path) != null;
+
+        /// <summary>An extracted .zib standing in for <paramref name="path"/>: a folder where the loose .zib would be, the .zib itself missing.</summary>
+        private string? LooseZibFolder(string path) => ZibFolder.Find(LoosePath(path));
 
         /// <summary>Which copy of a file the game loads: "loose", "patch" or "archive" (null: none).</summary>
         public string? SourceOf(string path)
         {
             path = path.Replace('/', '\\');
             if (_extracted != null)
-                return File.Exists(LoosePath(path)) ? "loose" : null;
+                return LooseExists(path) ? "loose" : null;
             bool loose = HasLoose(path), patched = _patch?.Contains(path) == true;
             if (_patchFirst && patched)
                 return "patch";
@@ -230,7 +237,7 @@ namespace Wolf.Editors
             path = path.Replace('/', '\\');
             return SourceOf(path) switch
             {
-                "loose" => File.ReadAllBytes(LoosePath(path)),
+                "loose" => LooseZibFolder(path) is { } folder ? new ZibFolder(folder).ToBytes() : File.ReadAllBytes(LoosePath(path)),
                 "patch" => _patch!.Read(path),
                 "archive" => _archive!.Read(path),
                 _ => null,
@@ -244,6 +251,8 @@ namespace Wolf.Editors
             string? source = SourceOf(path);
             if (source != "loose")
                 return source == "patch" ? _patch!.Read(path, start, count) : _archive?.Read(path, start, count);
+            if (LooseZibFolder(path) is { } folder)
+                return new ZibFolder(folder).Read(start, count);
             using var stream = new FileStream(loose, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             if (start < 0 || start >= stream.Length)
                 return null;
@@ -261,6 +270,8 @@ namespace Wolf.Editors
         {
             path = path.Replace('/', '\\');
             string? source = SourceOf(path);
+            if (source == "loose" && LooseZibFolder(path) is { } folder)
+                return new RangeReader(new ZibFolder(folder));
             if (source == "loose")
             {
                 string loose = LoosePath(path);
@@ -277,7 +288,8 @@ namespace Wolf.Editors
         /// <summary>A file inside another (or on its own) read in parts; see <see cref="OpenRange"/>.</summary>
         public sealed class RangeReader : IDisposable
         {
-            private readonly FileStream _stream;
+            private readonly FileStream? _stream;
+            private readonly ZibFolder? _folder;   // an extracted .zib, read as the archive it stands for
             private readonly long _offset;
 
             internal RangeReader(string file, long offset, long size)
@@ -287,25 +299,33 @@ namespace Wolf.Editors
                 Size = size;
             }
 
+            internal RangeReader(ZibFolder folder)
+            {
+                _folder = folder;
+                Size = folder.Size;
+            }
+
             public long Size { get; }
 
             public byte[]? Read(long start, int count)
             {
+                if (_folder != null)
+                    return _folder.Read(start, count);
                 if (start < 0 || start >= Size)
                     return null;
                 var data = new byte[Math.Min(count, Size - start)];
-                _stream.Position = _offset + start;
+                _stream!.Position = _offset + start;
                 _stream.ReadExactly(data);
                 return data;
             }
 
-            public void Dispose() => _stream.Dispose();
+            public void Dispose() => _stream?.Dispose();
         }
 
         /// <summary>Where a file is read from, for status lines: "YGO_2020.dat" or the loose file.</summary>
         public string Describe(string path) => SourceOf(path) switch
         {
-            "loose" => LoosePath(path),
+            "loose" => LooseZibFolder(path) is { } folder ? $"{folder} (extracted folder)" : LoosePath(path),
             "patch" => $"{PatchName}.dat (WolfX's patch)",
             "archive" => "YGO_2020.dat",
             _ => _archive != null ? $"{PatchName}.dat (WolfX's patch)" : LoosePath(path),
@@ -319,8 +339,16 @@ namespace Wolf.Editors
                 all.UnionWith(_patch?.Paths ?? []);
                 if (LooseLoading && Directory.Exists(OverrideFolder))
                 {
+                    // an extracted .zib (a folder named <name>.zib) is listed as the archive, not as its files
+                    var zibFolders = Directory.EnumerateDirectories(OverrideFolder, "*.zib", SearchOption.AllDirectories)
+                        .Where(folder => !File.Exists(folder)).Select(folder => folder + Path.DirectorySeparatorChar).ToList();
+                    foreach (string folder in zibFolders)
+                        all.Add(Path.GetRelativePath(OverrideFolder, folder.TrimEnd(Path.DirectorySeparatorChar)));
                     foreach (string file in Directory.EnumerateFiles(OverrideFolder, "*", SearchOption.AllDirectories))
-                        all.Add(Path.GetRelativePath(OverrideFolder, file));
+                    {
+                        if (!zibFolders.Any(folder => file.StartsWith(folder, StringComparison.OrdinalIgnoreCase)))
+                            all.Add(Path.GetRelativePath(OverrideFolder, file));
+                    }
                 }
                 return all;
             }
@@ -354,7 +382,23 @@ namespace Wolf.Editors
                 string path = rawPath.Replace('/', '\\');
                 string loose = LoosePath(path);
                 // into the copy the game loads: the loose file when it wins, otherwise the patch (an extracted folder is all loose files)
-                if (_archive == null || SourceOf(path) == "loose")
+                if ((_archive == null || SourceOf(path) == "loose") && LooseZibFolder(path) is { } folder)
+                {
+                    // an extracted .zib stays extracted: the new archive is written to a temporary file and unpacked into its folder
+                    string temp = Path.Combine(Path.GetTempPath(), $"WolfX-{Guid.NewGuid():N}.zib");
+                    try
+                    {
+                        using (var stream = new FileStream(temp, FileMode.Create, FileAccess.Write, FileShare.None, 1 << 20))
+                            source.WriteTo(stream);
+                        using var reader = new RangeReader(temp, 0, new FileInfo(temp).Length);
+                        ZibFolder.Unpack(reader.Read, folder);
+                    }
+                    finally
+                    {
+                        File.Delete(temp);
+                    }
+                }
+                else if (_archive == null || SourceOf(path) == "loose")
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(loose)!);
                     if (File.Exists(loose) && !File.Exists(loose + ".bak"))
@@ -416,7 +460,7 @@ namespace Wolf.Editors
         public byte[]? Read(string path)
         {
             string full = Path.Combine(Root, path.Replace('/', '\\'));
-            return File.Exists(full) ? File.ReadAllBytes(full) : null;
+            return File.Exists(full) ? File.ReadAllBytes(full) : ZibFolder.Open(full)?.ToBytes();   // a .zib may be extracted to a folder
         }
 
         public IEnumerable<string> Paths =>

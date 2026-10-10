@@ -275,12 +275,15 @@ namespace Wolf.Editors
                 SetEditable(true);
                 Refill();
                 _status.Text = $"{from}: {_baseline.Decks.Count} decks (of {DeckDataTable.SlotCount} slots), languages {string.Join("", _table.Languages)}, " +
-                    (_zib == null ? "no decks.zib so no cards" : $"cards for {withCards}") + (fromJson > 0 ? $"; {fromJson} from {DeckJson.FileName}" : "") + ".";
+                    (_zib == null ? "no decks.zib so no cards" : $"cards for {withCards}") + (fromJson > 0 ? $"; {fromJson} from {DeckJson.FileName}" : "") + "." +
+                    LanguageWarnings.Describe(_table.Warnings);
                 return true;
             }
-            catch (InvalidDataException ex)
+            catch (Exception ex) when (ex is InvalidDataException or ArgumentException or IOException or OverflowException)
             {
-                _status.Text = ex.Message;
+                // why it didn't open, in full (the status line is one line)
+                _status.Text = "Couldn't read the decks: " + ex.Message;
+                MessageBox.Show(this, ex.Message, "Couldn't read the decks", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
         }

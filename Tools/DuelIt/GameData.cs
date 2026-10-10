@@ -55,6 +55,15 @@ namespace DuelIt
         private Dictionary<string, (Rectangle Source, Point Offset, Size Full)>? _iconList;
         private GameFiles? _files;
         private TocArchive? _toc;
+        private readonly Dictionary<string, Types.ZibFolder?> _zibFolders = new(StringComparer.OrdinalIgnoreCase);
+
+        /// <summary>Part of an art .zib: from the folder it was extracted to when there is one (YGO_2020\2020.full.illust_j.jpg.zib\), else YGO_2020.dat.</summary>
+        private byte[]? ReadZib(string zib, long start, int count)
+        {
+            if (!_zibFolders.TryGetValue(zib, out var folder))
+                _zibFolders[zib] = folder = _files?.FindZibFolder(zib);
+            return folder != null ? folder.Read(start, count) : _toc?.Read(zib, start, count);
+        }
         private string _customFolder = "";
 
         public static readonly GameData Empty = new();
@@ -89,12 +98,9 @@ namespace DuelIt
 
             data.ReadCustomCards(Path.Combine(data._customFolder, "cards.json"));
 
-            if (data._toc != null)
-            {
-                data.ReadZibIndex(CensoredZib, data._censored);
-                data.ReadZibIndex(UncensoredZib, data._uncensored);
-                data.CardBack = Decode(data._toc.Read(@"card\0000.png"));
-            }
+            data.ReadZibIndex(CensoredZib, data._censored);
+            data.ReadZibIndex(UncensoredZib, data._uncensored);
+            data.CardBack = Decode(files.ReadBytes(@"card\0000.png"));
             if (!data.HasArt)
                 data.Warnings.Add("No card art found (YGO_2020.dat's .zib archives), cards are drawn without pictures.");
             return data;
@@ -184,10 +190,10 @@ namespace DuelIt
         // first entry's start is where the list ends.
         private void ReadZibIndex(string zib, Dictionary<int, (long, int)> into)
         {
-            if (_toc == null || _toc.Read(zib, 0, 64) is not { Length: 64 } head)
+            if (ReadZib(zib, 0, 64) is not { Length: 64 } head)
                 return;
             long dataStart = BinaryPrimitives.ReadUInt32BigEndian(head) / 4 * 4;
-            if (dataStart < 64 || dataStart > 16 * 1024 * 1024 || _toc.Read(zib, 0, (int)dataStart) is not { } list)
+            if (dataStart < 64 || dataStart > 16 * 1024 * 1024 || ReadZib(zib, 0, (int)dataStart) is not { } list)
                 return;
             for (int at = 0; at + 64 <= list.Length; at += 64)
             {
@@ -287,12 +293,12 @@ namespace DuelIt
                 {
                     try { art = Decode(File.ReadAllBytes(file)); } catch (IOException) { }
                 }
-                else if (_toc != null)
+                else
                 {
                     if (uncensored && _uncensored.TryGetValue(id, out var alt))
-                        art = Decode(_toc.Read(UncensoredZib, alt.Start, alt.Size));
+                        art = Decode(ReadZib(UncensoredZib, alt.Start, alt.Size));
                     if (art == null && _censored.TryGetValue(id, out var entry))
-                        art = Decode(_toc.Read(CensoredZib, entry.Start, entry.Size));
+                        art = Decode(ReadZib(CensoredZib, entry.Start, entry.Size));
                 }
                 _art[(id, uncensored)] = art;
                 return art;

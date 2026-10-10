@@ -86,6 +86,12 @@ namespace Types
         public List<char> Languages { get; } = [];
         public uint HeaderPad { get; set; }
 
+        /// <summary>
+        /// What didn't line up between the language files. Parse doesn't refuse them: a mod may edit only English. The first file (English
+        /// when present) is the list; another language's texts are matched to it, and what that language lacks shows the English text.
+        /// </summary>
+        public List<string> Warnings { get; } = [];
+
         public static CharacterTable Parse(IDictionary<char, byte[]> files)
         {
             var table = new CharacterTable();
@@ -100,17 +106,25 @@ namespace Types
                 }
                 else
                 {
+                    string first = FileName(table.Languages[0]);
                     if (records.Count != table.Characters.Count)
-                        throw new InvalidDataException($"{FileName(lang)} has {records.Count} characters, {FileName(table.Languages[0])} has {table.Characters.Count}.");
-                    for (int i = 0; i < records.Count; i++)
+                        table.Warnings.Add($"{FileName(lang)} has {records.Count} characters, {first} has {table.Characters.Count}: matched by id, the rest show the {first} text.");
+                    var byId = new Dictionary<int, Character>();
+                    foreach (var c in table.Characters)
+                        byId.TryAdd(c.Id, c);
+                    int differ = 0;
+                    foreach (var b in records)
                     {
-                        var (a, b) = (table.Characters[i], records[i]);
-                        if (a.Id != b.Id || a.Series != b.Series || a.Deck != b.Deck || a.Selectable != b.Selectable || a.Sku != b.Sku ||
+                        if (!byId.TryGetValue(b.Id, out var a))
+                            continue;
+                        if (a.Series != b.Series || a.Deck != b.Deck || a.Selectable != b.Selectable || a.Sku != b.Sku ||
                             a.Unused14 != b.Unused14 || a.Arena != b.Arena || a.Field1C != b.Field1C || a.Key != b.Key)
-                            throw new InvalidDataException($"Character {a.Id} differs between {FileName(table.Languages[0])} and {FileName(lang)} (only names and bios may).");
+                            differ++;
                         a.Names[lang] = b.Names[lang];
                         a.Bios[lang] = b.Bios[lang];
                     }
+                    if (differ > 0)
+                        table.Warnings.Add($"{differ} character(s) differ between {first} and {FileName(lang)} beyond names and bios: {first}'s are kept.");
                 }
                 table.Languages.Add(lang);
             }
