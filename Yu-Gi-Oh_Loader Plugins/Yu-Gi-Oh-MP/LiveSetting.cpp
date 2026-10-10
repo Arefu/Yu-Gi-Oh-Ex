@@ -5,6 +5,7 @@
 
 #include "Detours.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Memory.h"
 #include "BanList.h"
 #include "Steam.h"
 #include "YuGiOh/YuGiOh-RIX.h"
@@ -18,6 +19,7 @@
 #include <map>
 #include <string>
 #include <vector>
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -376,7 +378,7 @@ namespace
     constexpr const wchar_t* kNextLabel = L"Next page";
     constexpr const wchar_t* kBackLabel = L"Back";
     constexpr const char* kMemberBan = "exban";   // member data: "declined" = this joiner said No to the host's list and is leaving
-    const auto CardName = reinterpret_cast<const wchar_t*(__fastcall*)(short konamiId)>(0x14076D0F0);   // Get_CardNameFromKonamiId
+    const auto CardName = reinterpret_cast<const wchar_t*(__fastcall*)(short konamiId)>(YGO::Addr::Card_GetNameFromKonamiId);   // Get_CardNameFromKonamiId
 
     void OnAccept()
     {
@@ -651,17 +653,8 @@ namespace LiveSetting
     // 6+ are the Create/Join buttons.
     void PatchKeyboardBound()
     {
-        auto* imm = reinterpret_cast<unsigned char*>(0x1408542DA);
-        if (imm[-4] != 0x43 || imm[-3] != 0x83 || *imm != 5)   // 43 83 3C 81 05
-        {
-            Logger::WriteLog("Ban list row: unexpected bytes at 0x1408542D6, left/right keys not enabled", MODULE_NAME, 1);
-            return;
-        }
-        DWORD old;
-        VirtualProtect(imm, 1, PAGE_EXECUTE_READWRITE, &old);
-        *imm = 6;
-        VirtualProtect(imm, 1, old, &old);
-        FlushInstructionCache(GetCurrentProcess(), imm, 1);
+        // cmp dword [r9+r8*4], 5 -> 6
+        YGO::Memory::PatchBytes(0x1408542D6, { 0x43, 0x83, 0x3C, 0x81, 0x05 }, { 0x43, 0x83, 0x3C, 0x81, 0x06 }, "Ban list row left/right keys");
     }
 
     void Attach()

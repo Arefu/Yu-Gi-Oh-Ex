@@ -10,6 +10,7 @@
 #include "Logger.h"
 #include "Stubs.h"
 #include "YuGiOh/YuGiOh-DUELSTATE.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // Game addresses (YuGiOh.exe.i64; the exe is not relocated). Duel::PlayerState and the getters are documented in
 // docs/EffectSystem.md section 28 and docs/MultiplayerSystem.md.
@@ -25,14 +26,14 @@ namespace
     constexpr Pile kHand = { "hand", DS::Hand }, kDeck = { "deck", DS::Deck }, kExtra = { "extra", DS::ExtraDeck };
 
     template <typename R> R CallGame(uintptr_t address) { return reinterpret_cast<R(__fastcall*)()>(address)(); }
-    bool IsDuelMultiplayer() { return CallGame<uint8_t>(0x1407691D0) != 0; }
+    bool IsDuelMultiplayer() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsDuelMultiplayer) != 0; }
     bool IsTagDuel() { return CallGame<uint8_t>(0x1407694D0) != 0; }
     int LiveMatchType() { return CallGame<uint8_t>(0x140768E20); }
-    bool IsBattlePack() { return CallGame<uint8_t>(0x140769190) != 0; }
+    bool IsBattlePack() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsBattlePackMode) != 0; }
     bool IsCampaign() { return CallGame<uint8_t>(0x1407691A0) != 0; }
-    bool IsChallenge() { return CallGame<uint8_t>(0x1407691B0) != 0; }
+    bool IsChallenge() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsChallengeMode) != 0; }
     bool IsRoundBased() { return CallGame<uint8_t>(0x1407691F0) != 0; }
-    int LocalPlayerSeat() { return CallGame<int>(0x140768F80); }
+    int LocalPlayerSeat() { return CallGame<int>(YGO::Addr::Duel_Get_LocalPlayerSeat); }
 
     template <typename T> T Read(uintptr_t address) { return *reinterpret_cast<volatile T*>(address); }
 

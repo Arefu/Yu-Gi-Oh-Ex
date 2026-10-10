@@ -10,6 +10,7 @@
 #include "Logger.h"
 #include "P2P.h"
 #include "Stubs.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // Logging stubs on every multiplayer / duel-flow / stats function mapped so far (docs/MultiplayerSystem.md,
 // docs/StatsAndMatchResults.md; names and parameter names match YuGiOh.exe.i64). All of them call straight through -
@@ -58,7 +59,7 @@ namespace
 
     // ---- YGO::DUEL::Set_IsDuelMultiplayer (0x140769720): also called directly by the debug helper below.
     using SetIsDuelMultiplayer_t = void(__fastcall*)(bool);
-    SetIsDuelMultiplayer_t Call_SetIsDuelMultiplayer = reinterpret_cast<SetIsDuelMultiplayer_t>(0x140769720);
+    SetIsDuelMultiplayer_t Call_SetIsDuelMultiplayer = reinterpret_cast<SetIsDuelMultiplayer_t>(YGO::Addr::Duel_Set_IsDuelMultiplayer);
 
     template <typename... S>
     int AttachAll()
@@ -89,19 +90,19 @@ namespace
 
         // ===== Duel setup =====
         attached += AttachAll<
-            Stub<0x14081E530, "YGO__DuelSetup__AssignSeatDecksAndDuelists", "", Info, u64()>,
+            Stub<YGO::Addr::DuelSetup_AssignSeatDecksAndDuelists, "YGO__DuelSetup__AssignSeatDecksAndDuelists", "", Info, u64()>,
             Stub<0x14081ED30, "YGO::DuelSetup::SetupDuelSettings", "", Info, u64()>,
-            Stub<0x1407696E0, "YGO::DuelSetup::Setup_RuleAndLP", "", Info, u64()>,
-            Stub<0x1407BC4C0, "YGO::DUEL::Engine_Init", "", Info, u64(), DuelRecorder::Tap_EngineInit>,
+            Stub<YGO::Addr::DuelSetup_Setup_RuleAndLP, "YGO::DuelSetup::Setup_RuleAndLP", "", Info, u64()>,
+            Stub<YGO::Addr::Duel_Engine_Init, "YGO::DUEL::Engine_Init", "", Info, u64(), DuelRecorder::Tap_EngineInit>,
             Stub<0x1407BC910, "YGO::DUEL::Engine_InitRulesAndDecks", "", Info, u64()>,
-            Stub<0x14005FC90, "YGO::DUEL::DuelSetup_ClearState", "", Info, u64()>,
+            Stub<YGO::Addr::DuelSetup_ClearState, "YGO::DUEL::DuelSetup_ClearState", "", Info, u64()>,
             Stub<0x14005FD90, "YGO::DUEL::DuelSetup_InitEngine", "", Info, u64()>,
             Stub<0x14005FED0, "YGO::DUEL::DuelSetup_LoadBothDecks", "", Info, u64()>,
-            Stub<0x140769720, "YGO::DUEL::Set_IsDuelMultiplayer", "isMP:bool", Info, u64(u64)>,
-            Stub<0x140769AC0, "YGO::DUEL::Set_IsTagDuel", "isTag:bool", Info, u64(u64)>,
+            Stub<YGO::Addr::Duel_Set_IsDuelMultiplayer, "YGO::DUEL::Set_IsDuelMultiplayer", "isMP:bool", Info, u64(u64)>,
+            Stub<YGO::Addr::Duel_Set_IsTagDuel, "YGO::DUEL::Set_IsTagDuel", "isTag:bool", Info, u64(u64)>,
             Stub<0x1407697F0, "YGO__DUEL__Set_LiveMatchType", "type:u8", Info, u64(u64)>,
-            Stub<0x1407696C0, "YGO__DUEL__Set_IsLiveSession", "on:bool", Info, u64(u64)>,
-            Stub<0x140769740, "YGO::DUEL::Set_StartingPlayer", "player:i32", Info, u64(u64), DuelRecorder::Tap_SetStartingPlayer>,
+            Stub<YGO::Addr::Duel_Set_IsLiveSession, "YGO__DUEL__Set_IsLiveSession", "on:bool", Info, u64(u64)>,
+            Stub<YGO::Addr::Duel_Set_StartingPlayer, "YGO::DUEL::Set_StartingPlayer", "player:i32", Info, u64(u64), DuelRecorder::Tap_SetStartingPlayer>,
             Stub<0x140769850, "YGO__DUEL__Set_LocalPlayerSeat", "seat:i32", Info, u64(u64)>
         >();
 
@@ -119,8 +120,8 @@ namespace
             Stub<0x14000F400, "Duel__MsgQueue__ExecuteFront", "", Debug, u64()>,
             // Duel__MsgQueue__Push is deliberately not stubbed (register assumptions, see Stubs.h); the recorder reads each
             // message as PumpAndMirror pops it instead.
-            Stub<0x1400117E0, "Duel__MsgQueue__PumpAndMirror", "", Debug, u64(), DuelRecorder::Tap_PumpAndMirror>,
-            Stub<0x1407C1450, "YGO::UI::Draw_DuelAnimationFromId", "anim:u32,a2:i32,a3:i32,a4:i32", Debug, u64(u64, u64, u64, u64)>
+            Stub<YGO::Addr::Duel_MsgQueue_PumpAndMirror, "Duel__MsgQueue__PumpAndMirror", "", Debug, u64(), DuelRecorder::Tap_PumpAndMirror>,
+            Stub<YGO::Addr::UI_Draw_DuelAnimationFromId, "YGO::UI::Draw_DuelAnimationFromId", "anim:u32,a2:i32,a3:i32,a4:i32", Debug, u64(u64, u64, u64, u64)>
         >();
 
         // ===== LP / stats during the duel =====
@@ -147,11 +148,11 @@ namespace
             Stub<0x140147DD0, "YGO__DUEL__CheckTurnOrTimeLimit", "", Info, u64()>,
             Stub<0x1407C3420, "YGO__DUEL__OnDuelEnd", "outcome:i32", Info, u64(u64), DuelRecorder::Tap_OnDuelEnd>,
             Stub<0x140769A60, "YGO__DUEL__Set_RoundResult", "round:i32,outcome:i32,localParity:i32", Info, u64(u64, u64, u64), DuelRecorder::Tap_SetRoundResult>,
-            Stub<0x140769500, "YGO__DUEL__ResetMatchResults", "", Info, u64()>,
+            Stub<YGO::Addr::Duel_ResetMatchResults, "YGO__DUEL__ResetMatchResults", "", Info, u64()>,
             Stub<0x140769210, "YGO__DUEL__IsMatchOver", "matchState:ptr", Debug, u64(u64)>,
             Stub<0x1407692F0, "YGO__DUEL__DidSideWinMatch", "sideParity:i32", Debug, u64(u64)>,
             Stub<0x140768E40, "YGO__DUEL__Get_DuelMatchResult", "sideParity:i32", Debug, u64(u64)>,
-            Stub<0x14087F250, "YGO::DUEL::FinishAndUpdateSave", "resultScreen:ptr,rewardCtx:ptr,dpReward:i32", Info, u64(u64, u64, u64), DuelRecorder::Tap_FinishAndUpdateSave>,
+            Stub<YGO::Addr::Duel_FinishAndUpdateSave, "YGO::DUEL::FinishAndUpdateSave", "resultScreen:ptr,rewardCtx:ptr,dpReward:i32", Info, u64(u64, u64, u64), DuelRecorder::Tap_FinishAndUpdateSave>,
             Stub<0x1407F9420, "Steam::AchievementProgress::UpdateSaveStat", "statsSection:ptr,stat:u32,delta:i64", Info, u64(u64, u64, u64), DuelRecorder::Tap_UpdateSaveStat>,
             Stub<0x140858770, "RIX::ScreenMatchResult::Constructor", "self:ptr", Info, u64(u64)>
         >();
@@ -239,7 +240,7 @@ namespace
 
         // ===== Live* screens, main menu, leaderboards =====
         attached += AttachAll<
-            Stub<0x140856C40, "RIX::ScreenMainMenu::ActivateItem", "screen:ptr,item:i32,fromInput:bool", Info, u64(u64, u64, u64)>,
+            Stub<YGO::Addr::MainMenu_ActivateItem, "RIX::ScreenMainMenu::ActivateItem", "screen:ptr,item:i32,fromInput:bool", Info, u64(u64, u64, u64)>,
             Stub<0x1408D00B0, "RIX::ScreenLiveLobby::OnEnter", "self:ptr,fromScreen:ptr", Info, u64(u64, u64)>,
             Stub<0x1408D0990, "RIX::ScreenLiveLobby::SetState", "self:ptr,state:i32", Info, u64(u64, u64)>,
             Stub<0x1408D03A0, "RIX::ScreenLiveLobby::UpdateState", "self:ptr", Debug, u64(u64)>,

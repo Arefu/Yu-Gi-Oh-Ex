@@ -14,12 +14,13 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
-    constexpr uintptr_t kKonamiProps = 0x142847E50;   // YGO::CARDS::KONAMI_ID_CARD_PROPS
+    constexpr uintptr_t kKonamiProps = YGO::Addr::KONAMI_ID_CARD_PROPS;   // YGO::CARDS::KONAMI_ID_CARD_PROPS
     constexpr size_t kKonamiStride = 0x30, kKonamiCount = 0x3A79, kKonamiLimit = 0x20;
-    constexpr uintptr_t kFullProps = 0x142927600;     // YGO::CARDS::FULL_CARD_PROPS
+    constexpr uintptr_t kFullProps = YGO::Addr::FULL_CARD_PROPS;     // YGO::CARDS::FULL_CARD_PROPS
     constexpr size_t kFullStride = 0xA0, kFullCount = 65536, kFullLimit = 0x64;
     constexpr int32_t kForbidden = 0, kLimited = 1, kSemiLimited = 2, kUnlimited = 3;
 
