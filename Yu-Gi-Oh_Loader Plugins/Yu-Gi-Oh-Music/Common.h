@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <cstdint>
 #include <string>
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // Helpers and game addresses shared by the Music plugin. The audio RE is in docs/AudioSystem.md (IDB: YGO::SOUND::).
 namespace Music
@@ -23,14 +24,14 @@ namespace Music
     inline const auto Sound_Play = reinterpret_cast<SoundPlay_t>(0x14087A1C0);              // YGO::SOUND::Sound_Play
     inline const auto Sound_SetVolume = reinterpret_cast<SoundSetVolume_t>(0x14087A880);    // YGO::SOUND::Sound_SetVolumeClamped (bus volume 0..1)
 
-    inline int64_t* const g_SoundSlots = reinterpret_cast<int64_t*>(0x143329500);         // 73 Wwise sound objects
-    inline float* const g_MusicVolume = reinterpret_cast<float*>(0x143329748);            // 0..1 (level / 10)
-    inline float* const g_SfxVolume = reinterpret_cast<float*>(0x143329750);              // 0..1 (level / 10); voice lines follow it
-    inline bool* const g_bSoundSlotsReady = reinterpret_cast<bool*>(0x143329758);
-    inline int* const g_CurrentMusicSlot = reinterpret_cast<int*>(0x14332975C);           // -1 = none
+    inline int64_t* const g_SoundSlots = reinterpret_cast<int64_t*>(YGO::Addr::g_SoundSlots);         // 73 Wwise sound objects
+    inline float* const g_MusicVolume = reinterpret_cast<float*>(YGO::Addr::g_MusicVolume);            // 0..1 (level / 10)
+    inline float* const g_SfxVolume = reinterpret_cast<float*>(YGO::Addr::g_SfxVolume);              // 0..1 (level / 10); voice lines follow it
+    inline bool* const g_bSoundSlotsReady = reinterpret_cast<bool*>(YGO::Addr::g_bSoundSlotsReady);
+    inline int* const g_CurrentMusicSlot = reinterpret_cast<int*>(YGO::Addr::g_CurrentMusicSlot);           // -1 = none
 
-    inline const int* const g_CurrentArenaId = reinterpret_cast<const int*>(0x140C8D1F0);
-    inline const int* const g_DuelSideCharacters = reinterpret_cast<const int*>(0x140C8D1F8); // [0] player, [1] opponent (chardata ids)
+    inline const int* const g_CurrentArenaId = reinterpret_cast<const int*>(YGO::Addr::g_CurrentArenaId);
+    inline const int* const g_DuelSideCharacters = reinterpret_cast<const int*>(YGO::Addr::g_DuelSideCharacters); // [0] player, [1] opponent (chardata ids)
 
     constexpr int kSlotCount = 73;
 

@@ -23,6 +23,7 @@
 #include "Player.h"
 #include "Voice.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace Music
 {
@@ -72,7 +73,7 @@ namespace Music
         SoundManagerSuspend_t orig_Suspend = reinterpret_cast<SoundManagerSuspend_t>(0x14087A3E0);         // YGO::SOUND::SoundManager_Suspend
         SoundManagerResume_t orig_Resume = reinterpret_cast<SoundManagerResume_t>(0x14087A270);            // YGO::SOUND::SoundManager_Resume
         SetVolumeLevel_t orig_SetVolumeLevel = reinterpret_cast<SetVolumeLevel_t>(0x14086BE60);            // YGO::SOUND::SetVolumeLevel
-        SetArenaId_t orig_SetCurrentArenaId = reinterpret_cast<SetArenaId_t>(0x140769540);                 // free duel, tutorials
+        SetArenaId_t orig_SetCurrentArenaId = reinterpret_cast<SetArenaId_t>(YGO::Addr::Duel_Set_CurrentArenaId);                 // free duel, tutorials
         SetArenaId_t orig_SetArenaIdFromDuel = reinterpret_cast<SetArenaId_t>(0x1407695B0);                // campaign duels (story duel id)
         SetArenaFromMatchType_t orig_SetArenaIdFromMatchType = reinterpret_cast<SetArenaFromMatchType_t>(0x140769560); // battle packs, online...
 

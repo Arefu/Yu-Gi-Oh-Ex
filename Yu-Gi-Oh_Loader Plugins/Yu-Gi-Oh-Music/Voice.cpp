@@ -23,6 +23,7 @@
 #include "Voice.h"
 #include "YuGiOh/YuGiOh-DUELSTATE.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace Voice
 {
@@ -145,13 +146,13 @@ namespace Voice
 
         using EngineInit_t = uint64_t(__fastcall*)();
         using PumpAndMirror_t = uint64_t(__fastcall*)();
-        EngineInit_t orig_EngineInit = reinterpret_cast<EngineInit_t>(0x1407BC4C0);          // YGO::DUEL::Engine_Init
-        PumpAndMirror_t orig_PumpAndMirror = reinterpret_cast<PumpAndMirror_t>(0x1400117E0);  // Duel__MsgQueue__PumpAndMirror
+        EngineInit_t orig_EngineInit = reinterpret_cast<EngineInit_t>(YGO::Addr::Duel_Engine_Init);          // YGO::DUEL::Engine_Init
+        PumpAndMirror_t orig_PumpAndMirror = reinterpret_cast<PumpAndMirror_t>(YGO::Addr::Duel_MsgQueue_PumpAndMirror);  // Duel__MsgQueue__PumpAndMirror
         // Not Duel__MsgQueue__Push: LTCG callers keep values in rdx/r8/r9 across it, a C++ detour breaks the duel (docs/DuelIt.md).
 
         int LocalSide()
         {
-            return reinterpret_cast<int(__fastcall*)()>(0x140768F80)() & 1;   // YGO::DUEL::Get_LocalPlayerSeat
+            return reinterpret_cast<int(__fastcall*)()>(YGO::Addr::Duel_Get_LocalPlayerSeat)() & 1;   // YGO::DUEL::Get_LocalPlayerSeat
         }
 
         bool AnimBusy()
