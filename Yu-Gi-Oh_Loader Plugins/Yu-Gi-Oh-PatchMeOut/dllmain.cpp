@@ -8,6 +8,7 @@
 #include <format>
 #include "Yu-Gi-Oh-Ex.h"
 #include "Logger.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 BOOL NoJanken = 1;
 INT JankenFirst = 0; // 0 = random, 1 = P1 (you), 2 = P2 (opponent)
@@ -23,11 +24,11 @@ INT SetLP = 8000;
 //     lobby and sets state 15. Leaving the fader busy (an empty hook) also stopped the result screen being built.
 // Online duels play Janken as normal.
 using JankenUpdate_t = bool(__fastcall*)(__int64 lobby, float deltaTime);
-static bool(__fastcall* IsDuelMultiplayer)() = (bool(__fastcall*)())0x1407691D0;
-static int(__fastcall* LocalPlayerSeat)() = (int(__fastcall*)())0x140768F80;
-static void(__fastcall* SetStartingPlayer)(int player) = (void(__fastcall*)(int))0x140769740;
+static bool(__fastcall* IsDuelMultiplayer)() = (bool(__fastcall*)())YGO::Addr::Duel_Get_IsDuelMultiplayer;
+static int(__fastcall* LocalPlayerSeat)() = (int(__fastcall*)())YGO::Addr::Duel_Get_LocalPlayerSeat;
+static void(__fastcall* SetStartingPlayer)(int player) = (void(__fastcall*)(int))YGO::Addr::Duel_Set_StartingPlayer;
 static void(__fastcall* SetDuelCounts)(char on) = (void(__fastcall*)(char))0x1407697E0;
-static bool(__fastcall* IsBattlePackMode)() = (bool(__fastcall*)())0x140769190;
+static bool(__fastcall* IsBattlePackMode)() = (bool(__fastcall*)())YGO::Addr::Duel_Get_IsBattlePackMode;
 static int(__fastcall* BattlePackDuelistIndex)() = (int(__fastcall*)())0x1407688A0;
 static __int64(__fastcall* GetDuelistSlot)(unsigned int profile, int index) = (__int64(__fastcall*)(unsigned int, int))0x1407F8020;
 static void(__fastcall* MarkDuelistSlotPlayed)(__int64 slot) = (void(__fastcall*)(__int64))0x1407F8CB0;
@@ -78,7 +79,7 @@ void Patch_SetLPToCustomValue()
     using SetLPFunc = void(*)();
     ((SetLPFunc)YuGiOhEx::SetLP)();
 
-    *(int*)0x140C8D370 = SetLP;
+    *reinterpret_cast<int*>(YGO::Addr::g_iStartLifePoints) = SetLP;
 }
 
 void ProcessConfig();
