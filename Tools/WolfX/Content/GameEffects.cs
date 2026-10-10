@@ -16,6 +16,7 @@ namespace WolfEx
         public bool Overridden;              // effects.json "overridden": the game plays EffectSource / Effect instead of its own effect
         public string EffectSource = "";
         public JsonObject? Effect;           // compiled: the "effectClone" Yu-Gi-Oh-Effects runs; null with Overridden = no effect at all
+        public JsonObject? Lock;             // "lock" of its own: a continuous lock added while the card keeps the game's effect (Lock.cpp)
 
         public override string ToString() => (Overridden ? "✎ " : "") + Name + "  (" + Id + ")";
     }
@@ -53,6 +54,8 @@ namespace WolfEx
                 entry["effectScript"] = card.EffectSource;
             if (card.Effect != null)
                 entry["effectClone"] = card.Effect.DeepClone();
+            if (card.Lock != null)
+                entry["lock"] = card.Lock.DeepClone();
             return entry;
         }
 

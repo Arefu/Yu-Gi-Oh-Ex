@@ -39,6 +39,18 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitScript([NotNull] EffectScriptParser.ScriptContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.lockStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLockStatement([NotNull] EffectScriptParser.LockStatementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.lockArg"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLockArg([NotNull] EffectScriptParser.LockArgContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.asScript"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

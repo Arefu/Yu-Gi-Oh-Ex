@@ -21,6 +21,7 @@ namespace WolfEx
 
         // ---- game cards (effects.json) ----
         private readonly ComboBox _show = new() { DropDownStyle = ComboBoxStyle.DropDownList, Dock = DockStyle.Top };
+        private readonly Button _btnLock = new() { Text = "Lock...", AutoSize = true, Margin = new Padding(0, 6, 8, 0), UseVisualStyleBackColor = true };
         private readonly Button _btnUseGame = new() { Text = "Use the game's effect", AutoSize = true, Margin = new Padding(0, 6, 8, 0), Visible = false, UseVisualStyleBackColor = true };
         private const int ShowNew = 0, ShowGame = 1, ShowChanged = 2;
         private bool _showChosen;                                   // the user picked a list (else it follows "are there new cards")
@@ -67,6 +68,9 @@ namespace WolfEx
 
             _btnUseGame.Click += (_, _) => UseGameEffect();
             buttons.Controls.Add(_btnUseGame);
+            _btnLock.Click += (_, _) => EditLock();
+            buttons.Controls.Add(_btnLock);
+            buttons.Controls.SetChildIndex(_btnLock, buttons.Controls.GetChildIndex(_status));
             buttons.Controls.SetChildIndex(_btnUseGame, buttons.Controls.GetChildIndex(_status));
         }
 
@@ -106,7 +110,8 @@ namespace WolfEx
             card.Overridden = false;
             card.EffectSource = "";
             card.Effect = null;
-            _overrides.Remove(card.Id);
+            if (card.Lock == null)
+                _overrides.Remove(card.Id);   // a lock of its own keeps the entry
             RedrawSelected();
             BindSelected();
             _status.Text = card.Name + " plays its own effect again (saved to effects.json when you Save).";
@@ -138,6 +143,7 @@ namespace WolfEx
                     Overridden = entry["overridden"]?.GetValue<bool>() ?? false,
                     EffectSource = entry["effectScript"]?.GetValue<string>() ?? "",
                     Effect = entry["effectClone"] as JsonObject is { } clone ? clone.DeepClone().AsObject() : null,
+                    Lock = entry["lock"] as JsonObject is { } own ? own.DeepClone().AsObject() : null,
                 };
             _gameCards = null;   // the game folder may be another one now
             if (GameMode)
@@ -441,6 +447,51 @@ namespace WolfEx
             BindSelected();
         }
 
+        // ---- the continuous lock (Jinzo / Spell Canceller / Skill Drain; Yu-Gi-Oh-Effects Lock.cpp)
+
+        /// <summary>
+        /// Lock...: a new card's lock (and an overridden game card's) is the script's lock(...) line, so the script, the blocks and this dialog
+        /// show the same thing; it is compiled straight away. A game card that keeps the game's effect gets a "lock" of its own in effects.json.
+        /// </summary>
+        private void EditLock()
+        {
+            string name;
+            JsonObject? current;
+            var game = SelectedGame;
+            var card = Selected;
+            if (game != null)
+            {
+                name = game.Name;
+                current = game.Overridden ? game.Effect?["lock"] as JsonObject : game.Lock;
+            }
+            else if (card != null)
+            {
+                name = card.Name;
+                current = card.Effect?["lock"] as JsonObject;
+            }
+            else
+                return;
+
+            using var dialog = new LockDialog(name, current);
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+                return;
+
+            if (game != null && !game.Overridden)
+            {
+                game.Lock = dialog.Result;
+                if (game.Lock != null)
+                    _overrides[game.Id] = game;
+                else if (!game.Overridden)
+                    _overrides.Remove(game.Id);
+                RedrawSelected();
+                _status.Text = game.Lock != null ? LockDialog.Describe(game.Lock) + " - keeps the game's own effect (effects.json, when you Save)." : "Lock removed.";
+                _status.ForeColor = Color.DarkGreen;
+                return;
+            }
+            _source.Text = LockDialog.WithLock(_source.Text, LockDialog.ToScript(dialog.Result));
+            Compile();
+        }
+
         private void BindSelected()
         {
             if (_binding)
@@ -468,6 +519,8 @@ namespace WolfEx
                 _source.Text = card.EffectSource;
                 _compiled.Text = card.Effect?.ToJsonString(new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true }) ?? "(not compiled yet)";
                 _status.Text = string.IsNullOrEmpty(card.EffectSource) ? "No script yet." : "Loaded. Edit and press Compile to update the compiled JSON below.";
+                if (card.Effect?["lock"] is JsonObject cardLock)
+                    _status.Text += "  " + LockDialog.Describe(cardLock) + ".";
                 _status.ForeColor = SystemColors.ControlText;
             }
             finally { _binding = false; }

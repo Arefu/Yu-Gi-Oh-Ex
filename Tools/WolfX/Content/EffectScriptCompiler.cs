@@ -125,6 +125,65 @@ namespace WolfEx
 
             try
             {
+                var lockJson = CompileLock(tree.lockStatement());
+                var result = CompileScript(tree);
+                if (lockJson != null)
+                {
+                    result ??= [];
+                    result["lock"] = lockJson;
+                }
+                if (result == null)
+                    throw new ScriptError("The script is empty.");
+                return new Result { Ok = true, Compiled = result };
+            }
+            catch (ScriptError e)
+            {
+                return new Result { Ok = false, Error = e.Message };
+            }
+        }
+
+        // lock(...) -> the "lock" object Yu-Gi-Oh-Effects Lock.cpp reads (docs/EffectSystem.md section 44). One lock per card.
+        private static JsonObject? CompileLock(EffectScriptParser.LockStatementContext[] statements)
+        {
+            if (statements.Length == 0)
+                return null;
+            if (statements.Length > 1)
+                throw new ScriptError("A card has one lock(...): put every word in it, e.g. lock(trap, spell).");
+            var json = new JsonObject { ["traps"] = false };
+            string side = "both", zone = "monster";
+            foreach (var arg in statements[0].lockArg())
+            {
+                switch (arg.GetText())
+                {
+                    case "trap": json["traps"] = true; break;
+                    case "spell": json["spells"] = true; break;
+                    case "monster": json["monsters"] = true; break;
+                    case "continuous_trap": json["continuousTraps"] = true; break;
+                    case "continuous_spell": json["continuousSpells"] = true; break;
+                    case "field_spell": json["fieldSpells"] = true; break;
+                    case "equip_spell": json["equipSpells"] = true; break;
+                    case "both": side = "both"; break;
+                    case "opponent": side = "opponent"; break;
+                    case "own": side = "you"; break;
+                    case "monster_zone": zone = "monster"; break;
+                    case "spelltrap_zone": zone = "spelltrap"; break;
+                    case "any_zone": zone = "any"; break;
+                    default:
+                        throw new ScriptError($"lock: unknown word '{arg.GetText()}' (trap, spell, monster, continuous_trap, continuous_spell, field_spell, " +
+                                              "equip_spell; both, opponent, own; monster_zone, spelltrap_zone, any_zone).");
+                }
+            }
+            if (json.Count == 1 && json["traps"]!.GetValue<bool>() == false)
+                throw new ScriptError("lock(...) needs at least one of trap, spell, monster, continuous_trap, continuous_spell, field_spell, equip_spell.");
+            json["side"] = side;
+            json["zone"] = zone;
+            return json;
+        }
+
+        // The card's effect without its lock: null when the script is only a lock(...).
+        private static JsonObject? CompileScript(EffectScriptParser.ScriptContext tree)
+        {
+            {
                 if (tree.asScript() is { } asScript)
                 {
                     // The whole behaviour of one game card. In a duel Yu-Gi-Oh-MoreCards lends this card that id when it is free, so every
@@ -133,11 +192,13 @@ namespace WolfEx
                     var asCompiled = new JsonObject { ["from"] = from };
                     if (asScript.statPart().Length > 0)
                         asCompiled["stats"] = Stats(asScript.statPart());
-                    return new Result { Ok = true, Compiled = asCompiled };
+                    return asCompiled;
                 }
 
                 // One body per effect: effect { } blocks, or bodies joined with 'also'. The first is the card's main effect, the others become "parts".
                 var bodies = tree.effect().Length > 0 ? tree.effect().Select(e => e.effectBody()).ToArray() : tree.effectBody();
+                if (bodies.Length == 0)
+                    return null;
                 var main = CompileBody(bodies[0]);
                 if (bodies.Length > 1)
                 {
@@ -150,11 +211,7 @@ namespace WolfEx
                     }
                     main["parts"] = parts;
                 }
-                return new Result { Ok = true, Compiled = main };
-            }
-            catch (ScriptError e)
-            {
-                return new Result { Ok = false, Error = e.Message };
+                return main;
             }
         }
 
