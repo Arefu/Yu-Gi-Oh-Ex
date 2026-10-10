@@ -8,6 +8,7 @@
 #include <detours.h>
 #include <iostream>
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Log.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 typedef DWORD(WINAPI* _tGetTickCount)(void);
 typedef ULONGLONG(WINAPI* _tGetTickCount64)(void);
@@ -30,7 +31,7 @@ bool no_anims = true;
 bool no_movies = true;
 
 bool detours_Enabled = false;
-long long AnimationHNDLE = 0x1407C1450;
+long long AnimationHNDLE = YGO::Addr::UI_Draw_DuelAnimationFromId;
 long long MovieHNDLE = 0x0140875DA0;
 
 DWORD WINAPI _hGetTickCount()
