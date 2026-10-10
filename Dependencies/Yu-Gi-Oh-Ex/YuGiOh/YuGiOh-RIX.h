@@ -7,6 +7,11 @@
 
 // The game's UI framework ("RIX"): a screen manager that switches between screens (ScreenMainMenu, ScreenHelp...) and a small widget
 // kit (MenuKit) the menus are made of. Everything here was traced in YuGiOh.exe.i64 (names and types are in the IDB too).
+//
+// WHICH RIX HEADER: this is NOT the Yu-Gi-Oh-RIX plugin's API. It is raw game addresses (the game's own UI classes), and the plugin
+// Yu-Gi-Oh-RIX is built on it. Plugins use Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-RIX.h - the DLL's exports, found with GetProcAddress
+// (RIX::Load) - for menus, pages and widgets on screens. Include this one only to reach into a game screen's internals that the API
+// doesn't cover (a screen's state machine, its deck picker, its help bar).
 namespace YGO
 {
     namespace RIX

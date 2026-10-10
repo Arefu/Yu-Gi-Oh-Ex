@@ -16,6 +16,7 @@
 
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Log.h"
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -40,12 +41,12 @@ namespace
     };
     static_assert(sizeof(PackRecord) == 0x68, "PackRecord layout drifted");
 
-    constexpr uintptr_t kPackRecords = 0x1429241C0;      // g_PackRecords[128]
+    constexpr uintptr_t kPackRecords = YGO::Addr::g_PackRecords;      // g_PackRecords[128]
     constexpr uint32_t kPackCount = 128;
     constexpr uint32_t kRewardPack = 'R';
     constexpr size_t kUnlockBits = 0xB80;                // player section: u32[4], bit = pack id
-    constexpr uintptr_t kGameLanguageId = 0x14332A344;       // g_iGameLanguageID
-    constexpr uintptr_t kLanguageLetterTable = 0x140A51D30;  // {int id, char letter at +4}, ended by id -1
+    constexpr uintptr_t kGameLanguageId = YGO::Addr::g_iGameLanguageID;       // g_iGameLanguageID
+    constexpr uintptr_t kLanguageLetterTable = YGO::Addr::LanguageLetterTable;  // {int id, char letter at +4}, ended by id -1
 
     using LoadPackDefinitions_t = char(__fastcall*)();
     using GetArtName_t = char*(__fastcall*)(PackRecord* record, char* outString);
@@ -56,8 +57,8 @@ namespace
     uintptr_t orig_LoadPackDefinitions = 0x14080E3C0;    // YGO::GAME::LoadPackDefinitions
     uintptr_t orig_Pack_GetArtName = 0x14080E390;        // YGO::GAME::Pack_GetArtName
     uintptr_t orig_BuildPackList = 0x14085D6E0;          // YGO::UI::BoosterShop_BuildPackList
-    const auto WStringAssign = reinterpret_cast<WStringAssign_t>(0x140751310);        // the game's std::wstring::assign (its allocator)
-    const auto GetPlayerSection = reinterpret_cast<GetPlayerSection_t>(0x1407F80A0);  // YGO::SAVE::Get_PlayerSection(0xFFFFFFFD = current)
+    const auto WStringAssign = reinterpret_cast<WStringAssign_t>(YGO::Addr::WString_Assign);        // the game's std::wstring::assign (its allocator)
+    const auto GetPlayerSection = reinterpret_cast<GetPlayerSection_t>(YGO::Addr::Save_Get_PlayerSection);  // YGO::SAVE::Get_PlayerSection(0xFFFFFFFD = current)
 
     PackRecord* Record(uint32_t id) { return id < kPackCount ? reinterpret_cast<PackRecord*>(kPackRecords) + id : nullptr; }
 

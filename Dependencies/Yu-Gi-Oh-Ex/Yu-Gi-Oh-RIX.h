@@ -2,6 +2,11 @@
 /*
     Yu-Gi-Oh-RIX - the public interface of the menu plugin (Yu-Gi-Oh-RIX.dll).
 
+    WHICH RIX HEADER: this one. It is the DLL's API - functions Yu-Gi-Oh-RIX.dll exports, found at run time with GetProcAddress
+    (RIX::Load below) - and the one plugins use for menus, pages and widgets on screens. YuGiOh/YuGiOh-RIX.h is something else: raw
+    addresses of the game's own UI code ("RIX" is the game's UI framework), which Yu-Gi-Oh-RIX itself is built on; a plugin only includes
+    it to reach into a game screen's internals that this API doesn't cover (Yu-Gi-Oh-Campaign's deck picker steps, for one).
+
     The game builds its main menu from a fixed table of 13 buttons. Yu-Gi-Oh-RIX lets a plugin add, change and remove more of them.
     Nothing here needs the game's headers: the functions are plain C exports, so any language that can call a DLL can use them.
 
@@ -29,7 +34,7 @@
 extern "C" {
 #endif
 
-#define RIX_API_VERSION 5   /* 5: pages hold 5 buttons (RIX_PageDesc grew), RIX_UpdatePageButton */
+#define RIX_API_VERSION 6   /* 5: pages hold 5 buttons (RIX_PageDesc grew), RIX_UpdatePageButton. 6: RIX_AddImage / RIX_AddText / RIX_RemoveNode */
 
 /* The plugin itself defines RIX_EXPORTS; everyone else only declares the functions (and normally uses RIX::Load below instead). */
 #ifdef RIX_EXPORTS
@@ -214,6 +219,20 @@ RIX_API int __cdecl RIX_ClosePage(void);
    when no page is open or there is no such button. For toggles such as "Partner: AI" -> "Partner: Human". Call it on the game's thread. */
 RIX_API int __cdecl RIX_UpdatePageButton(int Index, const RIX_PageButton* Button);
 
+/* Widgets on any of the game's screens (Screen = the game's screen object, e.g. the one a page callback or a screen hook gets), in screen
+   pixels (1920 x 1080). Each returns a handle (NULL on failure: no such sheet / sprite) that owns the widget: take it off with
+   RIX_RemoveNode before the screen goes. Call them on the game's thread.
+   RIX_AddImage: one sprite of a sheet (e.g. "pdui/chars", "<character key>_neutral"), top-left at X, Y, stretched to Width x Height
+                 (0 = its own size).
+   RIX_AddText:  text in the game's UI font, PixelSize high. Width 0 = one line, X is its left / centre / right edge (Align); Width > 0 =
+                 a box Width wide, text wrapped and aligned in it. Colour is ARGB. The text is copied. */
+#define RIX_ALIGN_LEFT 0
+#define RIX_ALIGN_CENTRE 1
+#define RIX_ALIGN_RIGHT 2
+RIX_API void* __cdecl RIX_AddImage(void* Screen, const char* Resource, const char* Sprite, int Z, float X, float Y, float Width, float Height);
+RIX_API void* __cdecl RIX_AddText(void* Screen, const wchar_t* Text, int Z, float X, float Y, float Width, float PixelSize, int Align, uint32_t Colour);
+RIX_API void __cdecl RIX_RemoveNode(void* Node);
+
 #ifdef __cplusplus
 }
 
@@ -241,6 +260,9 @@ namespace RIX
         int(__cdecl* OpenPage)(const RIX_PageDesc*) = nullptr;
         int(__cdecl* ClosePage)() = nullptr;
         int(__cdecl* UpdatePageButton)(int, const RIX_PageButton*) = nullptr;
+        void*(__cdecl* AddImage)(void*, const char*, const char*, int, float, float, float, float) = nullptr;
+        void*(__cdecl* AddText)(void*, const wchar_t*, int, float, float, float, float, int, uint32_t) = nullptr;
+        void(__cdecl* RemoveNode)(void*) = nullptr;
     };
 
     inline Api& Functions()
@@ -282,6 +304,9 @@ namespace RIX
         RIX_BIND(OpenPage);
         RIX_BIND(ClosePage);
         RIX_BIND(UpdatePageButton);
+        RIX_BIND(AddImage);
+        RIX_BIND(AddText);
+        RIX_BIND(RemoveNode);
 #undef RIX_BIND
         return true;
     }
