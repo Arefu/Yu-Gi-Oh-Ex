@@ -16,6 +16,7 @@
 #include <vector>
 
 #include <json.hpp>
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -33,13 +34,13 @@ namespace
     constexpr uintptr_t kEngineDeckCards = 0x143497FBC;
     constexpr uint32_t kEngineDeckMax = 120;
 
-    constexpr uintptr_t kFullCardProps = 0x142927600;
+    constexpr uintptr_t kFullCardProps = YGO::Addr::FULL_CARD_PROPS;
     constexpr uintptr_t kFullCardPropsStride = 0xA0;
     constexpr int kMaxCardId = 0x4E1F;
 
     using LoadDeck_t = int64_t(__fastcall*)(char, int32_t*);
     using ShuffleDeck_t = int64_t(__fastcall*)(int);
-    LoadDeck_t orig_LoadDeck = reinterpret_cast<LoadDeck_t>(0x1400822F0);
+    LoadDeck_t orig_LoadDeck = reinterpret_cast<LoadDeck_t>(YGO::Addr::Duel_LoadDeck);
     ShuffleDeck_t orig_ShuffleDeck = reinterpret_cast<ShuffleDeck_t>(0x140080E90);
 
     // ---- the log (Yu-Gi-Oh-Console's WriteLog, when it is loaded) ----
@@ -269,7 +270,7 @@ namespace
     // DuelSetup_InitEngine's deck structs (192 bytes each, the calls at 0x14005FDDB / 0x14005FDEC): player 0 at Duel_DuelEngine + 0x2C
     // (0x1433302AC), player 1 at + 0xEC (0x14333036C). The old + 0x236 was wrong: a test deck written there overwrote tag seat 3's deck
     // count and the duel crashed at its first read (sub_1407BD610, 2026-10-04).
-    constexpr uintptr_t kDuelEngine = 0x143330280;
+    constexpr uintptr_t kDuelEngine = YGO::Addr::Duel_DuelEngine;
 
     // Writes the seat's test deck into a deck struct, with the cards' own ids: the outer hook runs before Yu-Gi-Oh-MoreCards' resolves them
     // (and before it reserves the vanilla ids of both decks for source-id lending), so they go through it like a normal deck.
@@ -310,7 +311,7 @@ namespace
 
     // The OUTER Duel_LoadDeck hook, attached late (LateInstall, on the first frame) so it wraps Yu-Gi-Oh-MoreCards' hook. Player 0's call
     // writes both seats: MoreCards reserves the vanilla ids of BOTH deck structs on player 0's call.
-    LoadDeck_t orig_LoadDeckOuter = reinterpret_cast<LoadDeck_t>(0x1400822F0);
+    LoadDeck_t orig_LoadDeckOuter = reinterpret_cast<LoadDeck_t>(YGO::Addr::Duel_LoadDeck);
 
     int64_t __fastcall Hook_LoadDeckOuter(char player, int32_t* deck)
     {

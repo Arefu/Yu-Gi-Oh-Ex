@@ -4,13 +4,14 @@
 #include <cstdint>
 #include <cstdio>
 #include "imgui.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
     // String lookup: the language's string bundle (YGO::LOCAL::g_iStringLocations), then its offset table.
     wchar_t* GetString(int id)
     {
-        uintptr_t langIndex = *(int*)0x14332A344;
+        uintptr_t langIndex = *(int*)YGO::Addr::g_iGameLanguageID;
         uintptr_t bundleBase = *(uintptr_t*)(0x143329E80 + langIndex * 8);
         uintptr_t offsetTable = *(uintptr_t*)(bundleBase + 8);
         return *(wchar_t**)(offsetTable + 8 * id - 8);
@@ -66,7 +67,7 @@ namespace UiWitchcraft
         ImGui::Separator();
 
         auto NavigateToScreen = reinterpret_cast<char(__fastcall*)(__int64, int, double, int, char)>(0x1408087A0);
-        auto OnMenuItemSelected = reinterpret_cast<void(__fastcall*)(__int64, __int64, char)>(0x140856C40);
+        auto OnMenuItemSelected = reinterpret_cast<void(__fastcall*)(__int64, __int64, char)>(YGO::Addr::MainMenu_ActivateItem);
 
         if (!ScreenMainMenu)
             return;
