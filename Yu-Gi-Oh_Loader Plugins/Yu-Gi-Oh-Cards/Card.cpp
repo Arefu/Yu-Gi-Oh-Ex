@@ -16,9 +16,11 @@
 #include "Detours.h"
 #include "Genres.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Memory.h"
 #include "Save.h"
 #include "Text.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // The game's card id window: Konami ids 3900..14968 index its fixed-size tables.
 constexpr uint32_t kVanillaKonamiIdBase = 3900;
@@ -48,9 +50,9 @@ static uintptr_t orig_Deck_RebuildCardCountTables_Alt = 0x140755FB0;
 // The duel-session id remap (see the design note in Card.h): Duel_LoadDeck is where an id above
 // 16383 gets swapped for a borrowed vanilla one; DuelSetup_ClearState/FinishAndUpdateSave bracket
 // one duel (reset the borrow pool at the start, restore real vanilla data when it ends).
-static uintptr_t orig_Duel_LoadDeck = 0x1400822F0;
-static uintptr_t orig_DuelSetup_ClearState = 0x14005FC90;
-static uintptr_t orig_FinishAndUpdateSave = 0x14087F250;
+static uintptr_t orig_Duel_LoadDeck = YGO::Addr::Duel_LoadDeck;
+static uintptr_t orig_DuelSetup_ClearState = YGO::Addr::DuelSetup_ClearState;
+static uintptr_t orig_FinishAndUpdateSave = YGO::Addr::Duel_FinishAndUpdateSave;
 
 static constexpr uintptr_t Get_NormalizedSameCardId = 0x14081A710;
 static constexpr uintptr_t kDeckSectionOffsets = 0x140A521C8;    // 3 ints, used by the rebuild
@@ -279,6 +281,9 @@ namespace
         std::string image = j.value("image", std::string());
         if (!image.empty())
             c.ImagePath = c.Folder + image;
+        std::string uncensored = j.value("imageUncensored", std::string());
+        if (!uncensored.empty())
+            c.UncensoredImagePath = c.Folder + uncensored;
 
         int kind = K_Normal, attribute = LIGHT, type = Warrior, icon = I_Normal, limitation = Unlimited;
         if (!ParseEnum(j, "kind", KindNames, kind)) { why = Unknown("kind"); return false; }
@@ -661,16 +666,13 @@ namespace
         int32_t Valid, Frame; int32_t pad7[2];
     };
     static_assert(sizeof(GameCard) == kFullCardPropsStride, "GameCard layout drifted");
+    // Get_LinkRatingFromKonamiId / Get_LinkArrowsFromKonamiId results, as Setup_FullCardProps stores them (FULL_CARD_PROPS +0x88 / +0x8C)
+    static_assert(offsetof(GameCard, LinkRating) == 0x88 && offsetof(GameCard, LinkArrows) == 0x8C && offsetof(GameCard, Rank) == 0x74, "GameCard Link fields drifted");
 
     // Page protection is deliberately not restored (see Limit.cpp).
     void ApplyBytePatch(uintptr_t address, const unsigned char* bytes, size_t len)
     {
-        void* target = reinterpret_cast<void*>(address);
-        DWORD oldProtect = 0;
-        if (!VirtualProtect(target, len, PAGE_EXECUTE_READWRITE, &oldProtect))
-            return;
-
-        std::memcpy(target, bytes, len);
+        YGO::Memory::WriteBytes(address, bytes, len, YGO::Memory::Protection::LeaveWritable);
     }
 
     void PatchImm32(uintptr_t address, uint32_t value)
@@ -684,11 +686,11 @@ namespace
     // sorts in among them; without this it kept rank 0 and sorted before every card.
     uint16_t NameSortRankFor(const std::wstring& name)
     {
-        constexpr uintptr_t kCardDatabase = 0x140C8D3A0;               // pointer to the card database (stru_140C8D3A0.pvoid0)
+        constexpr uintptr_t kCardDatabase = YGO::Addr::g_pCardDataFiles;               // pointer to the card database (stru_140C8D3A0.pvoid0)
         using KonamiFromInternal_t = int64_t(__fastcall*)(unsigned int);
         using NameFromKonami_t = const wchar_t*(__fastcall*)(int);
         auto konamiFromInternal = reinterpret_cast<KonamiFromInternal_t>(0x14076D7F0);   // YGO::CARDS::Get_KonamiIdFromInternalId
-        auto nameFromKonami = reinterpret_cast<NameFromKonami_t>(0x14076D0F0);           // YGO::CARDS::Get_CardNameFromKonamiId
+        auto nameFromKonami = reinterpret_cast<NameFromKonami_t>(YGO::Addr::Card_GetNameFromKonamiId);           // YGO::CARDS::Get_CardNameFromKonamiId
 
         auto* db = *reinterpret_cast<const uint8_t* const*>(kCardDatabase);
         if (!db)
@@ -788,7 +790,7 @@ namespace
         gc->LevelOrLinkRatingOrRank = props.LevelOrLinkRatingOrRank;
         gc->CardType = props.Type;
         gc->LinkRating = IsLinkKind(kind) ? props.LevelOrLinkRatingOrRank : 0;
-        gc->LinkArrows = IsLinkKind(kind) ? static_cast<uint32_t>(props.ArrowsOrDefense10) : 0; // bit order unconfirmed, see ParseLinkMarkers
+        gc->LinkArrows = IsLinkKind(kind) ? static_cast<uint32_t>(props.ArrowsOrDefense10) : 0; // bit 0 top-left .. 7 bottom-right: checked against CARD_Prop (Decode Talker, Firewall Dragon, Proxy Dragon ...) 2026-10-11
         gc->Valid = 1;
         gc->Frame = frame;
         // Setup_FullCardProps gave ids past the card tables entry 0's genres (none); a borrowed duel id still has the vanilla card's, which
@@ -1319,31 +1321,41 @@ bool __fastcall Hook_Get_IllustrationData(int64_t a1, uint16_t konamiId, void** 
     Logger::WriteLog(std::format("Illustration asked for custom card {} (kind {}){}", realId, card->Props.KindValue,
         realId != konamiId ? std::format(", borrowed as {} for a duel", konamiId) : std::string()), MODULE_NAME, 69);
 
-    if (!card->ImageTried)
+    // The game picks its uncensored art when it runs in Japanese (Get_IllustrationData reads g_bIsJpVersion); a custom card's
+    // "imageUncensored" stands in for that, and the normal picture is used when it has none.
+    auto load = [&](const std::string& path, std::vector<unsigned char>& bytes, bool& tried)
     {
-        card->ImageTried = true;
-
+        if (tried)
+            return;
+        tried = true;
         // The path is UTF-8 (names such as "Ace★Spades Speculation" or "Miss Mädchen"); a narrow path is read in the ANSI code page and does not open.
-        std::ifstream file(std::filesystem::path(Utf8ToWide(card->ImagePath)), std::ios::binary);
-        if (!card->ImagePath.empty() && file)
+        std::ifstream file(std::filesystem::path(Utf8ToWide(path)), std::ios::binary);
+        if (!path.empty() && file)
         {
-            card->ImageBytes.assign(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
-            Logger::WriteLog(std::format("Loaded {} ({} bytes)", card->ImagePath, card->ImageBytes.size()), MODULE_NAME, 0);
+            bytes.assign(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
+            Logger::WriteLog(std::format("Loaded {} ({} bytes)", path, bytes.size()), MODULE_NAME, 0);
         }
         else
         {
-            Logger::WriteLog(std::format("Could not open image \"{}\" for card {}", card->ImagePath, konamiId), MODULE_NAME, 2);
+            Logger::WriteLog(std::format("Could not open image \"{}\" for card {}", path, konamiId), MODULE_NAME, 2);
         }
-    }
+    };
 
-    if (!card->ImageBytes.empty())
+    const bool japanese = *reinterpret_cast<const uint8_t*>(YGO::Addr::g_bIsJpVersion) != 0;
+    if (japanese && !card->UncensoredImagePath.empty())
+        load(card->UncensoredImagePath, card->UncensoredImageBytes, card->UncensoredImageTried);
+    if (!japanese || card->UncensoredImageBytes.empty())
+        load(card->ImagePath, card->ImageBytes, card->ImageTried);
+    const auto& image = japanese && !card->UncensoredImageBytes.empty() ? card->UncensoredImageBytes : card->ImageBytes;
+
+    if (!image.empty())
     {
-        void* copy = GameMalloc(card->ImageBytes.size());
+        void* copy = GameMalloc(image.size());
         if (copy)
         {
-            std::memcpy(copy, card->ImageBytes.data(), card->ImageBytes.size());
+            std::memcpy(copy, image.data(), image.size());
             *buffer = copy;
-            *size = card->ImageBytes.size();
+            *size = image.size();
             return true;
         }
     }
@@ -1448,7 +1460,7 @@ unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
     // side 15 Konami ids after the 33-character name and the three u16 counts).
     {
         struct SavedDeck { wchar_t Name[33]; uint16_t MainCount, ExtraCount, SideCount; uint16_t Cards[90]; };
-        const auto DeckFromId = reinterpret_cast<const SavedDeck*(__fastcall*)(unsigned int profile, unsigned int deckId)>(0x14081AB40);
+        const auto DeckFromId = reinterpret_cast<const SavedDeck*(__fastcall*)(unsigned int profile, unsigned int deckId)>(YGO::Addr::Deck_FromId);
         std::unordered_map<uint16_t, int> usedInDeck;
         for (unsigned int deck = 0; deck < 32; ++deck)
         {
@@ -1647,7 +1659,7 @@ int64_t __fastcall Hook_Duel_LoadDeck(char player, int32_t* deck)
     // Reserve the vanilla cards of BOTH decks first, so a clone in player 0's deck is never lent the id of a card player 1 actually plays.
     if ((player & 1) == 0)
     {
-        constexpr uintptr_t kDuelEngine = 0x143330280;
+        constexpr uintptr_t kDuelEngine = YGO::Addr::Duel_DuelEngine;
         ReserveVanillaIds(deck);
         ReserveVanillaIds(reinterpret_cast<const int32_t*>(kDuelEngine + 0xEC));
     }
@@ -1724,7 +1736,7 @@ void __fastcall Hook_FinishAndUpdateSave(int64_t a1, uint32_t* a2, int a3)
 // name archetypes that only custom cards have. Signature (id, code) -> bool as int64.
 // ----------------------------------------------------------------------
 
-static uintptr_t orig_Is_CardInNamedArchetype = 0x14076CFF0;
+static uintptr_t orig_Is_CardInNamedArchetype = YGO::Addr::Card_IsInNamedArchetype;
 constexpr int kVanillaArchetypeCount = 419;
 
 int64_t __fastcall Hook_Is_CardInNamedArchetype(uint16_t id, int code)

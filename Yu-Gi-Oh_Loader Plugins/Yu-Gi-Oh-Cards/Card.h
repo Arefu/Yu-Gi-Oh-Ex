@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "Limit.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // Custom cards live between kFirstExtraCardId and the end of the table the game saves card ownership in (0x4E20 entries, indexed by Konami id).
 // The last vanilla Konami id is 14968, but the game ships effect rows and id lists for 14969-15234 (cards it has no data for): a custom card
@@ -13,13 +14,13 @@
 constexpr int kFirstExtraCardId = 0x3BC4;   // 15300
 constexpr int kLastExtraCardId = 0x4E1F;
 
-constexpr uintptr_t kInternalCardPropsAddress = 0x1427D0C30;
+constexpr uintptr_t kInternalCardPropsAddress = YGO::Addr::INTERNAL_ID_CARD_PROPS;
 constexpr size_t kVanillaCardPropCount = 10166;
 
-constexpr uintptr_t kFullCardPropsAddress = 0x142927600;
+constexpr uintptr_t kFullCardPropsAddress = YGO::Addr::FULL_CARD_PROPS;
 constexpr size_t kFullCardPropsStride = 0xA0;
 
-constexpr uintptr_t kFrameTableAddress = 0x140BF7820;
+constexpr uintptr_t kFrameTableAddress = YGO::Addr::CardFrameTable;
 constexpr uintptr_t kSubKindTableAddress = 0x140BF7824;
 
 // Shown instead of the card art when a custom card's image can't be read.
@@ -85,6 +86,10 @@ namespace Card
         std::string ImagePath;
         std::vector<unsigned char> ImageBytes; // read on first request
         bool ImageTried = false;
+        // "imageUncensored": served in place of ImagePath while the game runs in Japanese (g_bIsJpVersion), as the game's uncensored zib is
+        std::string UncensoredImagePath;
+        std::vector<unsigned char> UncensoredImageBytes;
+        bool UncensoredImageTried = false;
         int Copies = 3;                        // copies granted to the profile (0..3)
         // Named-archetype codes this card belongs to ("archetypes": [217, ...] in cards.json). The codes are
         // the game's own: the index into bin/CARD_Named.bin, e.g. 217 Nekroz, 357 Salamangreat (see

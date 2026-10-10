@@ -12,6 +12,7 @@
 #include "Logger.h"
 #include "Text.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
 {
@@ -20,8 +21,8 @@ namespace
     uintptr_t orig_GetWordText = 0x14076D7B0;   // YGO::CARDS::Get_WordText
     uintptr_t orig_GetDlgText = 0x14076D770;    // YGO::CARDS::Get_DlgText
 
-    constexpr uintptr_t kGameLanguageId = 0x14332A344;       // g_iGameLanguageID
-    constexpr uintptr_t kLanguageLetterTable = 0x140A51D30;  // g_LanguageLetterTable: {int id, char letter at +4}, ended by id -1
+    constexpr uintptr_t kGameLanguageId = YGO::Addr::g_iGameLanguageID;       // g_iGameLanguageID
+    constexpr uintptr_t kLanguageLetterTable = YGO::Addr::LanguageLetterTable;  // g_LanguageLetterTable: {int id, char letter at +4}, ended by id -1
 
     // entry number -> language letter (upper case) -> text
     using Table = std::unordered_map<int, std::unordered_map<char, std::wstring>>;

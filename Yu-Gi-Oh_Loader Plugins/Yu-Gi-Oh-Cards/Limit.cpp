@@ -6,6 +6,7 @@
 #include "Detours.h"
 #include "Limit.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Memory.h"
 
 namespace
 {
@@ -19,13 +20,7 @@ namespace
     // non-executable data and must stay executable once they hold a jump stub.
     void ApplyBytePatch(const BytePatch& patch)
     {
-        void* target = reinterpret_cast<void*>(patch.address);
-        DWORD oldProtect = 0;
-
-        if (!VirtualProtect(target, patch.bytes.size(), PAGE_EXECUTE_READWRITE, &oldProtect))
-            return;
-
-        std::memcpy(target, patch.bytes.data(), patch.bytes.size());
+        YGO::Memory::WriteBytes(patch.address, patch.bytes.data(), patch.bytes.size(), YGO::Memory::Protection::LeaveWritable);
     }
 
     void ApplyBytePatches(const std::vector<BytePatch>& patches)

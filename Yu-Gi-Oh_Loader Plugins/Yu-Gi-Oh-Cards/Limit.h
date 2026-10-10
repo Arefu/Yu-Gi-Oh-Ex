@@ -1,12 +1,13 @@
 #pragma once
 #include <cstdint>
+#include "YuGiOh/YuGiOh-Addresses.h"
 
 // Removes the vanilla card count limits: redirects the Konami id and internal id lookup
 // tables into bigger arrays owned by this DLL, and raises the hardcoded bound checks in
 // the trunk scan and the deck checks so ids above the vanilla range are visited.
 
-constexpr uintptr_t kKonamiCardIdLocation = 0x140D50510;   // g_KonamiIds
-constexpr uintptr_t kInternalCardIdLocation = 0x140D55480; // g_iInternalIDs
+constexpr uintptr_t kKonamiCardIdLocation = YGO::Addr::g_KonamiIds;   // g_KonamiIds
+constexpr uintptr_t kInternalCardIdLocation = YGO::Addr::g_iInternalIDs; // g_iInternalIDs
 
 constexpr size_t kVanillaCardIdCount = 10168;
 constexpr size_t kVanillaInternalIdCount = 11072;
