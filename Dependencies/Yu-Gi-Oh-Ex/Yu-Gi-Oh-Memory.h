@@ -17,7 +17,9 @@ namespace YGO::Memory
     enum class Protection { Restore, LeaveWritable };   // LeaveWritable: PAGE_EXECUTE_READWRITE stays (data that later holds a jump stub)
 
     // Copies Size bytes to Address. False when the range could not be made writable (nothing written).
-    inline bool WriteBytes(uintptr_t Address, const void* Data, size_t Size, Protection After = Protection::Restore)
+    // Keep the destination as a runtime pointer. MSVC's optimized inlined memcpy can turn a constant game address above 4 GiB
+    // into a store to address zero (RIX's video-settings arrow table), even while VirtualProtect receives the correct address.
+    __declspec(noinline) inline bool WriteBytes(uintptr_t Address, const void* Data, size_t Size, Protection After = Protection::Restore)
     {
         void* target = reinterpret_cast<void*>(Address);
         DWORD old = 0;
