@@ -428,8 +428,11 @@ namespace WolfEx
 
         public void MarkSaved() => (_snapshot ??= new ContentSnapshot(() => _cards)).Mark();
 
+        private readonly ContentLoadState _loadState = new();
+
         public void LoadFrom(string extraCardsFolder, string gameFolder)
         {
+            _loadState.Reset();
             _folder = extraCardsFolder;
             ArchetypeCatalog.Load(extraCardsFolder);
             if (ArchetypeCatalog.LoadError is { } archetypeError)
@@ -443,12 +446,13 @@ namespace WolfEx
                 try
                 {
                     var root = JsonNode.Parse(File.ReadAllText(path), documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip });
-                    var array = root as JsonArray ?? root?["cards"] as JsonArray ?? throw new InvalidDataException("expected a \"cards\" array");
+                    var array = ContentLoadState.Cards(root ?? throw new InvalidDataException("Expected cards JSON."));
                     foreach (var node in array.OfType<JsonObject>())
                         _cards.Add(ReadCard(node));
                 }
                 catch (Exception ex)
                 {
+                    _loadState.Failed(ex);
                     MessageBox.Show($"Could not read {path}:\n{ex.Message}", "New cards", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     _cards.Clear();
                 }
@@ -462,6 +466,7 @@ namespace WolfEx
 
         public bool SaveTo(string extraCardsFolder)
         {
+            _loadState.EnsureLoaded();
             var problems = new List<string>();
             foreach (var group in _cards.GroupBy(card => card.Id).Where(g => g.Count() > 1))
                 problems.Add($"ID {group.Key} is used by more than one card.");
@@ -503,6 +508,7 @@ namespace WolfEx
         // The model is updated only after every artwork and JSON change has committed.
         internal void SaveFiles(string folder)
         {
+            _loadState.EnsureLoaded();
             var files = new Dictionary<string, byte[]>(StringComparer.OrdinalIgnoreCase);
             var removals = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             var updates = new List<Action>();

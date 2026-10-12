@@ -471,11 +471,19 @@ namespace WolfEx.Designer
                 return;
             if (MessageBox.Show(this, $"Delete {_loadedName}.json?", "Pages", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
                 return;
-            File.Delete(Path.Combine(_folder, _loadedName + ".json"));
-            _loadedName = null;
-            _savedJson = "";
-            RefreshPageList(null);
+            try
+            {
+                ContentSaveBatch.Remove(Path.Combine(_folder, _loadedName + ".json"));
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+            {
+                MessageBox.Show(this, "Page was not deleted. Your pending edits are retained.\n" + ex.Message,
+                    "Pages", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             New();
+            RefreshPageList(null);
+            SetStatus("Page deleted. The original file is retained in its .bak backup.");
         }
 
         private bool ConfirmDiscard()

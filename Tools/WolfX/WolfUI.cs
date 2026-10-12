@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using Wolf.Editors;
 using WolfEx;
 using WolfX.Types;
@@ -14,6 +14,22 @@ namespace WolfX
     public partial class WolfUI : Form
     {
         private sealed record Page(string Group, string Title, Control Content, IGameEditor? Editor, string SavesTo, Control Host);
+
+        internal static bool CommitPendingEdits(ContainerControl root)
+        {
+            // Reading Value commits a NumericUpDown's pending text even when a
+            // ToolStrip save button has not moved focus out of the textbox.
+            static void CommitNumbers(Control parent)
+            {
+                foreach (Control child in parent.Controls)
+                {
+                    if (child is NumericUpDown number) _ = number.Value;
+                    CommitNumbers(child);
+                }
+            }
+            CommitNumbers(root);
+            return root.ValidateChildren();
+        }
 
         /// <summary>The smallest a page is laid out at: a smaller window scrolls the page instead of squeezing it.</summary>
         private static readonly Size PageMinimum = new(760, 440);
@@ -190,7 +206,7 @@ namespace WolfX
                 Select("Effects");
                 return true;
             };
-            Add("Cards", "Effect library", library, null, "The game's cards written in EffectScript, and your own entries: edit them as script or blocks; yours are kept in %APPDATA%\\WolfX\\effect_library.json.");
+            Add("Cards", "Effect library", library, library, "The game's cards written in EffectScript, and your own entries: edit them as script or blocks; yours are kept in %APPDATA%\\WolfX\\effect_library.json.");
             Editor("Cards", "Card genres", genres);
             Editor("Cards", "Related cards", related);
             Editor("Cards", "Card links", links);
@@ -596,12 +612,7 @@ namespace WolfX
 
         private bool SaveAll()
         {
-            if (GameFolderFiles.Current is not { } files)
-            {
-                SetStatus("Nothing is open to save: open YGO_2020.dat or an extracted folder first.");
-                return false;
-            }
-            Directory.CreateDirectory(files.ExFolder);
+            if (!CommitPendingEdits(this)) return false;
             int saved = 0;
             foreach (var page in _pages.Where(page => page.Editor is { Dirty: true }))
             {
@@ -619,6 +630,7 @@ namespace WolfX
 
         private bool ConfirmDiscard(string doing)
         {
+            if (!CommitPendingEdits(this)) return false;
             var dirty = _pages.Where(page => page.Editor?.Dirty == true).Select(page => page.Title).ToList();
             if (dirty.Count == 0)
                 return true;
@@ -715,11 +727,21 @@ namespace WolfX
             {
                 if (_files == null)
                     return false;
-                Directory.CreateDirectory(_files.ExFolder);
-                if (!panel.SaveTo(_files.ExFolder))
+                try
+                {
+                    if (panel is UserControl control && !CommitPendingEdits(control)) return false;
+                    Directory.CreateDirectory(_files.ExFolder);
+                    if (!panel.SaveTo(_files.ExFolder))
+                        return false;
+                    panel.MarkSaved();
+                    return true;
+                }
+                catch (Exception ex) when (ex is IOException or InvalidDataException or UnauthorizedAccessException or InvalidOperationException or System.Text.Json.JsonException)
+                {
+                    MessageBox.Show("Not saved. Pending edits are retained.\n" + ex.Message, panel.Title,
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
-                panel.MarkSaved();
-                return true;
+                }
             }
 
             public IReadOnlyCollection<string> Files => [];

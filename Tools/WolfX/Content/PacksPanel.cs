@@ -164,8 +164,11 @@ namespace WolfEx
 
         public void MarkSaved() => (_snapshot ??= new ContentSnapshot(() => new object[] { _packs, _replaceAll })).Mark();
 
+        private readonly ContentLoadState _loadState = new();
+
         public void LoadFrom(string extraCardsFolder, string gameFolder)
         {
+            _loadState.Reset();
             _packs.Clear();
             _list.Items.Clear();
             _gameIds.Clear();
@@ -173,7 +176,8 @@ namespace WolfEx
             _seriesNames.Clear();
 
             string jsonPath = Path.Combine(extraCardsFolder, "packs.json");
-            var additions = ReadAdditions(jsonPath, out _replaceAll);
+            var root = ReadRoot(jsonPath);
+            var additions = ReadAdditions(root, out _replaceAll);
 
             try
             {
@@ -206,7 +210,7 @@ namespace WolfEx
 
             _kept = additions;
 
-            _packs.AddRange(ReadNewPacks(jsonPath));
+            _packs.AddRange(ReadNewPacks(root));
 
             _series.Items.Clear();
             for (int series = 0; series <= 5; series++)
@@ -231,6 +235,7 @@ namespace WolfEx
 
         public bool SaveTo(string extraCardsFolder)
         {
+            _loadState.EnsureLoaded();
             var problems = new List<string>();
             var array = new JsonArray();
 
@@ -296,7 +301,7 @@ namespace WolfEx
             if (array.Count == 0 && newPacks.Count == 0)
             {
                 if (File.Exists(path))
-                    File.Delete(path);
+                    ContentSaveBatch.Remove(path);
                 return true;
             }
 
@@ -304,7 +309,7 @@ namespace WolfEx
             if (newPacks.Count > 0)
                 root["newPacks"] = newPacks;
             var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
-            File.WriteAllText(path, root.ToJsonString(options) + "\n", new UTF8Encoding(false));
+            ContentSaveBatch.WriteText(path, root.ToJsonString(options) + "\n");
             return true;
         }
 
@@ -330,26 +335,50 @@ namespace WolfEx
             return ids;
         }
 
-        private static JsonNode? ReadRoot(string path)
+        private JsonNode? ReadRoot(string path)
         {
             if (!File.Exists(path))
                 return null;
             try
             {
-                return JsonNode.Parse(File.ReadAllText(path), documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip, AllowTrailingCommas = true });
+                var root = ContentLoadState.Read(path)!;
+                if (root is JsonArray) ContentLoadState.Objects(root, "packs");
+                else if (root is JsonObject obj)
+                {
+                    if (obj.ContainsKey("packs")) ContentLoadState.Objects(obj["packs"], "packs");
+                    if (obj.ContainsKey("newPacks")) ContentLoadState.Objects(obj["newPacks"], "newPacks");
+                    if (obj["packs"] == null && obj["newPacks"] == null)
+                        throw new InvalidDataException("Expected packs or newPacks.");
+                }
+                else throw new InvalidDataException("Expected packs JSON.");
+                var packs = root as JsonArray ?? (root as JsonObject)?["packs"] as JsonArray;
+                if (root is JsonObject options) ContentLoadState.Fields<bool>(options, "replaceDefaults");
+                foreach (JsonObject entry in packs ?? new JsonArray())
+                {
+                    ContentLoadState.Fields<string>(entry, "pack");
+                    ContentLoadState.Fields<bool>(entry, "replace");
+                    if (entry["pack"] == null) throw new InvalidDataException("A pack entry needs its pack name.");
+                }
+                foreach (JsonObject entry in (root as JsonObject)?["newPacks"] as JsonArray ?? new JsonArray())
+                {
+                    ContentLoadState.Fields<int>(entry, "id", "series", "cost");
+                    ContentLoadState.Fields<string>(entry, "name", "art", "unlockWith");
+                    if (entry["id"] == null || entry["name"] == null) throw new InvalidDataException("A new pack needs id and name.");
+                }
+                return root;
             }
             catch (Exception ex)
             {
+                _loadState.Failed(ex);
                 MessageBox.Show($"Could not read {path}:\n{ex.Message}", "Packs", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
 
-        private static Dictionary<string, (string Common, string Rare, bool Replace)> ReadAdditions(string path, out bool replaceAll)
+        private Dictionary<string, (string Common, string Rare, bool Replace)> ReadAdditions(JsonNode? root, out bool replaceAll)
         {
             replaceAll = false;
             var result = new Dictionary<string, (string, string, bool)>();
-            var root = ReadRoot(path);
             var array = root as JsonArray ?? root?["packs"] as JsonArray;
             if (array == null)
                 return result;
@@ -367,10 +396,10 @@ namespace WolfEx
             return result;
         }
 
-        private static List<PackEntry> ReadNewPacks(string path)
+        private List<PackEntry> ReadNewPacks(JsonNode? source)
         {
             var result = new List<PackEntry>();
-            if (ReadRoot(path) is not JsonObject root || root["newPacks"] is not JsonArray array)
+            if (source is not JsonObject root || root["newPacks"] is not JsonArray array)
                 return result;
             foreach (var node in array.OfType<JsonObject>())
             {

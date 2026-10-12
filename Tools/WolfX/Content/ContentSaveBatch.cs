@@ -8,6 +8,9 @@ namespace WolfEx
         private sealed record Entry(string Target, string? Temp, string? Backup);
         internal static byte[] Text(string text) => new UTF8Encoding(false).GetBytes(text);
 
+        internal static void WriteText(string path, string text) => Write(new Dictionary<string, byte[]> { [path] = Text(text) });
+        internal static void Remove(string path) => Write(new Dictionary<string, byte[]>(), [path]);
+
         internal static void Write(IReadOnlyDictionary<string, byte[]> files, IEnumerable<string>? removals = null)
         {
             var entries = new List<Entry>();
