@@ -283,7 +283,12 @@ public static class ModMergeArchive
             }
             var result = new List<(string, string)>();
             for (int at = 0; at < files[0].Length; at += 8)
-                result.Add((Text(files[1], BitConverter.ToUInt32(files[0], at)), Text(files[2], BitConverter.ToUInt32(files[0], at + 4))));
+            {
+                uint name = BitConverter.ToUInt32(files[0], at), desc = BitConverter.ToUInt32(files[0], at + 4);
+                // The stock table ends with the end of each pool, rather than another card's text.
+                if (at == files[0].Length - 8 && name == files[1].Length && desc == files[2].Length) break;
+                result.Add((Text(files[1], name), Text(files[2], desc)));
+            }
             return result;
         }
         var entries = BinaryModMerge.MergeIndexed(Read(b), Read(c), Read(n), conflicts);
@@ -294,6 +299,11 @@ public static class ModMergeArchive
             writer.Write(checked((uint)names.Length)); writer.Write(checked((uint)descriptions.Length));
             names.Write(System.Text.Encoding.Unicode.GetBytes(entry.Name)); names.Write([0, 0]);
             descriptions.Write(System.Text.Encoding.Unicode.GetBytes(entry.Desc)); descriptions.Write([0, 0]);
+        }
+        if (b[0].Length >= 8 && BitConverter.ToUInt32(b[0], b[0].Length - 8) == b[1].Length
+            && BitConverter.ToUInt32(b[0], b[0].Length - 4) == b[2].Length)
+        {
+            writer.Write(checked((uint)names.Length)); writer.Write(checked((uint)descriptions.Length));
         }
         return new([index.ToArray(), names.ToArray(), descriptions.ToArray()], conflicts);
     }

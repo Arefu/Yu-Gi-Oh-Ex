@@ -189,6 +189,9 @@ static class BinaryMergeTests
             Check(wordsOut.Entries.SequenceEqual(new[] { "long replacement for zero", "second replacement" }), "Paired text offsets were not rebuilt");
             Check(System.Text.Encoding.Unicode.GetString(Archive().Read(@"bin\CARD_Name_E.bin")!).Contains("another card name")
                 && System.Text.Encoding.Unicode.GetString(Archive().Read(@"bin\CARD_Name_E.bin")!).Contains("a longer card name"), "Card text triplet did not merge");
+            byte[] cardIndex = Archive().Read(@"bin\CARD_Indx_E.bin")!;
+            Check(cardIndex.Length == 24 && BitConverter.ToUInt32(cardIndex, cardIndex.Length - 8) == Archive().SizeOf(@"bin\CARD_Name_E.bin")
+                && BitConverter.ToUInt32(cardIndex, cardIndex.Length - 4) == Archive().SizeOf(@"bin\CARD_Desc_E.bin"), "Card text end-of-pool sentinel was not rebuilt");
             string first = Manifest();
             ModMergeArchive.Prepare(root, mods);
             Check(Manifest() == first, "Unchanged inputs unnecessarily rebuilt the cache");
@@ -232,6 +235,7 @@ static class BinaryMergeTests
             pool.Write(System.Text.Encoding.Unicode.GetBytes(name)); pool.Write([0, 0]);
             desc.Write(System.Text.Encoding.Unicode.GetBytes("description")); desc.Write([0, 0]);
         }
+        writer.Write((uint)pool.Length); writer.Write((uint)desc.Length);
         return [index.ToArray(), pool.ToArray(), desc.ToArray()];
     }
 }
