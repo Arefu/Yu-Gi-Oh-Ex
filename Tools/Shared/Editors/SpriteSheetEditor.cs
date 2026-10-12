@@ -353,13 +353,21 @@ namespace Wolf.Editors
                 if (_resourcePath == null)
                     return false;
                 string json = ExJson(_resourcePath);
-                Directory.CreateDirectory(Path.GetDirectoryName(json)!);
-                File.WriteAllText(json, sheet.ToJson());
+                var pending = new Dictionary<string, byte[]> { [json] = ContentFileSave.Text(sheet.ToJson()) };
                 string picture = Path.ChangeExtension(json, ".png");
                 if (_newPng != null)
-                    File.WriteAllBytes(picture, _newPng);
+                    pending[picture] = _newPng;
                 else if (!File.Exists(picture) && _gameFiles.Read(_resourcePath + ".png") == null && _canvas.Image != null)
-                    _canvas.Image.Save(picture, System.Drawing.Imaging.ImageFormat.Png);   // no picture anywhere else: keep the one being edited
+                {
+                    using var image = new MemoryStream();
+                    _canvas.Image.Save(image, System.Drawing.Imaging.ImageFormat.Png);
+                    pending[picture] = image.ToArray();
+                }
+                if (!ContentFileSave.TryWrite(pending, out string error))
+                {
+                    SetStatus(error);
+                    return false;
+                }
                 _newPng = null;
                 _savedText = sheet.ToText();
                 SetStatus($"Saved {json} (a new sheet: no plugin applies it yet).");
@@ -381,19 +389,23 @@ namespace Wolf.Editors
                 target = dialog.FileName;
             }
 
-            Directory.CreateDirectory(Path.GetDirectoryName(target)!);
-            File.WriteAllText(target, sheet.ToText());
+            var files = new Dictionary<string, byte[]> { [target] = ContentFileSave.Text(sheet.ToText()) };
 
-            // the picture goes next to it when it is not there yet (a new sheet, or the game's sheet saved somewhere new)
+            // Save an imported replacement picture, or copy the picture beside a new target.
             string png = Path.ChangeExtension(target, ".png");
-            if (!File.Exists(png))
+            if (_newPng != null || !File.Exists(png))
             {
                 byte[]? bytes = _newPng ?? (_resourcePath != null ? _gameFiles?.Read(_resourcePath + ".png") : null)
                                 ?? (_diskPath != null && File.Exists(Path.ChangeExtension(_diskPath, ".png")) ? File.ReadAllBytes(Path.ChangeExtension(_diskPath, ".png")) : null);
                 if (bytes != null)
-                    File.WriteAllBytes(png, bytes);
+                    files[png] = bytes;
             }
 
+            if (!ContentFileSave.TryWrite(files, out string saveError))
+            {
+                SetStatus(saveError);
+                return false;
+            }
             _diskPath = target;
             _newPng = null;
             _savedText = sheet.ToText();

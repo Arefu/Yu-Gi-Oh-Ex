@@ -1,4 +1,4 @@
-﻿#include <d3d11.h>
+#include <d3d11.h>
 #include <detours.h>
 #include <dxgi.h>
 #include <fstream>
@@ -13,6 +13,7 @@
 
 #include "Inspector.h"
 #include "Logger.h"
+#include "HookDiagnostics.h"
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Log.h"
 #include "Plugins.h"
 #include "Yu-Gi-Oh-Ex.h"
@@ -212,10 +213,11 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(
     void** vmt = *(void***)(pSwapChain);
     oPresent = reinterpret_cast<Address>(vmt[8]);
 
-    DetourTransactionBegin();
-    DetourUpdateThread(GetCurrentThread());
+    if (!HookDiagnostics::Begin("GUI Present", MODULE_NAME, Logger::WriteLog))
+        return result;
     DetourAttach(reinterpret_cast<PVOID*>(&oPresent), YGOGUIPresent);
-    DetourTransactionCommit();
+    if (HookDiagnostics::Commit("GUI Present", MODULE_NAME, Logger::WriteLog) != NO_ERROR)
+        return result;
     nPresent = oPresent;
 
     ImGui::CreateContext();
@@ -262,9 +264,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     case DLL_PROCESS_ATTACH:
         SetProcessDPIAware();
         DetourRestoreAfterWith();
-        DetourTransactionBegin();
+        if (!HookDiagnostics::Begin("GUI device creation", MODULE_NAME, Logger::WriteLog))
+            break;
         DetourAttach(reinterpret_cast<PVOID*>(&oCreateDeviceAndSwapChain), CreateDeviceSwapChainAndSetupDearImGui);
-        DetourTransactionCommit();
+        if (HookDiagnostics::Commit("GUI device creation", MODULE_NAME, Logger::WriteLog) != NO_ERROR)
+            break;
         nCreateDeviceAndSwapChain = oCreateDeviceAndSwapChain;
         break;
     }
