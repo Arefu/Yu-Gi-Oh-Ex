@@ -117,20 +117,19 @@ The name colour comes from `g_CardNameColorByFrame[frame]`: white on Spell, Trap
 
 | Hook | Is | What the plugin does |
 | --- | --- | --- |
-| `0x14074E7D0` | `CardFace_Build` | remembers the card being built |
+| `0x14074E7D0` | `CardFace_Build` | remembers the card being built per thread and restores enclosing build state |
 | `0x1408795A0` | `AddQuad` | hides the line above ATK (zero-area quad, see batch note), scales and moves the art (both rects), moves the Spell/Trap icon |
-| `0x140766540` | `TextSlot_Layout` | font 35 (AtkDef) -> the ATK number only; description fonts (30..34) -> the DEF number on monsters; **every other text blanked** (name, type lines, pendulum text and scales) |
+| `0x140766540` | `TextSlot_Layout` | only during a face build: font 35 -> ATK; main 336 px description -> DEF or Link rating; font 36 preserves Pendulum scales; other card text blanked |
 | `0x140877EC0` | `Matrix4_Translation` | only while `CardFace_Build` runs (it is also called by `DFX::TLayerAnimoo::Render` and two duel functions): 367,544 (AtkDef) -> custom ATK position and scale; x == 32 -> custom DEF position and scale |
-| `0x14081A5D0` | attribute | pass-through |
-| `0x14081A630` | Spell/Trap property | monsters get property 1 so the icon is drawn for them too |
+
+The pass-through attribute getter hook and the synthetic Spell/Trap property override have been removed. Card classification uses the game's IsMonster getter; native Spell/Trap properties are preserved.
 
 Changes made for the anime frames in `Mods/Anime Frames` (2026-09-29):
 
 * Level / rank stars are drawn as one row centred on `StarsX`, `StarsY` (default 200, 465.5: the middle of the frame's coloured band
   between the art's border, y 434, and the ATK/DEF boxes, y 497; `StarsY` < 0 keeps the game's y 83). Rows wider than `StarsMaxWidth`
   (240, so they clear the attribute circle at x 324) are shrunk to fit. The `CardFace_Build` hook reads the star count with the game's getters (StarCount, else RankStars) and resets a counter; the
-  `AddQuad` hook re-places each 28 px star quad by index, keeping the game's spacing (28, or 27 above 11 level stars). The Spell/Trap
-  property hook only acts while `CardFace_Build` runs (a `thread_local` flag).
+  `AddQuad` hook re-places each 28 px star quad by index, keeping the game's spacing (28, or 27 above 11 level stars). Shared text and quad hooks only act while `CardFace_Build` runs (a `thread_local` flag).
 * The attribute icon goes in the frame's circle: centre 346, 469.5 on monster frames and 198.5, 469 on the Link frame. It is not drawn on
   Spell and Trap frames, which have their symbol in the art. Icons come from `pdui/STEAM_icons` (.png + .dfymoo sprite list); the card
   uses the 37 px `ICON_ID_ATTR_L_*` sprites (id attribute + 129). Stretched to fill the 45 px circle they went soft and the circle's pale
@@ -152,9 +151,9 @@ Changes made for the anime frames in `Mods/Anime Frames` (2026-09-29):
 Text alignment values (`TextSlot_Layout` align, `Layout_FinishLine` / `Layout_Build`): 1 left, 2 centre, 4 right; 8 top, 0x10 centre,
 0x20 bottom.
 
-Things the trace corrects in the plugin (behaviour unchanged, only noted):
+Historical findings from the trace:
 
-* `IsTrapSpellCard` returns **false for Spell, Trap and Link** (kinds 13, 14, 42, 43) and true for other monsters. The name is back to front,
+* The old `IsTrapSpellCard` returned **false for Spell, Trap and Link** (kinds 13, 14, 42, 43) and true for other monsters. The name was back to front,
   so "!IsTrapSpellCard" means "Spell, Trap or Link", not "monster".
 * The hook named `Get_RawDefFromFullCardProps` (`0x14081A5D0`) is the **attribute** getter.
 * The address flagged `TODO` (`0x14081A630`) is correct: it is the real Spell/Trap property getter.
@@ -201,4 +200,20 @@ resolutions), the whole face, art included, is magnified too. Sharper fonts cann
 * **Move, resize, hide or swap images:** `AddQuad`, by rect (or wrap `CardFace_Build`'s batches directly).
 * **Different frame art:** `FrameTextures[frame]` in the `CardImageManager`, or the frame images themselves (`duel/frame/card_*`).
 * **Stars / attribute:** their icon ids and sizes above. Returning 0 from `Get_StarCount` / `Get_RankStars` / the property getter skips
-  them, and the property getter can also force an icon on (the plugin's trick).
+  them. Keep the native Spell/Trap property getter: forcing a property changes the icon's meaning.
+
+## Rendering isolation regression check
+
+`Tests/AnimeCards/AnimeCards.vcxproj` compiles the actual hooks with stub original
+functions. It checks unchanged shared text/quad calls outside a face build,
+card-only attribute and ATK changes, retained Pendulum scales, blank Pendulum
+effect text instead of duplicate DEF, art offsets at scale 1, and nested build
+state restoration and per-thread context isolation. Build Release x64 with Visual Studio v143 and run the resulting
+`bin/AnimeCards.exe`; assertions must remain enabled.
+
+For in-game checks, use a separate save and verify the loaded DLL hash. Inspect
+normal monsters, Spells, Traps, Fusion, Synchro, Xyz, Link and Pendulum faces in
+Deck Edit. Check face stats against the surrounding details, rank and Link rating,
+and both Pendulum scale numbers. Confirm menu labels and card descriptions remain
+readable. Restore the original configuration after normal exit and compare the
+Steam save with its pre-test backup.
