@@ -55,7 +55,6 @@ namespace
     using GetArtName_t = char*(__fastcall*)(PackRecord* record, char* outString);
     using BuildPackList_t = void(__fastcall*)(int64_t screen, int series);
     using SetupShopHelp_t = void(__fastcall*)(int64_t screen);
-    using HandleShopInput_t = void(__fastcall*)(int64_t screen, int pressed);
     using WStringAssign_t = void*(__fastcall*)(GameWString* self, const wchar_t* text, size_t count);
     using GetPlayerSection_t = uint8_t*(__fastcall*)(unsigned int profile);
 
@@ -63,7 +62,6 @@ namespace
     uintptr_t orig_Pack_GetArtName = 0x14080E390;        // YGO::GAME::Pack_GetArtName
     uintptr_t orig_BuildPackList = 0x14085D6E0;          // YGO::UI::BoosterShop_BuildPackList
     uintptr_t orig_SetupShopHelp = 0x14085DDB0;
-    uintptr_t orig_HandleShopInput = 0x14085BAC0;
     constexpr size_t kShopCursor = 0x11B0; // selected index, total count, first visible index, visible count
     constexpr size_t kShopState = 0x1150;  // 1 = choosing a booster pack
     constexpr size_t kShopHelp = 0x108;
@@ -409,14 +407,6 @@ namespace
         YGO::RIX::HelpLayout(help);
     }
 
-    void __fastcall Hook_HandleShopInput(int64_t screen, int pressed)
-    {
-        // The new help prompts are clickable; the native handler owns navigation,
-        // scrolling, selection and purchases for keyboard and controller input.
-        pressed |= YGO::RIX::Input::HelpBarPressed(reinterpret_cast<void*>(screen + kShopHelp));
-        reinterpret_cast<HandleShopInput_t>(orig_HandleShopInput)(screen, pressed);
-    }
-
     char __fastcall Hook_LoadPackDefinitions()
     {
         char result = reinterpret_cast<LoadPackDefinitions_t>(orig_LoadPackDefinitions)();
@@ -485,10 +475,12 @@ namespace Packs
             DetourAttach(&(PVOID&)orig_Pack_GetArtName, Hook_Pack_GetArtName);
             DetourAttach(&(PVOID&)orig_BuildPackList, Hook_BuildPackList);
             DetourAttach(&(PVOID&)orig_SetupShopHelp, Hook_SetupShopHelp);
-            DetourAttach(&(PVOID&)orig_HandleShopInput, Hook_HandleShopInput);
         }
         LONG error = DetourTransactionCommit();
         YGO::Log("Pack hooks attached: " + std::to_string(error), MODULE_NAME, error == 0 ? 0 : 2);
+
+        if (error != NO_ERROR)
+            return; // Do not publish packs without their required UI/art hooks.
 
         // Core starts this plugin once the main menu is up, after the game's first pack load: apply to what is loaded now; the hook
         // above handles later reloads (language changes).

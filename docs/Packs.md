@@ -80,4 +80,24 @@ Packs tab:
 * **Remove new pack** removes it.
 * Save checks for names, ids, card lists and an English title.
 
-Not yet run in the game.
+## Scrolling tabs with more than six packs
+
+Overflowing tabs show Previous pack and Next pack help prompts. Keyboard,
+controller and mouse clicks use the game's existing navigation. Switching to
+a tab with six or fewer packs removes these extra prompts.
+
+The purchase check uses the selected pack's position in the six visible widgets,
+subtracting the first visible index from the absolute selection. The plugin
+checks the original instruction bytes before installing this patch; if they
+differ or installation fails, new packs are disabled and a diagnostic is logged.
+If the required Detours hooks fail to commit, packs are not applied.
+
+`Tests/CardShopOverflow/CardShopOverflow.vcxproj` builds a standalone Windows x64
+regression executable. It installs and executes the real patch on a synthetic
+screen for all visible positions in lists of up to 128 packs and checks rejection
+of unsupported instruction bytes. Build with MSBuild, Configuration=Release and
+Platform=x64, then run `Tests/CardShopOverflow/bin/CardShopOverflow.exe`.
+
+In-game verification remains necessary for prompt layout, tab changes, input
+devices and purchases of locked and complete packs. The regression executable
+does not access the game or its saves.
