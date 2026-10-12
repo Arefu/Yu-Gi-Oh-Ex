@@ -1408,8 +1408,27 @@ unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
 
     unsigned char* saved = Save::GetCardUnlockTable(profile);
 
-    // Only loaded cards receive counts in this display buffer. Keep ownership of unavailable cards in the save: a missing,
-    // disabled or invalid cards.json must not erase progress, and restoring the card should restore its owned copies.
+    // Read once per launch. Resetting unavailable cards remains the default for mod switches;
+    // persistence is opt-in. Both modes keep unavailable cards out of the display buffer.
+    static const bool preserveUnavailableCards = GetPrivateProfileIntW(
+        L"Yu-Gi-Oh-MoreCards", L"PreserveUnavailableCards", 0, L".\\Config.ini") != 0;
+    if (saved && !preserveUnavailableCards)
+    {
+        std::string removed;
+        int removedCount = 0;
+        for (int id = kFirstExtraCardId; id < static_cast<int>(kSavedCardTableSize); ++id)
+        {
+            if (saved[id] != 0 && !Card::ExtraLoadIDs.contains(static_cast<uint16_t>(id)))
+            {
+                saved[id] = 0;
+                if (++removedCount <= 10)
+                    removed += (removed.empty() ? "" : ", ") + std::to_string(id);
+            }
+        }
+        // A copy of the Steam save can carry marks for a whole run of unused ids: say how many, and only the first few.
+        if (removedCount > 0)
+            Logger::WriteLog(std::format("Dropped {} custom card(s) the profile owned that cards.json does not have: {}{}", removedCount, removed, removedCount > 10 ? ", ..." : ""), MODULE_NAME, 1);
+    }
 
     // The player owns at least `copies` of a card. The count is kept in the save's card table, under the
     // id the game reads it from, so it survives the game rebuilding its counts and being saved.
