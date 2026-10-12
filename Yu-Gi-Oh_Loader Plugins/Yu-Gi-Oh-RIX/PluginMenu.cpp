@@ -33,9 +33,12 @@ namespace
         bool Loaded = false;      // in memory right now (On is Config.ini, i.e. the next start; they differ after a toggle or a failed load)
         std::wstring Title;
         std::wstring Description; // the manifest's description, or why it is blocked
+        RIX_ButtonCallback Options = nullptr;
+        void* User = nullptr;
     };
 
     std::vector<Plugin> g_Plugins;
+    std::map<std::string, Plugin> g_Options;
     std::map<std::string, bool> g_AtStart;   // what was switched on when the game started, i.e. what is actually loaded
     int g_PerPage = kDefaultPerPage;
     int g_Page = 0;
@@ -95,6 +98,9 @@ namespace
                 plugin.Description = L"Not loaded: it " + FromUtf8(info.Problem) + L".";
             g_AtStart.emplace(plugin.Key, plugin.On);   // first sight = how it was when the game started (later toggles don't overwrite)
             g_Plugins.push_back(std::move(plugin));
+            auto options = g_Options.find(info.Key);
+            if (info.Loaded && options != g_Options.end())
+                g_Plugins.push_back(options->second);
         }
     }
 
@@ -109,7 +115,7 @@ namespace
 
     bool Changed()
     {
-        return std::any_of(g_Plugins.begin(), g_Plugins.end(), [](const Plugin& p) { return g_AtStart[p.Key] != p.On; });
+        return std::any_of(g_Plugins.begin(), g_Plugins.end(), [](const Plugin& p) { return !p.Options && g_AtStart[p.Key] != p.On; });
     }
 
     // The text is only pointed at, so the caller keeps it alive until the button is added or updated.
@@ -149,7 +155,7 @@ namespace
             // for one still in memory after it crashed while starting or was switched off this run.
             std::wstring state = plugin.Blocked ? L"Blocked" : plugin.On == plugin.Loaded ? (plugin.On ? L"On" : L"Off")
                 : plugin.On ? (g_AtStart[plugin.Key] ? L"Not loaded" : L"On after restart") : L"Off after restart";
-            std::wstring label = plugin.Title + L": " + state;
+            std::wstring label = plugin.Options ? plugin.Title : plugin.Title + L": " + state;
             std::wstring description = plugin.Description;   // empty when the plugin has no manifest
             if (!plugin.Blocked && plugin.On && !plugin.Loaded && g_AtStart[plugin.Key])
                 description = L"Switched on, but it is not loaded: it failed to load or start (see the log).";
@@ -253,6 +259,13 @@ namespace
 
         // Core switches it (and what it needs, or what needs it) in Config.ini.
         const Plugin plugin = g_Plugins[index];
+        if (plugin.Options)
+        {
+            plugin.Options(-1, plugin.User);
+            LoadPlugins();
+            Refresh(true);
+            return;
+        }
         if (Core::Load())
             Core::Functions().SetPluginEnabled(plugin.Key.c_str(), plugin.On ? 0 : 1);
         LoadPlugins();
@@ -362,6 +375,20 @@ namespace
 }
 namespace PluginMenu
 {
+    bool RegisterOptions(const char* key, const wchar_t* label, const wchar_t* description, RIX_ButtonCallback callback, void* user)
+    {
+        if (!key || !*key || !label || !*label || !callback)
+            return false;
+        Plugin options;
+        options.Key = key;
+        options.Title = label;
+        options.Description = description ? description : L"";
+        options.Options = callback;
+        options.User = user;
+        g_Options[key] = std::move(options);
+        return true;
+    }
+
     int PerPage()
     {
         return g_PerPage;

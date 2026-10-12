@@ -153,6 +153,11 @@ RIX_API int __cdecl RIX_GetMainMenuButton(int Id, RIX_ButtonDesc* Out);
    Registering the same name again replaces it. The callback gets ButtonId = -1 when it is not run by a button. */
 RIX_API int __cdecl RIX_RegisterAction(const char* Name, RIX_ButtonCallback Callback, void* User);
 
+/* Adds an options entry beside a loaded plugin in Help & Options > Plugins.
+   Key is the Core plugin key. Strings are copied; registering again replaces the entry.
+   Call on the game thread before opening the plugin list. Returns 1 on success. */
+RIX_API int __cdecl RIX_RegisterPluginOptions(const char* Key, const wchar_t* Label, const wchar_t* Description, RIX_ButtonCallback Callback, void* User);
+
 /* The buttons that are currently added (not removed), by position 0..count-1. */
 RIX_API int __cdecl RIX_GetMainMenuButtonCount(void);
 RIX_API int __cdecl RIX_GetMainMenuButtonIdAt(int Index);
@@ -250,6 +255,7 @@ namespace RIX
         int(__cdecl* UpdateMainMenuButton)(int, const RIX_ButtonDesc*) = nullptr;
         int(__cdecl* GetMainMenuButton)(int, RIX_ButtonDesc*) = nullptr;
         int(__cdecl* RegisterAction)(const char*, RIX_ButtonCallback, void*) = nullptr;
+        int(__cdecl* RegisterPluginOptions)(const char*, const wchar_t*, const wchar_t*, RIX_ButtonCallback, void*) = nullptr;
         int(__cdecl* GetMainMenuButtonCount)() = nullptr;
         int(__cdecl* GetMainMenuButtonIdAt)(int) = nullptr;
         int(__cdecl* PressMainMenuItem)(int) = nullptr;
@@ -294,6 +300,7 @@ namespace RIX
         RIX_BIND(UpdateMainMenuButton);
         RIX_BIND(GetMainMenuButton);
         RIX_BIND(RegisterAction);
+        RIX_BIND(RegisterPluginOptions);
         RIX_BIND(GetMainMenuButtonCount);
         RIX_BIND(GetMainMenuButtonIdAt);
         RIX_BIND(PressMainMenuItem);

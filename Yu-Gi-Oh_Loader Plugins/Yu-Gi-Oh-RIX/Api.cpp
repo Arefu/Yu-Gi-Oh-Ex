@@ -10,12 +10,18 @@
 #include "Pages.h"
 #include "Logger.h"
 #include "MainMenu.h"
+#include "PluginMenu.h"
 
 #include "YuGiOh/YuGiOh-RIX.h"
 
 extern "C"
 {
     int __cdecl RIX_GetVersion(void) { return RIX_API_VERSION; }
+
+    int __cdecl RIX_RegisterPluginOptions(const char* key, const wchar_t* label, const wchar_t* description, RIX_ButtonCallback callback, void* user)
+    {
+        return PluginMenu::RegisterOptions(key, label, description, callback, user) ? 1 : 0;
+    }
 
     int __cdecl RIX_AddMainMenuButton(const RIX_ButtonDesc* button) { return button ? Menu::Add(*button) : -1; }
 
