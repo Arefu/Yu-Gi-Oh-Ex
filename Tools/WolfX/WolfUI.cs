@@ -427,8 +427,8 @@ namespace WolfX
             if (GameFolderFiles.Current is not { } files)
                 return;
             if (MessageBox.Show(this, "The mod is made from what is saved. Save everything first?", "Export as mod",
-                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                SaveAll();
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes && !SaveAll())
+                return;
             using var form = new Wolf.Mods.CreateModForm(files.GameFolder);
             form.ShowDialog(this);
         }
@@ -594,12 +594,12 @@ namespace WolfX
                 "Required files not found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void SaveAll()
+        private bool SaveAll()
         {
             if (GameFolderFiles.Current is not { } files)
             {
                 SetStatus("Nothing is open to save: open YGO_2020.dat or an extracted folder first.");
-                return;
+                return false;
             }
             Directory.CreateDirectory(files.ExFolder);
             int saved = 0;
@@ -609,11 +609,12 @@ namespace WolfX
                 {
                     Select(page.Title);
                     SetStatus($"Not saved: fix the {page.Title} page first.");
-                    return;
+                    return false;
                 }
                 saved++;
             }
             SetStatus(saved == 0 ? "Nothing to save." : $"Saved {saved} page{(saved == 1 ? "" : "s")}. Restart the game to see the changes.");
+            return true;
         }
 
         private bool ConfirmDiscard(string doing)
@@ -626,7 +627,7 @@ namespace WolfX
             if (answer == DialogResult.Cancel)
                 return false;
             if (answer == DialogResult.Yes)
-                SaveAll();
+                return SaveAll();
             return true;
         }
 
