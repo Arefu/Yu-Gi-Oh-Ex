@@ -512,6 +512,9 @@ namespace WolfX
             _changedCards.Clear();
             _pendingArt.Clear();
             _summoning = SummoningFile.Load(files.ExPath(SummoningFile.FileName));
+            if (_summoning.LoadError is { } error)
+                MessageBox.Show("Could not read summoning.json. Saving summoning changes is blocked until you repair it and reopen the folder.\n" + error,
+                    "Summoning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             try
             {
                 _idMap = files.Read(CardIdMap.GamePath) is { } ids ? CardIdMap.Parse(ids) : null;
@@ -551,6 +554,7 @@ namespace WolfX
         /// <summary>Writes the files that changed, then the pages shown inside (genres, related cards, links) when they have changes.</summary>
         public bool Save()
         {
+            if (!WolfUI.CommitPendingEdits(this)) return false;
             if (_files == null)
                 return false;
             try

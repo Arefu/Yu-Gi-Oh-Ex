@@ -33,17 +33,16 @@ namespace WolfEx
         public static Dictionary<int, JsonObject> Load(string path)
         {
             var entries = new Dictionary<int, JsonObject>();
-            try
-            {
-                if (File.Exists(path) && JsonNode.Parse(File.ReadAllText(path)) is JsonObject root && root["cards"] is JsonArray cards)
-                    foreach (var entry in cards.OfType<JsonObject>())
-                        if (entry["id"] is JsonValue id && id.TryGetValue<int>(out int value))
-                            entries[value] = (JsonObject)entry.DeepClone();
-            }
-            catch (JsonException)
-            {
-                // a broken file starts empty; saving writes a good one
-            }
+            if (ContentLoadState.Read(path) is { } root)
+                foreach (JsonObject entry in ContentLoadState.Cards(root))
+                {
+                    ContentLoadState.Fields<string>(entry, "name", "effectScript");
+                    ContentLoadState.Fields<bool>(entry, "overridden");
+                    foreach (string field in new[] { "effectClone", "lock" })
+                        if (entry.ContainsKey(field) && entry[field] is not JsonObject)
+                            throw new InvalidDataException("Expected an object: " + field);
+                    entries[entry["id"]!.GetValue<int>()] = (JsonObject)entry.DeepClone();
+                }
             return entries;
         }
 

@@ -132,19 +132,31 @@ namespace WolfEx
 
         public string Title => "Effects";
 
+        private readonly ContentLoadState _loadState = new();
+
         public void LoadFrom(string extraCardsFolder, string gameFolder)
         {
+            _loadState.Reset();
             _overrides.Clear();
-            foreach (var (id, entry) in GameEffectsFile.Load(Path.Combine(extraCardsFolder, GameEffectsFile.FileName)))
-                _overrides[id] = new GameEffectCard
-                {
-                    Id = id,
-                    Name = entry["name"]?.GetValue<string>() ?? "",
-                    Overridden = entry["overridden"]?.GetValue<bool>() ?? false,
-                    EffectSource = entry["effectScript"]?.GetValue<string>() ?? "",
-                    Effect = entry["effectClone"] as JsonObject is { } clone ? clone.DeepClone().AsObject() : null,
-                    Lock = entry["lock"] as JsonObject is { } own ? own.DeepClone().AsObject() : null,
-                };
+            try
+            {
+                foreach (var (id, entry) in GameEffectsFile.Load(Path.Combine(extraCardsFolder, GameEffectsFile.FileName)))
+                    _overrides[id] = new GameEffectCard
+                    {
+                        Id = id,
+                        Name = entry["name"]?.GetValue<string>() ?? "",
+                        Overridden = entry["overridden"]?.GetValue<bool>() ?? false,
+                        EffectSource = entry["effectScript"]?.GetValue<string>() ?? "",
+                        Effect = entry["effectClone"] as JsonObject is { } clone ? clone.DeepClone().AsObject() : null,
+                        Lock = entry["lock"] as JsonObject is { } own ? own.DeepClone().AsObject() : null,
+                    };
+            }
+            catch (Exception ex) when (ex is IOException or InvalidDataException or UnauthorizedAccessException or System.Text.Json.JsonException or InvalidOperationException)
+            {
+                _overrides.Clear();
+                _loadState.Failed(ex);
+                MessageBox.Show($"Could not read effects.json:\n{ex.Message}", "Effects", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             _gameCards = null;   // the game folder may be another one now
             if (GameMode)
                 RefreshList();
@@ -152,14 +164,15 @@ namespace WolfEx
 
         public bool SaveTo(string extraCardsFolder)
         {
+            _loadState.EnsureLoaded();
             string path = Path.Combine(extraCardsFolder, GameEffectsFile.FileName);
             if (_overrides.Count == 0)
             {
                 if (File.Exists(path))
-                    File.Delete(path);
+                    ContentSaveBatch.Remove(path);
                 return true;
             }
-            File.WriteAllText(path, GameEffectsFile.Text(_overrides.Values));
+            ContentSaveBatch.WriteText(path, GameEffectsFile.Text(_overrides.Values));
             return true;
         }
 
