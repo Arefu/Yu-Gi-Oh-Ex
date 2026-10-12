@@ -7,6 +7,22 @@ cards (genres, related cards, links, password, name order, index letters). WolfX
 
 Game cards are unchanged: their edits go into the game's files (WolfX patch archive) or the page's own Yu-Gi-Oh-Ex JSON.
 
+## Ownership when content is unavailable
+
+Custom-card ownership stays in the profile's save table when a card is removed, its mod is disabled, or its JSON cannot be loaded.
+Only loaded cards appear in the trunk. Restoring the same card id makes its saved copies available again; viewing the trunk does
+not erase ownership for unavailable ids. The `copies` value remains a minimum grant, so use `copies: 0` when checking persistence.
+This preserves existing ownership; it cannot recover counts already erased by an earlier version without a backup or a new grant.
+
+To verify a MoreCards build, use Core with a separate toolkit save and back up both that profile and the Steam save:
+
+1. Give card 15300 two copies in the test save, keep it out of saved decks, and load a valid `cards.json` entry with `copies: 0`.
+2. Open Deck Edit and check that the trunk shows two copies. Save and exit normally.
+3. Temporarily remove `cards.json`, relaunch, and open the trunk. The unavailable card should be hidden. Save and exit.
+4. Repeat with malformed JSON, then restore the valid entry and relaunch. The trunk should show two copies again without a grant.
+5. Check the saved ownership bytes after every save, including another absent custom id and id 19999. Verify valid checksums,
+   an increased save counter, and an unchanged Steam save. Restore the original content and configuration after testing.
+
 ## Keys (besides id, name, description, image, kind, type, attribute, icon, level, atk, def, scale, linkmarkers, limitation, copies, archetypes, sameName, effectClone, effectScript, summoning keys)
 
 | Key | Example | Game table it stands for | Read by |

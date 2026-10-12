@@ -1404,29 +1404,12 @@ unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
         buffer.assign(kUnlockBufferSize, 0); // sized once so the pointer handed out stays valid
 
     std::memcpy(buffer.data(), original, kVanillaCardIdCount);
+    std::fill(buffer.begin() + kVanillaCardIdCount, buffer.end(), 0);
 
     unsigned char* saved = Save::GetCardUnlockTable(profile);
 
-    // A custom card the profile owns but cards.json no longer has (it was removed or skipped) has no name, art or details, and shows in
-    // the trunk as an empty card. Its copies are dropped from the profile's card table; putting the card back in cards.json does not restore them,
-    // but unlocks.json / the card's "copies" grant them again.
-    if (saved)
-    {
-        std::string removed;
-        int removedCount = 0;
-        for (int id = kFirstExtraCardId; id < static_cast<int>(kSavedCardTableSize); ++id)
-        {
-            if (saved[id] != 0 && !Card::ExtraLoadIDs.contains(static_cast<uint16_t>(id)))
-            {
-                saved[id] = 0;
-                if (++removedCount <= 10)
-                    removed += (removed.empty() ? "" : ", ") + std::to_string(id);
-            }
-        }
-        // A copy of the Steam save can carry marks for a whole run of unused ids: say how many, and only the first few.
-        if (removedCount > 0)
-            Logger::WriteLog(std::format("Dropped {} custom card(s) the profile owned that cards.json does not have: {}{}", removedCount, removed, removedCount > 10 ? ", ..." : ""), MODULE_NAME, 1);
-    }
+    // Only loaded cards receive counts in this display buffer. Keep ownership of unavailable cards in the save: a missing,
+    // disabled or invalid cards.json must not erase progress, and restoring the card should restore its owned copies.
 
     // The player owns at least `copies` of a card. The count is kept in the save's card table, under the
     // id the game reads it from, so it survives the game rebuilding its counts and being saved.
