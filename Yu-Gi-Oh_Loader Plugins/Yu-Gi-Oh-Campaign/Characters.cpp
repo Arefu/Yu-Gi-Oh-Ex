@@ -17,6 +17,7 @@
 #include "Detours.h"
 #include "Logger.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "Yu-Gi-Oh-Memory.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
@@ -62,7 +63,7 @@ namespace
         std::optional<int> Series, Deck, Selectable, Sku, Arena;
         std::optional<std::string> Key;
         std::map<char, std::wstring> Names, Bios;
-        bool Unlocked = true;     // new characters only
+        std::optional<bool> Unlocked; // absent: preserve existing progress, unlock new characters
         bool IsNew = false;       // decided when applied: the game had no character in the slot
     };
 
@@ -164,7 +165,7 @@ namespace
             Logger::WriteLog(std::format("Characters: {} changed, {} new", changed, added), MODULE_NAME, 0);
     }
 
-    void UnlockNewCharacters()
+    void UnlockCharacters()
     {
         uint8_t* player = GetPlayerSection(0xFFFFFFFD);
         if (!player)
@@ -172,7 +173,7 @@ namespace
         auto* bits = reinterpret_cast<uint32_t*>(player + kUnlockedCharacters);
         for (const Entry& entry : g_entries)
         {
-            if (!entry.IsNew || !entry.Unlocked || (bits[entry.Id >> 5] >> (entry.Id & 31) & 1))
+            if (!entry.Unlocked.value_or(entry.IsNew) || !Record(entry.Id)->Key || (bits[entry.Id >> 5] >> (entry.Id & 31) & 1))
                 continue;
             bits[entry.Id >> 5] |= 1u << (entry.Id & 31);
             Logger::WriteLog(std::format("Character {} unlocked", entry.Id), MODULE_NAME, 0);
@@ -187,13 +188,13 @@ namespace
 
     void __fastcall Hook_FreeDuelBuild(int64_t screen)
     {
-        UnlockNewCharacters();
+        UnlockCharacters();
         reinterpret_cast<FreeDuelBuild_t>(orig_FreeDuelBuild)(screen);
     }
 
     void* __fastcall Hook_CollectionCount(void* outString)
     {
-        UnlockNewCharacters();
+        UnlockCharacters();
         return reinterpret_cast<CollectionCount_t>(orig_CollectionCount)(outString);
     }
 }
@@ -203,6 +204,16 @@ namespace Characters
     void Attach()
     {
         Load();
+        // FreeDuel_BuildOpponentList already checks character, SKU and deck validity.
+        // Allow its assigned deck to be shared without changing the deck's canonical owner.
+        const auto* ownerCheck = reinterpret_cast<const uint8_t*>(0x1408419AF);
+        if (ownerCheck[0] == 0x75 && ownerCheck[1] == 0x4A)
+        {
+            const uint8_t nop[] = {0x90, 0x90};
+            YGO::Memory::WriteBytes(0x1408419AF, nop, sizeof(nop));
+        }
+        else
+            Logger::WriteLog("Shared character decks unavailable: opponent-list ownership check differs", MODULE_NAME, 2);
         if (g_entries.empty())
             return;
         DetourAttach(&(PVOID&)orig_LoadCharacterData, Hook_LoadCharacterData);
