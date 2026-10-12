@@ -423,7 +423,12 @@ namespace Wolf.Mods
                 list.Add(new JsonObject { ["id"] = mod.Id, ["enabled"] = mod.Enabled });
             var root = new JsonObject { ["mods"] = list };
             WriteAtomic(Path.Combine(ModsFolder(gameFolder), ListFileName), root.ToJsonString(WriteOptions));
+            PrepareMerges(gameFolder, mods.ToList());
         }
+
+        public static IReadOnlyList<ModIssue> PrepareMerges(string gameFolder, IReadOnlyList<Mod> mods) =>
+            ModMergeArchive.Prepare(gameFolder, mods, IniValue(gameFolder, "Yu-Gi-Oh-Core", "Archive", "YGO_2020"),
+                IniValue(gameFolder, "Yu-Gi-Oh-Core", "FileOrder", "loose").Equals("patch", StringComparison.OrdinalIgnoreCase));
 
         private static void WriteAtomic(string path, string text)
         {
@@ -599,7 +604,8 @@ namespace Wolf.Mods
                         owners[file] = list = [];
                     list.Add(mod);
                 }
-            foreach (var group in owners.Where(o => o.Value.Count > 1).GroupBy(o => (Winner: o.Value[^1], Losers: string.Join("|", o.Value.Take(o.Value.Count - 1).Select(m => m.Id)))))
+            // Mod-to-mod overlaps are reconciled by PrepareMerges; local files deliberately remain whole-file overrides.
+            foreach (var group in owners.Where(o => o.Value.Count > 1 && o.Value[^1].IsLocal).GroupBy(o => (Winner: o.Value[^1], Losers: string.Join("|", o.Value.Take(o.Value.Count - 1).Select(m => m.Id)))))
             {
                 Mod winner = group.Key.Winner;
                 var losers = group.First().Value.Take(group.First().Value.Count - 1).ToList();
@@ -751,6 +757,7 @@ namespace Wolf.Mods
                 }
             }
             // a mod without mod.json gets one (from its Info.ini or the zip's name), so the Mod Manager and the game agree on its name
+            ModDelta.Normalize(gameFolder, staging);
             if (!File.Exists(Path.Combine(staging, ModInfo.FileName)))
                 File.WriteAllText(Path.Combine(staging, ModInfo.FileName), package.Info.ToJsonText(), new UTF8Encoding(false));
 

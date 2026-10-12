@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows10.0.17763.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../File Type Libraries/CharData/CharData.csproj" />
+    <ProjectReference Include="../../File Type Libraries/StartingCollection/StartingCollection.csproj" />
+    <ProjectReference Include="../../File Type Libraries/PackDef/PackDef.csproj" />
+    <ProjectReference Include="../../File Type Libraries/TextTable/TextTable.csproj" />
+    <ProjectReference Include="../../File Type Libraries/RelatedCards/RelatedCards.csproj" />
+    <ProjectReference Include="../../File Type Libraries/DuelData/DuelData.csproj" />
+    <ProjectReference Include="../../File Type Libraries/ScriptData/ScriptData.csproj" />
+    <ProjectReference Include="../../File Type Libraries/BND/BND.csproj" />
+    <ProjectReference Include="../../File Type Libraries/CRED/CRED.csproj" />
+    <Compile Include="../../Tools/Shared/Mods/ModDelta.cs" Link="ModDelta.cs" />
+    <Compile Include="../../Tools/Shared/Mods/BinaryModMerge.cs" Link="BinaryModMerge.cs" />
+    <Compile Include="../../Tools/Shared/Mods/ModMergeArchive.cs" Link="ModMergeArchive.cs" />
+    <Compile Include="../../Tools/Shared/Mods/ModLibrary.cs" Link="ModLibrary.cs" />
+  </ItemGroup>
+</Project>
