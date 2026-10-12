@@ -85,6 +85,9 @@
 
         public static readonly ConfigSetting[] All =
         [
+            new("Yu-Gi-Oh-MoreCards", "PreserveUnavailableCards", SettingKind.Toggle, "0",
+                "Keep saved copies of unavailable custom cards when switching mods or when cards.json fails to load. Off resets those cards as before. Restart the game after changing this option."),
+
             new("Yu-Gi-Oh-Loader", "LoadOrder", SettingKind.Text, "",
                 "Names of plugin DLLs (without .dll) the loader loads first, in this order, separated by spaces. Plugins not listed load afterwards."),
 

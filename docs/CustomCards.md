@@ -7,6 +7,33 @@ cards (genres, related cards, links, password, name order, index letters). WolfX
 
 Game cards are unchanged: their edits go into the game's files (WolfX patch archive) or the page's own Yu-Gi-Oh-Ex JSON.
 
+## Ownership when content is unavailable
+
+MoreCards resets saved ownership for unavailable custom cards by default, retaining the original behavior when switching mods.
+To keep those copies instead, enable **PreserveUnavailableCards** in More Cards' plugin settings or add this to `Config.ini`:
+
+```ini
+[Yu-Gi-Oh-MoreCards]
+PreserveUnavailableCards=1
+```
+
+Restart the game after changing the option. `0` (or an omitted key) resets unavailable custom ids; `1` preserves them when a card
+is removed or its JSON cannot be loaded. In both modes, only loaded cards appear in the trunk. With preservation enabled, restoring
+the same card id makes its saved copies available again. The `copies` value remains a minimum grant, so use `copies: 0` when checking
+persistence. This cannot recover counts already erased without a backup or a new grant. The option applies while MoreCards is loaded.
+
+To verify a MoreCards build, use Core with a separate toolkit save and back up both that profile and the Steam save:
+
+1. Enable `PreserveUnavailableCards=1`. Give card 15300 two copies in the test save, keep it out of saved decks, and load a valid `cards.json` entry with `copies: 0`.
+2. Open Deck Edit and check that the trunk shows two copies. Save and exit normally.
+3. Temporarily remove `cards.json`, relaunch, and open the trunk. The unavailable card should be hidden. Save and exit.
+4. Repeat with malformed JSON, then restore the valid entry and relaunch. The trunk should show two copies again without a grant.
+5. Check the saved ownership bytes after every save, including another absent custom id and id 19999. Verify valid checksums,
+   an increased save counter, and an unchanged Steam save. Restore the original content and configuration after testing.
+6. Repeat from a fresh copy of the test save with the option omitted, then explicitly set to `0`. Opening the trunk should reset
+   unavailable custom ids, while preserving ownership for loaded cards. Restore the removed entry and check that it receives no
+   copies without a grant. Use a separate save for each mode so the intentional reset does not destroy the preservation fixture.
+
 ## Keys (besides id, name, description, image, kind, type, attribute, icon, level, atk, def, scale, linkmarkers, limitation, copies, archetypes, sameName, effectClone, effectScript, summoning keys)
 
 | Key | Example | Game table it stands for | Read by |

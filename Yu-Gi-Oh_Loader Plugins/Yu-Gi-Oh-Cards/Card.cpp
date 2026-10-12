@@ -1404,13 +1404,15 @@ unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
         buffer.assign(kUnlockBufferSize, 0); // sized once so the pointer handed out stays valid
 
     std::memcpy(buffer.data(), original, kVanillaCardIdCount);
+    std::fill(buffer.begin() + kVanillaCardIdCount, buffer.end(), 0);
 
     unsigned char* saved = Save::GetCardUnlockTable(profile);
 
-    // A custom card the profile owns but cards.json no longer has (it was removed or skipped) has no name, art or details, and shows in
-    // the trunk as an empty card. Its copies are dropped from the profile's card table; putting the card back in cards.json does not restore them,
-    // but unlocks.json / the card's "copies" grant them again.
-    if (saved)
+    // Read once per launch. Resetting unavailable cards remains the default for mod switches;
+    // persistence is opt-in. Both modes keep unavailable cards out of the display buffer.
+    static const bool preserveUnavailableCards = GetPrivateProfileIntW(
+        L"Yu-Gi-Oh-MoreCards", L"PreserveUnavailableCards", 0, L".\\Config.ini") != 0;
+    if (saved && !preserveUnavailableCards)
     {
         std::string removed;
         int removedCount = 0;
