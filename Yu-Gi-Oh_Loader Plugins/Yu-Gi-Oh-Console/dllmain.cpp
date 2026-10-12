@@ -1,4 +1,6 @@
 #include <fstream>
+#include "HookDiagnostics.h"
+extern "C" __declspec(dllexport) void WriteLog(std::string Message, std::string Module, int LogLevel);
 #include <iostream>
 #include <map>
 #include <memory>
@@ -230,12 +232,12 @@ namespace
 
     void HideForeignConsoleOutput()
     {
-        DetourTransactionBegin();
-        DetourUpdateThread(GetCurrentThread());
+        if (!HookDiagnostics::Begin("Console output filtering", MODULE_NAME, WriteLog))
+            return;
         DetourAttach(&(PVOID&)orig_WriteFile, Hook_WriteFile);
         DetourAttach(&(PVOID&)orig_WriteConsoleA, Hook_WriteConsoleA);
         DetourAttach(&(PVOID&)orig_WriteConsoleW, Hook_WriteConsoleW);
-        DetourTransactionCommit();
+        HookDiagnostics::Commit("Console output filtering", MODULE_NAME, WriteLog);
     }
 
     struct WriteLogMark

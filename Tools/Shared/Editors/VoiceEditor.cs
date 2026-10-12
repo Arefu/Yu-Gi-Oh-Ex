@@ -779,8 +779,11 @@ namespace Wolf.Editors
                 return false;
 
             var root = Build();
-            Directory.CreateDirectory(_files.ExFolder);
-            File.WriteAllText(_files.ExPath(FileName), root.ToJsonString(WriteOptions) + "\n", new UTF8Encoding(false));
+            if (!ContentFileSave.TryWrite(new Dictionary<string, byte[]> { [_files.ExPath(FileName)] = ContentFileSave.Text(root.ToJsonString(WriteOptions) + "\n") }, out string error))
+            {
+                _status.Text = error;
+                return false;
+            }
             _savedJson = root.ToJsonString();
             _status.Text = $"Saved {_files.ExPath(FileName)}. Yu-Gi-Oh-Music reads it when the game starts.";
             return true;

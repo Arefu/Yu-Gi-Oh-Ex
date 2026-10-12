@@ -1,4 +1,5 @@
 #include <Windows.h>
+#include "HookDiagnostics.h"
 #include <cstdint>
 #include <cmath>
 #include <cwchar>
@@ -677,8 +678,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         orig_Get_SpellTrapCardPropertyFromFullCardProps =
             (fn_Get_SpellTrapCardPropertyFromFullCardProps)ResolveVA(0x014081A630 /* TODO */);
 
-        DetourTransactionBegin();
-        DetourUpdateThread(GetCurrentThread());
+        if (!HookDiagnostics::Begin("Anime card display", MODULE_NAME, Logger::WriteLog))
+            break;
         DetourAttach(&(PVOID&)orig_sub_140766540, Hook_sub_140766540);
         DetourAttach(&(PVOID&)orig_sub_140877EC0, Hook_sub_140877EC0);
         DetourAttach(&(PVOID&)orig_sub_1408795A0, Hook_sub_1408795A0);
@@ -693,8 +694,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             DetourAttach(&(PVOID&)orig_DuelHand_DrawLevelNumber, Hook_DuelHand_DrawLevelNumber);
         }
          DetourAttach(&(PVOID&)orig_Get_SpellTrapCardPropertyFromFullCardProps,Hook_Get_SpellTrapCardPropertyFromFullCardProps); // uncomment once RVA above is fixed
-        LONG err = DetourTransactionCommit();
-        (void)err;
+        HookDiagnostics::Commit("Anime card display", MODULE_NAME, Logger::WriteLog);
 
         break;
     }

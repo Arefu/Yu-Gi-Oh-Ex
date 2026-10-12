@@ -1,4 +1,5 @@
-﻿#include <Windows.h>
+#include <Windows.h>
+#include "HookDiagnostics.h"
 #include <detours.h>
 #include <iostream>
 #include <vector>
@@ -31,8 +32,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         }
         Logger::WriteLog(std::format("Running from: {}", Path), MODULE_NAME, 0);
 
-        DetourTransactionBegin();
-        DetourUpdateThread(GetCurrentThread());
+        if (!HookDiagnostics::Begin("Effects", MODULE_NAME, Logger::WriteLog))
+            break;
 
         // Effects are added by hooking, not by patching or copying the game's tables (see EffectClone.h and docs/EffectSystem.md).
         // The earlier table-relocation code (copy the effect tables into vectors, zero the originals, patch instruction bytes to a code
@@ -44,7 +45,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         EffectClone::Setup();
         EffectDispatch::Setup();
         Lock::Setup();
-        DetourTransactionCommit();
+        HookDiagnostics::Commit("Effects", MODULE_NAME, Logger::WriteLog);
 
         break;;
     }

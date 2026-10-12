@@ -8,6 +8,7 @@
 #include <format>
 #include "Yu-Gi-Oh-Ex.h"
 #include "Logger.h"
+#include "HookDiagnostics.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 BOOL NoJanken = 1;
@@ -92,8 +93,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     {
     case DLL_PROCESS_ATTACH:
         Logger::WriteLog("DLL_PROCESS_ATTACH - Ready to BREAK THINGS!", MODULE_NAME, 0);
-        DetourTransactionBegin();
-        DetourUpdateThread(GetCurrentThread());
+        if (!HookDiagnostics::Begin("Duel starting rules", MODULE_NAME, Logger::WriteLog))
+            break;
 
         if (NoJanken == true)
         {
@@ -105,7 +106,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
             Logger::WriteLog(std::format("Changed LP To {}", SetLP), MODULE_NAME, 0);
             DetourAttach(&(PVOID&)YuGiOhEx::SetLP, Patch_SetLPToCustomValue);
         }
-        DetourTransactionCommit();
+        HookDiagnostics::Commit("Duel starting rules", MODULE_NAME, Logger::WriteLog);
 
 
         break;

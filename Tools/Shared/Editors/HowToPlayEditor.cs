@@ -357,15 +357,17 @@ namespace Wolf.Editors
             // main\howto_db\x.bin -> main\howto_img\ next to it, as in the game's layout
             pictureFolder = Path.Combine(Path.GetDirectoryName(Path.GetDirectoryName(target)!) ?? "", "howto_img");
 
-            Directory.CreateDirectory(Path.GetDirectoryName(target)!);
-            if (target.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
-                File.WriteAllText(target, HowToPlayFile.FromChapters(_chapters).ToJson(CurrentLanguage()));
-            else
-                File.WriteAllBytes(target, bytes);
-            foreach (var (number, picture) in _importedPictures)
+            var pending = new Dictionary<string, byte[]>
             {
-                Directory.CreateDirectory(pictureFolder);
-                File.WriteAllBytes(Path.Combine(pictureFolder, $"help_duelimg_{number:000}.png"), picture);
+                [target] = target.EndsWith(".json", StringComparison.OrdinalIgnoreCase)
+                    ? ContentFileSave.Text(HowToPlayFile.FromChapters(_chapters).ToJson(CurrentLanguage())) : bytes
+            };
+            foreach (var (number, picture) in _importedPictures)
+                pending[Path.Combine(pictureFolder, $"help_duelimg_{number:000}.png")] = picture;
+            if (!ContentFileSave.TryWrite(pending, out string error))
+            {
+                SetStatus(error);
+                return false;
             }
             _importedPictures.Clear();
             _savedBytes = bytes;
