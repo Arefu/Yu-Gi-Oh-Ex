@@ -31,10 +31,16 @@ namespace WolfX.Types
         private BindingList<CardRow> _cardRows = [];
         private BindingList<StatRow> _statRows = [];
         private bool _binding;
+        private readonly Label _profile = new() { Dock = DockStyle.Top, Height = 48, Padding = new Padding(6), AutoEllipsis = true };
 
         public SaveEditorPage()
         {
             InitializeComponent();
+            Controls.Add(_profile);
+            top.BringToFront();
+            _profile.BringToFront();
+            _tabs.BringToFront();
+            btnSave.Enabled = btnSaveAs.Enabled = false;
 
             _characters.Items.AddRange(Enumerable.Range(0, PlayerData.CharacterCount).Select(i => (object)$"#{i}").ToArray());
         }
@@ -48,7 +54,9 @@ namespace WolfX.Types
             foreach (var (path, what) in FindSaves())
             {
                 var info = new FileInfo(path);
-                menu.Items.Add($"{what}: {info.Name}  ({info.LastWriteTime:yyyy-MM-dd HH:mm}, {info.Length / 1024} KB)", null, (_, _) => Open(path)).ToolTipText = path;
+                if (info.Length != SaveFile.Size) continue;
+                string label = ProfileDescription(path).Split(". ")[0];
+                menu.Items.Add($"{label}: {info.Name}  ({info.LastWriteTime:yyyy-MM-dd HH:mm}, {info.Length / 1024} KB)", null, (_, _) => Open(path)).ToolTipText = path;
             }
             if (menu.Items.Count > 0)
                 menu.Items.Add(new ToolStripSeparator());
@@ -78,7 +86,17 @@ namespace WolfX.Types
                 }
                 if (Wolf.Editors.GameFolderFiles.Current?.GameFolder is { } game && Directory.Exists(game))
                     foreach (string file in Directory.EnumerateFiles(game, "savegame*.dat"))
-                        found.Add((file, "Game folder"));
+                        found.Add((file, "Game folder save"));
+                if (Wolf.Editors.GameFolderFiles.Current?.GameFolder is { } folder)
+                {
+                    string primary = Path.GetFullPath(Path.Combine(folder, PrimarySaveName(folder)));
+                    for (int slot = 1; slot <= 5; slot++)
+                    {
+                        string candidate = SaveProfileIdentity.SlotPath(primary, slot);
+                        if (File.Exists(candidate) && !found.Any(f => Path.GetFullPath(f.Item1).Equals(candidate, StringComparison.OrdinalIgnoreCase)))
+                            found.Add((candidate, $"Toolkit slot {slot}"));
+                    }
+                }
             }
             catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or System.Security.SecurityException)
             {
@@ -160,6 +178,8 @@ namespace WolfX.Types
                 _pathBox.Text = _path;
                 Bind();
                 _tabs.Enabled = true;
+                btnSave.Enabled = btnSaveAs.Enabled = true;
+                UpdateProfile();
             }
             catch (Exception ex)
             {
@@ -183,14 +203,12 @@ namespace WolfX.Types
             {
                 _stats.EndEdit();
                 _cards.EndEdit();
-                if (File.Exists(path) && !File.Exists(path + ".bak"))
-                    File.Copy(path, path + ".bak");
-
                 _save.Save(path);
                 _path = path;
                 _pathBox.Text = path;
                 UpdateInfo();
-                MessageBox.Show($"Saved {path}", "Save editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UpdateProfile();
+                MessageBox.Show($"Saved {path}" + (_save.LastBackupPath is { } backup ? $"\n\nPrevious save backed up to:\n{backup}" : ""), "Save editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -199,6 +217,21 @@ namespace WolfX.Types
         }
 
         // ---- binding ----
+
+        private static string PrimarySaveName(string folder)
+        {
+            string name = ContentManifest.IniValue(folder, "Yu-Gi-Oh-Core", "GameSaveName", "savegame-ex.dat");
+            return string.IsNullOrWhiteSpace(name) ? "savegame-ex.dat" : name;
+        }
+
+        private static string ProfileDescription(string path)
+        {
+            string? game = Wolf.Editors.GameFolderFiles.Current?.GameFolder;
+            string? steam = Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Valve\Steam", "SteamPath", null) as string;
+            return SaveProfileIdentity.Describe(path, game, game == null ? "savegame-ex.dat" : PrimarySaveName(game), steam);
+        }
+
+        private void UpdateProfile() { if (_path != null) _profile.Text = ProfileDescription(_path); }
 
         private void Bind()
         {
