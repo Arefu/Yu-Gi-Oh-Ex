@@ -188,11 +188,7 @@ namespace WolfEx
                 {
                     // The whole behaviour of one game card. In a duel Yu-Gi-Oh-MoreCards lends this card that id when it is free, so every
                     // id-keyed rule of the engine treats it as that card (docs/EffectSystem.md section 32).
-                    int from = asScript.NUMBER() != null ? int.Parse(asScript.NUMBER().GetText()) : CardIdByName(asScript.STRING().GetText().Trim('"'));
-                    var asCompiled = new JsonObject { ["from"] = from };
-                    if (asScript.statPart().Length > 0)
-                        asCompiled["stats"] = Stats(asScript.statPart());
-                    return asCompiled;
+                    return CompileAs(asScript);
                 }
 
                 // One body per effect: effect { } blocks, or bodies joined with 'also'. The first is the card's main effect, the others become "parts".
@@ -205,7 +201,7 @@ namespace WolfEx
                     var parts = new JsonArray();
                     foreach (var other in bodies.Skip(1))
                     {
-                        if (other.chain().action().Length > 1)
+                        if (other.chain()?.action().Length > 1)
                             throw new ScriptError("'then' is only supported in a card's first effect so far.");
                         parts.Add(CompileBody(other));
                     }
@@ -215,9 +211,20 @@ namespace WolfEx
             }
         }
 
+        private static JsonObject CompileAs(EffectScriptParser.AsScriptContext source)
+        {
+            int from = source.NUMBER() != null ? int.Parse(source.NUMBER().GetText()) : CardIdByName(source.STRING().GetText().Trim('"'));
+            var result = new JsonObject { ["from"] = from };
+            if (source.statPart().Length > 0)
+                result["stats"] = Stats(source.statPart());
+            return result;
+        }
+
         // One effect: its action(s), trigger and once-per-turn limit -> one effectClone step.
         private static JsonObject CompileBody(EffectScriptParser.EffectBodyContext body)
         {
+            if (body.asScript() is { } cloneStatement)
+                return CompileAs(cloneStatement);
             {
                 var actions = body.chain().action();
                 var compiled = CompileAction(actions[^1]);

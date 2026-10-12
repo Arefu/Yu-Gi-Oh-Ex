@@ -145,8 +145,8 @@ function defineBlocks() {
     type: 'ys_as',
     message0: 'act exactly like the game card %1', args0: [{ type: 'field_input', name: 'CARD', text: 'Pot of Greed' }],
     message1: 'with its own ATK %1 DEF %2 (optional)', args1: [{ type: 'field_input', name: 'ATK', text: '' }, { type: 'field_input', name: 'DEF', text: '' }],
-    colour: COLOUR.as,
-    tooltip: 'The whole effect of a game card (its name or Konami id). In a duel the card plays as that card, so everything the game knows about it applies.',
+    previousStatement: 'Effect', nextStatement: 'Effect', colour: COLOUR.as,
+    tooltip: 'Borrow a game card\'s effect handlers (name or Konami id). Stack more clone or effect blocks for multiple effects; the runtime routes by table and event.',
   });
   defs.push({
     type: 'ys_lock',
@@ -305,24 +305,25 @@ function generate(workspace) {
   return [lock, body].filter((s) => s).join('\n');
 }
 
-function generateEffects(tops) {
-  const as = tops.find((b) => b.type === 'ys_as');
-  if (as) {
+function asText(as) {
     const card = String(as.getFieldValue('CARD') || '').trim();
     const stats = [['atk', as.getFieldValue('ATK')], ['def', as.getFieldValue('DEF')]].filter(([, v]) => isNumber(String(v || ''))).map(([s, v]) => s + ' ' + String(v).trim());
     return 'as(' + (isNumber(card) ? card : quote(card)) + ')' + (stats.length ? ' with ' + stats.join(', ') : '') + ';';
-  }
+}
+
+function generateEffects(tops) {
   const effects = [];
   for (const top of tops)
     for (let b = top; b; b = b.getNextBlock())
-      if (b.type === 'ys_effect' && effectBody(b)) effects.push(b);
+      if (b.type === 'ys_as' || (b.type === 'ys_effect' && effectBody(b))) effects.push(b);
   if (effects.length === 0) return '';
-  if (effects.some((e) => String(e.getFieldValue('NAME') || '').trim()))
+  const body = (e) => e.type === 'ys_as' ? asText(e) : effectBody(e);
+  if (effects.some((e) => e.type === 'ys_effect' && String(e.getFieldValue('NAME') || '').trim()))
     return effects.map((e) => {
-      const name = String(e.getFieldValue('NAME') || '').trim();
-      return 'effect ' + (name ? quote(name) + ' ' : '') + '{\n    ' + effectBody(e) + '\n}';
+      const name = e.type === 'ys_effect' ? String(e.getFieldValue('NAME') || '').trim() : '';
+      return 'effect ' + (name ? quote(name) + ' ' : '') + '{\n    ' + body(e) + '\n}';
     }).join('\n');
-  return effects.map(effectBody).join('\nalso ');
+  return effects.map(body).join('\nalso ');
 }
 
 // ---------------------------------------------------------------- script (parse tree) -> blocks
@@ -396,6 +397,8 @@ function actionState(actionNode) {
 }
 
 function effectState(body, name) {
+  const source = rule(body, 'asScript');
+  if (source) return asState(source);
   const state = { type: 'ys_effect', fields: { NAME: name || '', TRIGGER: 'NONE', ONCE: !!rule(body, 'limit') }, inputs: {} };
   const trigger = rule(body, 'trigger');
   if (trigger) {
@@ -443,13 +446,15 @@ function treeToState(tree) {
   return locks.concat(blocks.filter((b) => b));
 }
 
-function treeEffects(tree) {
-  const as = rule(tree, 'asScript');
-  if (as) {
+function asState(as) {
     const target = as.c[2].replace(/^"|"$/g, '');
     const stat = (s) => { const p = rules(as, 'statPart').find((x) => x.c[0] === s); return p ? String(p.c[1]) : ''; };
-    return [{ type: 'ys_as', fields: { CARD: target, ATK: stat('atk'), DEF: stat('def') } }];
-  }
+    return { type: 'ys_as', fields: { CARD: target, ATK: stat('atk'), DEF: stat('def') } };
+}
+
+function treeEffects(tree) {
+  const as = rule(tree, 'asScript');
+  if (as) return [asState(as)];
   const effects = rules(tree, 'effect').map((e) => {
     const nameToken = (e.c || []).find((c) => typeof c === 'string' && c.startsWith('"'));
     return effectState(rule(e, 'effectBody'), nameToken ? nameToken.replace(/^"|"$/g, '') : '');

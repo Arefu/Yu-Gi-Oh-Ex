@@ -196,8 +196,8 @@ public partial class EffectScriptParser : Parser {
 			}
 			State = 110;
 			ErrorHandler.Sync(this);
-			switch (TokenStream.LA(1)) {
-			case T__15:
+			switch ( Interpreter.AdaptivePredict(TokenStream,3,Context) ) {
+			case 1:
 				{
 				State = 97;
 				ErrorHandler.Sync(this);
@@ -215,23 +215,7 @@ public partial class EffectScriptParser : Parser {
 				} while ( _la==T__15 );
 				}
 				break;
-			case T__10:
-			case T__18:
-			case T__27:
-			case T__31:
-			case T__47:
-			case T__48:
-			case T__50:
-			case T__51:
-			case T__54:
-			case T__55:
-			case T__56:
-			case T__57:
-			case T__62:
-			case T__63:
-			case T__64:
-			case T__66:
-			case T__67:
+			case 2:
 				{
 				State = 101;
 				effectBody();
@@ -253,16 +237,11 @@ public partial class EffectScriptParser : Parser {
 				}
 				}
 				break;
-			case T__11:
+			case 3:
 				{
 				State = 109;
 				asScript();
 				}
-				break;
-			case Eof:
-			case T__1:
-				break;
-			default:
 				break;
 			}
 			State = 115;
@@ -663,6 +642,9 @@ public partial class EffectScriptParser : Parser {
 	}
 
 	public partial class EffectBodyContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public AsScriptContext asScript() {
+			return GetRuleContext<AsScriptContext>(0);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ChainContext chain() {
 			return GetRuleContext<ChainContext>(0);
 		}
@@ -697,60 +679,91 @@ public partial class EffectScriptParser : Parser {
 		EnterRule(_localctx, 12, RULE_effectBody);
 		int _la;
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 173;
+			State = 189;
 			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			if (_la==T__31) {
+			switch (TokenStream.LA(1)) {
+			case T__11:
+				EnterOuterAlt(_localctx, 1);
 				{
 				State = 172;
-				trigger();
+				asScript();
 				}
-			}
-
-			State = 176;
-			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			if (_la==T__27) {
+				break;
+			case T__10:
+			case T__18:
+			case T__27:
+			case T__31:
+			case T__47:
+			case T__48:
+			case T__50:
+			case T__51:
+			case T__54:
+			case T__55:
+			case T__56:
+			case T__57:
+			case T__62:
+			case T__63:
+			case T__64:
+			case T__66:
+			case T__67:
+				EnterOuterAlt(_localctx, 2);
 				{
-				State = 175;
-				requireClause();
+				State = 174;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==T__31) {
+					{
+					State = 173;
+					trigger();
+					}
 				}
-			}
 
-			State = 179;
-			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			if (_la==T__18) {
-				{
-				State = 178;
-				costClause();
+				State = 177;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==T__27) {
+					{
+					State = 176;
+					requireClause();
+					}
 				}
-			}
 
-			State = 181;
-			chain();
-			State = 183;
-			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			if (_la==T__5) {
-				{
+				State = 180;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==T__18) {
+					{
+					State = 179;
+					costClause();
+					}
+				}
+
 				State = 182;
-				Match(T__5);
+				chain();
+				State = 184;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==T__5) {
+					{
+					State = 183;
+					Match(T__5);
+					}
 				}
-			}
 
-			State = 186;
-			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			if (_la==T__30) {
-				{
-				State = 185;
-				limit();
+				State = 187;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==T__30) {
+					{
+					State = 186;
+					limit();
+					}
 				}
-			}
 
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -800,20 +813,20 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 188;
+			State = 191;
 			Match(T__18);
-			State = 194;
+			State = 197;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case T__22:
 				{
-				State = 189;
+				State = 192;
 				discardCost();
 				}
 				break;
 			case T__23:
 				{
-				State = 190;
+				State = 193;
 				payCost();
 				}
 				break;
@@ -821,26 +834,26 @@ public partial class EffectScriptParser : Parser {
 			case T__25:
 			case T__26:
 				{
-				State = 191;
+				State = 194;
 				selfCost();
 				}
 				break;
 			case T__21:
 				{
-				State = 192;
+				State = 195;
 				detachCost();
 				}
 				break;
 			case T__20:
 				{
-				State = 193;
+				State = 196;
 				tributeCost();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
 			}
-			State = 196;
+			State = 199;
 			Match(T__19);
 			}
 		}
@@ -877,13 +890,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 198;
-			Match(T__20);
-			State = 199;
-			Match(T__2);
-			State = 200;
-			Match(NUMBER);
 			State = 201;
+			Match(T__20);
+			State = 202;
+			Match(T__2);
+			State = 203;
+			Match(NUMBER);
+			State = 204;
 			Match(T__4);
 			}
 		}
@@ -920,13 +933,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 203;
-			Match(T__21);
-			State = 204;
-			Match(T__2);
-			State = 205;
-			Match(NUMBER);
 			State = 206;
+			Match(T__21);
+			State = 207;
+			Match(T__2);
+			State = 208;
+			Match(NUMBER);
+			State = 209;
 			Match(T__4);
 			}
 		}
@@ -963,13 +976,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 208;
-			Match(T__22);
-			State = 209;
-			Match(T__2);
-			State = 210;
-			Match(NUMBER);
 			State = 211;
+			Match(T__22);
+			State = 212;
+			Match(T__2);
+			State = 213;
+			Match(NUMBER);
+			State = 214;
 			Match(T__4);
 			}
 		}
@@ -1006,13 +1019,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 213;
-			Match(T__23);
-			State = 214;
-			Match(T__2);
-			State = 215;
-			Match(NUMBER);
 			State = 216;
+			Match(T__23);
+			State = 217;
+			Match(T__2);
+			State = 218;
+			Match(NUMBER);
+			State = 219;
 			Match(T__4);
 			}
 		}
@@ -1049,7 +1062,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 218;
+			State = 221;
 			_la = TokenStream.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 234881024L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -1095,11 +1108,11 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 220;
+			State = 223;
 			Match(T__27);
-			State = 221;
+			State = 224;
 			condName();
-			State = 222;
+			State = 225;
 			Match(T__19);
 			}
 		}
@@ -1136,26 +1149,26 @@ public partial class EffectScriptParser : Parser {
 		CondNameContext _localctx = new CondNameContext(Context, State);
 		EnterRule(_localctx, 28, RULE_condName);
 		try {
-			State = 230;
+			State = 233;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case T__28:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 224;
+				State = 227;
 				Match(T__28);
 				}
 				break;
 			case T__29:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 225;
-				Match(T__29);
-				State = 226;
-				Match(T__2);
-				State = 227;
-				selector();
 				State = 228;
+				Match(T__29);
+				State = 229;
+				Match(T__2);
+				State = 230;
+				selector();
+				State = 231;
 				Match(T__4);
 				}
 				break;
@@ -1196,14 +1209,14 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 232;
+			State = 235;
 			Match(T__30);
-			State = 234;
+			State = 237;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__5) {
 				{
-				State = 233;
+				State = 236;
 				Match(T__5);
 				}
 			}
@@ -1245,11 +1258,11 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 236;
+			State = 239;
 			Match(T__31);
-			State = 237;
+			State = 240;
 			triggerName();
-			State = 238;
+			State = 241;
 			Match(T__19);
 			}
 		}
@@ -1286,7 +1299,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 240;
+			State = 243;
 			_la = TokenStream.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 140728898420736L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -1336,21 +1349,21 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 242;
+			State = 245;
 			action();
-			State = 247;
+			State = 250;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==T__46) {
 				{
 				{
-				State = 243;
+				State = 246;
 				Match(T__46);
-				State = 244;
+				State = 247;
 				action();
 				}
 				}
-				State = 249;
+				State = 252;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -1428,104 +1441,104 @@ public partial class EffectScriptParser : Parser {
 		ActionContext _localctx = new ActionContext(Context, State);
 		EnterRule(_localctx, 38, RULE_action);
 		try {
-			State = 264;
+			State = 267;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case T__47:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 250;
+				State = 253;
 				drawAction();
 				}
 				break;
 			case T__48:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 251;
+				State = 254;
 				searchAction();
 				}
 				break;
 			case T__50:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 252;
+				State = 255;
 				reviveAction();
 				}
 				break;
 			case T__51:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 253;
+				State = 256;
 				destroyAction();
 				}
 				break;
 			case T__55:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 254;
+				State = 257;
 				gainAction();
 				}
 				break;
 			case T__56:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 255;
+				State = 258;
 				burnAction();
 				}
 				break;
 			case T__54:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 256;
+				State = 259;
 				sendAction();
 				}
 				break;
 			case T__10:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 257;
+				State = 260;
 				equipAction();
 				}
 				break;
 			case T__57:
 				EnterOuterAlt(_localctx, 9);
 				{
-				State = 258;
+				State = 261;
 				summonAction();
 				}
 				break;
 			case T__64:
 				EnterOuterAlt(_localctx, 10);
 				{
-				State = 259;
+				State = 262;
 				salvageAction();
 				}
 				break;
 			case T__66:
 				EnterOuterAlt(_localctx, 11);
 				{
-				State = 260;
+				State = 263;
 				banishAction();
 				}
 				break;
 			case T__63:
 				EnterOuterAlt(_localctx, 12);
 				{
-				State = 261;
+				State = 264;
 				gainAtkAction();
 				}
 				break;
 			case T__62:
 				EnterOuterAlt(_localctx, 13);
 				{
-				State = 262;
+				State = 265;
 				returnAction();
 				}
 				break;
 			case T__67:
 				EnterOuterAlt(_localctx, 14);
 				{
-				State = 263;
+				State = 266;
 				negateAction();
 				}
 				break;
@@ -1566,13 +1579,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 266;
-			Match(T__47);
-			State = 267;
-			Match(T__2);
-			State = 268;
-			Match(NUMBER);
 			State = 269;
+			Match(T__47);
+			State = 270;
+			Match(T__2);
+			State = 271;
+			Match(NUMBER);
+			State = 272;
 			Match(T__4);
 			}
 		}
@@ -1612,25 +1625,25 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 271;
+			State = 274;
 			Match(T__48);
-			State = 272;
+			State = 275;
 			Match(T__2);
-			State = 273;
-			Match(T__49);
 			State = 276;
+			Match(T__49);
+			State = 279;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 274;
+				State = 277;
 				Match(T__3);
-				State = 275;
+				State = 278;
 				selector();
 				}
 			}
 
-			State = 278;
+			State = 281;
 			Match(T__4);
 			}
 		}
@@ -1673,25 +1686,25 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 280;
+			State = 283;
 			Match(T__50);
-			State = 281;
+			State = 284;
 			Match(T__2);
-			State = 282;
-			graveyard();
 			State = 285;
+			graveyard();
+			State = 288;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 283;
+				State = 286;
 				Match(T__3);
-				State = 284;
+				State = 287;
 				selector();
 				}
 			}
 
-			State = 287;
+			State = 290;
 			Match(T__4);
 			}
 		}
@@ -1737,37 +1750,37 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 289;
+			State = 292;
 			Match(T__51);
-			State = 290;
+			State = 293;
 			Match(T__2);
-			State = 291;
-			scope();
 			State = 294;
+			scope();
+			State = 297;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,24,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,25,Context) ) {
 			case 1:
 				{
-				State = 292;
+				State = 295;
 				Match(T__3);
-				State = 293;
+				State = 296;
 				side();
 				}
 				break;
 			}
-			State = 298;
+			State = 301;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 296;
+				State = 299;
 				Match(T__3);
-				State = 297;
+				State = 300;
 				selector();
 				}
 			}
 
-			State = 300;
+			State = 303;
 			Match(T__4);
 			}
 		}
@@ -1804,7 +1817,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 302;
+			State = 305;
 			_la = TokenStream.LA(1);
 			if ( !(_la==T__52 || _la==T__53) ) {
 			ErrorHandler.RecoverInline(this);
@@ -1851,25 +1864,25 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 304;
+			State = 307;
 			Match(T__54);
-			State = 305;
+			State = 308;
 			Match(T__2);
-			State = 306;
-			Match(T__49);
 			State = 309;
+			Match(T__49);
+			State = 312;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 307;
+				State = 310;
 				Match(T__3);
-				State = 308;
+				State = 311;
 				selector();
 				}
 			}
 
-			State = 311;
+			State = 314;
 			Match(T__4);
 			}
 		}
@@ -1906,13 +1919,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 313;
-			Match(T__55);
-			State = 314;
-			Match(T__2);
-			State = 315;
-			Match(NUMBER);
 			State = 316;
+			Match(T__55);
+			State = 317;
+			Match(T__2);
+			State = 318;
+			Match(NUMBER);
+			State = 319;
 			Match(T__4);
 			}
 		}
@@ -1949,13 +1962,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 318;
-			Match(T__56);
-			State = 319;
-			Match(T__2);
-			State = 320;
-			Match(NUMBER);
 			State = 321;
+			Match(T__56);
+			State = 322;
+			Match(T__2);
+			State = 323;
+			Match(NUMBER);
+			State = 324;
 			Match(T__4);
 			}
 		}
@@ -1998,29 +2011,29 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 323;
+			State = 326;
 			Match(T__10);
-			State = 324;
+			State = 327;
 			Match(T__2);
-			State = 325;
+			State = 328;
 			statPart();
-			State = 330;
+			State = 333;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==T__3) {
 				{
 				{
-				State = 326;
+				State = 329;
 				Match(T__3);
-				State = 327;
+				State = 330;
 				statPart();
 				}
 				}
-				State = 332;
+				State = 335;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 333;
+			State = 336;
 			Match(T__4);
 			}
 		}
@@ -2063,25 +2076,25 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 335;
+			State = 338;
 			Match(T__57);
-			State = 336;
+			State = 339;
 			Match(T__2);
-			State = 337;
-			summonZone();
 			State = 340;
+			summonZone();
+			State = 343;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 338;
+				State = 341;
 				Match(T__3);
-				State = 339;
+				State = 342;
 				selector();
 				}
 			}
 
-			State = 342;
+			State = 345;
 			Match(T__4);
 			}
 		}
@@ -2118,7 +2131,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 344;
+			State = 347;
 			_la = TokenStream.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 8648037184458194944L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -2168,37 +2181,37 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 346;
+			State = 349;
 			Match(T__62);
-			State = 347;
+			State = 350;
 			Match(T__2);
-			State = 348;
-			Match(T__53);
 			State = 351;
+			Match(T__53);
+			State = 354;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,29,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,30,Context) ) {
 			case 1:
 				{
-				State = 349;
+				State = 352;
 				Match(T__3);
-				State = 350;
+				State = 353;
 				side();
 				}
 				break;
 			}
-			State = 355;
+			State = 358;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 353;
+				State = 356;
 				Match(T__3);
-				State = 354;
+				State = 357;
 				selector();
 				}
 			}
 
-			State = 357;
+			State = 360;
 			Match(T__4);
 			}
 		}
@@ -2239,25 +2252,25 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 359;
+			State = 362;
 			Match(T__63);
-			State = 360;
+			State = 363;
 			Match(T__2);
-			State = 364;
+			State = 367;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 896L) != 0)) {
 				{
-				State = 361;
+				State = 364;
 				side();
-				State = 362;
+				State = 365;
 				Match(T__3);
 				}
 			}
 
-			State = 366;
+			State = 369;
 			Match(NUMBER);
-			State = 367;
+			State = 370;
 			Match(T__4);
 			}
 		}
@@ -2297,11 +2310,11 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 369;
+			State = 372;
 			Match(T__64);
-			State = 370;
+			State = 373;
 			Match(T__2);
-			State = 371;
+			State = 374;
 			_la = TokenStream.LA(1);
 			if ( !(_la==T__59 || _la==T__65) ) {
 			ErrorHandler.RecoverInline(this);
@@ -2310,19 +2323,19 @@ public partial class EffectScriptParser : Parser {
 				ErrorHandler.ReportMatch(this);
 			    Consume();
 			}
-			State = 374;
+			State = 377;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 372;
+				State = 375;
 				Match(T__3);
-				State = 373;
+				State = 376;
 				selector();
 				}
 			}
 
-			State = 376;
+			State = 379;
 			Match(T__4);
 			}
 		}
@@ -2368,37 +2381,37 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 378;
+			State = 381;
 			Match(T__66);
-			State = 379;
+			State = 382;
 			Match(T__2);
-			State = 380;
-			scope();
 			State = 383;
+			scope();
+			State = 386;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,33,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,34,Context) ) {
 			case 1:
 				{
-				State = 381;
+				State = 384;
 				Match(T__3);
-				State = 382;
+				State = 385;
 				side();
 				}
 				break;
 			}
-			State = 387;
+			State = 390;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 385;
+				State = 388;
 				Match(T__3);
-				State = 386;
+				State = 389;
 				selector();
 				}
 			}
 
-			State = 389;
+			State = 392;
 			Match(T__4);
 			}
 		}
@@ -2441,29 +2454,29 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 391;
+			State = 394;
 			Match(T__67);
-			State = 392;
+			State = 395;
 			Match(T__2);
-			State = 393;
+			State = 396;
 			negateArg();
-			State = 398;
+			State = 401;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==T__3) {
 				{
 				{
-				State = 394;
+				State = 397;
 				Match(T__3);
-				State = 395;
+				State = 398;
 				negateArg();
 				}
 				}
-				State = 400;
+				State = 403;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 401;
+			State = 404;
 			Match(T__4);
 			}
 		}
@@ -2503,27 +2516,27 @@ public partial class EffectScriptParser : Parser {
 		NegateArgContext _localctx = new NegateArgContext(Context, State);
 		EnterRule(_localctx, 72, RULE_negateArg);
 		try {
-			State = 412;
+			State = 415;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case IDENT:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 403;
+				State = 406;
 				Match(IDENT);
 				}
 				break;
 			case NUMBER:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 404;
+				State = 407;
 				Match(NUMBER);
 				}
 				break;
 			case STRING:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 405;
+				State = 408;
 				Match(STRING);
 				}
 				break;
@@ -2533,42 +2546,42 @@ public partial class EffectScriptParser : Parser {
 			case T__75:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 406;
+				State = 409;
 				kind();
 				}
 				break;
 			case T__8:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 407;
+				State = 410;
 				Match(T__8);
 				}
 				break;
 			case T__6:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 408;
+				State = 411;
 				Match(T__6);
 				}
 				break;
 			case T__9:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 409;
+				State = 412;
 				Match(T__9);
 				}
 				break;
 			case T__10:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 410;
+				State = 413;
 				Match(T__10);
 				}
 				break;
 			case T__15:
 				EnterOuterAlt(_localctx, 9);
 				{
-				State = 411;
+				State = 414;
 				Match(T__15);
 				}
 				break;
@@ -2609,7 +2622,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 414;
+			State = 417;
 			_la = TokenStream.LA(1);
 			if ( !(((((_la - 60)) & ~0x3f) == 0 && ((1L << (_la - 60)) & 1537L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -2653,7 +2666,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 416;
+			State = 419;
 			_la = TokenStream.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 896L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -2706,7 +2719,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 441;
+			State = 444;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case T__72:
@@ -2714,30 +2727,30 @@ public partial class EffectScriptParser : Parser {
 			case T__74:
 			case T__75:
 				{
-				State = 418;
+				State = 421;
 				kind();
-				State = 428;
+				State = 431;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				if (_la==T__70) {
 					{
-					State = 419;
+					State = 422;
 					Match(T__70);
-					State = 420;
+					State = 423;
 					condition();
-					State = 425;
+					State = 428;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 					while (_la==T__71) {
 						{
 						{
-						State = 421;
+						State = 424;
 						Match(T__71);
-						State = 422;
+						State = 425;
 						condition();
 						}
 						}
-						State = 427;
+						State = 430;
 						ErrorHandler.Sync(this);
 						_la = TokenStream.LA(1);
 					}
@@ -2754,31 +2767,31 @@ public partial class EffectScriptParser : Parser {
 			case T__79:
 			case T__80:
 				{
-				State = 431;
+				State = 434;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				if (_la==T__70) {
 					{
-					State = 430;
+					State = 433;
 					Match(T__70);
 					}
 				}
 
-				State = 433;
+				State = 436;
 				condition();
-				State = 438;
+				State = 441;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				while (_la==T__71) {
 					{
 					{
-					State = 434;
+					State = 437;
 					Match(T__71);
-					State = 435;
+					State = 438;
 					condition();
 					}
 					}
-					State = 440;
+					State = 443;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				}
@@ -2822,7 +2835,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 443;
+			State = 446;
 			_la = TokenStream.LA(1);
 			if ( !(((((_la - 73)) & ~0x3f) == 0 && ((1L << (_la - 73)) & 15L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -2874,11 +2887,11 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 445;
+			State = 448;
 			field();
-			State = 446;
+			State = 449;
 			op();
-			State = 447;
+			State = 450;
 			value();
 			}
 		}
@@ -2915,7 +2928,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 449;
+			State = 452;
 			_la = TokenStream.LA(1);
 			if ( !(_la==T__13 || ((((_la - 77)) & ~0x3f) == 0 && ((1L << (_la - 77)) & 31L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -2959,7 +2972,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 451;
+			State = 454;
 			_la = TokenStream.LA(1);
 			if ( !(((((_la - 82)) & ~0x3f) == 0 && ((1L << (_la - 82)) & 31L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -3006,7 +3019,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 453;
+			State = 456;
 			_la = TokenStream.LA(1);
 			if ( !(((((_la - 87)) & ~0x3f) == 0 && ((1L << (_la - 87)) & 7L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -3029,7 +3042,7 @@ public partial class EffectScriptParser : Parser {
 	}
 
 	private static int[] _serializedATN = {
-		4,1,91,456,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
+		4,1,91,459,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
 		7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,14,
 		2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,21,
 		2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,2,27,7,27,2,28,7,28,
@@ -3041,144 +3054,145 @@ public partial class EffectScriptParser : Parser {
 		1,10,1,12,1,129,9,1,1,1,1,1,3,1,133,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,
 		2,142,8,2,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,5,3,152,8,3,10,3,12,3,155,9,
 		3,3,3,157,8,3,1,3,3,3,160,8,3,1,4,1,4,1,4,1,5,1,5,3,5,167,8,5,1,5,1,5,
-		1,5,1,5,1,6,3,6,174,8,6,1,6,3,6,177,8,6,1,6,3,6,180,8,6,1,6,1,6,3,6,184,
-		8,6,1,6,3,6,187,8,6,1,7,1,7,1,7,1,7,1,7,1,7,3,7,195,8,7,1,7,1,7,1,8,1,
-		8,1,8,1,8,1,8,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,1,10,1,11,1,11,1,
-		11,1,11,1,11,1,12,1,12,1,13,1,13,1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,
-		14,3,14,231,8,14,1,15,1,15,3,15,235,8,15,1,16,1,16,1,16,1,16,1,17,1,17,
-		1,18,1,18,1,18,5,18,246,8,18,10,18,12,18,249,9,18,1,19,1,19,1,19,1,19,
-		1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,3,19,265,8,19,1,20,1,
-		20,1,20,1,20,1,20,1,21,1,21,1,21,1,21,1,21,3,21,277,8,21,1,21,1,21,1,22,
-		1,22,1,22,1,22,1,22,3,22,286,8,22,1,22,1,22,1,23,1,23,1,23,1,23,1,23,3,
-		23,295,8,23,1,23,1,23,3,23,299,8,23,1,23,1,23,1,24,1,24,1,25,1,25,1,25,
-		1,25,1,25,3,25,310,8,25,1,25,1,25,1,26,1,26,1,26,1,26,1,26,1,27,1,27,1,
-		27,1,27,1,27,1,28,1,28,1,28,1,28,1,28,5,28,329,8,28,10,28,12,28,332,9,
-		28,1,28,1,28,1,29,1,29,1,29,1,29,1,29,3,29,341,8,29,1,29,1,29,1,30,1,30,
-		1,31,1,31,1,31,1,31,1,31,3,31,352,8,31,1,31,1,31,3,31,356,8,31,1,31,1,
-		31,1,32,1,32,1,32,1,32,1,32,3,32,365,8,32,1,32,1,32,1,32,1,33,1,33,1,33,
-		1,33,1,33,3,33,375,8,33,1,33,1,33,1,34,1,34,1,34,1,34,1,34,3,34,384,8,
-		34,1,34,1,34,3,34,388,8,34,1,34,1,34,1,35,1,35,1,35,1,35,1,35,5,35,397,
-		8,35,10,35,12,35,400,9,35,1,35,1,35,1,36,1,36,1,36,1,36,1,36,1,36,1,36,
-		1,36,1,36,3,36,413,8,36,1,37,1,37,1,38,1,38,1,39,1,39,1,39,1,39,1,39,5,
-		39,424,8,39,10,39,12,39,427,9,39,3,39,429,8,39,1,39,3,39,432,8,39,1,39,
-		1,39,1,39,5,39,437,8,39,10,39,12,39,440,9,39,3,39,442,8,39,1,40,1,40,1,
-		41,1,41,1,41,1,41,1,42,1,42,1,43,1,43,1,44,1,44,1,44,0,0,45,0,2,4,6,8,
-		10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,
-		58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,0,13,2,0,87,87,89,89,1,
-		0,14,15,1,0,25,27,1,0,33,46,1,0,53,54,2,0,50,50,59,62,2,0,60,60,66,66,
-		2,0,60,60,69,70,1,0,7,9,1,0,73,76,2,0,14,14,77,81,1,0,82,86,1,0,87,89,
-		481,0,93,1,0,0,0,2,120,1,0,0,0,4,141,1,0,0,0,6,143,1,0,0,0,8,161,1,0,0,
-		0,10,164,1,0,0,0,12,173,1,0,0,0,14,188,1,0,0,0,16,198,1,0,0,0,18,203,1,
-		0,0,0,20,208,1,0,0,0,22,213,1,0,0,0,24,218,1,0,0,0,26,220,1,0,0,0,28,230,
-		1,0,0,0,30,232,1,0,0,0,32,236,1,0,0,0,34,240,1,0,0,0,36,242,1,0,0,0,38,
-		264,1,0,0,0,40,266,1,0,0,0,42,271,1,0,0,0,44,280,1,0,0,0,46,289,1,0,0,
-		0,48,302,1,0,0,0,50,304,1,0,0,0,52,313,1,0,0,0,54,318,1,0,0,0,56,323,1,
-		0,0,0,58,335,1,0,0,0,60,344,1,0,0,0,62,346,1,0,0,0,64,359,1,0,0,0,66,369,
-		1,0,0,0,68,378,1,0,0,0,70,391,1,0,0,0,72,412,1,0,0,0,74,414,1,0,0,0,76,
-		416,1,0,0,0,78,441,1,0,0,0,80,443,1,0,0,0,82,445,1,0,0,0,84,449,1,0,0,
-		0,86,451,1,0,0,0,88,453,1,0,0,0,90,92,3,2,1,0,91,90,1,0,0,0,92,95,1,0,
-		0,0,93,91,1,0,0,0,93,94,1,0,0,0,94,110,1,0,0,0,95,93,1,0,0,0,96,98,3,10,
-		5,0,97,96,1,0,0,0,98,99,1,0,0,0,99,97,1,0,0,0,99,100,1,0,0,0,100,111,1,
-		0,0,0,101,106,3,12,6,0,102,103,5,1,0,0,103,105,3,12,6,0,104,102,1,0,0,
-		0,105,108,1,0,0,0,106,104,1,0,0,0,106,107,1,0,0,0,107,111,1,0,0,0,108,
-		106,1,0,0,0,109,111,3,6,3,0,110,97,1,0,0,0,110,101,1,0,0,0,110,109,1,0,
-		0,0,110,111,1,0,0,0,111,115,1,0,0,0,112,114,3,2,1,0,113,112,1,0,0,0,114,
-		117,1,0,0,0,115,113,1,0,0,0,115,116,1,0,0,0,116,118,1,0,0,0,117,115,1,
-		0,0,0,118,119,5,0,0,1,119,1,1,0,0,0,120,121,5,2,0,0,121,122,5,3,0,0,122,
-		127,3,4,2,0,123,124,5,4,0,0,124,126,3,4,2,0,125,123,1,0,0,0,126,129,1,
-		0,0,0,127,125,1,0,0,0,127,128,1,0,0,0,128,130,1,0,0,0,129,127,1,0,0,0,
-		130,132,5,5,0,0,131,133,5,6,0,0,132,131,1,0,0,0,132,133,1,0,0,0,133,3,
-		1,0,0,0,134,142,5,88,0,0,135,142,3,80,40,0,136,142,5,7,0,0,137,142,5,8,
-		0,0,138,142,5,9,0,0,139,142,5,10,0,0,140,142,5,11,0,0,141,134,1,0,0,0,
-		141,135,1,0,0,0,141,136,1,0,0,0,141,137,1,0,0,0,141,138,1,0,0,0,141,139,
-		1,0,0,0,141,140,1,0,0,0,142,5,1,0,0,0,143,144,5,12,0,0,144,145,5,3,0,0,
-		145,146,7,0,0,0,146,156,5,5,0,0,147,148,5,13,0,0,148,153,3,8,4,0,149,150,
-		5,4,0,0,150,152,3,8,4,0,151,149,1,0,0,0,152,155,1,0,0,0,153,151,1,0,0,
-		0,153,154,1,0,0,0,154,157,1,0,0,0,155,153,1,0,0,0,156,147,1,0,0,0,156,
-		157,1,0,0,0,157,159,1,0,0,0,158,160,5,6,0,0,159,158,1,0,0,0,159,160,1,
-		0,0,0,160,7,1,0,0,0,161,162,7,1,0,0,162,163,5,87,0,0,163,9,1,0,0,0,164,
-		166,5,16,0,0,165,167,5,89,0,0,166,165,1,0,0,0,166,167,1,0,0,0,167,168,
-		1,0,0,0,168,169,5,17,0,0,169,170,3,12,6,0,170,171,5,18,0,0,171,11,1,0,
-		0,0,172,174,3,32,16,0,173,172,1,0,0,0,173,174,1,0,0,0,174,176,1,0,0,0,
-		175,177,3,26,13,0,176,175,1,0,0,0,176,177,1,0,0,0,177,179,1,0,0,0,178,
-		180,3,14,7,0,179,178,1,0,0,0,179,180,1,0,0,0,180,181,1,0,0,0,181,183,3,
-		36,18,0,182,184,5,6,0,0,183,182,1,0,0,0,183,184,1,0,0,0,184,186,1,0,0,
-		0,185,187,3,30,15,0,186,185,1,0,0,0,186,187,1,0,0,0,187,13,1,0,0,0,188,
-		194,5,19,0,0,189,195,3,20,10,0,190,195,3,22,11,0,191,195,3,24,12,0,192,
-		195,3,18,9,0,193,195,3,16,8,0,194,189,1,0,0,0,194,190,1,0,0,0,194,191,
-		1,0,0,0,194,192,1,0,0,0,194,193,1,0,0,0,195,196,1,0,0,0,196,197,5,20,0,
-		0,197,15,1,0,0,0,198,199,5,21,0,0,199,200,5,3,0,0,200,201,5,87,0,0,201,
-		202,5,5,0,0,202,17,1,0,0,0,203,204,5,22,0,0,204,205,5,3,0,0,205,206,5,
-		87,0,0,206,207,5,5,0,0,207,19,1,0,0,0,208,209,5,23,0,0,209,210,5,3,0,0,
-		210,211,5,87,0,0,211,212,5,5,0,0,212,21,1,0,0,0,213,214,5,24,0,0,214,215,
-		5,3,0,0,215,216,5,87,0,0,216,217,5,5,0,0,217,23,1,0,0,0,218,219,7,2,0,
-		0,219,25,1,0,0,0,220,221,5,28,0,0,221,222,3,28,14,0,222,223,5,20,0,0,223,
-		27,1,0,0,0,224,231,5,29,0,0,225,226,5,30,0,0,226,227,5,3,0,0,227,228,3,
-		78,39,0,228,229,5,5,0,0,229,231,1,0,0,0,230,224,1,0,0,0,230,225,1,0,0,
-		0,231,29,1,0,0,0,232,234,5,31,0,0,233,235,5,6,0,0,234,233,1,0,0,0,234,
-		235,1,0,0,0,235,31,1,0,0,0,236,237,5,32,0,0,237,238,3,34,17,0,238,239,
-		5,20,0,0,239,33,1,0,0,0,240,241,7,3,0,0,241,35,1,0,0,0,242,247,3,38,19,
-		0,243,244,5,47,0,0,244,246,3,38,19,0,245,243,1,0,0,0,246,249,1,0,0,0,247,
-		245,1,0,0,0,247,248,1,0,0,0,248,37,1,0,0,0,249,247,1,0,0,0,250,265,3,40,
-		20,0,251,265,3,42,21,0,252,265,3,44,22,0,253,265,3,46,23,0,254,265,3,52,
-		26,0,255,265,3,54,27,0,256,265,3,50,25,0,257,265,3,56,28,0,258,265,3,58,
-		29,0,259,265,3,66,33,0,260,265,3,68,34,0,261,265,3,64,32,0,262,265,3,62,
-		31,0,263,265,3,70,35,0,264,250,1,0,0,0,264,251,1,0,0,0,264,252,1,0,0,0,
-		264,253,1,0,0,0,264,254,1,0,0,0,264,255,1,0,0,0,264,256,1,0,0,0,264,257,
-		1,0,0,0,264,258,1,0,0,0,264,259,1,0,0,0,264,260,1,0,0,0,264,261,1,0,0,
-		0,264,262,1,0,0,0,264,263,1,0,0,0,265,39,1,0,0,0,266,267,5,48,0,0,267,
-		268,5,3,0,0,268,269,5,87,0,0,269,270,5,5,0,0,270,41,1,0,0,0,271,272,5,
-		49,0,0,272,273,5,3,0,0,273,276,5,50,0,0,274,275,5,4,0,0,275,277,3,78,39,
-		0,276,274,1,0,0,0,276,277,1,0,0,0,277,278,1,0,0,0,278,279,5,5,0,0,279,
-		43,1,0,0,0,280,281,5,51,0,0,281,282,5,3,0,0,282,285,3,74,37,0,283,284,
-		5,4,0,0,284,286,3,78,39,0,285,283,1,0,0,0,285,286,1,0,0,0,286,287,1,0,
-		0,0,287,288,5,5,0,0,288,45,1,0,0,0,289,290,5,52,0,0,290,291,5,3,0,0,291,
-		294,3,48,24,0,292,293,5,4,0,0,293,295,3,76,38,0,294,292,1,0,0,0,294,295,
-		1,0,0,0,295,298,1,0,0,0,296,297,5,4,0,0,297,299,3,78,39,0,298,296,1,0,
-		0,0,298,299,1,0,0,0,299,300,1,0,0,0,300,301,5,5,0,0,301,47,1,0,0,0,302,
-		303,7,4,0,0,303,49,1,0,0,0,304,305,5,55,0,0,305,306,5,3,0,0,306,309,5,
-		50,0,0,307,308,5,4,0,0,308,310,3,78,39,0,309,307,1,0,0,0,309,310,1,0,0,
-		0,310,311,1,0,0,0,311,312,5,5,0,0,312,51,1,0,0,0,313,314,5,56,0,0,314,
-		315,5,3,0,0,315,316,5,87,0,0,316,317,5,5,0,0,317,53,1,0,0,0,318,319,5,
-		57,0,0,319,320,5,3,0,0,320,321,5,87,0,0,321,322,5,5,0,0,322,55,1,0,0,0,
-		323,324,5,11,0,0,324,325,5,3,0,0,325,330,3,8,4,0,326,327,5,4,0,0,327,329,
-		3,8,4,0,328,326,1,0,0,0,329,332,1,0,0,0,330,328,1,0,0,0,330,331,1,0,0,
-		0,331,333,1,0,0,0,332,330,1,0,0,0,333,334,5,5,0,0,334,57,1,0,0,0,335,336,
-		5,58,0,0,336,337,5,3,0,0,337,340,3,60,30,0,338,339,5,4,0,0,339,341,3,78,
-		39,0,340,338,1,0,0,0,340,341,1,0,0,0,341,342,1,0,0,0,342,343,5,5,0,0,343,
-		59,1,0,0,0,344,345,7,5,0,0,345,61,1,0,0,0,346,347,5,63,0,0,347,348,5,3,
-		0,0,348,351,5,54,0,0,349,350,5,4,0,0,350,352,3,76,38,0,351,349,1,0,0,0,
-		351,352,1,0,0,0,352,355,1,0,0,0,353,354,5,4,0,0,354,356,3,78,39,0,355,
-		353,1,0,0,0,355,356,1,0,0,0,356,357,1,0,0,0,357,358,5,5,0,0,358,63,1,0,
-		0,0,359,360,5,64,0,0,360,364,5,3,0,0,361,362,3,76,38,0,362,363,5,4,0,0,
-		363,365,1,0,0,0,364,361,1,0,0,0,364,365,1,0,0,0,365,366,1,0,0,0,366,367,
-		5,87,0,0,367,368,5,5,0,0,368,65,1,0,0,0,369,370,5,65,0,0,370,371,5,3,0,
-		0,371,374,7,6,0,0,372,373,5,4,0,0,373,375,3,78,39,0,374,372,1,0,0,0,374,
-		375,1,0,0,0,375,376,1,0,0,0,376,377,5,5,0,0,377,67,1,0,0,0,378,379,5,67,
-		0,0,379,380,5,3,0,0,380,383,3,48,24,0,381,382,5,4,0,0,382,384,3,76,38,
-		0,383,381,1,0,0,0,383,384,1,0,0,0,384,387,1,0,0,0,385,386,5,4,0,0,386,
-		388,3,78,39,0,387,385,1,0,0,0,387,388,1,0,0,0,388,389,1,0,0,0,389,390,
-		5,5,0,0,390,69,1,0,0,0,391,392,5,68,0,0,392,393,5,3,0,0,393,398,3,72,36,
-		0,394,395,5,4,0,0,395,397,3,72,36,0,396,394,1,0,0,0,397,400,1,0,0,0,398,
-		396,1,0,0,0,398,399,1,0,0,0,399,401,1,0,0,0,400,398,1,0,0,0,401,402,5,
-		5,0,0,402,71,1,0,0,0,403,413,5,88,0,0,404,413,5,87,0,0,405,413,5,89,0,
-		0,406,413,3,80,40,0,407,413,5,9,0,0,408,413,5,7,0,0,409,413,5,10,0,0,410,
-		413,5,11,0,0,411,413,5,16,0,0,412,403,1,0,0,0,412,404,1,0,0,0,412,405,
-		1,0,0,0,412,406,1,0,0,0,412,407,1,0,0,0,412,408,1,0,0,0,412,409,1,0,0,
-		0,412,410,1,0,0,0,412,411,1,0,0,0,413,73,1,0,0,0,414,415,7,7,0,0,415,75,
-		1,0,0,0,416,417,7,8,0,0,417,77,1,0,0,0,418,428,3,80,40,0,419,420,5,71,
-		0,0,420,425,3,82,41,0,421,422,5,72,0,0,422,424,3,82,41,0,423,421,1,0,0,
-		0,424,427,1,0,0,0,425,423,1,0,0,0,425,426,1,0,0,0,426,429,1,0,0,0,427,
-		425,1,0,0,0,428,419,1,0,0,0,428,429,1,0,0,0,429,442,1,0,0,0,430,432,5,
-		71,0,0,431,430,1,0,0,0,431,432,1,0,0,0,432,433,1,0,0,0,433,438,3,82,41,
-		0,434,435,5,72,0,0,435,437,3,82,41,0,436,434,1,0,0,0,437,440,1,0,0,0,438,
-		436,1,0,0,0,438,439,1,0,0,0,439,442,1,0,0,0,440,438,1,0,0,0,441,418,1,
-		0,0,0,441,431,1,0,0,0,442,79,1,0,0,0,443,444,7,9,0,0,444,81,1,0,0,0,445,
-		446,3,84,42,0,446,447,3,86,43,0,447,448,3,88,44,0,448,83,1,0,0,0,449,450,
-		7,10,0,0,450,85,1,0,0,0,451,452,7,11,0,0,452,87,1,0,0,0,453,454,7,12,0,
-		0,454,89,1,0,0,0,42,93,99,106,110,115,127,132,141,153,156,159,166,173,
-		176,179,183,186,194,230,234,247,264,276,285,294,298,309,330,340,351,355,
-		364,374,383,387,398,412,425,428,431,438,441
+		1,5,1,5,1,6,1,6,3,6,175,8,6,1,6,3,6,178,8,6,1,6,3,6,181,8,6,1,6,1,6,3,
+		6,185,8,6,1,6,3,6,188,8,6,3,6,190,8,6,1,7,1,7,1,7,1,7,1,7,1,7,3,7,198,
+		8,7,1,7,1,7,1,8,1,8,1,8,1,8,1,8,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,
+		1,10,1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,13,1,13,1,13,1,13,1,14,1,14,
+		1,14,1,14,1,14,1,14,3,14,234,8,14,1,15,1,15,3,15,238,8,15,1,16,1,16,1,
+		16,1,16,1,17,1,17,1,18,1,18,1,18,5,18,249,8,18,10,18,12,18,252,9,18,1,
+		19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,3,
+		19,268,8,19,1,20,1,20,1,20,1,20,1,20,1,21,1,21,1,21,1,21,1,21,3,21,280,
+		8,21,1,21,1,21,1,22,1,22,1,22,1,22,1,22,3,22,289,8,22,1,22,1,22,1,23,1,
+		23,1,23,1,23,1,23,3,23,298,8,23,1,23,1,23,3,23,302,8,23,1,23,1,23,1,24,
+		1,24,1,25,1,25,1,25,1,25,1,25,3,25,313,8,25,1,25,1,25,1,26,1,26,1,26,1,
+		26,1,26,1,27,1,27,1,27,1,27,1,27,1,28,1,28,1,28,1,28,1,28,5,28,332,8,28,
+		10,28,12,28,335,9,28,1,28,1,28,1,29,1,29,1,29,1,29,1,29,3,29,344,8,29,
+		1,29,1,29,1,30,1,30,1,31,1,31,1,31,1,31,1,31,3,31,355,8,31,1,31,1,31,3,
+		31,359,8,31,1,31,1,31,1,32,1,32,1,32,1,32,1,32,3,32,368,8,32,1,32,1,32,
+		1,32,1,33,1,33,1,33,1,33,1,33,3,33,378,8,33,1,33,1,33,1,34,1,34,1,34,1,
+		34,1,34,3,34,387,8,34,1,34,1,34,3,34,391,8,34,1,34,1,34,1,35,1,35,1,35,
+		1,35,1,35,5,35,400,8,35,10,35,12,35,403,9,35,1,35,1,35,1,36,1,36,1,36,
+		1,36,1,36,1,36,1,36,1,36,1,36,3,36,416,8,36,1,37,1,37,1,38,1,38,1,39,1,
+		39,1,39,1,39,1,39,5,39,427,8,39,10,39,12,39,430,9,39,3,39,432,8,39,1,39,
+		3,39,435,8,39,1,39,1,39,1,39,5,39,440,8,39,10,39,12,39,443,9,39,3,39,445,
+		8,39,1,40,1,40,1,41,1,41,1,41,1,41,1,42,1,42,1,43,1,43,1,44,1,44,1,44,
+		0,0,45,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,
+		46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,0,13,
+		2,0,87,87,89,89,1,0,14,15,1,0,25,27,1,0,33,46,1,0,53,54,2,0,50,50,59,62,
+		2,0,60,60,66,66,2,0,60,60,69,70,1,0,7,9,1,0,73,76,2,0,14,14,77,81,1,0,
+		82,86,1,0,87,89,485,0,93,1,0,0,0,2,120,1,0,0,0,4,141,1,0,0,0,6,143,1,0,
+		0,0,8,161,1,0,0,0,10,164,1,0,0,0,12,189,1,0,0,0,14,191,1,0,0,0,16,201,
+		1,0,0,0,18,206,1,0,0,0,20,211,1,0,0,0,22,216,1,0,0,0,24,221,1,0,0,0,26,
+		223,1,0,0,0,28,233,1,0,0,0,30,235,1,0,0,0,32,239,1,0,0,0,34,243,1,0,0,
+		0,36,245,1,0,0,0,38,267,1,0,0,0,40,269,1,0,0,0,42,274,1,0,0,0,44,283,1,
+		0,0,0,46,292,1,0,0,0,48,305,1,0,0,0,50,307,1,0,0,0,52,316,1,0,0,0,54,321,
+		1,0,0,0,56,326,1,0,0,0,58,338,1,0,0,0,60,347,1,0,0,0,62,349,1,0,0,0,64,
+		362,1,0,0,0,66,372,1,0,0,0,68,381,1,0,0,0,70,394,1,0,0,0,72,415,1,0,0,
+		0,74,417,1,0,0,0,76,419,1,0,0,0,78,444,1,0,0,0,80,446,1,0,0,0,82,448,1,
+		0,0,0,84,452,1,0,0,0,86,454,1,0,0,0,88,456,1,0,0,0,90,92,3,2,1,0,91,90,
+		1,0,0,0,92,95,1,0,0,0,93,91,1,0,0,0,93,94,1,0,0,0,94,110,1,0,0,0,95,93,
+		1,0,0,0,96,98,3,10,5,0,97,96,1,0,0,0,98,99,1,0,0,0,99,97,1,0,0,0,99,100,
+		1,0,0,0,100,111,1,0,0,0,101,106,3,12,6,0,102,103,5,1,0,0,103,105,3,12,
+		6,0,104,102,1,0,0,0,105,108,1,0,0,0,106,104,1,0,0,0,106,107,1,0,0,0,107,
+		111,1,0,0,0,108,106,1,0,0,0,109,111,3,6,3,0,110,97,1,0,0,0,110,101,1,0,
+		0,0,110,109,1,0,0,0,110,111,1,0,0,0,111,115,1,0,0,0,112,114,3,2,1,0,113,
+		112,1,0,0,0,114,117,1,0,0,0,115,113,1,0,0,0,115,116,1,0,0,0,116,118,1,
+		0,0,0,117,115,1,0,0,0,118,119,5,0,0,1,119,1,1,0,0,0,120,121,5,2,0,0,121,
+		122,5,3,0,0,122,127,3,4,2,0,123,124,5,4,0,0,124,126,3,4,2,0,125,123,1,
+		0,0,0,126,129,1,0,0,0,127,125,1,0,0,0,127,128,1,0,0,0,128,130,1,0,0,0,
+		129,127,1,0,0,0,130,132,5,5,0,0,131,133,5,6,0,0,132,131,1,0,0,0,132,133,
+		1,0,0,0,133,3,1,0,0,0,134,142,5,88,0,0,135,142,3,80,40,0,136,142,5,7,0,
+		0,137,142,5,8,0,0,138,142,5,9,0,0,139,142,5,10,0,0,140,142,5,11,0,0,141,
+		134,1,0,0,0,141,135,1,0,0,0,141,136,1,0,0,0,141,137,1,0,0,0,141,138,1,
+		0,0,0,141,139,1,0,0,0,141,140,1,0,0,0,142,5,1,0,0,0,143,144,5,12,0,0,144,
+		145,5,3,0,0,145,146,7,0,0,0,146,156,5,5,0,0,147,148,5,13,0,0,148,153,3,
+		8,4,0,149,150,5,4,0,0,150,152,3,8,4,0,151,149,1,0,0,0,152,155,1,0,0,0,
+		153,151,1,0,0,0,153,154,1,0,0,0,154,157,1,0,0,0,155,153,1,0,0,0,156,147,
+		1,0,0,0,156,157,1,0,0,0,157,159,1,0,0,0,158,160,5,6,0,0,159,158,1,0,0,
+		0,159,160,1,0,0,0,160,7,1,0,0,0,161,162,7,1,0,0,162,163,5,87,0,0,163,9,
+		1,0,0,0,164,166,5,16,0,0,165,167,5,89,0,0,166,165,1,0,0,0,166,167,1,0,
+		0,0,167,168,1,0,0,0,168,169,5,17,0,0,169,170,3,12,6,0,170,171,5,18,0,0,
+		171,11,1,0,0,0,172,190,3,6,3,0,173,175,3,32,16,0,174,173,1,0,0,0,174,175,
+		1,0,0,0,175,177,1,0,0,0,176,178,3,26,13,0,177,176,1,0,0,0,177,178,1,0,
+		0,0,178,180,1,0,0,0,179,181,3,14,7,0,180,179,1,0,0,0,180,181,1,0,0,0,181,
+		182,1,0,0,0,182,184,3,36,18,0,183,185,5,6,0,0,184,183,1,0,0,0,184,185,
+		1,0,0,0,185,187,1,0,0,0,186,188,3,30,15,0,187,186,1,0,0,0,187,188,1,0,
+		0,0,188,190,1,0,0,0,189,172,1,0,0,0,189,174,1,0,0,0,190,13,1,0,0,0,191,
+		197,5,19,0,0,192,198,3,20,10,0,193,198,3,22,11,0,194,198,3,24,12,0,195,
+		198,3,18,9,0,196,198,3,16,8,0,197,192,1,0,0,0,197,193,1,0,0,0,197,194,
+		1,0,0,0,197,195,1,0,0,0,197,196,1,0,0,0,198,199,1,0,0,0,199,200,5,20,0,
+		0,200,15,1,0,0,0,201,202,5,21,0,0,202,203,5,3,0,0,203,204,5,87,0,0,204,
+		205,5,5,0,0,205,17,1,0,0,0,206,207,5,22,0,0,207,208,5,3,0,0,208,209,5,
+		87,0,0,209,210,5,5,0,0,210,19,1,0,0,0,211,212,5,23,0,0,212,213,5,3,0,0,
+		213,214,5,87,0,0,214,215,5,5,0,0,215,21,1,0,0,0,216,217,5,24,0,0,217,218,
+		5,3,0,0,218,219,5,87,0,0,219,220,5,5,0,0,220,23,1,0,0,0,221,222,7,2,0,
+		0,222,25,1,0,0,0,223,224,5,28,0,0,224,225,3,28,14,0,225,226,5,20,0,0,226,
+		27,1,0,0,0,227,234,5,29,0,0,228,229,5,30,0,0,229,230,5,3,0,0,230,231,3,
+		78,39,0,231,232,5,5,0,0,232,234,1,0,0,0,233,227,1,0,0,0,233,228,1,0,0,
+		0,234,29,1,0,0,0,235,237,5,31,0,0,236,238,5,6,0,0,237,236,1,0,0,0,237,
+		238,1,0,0,0,238,31,1,0,0,0,239,240,5,32,0,0,240,241,3,34,17,0,241,242,
+		5,20,0,0,242,33,1,0,0,0,243,244,7,3,0,0,244,35,1,0,0,0,245,250,3,38,19,
+		0,246,247,5,47,0,0,247,249,3,38,19,0,248,246,1,0,0,0,249,252,1,0,0,0,250,
+		248,1,0,0,0,250,251,1,0,0,0,251,37,1,0,0,0,252,250,1,0,0,0,253,268,3,40,
+		20,0,254,268,3,42,21,0,255,268,3,44,22,0,256,268,3,46,23,0,257,268,3,52,
+		26,0,258,268,3,54,27,0,259,268,3,50,25,0,260,268,3,56,28,0,261,268,3,58,
+		29,0,262,268,3,66,33,0,263,268,3,68,34,0,264,268,3,64,32,0,265,268,3,62,
+		31,0,266,268,3,70,35,0,267,253,1,0,0,0,267,254,1,0,0,0,267,255,1,0,0,0,
+		267,256,1,0,0,0,267,257,1,0,0,0,267,258,1,0,0,0,267,259,1,0,0,0,267,260,
+		1,0,0,0,267,261,1,0,0,0,267,262,1,0,0,0,267,263,1,0,0,0,267,264,1,0,0,
+		0,267,265,1,0,0,0,267,266,1,0,0,0,268,39,1,0,0,0,269,270,5,48,0,0,270,
+		271,5,3,0,0,271,272,5,87,0,0,272,273,5,5,0,0,273,41,1,0,0,0,274,275,5,
+		49,0,0,275,276,5,3,0,0,276,279,5,50,0,0,277,278,5,4,0,0,278,280,3,78,39,
+		0,279,277,1,0,0,0,279,280,1,0,0,0,280,281,1,0,0,0,281,282,5,5,0,0,282,
+		43,1,0,0,0,283,284,5,51,0,0,284,285,5,3,0,0,285,288,3,74,37,0,286,287,
+		5,4,0,0,287,289,3,78,39,0,288,286,1,0,0,0,288,289,1,0,0,0,289,290,1,0,
+		0,0,290,291,5,5,0,0,291,45,1,0,0,0,292,293,5,52,0,0,293,294,5,3,0,0,294,
+		297,3,48,24,0,295,296,5,4,0,0,296,298,3,76,38,0,297,295,1,0,0,0,297,298,
+		1,0,0,0,298,301,1,0,0,0,299,300,5,4,0,0,300,302,3,78,39,0,301,299,1,0,
+		0,0,301,302,1,0,0,0,302,303,1,0,0,0,303,304,5,5,0,0,304,47,1,0,0,0,305,
+		306,7,4,0,0,306,49,1,0,0,0,307,308,5,55,0,0,308,309,5,3,0,0,309,312,5,
+		50,0,0,310,311,5,4,0,0,311,313,3,78,39,0,312,310,1,0,0,0,312,313,1,0,0,
+		0,313,314,1,0,0,0,314,315,5,5,0,0,315,51,1,0,0,0,316,317,5,56,0,0,317,
+		318,5,3,0,0,318,319,5,87,0,0,319,320,5,5,0,0,320,53,1,0,0,0,321,322,5,
+		57,0,0,322,323,5,3,0,0,323,324,5,87,0,0,324,325,5,5,0,0,325,55,1,0,0,0,
+		326,327,5,11,0,0,327,328,5,3,0,0,328,333,3,8,4,0,329,330,5,4,0,0,330,332,
+		3,8,4,0,331,329,1,0,0,0,332,335,1,0,0,0,333,331,1,0,0,0,333,334,1,0,0,
+		0,334,336,1,0,0,0,335,333,1,0,0,0,336,337,5,5,0,0,337,57,1,0,0,0,338,339,
+		5,58,0,0,339,340,5,3,0,0,340,343,3,60,30,0,341,342,5,4,0,0,342,344,3,78,
+		39,0,343,341,1,0,0,0,343,344,1,0,0,0,344,345,1,0,0,0,345,346,5,5,0,0,346,
+		59,1,0,0,0,347,348,7,5,0,0,348,61,1,0,0,0,349,350,5,63,0,0,350,351,5,3,
+		0,0,351,354,5,54,0,0,352,353,5,4,0,0,353,355,3,76,38,0,354,352,1,0,0,0,
+		354,355,1,0,0,0,355,358,1,0,0,0,356,357,5,4,0,0,357,359,3,78,39,0,358,
+		356,1,0,0,0,358,359,1,0,0,0,359,360,1,0,0,0,360,361,5,5,0,0,361,63,1,0,
+		0,0,362,363,5,64,0,0,363,367,5,3,0,0,364,365,3,76,38,0,365,366,5,4,0,0,
+		366,368,1,0,0,0,367,364,1,0,0,0,367,368,1,0,0,0,368,369,1,0,0,0,369,370,
+		5,87,0,0,370,371,5,5,0,0,371,65,1,0,0,0,372,373,5,65,0,0,373,374,5,3,0,
+		0,374,377,7,6,0,0,375,376,5,4,0,0,376,378,3,78,39,0,377,375,1,0,0,0,377,
+		378,1,0,0,0,378,379,1,0,0,0,379,380,5,5,0,0,380,67,1,0,0,0,381,382,5,67,
+		0,0,382,383,5,3,0,0,383,386,3,48,24,0,384,385,5,4,0,0,385,387,3,76,38,
+		0,386,384,1,0,0,0,386,387,1,0,0,0,387,390,1,0,0,0,388,389,5,4,0,0,389,
+		391,3,78,39,0,390,388,1,0,0,0,390,391,1,0,0,0,391,392,1,0,0,0,392,393,
+		5,5,0,0,393,69,1,0,0,0,394,395,5,68,0,0,395,396,5,3,0,0,396,401,3,72,36,
+		0,397,398,5,4,0,0,398,400,3,72,36,0,399,397,1,0,0,0,400,403,1,0,0,0,401,
+		399,1,0,0,0,401,402,1,0,0,0,402,404,1,0,0,0,403,401,1,0,0,0,404,405,5,
+		5,0,0,405,71,1,0,0,0,406,416,5,88,0,0,407,416,5,87,0,0,408,416,5,89,0,
+		0,409,416,3,80,40,0,410,416,5,9,0,0,411,416,5,7,0,0,412,416,5,10,0,0,413,
+		416,5,11,0,0,414,416,5,16,0,0,415,406,1,0,0,0,415,407,1,0,0,0,415,408,
+		1,0,0,0,415,409,1,0,0,0,415,410,1,0,0,0,415,411,1,0,0,0,415,412,1,0,0,
+		0,415,413,1,0,0,0,415,414,1,0,0,0,416,73,1,0,0,0,417,418,7,7,0,0,418,75,
+		1,0,0,0,419,420,7,8,0,0,420,77,1,0,0,0,421,431,3,80,40,0,422,423,5,71,
+		0,0,423,428,3,82,41,0,424,425,5,72,0,0,425,427,3,82,41,0,426,424,1,0,0,
+		0,427,430,1,0,0,0,428,426,1,0,0,0,428,429,1,0,0,0,429,432,1,0,0,0,430,
+		428,1,0,0,0,431,422,1,0,0,0,431,432,1,0,0,0,432,445,1,0,0,0,433,435,5,
+		71,0,0,434,433,1,0,0,0,434,435,1,0,0,0,435,436,1,0,0,0,436,441,3,82,41,
+		0,437,438,5,72,0,0,438,440,3,82,41,0,439,437,1,0,0,0,440,443,1,0,0,0,441,
+		439,1,0,0,0,441,442,1,0,0,0,442,445,1,0,0,0,443,441,1,0,0,0,444,421,1,
+		0,0,0,444,434,1,0,0,0,445,79,1,0,0,0,446,447,7,9,0,0,447,81,1,0,0,0,448,
+		449,3,84,42,0,449,450,3,86,43,0,450,451,3,88,44,0,451,83,1,0,0,0,452,453,
+		7,10,0,0,453,85,1,0,0,0,454,455,7,11,0,0,455,87,1,0,0,0,456,457,7,12,0,
+		0,457,89,1,0,0,0,43,93,99,106,110,115,127,132,141,153,156,159,166,174,
+		177,180,184,187,189,197,233,237,250,267,279,288,297,301,312,333,343,354,
+		358,367,377,386,390,401,415,428,431,434,441,444
 	};
 
 	public static readonly ATN _ATN =

@@ -20,6 +20,7 @@
 #include "Save.h"
 #include "Text.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "EffectSourceLending.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 // The game's card id window: Konami ids 3900..14968 index its fixed-size tables.
@@ -268,13 +269,11 @@ namespace
             }
         }
 
-        // The effect source (Yu-Gi-Oh-Effects reads the rest of "effectClone"): the card is lent this id in a duel when it is free.
-        if (j.contains("effectClone") && j["effectClone"].is_object() && j["effectClone"].contains("from") && j["effectClone"]["from"].is_number_integer())
-        {
-            const int from = j["effectClone"]["from"].get<int>();
-            if (from >= static_cast<int>(kVanillaKonamiIdBase) && from < static_cast<int>(kVanillaKonamiIdBase + kVanillaKonamiIdCount))
-                c.CloneFrom = static_cast<uint16_t>(from);
-        }
+        // Only a single-effect clone has one source identity to lend. Multi-effect
+        // cards keep their own identity and let Effects route each table/event.
+        if (j.contains("effectClone"))
+            c.CloneFrom = YGO::Effects::SingleEffectSource(j["effectClone"], kVanillaKonamiIdBase,
+                kVanillaKonamiIdBase + kVanillaKonamiIdCount);
 
         // the art is relative to the content folder the card came from (a mod's Yu-Gi-Oh-Ex or the game's)
         c.Folder = YGO::Mods::FolderOf(j);

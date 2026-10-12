@@ -402,6 +402,12 @@ namespace WolfEx
                 {
                     var root = _tree.Nodes.Add(rootName, rootName);
                     var categories = _categories.Where(c => c.Root == rootName).ToList();
+                    if (all.Count == 0)
+                    {
+                        root.Nodes.Add("No matching entries. Clear the search or filters.");
+                        root.Expand();
+                        continue;
+                    }
                     if (categories.Count == 0)
                         root.Nodes.Add(rootName == GenreRoot ? "(no genres: the game data has no bin\\CARD_Genre.bin)" : "(no entries)");
                     foreach (var (_, category) in categories)

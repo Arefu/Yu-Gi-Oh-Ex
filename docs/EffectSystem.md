@@ -458,7 +458,22 @@ Under its source's id the card IS the source to every id-keyed rule: lists ("can
 * trigger lists / leave-field and stat tables: the first part whose source is in the list / has a row.
 * phase handlers and named-card helpers: every part is registered.
 * plain id tests: the highest answer over the parts (e.g. "is a FLIP monster" if any part is).
-Source-id lending (section 32) lends the MAIN effect's source.
+Source-id lending (section 32) applies only to single-effect clones. A card with non-empty `parts` keeps its custom id (or a scratch id above
+the duel engine's 14-bit limit), so the first source's properties and hard-coded identity cannot decide how the other effects behave.
+
+**Pendulum order fix (2026-10-12):** raw clones without `trigger` metadata choose a source with a real row in the summon or leave-field table.
+Row routing prefers an exact source row over the engine's generic Spell/Trap fallback. Wrapped rows are cached per part so their overrides
+cannot collide. The Stratos (6784) / Pot of Greed (4844) combination is covered in both orders by the production-hook regression tests in
+`Tests/EffectRouting`, including slot resolution and draw counts. Those tests mock vanilla engine lookups; they do not replace live duel testing.
+
+WolfX supports `as(6784); also as(4844);`, its reverse, multiple named `effect { as(...); }` blocks, and mixtures of cloned and scripted effects.
+Clone blocks now stack with other effect blocks and all are preserved when converting between script and blocks. These are separate effects,
+not a resolution chain: `then` still describes actions within one effect. Multiple sources in different tables or with distinct supported
+events can be routed independently. Trigger and activation offers also enumerate compatible effects sharing a table and event. A per-part
+tag in the queued record preserves the selected effect through lookup and resolution, while native calls see their original sub-effect number.
+Duplicate suppression distinguishes sibling effects but still rejects repeated offers of the same effect, and respects native queue capacities.
+Up to 127 independently selectable parts are supported. Independent per-effect use limits are not added; native card-wide limits still apply.
+Composed actions omit Stratos's unrelated native HERO choice menu unless an explicit cost or slot override requires it; raw clones retain it.
 
 **New list scans** (the list-filter wrappers decompiled: zone scanner + behaviour flag): `deckSummon` 0x14052EE80 (Deck, 4 = can be Special Summoned), `handSummon` 0x14052EE40 (hand, 2), `hand` 0x14052F490 (hand, 1 = any), `banished` 0x140532BF0 (0x40). Known before: `deck` 0x14052F2A0 (0), `grave` 0x14052F4D0 (0), `graveSummon` 0x14052EC80 (8), `opponentGrave` 0x14052EE00 (0x40001), Extra Deck 0x140531D30 (0x842). Magnet Circle LV2's machine 0x140160080 is HAND-ONLY (checks zone 13, reads the hand array).
 
@@ -679,6 +694,11 @@ effect" drops the entry. The Effect library's "Use" fills the selected game card
 (`GameEffectsFile`, `GameEffectCard` in Content\GameEffects.cs); content.json / mods map effects.json to Yu-Gi-Oh-Effects.
 
 ## 44. Continuous locks: Jinzo, Royal Decree, Spell Canceller, Skill Drain (2026-10-11)
+
+The effect library includes curated lock templates from `docs/effect-scripts/lock_reference.py`, even when the original card has no effect-table row.
+Spell Canceller is `lock(spell);`. Jinzo, Royal Decree, Skill Drain, and Silent Swordsman LV7 are marked partial with notes for exceptions,
+activation-order behavior, costs, or additional restrictions the template does not reproduce. These templates are not activated-effect trigger sources.
+The generator merges them on every refresh. Run `python docs/effect-scripts/test_lock_reference.py` to check the shipped entries and refresh behavior.
 
 Jinzo (4758) "Trap Cards, and their effects on the field, cannot be activated. Negate all Trap effects on the field." has no row in any effect table. The
 engine rebuilds a **lock state** (an int struct on the caller's stack) whenever it needs it, in `Duel_BuildContinuousLockState` (0x14010EAA0), from
