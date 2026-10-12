@@ -64,7 +64,13 @@ namespace savegame
                 Duelists[i] = new DuelistSlot(_data, DuelistSlotsOffset + DuelistSlotSize * i);
         }
 
-        public static SaveFile Load(string path) => new(File.ReadAllBytes(path));
+        public static SaveFile Load(string path)
+        {
+            var save = new SaveFile(File.ReadAllBytes(path));
+            if (!save.HasValidHeader)
+                throw new InvalidDataException("This is not a supported Link Evolution save (magic, version or size is invalid).");
+            return save;
+        }
 
         // ---------------------------------------------------------------- header
 
@@ -118,7 +124,7 @@ namespace savegame
             }
         }
 
-        public bool HasValidHeader => MagicNumber == Magic && TotalSize == Size;
+        public bool HasValidHeader => MagicNumber == Magic && Version == CurrentVersion && TotalSize == Size;
 
         /// <summary>Same steps as the game before it writes the save: bump the counter, then store the checksum.</summary>
         public void UpdateChecksum(bool incrementCounter = true)
@@ -138,7 +144,43 @@ namespace savegame
             return (byte[])_data.Clone();
         }
 
-        public void Save(string path, bool updateChecksum = true) => File.WriteAllBytes(path, ToBytes(updateChecksum));
+        /// <summary>The previous on-disk save from the last successful replacement, or null for a new file.</summary>
+        public string? LastBackupPath { get; private set; }
+
+        /// <summary>Write and flush a sibling temporary file, then atomically replace the target with a dated backup.</summary>
+        public void Save(string path, bool updateChecksum = true)
+        {
+            if (!HasValidHeader)
+                throw new InvalidDataException("Cannot save an unsupported Link Evolution header.");
+            string target = Path.GetFullPath(path);
+            string temporary = target + "." + Guid.NewGuid().ToString("N") + ".tmp";
+            var pending = new SaveFile((byte[])_data.Clone());
+            byte[] bytes = pending.ToBytes(updateChecksum);
+            string? backup = null;
+            try
+            {
+                using (var stream = new FileStream(temporary, FileMode.CreateNew, FileAccess.Write, FileShare.None))
+                {
+                    stream.Write(bytes);
+                    stream.Flush(flushToDisk: true);
+                }
+                if (File.Exists(target))
+                {
+                    backup = target + "." + DateTime.UtcNow.ToString("yyyyMMdd-HHmmssfff") + "-" + Guid.NewGuid().ToString("N") + ".bak";
+                    File.Replace(temporary, target, backup);
+                }
+                else
+                    File.Move(temporary, target);
+                // A failed write must not advance the in-memory counter or checksum.
+                bytes.CopyTo(_data, 0);
+                LastBackupPath = backup;
+            }
+            finally
+            {
+                try { if (File.Exists(temporary)) File.Delete(temporary); }
+                catch (Exception ex) when (ex is IOException or UnauthorizedAccessException) { /* Preserve the original write error. */ }
+            }
+        }
 
         // ---------------------------------------------------------------- sections
 
