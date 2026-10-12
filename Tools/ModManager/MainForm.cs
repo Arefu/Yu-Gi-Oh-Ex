@@ -66,7 +66,7 @@ namespace ModManager
             var order = new Label
             {
                 Dock = DockStyle.Bottom, Height = 22, Padding = new Padding(4, 4, 0, 0), ForeColor = SystemColors.GrayText,
-                Text = "Ticked mods load from the top down: a mod lower in the list wins when two change the same thing. Your own files always load last.",
+                Text = "Independent mod changes merge. A mod lower in the list wins conflicts. Your own files always load last.",
             };
             listArea.Controls.Add(order);
 
@@ -272,6 +272,11 @@ namespace ModManager
         {
             var active = _mods.Where(m => m.Enabled).Append(_local!).ToList();
             _issues = ModLibrary.Check(active, _plugins);
+            try { _issues.AddRange(ModLibrary.PrepareMerges(_game, _mods)); }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidDataException or System.Text.Json.JsonException)
+            {
+                _issues.Add(new ModIssue(IssueLevel.Error, null, "Binary merge archive could not be prepared: " + ex.Message));
+            }
 
             foreach (ListViewItem item in _list.Items)
             {
@@ -523,6 +528,13 @@ namespace ModManager
             if (ModLibrary.IsGameRunning())
             {
                 MessageBox.Show(this, "The game is already running. Close it first: mods are applied when it starts.", Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try { ModLibrary.PrepareMerges(_game, _mods); }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidDataException or System.Text.Json.JsonException)
+            {
+                MessageBox.Show(this, "The binary merge archive couldn't be prepared: " + ex.Message, Text,
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Process.Start(new ProcessStartInfo(loader) { WorkingDirectory = Path.GetDirectoryName(loader)!, UseShellExecute = true });
