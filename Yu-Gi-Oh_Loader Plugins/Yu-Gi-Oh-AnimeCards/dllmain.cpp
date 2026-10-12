@@ -125,7 +125,7 @@ constexpr float kSTIconY0_Jp = 86.0f;
 
 // The card being built (set by Hook_sub_14074E7D0, defined further down) and the game's getters for it (FULL_CARD_PROPS, see
 // docs/CardRendering.md): +0x1C IsMonster, +0x31 IsLink, +0x88 Link rating.
-extern unsigned short g_currentCardId;
+extern thread_local unsigned short g_currentCardId;
 using fn_CardValue = int(__fastcall*)(unsigned short);
 static fn_CardValue game_IsMonster = nullptr;    // 0x14081A410
 static fn_CardValue game_IsLink = nullptr;       // 0x14081A470
@@ -143,6 +143,7 @@ inline bool IsAttributeIcon(float x0, float y0, float x1, float y1)
 // The stars of the card being built, set by Hook_sub_14074E7D0. CardFace_Build draws level stars right to left from x 346, 28 apart
 // (27 when there are more than 11), and rank stars left to right from x 54, 28 apart, all at size 28 on y 83 (see the loop at
 // 0x14074FF80). Each star quad is re-placed at its index in a row centred on kStarsX, so 1, 2 or 3 stars all sit in the middle.
+static thread_local bool g_buildingFace = false;
 static thread_local int g_starCount = 0;
 static thread_local int g_starIndex = 0;
 static thread_local float g_starStep = 28.0f;
@@ -157,6 +158,12 @@ inline bool IsStarQuad(float x0, float y0, float x1, float y1)
 extern "C" void Hook_sub_1408795A0(void* a1, float x0, float y0, float x1, float y1,
     float u0, float v0, float u1, float v1, int a10, int color)
 {
+    if (!g_buildingFace)
+    {
+        orig_sub_1408795A0(a1, x0, y0, x1, y1, u0, v0, u1, v1, a10, color);
+        return;
+    }
+
     if (IsAttributeIcon(x0, y0, x1, y1))
     {
         // Spell and Trap frames have their symbol drawn in; monsters get the icon in the frame's circle.
@@ -201,7 +208,7 @@ extern "C" void Hook_sub_1408795A0(void* a1, float x0, float y0, float x1, float
     bool isLinkArt = NearlyEqual(x0, kArtLinkX0) && NearlyEqual(y0, kArtLinkY0) &&
         NearlyEqual(x1, kArtLinkX1) && NearlyEqual(y1, kArtLinkY1);
 
-    if ((isNormalArt || isLinkArt) && kCardArtScale != 1.0f)
+    if ((isNormalArt || isLinkArt) && (kCardArtScale != 1.0f || kCardArtOffsetX != 0.0f || kCardArtOffsetY != 0.0f))
     {
         float w = (x1 - x0) * kCardArtScale;
         float h = (y1 - y0) * kCardArtScale;
@@ -230,69 +237,14 @@ extern "C" void Hook_sub_1408795A0(void* a1, float x0, float y0, float x1, float
     orig_sub_1408795A0(a1, x0, y0, x1, y1, u0, v0, u1, v1, a10, color);
 }
 
-using fn_Get_RawDefFromFullCardProps = int(__fastcall*)(unsigned short);
 using fn_sub_14081A670 = int(__fastcall*)(unsigned short);
 using fn_sub_14081A730 = int(__fastcall*)(unsigned short);
-using fn_Get_CardTypeFromFullCardPropsByKonamiId = int(__fastcall*)(unsigned short);
-using fn_Get_SpellTrapCardPropertyFromFullCardProps = int(__fastcall*)(unsigned short);
 
-static fn_Get_RawDefFromFullCardProps orig_Get_RawDefFromFullCardProps = nullptr;
 static fn_sub_14081A670 orig_sub_14081A670 = nullptr;
 static fn_sub_14081A730 orig_sub_14081A730 = nullptr;
-static fn_Get_CardTypeFromFullCardPropsByKonamiId orig_Get_CardTypeFromFullCardPropsByKonamiId = nullptr;
-static fn_Get_SpellTrapCardPropertyFromFullCardProps orig_Get_SpellTrapCardPropertyFromFullCardProps = nullptr;
-
-// Forward-declared here; g_currentCardId is defined further down, right
-// next to Hook_sub_14074E7D0 which sets it. Declared early so the
-// IsMonster() helper below can use it.
-extern unsigned short g_currentCardId;
-
-// Single point of truth for "is this card a monster" — computed on demand
-// from the card-type getter, keyed off whatever card is currently being
-// drawn. No caching/statics here on purpose: earlier attempts to cache
-// this in a getter hook (first via SpellOrTrapProperty, which turned out
-// to be garbage/unset for monster cards, then via a stale cached bool)
-// caused inconsistent results across card types. Fetching fresh at each
-// use site avoids ordering issues entirely.
-//
-// NOTE (unverified): case 13/14 currently return false here, and
-// case 0/default return true - this is inverted from how the function
-// is named/was originally written. Left as-is since it wasn't confirmed
-// whether this was an intentional change (e.g. discovering 13/14 map to
-// something other than Spell/Trap for this game's encoding, possibly
-// tangled up with Synchro/Fusion/etc. extra-deck types) or a mistake.
-// Worth double-checking against real card data before relying on it.
-//
-// IMPORTANT: since this is used below to gate the monster ST-icon fix,
-// test it against Fusion/Synchro/XYZ/Pendulum/Link monsters specifically
-// — if any of those hit `default` instead of a monster-safe case, the
-// icon-forcing hook below will misfire for them.
-inline bool IsTrapSpellCard(unsigned short cardId)
-{
-    switch (orig_Get_CardTypeFromFullCardPropsByKonamiId(cardId))
-    {
-    case 13:
-    case 14:
-    case 42:
-    case 43:
-        return false;
-
-    case 0:
-    default:
-        return true;
-    }
-}
-
-extern "C" int Hook_Get_RawDefFromFullCardProps(unsigned short cardId)
-{
-   // if (IsTrapSpellCard(cardId)) return 0;
-    return orig_Get_RawDefFromFullCardProps(cardId);
-}
 
 // True on the loader thread while CardFace_Build (Hook_sub_14074E7D0) runs. The getters below are the game's own and are also used outside
 // drawing (deck rules, duels...), so they only change their answer for the card face being built.
-static thread_local bool g_buildingFace = false;
-
 // IconId_Attribute (0x1407FD320) picks the card's attribute icon from pdui/STEAM_icons: attribute + 129 = the 37 px ICON_ID_ATTR_L_* sprites,
 // drawn 1:1 at the game's 37 px. Drawn larger in the frame's circle they would be stretched and soft, so card faces use the 48 px
 // ICON_ID_ATTR_* sprites of the same attributes instead (attribute + 119), which are shrunk slightly and stay sharp.
@@ -304,32 +256,6 @@ extern "C" int Hook_IconId_Attribute(int attribute)
 {
     const int id = orig_IconId_Attribute(attribute);
     return g_buildingFace ? id + kLargeAttributeIconOffset : id;
-}
-
-// In sub_14074E7D0, the entire ST-icon build+draw block is gated on
-// `Get_SpellTrapCardPropertyFromFullCardProps(cardId) != 0`. For monster
-// cards this vanilla getter returns 0, so the icon never gets built and
-// never reaches Hook_sub_1408795A0 above at all. Forcing a non-zero
-// property id for monsters makes the game build + draw the icon through
-// the normal codepath, at the position controlled by
-// kCustomSTIconX/kCustomSTIconY above.
-//
-// kMonsterSTIconPropertyId: the value returned here is passed into
-// sub_1407FD3E0 to resolve which icon texture to use. Pick whichever
-// property id maps to the texture you want to show for monsters — you'll
-// likely need to test a few values in-game. An id that doesn't map to a
-// valid entry risks sub_1407FD3E0 or the downstream texture lookup
-// misbehaving, so start conservative and verify no crashes before
-// treating this as final.
-constexpr int kMonsterSTIconPropertyId = 1; // TODO: verify this maps to the icon you want
-
-extern "C" int Hook_Get_SpellTrapCardPropertyFromFullCardProps(unsigned short cardId)
-{
-    if (g_buildingFace && !IsTrapSpellCard(cardId)) // per IsTrapSpellCard's (inverted-named) logic, false == Spell, Trap or Link
-    {
-        return kMonsterSTIconPropertyId;
-    }
-    return orig_Get_SpellTrapCardPropertyFromFullCardProps(cardId);
 }
 
 struct FontTable
@@ -386,10 +312,15 @@ static fn_YGO_Get_EffectiveDefFromFullCardProps orig_YGO_Get_EffectiveDefFromFul
 static fn_sub_14081A610 orig_sub_14081A610 = nullptr;
 static fn_sub_14074E7D0 orig_sub_14074E7D0 = nullptr;
 
-unsigned short g_currentCardId = 0xFFFF;
+thread_local unsigned short g_currentCardId = 0xFFFF;
 
 extern "C" char Hook_sub_14074E7D0(__int64 a1, unsigned short cardId)
 {
+    // Preserve an enclosing build if the game recursively requests another face.
+    const auto previousCard = g_currentCardId;
+    const bool previousBuilding = g_buildingFace;
+    const int previousCount = g_starCount, previousIndex = g_starIndex;
+    const float previousStep = g_starStep;
     g_currentCardId = cardId;
 
     // Same choice as CardFace_Build: StarCount level stars (0x14081A670), or RankStars rank stars (0x14081A730) when that is 0.
@@ -401,8 +332,11 @@ extern "C" char Hook_sub_14074E7D0(__int64 a1, unsigned short cardId)
 
     g_buildingFace = true;
     const char result = orig_sub_14074E7D0(a1, cardId);
-    g_buildingFace = false;
-    g_starCount = 0;
+    g_currentCardId = previousCard;
+    g_buildingFace = previousBuilding;
+    g_starCount = previousCount;
+    g_starIndex = previousIndex;
+    g_starStep = previousStep;
     return result;
 }
 
@@ -460,10 +394,13 @@ extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, flo
     int color, unsigned int fontId,
     const unsigned short* wstr, int count, int flags, int arg10)
 {
+    if (!g_buildingFace)
+        return orig_sub_140766540(slotPtr, x, y, boxWidth, color, fontId, wstr, count, flags, arg10);
+
     if (fontId == kAtkDefCombinedFontId)
     {
         unsigned int atk = orig_YGO_Get_EffectiveDefFromFullCardProps(g_currentCardId);
-        static wchar_t buf[16];
+        wchar_t buf[16];
         if (atk == 0xFFFF)
             swprintf(buf, 16, L"?");
         else
@@ -473,20 +410,26 @@ extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, flo
             (const unsigned short*)buf, kCentredAlign, flags | kNoWrap, arg10);
     }
 
-    if (IsAbilityWrapFont(fontId))
+    // Font 36 also draws Pendulum scales. Keep their original numbers and positions.
+    if (fontId == kLargeAtkDefFontId)
+        return orig_sub_140766540(slotPtr, x, y, boxWidth, color, fontId, wstr, count, flags, arg10);
+
+    // Pendulum effects use the same fonts but a narrower (278 px) text box.
+    // Only the main description's 336 px layout becomes the DEF/rating number.
+    if (NearlyEqual(boxWidth, 336.0f) && IsAbilityWrapFont(fontId))
     {
         // The card text slot shows the right-hand number: DEF, or the rating on a Link monster (its box is the red one).
         const bool link = (game_IsLink(g_currentCardId) & 0xFF) != 0;
         if (link)
         {
-            static wchar_t rating[16];
+            wchar_t rating[16];
             swprintf(rating, 16, L"%d", game_LinkRating(g_currentCardId));
             return orig_sub_140766540(slotPtr, x, y, 0.0f, color,
                 UseLargeAtkDefFont() ? kLargeAtkDefFontId : fontId,
                 (const unsigned short*)rating, kCentredAlign, flags | kNoWrap, arg10);
         }
 
-        if (!IsTrapSpellCard(g_currentCardId))
+        if ((game_IsMonster(g_currentCardId) & 0xFF) == 0)
         {
             // Was `return 0;` - dropped the call entirely and left the
             // text object's texture uninitialized, which is what crashed
@@ -499,7 +442,7 @@ extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, flo
         }
 
         unsigned int def = orig_sub_14081A610(g_currentCardId);
-        static wchar_t buf[16];
+        wchar_t buf[16];
         if (def == 0xFFFF)
             swprintf(buf, 16, L"?");
         else
@@ -664,26 +607,14 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         orig_sub_1408795A0 = (fn_sub_1408795A0)ResolveVA(0x1408795A0);
         orig_sub_14074E7D0 = (fn_sub_14074E7D0)ResolveVA(0x14074E7D0);
 
-        orig_Get_RawDefFromFullCardProps = (fn_Get_RawDefFromFullCardProps)ResolveVA(0x14081A5D0);
         orig_sub_14081A670 = (fn_sub_14081A670)ResolveVA(0x14081A670);
         orig_sub_14081A730 = (fn_sub_14081A730)ResolveVA(0x14081A730);
-        orig_Get_CardTypeFromFullCardPropsByKonamiId = (fn_Get_CardTypeFromFullCardPropsByKonamiId)ResolveVA(YGO::Addr::Card_GetTypeFromFullCardPropsByKonamiId);
-
-        // TODO: fill in the real RVA for Get_SpellTrapCardPropertyFromFullCardProps
-        // (only seen as thunk j_YGO::CARDS::Get_SpellTrapCardPropertyFromFullCardProps
-        // so far — the thunk's own target address in your IDB is what belongs here).
-        // Leaving this at 0 will resolve to GameBase() - kImageBase, which is NOT a
-        // valid function pointer — do not attach/build until this is corrected.
-        orig_Get_SpellTrapCardPropertyFromFullCardProps =
-            (fn_Get_SpellTrapCardPropertyFromFullCardProps)ResolveVA(0x014081A630 /* TODO */);
-
         DetourTransactionBegin();
         DetourUpdateThread(GetCurrentThread());
         DetourAttach(&(PVOID&)orig_sub_140766540, Hook_sub_140766540);
         DetourAttach(&(PVOID&)orig_sub_140877EC0, Hook_sub_140877EC0);
         DetourAttach(&(PVOID&)orig_sub_1408795A0, Hook_sub_1408795A0);
         DetourAttach(&(PVOID&)orig_sub_14074E7D0, Hook_sub_14074E7D0);
-        DetourAttach(&(PVOID&)orig_Get_RawDefFromFullCardProps, Hook_Get_RawDefFromFullCardProps);
         DetourAttach(&(PVOID&)orig_IconId_Attribute, Hook_IconId_Attribute);
         DetourAttach(&(PVOID&)orig_DuelCardView_UpdateLevelBadge, Hook_DuelCardView_UpdateLevelBadge);
         if (kHideLevelBadge != 0)
@@ -692,7 +623,6 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             orig_DuelHand_DrawLevelNumber = (fn_DuelHand_DrawLevelNumber)ResolveVA(0x14078B0B0);
             DetourAttach(&(PVOID&)orig_DuelHand_DrawLevelNumber, Hook_DuelHand_DrawLevelNumber);
         }
-         DetourAttach(&(PVOID&)orig_Get_SpellTrapCardPropertyFromFullCardProps,Hook_Get_SpellTrapCardPropertyFromFullCardProps); // uncomment once RVA above is fixed
         LONG err = DetourTransactionCommit();
         (void)err;
 
