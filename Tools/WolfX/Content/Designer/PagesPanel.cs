@@ -110,8 +110,6 @@ namespace WolfEx.Designer
         {
             if (!Dirty)
                 return true;
-            if (string.IsNullOrWhiteSpace(_canvas.Document.Name))
-                return true;   // an unnamed page is not saved by Save all; the page's own Save asks for a name
             return Save();
         }
 
@@ -407,27 +405,40 @@ namespace WolfEx.Designer
                 return false;
             }
 
+            bool removeOld = _loadedName != null && !string.Equals(_loadedName, document.Name, StringComparison.OrdinalIgnoreCase) &&
+                MessageBox.Show(this, $"The page was renamed. Delete the old file {_loadedName}.json?", "Pages", MessageBoxButtons.YesNo) == DialogResult.Yes;
+            try
+            {
+                SaveDocument(removeOld);
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException or System.Text.Json.JsonException)
+            {
+                SetStatus("Not saved: " + ex.Message);
+                MessageBox.Show(this, "Save failed: " + ex.Message + "\nPending edits are retained.", "Pages", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             var missing = document.Elements.Where(e => WidgetCatalog.Find(e.Kind)?.Support != InGame.Yes).Select(e => e.Id).ToList();
             if (missing.Count > 0 && _warnedMissing.Add(document.Name))
-            {
                 MessageBox.Show(this,
                     $"Saved, but these won't appear in the game yet (only the page header, menu buttons, images and text do): {string.Join(", ", missing)}.\n\n" +
                     "They stay in the file, so they will appear once the game can build them.",
                     "Pages", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            SetStatus($"Saved {document.Name}.json. Open it from a menu button with the action {{\"page\": \"{document.Name}\"}}.");
+            return true;
+        }
 
-            Directory.CreateDirectory(_folder);
+        internal void SaveDocument(bool removeOld)
+        {
+            var document = _canvas.Document;
             string json = document.ToJson();
-            File.WriteAllText(Path.Combine(_folder, document.Name + ".json"), json);
-            if (_loadedName != null && !string.Equals(_loadedName, document.Name, StringComparison.OrdinalIgnoreCase) &&
-                MessageBox.Show(this, $"The page was renamed. Delete the old file {_loadedName}.json?", "Pages", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                File.Delete(Path.Combine(_folder, _loadedName + ".json"));
+            var files = new Dictionary<string, byte[]> { [Path.Combine(_folder, document.Name + ".json")] = ContentSaveBatch.Text(json) };
+            string[] removals = removeOld && _loadedName != null && !string.Equals(_loadedName, document.Name, StringComparison.OrdinalIgnoreCase)
+                ? [Path.Combine(_folder, _loadedName + ".json")] : [];
+            ContentSaveBatch.Write(files, removals);
             _loadedName = document.Name;
             _savedJson = json;
             RefreshPageList(_loadedName);
             UpdateState();
-            SetStatus($"Saved {document.Name}.json. Open it from a menu button with the action {{\"page\": \"{document.Name}\"}}.");
-            return true;
         }
 
         private bool SaveAs()
@@ -443,9 +454,15 @@ namespace WolfEx.Designer
             if (File.Exists(Path.Combine(_folder, name + ".json")) && !string.Equals(name, _loadedName, StringComparison.OrdinalIgnoreCase) &&
                 MessageBox.Show(this, $"{name}.json exists. Replace it?", "Pages", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 return false;
+            string previousName = _canvas.Document.Name;
+            string? previousLoaded = _loadedName;
             _canvas.Document.Name = name;
-            _loadedName = null;   // a new file: nothing to rename
-            return Save();
+            _loadedName = null;   // Save as keeps the old file.
+            if (Save()) return true;
+            _canvas.Document.Name = previousName;
+            _loadedName = previousLoaded;
+            UpdateState();
+            return false;
         }
 
         private void DeletePage()

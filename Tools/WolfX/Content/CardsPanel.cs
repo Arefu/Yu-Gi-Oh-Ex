@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using Wolf.Editors;
@@ -432,6 +432,8 @@ namespace WolfEx
         {
             _folder = extraCardsFolder;
             ArchetypeCatalog.Load(extraCardsFolder);
+            if (ArchetypeCatalog.LoadError is { } archetypeError)
+                MessageBox.Show(archetypeError, "Archetypes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             _cards.Clear();
             _summary.Art = GameFolderFiles.Current is { } files ? new WorkspaceCardArt(files) : null;
 
@@ -485,53 +487,7 @@ namespace WolfEx
 
             try
             {
-                foreach (var card in _cards.Where(card => card.PendingArt != null))
-                {
-                    // The game decodes PNG and JPEG by their header, so the picture is copied as it is.
-                    string extension = Path.GetExtension(card.PendingArt!).ToLowerInvariant();
-                    string name = card.Id + (extension == ".jpeg" ? ".jpg" : extension);
-
-                    foreach (string old in ImageExtensions.Select(ext => Path.Combine(extraCardsFolder, card.Id + ext)))
-                    {
-                        if (File.Exists(old) && !string.Equals(Path.GetFileName(old), name, StringComparison.OrdinalIgnoreCase))
-                            File.Delete(old);
-                    }
-
-                    string target = Path.Combine(extraCardsFolder, name);
-                    if (!string.Equals(Path.GetFullPath(card.PendingArt!), Path.GetFullPath(target), StringComparison.OrdinalIgnoreCase))
-                        File.Copy(card.PendingArt!, target, overwrite: true);
-
-                    card.Image = name;
-                    card.PendingArt = null;
-                }
-
-                // the uncensored picture: <id>_uncensored.<ext>, replaced or removed the same way
-                foreach (var card in _cards.Where(card => card.PendingUncensored != null || card.DropUncensored))
-                {
-                    string? extension = card.PendingUncensored is { } pending ? Path.GetExtension(pending).ToLowerInvariant() : null;
-                    string? name = extension == null ? null : card.Id + "_uncensored" + (extension == ".jpeg" ? ".jpg" : extension);
-                    foreach (string old in ImageExtensions.Select(ext => Path.Combine(extraCardsFolder, card.Id + "_uncensored" + ext)))
-                    {
-                        if (File.Exists(old) && !string.Equals(Path.GetFileName(old), name, StringComparison.OrdinalIgnoreCase))
-                            File.Delete(old);
-                    }
-                    if (name != null)
-                    {
-                        string target = Path.Combine(extraCardsFolder, name);
-                        if (!string.Equals(Path.GetFullPath(card.PendingUncensored!), Path.GetFullPath(target), StringComparison.OrdinalIgnoreCase))
-                            File.Copy(card.PendingUncensored!, target, overwrite: true);
-                    }
-                    card.ImageUncensored = name ?? "";
-                    card.PendingUncensored = null;
-                    card.DropUncensored = false;
-                }
-
-                var array = new JsonArray();
-                foreach (var card in _cards.OrderBy(card => card.Id))
-                    array.Add(WriteCard(card));
-
-                var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
-                File.WriteAllText(Path.Combine(extraCardsFolder, "cards.json"), new JsonObject { ["cards"] = array }.ToJsonString(options) + "\n", new UTF8Encoding(false));
+                SaveFiles(extraCardsFolder);
             }
             catch (Exception ex)
             {
@@ -542,6 +498,48 @@ namespace WolfEx
             if (Selected is { } selected)
                 RefreshArt(selected);
             return true;
+        }
+
+        // The model is updated only after every artwork and JSON change has committed.
+        internal void SaveFiles(string folder)
+        {
+            var files = new Dictionary<string, byte[]>(StringComparer.OrdinalIgnoreCase);
+            var removals = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            var updates = new List<Action>();
+            var array = new JsonArray();
+            string StageArt(int id, string suffix, string? source)
+            {
+                string? extension = source == null ? null : Path.GetExtension(source).ToLowerInvariant();
+                string name = extension == null ? "" : id + suffix + (extension == ".jpeg" ? ".jpg" : extension);
+                foreach (string old in ImageExtensions.Select(ext => Path.Combine(folder, id + suffix + ext)))
+                    if (!string.Equals(Path.GetFileName(old), name, StringComparison.OrdinalIgnoreCase))
+                        removals.Add(old);
+                if (source != null)
+                    files[Path.Combine(folder, name)] = File.ReadAllBytes(source);
+                return name;
+            }
+            foreach (var card in _cards.OrderBy(card => card.Id))
+            {
+                var json = WriteCard(card);
+                if (card.PendingArt != null)
+                {
+                    string name = StageArt(card.Id, "", card.PendingArt);
+                    json["image"] = name;
+                    updates.Add(() => { card.Image = name; card.PendingArt = null; });
+                }
+                if (card.PendingUncensored != null || card.DropUncensored)
+                {
+                    string name = StageArt(card.Id, "_uncensored", card.PendingUncensored);
+                    if (name.Length == 0) json.Remove("imageUncensored");
+                    else json["imageUncensored"] = name;
+                    updates.Add(() => { card.ImageUncensored = name; card.PendingUncensored = null; card.DropUncensored = false; });
+                }
+                array.Add(json);
+            }
+            var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
+            files[Path.Combine(folder, "cards.json")] = ContentSaveBatch.Text(new JsonObject { ["cards"] = array }.ToJsonString(options) + "\n");
+            ContentSaveBatch.Write(files, removals);
+            foreach (var update in updates) update();
         }
 
         // ---------------------------------------------------------------- model <-> UI
