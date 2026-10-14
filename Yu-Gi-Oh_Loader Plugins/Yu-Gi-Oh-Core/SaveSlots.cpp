@@ -227,7 +227,7 @@ SaveSlots::Summary SaveSlots::Read(int slot)
     summary.Exists = true;
     summary.LastPlayed = FileDate(path);
 
-    if (static_cast<size_t>(file.tellg()) != kSaveSize)
+    if (static_cast<size_t>(file.tellg()) < kSaveSize)   // more = plugin data after the blob (Core_GetSaveExtension)
         return summary;
     std::vector<unsigned char> data(kSaveSize);
     file.seekg(0);

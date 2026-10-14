@@ -201,6 +201,8 @@ namespace WolfX
             // Campaign
             Editor("Campaign", "Characters", new CharacterEditor());
             Editor("Campaign", "Decks", new DeckEditor());
+            Editor("Campaign", "Campaign series", new CampaignSeriesEditor());
+            Editor("Campaign", "Arenas", new ArenaEditor());
             Editor("Campaign", "Story editor", new StoryDuelEditor());
             Editor("Campaign", "Tutorials", new TutorialEditor());
 

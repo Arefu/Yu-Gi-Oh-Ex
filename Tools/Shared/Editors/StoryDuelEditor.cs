@@ -42,6 +42,7 @@ namespace Wolf.Editors
         private readonly IdCombo _arena = new(220);
         private readonly IdCombo _rewardPack = new(260);
         private readonly IdCombo _sku = new(220);
+        private readonly ComboBox _tutorial = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 330 };
         private readonly CheckBox _exclude = new() { Text = "Not needed to unlock the opponent's own deck (the game's two crossover duels)", AutoSize = true };
         private readonly DataGridView _texts = new()
         {
@@ -55,7 +56,8 @@ namespace Wolf.Editors
         private static readonly string[] SceneTitles = ["Intro scene", "Win scene", "Lose scene"];
         private readonly ToolStripButton _removeScene;
 
-        private StoryDuelTable? _table, _baseline;
+        private StoryDuelTable? _table, _baseline;   // _baseline / _scriptBaseline: the game's own (not what WolfX added, even once in dueldata)
+        private Dictionary<char, byte[]> _duelDisk = [], _sceneDisk = [];   // dueldata / scriptdata as read, to write only what changed
         private StoryScriptTable? _scripts, _scriptBaseline;
         private CharacterTable? _characters;
         private DeckDataFile? _decks;
@@ -84,7 +86,7 @@ namespace Wolf.Editors
             _removeScene = Button("Remove scene", "Remove the scene on the open tab (the duel then plays without it)", RemoveScene);
             _newDuel = Button("New duel", "Add a duel in the next free id, at the end of the shown series (the game has 226 slots)", () => NewDuel(null));
             _duplicate = Button("Duplicate", "Add a copy of the selected duel in the next free id, at the end of its series", () => NewDuel(Selected()));
-            _deleteDuel = Button("Delete duel...", "Delete a duel you added (New duel / Duplicate), with its scenes. The game's own duels can't be deleted", DeleteDuel);
+            _deleteDuel = Button("Delete duel...", "Delete the duel, with its scenes: one you added, or one of the game's (taken out of dueldata in the Ex patch)", DeleteDuel);
             _tools.Items.AddRange([_save, new ToolStripSeparator(), new ToolStripLabel("Language:")]);
             foreach (char language in StoryDuelTable.AllLanguages)
                 _language.Items.Add(language.ToString());
@@ -99,11 +101,9 @@ namespace Wolf.Editors
             };
             _tools.Items.Add(_language);
             _tools.Items.Add(new ToolStripLabel("Series:"));
-            _filter.Items.Add("All series");
-            _filter.Items.AddRange(StoryDuelTable.SeriesNames);
-            _filter.Items.Add("Changed / new");
-            _filter.SelectedIndex = 0;
+            FillSeriesLists();
             _filter.SelectedIndexChanged += (_, _) => Refill();
+            CampaignSeriesFile.Saved += () => { if (!IsDisposed) BeginInvoke(() => { FillSeriesLists(); Refill(); }); };
             _tools.Items.Add(_filter);
             _tools.Items.Add(new ToolStripLabel("Find:"));
             _find.TextChanged += (_, _) => Refill();
@@ -121,12 +121,11 @@ namespace Wolf.Editors
             {
                 if (e.ItemIndex >= _rows.Count) { e.Item = new ListViewItem(new string[_list.Columns.Count]); return; }   // stale index while the list shrinks
                 var d = _rows[e.ItemIndex];
-                e.Item = new ListViewItem([d.Id.ToString(), StoryDuelTable.SeriesName(d.Series), d.Order.ToString(), d.Title(Language),
+                e.Item = new ListViewItem([d.Id.ToString(), CampaignSeriesFile.NameOf(d.Series, Language), d.Order.ToString(), d.Title(Language),
                     $"{CharacterName(d.Characters[0])} vs {CharacterName(d.Characters[1])}", Note(d)]);
             };
             _list.SelectedIndexChanged += (_, _) => ShowSelected();
 
-            _series.Items.AddRange(StoryDuelTable.SeriesNames.Select((name, i) => $"{i}: {name}").ToArray());
             var grid = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, Padding = new Padding(4) };
             void Row(string label, params Control[] controls)
             {
@@ -138,6 +137,11 @@ namespace Wolf.Editors
             Label Small(string text) => new() { Text = text, AutoSize = true, Margin = new Padding(8, 7, 3, 3) };
             Row("Key (dialog <key>_INTRO / _OUTRO / _OUTRO_LOSE):", _key);
             Row("Series:", _series);
+            _tutorial.Items.Add("The game's rule (order 1 is the series' tutorial)");
+            _tutorial.Items.Add("Never a tutorial");
+            for (int n = 21; n <= 99; n++)
+                _tutorial.Items.Add(n <= 26 ? $"Tutorial {n} (the game's {StoryDuelTable.SeriesNames[n - 21]} tutorial)" : $"Tutorial {n} (new: Tutorials page)");
+            Row("Plays as tutorial:", _tutorial);
             Row($"Order in the series (1-{StoryDuelTable.MaxOrder}):", _order, _orderInfo);
             Row("Player character:", _character[0], _characterInfo[0]);
             Row("Player deck:", _deck[0], _deckInfo[0], Small("costume:"), _costume[0]);
@@ -206,9 +210,39 @@ namespace Wolf.Editors
             _status.Text = "Open the game data (File > Open).";
         }
 
+        // The series the lists offer: the game's 6, then the new ones from the Campaign series page (campaigns.json).
+        private List<int> _seriesChoices = [];
+
+        private void FillSeriesLists()
+        {
+            bool binding = _binding;
+            _binding = true;
+            try
+            {
+                int filter = _filter.SelectedIndex;
+                int? filterSeries = filter >= 1 && filter <= _seriesChoices.Count ? _seriesChoices[filter - 1] : null;
+                bool changedOnly = filter >= 1 && filter == _seriesChoices.Count + 1;
+                _seriesChoices = [.. CampaignSeriesFile.AllSeries()];
+                _filter.Items.Clear();
+                _filter.Items.Add("All series");
+                foreach (int series in _seriesChoices)
+                    _filter.Items.Add(CampaignSeriesFile.NameOf(series) + (series >= StoryDuelTable.SeriesNames.Length ? " (new)" : ""));
+                _filter.Items.Add("Changed / new");
+                _filter.SelectedIndex = changedOnly ? _seriesChoices.Count + 1 : filterSeries is int n && _seriesChoices.IndexOf(n) is int at and >= 0 ? at + 1 : 0;
+                _series.Items.Clear();
+                foreach (int series in _seriesChoices)
+                    _series.Items.Add($"{series + 1}: {CampaignSeriesFile.NameOf(series)}" + (series >= StoryDuelTable.SeriesNames.Length ? " (new)" : ""));
+            }
+            finally { _binding = binding; }
+        }
+
+        private int? FilterSeries => _filter.SelectedIndex >= 1 && _filter.SelectedIndex <= _seriesChoices.Count ? _seriesChoices[_filter.SelectedIndex - 1] : null;
+
         public void Open(GameFolderFiles files)
         {
             _gameFiles = files;
+            try { CampaignSeriesFile.Load(files.ExPath(CampaignSeriesFile.FileName)); } catch { }   // new series' names (Campaign series page)
+            FillSeriesLists();
             if (!Open(language => files.Read(StoryDuelTable.GamePath(language)), language => files.Read(StoryScriptTable.GamePath(language)),
                     language => files.Read(CharacterTable.GamePath(language)), files.Read(@"main\deckdata_E.bin"), files.Describe(StoryDuelTable.GamePath('E')), files))
             {
@@ -237,7 +271,7 @@ namespace Wolf.Editors
         private void SetEditable(bool editable)
         {
             _save.Enabled = _newDuel.Enabled = _duplicate.Enabled = editable;
-            _deleteDuel.Enabled = editable && IsAdded(_shown);
+            _deleteDuel.Enabled = editable && _shown != null;
             _removeScene.Enabled = editable && _scripts != null && _pages.SelectedIndex > 0;
         }
 
@@ -304,6 +338,7 @@ namespace Wolf.Editors
             try
             {
                 _table = StoryDuelTable.Parse(files);
+                _duelDisk = files;
                 var characterFiles = new Dictionary<char, byte[]>();
                 var scriptFiles = new Dictionary<char, byte[]>();
                 foreach (char language in StoryDuelTable.AllLanguages)
@@ -316,9 +351,18 @@ namespace Wolf.Editors
                 if (_decks != null)
                     DeckJson.ApplyTo(_decks, DeckJson.Load(_gameFiles!.ExPath(DeckJson.FileName)), 'E');   // new and changed decks from decks.json
                 _scripts = scriptFiles.Count > 0 ? StoryScriptTable.Parse(scriptFiles) : null;
+                _sceneDisk = scriptFiles;
                 _scriptBaseline = _scripts?.Clone();
                 _baseline = _table.Clone();
-                int fromJson = StoryDuelJson.Apply(StoryDuelJson.Load(JsonPath), _table);
+                // duels and scenes WolfX added are in dueldata / scriptdata too: storyduels.json lists them, so they count as new, not the game's
+                var json = StoryDuelJson.Load(JsonPath);
+                foreach (var id in (json["nativeDuels"] as System.Text.Json.Nodes.JsonArray ?? []).OfType<System.Text.Json.Nodes.JsonValue>())
+                    if (id.TryGetValue(out int nativeId))
+                        _baseline.Duels.RemoveAll(d => d.Id == nativeId);
+                foreach (var name in (json["nativeScenes"] as System.Text.Json.Nodes.JsonArray ?? []).OfType<System.Text.Json.Nodes.JsonValue>())
+                    if (name.TryGetValue(out string? nativeName) && _scriptBaseline != null)
+                        _scriptBaseline.Scripts.RemoveAll(sc => sc.Name.Equals(nativeName, StringComparison.OrdinalIgnoreCase));
+                int fromJson = StoryDuelJson.Apply(json, _table);
                 int scenesFromJson = _scripts != null ? StoryScriptJson.Apply(StoryScriptJson.Load(ScriptJsonPath), _scripts) : 0;
                 foreach (var scene in _scenes)
                     scene.UseFiles(pictures, _characters?.Characters.Select(c => c.Key) ?? [], _characters?.Find(139)?.Name(Language) ?? "");
@@ -361,52 +405,69 @@ namespace Wolf.Editors
             }
             try
             {
+                // What the game's files can hold goes into them (the Ex patch): every duel of series 1-6 (226 ids), changed or new, and every
+                // scene (scriptdata has no limit). Only duels of a NEW series (7+, which the game can't list) go to storyduels.json.
                 var write = new Dictionary<string, byte[]>();
                 var standard = _table.Clone();
-                standard.Duels.RemoveAll(d => _baseline.Find(d.Id) == null);
+                standard.Duels.RemoveAll(d => d.Series >= StoryDuelTable.SeriesNames.Length && _baseline.Find(d.Id) == null);
                 foreach (char language in standard.Languages)
                 {
                     byte[] bytes = standard.ToBytes(language);
-                    if (!bytes.AsSpan().SequenceEqual(_baseline.ToBytes(language)))
+                    if (!_duelDisk.TryGetValue(language, out var old) || !bytes.AsSpan().SequenceEqual(old))
                         write[StoryDuelTable.GamePath(language)] = bytes;
                 }
                 StoryScriptTable? standardScripts = null;
                 if (_scripts != null && _scriptBaseline != null)
                 {
                     standardScripts = _scripts.Clone();
-                    standardScripts.Scripts.RemoveAll(s => _scriptBaseline.Find(s.Name) == null);
                     foreach (char language in standardScripts.Languages)
                     {
                         byte[] bytes = standardScripts.ToBytes(language);
-                        if (!bytes.AsSpan().SequenceEqual(_scriptBaseline.ToBytes(language)))
+                        if (!_sceneDisk.TryGetValue(language, out var old) || !bytes.AsSpan().SequenceEqual(old))
                             write[StoryScriptTable.GamePath(language)] = bytes;
                     }
                 }
                 if (write.Count > 0)
+                {
+                    if (GameFolderFiles.GameRunning)
+                    {
+                        _status.Text = "Close the game first: the story is saved into its files.";
+                        return false;
+                    }
                     _gameFiles.Write(write);
+                    foreach (char language in standard.Languages)
+                        _duelDisk[language] = standard.ToBytes(language);
+                    if (standardScripts != null)
+                        foreach (char language in standardScripts.Languages)
+                            _sceneDisk[language] = standardScripts.ToBytes(language);
+                }
 
                 var root = StoryDuelJson.Diff(standard, _table);
+                // a game duel's tutorial setting has no place in dueldata: it goes to storyduels.json on its own ({ "id", "tutorial" })
+                var listed = ((System.Text.Json.Nodes.JsonArray)root["duels"]!).OfType<System.Text.Json.Nodes.JsonObject>()
+                    .Select(n => n["id"]?.GetValue<int>() ?? 0).ToHashSet();
+                foreach (var d in _table.Duels.Where(d => d.Tutorial != null && standard.Find(d.Id) != null && !listed.Contains(d.Id)))
+                    ((System.Text.Json.Nodes.JsonArray)root["duels"]!).Add(new System.Text.Json.Nodes.JsonObject { ["id"] = d.Id, ["tutorial"] = d.Tutorial });
                 int count = ((System.Text.Json.Nodes.JsonArray)root["duels"]!).Count;
-                if (count > 0)
+                // which duels and scenes in the game's files are WolfX's (so they show as new and are deleted without a warning)
+                var nativeDuels = standard.Duels.Where(d => _baseline.Find(d.Id) == null).Select(d => (System.Text.Json.Nodes.JsonNode?)d.Id).ToArray();
+                var nativeScenes = standardScripts?.Scripts.Where(sc => _scriptBaseline!.Find(sc.Name) == null).Select(sc => (System.Text.Json.Nodes.JsonNode?)sc.Name).ToArray() ?? [];
+                if (nativeDuels.Length > 0)
+                    root["nativeDuels"] = new System.Text.Json.Nodes.JsonArray(nativeDuels);
+                if (nativeScenes.Length > 0)
+                    root["nativeScenes"] = new System.Text.Json.Nodes.JsonArray(nativeScenes);
+                if (count + nativeDuels.Length + nativeScenes.Length > 0)
                     StoryDuelJson.Save(JsonPath, root);
                 else if (File.Exists(JsonPath))
                     File.Delete(JsonPath);
-                int scenes = 0;
-                if (standardScripts != null)
-                {
-                    var sceneRoot = StoryScriptJson.Diff(standardScripts, _scripts!);
-                    scenes = ((System.Text.Json.Nodes.JsonArray)sceneRoot["scripts"]!).Count;
-                    if (scenes > 0)
-                        StoryScriptJson.Save(ScriptJsonPath, sceneRoot);
-                    else if (File.Exists(ScriptJsonPath))
-                        File.Delete(ScriptJsonPath);
-                }
-                _baseline = standard;
-                _scriptBaseline = standardScripts ?? _scriptBaseline;
+                // every scene is in scriptdata now: storyscripts.json (the old place for new scenes) is no longer needed
+                if (standardScripts != null && File.Exists(ScriptJsonPath))
+                    File.Delete(ScriptJsonPath);
                 _changed = false;
                 Refill();
-                _status.Text = (write.Count > 0 ? $"Saved {string.Join(", ", write.Keys.Select(Path.GetFileName))} into {_gameFiles.Describe(StoryDuelTable.GamePath('E'))}" : "The game's story is unchanged") +
-                    (count + scenes > 0 ? $"; {count} new duels and {scenes} new scenes to {_gameFiles.ExFolder} (Yu-Gi-Oh-Campaign applies them)." : ".");
+                int newSeries = _table.Duels.Count(d => standard.Find(d.Id) == null);
+                _status.Text = (write.Count > 0 ? $"Saved {string.Join(", ", write.Keys.Select(Path.GetFileName))} into {_gameFiles.Describe(StoryDuelTable.GamePath('E'))}" : "The story files are unchanged") +
+                    (newSeries > 0 ? $"; {newSeries} duel(s) of new series to {StoryDuelJson.FileName} (Yu-Gi-Oh-Campaign)." : ".");
                 return true;
             }
             catch (Exception ex) when (ex is IOException or InvalidOperationException or UnauthorizedAccessException)
@@ -427,10 +488,12 @@ namespace Wolf.Editors
                 return;
             select ??= Selected()?.Id;
             string find = _find.Text.Trim();
-            int filter = _filter.SelectedIndex;   // 0 all, 1-6 a series, 7 changed/new
+            int filter = _filter.SelectedIndex;   // 0 all, then each series, then changed/new
+            int? series = FilterSeries;
+            bool changedOnly = filter == _seriesChoices.Count + 1;
             _rows = _table.Duels.OrderBy(d => d.Series).ThenBy(d => d.Order).ThenBy(d => d.Id).Where(d =>
-                (filter < 1 || filter > 6 || d.Series == filter - 1) &&
-                (filter != 7 || Note(d).Length > 0) &&
+                (series is not int only || d.Series == only) &&
+                (!changedOnly || Note(d).Length > 0) &&
                 (find.Length == 0 || d.Id.ToString() == find || d.Key.Contains(find, StringComparison.OrdinalIgnoreCase) ||
                  d.Titles.Values.Any(t => t.Contains(find, StringComparison.OrdinalIgnoreCase)) ||
                  d.Characters.Any(c => CharacterName(c).Contains(find, StringComparison.OrdinalIgnoreCase)))).ToList();
@@ -451,7 +514,7 @@ namespace Wolf.Editors
             var d = Selected();
             _shown = d?.Id;
             _editor.Enabled = d != null;
-            _deleteDuel.Enabled = _save.Enabled && IsAdded(_shown);
+            _deleteDuel.Enabled = _save.Enabled && _shown != null;
             if (d == null)
             {
                 _heading.Text = _table == null ? "" : "Pick a story duel.";
@@ -464,8 +527,9 @@ namespace Wolf.Editors
                 bool isNew = _baseline?.Find(d.Id) == null;
                 _heading.Text = $"{d.Title(Language)} ({d.Id}){(isNew ? " - new" : "")}";
                 _key.Text = d.Key;
-                _series.SelectedIndex = Math.Clamp(d.Series, 0, StoryDuelTable.SeriesNames.Length - 1);
+                _series.SelectedIndex = Math.Max(0, _seriesChoices.IndexOf(d.Series));   // a series with no Campaign series entry shows the first
                 _order.Value = Math.Clamp(d.Order, 1, StoryDuelTable.MaxOrder);
+                _tutorial.SelectedIndex = d.Tutorial switch { null => 0, 0 => 1, int n and >= 21 and <= 99 => n - 21 + 2, _ => 0 };
                 for (int side = 0; side < 2; side++)
                 {
                     _character[side].Value = d.Characters[side];
@@ -551,13 +615,12 @@ namespace Wolf.Editors
         {
             if (_table == null || _shown is not int id || _table.Find(id) is not StoryDuel d)
                 return;
-            if (!IsAdded(id))
-            {
-                _status.Text = $"Duel {id} is one of the game's own: only duels you added can be deleted (change or blank this one instead).";
-                return;
-            }
-            if (MessageBox.Show(this, $"Delete duel {id} \"{d.Titles.GetValueOrDefault('E', d.Key)}\" and its scenes?", "Delete duel",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+            string title = d.Titles.GetValueOrDefault('E', d.Key);
+            string question = IsAdded(id)
+                ? $"Delete duel {id} \"{title}\" and its scenes?"
+                : $"Duel {id} \"{title}\" is one of the game's own. Deleting it takes it out of dueldata (the Ex patch; the original stays in YGO_2020.dat), " +
+                  $"with its scenes. {CampaignSeriesFile.NameOf(d.Series)} then has no duel at order {d.Order} (the list skips it; saves keep that order's progress, unused).\n\nDelete it?";
+            if (MessageBox.Show(this, question, "Delete duel", MessageBoxButtons.YesNo, IsAdded(id) ? MessageBoxIcon.Question : MessageBoxIcon.Warning) != DialogResult.Yes)
                 return;
             int row = _rows.IndexOf(d);
             _table.Duels.Remove(d);
@@ -596,8 +659,10 @@ namespace Wolf.Editors
                         scene.Name = newKey + StoryScriptTable.SceneSuffixes[i];
             }
             d.Key = newKey;
-            d.Series = _series.SelectedIndex;
+            if (_series.SelectedIndex >= 0 && _series.SelectedIndex < _seriesChoices.Count)
+                d.Series = _seriesChoices[_series.SelectedIndex];
             d.Order = (int)_order.Value;
+            d.Tutorial = _tutorial.SelectedIndex switch { <= 0 => null, 1 => 0, int i => i - 2 + 21 };
             for (int side = 0; side < 2; side++)
             {
                 d.Characters[side] = _character[side].Value;
@@ -634,7 +699,7 @@ namespace Wolf.Editors
                 _status.Text = $"All {StoryDuelTable.SlotCount - 1} story duel ids are used.";
                 return;
             }
-            int series = copyOf?.Series ?? (_filter.SelectedIndex is >= 1 and <= 6 ? _filter.SelectedIndex - 1 : 0);
+            int series = copyOf?.Series ?? FilterSeries ?? 0;
             var d = copyOf?.Clone() ?? new StoryDuel { Series = series, Sku = 1, RewardPack = -1 };
             d.Id = id;
             d.Order = _table.NextOrder(series);
@@ -669,7 +734,7 @@ namespace Wolf.Editors
             _changed = true;
             _find.Text = "";
             Refill(id);
-            _status.Text = $"Duel {id} added as {StoryDuelTable.SeriesName(series)} #{d.Order}" +
+            _status.Text = $"Duel {id} added as {CampaignSeriesFile.NameOf(series)} #{d.Order}" +
                 (d.Order > StoryDuelTable.MaxOrder ? $" - over the {StoryDuelTable.MaxOrder} the save has room for, pick a free order" : "") +
                 (copyOf == null ? ". It has no scenes yet: the Intro / Win / Lose tabs make them." : ", with copies of its scenes.");
         }

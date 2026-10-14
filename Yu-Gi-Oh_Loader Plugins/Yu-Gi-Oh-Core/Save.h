@@ -27,4 +27,11 @@ namespace Save
     // The music and sound volume are shared by every slot (the rest of the save is not): every save read gets the volume of the last
     // save read or written. ApplySharedVolume puts it into a blob directly (a new profile made in memory).
     void ApplySharedVolume(unsigned char* blob);
+
+    // Core_AddSaveWriteFilter: filters run on a copy of every blob the game writes (see Yu-Gi-Oh-Core.h).
+    void AddWriteFilter(int(__cdecl* filter)(unsigned char*, int, void*), void* user);
+
+    // Core_GetSaveExtension / Core_SetSaveExtension: plugin data after the blob in the save file (see Yu-Gi-Oh-Core.h).
+    int GetExtension(const char* tag, void* out, int size);
+    void SetExtension(const char* tag, const void* data, int size);
 }

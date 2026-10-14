@@ -2,6 +2,8 @@
 #include "Common.h"
 
 #include <Windows.h>
+#include <intrin.h>
+#include <cstring>
 #include <array>
 #include <cstdint>
 #include <deque>
@@ -15,6 +17,7 @@
 
 #include "Detours.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Memory.h"
 #include "Yu-Gi-Oh-Mods.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
@@ -23,31 +26,6 @@ namespace
     using namespace Campaign;
 
     // ---- the game (names and layouts in the IDB) ----
-
-    struct StoryDuelSide
-    {
-        int32_t Character;        // chardata id
-        int32_t Deck;             // deckdata index (the duel uses + 32)
-        const char* Costume;      // portrait "<character key>_<costume>_neutral"; "" = normal
-    };
-
-    struct StoryDuelRecord        // g_StoryDuelRecords entry (0xB0)
-    {
-        int32_t Id;               // 0 = empty slot
-        int32_t Pad4;
-        StoryDuelSide Sides[2];   // [0] player, [1] opponent
-        int32_t Arena;
-        int32_t Sku;              // the loader turns the file's -1 into 1
-        int32_t RewardPack;       // pack unlocked on the first win; the loader turns -1 into 0 (= none)
-        int32_t Pad34;
-        const char* Key;          // dialog scripts <key>_INTRO/_OUTRO/_OUTRO_LOSE (scriptdata)
-        GameWString Title, Description, Tip;
-        int32_t Series;
-        int32_t Order;
-        int32_t ExcludeFromDeckUnlock;
-        int32_t PadAC;
-    };
-    static_assert(sizeof(StoryDuelRecord) == 0xB0, "StoryDuelRecord layout drifted");
 
 #pragma pack(push, 4)
     struct StoryDuelFileRecord    // dueldata record after the loader made the offsets absolute (0x5C)
@@ -91,6 +69,7 @@ namespace
     {
         uint32_t Id = 0;
         std::optional<int> Series, Order, Arena, RewardPack, Sku, ExcludeFromDeckUnlock;
+        std::optional<int> Tutorial;  // "tutorial": the tutorial number this duel plays as (21-99), 0 = none (the game: order 1 only)
         std::optional<std::string> Key;
         std::array<Side, 2> Sides;
         std::map<char, std::wstring> Titles, Descriptions, Tips;
@@ -141,6 +120,7 @@ namespace
                 entry.RewardPack = Int(json, "rewardPack");
                 entry.Sku = Int(json, "sku");
                 entry.ExcludeFromDeckUnlock = Int(json, "excludeFromDeckUnlock");
+                entry.Tutorial = Int(json, "tutorial");
                 entry.Key = Str(json, "key");
                 ReadSide(json, "player", entry.Sides[0]);
                 ReadSide(json, "opponent", entry.Sides[1]);
@@ -161,8 +141,8 @@ namespace
     // Whether the numbers would make the game misbehave (they go straight into its tables).
     std::string Problem(const StoryDuelFileRecord& r)
     {
-        if (r.Series < 0 || r.Series > 5)
-            return "series must be 0-5";
+        if (r.Series < 0 || r.Series > 63)
+            return "series must be 0-63 (6+ = a new series from campaigns.json)";
         if (r.Order < 1 || r.Order > kMaxOrder)
             return std::format("order must be 1-{}", kMaxOrder);
         for (int side = 0; side < 2; ++side)
@@ -247,6 +227,90 @@ namespace
             Logger::WriteLog(std::format("Story duels: {} changed, {} new", changed, added), MODULE_NAME, 0);
     }
 
+    // ---- any duel can be a tutorial ----
+    //
+    // The game: CampaignMenu_Update (0x140860040) makes a campaign duel a tutorial only when it is order 1, not the reverse duel, and the
+    // menu's flag (+5736) is set; the tutorial number is g_CampaignSeriesTutorial[series] (0x140A77E68, 21-26). TutorialStoryDuel_SetupSeats
+    // (0x14081EE80) then seats order 1 of series (number - 21) and adds that tutorial's extra cards (table 0x140A710B0: 2 u16* lists per
+    // tutorial 21-26, 0-ended). Here "tutorial": N on a storyduels.json duel decides instead: N > 0 plays the duel as tutorial N
+    // (Campaign Tutorials.cpp has the new numbers 27-99), 0 = never a tutorial; the seats are the duel's own, with tutorial N's extra
+    // cards when N is one of the game's.
+
+    using SetFlag_t = void(__fastcall*)(int value);
+    using GetInt_t = int(__fastcall*)();
+    using SetupSeats_t = void(__fastcall*)();
+    uintptr_t orig_SetIsTutorialDuel = 0x140769B00;     // YGO::DUEL::Set_IsTutorialDuel
+    uintptr_t orig_SetupTutorialSeats = 0x14081EE80;    // TutorialStoryDuel_SetupSeats
+    const auto SetTutorialDuelIndex = reinterpret_cast<SetFlag_t>(0x140769B20);   // YGO::DUEL::Set_TutorialDuelIndex
+    const auto GetCurrentStoryDuelId = reinterpret_cast<GetInt_t>(0x140768D60);  // Get_CurrentStoryDuelId (set by Set_ArenaIdFromDuel)
+    const auto IsReverseDuel = reinterpret_cast<GetInt_t>(0x1407694C0);          // Campaign_IsReverseDuel
+    constexpr uintptr_t kCampaignMenuUpdate = 0x140860040, kCampaignMenuUpdateEnd = 0x140860040 + 0x5FC;
+    constexpr uintptr_t kTutorialExtraCards = 0x140A710B0;   // const uint16_t* [6][2]
+
+    using SetSide_t = void(__fastcall*)(int side, int value);
+    using SideValue_t = int(__fastcall*)(int side);
+    using DeckFromId_t = void*(__fastcall*)(unsigned int profile, unsigned int deck);
+    using AddCard_t = char(__fastcall*)(void* deck, int section, int16_t card);
+    using Portrait_t = void*(__fastcall*)(void* out, unsigned int duel, unsigned int side);
+    using Extra_t = int64_t*(__fastcall*)(unsigned int duel, unsigned int side);
+    using SetupSeat_t = void(__fastcall*)(int seat, unsigned int character, const wchar_t* name, void* deck, int profile, void* portrait, int64_t* extra);
+    const auto SetSideCharacter = reinterpret_cast<SetSide_t>(0x140769670);   // Duel_Set_DuelSideCharacter
+    const auto SetSideDeck = reinterpret_cast<SetSide_t>(0x140769690);        // Set_DuelSideDeck
+    const auto SideDeck = reinterpret_cast<SideValue_t>(0x140768DA0);          // the side's deck (as set)
+    const auto SideCharacter = reinterpret_cast<SideValue_t>(0x140768D90);     // the side's character (as set)
+    const auto DeckFromId = reinterpret_cast<DeckFromId_t>(0x14081AB40);       // Deck_FromId
+    const auto AddCard = reinterpret_cast<AddCard_t>(0x14076EC30);             // deck: add a card to a section
+    const auto SidePortrait = reinterpret_cast<Portrait_t>(0x140768C70);
+    const auto SideExtra = reinterpret_cast<Extra_t>(0x140768AB0);
+    const auto SetupSeat = reinterpret_cast<SetupSeat_t>(0x14076A7B0);         // Duel_SetupSeat
+
+    std::map<uint32_t, int> g_tutorialByDuel;   // story duel id -> its "tutorial"
+    int g_customTutorial = 0;                    // the tutorial number a storyduels.json duel is playing as now, 0 = none
+
+    void __fastcall Hook_SetIsTutorialDuel(int value)
+    {
+        const auto from = reinterpret_cast<uintptr_t>(_ReturnAddress());
+        g_customTutorial = 0;
+        if (from >= kCampaignMenuUpdate && from < kCampaignMenuUpdateEnd)
+            if (auto it = g_tutorialByDuel.find(static_cast<uint32_t>(GetCurrentStoryDuelId())); it != g_tutorialByDuel.end())
+            {
+                const bool on = it->second > 0 && !IsReverseDuel();
+                reinterpret_cast<SetFlag_t>(orig_SetIsTutorialDuel)(on ? 1 : 0);
+                if (on)
+                {
+                    SetTutorialDuelIndex(it->second);
+                    g_customTutorial = it->second;
+                }
+                return;
+            }
+        reinterpret_cast<SetFlag_t>(orig_SetIsTutorialDuel)(value);
+    }
+
+    // The tutorial's seats: the duel's own (not order 1 of series number - 21), with the game tutorial's extra cards for 21-26.
+    void __fastcall Hook_SetupTutorialSeats()
+    {
+        if (g_customTutorial == 0)
+            return reinterpret_cast<SetupSeats_t>(orig_SetupTutorialSeats)();
+        const unsigned int duel = static_cast<unsigned int>(GetCurrentStoryDuelId());
+        const StoryDuelRecord* record = reinterpret_cast<const StoryDuelRecord*>(kStoryDuelTable) + duel;
+        const auto* extras = g_customTutorial >= 21 && g_customTutorial <= 26
+            ? reinterpret_cast<const uint16_t* const*>(kTutorialExtraCards) + 2 * (g_customTutorial - 21) : nullptr;
+        for (int side = 0; side < 2; ++side)
+        {
+            SetSideCharacter(side, record->Sides[side].Character);
+            SetSideDeck(side, record->Sides[side].Deck + 32);
+            uint8_t deck[256]{};
+            std::memcpy(deck, DeckFromId(0xFFFFFFFD, static_cast<unsigned int>(SideDeck(side))), 252);
+            if (extras && extras[side])
+                for (const uint16_t* card = extras[side]; *card; ++card)
+                    AddCard(deck, 0, static_cast<int16_t>(*card));
+            uint8_t portrait[64]{};
+            void* name = SidePortrait(portrait, duel, side);
+            int64_t* extra = SideExtra(duel, side);
+            SetupSeat(side, static_cast<unsigned int>(SideCharacter(side)), nullptr, deck, -1, name, extra);
+        }
+    }
+
     void __fastcall Hook_LoadStoryDuelData()
     {
         reinterpret_cast<LoadStoryDuelData_t>(orig_LoadStoryDuelData)();
@@ -258,10 +322,31 @@ namespace StoryDuels
 {
     void Attach()
     {
+        // Reverse duels for order 1 (the series' tutorial duel), which the game leaves out in two places:
+        //  - CampaignMenu_Update 0x14086058A: "test ecx, 0xFFFFFFFD" on order + 1 refuses the reverse button for order 1 (and -1 = nothing
+        //    picked); mask 0xFFFFFFFF refuses only -1.
+        //  - DuelResult_GrantRewards 0x14088066B: "cmp dword [rax+0xA4], 1" (the duel's Order) skips unlocking the reverse duel after a win;
+        //    comparing with 0 (no duel has order 0) unlocks it like any other.
+        // The reverse duel is a normal duel: the tutorial only runs when the duel is not the reverse one (the game's rule and ours).
+        const bool menu = YGO::Memory::PatchBytes(0x14086058A, { 0xF7, 0xC1, 0xFD, 0xFF, 0xFF, 0xFF }, { 0xF7, 0xC1, 0xFF, 0xFF, 0xFF, 0xFF },
+            "Reverse duel button for order 1");
+        const bool reward = YGO::Memory::PatchBytes(0x14088066B, { 0x83, 0xB8, 0xA4, 0x00, 0x00, 0x00, 0x01 }, { 0x83, 0xB8, 0xA4, 0x00, 0x00, 0x00, 0x00 },
+            "Reverse duel unlock for order 1");
+        Logger::WriteLog(std::format("Reverse duels for tutorial duels (order 1): {}", menu && reward ? "on" : "not patched"), MODULE_NAME, menu && reward ? 0 : 1);
+
         Load();
         if (g_entries.empty())
             return;
         DetourAttach(&(PVOID&)orig_LoadStoryDuelData, Hook_LoadStoryDuelData);
+        for (const Entry& entry : g_entries)
+            if (entry.Tutorial)
+                g_tutorialByDuel[entry.Id] = *entry.Tutorial;
+        if (!g_tutorialByDuel.empty())
+        {
+            DetourAttach(&(PVOID&)orig_SetIsTutorialDuel, Hook_SetIsTutorialDuel);
+            DetourAttach(&(PVOID&)orig_SetupTutorialSeats, Hook_SetupTutorialSeats);
+            Logger::WriteLog(std::format("Story duels: {} with their own tutorial setting", g_tutorialByDuel.size()), MODULE_NAME, 0);
+        }
     }
 
     void ApplyIfLoaded()

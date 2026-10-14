@@ -80,3 +80,7 @@ Yu-Gi-Oh-Campaign:
 * **"Used by"** in the Decks tab lists every character and story duel that uses the selected deck.
 
 Built, but not yet run in the game. Yu-Gi-Oh-Campaign must be switched on in Config.ini: `[Yu-Gi-Oh-Core]` `Yu-Gi-Oh-Campaign=1`.
+
+## Import / export (WolfX Decks page)
+
+`Tools/Shared/Editors/DeckFiles.cs`. **Import deck...** reads a `.ydk` (YGOPro / EDOPro / Master Duel exports: `#main`, `#extra`, `!side`, one card password per line) or a `.ydc` (the game's format) into a new deck or the selected deck's cards. Passwords become Konami ids through `bin\CARD_Pass.bin` (password per internal id) + `bin\CARD_IntID.bin` (internal -> Konami id), with the custom cards' `"password"` from `cards.json` on top (10,084 passwords in the game). Passwords that match no card are listed and left out; past 60 / 15 / 15 the rest is cut. **Export deck...** writes the selected deck as `.ydk` (a card with no password is written as `0` with a comment) or `.ydc`.

@@ -81,3 +81,9 @@ Packs tab:
 * Save checks for names, ids, card lists and an English title.
 
 Not yet run in the game.
+
+## Art from the sheets (2026-10-11)
+
+* A pack\'s picture is the `wrap_<x>` sprite of `pdui\PackWrappers.dfymoo` (37 in the game). WolfX\'s New packs page lists every `wrap_*` in the sheet as the game reads it (the Ex patch\'s copy included), so a picture added there with **Sprite sheets > Add sprite from PNG...** can be picked; a new pack whose own name has a `wrap_<name>` sprite needs no `"art"`.
+* A shop row\'s banner is the `wrap_series_<key>` sprite of `pdui\SeriesLogo.dfymoo`. `"rows"` `"art"`: 1-6 = a game row\'s banner, a name = a new `wrap_series_<name>` added to that sheet (BetterCardShop selects it).
+* **Sprite sheets > Replace sprite image...** paints a PNG over a sprite (e.g. a game pack's art or a series logo); both save the sheet's .dfymoo and .png into the Ex patch.

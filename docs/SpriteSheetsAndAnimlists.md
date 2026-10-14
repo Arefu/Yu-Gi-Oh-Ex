@@ -60,3 +60,9 @@ Utopia39_Character.cropped, 770, -10, 30
 * **Add picture** adds a layer. A picture from outside the folder is copied in as a `.png` when you save.
 * The dashed box shows where the title logo and menu go for the chosen side (title screens only; arenas have no menu).
 * **Play slides** animates the slide as the game does; stop it to edit at the file's positions.
+
+## What an animlist can do (verified in IDA 2026-10-11)
+
+* `Animlist_Load` (0x140745D30): lines `name, x, y, slide`, at most **10** layers; an optional `side, N` line (title screen); `#` / `;` start a comment.
+* `Animlist_BuildLayers` (0x1407458A0): one picture per layer (`<folder>/<name>`, any case), placed at x, y, in list order (later = in front).
+* `Animlist_UpdateSlide` (0x140746510) is the **only** animation, called by `DuelBackground_Tick` (arenas) and `ScreenTitle::Update`: one shared timer += frame time (wraps at 2 pi, about 6.3 s a cycle), and each layer with `slide` != 0 gets `y = y + slide * cos(timer)`. No x movement, rotation, scale, fading or frames; all layers bob in step.

@@ -63,6 +63,7 @@ namespace
         std::optional<std::string> Key;
         std::map<char, std::wstring> Names, Bios;
         bool Unlocked = true;     // new characters only
+        bool Native = false;      // "native": WolfX wrote it into chardata; only its unlock is ours
         bool IsNew = false;       // decided when applied: the game had no character in the slot
     };
 
@@ -105,6 +106,7 @@ namespace
                 ReadTexts(json, "bio", entry.Bios);
                 if (auto unlocked = json.find("unlocked"); unlocked != json.end() && unlocked->is_boolean())
                     entry.Unlocked = unlocked->get<bool>();
+                entry.Native = json.value("native", false);
                 g_entries.push_back(std::move(entry));
             }
             Logger::WriteLog(std::format("characters.json: {} character(s)", g_entries.size()), MODULE_NAME, 0);
@@ -123,6 +125,14 @@ namespace
         for (Entry& entry : g_entries)
         {
             CharacterRecord* record = Record(entry.Id);
+            if (entry.Native)
+            {
+                // the game loaded it from chardata: only check it is there (for the unlock)
+                entry.IsNew = record->Key && entry.Key && _stricmp(record->Key, entry.Key->c_str()) == 0;
+                if (!entry.IsNew)
+                    Logger::WriteLog(std::format("characters.json: duelist {} should be in chardata but isn't: save it again in WolfX", entry.Id), MODULE_NAME, 2);
+                continue;
+            }
             const bool ours = entry.IsNew && entry.Key && record->Key == entry.Key->c_str();
             if (!record->Key || ours)
             {

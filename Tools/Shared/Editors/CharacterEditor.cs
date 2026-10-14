@@ -39,7 +39,12 @@ namespace Wolf.Editors
         private readonly Panel _editor = new() { Dock = DockStyle.Fill, Enabled = false, AutoScroll = true };
         private readonly ToolStripStatusLabel _status = new() { Spring = true, TextAlign = ContentAlignment.MiddleLeft };
 
-        private CharacterTable? _table, _baseline;
+        // duel rules against a duelist (Yu-Gi-Oh-Ex\duelistrules.json, Yu-Gi-Oh-Campaign DuelistRules.cpp): id -> starting LP
+        private readonly NumericUpDown _ruleLp = new() { Minimum = 0, Maximum = 999999, Increment = 500, Width = 90 };
+        private readonly Dictionary<int, int> _ruleLps = [];
+        private string RulesPath => _gameFiles!.ExPath("duelistrules.json");
+        private CharacterTable? _table, _baseline;   // _baseline: the game's own characters (not the ones WolfX added, even once they are in chardata)
+        private Dictionary<char, byte[]> _onDisk = [];   // chardata as read, to write only what changed
         private readonly Dictionary<int, bool> _unlockedFlags = [];
         private DeckDataFile? _decks;
         private List<Character> _rows = [];
@@ -48,6 +53,31 @@ namespace Wolf.Editors
         private int? _shown;
 
         private static readonly string[] SeriesNames = ["-1: none (unlocked from the start)", "0: Duel Monsters", "1: GX", "2: 5D's", "3: ZEXAL", "4: ARC-V", "5: VRAINS"];
+
+        // the series a duelist can be under: none, the game's 6, then the new series (campaigns.json) - Free Duel lists them under it
+        private readonly List<int> _seriesValues = [];
+
+        private void FillSeries()
+        {
+            bool binding = _binding;
+            _binding = true;
+            try
+            {
+                _seriesValues.Clear();
+                _series.Items.Clear();
+                for (int i = 0; i < SeriesNames.Length; i++)
+                {
+                    _seriesValues.Add(i - 1);
+                    _series.Items.Add(SeriesNames[i]);
+                }
+                foreach (var series in CampaignSeriesFile.Current.Entries)
+                {
+                    _seriesValues.Add(series.Id);
+                    _series.Items.Add($"{series.Id}: {series.Name()} (new series)");
+                }
+            }
+            finally { _binding = binding; }
+        }
 
         private string JsonPath => _gameFiles!.ExPath(CharacterJson.FileName);
 
@@ -81,7 +111,11 @@ namespace Wolf.Editors
             _find.TextChanged += (_, _) => Refill();
             _tools.Items.Add(_find);
             _tools.Items.Add(new ToolStripSeparator());
-            _tools.Items.AddRange([_newCharacter, _duplicate]);
+            _tools.Items.AddRange([_newCharacter, _duplicate,
+                Button("Delete...", "Delete the selected duelist: one you added, or one of the game's (taken out of chardata in the Ex patch)", DeleteCharacter),
+                new ToolStripSeparator(),
+                Button("Menu portrait...", "The duelist's portrait on the menus and Free Duel: sprite <key>_neutral of pdui\\chars (replaced, or added for a new key), saved into the Ex patch", SetMenuPortrait),
+                Button("Story sprite...", "The duelist's story scene picture: pdui\\dialog_chars\\<key>_<mood>.png (neutral, smile, anger, surprise, shy...), saved into the Ex patch", SetStorySprite)]);
 
             _list.Columns.Add("Id", 45);
             _list.Columns.Add("Name", 190);
@@ -97,7 +131,7 @@ namespace Wolf.Editors
             };
             _list.SelectedIndexChanged += (_, _) => ShowSelected();
 
-            _series.Items.AddRange(SeriesNames);
+            FillSeries();
             var grid = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, Padding = new Padding(4) };
             void Row(string label, params Control[] controls)
             {
@@ -112,6 +146,7 @@ namespace Wolf.Editors
             Row("", _selectable);
             Row("Content pack (sku):", _sku);
             Row("Arena:", _arena);
+            Row("Starting LP against them (0 = the game's):", _ruleLp);
             Row("", _unlocked);
             _texts.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Language", ReadOnly = true, FillWeight = 10 });
             _texts.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Name", FillWeight = 25 });
@@ -150,13 +185,41 @@ namespace Wolf.Editors
             Controls.Add(_tools);
             Controls.Add(status);
             Load += (_, _) => split.SplitterDistance = Math.Clamp(split.Width * 38 / 100, 280, 520);
+            LiveTables.Characters = () => _table;
+            VisibleChanged += (_, _) => { if (Visible) RefreshDecks(); };   // decks added on the Decks page since this page was opened
             SetEditable(false);
             _status.Text = "Open the game data (File > Open).";
+        }
+
+        /// <summary>
+        /// Takes the Decks page's current decks (new ones and unsaved changes too) for the deck list and the deck labels, keeping this page's own
+        /// edits. Runs when the page is shown: the page is otherwise only read again after a save, and not at all while it has unsaved changes.
+        /// </summary>
+        private void RefreshDecks()
+        {
+            if (_table == null || LiveTables.Decks?.Invoke() is not { } live || !live.Languages.Any())
+                return;
+            try
+            {
+                _decks = DeckDataFile.Parse(live.ToBytes(live.Languages.Contains('E') ? 'E' : live.Languages.First()));
+            }
+            catch (Exception ex)   // best effort: an unsaved deck the table can't write yet must not break the page
+            {
+                _status.Text = "Couldn't refresh the deck list from the Decks page: " + ex.Message;
+                return;
+            }
+            bool binding = _binding;
+            _binding = true;   // SetItems must not count as an edit
+            try { _deck.SetItems(GameNames.Decks(_decks).Prepend((-1, "none"))); }
+            finally { _binding = binding; }
+            Refill();   // keeps the selected character; shows its deck and the deck's owner again
         }
 
         public void Open(GameFolderFiles files)
         {
             _gameFiles = files;
+            try { CampaignSeriesFile.Load(files.ExPath(CampaignSeriesFile.FileName)); } catch { }
+            FillSeries();
             if (!Open(language => files.Read(CharacterTable.GamePath(language)), files.Read(@"main\deckdata_E.bin"), files.Describe(CharacterTable.GamePath('E'))))
             {
                 _table = _baseline = null;
@@ -217,12 +280,27 @@ namespace Wolf.Editors
             try
             {
                 _table = CharacterTable.Parse(files);
+                _onDisk = files;
                 _decks = deckData != null ? DeckDataFile.Parse(deckData) : null;
                 if (_decks != null)
                     DeckJson.ApplyTo(_decks, DeckJson.Load(Path.Combine(Path.GetDirectoryName(JsonPath)!, DeckJson.FileName)), 'E');   // new and changed decks from decks.json
                 _baseline = _table.Clone();
                 _unlockedFlags.Clear();
-                int fromJson = CharacterJson.Apply(CharacterJson.Load(JsonPath), _table, _unlockedFlags);
+                // characters WolfX added are in chardata too ("native" in characters.json): they are new, not the game's
+                var json = CharacterJson.Load(JsonPath);
+                foreach (var node in (json["characters"] as System.Text.Json.Nodes.JsonArray ?? []).OfType<System.Text.Json.Nodes.JsonObject>())
+                    if (node["native"] is System.Text.Json.Nodes.JsonValue native && native.TryGetValue(out bool isNative) && isNative &&
+                        node["id"] is System.Text.Json.Nodes.JsonValue idNode && idNode.TryGetValue(out int nativeId))
+                    {
+                        _baseline.Characters.RemoveAll(c => c.Id == nativeId);
+                        _unlockedFlags[nativeId] = node["unlocked"] is System.Text.Json.Nodes.JsonValue flag && flag.TryGetValue(out bool on) ? on : true;
+                    }
+                int fromJson = CharacterJson.Apply(json, _table, _unlockedFlags);
+                _ruleLps.Clear();
+                if (File.Exists(RulesPath) && System.Text.Json.Nodes.JsonNode.Parse(File.ReadAllText(RulesPath))?["duelists"] is System.Text.Json.Nodes.JsonArray rules)
+                    foreach (var node in rules.OfType<System.Text.Json.Nodes.JsonObject>())
+                        if (node["id"] is System.Text.Json.Nodes.JsonValue rid && rid.TryGetValue(out int ruleId) && node["lp"] is System.Text.Json.Nodes.JsonValue rlp && rlp.TryGetValue(out int lp) && lp > 0)
+                            _ruleLps[ruleId] = lp;
                 _deck.SetItems(GameNames.Decks(_decks).Prepend((-1, "none")));
                 _sku.SetItems(GameNames.ContentPacks(_gameFiles));
                 _arena.SetItems(GameNames.Arenas(_gameFiles, "none"));
@@ -241,13 +319,15 @@ namespace Wolf.Editors
         }
 
         /// <summary>
-        /// Standard content: the game's characters (with your changes) go back into every language's chardata_*.bin.
-        /// Additional content: new characters go to characters.json; it is deleted when there are none.
+        /// Every character (the game's with your changes, and new ones: the game has 240 slots) goes into every language's chardata_*.bin.
+        /// characters.json lists the new ones ("native") and their unlock flag; it is deleted when there are none.
         /// </summary>
         public bool Save()
         {
             if (_table == null || _baseline == null || _gameFiles == null)
                 return false;
+            _ = _ruleLp.Value;   // a toolbar click keeps the focus in the box: commit what was typed
+            _texts.EndEdit();
             var problems = _table.Characters.Where(c => c.Key.Length == 0 || c.Key.Any(ch => ch > 127)).Select(c => $"Character {c.Id}: the key must be ASCII and not empty.").ToList();
             if (problems.Count > 0)
             {
@@ -256,30 +336,60 @@ namespace Wolf.Editors
             }
             try
             {
+                // Every character fits the game's 240 slots, so all of them - new ones too - go into chardata (the Ex patch). characters.json
+                // only keeps which ones are new ("native": true) and whether each starts unlocked, which Yu-Gi-Oh-Campaign sets in the save.
                 var standard = _table.Clone();
-                standard.Characters.RemoveAll(c => _baseline.Find(c.Id) == null);
                 standard.Characters.Sort((a, b) => a.Id.CompareTo(b.Id));
                 var write = new Dictionary<string, byte[]>();
                 foreach (char language in standard.Languages)
                 {
                     byte[] bytes = standard.ToBytes(language);
-                    if (!bytes.AsSpan().SequenceEqual(_baseline.ToBytes(language)))
+                    if (!_onDisk.TryGetValue(language, out var old) || !bytes.AsSpan().SequenceEqual(old))
                         write[CharacterTable.GamePath(language)] = bytes;
                 }
                 if (write.Count > 0)
+                {
+                    if (GameFolderFiles.GameRunning)
+                    {
+                        _status.Text = "Close the game first: characters are saved into its files.";
+                        return false;
+                    }
                     _gameFiles.Write(write);
+                    foreach (char language in standard.Languages)
+                        _onDisk[language] = standard.ToBytes(language);
+                }
 
-                var root = CharacterJson.Diff(standard, _table, _unlockedFlags);
-                int count = ((System.Text.Json.Nodes.JsonArray)root["characters"]!).Count;
+                var added = new System.Text.Json.Nodes.JsonArray();
+                foreach (var c in standard.Characters.Where(c => _baseline.Find(c.Id) == null))
+                    added.Add(new System.Text.Json.Nodes.JsonObject
+                    {
+                        ["id"] = c.Id, ["key"] = c.Key, ["native"] = true, ["unlocked"] = !_unlockedFlags.TryGetValue(c.Id, out bool u) || u,
+                    });
+                int count = added.Count;
                 if (count > 0)
-                    CharacterJson.Save(JsonPath, root);
+                    CharacterJson.Save(JsonPath, new System.Text.Json.Nodes.JsonObject
+                    {
+                        ["note"] = "New duelists made by WolfX. They are in main/chardata_<lang>.bin (the Ex patch); this file says which are new and whether each starts unlocked (Yu-Gi-Oh-Campaign sets it in the save).",
+                        ["characters"] = added,
+                    });
                 else if (File.Exists(JsonPath))
                     File.Delete(JsonPath);
-                _baseline = standard;
+                foreach (int gone in _ruleLps.Keys.Where(id => _table.Find(id) == null).ToList())
+                    _ruleLps.Remove(gone);
+                if (_ruleLps.Count > 0)
+                {
+                    var rules = new System.Text.Json.Nodes.JsonArray();
+                    foreach (var (id, lp) in _ruleLps.OrderBy(r => r.Key))
+                        rules.Add(new System.Text.Json.Nodes.JsonObject { ["id"] = id, ["lp"] = lp });
+                    File.WriteAllText(RulesPath, new System.Text.Json.Nodes.JsonObject { ["duelists"] = rules }
+                        .ToJsonString(new System.Text.Json.JsonSerializerOptions { WriteIndented = true }) + "\n");
+                }
+                else if (File.Exists(RulesPath))
+                    File.Delete(RulesPath);
                 _changed = false;
                 Refill();
-                _status.Text = (write.Count > 0 ? $"Saved chardata for {write.Count} languages into {_gameFiles.Describe(CharacterTable.GamePath('E'))}" : "The game's characters are unchanged") +
-                    (count > 0 ? $"; {count} new characters to {JsonPath} (Yu-Gi-Oh-Campaign applies it)." : ".");
+                _status.Text = (write.Count > 0 ? $"Saved chardata for {write.Count} languages into {_gameFiles.Describe(CharacterTable.GamePath('E'))}" : "Chardata unchanged") +
+                    (count > 0 ? $"; {count} new duelist(s) are in it, listed in {CharacterJson.FileName} for unlocking (Yu-Gi-Oh-Campaign)." : ".");
                 return true;
             }
             catch (Exception ex) when (ex is IOException or InvalidOperationException or UnauthorizedAccessException)
@@ -290,6 +400,76 @@ namespace Wolf.Editors
         }
 
         // ---- list ----
+
+        // ---- the duelist's art (game files, the Ex patch) ----
+
+        private byte[]? PickPng(string title)
+        {
+            using var dialog = new OpenFileDialog { Title = title, Filter = "PNG picture (*.png)|*.png" };
+            return dialog.ShowDialog(this) == DialogResult.OK ? File.ReadAllBytes(dialog.FileName) : null;
+        }
+
+        private Character? ArtTarget()
+        {
+            if (_gameFiles == null || Selected() is not { } c || c.Key.Trim().Length == 0)
+            {
+                _status.Text = "Pick a duelist with a key first.";
+                return null;
+            }
+            if (GameFolderFiles.GameRunning)
+            {
+                _status.Text = "Close the game first: the art goes into its files.";
+                return null;
+            }
+            return c;
+        }
+
+        private void SetMenuPortrait()
+        {
+            if (ArtTarget() is not { } c || PickPng($"Menu portrait for {c.Name(Language)} ({c.Key}_neutral)") is not { } png)
+                return;
+            try
+            {
+                _status.Text = SheetEdit.SetSprite(_gameFiles!, @"pdui\chars", c.Key + "_neutral", png);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not set the portrait:\n{ex.Message}", "Menu portrait", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SetStorySprite()
+        {
+            if (ArtTarget() is not { } c)
+                return;
+            // the moods the game's own duelists have, and any other name
+            using var form = new Form
+            {
+                Text = "Story sprite", Size = new Size(420, 150), StartPosition = FormStartPosition.CenterParent, FormBorderStyle = FormBorderStyle.FixedDialog,
+                MinimizeBox = false, MaximizeBox = false,
+            };
+            form.Controls.Add(new Label { Text = $"Mood ({c.Key}_<mood>.png in pdui\\dialog_chars):", Location = new Point(12, 12), AutoSize = true });
+            var mood = new ComboBox { Location = new Point(12, 36), Width = 380 };
+            mood.Items.AddRange(["neutral", "smile", "anger", "surprise", "shy", "sad"]);
+            mood.Text = "neutral";
+            var ok = new System.Windows.Forms.Button { Text = "Pick picture...", DialogResult = DialogResult.OK, Location = new Point(292, 72), Width = 100 };
+            form.Controls.AddRange([mood, ok]);
+            form.AcceptButton = ok;
+            if (form.ShowDialog(this) != DialogResult.OK || mood.Text.Trim().Length == 0)
+                return;
+            string path = $@"pdui\dialog_chars\{c.Key}_{mood.Text.Trim()}.png";
+            if (PickPng($"Story sprite for {c.Name(Language)} ({path})") is not { } png)
+                return;
+            try
+            {
+                _gameFiles!.Write(path, png);
+                _status.Text = $"{path} saved into {_gameFiles.Describe(path)}.";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not save the sprite:\n{ex.Message}", "Story sprite", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private Character? Selected() =>
             _list.SelectedIndices.Count > 0 && _list.SelectedIndices[0] < _rows.Count ? _rows[_list.SelectedIndices[0]] : null;
@@ -333,11 +513,12 @@ namespace Wolf.Editors
                 bool isNew = _baseline?.Find(c.Id) == null;
                 _heading.Text = $"{c.Name(Language)} ({c.Id}){(isNew ? " - new" : "")}";
                 _key.Text = c.Key;
-                _series.SelectedIndex = Math.Clamp(c.Series + 1, 0, SeriesNames.Length - 1);
+                _series.SelectedIndex = Math.Max(0, _seriesValues.IndexOf(c.Series));
                 _deck.Value = c.Deck;
                 _selectable.Checked = c.Selectable != 0;
                 _sku.Value = c.Sku;
                 _arena.Value = c.Arena;
+                _ruleLp.Value = Math.Clamp(_ruleLps.GetValueOrDefault(c.Id), 0, 999999);
                 _unlocked.Visible = isNew;
                 _unlocked.Checked = !_unlockedFlags.TryGetValue(c.Id, out bool u) || u;
                 for (int i = 0; i < CharacterTable.AllLanguages.Length; i++)
@@ -372,11 +553,16 @@ namespace Wolf.Editors
             if (_binding || _table == null || _shown is not int id || _table.Find(id) is not Character c)
                 return;
             c.Key = _key.Text.Trim();
-            c.Series = _series.SelectedIndex - 1;
+            if (_series.SelectedIndex >= 0 && _series.SelectedIndex < _seriesValues.Count)
+                c.Series = _seriesValues[_series.SelectedIndex];
             c.Deck = _deck.Value;
             c.Selectable = _selectable.Checked ? 1 : 0;
             c.Sku = _sku.Value;
             c.Arena = _arena.Value;
+            if (_ruleLp.Value > 0)
+                _ruleLps[c.Id] = (int)_ruleLp.Value;
+            else
+                _ruleLps.Remove(c.Id);
             if (_unlocked.Visible)
                 _unlockedFlags[id] = _unlocked.Checked;
             for (int i = 0; i < CharacterTable.AllLanguages.Length; i++)
@@ -390,6 +576,25 @@ namespace Wolf.Editors
             _changed = true;
             ShowDeckInfo(c);
             _list.Invalidate();
+        }
+
+        private void DeleteCharacter()
+        {
+            if (_table == null || Selected() is not { } c)
+                return;
+            bool game = _baseline?.Find(c.Id) != null;
+            var owned = _decks?.Records.Where(d => d.CharacterId == c.Id).Select(d => $"{d.Id}").ToList() ?? [];
+            string question = $"Delete duelist {c.Id} \"{c.Name(Language)}\"?" +
+                (game ? "\n\nIt is one of the game's own: it is taken out of chardata (the Ex patch; the original stays in YGO_2020.dat)." : "") +
+                (owned.Count > 0 ? $"\n\nDecks {string.Join(", ", owned)} name it as their owner; they stay, owned by nobody (set a new owner on Decks)." : "") +
+                "\n\nStory duels that use it (Story editor) will show an empty character until you change them.";
+            if (MessageBox.Show(this, question, "Delete duelist", MessageBoxButtons.YesNo, game ? MessageBoxIcon.Warning : MessageBoxIcon.Question) != DialogResult.Yes)
+                return;
+            _table.Characters.Remove(c);
+            _unlockedFlags.Remove(c.Id);
+            _changed = true;
+            Refill();
+            _status.Text = $"Duelist {c.Id} deleted (saved when you press Save).";
         }
 
         private void NewCharacter(Character? copyOf)

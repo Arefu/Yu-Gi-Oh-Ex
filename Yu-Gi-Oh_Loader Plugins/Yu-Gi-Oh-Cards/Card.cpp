@@ -12,6 +12,7 @@
 
 #include <json.hpp>
 
+#include "MissingArt.h"
 #include "Card.h"
 #include "Detours.h"
 #include "Genres.h"
@@ -1360,6 +1361,15 @@ bool __fastcall Hook_Get_IllustrationData(int64_t a1, uint16_t konamiId, void** 
         }
     }
 
+    // No picture (none set, or the file is missing): the "missing texture" checkerboard built into this DLL (MissingArt.h), so it is
+    // plain to see which cards still need art; Blue-Eyes White Dragon's art only if that copy fails.
+    if (void* copy = GameMalloc(MissingArt::kSize))
+    {
+        std::memcpy(copy, MissingArt::kJpeg, MissingArt::kSize);
+        *buffer = copy;
+        *size = MissingArt::kSize;
+        return true;
+    }
     return reinterpret_cast<Get_IllustrationData_t>(orig_Get_IllustrationData)(a1, kPlaceholderImageId, buffer, size);
 }
 

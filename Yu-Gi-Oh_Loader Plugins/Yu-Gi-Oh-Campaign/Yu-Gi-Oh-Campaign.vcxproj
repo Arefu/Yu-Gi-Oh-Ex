@@ -97,9 +97,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AiDeck.cpp" />
+    <ClCompile Include="Arenas.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Characters.cpp" />
     <ClCompile Include="Decks.cpp" />
+    <ClCompile Include="DuelistRules.cpp" />
+    <ClCompile Include="Series.cpp" />
     <ClCompile Include="StoryDuels.cpp" />
     <ClCompile Include="StoryScripts.cpp" />
     <ClCompile Include="Tutorials.cpp" />
@@ -109,7 +112,10 @@
     <ClInclude Include="Characters.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="AiDeck.h" />
+    <ClInclude Include="Arenas.h" />
     <ClInclude Include="Decks.h" />
+    <ClInclude Include="DuelistRules.h" />
+    <ClInclude Include="Series.h" />
     <ClInclude Include="StoryDuels.h" />
     <ClInclude Include="StoryScripts.h" />
     <ClInclude Include="Tutorials.h" />

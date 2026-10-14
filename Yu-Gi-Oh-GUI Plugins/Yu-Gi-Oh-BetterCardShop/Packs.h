@@ -15,8 +15,11 @@
 // (BoosterShop_BuildPackList), so a new record in a free slot shows up by itself. Buying needs the pack's bit in the save's 128-bit
 // unlock field (player section +0xB80). The picture is the "wrap_<name>" layer (Pack_GetArtName).
 //
-// New packs: "id" 0-127 and not a game pack's (WolfEx picks the next free one; keep it, the save's unlock bit is by id), "series" 0-5 =
-// the shop tab, "art" = an existing pack name whose picture to use, "common"/"rare" must both have cards. Unlock: no "unlockWith" = open
+// New packs: "id" 0-127 and not a game pack's (WolfEx picks the next free one; keep it, the save's unlock bit is by id), "series" = the
+// shop row (tab; 6+ = new rows, no "series" = first new row with room; a row holds as many packs as the game's fullest row,
+// "rows": [{"row": 6, "name": {"E": "TEST"}, "art": 2}] = row 6's name, drawn over game row 2's banner ("art": "<key>" = a new
+// "wrap_series_<key>" banner added to pdui\SeriesLogo; a pack's "art" likewise names any "wrap_<x>" of pdui\PackWrappers); "rowLabel": {"x", "y",
+// "size", "colour"} = where the name goes, screen pixels 1920x1080), "art" = an existing pack name whose picture to use, "common"/"rare" must both have cards. Unlock: no "unlockWith" = open
 // from the start; "unlockWith": "<pack name>" = opens when that pack does; "unlockWith": "never" = stays locked. The bits are set when a
 // shop tab is built and are kept in the save (a game without this plugin ignores them: the slot is empty there).
 namespace Packs

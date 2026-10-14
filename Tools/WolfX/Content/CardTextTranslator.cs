@@ -106,11 +106,10 @@ namespace WolfEx
                 }
                 if (!bullet && PlainChoice.IsMatch(sentence))
                 {
-                    // "(Once per turn:) Activate 1 of these effects;": the choice is read as its first bullet (one effect of a kind is kept below).
+                    // "(Once per turn:) Activate 1 of these effects;": each bullet becomes an effect of its own; the player picks one when it is activated.
                     bulletsAllowed = true;
                     if (sentence.Contains("once per turn", StringComparison.OrdinalIgnoreCase))
                         allOnce = true;
-                    looser.Add($"only the first choice of \"{Short(sentence)}\"");
                     continue;
                 }
                 var context = new Context(isMonster, kind, icon, ownArchetypes, cardIdByName, archetypeCodes);
@@ -124,15 +123,9 @@ namespace WolfEx
                     LastReasons.Add(_why ?? "unknown");
                     continue;
                 }
-                // The game asks a card for its effects table by table (and per event), so one effect of each kind is all a card can show; a
-                // second one of the same kind would never be found (Yu-Gi-Oh-Effects RouteByRow, docs/EffectSystem.md section 37).
-                if (!kinds.Add(context.EffectKind))
-                {
-                    notRun.Add(sentence);
-                    LastReasons.Add("same kind: " + context.EffectKind);
-                    looser.Add($"a second {context.EffectKind} effect is not run ({Short(sentence)})");
-                    continue;
-                }
+                // Several effects of the same kind (two ignition effects, two for the same event, the bullets of "activate 1 of these effects")
+                // are all kept: Yu-Gi-Oh-Effects offers the card once and asks which one, as the game's own cards do (docs/EffectSystem.md section 45).
+                kinds.Add(context.EffectKind);
                 looser.AddRange(context.Looser.Select(l => $"{l} ({Short(sentence)})"));
                 bodies.Add((script, context.OncePerTurn));
             }
@@ -373,6 +366,58 @@ namespace WolfEx
             (Rx("(?:If|When) this card is (?:Synchro|Xyz|Link|Fusion|Ritual|Pendulum|Tribute) Summoned(?: .*)?"), "special_summoned", "Synchro / Xyz / Link / Fusion / Ritual / Tribute Summon read as any Special Summon"),
         };
 
+        // "If this card is Special Summoned from the GY by a card effect" / "If this card is Xyz Summoned" / "If this card is Tribute Summoned":
+        // the summon trigger with its conditions (EffectScript summonConditions, docs/EffectSystem.md section 46). null = not wholly understood.
+        private static readonly Regex SummonedAs = new("^(?:If|When) this card is (Normal|Special|Fusion|Synchro|Xyz|Ritual|Link|Pendulum|Tribute) Summoned(.*)$", Opt);
+        private static readonly Regex SummonFrom = new("^ from (?:your |the |a |your opponent's )?(hand|Deck|GY|Graveyard|Extra Deck|banishment|banished cards|Main Deck)(?: or (?:your |the )?(hand|Deck|GY|Graveyard|Extra Deck))?", Opt);
+        private static readonly Regex SummonBy = new("^ (?:by|with) (?:a card effect|card effects?|an effect|the effect of a \"([^\"]+)\" (?:card|monster)|a \"([^\"]+)\" card's effect|a Spell Card(?: effect)?|a Trap Card(?: effect)?|a Spell effect|a Trap effect|a monster effect|the effect of a monster|its own effect)", Opt);
+
+        private static string? SummonHead(string head)
+        {
+            var m = SummonedAs.Match(head);
+            if (!m.Success)
+                return null;
+            string how = m.Groups[1].Value.ToLowerInvariant();
+            string trigger = how is "normal" or "tribute" ? "normal_summoned" : "special_summoned";
+            var parts = new List<string>();
+            if (how is "fusion" or "synchro" or "xyz" or "ritual" or "link" or "pendulum")
+                parts.Add(how);
+            else if (how == "tribute")
+                parts.Add("tribute");
+            string rest = m.Groups[2].Value;
+            while (rest.Length > 0)
+            {
+                if (SummonFrom.Match(rest) is { Success: true } from)
+                {
+                    foreach (Group g in from.Groups.Values.Skip(1).Where(g => g.Success))
+                        parts.Add("from " + g.Value.ToLowerInvariant() switch
+                        {
+                            "hand" => "hand",
+                            "deck" or "main deck" => "deck",
+                            "extra deck" => "extra",
+                            "gy" or "graveyard" => "grave",
+                            _ => "banished",
+                        });
+                    rest = rest[from.Length..];
+                }
+                else if (SummonBy.Match(rest) is { Success: true } by)
+                {
+                    string text = by.Value.ToLowerInvariant();
+                    string? archetype = by.Groups[1].Success ? by.Groups[1].Value : by.Groups[2].Success ? by.Groups[2].Value : null;
+                    parts.Add(archetype != null ? $"by \"{archetype}\""
+                        : text.Contains("spell") ? "by spell" : text.Contains("trap") ? "by trap" : text.Contains("monster") ? "by monster"
+                        : text.Contains("its own") ? "by own" : "by effect");
+                    rest = rest[by.Length..];
+                }
+                else
+                    return null;   // more than the conditions know ("while you control ...", "in Defense Position" ...): left to the loose reading
+            }
+            // An archetype the catalog does not know would not compile: leave such a card to the loose reading.
+            if (parts.FirstOrDefault(p => p.StartsWith("by \"")) is { } named && ArchetypeCatalog.CodeOf(named[4..^1]) == 0)
+                return null;
+            return parts.Count == 0 ? trigger : $"{trigger}({string.Join(", ", parts)})";
+        }
+
         private static bool Head(string head, Context cx, out string? trigger, out string? require)
         {
             trigger = null;
@@ -384,6 +429,11 @@ namespace WolfEx
                     trigger = t;
                     return true;
                 }
+            if (SummonHead(head) is { } summon)
+            {
+                trigger = summon;
+                return true;
+            }
             foreach (var (rx, t, note) in LooseTriggers)
                 if (rx.IsMatch(head))
                 {

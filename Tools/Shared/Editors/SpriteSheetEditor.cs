@@ -51,6 +51,9 @@ namespace Wolf.Editors
             _tools.Items.Add(Button("Duplicate", "Ctrl+D", () => _canvas.DuplicateSelected()));
             _tools.Items.Add(Button("Delete", "Del", () => _canvas.DeleteSelected()));
             _tools.Items.Add(new ToolStripSeparator());
+            _tools.Items.Add(Button("Replace sprite image...", "Paint a PNG into the selected sprite's place (stretched to it): e.g. a new logo_classic or wrap_1_1", ReplaceSpriteImage));
+            _tools.Items.Add(Button("Add sprite from PNG...", "Grow the sheet and add a PNG as a new named sprite: e.g. logo_mynew (a new campaign series logo) or wrap_mypack (a new pack's art)", AddSpriteFromPng));
+            _tools.Items.Add(new ToolStripSeparator());
             _tools.Items.Add(new ToolStripLabel("Grid:"));
             foreach (int size in new[] { 1, 2, 4, 8, 16, 32, 64 })
                 _grid.Items.Add(size == 1 ? "px" : size.ToString());
@@ -402,6 +405,110 @@ namespace Wolf.Editors
         }
 
         // ---- editing ----
+
+        // ---- whole pictures in and out of the sheet ----
+
+        private byte[]? PickPng(string title)
+        {
+            using var dialog = new OpenFileDialog { Title = title, Filter = "PNG picture (*.png)|*.png" };
+            return dialog.ShowDialog(this) == DialogResult.OK ? File.ReadAllBytes(dialog.FileName) : null;
+        }
+
+        // The sheet picture changed: it is saved as the sheet's new .png (game sheets go into the Ex patch with their .dfymoo).
+        private void TakeNewPicture(Bitmap picture, string status)
+        {
+            using var stream = new MemoryStream();
+            picture.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+            _newPng = stream.ToArray();
+            var old = _canvas.Image;
+            var sheet = _canvas.Sheet;
+            string? selected = _canvas.Selected?.Name;
+            _canvas.SetSheet(sheet, Imaging.Decode(_newPng));
+            old?.Dispose();
+            _savedText = "";   // a new picture is a change even with the same sprite list
+            FillList();
+            if (sheet.Sprites.FirstOrDefault(sp => sp.Name == selected) is { } again)
+                _canvas.ShowSprite(again);
+            ShowSelected();
+            SetStatus(status + " Save puts the sheet and its picture back.");
+        }
+
+        private void ReplaceSpriteImage()
+        {
+            if (_canvas.Image == null || _canvas.Selected is not { } sprite)
+            {
+                SetStatus("Pick the sprite to replace first.");
+                return;
+            }
+            if (PickPng($"A picture for {sprite.Name} ({sprite.Width} x {sprite.Height})") is not { } png || Imaging.Decode(png) is not { } picture)
+                return;
+            using (picture)
+            {
+                var sheetPicture = new Bitmap(_canvas.Image);
+                using (var g = Graphics.FromImage(sheetPicture))
+                {
+                    g.CompositingMode = System.Drawing.Drawing2D.CompositingMode.SourceCopy;   // the old pixels go, transparency included
+                    g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                    g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.HighQuality;
+                    g.DrawImage(picture, new Rectangle(sprite.X, sprite.Y, sprite.Width, sprite.Height));
+                }
+                TakeNewPicture(sheetPicture, $"{sprite.Name} replaced ({picture.Width} x {picture.Height} stretched to {sprite.Width} x {sprite.Height}).");
+            }
+        }
+
+        private void AddSpriteFromPng()
+        {
+            if (_canvas.Image == null)
+            {
+                SetStatus("Open a sheet first.");
+                return;
+            }
+            if (PickPng("A picture for the new sprite") is not { } png || Imaging.Decode(png) is not { } picture)
+                return;
+            using (picture)
+            {
+                string name = AskName(picture.Width, picture.Height);
+                if (name.Length == 0)
+                    return;
+                if (_canvas.Sheet.Sprites.Any(sp => sp.Name.Equals(name, StringComparison.OrdinalIgnoreCase)))
+                {
+                    SetStatus($"The sheet already has {name}: pick it and use Replace sprite image.");
+                    return;
+                }
+                // under everything there is, 2 px apart, in a picture as wide as the widest of the two
+                var old = _canvas.Image;
+                int top = old.Height + 2;
+                var sheetPicture = new Bitmap(Math.Max(old.Width, picture.Width), top + picture.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                using (var g = Graphics.FromImage(sheetPicture))
+                {
+                    g.CompositingMode = System.Drawing.Drawing2D.CompositingMode.SourceCopy;
+                    g.DrawImage(old, 0, 0, old.Width, old.Height);
+                    g.DrawImage(picture, 0, top, picture.Width, picture.Height);
+                }
+                var sheet = _canvas.Sheet;
+                sheet.Width = sheetPicture.Width;
+                sheet.Height = sheetPicture.Height;
+                var sprite = new DfymooSprite { Name = name, X = 0, Y = top, Width = picture.Width, Height = picture.Height, FullWidth = picture.Width, FullHeight = picture.Height };
+                sheet.Sprites.Add(sprite);
+                TakeNewPicture(sheetPicture, $"{name} added ({picture.Width} x {picture.Height}); the sheet is now {sheetPicture.Width} x {sheetPicture.Height}.");
+                _canvas.ShowSprite(sprite);
+            }
+        }
+
+        private string AskName(int width, int height)
+        {
+            using var form = new Form
+            {
+                Text = "New sprite", Size = new Size(460, 160), StartPosition = FormStartPosition.CenterParent, FormBorderStyle = FormBorderStyle.FixedDialog,
+                MinimizeBox = false, MaximizeBox = false,
+            };
+            form.Controls.Add(new Label { Text = $"Name ({width} x {height}): logo_<key> = a series logo, wrap_<pack> = a pack's art", Location = new Point(12, 12), AutoSize = true });
+            var box = new TextBox { Location = new Point(12, 36), Width = 420 };
+            var ok = new System.Windows.Forms.Button { Text = "OK", DialogResult = DialogResult.OK, Location = new Point(357, 76) };
+            form.Controls.AddRange([box, ok]);
+            form.AcceptButton = ok;
+            return form.ShowDialog(this) == DialogResult.OK ? box.Text.Trim() : "";
+        }
 
         private void FindSprites()
         {

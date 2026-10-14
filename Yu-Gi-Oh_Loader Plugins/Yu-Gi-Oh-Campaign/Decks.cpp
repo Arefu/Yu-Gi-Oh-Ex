@@ -84,6 +84,7 @@ namespace
         std::vector<uint16_t> Main, Extra, Side;
         bool Unlocked = false;    // new decks only
         bool IsNew = false;       // decided when applied: the game had no deck in the slot
+        bool Native = false;      // "native": WolfX wrote it into deckdata; only its unlock (and custom cards) are ours
     };
 
     std::deque<Entry> g_entries;  // deque: records point at FileName strings
@@ -146,6 +147,7 @@ namespace
                 }
                 if (auto unlocked = json.find("unlocked"); unlocked != json.end() && unlocked->is_boolean())
                     entry.Unlocked = unlocked->get<bool>();
+                entry.Native = json.value("native", false);
                 g_entries.push_back(std::move(entry));
             }
             Logger::WriteLog(std::format("decks.json: {} deck(s)", g_entries.size()), MODULE_NAME, 0);
@@ -164,6 +166,14 @@ namespace
         for (Entry& entry : g_entries)
         {
             DeckRecord* record = Record(entry.Id);
+            if (entry.Native)
+            {
+                // the game loaded it from deckdata: it only needs its unlock (and its cards, ApplyCards)
+                entry.IsNew = record->FileName != nullptr;
+                if (!entry.IsNew)
+                    Logger::WriteLog(std::format("decks.json: deck {} should be in deckdata but isn't: save it again in WolfX", entry.Id), MODULE_NAME, 2);
+                continue;
+            }
             const bool ours = entry.IsNew && entry.FileName && record->FileName == entry.FileName->c_str();
             if (!record->FileName || ours)
             {

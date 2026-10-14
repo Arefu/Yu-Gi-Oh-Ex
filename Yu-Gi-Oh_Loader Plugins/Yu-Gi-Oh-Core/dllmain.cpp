@@ -38,6 +38,12 @@ extern "C"
 
     CORE_API void __cdecl Core_AddCredits(const char* Heading, const char* Lines) { Credits::Add(Heading ? Heading : "", Lines ? Lines : ""); }
 
+    CORE_API void __cdecl Core_AddSaveWriteFilter(CoreSaveWriteFilter Filter, void* User) { Save::AddWriteFilter(Filter, User); }
+
+    CORE_API int __cdecl Core_GetSaveExtension(const char* Tag, void* Out, int Size) { return Save::GetExtension(Tag, Out, Size); }
+
+    CORE_API void __cdecl Core_SetSaveExtension(const char* Tag, const void* Data, int Size) { Save::SetExtension(Tag, Data, Size); }
+
     CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size)
     {
         const std::u8string name = Save::CurrentSavePath().filename().u8string();

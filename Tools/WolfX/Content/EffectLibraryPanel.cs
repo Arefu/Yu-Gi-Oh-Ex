@@ -190,6 +190,21 @@ namespace WolfEx
                 }
             }
 
+            // the continuous locks (Jinzo, Spell Canceller, Skill Drain ...): named in the game's code, not its tables, so not in effect_reference.json
+            foreach (var lockCard in LockCatalog.Cards)
+            {
+                var entry = _all.FirstOrDefault(e => e.Id == lockCard.Id);
+                if (entry == null)
+                    _all.Add(entry = new Entry { Id = lockCard.Id, Name = lockCard.Name, Kind = "", Origin = Origin.Game });
+                if (entry.GameScript.Length > 0)
+                    continue;   // the tables already describe it
+                entry.Script = entry.GameScript = lockCard.Script;
+                entry.Complete = lockCard.Complete;
+                entry.Action = "lock";
+                if (lockCard.Note.Length > 0)
+                    entry.Notes = [.. entry.Notes, lockCard.Note];
+            }
+
             // yours: edits of game entries (by id) and your own entries
             try
             {

@@ -89,6 +89,11 @@ if (RIX::Load())   // finds the module the loader already loaded
 | `RIX_GetMainMenuButton(id, out)` / `...Count` / `...IdAt` | read back |
 | `RIX_PressMainMenuItem(item)` | presses one of the game's 13 buttons (main menu open) |
 | `RIX_IsMainMenuOpen`, `RIX_GetCurrentScreenId`, `RIX_GotoScreen(id)` | screens |
+| `RIX_AddImage(screen, sheet, sprite, z, x, y, w, h)` | one sprite of a .dfymoo sheet on any game screen (1920 x 1080 UI pixels, top-left anchored); `w`/`h` 0 = own size, **negative = flipped that way in the same box** (an up arrow from `pdui/doShared` `arrow_1`). Returns a handle for `RIX_RemoveNode` |
+| `RIX_AddText(screen, text, z, x, y, w, size, align, colour)` | text in the game's UI font |
+| `RIX_RemoveNode(handle)` | takes an image or text off its screen (do it before the screen goes) |
+
+Images: only sprites listed in a `.dfymoo` sheet load (`pdui/doShared`: `arrow_1` (down arrow), `arrow_2` (its hover look), `avatarbox`, `optionbox`, `menuheader`, `characterframe_large`, `statsbar_vertical`, `lock`, ...). Loose PNGs such as `pdui\shared\scrollbar_blue_track.png` are not found, and passing a PNG path as the sheet **crashes** the game's layer loader (`YuGiOh.exe+0x747A98`). The pointer position the game's own hit tests use is two ints at 0x142924070 (window pixels, which match UI pixels in a 1920 x 1080 window). Used by Yu-Gi-Oh-Campaign `Series.cpp` for the campaign series list's up / down arrows (docs/CampaignSeries.md).
 
 Rules: buttons added at start-up appear the first time the menu is built; buttons added later appear the next time the game builds the
 menu (a restart always works); label / description / page changes and removals apply on the next main menu frame. Callbacks run on the

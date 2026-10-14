@@ -669,13 +669,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         orig_sub_14081A730 = (fn_sub_14081A730)ResolveVA(0x14081A730);
         orig_Get_CardTypeFromFullCardPropsByKonamiId = (fn_Get_CardTypeFromFullCardPropsByKonamiId)ResolveVA(YGO::Addr::Card_GetTypeFromFullCardPropsByKonamiId);
 
-        // TODO: fill in the real RVA for Get_SpellTrapCardPropertyFromFullCardProps
-        // (only seen as thunk j_YGO::CARDS::Get_SpellTrapCardPropertyFromFullCardProps
-        // so far — the thunk's own target address in your IDB is what belongs here).
-        // Leaving this at 0 will resolve to GameBase() - kImageBase, which is NOT a
-        // valid function pointer — do not attach/build until this is corrected.
+        // Get_SpellTrapCardPropertyFromFullCardProps = 0x14081A630: reads FULL_CARD_PROPS +0x58 (the Spell/Trap property, filled by
+        // Setup_FullCardProps from Get_SpellTrapCardProperty; its neighbours read +0x5C Type and +0x60 star count). Verified
+        // 2026-10-11 by disassembling the exe.
         orig_Get_SpellTrapCardPropertyFromFullCardProps =
-            (fn_Get_SpellTrapCardPropertyFromFullCardProps)ResolveVA(0x014081A630 /* TODO */);
+            (fn_Get_SpellTrapCardPropertyFromFullCardProps)ResolveVA(0x14081A630);
 
         DetourTransactionBegin();
         DetourUpdateThread(GetCurrentThread());
@@ -692,7 +690,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             orig_DuelHand_DrawLevelNumber = (fn_DuelHand_DrawLevelNumber)ResolveVA(0x14078B0B0);
             DetourAttach(&(PVOID&)orig_DuelHand_DrawLevelNumber, Hook_DuelHand_DrawLevelNumber);
         }
-         DetourAttach(&(PVOID&)orig_Get_SpellTrapCardPropertyFromFullCardProps,Hook_Get_SpellTrapCardPropertyFromFullCardProps); // uncomment once RVA above is fixed
+         DetourAttach(&(PVOID&)orig_Get_SpellTrapCardPropertyFromFullCardProps,Hook_Get_SpellTrapCardPropertyFromFullCardProps); // address verified 2026-10-11
         LONG err = DetourTransactionCommit();
         (void)err;
 

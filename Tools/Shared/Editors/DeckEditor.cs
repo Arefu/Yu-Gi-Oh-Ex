@@ -48,6 +48,7 @@ namespace Wolf.Editors
 
         private DeckDataTable? _table, _baseline;
         private readonly Dictionary<uint, bool> _unlockedFlags = [];
+        private Dictionary<char, byte[]> _deckDisk = [];   // deckdata as read, to write only what changed
         private CharacterTable? _characters;
         private StoryDuelTable? _duels;
         private ZibArchive? _zib;
@@ -93,7 +94,11 @@ namespace Wolf.Editors
             _find.TextChanged += (_, _) => Refill();
             _tools.Items.Add(_find);
             _tools.Items.Add(new ToolStripSeparator());
-            _tools.Items.AddRange([_newDeck, _duplicate]);
+            _tools.Items.AddRange([_newDeck, _duplicate,
+                Button("Delete...", "Delete the selected deck: one you added, or one of the game's (taken out of deckdata in the Ex patch)", DeleteDeck),
+                new ToolStripSeparator(),
+                Button("Import deck...", "A .ydk (YGOPro / EDOPro / Master Duel export, by card password) or a .ydc (the game's format): into a new deck, or the selected deck's cards", ImportDeck),
+                Button("Export deck...", "The selected deck's cards as a .ydk (passwords) or .ydc", ExportDeck)]);
 
             _list.Columns.Add("Id", 45);
             _list.Columns.Add("Title", 200);
@@ -168,8 +173,27 @@ namespace Wolf.Editors
             Controls.Add(_tools);
             Controls.Add(status);
             Load += (_, _) => split.SplitterDistance = Math.Clamp(split.Width * 34 / 100, 280, 480);
+            LiveTables.Decks = () => _table;
+            VisibleChanged += (_, _) => { if (Visible) RefreshCharacters(); };   // characters added on the Characters page since this page was opened
             SetEditable(false);
             _status.Text = "Open the game data (File > Open).";
+        }
+
+        /// <summary>
+        /// Takes the Characters page's current characters (new ones and unsaved changes too) for the owner list, the owner names and "Used by",
+        /// keeping this page's own edits. Runs when the page is shown: the page is otherwise only read again after a save, and not at all while
+        /// it has unsaved changes.
+        /// </summary>
+        private void RefreshCharacters()
+        {
+            if (_table == null || LiveTables.Characters?.Invoke() is not { } live)
+                return;
+            _characters = live;
+            bool binding = _binding;
+            _binding = true;   // SetItems must not count as an edit
+            try { _owner.SetItems(GameNames.Characters(_characters, Language)); }
+            finally { _binding = binding; }
+            Refill();   // keeps the selected deck; shows its owner and "Used by" again
         }
 
         public void Open(GameFolderFiles files)
@@ -251,6 +275,7 @@ namespace Wolf.Editors
             try
             {
                 _table = DeckDataTable.Parse(deckFiles);
+                _deckDisk = deckFiles;
                 _zib = zib != null ? ZibArchive.Parse(zib) : null;
                 int withCards = 0;
                 if (_zib != null)
@@ -265,7 +290,16 @@ namespace Wolf.Editors
                 _duels = duelFiles.Count > 0 ? StoryDuelTable.Parse(duelFiles) : null;
                 _baseline = _table.Clone();
                 _unlockedFlags.Clear();
-                int fromJson = DeckJson.Apply(DeckJson.Load(JsonPath), _table, _unlockedFlags);
+                // decks WolfX added are in deckdata too ("native" in decks.json): they are new, not the game's
+                var json = DeckJson.Load(JsonPath);
+                foreach (var node in (json["decks"] as System.Text.Json.Nodes.JsonArray ?? []).OfType<System.Text.Json.Nodes.JsonObject>())
+                    if (node["native"] is System.Text.Json.Nodes.JsonValue native && native.TryGetValue(out bool isNative) && isNative &&
+                        node["id"] is System.Text.Json.Nodes.JsonValue idNode && idNode.TryGetValue(out int nativeId))
+                    {
+                        _baseline.Decks.RemoveAll(d => d.Id == (uint)nativeId);
+                        _unlockedFlags[(uint)nativeId] = node["unlocked"] is System.Text.Json.Nodes.JsonValue flag && flag.TryGetValue(out bool on) && on;
+                    }
+                int fromJson = DeckJson.Apply(json, _table, _unlockedFlags);
                 // the other content's JSON, for "Used by"
                 if (_characters != null) CharacterJson.Apply(CharacterJson.Load(_gameFiles!.ExPath(CharacterJson.FileName)), _characters);
                 if (_duels != null) StoryDuelJson.Apply(StoryDuelJson.Load(_gameFiles!.ExPath(StoryDuelJson.FileName)), _duels);
@@ -305,16 +339,30 @@ namespace Wolf.Editors
             }
             try
             {
+                // Every deck fits the game's 700 slots, so all of them - new ones too - go into deckdata and decks.zib (the Ex patch). A deck
+                // with custom cards keeps only the game's cards in its .ydc (the game checks them while it loads, before custom cards exist):
+                // its whole list goes to decks.json, which Yu-Gi-Oh-Campaign applies once cards are in.
+                static bool HasCustom(Deck d) => d.Cards != null && d.Cards.AllCards.Any(card => !GameContent.IsGameCard(card));
                 var standard = _table.Clone();
-                standard.Decks.RemoveAll(d => _baseline.Find(d.Id) == null);
-                foreach (var d in standard.Decks.Where(d => d.Cards != null && d.Cards.AllCards.Any(card => !GameContent.IsGameCard(card))))
-                    d.Cards = _baseline.Find(d.Id)!.Cards;
+                foreach (var d in standard.Decks.Where(HasCustom))
+                {
+                    if (_baseline.Find(d.Id) is { } game)
+                        d.Cards = game.Cards;
+                    else
+                    {
+                        var gameOnly = new YdcDeck { Header = d.Cards!.Header };
+                        gameOnly.Main.AddRange(d.Cards.Main.Where(card => GameContent.IsGameCard(card)));
+                        gameOnly.Extra.AddRange(d.Cards.Extra.Where(card => GameContent.IsGameCard(card)));
+                        gameOnly.Side.AddRange(d.Cards.Side.Where(card => GameContent.IsGameCard(card)));
+                        d.Cards = gameOnly;
+                    }
+                }
 
                 var write = new Dictionary<string, byte[]>();
                 foreach (char language in standard.Languages)
                 {
                     byte[] bytes = standard.ToBytes(language);
-                    if (!bytes.AsSpan().SequenceEqual(_baseline.ToBytes(language)))
+                    if (!_deckDisk.TryGetValue(language, out var old) || !bytes.AsSpan().SequenceEqual(old))
                         write[DeckDataTable.GamePath(language)] = bytes;
                 }
                 int ydcs = 0;
@@ -325,6 +373,8 @@ namespace Wolf.Editors
                         var game = _baseline.Find(d.Id);
                         if (game != null && game.SameCards(d) && game.FileName == d.FileName)
                             continue;
+                        if (_zib.Find(d.FileName + ".ydc") is { } existing && existing.Data.AsSpan().SequenceEqual(d.Cards!.ToBytes()))
+                            continue;
                         string name = _zib.Entries.FirstOrDefault(e => e.Name.Equals(d.FileName + ".ydc", StringComparison.OrdinalIgnoreCase))?.Name ?? d.FileName + ".ydc";
                         _zib.Set(name, d.Cards!.ToBytes());
                         ydcs++;
@@ -333,15 +383,42 @@ namespace Wolf.Editors
                         write["decks.zib"] = _zib.ToBytes();
                 }
                 if (write.Count > 0)
+                {
+                    if (GameFolderFiles.GameRunning)
+                    {
+                        _status.Text = "Close the game first: decks are saved into its files.";
+                        return false;
+                    }
                     _gameFiles.Write(write);
+                    foreach (char language in standard.Languages)
+                        _deckDisk[language] = standard.ToBytes(language);
+                }
 
-                var root = DeckJson.Diff(standard, _table, _unlockedFlags);
-                int count = ((System.Text.Json.Nodes.JsonArray)root["decks"]!).Count;
+                // decks.json: the new decks (marked "native": they are in deckdata; their unlock flag, and their cards when custom) and the
+                // game decks whose cards include custom ones
+                var array = new System.Text.Json.Nodes.JsonArray();
+                foreach (var d in _table.Decks.OrderBy(d => d.Id))
+                {
+                    var game = _baseline.Find(d.Id);
+                    if (game == null)
+                    {
+                        var node = DeckJson.ToJson(d, withCards: HasCustom(d), _unlockedFlags.TryGetValue(d.Id, out bool u) && u);
+                        node["native"] = true;
+                        array.Add(node);
+                    }
+                    else if (HasCustom(d) && !game.SameCards(d))
+                        array.Add(DeckJson.ToJson(d, withCards: true, null));
+                }
+                int count = array.Count;
                 if (count > 0)
-                    DeckJson.Save(JsonPath, root);
+                    DeckJson.Save(JsonPath, new System.Text.Json.Nodes.JsonObject
+                    {
+                        ["note"] = "Decks made or changed by WolfX. All of them are in main/deckdata_<lang>.bin and decks.zib (the Ex patch); \"native\" = a new deck " +
+                            "(Yu-Gi-Oh-Campaign sets \"unlocked\" in the save). \"cards\" (Konami ids) = a list with custom cards, which the .ydc can't hold.",
+                        ["decks"] = array,
+                    });
                 else if (File.Exists(JsonPath))
                     File.Delete(JsonPath);
-                _baseline = standard;
                 _changed = false;
                 Refill();
                 _status.Text = (write.Count > 0 ? $"Saved {string.Join(", ", write.Keys.Select(Path.GetFileName))} into {_gameFiles.Describe(DeckDataTable.GamePath('E'))}" : "The game's decks are unchanged") +
@@ -495,6 +572,109 @@ namespace Wolf.Editors
             _changed = true;
             ShowInfo(d);
             _list.Invalidate();
+        }
+
+        private void DeleteDeck()
+        {
+            if (_table == null || Selected() is not { } d)
+                return;
+            bool game = _baseline?.Find(d.Id) != null;
+            var users = new List<string>();
+            if (_characters != null)
+                users.AddRange(_characters.Characters.Where(c => c.Deck == (int)d.Id).Select(c => $"duelist {c.Id} ({c.Name(Language)})"));
+            if (_duels != null)
+                users.AddRange(_duels.Duels.Where(sd => sd.Decks.Contains((int)d.Id)).Select(sd => $"story duel {sd.Id}"));
+            string question = $"Delete deck {d.Id} \"{d.Title(Language)}\"?" +
+                (game ? "\n\nIt is one of the game's own: it is taken out of deckdata (the Ex patch; the original stays in YGO_2020.dat)." : "") +
+                (users.Count > 0 ? $"\n\nStill used by: {string.Join(", ", users.Take(10))}{(users.Count > 10 ? "..." : "")}. Give them another deck (Characters / Story editor), or they will have none." : "");
+            if (MessageBox.Show(this, question, "Delete deck", MessageBoxButtons.YesNo, game || users.Count > 0 ? MessageBoxIcon.Warning : MessageBoxIcon.Question) != DialogResult.Yes)
+                return;
+            _table.Decks.Remove(d);
+            _changed = true;
+            Refill();
+            _status.Text = $"Deck {d.Id} deleted (saved when you press Save).";
+        }
+
+        private void ImportDeck()
+        {
+            if (_table == null || _gameFiles == null)
+                return;
+            using var dialog = new OpenFileDialog { Title = "Import a deck", Filter = "Deck files (*.ydk;*.ydc)|*.ydk;*.ydc|All files (*.*)|*.*" };
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+                return;
+            DeckFiles.Imported cards;
+            try
+            {
+                cards = DeckFiles.Read(dialog.FileName, _gameFiles);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not read the deck:\n{ex.Message}", "Import deck", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // into a new deck, or the picked deck's cards
+            var target = Selected();
+            if (target != null)
+            {
+                var answer = MessageBox.Show($"Make a new deck from {Path.GetFileName(dialog.FileName)}?\n\nYes: a new deck.\nNo: replace the cards of \"{target.Title(Language)}\" ({target.Id}).",
+                    "Import deck", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (answer == DialogResult.Cancel)
+                    return;
+                if (answer == DialogResult.Yes)
+                    target = null;
+            }
+            if (target == null)
+            {
+                NewDeck(null);
+                target = Selected();
+                if (target == null)
+                    return;
+                target.Titles['E'] = Path.GetFileNameWithoutExtension(dialog.FileName);
+            }
+            target.Cards ??= new YdcDeck();
+            target.Cards.Main.Clear();
+            target.Cards.Main.AddRange(cards.Main.Take(DeckDataTable.MaxMain));
+            target.Cards.Extra.Clear();
+            target.Cards.Extra.AddRange(cards.Extra.Take(DeckDataTable.MaxExtra));
+            target.Cards.Side.Clear();
+            target.Cards.Side.AddRange(cards.Side.Take(DeckDataTable.MaxSide));
+            _changed = true;
+            Refill(target.Id);
+
+            var notes = new List<string>();
+            if (cards.Main.Count > DeckDataTable.MaxMain || cards.Extra.Count > DeckDataTable.MaxExtra || cards.Side.Count > DeckDataTable.MaxSide)
+                notes.Add($"the game holds {DeckDataTable.MaxMain} / {DeckDataTable.MaxExtra} / {DeckDataTable.MaxSide}: the rest was left out");
+            if (cards.Unknown.Count > 0)
+                notes.Add($"{cards.Unknown.Count} password(s) match no card: {string.Join(", ", cards.Unknown.Distinct().Take(8))}{(cards.Unknown.Distinct().Count() > 8 ? "..." : "")}");
+            _status.Text = $"Imported {cards.Main.Count} / {cards.Extra.Count} / {cards.Side.Count} cards into deck {target.Id}" +
+                (notes.Count > 0 ? " - " + string.Join("; ", notes) : ". Save to keep it.");
+        }
+
+        private void ExportDeck()
+        {
+            if (_gameFiles == null || Selected() is not { } d || d.Cards == null)
+            {
+                _status.Text = "Pick a deck with cards to export.";
+                return;
+            }
+            string name = string.Concat(d.Title(Language).Split(Path.GetInvalidFileNameChars()));
+            using var dialog = new SaveFileDialog
+            {
+                Title = "Export the deck", FileName = name.Length > 0 ? name : d.FileName, DefaultExt = "ydk",
+                Filter = "YGOPro deck (*.ydk)|*.ydk|Game deck (*.ydc)|*.ydc",
+            };
+            if (dialog.ShowDialog(this) != DialogResult.OK)
+                return;
+            try
+            {
+                DeckFiles.Write(dialog.FileName, d.Cards, _gameFiles, d.Title(Language));
+                _status.Text = $"Exported to {dialog.FileName}.";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Could not write the deck:\n{ex.Message}", "Export deck", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void NewDeck(Deck? copyOf)

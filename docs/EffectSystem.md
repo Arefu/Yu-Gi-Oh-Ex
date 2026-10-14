@@ -718,3 +718,32 @@ is face-up in its zone and not exempt.
 
 **WolfX:** a "Lock" block category, and a **Lock...** button on the Effects page. The button's dialog has presets (Jinzo, Spell Canceller,
 Skill Drain) and writes the script line. For a game card that keeps its own effect, the lock goes into effects.json as `"lock"` instead.
+
+## 45. Several effects of the same kind: the player chooses (2026-10-11)
+
+**How the game does it.** Cards such as Rainbow Dragon (7171, two ignition effects) or Cyber Raider (4760) have several CONSECUTIVE rows with the same id in one table. `Effect_GetRowIndexForRecord` (0x1400DE070, called by `Get_EffectTableEntryForCard`) picks the row: for the 237 ids of `EffectChoice_IdList` (0x140AF6A70) it is record word19 (+0x26) - 1 (word20/21 for 14940/15132/14755); `EffectRowByEvent_List` {id, event} picks row 1 when word3 is the event; `EffectRowByZone_List` {id, zone} by word2; then a per-id ladder. The rows of such a card share slot 2 `Slot2_EffectChoice_AnyAvailable` (0x1400FB8D0) and slot 3 `Slot3_EffectChoice_SelectThenCost` (0x1401FCB00):
+* `EffectChoice_GetAvailableMask` (0x1401FA890): bit n = effect n can be used now (`EffectChoice_ConditionTable` 0x140B24E00 {id, cond1..3}, run with word19 = n+1, plus per-id ladders).
+* slot 3, stage counter at 0x14349B580+754: 0 -> mask; a single option is auto-picked for some ids, else `EffectChoice_ShowPrompt` (0x14005F630, text 259) lists `EffectChoice_GetCount` (0x1401FA6D0: 2 unless listed) options labelled by `EffectChoice_GetLabel` (0x1401FA760: `EffectChoice_LabelTable`, default id + (n << 14)); returns 0 (call again). 1 -> the answer (DuelState +0x3802, 0-based) -> word19 = answer + 1. 2 and on -> the chosen effect's cost (`EffectChoice_CostTable` 0x140B223D0).
+* Once per turn per effect: class 5 (key 1001) and class 6 (key 1002) are two independent limits (section 20); some cards key 1001 by the effect number.
+
+**Custom cards (Yu-Gi-Oh-Effects EffectClone.cpp).** When more than one part answers a lookup (`Candidates`: the parts whose source has a row, narrowed to the ones whose trigger fits the event), the lookup returns a select row (`ChoiceRow`): the first candidate's row with no limit class, slot 1 empty, slot 2 `ChoiceSlot2` (any effect usable: `ComputeChoiceMask` runs the full `Check_CanActivate_Driver` with each effect chosen in turn - limit class, condition, targets), slot 3 `ChoiceSlot3` (one usable effect -> chosen; else the game's prompt with the mask, `Hook_ChoiceCount` answering the number of effects; the next call reads the answer) and then the chosen effect's own slot 3 (cost). The choice is kept by the plugin per (custom id, card instance word11) in `g_Choices`, not in word19 (a borrowed source's machines may use that word), and dropped when the chosen effect's slot 0 finishes. After the choice every lookup (`RouteByRow`, ladders, slots) means the chosen effect. The second once-per-turn effect of a card gets limit class 6. Built 2026-10-11, untested.
+
+**Open:** the prompt's option labels are the game's default (custom id + (n << 14)), not checked in a duel - if they show nothing useful, hook `EffectChoice_GetLabel`. A choice cancelled before it resolves keeps the card on that effect until it resolves once. "Once per turn: activate 1 of these effects" gives each bullet its own limit (the second gets key 1002), so both can be used in one turn.
+
+**WolfX:** `CardTextTranslator` no longer drops a second effect of the same kind, and keeps every bullet of "activate 1 of these effects".
+
+## 46. Summon conditions: how the card was summoned (2026-10-11)
+
+**The summon event record** (0x14349C560, the one `Eval_EventTriggersCardEffect_ByCardId` reads; decoded from its per-card checks and the cards they belong to):
+| offset | meaning | evidence |
+|---|---|---|
+| +0x0A (u16) | zone the monster came from: 13 hand, 14 Extra Deck, 15 Deck, 16 GY, 17 banished, 7-11 Spell & Trap Zones | Gilasaurus / Archfiend Commander test 13; Molten Zombie, Felgrand, Tengu 16; Esper Girl, Mental Seeker 17; Impcantations 15; Nebula / Cosmo Neos 14; Vision HEROs 7-11 |
+| +0x10 (u16) flags | bit 0 = Summoned properly as its kind (Fusion / Synchro / Xyz / Ritual / Link Summon); 0x40 = Pendulum Summoned | Neo Galaxy-Eyes, Five-Headed Link Dragon, Saffira (bit 0); Aether, D/D/D Supreme King Kaiser, Magician of Hope (0x40) |
+| +0x12 (u16) | id of the card whose effect Special Summoned it (0 = not by an effect); compared with the card itself ("by its own effect": the Aesir), archetypes, Spell (`Check_LinkIsSpellEffect`) | |
+| +0x30 (u16) | number of Tributes of a Tribute Summon (event 7) | Moisture Creature / Gilford / Barbaros (>= 3); the Monarchs list needs it non-zero |
+
+**Runtime (EffectClone.cpp).** `"summonCondition": { "from": [zones], "by": "effect" | "not_effect" | "own" | "spell" | "trap" | "monster" | {"card": id} | {"archetype": code}, "proper": true, "pendulum": true, "tributes": N }` on an effect (or part). `Hook_EventEvaluator`, for events 7 and 9, picks the first summon effect whose trigger fits the event and whose condition the record meets (`SummonMatches`); when the card has conditions and none is met, the evaluator does not run for it (no offer). "own": the record holds the id the clone's effect ran under (a part's source / action card) or the card's own id. Spell / Trap = card type 13 / 14; monster = `Kind_IsMonster`; archetype = `Is_CardInNamedArchetype`. The source the compiler borrows for the trigger must fire on every summon of that kind (Sacred Crane, Genex Blastfan ...), the condition narrows it.
+
+**Language:** `on special_summoned(from grave, by effect): ...`, `on normal_summoned(tribute 2): ...`, `on special_summoned(xyz): ...`, `on special_summoned(by "Dark World", from hand): ...`, `pendulum`, `by own`. Only with normal_summoned / special_summoned / summoned / normal_or_special_summoned. Blocks: the Effect block's "if summoned: from / by / as" row. `CardTextTranslator` reads "If this card is Special Summoned from the GY by a card effect", "If this card is Xyz / Pendulum / Tribute Summoned" ... exactly (it used to read them as any Special Summon).
+
+**Built 2026-10-11, untested in a duel.** Open: a choice between two summon effects (section 45) does not look at the conditions. Next family: the leave-the-field conditions (the move ref already carries from-zone, from-field, by-battle, section 29).

@@ -27,6 +27,16 @@ const TRIGGERS = [
   ['you choose to use it (ignition, once per turn)', 'ignition'],
 ];
 
+// How the card must have been summoned (summon triggers only): on special_summoned(from grave, by effect, xyz):
+const SUMMON_TRIGGERS = ['normal_summoned', 'special_summoned', 'summoned', 'normal_or_special_summoned'];
+const SUMMON_FROM = [['anywhere', 'ANY'], ['your hand', 'hand'], ['your Deck', 'deck'], ['the Extra Deck', 'extra'], ['the GY', 'grave'],
+  ['banishment', 'banished'], ['a Spell & Trap Zone', 'spelltrap']];
+const SUMMON_BY = [['any way', 'ANY'], ['a card effect', 'effect'], ['not a card effect', 'not_effect'], ['its own effect', 'own'],
+  ['a Spell effect', 'spell'], ['a Trap effect', 'trap'], ['a monster effect', 'monster']];
+const SUMMON_HOW = [['any summon', 'ANY'], ['Fusion Summon', 'fusion'], ['Synchro Summon', 'synchro'], ['Xyz Summon', 'xyz'],
+  ['Ritual Summon', 'ritual'], ['Link Summon', 'link'], ['Pendulum Summon', 'pendulum'], ['Tribute Summon', 'tribute'],
+  ['Tribute Summon (2+ Tributes)', 'tribute 2'], ['Tribute Summon (3 Tributes)', 'tribute 3']];
+
 const SIDE = [['(default)', 'DEFAULT'], ['you control', 'own'], ['your opponent controls', 'opponent'], ['on either side', 'any']];
 
 // text: what the block says, %NAME = one of its fields / inputs. args: the script's arguments in order.
@@ -100,7 +110,14 @@ const RACES = ['Dragon', 'Zombie', 'Fiend', 'Pyro', 'SeaSerpent', 'Rock', 'Machi
 const ATTRIBUTES = ['Light', 'Dark', 'Water', 'Fire', 'Earth', 'Wind', 'Divine'];
 const spaced = (name) => name.replace(/([a-z])([A-Z])/g, '$1 $2');
 
-const COLOUR = { effect: 210, when: 290, cost: 20, action: 120, cards: 45, as: 330 };
+const COLOUR = { effect: 210, when: 290, cost: 20, action: 120, cards: 45, as: 330, lock: 0 };
+
+// lock(...): what it locks (checkboxes), who, and where this card has to be (EffectScript lockStatement).
+const LOCK_WHAT = [['TRAP', 'trap', 'Trap Cards'], ['SPELL', 'spell', 'Spell Cards'], ['MONSTER', 'monster', 'monster effects'],
+  ['CTRAP', 'continuous_trap', 'Continuous Traps'], ['CSPELL', 'continuous_spell', 'Continuous Spells'], ['FSPELL', 'field_spell', 'Field Spells'],
+  ['ESPELL', 'equip_spell', 'Equip Spells']];
+const LOCK_WHO = [['both players', 'both'], ['the opponent', 'opponent'], ['its controller', 'own']];
+const LOCK_WHERE = [['a Monster Zone', 'monster_zone'], ['a Spell/Trap Zone', 'spelltrap_zone'], ['any zone', 'any_zone']];
 
 // ---------------------------------------------------------------- blocks
 
@@ -127,12 +144,14 @@ function defineBlocks() {
     type: 'ys_effect',
     message0: 'Effect %1', args0: [{ type: 'field_input', name: 'NAME', text: '' }],
     message1: 'when %1', args1: [{ type: 'field_dropdown', name: 'TRIGGER', options: TRIGGERS }],
-    message2: 'only if %1', args2: [{ type: 'input_value', name: 'REQ', check: 'Req' }],
-    message3: 'cost %1', args3: [{ type: 'input_value', name: 'COST', check: 'Cost' }],
-    message4: 'do %1', args4: [{ type: 'input_statement', name: 'DO', check: 'Action' }],
-    message5: 'only once per turn %1', args5: [{ type: 'field_checkbox', name: 'ONCE', checked: false }],
+    message2: 'if summoned: from %1 by %2 as %3', args2: [{ type: 'field_dropdown', name: 'FROM', options: SUMMON_FROM },
+      { type: 'field_dropdown', name: 'BY', options: SUMMON_BY }, { type: 'field_dropdown', name: 'HOW', options: SUMMON_HOW }],
+    message3: 'only if %1', args3: [{ type: 'input_value', name: 'REQ', check: 'Req' }],
+    message4: 'cost %1', args4: [{ type: 'input_value', name: 'COST', check: 'Cost' }],
+    message5: 'do %1', args5: [{ type: 'input_statement', name: 'DO', check: 'Action' }],
+    message6: 'only once per turn %1', args6: [{ type: 'field_checkbox', name: 'ONCE', checked: false }],
     previousStatement: 'Effect', nextStatement: 'Effect', colour: COLOUR.effect,
-    tooltip: 'One effect of the card. The name is optional. Put actions in "do"; they run one after another (then). Stack more effects underneath for a card with several.',
+    tooltip: 'One effect of the card. The name is optional. Put actions in "do"; they run one after another (then). Stack more effects underneath for a card with several. "if summoned" narrows a summon trigger: where the card came from, what summoned it and how (ignored for other triggers).',
   });
   defs.push({
     type: 'ys_as',
@@ -140,6 +159,19 @@ function defineBlocks() {
     message1: 'with its own ATK %1 DEF %2 (optional)', args1: [{ type: 'field_input', name: 'ATK', text: '' }, { type: 'field_input', name: 'DEF', text: '' }],
     colour: COLOUR.as,
     tooltip: 'The whole effect of a game card (its name or Konami id). In a duel the card plays as that card, so everything the game knows about it applies.',
+  });
+  defs.push({
+    type: 'ys_lock',
+    message0: 'Lock: these cannot be activated, and are negated on the field', args0: [],
+    message1: 'Traps %1 Spells %2 monster effects %3', args1: [
+      { type: 'field_checkbox', name: 'TRAP', checked: true }, { type: 'field_checkbox', name: 'SPELL', checked: false }, { type: 'field_checkbox', name: 'MONSTER', checked: false }],
+    message2: 'only these: Continuous Traps %1 Continuous Spells %2 Field Spells %3 Equip Spells %4', args2: [
+      { type: 'field_checkbox', name: 'CTRAP', checked: false }, { type: 'field_checkbox', name: 'CSPELL', checked: false },
+      { type: 'field_checkbox', name: 'FSPELL', checked: false }, { type: 'field_checkbox', name: 'ESPELL', checked: false }],
+    message3: 'of %1 while this card is face-up in %2', args3: [
+      { type: 'field_dropdown', name: 'WHO', options: LOCK_WHO }, { type: 'field_dropdown', name: 'WHERE', options: LOCK_WHERE }],
+    colour: COLOUR.lock,
+    tooltip: 'While this card is face-up in the chosen zone and its effects are not negated, the ticked cards cannot be activated and their effects on the field are negated. It sits beside the card\'s effects (Script: lock(...);).',
   });
   defs.push({ type: 'ys_req_no_monsters', message0: 'you control no monsters', output: 'Req', colour: COLOUR.when });
   defs.push({ type: 'ys_req_controls', message0: 'you control %1', args0: [{ type: 'input_value', name: 'SEL', check: 'Selector' }], output: 'Req', colour: COLOUR.when });
@@ -183,6 +215,7 @@ function toolbox() {
     kind: 'categoryToolbox',
     contents: [
       { kind: 'category', name: 'Effect', colour: COLOUR.effect, contents: [block('ys_effect'), block('ys_as')] },
+      { kind: 'category', name: 'Lock', colour: COLOUR.lock, contents: [block('ys_lock')] },
       { kind: 'category', name: 'Only if', colour: COLOUR.when, contents: [block('ys_req_no_monsters'), withSelector('ys_req_controls', 'monster')] },
       { kind: 'category', name: 'Cost', colour: COLOUR.cost, contents: [...COSTS.map((c) => block('ys_cost_' + c.word)), block('ys_cost_self')] },
       {
@@ -258,7 +291,7 @@ function effectBody(block) {
   if (actions.length === 0) return '';   // nothing to do yet: not written
   let text = '';
   const trigger = block.getFieldValue('TRIGGER');
-  if (trigger !== 'NONE') text += 'on ' + trigger + ': ';
+  if (trigger !== 'NONE') text += 'on ' + trigger + summonConditionsText(block, trigger) + ': ';
   const req = reqText(block.getInputTargetBlock('REQ'));
   if (req) text += 'if ' + req + ': ';
   const cost = costText(block.getInputTargetBlock('COST'));
@@ -268,8 +301,32 @@ function effectBody(block) {
   return text;
 }
 
+function summonConditionsText(block, trigger) {
+  if (!SUMMON_TRIGGERS.includes(trigger)) return '';
+  const parts = [];
+  if (block.getFieldValue('FROM') !== 'ANY') parts.push('from ' + block.getFieldValue('FROM'));
+  if (block.getFieldValue('BY') !== 'ANY') parts.push('by ' + block.getFieldValue('BY'));
+  if (block.getFieldValue('HOW') !== 'ANY') parts.push(block.getFieldValue('HOW'));
+  return parts.length ? '(' + parts.join(', ') + ')' : '';
+}
+
+function lockText(block) {
+  const words = LOCK_WHAT.filter(([field]) => block.getFieldValue(field) === 'TRUE').map(([, word]) => word);
+  if (words.length === 0) return '';
+  if (block.getFieldValue('WHO') !== 'both') words.push(block.getFieldValue('WHO'));
+  if (block.getFieldValue('WHERE') !== 'monster_zone') words.push(block.getFieldValue('WHERE'));
+  return 'lock(' + words.join(', ') + ');';
+}
+
 function generate(workspace) {
   const tops = workspace.getTopBlocks(true);
+  const lockBlock = tops.find((b) => b.type === 'ys_lock');
+  const lock = lockBlock ? lockText(lockBlock) : '';
+  const body = generateEffects(tops);
+  return [lock, body].filter((s) => s).join('\n');
+}
+
+function generateEffects(tops) {
   const as = tops.find((b) => b.type === 'ys_as');
   if (as) {
     const card = String(as.getFieldValue('CARD') || '').trim();
@@ -359,6 +416,21 @@ function actionState(actionNode) {
   return state;
 }
 
+function summonConditionsState(conditions) {
+  const fields = {};
+  for (const c of conditions.c.filter((n) => isNode(n) && n.r === 'summonCondition')) {
+    const w = text(c).split(' ').filter((x) => x.length);
+    const set = (field, value, options) => {
+      if (fields[field] !== undefined || !options.some((o) => o[1] === value)) throw new Unsupported('no block for the summon condition ' + w.join(' ') + ' yet');
+      fields[field] = value;
+    };
+    if (w[0] === 'from') set('FROM', w[1], SUMMON_FROM);
+    else if (w[0] === 'by') set('BY', w[1], SUMMON_BY);
+    else set('HOW', w.join(' '), SUMMON_HOW);
+  }
+  return fields;
+}
+
 function effectState(body, name) {
   const state = { type: 'ys_effect', fields: { NAME: name || '', TRIGGER: 'NONE', ONCE: !!rule(body, 'limit') }, inputs: {} };
   const trigger = rule(body, 'trigger');
@@ -366,6 +438,8 @@ function effectState(body, name) {
     const t = text(rule(trigger, 'triggerName'));
     if (!TRIGGERS.some((o) => o[1] === t)) throw new Unsupported('no block for the trigger ' + t + ' yet');
     state.fields.TRIGGER = t;
+    const conditions = rule(trigger, 'summonConditions');
+    if (conditions) Object.assign(state.fields, summonConditionsState(conditions));
   }
   const req = rule(body, 'requireClause');
   if (req) {
@@ -387,7 +461,27 @@ function effectState(body, name) {
   return state;
 }
 
+function lockState(statement) {
+  const fields = { WHO: 'both', WHERE: 'monster_zone' };
+  for (const [field] of LOCK_WHAT) fields[field] = false;
+  for (const arg of rules(statement, 'lockArg')) {
+    const word = text(arg);
+    const what = LOCK_WHAT.find(([, w]) => w === word);
+    if (what) fields[what[0]] = true;
+    else if (LOCK_WHO.some(([, w]) => w === word)) fields.WHO = word;
+    else if (LOCK_WHERE.some(([, w]) => w === word)) fields.WHERE = word;
+    else throw new Unsupported('no block for the lock word ' + word);
+  }
+  return { type: 'ys_lock', fields };
+}
+
 function treeToState(tree) {
+  const locks = rules(tree, 'lockStatement').map(lockState);
+  const blocks = treeEffects(tree);
+  return locks.concat(blocks.filter((b) => b));
+}
+
+function treeEffects(tree) {
   const as = rule(tree, 'asScript');
   if (as) {
     const target = as.c[2].replace(/^"|"$/g, '');
@@ -399,7 +493,8 @@ function treeToState(tree) {
     return effectState(rule(e, 'effectBody'), nameToken ? nameToken.replace(/^"|"$/g, '') : '');
   });
   const bodies = rules(tree, 'effectBody').map((b) => effectState(b, ''));
-  return [chain(effects.concat(bodies))];
+  const all = effects.concat(bodies);
+  return all.length ? [chain(all)] : [];
 }
 
 // ---------------------------------------------------------------- the page and WolfX

@@ -223,7 +223,11 @@ RIX_API int __cdecl RIX_UpdatePageButton(int Index, const RIX_PageButton* Button
    pixels (1920 x 1080). Each returns a handle (NULL on failure: no such sheet / sprite) that owns the widget: take it off with
    RIX_RemoveNode before the screen goes. Call them on the game's thread.
    RIX_AddImage: one sprite of a sheet (e.g. "pdui/chars", "<character key>_neutral"), top-left at X, Y, stretched to Width x Height
-                 (0 = its own size).
+                 (0 = its own size). A negative Width / Height flips the sprite that way and keeps it in the same box (X..X+|Width|,
+                 Y..Y+|Height|), e.g. an up arrow from "pdui/doShared" "arrow_1" (which points down). Added in version 6 without a version
+                 change: an older RIX ignores a negative size (the sprite is not flipped).
+                 Only sprites of a .dfymoo sheet load: a loose PNG (pdui\shared\scrollbar_*.png) is not found, and passing a PNG's path as
+                 the Resource crashes the game's layer loader (YuGiOh.exe+0x747A98).
    RIX_AddText:  text in the game's UI font, PixelSize high. Width 0 = one line, X is its left / centre / right edge (Align); Width > 0 =
                  a box Width wide, text wrapped and aligned in it. Colour is ARGB. The text is copied. */
 #define RIX_ALIGN_LEFT 0

@@ -11,7 +11,7 @@ namespace WolfEx
     {
         private readonly CheckBox _traps = Check("Trap Cards (can't be activated; Trap effects on the field negated)");
         private readonly CheckBox _spells = Check("Spell Cards (the same for Spells)");
-        private readonly CheckBox _monsters = Check("Monster effects (face-up monsters' effects are negated, like Skill Drain)");
+        private readonly CheckBox _monsters = Check("Monster effects (the effects of face-up monsters are negated)");
         private readonly CheckBox _continuousTraps = Check("Continuous Traps can't be activated (both players)");
         private readonly CheckBox _continuousSpells = Check("Continuous Spells can't be activated (both players)");
         private readonly CheckBox _fieldSpells = Check("Field Spells can't be activated (both players)");
@@ -36,8 +36,8 @@ namespace WolfEx
             Padding = new Padding(10);
 
             var flow = new FlowLayoutPanel { FlowDirection = FlowDirection.TopDown, AutoSize = true, WrapContents = false, Dock = DockStyle.Fill };
-            flow.Controls.Add(Note("While this card is face-up and its effects aren't negated, the game treats it like Jinzo (4758), Spell Canceller " +
-                                   "(5594) or Skill Drain (5740): the cards ticked here can't be activated and are negated on the field."));
+            flow.Controls.Add(Note("While this card is face-up in the zone below and its effects aren't negated, the cards ticked here can't be " +
+                                   "activated and their effects on the field are negated."));
             flow.Controls.Add(Heading("Lock"));
             foreach (var box in new[] { _traps, _spells, _monsters })
                 flow.Controls.Add(box);
@@ -47,13 +47,6 @@ namespace WolfEx
                 flow.Controls.Add(box);
             flow.Controls.Add(Row(new Label { Text = "Works while this card is in:", AutoSize = true, Margin = new Padding(3, 7, 3, 3) }, _zone));
 
-            var jinzo = new Button { Text = "Jinzo", AutoSize = true };
-            jinzo.Click += (_, _) => Fill(new JsonObject { ["traps"] = true, ["side"] = "both", ["zone"] = "monster" });
-            var canceller = new Button { Text = "Spell Canceller", AutoSize = true };
-            canceller.Click += (_, _) => Fill(new JsonObject { ["traps"] = false, ["spells"] = true, ["side"] = "both", ["zone"] = "monster" });
-            var skillDrain = new Button { Text = "Skill Drain", AutoSize = true };
-            skillDrain.Click += (_, _) => Fill(new JsonObject { ["traps"] = false, ["monsters"] = true, ["side"] = "both", ["zone"] = "spelltrap" });
-            flow.Controls.Add(Row(new Label { Text = "Presets:", AutoSize = true, Margin = new Padding(3, 7, 3, 3) }, jinzo, canceller, skillDrain));
 
             var ok = new Button { Text = "OK", DialogResult = DialogResult.OK, AutoSize = true };
             var remove = new Button { Text = "Remove lock", DialogResult = DialogResult.OK, AutoSize = true };

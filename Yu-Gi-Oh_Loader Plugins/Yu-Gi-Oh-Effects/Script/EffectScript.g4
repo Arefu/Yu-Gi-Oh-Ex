@@ -76,7 +76,14 @@ limit      : 'once_per_turn' ';'? ;
 
 // When the effect happens, for a MONSTER effect. No trigger = a Spell (activated from the hand / field). A card that lists no trigger gets the
 // behaviour of a vanilla Normal Spell; with a trigger it borrows a vanilla monster that has that trigger and that action (trigger_sources.json).
-trigger    : 'on' triggerName ':' ;
+trigger    : 'on' triggerName summonConditions? ':' ;
+// How the card must have been summoned, for the summon triggers: on special_summoned(from grave, by effect): / on normal_summoned(tribute 2):
+//   from hand | deck | extra | grave | banished | spelltrap      by effect | not_effect | own | spell | trap | monster | "Archetype" | <card id>
+//   fusion | synchro | xyz | ritual | link (Summoned as its kind)   pendulum   tribute [N]
+summonConditions : '(' summonCondition (',' summonCondition)* ')' ;
+summonCondition  : 'from' summonFrom | 'by' summonBy | ('tribute' | IDENT) NUMBER? ;
+summonFrom : 'hand' | 'deck' | 'grave' | 'banished' | IDENT ;
+summonBy   : 'effect' | 'own' | kind | STRING | NUMBER | IDENT ;
 triggerName : 'normal_summoned' | 'special_summoned' | 'summoned' | 'normal_or_special_summoned' | 'flip'
             | 'destroyed_by_battle' | 'sent_to_grave' | 'sent_from_field_to_grave'
             | 'standby_phase' | 'end_phase' | 'destroys_by_battle' | 'battle_damage' | 'attack_declared' | 'ignition' ;

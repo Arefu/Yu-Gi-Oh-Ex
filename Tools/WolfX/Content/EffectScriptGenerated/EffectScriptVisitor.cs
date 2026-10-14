@@ -135,6 +135,30 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitTrigger([NotNull] EffectScriptParser.TriggerContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.summonConditions"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSummonConditions([NotNull] EffectScriptParser.SummonConditionsContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.summonCondition"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSummonCondition([NotNull] EffectScriptParser.SummonConditionContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.summonFrom"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSummonFrom([NotNull] EffectScriptParser.SummonFromContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.summonBy"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSummonBy([NotNull] EffectScriptParser.SummonByContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.triggerName"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

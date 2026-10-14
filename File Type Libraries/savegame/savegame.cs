@@ -44,12 +44,18 @@ namespace savegame
 
         private readonly byte[] _data;
 
+        /// <summary>The bytes after the game's 44008 (Yu-Gi-Oh-Core's save extension: plugin data by tag, "YGEX"...). Kept as they are and
+        /// written back after the blob; empty for a plain save.</summary>
+        public byte[] Extension { get; } = [];
+
         public SaveFile(byte[] data)
         {
-            if (data.Length != Size)
+            if (data.Length < Size)
                 throw new InvalidDataException($"A save file is {Size} bytes, this one is {data.Length}.");
 
-            _data = data;
+            _data = data.Length == Size ? data : data[..Size];
+            if (data.Length > Size)
+                Extension = data[Size..];
 
             Player = new PlayerData(_data, PlayerOffset);
             Cards = new CardTable(_data, CardTableOffset);
@@ -135,7 +141,7 @@ namespace savegame
             if (updateChecksum)
                 UpdateChecksum();
 
-            return (byte[])_data.Clone();
+            return [.. _data, .. Extension];
         }
 
         public void Save(string path, bool updateChecksum = true) => File.WriteAllBytes(path, ToBytes(updateChecksum));

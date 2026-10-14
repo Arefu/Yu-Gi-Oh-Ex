@@ -139,6 +139,7 @@ namespace WolfX
             _tools.Items.Add(Button("Save", "Save this page: game cards into the game's files (Ctrl+S)", () => Save()));
             _tools.Items.Add(new ToolStripSeparator());
             _tools.Items.Add(Button("New custom card...", "Make a new card on the New cards page (saved to cards.json)", () => OpenCustomCard?.Invoke(0)));
+            _tools.Items.Add(Button("Delete card...", "Delete the selected game card: the game then has no card with its id (bin\\CARD_IntID.bin in the Ex patch). At your own risk", DeleteCard));
 
             // preview + summary above the tabs, with a splitter between them; the card scales to the height it gets
             var upright = new SplitContainer { Dock = DockStyle.Fill, Orientation = Orientation.Horizontal };
@@ -576,6 +577,8 @@ namespace WolfX
                     write[CardKanaTable.KanaPath(2, language)] = kana2;
                     write[CardKanaTable.KanaPath(3, language)] = kana3;
                 }
+                if (_idMap != null && _changedFiles.Contains(CardIdMap.GamePath))
+                    write[CardIdMap.GamePath] = _idMap.ToBytes();
                 if (_changedFiles.Contains(Card_Pass.GamePath))
                     write[Card_Pass.GamePath] = Card_Pass.ToBytes(_passwords);
                 if (_changedFiles.Contains(Card_Named.GamePath))
@@ -810,6 +813,27 @@ namespace WolfX
         }
 
         // ---- edits ----
+
+        // Deleting a game card: CARD_IntID.bin maps it to internal id 0, which the game treats as "no such card" (Is_ValidCardId), so it
+        // leaves the trunk, the shop and packs and can't be drawn; its rows in the other tables stay (they are indexed by internal id, and
+        // removing one would move every card after it). Decks, packs, starter collections and saves that still name it may break.
+        private void DeleteCard()
+        {
+            if (_idMap == null || _shown is not int id || InternalOf(id) == 0)
+            {
+                _status.Text = "Pick a game card first (custom cards are deleted on the New cards page).";
+                return;
+            }
+            if (MessageBox.Show(this,
+                    $"Delete {NameOf(id)} ({id}) from the game?\n\nThe game will have no card with this id (bin\\CARD_IntID.bin, in the Ex patch; the original stays " +
+                    "in YGO_2020.dat). Decks, packs, the starting collection and saves that use it can break, and the game may crash where it expects it. " +
+                    "This is at your own risk.\n\nDelete it?", "Delete card", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+                return;
+            _idMap.Set(id, 0);
+            Changed(id, CardIdMap.GamePath);
+            Refill();
+            _status.Text = $"{id} deleted (saved when you press Save). Restore it by setting its internal id back on the Card ids page.";
+        }
 
         private void Changed(int id, string file)
         {

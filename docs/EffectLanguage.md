@@ -116,3 +116,19 @@ chosen cards can't be activated and are negated on the field:
 * Where this card has to be: monster_zone (the default), spelltrap_zone, any_zone.
 
 A card has one lock. It compiles to `"lock"` in the card's JSON, which Yu-Gi-Oh-Effects Lock.cpp reads.
+
+## Summon conditions (2026-10-11, EffectSystem.md section 46)
+
+A summon trigger can say how the card must have been summoned, in brackets after it:
+
+    on special_summoned(from grave): draw(1);                 // "If this card is Special Summoned from the GY"
+    on special_summoned(from hand, by effect): draw(1);       // "... from your hand by a card effect"
+    on special_summoned(xyz): search(deck, monster where race = Dragon);   // "If this card is Xyz Summoned"
+    on normal_summoned(tribute 2): draw(1);                   // Tribute Summoned with 2 or more Tributes
+    on special_summoned(by "Dark World"): draw(1);            // by the effect of a "Dark World" card
+
+* `from hand | deck | extra | grave | banished | spelltrap` (several = any of them)
+* `by effect | not_effect | own | spell | trap | monster | "Archetype" | <card id>` (one)
+* `fusion | synchro | xyz | ritual | link` = Summoned properly as its kind; `pendulum`; `tribute [N]`
+
+Only for normal_summoned, special_summoned, summoned and normal_or_special_summoned. Built, not yet played.

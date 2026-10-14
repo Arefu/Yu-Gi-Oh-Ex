@@ -4,6 +4,8 @@
 #include <filesystem>
 #include <format>
 #include <fstream>
+#include <map>
+#include <string>
 #include <mutex>
 #include <vector>
 
@@ -43,6 +45,8 @@ static constexpr uintptr_t Manager_SetResultCode = 0x1408717D0;
 static constexpr uintptr_t Manager_ProcessReadBuffer = 0x1408717E0;
 static constexpr uintptr_t AllocReadBuffer = 0x1408D9450;
 static constexpr uintptr_t FinalizeChecksum = 0x1407F8280;
+static constexpr uintptr_t SetChecksumField = 0x140760440;    // YGO::SAVE::SetChecksumField(blob, value)
+static constexpr uintptr_t ComputeCrc32 = 0x1407556F0;        // ComputeInternalCRC32(data, size)
 static constexpr uintptr_t GameFree = 0x14090D2F4;
 
 // The game's byte vector: begin, end, end of capacity.
@@ -311,6 +315,98 @@ static void __fastcall Hook_QuerySaveFileExists(int64_t manager)
     }
 }
 
+// ---------------------------------------------------------------------
+// Save extension: plugin data after the blob (Core_GetSaveExtension)
+// ---------------------------------------------------------------------
+
+constexpr char kExtensionMagic[4] = { 'Y', 'G', 'E', 'X' };
+constexpr uint32_t kExtensionVersion = 1;
+constexpr size_t kExtensionTag = 32;
+
+static std::map<std::string, std::vector<unsigned char>> g_Extensions;   // of the save read last
+static std::mutex g_ExtensionLock;
+
+// Takes the extension off a file read from disk (the game gets the blob only) and keeps it.
+static void TakeExtension(std::vector<unsigned char>& file)
+{
+    std::lock_guard<std::mutex> guard(g_ExtensionLock);
+    g_Extensions.clear();
+    if (file.size() <= kSaveSize)
+        return;
+    const unsigned char* p = file.data() + kSaveSize;
+    const unsigned char* end = file.data() + file.size();
+    auto u32 = [&](uint32_t& v) { if (end - p < 4) return false; std::memcpy(&v, p, 4); p += 4; return true; };
+    uint32_t version = 0, count = 0;
+    if (end - p >= 4 && std::memcmp(p, kExtensionMagic, 4) == 0)
+    {
+        p += 4;
+        if (u32(version) && version == kExtensionVersion && u32(count))
+            for (uint32_t i = 0; i < count && static_cast<size_t>(end - p) >= kExtensionTag + 4; ++i)
+            {
+                std::string tag(reinterpret_cast<const char*>(p), strnlen(reinterpret_cast<const char*>(p), kExtensionTag));
+                p += kExtensionTag;
+                uint32_t size = 0;
+                if (!u32(size) || static_cast<size_t>(end - p) < size)
+                    break;
+                g_Extensions[tag].assign(p, p + size);
+                p += size;
+            }
+        Logger::WriteLog(std::format("Save extension: {} entr{} ({} bytes after the blob)", g_Extensions.size(),
+            g_Extensions.size() == 1 ? "y" : "ies", file.size() - kSaveSize), MODULE_NAME, 0);
+    }
+    else
+        Logger::WriteLog(std::format("The save has {} unknown bytes after the blob; they are dropped at the next save", file.size() - kSaveSize), MODULE_NAME, 1);
+    file.resize(kSaveSize);
+}
+
+// The bytes after the blob, or none (a save with no extension data stays the game's size).
+static std::vector<unsigned char> ExtensionBytes()
+{
+    std::lock_guard<std::mutex> guard(g_ExtensionLock);
+    std::vector<unsigned char> out;
+    if (g_Extensions.empty())
+        return out;
+    auto put = [&](const void* data, size_t size) { const auto* b = static_cast<const unsigned char*>(data); out.insert(out.end(), b, b + size); };
+    const uint32_t version = kExtensionVersion, count = static_cast<uint32_t>(g_Extensions.size());
+    put(kExtensionMagic, 4);
+    put(&version, 4);
+    put(&count, 4);
+    for (const auto& [tag, data] : g_Extensions)
+    {
+        char name[kExtensionTag]{};
+        std::memcpy(name, tag.data(), (std::min)(tag.size(), kExtensionTag - 1));
+        const uint32_t size = static_cast<uint32_t>(data.size());
+        put(name, kExtensionTag);
+        put(&size, 4);
+        put(data.data(), data.size());
+    }
+    return out;
+}
+
+int Save::GetExtension(const char* tag, void* out, int size)
+{
+    if (!tag)
+        return 0;
+    std::lock_guard<std::mutex> guard(g_ExtensionLock);
+    auto it = g_Extensions.find(tag);
+    if (it == g_Extensions.end())
+        return 0;
+    if (out && size > 0)
+        std::memcpy(out, it->second.data(), (std::min)(it->second.size(), static_cast<size_t>(size)));
+    return static_cast<int>(it->second.size());
+}
+
+void Save::SetExtension(const char* tag, const void* data, int size)
+{
+    if (!tag || !*tag || std::strlen(tag) >= kExtensionTag)
+        return;
+    std::lock_guard<std::mutex> guard(g_ExtensionLock);
+    if (!data || size <= 0)
+        g_Extensions.erase(tag);
+    else
+        g_Extensions[tag].assign(static_cast<const unsigned char*>(data), static_cast<const unsigned char*>(data) + size);
+}
+
 static void __fastcall Hook_ReadSaveFile(int64_t manager)
 {
     SeedFromSteamOnce();
@@ -319,10 +415,12 @@ static void __fastcall Hook_ReadSaveFile(int64_t manager)
     std::vector<unsigned char> file;
     if (!ReadLocalSave(path, file))
     {
+        TakeExtension(file);   // no file: no plugin data either (a new profile)
         SetResultCode(manager, kResultNoFile);
         SetPendingOp(manager, 0);
         return;
     }
+    TakeExtension(file);   // the game gets its 44008 bytes; plugin data after them stays with Core
     ShareVolume(file);
 
     GameBuffer buffer{};
@@ -337,6 +435,40 @@ static void __fastcall Hook_ReadSaveFile(int64_t manager)
     Logger::WriteLog(std::format("Read {} ({} bytes), result {}", path.string(), file.size(), result), MODULE_NAME, 0);
 }
 
+struct WriteFilter
+{
+    int(__cdecl* Filter)(unsigned char*, int, void*);
+    void* User;
+};
+static std::vector<WriteFilter> g_WriteFilters;
+static std::mutex g_FilterLock;
+
+void Save::AddWriteFilter(int(__cdecl* filter)(unsigned char*, int, void*), void* user)
+{
+    if (!filter)
+        return;
+    std::lock_guard<std::mutex> guard(g_FilterLock);
+    g_WriteFilters.push_back({ filter, user });
+}
+
+// The bytes to write: the game's blob, or a filtered copy of it with its checksum redone (the save counter is the game's, already bumped).
+static const unsigned char* FilteredBlob(const unsigned char* blob, std::vector<unsigned char>& copy)
+{
+    std::lock_guard<std::mutex> guard(g_FilterLock);
+    if (g_WriteFilters.empty())
+        return blob;
+    copy.assign(blob, blob + kSaveSize);
+    bool changed = false;
+    for (const WriteFilter& filter : g_WriteFilters)
+        changed |= filter.Filter(copy.data(), static_cast<int>(kSaveSize), filter.User) != 0;
+    if (!changed)
+        return blob;
+    reinterpret_cast<void(__fastcall*)(unsigned char*, int)>(SetChecksumField)(copy.data(), 0);
+    const int crc = reinterpret_cast<int(__fastcall*)(const unsigned char*, int)>(ComputeCrc32)(copy.data(), static_cast<int>(kSaveSize));
+    reinterpret_cast<void(__fastcall*)(unsigned char*, int)>(SetChecksumField)(copy.data(), crc);
+    return copy.data();
+}
+
 static void __fastcall Hook_WriteSaveFile(int64_t manager)
 {
     SetPendingOp(manager, 2);
@@ -348,7 +480,12 @@ static void __fastcall Hook_WriteSaveFile(int64_t manager)
     RememberVolume(blob);   // a volume change in Settings is saved like this; it is what the next slot gets
 
     const std::filesystem::path path = CurrentPath();
-    bool ok = WriteLocalSave(path, blob, kSaveSize);
+    std::vector<unsigned char> filtered;
+    const unsigned char* bytes = FilteredBlob(blob, filtered);   // filters run first: they may set extension data
+    std::vector<unsigned char> file(bytes, bytes + kSaveSize);
+    const std::vector<unsigned char> extension = ExtensionBytes();
+    file.insert(file.end(), extension.begin(), extension.end());
+    bool ok = WriteLocalSave(path, file.data(), file.size());
     SetResultCode(manager, ok ? kResultOk : kResultWriteFailed);
     SetPendingOp(manager, 0);
 

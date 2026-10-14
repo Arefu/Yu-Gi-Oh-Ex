@@ -19,7 +19,9 @@ namespace YGO::Memory
     // Copies Size bytes to Address. False when the range could not be made writable (nothing written).
     inline bool WriteBytes(uintptr_t Address, const void* Data, size_t Size, Protection After = Protection::Restore)
     {
-        void* target = reinterpret_cast<void*>(Address);
+        // volatile: in Release the address is a constant (0x140C8E9BC...) once this is inlined, and MSVC then stored straight to it with a
+        // 32-bit absolute operand - [0] after the high bits were lost - which crashed Yu-Gi-Oh-RIX on load (2026-10-11). Read at run time instead.
+        void* volatile target = reinterpret_cast<void*>(Address);
         DWORD old = 0;
         if (!VirtualProtect(target, Size, PAGE_EXECUTE_READWRITE, &old))
             return false;

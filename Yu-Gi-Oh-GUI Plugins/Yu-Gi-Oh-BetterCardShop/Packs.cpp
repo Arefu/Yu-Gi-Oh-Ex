@@ -7,6 +7,7 @@
 #include <deque>
 #include <fstream>
 #include <map>
+#include <cstdio>
 #include <string>
 #include <unordered_set>
 #include <vector>
@@ -16,6 +17,7 @@
 
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Log.h"
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Mods.h"
+#include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-RIX.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
@@ -53,6 +55,21 @@ namespace
     using BuildPackList_t = void(__fastcall*)(int64_t screen, int series);
     using WStringAssign_t = void*(__fastcall*)(GameWString* self, const wchar_t* text, size_t count);
     using GetPlayerSection_t = uint8_t*(__fastcall*)(unsigned int profile);
+    using ShopOpen_t = void(__fastcall*)(int64_t screen);
+    using ShowSeriesArt_t = void(__fastcall*)(int64_t screen);
+    using SelectLayerByName_t = void(__fastcall*)(void* animoo, const char* name);
+    using ShopSetState_t = void(__fastcall*)(int64_t screen, int state, double unused);
+
+    // Shop rows (the tabs, "series"): BoosterShop_Open sets the row list to the game's 6 (ListState_Init(screen+4472, 6, 6, wrap)), and
+    // that is the only place the 6 lives. The row's banner is the animoo layer "wrap_series_<row+1>" (BoosterShop_ShowSeriesArt), which
+    // only exists for the game's rows, so a new row borrows one. The pack list of a row already scrolls (ListState at screen+4528).
+    constexpr uint32_t kGameRows = 6;
+    constexpr int64_t kRowList = 4472;                   // ListState {+0 cursor, +4 count, +8 top, +12 shown, ...}
+    constexpr int64_t kShopAnimoo = 1032;                // DFX::TLayerAnimoo* the banner layers live in
+    uintptr_t orig_ShopOpen = 0x14085D5B0;               // YGO::UI::BoosterShop_Open
+    uintptr_t orig_ShowSeriesArt = 0x14085E0C0;          // YGO::UI::BoosterShop_ShowSeriesArt
+    uintptr_t orig_ShopSetState = 0x14085D790;           // BoosterShop_SetState: 6 = leaving (NavigateToScreen back), 7 = gone
+    const auto SelectLayerByName = reinterpret_cast<SelectLayerByName_t>(0x14075BB00);  // DFX::TLayerAnimoo::SelectByName
 
     uintptr_t orig_LoadPackDefinitions = 0x14080E3C0;    // YGO::GAME::LoadPackDefinitions
     uintptr_t orig_Pack_GetArtName = 0x14080E390;        // YGO::GAME::Pack_GetArtName
@@ -95,6 +112,8 @@ namespace
         uint32_t Id = 0;
         std::string Name, Art, UnlockWith;
         uint32_t Series = 0, Cost = 0;
+        bool AutoRow = false;             // no "series": goes in the first new row with room
+        bool Native = false;              // "native": WolfX wrote it into the game's pack files; only its picture and unlock are ours
         std::map<char, std::wstring> Titles, Texts;
         std::vector<uint16_t> Common, Rare;
         std::vector<uint16_t> Contents;   // the list the record points at (built once, never freed: the game may be reading it)
@@ -103,6 +122,17 @@ namespace
     std::vector<PackChange> g_changes;
     std::deque<NewPack> g_newPacks;       // deque: records point into Name/Contents
     std::unordered_set<uint32_t> g_ours;  // ids of the new packs
+    struct ShopRow                        // "rows": a new row's name and the game row (1-6) whose banner it borrows
+    {
+        std::map<char, std::wstring> Names;
+        uint32_t Art = 0;
+        std::string ArtKey;                // or "wrap_series_<key>": a banner added to pdui\SeriesLogo
+    };
+    std::map<uint32_t, ShopRow> g_rows;
+    struct { float X = 960, Y = 200, Size = 48; uint32_t Colour = 0xFFFFFFFF; } g_rowLabel;  // "rowLabel": where the name is drawn
+    void* g_labelNode = nullptr;          // RIX text node on the shop screen (the row name), or null
+    uint32_t g_rowCount = kGameRows;      // shop rows: the game's 6 + new ones
+    bool g_rowsAssigned = false;
 
     void ReadIds(const nlohmann::json& entry, const char* key, std::vector<uint16_t>& out)
     {
@@ -157,7 +187,8 @@ namespace
     void Parse(const nlohmann::json& root)
     {
         const bool replaceAll = root.is_object() && root.value("replaceDefaults", false);
-        const nlohmann::json& changes = root.is_array() ? root : root["packs"];
+        // const json: operator[] on a missing key is undefined (the debug CRT fast-fails), so look "packs" up with value()
+        const nlohmann::json changes = root.is_array() ? root : root.is_object() ? root.value("packs", nlohmann::json()) : nlohmann::json();
         if (changes.is_array())
             for (const auto& entry : changes)
             {
@@ -181,7 +212,9 @@ namespace
                 pack.Name = entry.value("name", std::string());
                 pack.Art = entry.value("art", std::string());
                 pack.UnlockWith = entry.value("unlockWith", std::string());
-                pack.Series = entry.value("series", 0u);
+                pack.AutoRow = !entry.contains("series") || !entry["series"].is_number_integer();
+                pack.Series = pack.AutoRow ? 0u : entry.value("series", 0u);
+                pack.Native = entry.value("native", false) && !pack.AutoRow;
                 pack.Cost = entry.value("cost", 200u);
                 ReadTexts(entry, "title", pack.Titles);
                 ReadTexts(entry, "text", pack.Texts);
@@ -195,7 +228,7 @@ namespace
                     why = "\"id\" must be 0-127";
                 else if (g_ours.count(pack.Id))
                     why = "another new pack has id " + std::to_string(pack.Id);
-                else if (pack.Common.empty() || pack.Rare.empty())
+                else if (!pack.Native && (pack.Common.empty() || pack.Rare.empty()))
                     why = "it needs cards in both \"common\" and \"rare\"";
                 if (!why.empty())
                 {
@@ -209,6 +242,79 @@ namespace
                 g_ours.insert(pack.Id);
                 g_newPacks.push_back(std::move(pack));
             }
+
+        // "rows": [ { "row": 6, "name": { "E": "TEST" }, "art": 2 } ]   (art = the game row 1-6 whose banner it shows)
+        if (root.is_object() && root.contains("rows") && root["rows"].is_array())
+            for (const auto& entry : root["rows"])
+            {
+                if (!entry.is_object() || !entry.contains("row") || !entry["row"].is_number_integer())
+                    continue;
+                const int row = entry["row"].get<int>();
+                if (row < static_cast<int>(kGameRows))
+                {
+                    YGO::Log("packs.json: rows: row " + std::to_string(row) + " is the game's, skipped (new rows start at 6)", MODULE_NAME, 2);
+                    continue;
+                }
+                ShopRow& shopRow = g_rows[static_cast<uint32_t>(row)];
+                ReadTexts(entry, "name", shopRow.Names);
+                if (entry.contains("art") && entry["art"].is_string())
+                    shopRow.ArtKey = entry["art"].get<std::string>();
+                const int art = entry.contains("art") && entry["art"].is_number_integer() ? entry["art"].get<int>() : 0;
+                shopRow.Art = art >= 1 && art <= static_cast<int>(kGameRows) ? static_cast<uint32_t>(art) : 0;
+            }
+        if (root.is_object() && root.contains("rowLabel") && root["rowLabel"].is_object())
+        {
+            const auto& label = root["rowLabel"];
+            g_rowLabel.X = label.value("x", g_rowLabel.X);
+            g_rowLabel.Y = label.value("y", g_rowLabel.Y);
+            g_rowLabel.Size = label.value("size", g_rowLabel.Size);
+            g_rowLabel.Colour = label.value("colour", g_rowLabel.Colour);
+        }
+    }
+
+    // Puts the new packs in rows, once, after the game's packs are loaded: a row holds at most as many packs as the game's fullest row.
+    // Packs with a "series" keep it (a full row overflows into the next new row); packs without one fill the new rows after the game's.
+    void AssignRows()
+    {
+        if (g_rowsAssigned)
+            return;
+        g_rowsAssigned = true;
+        std::map<uint32_t, uint32_t> used;
+        uint32_t cap = 0;
+        for (uint32_t i = 0; i < kPackCount; ++i)
+        {
+            const PackRecord* record = Record(i);
+            if (record->Kind == kRewardPack && record->Series < kGameRows && !g_ours.count(i))
+                cap = (std::max)(cap, ++used[record->Series]);
+        }
+        if (cap == 0)
+            cap = 6;
+        auto place = [&](NewPack& pack, uint32_t row)
+        {
+            while (used[row] >= cap)
+                row = (std::max)(row + 1, kGameRows);
+            if (!pack.AutoRow && row != pack.Series)
+                YGO::Log("New pack \"" + pack.Name + "\": row " + std::to_string(pack.Series) + " is full (" + std::to_string(cap) +
+                    " packs), put in row " + std::to_string(row), MODULE_NAME, 1);
+            pack.Series = row;
+            ++used[row];
+            g_rowCount = (std::max)(g_rowCount, row + 1);
+        };
+        for (NewPack& pack : g_newPacks)
+            if (!pack.AutoRow)
+                place(pack, pack.Series);
+        for (NewPack& pack : g_newPacks)
+            if (pack.AutoRow)
+                place(pack, kGameRows);
+        for (const auto& [row, shopRow] : g_rows)
+            g_rowCount = (std::max)(g_rowCount, row + 1);
+        YGO::Log("Shop rows: " + std::to_string(g_rowCount) + " (" + std::to_string(cap) + " packs per row)", MODULE_NAME, 0);
+    }
+
+    // The slot holds this new pack: ours (filled from packs.json) or the game's own record of it ("native").
+    bool IsPack(const PackRecord* record, const NewPack& pack)
+    {
+        return record && record->Name && (record->Name == pack.Name.c_str() || pack.Name == record->Name);
     }
 
     const NewPack* FindNew(uint32_t id)
@@ -278,10 +384,17 @@ namespace
         for (NewPack& pack : g_newPacks)
         {
             PackRecord* record = Record(pack.Id);
+            if (pack.Native)
+            {
+                if (!IsPack(record, pack))
+                    YGO::Log("New pack \"" + pack.Name + "\" should be in the game's pack files (id " + std::to_string(pack.Id) +
+                        ") but isn't: save it again in WolfX", MODULE_NAME, 2);
+                continue;   // the game loaded it (cards, texts, row, cost)
+            }
             if (record->Kind != 0 && record->Name != pack.Name.c_str())
             {
                 YGO::Log("New pack \"" + pack.Name + "\": id " + std::to_string(pack.Id) + " is the game's pack \"" +
-                    std::string(record->Name ? record->Name : "?") + "\", skipped (pick a free id, 36-127)", MODULE_NAME, 2);
+                    std::string(record->Name ? record->Name : "?") + "\", skipped (pick an id the game doesn't use)", MODULE_NAME, 2);
                 continue;
             }
             record->Id = pack.Id;
@@ -300,6 +413,7 @@ namespace
 
     void Apply()
     {
+        AssignRows();
         ApplyChanges();
         ApplyNewPacks();
     }
@@ -314,7 +428,7 @@ namespace
         auto has = [bits](uint32_t id) { return (bits[id >> 5] >> (id & 31) & 1) != 0; };
         for (const NewPack& pack : g_newPacks)
         {
-            if (has(pack.Id) || _stricmp(pack.UnlockWith.c_str(), "never") == 0 || Record(pack.Id)->Name != pack.Name.c_str())
+            if (has(pack.Id) || _stricmp(pack.UnlockWith.c_str(), "never") == 0 || !IsPack(Record(pack.Id), pack))
                 continue;
             bool open = pack.UnlockWith.empty();
             if (!open)
@@ -342,7 +456,7 @@ namespace
     char* __fastcall Hook_Pack_GetArtName(PackRecord* record, char* outString)
     {
         if (record && g_ours.count(record->Id))
-            if (const NewPack* pack = FindNew(record->Id); pack && !pack->Art.empty() && record->Name == pack->Name.c_str())
+            if (const NewPack* pack = FindNew(record->Id); pack && !pack->Art.empty() && IsPack(record, *pack))
             {
                 PackRecord borrowed = {};
                 borrowed.Name = pack->Art.c_str();   // "wrap_<art>": the picture of an existing pack
@@ -355,6 +469,55 @@ namespace
     {
         UnlockNewPacks();
         reinterpret_cast<BuildPackList_t>(orig_BuildPackList)(screen, series);
+    }
+
+    // The game opens the shop with 6 rows; give it all of them (the row list wraps, so L/R walks through every row).
+    void __fastcall Hook_ShopOpen(int64_t screen)
+    {
+        reinterpret_cast<ShopOpen_t>(orig_ShopOpen)(screen);
+        auto* rows = reinterpret_cast<int32_t*>(screen + kRowList);
+        rows[1] = static_cast<int32_t>(g_rowCount);
+        rows[3] = static_cast<int32_t>(g_rowCount);
+    }
+
+    void RemoveRowLabel()
+    {
+        if (g_labelNode && RIX::Load())
+            RIX::Functions().RemoveNode(g_labelNode);
+        g_labelNode = nullptr;
+    }
+
+    // A new row has no "wrap_series_<n>" layer: show the banner of the game row its "rows" entry names (default: cycles 1-6), with the
+    // row's name drawn over it (RIX text, needs Yu-Gi-Oh-RIX).
+    void __fastcall Hook_ShowSeriesArt(int64_t screen)
+    {
+        RemoveRowLabel();
+        const uint32_t row = *reinterpret_cast<uint32_t*>(screen + kRowList);
+        void* animoo = *reinterpret_cast<void**>(screen + kShopAnimoo);
+        if (row < kGameRows || !animoo)
+            return reinterpret_cast<ShowSeriesArt_t>(orig_ShowSeriesArt)(screen);
+        auto it = g_rows.find(row);
+        const uint32_t art = it != g_rows.end() && it->second.Art ? it->second.Art : row % kGameRows + 1;
+        char name[96];
+        if (it != g_rows.end() && !it->second.ArtKey.empty())
+            std::snprintf(name, sizeof(name), "wrap_series_%s", it->second.ArtKey.c_str());
+        else
+            std::snprintf(name, sizeof(name), "wrap_series_%u", art);
+        SelectLayerByName(animoo, name);
+        if (it != g_rows.end() && !it->second.Names.empty() && RIX::Load())
+        {
+            const std::wstring& label = Pick(it->second.Names);
+            g_labelNode = RIX::Functions().AddText(reinterpret_cast<void*>(screen), label.c_str(), 1000, g_rowLabel.X, g_rowLabel.Y, 0.0f,
+                g_rowLabel.Size, RIX_ALIGN_CENTRE, g_rowLabel.Colour);
+        }
+    }
+
+    // The label belongs to the shop screen: take it off as the shop is left.
+    void __fastcall Hook_ShopSetState(int64_t screen, int state, double unused)
+    {
+        if (state == 6 || state == 7)
+            RemoveRowLabel();
+        reinterpret_cast<ShopSetState_t>(orig_ShopSetState)(screen, state, unused);
     }
 }
 
@@ -389,6 +552,9 @@ namespace Packs
         {
             DetourAttach(&(PVOID&)orig_Pack_GetArtName, Hook_Pack_GetArtName);
             DetourAttach(&(PVOID&)orig_BuildPackList, Hook_BuildPackList);
+            DetourAttach(&(PVOID&)orig_ShopOpen, Hook_ShopOpen);
+            DetourAttach(&(PVOID&)orig_ShowSeriesArt, Hook_ShowSeriesArt);
+            DetourAttach(&(PVOID&)orig_ShopSetState, Hook_ShopSetState);
         }
         LONG error = DetourTransactionCommit();
         YGO::Log("Pack hooks attached: " + std::to_string(error), MODULE_NAME, error == 0 ? 0 : 2);

@@ -359,7 +359,9 @@ namespace YGO
             }
 
             // Puts one sprite on a node (normally ScreenRoot(screen)) with its top-left at X, Y, stretched to Width x Height (0 = its own size).
-            // Returns the node holding it (the caller owns one reference: take it off with RemoveImage), or an empty SharedNode when the
+            // A negative Width / Height flips it that way and keeps it in the same box (X..X+|Width|, Y..Y+|Height|): the node is scaled by
+            // a negative factor, which mirrors it about the node's origin, so the node moves to the box's far edge (2026-10-11: an up arrow
+            // from doShared's down-pointing arrow_1). Returns the node holding it (the caller owns one reference: take it off with RemoveImage), or an empty SharedNode when the
             // sheet or sprite does not exist.
             inline SharedNode AddImage(const SharedNode* Parent, const char* Resource, const char* Sprite, int Z, float X, float Y, float Width = 0, float Height = 0)
             {
@@ -378,11 +380,14 @@ namespace YGO
                     return {};
                 }
 
+                // a flipped axis mirrors about the node's origin: start the node at the box's far edge
+                const float boxWidth = Width != 0 ? (Width < 0 ? -Width : Width) : static_cast<float>(w);
+                const float boxHeight = Height != 0 ? (Height < 0 ? -Height : Height) : static_cast<float>(h);
                 SharedNode parent = ParentRef(Parent);
                 SharedNode node{};
-                MakeChildWithContent(&node, &parent, &layer, Z, X, Y);   // parent and layer consumed
-                if (node.Node && (Width > 0 || Height > 0))
-                    SetScaleXY(node.Node, Width > 0 ? Width / w : 1.0f, Height > 0 ? Height / h : 1.0f);
+                MakeChildWithContent(&node, &parent, &layer, Z, Width < 0 ? X + boxWidth : X, Height < 0 ? Y + boxHeight : Y);   // parent and layer consumed
+                if (node.Node && (Width != 0 || Height != 0))
+                    SetScaleXY(node.Node, Width != 0 ? Width / w : 1.0f, Height != 0 ? Height / h : 1.0f);
                 return node;
             }
 

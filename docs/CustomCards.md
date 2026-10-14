@@ -37,3 +37,7 @@ Genre keys / tag conditions / link targets: docs/CardGenre.md, docs/RelatedCards
   The uncensored picture is `"imageUncensored"` (New cards > Art).
 
 Untested in game (2026-10-04): built only.
+
+## A card without art
+
+A custom card with no `"image"`, or whose file is missing, shows the **missing-texture checkerboard** (magenta and black, 8 x 8, a 304 x 304 JPEG like the game's card art), built into Yu-Gi-Oh-MoreCards as raw bytes (`MissingArt.h`, made by `Tools/Scripts/make_missing_art.py`). Before 2026-10-11 it borrowed Blue-Eyes White Dragon's art.

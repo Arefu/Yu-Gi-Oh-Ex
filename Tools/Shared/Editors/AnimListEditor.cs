@@ -26,6 +26,9 @@ namespace Wolf.Editors
         private readonly ToolStripItem[] _titleOnly;
         private readonly ToolStripButton _play;
         private readonly ToolStripButton _openFromGame, _newForGame;
+        // the game's animlists (title animations and arenas, the Ex patch's new ones too), opened by a click like the other pages
+        private readonly ListBox _gameList = new() { Dock = DockStyle.Fill, IntegralHeight = false };
+        private bool _fillingGameList;
         private readonly Stack<string> _undo = new();
         private readonly Stack<string> _redo = new();
         private readonly Dictionary<string, byte[]> _imported = new(StringComparer.OrdinalIgnoreCase);
@@ -117,7 +120,17 @@ namespace Wolf.Editors
             var status = new StatusStrip { SizingGrip = false };
             status.Items.Add(_cursor);
             status.Items.Add(_status);
-            Controls.Add(outer);
+            var pages = new SplitContainer { Dock = DockStyle.Fill, FixedPanel = FixedPanel.Panel1 };
+            pages.Panel1.Controls.Add(_gameList);
+            pages.Panel1.Controls.Add(new Label { Text = "The game's animlists", Dock = DockStyle.Top, Height = 20 });
+            pages.Panel2.Controls.Add(outer);
+            Load += (_, _) => pages.SplitterDistance = Math.Clamp(Width / 5, 180, 320);
+            _gameList.SelectedIndexChanged += (_, _) =>
+            {
+                if (!_fillingGameList && _gameList.SelectedItem is string path)
+                    OpenGamePath(path);
+            };
+            Controls.Add(pages);
             Controls.Add(_tools2);
             Controls.Add(_tools);
             Controls.Add(status);
@@ -157,6 +170,20 @@ namespace Wolf.Editors
         {
             _gameFiles = files;
             _openFromGame.Visible = _newForGame.Visible = files.Available;
+            // list the game's animlists and open one straight away (the one open before, else the first), as the other pages do
+            string? keep = _gameFolder != null && _diskFile == null ? Path.Combine(_gameFolder, _fileName) : null;
+            _fillingGameList = true;
+            try
+            {
+                _gameList.Items.Clear();
+                foreach (string path in GameAnimlists())
+                    _gameList.Items.Add(path);
+            }
+            finally { _fillingGameList = false; }
+            if (_gameList.Items.Count == 0 || Dirty || _diskFile != null)
+                return;
+            int index = keep != null ? _gameList.Items.IndexOf(_gameList.Items.Cast<string>().FirstOrDefault(p => p.Equals(keep, StringComparison.OrdinalIgnoreCase)) ?? "") : -1;
+            _gameList.SelectedIndex = index >= 0 ? index : 0;
         }
 
         bool IGameEditor.Save() => Save(false);
@@ -335,7 +362,17 @@ namespace Wolf.Editors
                 return;
             string? choice = ListPicker.Pick(this, "Open a title animation or arena", GameAnimlists(),
                 p => File.Exists(ExJson(Path.GetDirectoryName(p)!, Path.GetFileName(p))) ? p + "   (your Yu-Gi-Oh-Ex JSON)" : p);
-            if (choice == null)
+            if (choice != null)
+                OpenGamePath(choice, confirmed: true);
+        }
+
+        private void OpenGamePath(string choice, bool confirmed = false)
+        {
+            if (_gameFiles == null)
+                return;
+            if (!confirmed && Path.Combine(_gameFolder ?? "", _fileName).Equals(choice, StringComparison.OrdinalIgnoreCase) && _diskFile == null)
+                return;   // already open
+            if (!confirmed && !ConfirmDiscard())
                 return;
             string folder = Path.GetDirectoryName(choice)!, file = Path.GetFileName(choice), json = ExJson(folder, file);
             try

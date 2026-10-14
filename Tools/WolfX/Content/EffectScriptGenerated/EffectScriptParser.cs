@@ -48,30 +48,32 @@ public partial class EffectScriptParser : Parser {
 		T__59=60, T__60=61, T__61=62, T__62=63, T__63=64, T__64=65, T__65=66, 
 		T__66=67, T__67=68, T__68=69, T__69=70, T__70=71, T__71=72, T__72=73, 
 		T__73=74, T__74=75, T__75=76, T__76=77, T__77=78, T__78=79, T__79=80, 
-		T__80=81, T__81=82, T__82=83, T__83=84, T__84=85, T__85=86, NUMBER=87, 
-		IDENT=88, STRING=89, WS=90, LINE_COMMENT=91;
+		T__80=81, T__81=82, T__82=83, T__83=84, T__84=85, T__85=86, T__86=87, 
+		T__87=88, NUMBER=89, IDENT=90, STRING=91, WS=92, LINE_COMMENT=93;
 	public const int
 		RULE_script = 0, RULE_lockStatement = 1, RULE_lockArg = 2, RULE_asScript = 3, 
 		RULE_statPart = 4, RULE_effect = 5, RULE_effectBody = 6, RULE_costClause = 7, 
 		RULE_tributeCost = 8, RULE_detachCost = 9, RULE_discardCost = 10, RULE_payCost = 11, 
 		RULE_selfCost = 12, RULE_requireClause = 13, RULE_condName = 14, RULE_limit = 15, 
-		RULE_trigger = 16, RULE_triggerName = 17, RULE_chain = 18, RULE_action = 19, 
-		RULE_drawAction = 20, RULE_searchAction = 21, RULE_reviveAction = 22, 
-		RULE_destroyAction = 23, RULE_scope = 24, RULE_sendAction = 25, RULE_gainAction = 26, 
-		RULE_burnAction = 27, RULE_equipAction = 28, RULE_summonAction = 29, RULE_summonZone = 30, 
-		RULE_returnAction = 31, RULE_gainAtkAction = 32, RULE_salvageAction = 33, 
-		RULE_banishAction = 34, RULE_negateAction = 35, RULE_negateArg = 36, RULE_graveyard = 37, 
-		RULE_side = 38, RULE_selector = 39, RULE_kind = 40, RULE_condition = 41, 
-		RULE_field = 42, RULE_op = 43, RULE_value = 44;
+		RULE_trigger = 16, RULE_summonConditions = 17, RULE_summonCondition = 18, 
+		RULE_summonFrom = 19, RULE_summonBy = 20, RULE_triggerName = 21, RULE_chain = 22, 
+		RULE_action = 23, RULE_drawAction = 24, RULE_searchAction = 25, RULE_reviveAction = 26, 
+		RULE_destroyAction = 27, RULE_scope = 28, RULE_sendAction = 29, RULE_gainAction = 30, 
+		RULE_burnAction = 31, RULE_equipAction = 32, RULE_summonAction = 33, RULE_summonZone = 34, 
+		RULE_returnAction = 35, RULE_gainAtkAction = 36, RULE_salvageAction = 37, 
+		RULE_banishAction = 38, RULE_negateAction = 39, RULE_negateArg = 40, RULE_graveyard = 41, 
+		RULE_side = 42, RULE_selector = 43, RULE_kind = 44, RULE_condition = 45, 
+		RULE_field = 46, RULE_op = 47, RULE_value = 48;
 	public static readonly string[] ruleNames = {
 		"script", "lockStatement", "lockArg", "asScript", "statPart", "effect", 
 		"effectBody", "costClause", "tributeCost", "detachCost", "discardCost", 
 		"payCost", "selfCost", "requireClause", "condName", "limit", "trigger", 
-		"triggerName", "chain", "action", "drawAction", "searchAction", "reviveAction", 
-		"destroyAction", "scope", "sendAction", "gainAction", "burnAction", "equipAction", 
-		"summonAction", "summonZone", "returnAction", "gainAtkAction", "salvageAction", 
-		"banishAction", "negateAction", "negateArg", "graveyard", "side", "selector", 
-		"kind", "condition", "field", "op", "value"
+		"summonConditions", "summonCondition", "summonFrom", "summonBy", "triggerName", 
+		"chain", "action", "drawAction", "searchAction", "reviveAction", "destroyAction", 
+		"scope", "sendAction", "gainAction", "burnAction", "equipAction", "summonAction", 
+		"summonZone", "returnAction", "gainAtkAction", "salvageAction", "banishAction", 
+		"negateAction", "negateArg", "graveyard", "side", "selector", "kind", 
+		"condition", "field", "op", "value"
 	};
 
 	private static readonly string[] _LiteralNames = {
@@ -79,14 +81,14 @@ public partial class EffectScriptParser : Parser {
 		"'any'", "'field'", "'equip'", "'as'", "'with'", "'atk'", "'def'", "'effect'", 
 		"'{'", "'}'", "'cost'", "':'", "'tribute'", "'detach'", "'discard'", "'pay_lp'", 
 		"'banish_self'", "'discard_self'", "'tribute_self'", "'if'", "'no_monsters'", 
-		"'controls'", "'once_per_turn'", "'on'", "'normal_summoned'", "'special_summoned'", 
-		"'summoned'", "'normal_or_special_summoned'", "'flip'", "'destroyed_by_battle'", 
-		"'sent_to_grave'", "'sent_from_field_to_grave'", "'standby_phase'", "'end_phase'", 
-		"'destroys_by_battle'", "'battle_damage'", "'attack_declared'", "'ignition'", 
-		"'then'", "'draw'", "'search'", "'deck'", "'revive'", "'destroy'", "'all'", 
-		"'target'", "'send_to_grave'", "'gain_lp'", "'burn'", "'special_summon'", 
-		"'hand'", "'grave'", "'self'", "'self_grave'", "'return_to_hand'", "'gain_atk'", 
-		"'add_to_hand'", "'banished'", "'banish'", "'negate'", "'opponent_grave'", 
+		"'controls'", "'once_per_turn'", "'on'", "'from'", "'by'", "'hand'", "'deck'", 
+		"'grave'", "'banished'", "'normal_summoned'", "'special_summoned'", "'summoned'", 
+		"'normal_or_special_summoned'", "'flip'", "'destroyed_by_battle'", "'sent_to_grave'", 
+		"'sent_from_field_to_grave'", "'standby_phase'", "'end_phase'", "'destroys_by_battle'", 
+		"'battle_damage'", "'attack_declared'", "'ignition'", "'then'", "'draw'", 
+		"'search'", "'revive'", "'destroy'", "'all'", "'target'", "'send_to_grave'", 
+		"'gain_lp'", "'burn'", "'special_summon'", "'self'", "'self_grave'", "'return_to_hand'", 
+		"'gain_atk'", "'add_to_hand'", "'banish'", "'negate'", "'opponent_grave'", 
 		"'either_grave'", "'where'", "'and'", "'monster'", "'spell'", "'trap'", 
 		"'card'", "'race'", "'attribute'", "'level'", "'archetype'", "'name'", 
 		"'='", "'<='", "'>='", "'<'", "'>'"
@@ -99,7 +101,7 @@ public partial class EffectScriptParser : Parser {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
 		null, null, null, null, null, null, null, null, null, null, null, null, 
-		null, null, null, "NUMBER", "IDENT", "STRING", "WS", "LINE_COMMENT"
+		null, null, null, null, null, "NUMBER", "IDENT", "STRING", "WS", "LINE_COMMENT"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -178,38 +180,38 @@ public partial class EffectScriptParser : Parser {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 93;
+			State = 101;
 			ErrorHandler.Sync(this);
 			_alt = Interpreter.AdaptivePredict(TokenStream,0,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					State = 90;
+					State = 98;
 					lockStatement();
 					}
 					} 
 				}
-				State = 95;
+				State = 103;
 				ErrorHandler.Sync(this);
 				_alt = Interpreter.AdaptivePredict(TokenStream,0,Context);
 			}
-			State = 110;
+			State = 118;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case T__15:
 				{
-				State = 97;
+				State = 105;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				do {
 					{
 					{
-					State = 96;
+					State = 104;
 					effect();
 					}
 					}
-					State = 99;
+					State = 107;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				} while ( _la==T__15 );
@@ -219,35 +221,35 @@ public partial class EffectScriptParser : Parser {
 			case T__18:
 			case T__27:
 			case T__31:
-			case T__47:
-			case T__48:
-			case T__50:
-			case T__51:
+			case T__53:
 			case T__54:
 			case T__55:
 			case T__56:
-			case T__57:
+			case T__59:
+			case T__60:
+			case T__61:
 			case T__62:
-			case T__63:
-			case T__64:
+			case T__65:
 			case T__66:
 			case T__67:
+			case T__68:
+			case T__69:
 				{
-				State = 101;
+				State = 109;
 				effectBody();
-				State = 106;
+				State = 114;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				while (_la==T__0) {
 					{
 					{
-					State = 102;
+					State = 110;
 					Match(T__0);
-					State = 103;
+					State = 111;
 					effectBody();
 					}
 					}
-					State = 108;
+					State = 116;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				}
@@ -255,7 +257,7 @@ public partial class EffectScriptParser : Parser {
 				break;
 			case T__11:
 				{
-				State = 109;
+				State = 117;
 				asScript();
 				}
 				break;
@@ -265,21 +267,21 @@ public partial class EffectScriptParser : Parser {
 			default:
 				break;
 			}
-			State = 115;
+			State = 123;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==T__1) {
 				{
 				{
-				State = 112;
+				State = 120;
 				lockStatement();
 				}
 				}
-				State = 117;
+				State = 125;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 118;
+			State = 126;
 			Match(Eof);
 			}
 		}
@@ -322,36 +324,36 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 120;
+			State = 128;
 			Match(T__1);
-			State = 121;
+			State = 129;
 			Match(T__2);
-			State = 122;
+			State = 130;
 			lockArg();
-			State = 127;
+			State = 135;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==T__3) {
 				{
 				{
-				State = 123;
+				State = 131;
 				Match(T__3);
-				State = 124;
+				State = 132;
 				lockArg();
 				}
 				}
-				State = 129;
+				State = 137;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 130;
+			State = 138;
 			Match(T__4);
-			State = 132;
+			State = 140;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__5) {
 				{
-				State = 131;
+				State = 139;
 				Match(T__5);
 				}
 			}
@@ -392,58 +394,58 @@ public partial class EffectScriptParser : Parser {
 		LockArgContext _localctx = new LockArgContext(Context, State);
 		EnterRule(_localctx, 4, RULE_lockArg);
 		try {
-			State = 141;
+			State = 149;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case IDENT:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 134;
+				State = 142;
 				Match(IDENT);
 				}
 				break;
-			case T__72:
-			case T__73:
 			case T__74:
 			case T__75:
+			case T__76:
+			case T__77:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 135;
+				State = 143;
 				kind();
 				}
 				break;
 			case T__6:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 136;
+				State = 144;
 				Match(T__6);
 				}
 				break;
 			case T__7:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 137;
+				State = 145;
 				Match(T__7);
 				}
 				break;
 			case T__8:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 138;
+				State = 146;
 				Match(T__8);
 				}
 				break;
 			case T__9:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 139;
+				State = 147;
 				Match(T__9);
 				}
 				break;
 			case T__10:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 140;
+				State = 148;
 				Match(T__10);
 				}
 				break;
@@ -492,11 +494,11 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 143;
+			State = 151;
 			Match(T__11);
-			State = 144;
+			State = 152;
 			Match(T__2);
-			State = 145;
+			State = 153;
 			_la = TokenStream.LA(1);
 			if ( !(_la==NUMBER || _la==STRING) ) {
 			ErrorHandler.RecoverInline(this);
@@ -505,42 +507,42 @@ public partial class EffectScriptParser : Parser {
 				ErrorHandler.ReportMatch(this);
 			    Consume();
 			}
-			State = 146;
+			State = 154;
 			Match(T__4);
-			State = 156;
+			State = 164;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__12) {
 				{
-				State = 147;
+				State = 155;
 				Match(T__12);
-				State = 148;
+				State = 156;
 				statPart();
-				State = 153;
+				State = 161;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				while (_la==T__3) {
 					{
 					{
-					State = 149;
+					State = 157;
 					Match(T__3);
-					State = 150;
+					State = 158;
 					statPart();
 					}
 					}
-					State = 155;
+					State = 163;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				}
 				}
 			}
 
-			State = 159;
+			State = 167;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__5) {
 				{
-				State = 158;
+				State = 166;
 				Match(T__5);
 				}
 			}
@@ -581,7 +583,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 161;
+			State = 169;
 			_la = TokenStream.LA(1);
 			if ( !(_la==T__13 || _la==T__14) ) {
 			ErrorHandler.RecoverInline(this);
@@ -590,7 +592,7 @@ public partial class EffectScriptParser : Parser {
 				ErrorHandler.ReportMatch(this);
 			    Consume();
 			}
-			State = 162;
+			State = 170;
 			Match(NUMBER);
 			}
 		}
@@ -631,23 +633,23 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 164;
+			State = 172;
 			Match(T__15);
-			State = 166;
+			State = 174;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==STRING) {
 				{
-				State = 165;
+				State = 173;
 				Match(STRING);
 				}
 			}
 
-			State = 168;
+			State = 176;
 			Match(T__16);
-			State = 169;
+			State = 177;
 			effectBody();
-			State = 170;
+			State = 178;
 			Match(T__17);
 			}
 		}
@@ -699,54 +701,54 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 173;
+			State = 181;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__31) {
 				{
-				State = 172;
+				State = 180;
 				trigger();
 				}
 			}
 
-			State = 176;
+			State = 184;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__27) {
 				{
-				State = 175;
+				State = 183;
 				requireClause();
 				}
 			}
 
-			State = 179;
+			State = 187;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__18) {
 				{
-				State = 178;
+				State = 186;
 				costClause();
 				}
 			}
 
-			State = 181;
+			State = 189;
 			chain();
-			State = 183;
+			State = 191;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__5) {
 				{
-				State = 182;
+				State = 190;
 				Match(T__5);
 				}
 			}
 
-			State = 186;
+			State = 194;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__30) {
 				{
-				State = 185;
+				State = 193;
 				limit();
 				}
 			}
@@ -800,20 +802,20 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 188;
+			State = 196;
 			Match(T__18);
-			State = 194;
+			State = 202;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case T__22:
 				{
-				State = 189;
+				State = 197;
 				discardCost();
 				}
 				break;
 			case T__23:
 				{
-				State = 190;
+				State = 198;
 				payCost();
 				}
 				break;
@@ -821,26 +823,26 @@ public partial class EffectScriptParser : Parser {
 			case T__25:
 			case T__26:
 				{
-				State = 191;
+				State = 199;
 				selfCost();
 				}
 				break;
 			case T__21:
 				{
-				State = 192;
+				State = 200;
 				detachCost();
 				}
 				break;
 			case T__20:
 				{
-				State = 193;
+				State = 201;
 				tributeCost();
 				}
 				break;
 			default:
 				throw new NoViableAltException(this);
 			}
-			State = 196;
+			State = 204;
 			Match(T__19);
 			}
 		}
@@ -877,13 +879,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 198;
+			State = 206;
 			Match(T__20);
-			State = 199;
+			State = 207;
 			Match(T__2);
-			State = 200;
+			State = 208;
 			Match(NUMBER);
-			State = 201;
+			State = 209;
 			Match(T__4);
 			}
 		}
@@ -920,13 +922,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 203;
+			State = 211;
 			Match(T__21);
-			State = 204;
+			State = 212;
 			Match(T__2);
-			State = 205;
+			State = 213;
 			Match(NUMBER);
-			State = 206;
+			State = 214;
 			Match(T__4);
 			}
 		}
@@ -963,13 +965,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 208;
+			State = 216;
 			Match(T__22);
-			State = 209;
+			State = 217;
 			Match(T__2);
-			State = 210;
+			State = 218;
 			Match(NUMBER);
-			State = 211;
+			State = 219;
 			Match(T__4);
 			}
 		}
@@ -1006,13 +1008,13 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 213;
+			State = 221;
 			Match(T__23);
-			State = 214;
+			State = 222;
 			Match(T__2);
-			State = 215;
+			State = 223;
 			Match(NUMBER);
-			State = 216;
+			State = 224;
 			Match(T__4);
 			}
 		}
@@ -1049,7 +1051,7 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 218;
+			State = 226;
 			_la = TokenStream.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 234881024L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -1095,11 +1097,11 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 220;
+			State = 228;
 			Match(T__27);
-			State = 221;
+			State = 229;
 			condName();
-			State = 222;
+			State = 230;
 			Match(T__19);
 			}
 		}
@@ -1136,26 +1138,26 @@ public partial class EffectScriptParser : Parser {
 		CondNameContext _localctx = new CondNameContext(Context, State);
 		EnterRule(_localctx, 28, RULE_condName);
 		try {
-			State = 230;
+			State = 238;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case T__28:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 224;
+				State = 232;
 				Match(T__28);
 				}
 				break;
 			case T__29:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 225;
+				State = 233;
 				Match(T__29);
-				State = 226;
+				State = 234;
 				Match(T__2);
-				State = 227;
+				State = 235;
 				selector();
-				State = 228;
+				State = 236;
 				Match(T__4);
 				}
 				break;
@@ -1196,14 +1198,14 @@ public partial class EffectScriptParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 232;
+			State = 240;
 			Match(T__30);
-			State = 234;
+			State = 242;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__5) {
 				{
-				State = 233;
+				State = 241;
 				Match(T__5);
 				}
 			}
@@ -1225,6 +1227,9 @@ public partial class EffectScriptParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public TriggerNameContext triggerName() {
 			return GetRuleContext<TriggerNameContext>(0);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public SummonConditionsContext summonConditions() {
+			return GetRuleContext<SummonConditionsContext>(0);
+		}
 		public TriggerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1242,15 +1247,311 @@ public partial class EffectScriptParser : Parser {
 	public TriggerContext trigger() {
 		TriggerContext _localctx = new TriggerContext(Context, State);
 		EnterRule(_localctx, 32, RULE_trigger);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 236;
+			State = 244;
 			Match(T__31);
-			State = 237;
+			State = 245;
 			triggerName();
-			State = 238;
+			State = 247;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==T__2) {
+				{
+				State = 246;
+				summonConditions();
+				}
+			}
+
+			State = 249;
 			Match(T__19);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SummonConditionsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public SummonConditionContext[] summonCondition() {
+			return GetRuleContexts<SummonConditionContext>();
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SummonConditionContext summonCondition(int i) {
+			return GetRuleContext<SummonConditionContext>(i);
+		}
+		public SummonConditionsContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_summonConditions; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IEffectScriptVisitor<TResult> typedVisitor = visitor as IEffectScriptVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitSummonConditions(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public SummonConditionsContext summonConditions() {
+		SummonConditionsContext _localctx = new SummonConditionsContext(Context, State);
+		EnterRule(_localctx, 34, RULE_summonConditions);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 251;
+			Match(T__2);
+			State = 252;
+			summonCondition();
+			State = 257;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			while (_la==T__3) {
+				{
+				{
+				State = 253;
+				Match(T__3);
+				State = 254;
+				summonCondition();
+				}
+				}
+				State = 259;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+			}
+			State = 260;
+			Match(T__4);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SummonConditionContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public SummonFromContext summonFrom() {
+			return GetRuleContext<SummonFromContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SummonByContext summonBy() {
+			return GetRuleContext<SummonByContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IDENT() { return GetToken(EffectScriptParser.IDENT, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NUMBER() { return GetToken(EffectScriptParser.NUMBER, 0); }
+		public SummonConditionContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_summonCondition; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IEffectScriptVisitor<TResult> typedVisitor = visitor as IEffectScriptVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitSummonCondition(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public SummonConditionContext summonCondition() {
+		SummonConditionContext _localctx = new SummonConditionContext(Context, State);
+		EnterRule(_localctx, 36, RULE_summonCondition);
+		int _la;
+		try {
+			State = 270;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case T__32:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 262;
+				Match(T__32);
+				State = 263;
+				summonFrom();
+				}
+				break;
+			case T__33:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 264;
+				Match(T__33);
+				State = 265;
+				summonBy();
+				}
+				break;
+			case T__20:
+			case IDENT:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 266;
+				_la = TokenStream.LA(1);
+				if ( !(_la==T__20 || _la==IDENT) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				State = 268;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				if (_la==NUMBER) {
+					{
+					State = 267;
+					Match(NUMBER);
+					}
+				}
+
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SummonFromContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IDENT() { return GetToken(EffectScriptParser.IDENT, 0); }
+		public SummonFromContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_summonFrom; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IEffectScriptVisitor<TResult> typedVisitor = visitor as IEffectScriptVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitSummonFrom(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public SummonFromContext summonFrom() {
+		SummonFromContext _localctx = new SummonFromContext(Context, State);
+		EnterRule(_localctx, 38, RULE_summonFrom);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 272;
+			_la = TokenStream.LA(1);
+			if ( !(((((_la - 35)) & ~0x3f) == 0 && ((1L << (_la - 35)) & 36028797018963983L) != 0)) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class SummonByContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public KindContext kind() {
+			return GetRuleContext<KindContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode STRING() { return GetToken(EffectScriptParser.STRING, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode NUMBER() { return GetToken(EffectScriptParser.NUMBER, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IDENT() { return GetToken(EffectScriptParser.IDENT, 0); }
+		public SummonByContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_summonBy; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IEffectScriptVisitor<TResult> typedVisitor = visitor as IEffectScriptVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitSummonBy(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public SummonByContext summonBy() {
+		SummonByContext _localctx = new SummonByContext(Context, State);
+		EnterRule(_localctx, 40, RULE_summonBy);
+		try {
+			State = 280;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case T__15:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 274;
+				Match(T__15);
+				}
+				break;
+			case T__7:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 275;
+				Match(T__7);
+				}
+				break;
+			case T__74:
+			case T__75:
+			case T__76:
+			case T__77:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 276;
+				kind();
+				}
+				break;
+			case STRING:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 277;
+				Match(STRING);
+				}
+				break;
+			case NUMBER:
+				EnterOuterAlt(_localctx, 5);
+				{
+				State = 278;
+				Match(NUMBER);
+				}
+				break;
+			case IDENT:
+				EnterOuterAlt(_localctx, 6);
+				{
+				State = 279;
+				Match(IDENT);
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1281,14 +1582,14 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public TriggerNameContext triggerName() {
 		TriggerNameContext _localctx = new TriggerNameContext(Context, State);
-		EnterRule(_localctx, 34, RULE_triggerName);
+		EnterRule(_localctx, 42, RULE_triggerName);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 240;
+			State = 282;
 			_la = TokenStream.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 140728898420736L) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 9006649498927104L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -1331,26 +1632,26 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public ChainContext chain() {
 		ChainContext _localctx = new ChainContext(Context, State);
-		EnterRule(_localctx, 36, RULE_chain);
+		EnterRule(_localctx, 44, RULE_chain);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 242;
+			State = 284;
 			action();
-			State = 247;
+			State = 289;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			while (_la==T__46) {
+			while (_la==T__52) {
 				{
 				{
-				State = 243;
-				Match(T__46);
-				State = 244;
+				State = 285;
+				Match(T__52);
+				State = 286;
 				action();
 				}
 				}
-				State = 249;
+				State = 291;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -1426,106 +1727,106 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public ActionContext action() {
 		ActionContext _localctx = new ActionContext(Context, State);
-		EnterRule(_localctx, 38, RULE_action);
+		EnterRule(_localctx, 46, RULE_action);
 		try {
-			State = 264;
+			State = 306;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__47:
+			case T__53:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 250;
+				State = 292;
 				drawAction();
 				}
 				break;
-			case T__48:
+			case T__54:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 251;
+				State = 293;
 				searchAction();
 				}
 				break;
-			case T__50:
+			case T__55:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 252;
+				State = 294;
 				reviveAction();
 				}
 				break;
-			case T__51:
+			case T__56:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 253;
+				State = 295;
 				destroyAction();
 				}
 				break;
-			case T__55:
+			case T__60:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 254;
+				State = 296;
 				gainAction();
 				}
 				break;
-			case T__56:
+			case T__61:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 255;
+				State = 297;
 				burnAction();
 				}
 				break;
-			case T__54:
+			case T__59:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 256;
+				State = 298;
 				sendAction();
 				}
 				break;
 			case T__10:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 257;
+				State = 299;
 				equipAction();
 				}
 				break;
-			case T__57:
+			case T__62:
 				EnterOuterAlt(_localctx, 9);
 				{
-				State = 258;
+				State = 300;
 				summonAction();
 				}
 				break;
-			case T__64:
+			case T__67:
 				EnterOuterAlt(_localctx, 10);
 				{
-				State = 259;
+				State = 301;
 				salvageAction();
 				}
 				break;
-			case T__66:
+			case T__68:
 				EnterOuterAlt(_localctx, 11);
 				{
-				State = 260;
+				State = 302;
 				banishAction();
 				}
 				break;
-			case T__63:
+			case T__66:
 				EnterOuterAlt(_localctx, 12);
 				{
-				State = 261;
+				State = 303;
 				gainAtkAction();
 				}
 				break;
-			case T__62:
+			case T__65:
 				EnterOuterAlt(_localctx, 13);
 				{
-				State = 262;
+				State = 304;
 				returnAction();
 				}
 				break;
-			case T__67:
+			case T__69:
 				EnterOuterAlt(_localctx, 14);
 				{
-				State = 263;
+				State = 305;
 				negateAction();
 				}
 				break;
@@ -1562,17 +1863,17 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public DrawActionContext drawAction() {
 		DrawActionContext _localctx = new DrawActionContext(Context, State);
-		EnterRule(_localctx, 40, RULE_drawAction);
+		EnterRule(_localctx, 48, RULE_drawAction);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 266;
-			Match(T__47);
-			State = 267;
+			State = 308;
+			Match(T__53);
+			State = 309;
 			Match(T__2);
-			State = 268;
+			State = 310;
 			Match(NUMBER);
-			State = 269;
+			State = 311;
 			Match(T__4);
 			}
 		}
@@ -1607,30 +1908,30 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public SearchActionContext searchAction() {
 		SearchActionContext _localctx = new SearchActionContext(Context, State);
-		EnterRule(_localctx, 42, RULE_searchAction);
+		EnterRule(_localctx, 50, RULE_searchAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 271;
-			Match(T__48);
-			State = 272;
+			State = 313;
+			Match(T__54);
+			State = 314;
 			Match(T__2);
-			State = 273;
-			Match(T__49);
-			State = 276;
+			State = 315;
+			Match(T__35);
+			State = 318;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 274;
+				State = 316;
 				Match(T__3);
-				State = 275;
+				State = 317;
 				selector();
 				}
 			}
 
-			State = 278;
+			State = 320;
 			Match(T__4);
 			}
 		}
@@ -1668,30 +1969,30 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public ReviveActionContext reviveAction() {
 		ReviveActionContext _localctx = new ReviveActionContext(Context, State);
-		EnterRule(_localctx, 44, RULE_reviveAction);
+		EnterRule(_localctx, 52, RULE_reviveAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 280;
-			Match(T__50);
-			State = 281;
+			State = 322;
+			Match(T__55);
+			State = 323;
 			Match(T__2);
-			State = 282;
+			State = 324;
 			graveyard();
-			State = 285;
+			State = 327;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 283;
+				State = 325;
 				Match(T__3);
-				State = 284;
+				State = 326;
 				selector();
 				}
 			}
 
-			State = 287;
+			State = 329;
 			Match(T__4);
 			}
 		}
@@ -1732,42 +2033,42 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public DestroyActionContext destroyAction() {
 		DestroyActionContext _localctx = new DestroyActionContext(Context, State);
-		EnterRule(_localctx, 46, RULE_destroyAction);
+		EnterRule(_localctx, 54, RULE_destroyAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 289;
-			Match(T__51);
-			State = 290;
+			State = 331;
+			Match(T__56);
+			State = 332;
 			Match(T__2);
-			State = 291;
+			State = 333;
 			scope();
-			State = 294;
+			State = 336;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,24,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,29,Context) ) {
 			case 1:
 				{
-				State = 292;
+				State = 334;
 				Match(T__3);
-				State = 293;
+				State = 335;
 				side();
 				}
 				break;
 			}
-			State = 298;
+			State = 340;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 296;
+				State = 338;
 				Match(T__3);
-				State = 297;
+				State = 339;
 				selector();
 				}
 			}
 
-			State = 300;
+			State = 342;
 			Match(T__4);
 			}
 		}
@@ -1799,14 +2100,14 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public ScopeContext scope() {
 		ScopeContext _localctx = new ScopeContext(Context, State);
-		EnterRule(_localctx, 48, RULE_scope);
+		EnterRule(_localctx, 56, RULE_scope);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 302;
+			State = 344;
 			_la = TokenStream.LA(1);
-			if ( !(_la==T__52 || _la==T__53) ) {
+			if ( !(_la==T__57 || _la==T__58) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -1846,30 +2147,30 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public SendActionContext sendAction() {
 		SendActionContext _localctx = new SendActionContext(Context, State);
-		EnterRule(_localctx, 50, RULE_sendAction);
+		EnterRule(_localctx, 58, RULE_sendAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 304;
-			Match(T__54);
-			State = 305;
+			State = 346;
+			Match(T__59);
+			State = 347;
 			Match(T__2);
-			State = 306;
-			Match(T__49);
-			State = 309;
+			State = 348;
+			Match(T__35);
+			State = 351;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 307;
+				State = 349;
 				Match(T__3);
-				State = 308;
+				State = 350;
 				selector();
 				}
 			}
 
-			State = 311;
+			State = 353;
 			Match(T__4);
 			}
 		}
@@ -1902,17 +2203,17 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public GainActionContext gainAction() {
 		GainActionContext _localctx = new GainActionContext(Context, State);
-		EnterRule(_localctx, 52, RULE_gainAction);
+		EnterRule(_localctx, 60, RULE_gainAction);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 313;
-			Match(T__55);
-			State = 314;
+			State = 355;
+			Match(T__60);
+			State = 356;
 			Match(T__2);
-			State = 315;
+			State = 357;
 			Match(NUMBER);
-			State = 316;
+			State = 358;
 			Match(T__4);
 			}
 		}
@@ -1945,17 +2246,17 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public BurnActionContext burnAction() {
 		BurnActionContext _localctx = new BurnActionContext(Context, State);
-		EnterRule(_localctx, 54, RULE_burnAction);
+		EnterRule(_localctx, 62, RULE_burnAction);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 318;
-			Match(T__56);
-			State = 319;
+			State = 360;
+			Match(T__61);
+			State = 361;
 			Match(T__2);
-			State = 320;
+			State = 362;
 			Match(NUMBER);
-			State = 321;
+			State = 363;
 			Match(T__4);
 			}
 		}
@@ -1993,34 +2294,34 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public EquipActionContext equipAction() {
 		EquipActionContext _localctx = new EquipActionContext(Context, State);
-		EnterRule(_localctx, 56, RULE_equipAction);
+		EnterRule(_localctx, 64, RULE_equipAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 323;
+			State = 365;
 			Match(T__10);
-			State = 324;
+			State = 366;
 			Match(T__2);
-			State = 325;
+			State = 367;
 			statPart();
-			State = 330;
+			State = 372;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==T__3) {
 				{
 				{
-				State = 326;
+				State = 368;
 				Match(T__3);
-				State = 327;
+				State = 369;
 				statPart();
 				}
 				}
-				State = 332;
+				State = 374;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 333;
+			State = 375;
 			Match(T__4);
 			}
 		}
@@ -2058,30 +2359,30 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public SummonActionContext summonAction() {
 		SummonActionContext _localctx = new SummonActionContext(Context, State);
-		EnterRule(_localctx, 58, RULE_summonAction);
+		EnterRule(_localctx, 66, RULE_summonAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 335;
-			Match(T__57);
-			State = 336;
+			State = 377;
+			Match(T__62);
+			State = 378;
 			Match(T__2);
-			State = 337;
+			State = 379;
 			summonZone();
-			State = 340;
+			State = 382;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 338;
+				State = 380;
 				Match(T__3);
-				State = 339;
+				State = 381;
 				selector();
 				}
 			}
 
-			State = 342;
+			State = 384;
 			Match(T__4);
 			}
 		}
@@ -2113,14 +2414,14 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public SummonZoneContext summonZone() {
 		SummonZoneContext _localctx = new SummonZoneContext(Context, State);
-		EnterRule(_localctx, 60, RULE_summonZone);
+		EnterRule(_localctx, 68, RULE_summonZone);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 344;
+			State = 386;
 			_la = TokenStream.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 8648037184458194944L) != 0)) ) {
+			if ( !(((((_la - 35)) & ~0x3f) == 0 && ((1L << (_la - 35)) & 1610612743L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -2163,42 +2464,42 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public ReturnActionContext returnAction() {
 		ReturnActionContext _localctx = new ReturnActionContext(Context, State);
-		EnterRule(_localctx, 62, RULE_returnAction);
+		EnterRule(_localctx, 70, RULE_returnAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 346;
-			Match(T__62);
-			State = 347;
+			State = 388;
+			Match(T__65);
+			State = 389;
 			Match(T__2);
-			State = 348;
-			Match(T__53);
-			State = 351;
+			State = 390;
+			Match(T__58);
+			State = 393;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,29,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,34,Context) ) {
 			case 1:
 				{
-				State = 349;
+				State = 391;
 				Match(T__3);
-				State = 350;
+				State = 392;
 				side();
 				}
 				break;
 			}
-			State = 355;
+			State = 397;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 353;
+				State = 395;
 				Match(T__3);
-				State = 354;
+				State = 396;
 				selector();
 				}
 			}
 
-			State = 357;
+			State = 399;
 			Match(T__4);
 			}
 		}
@@ -2234,30 +2535,30 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public GainAtkActionContext gainAtkAction() {
 		GainAtkActionContext _localctx = new GainAtkActionContext(Context, State);
-		EnterRule(_localctx, 64, RULE_gainAtkAction);
+		EnterRule(_localctx, 72, RULE_gainAtkAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 359;
-			Match(T__63);
-			State = 360;
+			State = 401;
+			Match(T__66);
+			State = 402;
 			Match(T__2);
-			State = 364;
+			State = 406;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 896L) != 0)) {
 				{
-				State = 361;
+				State = 403;
 				side();
-				State = 362;
+				State = 404;
 				Match(T__3);
 				}
 			}
 
-			State = 366;
+			State = 408;
 			Match(NUMBER);
-			State = 367;
+			State = 409;
 			Match(T__4);
 			}
 		}
@@ -2292,37 +2593,37 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public SalvageActionContext salvageAction() {
 		SalvageActionContext _localctx = new SalvageActionContext(Context, State);
-		EnterRule(_localctx, 66, RULE_salvageAction);
+		EnterRule(_localctx, 74, RULE_salvageAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 369;
-			Match(T__64);
-			State = 370;
+			State = 411;
+			Match(T__67);
+			State = 412;
 			Match(T__2);
-			State = 371;
+			State = 413;
 			_la = TokenStream.LA(1);
-			if ( !(_la==T__59 || _la==T__65) ) {
+			if ( !(_la==T__36 || _la==T__37) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
 				ErrorHandler.ReportMatch(this);
 			    Consume();
 			}
-			State = 374;
+			State = 416;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 372;
+				State = 414;
 				Match(T__3);
-				State = 373;
+				State = 415;
 				selector();
 				}
 			}
 
-			State = 376;
+			State = 418;
 			Match(T__4);
 			}
 		}
@@ -2363,42 +2664,42 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public BanishActionContext banishAction() {
 		BanishActionContext _localctx = new BanishActionContext(Context, State);
-		EnterRule(_localctx, 68, RULE_banishAction);
+		EnterRule(_localctx, 76, RULE_banishAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 378;
-			Match(T__66);
-			State = 379;
+			State = 420;
+			Match(T__68);
+			State = 421;
 			Match(T__2);
-			State = 380;
+			State = 422;
 			scope();
-			State = 383;
+			State = 425;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,33,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,38,Context) ) {
 			case 1:
 				{
-				State = 381;
+				State = 423;
 				Match(T__3);
-				State = 382;
+				State = 424;
 				side();
 				}
 				break;
 			}
-			State = 387;
+			State = 429;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==T__3) {
 				{
-				State = 385;
+				State = 427;
 				Match(T__3);
-				State = 386;
+				State = 428;
 				selector();
 				}
 			}
 
-			State = 389;
+			State = 431;
 			Match(T__4);
 			}
 		}
@@ -2436,34 +2737,34 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public NegateActionContext negateAction() {
 		NegateActionContext _localctx = new NegateActionContext(Context, State);
-		EnterRule(_localctx, 70, RULE_negateAction);
+		EnterRule(_localctx, 78, RULE_negateAction);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 391;
-			Match(T__67);
-			State = 392;
+			State = 433;
+			Match(T__69);
+			State = 434;
 			Match(T__2);
-			State = 393;
+			State = 435;
 			negateArg();
-			State = 398;
+			State = 440;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==T__3) {
 				{
 				{
-				State = 394;
+				State = 436;
 				Match(T__3);
-				State = 395;
+				State = 437;
 				negateArg();
 				}
 				}
-				State = 400;
+				State = 442;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 401;
+			State = 443;
 			Match(T__4);
 			}
 		}
@@ -2501,74 +2802,74 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public NegateArgContext negateArg() {
 		NegateArgContext _localctx = new NegateArgContext(Context, State);
-		EnterRule(_localctx, 72, RULE_negateArg);
+		EnterRule(_localctx, 80, RULE_negateArg);
 		try {
-			State = 412;
+			State = 454;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case IDENT:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 403;
+				State = 445;
 				Match(IDENT);
 				}
 				break;
 			case NUMBER:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 404;
+				State = 446;
 				Match(NUMBER);
 				}
 				break;
 			case STRING:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 405;
+				State = 447;
 				Match(STRING);
 				}
 				break;
-			case T__72:
-			case T__73:
 			case T__74:
 			case T__75:
+			case T__76:
+			case T__77:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 406;
+				State = 448;
 				kind();
 				}
 				break;
 			case T__8:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 407;
+				State = 449;
 				Match(T__8);
 				}
 				break;
 			case T__6:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 408;
+				State = 450;
 				Match(T__6);
 				}
 				break;
 			case T__9:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 409;
+				State = 451;
 				Match(T__9);
 				}
 				break;
 			case T__10:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 410;
+				State = 452;
 				Match(T__10);
 				}
 				break;
 			case T__15:
 				EnterOuterAlt(_localctx, 9);
 				{
-				State = 411;
+				State = 453;
 				Match(T__15);
 				}
 				break;
@@ -2604,14 +2905,14 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public GraveyardContext graveyard() {
 		GraveyardContext _localctx = new GraveyardContext(Context, State);
-		EnterRule(_localctx, 74, RULE_graveyard);
+		EnterRule(_localctx, 82, RULE_graveyard);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 414;
+			State = 456;
 			_la = TokenStream.LA(1);
-			if ( !(((((_la - 60)) & ~0x3f) == 0 && ((1L << (_la - 60)) & 1537L) != 0)) ) {
+			if ( !(((((_la - 37)) & ~0x3f) == 0 && ((1L << (_la - 37)) & 51539607553L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -2648,12 +2949,12 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public SideContext side() {
 		SideContext _localctx = new SideContext(Context, State);
-		EnterRule(_localctx, 76, RULE_side);
+		EnterRule(_localctx, 84, RULE_side);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 416;
+			State = 458;
 			_la = TokenStream.LA(1);
 			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 896L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -2701,43 +3002,43 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public SelectorContext selector() {
 		SelectorContext _localctx = new SelectorContext(Context, State);
-		EnterRule(_localctx, 78, RULE_selector);
+		EnterRule(_localctx, 86, RULE_selector);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 441;
+			State = 483;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
-			case T__72:
-			case T__73:
 			case T__74:
 			case T__75:
+			case T__76:
+			case T__77:
 				{
-				State = 418;
+				State = 460;
 				kind();
-				State = 428;
+				State = 470;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if (_la==T__70) {
+				if (_la==T__72) {
 					{
-					State = 419;
-					Match(T__70);
-					State = 420;
+					State = 461;
+					Match(T__72);
+					State = 462;
 					condition();
-					State = 425;
+					State = 467;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
-					while (_la==T__71) {
+					while (_la==T__73) {
 						{
 						{
-						State = 421;
-						Match(T__71);
-						State = 422;
+						State = 463;
+						Match(T__73);
+						State = 464;
 						condition();
 						}
 						}
-						State = 427;
+						State = 469;
 						ErrorHandler.Sync(this);
 						_la = TokenStream.LA(1);
 					}
@@ -2747,38 +3048,38 @@ public partial class EffectScriptParser : Parser {
 				}
 				break;
 			case T__13:
-			case T__70:
-			case T__76:
-			case T__77:
+			case T__72:
 			case T__78:
 			case T__79:
 			case T__80:
+			case T__81:
+			case T__82:
 				{
-				State = 431;
+				State = 473;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				if (_la==T__70) {
+				if (_la==T__72) {
 					{
-					State = 430;
-					Match(T__70);
+					State = 472;
+					Match(T__72);
 					}
 				}
 
-				State = 433;
+				State = 475;
 				condition();
-				State = 438;
+				State = 480;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				while (_la==T__71) {
+				while (_la==T__73) {
 					{
 					{
-					State = 434;
-					Match(T__71);
-					State = 435;
+					State = 476;
+					Match(T__73);
+					State = 477;
 					condition();
 					}
 					}
-					State = 440;
+					State = 482;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				}
@@ -2817,14 +3118,14 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public KindContext kind() {
 		KindContext _localctx = new KindContext(Context, State);
-		EnterRule(_localctx, 80, RULE_kind);
+		EnterRule(_localctx, 88, RULE_kind);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 443;
+			State = 485;
 			_la = TokenStream.LA(1);
-			if ( !(((((_la - 73)) & ~0x3f) == 0 && ((1L << (_la - 73)) & 15L) != 0)) ) {
+			if ( !(((((_la - 75)) & ~0x3f) == 0 && ((1L << (_la - 75)) & 15L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -2870,15 +3171,15 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public ConditionContext condition() {
 		ConditionContext _localctx = new ConditionContext(Context, State);
-		EnterRule(_localctx, 82, RULE_condition);
+		EnterRule(_localctx, 90, RULE_condition);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 445;
+			State = 487;
 			field();
-			State = 446;
+			State = 488;
 			op();
-			State = 447;
+			State = 489;
 			value();
 			}
 		}
@@ -2910,14 +3211,14 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public FieldContext field() {
 		FieldContext _localctx = new FieldContext(Context, State);
-		EnterRule(_localctx, 84, RULE_field);
+		EnterRule(_localctx, 92, RULE_field);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 449;
+			State = 491;
 			_la = TokenStream.LA(1);
-			if ( !(_la==T__13 || ((((_la - 77)) & ~0x3f) == 0 && ((1L << (_la - 77)) & 31L) != 0)) ) {
+			if ( !(_la==T__13 || ((((_la - 79)) & ~0x3f) == 0 && ((1L << (_la - 79)) & 31L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -2954,14 +3255,14 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public OpContext op() {
 		OpContext _localctx = new OpContext(Context, State);
-		EnterRule(_localctx, 86, RULE_op);
+		EnterRule(_localctx, 94, RULE_op);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 451;
+			State = 493;
 			_la = TokenStream.LA(1);
-			if ( !(((((_la - 82)) & ~0x3f) == 0 && ((1L << (_la - 82)) & 31L) != 0)) ) {
+			if ( !(((((_la - 84)) & ~0x3f) == 0 && ((1L << (_la - 84)) & 31L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -3001,14 +3302,14 @@ public partial class EffectScriptParser : Parser {
 	[RuleVersion(0)]
 	public ValueContext value() {
 		ValueContext _localctx = new ValueContext(Context, State);
-		EnterRule(_localctx, 88, RULE_value);
+		EnterRule(_localctx, 96, RULE_value);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 453;
+			State = 495;
 			_la = TokenStream.LA(1);
-			if ( !(((((_la - 87)) & ~0x3f) == 0 && ((1L << (_la - 87)) & 7L) != 0)) ) {
+			if ( !(((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & 7L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -3029,156 +3330,172 @@ public partial class EffectScriptParser : Parser {
 	}
 
 	private static int[] _serializedATN = {
-		4,1,91,456,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
+		4,1,93,498,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
 		7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,14,
 		2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,21,
 		2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,2,27,7,27,2,28,7,28,
 		2,29,7,29,2,30,7,30,2,31,7,31,2,32,7,32,2,33,7,33,2,34,7,34,2,35,7,35,
 		2,36,7,36,2,37,7,37,2,38,7,38,2,39,7,39,2,40,7,40,2,41,7,41,2,42,7,42,
-		2,43,7,43,2,44,7,44,1,0,5,0,92,8,0,10,0,12,0,95,9,0,1,0,4,0,98,8,0,11,
-		0,12,0,99,1,0,1,0,1,0,5,0,105,8,0,10,0,12,0,108,9,0,1,0,3,0,111,8,0,1,
-		0,5,0,114,8,0,10,0,12,0,117,9,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,5,1,126,8,
-		1,10,1,12,1,129,9,1,1,1,1,1,3,1,133,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,
-		2,142,8,2,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,5,3,152,8,3,10,3,12,3,155,9,
-		3,3,3,157,8,3,1,3,3,3,160,8,3,1,4,1,4,1,4,1,5,1,5,3,5,167,8,5,1,5,1,5,
-		1,5,1,5,1,6,3,6,174,8,6,1,6,3,6,177,8,6,1,6,3,6,180,8,6,1,6,1,6,3,6,184,
-		8,6,1,6,3,6,187,8,6,1,7,1,7,1,7,1,7,1,7,1,7,3,7,195,8,7,1,7,1,7,1,8,1,
-		8,1,8,1,8,1,8,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,1,10,1,11,1,11,1,
-		11,1,11,1,11,1,12,1,12,1,13,1,13,1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,
-		14,3,14,231,8,14,1,15,1,15,3,15,235,8,15,1,16,1,16,1,16,1,16,1,17,1,17,
-		1,18,1,18,1,18,5,18,246,8,18,10,18,12,18,249,9,18,1,19,1,19,1,19,1,19,
-		1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,1,19,3,19,265,8,19,1,20,1,
-		20,1,20,1,20,1,20,1,21,1,21,1,21,1,21,1,21,3,21,277,8,21,1,21,1,21,1,22,
-		1,22,1,22,1,22,1,22,3,22,286,8,22,1,22,1,22,1,23,1,23,1,23,1,23,1,23,3,
-		23,295,8,23,1,23,1,23,3,23,299,8,23,1,23,1,23,1,24,1,24,1,25,1,25,1,25,
-		1,25,1,25,3,25,310,8,25,1,25,1,25,1,26,1,26,1,26,1,26,1,26,1,27,1,27,1,
-		27,1,27,1,27,1,28,1,28,1,28,1,28,1,28,5,28,329,8,28,10,28,12,28,332,9,
-		28,1,28,1,28,1,29,1,29,1,29,1,29,1,29,3,29,341,8,29,1,29,1,29,1,30,1,30,
-		1,31,1,31,1,31,1,31,1,31,3,31,352,8,31,1,31,1,31,3,31,356,8,31,1,31,1,
-		31,1,32,1,32,1,32,1,32,1,32,3,32,365,8,32,1,32,1,32,1,32,1,33,1,33,1,33,
-		1,33,1,33,3,33,375,8,33,1,33,1,33,1,34,1,34,1,34,1,34,1,34,3,34,384,8,
-		34,1,34,1,34,3,34,388,8,34,1,34,1,34,1,35,1,35,1,35,1,35,1,35,5,35,397,
-		8,35,10,35,12,35,400,9,35,1,35,1,35,1,36,1,36,1,36,1,36,1,36,1,36,1,36,
-		1,36,1,36,3,36,413,8,36,1,37,1,37,1,38,1,38,1,39,1,39,1,39,1,39,1,39,5,
-		39,424,8,39,10,39,12,39,427,9,39,3,39,429,8,39,1,39,3,39,432,8,39,1,39,
-		1,39,1,39,5,39,437,8,39,10,39,12,39,440,9,39,3,39,442,8,39,1,40,1,40,1,
-		41,1,41,1,41,1,41,1,42,1,42,1,43,1,43,1,44,1,44,1,44,0,0,45,0,2,4,6,8,
-		10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,
-		58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,0,13,2,0,87,87,89,89,1,
-		0,14,15,1,0,25,27,1,0,33,46,1,0,53,54,2,0,50,50,59,62,2,0,60,60,66,66,
-		2,0,60,60,69,70,1,0,7,9,1,0,73,76,2,0,14,14,77,81,1,0,82,86,1,0,87,89,
-		481,0,93,1,0,0,0,2,120,1,0,0,0,4,141,1,0,0,0,6,143,1,0,0,0,8,161,1,0,0,
-		0,10,164,1,0,0,0,12,173,1,0,0,0,14,188,1,0,0,0,16,198,1,0,0,0,18,203,1,
-		0,0,0,20,208,1,0,0,0,22,213,1,0,0,0,24,218,1,0,0,0,26,220,1,0,0,0,28,230,
-		1,0,0,0,30,232,1,0,0,0,32,236,1,0,0,0,34,240,1,0,0,0,36,242,1,0,0,0,38,
-		264,1,0,0,0,40,266,1,0,0,0,42,271,1,0,0,0,44,280,1,0,0,0,46,289,1,0,0,
-		0,48,302,1,0,0,0,50,304,1,0,0,0,52,313,1,0,0,0,54,318,1,0,0,0,56,323,1,
-		0,0,0,58,335,1,0,0,0,60,344,1,0,0,0,62,346,1,0,0,0,64,359,1,0,0,0,66,369,
-		1,0,0,0,68,378,1,0,0,0,70,391,1,0,0,0,72,412,1,0,0,0,74,414,1,0,0,0,76,
-		416,1,0,0,0,78,441,1,0,0,0,80,443,1,0,0,0,82,445,1,0,0,0,84,449,1,0,0,
-		0,86,451,1,0,0,0,88,453,1,0,0,0,90,92,3,2,1,0,91,90,1,0,0,0,92,95,1,0,
-		0,0,93,91,1,0,0,0,93,94,1,0,0,0,94,110,1,0,0,0,95,93,1,0,0,0,96,98,3,10,
-		5,0,97,96,1,0,0,0,98,99,1,0,0,0,99,97,1,0,0,0,99,100,1,0,0,0,100,111,1,
-		0,0,0,101,106,3,12,6,0,102,103,5,1,0,0,103,105,3,12,6,0,104,102,1,0,0,
-		0,105,108,1,0,0,0,106,104,1,0,0,0,106,107,1,0,0,0,107,111,1,0,0,0,108,
-		106,1,0,0,0,109,111,3,6,3,0,110,97,1,0,0,0,110,101,1,0,0,0,110,109,1,0,
-		0,0,110,111,1,0,0,0,111,115,1,0,0,0,112,114,3,2,1,0,113,112,1,0,0,0,114,
-		117,1,0,0,0,115,113,1,0,0,0,115,116,1,0,0,0,116,118,1,0,0,0,117,115,1,
-		0,0,0,118,119,5,0,0,1,119,1,1,0,0,0,120,121,5,2,0,0,121,122,5,3,0,0,122,
-		127,3,4,2,0,123,124,5,4,0,0,124,126,3,4,2,0,125,123,1,0,0,0,126,129,1,
-		0,0,0,127,125,1,0,0,0,127,128,1,0,0,0,128,130,1,0,0,0,129,127,1,0,0,0,
-		130,132,5,5,0,0,131,133,5,6,0,0,132,131,1,0,0,0,132,133,1,0,0,0,133,3,
-		1,0,0,0,134,142,5,88,0,0,135,142,3,80,40,0,136,142,5,7,0,0,137,142,5,8,
-		0,0,138,142,5,9,0,0,139,142,5,10,0,0,140,142,5,11,0,0,141,134,1,0,0,0,
-		141,135,1,0,0,0,141,136,1,0,0,0,141,137,1,0,0,0,141,138,1,0,0,0,141,139,
-		1,0,0,0,141,140,1,0,0,0,142,5,1,0,0,0,143,144,5,12,0,0,144,145,5,3,0,0,
-		145,146,7,0,0,0,146,156,5,5,0,0,147,148,5,13,0,0,148,153,3,8,4,0,149,150,
-		5,4,0,0,150,152,3,8,4,0,151,149,1,0,0,0,152,155,1,0,0,0,153,151,1,0,0,
-		0,153,154,1,0,0,0,154,157,1,0,0,0,155,153,1,0,0,0,156,147,1,0,0,0,156,
-		157,1,0,0,0,157,159,1,0,0,0,158,160,5,6,0,0,159,158,1,0,0,0,159,160,1,
-		0,0,0,160,7,1,0,0,0,161,162,7,1,0,0,162,163,5,87,0,0,163,9,1,0,0,0,164,
-		166,5,16,0,0,165,167,5,89,0,0,166,165,1,0,0,0,166,167,1,0,0,0,167,168,
-		1,0,0,0,168,169,5,17,0,0,169,170,3,12,6,0,170,171,5,18,0,0,171,11,1,0,
-		0,0,172,174,3,32,16,0,173,172,1,0,0,0,173,174,1,0,0,0,174,176,1,0,0,0,
-		175,177,3,26,13,0,176,175,1,0,0,0,176,177,1,0,0,0,177,179,1,0,0,0,178,
-		180,3,14,7,0,179,178,1,0,0,0,179,180,1,0,0,0,180,181,1,0,0,0,181,183,3,
-		36,18,0,182,184,5,6,0,0,183,182,1,0,0,0,183,184,1,0,0,0,184,186,1,0,0,
-		0,185,187,3,30,15,0,186,185,1,0,0,0,186,187,1,0,0,0,187,13,1,0,0,0,188,
-		194,5,19,0,0,189,195,3,20,10,0,190,195,3,22,11,0,191,195,3,24,12,0,192,
-		195,3,18,9,0,193,195,3,16,8,0,194,189,1,0,0,0,194,190,1,0,0,0,194,191,
-		1,0,0,0,194,192,1,0,0,0,194,193,1,0,0,0,195,196,1,0,0,0,196,197,5,20,0,
-		0,197,15,1,0,0,0,198,199,5,21,0,0,199,200,5,3,0,0,200,201,5,87,0,0,201,
-		202,5,5,0,0,202,17,1,0,0,0,203,204,5,22,0,0,204,205,5,3,0,0,205,206,5,
-		87,0,0,206,207,5,5,0,0,207,19,1,0,0,0,208,209,5,23,0,0,209,210,5,3,0,0,
-		210,211,5,87,0,0,211,212,5,5,0,0,212,21,1,0,0,0,213,214,5,24,0,0,214,215,
-		5,3,0,0,215,216,5,87,0,0,216,217,5,5,0,0,217,23,1,0,0,0,218,219,7,2,0,
-		0,219,25,1,0,0,0,220,221,5,28,0,0,221,222,3,28,14,0,222,223,5,20,0,0,223,
-		27,1,0,0,0,224,231,5,29,0,0,225,226,5,30,0,0,226,227,5,3,0,0,227,228,3,
-		78,39,0,228,229,5,5,0,0,229,231,1,0,0,0,230,224,1,0,0,0,230,225,1,0,0,
-		0,231,29,1,0,0,0,232,234,5,31,0,0,233,235,5,6,0,0,234,233,1,0,0,0,234,
-		235,1,0,0,0,235,31,1,0,0,0,236,237,5,32,0,0,237,238,3,34,17,0,238,239,
-		5,20,0,0,239,33,1,0,0,0,240,241,7,3,0,0,241,35,1,0,0,0,242,247,3,38,19,
-		0,243,244,5,47,0,0,244,246,3,38,19,0,245,243,1,0,0,0,246,249,1,0,0,0,247,
-		245,1,0,0,0,247,248,1,0,0,0,248,37,1,0,0,0,249,247,1,0,0,0,250,265,3,40,
-		20,0,251,265,3,42,21,0,252,265,3,44,22,0,253,265,3,46,23,0,254,265,3,52,
-		26,0,255,265,3,54,27,0,256,265,3,50,25,0,257,265,3,56,28,0,258,265,3,58,
-		29,0,259,265,3,66,33,0,260,265,3,68,34,0,261,265,3,64,32,0,262,265,3,62,
-		31,0,263,265,3,70,35,0,264,250,1,0,0,0,264,251,1,0,0,0,264,252,1,0,0,0,
-		264,253,1,0,0,0,264,254,1,0,0,0,264,255,1,0,0,0,264,256,1,0,0,0,264,257,
-		1,0,0,0,264,258,1,0,0,0,264,259,1,0,0,0,264,260,1,0,0,0,264,261,1,0,0,
-		0,264,262,1,0,0,0,264,263,1,0,0,0,265,39,1,0,0,0,266,267,5,48,0,0,267,
-		268,5,3,0,0,268,269,5,87,0,0,269,270,5,5,0,0,270,41,1,0,0,0,271,272,5,
-		49,0,0,272,273,5,3,0,0,273,276,5,50,0,0,274,275,5,4,0,0,275,277,3,78,39,
-		0,276,274,1,0,0,0,276,277,1,0,0,0,277,278,1,0,0,0,278,279,5,5,0,0,279,
-		43,1,0,0,0,280,281,5,51,0,0,281,282,5,3,0,0,282,285,3,74,37,0,283,284,
-		5,4,0,0,284,286,3,78,39,0,285,283,1,0,0,0,285,286,1,0,0,0,286,287,1,0,
-		0,0,287,288,5,5,0,0,288,45,1,0,0,0,289,290,5,52,0,0,290,291,5,3,0,0,291,
-		294,3,48,24,0,292,293,5,4,0,0,293,295,3,76,38,0,294,292,1,0,0,0,294,295,
-		1,0,0,0,295,298,1,0,0,0,296,297,5,4,0,0,297,299,3,78,39,0,298,296,1,0,
-		0,0,298,299,1,0,0,0,299,300,1,0,0,0,300,301,5,5,0,0,301,47,1,0,0,0,302,
-		303,7,4,0,0,303,49,1,0,0,0,304,305,5,55,0,0,305,306,5,3,0,0,306,309,5,
-		50,0,0,307,308,5,4,0,0,308,310,3,78,39,0,309,307,1,0,0,0,309,310,1,0,0,
-		0,310,311,1,0,0,0,311,312,5,5,0,0,312,51,1,0,0,0,313,314,5,56,0,0,314,
-		315,5,3,0,0,315,316,5,87,0,0,316,317,5,5,0,0,317,53,1,0,0,0,318,319,5,
-		57,0,0,319,320,5,3,0,0,320,321,5,87,0,0,321,322,5,5,0,0,322,55,1,0,0,0,
-		323,324,5,11,0,0,324,325,5,3,0,0,325,330,3,8,4,0,326,327,5,4,0,0,327,329,
-		3,8,4,0,328,326,1,0,0,0,329,332,1,0,0,0,330,328,1,0,0,0,330,331,1,0,0,
-		0,331,333,1,0,0,0,332,330,1,0,0,0,333,334,5,5,0,0,334,57,1,0,0,0,335,336,
-		5,58,0,0,336,337,5,3,0,0,337,340,3,60,30,0,338,339,5,4,0,0,339,341,3,78,
-		39,0,340,338,1,0,0,0,340,341,1,0,0,0,341,342,1,0,0,0,342,343,5,5,0,0,343,
-		59,1,0,0,0,344,345,7,5,0,0,345,61,1,0,0,0,346,347,5,63,0,0,347,348,5,3,
-		0,0,348,351,5,54,0,0,349,350,5,4,0,0,350,352,3,76,38,0,351,349,1,0,0,0,
-		351,352,1,0,0,0,352,355,1,0,0,0,353,354,5,4,0,0,354,356,3,78,39,0,355,
-		353,1,0,0,0,355,356,1,0,0,0,356,357,1,0,0,0,357,358,5,5,0,0,358,63,1,0,
-		0,0,359,360,5,64,0,0,360,364,5,3,0,0,361,362,3,76,38,0,362,363,5,4,0,0,
-		363,365,1,0,0,0,364,361,1,0,0,0,364,365,1,0,0,0,365,366,1,0,0,0,366,367,
-		5,87,0,0,367,368,5,5,0,0,368,65,1,0,0,0,369,370,5,65,0,0,370,371,5,3,0,
-		0,371,374,7,6,0,0,372,373,5,4,0,0,373,375,3,78,39,0,374,372,1,0,0,0,374,
-		375,1,0,0,0,375,376,1,0,0,0,376,377,5,5,0,0,377,67,1,0,0,0,378,379,5,67,
-		0,0,379,380,5,3,0,0,380,383,3,48,24,0,381,382,5,4,0,0,382,384,3,76,38,
-		0,383,381,1,0,0,0,383,384,1,0,0,0,384,387,1,0,0,0,385,386,5,4,0,0,386,
-		388,3,78,39,0,387,385,1,0,0,0,387,388,1,0,0,0,388,389,1,0,0,0,389,390,
-		5,5,0,0,390,69,1,0,0,0,391,392,5,68,0,0,392,393,5,3,0,0,393,398,3,72,36,
-		0,394,395,5,4,0,0,395,397,3,72,36,0,396,394,1,0,0,0,397,400,1,0,0,0,398,
-		396,1,0,0,0,398,399,1,0,0,0,399,401,1,0,0,0,400,398,1,0,0,0,401,402,5,
-		5,0,0,402,71,1,0,0,0,403,413,5,88,0,0,404,413,5,87,0,0,405,413,5,89,0,
-		0,406,413,3,80,40,0,407,413,5,9,0,0,408,413,5,7,0,0,409,413,5,10,0,0,410,
-		413,5,11,0,0,411,413,5,16,0,0,412,403,1,0,0,0,412,404,1,0,0,0,412,405,
-		1,0,0,0,412,406,1,0,0,0,412,407,1,0,0,0,412,408,1,0,0,0,412,409,1,0,0,
-		0,412,410,1,0,0,0,412,411,1,0,0,0,413,73,1,0,0,0,414,415,7,7,0,0,415,75,
-		1,0,0,0,416,417,7,8,0,0,417,77,1,0,0,0,418,428,3,80,40,0,419,420,5,71,
-		0,0,420,425,3,82,41,0,421,422,5,72,0,0,422,424,3,82,41,0,423,421,1,0,0,
-		0,424,427,1,0,0,0,425,423,1,0,0,0,425,426,1,0,0,0,426,429,1,0,0,0,427,
-		425,1,0,0,0,428,419,1,0,0,0,428,429,1,0,0,0,429,442,1,0,0,0,430,432,5,
-		71,0,0,431,430,1,0,0,0,431,432,1,0,0,0,432,433,1,0,0,0,433,438,3,82,41,
-		0,434,435,5,72,0,0,435,437,3,82,41,0,436,434,1,0,0,0,437,440,1,0,0,0,438,
-		436,1,0,0,0,438,439,1,0,0,0,439,442,1,0,0,0,440,438,1,0,0,0,441,418,1,
-		0,0,0,441,431,1,0,0,0,442,79,1,0,0,0,443,444,7,9,0,0,444,81,1,0,0,0,445,
-		446,3,84,42,0,446,447,3,86,43,0,447,448,3,88,44,0,448,83,1,0,0,0,449,450,
-		7,10,0,0,450,85,1,0,0,0,451,452,7,11,0,0,452,87,1,0,0,0,453,454,7,12,0,
-		0,454,89,1,0,0,0,42,93,99,106,110,115,127,132,141,153,156,159,166,173,
-		176,179,183,186,194,230,234,247,264,276,285,294,298,309,330,340,351,355,
-		364,374,383,387,398,412,425,428,431,438,441
+		2,43,7,43,2,44,7,44,2,45,7,45,2,46,7,46,2,47,7,47,2,48,7,48,1,0,5,0,100,
+		8,0,10,0,12,0,103,9,0,1,0,4,0,106,8,0,11,0,12,0,107,1,0,1,0,1,0,5,0,113,
+		8,0,10,0,12,0,116,9,0,1,0,3,0,119,8,0,1,0,5,0,122,8,0,10,0,12,0,125,9,
+		0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,5,1,134,8,1,10,1,12,1,137,9,1,1,1,1,1,3,
+		1,141,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,150,8,2,1,3,1,3,1,3,1,3,1,3,
+		1,3,1,3,1,3,5,3,160,8,3,10,3,12,3,163,9,3,3,3,165,8,3,1,3,3,3,168,8,3,
+		1,4,1,4,1,4,1,5,1,5,3,5,175,8,5,1,5,1,5,1,5,1,5,1,6,3,6,182,8,6,1,6,3,
+		6,185,8,6,1,6,3,6,188,8,6,1,6,1,6,3,6,192,8,6,1,6,3,6,195,8,6,1,7,1,7,
+		1,7,1,7,1,7,1,7,3,7,203,8,7,1,7,1,7,1,8,1,8,1,8,1,8,1,8,1,9,1,9,1,9,1,
+		9,1,9,1,10,1,10,1,10,1,10,1,10,1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,13,
+		1,13,1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,14,3,14,239,8,14,1,15,1,15,3,
+		15,243,8,15,1,16,1,16,1,16,3,16,248,8,16,1,16,1,16,1,17,1,17,1,17,1,17,
+		5,17,256,8,17,10,17,12,17,259,9,17,1,17,1,17,1,18,1,18,1,18,1,18,1,18,
+		1,18,3,18,269,8,18,3,18,271,8,18,1,19,1,19,1,20,1,20,1,20,1,20,1,20,1,
+		20,3,20,281,8,20,1,21,1,21,1,22,1,22,1,22,5,22,288,8,22,10,22,12,22,291,
+		9,22,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,
+		1,23,3,23,307,8,23,1,24,1,24,1,24,1,24,1,24,1,25,1,25,1,25,1,25,1,25,3,
+		25,319,8,25,1,25,1,25,1,26,1,26,1,26,1,26,1,26,3,26,328,8,26,1,26,1,26,
+		1,27,1,27,1,27,1,27,1,27,3,27,337,8,27,1,27,1,27,3,27,341,8,27,1,27,1,
+		27,1,28,1,28,1,29,1,29,1,29,1,29,1,29,3,29,352,8,29,1,29,1,29,1,30,1,30,
+		1,30,1,30,1,30,1,31,1,31,1,31,1,31,1,31,1,32,1,32,1,32,1,32,1,32,5,32,
+		371,8,32,10,32,12,32,374,9,32,1,32,1,32,1,33,1,33,1,33,1,33,1,33,3,33,
+		383,8,33,1,33,1,33,1,34,1,34,1,35,1,35,1,35,1,35,1,35,3,35,394,8,35,1,
+		35,1,35,3,35,398,8,35,1,35,1,35,1,36,1,36,1,36,1,36,1,36,3,36,407,8,36,
+		1,36,1,36,1,36,1,37,1,37,1,37,1,37,1,37,3,37,417,8,37,1,37,1,37,1,38,1,
+		38,1,38,1,38,1,38,3,38,426,8,38,1,38,1,38,3,38,430,8,38,1,38,1,38,1,39,
+		1,39,1,39,1,39,1,39,5,39,439,8,39,10,39,12,39,442,9,39,1,39,1,39,1,40,
+		1,40,1,40,1,40,1,40,1,40,1,40,1,40,1,40,3,40,455,8,40,1,41,1,41,1,42,1,
+		42,1,43,1,43,1,43,1,43,1,43,5,43,466,8,43,10,43,12,43,469,9,43,3,43,471,
+		8,43,1,43,3,43,474,8,43,1,43,1,43,1,43,5,43,479,8,43,10,43,12,43,482,9,
+		43,3,43,484,8,43,1,44,1,44,1,45,1,45,1,45,1,45,1,46,1,46,1,47,1,47,1,48,
+		1,48,1,48,0,0,49,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,
+		40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,70,72,74,76,78,80,82,84,86,
+		88,90,92,94,96,0,15,2,0,89,89,91,91,1,0,14,15,1,0,25,27,2,0,21,21,90,90,
+		2,0,35,38,90,90,1,0,39,52,1,0,58,59,2,0,35,37,64,65,1,0,37,38,2,0,37,37,
+		71,72,1,0,7,9,1,0,75,78,2,0,14,14,79,83,1,0,84,88,1,0,89,91,529,0,101,
+		1,0,0,0,2,128,1,0,0,0,4,149,1,0,0,0,6,151,1,0,0,0,8,169,1,0,0,0,10,172,
+		1,0,0,0,12,181,1,0,0,0,14,196,1,0,0,0,16,206,1,0,0,0,18,211,1,0,0,0,20,
+		216,1,0,0,0,22,221,1,0,0,0,24,226,1,0,0,0,26,228,1,0,0,0,28,238,1,0,0,
+		0,30,240,1,0,0,0,32,244,1,0,0,0,34,251,1,0,0,0,36,270,1,0,0,0,38,272,1,
+		0,0,0,40,280,1,0,0,0,42,282,1,0,0,0,44,284,1,0,0,0,46,306,1,0,0,0,48,308,
+		1,0,0,0,50,313,1,0,0,0,52,322,1,0,0,0,54,331,1,0,0,0,56,344,1,0,0,0,58,
+		346,1,0,0,0,60,355,1,0,0,0,62,360,1,0,0,0,64,365,1,0,0,0,66,377,1,0,0,
+		0,68,386,1,0,0,0,70,388,1,0,0,0,72,401,1,0,0,0,74,411,1,0,0,0,76,420,1,
+		0,0,0,78,433,1,0,0,0,80,454,1,0,0,0,82,456,1,0,0,0,84,458,1,0,0,0,86,483,
+		1,0,0,0,88,485,1,0,0,0,90,487,1,0,0,0,92,491,1,0,0,0,94,493,1,0,0,0,96,
+		495,1,0,0,0,98,100,3,2,1,0,99,98,1,0,0,0,100,103,1,0,0,0,101,99,1,0,0,
+		0,101,102,1,0,0,0,102,118,1,0,0,0,103,101,1,0,0,0,104,106,3,10,5,0,105,
+		104,1,0,0,0,106,107,1,0,0,0,107,105,1,0,0,0,107,108,1,0,0,0,108,119,1,
+		0,0,0,109,114,3,12,6,0,110,111,5,1,0,0,111,113,3,12,6,0,112,110,1,0,0,
+		0,113,116,1,0,0,0,114,112,1,0,0,0,114,115,1,0,0,0,115,119,1,0,0,0,116,
+		114,1,0,0,0,117,119,3,6,3,0,118,105,1,0,0,0,118,109,1,0,0,0,118,117,1,
+		0,0,0,118,119,1,0,0,0,119,123,1,0,0,0,120,122,3,2,1,0,121,120,1,0,0,0,
+		122,125,1,0,0,0,123,121,1,0,0,0,123,124,1,0,0,0,124,126,1,0,0,0,125,123,
+		1,0,0,0,126,127,5,0,0,1,127,1,1,0,0,0,128,129,5,2,0,0,129,130,5,3,0,0,
+		130,135,3,4,2,0,131,132,5,4,0,0,132,134,3,4,2,0,133,131,1,0,0,0,134,137,
+		1,0,0,0,135,133,1,0,0,0,135,136,1,0,0,0,136,138,1,0,0,0,137,135,1,0,0,
+		0,138,140,5,5,0,0,139,141,5,6,0,0,140,139,1,0,0,0,140,141,1,0,0,0,141,
+		3,1,0,0,0,142,150,5,90,0,0,143,150,3,88,44,0,144,150,5,7,0,0,145,150,5,
+		8,0,0,146,150,5,9,0,0,147,150,5,10,0,0,148,150,5,11,0,0,149,142,1,0,0,
+		0,149,143,1,0,0,0,149,144,1,0,0,0,149,145,1,0,0,0,149,146,1,0,0,0,149,
+		147,1,0,0,0,149,148,1,0,0,0,150,5,1,0,0,0,151,152,5,12,0,0,152,153,5,3,
+		0,0,153,154,7,0,0,0,154,164,5,5,0,0,155,156,5,13,0,0,156,161,3,8,4,0,157,
+		158,5,4,0,0,158,160,3,8,4,0,159,157,1,0,0,0,160,163,1,0,0,0,161,159,1,
+		0,0,0,161,162,1,0,0,0,162,165,1,0,0,0,163,161,1,0,0,0,164,155,1,0,0,0,
+		164,165,1,0,0,0,165,167,1,0,0,0,166,168,5,6,0,0,167,166,1,0,0,0,167,168,
+		1,0,0,0,168,7,1,0,0,0,169,170,7,1,0,0,170,171,5,89,0,0,171,9,1,0,0,0,172,
+		174,5,16,0,0,173,175,5,91,0,0,174,173,1,0,0,0,174,175,1,0,0,0,175,176,
+		1,0,0,0,176,177,5,17,0,0,177,178,3,12,6,0,178,179,5,18,0,0,179,11,1,0,
+		0,0,180,182,3,32,16,0,181,180,1,0,0,0,181,182,1,0,0,0,182,184,1,0,0,0,
+		183,185,3,26,13,0,184,183,1,0,0,0,184,185,1,0,0,0,185,187,1,0,0,0,186,
+		188,3,14,7,0,187,186,1,0,0,0,187,188,1,0,0,0,188,189,1,0,0,0,189,191,3,
+		44,22,0,190,192,5,6,0,0,191,190,1,0,0,0,191,192,1,0,0,0,192,194,1,0,0,
+		0,193,195,3,30,15,0,194,193,1,0,0,0,194,195,1,0,0,0,195,13,1,0,0,0,196,
+		202,5,19,0,0,197,203,3,20,10,0,198,203,3,22,11,0,199,203,3,24,12,0,200,
+		203,3,18,9,0,201,203,3,16,8,0,202,197,1,0,0,0,202,198,1,0,0,0,202,199,
+		1,0,0,0,202,200,1,0,0,0,202,201,1,0,0,0,203,204,1,0,0,0,204,205,5,20,0,
+		0,205,15,1,0,0,0,206,207,5,21,0,0,207,208,5,3,0,0,208,209,5,89,0,0,209,
+		210,5,5,0,0,210,17,1,0,0,0,211,212,5,22,0,0,212,213,5,3,0,0,213,214,5,
+		89,0,0,214,215,5,5,0,0,215,19,1,0,0,0,216,217,5,23,0,0,217,218,5,3,0,0,
+		218,219,5,89,0,0,219,220,5,5,0,0,220,21,1,0,0,0,221,222,5,24,0,0,222,223,
+		5,3,0,0,223,224,5,89,0,0,224,225,5,5,0,0,225,23,1,0,0,0,226,227,7,2,0,
+		0,227,25,1,0,0,0,228,229,5,28,0,0,229,230,3,28,14,0,230,231,5,20,0,0,231,
+		27,1,0,0,0,232,239,5,29,0,0,233,234,5,30,0,0,234,235,5,3,0,0,235,236,3,
+		86,43,0,236,237,5,5,0,0,237,239,1,0,0,0,238,232,1,0,0,0,238,233,1,0,0,
+		0,239,29,1,0,0,0,240,242,5,31,0,0,241,243,5,6,0,0,242,241,1,0,0,0,242,
+		243,1,0,0,0,243,31,1,0,0,0,244,245,5,32,0,0,245,247,3,42,21,0,246,248,
+		3,34,17,0,247,246,1,0,0,0,247,248,1,0,0,0,248,249,1,0,0,0,249,250,5,20,
+		0,0,250,33,1,0,0,0,251,252,5,3,0,0,252,257,3,36,18,0,253,254,5,4,0,0,254,
+		256,3,36,18,0,255,253,1,0,0,0,256,259,1,0,0,0,257,255,1,0,0,0,257,258,
+		1,0,0,0,258,260,1,0,0,0,259,257,1,0,0,0,260,261,5,5,0,0,261,35,1,0,0,0,
+		262,263,5,33,0,0,263,271,3,38,19,0,264,265,5,34,0,0,265,271,3,40,20,0,
+		266,268,7,3,0,0,267,269,5,89,0,0,268,267,1,0,0,0,268,269,1,0,0,0,269,271,
+		1,0,0,0,270,262,1,0,0,0,270,264,1,0,0,0,270,266,1,0,0,0,271,37,1,0,0,0,
+		272,273,7,4,0,0,273,39,1,0,0,0,274,281,5,16,0,0,275,281,5,8,0,0,276,281,
+		3,88,44,0,277,281,5,91,0,0,278,281,5,89,0,0,279,281,5,90,0,0,280,274,1,
+		0,0,0,280,275,1,0,0,0,280,276,1,0,0,0,280,277,1,0,0,0,280,278,1,0,0,0,
+		280,279,1,0,0,0,281,41,1,0,0,0,282,283,7,5,0,0,283,43,1,0,0,0,284,289,
+		3,46,23,0,285,286,5,53,0,0,286,288,3,46,23,0,287,285,1,0,0,0,288,291,1,
+		0,0,0,289,287,1,0,0,0,289,290,1,0,0,0,290,45,1,0,0,0,291,289,1,0,0,0,292,
+		307,3,48,24,0,293,307,3,50,25,0,294,307,3,52,26,0,295,307,3,54,27,0,296,
+		307,3,60,30,0,297,307,3,62,31,0,298,307,3,58,29,0,299,307,3,64,32,0,300,
+		307,3,66,33,0,301,307,3,74,37,0,302,307,3,76,38,0,303,307,3,72,36,0,304,
+		307,3,70,35,0,305,307,3,78,39,0,306,292,1,0,0,0,306,293,1,0,0,0,306,294,
+		1,0,0,0,306,295,1,0,0,0,306,296,1,0,0,0,306,297,1,0,0,0,306,298,1,0,0,
+		0,306,299,1,0,0,0,306,300,1,0,0,0,306,301,1,0,0,0,306,302,1,0,0,0,306,
+		303,1,0,0,0,306,304,1,0,0,0,306,305,1,0,0,0,307,47,1,0,0,0,308,309,5,54,
+		0,0,309,310,5,3,0,0,310,311,5,89,0,0,311,312,5,5,0,0,312,49,1,0,0,0,313,
+		314,5,55,0,0,314,315,5,3,0,0,315,318,5,36,0,0,316,317,5,4,0,0,317,319,
+		3,86,43,0,318,316,1,0,0,0,318,319,1,0,0,0,319,320,1,0,0,0,320,321,5,5,
+		0,0,321,51,1,0,0,0,322,323,5,56,0,0,323,324,5,3,0,0,324,327,3,82,41,0,
+		325,326,5,4,0,0,326,328,3,86,43,0,327,325,1,0,0,0,327,328,1,0,0,0,328,
+		329,1,0,0,0,329,330,5,5,0,0,330,53,1,0,0,0,331,332,5,57,0,0,332,333,5,
+		3,0,0,333,336,3,56,28,0,334,335,5,4,0,0,335,337,3,84,42,0,336,334,1,0,
+		0,0,336,337,1,0,0,0,337,340,1,0,0,0,338,339,5,4,0,0,339,341,3,86,43,0,
+		340,338,1,0,0,0,340,341,1,0,0,0,341,342,1,0,0,0,342,343,5,5,0,0,343,55,
+		1,0,0,0,344,345,7,6,0,0,345,57,1,0,0,0,346,347,5,60,0,0,347,348,5,3,0,
+		0,348,351,5,36,0,0,349,350,5,4,0,0,350,352,3,86,43,0,351,349,1,0,0,0,351,
+		352,1,0,0,0,352,353,1,0,0,0,353,354,5,5,0,0,354,59,1,0,0,0,355,356,5,61,
+		0,0,356,357,5,3,0,0,357,358,5,89,0,0,358,359,5,5,0,0,359,61,1,0,0,0,360,
+		361,5,62,0,0,361,362,5,3,0,0,362,363,5,89,0,0,363,364,5,5,0,0,364,63,1,
+		0,0,0,365,366,5,11,0,0,366,367,5,3,0,0,367,372,3,8,4,0,368,369,5,4,0,0,
+		369,371,3,8,4,0,370,368,1,0,0,0,371,374,1,0,0,0,372,370,1,0,0,0,372,373,
+		1,0,0,0,373,375,1,0,0,0,374,372,1,0,0,0,375,376,5,5,0,0,376,65,1,0,0,0,
+		377,378,5,63,0,0,378,379,5,3,0,0,379,382,3,68,34,0,380,381,5,4,0,0,381,
+		383,3,86,43,0,382,380,1,0,0,0,382,383,1,0,0,0,383,384,1,0,0,0,384,385,
+		5,5,0,0,385,67,1,0,0,0,386,387,7,7,0,0,387,69,1,0,0,0,388,389,5,66,0,0,
+		389,390,5,3,0,0,390,393,5,59,0,0,391,392,5,4,0,0,392,394,3,84,42,0,393,
+		391,1,0,0,0,393,394,1,0,0,0,394,397,1,0,0,0,395,396,5,4,0,0,396,398,3,
+		86,43,0,397,395,1,0,0,0,397,398,1,0,0,0,398,399,1,0,0,0,399,400,5,5,0,
+		0,400,71,1,0,0,0,401,402,5,67,0,0,402,406,5,3,0,0,403,404,3,84,42,0,404,
+		405,5,4,0,0,405,407,1,0,0,0,406,403,1,0,0,0,406,407,1,0,0,0,407,408,1,
+		0,0,0,408,409,5,89,0,0,409,410,5,5,0,0,410,73,1,0,0,0,411,412,5,68,0,0,
+		412,413,5,3,0,0,413,416,7,8,0,0,414,415,5,4,0,0,415,417,3,86,43,0,416,
+		414,1,0,0,0,416,417,1,0,0,0,417,418,1,0,0,0,418,419,5,5,0,0,419,75,1,0,
+		0,0,420,421,5,69,0,0,421,422,5,3,0,0,422,425,3,56,28,0,423,424,5,4,0,0,
+		424,426,3,84,42,0,425,423,1,0,0,0,425,426,1,0,0,0,426,429,1,0,0,0,427,
+		428,5,4,0,0,428,430,3,86,43,0,429,427,1,0,0,0,429,430,1,0,0,0,430,431,
+		1,0,0,0,431,432,5,5,0,0,432,77,1,0,0,0,433,434,5,70,0,0,434,435,5,3,0,
+		0,435,440,3,80,40,0,436,437,5,4,0,0,437,439,3,80,40,0,438,436,1,0,0,0,
+		439,442,1,0,0,0,440,438,1,0,0,0,440,441,1,0,0,0,441,443,1,0,0,0,442,440,
+		1,0,0,0,443,444,5,5,0,0,444,79,1,0,0,0,445,455,5,90,0,0,446,455,5,89,0,
+		0,447,455,5,91,0,0,448,455,3,88,44,0,449,455,5,9,0,0,450,455,5,7,0,0,451,
+		455,5,10,0,0,452,455,5,11,0,0,453,455,5,16,0,0,454,445,1,0,0,0,454,446,
+		1,0,0,0,454,447,1,0,0,0,454,448,1,0,0,0,454,449,1,0,0,0,454,450,1,0,0,
+		0,454,451,1,0,0,0,454,452,1,0,0,0,454,453,1,0,0,0,455,81,1,0,0,0,456,457,
+		7,9,0,0,457,83,1,0,0,0,458,459,7,10,0,0,459,85,1,0,0,0,460,470,3,88,44,
+		0,461,462,5,73,0,0,462,467,3,90,45,0,463,464,5,74,0,0,464,466,3,90,45,
+		0,465,463,1,0,0,0,466,469,1,0,0,0,467,465,1,0,0,0,467,468,1,0,0,0,468,
+		471,1,0,0,0,469,467,1,0,0,0,470,461,1,0,0,0,470,471,1,0,0,0,471,484,1,
+		0,0,0,472,474,5,73,0,0,473,472,1,0,0,0,473,474,1,0,0,0,474,475,1,0,0,0,
+		475,480,3,90,45,0,476,477,5,74,0,0,477,479,3,90,45,0,478,476,1,0,0,0,479,
+		482,1,0,0,0,480,478,1,0,0,0,480,481,1,0,0,0,481,484,1,0,0,0,482,480,1,
+		0,0,0,483,460,1,0,0,0,483,473,1,0,0,0,484,87,1,0,0,0,485,486,7,11,0,0,
+		486,89,1,0,0,0,487,488,3,92,46,0,488,489,3,94,47,0,489,490,3,96,48,0,490,
+		91,1,0,0,0,491,492,7,12,0,0,492,93,1,0,0,0,493,494,7,13,0,0,494,95,1,0,
+		0,0,495,496,7,14,0,0,496,97,1,0,0,0,47,101,107,114,118,123,135,140,149,
+		161,164,167,174,181,184,187,191,194,202,238,242,247,257,268,270,280,289,
+		306,318,327,336,340,351,372,382,393,397,406,416,425,429,440,454,467,470,
+		473,480,483
 	};
 
 	public static readonly ATN _ATN =

@@ -314,6 +314,8 @@ namespace WolfEx
                         compiled["from"] = AnyTriggerSource(name);
                     }
                     compiled["trigger"] = name;
+                    if (trigger.summonConditions() is { } conditions)
+                        compiled["summonCondition"] = CompileSummonConditions(name, conditions);
                 }
                 if (actions.Length > 1)
                 {
@@ -330,6 +332,62 @@ namespace WolfEx
                 }
                 return compiled;
             }
+        }
+
+        // on special_summoned(from grave, by effect): -> "summonCondition" (Yu-Gi-Oh-Effects checks it against the summon event, docs/EffectSystem.md section 46).
+        private static readonly string[] SummonZones = ["hand", "deck", "extra", "grave", "banished", "spelltrap"];
+        private static readonly string[] KindWords = ["fusion", "synchro", "xyz", "ritual", "link"];
+
+        private static JsonObject CompileSummonConditions(string trigger, EffectScriptParser.SummonConditionsContext conditions)
+        {
+            if (trigger is not ("normal_summoned" or "special_summoned" or "summoned" or "normal_or_special_summoned"))
+                throw new ScriptError($"'{trigger}' is not a summon trigger; (from ..., by ...) only go with normal_summoned / special_summoned / summoned.");
+            var result = new JsonObject();
+            var from = new JsonArray();
+            foreach (var condition in conditions.summonCondition())
+            {
+                if (condition.summonFrom() is { } zone)
+                {
+                    string z = zone.GetText() == "gy" ? "grave" : zone.GetText();
+                    if (!SummonZones.Contains(z))
+                        throw new ScriptError($"'from {z}': the zones are {string.Join(", ", SummonZones)}.");
+                    from.Add(z);
+                }
+                else if (condition.summonBy() is { } by)
+                {
+                    if (result.ContainsKey("by"))
+                        throw new ScriptError("one 'by ...' per trigger.");
+                    string text = by.GetText();
+                    if (by.NUMBER() != null)
+                        result["by"] = new JsonObject { ["card"] = int.Parse(text) };
+                    else if (by.STRING() != null)
+                    {
+                        string archetype = text.Trim('"');
+                        int code = ArchetypeCatalog.CodeOf(archetype);
+                        if (code == 0) throw new ScriptError($"unknown archetype \"{archetype}\" (see Archetypes.json).");
+                        result["by"] = new JsonObject { ["archetype"] = code };
+                    }
+                    else if (text is "effect" or "not_effect" or "own" or "spell" or "trap" or "monster")
+                        result["by"] = text;
+                    else
+                        throw new ScriptError($"'by {text}': use effect, not_effect, own, spell, trap, monster, an archetype \"Name\" or a card id.");
+                }
+                else
+                {
+                    string word = condition.GetChild(0).GetText();
+                    if (KindWords.Contains(word))
+                        result["proper"] = true;   // Summoned as its kind; the card's own kind says which (an Xyz Monster is Xyz Summoned ...)
+                    else if (word == "pendulum")
+                        result["pendulum"] = true;
+                    else if (word == "tribute")
+                        result["tributes"] = condition.NUMBER() is { } n ? int.Parse(n.GetText()) : 1;
+                    else
+                        throw new ScriptError($"'{word}': the summon conditions are from ..., by ..., fusion / synchro / xyz / ritual / link, pendulum, tribute [N].");
+                }
+            }
+            if (from.Count > 0)
+                result["from"] = from;
+            return result;
         }
 
         // "require": the game's own checks run before the effect's condition (Yu-Gi-Oh-Effects knows them by these names).

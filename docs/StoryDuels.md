@@ -83,3 +83,9 @@ The plugin skips an entry and logs why if:
 **A new duel has no dialog until it has `<key>_INTRO` / `_OUTRO` scenes**: make them in the Story editor's scene tabs.
 
 Built, but not yet run in the game. Yu-Gi-Oh-Campaign must be switched on in Config.ini: `[Yu-Gi-Oh-Core]` `Yu-Gi-Oh-Campaign=1`.
+
+## Tutorial duels and reverse duels (2026-10-11)
+
+* The game: `CampaignMenu_Update` (0x140860040) makes a campaign duel a tutorial only when it is **order 1**, not the reverse duel, and the menu flag (+5736) is set; the number is `g_CampaignSeriesTutorial[series]` (0x140A77E68, 21-26). `TutorialStoryDuel_SetupSeats` (0x14081EE80) seats order 1 of series (number - 21) and adds the tutorial's extra cards (0x140A710B0: two 0-ended u16 lists per tutorial 21-26). `Set_ArenaIdFromDuel` (0x1407695B0) also stores the current story duel id (`Get_CurrentStoryDuelId` 0x140768D60).
+* **Any duel as a tutorial:** storyduels.json `"tutorial": N` on a duel (21-99; 27+ are new tutorials from the Tutorials page), `0` = never. Yu-Gi-Oh-Campaign hooks `Set_IsTutorialDuel` (0x140769B00) when CampaignMenu_Update calls it and seats the duel's own players (`Hook_SetupTutorialSeats`), with the game tutorial's extra cards for 21-26. The game files have no field for this, so a game duel's setting is a small `{ "id", "tutorial" }` entry. WolfX Story editor: **Plays as tutorial**.
+* **Reverse duels for order 1:** two one-byte patches in Yu-Gi-Oh-Campaign: the reverse button test in CampaignMenu_Update (0x14086058A, mask 0xFFFFFFFD -> 0xFFFFFFFF) and the reverse unlock after a win in DuelResult_GrantRewards (0x14088066B, `cmp Order, 1` -> `cmp Order, 0`). The reverse duel is never a tutorial. An order-1 duel won before this unlocks its reverse the next time it is won.

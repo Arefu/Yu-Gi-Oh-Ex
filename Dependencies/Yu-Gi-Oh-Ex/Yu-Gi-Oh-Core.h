@@ -77,6 +77,23 @@ CORE_API void __cdecl Core_AddCredits(const char* Heading, const char* Lines);
    AddCredits: Core::Functions().GetSaveFile is NULL with an older Core. */
 CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size);
 
+/* Save write filters: every time the game writes its save, Core hands each filter a COPY of the 44008-byte blob (after the game's own checksum
+   step) and writes that copy, re-checksummed, instead of the game's blob. A filter changes the copy only (the game's blob in memory stays as
+   it is) and returns nonzero when it changed something. For plugins that put their own data into the save while the game runs (Campaign's
+   new series borrow a series slot) and must never let it reach the file. Called on the game's save thread. Added after version 1 like
+   AddCredits: Core::Functions().AddSaveWriteFilter is NULL with an older Core. */
+typedef int(__cdecl* CoreSaveWriteFilter)(unsigned char* Blob, int Size, void* User);
+CORE_API void __cdecl Core_AddSaveWriteFilter(CoreSaveWriteFilter Filter, void* User);
+
+/* Save extension: plugin data kept IN the save file (savegame-ex.dat, or the slot's file), after the game's 44008 bytes, by tag. The file
+   only grows when some plugin has data there (a save with none stays exactly the game's 44008 bytes); the game is only ever handed its own
+   44008 bytes. Layout after the blob: "YGEX", u32 version (1), u32 count, then count x { char tag[32] (NUL padded), u32 size, size bytes }.
+   Get: copies the data of Tag for the save read last into Out (up to Size bytes) and returns its full size, 0 when there is none (Out may
+   be NULL to ask the size). Set: replaces it (Size 0 removes it); written with the game's next save write. Thread safe. Added after
+   version 1 like AddCredits: NULL with an older Core. */
+CORE_API int __cdecl Core_GetSaveExtension(const char* Tag, void* Out, int Size);
+CORE_API void __cdecl Core_SetSaveExtension(const char* Tag, const void* Data, int Size);
+
 #ifdef __cplusplus
 }
 
@@ -94,6 +111,9 @@ namespace Core
         int(__cdecl* StartPlugins)() = nullptr;
         void(__cdecl* AddCredits)(const char*, const char*) = nullptr;   // NULL with a Core that predates it
         int(__cdecl* GetSaveFile)(char*, int) = nullptr;                 // NULL with a Core that predates it
+        void(__cdecl* AddSaveWriteFilter)(CoreSaveWriteFilter, void*) = nullptr;   // NULL with a Core that predates it
+        int(__cdecl* GetSaveExtension)(const char*, void*, int) = nullptr;           // NULL with a Core that predates it
+        void(__cdecl* SetSaveExtension)(const char*, const void*, int) = nullptr;    // NULL with a Core that predates it
     };
 
     inline Api& Functions()
@@ -128,6 +148,9 @@ namespace Core
         CORE_BIND(StartPlugins);
         CORE_BIND(AddCredits);
         CORE_BIND(GetSaveFile);
+        CORE_BIND(AddSaveWriteFilter);
+        CORE_BIND(GetSaveExtension);
+        CORE_BIND(SetSaveExtension);
 #undef CORE_BIND
         return true;
     }
