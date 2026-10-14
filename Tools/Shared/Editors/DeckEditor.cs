@@ -70,8 +70,18 @@ namespace Wolf.Editors
 
         public bool Dirty => _changed;
 
+        private void RefreshCharacterChoices()
+        {
+            if (_gameFiles?.CharacterChoices is not { } characters) return;
+            _characters = characters;
+            _owner.SetItems(GameNames.Characters(_characters, Language));
+            _list.Invalidate();
+        }
+
         public DeckEditor()
         {
+            _owner.DropDown += (_, _) => RefreshCharacterChoices();
+            VisibleChanged += (_, _) => { if (Visible) RefreshCharacterChoices(); };
 
             ListPick.FirstWhenShown(_list);   // open on the first entry, not an empty "Pick a ..." panel
             _save = Button("Save", "The game's decks into deckdata_*.bin and decks.zib, new decks into decks.json (Ctrl+S)", () => Save());
@@ -246,7 +256,7 @@ namespace Wolf.Editors
         {
             var uses = new List<string>();
             foreach (var c in _characters?.Characters.Where(c => c.Deck == (int)d.Id) ?? [])
-                uses.Add(c.Id == (int)d.CharacterId ? $"{c.Name(Language)}'s Free Duel deck" : $"{c.Name(Language)} points at it, but doesn't own it (not in Free Duel)");
+                uses.Add(c.Id == (int)d.CharacterId ? $"{c.Name(Language)}'s Free Duel deck" : $"{c.Name(Language)} shares this Free Duel deck (requires Yu-Gi-Oh-Campaign)");
             foreach (var duel in _duels?.Duels.Where(x => x.Decks.Contains((int)d.Id)) ?? [])
                 uses.Add($"story duel {duel.Id} \"{duel.Title(Language)}\" ({(duel.Decks[0] == (int)d.Id ? "player" : "opponent")})");
             if (d.Series < 0)
@@ -290,16 +300,8 @@ namespace Wolf.Editors
                 _duels = duelFiles.Count > 0 ? StoryDuelTable.Parse(duelFiles) : null;
                 _baseline = _table.Clone();
                 _unlockedFlags.Clear();
-                // decks WolfX added are in deckdata too ("native" in decks.json): they are new, not the game's
-                var json = DeckJson.Load(JsonPath);
-                foreach (var node in (json["decks"] as System.Text.Json.Nodes.JsonArray ?? []).OfType<System.Text.Json.Nodes.JsonObject>())
-                    if (node["native"] is System.Text.Json.Nodes.JsonValue native && native.TryGetValue(out bool isNative) && isNative &&
-                        node["id"] is System.Text.Json.Nodes.JsonValue idNode && idNode.TryGetValue(out int nativeId))
-                    {
-                        _baseline.Decks.RemoveAll(d => d.Id == (uint)nativeId);
-                        _unlockedFlags[(uint)nativeId] = node["unlocked"] is System.Text.Json.Nodes.JsonValue flag && flag.TryGetValue(out bool on) && on;
-                    }
-                int fromJson = DeckJson.Apply(json, _table, _unlockedFlags);
+                int fromJson = DeckJson.Apply(DeckJson.Load(JsonPath), _table, _unlockedFlags);
+                _gameFiles!.DeckChoices = _table;
                 // the other content's JSON, for "Used by"
                 if (_characters != null) CharacterJson.Apply(CharacterJson.Load(_gameFiles!.ExPath(CharacterJson.FileName)), _characters);
                 if (_duels != null) StoryDuelJson.Apply(StoryDuelJson.Load(_gameFiles!.ExPath(StoryDuelJson.FileName)), _duels);
@@ -695,7 +697,7 @@ namespace Wolf.Editors
             _changed = true;
             _find.Text = "";
             Refill(id);
-            _status.Text = $"Deck {id} added. Give it an owner: a character appears in Free Duel only with a deck it owns (set the character's deck to {id} in Characters).";
+            _status.Text = $"Deck {id} added. Assign it in Characters. Yu-Gi-Oh-Campaign permits shared Free Duel decks.";
         }
     }
 }

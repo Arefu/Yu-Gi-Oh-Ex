@@ -30,7 +30,7 @@ namespace Wolf.Editors
         private readonly CheckBox _selectable = new() { Text = "Selectable (Free Duel opponent, counted in the collection)", AutoSize = true };
         private readonly IdCombo _sku = new(220);
         private readonly IdCombo _arena = new(220);
-        private readonly CheckBox _unlocked = new() { Text = "Unlocked (a new character; Yu-Gi-Oh-Campaign sets it in the save)", AutoSize = true };
+        private readonly CheckBox _unlocked = new() { Text = "Unlocked from start (requires Yu-Gi-Oh-Campaign)", AutoSize = true };
         private readonly DataGridView _texts = new()
         {
             Dock = DockStyle.Fill, AllowUserToAddRows = false, AllowUserToDeleteRows = false, RowHeadersVisible = false,
@@ -91,6 +91,8 @@ namespace Wolf.Editors
 
         public CharacterEditor()
         {
+            _deck.DropDown += (_, _) => RefreshDeckChoices();
+            VisibleChanged += (_, _) => { if (Visible) RefreshDeckChoices(); };
 
             ListPick.FirstWhenShown(_list);   // open on the first entry, not an empty "Pick a ..." panel
             _save = Button("Save", "The game's characters into chardata_*.bin, new characters into characters.json (Ctrl+S)", () => Save());
@@ -252,6 +254,8 @@ namespace Wolf.Editors
         {
             if (c.Deck < 0)
                 return "(none)";
+            if (_gameFiles?.DeckChoices?.Find((uint)c.Deck) is { } live)
+                return $"{c.Deck}: {live.Title(Language)}";
             var deck = _decks?.Find((uint)c.Deck);
             return deck == null ? $"{c.Deck}" : $"{c.Deck}: {deck.Title}";
         }
@@ -286,21 +290,8 @@ namespace Wolf.Editors
                     DeckJson.ApplyTo(_decks, DeckJson.Load(Path.Combine(Path.GetDirectoryName(JsonPath)!, DeckJson.FileName)), 'E');   // new and changed decks from decks.json
                 _baseline = _table.Clone();
                 _unlockedFlags.Clear();
-                // characters WolfX added are in chardata too ("native" in characters.json): they are new, not the game's
-                var json = CharacterJson.Load(JsonPath);
-                foreach (var node in (json["characters"] as System.Text.Json.Nodes.JsonArray ?? []).OfType<System.Text.Json.Nodes.JsonObject>())
-                    if (node["native"] is System.Text.Json.Nodes.JsonValue native && native.TryGetValue(out bool isNative) && isNative &&
-                        node["id"] is System.Text.Json.Nodes.JsonValue idNode && idNode.TryGetValue(out int nativeId))
-                    {
-                        _baseline.Characters.RemoveAll(c => c.Id == nativeId);
-                        _unlockedFlags[nativeId] = node["unlocked"] is System.Text.Json.Nodes.JsonValue flag && flag.TryGetValue(out bool on) ? on : true;
-                    }
-                int fromJson = CharacterJson.Apply(json, _table, _unlockedFlags);
-                _ruleLps.Clear();
-                if (File.Exists(RulesPath) && System.Text.Json.Nodes.JsonNode.Parse(File.ReadAllText(RulesPath))?["duelists"] is System.Text.Json.Nodes.JsonArray rules)
-                    foreach (var node in rules.OfType<System.Text.Json.Nodes.JsonObject>())
-                        if (node["id"] is System.Text.Json.Nodes.JsonValue rid && rid.TryGetValue(out int ruleId) && node["lp"] is System.Text.Json.Nodes.JsonValue rlp && rlp.TryGetValue(out int lp) && lp > 0)
-                            _ruleLps[ruleId] = lp;
+                int fromJson = CharacterJson.Apply(CharacterJson.Load(JsonPath), _table, _unlockedFlags);
+                _gameFiles!.CharacterChoices = _table;
                 _deck.SetItems(GameNames.Decks(_decks).Prepend((-1, "none")));
                 _sku.SetItems(GameNames.ContentPacks(_gameFiles));
                 _arena.SetItems(GameNames.Arenas(_gameFiles, "none"));
@@ -518,9 +509,8 @@ namespace Wolf.Editors
                 _selectable.Checked = c.Selectable != 0;
                 _sku.Value = c.Sku;
                 _arena.Value = c.Arena;
-                _ruleLp.Value = Math.Clamp(_ruleLps.GetValueOrDefault(c.Id), 0, 999999);
-                _unlocked.Visible = isNew;
-                _unlocked.Checked = !_unlockedFlags.TryGetValue(c.Id, out bool u) || u;
+                _unlocked.Visible = true;
+                _unlocked.Checked = _unlockedFlags.TryGetValue(c.Id, out bool u) ? u : isNew;
                 for (int i = 0; i < CharacterTable.AllLanguages.Length; i++)
                 {
                     char language = CharacterTable.AllLanguages[i];
@@ -542,10 +532,23 @@ namespace Wolf.Editors
                 _deckInfo.Text = c.Selectable != 0 ? "no deck: won't be listed in Free Duel" : "";
                 return;
             }
+            if (_gameFiles?.DeckChoices?.Find((uint)c.Deck) is { } live)
+            {
+                _deckInfo.Text = live.CharacterId == c.Id ? "(owned by this character)"
+                    : $"shared deck (requires Yu-Gi-Oh-Campaign; original owner {live.CharacterId})";
+                return;
+            }
             var deck = _decks?.Find((uint)c.Deck);
             _deckInfo.Text = deck == null ? (_decks == null ? "" : "not a deck in deckdata")
                 : deck.CharacterId == c.Id ? "(owned by this character)"
-                : $"belongs to character {deck.CharacterId}: Free Duel won't list this one";
+                : $"shared deck (requires Yu-Gi-Oh-Campaign; original owner {deck.CharacterId})";
+        }
+
+        private void RefreshDeckChoices()
+        {
+            if (_gameFiles?.DeckChoices is not { } decks) return;
+            _deck.SetItems(decks.Decks.OrderBy(d => d.Id).Select(d => ((int)d.Id, d.Title(Language))).Prepend((-1, "none")));
+            _list.Invalidate();
         }
 
         private void Edited()

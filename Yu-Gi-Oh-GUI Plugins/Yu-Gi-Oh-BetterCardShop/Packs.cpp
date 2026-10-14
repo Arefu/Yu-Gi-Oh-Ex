@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <cctype>
 #include <cstdint>
+#include <cstring>
+#include <limits>
 #include <deque>
 #include <fstream>
 #include <map>
@@ -19,6 +21,7 @@
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Mods.h"
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-RIX.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
+#include "YuGiOh/YuGiOh-RIX.h"
 
 namespace
 {
@@ -53,6 +56,7 @@ namespace
     using LoadPackDefinitions_t = char(__fastcall*)();
     using GetArtName_t = char*(__fastcall*)(PackRecord* record, char* outString);
     using BuildPackList_t = void(__fastcall*)(int64_t screen, int series);
+    using SetupShopHelp_t = void(__fastcall*)(int64_t screen);
     using WStringAssign_t = void*(__fastcall*)(GameWString* self, const wchar_t* text, size_t count);
     using GetPlayerSection_t = uint8_t*(__fastcall*)(unsigned int profile);
     using ShopOpen_t = void(__fastcall*)(int64_t screen);
@@ -74,6 +78,11 @@ namespace
     uintptr_t orig_LoadPackDefinitions = 0x14080E3C0;    // YGO::GAME::LoadPackDefinitions
     uintptr_t orig_Pack_GetArtName = 0x14080E390;        // YGO::GAME::Pack_GetArtName
     uintptr_t orig_BuildPackList = 0x14085D6E0;          // YGO::UI::BoosterShop_BuildPackList
+    uintptr_t orig_SetupShopHelp = 0x14085DDB0;
+    constexpr size_t kShopCursor = 0x11B0; // selected index, total count, first visible index, visible count
+    constexpr size_t kShopState = 0x1150;  // 1 = choosing a booster pack
+    constexpr size_t kShopHelp = 0x108;
+    constexpr int kVisiblePacks = 6;
     const auto WStringAssign = reinterpret_cast<WStringAssign_t>(YGO::Addr::WString_Assign);        // the game's std::wstring::assign (its allocator)
     const auto GetPlayerSection = reinterpret_cast<GetPlayerSection_t>(YGO::Addr::Save_Get_PlayerSection);  // YGO::SAVE::Get_PlayerSection(0xFFFFFFFD = current)
 
@@ -445,6 +454,73 @@ namespace
 
     // ---- hooks ----
 
+    // The list scrolls, but HandleInput checks the full-set flag in a six-widget
+    // array using the absolute selection. Replace only its stride calculation:
+    // RAX = absolute selection, RDI = screen, RCX = visible widget byte offset.
+    // The following instruction overwrites RAX; no other registers are changed.
+    __declspec(noinline) bool WriteShopCode(void* address, const void* bytes, size_t count)
+    {
+        DWORD old = 0;
+        if (!VirtualProtect(address, count, PAGE_EXECUTE_READWRITE, &old))
+            return false;
+        std::memcpy(address, bytes, count);
+        DWORD ignored = 0;
+        VirtualProtect(address, count, old, &ignored);
+        FlushInstructionCache(GetCurrentProcess(), address, count);
+        return true;
+    }
+
+    bool FixScrolledPurchaseIndex()
+    {
+        constexpr uintptr_t site = 0x14085BCA5;
+        const uint8_t expected[] = { 0x48, 0x69, 0xC8, 0xD8, 0, 0, 0 }; // imul rcx, rax, 0xD8
+        if (std::memcmp(reinterpret_cast<const void*>(site), expected, sizeof(expected)) != 0)
+        {
+            YGO::Log("Scrolled pack purchase check differs from the supported game; new packs disabled", MODULE_NAME, 2);
+            return false;
+        }
+        DWORD size = 0;
+        auto* code = static_cast<uint8_t*>(DetourAllocateRegionWithinJumpBounds(reinterpret_cast<void*>(site), &size));
+        if (!code)
+            return false;
+        const intptr_t displacement = reinterpret_cast<intptr_t>(code) - static_cast<intptr_t>(site + 5);
+        if (displacement < (std::numeric_limits<int32_t>::min)() || displacement > (std::numeric_limits<int32_t>::max)())
+        {
+            VirtualFree(code, 0, MEM_RELEASE);
+            return false;
+        }
+        const uint8_t thunk[] = {
+            0x2B, 0x87, 0xB8, 0x11, 0, 0,       // sub eax, [rdi+0x11B8] (first visible index)
+            0x48, 0x69, 0xC8, 0xD8, 0, 0, 0,   // imul rcx, rax, 0xD8
+            0xC3                              // ret
+        };
+        uint8_t replacement[] = { 0xE8, 0, 0, 0, 0, 0x90, 0x90 }; // call thunk; nop; nop
+        const int32_t relative = static_cast<int32_t>(displacement);
+        std::memcpy(replacement + 1, &relative, sizeof(relative));
+        if (!WriteShopCode(code, thunk, sizeof(thunk)) ||
+            !WriteShopCode(reinterpret_cast<void*>(site), replacement, sizeof(replacement)))
+        {
+            VirtualFree(code, 0, MEM_RELEASE);
+            return false;
+        }
+        // Kept for the process lifetime, just like the installed Detours hooks.
+        return true;
+    }
+
+    void __fastcall Hook_SetupShopHelp(int64_t screen)
+    {
+        reinterpret_cast<SetupShopHelp_t>(orig_SetupShopHelp)(screen);
+        const auto* cursor = reinterpret_cast<const int*>(screen + kShopCursor);
+        if (*reinterpret_cast<const int*>(screen + kShopState) != 1 || cursor[1] <= kVisiblePacks)
+            return;
+        void* help = reinterpret_cast<void*>(screen + kShopHelp);
+        for (const auto& entry : {
+            YGO::RIX::HelpEntry{4, 1, reinterpret_cast<int64_t>(L"Previous pack")},
+            YGO::RIX::HelpEntry{8, 1, reinterpret_cast<int64_t>(L"Next pack")}})
+            YGO::RIX::HelpAdd(help, &entry, 1);
+        YGO::RIX::HelpLayout(help);
+    }
+
     char __fastcall Hook_LoadPackDefinitions()
     {
         char result = reinterpret_cast<LoadPackDefinitions_t>(orig_LoadPackDefinitions)();
@@ -469,6 +545,8 @@ namespace
     {
         UnlockNewPacks();
         reinterpret_cast<BuildPackList_t>(orig_BuildPackList)(screen, series);
+        // A tab change can switch between an overflowing and an ordinary list.
+        Hook_SetupShopHelp(screen);
     }
 
     // The game opens the shop with 6 rows; give it all of them (the row list wraps, so L/R walks through every row).
@@ -545,6 +623,13 @@ namespace Packs
         if (g_changes.empty() && g_newPacks.empty())
             return;
 
+        if (!g_newPacks.empty() && !FixScrolledPurchaseIndex())
+        {
+            YGO::Log("Could not install the scrolled purchase fix; new packs disabled", MODULE_NAME, 2);
+            g_newPacks.clear();
+            g_ours.clear();
+        }
+
         DetourTransactionBegin();
         DetourUpdateThread(GetCurrentThread());
         DetourAttach(&(PVOID&)orig_LoadPackDefinitions, Hook_LoadPackDefinitions);
@@ -552,12 +637,13 @@ namespace Packs
         {
             DetourAttach(&(PVOID&)orig_Pack_GetArtName, Hook_Pack_GetArtName);
             DetourAttach(&(PVOID&)orig_BuildPackList, Hook_BuildPackList);
-            DetourAttach(&(PVOID&)orig_ShopOpen, Hook_ShopOpen);
-            DetourAttach(&(PVOID&)orig_ShowSeriesArt, Hook_ShowSeriesArt);
-            DetourAttach(&(PVOID&)orig_ShopSetState, Hook_ShopSetState);
+            DetourAttach(&(PVOID&)orig_SetupShopHelp, Hook_SetupShopHelp);
         }
         LONG error = DetourTransactionCommit();
         YGO::Log("Pack hooks attached: " + std::to_string(error), MODULE_NAME, error == 0 ? 0 : 2);
+
+        if (error != NO_ERROR)
+            return; // Do not publish packs without their required UI/art hooks.
 
         // Core starts this plugin once the main menu is up, after the game's first pack load: apply to what is loaded now; the hook
         // above handles later reloads (language changes).

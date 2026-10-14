@@ -21,6 +21,7 @@
 #include "Save.h"
 #include "Text.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "EffectSourceLending.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 // The game's card id window: Konami ids 3900..14968 index its fixed-size tables.
@@ -269,13 +270,11 @@ namespace
             }
         }
 
-        // The effect source (Yu-Gi-Oh-Effects reads the rest of "effectClone"): the card is lent this id in a duel when it is free.
-        if (j.contains("effectClone") && j["effectClone"].is_object() && j["effectClone"].contains("from") && j["effectClone"]["from"].is_number_integer())
-        {
-            const int from = j["effectClone"]["from"].get<int>();
-            if (from >= static_cast<int>(kVanillaKonamiIdBase) && from < static_cast<int>(kVanillaKonamiIdBase + kVanillaKonamiIdCount))
-                c.CloneFrom = static_cast<uint16_t>(from);
-        }
+        // Only a single-effect clone has one source identity to lend. Multi-effect
+        // cards keep their own identity and let Effects route each table/event.
+        if (j.contains("effectClone"))
+            c.CloneFrom = YGO::Effects::SingleEffectSource(j["effectClone"], kVanillaKonamiIdBase,
+                kVanillaKonamiIdBase + kVanillaKonamiIdCount);
 
         // the art is relative to the content folder the card came from (a mod's Yu-Gi-Oh-Ex or the game's)
         c.Folder = YGO::Mods::FolderOf(j);
@@ -1414,13 +1413,15 @@ unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
         buffer.assign(kUnlockBufferSize, 0); // sized once so the pointer handed out stays valid
 
     std::memcpy(buffer.data(), original, kVanillaCardIdCount);
+    std::fill(buffer.begin() + kVanillaCardIdCount, buffer.end(), 0);
 
     unsigned char* saved = Save::GetCardUnlockTable(profile);
 
-    // A custom card the profile owns but cards.json no longer has (it was removed or skipped) has no name, art or details, and shows in
-    // the trunk as an empty card. Its copies are dropped from the profile's card table; putting the card back in cards.json does not restore them,
-    // but unlocks.json / the card's "copies" grant them again.
-    if (saved)
+    // Read once per launch. Resetting unavailable cards remains the default for mod switches;
+    // persistence is opt-in. Both modes keep unavailable cards out of the display buffer.
+    static const bool preserveUnavailableCards = GetPrivateProfileIntW(
+        L"Yu-Gi-Oh-MoreCards", L"PreserveUnavailableCards", 0, L".\\Config.ini") != 0;
+    if (saved && !preserveUnavailableCards)
     {
         std::string removed;
         int removedCount = 0;

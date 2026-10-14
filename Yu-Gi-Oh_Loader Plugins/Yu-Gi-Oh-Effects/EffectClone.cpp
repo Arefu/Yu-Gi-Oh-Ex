@@ -1,4 +1,4 @@
-﻿#include <algorithm>
+#include <algorithm>
 #include <array>
 #include <bit>
 #include <utility>
@@ -34,6 +34,14 @@ namespace
     // A game card whose effect is overridden with none ("overridden": true and no "effectClone" in effects.json) clones this card:
     // Blue-Eyes White Dragon is a Normal Monster, in no effect table, id list, ladder or phase table, so every lookup answers "nothing".
     constexpr int kNoEffectSource = 4007;
+
+    struct Row   // the game's 48-byte effect table row
+    {
+        uint16_t Id;
+        uint16_t Extra[3];
+        void* Slot[5];
+    };
+    static_assert(sizeof(Row) == 48, "effect table rows are 48 bytes");
 
     struct Clone
     {
@@ -187,6 +195,26 @@ namespace
         return all;
     }
 
+    // The native record copier preserves word 20 verbatim, including in compact
+    // chain records. Keep the native sub-effect number in its low byte.
+    Clone* g_MenuPart = nullptr;
+    uint16_t ChoiceTag(Clone& root, const Clone* part)
+    {
+        const auto parts = AllParts(root);
+        for (size_t i = 0; i < parts.size() && i < 127; ++i)
+            if (parts[i] == part) return static_cast<uint16_t>(0x8000 | ((i + 1) << 8));
+        return 0;
+    }
+
+    struct NativeChoiceScope
+    {
+        uint16_t* Record;
+        uint16_t Tag;
+        explicit NativeChoiceScope(uint16_t* record) : Record(record), Tag(record[20] & 0xFF00)
+        { if (Tag & 0x8000) record[20] &= 0xFF; else Tag = 0; }
+        ~NativeChoiceScope() { if (Tag) Record[20] = Tag | (Record[20] & 0xFF); }
+    };
+
     // Does an effect compiled for `trigger` belong to the event in an effect record's word3 (docs/EffectSystem.md sections 29-30)?
     bool TriggerFitsEvent(const std::string& trigger, uint16_t event)
     {
@@ -252,46 +280,54 @@ namespace
     {
         std::vector<Clone*> rows, fitting;
         if (!clone || clone->Parts.empty() || !effect)
-            return rows;
+            return clone;
+        const auto parts = AllParts(*clone);
+        if (g_MenuPart && std::find(parts.begin(), parts.end(), g_MenuPart) != parts.end())
+            return g_MenuPart;
+        if (effect[20] & 0x8000)
+        {
+            const size_t index = ((effect[20] >> 8) & 0x7F);
+            if (index && index <= parts.size()) return parts[index - 1];
+            return nullptr;
+        }
         const uint16_t saved = effect[0];
+        Clone* first = nullptr;
+        Clone* fitting = nullptr;
+        Clone* generic = nullptr;
         for (Clone* part : AllParts(*clone))
         {
             effect[0] = static_cast<uint16_t>(part->From);
-            if (orig_GetEntry(effect))
+            if (const Row* row = static_cast<const Row*>(orig_GetEntry(effect)))
             {
-                rows.push_back(part);
-                if (TriggerFitsEvent(part->Trigger, effect[3]))
-                    fitting.push_back(part);
+                // Table 0 returns a generic Spell/Trap row even without a row for this source.
+                // Such a fallback must not hide another part's actual effect row.
+                if (row->Id != part->From)
+                {
+                    if (!generic)
+                        generic = part;
+                    continue;
+                }
+                if (!part->Trigger.empty() && part->Trigger != "ignition" && IsKnownTriggerEvent(effect[3])
+                    && !TriggerFitsEvent(part->Trigger, effect[3]))
+                    continue;
+                if (!first)
+                    first = part;
+                if (!fitting && TriggerFitsEvent(part->Trigger, effect[3]))
+                    fitting = part;
             }
         }
         effect[0] = saved;
-        return fitting.empty() ? rows : fitting;
-    }
-
-    // The part of a multi-effect card this lookup means: the only candidate, else the one the player chose, else the first.
-    Clone* RouteByRow(Clone* clone, uint16_t* effect)
-    {
-        if (!clone || clone->Parts.empty() || !effect)
-            return clone;
-        const std::vector<Clone*> pool = Candidates(clone, effect);
-        if (pool.empty())
-            return clone;
-        if (pool.size() > 1)
-        {
-            const int chosen = ChosenIndex(effect);
-            const std::vector<Clone*> all = AllParts(*clone);
-            if (chosen >= 0 && chosen < static_cast<int>(all.size()) && std::find(pool.begin(), pool.end(), all[chosen]) != pool.end())
-                return all[chosen];
-        }
-        return pool.front();
+        return fitting ? fitting : first ? first : generic ? generic : clone;
     }
 
     constexpr const char* kSummonTriggers[] = { "normal_summoned", "special_summoned", "summoned", "normal_or_special_summoned", "flip" };
     constexpr const char* kLeaveTriggers[] = { "sent_to_grave", "sent_from_field_to_grave", "destroyed_by_battle" };
     constexpr const char* kBattleListTriggers[] = { "attack_declared", "battle_damage" };
 
-    // The part whose trigger is one of `triggers` (the main effect when none is).
-    Clone* RouteByTrigger(Clone* clone, std::span<const char* const> triggers)
+    // Explicit triggers take precedence. Raw {from, parts} clones have no trigger metadata:
+    // choose a source with an actual row in the event's table, rather than always the main source.
+    // A generic Spell/Trap fallback is not evidence of a monster event effect.
+    Clone* RouteByTrigger(Clone* clone, std::span<const char* const> triggers, int table = -1)
     {
         if (!clone || clone->Parts.empty())
             return clone;
@@ -299,6 +335,21 @@ namespace
             for (const char* t : triggers)
                 if (part->Trigger == t)
                     return part;
+        if (table >= 0)
+        {
+            for (Clone* part : AllParts(*clone))
+            {
+                if (!part->Trigger.empty())
+                    continue;
+                uint16_t record[0x20]{};
+                record[0] = static_cast<uint16_t>(part->From);
+                record[4] = static_cast<uint16_t>(table);
+                const Row* row = static_cast<const Row*>(orig_GetEntry(record));
+                if (row && row->Id == part->From)
+                    return part;
+            }
+            return nullptr;
+        }
         return clone;
     }
 
@@ -346,14 +397,6 @@ namespace
     // branch ("no targets", never playable). So the row handed back holds wrappers, one per slot the source row uses, that swap the source
     // id into the record for the duration of that slot call and restore it after: the effect runs exactly as the source card's would.
 
-    struct Row   // the game's 48-byte effect table row
-    {
-        uint16_t Id;
-        uint16_t Extra[3];
-        void* Slot[5];
-    };
-    static_assert(sizeof(Row) == 48, "effect table rows are 48 bytes");
-
     // Draw and life point effects resolve completely within a single call (no player interaction), so they can be run back to back.
     bool IsImmediate(const Clone& c)
     {
@@ -392,6 +435,7 @@ namespace
         // The same source row the wrapper was built from (the record's other fields are unchanged, so the lookup picks the same row).
         const uint16_t saved = effect[0];
         effect[0] = static_cast<uint16_t>(clone->From);
+        NativeChoiceScope nativeChoice(effect);
         const Row* row = static_cast<const Row*>(orig_GetEntry(effect));
         void* fn = clone->SlotOverride[SlotIndex] ? reinterpret_cast<void*>(clone->SlotOverride[SlotIndex]) : row ? row->Slot[SlotIndex] : nullptr;
         uint16_t impersonate = static_cast<uint16_t>(clone->From);
@@ -518,6 +562,7 @@ namespace
                     const uint16_t previousShown = g_ShowingSource;
                     effect[0] = static_cast<uint16_t>(clone->From);
                     g_ShowingSource = effect[0];
+                    NativeChoiceScope nativeChoice(effect);
                     const uint64_t result = Orig(effect, a2, a3, a4);
                     g_ShowingSource = previousShown;
                     effect[0] = saved;
@@ -631,7 +676,91 @@ namespace
             g_Swap.OfferResult = result;
             return result;
         }
-        return orig_OfferByRef(ref, a2, a3);
+        bool ignore;
+        Clone* root = Find(static_cast<uint16_t>(ref), ignore);
+        if (!root || root->Parts.empty() || g_MenuPart)
+            return orig_OfferByRef(ref, a2, a3);
+        int64_t result = 0;
+        for (Clone* part : AllParts(*root))
+        {
+            uint16_t probe[0x20]{};
+            probe[0] = static_cast<uint16_t>(part->From);
+            probe[1] = ref >> 31;
+            probe[2] = (ref >> 16) & 0x1F;
+            probe[3] = (ref >> 25) & 0x3F;
+            probe[4] = (ref >> 21) & 7;
+            if (!part->Trigger.empty() && IsKnownTriggerEvent(probe[3]) && !TriggerFitsEvent(part->Trigger, probe[3])) continue;
+            const Row* row = static_cast<const Row*>(orig_GetEntry(probe));
+            if (!row || row->Id != part->From) continue;
+            g_MenuPart = part;
+            const int64_t offered = orig_OfferByRef(ref, a2, a3);
+            if (offered) result = offered;
+        }
+        g_MenuPart = nullptr;
+        return result;
+    }
+
+    using MenuOffer_t = int64_t(__fastcall*)(uint32_t, int16_t, void*, uint32_t);
+    MenuOffer_t orig_MenuOffer = reinterpret_cast<MenuOffer_t>(0x1400AB050);
+    using InsertOffer_t = int64_t(__fastcall*)(int, uint32_t, int16_t, uint32_t);
+    InsertOffer_t orig_InsertOffer = reinterpret_cast<InsertOffer_t>(0x1400AA860);
+
+    int64_t __fastcall Hook_MenuOffer(uint32_t ref, int16_t instance, void* chain, uint32_t param)
+    {
+        bool ignore;
+        Clone* root = Find(static_cast<uint16_t>(ref), ignore);
+        if (!root || root->Parts.empty() || g_MenuPart)
+            return orig_MenuOffer(ref, instance, chain, param);
+        int64_t result = 0;
+        for (Clone* part : AllParts(*root))
+        {
+            uint16_t probe[0x20]{};
+            probe[0] = static_cast<uint16_t>(part->From);
+            probe[1] = ref >> 31;
+            probe[2] = (ref >> 16) & 0x1F;
+            probe[3] = (ref >> 25) & 0x3F;
+            probe[4] = (ref >> 21) & 7;
+            if (!part->Trigger.empty() && IsKnownTriggerEvent(probe[3]) && !TriggerFitsEvent(part->Trigger, probe[3])) continue;
+            const Row* row = static_cast<const Row*>(orig_GetEntry(probe));
+            if (!row || row->Id != part->From) continue;
+            g_MenuPart = part;
+            const int64_t offered = orig_MenuOffer(ref, instance, chain, param);
+            if (offered) result = offered;
+        }
+        g_MenuPart = nullptr;
+        return result;
+    }
+
+    int64_t __fastcall Hook_InsertOffer(int kind, uint32_t ref, int16_t instance, uint32_t param)
+    {
+        bool ignore;
+        Clone* root = Find(static_cast<uint16_t>(ref), ignore);
+        if (!root || root->Parts.empty() || !g_MenuPart)
+            return orig_InsertOffer(kind, ref, instance, param);
+        const uint16_t tag = ChoiceTag(*root, g_MenuPart);
+        auto* records = reinterpret_cast<uint16_t*>(kind ? 0x14349BC80 : 0x14349B580);
+        auto* count = reinterpret_cast<uint32_t*>(kind ? 0x14349C000 : 0x14349C020);
+        const uint32_t before = *count;
+        // The two queues occupy 16 and 32 records respectively. Expanding a
+        // card's choices must never write past the native buffers.
+        if (before >= (kind ? 16u : 32u)) return 0;
+        std::vector<std::pair<uint16_t*, uint16_t>> hidden;
+        // Native duplicate detection compares card instance and table, but not
+        // the selected effect. Hide sibling choices for this one insertion.
+        for (uint32_t i = 0; i < before; ++i)
+        {
+            uint16_t* record = records + i * (0x38 / 2);
+            if (record[0] == static_cast<uint16_t>(ref) && (record[20] & 0xFF00) != tag)
+            { hidden.emplace_back(record, record[0]); record[0] = 0; }
+        }
+        const int64_t result = orig_InsertOffer(kind, ref, instance, param);
+        for (const auto& [record, id] : hidden) record[0] = id;
+        for (uint32_t i = before; i < *count; ++i)
+        {
+            uint16_t* record = records + i * (0x38 / 2);
+            record[20] = tag | (record[20] & 0xFF);
+        }
+        return result;
     }
 
     // The first 0x40 bytes of the event record as 16-bit words, for the trace.
@@ -702,33 +831,18 @@ namespace
 
         bool ignore;
         Clone* root = raw ? Find(raw, ignore) : nullptr;
-        Clone* clone = root ? RouteByTrigger(root, kSummonTriggers) : nullptr;
-        // Summon conditions ("If this card is Special Summoned from the GY ..."): the first summon effect that fits this event and whose condition
-        // the record meets; none = the card does not trigger at all on this summon.
-        if (root && (eventType == 7 || eventType == 9))
+        if (root && !root->Parts.empty() && !g_MenuPart)
         {
-            bool anyCondition = false;
-            Clone* meets = nullptr;
             for (Clone* part : AllParts(*root))
             {
-                anyCondition = anyCondition || part->Summon.Any;
-                if (!meets && TriggerFitsEvent(part->Trigger, static_cast<uint16_t>(eventType)) && SummonMatches(*root, *part, record, raw))
-                    meets = part;
+                if (!part->Trigger.empty() && !TriggerFitsEvent(part->Trigger, static_cast<uint16_t>(eventType))) continue;
+                g_MenuPart = part;
+                Hook_EventEvaluator(eventType);
             }
-            if (anyCondition)
-            {
-                if (!meets)
-                {
-                    static int skipped = 0;
-                    if (++skipped <= 20)
-                        Logger::WriteLog(std::format("Event {} for custom card {}: no summon effect's condition is met (from zone {}, flags {:X}, by card {}, tributes {})", eventType, raw,
-                            *reinterpret_cast<uint16_t*>(record + 0x0A), *reinterpret_cast<uint16_t*>(record + 0x10), *reinterpret_cast<uint16_t*>(record + 0x12),
-                            *reinterpret_cast<uint16_t*>(record + 0x30)), MODULE_NAME, 0);
-                    return;
-                }
-                clone = meets;
-            }
+            g_MenuPart = nullptr;
+            return;
         }
+        Clone* clone = g_MenuPart ? g_MenuPart : RouteByTrigger(root, kSummonTriggers, 1);
 
         // Trace: the event record of every custom card AND of every vanilla card a clone borrows from, side by side, to see which words differ.
         if (g_Trace && raw)
@@ -793,7 +907,19 @@ namespace
         uint32_t& instance = *reinterpret_cast<uint32_t*>(kCardInstances + 8 * static_cast<uintptr_t>(*ref & 0x1FF));
         const uint16_t raw = static_cast<uint16_t>(instance & 0x3FFF);
         bool ignore;
-        Clone* clone = raw ? RouteByTrigger(Find(raw, ignore), kLeaveTriggers) : nullptr;
+        Clone* root = raw ? Find(raw, ignore) : nullptr;
+        if (root && !root->Parts.empty() && !g_MenuPart)
+        {
+            for (Clone* part : AllParts(*root))
+            {
+                if (!part->Trigger.empty() && !TriggerFitsEvent(part->Trigger, static_cast<uint16_t>(eventType))) continue;
+                g_MenuPart = part;
+                Hook_MoveEvaluator(eventType, ref, a3, a4);
+            }
+            g_MenuPart = nullptr;
+            return;
+        }
+        Clone* clone = g_MenuPart ? g_MenuPart : RouteByTrigger(root, kLeaveTriggers, 2);
         // A custom card without a clone is NOT skipped here (unlike the summon evaluator): this evaluator may also let other cards react to the move.
         if (!clone)
             return orig_MoveEvaluator(eventType, ref, a3, a4);
@@ -1277,12 +1403,13 @@ namespace
         return true;
     }
 
-    // One wrapped row per (custom card, source row); rows are never freed (the engine may hold the pointer).
-    std::map<std::pair<const void*, uint16_t>, Row*> g_Wrapped;
+    // Each part has its own overrides, even when two parts borrow the same row.
+    // Rows are never freed (the engine may hold the pointer).
+    std::map<std::tuple<const void*, uint16_t, const Clone*>, Row*> g_Wrapped;
 
     Row* WrappedRow(const Row* source, uint16_t customId, const Clone& clone)
     {
-        auto key = std::make_pair(static_cast<const void*>(source), customId);
+        auto key = std::make_tuple(static_cast<const void*>(source), customId, &clone);
         auto it = g_Wrapped.find(key);
         if (it != g_Wrapped.end())
             return it->second;
@@ -1312,6 +1439,11 @@ namespace
             const Row* action = clone.ActionFrom && i != 3 ? ActionRow(clone.ActionFrom) : nullptr;
             if ((clone.CostFrom && (i == 2 || i == 3)) || (i == 2 && !clone.Require.empty()))
                 wrapped->Slot[i] = kThunks[i];   // the composed cost (slot 3) and its payability / required checks (slot 2)
+            // This handler asks for the donor's native sub-effects (e.g. Stratos's
+            // search/destroy menu). A composed action already defines the effect;
+            // retaining that menu can cancel it when no donor option is legal.
+            else if (i == 3 && clone.ActionFrom && !clone.SlotOverride[i] && fn == 0x140201950)
+                wrapped->Slot[i] = nullptr;
             else if (clone.ActionFrom && i != 3)
                 wrapped->Slot[i] = clone.SlotOverride[i] || (action && action->Slot[i]) ? kThunks[i] : nullptr;
             else
@@ -1481,6 +1613,7 @@ namespace
         LogLookup(effect);
         const uint16_t saved = effect[0];
         effect[0] = static_cast<uint16_t>(clone->From);
+        NativeChoiceScope nativeChoice(effect);
         const Row* source = static_cast<const Row*>(orig_GetEntry(effect));
         effect[0] = saved;
         {
@@ -2077,6 +2210,11 @@ namespace
         // A card's further effects: "parts": [ { "from": ..., "trigger": ..., ... }, ... ] (each one step, its own source; see Clone::Parts).
         if (clone.contains("parts") && clone["parts"].is_array())
         {
+            if (clone["parts"].size() >= 127)
+            {
+                Logger::WriteLog(std::format("{}: at most 127 independent effects are supported, skipped", label), MODULE_NAME, 2);
+                return false;
+            }
             for (const nlohmann::json& partJson : clone["parts"])
             {
                 Clone part;
@@ -2201,6 +2339,8 @@ void EffectClone::Setup()
     AttachIdTests(std::make_integer_sequence<int, 7>());
     DetourAttach(&(PVOID&)orig_CardIdAt, Hook_CardIdAt);
     DetourAttach(&(PVOID&)orig_OfferByRef, Hook_OfferByRef);
+    DetourAttach(&(PVOID&)orig_MenuOffer, Hook_MenuOffer);
+    DetourAttach(&(PVOID&)orig_InsertOffer, Hook_InsertOffer);
     DetourAttach(&(PVOID&)orig_EventEvaluator, Hook_EventEvaluator);
     DetourAttach(&(PVOID&)orig_MoveEvaluator, Hook_MoveEvaluator);
     DetourAttach(&(PVOID&)orig_ListSearch, Hook_ListSearch);

@@ -74,10 +74,14 @@ namespace WolfEx
 
         public void MarkSaved() => (_snapshot ??= new ContentSnapshot(() => new object[] { _rows, _replace.Checked })).Mark();
 
+        private readonly ContentLoadState _loadState = new();
+
         public void LoadFrom(string extraCardsFolder, string gameFolder)
         {
+            _loadState.Reset();
             _gameFolder = gameFolder;
             _rows.Clear();
+            _replace.Checked = true;
 
             string path = Path.Combine(extraCardsFolder, "unlocks.json");
             if (!File.Exists(path))
@@ -86,20 +90,23 @@ namespace WolfEx
             try
             {
                 string json = File.ReadAllText(path);
-                foreach (var row in Read(json))
-                    _rows.Add(row);
+                var rows = Read(json).ToArray();
+                foreach (var row in rows) _rows.Add(row);
 
                 _replace.Checked = !(JsonNode.Parse(json, documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip }) is JsonObject root
                     && root["replaceDefaults"] is JsonValue flag && flag.TryGetValue<bool>(out bool value) && !value);
             }
             catch (Exception ex)
             {
+                _loadState.Failed(ex);
+                _rows.Clear();
                 MessageBox.Show($"Could not read {path}:\n{ex.Message}", "Unlocks", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         public bool SaveTo(string extraCardsFolder)
         {
+            _loadState.EnsureLoaded();
             _grid.EndEdit();
 
             var problems = new List<string>();
@@ -125,17 +132,18 @@ namespace WolfEx
 
             var root = new JsonObject { ["replaceDefaults"] = _replace.Checked, ["cards"] = array };
             var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true };
-            File.WriteAllText(Path.Combine(extraCardsFolder, "unlocks.json"), root.ToJsonString(options) + "\n", new UTF8Encoding(false));
+            ContentSaveBatch.WriteText(Path.Combine(extraCardsFolder, "unlocks.json"), root.ToJsonString(options) + "\n");
             return true;
         }
 
         private static IEnumerable<Row> Read(string json)
         {
             var root = JsonNode.Parse(json, documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip });
-            var array = root as JsonArray ?? root?["cards"] as JsonArray ?? throw new InvalidDataException("expected a \"cards\" array");
+            var array = ContentLoadState.Cards(root ?? throw new InvalidDataException("Expected unlocks JSON."));
 
             foreach (var node in array.OfType<JsonObject>())
             {
+                ContentLoadState.Fields<int>(node, "copies");
                 if (node["id"] is JsonValue id && id.TryGetValue<int>(out int idValue))
                     yield return new Row { Id = idValue, Copies = node["copies"] is JsonValue c && c.TryGetValue<int>(out int copies) ? copies : 3 };
             }

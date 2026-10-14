@@ -4,12 +4,14 @@
 #include <Windows.h>
 #include <cstdint>
 #include <format>
+#include <fstream>
 #include <map>
 #include <string>
 
 #include "Detours.h"
 #include "Logger.h"
 #include "Yu-Gi-Oh-Memory.h"
+#include "Yu-Gi-Oh-RIX.h"
 #include "YuGiOh/YuGiOh-RIX.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
@@ -17,6 +19,72 @@ namespace
 {
     namespace R = YGO::RIX;
     namespace List = YGO::RIX::DeckSelectList;
+
+    bool g_CustomDecks = true;
+    int g_OptionButton = -1;
+    int64_t g_OriginalMenuText[3]{};
+    void RelabelCampaignMenu();
+    void ResetDeckChoice();
+    const auto kMainMenuSetupArrays = YGO::RIX::MainMenu::SetupArrays;
+    auto orig_MainMenuSetupArrays = reinterpret_cast<void(__fastcall*)(void*)>(kMainMenuSetupArrays);
+
+    std::string OptionsPath() { return Campaign::GameFolder() + "campaign-options.json"; }
+
+    void ReadOptions()
+    {
+        std::ifstream file(OptionsPath());
+        if (!file) return;
+        try
+        {
+            const auto options = nlohmann::json::parse(file);
+            g_CustomDecks = options.at("customDecks").get<bool>();
+        }
+        catch (const std::exception& error)
+        {
+            Logger::WriteLog(std::string("Campaign options could not be read: ") + error.what(), MODULE_NAME, 1);
+        }
+    }
+
+    bool RegisterToggle();
+
+    void __cdecl ToggleCustomDecks(int, void*)
+    {
+        const std::string path = OptionsPath(), temp = path + ".tmp";
+        std::ofstream file(temp, std::ios::trunc);
+        file << nlohmann::json{{"customDecks", !g_CustomDecks}}.dump(2) << '\n';
+        file.close();
+        if (!file || !MoveFileExA(temp.c_str(), path.c_str(), MOVEFILE_REPLACE_EXISTING | MOVEFILE_WRITE_THROUGH))
+        {
+            DeleteFileA(temp.c_str());
+            Logger::WriteLog("Campaign option not saved; previous setting retained", MODULE_NAME, 2);
+            MessageBoxW(nullptr, L"Could not save the Campaign setting. The previous setting is retained.", L"Campaign", MB_OK | MB_ICONERROR);
+            return;
+        }
+        g_CustomDecks = !g_CustomDecks;
+        ResetDeckChoice();
+        RelabelCampaignMenu();
+        RegisterToggle();
+    }
+
+    bool RegisterToggle()
+    {
+        return RIX::Functions().RegisterPluginOptions("Yu-Gi-Oh-Campaign",
+            g_CustomDecks ? L"Custom Opponent Decks: On" : L"Custom Opponent Decks: Off",
+            L"Choose the opponent's deck in Campaign and Free Duel. Off keeps their normal deck. Tag Duel still requires its deck-selection steps.",
+            &ToggleCustomDecks, nullptr) != 0;
+    }
+
+    void __fastcall Hook_MainMenuSetupArrays(void* screen)
+    {
+        // Campaign can be injected before RIX: register on the game thread once
+        // the main menu is built, after the loader has injected all plugins.
+        if (g_OptionButton < 0 && RIX::Load() && RIX::Functions().RegisterPluginOptions)
+        {
+            if (RegisterToggle())
+                g_OptionButton = 1;
+        }
+        orig_MainMenuSetupArrays(screen);
+    }
 
     // ---- the game (names in the IDB)
 
@@ -244,6 +312,14 @@ namespace
             return;
         R::SetHeaderText(screen, g_SavedTitle);
         g_TitledScreen = nullptr;
+    }
+
+    void ResetDeckChoice()
+    {
+        g_Picker.Active = false;
+        g_PendingCharacter = -1;
+        if (g_TitledScreen)
+            RestoreTitle(g_TitledScreen);
     }
 
     int CharacterDeck(int character)
@@ -542,6 +618,11 @@ namespace
 
     void __fastcall Hook_FreeDuelInput(void* screen, void* ui)
     {
+        if (!g_CustomDecks && !TagDuelOn())
+        {
+            g_PendingCharacter = -1;
+            return orig_FreeDuelInput(screen, ui);
+        }
         char* s = static_cast<char*>(screen);
         int& state = *reinterpret_cast<int*>(s + kFreeState);
 
@@ -638,6 +719,11 @@ namespace
 
     void __fastcall Hook_CampaignInput(void* screen)
     {
+        if (!g_CustomDecks)
+        {
+            g_PendingCharacter = -1;
+            return orig_CampaignInput(screen);
+        }
         char* s = static_cast<char*>(screen);
         int& state = *reinterpret_cast<int*>(s + kCampaignState);
         if (g_Picker.Active && g_Picker.Screen == s)
@@ -701,6 +787,12 @@ namespace
         YGO::Memory::WriteValue(kCampaignMenuItems + 2 * sizeof(int64_t), reinterpret_cast<int64_t>(storyText));
         YGO::Memory::WriteValue(kCampaignMenuItems + 4 * sizeof(int64_t), reinterpret_cast<int64_t>(customLabel));
         YGO::Memory::WriteValue(kCampaignMenuItems + 5 * sizeof(int64_t), reinterpret_cast<int64_t>(customText));
+        if (!g_CustomDecks)
+        {
+            YGO::Memory::WriteValue(kCampaignMenuItems + 2 * sizeof(int64_t), g_OriginalMenuText[0]);
+            YGO::Memory::WriteValue(kCampaignMenuItems + 4 * sizeof(int64_t), g_OriginalMenuText[1]);
+            YGO::Memory::WriteValue(kCampaignMenuItems + 5 * sizeof(int64_t), g_OriginalMenuText[2]);
+        }
     }
 }
 
@@ -708,7 +800,12 @@ namespace AiDeck
 {
     void Attach()
     {
+        ReadOptions();
+        g_OriginalMenuText[0] = *reinterpret_cast<int64_t*>(kCampaignMenuItems + 2 * sizeof(int64_t));
+        g_OriginalMenuText[1] = *reinterpret_cast<int64_t*>(kCampaignMenuItems + 4 * sizeof(int64_t));
+        g_OriginalMenuText[2] = *reinterpret_cast<int64_t*>(kCampaignMenuItems + 5 * sizeof(int64_t));
         RelabelCampaignMenu();
+        DetourAttach(&reinterpret_cast<PVOID&>(orig_MainMenuSetupArrays), Hook_MainMenuSetupArrays);
         DetourAttach(&reinterpret_cast<PVOID&>(orig_FreeDuelInput), Hook_FreeDuelInput);
         DetourAttach(&reinterpret_cast<PVOID&>(orig_FreeDuelSetState), Hook_FreeDuelSetState);
         DetourAttach(&reinterpret_cast<PVOID&>(orig_CampaignInput), Hook_CampaignInput);

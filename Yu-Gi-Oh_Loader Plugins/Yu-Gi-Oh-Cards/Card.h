@@ -97,7 +97,7 @@ namespace Card
         // archetypes that exist only for custom cards.
         std::vector<int> Archetypes;
         // The vanilla card whose effect this card borrows ("effectClone": { "from": N } in cards.json, applied by Yu-Gi-Oh-Effects).
-        // In a duel the card plays under that id when it is free (see BorrowSourceId), so every id-keyed rule of the engine treats it as the source.
+        // Single-effect clones play under that id when free. Multi-effect clones use 0 here: each effect is routed independently.
         uint16_t CloneFrom = 0;
         // The card whose name this one is treated as ("sameName": { "card": N, "always": true } in cards.json; 0 = its own name). The game's
         // own cards get theirs from bin/CARD_Same.bin in Setup_CardPropTable, which never reads ids past 14968 (docs/CardSame.md). Always:

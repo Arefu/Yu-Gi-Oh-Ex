@@ -29,6 +29,8 @@ namespace Wolf.Editors
     /// </summary>
     public sealed class GameFolderFiles : IGameFiles
     {
+        public CharacterTable? CharacterChoices { get; set; }
+        public DeckData.DeckDataTable? DeckChoices { get; set; }
         /// <summary>The files a full set of game data has; missing ones are reported when a folder is opened.</summary>
         public static readonly (string Path, string What)[] RequiredFiles =
         [

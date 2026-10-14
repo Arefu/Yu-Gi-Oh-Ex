@@ -8,6 +8,7 @@ Reads YuGiOh.exe (tables: effect rows, draw counts, life point table, filter row
 """
 import json, os, re, struct, sys
 import pefile
+from lock_reference import add_lock_references
 
 sys.stdout.reconfigure(encoding='utf-8')
 EXE = r'C:\Users\Johnathon\source\repos\Yu-Gi-Oh-Ex\YuGiOh.exe'
@@ -385,6 +386,9 @@ for cid in sorted(rows):
     out.append({'id': cid, 'name': c['name'], 'kind': c.get('kind', ''), 'icon': c.get('icon', ''), 'text': text, 'script': script, 'trigger': trigger,
                 'complete': complete, 'sourceOk': source_ok, 'unread': unknown, 'notes': notes, 'table': tname.split()[0], 'cost': cost or '',
                 'firstClause': first_clause, 'action': line.split('(')[0] + ('_' + line.split('(')[1].split(',')[0] if line.startswith('destroy') else '')})
+
+# Continuous locks are hard-coded in the engine, not rows in these tables.
+add_lock_references(out, cards)
 
 # Which vanilla card a (trigger, action) pair borrows its behaviour from: the exact single-effect cards of each pair, shortest text first.
 SOURCES_OUT = os.path.join(os.path.dirname(OUT), 'trigger_sources.json')

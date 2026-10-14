@@ -1,10 +1,12 @@
 #pragma once
+#include "Yu-Gi-Oh-RIX.h"
 
 // The in-game plugin list. The loader keeps a [Yu-Gi-Oh-RIX] section in Config.ini (Name=1 or Name=0 for every plugin it found, and
 // YGO-Ex/Name for the ones Yu-Gi-Oh-GUI starts) and only loads the ones set to 1. This adds a "Plugins" button to the main menu; pressing it swaps the menu for one button per plugin
 // (press to switch it on or off, six to a page) with Next and Back. The choice is written to Config.ini and applies at the next launch.
 namespace PluginMenu
 {
+    bool RegisterOptions(const char* Key, const wchar_t* Label, const wchar_t* Description, RIX_ButtonCallback Callback, void* User);
     // Reads the list and adds the buttons. Does nothing when the section is empty (the loader has not listed anything yet).
     void Install();
 

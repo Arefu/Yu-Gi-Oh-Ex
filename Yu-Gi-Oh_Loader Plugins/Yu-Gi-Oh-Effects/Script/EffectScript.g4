@@ -55,7 +55,7 @@ lockArg       : IDENT | kind | 'opponent' | 'own' | 'any' | 'field' | 'equip' ;
 asScript   : 'as' '(' (NUMBER | STRING) ')' ('with' statPart (',' statPart)*)? ';'? ;
 statPart   : ('atk' | 'def') NUMBER ;
 effect     : 'effect' STRING? '{' effectBody '}' ;
-effectBody : trigger? requireClause? costClause? chain ';'? limit? ;
+effectBody : asScript | trigger? requireClause? costClause? chain ';'? limit? ;
 
 // A cost paid when the effect is activated ("Discard 1 card; ...", "Pay 800 LP; ..."): the game's own cost functions, docs/EffectSystem.md section 34.
 costClause : 'cost' (discardCost | payCost | selfCost | detachCost | tributeCost) ':' ;

@@ -36,7 +36,7 @@ order (key, name, bio) with no padding.
 * `Character_IsDefined` (Key != NULL), `Character_IsSelectable`, `Get_CharacterSeries`, `Get_CharacterSku` (id 47 forced to 1).
   The portrait functions are `Character_GetPortraitName`, `…NameOr` and `…Cached`.
 * **Free Duel:** `FreeDuel_BuildOpponentList` (0x140841900) lists a character if it is defined, selectable, in the tab's series,
-  its SKU is owned, **and its deck is defined and owned by it** (`Get_DeckOwnerCharacter(deck) == id`). `FreeDuel_HandleInput`
+  its SKU is owned, **and its deck is defined and owned by it** (`Get_DeckOwnerCharacter(deck) == id`). Campaign relaxes the ownership check for this list so characters can share a valid deck. `FreeDuel_HandleInput`
   starts the duel with deck + 32 and the character's arena.
 * **Unlocks:** a 240-bit set at the save's player section +0x18 (bit = character id).
   * `InitPlayerSection` unlocks characters with series -1, plus `g_InitialUnlockedCharacters` (105, 119, 35, 174, 72).
@@ -56,16 +56,14 @@ It lists only characters that differ from the game's or are new, each one whole.
 * **key:** the portrait. An existing character's key borrows their picture, and no hook is needed because the key is only
   used for the portrait.
 * **name / bio:** per language, falling back to English.
-* **unlocked** (new characters, default true): the plugin sets the character's save bit when the Free Duel list or the
+* **unlocked** (new characters default true; existing characters default to their saved progress): the plugin sets the character's save bit when the Free Duel list or the
   collection count is built.
 
 Yu-Gi-Oh-Campaign hooks `LoadCharacterData` (fills the slots again after every reload, for the language), plus
 `FreeDuel_BuildOpponentList` and `Collection_FormatCharacterCount` (for the unlock bits). Name and bio go through the game's own
 `std::wstring::assign`.
 
-**For a new character to appear in Free Duel it needs a deck it owns**: make one in the Decks tab with the character as its owner
-(decks.json, [Decks.md](Decks.md)), then set it as the character's deck. Pointing a new character at an existing deck shows it
-everywhere else but not in Free Duel, and the editor warns about this.
+With Campaign enabled, multiple characters may point at the same deck without changing its canonical owner. Selectable, series, SKU and deck-validity checks still apply. The Characters panel exposes **Unlocked from start** for existing and new characters; it grants access in the current profile and does not clear earned progress when unchecked. No save-slot editing is needed. Deck and character dropdowns include live additions from their open editor tabs, including changes not yet saved.
 
 Built, but not yet run in the game. Yu-Gi-Oh-Campaign is new, so switch it on in Config.ini: `[Yu-Gi-Oh-Core]`
 `Yu-Gi-Oh-Campaign=1`, or use the in-game Plugins menu.

@@ -8,6 +8,8 @@
 //       <game>\YGO_2020-Ex.toc   "UB\n", then per file: u32 length of the path, the path (e.g. bin\CARD_Prop.bin), u64 size, u64 offset
 //       <game>\YGO_2020-Ex.dat   the files, each padded to 4 bytes
 //     PatchArchive names it (default YGO_2020-Ex; empty = off).
+//   * the Mod Manager's generated merge archive (Mods/merged.json), only when its input/output inventory and active order match.
+//     It combines independent binary records and archive entries; never changes the original game or mod archives.
 //   * the mods that are on (Yu-Gi-Oh-Mods.h, docs/Mods.md), the last in the load order first, each with the same two kinds of file:
 //       <game>\Mods\<id>\YGO_2020\<path>          loose files (always served; listed once at the first file the game asks for)
 //       <game>\Mods\<id>\YGO_2020-Ex.toc / .dat   a patch archive like WolfX's

@@ -7,5 +7,13 @@
     "genres.json",
     "relatedcards.json",
     "text.json"
+  ],
+  "settings": [
+    {
+      "key": "PreserveUnavailableCards",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Keep saved copies of unavailable custom cards when switching mods or when cards.json fails to load. Off resets those cards as before. Restart the game after changing this option."
+    }
   ]
 }

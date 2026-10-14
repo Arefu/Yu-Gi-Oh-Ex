@@ -513,6 +513,9 @@ namespace WolfX
             _changedCards.Clear();
             _pendingArt.Clear();
             _summoning = SummoningFile.Load(files.ExPath(SummoningFile.FileName));
+            if (_summoning.LoadError is { } error)
+                MessageBox.Show("Could not read summoning.json. Saving summoning changes is blocked until you repair it and reopen the folder.\n" + error,
+                    "Summoning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             try
             {
                 _idMap = files.Read(CardIdMap.GamePath) is { } ids ? CardIdMap.Parse(ids) : null;
@@ -552,6 +555,7 @@ namespace WolfX
         /// <summary>Writes the files that changed, then the pages shown inside (genres, related cards, links) when they have changes.</summary>
         public bool Save()
         {
+            if (!WolfUI.CommitPendingEdits(this)) return false;
             if (_files == null)
                 return false;
             try
@@ -601,10 +605,6 @@ namespace WolfX
                     }
                     _pendingArt.Clear();
                 }
-                _changedFiles.Clear();
-                _changedCards.Clear();
-                _list.Invalidate();
-
                 int pages = 0;
                 if (_summoning?.Dirty == true)
                 {
@@ -616,13 +616,26 @@ namespace WolfX
                     if (editor is IGameEditor { Dirty: true } page)
                     {
                         if (!page.Save())
+                        {
+                            _status.Text = "Not fully saved: a linked editor could not save its changes. Pending edits are retained.";
                             return false;
+                        }
                         pages++;
                     }
                 }
                 // a custom card's requirements, genres, related cards or links changed here: all of them are its cards.json entry
-                if (_customCards.Dirty && _customCards.SaveRequested?.Invoke() == true)
+                if (_customCards.Dirty)
+                {
+                    if (_customCards.SaveRequested?.Invoke() != true)
+                    {
+                        _status.Text = "Not fully saved: custom card changes could not be saved. Pending edits are retained.";
+                        return false;
+                    }
                     pages++;
+                }
+                _changedFiles.Clear();
+                _changedCards.Clear();
+                _list.Invalidate();
                 _status.Text = (write.Count > 0 ? $"Saved {write.Count} files into {_files.Describe(CardPropTable.GamePath)}" : "No card files changed") +
                                (art > 0 ? $"; {art} card picture{(art == 1 ? "" : "s")} into {_files.Describe(CardArt.CensoredZib)}" : "") +
                                (pages > 0 ? $"; saved {pages} of summoning.json, cards.json and the genres / related cards / links pages." : ".");
