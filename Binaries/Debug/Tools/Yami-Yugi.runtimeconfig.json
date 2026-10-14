@@ -6,6 +6,10 @@
       "version": "8.0.0"
     },
     "configProperties": {
+      "System.GC.ConserveMemory": 7,
+      "System.GC.HeapHardLimit": 268435456,
+      "System.GC.Concurrent": false,
+      "System.GC.Server": false,
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,
       "CSWINRT_USE_WINDOWS_UI_XAML_PROJECTIONS": false
     }
