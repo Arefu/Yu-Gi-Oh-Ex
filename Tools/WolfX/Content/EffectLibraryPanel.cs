@@ -31,6 +31,7 @@ namespace WolfEx
             public Origin Origin;
             public string Action = "";   // the script's main action ("search", "destroy" ...)
             public ulong Genres;          // CARD_Genre bits of the game card (0 = none or no game data)
+            public string LockGroup = ""; // LockCatalog group of a continuous lock card ("" = not one)
 
             public override string ToString() =>
                 (Origin == Origin.Mine ? "★ " : Origin == Origin.Edited ? "✎ " : "") + (Complete || Origin == Origin.Mine ? "" : "~ ") + Name;
@@ -202,11 +203,12 @@ namespace WolfEx
                 var entry = _all.FirstOrDefault(e => e.Id == lockCard.Id);
                 if (entry == null)
                     _all.Add(entry = new Entry { Id = lockCard.Id, Name = lockCard.Name, Kind = "", Origin = Origin.Game });
+                entry.LockGroup = lockCard.Group;
                 if (entry.GameScript.Length > 0)
                     continue;   // the tables already describe it
                 entry.Script = entry.GameScript = lockCard.Script;
                 entry.Complete = lockCard.Complete;
-                entry.Action = "lock";
+                entry.Action = ActionOf(lockCard.Script);
                 if (lockCard.Note.Length > 0)
                     entry.Notes = [.. entry.Notes, lockCard.Note];
             }
@@ -288,7 +290,7 @@ namespace WolfEx
         /// <summary>One category node: its name and which entries belong to it.</summary>
         private sealed record Category(string Name, Func<Entry, bool> Match);
 
-        private const string GenreRoot = "What it does", ActionRoot = "Script action";
+        private const string GenreRoot = "What it does", ActionRoot = "Script action", LockRoot = "Continuous locks";
         private readonly List<(string Root, Category Category)> _categories = [];
         private bool _filling;
 
@@ -358,6 +360,9 @@ namespace WolfEx
                 string action = group.Key;
                 _categories.Add((ActionRoot, new Category(action.Length == 0 ? "(no action)" : action, e => e.Action == action)));
             }
+            // every card Duel_BuildContinuousLockState names (LockCatalog), by kind: also the ones lock(...) can't say yet
+            foreach (string group in LockCatalog.Groups)
+                _categories.Add((LockRoot, new Category(group, e => e.LockGroup == group)));
             Refill();
         }
 
@@ -413,7 +418,7 @@ namespace WolfEx
             {
                 _tree.Nodes.Clear();
                 var all = _all.Where(Passes).ToList();
-                foreach (string rootName in new[] { GenreRoot, ActionRoot })
+                foreach (string rootName in new[] { GenreRoot, ActionRoot, LockRoot })
                 {
                     var root = _tree.Nodes.Add(rootName, rootName);
                     var categories = _categories.Where(c => c.Root == rootName).ToList();

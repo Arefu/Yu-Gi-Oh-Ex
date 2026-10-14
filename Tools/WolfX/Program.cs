@@ -35,6 +35,13 @@ namespace WolfX
                 return;
             }
 
+            // The game's UI sprites (no window): WolfX.exe --sprites <game folder> <output folder> [resource ...] (see PageRenderer.ListSprites)
+            if (args.Length >= 3 && args[0] == "--sprites")
+            {
+                WolfEx.Designer.PageRenderer.ListSprites(args[1], args[2], args.Skip(3));
+                return;
+            }
+
             // WolfX.exe --page "Card genres": open on that page
             if (args.Length >= 2 && args[0] == "--page")
                 WolfUI.StartPage = args[1];

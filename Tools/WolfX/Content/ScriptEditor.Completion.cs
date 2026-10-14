@@ -128,7 +128,7 @@ namespace WolfEx
             AutoCCancelled += (_, _) => HideListHint();
             AutoCCompleted += (_, _) => HideListHint();
             LostFocus += (_, _) => HideListHint();
-            UpdateUI += (_, _) => ShowWordHint();
+            UpdateUI += (_, _) => KeepWordHint();
             KeyDown += (_, e) =>
             {
                 if (e.Control && e.KeyCode == Keys.Space)
@@ -136,6 +136,8 @@ namespace WolfEx
                     e.SuppressKeyPress = true;
                     e.Handled = true;
                     ShowCompletion(automatic: false);
+                    if (!AutoCActive)
+                        ShowWordHint();   // nothing to list here: what the word at the caret does
                 }
             };
         }
@@ -170,7 +172,23 @@ namespace WolfEx
 
         private string _wordHinted = "";
 
-        /// <summary>With no list open: the caret on a word EffectScript knows shows what it does above the line.</summary>
+        /// <summary>The word hint stays while the caret is on the word it was shown for; moving off closes it (only Ctrl+Space opens one).</summary>
+        private void KeepWordHint()
+        {
+            if (_strip?.Visible == true && !AutoCActive)
+                HideListHint();   // the list closed without an event (the caret moved off it)
+            if (_wordHinted.Length == 0 || AutoCActive)
+                return;
+            int position = CurrentPosition;
+            int start = WordStartPosition(position, true), end = WordEndPosition(position, true);
+            if ($"{start}:{(end > start ? GetTextRange(start, end) : "")}" != _wordHinted)
+            {
+                CallTipCancel();
+                _wordHinted = "";
+            }
+        }
+
+        /// <summary>Ctrl+Space with nothing to list: the caret on a word EffectScript knows shows what it does above the line.</summary>
         private void ShowWordHint()
         {
             if (AutoCActive)

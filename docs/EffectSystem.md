@@ -381,6 +381,8 @@ Made by scanning every call to the offer functions (`Offer_EffectByCardRef`, `Of
 | 6 | End Phase ("during the End Phase") | `Phase_EndPhase_RunHandlers` 0x1401558E0, rows at 0x140B12310 (552, u16 id at +8, flag bytes +0xA/+0xB) + 0x140B14590 (19) | table of {handler, id} | **hooked** (same AttachPhaseHandlers), test 15 |
 | 7 / 8 / 9 | summon / Flip Summon / special + material | section 29 | | working |
 | 11 | a card is Set (Worm Illidan) | `Eval_CardSetTriggers_Ev11` | named-card helper | **hooked** (named helpers) |
+| 12 | **flipped face-up** too: `Duel_ChangePosition_OfferFlip_Ev12or13` (0x140084E50) offers event 12 + flag, FLIP monsters only (seen in-duel 2026-10-14: Book of Taiyou on Bunny Ear Enthusiast) | position change | `Kind_IsFlipMonster` | fits "flip" since 2026-10-14 (it was unknown, so a FLIP + Standby card got the choose-an-effect prompt) |
+| - | **one-effect clones are offered only for their own trigger** (2026-10-14): `Hook_OfferByRef` drops an offer whose event (ref bits 25-30) is known and does not fit the clone's trigger. A lent source id brings every id-keyed trigger of the source along: Black Mamba (as Edge Imp Chain 11688) dealt its 300 when Dark Hole sent it to the GY. | | | fixed, untested |
 | 13 / 21 | flipped by an effect / after damage calculation and battle flips (D.D. Warrior, FLIP in battle) | `ChangeBattlePosition_FlipTrigger`, `Eval_AfterDamageCalcTriggers_Ev21` | | FLIP working; other 21 uses untested |
 | 14 | damage calculation (Cipher Soldier "during damage calculation") | `sub_1402114C0` | named-card helpers + a few per-id compares | **hooked** (named helpers) |
 | 15 | inflicts battle damage | `Eval_BattleDamageTriggers_Ev15` | inline list `EventIdList_BattleDamage_Ev15` | **hooked** (inline stub), test 14 |
@@ -736,6 +738,8 @@ is face-up in its zone and not exempt.
 * Words: trap, spell, monster, continuous_trap, continuous_spell, field_spell, equip_spell; both, opponent, own; monster_zone, spelltrap_zone, any_zone.
 * One lock per card. It goes before or after any effect, and a script may be only a lock.
 
+**Every card the builder names (re-read 2026-10-14)** is in `Tools/WolfX/Content/LockCatalog.cs` and shows in the Effect library under its own **Continuous locks** root, by kind. **Narrow monster locks are lock words now** (`Duel_IsMonsterEffectNegatedByLocks` 0x1401103A0 reads one int each; Lock.cpp `kFilters` writes the lock card's activation number into it): `light` (+56), `a_counter` (+52, counter 6800), `except_koaki_meiru` (+60, archetype 70), `from_main_deck` (+64, UNK_02 0x80000), `from_extra_deck` (+68, UNK_02 0x200000), `fusion_synchro_xyz` (+76), `extra_monster_zone` (+80), `except_tribute_summoned` (+84, UNK_02 & 8), `summoned_this_turn` (+36/+40, UNK_03 & 4), `defense_position` (+104). One per lock, both players only; JSON `"monsterFilter"`. Blocks: the Lock block's "monster effects of only"; the Lock dialog's picker. The this-turn locks (flag markers: Trap Stun 8223, Gishki Emilia 9592, 6208, 12013, 13551, 5753, 7275, 8313, 4799, 11096, 14122, 11994, 10298, 4942-4945), Powersink Stone 9155, Moon Dance Ritual 10821 and the exemptions (11274, 4819, 9156) are keyed on the card id, so the library template is `as("Card")` (source-id lending). 15148 is a not-in-game id. All untested in a duel.
+
 **WolfX:** a "Lock" block category, and a **Lock...** button on the Effects page. The button's dialog has presets (Jinzo, Spell Canceller,
 Skill Drain) and writes the script line. For a game card that keeps its own effect, the lock goes into effects.json as `"lock"` instead.
 
@@ -767,3 +771,73 @@ Skill Drain) and writes the script line. For a game card that keeps its own effe
 **Language:** `on special_summoned(from grave, by effect): ...`, `on normal_summoned(tribute 2): ...`, `on special_summoned(xyz): ...`, `on special_summoned(by "Dark World", from hand): ...`, `pendulum`, `by own`. Only with normal_summoned / special_summoned / summoned / normal_or_special_summoned. Blocks: the Effect block's "if summoned: from / by / as" row. `CardTextTranslator` reads "If this card is Special Summoned from the GY by a card effect", "If this card is Xyz / Pendulum / Tribute Summoned" ... exactly (it used to read them as any Special Summon).
 
 **Built 2026-10-11, untested in a duel.** Open: a choice between two summon effects (section 45) does not look at the conditions. Next family: the leave-the-field conditions (the move ref already carries from-zone, from-field, by-battle, section 29).
+
+## 47. Hand size limit, choose-an-effect labels, except-this-card with a name test (2026-10-14)
+
+**Hand size limit.** The turn runs a table of step functions (0x140ACD6D8, index `field_37BA`): 0 `sub_140147A00`, 1 Draw Phase, 2 Standby Phase,
+3 Main Phase (Battle inside), 4 `Phase_EndPhase_RunHandlers` (0x1401558E0), 5 `Duel_TurnStep5_CheckTurnOrTimeLimit` (0x140147DD0). The End Phase runner
+walks the 552-row handler table 0x140B12310; the row `EndPhase_DiscardToHandLimit` (0x140155830) moves the step to 11 and, when the hand
+(`PlayerState.iNumberOfCardsInHand`) is over `Duel_GetHandLimit(player)` (0x14005D120), sets up the discard-N prompt. `Duel_GetHandLimit`: 6;
+none (0xFFFF) while Infinite Cards is face-up; 5 while the OPPONENT has Enervating Mist (or flag marker 5535 on the player); 3 while Finite Cards
+(12341) is face-up unless the player has Silent Wobby. Callers: the End Phase row, `sub_140284300`, `sub_14050FEC0` (AI / UI) - one hook covers all.
+**Built (Lock.cpp, untested):** `"handLimit": {"limit": N, "side": "opponent" (default) | "you" | "both", "zone": "monster" | "spelltrap" | "any"}` on
+a card or in its effectClone; `Hook_HandLimit` lowers the limit while the card is face-up in its zone and not negated (the lock state is built
+with our locks, so a custom Skill Drain stops it). Language `hand_limit(3);` `hand_limit(4, both, spelltrap_zone);`; BAB "While face-up" category.
+
+**Choose-an-effect labels.** `EffectChoice_GetLabel` (0x1401FA760, id, n): sorted {card, label} rows at 0x140B241B0 (labels < 3000 = DLG text
+indices, the duel prompt table, 689 entries); else id + (n << 14). `EffectChoice_ShowPrompt` keeps them as u16. `Duel_PromptText` (0x14077AE30):
+< 3000 = `Get_DlgText`; else the text after the (n+1)-th U+25CF bullet of card (id & 0x3FFF)'s description - which is why a custom card showed
+blank CHOICE 1 / 2. **Built (EffectClone.cpp, untested):** `Hook_ChoiceLabel` answers card | n << 14 for our prompt (a lent source's table labels
+never leak in), `ChoiceSlot3` records the candidates' labels per card, `Hook_PromptText` answers them (game std::wstring filled with the game's own
+assign 0x140751310). The compiler gives every effect of a several-effect card a `"label"`: the `effect "Name"` name, else a summary
+("Draw 1 card", "Inflict 500 damage, then ..."). At most 4 options (2 bits of n).
+
+**Except this card with an archetype / card filter.** A match-list entry is the card's dword (`sub_14003D120(player, zone, index)`), id = low 14
+bits. When the row's name test is taken, `RunDeckScan` drops the matches named like this card (`j_Card_IsSameName` 0x1407EBA00) after each scan
+(`ExceptSelfAfter`). The ~58 direct row-index callers (Get_DeckFilterIndexForEffect) still see the plain row.
+
+## 48. "For the rest of this turn" locks: lock_turn(...) (2026-10-14)
+
+`Action_AddTurnFlagMarker` (0x140177EE0) is slot 0 of the this-turn cards: it pushes MsgQueue 0x35 FlagMarker_Add with arg2 = the effect
+RECORD's card id and arg3 = the current turn (Trap Stun 8223, Gorgon's Eye 4799, Magic Deflector 10298; Koa'ki Meiru Hydro Barrier 8313 kind 2
+= until the next Standby Phase; Dark Contract with Errors 12013 does its own result first). `Duel_BuildContinuousLockState` reads the markers by
+id (section 44: 8223 -> both players' Traps, 10298 -> +108, 4799 -> +104). A composed custom effect runs its action as the action card
+(impersonation), so the marker it adds IS that card's: no hook needed.
+
+**Built (compiler + BAB, untested in a duel):** `lock_turn(trap | spell | defense_position);` = `{"from": 10298 (Magic Deflector's Normal Spell
+row), "condition": "always", "actionFrom": <8223 | 4799>}`; with a trigger the usual trigger x action composition (any monster with the trigger,
+actionFrom the marker card). BAB: "for the rest of this turn, negate ..." in Actions. The Effect library's Trap Stun / Gorgon's Eye / Magic
+Deflector now use it (complete). Others of the family (Armored Glass 4942 ... Metal Detector 4945, White Howling, Triangle Ecstasy Spark) use
+other slot functions with conditions - not mapped yet.
+
+## 49. Engine primitives for our own resolver (research, 2026-10-14)
+
+The long-term BAB goal (fully custom effects from parts) needs a resolve step of our own that calls the engine's actions directly. Found so far:
+
+| primitive | address | call | notes |
+|---|---|---|---|
+| draw N | `Draw_ExecuteDraw` 0x1400A1C10 | (record, player, count, flags) | whole draw in one call: draw-blocking cards (Protector of the Sanctuary, markers 9279 / 12005 / 13547 / 14144), deck -> hand, UI messages, on-draw triggers; returns -1 when the deck runs out, 1 = drew |
+| effect damage | `Damage_Player` 0x14009DE50 | (player, amount) | MsgQueue 0x24 (arg2 3 = effect damage) + animation 45; the LP handler applies it |
+| turn marker | `Action_AddTurnFlagMarker` 0x140177EE0 | slot 0 | MsgQueue 0x35 FlagMarker_Add, keyed on the record id (section 48) |
+| to GY / banish | `Move_NonFieldCardToGraveOrBanish_Ev31` 0x1400A6F40, `Move_HandCardToGraveOrBanish_Ev32` 0x140088D90, `Move_FieldCardToGraveOrBanish_Ev33` 0x1400A7750 | (player, zone, ..., index, ..., by card) | fire the leave / sent-to-GY events (section 29) |
+| destroy zones | `Action_DestroyZoneMask` 0x1400D5150 | | |
+| hand limit | `Duel_GetHandLimit` 0x14005D120 | (player) | section 47 |
+
+Immediate steps (draw, LP, markers) can run back to back inside one slot 0 call, the way chaining stage 1 already runs draw / LP "before" steps.
+Interactive steps (choose a card, target) are step machines (section 12) and still need the game's own machines - the sequencer of section
+"Chaining" in EffectLanguage.md. Next: add-to-hand from the GY / Deck without a selection, Special Summon by id, change ATK.
+
+## 50. The plugin's own resolver: "steps" (2026-10-14)
+
+First piece of "custom effects from parts": an effect's slot 0 can be the plugin's `Slot0_RunSteps` instead of a game card's machine. It runs
+`"steps": [{"op": "draw" | "gain" | "damage", "n": N, "who": "own" | "opponent" | "both"}, ...]` in order with the game's functions -
+`Draw_ExecuteDraw` (0x1400A1C10, record, player, count, 0), `LP_ApplyGain_Internal` (0x1400A15F0, record, side, amount), `LP_ApplyDamage_Internal`
+(0x14009E4C0) - for the record's player `record[1]` (as `LP_ApplyChangeFromParamTable` reads it) and/or the other one, then returns 0 (finished:
+all of them are immediate). The row (activation: Spell / trigger) still comes from `from` (Pot of Greed 4844 for a Spell, the trigger composition
+otherwise) with `"condition": "always"`.
+Compiler: a chain made only of draw / gain_lp / burn / damage, or one that names a player (`draw(1, opponent)`, `gain_lp(500, any)`, new
+`damage(N[, own | opponent | any])`), compiles to steps; a single plain draw / gain_lp / burn keeps its game card (unchanged, tested). Mixing a
+player-named step with an interactive action (search ...) is an error for now. BAB: draw / gain LP / damage blocks have a "whose" dropdown.
+Built 2026-10-14, untested in a duel (test 8). Not yet: Resolution_BeginScope around a both-players LP change (the game does it for two-sided
+changes; watch the LP animation), card moves (field cards: `Action_DestroyZoneMask` queues ONE pending move, so only as a last step; GY/Deck -> hand
+mover not found yet), choices/targets (step machines).

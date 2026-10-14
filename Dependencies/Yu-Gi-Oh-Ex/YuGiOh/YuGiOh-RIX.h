@@ -179,7 +179,9 @@ namespace YGO
             int64_t ui = GetUI();
             int index = *reinterpret_cast<int*>(ui + 852);
             int64_t records = *reinterpret_cast<int64_t*>(ui + 856);
-            return records ? *reinterpret_cast<int*>(records + 48LL * index + 8) : -1;
+            // the screen record: +0 current id, +4 previous id, +8 pending id (RIX::UI::GetCurrentScreenId 0x140807F80 reads +0;
+            // this read +8 until 2026-10-14, which is 0 once a screen change has finished)
+            return records ? *reinterpret_cast<int*>(records + 48LL * index) : -1;
         }
 
         // The MenuKit menu object every ScreenBaseMenu (options, pause, live menu) owns at screen+664.

@@ -17,9 +17,30 @@ std::string Config::Get_WorkingDirectory()
     return std::string(Path).append("\\MP");
 }
 
+namespace
+{
+    std::string Read(const char* key)
+    {
+        char value[512]{};
+        GetPrivateProfileStringA("Yu-Gi-Oh-MP", key, "", value, sizeof(value), ".\\Config.ini");
+        return value;
+    }
+}
+
 std::string Config::Get_ServerUrl()
 {
-    char value[512]{};
-    GetPrivateProfileStringA("Yu-Gi-Oh-MP", "ServerUrl", "", value, sizeof(value), ".\\Config.ini");
-    return value;
+    std::string url = Read("ServerUrl");
+    while (!url.empty() && (url.back() == '/' || url.back() == ' '))   // routes are appended with their own leading '/'
+        url.pop_back();
+    return url;
+}
+
+std::string Config::Get_ClaimCode()
+{
+    return Read("ClaimCode");
+}
+
+std::string Config::Get_DisplayName()
+{
+    return Read("DisplayName");
 }

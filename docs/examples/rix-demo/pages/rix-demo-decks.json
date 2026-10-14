@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "header": "Deck picker",
+    "elements": [
+        {
+            "kind": "decks",
+            "x": 118.5,
+            "y": 171,
+            "width": 500,
+            "height": 760,
+            "bind": "var:demo.deck",
+            "description": "Your decks (the Free Duel grid; L / R change the category tab). Confirm on one.",
+            "action": {
+                "message": "Deck {var:demo.deck} chosen."
+            }
+        },
+        {
+            "kind": "deckInfo",
+            "x": 645.5,
+            "y": 171,
+            "deck": "{var:demo.deck}"
+        },
+        {
+            "kind": "text",
+            "x": 1383,
+            "y": 200,
+            "width": 480,
+            "text": "widget_RecipeZone + widget_RecipeInfo at the Free Duel places (118.5 / 171 and 645.5 / 171). Deck id: {var:demo.deck}",
+            "textSize": 24,
+            "align": "left"
+        }
+    ]
+}

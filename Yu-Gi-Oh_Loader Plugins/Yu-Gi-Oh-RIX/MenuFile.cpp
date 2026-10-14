@@ -10,6 +10,7 @@
 // { "page": "<name>" } (see docs/PageDesigner.md). The file is read again when it changed, so a page can be edited and re-opened
 // without restarting the game.
 #include "MainMenu.h"
+#include "PageScreen.h"
 #include "Pages.h"
 
 #include <Windows.h>
@@ -452,6 +453,9 @@ namespace
 
     bool OpenPageFile(const std::string& name)
     {
+        // "version": 2 pages open on the page engine's own screen (PageScreen.cpp)
+        if (PageScreen::TryOpen(name))
+            return true;
         std::shared_ptr<PageFile> page = ReadPageFile(name);
         if (!page)
             return false;
@@ -605,6 +609,12 @@ namespace Menu
     bool OpenPage(const std::string& name)
     {
         return OpenPageFile(name);
+    }
+
+    int ScreenIdByName(const std::string& name)
+    {
+        int id = -1;
+        return Lookup(kScreens, json(name), id) ? id : -1;
     }
 
     void LoadMenuFiles()

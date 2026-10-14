@@ -26,6 +26,37 @@ namespace WolfEx.Designer
             }
         }
 
+        /// <summary>
+        /// WolfX.exe --sprites &lt;game folder&gt; &lt;output folder&gt; [resource ...]: sprites.txt lists every sheet's sprites with their full size;
+        /// for each resource named, every sprite is also saved as &lt;resource&gt;\&lt;sprite&gt;.png (to see which art a control can use).
+        /// </summary>
+        public static void ListSprites(string gameFolder, string outputFolder, IEnumerable<string> export)
+        {
+            Directory.CreateDirectory(outputFolder);
+            using var art = GameArt.Open(Wolf.Editors.GameFolderFiles.Open(gameFolder));
+            var lines = new List<string>();
+            foreach (string resource in art.AtlasResources)
+            {
+                var atlas = art.Atlas(resource);
+                if (atlas == null)
+                    continue;
+                lines.Add($"[{resource}] {atlas.Sprites.Count} sprite(s)");
+                lines.AddRange(atlas.Sprites.Select(s => $"  {s.Name} {s.Full.Width}x{s.Full.Height}"));
+            }
+            File.WriteAllLines(Path.Combine(outputFolder, "sprites.txt"), lines);
+
+            foreach (string resource in export)
+            {
+                var atlas = art.Atlas(resource);
+                if (atlas == null)
+                    continue;
+                string folder = Path.Combine(outputFolder, resource.Replace('/', '_'));
+                Directory.CreateDirectory(folder);
+                foreach (var sprite in atlas.Sprites)
+                    art.Sprite(resource, sprite.Name)?.Save(Path.Combine(folder, string.Concat(sprite.Name.Split(Path.GetInvalidFileNameChars())) + ".png"), System.Drawing.Imaging.ImageFormat.Png);
+            }
+        }
+
         private static void Save(DesignCanvas canvas, string path)
         {
             using var bitmap = canvas.Render();

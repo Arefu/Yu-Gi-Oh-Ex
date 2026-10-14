@@ -1,0 +1,83 @@
+{
+    "version": 2,
+    "header": "Digit wheels",
+    "elements": [
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 220,
+            "width": 1500,
+            "text": "widget_EntryDigit, one per digit (Constructor, CreateFromLayout, SetValue / SetSelected / HitTest). Up / down change a digit, left / right move.",
+            "textSize": 24,
+            "align": "left"
+        },
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 300,
+            "width": 1500,
+            "text": "Bound to demo.code. Confirm on the digits checks the code (1234).",
+            "textSize": 24,
+            "align": "left",
+            "colour": "#FFC8E6FF"
+        },
+        {
+            "kind": "digits",
+            "id": "demo.code",
+            "x": 560,
+            "y": 540,
+            "width": 600,
+            "height": 260,
+            "count": 4,
+            "spacing": 160,
+            "bind": "var:demo.code",
+            "description": "The Player Match code wheels. Try 1234.",
+            "action": {
+                "if": {
+                    "var": "demo.code",
+                    "equals": "1234"
+                },
+                "then": {
+                    "message": "Correct code!"
+                },
+                "else": {
+                    "message": "The code {var:demo.code} is wrong."
+                }
+            }
+        },
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 720,
+            "width": 0,
+            "text": "Code: {var:demo.code}",
+            "textSize": 30,
+            "align": "left"
+        },
+        {
+            "kind": "menu",
+            "id": "demo.digitsBack",
+            "x": 200,
+            "y": 820,
+            "width": 660,
+            "height": 200,
+            "items": [
+                {
+                    "label": "Clear",
+                    "description": "Sets demo.code back to 0000.",
+                    "action": {
+                        "set": "var:demo.code",
+                        "value": "0000"
+                    }
+                },
+                {
+                    "label": "Back",
+                    "description": "Back to the previous page.",
+                    "action": {
+                        "back": true
+                    }
+                }
+            ]
+        }
+    ]
+}

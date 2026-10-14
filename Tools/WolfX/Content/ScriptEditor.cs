@@ -65,7 +65,7 @@ namespace WolfEx
                 ClearError();
                 Colourise();
             };
-            CharAdded += OnCharAdded;
+            CharAdded += OnCharAdded;   // keeps an open list in step; it never opens one (Ctrl+Space does)
             InitCompletion();
         }
 
@@ -128,13 +128,13 @@ namespace WolfEx
                     SetStyling(length, style);
         }
 
-        // Typing letters offers the actions and keywords (and the race / attribute names after "= ").
+        // The list and the hints open only on Ctrl+Space (ScriptEditor.Completion.cs); typing just keeps an open list filtered.
         private void OnCharAdded(object? sender, CharAddedEventArgs e)
         {
-            if (!char.IsLetter((char)e.Char) && e.Char != '_')
+            if (!AutoCActive || (!char.IsLetter((char)e.Char) && e.Char != '_'))
                 return;
 
-            ShowCompletion(automatic: true);   // Ctrl+Space asks for the same list on demand (ScriptEditor.Completion.cs)
+            ShowCompletion(automatic: false);
         }
     }
 }

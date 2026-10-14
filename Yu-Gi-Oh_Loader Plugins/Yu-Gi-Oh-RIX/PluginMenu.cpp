@@ -37,7 +37,13 @@ namespace
         void* User = nullptr;
     };
 
+    // Help & Options > Plugins & Settings opens a hub with two lists: the plugins (on / off, applied by a restart) and the settings the loaded
+    // plugins register (RIX_RegisterPluginOptions, applied at once).
+    enum class View { Hub, Plugins, Settings };
+    View g_View = View::Hub;
+
     std::vector<Plugin> g_Plugins;
+    std::vector<Plugin> g_Settings;          // the registered options of the plugins that are loaded, in plugin order
     std::map<std::string, Plugin> g_Options;
     std::map<std::string, bool> g_AtStart;   // what was switched on when the game started, i.e. what is actually loaded
     int g_PerPage = kDefaultPerPage;
@@ -61,15 +67,23 @@ namespace
         return result;
     }
 
+    // The rows of the list being shown (none on the hub).
+    const std::vector<Plugin>& Rows()
+    {
+        static const std::vector<Plugin> none;
+        return g_View == View::Plugins ? g_Plugins : g_View == View::Settings ? g_Settings : none;
+    }
+
     int PageCount()
     {
-        const int pages = static_cast<int>((g_Plugins.size() + g_PerPage - 1) / g_PerPage);
+        const int pages = static_cast<int>((Rows().size() + g_PerPage - 1) / g_PerPage);
         return pages > 1 ? pages : 1;
     }
 
     void LoadPlugins()
     {
         g_Plugins.clear();
+        g_Settings.clear();
         if (!Core::Load())
             return;
 
@@ -97,10 +111,14 @@ namespace
             if (plugin.Blocked)
                 plugin.Description = L"Not loaded: it " + FromUtf8(info.Problem) + L".";
             g_AtStart.emplace(plugin.Key, plugin.On);   // first sight = how it was when the game started (later toggles don't overwrite)
-            g_Plugins.push_back(std::move(plugin));
             auto options = g_Options.find(info.Key);
             if (info.Loaded && options != g_Options.end())
-                g_Plugins.push_back(options->second);
+            {
+                Plugin setting = options->second;
+                setting.Description = plugin.Title + (setting.Description.empty() ? L"" : L": " + setting.Description);
+                g_Settings.push_back(std::move(setting));
+            }
+            g_Plugins.push_back(std::move(plugin));
         }
     }
 
@@ -134,6 +152,7 @@ namespace
     }
 
     void __cdecl OnToggle(int id, void* user);
+    void __cdecl OnPick(int id, void* user);
     void __cdecl OnNext(int id, void* user);
     void __cdecl OnPrevious(int id, void* user);
     void __cdecl OnBack(int id, void* user);
@@ -141,16 +160,47 @@ namespace
     // Shows the buttons of the current page (open) or takes them all off (closed).
     void Refresh(bool open)
     {
+        // The hub: the two lists, then Back.
+        if (open && g_View == View::Hub)
+        {
+            static const wchar_t* const labels[] = { L"Plugins", L"Settings" };
+            static const wchar_t* const texts[] = { L"Choose which plugins load. The game restarts to apply the change.",
+                                                    L"Options of the plugins that are loaded. They apply at once." };
+            for (int slot = 0; slot < kMaxSlots; ++slot)
+            {
+                if (slot < 2)
+                {
+                    RIX_ButtonDesc desc = Describe(labels[slot], texts[slot], &OnPick, reinterpret_cast<void*>(static_cast<intptr_t>(slot)));
+                    Menu::Update(g_SlotIds[slot], desc);
+                }
+                else
+                    Menu::Remove(g_SlotIds[slot]);
+            }
+            Menu::Remove(g_NextId);
+            Menu::Remove(g_PrevId);
+            RIX_ButtonDesc back = Describe(L"Back", L"", &OnBack, nullptr);
+            Menu::Update(g_BackId, back);
+            g_HelpDirty = true;
+            return;
+        }
+
+        const std::vector<Plugin>& rows = Rows();
         for (int slot = 0; slot < kMaxSlots; ++slot)
         {
             const size_t index = static_cast<size_t>(g_Page * g_PerPage + slot);
-            if (!open || slot >= g_PerPage || index >= g_Plugins.size())
+            if (open && g_View == View::Settings && rows.empty() && slot == 0)
+            {
+                RIX_ButtonDesc desc = Describe(L"No settings", L"None of the loaded plugins has settings.", nullptr, nullptr);
+                Menu::Update(g_SlotIds[slot], desc);
+                continue;
+            }
+            if (!open || slot >= g_PerPage || index >= rows.size())
             {
                 Menu::Remove(g_SlotIds[slot]);
                 continue;
             }
 
-            const Plugin& plugin = g_Plugins[index];
+            const Plugin& plugin = rows[index];
             // What runs now and what the next start does: Config.ini alone said "On" for a plugin that failed to load, and kept saying "Off"
             // for one still in memory after it crashed while starting or was switched off this run.
             std::wstring state = plugin.Blocked ? L"Blocked" : plugin.On == plugin.Loaded ? (plugin.On ? L"On" : L"Off")
@@ -198,6 +248,7 @@ namespace
     void __cdecl OnOpenFromOptions(int, void*)
     {
         g_Open = true;
+        g_View = View::Hub;
         g_Page = 0;
         LoadPlugins();   // read it now: the list made at start-up came before Core started the YGO-Ex plugins
         Menu::SetExclusive(true);
@@ -254,11 +305,11 @@ namespace
     void __cdecl OnToggle(int, void* user)
     {
         const size_t index = static_cast<size_t>(g_Page * g_PerPage + static_cast<int>(reinterpret_cast<intptr_t>(user)));
-        if (index >= g_Plugins.size())
+        if (index >= Rows().size())
             return;
 
-        // Core switches it (and what it needs, or what needs it) in Config.ini.
-        const Plugin plugin = g_Plugins[index];
+        // A setting runs its plugin's callback; a plugin row: Core switches it (and what it needs, or what needs it) in Config.ini.
+        const Plugin plugin = Rows()[index];
         if (plugin.Options)
         {
             plugin.Options(-1, plugin.User);
@@ -268,6 +319,15 @@ namespace
         }
         if (Core::Load())
             Core::Functions().SetPluginEnabled(plugin.Key.c_str(), plugin.On ? 0 : 1);
+        LoadPlugins();
+        Refresh(true);
+    }
+
+    // A hub button: 0 = the plugin list, 1 = the settings.
+    void __cdecl OnPick(int, void* user)
+    {
+        g_View = reinterpret_cast<intptr_t>(user) == 0 ? View::Plugins : View::Settings;
+        g_Page = 0;
         LoadPlugins();
         Refresh(true);
     }
@@ -338,6 +398,14 @@ namespace
 
     void __cdecl OnBack(int, void*)
     {
+        // From a list: back to the hub. From the hub: out, to Help & Options.
+        if (g_View != View::Hub)
+        {
+            g_View = View::Hub;
+            g_Page = 0;
+            Refresh(true);
+            return;
+        }
         g_Open = false;
 
         g_MainScreen = Menu::CallbackSource();
@@ -427,7 +495,7 @@ namespace PluginMenu
         Refresh(false);
 
         // The entry point is a button in Help & Options.
-        RIX_ButtonDesc open = Describe(L"Plugins", L"Choose which plugins load. The game restarts to apply the change.", &OnOpenFromOptions, nullptr, RIX_OPTION_SETTINGS, RIX_MENU_OPTIONS);
+        RIX_ButtonDesc open = Describe(L"Plugins & Settings", L"Choose which plugins load, and change the plugins' settings.", &OnOpenFromOptions, nullptr, RIX_OPTION_SETTINGS, RIX_MENU_OPTIONS);
         g_OptionsButton = Menu::Add(open);
 
         Logger::WriteLog(std::format("Plugin list: {} plugin(s), {} per page", g_Plugins.size(), g_PerPage), MODULE_NAME, 0);

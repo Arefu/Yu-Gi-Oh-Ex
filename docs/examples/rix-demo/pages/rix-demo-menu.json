@@ -1,0 +1,106 @@
+{
+    "version": 2,
+    "header": "Menu buttons",
+    "elements": [
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 760,
+            "width": 1520,
+            "text": "RIX::MenuKit::menu, built like ScreenBattlePackStore::SetupWidgets does: Constructor, SetDefinition, CreateItems, then ProcessInput every frame. Choice items cycle with left / right or confirm; the right-hand menu is filled by a plugin (list source \"rix.demoRows\"). Left / right on a normal button moves to the other menu.",
+            "textSize": 22,
+            "align": "left",
+            "colour": "#FFC8E6FF"
+        },
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 880,
+            "width": 1520,
+            "text": "Choice: {var:demo.choice}    Toggle: {var:demo.toggle}    Plugins per page (Config.ini): {config:Yu-Gi-Oh-RIX/PluginsPerPage}    From the plugin list: {var:demo.rows}",
+            "textSize": 22,
+            "align": "left"
+        },
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 930,
+            "width": 600,
+            "text": "The toggle is on.",
+            "textSize": 24,
+            "align": "left",
+            "colour": "#FF7CFC00",
+            "visible": {
+                "var": "demo.toggle"
+            }
+        },
+        {
+            "kind": "menu",
+            "id": "demo.menu",
+            "x": 160,
+            "y": 200,
+            "width": 660,
+            "height": 500,
+            "items": [
+                {
+                    "label": "Difficulty",
+                    "description": "A choice item: left / right changes it. Bound to the page variable demo.choice.",
+                    "values": [
+                        "Easy",
+                        "Normal",
+                        "Hard"
+                    ],
+                    "bind": "var:demo.choice",
+                    "default": "Normal"
+                },
+                {
+                    "label": "Show extra text",
+                    "description": "A toggle (Off / On), bound to demo.toggle. The green text and a hidden button show while it is on.",
+                    "toggle": true,
+                    "bind": "var:demo.toggle"
+                },
+                {
+                    "label": "Plugins per page",
+                    "description": "Bound to Config.ini [Yu-Gi-Oh-RIX] PluginsPerPage: changing it writes the file.",
+                    "values": [
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "bind": "config:Yu-Gi-Oh-RIX/PluginsPerPage",
+                    "default": "5"
+                },
+                {
+                    "label": "Only when the toggle is on",
+                    "description": "This button is visible only while \"Show extra text\" is On.",
+                    "visible": {
+                        "var": "demo.toggle"
+                    },
+                    "action": {
+                        "message": "You found the hidden button."
+                    }
+                },
+                {
+                    "label": "Back",
+                    "description": "Back to the previous page.",
+                    "action": {
+                        "back": true
+                    }
+                }
+            ]
+        },
+        {
+            "kind": "menu",
+            "id": "demo.rows",
+            "x": 1060,
+            "y": 200,
+            "width": 660,
+            "height": 500,
+            "items": [],
+            "source": "rix.demoRows",
+            "action": {
+                "message": "You picked the row with the value {var:demo.rows}."
+            }
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "version": 2,
+    "header": "Working widgets",
+    "elements": [
+        {
+            "kind": "text",
+            "x": 1000,
+            "y": 230,
+            "width": 760,
+            "text": "Every control on these pages is one of the game's own widgets, lifted from the screen that owns it and built on a screen of RIX's own.",
+            "textSize": 30,
+            "align": "left"
+        },
+        {
+            "kind": "text",
+            "x": 1000,
+            "y": 420,
+            "width": 760,
+            "text": "Pick a widget on the left. Each page says which game screen it comes from.",
+            "textSize": 26,
+            "align": "left",
+            "colour": "#FFC8E6FF"
+        },
+        {
+            "kind": "text",
+            "x": 1000,
+            "y": 900,
+            "width": 760,
+            "text": "Page variables so far: choice = {var:demo.choice}, toggle = {var:demo.toggle}, volume = {var:demo.volume}, code = {var:demo.code}",
+            "textSize": 22,
+            "align": "left",
+            "colour": "#FFA0A0A0"
+        },
+        {
+            "kind": "menu",
+            "id": "demo.done",
+            "x": 200,
+            "y": 180,
+            "width": 660,
+            "height": 760,
+            "items": [
+                {
+                    "label": "Menu buttons",
+                    "description": "RIX::MenuKit::menu - the button list of the Battle Pack, Help & Options and Pause screens.",
+                    "action": {
+                        "page": "rix-demo-menu"
+                    }
+                },
+                {
+                    "label": "Volume bar",
+                    "description": "ScreenHelpSetting::tickLine_t - the 10-tick bar from Help & Options > Settings.",
+                    "action": {
+                        "page": "rix-demo-slider"
+                    }
+                },
+                {
+                    "label": "Digit wheels",
+                    "description": "widget_EntryDigit - the code entry from the Player Match (Live) setting screen.",
+                    "action": {
+                        "page": "rix-demo-digits"
+                    }
+                },
+                {
+                    "label": "Card details",
+                    "description": "widget_CardDetails - the deck editor's card picture and text panel.",
+                    "action": {
+                        "page": "rix-demo-card"
+                    }
+                },
+                {
+                    "label": "Free Duel pickers",
+                    "description": "widget_pickSeries and widget_pickCharacter - the series row and opponent grid of Free Duel.",
+                    "action": {
+                        "page": "rix-demo-series"
+                    }
+                },
+                {
+                    "label": "Deck picker",
+                    "description": "widget_RecipeZone and widget_RecipeInfo - the Free Duel deck grid and deck panel.",
+                    "action": {
+                        "page": "rix-demo-decks"
+                    }
+                },
+                {
+                    "label": "Message boxes",
+                    "description": "widget_Dialog - the OK and Yes / No boxes every screen owns.",
+                    "action": {
+                        "page": "rix-demo-dialogs"
+                    }
+                },
+                {
+                    "label": "Back",
+                    "description": "Back to the previous page.",
+                    "action": {
+                        "back": true
+                    }
+                }
+            ],
+            "spacing": 84
+        }
+    ]
+}

@@ -272,8 +272,10 @@ namespace
     // count and the duel crashed at its first read (sub_1407BD610, 2026-10-04).
     constexpr uintptr_t kDuelEngine = YGO::Addr::Duel_DuelEngine;
 
-    // Writes the seat's test deck into a deck struct, with the cards' own ids: the outer hook runs before Yu-Gi-Oh-MoreCards' resolves them
-    // (and before it reserves the vanilla ids of both decks for source-id lending), so they go through it like a normal deck.
+    // Writes the seat's test deck into a deck struct. Each id is resolved here (Card_ResolveDuelSessionId: a custom card above 16383 or with
+    // an effect clone gets the id it plays under this duel), because the hook order is not fixed: since Core starts Funky at the main menu,
+    // Yu-Gi-Oh-MoreCards' Duel_LoadDeck hook runs FIRST and resolves the deck that was there, then this overwrites it (2026-10-14: Flint
+    // Cragger 16403 went in unresolved, cut to 14 bits, and never reached the duel). Resolving an id twice gives the same answer.
     void WriteTestDeck(int seat, int32_t* deck)
     {
         if (g_DeckPath[seat].empty() || !deck)
@@ -295,12 +297,12 @@ namespace
         for (uint16_t id : ydc.Main)
         {
             if (!*CardName(id)) { ++skipped; continue; }
-            if (main < kMainCapacity) mainIds[main++] = id;
+            if (main < kMainCapacity) mainIds[main++] = ResolveForDeck(id);
         }
         for (uint16_t id : ydc.Extra)
         {
             if (!*CardName(id)) { ++skipped; continue; }
-            if (extra < kExtraCapacity) extraIds[extra++] = id;
+            if (extra < kExtraCapacity) extraIds[extra++] = ResolveForDeck(id);
         }
         mainCount = main;
         extraCount = extra;
@@ -520,7 +522,7 @@ namespace
             AddMissing(deck);
 
         Log(std::format("Duel_LoadDeck(player {}): main {} extra {} before{}", static_cast<int>(player & 1), g_Last.MainBefore, g_Last.ExtraBefore,
-            mine ? ", chosen cards added" : ", not applied"));
+            mine ? ", chosen hand cards added" : ", no chosen hand cards (the test deck, if any, is written separately)"));
         return orig_LoadDeck(player, deck);
     }
 

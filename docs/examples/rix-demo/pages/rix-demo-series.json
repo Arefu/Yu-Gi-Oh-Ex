@@ -1,0 +1,36 @@
+{
+    "version": 2,
+    "header": "Series",
+    "elements": [
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 200,
+            "width": 1520,
+            "text": "widget_pickSeries, built as Free Duel builds it (SetupWidgets: CreateFromLayout at 960 / 553, the series list 0..5 from OnEnter). Left / right pick a series; confirm opens its opponents.",
+            "textSize": 24,
+            "align": "left"
+        },
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 900,
+            "width": 0,
+            "text": "Series: {var:demo.series}",
+            "textSize": 30,
+            "align": "left"
+        },
+        {
+            "kind": "seriesTabs",
+            "x": 960,
+            "y": 553,
+            "width": 1600,
+            "height": 300,
+            "bind": "var:demo.series",
+            "description": "The Free Duel series row. Confirm shows the opponents of that series.",
+            "action": {
+                "page": "rix-demo-characters"
+            }
+        }
+    ]
+}

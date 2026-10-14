@@ -34,7 +34,7 @@
 extern "C" {
 #endif
 
-#define RIX_API_VERSION 6   /* 5: pages hold 5 buttons (RIX_PageDesc grew), RIX_UpdatePageButton. 6: RIX_AddImage / RIX_AddText / RIX_RemoveNode */
+#define RIX_API_VERSION 7   /* 5: pages hold 5 buttons (RIX_PageDesc grew), RIX_UpdatePageButton. 6: RIX_AddImage / RIX_AddText / RIX_RemoveNode. 7: the page engine (RIX_OpenPageFile, page variables, list sources) */
 
 /* The plugin itself defines RIX_EXPORTS; everyone else only declares the functions (and normally uses RIX::Load below instead). */
 #ifdef RIX_EXPORTS
@@ -242,6 +242,18 @@ RIX_API void* __cdecl RIX_AddImage(void* Screen, const char* Resource, const cha
 RIX_API void* __cdecl RIX_AddText(void* Screen, const wchar_t* Text, int Z, float X, float Y, float Width, float PixelSize, int Align, uint32_t Colour);
 RIX_API void __cdecl RIX_RemoveNode(void* Node);
 
+/* The page engine (version 7, docs/PageEngine.md): page files with "version": 2 open on RIX's own screen, built from the game's widgets.
+   RIX_OpenPageFile: opens Yu-Gi-Oh-Ex/pages/<Name>.json (a version 1 page opens the old way). Call it on the game's thread.
+   Page variables: what "var:<name>" bindings and "{var:<name>}" texts read; a menu with an "id" sets the variable of that name to the
+   chosen item's value. Values are UTF-8 strings. RIX_GetPageVar copies the value into Buffer and returns its length (0 when it is empty or not set).
+   List sources: a menu with "source": "<Name>" gets one item per RIX_PageListAdd the callback makes (called each time the page is built). */
+typedef void(__cdecl* RIX_PageListCallback)(void* List, void* User);
+RIX_API int __cdecl RIX_OpenPageFile(const char* Name);
+RIX_API void __cdecl RIX_SetPageVar(const char* Name, const char* Value);
+RIX_API int __cdecl RIX_GetPageVar(const char* Name, char* Buffer, int BufferSize);
+RIX_API int __cdecl RIX_RegisterPageList(const char* Name, RIX_PageListCallback Callback, void* User);
+RIX_API void __cdecl RIX_PageListAdd(void* List, const wchar_t* Label, const wchar_t* Description, const char* Value);
+
 #ifdef __cplusplus
 }
 
@@ -273,6 +285,11 @@ namespace RIX
         void*(__cdecl* AddImage)(void*, const char*, const char*, int, float, float, float, float) = nullptr;
         void*(__cdecl* AddText)(void*, const wchar_t*, int, float, float, float, float, int, uint32_t) = nullptr;
         void(__cdecl* RemoveNode)(void*) = nullptr;
+        int(__cdecl* OpenPageFile)(const char*) = nullptr;
+        void(__cdecl* SetPageVar)(const char*, const char*) = nullptr;
+        int(__cdecl* GetPageVar)(const char*, char*, int) = nullptr;
+        int(__cdecl* RegisterPageList)(const char*, RIX_PageListCallback, void*) = nullptr;
+        void(__cdecl* PageListAdd)(void*, const wchar_t*, const wchar_t*, const char*) = nullptr;
     };
 
     inline Api& Functions()
@@ -318,6 +335,11 @@ namespace RIX
         RIX_BIND(AddImage);
         RIX_BIND(AddText);
         RIX_BIND(RemoveNode);
+        RIX_BIND(OpenPageFile);
+        RIX_BIND(SetPageVar);
+        RIX_BIND(GetPageVar);
+        RIX_BIND(RegisterPageList);
+        RIX_BIND(PageListAdd);
 #undef RIX_BIND
         return true;
     }

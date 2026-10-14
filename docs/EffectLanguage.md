@@ -64,10 +64,7 @@ on flip: burn(500);
 
 The card list has a checkbox per card (plus "Check all shown" with the filter box, "Clear all checks"). Write a script in the editor (Scintilla: colours, line numbers, keyword completion, red squiggle at the compile error), **Apply script to all checked**. **Attach from card text...** reads the text of every Normal Spell (or of the checked cards) and attaches the effect where its first sentence is a plain supported effect; the remaining sentences are stored in `effectNotImplemented` on the card.
 
-**Blocks:** on the Blocks tab next to the Script tab, Scratch-style blocks build the same script (Blockly in a WebView2): an Effect block (when / only if /
-cost / do / once per turn), the actions, and "which cards" blocks for selectors. Changing the blocks rewrites the script; typing in the
-script (another card, a template) redraws them. Adding a grammar rule = one entry in `Tools\WolfX\Content\Blocks\effect-blocks.js`
-(ACTIONS or COSTS); until then a script using it shows a note over the (locked) blocks and is left alone. See docs/WolfXContent.md.
+**Blocks** (the first tab since 2026-10-14; the Script tab is the text behind them): one **hat block per effect**, headlined by when it happens - "When this card is [Summoned] from / by / as", "When [this card is flipped / destroyed by battle / sent to the GY / declares an attack ...]", "During [your Standby Phase / the End Phase]", "You can (ignition)", "Activate (a Spell / Trap, or a self cost)". Every hat has the same slots: name (the effect's name, for the choose-an-effect prompt), only if, cost, do (actions, run in order = then), only once per turn. Several effects = several hats, read top to bottom. Beside them: "act exactly like the game card" (as) and the Lock block. Changing the blocks rewrites the script; typing in the script redraws them. A new action = one entry in `Tools\WolfX\Content\Blocks\effect-blocks.js` (ACTIONS / COSTS); a new trigger = an entry in HATS' lists. Until then a script using it shows a note over the (locked) blocks and is left alone. See docs/WolfXContent.md.
 
 **Effect library tab:** the game's own cards written in EffectScript wherever the language can say it (about 1170 cards; ~250 are exactly the one effect, the rest carry a "~" and a note of what the script does not cover - e.g. "must have the same name", "ATK <= 1500"). Monster cards show their trigger as a comment. Select a card to read its text and script; **Use as template** puts the script into the Effects tab for the card selected there. The data is `Tools\WolfEx\effect_reference.json`, made from the game's tables by `docs\effect-scripts\build_effect_reference.py` (re-run it after learning to decode a new effect type). `Desktop\New folder\Attach-Effects.py` does the same for a whole cards.json without opening the editor (run it after each Delta.ps1).
 
@@ -132,3 +129,46 @@ A summon trigger can say how the card must have been summoned, in brackets after
 * `fusion | synchro | xyz | ritual | link` = Summoned properly as its kind; `pendulum`; `tribute [N]`
 
 Only for normal_summoned, special_summoned, summoned and normal_or_special_summoned. Built, not yet played.
+
+## Except this card (2026-10-14)
+
+A search / revive / add_to_hand / special_summon(hand|deck|grave, ...) **never picks a card with this card's own name** - "except <this card>", the way real cards word it. That is the default; end the selector with `including self` to allow it:
+
+    on sent_from_field_to_grave: revive(grave, monster where level <= 4);                 // never revives itself
+    on sent_from_field_to_grave: revive(grave, monster where level <= 4 including self);  // may
+
+Compiles to `"exceptSelf": true` in the `"deck"` filter. Yu-Gi-Oh-Effects sets the game row's name test (param = minus the id the card plays under this duel), so every copy with the same name is left out. With an `archetype =` or `name =` condition (the row's one name test is taken) the plugin drops this card's name from the matches after the scan instead (EffectSystem.md section 47). Blocks: the selector's "except this card" checkbox (ticked by default).
+
+## Or (2026-10-14)
+
+search / revive / add_to_hand / special_summon / send_to_grave take several selectors joined with `or` (any of them): `search(deck, monster where race = Warrior or monster where race = Dragon)`. Compiles to the first filter plus `"or": [...]`; Yu-Gi-Oh-Effects runs one scan per alternative and keeps each card once. Limit: the game's own "is there any match" checks that read the filter row directly see only the first alternative. BAB: the "any of ... or ..." block in Which cards (nest it for three or more).
+
+## Hand size limit (2026-10-14)
+
+    hand_limit(3, opponent);             // while face-up in a Monster Zone: your opponent discards down to 3 in the End Phase
+    hand_limit(4, both, spelltrap_zone); // both players, while face-up in a Spell & Trap Zone
+
+Who (required, no default): opponent, own, both. Where: monster_zone (default), spelltrap_zone, any_zone. The lowest limit on the field wins; not while this
+card's effects are negated. BAB: "While this card is face-up in ... : ... hand size limit is N" (While face-up category). Compiles to `"handLimit"`.
+
+## Effect labels (2026-10-14)
+
+A card with several effects of the same kind asks the player which one to use. The options show each effect's name (`effect "Draw" { ... }`, the
+hat's "name" slot in BAB), or a short summary of what it does when it has none.
+
+## For the rest of this turn (2026-10-14)
+
+    lock_turn(trap);                              // a Spell: "Negate all Trap effects on the field this turn" (Trap Stun's way)
+    on normal_summoned: lock_turn(defense_position);   // "the effects of Defense Position monsters are negated this turn"
+    lock_turn(spell);                             // Equip, Field, Continuous and Quick-Play Spells (Magic Deflector)
+
+An action like any other (BAB: Actions > "for the rest of this turn, negate ..."). See EffectSystem.md section 48.
+
+## Whose draw / life points, and chains of them (2026-10-14)
+
+    draw(1, opponent);                         // your opponent draws 1
+    gain_lp(500, any);                         // both players gain 500
+    damage(800, own);                          // you take 800 (damage defaults to your opponent, like burn)
+    gain_lp(500) then draw(1) then damage(300);   // any chain of these, under any trigger
+
+Run by Yu-Gi-Oh-Effects itself (EffectSystem.md section 50). BAB: the "whose" dropdown on draw / gain LP / damage.

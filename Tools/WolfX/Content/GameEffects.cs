@@ -102,7 +102,7 @@ namespace WolfEx
                 if (entry.IsCustom || entry.Id <= 0 || entry.Id >= 15300)
                     continue;
                 reference.TryGetValue(entry.Id, out var known);
-                if (string.IsNullOrEmpty(known.Script) && LockCatalog.Find(entry.Id) is { } lockCard)
+                if (string.IsNullOrEmpty(known.Script) && LockCatalog.Find(entry.Id) is { IsLock: true } lockCard)
                     known.Script = lockCard.Script;   // a continuous lock: in the game's code, not its tables (LockCatalog)
                 int i = ids?.InternalOf(entry.Id) ?? 0;
                 string text = english != null && i > 0 && i < english.Descs.Count ? english.Descs[i] : known.Text ?? "";

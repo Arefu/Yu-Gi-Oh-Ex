@@ -183,3 +183,5 @@ Mouse hover does not select the new row. Positions (label 650, value 750, Apply 
 Plugins > Plugin Settings and its own screen (RIX `SettingsScreen.cpp`, screen id 101) were removed on 2026-10-04 at the user's request
 (not wanted in game). The Plugins button in Help & Options opens the on/off plugin list again. Plugin settings are edited in WolfX's
 Config Editor, which reads the manifests' `"settings"` lists. How to make a screen of our own is still in docs/CustomScreens.md.
+
+**Plugins & Settings hub (2026-10-14).** The Help & Options button is now "Plugins & Settings" and opens a hub page (still the main menu's own page, RIX `PluginMenu.cpp`, no screen of its own) with two buttons: **Plugins** (the on/off list, applied by a restart) and **Settings** (the options loaded plugins register with `RIX_RegisterPluginOptions`, e.g. Campaign's "Custom Opponent Decks"; applied at once; the row's help text names the plugin). Back from a list returns to the hub; Back from the hub leaves (restart prompt if a plugin was switched). Manifest `"settings"` are still edited in WolfX.

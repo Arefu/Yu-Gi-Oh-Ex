@@ -121,6 +121,7 @@
             new("Yu-Gi-Oh-Core", "FileOrder", SettingKind.Choice, "loose",
                 "Which copy of a game file wins when both exist: loose = a loose file (LooseLoading, FolderName) wins over WolfX's patch archive; patch = WolfX's patch wins. Either way the game's own YGO_2020.dat comes last. WolfX follows the same setting.", ["loose", "patch"]),
 
+            new("Yu-Gi-Oh-Effects", "Trace", SettingKind.Toggle, "0", "Write the effect diagnostics to the log: effect lookups, slot calls, deck filter rows and candidate counts (for finding why an effect does nothing)."),
             new("Yu-Gi-Oh-PatchMeOut", "NoJanken", SettingKind.Toggle, "1", "Skip rock-paper-scissors at the start of a duel (offline duels; online duels still play it)."),
             new("Yu-Gi-Oh-PatchMeOut", "JankenFirst", SettingKind.Choice, "random",
                 "Who goes first when NoJanken skips rock-paper-scissors: P1 = you, P2 = your opponent, random = either.", ["random", "P1", "P2"]),
@@ -184,7 +185,11 @@
                 "A .ydc deck for the opponent's tag partner. Empty = a copy of the opponent's deck."),
 
             new("Yu-Gi-Oh-MP", "ServerUrl", SettingKind.Text, "",
-                "Base URL of the multiplayer server (sign-in, event reports). Empty = offline: the duel recorder (Duels.log) and logging still work."),
+                "Base URL of the multiplayer server (YgoMp, e.g. http://localhost:5080). Multiplayer > Connect to Server signs in here. Empty = offline: the duel recorder (Duels.log) and logging still work."),
+            new("Yu-Gi-Oh-MP", "ClaimCode", SettingKind.Text, "",
+                "Sign in with a code the server's host minted (YgoMp.SelfHost mint) instead of Steam: for Epic/GOG copies. Empty = Steam."),
+            new("Yu-Gi-Oh-MP", "DisplayName", SettingKind.Text, "",
+                "The name a claim code's account gets the first time it signs in."),
 
             new("Yu-Gi-Oh-Funky", "DemoMenuButtons", SettingKind.Toggle, "0",
                 "Add the demo buttons to the game's menus (Debug Tools and Credits on the main menu, Funky Tools in options). Needs Yu-Gi-Oh-RIX."),

@@ -7,6 +7,7 @@
 #include <string>
 
 #include "DuelRecorder.h"
+#include "Live.h"
 #include "Logger.h"
 #include "Stubs.h"
 #include "YuGiOh/YuGiOh-DUELSTATE.h"
@@ -67,6 +68,7 @@ namespace
     {
         ++g_Events;
         Logger::WriteLogTo(kLogFile, line, MODULE_NAME, 0);
+        Live::Forward(line);   // no-op unless connected to a server (Connect to Server)
     }
 
     void EndDuel(int outcome, int winner, int reason, const char* source);
