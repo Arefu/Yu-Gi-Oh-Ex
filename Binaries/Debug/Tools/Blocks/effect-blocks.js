@@ -37,6 +37,39 @@ const SUMMON_HOW = [['any summon', 'ANY'], ['Fusion Summon', 'fusion'], ['Synchr
   ['Ritual Summon', 'ritual'], ['Link Summon', 'link'], ['Pendulum Summon', 'pendulum'], ['Tribute Summon', 'tribute'],
   ['Tribute Summon (2+ Tributes)', 'tribute 2'], ['Tribute Summon (3 Tributes)', 'tribute 3']];
 
+// The effect hats: what the headline says, the script trigger it writes (trigger(block)) and which triggers it shows when a script is
+// loaded (has(trigger)). TRIGGERS above stays the full list the language knows.
+const SUMMONED = [['Normal Summoned', 'normal_summoned'], ['Special Summoned', 'special_summoned'], ['Summoned (any way)', 'summoned'],
+  ['Normal or Special Summoned', 'normal_or_special_summoned']];
+const EVENTS = [['this card is flipped face-up (FLIP)', 'flip'], ['this card is destroyed by battle', 'destroyed_by_battle'],
+  ['this card is sent to the GY', 'sent_to_grave'], ['this card is sent from the field to the GY', 'sent_from_field_to_grave'],
+  ['this card destroys a monster by battle', 'destroys_by_battle'], ['this card inflicts battle damage', 'battle_damage'],
+  ['this card declares an attack', 'attack_declared']];
+const PHASES = [['your Standby Phase', 'standby_phase'], ['the End Phase', 'end_phase']];
+const dropdown = (name, options) => ({ type: 'field_dropdown', name, options });
+const HATS = [
+  { type: 'ys_on_summon', head: () => ['When this card is %1 from %2 by %3 as %4', [dropdown('TRIGGER', SUMMONED), dropdown('FROM', SUMMON_FROM),
+      dropdown('BY', SUMMON_BY), dropdown('HOW', SUMMON_HOW)]],
+    trigger: (b) => b.getFieldValue('TRIGGER'), has: (t) => SUMMONED.some((o) => o[1] === t),
+    tooltip: 'A summon trigger. "from / by / as" narrow it: where the card came from, what summoned it and how (leave them on any).' },
+  { type: 'ys_on_event', head: () => ['When %1', [dropdown('TRIGGER', EVENTS)]],
+    trigger: (b) => b.getFieldValue('TRIGGER'), has: (t) => EVENTS.some((o) => o[1] === t),
+    tooltip: 'A monster effect that happens when something happens to this card.' },
+  { type: 'ys_during', head: () => ['During %1', [dropdown('TRIGGER', PHASES)]],
+    trigger: (b) => b.getFieldValue('TRIGGER'), has: (t) => PHASES.some((o) => o[1] === t),
+    tooltip: 'A phase effect, while this card is face-up on the field.' },
+  { type: 'ys_ignition', head: () => ['You can (an ignition effect, in your Main Phase)', []],
+    trigger: () => 'ignition', has: (t) => t === 'ignition',
+    tooltip: 'An effect the player chooses to use. Tick "only once per turn" for "You can only use this effect once per turn".' },
+  { type: 'ys_activate', head: () => ['Activate (a Spell / Trap, or a cost that says where it is used)', []],
+    trigger: () => 'NONE', has: (t) => t === 'NONE',
+    tooltip: 'No trigger: a Spell or Trap card\'s effect, or a monster effect whose cost says where it is used (discard this card, banish it from the GY ...).' },
+];
+const hatOf = (block) => HATS.find((h) => h.type === block.type);
+
+// draw / gain_lp / damage: whose (Yu-Gi-Oh-Effects runs them itself when a player is named or they are chained)
+const WHO_OWN = [['you', 'DEFAULT'], ['your opponent', 'opponent'], ['both players', 'any']];
+const WHO_OPPONENT = [['your opponent', 'DEFAULT'], ['you', 'own'], ['both players', 'any']];
 const SIDE = [['(default)', 'DEFAULT'], ['you control', 'own'], ['your opponent controls', 'opponent'], ['on either side', 'any']];
 
 // text: what the block says, %NAME = one of its fields / inputs. args: the script's arguments in order.
@@ -44,9 +77,15 @@ const SIDE = [['(default)', 'DEFAULT'], ['you control', 'own'], ['your opponent 
 //   pick: a dropdown; rule = the grammar rule that holds the word, or token: true when it is a plain word; optional = may be left out
 //   stat: "atk N" / "def N" (left out when blank)
 const ACTIONS = [
-  { name: 'draw', text: 'draw %N card(s)', args: [{ kind: 'num', field: 'N', def: 1, min: 1 }] },
-  { name: 'gain_lp', text: 'gain %N Life Points', args: [{ kind: 'num', field: 'N', def: 500, min: 0 }] },
+  { name: 'draw', text: '%WHO draw %N card(s)', args: [{ kind: 'num', field: 'N', def: 1, min: 1 }, { kind: 'pick', rule: 'side', field: 'WHO', optional: true, options: WHO_OWN }] },
+  { name: 'gain_lp', text: '%WHO gain %N Life Points', args: [{ kind: 'num', field: 'N', def: 500, min: 0 }, { kind: 'pick', rule: 'side', field: 'WHO', optional: true, options: WHO_OWN }] },
+  { name: 'damage', text: 'inflict %N damage to %WHO', args: [{ kind: 'num', field: 'N', def: 500, min: 0 }, { kind: 'pick', rule: 'side', field: 'WHO', optional: true, options: WHO_OPPONENT }] },
   { name: 'burn', text: 'inflict %N damage to your opponent', args: [{ kind: 'num', field: 'N', def: 500, min: 0 }] },
+  {
+    name: 'lock_turn', text: 'for the rest of this turn, negate %WHAT',
+    args: [{ kind: 'pick', rule: 'lockTurnArg', field: 'WHAT', options: [['Traps on the field', 'trap'], ['Equip, Field, Continuous and Quick-Play Spells', 'spell'],
+           ['the effects of Defense Position monsters', 'defense_position']] }],
+  },
   { name: 'search', text: 'add from your Deck to your hand: %SEL', args: [{ kind: 'lit', value: 'deck' }, { kind: 'sel', field: 'SEL' }] },
   { name: 'send_to_grave', text: 'send from your Deck to the GY: %SEL', args: [{ kind: 'lit', value: 'deck' }, { kind: 'sel', field: 'SEL' }] },
   {
@@ -83,11 +122,15 @@ const ACTIONS = [
     args: [{ kind: 'pick', rule: 'side', field: 'SIDE', optional: true, options: SIDE, comma: true }, { kind: 'num', field: 'N', def: 500, min: 0 }],
   },
   {
-    // negate(what[, opponent][, property]); the other words (your_turn, battle_phase, targets_one, effect ...) are text-editor only
-    name: 'negate', text: 'negate the activation of %WHAT %WHO %PROP , and if you do, destroy it',
+    // negate(what[, opponent][, effect][, property][, your_turn | opponent_turn | battle_phase][, targets_one]) - the words in this order
+    // (a script with them in another order opens in the text editor only)
+    name: 'negate', text: 'negate %SCOPE %WHAT %WHO %PROP %WHEN %TARGET , and if you do, destroy it',
     args: [{ kind: 'pick', rule: 'negateArg', field: 'WHAT', options: [['a Spell Card', 'spell'], ['a Trap Card', 'trap'], ['a monster effect', 'monster'], ['a Spell/Trap Card', 'spelltrap'], ['any card or effect', 'any']] },
            { kind: 'pick', rule: 'negateArg', field: 'WHO', optional: true, options: [['(by either player)', 'DEFAULT'], ['by your opponent', 'opponent']] },
-           { kind: 'pick', rule: 'negateArg', field: 'PROP', optional: true, options: [['(any kind)', 'DEFAULT'], ['Normal', 'normal'], ['Counter', 'counter'], ['Field', 'field'], ['Equip', 'equip'], ['Continuous', 'continuous'], ['Quick-Play', 'quickplay'], ['Ritual', 'ritual']] }],
+           { kind: 'pick', rule: 'negateArg', field: 'SCOPE', optional: true, options: [['the activation of', 'DEFAULT'], ['the activation or effect of', 'effect']] },
+           { kind: 'pick', rule: 'negateArg', field: 'PROP', optional: true, options: [['(any kind)', 'DEFAULT'], ['Normal', 'normal'], ['Counter', 'counter'], ['Field', 'field'], ['Equip', 'equip'], ['Continuous', 'continuous'], ['Quick-Play', 'quickplay'], ['Ritual', 'ritual']] },
+           { kind: 'pick', rule: 'negateArg', field: 'WHEN', optional: true, options: [['(any time)', 'DEFAULT'], ['during your turn', 'your_turn'], ["during your opponent's turn", 'opponent_turn'], ['during the Battle Phase', 'battle_phase']] },
+           { kind: 'pick', rule: 'negateArg', field: 'TARGET', optional: true, options: [['(targeting or not)', 'DEFAULT'], ['that targets 1 card', 'targets_one']] }],
   },
   {
     name: 'equip', text: 'the equipped monster gains ATK %ATK DEF %DEF',
@@ -117,7 +160,14 @@ const LOCK_WHAT = [['TRAP', 'trap', 'Trap Cards'], ['SPELL', 'spell', 'Spell Car
   ['CTRAP', 'continuous_trap', 'Continuous Traps'], ['CSPELL', 'continuous_spell', 'Continuous Spells'], ['FSPELL', 'field_spell', 'Field Spells'],
   ['ESPELL', 'equip_spell', 'Equip Spells']];
 const LOCK_WHO = [['both players', 'both'], ['the opponent', 'opponent'], ['its controller', 'own']];
-const LOCK_WHERE = [['a Monster Zone', 'monster_zone'], ['a Spell/Trap Zone', 'spelltrap_zone'], ['any zone', 'any_zone']];
+const HAND_WHO = [["your opponent's", 'opponent'], ['your', 'own'], ["both players'", 'both']];
+const LOCK_WHERE = [['its own zone', 'AUTO'], ['a Monster Zone', 'monster_zone'], ['a Spell/Trap Zone', 'spelltrap_zone'], ['any zone', 'any_zone']];
+// the narrow monster locks (one game slot each, both players' monsters): lock(monster, light) -> lock(light)
+const LOCK_ONLY = [['every monster', 'ALL'], ['LIGHT monsters', 'light'], ['monsters with an A-Counter', 'a_counter'],
+  ["monsters except Koa'ki Meiru", 'except_koaki_meiru'], ['Special Summoned from the Main Deck', 'from_main_deck'],
+  ['Special Summoned from the Extra Deck', 'from_extra_deck'], ['Fusion, Synchro and Xyz monsters', 'fusion_synchro_xyz'],
+  ['in the Extra Monster Zones', 'extra_monster_zone'], ['except Tribute Summoned ones', 'except_tribute_summoned'],
+  ['Special Summoned this turn', 'summoned_this_turn'], ['Defense Position monsters', 'defense_position']];
 
 // ---------------------------------------------------------------- blocks
 
@@ -140,25 +190,26 @@ function actionField(arg) {
 
 function defineBlocks() {
   const defs = [];
-  defs.push({
-    type: 'ys_effect',
-    message0: 'Effect %1', args0: [{ type: 'field_input', name: 'NAME', text: '' }],
-    message1: 'when %1', args1: [{ type: 'field_dropdown', name: 'TRIGGER', options: TRIGGERS }],
-    message2: 'if summoned: from %1 by %2 as %3', args2: [{ type: 'field_dropdown', name: 'FROM', options: SUMMON_FROM },
-      { type: 'field_dropdown', name: 'BY', options: SUMMON_BY }, { type: 'field_dropdown', name: 'HOW', options: SUMMON_HOW }],
-    message3: 'only if %1', args3: [{ type: 'input_value', name: 'REQ', check: 'Req' }],
-    message4: 'cost %1', args4: [{ type: 'input_value', name: 'COST', check: 'Cost' }],
-    message5: 'do %1', args5: [{ type: 'input_statement', name: 'DO', check: 'Action' }],
-    message6: 'only once per turn %1', args6: [{ type: 'field_checkbox', name: 'ONCE', checked: false }],
-    previousStatement: 'Effect', nextStatement: 'Effect', colour: COLOUR.effect,
-    tooltip: 'One effect of the card. The name is optional. Put actions in "do"; they run one after another (then). Stack more effects underneath for a card with several. "if summoned" narrows a summon trigger: where the card came from, what summoned it and how (ignored for other triggers).',
-  });
+  // One hat block per effect, headlined by WHEN it happens (HATS); the slots below are the same on every hat. A card with several effects
+  // is several hats on the canvas, written top to bottom.
+  for (const hat of HATS) {
+    const head = hat.head(), rest = [
+      ['name (shown when the player chooses) %1', [{ type: 'field_input', name: 'NAME', text: '' }]],
+      ['only if %1', [{ type: 'input_value', name: 'REQ', check: 'Req' }]],
+      ['cost %1', [{ type: 'input_value', name: 'COST', check: 'Cost' }]],
+      ['do %1', [{ type: 'input_statement', name: 'DO', check: 'Action' }]],
+      ['only once per turn %1', [{ type: 'field_checkbox', name: 'ONCE', checked: false }]],
+    ];
+    const def = { type: hat.type, colour: COLOUR.effect, tooltip: hat.tooltip };
+    [head, ...rest].forEach(([msg, args], i) => { def['message' + i] = msg; def['args' + i] = args; });
+    defs.push(def);
+  }
   defs.push({
     type: 'ys_as',
     message0: 'act exactly like the game card %1', args0: [{ type: 'field_input', name: 'CARD', text: 'Pot of Greed' }],
     message1: 'with its own ATK %1 DEF %2 (optional)', args1: [{ type: 'field_input', name: 'ATK', text: '' }, { type: 'field_input', name: 'DEF', text: '' }],
-    previousStatement: 'Effect', nextStatement: 'Effect', colour: COLOUR.as,
-    tooltip: 'Borrow a game card\'s effect handlers (name or Konami id). Stack more clone or effect blocks for multiple effects; the runtime routes by table and event.',
+    colour: COLOUR.as,
+    tooltip: 'Borrow a game card\'s whole behaviour (name or Konami id). Put more effect hats beside it for a card with several effects; the runtime routes by table and event.',
   });
   defs.push({
     type: 'ys_lock',
@@ -170,8 +221,17 @@ function defineBlocks() {
       { type: 'field_checkbox', name: 'FSPELL', checked: false }, { type: 'field_checkbox', name: 'ESPELL', checked: false }],
     message3: 'of %1 while this card is face-up in %2', args3: [
       { type: 'field_dropdown', name: 'WHO', options: LOCK_WHO }, { type: 'field_dropdown', name: 'WHERE', options: LOCK_WHERE }],
+    message4: 'monster effects of only %1', args4: [{ type: 'field_dropdown', name: 'ONLY', options: LOCK_ONLY }],
     colour: COLOUR.lock,
     tooltip: 'While this card is face-up in the chosen zone and its effects are not negated, the ticked cards cannot be activated and their effects on the field are negated. It sits beside the card\'s effects (Script: lock(...);).',
+  });
+  defs.push({
+    type: 'ys_hand_limit',
+    message0: 'While this card is face-up in %1', args0: [{ type: 'field_dropdown', name: 'WHERE', options: LOCK_WHERE }],
+    message1: '%1 hand size limit is %2', args1: [{ type: 'field_dropdown', name: 'WHO', options: HAND_WHO },
+      { type: 'field_number', name: 'N', value: 3, min: 0, max: 60, precision: 1 }],
+    colour: COLOUR.lock,
+    tooltip: 'In the End Phase that player discards down to this many cards (normally 6). The lowest limit on the field wins. Not while this card\'s effects are negated (Script: hand_limit(...);).',
   });
   defs.push({ type: 'ys_req_no_monsters', message0: 'you control no monsters', output: 'Req', colour: COLOUR.when });
   defs.push({ type: 'ys_req_controls', message0: 'you control %1', args0: [{ type: 'input_value', name: 'SEL', check: 'Selector' }], output: 'Req', colour: COLOUR.when });
@@ -193,7 +253,14 @@ function defineBlocks() {
     type: 'ys_selector',
     message0: 'a %1', args0: [{ type: 'field_dropdown', name: 'KIND', options: [['monster', 'monster'], ['Spell', 'spell'], ['Trap', 'trap'], ['card', 'card'], ['(anything)', 'NONE']] }],
     message1: 'where %1', args1: [{ type: 'input_statement', name: 'CONDS', check: 'Cond' }],
-    output: 'Selector', colour: COLOUR.cards, tooltip: 'Which cards: a kind, and any number of conditions (all must be true).',
+    message2: 'except this card %1', args2: [{ type: 'field_checkbox', name: 'EXCEPT_SELF', checked: true }],
+    output: 'Selector', colour: COLOUR.cards, tooltip: 'Which cards: a kind, and any number of conditions (all must be true). "except this card" (on by default) leaves out cards with the same name as this one when searching, reviving or adding to the hand; untick it to allow them (Script: including self).',
+  });
+  defs.push({
+    type: 'ys_or',
+    message0: 'any of %1 or %2', args0: [{ type: 'input_value', name: 'A', check: 'Selector' }, { type: 'input_value', name: 'B', check: 'Selector' }],
+    output: 'Selector', colour: COLOUR.cards, inputsInline: false,
+    tooltip: 'Cards matching either side (search, revive, add to hand, Special Summon, send). Put another "any of" in a side for three or more (Script: ... or ...).',
   });
   const cond = (type, msg, args, tooltip) => defs.push({ type, message0: msg, args0: args, previousStatement: 'Cond', nextStatement: 'Cond', colour: COLOUR.cards, tooltip });
   cond('ys_cond_race', 'Type is %1', [{ type: 'field_dropdown', name: 'V', options: RACES.map((r) => [spaced(r), r]) }]);
@@ -214,8 +281,8 @@ function toolbox() {
   return {
     kind: 'categoryToolbox',
     contents: [
-      { kind: 'category', name: 'Effect', colour: COLOUR.effect, contents: [block('ys_effect'), block('ys_as')] },
-      { kind: 'category', name: 'Lock', colour: COLOUR.lock, contents: [block('ys_lock')] },
+      { kind: 'category', name: 'Effect', colour: COLOUR.effect, contents: [...HATS.map((h) => block(h.type)), block('ys_as')] },
+      { kind: 'category', name: 'While face-up', colour: COLOUR.lock, contents: [block('ys_lock'), block('ys_hand_limit')] },
       { kind: 'category', name: 'Only if', colour: COLOUR.when, contents: [block('ys_req_no_monsters'), withSelector('ys_req_controls', 'monster')] },
       { kind: 'category', name: 'Cost', colour: COLOUR.cost, contents: [...COSTS.map((c) => block('ys_cost_' + c.word)), block('ys_cost_self')] },
       {
@@ -224,7 +291,7 @@ function toolbox() {
       },
       {
         kind: 'category', name: 'Which cards', colour: COLOUR.cards,
-        contents: [block('ys_selector'), block('ys_cond_race'), block('ys_cond_attribute'), block('ys_cond_number'), block('ys_cond_archetype'), block('ys_cond_name'), block('ys_cond_raw')],
+        contents: [block('ys_selector'), block('ys_or'), block('ys_cond_race'), block('ys_cond_attribute'), block('ys_cond_number'), block('ys_cond_archetype'), block('ys_cond_name'), block('ys_cond_raw')],
       },
     ],
   };
@@ -237,6 +304,8 @@ const isNumber = (text) => /^\d+$/.test(text.trim());
 
 function selectorText(block) {
   if (!block) return '';
+  if (block.type === 'ys_or')
+    return [selectorText(block.getInputTargetBlock('A')), selectorText(block.getInputTargetBlock('B'))].filter((s) => s).join(' or ');
   const kind = block.getFieldValue('KIND');
   const conds = [];
   for (let c = block.getInputTargetBlock('CONDS'); c; c = c.getNextBlock()) {
@@ -251,8 +320,9 @@ function selectorText(block) {
     }
   }
   const where = conds.join(' and ');
-  if (kind === 'NONE') return where;
-  return where ? kind + ' where ' + where : kind;
+  const self = block.getFieldValue('EXCEPT_SELF') === 'FALSE' ? ' including self' : '';
+  if (kind === 'NONE') return where ? where + self : '';
+  return (where ? kind + ' where ' + where : kind) + self;
 }
 
 function actionText(block) {
@@ -290,7 +360,7 @@ function effectBody(block) {
   for (let a = block.getInputTargetBlock('DO'); a; a = a.getNextBlock()) actions.push(actionText(a));
   if (actions.length === 0) return '';   // nothing to do yet: not written
   let text = '';
-  const trigger = block.getFieldValue('TRIGGER');
+  const trigger = hatOf(block).trigger(block);
   if (trigger !== 'NONE') text += 'on ' + trigger + summonConditionsText(block, trigger) + ': ';
   const req = reqText(block.getInputTargetBlock('REQ'));
   if (req) text += 'if ' + req + ': ';
@@ -311,19 +381,29 @@ function summonConditionsText(block, trigger) {
 }
 
 function lockText(block) {
-  const words = LOCK_WHAT.filter(([field]) => block.getFieldValue(field) === 'TRUE').map(([, word]) => word);
+  const only = block.getFieldValue('ONLY');
+  const words = LOCK_WHAT.filter(([field]) => block.getFieldValue(field) === 'TRUE' || (field === 'MONSTER' && only !== 'ALL'))
+    .map(([, word]) => (word === 'monster' && only !== 'ALL' ? only : word));
   if (words.length === 0) return '';
-  if (block.getFieldValue('WHO') !== 'both') words.push(block.getFieldValue('WHO'));
-  if (block.getFieldValue('WHERE') !== 'monster_zone') words.push(block.getFieldValue('WHERE'));
+  if (block.getFieldValue('WHO') !== 'both' && only === 'ALL') words.push(block.getFieldValue('WHO'));   // a filter covers both players
+  if (block.getFieldValue('WHERE') !== 'AUTO') words.push(block.getFieldValue('WHERE'));
   return 'lock(' + words.join(', ') + ');';
+}
+
+function handLimitText(block) {
+  const words = [String(block.getFieldValue('N')), block.getFieldValue('WHO')];   // whose hand is always written (no default)
+  if (block.getFieldValue('WHERE') !== 'AUTO') words.push(block.getFieldValue('WHERE'));
+  return 'hand_limit(' + words.join(', ') + ');';
 }
 
 function generate(workspace) {
   const tops = workspace.getTopBlocks(true);
   const lockBlock = tops.find((b) => b.type === 'ys_lock');
   const lock = lockBlock ? lockText(lockBlock) : '';
+  const handBlock = tops.find((b) => b.type === 'ys_hand_limit');
+  const hand = handBlock ? handLimitText(handBlock) : '';
   const body = generateEffects(tops);
-  return [lock, body].filter((s) => s).join('\n');
+  return [lock, hand, body].filter((s) => s).join('\n');
 }
 
 function asText(as) {
@@ -333,15 +413,13 @@ function asText(as) {
 }
 
 function generateEffects(tops) {
-  const effects = [];
-  for (const top of tops)
-    for (let b = top; b; b = b.getNextBlock())
-      if (b.type === 'ys_as' || (b.type === 'ys_effect' && effectBody(b))) effects.push(b);
+  // the hats in reading order: top to bottom, then left to right (getTopBlocks(true) sorts that way)
+  const effects = tops.filter((b) => b.type === 'ys_as' || (hatOf(b) && effectBody(b)));
   if (effects.length === 0) return '';
   const body = (e) => e.type === 'ys_as' ? asText(e) : effectBody(e);
-  if (effects.some((e) => e.type === 'ys_effect' && String(e.getFieldValue('NAME') || '').trim()))
+  if (effects.some((e) => hatOf(e) && String(e.getFieldValue('NAME') || '').trim()))
     return effects.map((e) => {
-      const name = e.type === 'ys_effect' ? String(e.getFieldValue('NAME') || '').trim() : '';
+      const name = hatOf(e) ? String(e.getFieldValue('NAME') || '').trim() : '';
       return 'effect ' + (name ? quote(name) + ' ' : '') + '{\n    ' + body(e) + '\n}';
     }).join('\n');
   return effects.map(body).join('\nalso ');
@@ -360,7 +438,7 @@ const words = (node) => (node.c || []).filter((c) => !isNode(c));
 function selectorState(node) {
   if (!node) return null;
   const kindNode = rule(node, 'kind');
-  const state = { type: 'ys_selector', fields: { KIND: kindNode ? text(kindNode) : 'NONE' } };
+  const state = { type: 'ys_selector', fields: { KIND: kindNode ? text(kindNode) : 'NONE', EXCEPT_SELF: !rule(node, 'includingSelf') } };
   const conds = rules(node, 'condition').map((c) => {
     const field = text(rule(c, 'field')), op = text(rule(c, 'op')), raw = text(rule(c, 'value'));
     const value = raw.replace(/^"|"$/g, '');
@@ -379,6 +457,13 @@ function selectorState(node) {
   });
   if (conds.length) state.inputs = { CONDS: { block: chain(conds) } };
   return state;
+}
+
+// "a or b or c" -> any of (a, any of (b, c))
+function choicesState(node) {
+  const states = rules(node, 'selector').map(selectorState);
+  const nest = (list) => (list.length === 1 ? list[0] : { type: 'ys_or', inputs: { A: { block: list[0] }, B: { block: nest(list.slice(1)) } } });
+  return nest(states);
 }
 
 function chain(states) {
@@ -406,6 +491,7 @@ function actionState(actionNode) {
       }
       case 'sel':
         if (isNode(item) && item.r === 'selector') { state.inputs[arg.field] = { block: selectorState(item) }; i++; }
+        else if (isNode(item) && item.r === 'choices') { state.inputs[arg.field] = { block: choicesState(item) }; i++; }
         else state.inputs[arg.field] = { block: { type: 'ys_selector', fields: { KIND: 'NONE' } } };
         break;
       case 'stat':
@@ -435,14 +521,16 @@ function summonConditionsState(conditions) {
 function effectState(body, name) {
   const source = rule(body, 'asScript');
   if (source) return asState(source);
-  const state = { type: 'ys_effect', fields: { NAME: name || '', TRIGGER: 'NONE', ONCE: !!rule(body, 'limit') }, inputs: {} };
   const trigger = rule(body, 'trigger');
-  if (trigger) {
-    const t = text(rule(trigger, 'triggerName'));
-    if (!TRIGGERS.some((o) => o[1] === t)) throw new Unsupported('no block for the trigger ' + t + ' yet');
-    state.fields.TRIGGER = t;
-    const conditions = rule(trigger, 'summonConditions');
-    if (conditions) Object.assign(state.fields, summonConditionsState(conditions));
+  const t = trigger ? text(rule(trigger, 'triggerName')) : 'NONE';
+  const hat = HATS.find((h) => h.has(t));
+  if (!hat) throw new Unsupported('no block for the trigger ' + t + ' yet');
+  const state = { type: hat.type, fields: { NAME: name || '', ONCE: !!rule(body, 'limit') }, inputs: {} };
+  if (t !== 'NONE' && t !== 'ignition') state.fields.TRIGGER = t;
+  const conditions = trigger && rule(trigger, 'summonConditions');
+  if (conditions) {
+    if (hat.type !== 'ys_on_summon') throw new Unsupported('summon conditions only go with a summon trigger');
+    Object.assign(state.fields, summonConditionsState(conditions));
   }
   const req = rule(body, 'requireClause');
   if (req) {
@@ -465,7 +553,7 @@ function effectState(body, name) {
 }
 
 function lockState(statement) {
-  const fields = { WHO: 'both', WHERE: 'monster_zone' };
+  const fields = { WHO: 'both', WHERE: 'AUTO', ONLY: 'ALL' };
   for (const [field] of LOCK_WHAT) fields[field] = false;
   for (const arg of rules(statement, 'lockArg')) {
     const word = text(arg);
@@ -473,15 +561,28 @@ function lockState(statement) {
     if (what) fields[what[0]] = true;
     else if (LOCK_WHO.some(([, w]) => w === word)) fields.WHO = word;
     else if (LOCK_WHERE.some(([, w]) => w === word)) fields.WHERE = word;
+    else if (LOCK_ONLY.some(([, w]) => w === word)) { fields.ONLY = word; fields.MONSTER = true; }
     else throw new Unsupported('no block for the lock word ' + word);
   }
   return { type: 'ys_lock', fields };
 }
 
+function handLimitState(statement) {
+  const fields = { N: Number(words(statement).find(isNumber)), WHO: 'opponent', WHERE: 'AUTO' };
+  for (const arg of rules(statement, 'lockArg')) {
+    const word = text(arg);
+    if (HAND_WHO.some(([, w]) => w === word)) fields.WHO = word;
+    else if (LOCK_WHERE.some(([, w]) => w === word)) fields.WHERE = word;
+    else throw new Unsupported('no block for the hand_limit word ' + word);
+  }
+  return { type: 'ys_hand_limit', fields };
+}
+
 function treeToState(tree) {
   const locks = rules(tree, 'lockStatement').map(lockState);
+  const hands = rules(tree, 'handLimitStatement').map(handLimitState);
   const blocks = treeEffects(tree);
-  return locks.concat(blocks.filter((b) => b));
+  return locks.concat(hands, blocks.filter((b) => b));
 }
 
 function asState(as) {
@@ -498,8 +599,7 @@ function treeEffects(tree) {
     return effectState(rule(e, 'effectBody'), nameToken ? nameToken.replace(/^"|"$/g, '') : '');
   });
   const bodies = rules(tree, 'effectBody').map((b) => effectState(b, ''));
-  const all = effects.concat(bodies);
-  return all.length ? [chain(all)] : [];
+  return effects.concat(bodies);   // one hat each, laid out top to bottom by load()
 }
 
 // ---------------------------------------------------------------- the page and WolfX
@@ -524,7 +624,7 @@ function send() {
 }
 
 function starter() {
-  return [{ type: 'ys_effect', fields: { NAME: '', TRIGGER: 'NONE', ONCE: false } }];
+  return [{ type: 'ys_activate', fields: { NAME: '', ONCE: false } }];
 }
 
 // Called by WolfX with {tree} / {error} / {empty}.
