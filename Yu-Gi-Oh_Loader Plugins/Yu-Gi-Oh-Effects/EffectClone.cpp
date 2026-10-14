@@ -275,49 +275,61 @@ namespace
     }
 
     // The parts of a multi-effect card that answer this lookup (same table selector word4, index word2, event word3): those whose source has a
-    // row for it, narrowed to the ones whose trigger fits the record's event when any does (a FLIP and a Normal Summon effect share a table).
+    // real row for it, narrowed to the ones whose trigger fits the record's event when any does (a FLIP and a Normal Summon effect share a table).
+    // Table 0 returns a generic Spell/Trap row even for a source without one; such a part is only used when no part has a real row.
     std::vector<Clone*> Candidates(Clone* clone, uint16_t* effect)
     {
-        std::vector<Clone*> rows, fitting;
+        std::vector<Clone*> rows, fitting, generic;
         if (!clone || clone->Parts.empty() || !effect)
-            return clone;
-        const auto parts = AllParts(*clone);
-        if (g_MenuPart && std::find(parts.begin(), parts.end(), g_MenuPart) != parts.end())
-            return g_MenuPart;
-        if (effect[20] & 0x8000)
-        {
-            const size_t index = ((effect[20] >> 8) & 0x7F);
-            if (index && index <= parts.size()) return parts[index - 1];
-            return nullptr;
-        }
+            return rows;
         const uint16_t saved = effect[0];
-        Clone* first = nullptr;
-        Clone* fitting = nullptr;
-        Clone* generic = nullptr;
         for (Clone* part : AllParts(*clone))
         {
             effect[0] = static_cast<uint16_t>(part->From);
             if (const Row* row = static_cast<const Row*>(orig_GetEntry(effect)))
             {
-                // Table 0 returns a generic Spell/Trap row even without a row for this source.
-                // Such a fallback must not hide another part's actual effect row.
                 if (row->Id != part->From)
                 {
-                    if (!generic)
-                        generic = part;
+                    generic.push_back(part);
                     continue;
                 }
                 if (!part->Trigger.empty() && part->Trigger != "ignition" && IsKnownTriggerEvent(effect[3])
                     && !TriggerFitsEvent(part->Trigger, effect[3]))
                     continue;
-                if (!first)
-                    first = part;
-                if (!fitting && TriggerFitsEvent(part->Trigger, effect[3]))
-                    fitting = part;
+                rows.push_back(part);
+                if (TriggerFitsEvent(part->Trigger, effect[3]))
+                    fitting.push_back(part);
             }
         }
         effect[0] = saved;
-        return fitting ? fitting : first ? first : generic ? generic : clone;
+        return !fitting.empty() ? fitting : !rows.empty() ? rows : generic;
+    }
+
+    // The part of a multi-effect card this lookup means: the part picked from the effect menu, or the one tagged in the record (word20 bit 15,
+    // index in bits 8-14); else the only candidate, else the one the player chose at the "select an effect" prompt, else the first.
+    Clone* RouteByRow(Clone* clone, uint16_t* effect)
+    {
+        if (!clone || clone->Parts.empty() || !effect)
+            return clone;
+        const std::vector<Clone*> all = AllParts(*clone);
+        if (g_MenuPart && std::find(all.begin(), all.end(), g_MenuPart) != all.end())
+            return g_MenuPart;
+        if (effect[20] & 0x8000)
+        {
+            const size_t index = ((effect[20] >> 8) & 0x7F);
+            if (index && index <= all.size()) return all[index - 1];
+            return nullptr;
+        }
+        const std::vector<Clone*> pool = Candidates(clone, effect);
+        if (pool.empty())
+            return clone;
+        if (pool.size() > 1)
+        {
+            const int chosen = ChosenIndex(effect);
+            if (chosen >= 0 && chosen < static_cast<int>(all.size()) && std::find(pool.begin(), pool.end(), all[chosen]) != pool.end())
+                return all[chosen];
+        }
+        return pool.front();
     }
 
     constexpr const char* kSummonTriggers[] = { "normal_summoned", "special_summoned", "summoned", "normal_or_special_summoned", "flip" };

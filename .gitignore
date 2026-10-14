@@ -399,5 +399,4 @@ x64/
 /Tools/**/Binaries/
 /File Type Libraries/**/Binaries/
 
-# The project IDA database is tracked (Git LFS; LICENSE-IDB.md). Its unpacked working files never are.
-!YuGiOh.exe.i64
+# The project IDA database (YuGiOh.exe.i64) is not tracked; share it outside git (LICENSE-IDB.md still applies).

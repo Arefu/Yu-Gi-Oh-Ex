@@ -64,6 +64,7 @@ namespace
         std::optional<std::string> Key;
         std::map<char, std::wstring> Names, Bios;
         std::optional<bool> Unlocked; // absent: preserve existing progress, unlock new characters
+        bool Native = false;      // "native": WolfX wrote it into chardata; only its unlock is ours
         bool IsNew = false;       // decided when applied: the game had no character in the slot
     };
 
