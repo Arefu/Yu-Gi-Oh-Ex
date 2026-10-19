@@ -98,7 +98,7 @@ Which page needs which plugin (from `docs/WolfXContent.md`, worth a table in the
 | **Konami id** | 4007 | the id everything in WolfX and the plugins uses. Game cards are 3900-14968 |
 | **internal id** | 101 | the row in the game's card files (CARD_Prop, names, text). Mapped by `CARD_IntID.bin` (Card ids page) |
 | **password** | 89631139 | the 8 digits printed on the card; used by the in-game password machine |
-| **custom card id** | 15300-19999 | new cards. 14969-15234 are "ghost" ids the game keeps effect data for - don't use them |
+| **custom card id** | 15300-65534 | new cards. 14969-15234 are "ghost" ids the game keeps effect data for - don't use them |
 
 ### 1.6 Languages
 
@@ -216,7 +216,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
   **Properties, Text, Art**. Toolbar: Save, New card, Duplicate, Delete..., **Genres, related cards, links...** (opens the card in the Card
   Manager, which has those tabs).
 * **Options**:
-  * Card id (15300-19999; New card picks the next free one).
+  * Card id (15300-65534; New card picks the next free one).
   * Kind, Attribute, Type, Level / Rank / Link rating, ATK, DEF, Spell/Trap icon, **Link arrows** (saved as `linkmarkers`),
     **Pendulum scale** (`scale`), Archetypes (a new archetype gets the next free code from 419 and is added to Archetypes.json).
   * **Same name as** (`sameName`): the card whose name this one counts as, always or while an effect says so (MoreCards applies it).

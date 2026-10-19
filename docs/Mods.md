@@ -90,7 +90,7 @@ How a plugin reads its content (instead of `<game>\Yu-Gi-Oh-Ex\<file>`), from `Y
 * Tick to switch on/off, **Move up / down** for the order; saved straight away.
 * The selected mod: what it changes, the plugins it needs (installed / missing, with **links** to get them), what clashes.
 * **Things to know**: missing plugins, two mods adding cards with the **same ids** (only one can exist, and the save keeps owned cards by id,
-  so swapping mods turns your copies into the other mod's cards - authors should pick different ids in 15300-19999), game files changed by
+  so swapping mods turns your copies into the other mod's cards - authors should pick different ids in 15300-65534), game files changed by
   conflicting binary records or archive entries (the later change wins), characters/decks changed by more than one.
 * **Export .zip** re-packs an installed mod; **Create mod** packs your own content; **Play** starts `Yu-Gi-Oh_Loader.exe`.
 

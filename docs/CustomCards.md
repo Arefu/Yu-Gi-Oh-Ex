@@ -1,6 +1,6 @@
 # Custom cards: everything in cards.json
 
-`<game>\Yu-Gi-Oh-Ex\cards.json` holds every custom card (ids 15300-19999) and **everything about it**: stats, text in every
+`<game>\Yu-Gi-Oh-Ex\cards.json` holds every custom card (ids 15300-65534; who owns ids past 19999 is kept by Yu-Gi-Oh-Core's CardTable.cpp in the save extension) and **everything about it**: stats, text in every
 language, art, archetypes, same name, summoning requirements, effect, and the parts the game keeps in other tables for its own
 cards (genres, related cards, links, password, name order, index letters). WolfX's **New cards** page writes it; Yu-Gi-Oh-MoreCards
 (`Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Cards`) reads it.
