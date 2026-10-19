@@ -16,6 +16,7 @@
 #include <memory>
 #include <mutex>
 #include <optional>
+#include <random>
 #include <string>
 #include <thread>
 #include <utility>
@@ -29,6 +30,7 @@
 #include "Logger.h"
 #include "Player.h"
 #include "Video.h"
+#include "Voice.h"
 #include "Yu-Gi-Oh-Mods.h"
 
 #pragma comment(lib, "mfplat.lib")
@@ -58,15 +60,6 @@ namespace Video
         MovieCtx_t orig_MovieClose = reinterpret_cast<MovieCtx_t>(0x14080ADB0);        // Movie_Close
         FileExists_t orig_FileExists = reinterpret_cast<FileExists_t>(0x140760D80);    // archive / loose file exists (std::string path)
 
-        const auto EnqueueCommandList = reinterpret_cast<int64_t(__fastcall*)(void*)>(0x1408C6AE0);   // hands a command list to the render thread
-        ID3D11DeviceContext* const* const g_MovieContext = reinterpret_cast<ID3D11DeviceContext* const*>(0x142924178);   // Bink's deferred context
-        const uint8_t* const g_MovieShowing = reinterpret_cast<const uint8_t*>(0x14278EEA8);   // YGOFront_UNK.BaseWidget.qword40 low byte: a movie is up
-
-        // Starting a movie the way SpecialMovie_PlayByCardId (0x1407A2F80) does, with any name.
-        const auto GameNew = reinterpret_cast<void*(__fastcall*)(size_t)>(0x14090D2B8);
-        const auto SpecialMovie_Construct = reinterpret_cast<void*(__fastcall*)(void*)>(0x1407A2D90);
-        const auto Front_Register = reinterpret_cast<void(__fastcall*)(void*)>(0x14078B8F0);
-        const auto SpecialMovie_Start = reinterpret_cast<void(__fastcall*)(void*, const char*)>(0x1407A3140);
 
         // The game's own movies (summon cut-ins by card id); a card with one keeps its cut-in, an mp4 next to it only replaces the picture.
         constexpr std::array<uint16_t, 23> kGameCutIns = { 4007, 4021, 4041, 4088, 4737, 4766, 6345, 6653, 7344, 7734, 7735, 9575, 9656,
@@ -100,10 +93,10 @@ namespace Video
             LARGE_INTEGER StartedAt{};
         };
 
-        std::mutex g_SessionsLock;
-        std::map<uintptr_t, std::unique_ptr<Session>> g_Sessions;
-        std::mutex g_QueueLock;
-        std::deque<std::string> g_Queue;
+        // Game movies (Movie_Open contexts) we have an mp4 for: the context stays open, Bink paused and muted, while the full-screen player
+        // shows the mp4; it ends when the video does. Value = the first Movie_UpdateFrame hasn't run yet.
+        std::mutex g_MirrorLock;
+        std::map<uintptr_t, bool> g_Mirrored;
 
         std::wstring FindMp4(const std::string& name)
         {
@@ -314,62 +307,28 @@ namespace Video
 
         // ---- the game's movie hooks ----
 
-        void EndSession(uintptr_t ctx)
-        {
-            std::unique_ptr<Session> s;
-            {
-                std::lock_guard lock(g_SessionsLock);
-                auto it = g_Sessions.find(ctx);
-                if (it == g_Sessions.end())
-                    return;
-                s = std::move(it->second);
-                g_Sessions.erase(it);
-            }
-            s->Stop = true;
-            if (s->Worker.joinable())
-                s->Worker.join();
-            if (s->Started && s->HasAudio)
-                Player::StopPcm();
-        }
-
         uint8_t __fastcall Hook_MovieOpen(uintptr_t ctx, const char* path)
         {
             const std::string name = path ? NameOf(path) : std::string();
-            const std::wstring mp4 = FindMp4(name);
-            if (mp4.empty())
+            if (FindMp4(name).empty())
                 return orig_MovieOpen(ctx, path);
             uint8_t ok = orig_MovieOpen(ctx, path);         // the game's own .bik when it has one ...
             if (!ok)
-                ok = orig_MovieOpen(ctx, kCarrier);         // ... else a carrier, so the movie screen runs
-            auto* view = ok ? *reinterpret_cast<ID3D11RenderTargetView**>(ctx + kCtxTargetView) : nullptr;
-            if (!view)
+                ok = orig_MovieOpen(ctx, kCarrier);         // ... else a carrier, so the movie screen (and the duel's wait for it) runs
+            if (!ok)
                 return ok;
-            ComPtr<ID3D11Resource> resource;
-            view->GetResource(&resource);
-            ComPtr<ID3D11Texture2D> texture;
-            D3D11_TEXTURE2D_DESC desc{};
-            if (FAILED(resource.As(&texture)))
-                return ok;
-            texture->GetDesc(&desc);
-
             // Bink stays open (the game's code expects it) but silent and still.
             void* bink = *reinterpret_cast<void**>(ctx + kCtxBink);
             if (auto pause = BinkExport<BinkPause_t>("BinkPause"))
                 pause(bink, 1);
             if (auto volume = BinkExport<BinkSetVolume_t>("BinkSetVolume"))
                 volume(bink, 0, 0);
-
-            auto s = std::make_unique<Session>();
-            s->Path = mp4;
-            s->Width = desc.Width;
-            s->Height = desc.Height;
-            Session* raw = s.get();
             {
-                std::lock_guard lock(g_SessionsLock);
-                g_Sessions[ctx] = std::move(s);
+                std::lock_guard lock(g_MirrorLock);
+                g_Mirrored[ctx] = true;
             }
-            raw->Worker = std::thread(Work, raw);
-            Logger::Log(std::format("Video: {} plays {} ({}x{})", path, Narrow(mp4), desc.Width, desc.Height), MODULE_NAME, 0);
+            PlayFullScreen(name);
+            Logger::Log(std::format("Video: {} plays movies\\{}.mp4 full screen", path, name), MODULE_NAME, 0);
             return ok;
         }
 
@@ -418,53 +377,35 @@ namespace Video
             return s.Decoded && empty && (!s.Started || Clock(s) >= std::max(s.Shown, s.HasAudio ? s.AudioSeconds - 0.05 : 0.0));
         }
 
-        void Upload(uintptr_t ctx, const Frame& frame, const Session& s)
-        {
-            ID3D11DeviceContext* dc = *g_MovieContext;
-            auto* view = *reinterpret_cast<ID3D11RenderTargetView**>(ctx + kCtxTargetView);
-            if (!dc || !view)
-                return;
-            ComPtr<ID3D11Resource> resource;
-            view->GetResource(&resource);
-            dc->UpdateSubresource(resource.Get(), 0, nullptr, frame.Pixels.data(), s.Width * 4, 0);
-            ComPtr<ID3D11CommandList> list;
-            if (SUCCEEDED(dc->FinishCommandList(FALSE, &list)))
-                EnqueueCommandList(list.Detach());   // the render thread runs and releases it, as with Bink's frames
-        }
-
         void __fastcall Hook_MovieUpdate(uintptr_t ctx)
         {
-            Session* s = nullptr;
+            bool first;
             {
-                std::lock_guard lock(g_SessionsLock);
-                auto it = g_Sessions.find(ctx);
-                if (it != g_Sessions.end())
-                    s = it->second.get();
+                std::lock_guard lock(g_MirrorLock);
+                auto it = g_Mirrored.find(ctx);
+                if (it == g_Mirrored.end())
+                    return orig_MovieUpdate(ctx);
+                first = std::exchange(it->second, false);
             }
-            if (!s)
-                return orig_MovieUpdate(ctx);
             auto* bytes = reinterpret_cast<uint8_t*>(ctx);
-            if (!bytes[kCtxPlaying] || bytes[kCtxPaused])
-                return;
-            if (s->FirstUpdate)
+            if (first)
             {
                 // Movie_Open started one Bink frame decoding: let it finish before Bink is left alone.
                 if (bytes[kCtxFramePending])
                     if (auto wait = BinkExport<BinkWait_t>("BinkDoFrameAsyncWait"))
                         wait(*reinterpret_cast<void**>(ctx + kCtxBink), 1000);
                 bytes[kCtxFramePending] = 0;
-                s->FirstUpdate = false;
             }
-
-            if (auto show = TakeDue(*s))
-                Upload(ctx, *show, *s);
-            else if (Finished(*s))
-                bytes[kCtxPlaying] = 0;   // the end: the movie screen closes as after Bink's last frame
+            if (bytes[kCtxPlaying] && !FullScreenBusy())
+                bytes[kCtxPlaying] = 0;   // the video ended (or was skipped): the movie screen closes as after Bink's last frame
         }
 
         void __fastcall Hook_MovieClose(uintptr_t ctx)
         {
-            EndSession(ctx);
+            {
+                std::lock_guard lock(g_MirrorLock);
+                g_Mirrored.erase(ctx);
+            }
             orig_MovieClose(ctx);
         }
 
@@ -477,17 +418,6 @@ namespace Video
             return !name.empty() && !FindMp4(name).empty();
         }
 
-        void StartMovie(const std::string& name)
-        {
-            void* handle = GameNew(0xB8);
-            if (!handle)
-                return;
-            handle = SpecialMovie_Construct(handle);
-            Front_Register(handle);
-            *reinterpret_cast<int32_t*>(static_cast<uint8_t*>(handle) + 44) = 4;
-            SpecialMovie_Start(handle, name.c_str());
-            Logger::Log(std::format("Video: started movie {}", name), MODULE_NAME, 0);
-        }
     }
 
     namespace
@@ -776,6 +706,28 @@ float4 ps(V i) : SV_Target { return float4(t.Sample(s, i.uv).rgb, 1); }
         using PlayLine_t = char(__fastcall*)(uintptr_t scene);
         PlayLine_t orig_PlayLine = reinterpret_cast<PlayLine_t>(0x14082F890);   // StoryScene_PlayLine
 
+        // ---- story scenes: VOICE / SOUND command lines play audio under the text (docs/StoryScenes.md) ----
+        // command / VOICE / <name>: Yu-Gi-Oh-Ex\voices\<name> (.ogg, .wav, .mp3 or .flac, or the name with its extension) starts as the next
+        // text line shows, so that line is its subtitle; it stops when the player moves on to the text line after it (or the scene starts
+        // again). command / SOUND / <name>: the same file, played to its end alongside (a sound effect, or a line spoken over several boxes).
+        int g_SceneVoiceLine = -1;      // the VOICE line playing, -1 = none
+        bool g_SceneVoiceShown = false; // its subtitle (the first text line after it) has shown
+
+        std::wstring FindSceneAudio(const std::string& name)
+        {
+            if (name.empty() || name.find_first_of("/\\:") != std::string::npos)
+                return {};
+            for (const char* extension : { "", ".ogg", ".wav", ".mp3", ".flac" })
+            {
+                const auto path = YGO::Mods::Find("voices\\" + name + extension);
+                if (!path.empty() && std::filesystem::is_regular_file(path))
+                    return path.wstring();
+            }
+            return {};
+        }
+
+        bool IsCommand(const ScriptLine& line) { return line.Speaker && _stricmp(line.Speaker, "command") == 0; }
+
         char __fastcall Hook_PlayLine(uintptr_t scene)
         {
             const auto* file = *reinterpret_cast<ScriptFile* const*>(YGO::Addr::g_pStoryScriptFile);
@@ -789,6 +741,42 @@ float4 ps(V i) : SV_Target { return float4(t.Sample(s, i.uv).rgb, 1); }
                         PlayFullScreen(line.Expression);
                     return 1;
                 }
+                const bool voice = line.Position && _stricmp(line.Position, "VOICE") == 0;
+                if (voice || (line.Position && _stricmp(line.Position, "SOUND") == 0))
+                {
+                    const std::string name = line.Expression ? line.Expression : "";
+                    const std::wstring path = FindSceneAudio(name);
+                    if (path.empty())
+                        Logger::Log(std::format("Story scene: no voices\\{} (.ogg / .wav / .mp3 / .flac) for a {} line", name, voice ? "VOICE" : "SOUND"), MODULE_NAME, 1);
+                    else if (voice)
+                    {
+                        if (Player::PlayVoice(path, Voice::Volume()))
+                        {
+                            g_SceneVoiceLine = static_cast<int>(index);
+                            g_SceneVoiceShown = false;
+                        }
+                    }
+                    else
+                        Player::PlayVoiceAlongside(path, Voice::Volume());
+                    return 1;   // shows nothing: the scene goes straight on to the next line
+                }
+
+                // the VOICE line's subtitle is the first text line after it; the next text line (or going back) ends it
+                if (g_SceneVoiceLine >= 0)
+                {
+                    if (static_cast<int>(index) <= g_SceneVoiceLine)
+                        g_SceneVoiceLine = -1, Player::StopVoice();
+                    else if (!IsCommand(line))
+                    {
+                        if (!g_SceneVoiceShown)
+                            g_SceneVoiceShown = true;
+                        else
+                        {
+                            g_SceneVoiceLine = -1;
+                            Player::StopVoice();
+                        }
+                    }
+                }
             }
             return orig_PlayLine(scene);
         }
@@ -798,6 +786,19 @@ float4 ps(V i) : SV_Target { return float4(t.Sample(s, i.uv).rgb, 1); }
         struct StoryVideos { std::string Before, After; };
         std::map<int, StoryVideos> g_StoryVideos;
         std::vector<std::string> g_Startup;
+
+        // videos.json "duel": a full-screen video on a duel event. "who" is about the local player: "me" (default), "opponent" or "any"; "duelist" =
+        // only when this character does it. One entry plays per event (picked at random among those that fit).
+        struct DuelVideo : Trigger::Conditions
+        {
+            bool AnySide = false;              // "who": "any"
+            int Duelist = -1;                  // only when this character is the side it is about
+            std::vector<std::string> Videos;
+            Trigger::Bag Bag;
+            bool Used = false;
+        };
+        std::vector<DuelVideo> g_DuelVideos;
+        std::mt19937 g_Random{ std::random_device{}() };
 
         std::vector<std::string> Names(const nlohmann::json& node)
         {
@@ -829,7 +830,33 @@ float4 ps(V i) : SV_Target { return float4(t.Sample(s, i.uv).rgb, 1); }
                         StoryVideos v{ entry.value("before", std::string()), entry.value("after", std::string()) };
                         g_StoryVideos[std::atoi(id.c_str())] = v;
                     }
-                Logger::Log(std::format("videos.json: {} startup video(s), {} story duel(s) with videos", g_Startup.size(), g_StoryVideos.size()), MODULE_NAME, 0);
+                if (auto duel = root.find("duel"); duel != root.end() && duel->is_array())
+                    for (auto& entry : *duel)
+                    {
+                        auto conditions = entry.is_object() ? Trigger::Parse(entry) : std::nullopt;
+                        if (!conditions || conditions->Event == Trigger::When::InHand)
+                        {
+                            Logger::Log("videos.json: a duel video with an unknown \"when\" skipped", MODULE_NAME, 1);
+                            continue;
+                        }
+                        DuelVideo video;
+                        static_cast<Trigger::Conditions&>(video) = std::move(*conditions);
+                        video.AnySide = entry.value("who", std::string()) == "any";
+                        video.Duelist = entry.contains("duelist") && entry["duelist"].is_number_integer() ? entry["duelist"].get<int>() : -1;
+                        for (const char* key : { "videos", "video" })
+                            if (entry.contains(key))
+                                for (auto& name : Names(entry[key]))
+                                {
+                                    if (FindMp4(name).empty())
+                                        Logger::Log(std::format("videos.json: duel video movies\\{}.mp4 is missing", name), MODULE_NAME, 1);
+                                    else
+                                        video.Videos.push_back(name);
+                                }
+                        if (!video.Videos.empty())
+                            g_DuelVideos.push_back(std::move(video));
+                    }
+                Logger::Log(std::format("videos.json: {} startup video(s), {} story duel(s) with videos, {} duel video(s)", g_Startup.size(),
+                                        g_StoryVideos.size(), g_DuelVideos.size()), MODULE_NAME, 0);
             }
             catch (const std::exception& e)
             {
@@ -865,6 +892,7 @@ float4 ps(V i) : SV_Target { return float4(t.Sample(s, i.uv).rgb, 1); }
             return;
         std::lock_guard lock(g_FullLock);
         g_FullQueue.push_back(name);
+        g_BlockInput = true;   // from now, not only once Present opens it
     }
 
     void Tick()
@@ -892,6 +920,8 @@ float4 ps(V i) : SV_Target { return float4(t.Sample(s, i.uv).rgb, 1); }
 
     void OnDuelStart(int storyDuel)
     {
+        for (auto& video : g_DuelVideos)
+            video.Used = false;
         if (auto it = g_StoryVideos.find(storyDuel); it != g_StoryVideos.end() && !it->second.Before.empty())
             PlayFullScreen(it->second.Before);
     }
@@ -918,33 +948,60 @@ float4 ps(V i) : SV_Target { return float4(t.Sample(s, i.uv).rgb, 1); }
             MODULE_NAME, error == NO_ERROR ? 0 : 2);
     }
 
-    void Play(const std::string& name)
+    bool FullScreenBusy()
     {
-        std::lock_guard lock(g_QueueLock);
-        g_Queue.push_back(name);
+        std::lock_guard lock(g_FullLock);
+        return g_Full != nullptr || !g_FullQueue.empty();
     }
 
-    void OnSummon(uint16_t card)
+    void OnSummon(uint16_t)
     {
-        if (std::find(kGameCutIns.begin(), kGameCutIns.end(), card) != kGameCutIns.end())
-            return;   // the game plays its own cut-in (an mp4 for it replaces the picture)
-        const std::string name = std::to_string(card);
-        if (!FindMp4(name).empty())
-            Play(name);
+        // The game opens movies/<card id>.bik itself on a summon when it "exists" (Hook_FileExists says an mp4 counts), and Hook_MovieOpen
+        // plays the mp4 full screen: nothing to do here.
     }
 
-    void Pump()
+    void OnNewTurn()
     {
-        if (*g_MovieShowing)
-            return;   // one movie at a time, as the game does
-        std::string name;
+        for (auto& video : g_DuelVideos)
+            if (video.PerTurn)
+                video.Used = false;
+    }
+
+    void OnEvent(const Trigger::Happening& h, int localSide)
+    {
+        using Trigger::When;
+        if (g_DuelVideos.empty())
+            return;
+        auto characterOf = [&](int side) { return Music::g_DuelSideCharacters[side == localSide ? 0 : 1]; };
+        std::vector<DuelVideo*> fits;
+        auto collect = [&](When event, int side)
         {
-            std::lock_guard lock(g_QueueLock);
-            if (g_Queue.empty())
-                return;
-            name = std::move(g_Queue.front());
-            g_Queue.pop_front();
+            for (auto& video : g_DuelVideos)
+            {
+                if (video.Event != event || (video.Once && video.Used))
+                    continue;
+                const bool sided = event != When::DuelStart && event != When::Draw;
+                if (sided && !video.AnySide && (side == localSide) == video.AboutOpponent)
+                    continue;   // "me" = the local player, "opponent" = the other side
+                if (video.Duelist >= 0 && video.Duelist != characterOf(side))
+                    continue;
+                if (Trigger::Matches(video, h, event, side, characterOf(1 - side)) && Trigger::Roll(video, g_Random))
+                    fits.push_back(&video);
+            }
+        };
+        if (h.Event == When::Win)
+        {
+            collect(When::Win, h.Side);
+            collect(When::Lose, 1 - h.Side);
         }
-        StartMovie(name);
+        else
+            collect(h.Event, h.Side);
+        if (fits.empty())
+            return;
+        DuelVideo& pick = *fits[std::uniform_int_distribution<size_t>(0, fits.size() - 1)(g_Random)];
+        pick.Used = true;
+        const std::string& name = pick.Videos[pick.Bag.Deal(pick.Videos.size(), g_Random)];
+        Logger::Log(std::format("Video: duel video {} ({}, side {})", name, Trigger::kWhenNames[static_cast<size_t>(pick.Event)], h.Side), MODULE_NAME, 0);
+        PlayFullScreen(name);
     }
 }

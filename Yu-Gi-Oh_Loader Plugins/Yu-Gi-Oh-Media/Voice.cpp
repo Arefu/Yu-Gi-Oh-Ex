@@ -23,6 +23,7 @@
 #include "Music.h"
 #include "Video.h"
 #include "Voice.h"
+#include "Trigger.h"
 #include "YuGiOh/YuGiOh-DUELSTATE.h"
 #include "Yu-Gi-Oh-Mods.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
@@ -33,36 +34,7 @@ namespace Voice
     {
         namespace DS = YGO::DUELSTATE;
         using namespace Music;   // Common.h: game addresses and path helpers
-
-        // The duel events a line can be said on. The names are voices.json's "when" values (WolfX Sound > Voice Over shows them
-        // as sentences).
-        enum class When { DuelStart, TurnStart, BattlePhase, Attack, Damage, LowLp, Win, Lose, Draw, Summon, InHand,
-                          Activate, Set, Destroyed, DirectAttack, LethalAttack, Count };
-        constexpr std::array<const char*, static_cast<size_t>(When::Count)> kWhenNames = {
-            "duelStart", "turnStart", "battlePhase", "attack", "damage", "lowLP", "win", "lose", "draw", "summon", "inHand",
-            "activate", "set", "destroyed", "directAttack", "lethalAttack",
-        };
-
-        // How a monster came to be face-up on the field ("how" on a summon line). Fusion..Pendulum are kinds of Special Summon: a
-        // "special" line matches them too.
-        enum class How { Any, Normal, Flip, Special, Fusion, Synchro, Xyz, Link, Ritual, Pendulum, Count };
-        constexpr std::array<const char*, static_cast<size_t>(How::Count)> kHowNames = {
-            "any", "normal", "flip", "special", "fusion", "synchro", "xyz", "link", "ritual", "pendulum" };
-
-        // What kind of card an activate / set / destroyed line is about ("kind").
-        enum class Kind { Any, Monster, Spell, Trap, Count };
-        constexpr std::array<const char*, static_cast<size_t>(Kind::Count)> kKindNames = { "any", "monster", "spell", "trap" };
-
-        // turnStart "standing": the speaker's LP against the other duelist's.
-        enum class Standing { Any, Winning, Losing, Even, Count };
-        constexpr std::array<const char*, static_cast<size_t>(Standing::Count)> kStandingNames = { "any", "winning", "losing", "even" };
-
-        // DuelWinReason (docs/StatsAndMatchResults.md), as voices.json's "reason" names. 0 = any.
-        constexpr std::array<const char*, 25> kReasonNames = {
-            "any", "lp", "deckOut", "timeLimit", "surrender", "rules", "exodia", "destinyBoard", "yataLock", "lastTurn", "finalCountdown",
-            "effect", "vennominaga", "exodius", "effect14", "leo", "disasterLeo", "jackpot7", "effect18", "relaySoul", "ghostrickAngel",
-            "phantasmSpiral", "faWinners", "flyingElephant", "exodiaDefender",
-        };
+        using namespace Trigger;   // events, conditions and their names (shared with videos.json "duel")
 
         // Engine message codes (DuelMsgCode, docs/MultiplayerSystem.md). `side` in a message is the side it is about.
         constexpr uint32_t kMsgDuelResult = 0x05;      // a1: 1 = the local side won, 2 = the other side, 3 = draw; a2/a3 = win reasons
@@ -83,27 +55,13 @@ namespace Voice
         constexpr uintptr_t kNetDuel = DS::PlayerState + 0x37B0;      // u32: nonzero in an online duel
         constexpr uintptr_t kQueueStage = DS::PlayerState + 0x388A;   // u32: 0 = PumpAndMirror pops the next message this call
 
-        struct Line
+        struct Line : Conditions
         {
-            When Event = When::DuelStart;
-            bool AboutOpponent = false;       // "who": "opponent" = said when the other duelist does it
-            int Against = -1;                 // only against this character (-1 = anyone)
-            int Amount = 0;                   // damage: at least this much; lowLP: LP falls to this or below; inHand: how many of Cards
-            std::vector<int> Cards;           // summon / attack: one of these cards; inHand: the cards to hold
-            How Summon = How::Any;
-            Kind CardKind = Kind::Any;        // activate / set / destroyed: only this kind of card
-            int Response = -1;                // activate: 1 = only in response (chain link 2+), 0 = only to start a chain, -1 = either
-            Standing Stand = Standing::Any;   // turnStart: only when the speaker is winning / losing / even on LP
-            int Reason = 0;                   // win / lose: only for this DuelWinReason (0 = any)
             std::vector<std::wstring> Files;
-            float Chance = 1.0f;
-            bool Once = true;                 // at most once per duel
-            bool PerTurn = false;             // "once": "turn" - at most once per turn (e.g. one attack line for two Dark Magicians)
             float Volume = 1.0f;
 
             // Runtime: files are dealt from a shuffled bag so none repeats until all have played.
-            std::vector<size_t> Bag;
-            size_t Last = SIZE_MAX;
+            Trigger::Bag Bag;
             bool Used = false;
             std::array<bool, 2> Held{};       // inHand: the hand held the cards at the last check (by speaker side)
         };
@@ -120,19 +78,6 @@ namespace Voice
         {
             std::wstring Path;
             float Volume = 1.0f;
-        };
-
-        // What happened, for matching lines against.
-        struct Happening
-        {
-            When Event = When::DuelStart;
-            int Side = 0;                     // the side it is about (the winner for Win)
-            int Amount = 0;                   // damage, or the LP after it for LowLp
-            int LpBefore = 0;
-            int Card = 0;                     // summon / attack / activate / set / destroyed
-            How Summon = How::Any;
-            bool Response = false;            // activate: chained to another card's activation
-            int Reason = 0;                   // win
         };
 
         enum class Outcome { Blocked, Silent, Said };
@@ -200,40 +145,6 @@ namespace Voice
             return error == std::errc() && end == key.data() + key.size() ? std::optional<int>(number) : std::nullopt;
         }
 
-        template <size_t N>
-        std::optional<int> IndexOfName(const std::array<const char*, N>& names, const std::string& name)
-        {
-            for (size_t i = 0; i < N; ++i)
-                if (_stricmp(name.c_str(), names[i]) == 0)
-                    return static_cast<int>(i);
-            return std::nullopt;
-        }
-
-        float Float(const nlohmann::json& entry, const char* key, float fallback)
-        {
-            auto it = entry.find(key);
-            return it != entry.end() && it->is_number() ? it->get<float>() : fallback;
-        }
-
-        // "cards": [4023, 4024] or "card": 4027 (either key, either shape).
-        std::vector<int> CardList(const nlohmann::json& entry)
-        {
-            std::vector<int> cards;
-            for (const char* key : { "cards", "card" })
-            {
-                auto it = entry.find(key);
-                if (it == entry.end())
-                    continue;
-                if (it->is_number_integer())
-                    cards.push_back(it->get<int>());
-                else if (it->is_array())
-                    for (auto& card : *it)
-                        if (card.is_number_integer())
-                            cards.push_back(card.get<int>());
-            }
-            return cards;
-        }
-
         void Load()
         {
             Config config;
@@ -275,43 +186,14 @@ namespace Voice
                             {
                                 if (!entry.is_object())
                                     continue;
-                                auto when = entry.contains("when") && entry["when"].is_string() ? IndexOfName(kWhenNames, entry["when"].get<std::string>()) : std::nullopt;
-                                if (!when)
+                                auto conditions = Parse(entry);
+                                if (!conditions)
                                 {
                                     Logger::Log(std::format("voices.json: character {}: a line with an unknown \"when\" skipped", id), MODULE_NAME, 1);
                                     continue;
                                 }
                                 Line line;
-                                line.Event = static_cast<When>(*when);
-                                line.AboutOpponent = entry.value("who", std::string("me")) == "opponent";
-                                line.Against = entry.contains("against") && entry["against"].is_number_integer() ? entry["against"].get<int>() : -1;
-                                line.Amount = entry.contains("amount") && entry["amount"].is_number() ? entry["amount"].get<int>() : 0;
-                                if (entry.contains("count") && entry["count"].is_number_integer())
-                                    line.Amount = entry["count"].get<int>();
-                                line.Cards = CardList(entry);
-                                if (auto how = entry.find("how"); how != entry.end() && how->is_string())
-                                    line.Summon = static_cast<How>(IndexOfName(kHowNames, how->get<std::string>()).value_or(0));
-                                if (auto reason = entry.find("reason"); reason != entry.end())
-                                {
-                                    if (reason->is_number_integer())
-                                        line.Reason = reason->get<int>();
-                                    else if (reason->is_string())
-                                        line.Reason = IndexOfName(kReasonNames, reason->get<std::string>()).value_or(0);
-                                }
-                                line.Chance = std::clamp(Float(entry, "chance", 100.0f), 0.0f, 100.0f) / 100.0f;
-                                if (auto once = entry.find("once"); once != entry.end() && once->is_string())
-                                {
-                                    line.PerTurn = once->get<std::string>() == "turn";
-                                    line.Once = line.PerTurn || once->get<std::string>() == "duel";
-                                }
-                                else
-                                    line.Once = entry.value("once", true);
-                                if (auto kind = entry.find("kind"); kind != entry.end() && kind->is_string())
-                                    line.CardKind = static_cast<Kind>(IndexOfName(kKindNames, kind->get<std::string>()).value_or(0));
-                                if (auto response = entry.find("response"); response != entry.end() && response->is_boolean())
-                                    line.Response = response->get<bool>() ? 1 : 0;
-                                if (auto standing = entry.find("standing"); standing != entry.end() && standing->is_string())
-                                    line.Stand = static_cast<Standing>(IndexOfName(kStandingNames, standing->get<std::string>()).value_or(0));
+                                static_cast<Conditions&>(line) = std::move(*conditions);
                                 line.Volume = Float(entry, "volume", 1.0f);
                                 if (line.Event == When::InHand && line.Cards.empty())
                                 {
@@ -364,17 +246,7 @@ namespace Voice
         // file that just played.
         const std::wstring& DealFile(Line& line)
         {
-            if (line.Bag.empty())
-            {
-                for (size_t i = 0; i < line.Files.size(); ++i)
-                    line.Bag.push_back(i);
-                std::shuffle(line.Bag.begin(), line.Bag.end(), g_Random);
-                if (line.Bag.size() > 1 && line.Bag.back() == line.Last)
-                    std::swap(line.Bag.front(), line.Bag.back());
-            }
-            line.Last = line.Bag.back();
-            line.Bag.pop_back();
-            return line.Files[line.Last];
+            return line.Files[line.Bag.Deal(line.Files.size(), g_Random)];
         }
 
         struct Candidate
@@ -383,35 +255,9 @@ namespace Voice
             int Character;
         };
 
-        // The card's kind as KIND_TABLE says (docs: kind 13 = Spell, 14 = Trap, anything else a monster).
-        int CardKindNumber(int card)
-        {
-            return card > 0 ? reinterpret_cast<int(__fastcall*)(int)>(YGO::Addr::Card_GetTypeFromFullCardPropsByKonamiId)(card) : -1;
-        }
-
-        Kind KindOf(int card)
-        {
-            const int kind = CardKindNumber(card);
-            return kind < 0 ? Kind::Any : kind == 13 ? Kind::Spell : kind == 14 ? Kind::Trap : Kind::Monster;
-        }
-
-        // KIND_TABLE row (0x140BF7820, 6 words: Frame, BaseFrame, Category, DeckSection, Tuner, Pendulum).
-        const uint16_t* KindRow(int card)
-        {
-            const int kind = CardKindNumber(card);
-            return kind >= 0 && kind < 46 ? reinterpret_cast<const uint16_t*>(YGO::Addr::CardFrameTable + 12 * static_cast<uintptr_t>(kind)) : nullptr;
-        }
-
-        bool HowMatches(How line, How happened)
-        {
-            if (line == How::Any || line == happened)
-                return true;
-            return line == How::Special && happened >= How::Special;   // a Fusion / Synchro / ... Summon is a Special Summon
-        }
-
         bool Roll(const Line& line)
         {
-            return line.Chance >= 1.0f || std::uniform_real_distribution<float>(0.0f, 1.0f)(g_Random) < line.Chance;
+            return Trigger::Roll(line, g_Random);
         }
 
         // Collects the `lineEvent` lines `speakerSide`'s character has, said about itself or about the other duelist.
@@ -426,38 +272,7 @@ namespace Voice
             {
                 if (line.Event != lineEvent || line.AboutOpponent != aboutOpponent || (line.Once && line.Used))
                     continue;
-                if (line.Against >= 0 && line.Against != other)
-                    continue;
-                if (lineEvent == When::Damage && h.Amount < line.Amount)
-                    continue;
-                if (lineEvent == When::LowLp && !(h.LpBefore > line.Amount && h.Amount <= line.Amount))
-                    continue;
-                if ((lineEvent == When::Summon || lineEvent == When::Attack) && !line.Cards.empty()
-                    && std::find(line.Cards.begin(), line.Cards.end(), h.Card) == line.Cards.end())
-                    continue;
-                if (lineEvent == When::Summon && !HowMatches(line.Summon, h.Summon))
-                    continue;
-                if ((lineEvent == When::Activate || lineEvent == When::Set || lineEvent == When::Destroyed || lineEvent == When::DirectAttack ||
-                     lineEvent == When::LethalAttack) && !line.Cards.empty()
-                    && std::find(line.Cards.begin(), line.Cards.end(), h.Card) == line.Cards.end())
-                    continue;
-                if ((lineEvent == When::Activate || lineEvent == When::Set || lineEvent == When::Destroyed) && line.CardKind != Kind::Any
-                    && line.CardKind != KindOf(h.Card))
-                    continue;
-                if (lineEvent == When::Activate && line.Response >= 0 && (line.Response == 1) != h.Response)
-                    continue;
-                if (lineEvent == When::TurnStart && line.Stand != Standing::Any)
-                {
-                    const int mine = DS::LifePoints(speakerSide), theirs = DS::LifePoints(1 - speakerSide);
-                    const Standing now = mine > theirs ? Standing::Winning : mine < theirs ? Standing::Losing : Standing::Even;
-                    if (now != line.Stand)
-                        continue;
-                }
-                if (lineEvent == When::TurnStart && line.Amount > 0 && DS::LifePoints(speakerSide) > line.Amount)
-                    continue;   // turnStart "amount": only when the speaker's LP is at or below it
-                if ((lineEvent == When::Win || lineEvent == When::Lose) && line.Reason != 0 && line.Reason != h.Reason)
-                    continue;
-                if (!Roll(line))
+                if (!Matches(line, h, lineEvent, speakerSide, other) || !Roll(line))
                     continue;
                 out.push_back({ &line, character });
             }
@@ -509,6 +324,7 @@ namespace Voice
 
         Outcome Fire(const Happening& h)
         {
+            Video::OnEvent(h, LocalSide());   // videos.json "duel" entries
             const bool important = h.Event == When::DuelStart || h.Event == When::Win || h.Event == When::Draw;
             if (!important && !Quiet())
                 return Outcome::Blocked;
@@ -599,6 +415,7 @@ namespace Voice
         // A line is said at most once a turn when its "once" is "turn": the turn's start clears it.
         void NewTurn()
         {
+            Video::OnNewTurn();
             std::lock_guard lock(g_ConfigLock);
             for (auto& [character, lines] : g_Config.Characters)
                 for (Line& line : lines)
@@ -823,7 +640,8 @@ namespace Voice
             g_Deferred.reset();
             g_InDuel = true;
             g_DuelStartPending = true;   // said when the duel's first message runs, not during loading
-            Video::OnDuelStart(Music::CurrentStoryDuel());
+            Logger::Log("Voice: duel started (watching summons, attacks and activations)", MODULE_NAME, 0);
+            Video::OnDuelStart(Music::CurrentStoryDuel());   // also clears the duel videos' "once"
             return result;
         }
 
@@ -925,6 +743,9 @@ namespace Voice
             const DuelMsg first = countBefore ? *reinterpret_cast<const DuelMsg*>(DS::MsgQueue + 0x10) : DuelMsg{};
             if (HoldForResult(countBefore, first))
                 return 1;
+            // A full-screen video (a card's cut-in, videos.json "duel") holds the duel like the game's own cut-ins do. Offline only.
+            if (g_InDuel && Video::FullScreenBusy() && DS::Read<uint32_t>(kNetDuel) == 0)
+                return 1;
             const uint64_t result = orig_PumpAndMirror();
             if (!g_InDuel || countBefore == 0 || DS::Read<uint32_t>(DS::MsgQueueCount) >= countBefore)
                 return result;
@@ -981,7 +802,6 @@ namespace Voice
             WatchField(true);
             TickDeferred();
             CheckHands();
-            Video::Pump();
             return result;
         }
     }
