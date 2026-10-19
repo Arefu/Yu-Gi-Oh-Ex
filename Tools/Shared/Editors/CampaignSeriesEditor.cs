@@ -28,6 +28,7 @@ namespace Wolf.Editors
         private const int Stock = 6;                       // the list starts with the game's 6 series (shown, not editable)
 
         private CampaignSeriesFile _file = new();
+        private HashSet<string> _openedProblems = [];   // problems the file already had: only new ones block a save
         private GameFolderFiles? _gameFiles;
         private bool _changed, _binding;
 
@@ -103,6 +104,7 @@ namespace Wolf.Editors
                 _file = new CampaignSeriesFile();
                 _status.Text = $"Could not read {CampaignSeriesFile.FileName}: {ex.Message}";
             }
+            _openedProblems = [.. _file.Problems()];
             _changed = false;
             Fill(_file.Entries.Count > 0 ? Stock : 0);
             _status.Text = $"{_file.Entries.Count} new series. The game has 6; a new one is listed after them and borrows series 6's save space while it is picked.";
@@ -116,7 +118,7 @@ namespace Wolf.Editors
             _names.EndEdit();
             _ = _id.Value;   // reading Value commits text typed into the box
             Commit();
-            var problems = _file.Problems();
+            var problems = _file.Problems().Where(p => !_openedProblems.Contains(p)).ToList();
             if (problems.Count > 0)
             {
                 MessageBox.Show(string.Join("\n", problems), "Fix these before saving", MessageBoxButtons.OK, MessageBoxIcon.Warning);

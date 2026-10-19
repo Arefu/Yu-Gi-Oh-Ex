@@ -26,6 +26,7 @@ namespace Wolf.Editors
         };
         private readonly Label _heading = new() { Dock = DockStyle.Top, Height = 22, TextAlign = ContentAlignment.MiddleLeft, Font = new Font("Segoe UI", 9.5f, FontStyle.Bold) };
         private readonly TextBox _file = new() { Width = 220 };
+        private HashSet<string> _openedProblems = [];   // problems the opened deckdata already had (a mod's): only new ones block a save
         private readonly ComboBox _series = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 160 };
         private readonly IdCombo _owner = new(220);
         private readonly Label _ownerInfo = new() { AutoSize = true, Margin = new Padding(6, 7, 3, 3) };
@@ -299,6 +300,7 @@ namespace Wolf.Editors
                 var duelFiles = Files(readDuels);
                 _duels = duelFiles.Count > 0 ? StoryDuelTable.Parse(duelFiles) : null;
                 _baseline = _table.Clone();
+                _openedProblems = [.. _table.Problems()];
                 _unlockedFlags.Clear();
                 int fromJson = DeckJson.Apply(DeckJson.Load(JsonPath), _table, _unlockedFlags);
                 _gameFiles!.DeckChoices = _table;
@@ -333,7 +335,7 @@ namespace Wolf.Editors
         {
             if (_table == null || _baseline == null || _gameFiles == null)
                 return false;
-            var problems = _table.Problems();
+            var problems = _table.Problems().Where(p => !_openedProblems.Contains(p)).ToList();
             if (problems.Count > 0)
             {
                 MessageBox.Show(this, string.Join("\n", problems.Take(30)), "Fix these before saving", MessageBoxButtons.OK, MessageBoxIcon.Warning);

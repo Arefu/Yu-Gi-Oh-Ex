@@ -237,11 +237,13 @@ namespace WolfX
             Editor("Art & menus", "Animlists", new AnimListEditor());
             Editor("Art & menus", "Fonts", new FontEditor());
             Content("Art & menus", "Pages", new WolfEx.Designer.PagesPanel(), "Additional: Yu-Gi-Oh-Ex\\pages\\*.json (needs Yu-Gi-Oh-RIX).");
+            Content("Art & menus", "Page scripts", new PageScriptPanel(), "Additional: Yu-Gi-Oh-Ex\\pages\\<name>.bob, compiled to <name>.json (needs Yu-Gi-Oh-RIX).");
             Content("Art & menus", "Menus", new MenusPanel(), "Additional: Yu-Gi-Oh-Ex\\menus\\menus.json (needs Yu-Gi-Oh-RIX).");
 
             // Sound
             Editor("Sound", "Music", new MusicEditor());
             Editor("Sound", "Voice Over", new VoiceEditor());
+            Editor("Sound", "Videos", new VideoEditor());
 
             // Files
             Editor("Files", "Game files & loading", new GameFilesPage());

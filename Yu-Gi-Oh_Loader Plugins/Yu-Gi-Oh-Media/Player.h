@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdint>
 #include <string>
+#include <vector>
 
 // The plugin's own music player (miniaudio): the game's Wwise engine can't play loose files, so overridden music slots are
 // played here while the Wwise slot stays silent. One track plays at a time; a replaced track can fade out underneath the new one.
@@ -30,9 +31,16 @@ namespace Player
     // Voice lines (Voice.cpp): one at a time, on their own volume (the game's sound effect volume), separate from the music.
     // A new line replaces the one playing. False if the file can't be opened.
     bool PlayVoice(const std::wstring& path, float volume);
+    // A second line at the same time as the one playing (both duelists' duel-start lines overlap); replaces an earlier second line.
+    bool PlayVoiceAlongside(const std::wstring& path, float volume);
     void StopVoice();
     bool IsVoicePlaying();
     void SetVoiceVolume(float volume);
+    // A video's sound track (Video.cpp): interleaved float PCM, played once on the voice group. One at a time.
+    bool PlayPcm(std::vector<float> samples, uint32_t channels, uint32_t sampleRate, float volume);
+    // Seconds of the track played so far (the video's clock); negative when nothing is playing.
+    double PcmSeconds();
+    void StopPcm();
     // Lowers the plugin's music to `level` (1 = normal) over fadeMs, e.g. while a voice line plays.
     void SetDuck(float level, uint32_t fadeMs);
     // Follows the game's window: Wwise is suspended while the window is hidden, so is the player.

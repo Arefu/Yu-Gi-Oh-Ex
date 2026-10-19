@@ -288,7 +288,7 @@ namespace Wolf.Mods
         /// <summary>The plugins that come with Yu-Gi-Oh-Ex, so a mod needing one doesn't need a link.</summary>
         public static readonly string[] StockPlugins =
         [
-            "Yu-Gi-Oh-Core", "Yu-Gi-Oh-RIX", "Yu-Gi-Oh-MoreCards", "Yu-Gi-Oh-Campaign", "Yu-Gi-Oh-Effects", "Yu-Gi-Oh-Music",
+            "Yu-Gi-Oh-Core", "Yu-Gi-Oh-RIX", "Yu-Gi-Oh-MoreCards", "Yu-Gi-Oh-Campaign", "Yu-Gi-Oh-Effects", "Yu-Gi-Oh-Media",
             "Yu-Gi-Oh-AnimeCards", "Yu-Gi-Oh-MP", "Yu-Gi-Oh-TagDuel", "Yu-Gi-Oh-Console", "Yu-Gi-Oh-GUI", "Yu-Gi-Oh-PatchMeOut",
             "Yu-Gi-Oh-BetterCardShop", "Yu-Gi-Oh-Funky", "Yu-Gi-Oh-SpeedHacks",
         ];
@@ -302,7 +302,7 @@ namespace Wolf.Mods
             ("storyscripts.json", "Yu-Gi-Oh-Campaign"),
             ("packs.json", "Yu-Gi-Oh-BetterCardShop"), ("prices.json", "Yu-Gi-Oh-BetterCardShop"),
             ("summoning.json", "Yu-Gi-Oh-Effects"), ("effects.json", "Yu-Gi-Oh-Effects"),
-            ("music.json", "Yu-Gi-Oh-Music"), ("voices.json", "Yu-Gi-Oh-Music"),
+            ("music.json", "Yu-Gi-Oh-Media"), ("voices.json", "Yu-Gi-Oh-Media"), ("videos.json", "Yu-Gi-Oh-Media"),
             (@"pages\", "Yu-Gi-Oh-RIX"), (@"menus\", "Yu-Gi-Oh-RIX"),
         ];
 

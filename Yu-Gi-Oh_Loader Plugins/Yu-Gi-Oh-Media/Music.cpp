@@ -21,6 +21,7 @@
 #include "Logger.h"
 #include "Music.h"
 #include "Player.h"
+#include "Video.h"
 #include "Voice.h"
 #include "Yu-Gi-Oh-Mods.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
@@ -426,6 +427,16 @@ namespace Music
         }
 
         // The game writes g_MusicVolume from several places (settings page, sign-in, defaults, reset), so follow the value itself.
+        DWORD WINAPI Watcher(LPVOID);
+    }
+
+    int CurrentStoryDuel()
+    {
+        return g_StoryDuel;
+    }
+
+    namespace
+    {
         DWORD WINAPI Watcher(LPVOID)
         {
             float applied = -1.0f;
@@ -440,6 +451,7 @@ namespace Music
                 Player::SetVoiceVolume(std::clamp(*g_SfxVolume, 0.0f, 1.0f) * Voice::Volume());
                 Player::Reap();
                 Voice::Tick();
+                Video::Tick();
                 Sleep(50);
             }
         }
@@ -449,6 +461,7 @@ namespace Music
     {
         Load();
         Voice::Setup();
+        Video::Setup();
 
         DetourTransactionBegin();
         DetourUpdateThread(GetCurrentThread());

@@ -21,6 +21,26 @@ namespace WolfX
             }
 
             // The parse trees the block editor gets (no window): WolfX.exe --script-tree <file with one script per line> <result file, one tree per line>
+            // Headless check of the page script compiler: WolfX.exe --compile-page <script file> <result file>   (or --decompile-page <page json> <script file>)
+            if (args.Length >= 3 && args[0] == "--compile-page")
+            {
+                try
+                {
+                    var page = PageScript.Compile(File.ReadAllText(args[1]), Path.GetFileNameWithoutExtension(args[1]));
+                    var options = PageScript.Indented;
+                    File.WriteAllText(args[2], page.Page.ToJsonString(options) + (page.Menus != null ? "\n" + page.Menus.ToJsonString(options) : ""));
+                }
+                catch (PageScript.Error ex)
+                {
+                    File.WriteAllText(args[2], "ERROR " + ex.Message);
+                }
+                return;
+            }
+            if (args.Length >= 3 && args[0] == "--decompile-page")
+            {
+                File.WriteAllText(args[2], PageScript.Decompile((System.Text.Json.Nodes.JsonObject)System.Text.Json.Nodes.JsonNode.Parse(File.ReadAllText(args[1]))!));
+                return;
+            }
             if (args.Length >= 3 && args[0] == "--script-tree")
             {
                 File.WriteAllLines(args[2], File.ReadAllLines(args[1]).Select(line => EffectScriptTree.ToJson(line.Replace("\\n", "\n"))));

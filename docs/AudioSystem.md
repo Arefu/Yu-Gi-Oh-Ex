@@ -69,7 +69,7 @@ The defaults are 5 / 0.5 (`ApplyDefaultAudioSettings`, `ResetAudioSettings`).
 (`SoundManager_Suspend`, 0x14087A3E0) and wakes it up when the window is shown (`SoundManager_Resume`, 0x14087A270). Shutdown is
 `ShutdownSoundSlots` (0x14086C0C0): it stops everything, sets `g_CurrentMusicSlot = -1` and frees the slots.
 
-## Custom music plan (Yu-Gi-Oh-Music)
+## Custom music plan (Yu-Gi-Oh-Media)
 
 Wwise can't play a loose mp3, so the plugin plays files itself (e.g. miniaudio: one header, mp3/wav/flac/ogg, its own output) and keeps
 Wwise silent for the slots it overrides. All hooks go through MS Detours:

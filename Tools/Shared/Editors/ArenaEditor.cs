@@ -125,6 +125,7 @@ namespace Wolf.Editors
         private readonly TableLayoutPanel _fields = new() { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, Padding = new Padding(4) };
         private readonly ToolStripStatusLabel _status = new() { Spring = true, TextAlign = ContentAlignment.MiddleLeft };
         private ArenaFile _file = new();
+        private HashSet<string> _openedProblems = [];   // problems the file already had: only new ones block a save
         private GameFolderFiles? _gameFiles;
         private bool _changed, _binding;
         private static readonly char[] Languages = ['E', 'F', 'G', 'I', 'J', 'S'];
@@ -183,6 +184,7 @@ namespace Wolf.Editors
             _gameFiles = files;
             try { _file = ArenaFile.Load(JsonPath); }
             catch (Exception ex) { _file = new ArenaFile(); _status.Text = $"Could not read {ArenaFile.FileName}: {ex.Message}"; }
+            _openedProblems = [.. _file.Problems()];
             _changed = false;
             Fill(0);
             _status.Text = $"{_file.Entries.Count} new arena(s). The game's 14 are listed first.";
@@ -196,7 +198,7 @@ namespace Wolf.Editors
             _names.EndEdit();
             _ = _id.Value;   // reading Value commits text typed into the box
             Commit();
-            var problems = _file.Problems();
+            var problems = _file.Problems().Where(p => !_openedProblems.Contains(p)).ToList();
             if (problems.Count > 0)
             {
                 MessageBox.Show(string.Join("\n", problems), "Fix these before saving", MessageBoxButtons.OK, MessageBoxIcon.Warning);

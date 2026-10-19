@@ -9,6 +9,7 @@
 #include <string>
 #include <vector>
 
+#include <detours.h>
 #include <json.hpp>
 
 #include "SynchroXyz.h"
@@ -233,6 +234,72 @@ namespace
     void __cdecl RefreshSynchro() { Rebuild(g_Synchro); }
     void __cdecl RefreshLink() { Rebuild(g_Link); }
 
+    // ---------------------------------------------------------------- named-card materials (Xyz, Link "condition" / "material")
+    //
+    // The game's Xyz check and Link's per-material slots have no case for a card id: a code >= 3000 falls through to "usable", so on
+    // its own a named card would accept any monster. Only Link's "including" slot calls Card_IsSameName. These wrap the two checks:
+    // when the card's row names a card, the material must also have that card's name.
+
+    using MaterialCheck_t = int64_t(__fastcall*)(int engine, int summoned, unsigned int player, int zone, int index);
+    using CardAt_t = uint16_t(__fastcall*)(unsigned int player, int zone, int index);
+    using SameName_t = int(__fastcall*)(int a, int b);
+
+    MaterialCheck_t orig_XyzMaterialLevel = reinterpret_cast<MaterialCheck_t>(0x14003F3C0);   // Xyz_GetMaterialLevelIfUsable
+    MaterialCheck_t orig_LinkValidMaterial = reinterpret_cast<MaterialCheck_t>(0x1405B2500);  // Link_CardIsValidMaterial
+    const CardAt_t CardIdAt = reinterpret_cast<CardAt_t>(0x14003D3F0);                        // the card id at (player, zone, index)
+    const SameName_t CardIsSameName = reinterpret_cast<SameName_t>(0x1407EBA00);              // j_Card_IsSameName
+
+    const int16_t* RowOf(const Table& table, int id)
+    {
+        for (int r = 0; r < table.capacity; ++r)
+        {
+            const int16_t* row = table.memory + r * table.words;
+            if (row[0] == id)
+                return row;
+            if (row[0] > id)
+                break;   // the rows are sorted by id
+        }
+        return nullptr;
+    }
+
+    int64_t __fastcall Hook_XyzMaterialLevel(int engine, int summoned, unsigned int player, int zone, int index)
+    {
+        Rebuild(g_Xyz);
+        const int64_t level = orig_XyzMaterialLevel(engine, summoned, player, zone, index);
+        if (level == 0)
+            return 0;
+        const int16_t* row = RowOf(g_Xyz, summoned);
+        if (row && row[1] >= kFirstCardCode && !CardIsSameName(CardIdAt(player, zone, index), row[1]))
+            return 0;
+        return level;
+    }
+
+    int64_t __fastcall Hook_LinkValidMaterial(int engine, int summoned, unsigned int player, int zone, int index)
+    {
+        Rebuild(g_Link);
+        const int64_t valid = orig_LinkValidMaterial(engine, summoned, player, zone, index);
+        if (valid == 0)
+            return 0;
+        const int16_t* row = RowOf(g_Link, summoned);
+        if (!row || (row[1] < kFirstCardCode && row[2] < kFirstCardCode))
+            return valid;
+        // on the field a non-zero index is a card id the material counts as (the game's own second pass); elsewhere it is the index
+        const int card = zone <= 6 && index != 0 ? index : CardIdAt(player, zone, index);
+        for (int slot = 1; slot <= 2; ++slot)
+            if (row[slot] >= kFirstCardCode && !CardIsSameName(card, row[slot]))
+                return 0;
+        return valid;
+    }
+
+    bool HasNamedMaterial(const Table& table, int lastSlot)
+    {
+        for (const auto& o : table.overrides)
+            for (int slot = 1; o.hasRow && slot <= lastSlot; ++slot)
+                if (o.row[slot] >= kFirstCardCode)
+                    return true;
+        return false;
+    }
+
     // ---------------------------------------------------------------- JSON
 
     bool AllowedCode(int code, bool synchro)
@@ -241,7 +308,7 @@ namespace
             return true;
         if (code == 72 || code == 73 || code == 83 || code == 94 || code == 97)   // 97: the game's per-card rule (kept for game cards)
             return true;
-        return synchro && (code == 75 || code >= kFirstCardCode);
+        return code >= kFirstCardCode || (synchro && code == 75);   // a card by name: Xyz through Hook_XyzMaterialLevel
     }
 
     // A material: absent / null / "any" / 0 = any; a number = a game code (or, for Synchro, a card id >= 3000); a word = as Fusion's.
@@ -264,7 +331,7 @@ namespace
         if (code < 0 || code > SummonJson::kLastExtraCardId || !AllowedCode(code, synchro))
         {
             error = std::format("\"{}\" {} is not a material the game's {} check knows (race, attribute, archetype up to 418, normal, gemini, pendulum{})",
-                key, value.dump(), synchro ? "Synchro" : "Xyz", synchro ? ", synchro, a card" : "");
+                key, value.dump(), synchro ? "Synchro" : "Xyz", synchro ? ", synchro, a card" : ", a card");
             return false;
         }
         out = static_cast<int16_t>(code);
@@ -275,10 +342,10 @@ namespace
     // when its last material is picked (one of them must match). Codes the check knows, anything else in "including" can never be met.
     bool AllowedLinkCode(int code, bool including)
     {
-        if (code == 0 || (code >= 1 && code <= 31) || (code >= 98 && code <= 516) || code == 95 || code == 97)
-            return true;
+        if (code == 0 || (code >= 1 && code <= 31) || (code >= 98 && code <= 516) || code == 95 || code == 97 || code >= kFirstCardCode)
+            return true;   // a card by name: "including" is the game's, the other two through Hook_LinkValidMaterial
         if (including)
-            return code == 75 || code == 90 || code >= kFirstCardCode;           // Synchro, Tuner, a card by name
+            return code == 75 || code == 90;                                      // Synchro, Tuner
         return (code >= 32 && code <= 67) || code == 73 || code == 74 || code == 82 || code == 83 || code == 96;   // Levels, Normal, Effect, Xyz, Pendulum, not a Token
     }
 
@@ -309,7 +376,7 @@ namespace
         {
             error = std::format("\"{}\" {} is not a material the game's Link check knows ({})", key, value.dump(),
                 including ? "race, attribute, archetype up to 418, link, synchro, tuner, a card" :
-                            "race, attribute, archetype up to 418, level, normal, effect, xyz, pendulum, link, notToken");
+                            "race, attribute, archetype up to 418, level, normal, effect, xyz, pendulum, link, notToken, a card");
             return false;
         }
         out = static_cast<int16_t>(code);
@@ -398,18 +465,19 @@ namespace
         }
     }
 
-    void Install(Table& table, void(__cdecl* refresh)())
+    // `hooked`: an entry a named-card hook wraps (the hook refreshes the table itself, so no refresh stub there)
+    bool Install(Table& table, void(__cdecl* refresh)(), uintptr_t hooked = 0)
     {
         size_t withRows = 0;
         for (const auto& o : table.overrides)
             withRows += o.hasRow;
         if (table.overrides.empty())
-            return;
+            return false;
         if (!OperandsAreTheGames(table))
         {
             Logger::WriteLog(std::format("{}: the table's readers are not the expected instructions (different exe?), custom {} requirements are off",
                 table.name, table.name), MODULE_NAME, 2);
-            return;
+            return false;
         }
         table.gameRows_.resize(table.gameRows);
         for (int r = 0; r < table.gameRows; ++r)
@@ -423,25 +491,30 @@ namespace
         if (!table.memory)
         {
             Logger::WriteLog(std::format("{}: no memory near the game image for the table, custom requirements are off", table.name), MODULE_NAME, 2);
-            return;
+            return false;
         }
         Rebuild(table);
         if (!PointOperandsAtTable(table))
         {
             Logger::WriteLog(std::format("{}: could not write the table's operands", table.name), MODULE_NAME, 2);
-            return;
+            return false;
         }
         for (uintptr_t entry : table.entries)
-            CodePatch::AttachRefresh(entry, refresh, table.name);
+            if (entry != hooked)
+                CodePatch::AttachRefresh(entry, refresh, table.name);
         Logger::WriteLog(std::format("{}: table moved to 0x{:X}, {} game rows + {} requirement(s) ({} more cards use the generic rule if they borrow an id)",
             table.name, reinterpret_cast<uintptr_t>(table.memory), table.gameRows, withRows, table.overrides.size() - withRows), MODULE_NAME, 0);
+        return true;
     }
 }
 
 void SynchroXyz::Setup()
 {
     Load();
-    Install(g_Xyz, RefreshXyz);
+    const bool xyzNamed = HasNamedMaterial(g_Xyz, 1), linkNamed = HasNamedMaterial(g_Link, 2);
+    if (Install(g_Xyz, RefreshXyz, xyzNamed ? reinterpret_cast<uintptr_t>(orig_XyzMaterialLevel) : 0) && xyzNamed)
+        DetourAttach(&(PVOID&)orig_XyzMaterialLevel, Hook_XyzMaterialLevel);
     Install(g_Synchro, RefreshSynchro);
-    Install(g_Link, RefreshLink);
+    if (Install(g_Link, RefreshLink, linkNamed ? reinterpret_cast<uintptr_t>(orig_LinkValidMaterial) : 0) && linkNamed)
+        DetourAttach(&(PVOID&)orig_LinkValidMaterial, Hook_LinkValidMaterial);
 }

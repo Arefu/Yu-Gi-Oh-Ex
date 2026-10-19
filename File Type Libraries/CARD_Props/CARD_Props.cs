@@ -69,8 +69,7 @@ namespace Types
             Gemini = 9,
             Token = 10,
 
-            //11?
-            //12?
+            //11, 12: unused (KIND_TABLE frames 4/5)
             Spell = 13,
 
             Trap = 14,
@@ -80,20 +79,20 @@ namespace Types
             Synchro_Effect = 18,
             Synchro_Tuner_Effect = 19,
 
-            //20?
-            //21?
+            //20: Dark Tuner, 21: Dark Synchro (Tag Force leftovers, crash the game)
             Xyz = 22,
 
             Xyz_Effect = 23,
             Flip_Effect = 24,
             Pendulum = 25,
             Pendulum_Effect = 26,
+            // 27-30 and 40: cannot be Normal Summoned (KIND_TABLE 0x140BF7820 DeckSection 1)
             SpecialSummoned_Effect = 27,
-            Toon_Effect = 28,
-            Spirit_Effect = 29,
-            Tuner = 30,
+            Toon_SpecialSummonOnly = 28,
+            Spirit_SpecialSummonOnly = 29,
+            Tuner_Effect_SpecialSummonOnly = 30,
 
-            //31?
+            //31: Dark Tuner, Special Summon only (unused)
             Tuner_Flip_Effect = 32,
 
             Pendulum_Tuner_Effect = 33,
@@ -103,7 +102,7 @@ namespace Types
             Union_Tuner_Effect = 37,
             Ritual_Spirit_Effect = 38,
             Fusion_Tuner = 39,
-            Pendulum_Effect_Alt = 40,
+            Pendulum_Effect_SpecialSummonOnly = 40,
             Fusion_Pendulum_Effect = 41,
             Link = 42,
             Link_Effect = 43,

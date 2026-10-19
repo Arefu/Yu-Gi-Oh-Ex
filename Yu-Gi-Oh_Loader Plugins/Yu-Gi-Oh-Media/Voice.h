@@ -2,7 +2,7 @@
 
 // Voice lines (VOX): Yu-Gi-Oh-Ex\voices.json gives characters lines to say when something happens in a duel (the duel starts,
 // a turn starts, an attack, damage, low LP, win/lose). The game has no voice audio of its own; the plugin plays the files.
-// Format and events: docs/MusicPlugin.md "Voice lines".
+// Format and events: docs/MediaPlugin.md "Voice lines".
 namespace Voice
 {
     // Reads voices.json and hooks the duel engine (Engine_Init, MsgQueue PumpAndMirror).

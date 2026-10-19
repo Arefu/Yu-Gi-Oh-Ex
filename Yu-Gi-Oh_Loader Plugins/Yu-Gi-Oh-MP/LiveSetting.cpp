@@ -46,6 +46,24 @@ namespace
     constexpr const char* kLobbyListPrefix = "exbanlist";
     constexpr size_t kLobbyChunk = 7000;
     constexpr const char* kMemberMark = "exmp";
+    // "extag" = "coop": the host armed an online co-op tag duel (Yu-Gi-Oh-TagDuel); a joining player's TagDuel is armed to match, so both
+    // games run the same 4-seat duel. Any other value / missing = a normal duel (a joiner's own arming is cleared).
+    constexpr const char* kLobbyTag = "extag";
+
+    // Yu-Gi-Oh-TagDuel's exports (optional plugin).
+    bool TagCoopArmed()
+    {
+        static auto get = reinterpret_cast<bool(__cdecl*)()>(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll") ? GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll"), "TagDuel_IsOnlineCoop") : nullptr);
+        return get && get();
+    }
+
+    bool SetTagCoop(bool on)
+    {
+        static auto set = reinterpret_cast<void(__cdecl*)(bool)>(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll") ? GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-TagDuel.dll"), "TagDuel_SetOnlineCoop") : nullptr);
+        if (set)
+            set(on);
+        return set != nullptr;
+    }
 
     using Screen_t = void(__fastcall*)(char* screen);
     using Input_t = void(__fastcall*)(char* screen, int pressed);
@@ -573,6 +591,7 @@ namespace
         for (size_t i = 0; i < parts; ++i)
             SetLobbyData(lobby, (kLobbyListPrefix + std::to_string(i)).c_str(), list.substr(i * kLobbyChunk, kLobbyChunk).c_str());
         SetLobbyData(lobby, kLobbyParts, std::to_string(parts).c_str());
+        SetLobbyData(lobby, kLobbyTag, TagCoopArmed() ? "coop" : "off");
         MarkMember(lobby);
         g_HostLobby = lobby;
     }
@@ -616,6 +635,14 @@ namespace
             }
         }
         Logger::WriteLog("Joined a lobby (ban list: " + (value.empty() ? std::string("the game's") : value) + ")", MODULE_NAME, 0);
+
+        // The host's tag duel setting, so both games set the duel up the same way.
+        const char* tag = GetLobbyData(lobby, kLobbyTag);
+        const bool coop = tag && std::string(tag) == "coop";
+        if (!SetTagCoop(coop) && coop)
+            Logger::WriteLog("The host set up an online co-op tag duel but Yu-Gi-Oh-TagDuel isn't loaded here: the two games will not match", MODULE_NAME, 2);
+        else if (coop)
+            Logger::WriteLog("Joined an online co-op tag duel lobby (you + an AI partner vs the host + theirs)", MODULE_NAME, 0);
     }
 
     void __fastcall Hook_LeaveLobby(void* qnet, uint64_t lobby)

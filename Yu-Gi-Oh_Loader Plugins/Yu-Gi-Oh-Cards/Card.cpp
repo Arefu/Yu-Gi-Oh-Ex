@@ -100,11 +100,14 @@ namespace
         { "Toon", 6 }, { "Spirit", 7 }, { "Union", 8 }, { "Gemini", 9 }, { "Token", 10 }, { "Spell", 13 }, { "Trap", 14 },
         { "TunerNormal", 15 }, { "TunerEffect", 16 }, { "Synchro", 17 }, { "SynchroEffect", 18 }, { "SynchroTunerEffect", 19 },
         { "Xyz", 22 }, { "XyzEffect", 23 }, { "FlipEffect", 24 }, { "Pendulum", 25 }, { "PendulumEffect", 26 },
-        { "SpecialSummonedEffect", 27 }, { "ToonEffect", 28 }, { "SpiritEffect", 29 }, { "Tuner", 30 }, { "TunerFlipEffect", 32 },
+        { "EffectSpecialSummonOnly", 27 }, { "ToonSpecialSummonOnly", 28 }, { "SpiritSpecialSummonOnly", 29 },
+        { "TunerEffectSpecialSummonOnly", 30 }, { "TunerFlipEffect", 32 },
         { "PendulumTunerEffect", 33 }, { "XyzPendulumEffect", 34 }, { "PendulumFlipEffect", 35 }, { "SynchroPendulumEffect", 36 },
-        { "UnionTunerEffect", 37 }, { "RitualSpiritEffect", 38 }, { "FusionTuner", 39 }, { "PendulumEffectAlt", 40 },
+        { "UnionTunerEffect", 37 }, { "RitualSpiritEffect", 38 }, { "FusionTuner", 39 }, { "PendulumEffectSpecialSummonOnly", 40 },
         { "FusionPendulumEffect", 41 }, { "Link", 42 }, { "LinkEffect", 43 }, { "PendulumTunerNormal", 44 },
         { "PendulumSpiritEffect", 45 },
+        // Older names for 27-30 and 40 (27-31/40 = KIND_TABLE DeckSection 1, cannot be Normal Summoned; 20/21 Dark Tuner/Synchro crash).
+        { "SpecialSummonedEffect", 27 }, { "ToonEffect", 28 }, { "SpiritEffect", 29 }, { "Tuner", 30 }, { "PendulumEffectAlt", 40 },
     };
     const NamedValue AttributeNames[] = {
         { "Special", Card::SPECIAL }, { "Light", Card::LIGHT }, { "Dark", Card::DARK },

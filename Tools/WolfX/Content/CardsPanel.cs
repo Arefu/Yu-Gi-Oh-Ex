@@ -39,10 +39,10 @@ namespace WolfEx
             ("Flip Effect", 24),
             ("Pendulum", 25),
             ("Pendulum Effect", 26),
-            ("Special Summoned Effect", 27),
-            ("Toon Effect", 28),
-            ("Spirit Effect", 29),
-            ("Tuner", 30),
+            ("Effect Special Summon Only", 27),
+            ("Toon Special Summon Only", 28),
+            ("Spirit Special Summon Only", 29),
+            ("Tuner Effect Special Summon Only", 30),
             ("Tuner Flip Effect", 32),
             ("Pendulum Tuner Effect", 33),
             ("Xyz Pendulum Effect", 34),
@@ -51,13 +51,16 @@ namespace WolfEx
             ("Union Tuner Effect", 37),
             ("Ritual Spirit Effect", 38),
             ("Fusion Tuner", 39),
-            ("Pendulum Effect Alt", 40),
+            ("Pendulum Effect Special Summon Only", 40),
             ("Fusion Pendulum Effect", 41),
             ("Link", 42),
             ("Link Effect", 43),
             ("Pendulum Tuner Normal", 44),
             ("Pendulum Spirit Effect", 45),
         };
+        // Names older cards.json files used for 27-30 and 40 (before the kinds were checked against the exe's KIND_TABLE).
+        private static readonly (string Name, int Value)[] OldKindNames =
+            [("Special Summoned Effect", 27), ("Toon Effect", 28), ("Spirit Effect", 29), ("Tuner", 30), ("Pendulum Effect Alt", 40)];
         internal static readonly (string Name, int Value)[] Attributes =
         {
             ("Special", 0), ("Light", 1), ("Dark", 2), ("Water", 3), ("Fire", 4),
@@ -641,7 +644,7 @@ namespace WolfEx
                 Select(_type, card.Type);
                 Select(_attribute, card.Attribute);
                 Select(_icon, card.Icon);
-                _level.Value = Math.Clamp(card.Level, 1, 12);
+                _level.Value = Math.Clamp(card.Level, 0, 13);   // the props hold 0-15; 7 game monsters are Level 0
                 _atk.Value = Math.Clamp(card.Atk, 0, 9990);
                 _def.Value = Math.Clamp(card.Def, 0, 9990);
                 _atkUnknown.Checked = card.AtkUnknown;
@@ -945,7 +948,9 @@ namespace WolfEx
             Description = ReadString(json, "description"),
             Image = ReadString(json, "image"),
             ImageUncensored = ReadString(json, "imageUncensored"),
-            Kind = ReadEnum(json, "kind", Kinds, "Normal"),
+            Kind = ReadEnum(json, "kind", Kinds, "Normal") is var kind && kind == "Normal" && json["kind"] is JsonValue old && old.TryGetValue<string>(out var oldName)
+                && OldKindNames.FirstOrDefault(k => string.Equals(k.Name, oldName, StringComparison.OrdinalIgnoreCase)) is { Name: not null } alias
+                ? Kinds.First(k => k.Value == alias.Value).Name : kind,
             Type = ReadEnum(json, "type", Types, "Warrior"),
             Attribute = ReadEnum(json, "attribute", Attributes, "Light"),
             Icon = ReadEnum(json, "icon", Icons, "Normal"),

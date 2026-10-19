@@ -107,3 +107,7 @@ Yu-Gi-Oh-Campaign hooks `LoadStoryScriptData`, which runs at start and on a lang
 4. frees the game's block and stores its own in `g_pStoryScriptFile`.
 
 Built, but not yet run in the game. Yu-Gi-Oh-Campaign must be switched on in Config.ini: `[Yu-Gi-Oh-Core]` `Yu-Gi-Oh-Campaign=1`.
+
+## VIDEO command (Yu-Gi-Oh-Media, 2026-10-19)
+
+`command` / `VIDEO` / `<name>` plays `Yu-Gi-Oh-Ex\movies\<name>.mp4` full screen (docs/MediaPlugin.md "Videos"). The game itself skips the line.

@@ -335,9 +335,114 @@ namespace
     }
 
     // A binding: "var:name" or "config:Section/Key".
+    // ---- the game's own values pages can read and change (docs/PageScript.md "Game"): the profile's DP and cards, guarded like the
+    // Card Store reads them (the save sections are only there once a profile is loaded)
+    constexpr int kSaveCardCount = 20000;   // the save's card table: one byte per card id, bits 0-2 = copies owned, bit 3 = seen
+    constexpr int kFullSet = 3;
+
+    uint64_t* GameWallet()
+    {
+        __try
+        {
+            uint8_t* section = YGO::SAVE::Get_PlayerSection(YGO::SAVE::CURRENT_PROFILE);
+            return section ? reinterpret_cast<uint64_t*>(section + YGO::SAVE::PlayerSection::Wallet) : nullptr;
+        }
+        __except (EXCEPTION_EXECUTE_HANDLER)
+        {
+            return nullptr;
+        }
+    }
+
+    uint8_t* GameCardTable()
+    {
+        __try
+        {
+            return YGO::SAVE::Get_CardUnlockTable(YGO::SAVE::CURRENT_PROFILE);
+        }
+        __except (EXCEPTION_EXECUTE_HANDLER)
+        {
+            return nullptr;
+        }
+    }
+
+    // menu names for the unlock action / game:unlocked.<name> -> PlayerSection::MenuUnlock bits
+    uint32_t MenuUnlockBit(const std::string& name)
+    {
+        if (name == "duelist_challenge") return YGO::SAVE::PlayerSection::DUELIST_CHALLENGE;
+        if (name == "battle_packs") return YGO::SAVE::PlayerSection::BATTLE_PACKS;
+        if (name == "card_shop") return YGO::SAVE::PlayerSection::CARD_SHOP;
+        return 0;
+    }
+
+    uint8_t* GamePlayer()
+    {
+        __try
+        {
+            return YGO::SAVE::Get_PlayerSection(YGO::SAVE::CURRENT_PROFILE);
+        }
+        __except (EXCEPTION_EXECUTE_HANDLER)
+        {
+            return nullptr;
+        }
+    }
+
+    const wchar_t* SafeCardName(short id)
+    {
+        __try
+        {
+            return reinterpret_cast<const wchar_t*>(YGO::CARDS::Get_CardNameFromKonamiId(id));
+        }
+        __except (EXCEPTION_EXECUTE_HANDLER)
+        {
+            return nullptr;
+        }
+    }
+
+    // game:dp, game:owned.<card id> (copies, 0-3), game:cardname.<card id>, game:unlocked.<menu>, game:character.<id> (1 = unlocked),
+    // game:language (the game's language id)
+    std::string GameValue(const std::string& name)
+    {
+        if (name.rfind("cardname.", 0) == 0)
+        {
+            const int id = std::atoi(name.c_str() + 9);
+            if (id <= 0 || id >= kSaveCardCount)
+                return {};
+            const wchar_t* text = SafeCardName(static_cast<short>(id));
+            return text ? Narrow(std::wstring(text)) : std::string();
+        }
+        if (name.rfind("unlocked.", 0) == 0)
+        {
+            const uint8_t* player = GamePlayer();
+            const uint32_t bit = MenuUnlockBit(name.substr(9));
+            return player && bit ? ((*reinterpret_cast<const uint32_t*>(player + YGO::SAVE::PlayerSection::MenuUnlockFlags) & bit) ? "1" : "0") : std::string();
+        }
+        if (name.rfind("character.", 0) == 0)
+        {
+            const uint8_t* player = GamePlayer();
+            const int id = std::atoi(name.c_str() + 10);
+            if (!player || id < 0 || id >= static_cast<int>(YGO::SAVE::PlayerSection::CharacterCount))
+                return {};
+            return (player[YGO::SAVE::PlayerSection::UnlockedCharacters + id / 8] >> (id % 8)) & 1 ? "1" : "0";
+        }
+        if (name == "language")
+            return std::to_string(*reinterpret_cast<const int*>(YGO::Addr::g_iGameLanguageID));
+        if (name == "dp")
+        {
+            const uint64_t* wallet = GameWallet();
+            return wallet ? std::to_string(*wallet) : std::string();
+        }
+        if (name.rfind("owned.", 0) == 0)
+        {
+            const int id = std::atoi(name.c_str() + 6);
+            const uint8_t* table = GameCardTable();
+            return table && id > 0 && id < kSaveCardCount ? std::to_string(table[id] & 7) : std::string();
+        }
+        return {};
+    }
+
     struct Binding
     {
-        enum Kind { None, Var, Config } Type = None;
+        enum Kind { None, Var, Config, Game } Type = None;
         std::string Name;
 
         static Binding Parse(const std::string& text)
@@ -345,6 +450,7 @@ namespace
             Binding b;
             if (text.rfind("var:", 0) == 0) { b.Type = Var; b.Name = text.substr(4); }
             else if (text.rfind("config:", 0) == 0) { b.Type = Config; b.Name = text.substr(7); }
+            else if (text.rfind("game:", 0) == 0) { b.Type = Game; b.Name = text.substr(5); }
             return b;
         }
 
@@ -353,6 +459,7 @@ namespace
             std::string value;
             if (Type == Var) { auto it = g_Vars.find(Name); value = it != g_Vars.end() ? it->second : std::string(); }
             else if (Type == Config) value = ReadConfig(Name);
+            else if (Type == Game) value = GameValue(Name);
             return value.empty() ? fallback : value;
         }
 
@@ -360,6 +467,7 @@ namespace
         {
             if (Type == Var) g_Vars[Name] = value;
             else if (Type == Config) WriteConfig(Name, value);
+            // game: values are read only; the giveDp / takeDp / giveCard actions change them
         }
     };
 
@@ -388,7 +496,8 @@ namespace
         return out;
     }
 
-    // { "var" | "config": name, "equals": value, "not": true } ; an array = all of them. No "equals" = set and not "0".
+    // { "var" | "config" | "game": name, "equals": value, "atLeast": n, "not": true } ; an array = all of them. No "equals" / "atLeast" = set
+    // and not "0".
     bool Holds(const json& when)
     {
         if (when.is_null())
@@ -405,7 +514,12 @@ namespace
         std::string value;
         if (when.contains("var")) value = Binding{ Binding::Var, Str(when, "var") }.Get();
         else if (when.contains("config")) value = Binding{ Binding::Config, Str(when, "config") }.Get();
-        const bool result = when.contains("equals") ? value == Expand(Str(when, "equals")) : !value.empty() && value != "0";
+        else if (when.contains("game")) value = GameValue(Str(when, "game"));
+        bool result;
+        if (when.contains("atLeast"))
+            result = !value.empty() && std::strtoll(value.c_str(), nullptr, 10) >= std::strtoll(Expand(when["atLeast"].is_string() ? when["atLeast"].get<std::string>() : when["atLeast"].dump()).c_str(), nullptr, 10);
+        else
+            result = when.contains("equals") ? value == Expand(Str(when, "equals")) : !value.empty() && value != "0";
         return when.value("not", false) ? !result : result;
     }
 
@@ -1811,6 +1925,12 @@ namespace
             if (id < 0 || !R::GotoScreenFrom(g_Screen, id))
                 Logger::WriteLog(std::format("Page action: can't go to screen {}", target.dump()), MODULE_NAME, 1);
         }
+        else if (step.contains("video"))
+        {
+            // Yu-Gi-Oh-Media registers "video:<name>" for every movies\<name>.mp4 (full screen, Esc / click skips)
+            if (!Menu::RunAction("video:" + Str(step, "video")))
+                Logger::WriteLog(std::format("Page action: no video '{}' (needs Yu-Gi-Oh-Media and movies\\{}.mp4)", Str(step, "video"), Str(step, "video")), MODULE_NAME, 1);
+        }
         else if (step.contains("call"))
         {
             if (!Menu::RunAction(Str(step, "call")))
@@ -1846,6 +1966,94 @@ namespace
                         RefreshGridCounts(static_cast<char*>(element.Trunk));
                     }
         }
+        else if (step.contains("giveDp") || step.contains("takeDp"))
+        {
+            // { "giveDp": 500 } / { "takeDp": 500, "else": <action when the profile has less> } - amounts may be "{var:x}"
+            const bool take = step.contains("takeDp");
+            const json& amount = step[take ? "takeDp" : "giveDp"];
+            const long long dp = std::strtoll(Expand(amount.is_string() ? amount.get<std::string>() : amount.dump()).c_str(), nullptr, 10);
+            uint64_t* wallet = GameWallet();
+            if (!wallet || dp < 0)
+                Logger::WriteLog("Page action: no profile is loaded (or a negative amount), DP unchanged", MODULE_NAME, 1);
+            else if (take && *wallet < static_cast<uint64_t>(dp))
+            {
+                if (step.contains("else"))
+                    RunAction(step["else"]);
+                else
+                    R::PlayUISound(kSoundError);
+            }
+            else
+            {
+                *wallet = take ? *wallet - dp : (std::min)(*wallet + dp, 999999999ull);   // the game shows up to 9 digits
+                if (step.contains("then"))
+                    RunAction(step["then"]);
+            }
+        }
+        else if (step.contains("giveCard"))
+        {
+            // { "giveCard": 4007, "copies": 1 } - up to the save's 3 copies, marked as seen
+            const json& card = step["giveCard"];
+            const int id = std::atoi(Expand(card.is_string() ? card.get<std::string>() : card.dump()).c_str());
+            const int copies = static_cast<int>(Num(step, "copies", 1));
+            uint8_t* table = GameCardTable();
+            if (!table || id <= 0 || id >= kSaveCardCount)
+                Logger::WriteLog(std::format("Page action: can't give card {} (no profile loaded, or not a card id)", id), MODULE_NAME, 1);
+            else
+            {
+                const int owned = (std::min)(kFullSet, (std::max)(0, (table[id] & 7) + copies));
+                table[id] = static_cast<uint8_t>((table[id] & ~7) | owned | 8);
+            }
+        }
+        else if (step.contains("takeCard"))
+        {
+            // { "takeCard": 4007, "copies": 1, "else": <action when the profile has fewer> }
+            const json& card = step["takeCard"];
+            const int id = std::atoi(Expand(card.is_string() ? card.get<std::string>() : card.dump()).c_str());
+            const int copies = static_cast<int>(Num(step, "copies", 1));
+            uint8_t* table = GameCardTable();
+            if (!table || id <= 0 || id >= kSaveCardCount || copies < 0)
+                Logger::WriteLog(std::format("Page action: can't take card {} (no profile loaded, or not a card id)", id), MODULE_NAME, 1);
+            else if ((table[id] & 7) < copies)
+            {
+                if (step.contains("else"))
+                    RunAction(step["else"]);
+                else
+                    R::PlayUISound(kSoundError);
+            }
+            else
+            {
+                table[id] = static_cast<uint8_t>((table[id] & ~7) | ((table[id] & 7) - copies));
+                if (step.contains("then"))
+                    RunAction(step["then"]);
+            }
+        }
+        else if (step.contains("unlock") || step.contains("lock"))
+        {
+            // { "unlock": "card_shop" | "battle_packs" | "duelist_challenge" } - the main menu buttons a new profile has greyed out
+            const bool on = step.contains("unlock");
+            const uint32_t bit = MenuUnlockBit(Str(step, on ? "unlock" : "lock"));
+            uint8_t* player = GamePlayer();
+            if (!player || !bit)
+                Logger::WriteLog("Page action: (un)lock needs a loaded profile and card_shop, battle_packs or duelist_challenge", MODULE_NAME, 1);
+            else
+            {
+                uint32_t& flags = *reinterpret_cast<uint32_t*>(player + YGO::SAVE::PlayerSection::MenuUnlockFlags);
+                flags = on ? flags | bit : flags & ~bit;
+            }
+        }
+        else if (step.contains("unlockCharacter"))
+        {
+            // { "unlockCharacter": 12 } - a chardata id (0-239): the character shows in Free Duel
+            const json& c = step["unlockCharacter"];
+            const int id = std::atoi(Expand(c.is_string() ? c.get<std::string>() : c.dump()).c_str());
+            uint8_t* player = GamePlayer();
+            if (!player || id < 0 || id >= static_cast<int>(YGO::SAVE::PlayerSection::CharacterCount))
+                Logger::WriteLog(std::format("Page action: can't unlock character {}", id), MODULE_NAME, 1);
+            else
+                player[YGO::SAVE::PlayerSection::UnlockedCharacters + id / 8] |= static_cast<uint8_t>(1 << (id % 8));
+        }
+        else if (step.contains("sound"))
+            R::PlayUISound(static_cast<int>(Num(step, "sound", kSoundConfirm)));
         else if (step.contains("message"))
         {
             static std::wstring text;   // the box reads it while it is open

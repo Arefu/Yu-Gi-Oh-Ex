@@ -237,7 +237,12 @@ namespace DuelIt
 
         private void EventList_RetrieveVirtualItem(object? sender, RetrieveVirtualItemEventArgs e)
         {
-            var ev = _duel!.Events[e.ItemIndex];
+            if (_duel == null || e.ItemIndex >= _duel.Events.Count || e.ItemIndex >= _states.Count)
+            {
+                e.Item = new ListViewItem(new string[eventList.Columns.Count]);   // stale index while the list shrinks (another duel opened)
+                return;
+            }
+            var ev = _duel.Events[e.ItemIndex];
             var item = new ListViewItem((e.ItemIndex + 1).ToString());
             item.SubItems.Add(ev.Time);
             item.SubItems.Add(ev.Tag == "MSG" ? ev.Get("name") : ev.Tag);

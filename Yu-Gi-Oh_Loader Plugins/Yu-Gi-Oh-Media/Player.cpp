@@ -33,7 +33,27 @@ namespace Player
         ma_sound_group g_VoiceGroup{};          // voice lines: the game's sound effect volume
         std::unique_ptr<Playing> g_Current;
         std::unique_ptr<ma_sound> g_Voice;      // the voice line playing (one at a time)
+        std::unique_ptr<ma_sound> g_Voice2;     // a line said at the same time (PlayVoiceAlongside)
         std::vector<std::unique_ptr<Playing>> g_Retired;   // fading out; freed by Reap once silent
+
+        // A video's sound track: the decoded PCM, the miniaudio buffer reading it and the sound playing the buffer.
+        struct Pcm
+        {
+            std::vector<float> Samples;
+            ma_audio_buffer Buffer{};
+            ma_sound Sound{};
+            uint32_t SampleRate = 0;
+        };
+        std::unique_ptr<Pcm> g_Pcm;
+
+        void StopPcmLocked()
+        {
+            if (!g_Pcm)
+                return;
+            ma_sound_uninit(&g_Pcm->Sound);
+            ma_audio_buffer_uninit(&g_Pcm->Buffer);
+            g_Pcm.reset();
+        }
 
         bool EnsureEngine()
         {
@@ -73,12 +93,32 @@ namespace Player
             g_Retired.push_back(std::move(playing));
         }
 
+        void StopOne(std::unique_ptr<ma_sound>& voice)
+        {
+            if (!voice)
+                return;
+            ma_sound_uninit(voice.get());
+            voice.reset();
+        }
+
         void StopVoiceLocked()
         {
-            if (!g_Voice)
-                return;
-            ma_sound_uninit(g_Voice.get());
-            g_Voice.reset();
+            StopOne(g_Voice);
+            StopOne(g_Voice2);
+        }
+
+        std::unique_ptr<ma_sound> OpenVoice(const std::wstring& path, float volume)
+        {
+            auto voice = std::make_unique<ma_sound>();
+            const ma_result result = ma_sound_init_from_file_w(&g_Engine, path.c_str(), MA_SOUND_FLAG_STREAM | MA_SOUND_FLAG_NO_SPATIALIZATION,
+                &g_VoiceGroup, nullptr, voice.get());
+            if (result != MA_SUCCESS)
+            {
+                Logger::Log(std::format("Can't open voice line {} (miniaudio error {})", Music::Narrow(path), static_cast<int>(result)), MODULE_NAME, 2);
+                return nullptr;
+            }
+            ma_sound_set_volume(voice.get(), volume);
+            return voice;
         }
 
         // miniaudio multiplies a group's volume by its fader: the volume is the game's music setting, the fader is the duck.
@@ -156,19 +196,67 @@ namespace Player
         std::lock_guard lock(g_Lock);
         if (!EnsureEngine())
             return false;
-        auto voice = std::make_unique<ma_sound>();
-        const ma_result result = ma_sound_init_from_file_w(&g_Engine, path.c_str(), MA_SOUND_FLAG_STREAM | MA_SOUND_FLAG_NO_SPATIALIZATION,
-            &g_VoiceGroup, nullptr, voice.get());
-        if (result != MA_SUCCESS)
-        {
-            Logger::Log(std::format("Can't open voice line {} (miniaudio error {})", Music::Narrow(path), static_cast<int>(result)), MODULE_NAME, 2);
+        auto voice = OpenVoice(path, volume);
+        if (!voice)
             return false;
-        }
         StopVoiceLocked();
-        ma_sound_set_volume(voice.get(), volume);
         ma_sound_start(voice.get());
         g_Voice = std::move(voice);
         return true;
+    }
+
+    bool PlayVoiceAlongside(const std::wstring& path, float volume)
+    {
+        std::lock_guard lock(g_Lock);
+        if (!EnsureEngine())
+            return false;
+        auto voice = OpenVoice(path, volume);
+        if (!voice)
+            return false;
+        StopOne(g_Voice2);
+        ma_sound_start(voice.get());
+        g_Voice2 = std::move(voice);
+        return true;
+    }
+
+    bool PlayPcm(std::vector<float> samples, uint32_t channels, uint32_t sampleRate, float volume)
+    {
+        std::lock_guard lock(g_Lock);
+        if (!EnsureEngine() || channels == 0 || sampleRate == 0 || samples.empty())
+            return false;
+        StopPcmLocked();
+        auto pcm = std::make_unique<Pcm>();
+        pcm->Samples = std::move(samples);
+        pcm->SampleRate = sampleRate;
+        ma_audio_buffer_config config = ma_audio_buffer_config_init(ma_format_f32, channels, pcm->Samples.size() / channels, pcm->Samples.data(), nullptr);
+        config.sampleRate = sampleRate;
+        if (ma_audio_buffer_init(&config, &pcm->Buffer) != MA_SUCCESS)
+            return false;
+        if (ma_sound_init_from_data_source(&g_Engine, &pcm->Buffer, MA_SOUND_FLAG_NO_SPATIALIZATION, &g_VoiceGroup, &pcm->Sound) != MA_SUCCESS)
+        {
+            ma_audio_buffer_uninit(&pcm->Buffer);
+            return false;
+        }
+        ma_sound_set_volume(&pcm->Sound, volume);
+        ma_sound_start(&pcm->Sound);
+        g_Pcm = std::move(pcm);
+        return true;
+    }
+
+    double PcmSeconds()
+    {
+        std::lock_guard lock(g_Lock);
+        if (!g_Pcm)
+            return -1.0;
+        ma_uint64 cursor = 0;
+        ma_data_source_get_cursor_in_pcm_frames(&g_Pcm->Buffer, &cursor);
+        return static_cast<double>(cursor) / g_Pcm->SampleRate;
+    }
+
+    void StopPcm()
+    {
+        std::lock_guard lock(g_Lock);
+        StopPcmLocked();
     }
 
     void StopVoice()
@@ -180,7 +268,7 @@ namespace Player
     bool IsVoicePlaying()
     {
         std::lock_guard lock(g_Lock);
-        return g_Voice && ma_sound_is_playing(g_Voice.get());
+        return (g_Voice && ma_sound_is_playing(g_Voice.get())) || (g_Voice2 && ma_sound_is_playing(g_Voice2.get()));
     }
 
     void SetVoiceVolume(float volume)
@@ -231,7 +319,9 @@ namespace Player
             return true;
         });
         if (g_Voice && !g_Suspended && ma_sound_at_end(g_Voice.get()))
-            StopVoiceLocked();
+            StopOne(g_Voice);
+        if (g_Voice2 && !g_Suspended && ma_sound_at_end(g_Voice2.get()))
+            StopOne(g_Voice2);
     }
 
     void Shutdown()
@@ -242,6 +332,7 @@ namespace Player
             ma_sound_uninit(&playing->Sound);
         g_Retired.clear();
         StopVoiceLocked();
+        StopPcmLocked();
         if (g_EngineReady)
         {
             ma_sound_group_uninit(&g_MusicGroup);

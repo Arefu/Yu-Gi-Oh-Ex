@@ -26,12 +26,12 @@ namespace WolfEx
 
         private readonly NumericUpDown _id = new() { Minimum = MinId, Maximum = MaxId, Value = MinId, Width = 90 };
         // The lists read as on the Card Manager ("13: Spell", "1: Dragon"); the item is the name cards.json uses.
-        private readonly ComboBox _kind = Combo(220, Kinds, CardNames.KindName), _type = Combo(150, Types, CardNames.RaceName),
+        private readonly ComboBox _kind = Combo(220, Kinds, CardNames.KindLabel), _type = Combo(150, Types, CardNames.RaceName),
             _attribute = Combo(120, Attributes, CardNames.AttributeName), _icon = Combo(120, Icons, i => CardNames.Icons[Math.Clamp(i, 0, CardNames.Icons.Length - 1)]),
             _limitation = Combo(120, Limitations, null);
         private readonly NumericUpDown _scale = new() { Maximum = 13, Width = 80 };
         private readonly LinkArrowPicker _arrows = new();
-        private readonly NumericUpDown _level = new() { Minimum = 1, Maximum = 12, Value = 4, Width = 80 },
+        private readonly NumericUpDown _level = new() { Minimum = 0, Maximum = 13, Value = 4, Width = 80 },
             _atk = new() { Maximum = 9990, Increment = 100, Width = 80 }, _def = new() { Maximum = 9990, Increment = 100, Width = 80 },
             _copies = new() { Maximum = 3, Value = 3, Width = 80 };
         private readonly Label _levelLabel = new() { Text = "Level:", AutoSize = true, Anchor = AnchorStyles.Left, Margin = new Padding(3, 7, 3, 3) };

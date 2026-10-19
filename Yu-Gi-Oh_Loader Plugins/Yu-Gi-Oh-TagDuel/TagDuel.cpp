@@ -143,16 +143,22 @@ namespace
 
     // Gives the partner seat a deck: the one picked on the deck screen, else the .ydc named by the setting, else a copy of the
     // teammate's deck (their own copy - the two hands and decks are still separate).
-    void FillPartnerDeck(int partnerSeat, int teammateSeat, int pickedDeck, const char* settingKey, const char* who)
+    void FillPartnerDeck(int partnerSeat, int teammateSeat, int pickedDeck, const char* settingKey, const char* who, bool copyOnly = false)
     {
         uint16_t* deck = SeatDeck(partnerSeat);
+        if (copyOnly)
+        {
+            // Online co-op: both machines must load the same four decks, and each only knows the two the game exchanged.
+            pickedDeck = -1;
+            settingKey = "";
+        }
         if (CopyPickedDeck(deck, pickedDeck))
         {
             Logger::WriteLog(std::format("TagDuel: {} (seat {}) plays picked deck {} ({} main, {} extra)", who, partnerSeat, pickedDeck, deck[kMainCount],
                 deck[kExtraCount]), MODULE_NAME, 0);
             return;
         }
-        std::string path = ReadSetting(settingKey, "");
+        std::string path = *settingKey ? ReadSetting(settingKey, "") : std::string();
         if (!path.empty())
         {
             if (path.size() < 2 || path[1] != ':')
@@ -182,6 +188,7 @@ namespace
 
     std::atomic<bool> g_SharedThisDuel = false;
     std::atomic<bool> g_AllowInMultiplayer = false;
+    std::atomic<bool> g_OnlineCoop = false;   // TagDuel::SetOnlineCoop
     bool g_HasSeatControllers = false;
     int g_SeatControllers[4] = { TagDuel::Human, TagDuel::AI, TagDuel::AI, TagDuel::AI };
 
@@ -255,6 +262,11 @@ namespace
         const __int64 result = orig_GameResultOnEnter(a1, a2, a3, a4);   // FinishAndUpdateSave counts TAG stats while tag is still on
         if (g_Enabled && !Call_GetIsDuelMultiplayer())
             Call_SetIsTagDuel(false);
+        if (g_OnlineCoop.exchange(false))
+        {
+            Call_SetIsTagDuel(false);
+            Logger::WriteLog("TagDuel: online co-op duel over - disarmed", MODULE_NAME, 0);
+        }
         return result;
     }
 
@@ -332,7 +344,8 @@ namespace
         g_SharedThisDuel = false;
         g_SoloParity = -1;
         g_LpPending = false;
-        if (g_Enabled && Call_GetIsDuelMultiplayer() && !g_AllowInMultiplayer)
+        const bool coop = g_OnlineCoop && Call_GetIsDuelMultiplayer();
+        if (g_Enabled && Call_GetIsDuelMultiplayer() && !g_AllowInMultiplayer && !coop)
         {
             Logger::WriteLog("TagDuel: online duel - left as the game set it up (no multiplayer plugin handles tag duels yet)", MODULE_NAME, 1);
             return orig_EngineInit();
@@ -367,13 +380,28 @@ namespace
                 // Seats pair by parity: 0 & 2 are one team, 1 & 3 the other.
                 const int local = Call_GetLocalSeat() & 1;
                 const int opponent = 1 - local;
-                FillPartnerDeck(local + 2, local, g_PickedPartnerDeck[0], "PartnerDeck", "your partner");
-                FillPartnerDeck(opponent + 2, opponent, g_PickedPartnerDeck[1], "OpponentPartnerDeck", "the opponent's partner");
+                FillPartnerDeck(local + 2, local, g_PickedPartnerDeck[0], "PartnerDeck", "your partner", coop);
+                FillPartnerDeck(opponent + 2, opponent, g_PickedPartnerDeck[1], "OpponentPartnerDeck", "the opponent's partner", coop);
             }
-            // A plugin's seat controllers (Yu-Gi-Oh-MP) win; otherwise the local seating picked from the menu.
+            // A plugin's seat controllers (Yu-Gi-Oh-MP) win; then online co-op; otherwise the local seating picked from the menu.
             int controllers[4];
             if (g_HasSeatControllers)
                 std::memcpy(controllers, g_SeatControllers, sizeof(controllers));
+            else if (coop)
+            {
+                // Each AI partner runs on its own player's machine; the other machine waits for it over the network, as for any remote turn.
+                const int local = Call_GetLocalSeat() & 1;
+                controllers[local] = TagDuel::Human;
+                controllers[local + 2] = TagDuel::AI;
+                controllers[1 - local] = TagDuel::Network;
+                controllers[3 - local] = TagDuel::Network;
+                // The partners look like their teammates (the game exchanged only the two players' duelists); the same on both machines.
+                const auto* sideCharacters = reinterpret_cast<const unsigned int*>(YGO::Addr::g_DuelSideCharacters);
+                Call_SetSideCharacter(local + 2, sideCharacters[local]);
+                Call_SetSideCharacter(3 - local, sideCharacters[1 - local]);
+                Logger::WriteLog(std::format("TagDuel: online co-op tag duel - you are seat {}, your AI partner seat {} (runs here), the other player's seats {} and {}",
+                    local, local + 2, 1 - local, 3 - local), MODULE_NAME, 0);
+            }
             else
                 ControllersFromRoles(controllers);
 
@@ -552,6 +580,19 @@ void TagDuel::AllowInMultiplayer(bool on)
 {
     Logger::WriteLog(std::format("TagDuel::AllowInMultiplayer({})", on), MODULE_NAME, 0);
     g_AllowInMultiplayer = on;
+}
+
+void TagDuel::SetOnlineCoop(bool on)
+{
+    Logger::WriteLog(std::format("TagDuel::SetOnlineCoop({})", on), MODULE_NAME, 0);
+    g_OnlineCoop = on;
+    if (on)
+        g_Enabled = true;
+}
+
+bool TagDuel::IsOnlineCoop()
+{
+    return g_OnlineCoop;
 }
 
 bool TagDuel::MultiplayerPluginLoaded()

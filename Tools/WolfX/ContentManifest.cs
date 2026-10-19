@@ -25,7 +25,7 @@ namespace WolfX
             ("storyscripts.json", "Yu-Gi-Oh-Campaign"), (@"tutorials\", "Yu-Gi-Oh-Campaign"),
             ("packs.json", "Yu-Gi-Oh-BetterCardShop"),
             ("prices.json", "Yu-Gi-Oh-BetterCardShop"),
-            ("music.json", "Yu-Gi-Oh-Music"), ("voices.json", "Yu-Gi-Oh-Music"),
+            ("music.json", "Yu-Gi-Oh-Media"), ("voices.json", "Yu-Gi-Oh-Media"), ("videos.json", "Yu-Gi-Oh-Media"),
             ("summoning.json", "Yu-Gi-Oh-Effects"), ("effects.json", "Yu-Gi-Oh-Effects"),
             (@"pages\", "Yu-Gi-Oh-RIX"), (@"menus\", "Yu-Gi-Oh-RIX"),
         ];

@@ -52,4 +52,12 @@ namespace TagDuel
     // that plugin sets the seat controllers (one machine runs each AI seat, the other sees it as Network).
     void AllowInMultiplayer(bool on);
     bool MultiplayerPluginLoaded();   // Yu-Gi-Oh-MP.dll is in the game
+
+    // Online co-op tag duel: each player and their own AI partner against the other player and theirs. Armed by the Tag Duel menu's
+    // Co-Op button (the host) and by Yu-Gi-Oh-MP when joining a lobby whose host armed it ("extag" lobby data), so both machines agree.
+    // On each machine: the local seat human, its partner (local seat + 2) AI run here, both remote seats Network - so each AI partner runs
+    // on its own player's machine and reaches the other one as that player's turns do. Partner decks are a copy of the teammate's deck on
+    // both machines (nothing extra to send). Disarmed at the duel's result screen.
+    void SetOnlineCoop(bool on);
+    bool IsOnlineCoop();
 }

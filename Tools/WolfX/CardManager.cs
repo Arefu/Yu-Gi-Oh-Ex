@@ -283,7 +283,7 @@ namespace WolfX
         private void BuildProperties()
         {
             foreach (var kind in Enum.GetValues<CARDS_INFO.CARD_Kind>().Where(k => (int)k >= 0))
-                _kind.Items.Add(new Choice((int)kind, $"{(int)kind}: {CardNames.KindName((int)kind)}"));
+                _kind.Items.Add(new Choice((int)kind, $"{(int)kind}: {CardNames.KindLabel((int)kind)}"));
             for (int a = 0; a <= 9; a++)
                 _attribute.Items.Add(new Choice(a, a == 0 ? "0: (none)" : $"{a}: {CardNames.AttributeName(a)}"));
             foreach (var type in Enum.GetValues<CARDS_INFO.CARD_Type>())

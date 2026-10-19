@@ -29,11 +29,11 @@ namespace WolfEx
         private static readonly string[] OptionItems = ["howToPlay", "controllerSettings", "settings", "videoSettings", "credits"];
 
         // "quit" stays at 4 (it has no argument); "page" opens Yu-Gi-Oh-Ex/pages/<name>.json, made on the Pages tab
-        private static readonly string[] ActionKinds = ["nothing", "goto", "press", "call", "quit", "page"];
+        private static readonly string[] ActionKinds = ["nothing", "goto", "press", "call", "quit", "page", "video"];
 
         private string _pagesFolder = "";
 
-        private static bool TakesArgument(int kind) => kind is > 0 and < 4 or 5;
+        private static bool TakesArgument(int kind) => kind is > 0 and < 4 or 5 or 6;
 
         private sealed class ButtonModel
         {
@@ -155,7 +155,7 @@ namespace WolfEx
                 _look.Text = looks.Contains(look) ? look : looks[Math.Min(looks.Length - 1, 2)];
                 _page.Enabled = _menu.Text != "options" && _menu.Enabled;
 
-                string[] choices = _actionType.SelectedIndex switch { 1 => Screens, 2 => MainItems, 5 => PageNames(), _ => [] };
+                string[] choices = _actionType.SelectedIndex switch { 1 => Screens, 2 => MainItems, 5 => PageNames(), 6 => VideoNames(), _ => [] };
                 _actionArg.Items.Clear();
                 _actionArg.Items.AddRange(choices);
                 _actionArg.Enabled = TakesArgument(_actionType.SelectedIndex) && _actionType.Enabled;
@@ -227,6 +227,13 @@ namespace WolfEx
         // ---- IContentPanel ----
 
         private static string FilePath(string extraCardsFolder) => Path.Combine(extraCardsFolder, "menus", "menus.json");
+
+        // movies\<name>.mp4 next to the pages folder (Yu-Gi-Oh-Media plays them full screen: {"video": "<name>"}).
+        private string[] VideoNames()
+        {
+            string movies = Path.Combine(Path.GetDirectoryName(_pagesFolder.TrimEnd('\\', '/')) ?? "", "movies");
+            return Directory.Exists(movies) ? Directory.GetFiles(movies, "*.mp4").Select(f => Path.GetFileNameWithoutExtension(f)!).OrderBy(n => n).ToArray() : [];
+        }
 
         private string[] PageNames() =>
             Directory.Exists(_pagesFolder)

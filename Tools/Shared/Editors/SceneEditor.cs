@@ -465,10 +465,10 @@ namespace Wolf.Editors
         private bool _binding;
         private List<string> _characterKeys = [];
         private Dictionary<string, List<string>> _expressions = new(StringComparer.OrdinalIgnoreCase);
-        private List<string> _backgrounds = [], _props = [];
+        private List<string> _backgrounds = [], _props = [], _videos = [];
 
         private static readonly string[] CharacterPositions = ["", "LEFT", "CENTER", "RIGHT", "NONE", "LEFT:FADEIN", "CENTER:FADEIN", "RIGHT:FADEIN", "FADEOUT"];
-        private static readonly string[] CommandPositions = ["BG", "PROP_ON", "PROP_OFF"];
+        private static readonly string[] CommandPositions = ["BG", "PROP_ON", "PROP_OFF", "VIDEO"];   // VIDEO: Yu-Gi-Oh-Media plays movies\<expression>.mp4 full screen
 
         public char Language { get; set; } = 'E';
 
@@ -526,6 +526,7 @@ namespace Wolf.Editors
             Tool("Narrator", "A narrator line after the selected step", () => AddStep(ScriptLine.Narrator));
             Tool("Background", "A background change after the selected step", () => AddStep(ScriptLine.Command, "BG", _backgrounds.FirstOrDefault() ?? ""));
             Tool("Prop", "Show a prop (Millennium items, cards...) after the selected step", () => AddStep(ScriptLine.Command, "PROP_ON", _props.FirstOrDefault() ?? ""));
+            Tool("Video", "A video (Yu-Gi-Oh-Ex\\movies\\<name>.mp4, full screen, needs Yu-Gi-Oh-Media) after the selected step", () => AddStep(ScriptLine.Command, "VIDEO", _videos.FirstOrDefault() ?? ""));
             Tool("Duplicate", "A copy of the selected step after it", () => { if (SelectedLine() is ScriptLine l) Insert(l.Clone()); });
             _tools.Items.Add(new ToolStripSeparator());
             Tool("Up", "Move the selected step up", () => MoveStep(-1));
@@ -633,6 +634,10 @@ namespace Wolf.Editors
             _characterKeys = [.. keys];
             _backgrounds = [.. paths.Where(p => p.StartsWith(@"pdui\dialog_bg\", StringComparison.OrdinalIgnoreCase)).Select(Path.GetFileNameWithoutExtension).OfType<string>().Distinct().Order()];
             _props = [.. paths.Where(p => p.StartsWith(@"pdui\dialog_props\", StringComparison.OrdinalIgnoreCase)).Select(Path.GetFileNameWithoutExtension).OfType<string>().Distinct().Order()];
+            // movies\*.mp4 in the Yu-Gi-Oh-Ex folder (VIDEO steps)
+            _videos = [];
+            if (files is GameFolderFiles folder && Path.GetDirectoryName(folder.ExPath("videos.json")) is string ex && Directory.Exists(Path.Combine(ex, "movies")))
+                _videos = [.. Directory.GetFiles(Path.Combine(ex, "movies"), "*.mp4").Select(Path.GetFileNameWithoutExtension).OfType<string>().Order()];
             _who.Items.Clear();
             _who.Items.Add(ScriptLine.Command);
             _who.Items.Add(ScriptLine.Narrator);
@@ -753,7 +758,7 @@ namespace Wolf.Editors
                 for (int i = 0; i < StoryScriptTable.AllLanguages.Length; i++)
                     _texts.Rows[i].Cells[1].Value = line.Texts.GetValueOrDefault(StoryScriptTable.AllLanguages[i], "");
                 _texts.Enabled = !line.IsCommand;
-                _whoName.Text = line.IsCommand ? "a background / prop change" : line.IsNarrator ? "the narrator box" : NameOf?.Invoke(line.Speaker) ?? "";
+                _whoName.Text = line.IsCommand ? (line.Position.Equals("VIDEO", StringComparison.OrdinalIgnoreCase) ? "a video (full screen)" : "a background / prop change") : line.IsNarrator ? "the narrator box" : NameOf?.Invoke(line.Speaker) ?? "";
             }
             finally
             {
@@ -767,7 +772,8 @@ namespace Wolf.Editors
             _position.Items.AddRange(line.IsCommand ? CommandPositions : line.IsNarrator ? ["", "CENTER", "NONE"] : CharacterPositions);
             _expression.Items.Clear();
             if (line.IsCommand)
-                _expression.Items.AddRange([.. (line.Position.Equals("BG", StringComparison.OrdinalIgnoreCase) ? _backgrounds : _props)]);
+                _expression.Items.AddRange([.. (line.Position.Equals("BG", StringComparison.OrdinalIgnoreCase) ? _backgrounds
+                    : line.Position.Equals("VIDEO", StringComparison.OrdinalIgnoreCase) ? _videos : _props)]);
             else if (!line.IsNarrator)
             {
                 _expression.Items.Add("");
@@ -798,7 +804,7 @@ namespace Wolf.Editors
                     FillChoices(line);
                     _position.Text = position;
                     _expression.Text = expression;
-                    _whoName.Text = line.IsCommand ? "a background / prop change" : line.IsNarrator ? "the narrator box" : NameOf?.Invoke(line.Speaker) ?? "";
+                    _whoName.Text = line.IsCommand ? (line.Position.Equals("VIDEO", StringComparison.OrdinalIgnoreCase) ? "a video (full screen)" : "a background / prop change") : line.IsNarrator ? "the narrator box" : NameOf?.Invoke(line.Speaker) ?? "";
                 }
                 finally
                 {

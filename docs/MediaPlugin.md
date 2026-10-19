@@ -1,4 +1,4 @@
-# Yu-Gi-Oh-Music
+# Yu-Gi-Oh-Media
 
 The plugin plays music files itself (miniaudio) in place of the game's Wwise music. How the game's audio works, and why the plugin
 hooks where it does, is in [AudioSystem.md](AudioSystem.md).
@@ -128,7 +128,21 @@ them into `voices\<character id>\`).
 
 - **Characters** are chardata ids (custom ones from characters.json too). The speaker is the character on that duel side:
   `g_DuelSideCharacters[0]` for the local player, `[1]` for the opponent.
-- **`when`:** `duelStart`, `turnStart`, `battlePhase`, `summon`, `attack`, `inHand`, `damage`, `lowLP`, `win`, `lose`, `draw`.
+- **`when`:** `duelStart`, `turnStart`, `battlePhase`, `summon`, `attack`, `directAttack`, `lethalAttack`, `activate`, `set`,
+  `destroyed`, `inHand`, `damage`, `lowLP`, `win`, `lose`, `draw` (2026-10-19 additions untested in game):
+  - `duelStart`: both duelists' lines play at the same time (they overlap), one each.
+  - `turnStart`: **`standing`** `winning` / `losing` / `even` (the speaker's LP against the other's); **`amount`** = only when the
+    speaker's LP is at or below it.
+  - `attack` / `directAttack` / `lethalAttack`: the most specific one with a line is said: an attack whose damage (ATK, or ATK minus
+    an attack-position target's ATK; from `Calc_EffectiveAtkDef_Modifiers`) reaches the defender's LP, else a direct attack (no
+    monster in the target zone), else any attack.
+  - `activate`: msg 0x2D (a2 = card, a3 = chain link id; 0x11 `ChainLinkResolve` closes it). **`response`** `true` = only while
+    another link is open (a Trap springing in response), `false` = only to start a chain. **`kind`** `monster` / `spell` / `trap`.
+  - `set`: a card that turns up face-down in a Monster, Spell & Trap or Field Zone. `kind` as above.
+  - `destroyed`: a card that left the field while its owner's Graveyard grew, in a message that summoned nothing (tributes and
+    materials don't count). `kind` as above.
+  - `summon` **`how`** also takes `fusion`, `synchro`, `xyz`, `link`, `ritual`, `pendulum` (g_EventRecord +0x10: 1 = proper summon,
+    0x40 = Pendulum, and the card's KIND_TABLE frame); `special` matches all of them.
 - **`who`:** `me` (default) = the character did it / it happened to them; `opponent` = said when the other duelist does it (a
   reaction). Not used by duelStart / win / lose / draw.
 - **`amount`:** `damage` = at least this much; `lowLP` = said when LP falls from above `amount` to `amount` or below (reaching 0 is
@@ -145,7 +159,8 @@ them into `voices\<character id>\`).
 - **`against`:** only when the other duelist is this character.
 - **`files`:** one is picked each time from a shuffled bag: none repeats until all of the line's files have played, and a new round
   never starts with the one that just played.
-- **`once`** (default **true**): at most once per duel. **`chance`**: percent (default 100). **`volume`**: on top of the rest.
+- **`once`** (default **true**): at most once per duel; `"turn"` = at most once per turn (two Dark Magicians attacking say one
+  line); `false` = every time. **`chance`**: percent (default 100). **`volume`**: on top of the rest.
 - **Top level:** `volume` (on top of the game's **sound effect** volume, which voice lines follow), `duck` (the plugin's music level
   while a line plays, 0-1; the game's own Wwise music is not ducked), `gap` (seconds of quiet after a line before the next).
 - One line at a time: if a line is playing or the gap hasn't passed, other events are skipped (not queued; inHand waits). Duel
@@ -220,3 +235,48 @@ instead of relying on `SetVolumeLevel`) and frees tracks that finished fading ou
 `DllMain`.
 
 Export: `Music_Reload()` re-reads music.json (the playing track carries on until the game changes music).
+
+## Videos (mp4)
+
+Built 2026-10-19, untested in game. `Video.cpp`. The plugin was renamed from Yu-Gi-Oh-Music to Yu-Gi-Oh-Media for this
+(Config.ini key `Yu-Gi-Oh-Media=1`).
+
+- **`movies\<name>.mp4`** in `Yu-Gi-Oh-Ex` (or a mod, `YGO::Mods::Find`) plays wherever the game would play `movies/<name>.bik`:
+  the 23 summon cut-ins (`moviesĀ7.mp4` = Blue-Eyes White Dragon's) and `movies\exodia.mp4` (the Exodia finish).
+- **`movies\<card id>.mp4` for any other card** (custom cards too) plays as that card's summon cut-in when it is summoned
+  (`Video::OnSummon`, from the voice lines' field watch). Cards the game has a cut-in for keep the game's timing.
+- **Full screen, anywhere** (startup, menus, duels, story): letterboxed on black over the whole game, Esc or a click skips it.
+  - **`videos.json`** (Yu-Gi-Oh-Ex or a mod, merged): `{ "startup": ["intro"], "storyDuels": { "186": { "before": "a", "after": "b" } } }`.
+    Startup videos play as soon as the game's swap chain exists; `before` as the story duel's engine starts, `after` at its result.
+  - **Menus and pages:** every `movies\<name>.mp4` is registered as the RIX action `video:<name>`; menu files and pages take
+    `{"video": "<name>"}` (or `{"call": "video:<name>"}`). WolfX Menus: action "play a video".
+  - **`Video_Play("name")`** (export) for other plugins.
+- **WolfX: Sound > Videos** lists the mp4s (what each plays as), adds one by name or as a card's cut-in (card picker), renames, deletes,
+  previews in Windows' player, and edits videos.json (startup list in order, story duel before / after).
+- Formats: whatever Windows Media Foundation decodes. H.264 + AAC in an .mp4 always works; H.265 needs the HEVC extension.
+
+### How it works
+
+| Hook (Detours) | |
+|---|---|
+| `Movie_Open` 0x14080B440 | An mp4 for the name: open the game's .bik (or `movies/exodia.bik` as a carrier when there is none), pause and mute Bink, start a decoder thread for the mp4 sized to the movie texture (`ctx+248` RTV). |
+| `Movie_UpdateFrame` 0x14080AF90 | For an mp4: upload the frame that is due (RGBA, `UpdateSubresource` on Bink's deferred context `0x142924178`, `FinishCommandList`, handed to the render thread with `0x1408C6AE0`, as Bink's frames are). The clock is the sound track (miniaudio, `Player::PlayPcm`); `ctx+9 = 0` at the end closes the movie screen. |
+| `Movie_Close` 0x14080ADB0 | Stops the decoder and the sound, then the original. |
+| file exists 0x140760D80 | `movies/<name>.bik` "exists" when an mp4 does, so `SpecialMovie_Start` (0x1407A3140) goes ahead for new names. |
+
+The decoder thread (Media Foundation Source Reader) decodes the whole sound track first (float PCM), then video frames a few ahead,
+scaled by Media Foundation to the movie texture's size and converted from BGRX to RGBA. Starting a movie by name copies
+`SpecialMovie_PlayByCardId` 0x1407A2F80: `new(0xB8)`, construct 0x1407A2D90, register 0x14078B8F0, `+44 = 4`, `SpecialMovie_Start`.
+
+The full-screen player hooks `IDXGISwapChain::Present` (the game's `ppSwapChain` 0x14332D380, vtable slot 8) from the watcher thread once
+the swap chain exists, decodes at the video's own size, uploads to its own texture on the immediate context and draws a full-screen
+triangle (shaders compiled at runtime with d3dcompiler_47) into a letterboxed viewport after clearing the back buffer, saving and
+restoring the pipeline state it touches. The game keeps running underneath but gets no input while a video is up (or queued): the
+input accessors on `g_InputManager` 0x142924010 (`YGO::Input::GetPressed` / `GetRepeat` / `GetHeld` / `TakeMouseClick` /
+`InputCancelPressed` / `TakeRightClick` / `TakeWheel` / 0x140800940) are hooked to still run (so a click or Back is consumed, not kept
+for afterwards) and answer 0. Esc or a click only skips the video.
+
+**Story scenes:** a scriptdata line `command` / `VIDEO` / `<name>` (speaker / position / expression) plays `movies\<name>.mp4` full
+screen. `StoryScene_PlayLine` (0x14082F890) is hooked: for a VIDEO line it queues the video and returns 1, as the game does for its BG /
+PROP commands, so the scene moves on to the next line, which waits under the video (no input reaches the game while it plays). Without
+Yu-Gi-Oh-Media the game skips the line (an unknown command). WolfX Story editor: **Video** step (lists the movies folder).

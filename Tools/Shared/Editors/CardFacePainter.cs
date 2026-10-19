@@ -51,18 +51,31 @@ namespace Wolf.Editors
             _ => "card_kouka",
         };
 
+        /// <summary>
+        /// The kind as printed on the card's type line. Verified against the exe's KIND_TABLE (0x140BF7820: Frame, BaseFrame, Category,
+        /// DeckSection, Tuner, Pendulum) and CARD_Prop.bin: 27-31 and 40 print like 1/28→Toon etc. but have DeckSection 1 (cannot be
+        /// Normal Summoned), so use KindLabel where two kinds must be told apart. 11/12 (frames 4/5), 20 (Dark Tuner), 21 (Dark Synchro)
+        /// and 31 (Dark Tuner, special only) are Tag Force leftovers no card uses; 20/21 crash the game.
+        /// </summary>
         public static string KindName(int kind) => kind switch
         {
             0 => "Normal", 1 => "Effect", 2 => "Fusion", 3 => "Fusion / Effect", 4 => "Ritual", 5 => "Ritual / Effect", 6 => "Toon",
-            7 => "Spirit", 8 => "Union", 9 => "Gemini", 10 => "Token", 13 => "Spell", 14 => "Trap", 15 => "Tuner / Normal",
-            16 => "Tuner / Effect", 17 => "Synchro", 18 => "Synchro / Effect", 19 => "Synchro / Tuner / Effect", 22 => "Xyz",
+            7 => "Spirit", 8 => "Union", 9 => "Gemini", 10 => "Token", 13 => "Spell", 14 => "Trap", 11 => "Effect (unused frame 4)", 12 => "Effect (unused frame 5)", 15 => "Tuner / Normal",
+            16 => "Tuner / Effect", 17 => "Synchro", 18 => "Synchro / Effect", 19 => "Synchro / Tuner / Effect", 20 => "Dark Tuner / Effect", 21 => "Dark Synchro", 22 => "Xyz",
             23 => "Xyz / Effect", 24 => "Flip / Effect", 25 => "Pendulum", 26 => "Pendulum / Effect", 27 => "Effect", 28 => "Toon / Effect",
-            29 => "Spirit / Effect", 30 => "Tuner", 32 => "Tuner / Flip / Effect", 33 => "Pendulum / Tuner / Effect",
+            29 => "Spirit / Effect", 30 => "Tuner / Effect", 31 => "Dark Tuner / Effect", 32 => "Tuner / Flip / Effect", 33 => "Pendulum / Tuner / Effect",
             34 => "Xyz / Pendulum / Effect", 35 => "Pendulum / Flip / Effect", 36 => "Synchro / Pendulum / Effect",
             37 => "Union / Tuner / Effect", 38 => "Ritual / Spirit / Effect", 39 => "Fusion / Tuner", 40 => "Pendulum / Effect",
             41 => "Fusion / Pendulum / Effect", 42 => "Link", 43 => "Link / Effect", 44 => "Pendulum / Tuner / Normal",
             45 => "Pendulum / Spirit / Effect", _ => $"kind {kind}",
         };
+
+        /// <summary>Kinds that cannot be Normal Summoned although their type line matches another kind (KIND_TABLE DeckSection 1).</summary>
+        public static bool IsSpecialSummonOnly(int kind) => kind is 27 or 28 or 29 or 30 or 31 or 40;
+
+        /// <summary>KindName made unique for pickers: 1 "Effect" vs 27 "Effect (Special Summon only)"; unusable kinds say so.</summary>
+        public static string KindLabel(int kind) =>
+            KindName(kind) + (IsSpecialSummonOnly(kind) ? " (Special Summon only)" : "") + (kind is 20 or 21 ? " (crashes the game)" : kind is 11 or 12 or 31 ? " (unused)" : "");
 
         public static string AttributeName(int attribute) => attribute switch
         {

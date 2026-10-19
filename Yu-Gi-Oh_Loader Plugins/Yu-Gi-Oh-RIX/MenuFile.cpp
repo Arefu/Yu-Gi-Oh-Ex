@@ -147,7 +147,7 @@ namespace
     {
         if (!node.is_object() || node.size() != 1)
         {
-            problem = "an action is an object with one of goto, press, call, page or quit";
+            problem = "an action is an object with one of goto, press, call, page, video or quit";
             return false;
         }
 
@@ -183,9 +183,15 @@ namespace
             step.Type = Step::Page;
             step.Name = node["page"].get<std::string>();
         }
+        else if (node.contains("video") && node["video"].is_string())
+        {
+            // { "video": "intro" } = { "call": "video:intro" }: Yu-Gi-Oh-Media registers an action per movies\<name>.mp4
+            step.Type = Step::Call;
+            step.Name = "video:" + node["video"].get<std::string>();
+        }
         else
         {
-            problem = "an action is goto, press, call, page or quit";
+            problem = "an action is goto, press, call, page, video or quit";
             return false;
         }
         return true;

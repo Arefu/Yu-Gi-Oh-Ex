@@ -40,6 +40,7 @@ namespace Wolf.Editors
         private readonly Label[] _deckInfo = [new() { AutoSize = true, Margin = new Padding(6, 7, 3, 3) }, new() { AutoSize = true, Margin = new Padding(6, 7, 3, 3) }];
         private readonly TextBox[] _costume = [new() { Width = 100 }, new() { Width = 100 }];
         private readonly IdCombo _arena = new(220);
+        private HashSet<string> _openedProblems = [];   // problems the files already had (a mod's dueldata may use order 49 or id 226)
         private readonly IdCombo _rewardPack = new(260);
         private readonly IdCombo _sku = new(220);
         private readonly ComboBox _tutorial = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 330 };
@@ -354,6 +355,7 @@ namespace Wolf.Editors
                 _sceneDisk = scriptFiles;
                 _scriptBaseline = _scripts?.Clone();
                 _baseline = _table.Clone();
+                _openedProblems = [.. _table.Problems()];
                 // duels and scenes WolfX added are in dueldata / scriptdata too: storyduels.json lists them, so they count as new, not the game's
                 var json = StoryDuelJson.Load(JsonPath);
                 foreach (var id in (json["nativeDuels"] as System.Text.Json.Nodes.JsonArray ?? []).OfType<System.Text.Json.Nodes.JsonValue>())
@@ -394,7 +396,8 @@ namespace Wolf.Editors
         {
             if (_table == null || _baseline == null || _gameFiles == null)
                 return false;
-            var problems = _table.Problems();
+            // only what was changed here blocks a save; problems the opened files already had are left as they are
+            var problems = _table.Problems().Where(p => !_openedProblems.Contains(p)).ToList();
             if (_scripts != null)
                 problems.AddRange(_scripts.Scripts.Where(s => s.Lines.Count == 0).Select(s => $"Scene {s.Name} has no steps (remove it instead)."));
             problems.AddRange(_table.Duels.Where(d => d.Key.Any(ch => ch > 127) || d.Costumes.Any(c => c.Any(ch => ch > 127))).Select(d => $"Duel {d.Id}: the key and costumes must be ASCII."));
@@ -528,7 +531,10 @@ namespace Wolf.Editors
                 _heading.Text = $"{d.Title(Language)} ({d.Id}){(isNew ? " - new" : "")}";
                 _key.Text = d.Key;
                 _series.SelectedIndex = Math.Max(0, _seriesChoices.IndexOf(d.Series));   // a series with no Campaign series entry shows the first
-                _order.Value = Math.Clamp(d.Order, 1, StoryDuelTable.MaxOrder);
+                // never clamp: Edited() writes the box back, so a mod's order 49 would silently become 48 on any edit
+                _order.Maximum = Math.Max(StoryDuelTable.MaxOrder, d.Order);
+                _order.Minimum = Math.Min(1, d.Order);
+                _order.Value = d.Order;
                 _tutorial.SelectedIndex = d.Tutorial switch { null => 0, 0 => 1, int n and >= 21 and <= 99 => n - 21 + 2, _ => 0 };
                 for (int side = 0; side < 2; side++)
                 {

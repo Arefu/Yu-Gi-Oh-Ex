@@ -14,7 +14,7 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{CE99095E-6494-4A7D-81F0-44B9CB1889AE}</ProjectGuid>
-    <RootNamespace>YuGiOhMusic</RootNamespace>
+    <RootNamespace>YuGiOhMedia</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -100,6 +100,7 @@
     <ClCompile Include="Music.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Voice.cpp" />
+    <ClCompile Include="Video.cpp" />
     <ClCompile Include="MiniaudioImpl.cpp">
       <SDLCheck>false</SDLCheck>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
@@ -111,6 +112,7 @@
     <ClInclude Include="Music.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Voice.h" />
+    <ClInclude Include="Video.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Yu-Gi-Oh.def" />
