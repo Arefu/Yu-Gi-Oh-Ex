@@ -171,7 +171,7 @@ namespace
                 // the game loaded it from deckdata: it only needs its unlock (and its cards, ApplyCards)
                 entry.IsNew = record->FileName != nullptr;
                 if (!entry.IsNew)
-                    Logger::WriteLog(std::format("decks.json: deck {} should be in deckdata but isn't: save it again in WolfX", entry.Id), MODULE_NAME, 2);
+                    Logger::WriteLog(std::format("decks.json: archive missing data: deck {} isn't in deckdata (is the YGO_2020-Ex patch archive there?)", entry.Id), MODULE_NAME, 2);
                 continue;
             }
             const bool ours = entry.IsNew && entry.FileName && record->FileName == entry.FileName->c_str();

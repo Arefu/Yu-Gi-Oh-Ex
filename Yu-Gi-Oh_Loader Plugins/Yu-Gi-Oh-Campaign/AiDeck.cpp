@@ -28,10 +28,14 @@ namespace
     const auto kMainMenuSetupArrays = YGO::RIX::MainMenu::SetupArrays;
     auto orig_MainMenuSetupArrays = reinterpret_cast<void(__fastcall*)(void*)>(kMainMenuSetupArrays);
 
-    std::string OptionsPath() { return Campaign::GameFolder() + "campaign-options.json"; }
+    std::string OptionsPath() { return Campaign::GameFolder() + "Yu-Gi-Oh-Ex\\campaign-options.json"; }
 
     void ReadOptions()
     {
+        // moved from next to the exe into Yu-Gi-Oh-Ex (2026-10-19): take an old file along once
+        const std::string old = Campaign::GameFolder() + "campaign-options.json";
+        if (GetFileAttributesA(OptionsPath().c_str()) == INVALID_FILE_ATTRIBUTES && GetFileAttributesA(old.c_str()) != INVALID_FILE_ATTRIBUTES)
+            MoveFileExA(old.c_str(), OptionsPath().c_str(), MOVEFILE_COPY_ALLOWED);
         std::ifstream file(OptionsPath());
         if (!file) return;
         try

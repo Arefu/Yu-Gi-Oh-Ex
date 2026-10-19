@@ -7,7 +7,7 @@
 // same "Opponent's Deck" step comes. That step lists every deck the game has, the opponent's own first; Duel starts, Back returns to your
 // deck. The last pick per opponent is where the list starts next time (until the game closes).
 // Help & Options > Plugins > Custom Opponent Decks toggles those additional opponent-deck steps for Campaign and normal Free Duel.
-// On by default; the choice is saved in campaign-options.json next to the game. Tag Duel keeps its required multi-seat picker.
+// On by default; the choice is saved in Yu-Gi-Oh-Ex\campaign-options.json. Tag Duel keeps its required multi-seat picker.
 //
 // The deck is swapped where the duel copies it in: Duel_SetupSeat (0x14076A7B0) for seat 1, only for the duel it was picked for, offline,
 // not tutorial / battle pack / challenge. See docs/Widgets.md (DeckSelectList) and YuGiOh-RIX.h.

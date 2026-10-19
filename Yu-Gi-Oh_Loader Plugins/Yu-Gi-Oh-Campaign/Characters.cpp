@@ -131,7 +131,7 @@ namespace
                 // the game loaded it from chardata: only check it is there (for the unlock)
                 entry.IsNew = record->Key && entry.Key && _stricmp(record->Key, entry.Key->c_str()) == 0;
                 if (!entry.IsNew)
-                    Logger::WriteLog(std::format("characters.json: duelist {} should be in chardata but isn't: save it again in WolfX", entry.Id), MODULE_NAME, 2);
+                    Logger::WriteLog(std::format("characters.json: archive missing data: duelist {} isn't in chardata (is the YGO_2020-Ex patch archive there?)", entry.Id), MODULE_NAME, 2);
                 continue;
             }
             const bool ours = entry.IsNew && entry.Key && record->Key == entry.Key->c_str();
