@@ -363,16 +363,40 @@ using fn_DuelCardView_UpdateLevelBadge = void(__fastcall*)(__int64);
 static fn_DuelCardView_UpdateLevelBadge orig_DuelCardView_UpdateLevelBadge = nullptr;
 static int kHideLevelBadge = 1;
 
+// The stat plate under a face-up monster on the field (level badge, ATK / DEF, attribute and type icons). DuelCardView_Refresh
+// (0x1407C6660) shows the view, sets its Link arrows, then DuelCardView_UpdateStatPlate (0x1407C6180) enables the plate's nodes:
+// view+152 the plate, +376 / +392 the ATK box / text, +408 / +424 the DEF box / text (not on Link monsters), +280 and +328 the two
+// icons. The anime frames carry all of that on the card, so with HideFieldStats=1 (default) those nodes are switched off again after the
+// game's refresh; the level badge on the field goes too (see Hook_DuelCardView_UpdateLevelBadge). Link arrows (+472..) stay.
+// Its caller (a loop at 0x1407C54C0: mov rcx, rbx; call) keeps only callee-saved registers, so a plain detour is safe.
+using fn_DuelCardView_Refresh = void(__fastcall*)(__int64);
+static fn_DuelCardView_Refresh orig_DuelCardView_Refresh = nullptr;
+using fn_WidgetBase_SetEnabled = void(__fastcall*)(__int64, char);
+static fn_WidgetBase_SetEnabled game_WidgetBase_SetEnabled = nullptr;
+static int kHideFieldStats = 1;
+constexpr int kStatPlateNodes[] = { 152, 376, 408, 280, 328 };
+
+extern "C" void Hook_DuelCardView_Refresh(__int64 view)
+{
+    orig_DuelCardView_Refresh(view);
+    if (kHideFieldStats == 0 || view == 0)
+        return;
+    for (int offset : kStatPlateNodes)
+        if (const __int64 node = *reinterpret_cast<__int64*>(view + offset))
+            game_WidgetBase_SetEnabled(node, 0);
+}
+
 extern "C" void Hook_DuelCardView_UpdateLevelBadge(__int64 view)
 {
     auto* data = view ? *reinterpret_cast<unsigned char**>(view + 0x30) : nullptr;
-    if (kHideLevelBadge == 0 || data == nullptr)
+    if ((kHideLevelBadge == 0 && kHideFieldStats == 0) || data == nullptr)
     {
         orig_DuelCardView_UpdateLevelBadge(view);
         return;
     }
     const unsigned zone = (*reinterpret_cast<unsigned short*>(data + 164) >> 1) & 0x1F;
-    if (kHideLevelBadge == 1 && zone != 13)
+    const bool hide = kHideLevelBadge == 2 || (kHideLevelBadge == 1 && zone == 13) || (kHideFieldStats != 0 && zone != 13);
+    if (!hide)
     {
         orig_DuelCardView_UpdateLevelBadge(view);
         return;
@@ -592,6 +616,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         kUseLargeAtkDefFont = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "UseLargeAtkDefFont", 1, ".\\Config.ini") != 0;
         kHideLevelBadge = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "HideLevelBadge", 1, ".\\Config.ini");
         orig_DuelCardView_UpdateLevelBadge = (fn_DuelCardView_UpdateLevelBadge)ResolveVA(0x1407C6980);
+        kHideFieldStats = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "HideFieldStats", 1, ".\\Config.ini");
+        orig_DuelCardView_Refresh = (fn_DuelCardView_Refresh)ResolveVA(0x1407C6660);
+        game_WidgetBase_SetEnabled = (fn_WidgetBase_SetEnabled)ResolveVA(0x14075A490);
 
         p_g_bIsJpVersion = (bool*)ResolveVA(YGO::Addr::g_bIsJpVersion);
         orig_Get_FontById = (fn_Get_FontById)ResolveVA(0x140872C60);
@@ -617,6 +644,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         DetourAttach(&(PVOID&)orig_sub_14074E7D0, Hook_sub_14074E7D0);
         DetourAttach(&(PVOID&)orig_IconId_Attribute, Hook_IconId_Attribute);
         DetourAttach(&(PVOID&)orig_DuelCardView_UpdateLevelBadge, Hook_DuelCardView_UpdateLevelBadge);
+        if (kHideFieldStats != 0)
+            DetourAttach(&(PVOID&)orig_DuelCardView_Refresh, Hook_DuelCardView_Refresh);
         if (kHideLevelBadge != 0)
         {
             // Only attached when hiding: the hook never calls the original, so it needs none of its arguments.
