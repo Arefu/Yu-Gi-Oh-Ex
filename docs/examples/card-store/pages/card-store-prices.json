@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "header": "card-store-prices",
+  "values": {
+    "monster_price": "{value:attack_price}",
+    "spell_trap_price": "{value:rarity_price}",
+    "flat_price": "500",
+    "password_cost": "1000",
+    "ATK": "{game:atk.{var:card}|0}",
+    "DEF": "{= if({game:link.{var:card}|0}, ATK * 0.8, {game:def.{var:card}|0})}",
+    "LEVEL": "{game:level.{var:card}|0}",
+    "RARE": "{game:rare.{var:card}|0}",
+    "LINK": "{game:link.{var:card}|0}",
+    "attack_price": "{= clamp(round(ATK * 1.8 / 5 / 10) * 10, 100, 999999)}",
+    "classic_price": "{= clamp(round(11.56 * exp(0.001179 * (ATK \u002B DEF)) / 10) * 10, 100, 10000)}",
+    "formula_price": "{= clamp(round(ATK * 1.8 / 5 / 10) * 10, 100, 999999)}",
+    "rarity_price": "{game:median.monster_price.{game:rarity.{var:card}|common}}",
+    "spell_formula_price": "{= clamp(round((500 \u002B 500 * RARE) / 10) * 10, 100, 999999)}",
+    "base_price": "{= if({game:spell.{var:card}|0} or {game:trap.{var:card}|0}, {value:spell_trap_price}, if({game:known.{var:card}|0}, {value:monster_price}, {value:rarity_price}))}",
+    "price": "{value:fixed.{var:card}|{value:base_price}}",
+    "password_price": "{value:fixedpassword.{var:card}|{value:password_cost}}"
+  },
+  "elements": []
+}

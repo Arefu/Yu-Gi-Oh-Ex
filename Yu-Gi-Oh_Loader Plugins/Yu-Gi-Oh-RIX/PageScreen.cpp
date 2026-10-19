@@ -8,6 +8,7 @@
 //   slider   ScreenHelpSetting::tickLine_t (408 bytes, the 10-tick volume bar): Constructor, Setup, a tick node's SetEnabled per level
 //   digits   widget_EntryDigit (the Live setting code wheel), one per digit
 //   cardInfo widget_CardDetails (the deck editor's card panel)
+//   cardBox  widget_CardDisplay (the Random Pack Store's box of pulled cards): Constructor, CreateFromLayout(desc), SetCards, ProcessInput
 //   message / confirm  the screen's widget_Dialog (screen+432): ShowMessageText / ShowYesNo
 //   image / text       plain DFX layers (decoration)
 //
@@ -19,6 +20,10 @@
 #include <Windows.h>
 #include <detours.h>
 #include <algorithm>
+#include <cctype>
+#include <unordered_set>
+#include <set>
+#include <cmath>
 #include <cstring>
 #include <deque>
 #include <filesystem>
@@ -38,6 +43,7 @@
 #include "YuGiOh/YuGiOh-Addresses.h"
 #include "YuGiOh/YuGiOh-CARDS.h"
 #include "YuGiOh/YuGiOh-SAVE.h"
+#include "YuGiOh/YuGiOh-PASS.h"
 #include "Yu-Gi-Oh-Mods.h"
 
 namespace R = YGO::RIX;
@@ -398,10 +404,145 @@ namespace
         }
     }
 
+    // ---- page values (docs/PageScript.md "Values and maths"): named texts a page file defines ("values": { "name": "text" }, BOB
+    // `value name = "text";`), read as {value:name} and by name inside {= ...}. They are worked out when read, so a value that names
+    // {var:card} follows the card. Shared by every page (a later definition replaces an earlier one).
+    std::map<std::string, std::string> g_PageValues;
+    std::string Expand(const std::string& text);
+
+    // CARD_PROPS::Kind (File Type Libraries/CARD_Props)
+    constexpr int kKindToken = 10, kKindSpell = 13, kKindTrap = 14, kKindLink = 42, kKindLinkEffect = 43;
+    constexpr int kMaxStat = 5000;   // the highest real ATK / DEF; above it (or below 0) is "?"
+
+    const YGO::CARDS::CARD_PROPS* SafeProps(short id)
+    {
+        __try
+        {
+            return YGO::CARDS::Get_CardPropsFromKonamiId(id);
+        }
+        __except (EXCEPTION_EXECUTE_HANDLER)
+        {
+            return nullptr;
+        }
+    }
+
+    // The cards in a rare slot of any booster pack loaded now: g_PackRecords[128], 0x68 each, Kind at +12 ('R' = a booster), Contents at
+    // +24 = u16 common count, u16 rare count, common ids, rare ids. Built when first asked for, again after a page opens.
+    std::unordered_set<uint16_t> g_RareCards;
+    bool g_RareCardsBuilt = false;
+
+    bool IsRareCard(uint16_t id)
+    {
+        if (!g_RareCardsBuilt)
+        {
+            g_RareCards.clear();
+            const auto* records = reinterpret_cast<const uint8_t*>(YGO::Addr::g_PackRecords);
+            for (uint32_t i = 0; i < 128; ++i)
+            {
+                const uint8_t* record = records + i * 0x68;
+                const uint16_t* contents = *reinterpret_cast<uint16_t* const*>(record + 24);
+                if (*reinterpret_cast<const uint32_t*>(record + 12) != 'R' || !contents)
+                    continue;
+                const uint16_t* ids = contents + 2 + contents[0];
+                g_RareCards.insert(ids, ids + contents[1]);
+            }
+            g_RareCardsBuilt = true;
+        }
+        return g_RareCards.count(id) != 0;
+    }
+
+    // game:atk.<id> ... : a card's own values. ATK / DEF are empty when they are "?" (game:known.<id> says which).
+    std::string CardValue(const std::string& what, int id)
+    {
+        const YGO::CARDS::CARD_PROPS* card = id > 0 && id < 0x8000 ? SafeProps(static_cast<short>(id)) : nullptr;
+        if (!card || card->KonamiID == 0)
+            return {};
+        const bool spell = card->Kind == kKindSpell, trap = card->Kind == kKindTrap;
+        const bool link = card->Kind == kKindLink || card->Kind == kKindLinkEffect;
+        auto stat = [](int v) { return v >= 0 && v <= kMaxStat ? std::to_string(v) : std::string(); };
+        if (what == "atk") return stat(card->ATK);
+        if (what == "def") return link ? std::string() : stat(card->DEF);
+        if (what == "level") return std::to_string(card->Level);
+        if (what == "kind") return std::to_string(card->Kind);
+        if (what == "attribute") return std::to_string(card->Attribute);
+        if (what == "type") return std::to_string(card->Type);
+        if (what == "spell") return spell ? "1" : "0";
+        if (what == "trap") return trap ? "1" : "0";
+        if (what == "monster") return !spell && !trap && card->Kind != kKindToken ? "1" : "0";
+        if (what == "link") return link ? "1" : "0";
+        if (what == "known") return card->ATK >= 0 && card->ATK <= kMaxStat ? "1" : "0";
+        if (what == "rare") return IsRareCard(static_cast<uint16_t>(id)) ? "1" : "0";
+        if (what == "rarity") return IsRareCard(static_cast<uint16_t>(id)) ? "rare" : "common";
+        return {};
+    }
+
+    // game:median.<value>.<rare|common>: the median of a page value over every monster with a known ATK of that pack rarity, worked out
+    // with var:card set to each one in turn (the Card Store prices spells and traps like a typical monster). Kept until a page opens.
+    std::map<std::string, std::string> g_Medians;
+
+    std::string Median(const std::string& value, const std::string& rarity)
+    {
+        const std::string key = value + "." + rarity;
+        if (auto it = g_Medians.find(key); it != g_Medians.end())
+            return it->second;
+        const bool wantRare = rarity == "rare";
+        const std::string saved = g_Vars["card"];
+        std::vector<double> numbers;
+        auto propsOf = reinterpret_cast<YGO::CARDS::CARD_PROPS*(__fastcall*)(unsigned int)>(YGO::CARDS::Get_CardPropsFromInternalId);
+        const uint32_t limit = R::Trunk::InternalIdLimit();
+        for (uint32_t internal = 1; internal < limit; ++internal)
+        {
+            const YGO::CARDS::CARD_PROPS* card = propsOf(internal);
+            if (!card || card->KonamiID == 0 || card->Kind == kKindToken || card->Kind == kKindSpell || card->Kind == kKindTrap ||
+                card->ATK < 0 || card->ATK > kMaxStat || IsRareCard(static_cast<uint16_t>(card->KonamiID)) != wantRare)
+                continue;
+            g_Vars["card"] = std::to_string(card->KonamiID);
+            const std::string number = Expand("{value:" + value + "}");
+            if (!number.empty())
+                numbers.push_back(std::atof(number.c_str()));
+        }
+        g_Vars["card"] = saved;
+        std::string result;
+        if (!numbers.empty())
+        {
+            std::nth_element(numbers.begin(), numbers.begin() + numbers.size() / 2, numbers.end());
+            result = std::format("{}", numbers[numbers.size() / 2]);
+        }
+        Logger::WriteLog(std::format("Page values: median of '{}' over {} {} monsters = {}", value, numbers.size(), rarity, result), MODULE_NAME, 0);
+        return g_Medians[key] = result;
+    }
+
+    // Forgets the rarities and medians (a page opened: packs.json or the values may have changed).
+    void ResetComputed()
+    {
+        g_RareCardsBuilt = false;
+        g_Medians.clear();
+    }
+
+    // Values plugins supply (RIX_RegisterPageValue): game:<name>.<argument> asks the plugin that registered <name>, e.g.
+    // game:mymod.thing -> what the plugin that registered "mymod" answers for "thing".
+    struct ValueSource { RIX_PageValueCallback Callback = nullptr; void* User = nullptr; };
+    std::map<std::string, ValueSource> g_ValueSources;
+
     // game:dp, game:owned.<card id> (copies, 0-3), game:cardname.<card id>, game:unlocked.<menu>, game:character.<id> (1 = unlocked),
-    // game:language (the game's language id)
+    // game:language (the game's language id), game:password.<8 digits> (the card id, 0 = none), then the plugins' values
     std::string GameValue(const std::string& name)
     {
+        if (name.rfind("median.", 0) == 0)
+        {
+            const size_t dot = name.rfind('.');
+            return dot > 7 ? Median(name.substr(7, dot - 7), name.substr(dot + 1)) : std::string();
+        }
+        {
+            static const char* kCardValues[] = { "atk", "def", "level", "kind", "attribute", "type", "spell", "trap", "monster", "link", "known", "rare", "rarity" };
+            const size_t dot = name.find('.');
+            if (dot != std::string::npos)
+                for (const char* what : kCardValues)
+                    if (name.compare(0, dot, what) == 0)
+                        return CardValue(what, std::atoi(name.c_str() + dot + 1));
+        }
+        if (name.rfind("password.", 0) == 0)
+            return std::to_string(YGO::CARDS::FindCardByPassword(static_cast<uint32_t>(std::strtoul(name.c_str() + 9, nullptr, 10))));
         if (name.rfind("cardname.", 0) == 0)
         {
             const int id = std::atoi(name.c_str() + 9);
@@ -426,6 +567,14 @@ namespace
         }
         if (name == "language")
             return std::to_string(*reinterpret_cast<const int*>(YGO::Addr::g_iGameLanguageID));
+        const size_t dot = name.find('.');
+        const auto source = g_ValueSources.find(name.substr(0, dot));
+        if (source != g_ValueSources.end())
+        {
+            char buffer[512] = {};
+            const int length = source->second.Callback(dot == std::string::npos ? "" : name.c_str() + dot + 1, buffer, sizeof(buffer), source->second.User);
+            return length > 0 ? std::string(buffer, (std::min)(static_cast<size_t>(length), sizeof(buffer) - 1)) : std::string();
+        }
         if (name == "dp")
         {
             const uint64_t* wallet = GameWallet();
@@ -442,7 +591,7 @@ namespace
 
     struct Binding
     {
-        enum Kind { None, Var, Config, Game } Type = None;
+        enum Kind { None, Var, Config, Game, Value } Type = None;
         std::string Name;
 
         static Binding Parse(const std::string& text)
@@ -451,6 +600,7 @@ namespace
             if (text.rfind("var:", 0) == 0) { b.Type = Var; b.Name = text.substr(4); }
             else if (text.rfind("config:", 0) == 0) { b.Type = Config; b.Name = text.substr(7); }
             else if (text.rfind("game:", 0) == 0) { b.Type = Game; b.Name = text.substr(5); }
+            else if (text.rfind("value:", 0) == 0) { b.Type = Value; b.Name = text.substr(6); }
             return b;
         }
 
@@ -460,6 +610,17 @@ namespace
             if (Type == Var) { auto it = g_Vars.find(Name); value = it != g_Vars.end() ? it->second : std::string(); }
             else if (Type == Config) value = ReadConfig(Name);
             else if (Type == Game) value = GameValue(Name);
+            else if (Type == Value)
+            {
+                static int depth = 0;   // a value naming itself would never end
+                auto it = g_PageValues.find(Name);
+                if (it != g_PageValues.end() && depth < 32)
+                {
+                    ++depth;
+                    value = Expand(it->second);
+                    --depth;
+                }
+            }
             return value.empty() ? fallback : value;
         }
 
@@ -471,7 +632,179 @@ namespace
         }
     };
 
-    // "{var:name}" / "{config:Section/Key}" in text -> the value.
+    // {= ...}: + - * / ^ ( ), comparisons (< <= > >= == != give 1 or 0), "and" / "or" / "not", numbers, page values by name (ATK = the
+    // value ATK) and min, max, clamp(x, lo, hi), round, floor, ceil, abs, exp, log, sqrt, if(test, then, else). Values inside are expanded
+    // first, so {= {game:atk.{var:card}} * 1.8 / 5} works too. Empty = 0.
+    class Maths
+    {
+    public:
+        explicit Maths(const std::string& text) : m_Text(text) {}
+
+        bool Evaluate(double& result)
+        {
+            result = Or();
+            Skip();
+            return m_Ok && m_At == m_Text.size();
+        }
+
+    private:
+        const std::string& m_Text;
+        size_t m_At = 0;
+        bool m_Ok = true;
+
+        void Skip() { while (m_At < m_Text.size() && std::isspace(static_cast<unsigned char>(m_Text[m_At]))) ++m_At; }
+
+        bool Take(const char* token)
+        {
+            Skip();
+            const size_t length = std::strlen(token);
+            if (m_Text.compare(m_At, length, token) != 0)
+                return false;
+            // a word must end there ("and" isn't the start of "android")
+            if (std::isalpha(static_cast<unsigned char>(token[0])) && m_At + length < m_Text.size() &&
+                (std::isalnum(static_cast<unsigned char>(m_Text[m_At + length])) || m_Text[m_At + length] == '_'))
+                return false;
+            m_At += length;
+            return true;
+        }
+
+        double Or()
+        {
+            double value = And();
+            while (Take("or") || Take("||"))
+                value = (And() != 0 || value != 0) ? 1 : 0;
+            return value;
+        }
+
+        double And()
+        {
+            double value = Compare();
+            while (Take("and") || Take("&&"))
+            {
+                const double right = Compare();
+                value = (value != 0 && right != 0) ? 1 : 0;
+            }
+            return value;
+        }
+
+        double Compare()
+        {
+            const double left = Sum();
+            if (Take("<=")) return left <= Sum() ? 1 : 0;
+            if (Take(">=")) return left >= Sum() ? 1 : 0;
+            if (Take("==")) return left == Sum() ? 1 : 0;
+            if (Take("!=")) return left != Sum() ? 1 : 0;
+            if (Take("<")) return left < Sum() ? 1 : 0;
+            if (Take(">")) return left > Sum() ? 1 : 0;
+            return left;
+        }
+
+        double Sum()
+        {
+            double value = Product();
+            for (;;)
+            {
+                if (Take("+")) value += Product();
+                else if (Take("-")) value -= Product();
+                else return value;
+            }
+        }
+
+        double Product()
+        {
+            double value = Power();
+            for (;;)
+            {
+                if (Take("*")) value *= Power();
+                else if (Take("/")) { const double by = Power(); value = by == 0 ? 0 : value / by; }
+                else if (Take("%")) { const double by = Power(); value = by == 0 ? 0 : std::fmod(value, by); }
+                else return value;
+            }
+        }
+
+        double Power()
+        {
+            const double base = Unary();
+            return Take("^") ? std::pow(base, Power()) : base;
+        }
+
+        double Unary()
+        {
+            if (Take("not") || Take("!")) return Unary() == 0 ? 1 : 0;
+            if (Take("-")) return -Unary();
+            if (Take("+")) return Unary();
+            return Atom();
+        }
+
+        double Atom()
+        {
+            Skip();
+            if (Take("("))
+            {
+                const double value = Or();
+                if (!Take(")")) m_Ok = false;
+                return value;
+            }
+            const size_t start = m_At;
+            if (m_At < m_Text.size() && (std::isdigit(static_cast<unsigned char>(m_Text[m_At])) || m_Text[m_At] == '.'))
+            {
+                while (m_At < m_Text.size() && (std::isdigit(static_cast<unsigned char>(m_Text[m_At])) || m_Text[m_At] == '.')) ++m_At;
+                return std::atof(m_Text.substr(start, m_At - start).c_str());
+            }
+            while (m_At < m_Text.size() && (std::isalnum(static_cast<unsigned char>(m_Text[m_At])) || m_Text[m_At] == '_' || m_Text[m_At] == '.')) ++m_At;
+            const std::string name = m_Text.substr(start, m_At - start);
+            if (name.empty())
+            {
+                m_Ok = false;
+                return 0;
+            }
+            if (!Take("("))
+            {
+                // a page value by name
+                const std::string text = Binding{ Binding::Value, name }.Get();
+                return std::atof(text.c_str());
+            }
+            std::vector<double> args{ Or() };
+            while (Take(",")) args.push_back(Or());
+            if (!Take(")")) m_Ok = false;
+            const double a = args[0];
+            auto arg = [&](size_t i) { return i < args.size() ? args[i] : 0.0; };
+            if (name == "min") return *std::min_element(args.begin(), args.end());
+            if (name == "max") return *std::max_element(args.begin(), args.end());
+            if (name == "clamp") return std::clamp(a, arg(1), (std::max)(arg(1), arg(2)));
+            if (name == "if") return a != 0 ? arg(1) : arg(2);
+            if (name == "round") return std::round(a);
+            if (name == "floor") return std::floor(a);
+            if (name == "ceil") return std::ceil(a);
+            if (name == "abs") return std::fabs(a);
+            if (name == "exp") return std::exp(a);
+            if (name == "log") return a > 0 ? std::log(a) : 0;
+            if (name == "sqrt") return a > 0 ? std::sqrt(a) : 0;
+            m_Ok = false;
+            return 0;
+        }
+    };
+
+    std::string Calculate(const std::string& expression)
+    {
+        double result = 0;
+        if (!Maths(expression).Evaluate(result) || !std::isfinite(result))
+        {
+            static std::set<std::string> logged;
+            if (logged.insert(expression).second)
+                Logger::WriteLog(std::format("Page maths can't be read: {}", expression), MODULE_NAME, 1);
+            return {};
+        }
+        if (result == std::floor(result) && std::fabs(result) < 1e15)
+            return std::to_string(static_cast<long long>(result));
+        std::string text = std::format("{:.6f}", result);
+        text.erase(text.find_last_not_of('0') + 1);
+        if (!text.empty() && text.back() == '.') text.pop_back();
+        return text;
+    }
+
+    // "{var:name}" / "{config:Section/Key}" / "{game:...}" in text -> the value. Names may hold values of their own:
+    // "{game:cardname.{var:card}}" reads var:card first.
     std::string Expand(const std::string& text)
     {
         std::string out;
@@ -479,13 +812,37 @@ namespace
         {
             if (text[i] == '{')
             {
-                const size_t end = text.find('}', i);
-                if (end != std::string::npos)
+                size_t end = i + 1;
+                for (int depth = 1; end < text.size(); ++end)
                 {
-                    Binding b = Binding::Parse(text.substr(i + 1, end - i - 1));
+                    if (text[end] == '{') ++depth;
+                    else if (text[end] == '}' && --depth == 0) break;
+                }
+                if (end < text.size())
+                {
+                    const std::string inner = text.substr(i + 1, end - i - 1);
+                    if (!inner.empty() && inner[0] == '=')
+                    {
+                        out += Calculate(Expand(inner.substr(1)));
+                        i = end + 1;
+                        continue;
+                    }
+                    // {name|fallback}: the fallback (expanded) when the value is empty
+                    size_t bar = std::string::npos;
+                    for (size_t k = 0, depth = 0; k < inner.size(); ++k)
+                    {
+                        if (inner[k] == '{') ++depth;
+                        else if (inner[k] == '}') --depth;
+                        else if (inner[k] == '|' && depth == 0) { bar = k; break; }
+                    }
+                    const std::string head = bar == std::string::npos ? inner : inner.substr(0, bar);
+                    Binding b = Binding::Parse(head.find('{') != std::string::npos ? Expand(head) : head);
                     if (b.Type != Binding::None)
                     {
-                        out += b.Get();
+                        std::string value = b.Get();
+                        if (value.empty() && bar != std::string::npos)
+                            value = Expand(inner.substr(bar + 1));
+                        out += value;
                         i = end + 1;
                         continue;
                     }
@@ -512,9 +869,10 @@ namespace
         if (!when.is_object())
             return true;
         std::string value;
-        if (when.contains("var")) value = Binding{ Binding::Var, Str(when, "var") }.Get();
-        else if (when.contains("config")) value = Binding{ Binding::Config, Str(when, "config") }.Get();
-        else if (when.contains("game")) value = GameValue(Str(when, "game"));
+        if (when.contains("var")) value = Binding{ Binding::Var, Expand(Str(when, "var")) }.Get();
+        else if (when.contains("config")) value = Binding{ Binding::Config, Expand(Str(when, "config")) }.Get();
+        else if (when.contains("game")) value = GameValue(Expand(Str(when, "game")));
+        else if (when.contains("value")) value = Binding{ Binding::Value, Expand(Str(when, "value")) }.Get();
         bool result;
         if (when.contains("atLeast"))
             result = !value.empty() && std::strtoll(value.c_str(), nullptr, 10) >= std::strtoll(Expand(when["atLeast"].is_string() ? when["atLeast"].get<std::string>() : when["atLeast"].dump()).c_str(), nullptr, 10);
@@ -578,6 +936,8 @@ namespace
         void* User = nullptr;
         void* Related = nullptr;
         std::string RelatedCard = "\x1";
+        void* CardBox = nullptr;
+        std::string BoxCards = "\x1";        // the expanded "cards" the box was filled with
         bool FilterOpen = false;
         std::string ShownCards;              // the "cards" value the grid was filled with
         int Selected = -1;                   // the character / deck / card last written to the binding
@@ -1152,6 +1512,35 @@ namespace
         Related_SetCard(element.Related, konami == 0xFFFF ? 0 : Related_Count(konami), konami == 0xFFFF ? nullptr : Related_List(konami), konami);
     }
 
+    // "cards": ids separated by anything that is not a digit ("4007, 4008", "{var:pulled}"), or a JSON array of ids.
+    void FillCardBox(Element& element)
+    {
+        const json& cards = Field(element.Source, "cards");
+        std::string text;
+        if (cards.is_array())
+            for (const json& card : cards)
+                text += (card.is_string() ? Expand(card.get<std::string>()) : card.is_number() ? std::to_string(card.get<int>()) : std::string()) + ",";
+        else
+            text = Expand(Str(element.Source, "cards"));
+        if (text == element.BoxCards)
+            return;
+        element.BoxCards = text;
+        std::vector<uint16_t> ids;
+        int value = -1;
+        for (size_t i = 0; i <= text.size(); ++i)
+        {
+            if (i < text.size() && std::isdigit(static_cast<unsigned char>(text[i])))
+                value = (value < 0 ? 0 : value * 10) + (text[i] - '0');
+            else if (value >= 0)
+            {
+                if (value >= 3900 && value < 0xFFFF)
+                    ids.push_back(static_cast<uint16_t>(value));
+                value = -1;
+            }
+        }
+        R::CardBox::SetCards(element.CardBox, static_cast<unsigned>(ids.size()), ids.data(), -1, nullptr, nullptr);   // as the store
+    }
+
     void BuildWidgets(Element& element)
     {
         char* screen = static_cast<char*>(g_Screen);
@@ -1250,6 +1639,28 @@ namespace
             R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
             Related_Create(element.Related, &parent, 13 + element.Z, R::ScreenOwner(screen), element.X, element.Y);
         }
+        else if (element.Kind == "cardBox")
+        {
+            // ScreenRandomPackStore::SetupWidgets' desc, with the grid and cell size from the page
+            element.CardBox = NewWidget(1024);
+            R::CardBox::Construct(element.CardBox);
+            R::CardBox::Desc desc;
+            desc.X = element.X;
+            desc.Y = element.Y;
+            desc.Cols = (std::max)(1, static_cast<int>(Num(element.Source, "cols", 4)));
+            desc.Rows = (std::max)(1, static_cast<int>(Num(element.Source, "rows", 2)));
+            desc.CellW = Num(element.Source, "cellWidth", 255.17f);
+            desc.CellH = Num(element.Source, "cellHeight", 370.0f);
+            desc.GapX = desc.GapY = Num(element.Source, "gap", 10.0f);
+            desc.ShowFrame = !Field(element.Source, "frame").is_boolean() || Field(element.Source, "frame").get<bool>();
+            R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
+            R::CardBox::CreateFromLayout(element.CardBox, &parent, 2 + element.Z, R::ScreenOwner(screen), &desc);
+            R::CardBox::SetCursorScale(element.CardBox, 1.03f);
+            if (element.Width <= 0)   // the mouse box = the frame (CreateFromLayout's sum)
+                element.Width = desc.Cols * desc.CellW + (desc.Cols - 1) * desc.GapX + 2 * desc.PadX;
+            if (element.Height <= 0)
+                element.Height = desc.Rows * desc.CellH + (desc.Rows - 1) * desc.GapY + 2 * desc.PadY;
+        }
         else if (element.Kind == "cardInfo")
         {
             element.CardInfo = NewWidget(R::CardInfo::Size);
@@ -1302,7 +1713,7 @@ namespace
             R::WidgetSetVisible(element.Tick, on);
         for (void* digit : element.Digits)
             R::WidgetSetVisible(digit, on);
-        for (void* widget : { element.Series, element.Chars, element.Decks, element.DeckInfo, element.Trunk, element.User, element.Related })
+        for (void* widget : { element.Series, element.Chars, element.Decks, element.DeckInfo, element.Trunk, element.User, element.Related, element.CardBox })
             if (widget)
                 R::WidgetSetVisible(widget, on);
         if (element.Filter && (!on || !element.FilterOpen))
@@ -1313,6 +1724,8 @@ namespace
         }
         if (on && element.Trunk)
             FillCards(element);
+        if (on && element.CardBox)
+            FillCardBox(element);
         if (on && element.User)
         {
             User_SetProfile(element.User, 0xFFFFFFFD);   // as the Battle Pack screen's OnEnter
@@ -1410,8 +1823,27 @@ namespace
         }
     }
 
+    // A page file's "values" (and those of the files it "use"s, e.g. a values-only file shared by several pages) join the page values.
+    void LoadValues(const json& root, int depth = 0)
+    {
+        if (root.contains("use") && root["use"].is_array() && depth < 8)
+            for (const json& used : root["use"])
+            {
+                json other;
+                if (used.is_string() && ReadJson(PageFile(used.get<std::string>()), other))
+                    LoadValues(other, depth + 1);
+                else
+                    Logger::WriteLog(std::format("Page values: can't read the page file '{}' a page uses", used.dump()), MODULE_NAME, 1);
+            }
+        if (root.contains("values") && root["values"].is_object())
+            for (const auto& [key, value] : root["values"].items())
+                g_PageValues[key] = value.is_string() ? value.get<std::string>() : value.dump();
+    }
+
     std::unique_ptr<Page> LoadPage(const std::string& name, const json& root)
     {
+        ResetComputed();
+        LoadValues(root);
         auto page = std::make_unique<Page>();
         page->Name = name;
         page->Root = root;
@@ -1429,9 +1861,9 @@ namespace
                 element.Height = Num(source, "height", 0);
                 element.Z = static_cast<int>(Num(source, "z", 0));
                 element.Bind = Binding::Parse(Str(source, "bind"));
-                static const char* kFocusable[] = { "menu", "slider", "digits", "seriesTabs", "characters", "decks", "cardGrid", "relatedCards" };
+                static const char* kFocusable[] = { "menu", "slider", "digits", "seriesTabs", "characters", "decks", "cardGrid", "relatedCards", "cardBox" };
                 element.Focusable = std::any_of(std::begin(kFocusable), std::end(kFocusable), [&](const char* k) { return element.Kind == k; });
-                static const char* kKnown[] = { "menu", "slider", "digits", "cardInfo", "image", "text", "seriesTabs", "characters", "decks", "deckInfo", "cardGrid", "user", "relatedCards" };
+                static const char* kKnown[] = { "menu", "slider", "digits", "cardInfo", "image", "text", "seriesTabs", "characters", "decks", "deckInfo", "cardGrid", "user", "relatedCards", "cardBox" };
                 if (std::none_of(std::begin(kKnown), std::end(kKnown), [&](const char* k) { return element.Kind == k; }))
                     Logger::WriteLog(std::format("Page '{}': element kind '{}' is not one the engine builds (yet)", name, element.Kind), MODULE_NAME, 1);
             }
@@ -1457,6 +1889,8 @@ namespace
                 R::WidgetSetFocused(element.Trunk, focused);
             if (element.Related)
                 R::WidgetSetFocused(element.Related, focused);
+            if (element.CardBox)
+                R::WidgetSetFocused(element.CardBox, focused);
         }
     }
 
@@ -1551,6 +1985,8 @@ namespace
                 ShowDeckInfo(element);
             if (element.Related)
                 ShowRelated(element);
+            if (element.CardBox)
+                FillCardBox(element);
             if (element.Decks)
                 R::DeckSelectList::Tick(element.Decks);
             if (element.Trunk)
@@ -1758,6 +2194,38 @@ namespace
                     if (element.Source.contains("action"))
                         RunAction(element.Source["action"]);
                 }
+            }
+            else if (element.CardBox)
+            {
+                // ScreenRandomPackStore::Update state 4: a right-click / 0x8000 = the full card view; L / R leave the box
+                pressed |= Input_TakeRightClick(R::InputState, 0x8000u);
+                int action = 0;
+                char clicked = 0;
+                R::CardBox::ProcessInput(element.CardBox, pressed, held, &action, &clicked);
+                const int selected = R::CardBox::GetSelectedCardId(element.CardBox);
+                if (selected != element.Selected)
+                {
+                    element.Selected = selected;
+                    element.Bind.Set(selected == 0xFFFF ? std::string() : std::to_string(selected));
+                    if (element.Source.contains("onChange"))
+                        RunAction(element.Source["onChange"]);
+                }
+                if (pressed & 0x8000)
+                    ShowFullCard(selected);
+                else if (action == 3)
+                {
+                    if (selected == 0xFFFF)
+                        R::PlayUISound(kSoundError);
+                    else
+                    {
+                        R::PlayUISound(kSoundConfirm);
+                        if (element.Source.contains("action"))
+                            RunAction(element.Source["action"]);
+                    }
+                }
+                const int tabs = R::DeckSelectList::TabButtons(R::InputState);
+                if (tabs & 0x20000000) MoveFocus(page, -1);
+                else if (tabs & 0x40000000) MoveFocus(page, 1);
             }
             else if (element.Trunk)
             {
@@ -2219,6 +2687,8 @@ namespace PageScreen
     }
 
     void RegisterList(const std::string& name, RIX_PageListCallback callback, void* user) { g_Sources[name] = { callback, user }; }
+
+    void RegisterValue(const std::string& name, RIX_PageValueCallback callback, void* user) { g_ValueSources[name] = { callback, user }; }
 
     void ListAdd(void* list, const wchar_t* label, const wchar_t* description, const char* value)
     {

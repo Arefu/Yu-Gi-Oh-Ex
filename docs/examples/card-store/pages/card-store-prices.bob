@@ -1,0 +1,43 @@
+// What the Card Store charges, in BOB values (docs/PageScript.md "Values and maths"). This was Yu-Gi-Oh-BetterCardShop's Prices.cpp;
+// the store pages read it with `use "card-store-prices";`. Every value is worked out for the card in var:card when it is read.
+// Change the settings below, or write your own rule as a new value and point monster_price / spell_trap_price at it.
+
+// ---- settings
+
+value monster_price = "{value:attack_price}";        // attack_price, classic_price, formula_price or flat_price
+value spell_trap_price = "{value:rarity_price}";     // rarity_price, spell_formula_price or flat_price
+value flat_price = "500";                            // one copy, when a rule above is flat_price
+value password_cost = "1000";                        // Enter Password: unlocks three copies
+
+// Fixed prices for single cards beat every rule: value fixed.<card id> (Card Shop), fixedpassword.<card id> (Enter Password).
+// value fixed.4007 = "5000";
+// value fixedpassword.4007 = "2500";
+
+// ---- the card (names used inside {= ...})
+
+value ATK = "{game:atk.{var:card}|0}";                                            // "?" counts as 0
+value DEF = "{= if({game:link.{var:card}|0}, ATK * 0.8, {game:def.{var:card}|0})}";  // a Link monster has no DEF: 0.8 x ATK, the game's average
+value LEVEL = "{game:level.{var:card}|0}";
+value RARE = "{game:rare.{var:card}|0}";                                          // 1 when the card is in a pack's rare slot
+value LINK = "{game:link.{var:card}|0}";
+
+// ---- the rules (rounded to 10 DP, never under 100)
+
+// ATK x 1.8 / 5: Blue-Eyes 1,080 DP
+value attack_price = "{= clamp(round(ATK * 1.8 / 5 / 10) * 10, 100, 999999)}";
+// Forbidden Memories' star chip prices, fitted on its 533 buyable monsters: ln(cost) = 1.754 + 0.001179 (ATK + DEF), in DP twice the
+// star chips (a common about 200 DP, a rare about 1,060, Blue-Eyes about 7,540); stops at 10,000
+value classic_price = "{= clamp(round(11.56 * exp(0.001179 * (ATK + DEF)) / 10) * 10, 100, 10000)}";
+// your own monster formula
+value formula_price = "{= clamp(round(ATK * 1.8 / 5 / 10) * 10, 100, 999999)}";
+// what a typical monster of the same pack rarity costs (the median of monster_price over the monsters with a known ATK)
+value rarity_price = "{game:median.monster_price.{game:rarity.{var:card}|common}}";
+// your own spell / trap formula
+value spell_formula_price = "{= clamp(round((500 + 500 * RARE) / 10) * 10, 100, 999999)}";
+
+// ---- what the pages read
+
+// spells and traps by their rule; monsters with a "?" ATK like spells by rarity (their worth is in the effect); the rest by monster_price
+value base_price = "{= if({game:spell.{var:card}|0} or {game:trap.{var:card}|0}, {value:spell_trap_price}, if({game:known.{var:card}|0}, {value:monster_price}, {value:rarity_price}))}";
+value price = "{value:fixed.{var:card}|{value:base_price}}";
+value password_price = "{value:fixedpassword.{var:card}|{value:password_cost}}";

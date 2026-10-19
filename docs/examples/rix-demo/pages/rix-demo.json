@@ -37,6 +37,13 @@
                     }
                 },
                 {
+                    "label": "Card box",
+                    "description": "widget_CardDisplay - the Random Pack Store's box of pulled cards, filled from a list of ids.",
+                    "action": {
+                        "page": "rix-demo-box"
+                    }
+                },
+                {
                     "label": "Working widgets",
                     "description": "Menus, volume bar, digits, card details, Free Duel pickers, deck picker, message boxes.",
                     "action": {

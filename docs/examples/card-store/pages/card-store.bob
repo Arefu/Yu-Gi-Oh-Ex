@@ -1,0 +1,16 @@
+// The Card Store, written in BOB (docs/PageScript.md). It replaced Yu-Gi-Oh-BetterCardShop's C++ store (StorePages.cpp, kept, not built).
+// The edit line below points the main menu's Card Shop button at this page (WolfX writes it to menus\bob-card-store.json).
+header "Card Store";
+
+edit cardShop -> page("card-store");
+
+user;   // the player's name, avatar and DP, top right (as on the Battle Pack screen)
+
+menu store at 160, 220 size 660, 400 {
+    button "Booster Packs" "Buy booster packs of random cards." -> goto(cardShop);
+    button "Card Shop" "Buy the single cards you want, one copy at a time." -> page("card-store-shop");
+    button "Enter Password" "Enter a card's eight digit password." -> page("card-store-password");
+    button "Back" -> back;
+}
+
+text "You have {game:dp} DP." at 1000, 240 width 760 textSize 30 align left;

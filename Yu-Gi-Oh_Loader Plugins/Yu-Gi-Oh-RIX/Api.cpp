@@ -158,6 +158,14 @@ extern "C"
         PageScreen::ListAdd(list, label, description, value);
     }
 
+    int __cdecl RIX_RegisterPageValue(const char* name, RIX_PageValueCallback callback, void* user)
+    {
+        if (!name || !*name || !callback)
+            return 0;
+        PageScreen::RegisterValue(name, callback, user);
+        return 1;
+    }
+
     void __cdecl RIX_RemoveNode(void* node)
     {
         std::unique_ptr<WidgetHandle> handle(static_cast<WidgetHandle*>(node));

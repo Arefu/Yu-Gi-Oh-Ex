@@ -1,0 +1,48 @@
+{
+    "version": 2,
+    "header": "Card box",
+    "elements": [
+        {
+            "kind": "cardBox",
+            "x": 118,
+            "y": 145,
+            "cols": 4,
+            "rows": 2,
+            "cards": "{var:demo.boxCards|4007, 4041, 4088, 5012, 4594, 6853, 4796, 5407, 4844, 7104}",
+            "bind": "var:demo.boxCard",
+            "description": "widget_CardDisplay - the box the Random Pack Store shows a pack's cards in. More cards than cells scroll. Right-click = full details.",
+            "action": {
+                "message": "Card {var:demo.boxCard}."
+            }
+        },
+        {
+            "kind": "cardInfo",
+            "x": 1316,
+            "y": 120,
+            "width": 486.5,
+            "card": "{var:demo.boxCard}"
+        },
+        {
+            "kind": "menu",
+            "id": "demo.boxMenu",
+            "x": 1316,
+            "y": 860,
+            "width": 486,
+            "height": 160,
+            "items": [
+                {
+                    "label": "Show",
+                    "description": "Which ids the box lists (it is filled again when the \"cards\" text changes).",
+                    "bind": "var:demo.boxCards",
+                    "default": "4007, 4041, 4088, 5012, 4594, 6853, 4796, 5407, 4844, 7104",
+                    "values": [
+                        { "label": "Ten cards", "value": "4007, 4041, 4088, 5012, 4594, 6853, 4796, 5407, 4844, 7104" },
+                        { "label": "Three cards", "value": "4007 4041 4088" },
+                        { "label": "Empty", "value": " " }
+                    ]
+                }
+            ],
+            "spacing": 80
+        }
+    ]
+}

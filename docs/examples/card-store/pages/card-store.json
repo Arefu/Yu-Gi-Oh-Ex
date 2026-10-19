@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "header": "Card Store",
+  "elements": [
+    {
+      "kind": "user"
+    },
+    {
+      "kind": "menu",
+      "id": "store",
+      "x": 160,
+      "y": 220,
+      "width": 660,
+      "height": 400,
+      "items": [
+        {
+          "label": "Booster Packs",
+          "description": "Buy booster packs of random cards.",
+          "action": {
+            "goto": "cardShop"
+          }
+        },
+        {
+          "label": "Card Shop",
+          "description": "Buy the single cards you want, one copy at a time.",
+          "action": {
+            "page": "card-store-shop"
+          }
+        },
+        {
+          "label": "Enter Password",
+          "description": "Enter a card\u0027s eight digit password.",
+          "action": {
+            "page": "card-store-password"
+          }
+        },
+        {
+          "label": "Back",
+          "action": {
+            "back": true
+          }
+        }
+      ]
+    },
+    {
+      "kind": "text",
+      "text": "You have {game:dp} DP.",
+      "x": 1000,
+      "y": 240,
+      "width": 760,
+      "textSize": 30,
+      "align": "left"
+    }
+  ]
+}

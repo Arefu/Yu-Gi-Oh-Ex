@@ -18,5 +18,8 @@ namespace PageScreen
     void RegisterList(const std::string& name, RIX_PageListCallback callback, void* user);
     void ListAdd(void* list, const wchar_t* label, const wchar_t* description, const char* value);
 
+    // A value plugins supply: "game:<name>.<argument>" in pages calls it (RIX_RegisterPageValue).
+    void RegisterValue(const std::string& name, RIX_PageValueCallback callback, void* user);
+
     void Install();
 }

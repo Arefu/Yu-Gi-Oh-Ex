@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "header": "Card Shop",
+  "use": [
+    "card-store-prices"
+  ],
+  "elements": [
+    {
+      "kind": "user"
+    },
+    {
+      "kind": "cardInfo",
+      "card": "{var:card}",
+      "x": 260,
+      "y": 120,
+      "width": 486.5
+    },
+    {
+      "kind": "cardGrid",
+      "cards": "all",
+      "x": 528.5,
+      "y": 120,
+      "width": 1350,
+      "height": 860,
+      "bind": "var:card",
+      "description": "Confirm on a card to buy one copy.",
+      "action": {
+        "if": {
+          "game": "owned.{var:card}",
+          "atLeast": 3
+        },
+        "then": {
+          "message": "You already have 3 copies of {game:cardname.{var:card}}."
+        },
+        "else": {
+          "if": {
+            "game": "dp",
+            "atLeast": "{value:price}",
+            "not": true
+          },
+          "then": [
+            {
+              "sound": 71
+            },
+            {
+              "message": "{game:cardname.{var:card}} costs {value:price} DP. You have {game:dp} DP."
+            }
+          ],
+          "else": {
+            "confirm": "Buy {game:cardname.{var:card}} for {value:price} DP? You have {game:dp} DP and {game:owned.{var:card}} of it.",
+            "yes": {
+              "takeDp": "{value:price}",
+              "then": [
+                {
+                  "giveCard": "{var:card}"
+                },
+                {
+                  "sound": 52
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -3,7 +3,8 @@
 //   {
 //     "buttons": [ { "key": "mymod.credits", "menu": "main", "page": "main", "label": "Credits", "description": "...",
 //                    "look": "helpAndOptions", "action": { "goto": "credits" } } ],
-//     "edit":    [ { "item": "quit", "label": "Exit to Desktop", "hidden": false } ]
+//     "edit":    [ { "item": "quit", "label": "Exit to Desktop", "hidden": false },
+//                  { "item": "cardShop", "action": { "page": "card-store" } } ]   (a new action for one of the game's buttons)
 //   }
 //
 // Pages made in the WolfEx page designer live in <game folder>\Yu-Gi-Oh-Ex\pages\<name>.json and are opened by the action
@@ -560,6 +561,20 @@ namespace
             description = Wide(node["description"].get<std::string>());
 
         Menu::EditVanilla(item, hasLabel ? &label : nullptr, hasDescription ? &description : nullptr, node.value("hidden", false));
+
+        // "action": the button does this instead of what the game (or a plugin's RIX_SetMainMenuItemAction) gave it
+        if (node.contains("action"))
+        {
+            Action action;
+            std::string problem;
+            if (!ParseAction(node["action"], action, problem))
+                return Logger::WriteLog(where + ": " + problem, MODULE_NAME, 2);
+            g_Actions.push_back(std::move(action));
+            if (!Menu::SetVanillaAction(item, &RunButtonAction, &g_Actions.back()))
+                Logger::WriteLog(where + ": the button's action could not be replaced", MODULE_NAME, 2);
+            else
+                Logger::WriteLog(std::format("{}: the game's \"{}\" button runs a new action", file, node["item"].get<std::string>()), MODULE_NAME, 0);
+        }
     }
 
     void LoadFile(const std::filesystem::path& path)
