@@ -30,7 +30,7 @@
 namespace
 {
     constexpr int kFirstExtraCardId = 0x3BC4;   // 15300, as in Yu-Gi-Oh-Cards/Card.h
-    constexpr int kLastExtraCardId = 0x4E1F;
+    constexpr int kLastExtraCardId = 0xFFFE;    // 65534, as in Yu-Gi-Oh-Cards/Card.h
     // A game card whose effect is overridden with none ("overridden": true and no "effectClone" in effects.json) clones this card:
     // Blue-Eyes White Dragon is a Normal Monster, in no effect table, id list, ladder or phase table, so every lookup answers "nothing".
     constexpr int kNoEffectSource = 4007;

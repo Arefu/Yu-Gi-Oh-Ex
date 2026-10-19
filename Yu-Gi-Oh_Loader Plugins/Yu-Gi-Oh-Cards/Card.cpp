@@ -28,8 +28,9 @@
 constexpr uint32_t kVanillaKonamiIdBase = 3900;
 constexpr uint32_t kVanillaKonamiIdCount = 0x2B3D;
 
-// Entries in the table the save file keeps card ownership in.
-constexpr uint32_t kSavedCardTableSize = 0x4E20;
+// Entries in the card ownership table Get_CardUnlockTable hands out: Yu-Gi-Oh-Core's (CardTable.cpp) covers every id below 0xFFFF; the save's
+// own stopped at 0x4E20. The game's id checks are widened to match (WidenSavedCardChecks).
+constexpr uint32_t kSavedCardTableSize = 0xFFFF;
 
 // The unlock count table the trunk reads is sized for the vanilla cards only.
 constexpr size_t kUnlockBufferSize = 0xFFFF;
@@ -253,7 +254,7 @@ namespace
         int id = j["id"].get<int>();
         if (id < kFirstExtraCardId || id > kLastExtraCardId)
         {
-            why = std::format("\"id\" must be between {} and {} (the game and its unused card data own ids below, its save has no room above)", kFirstExtraCardId, kLastExtraCardId);
+            why = std::format("\"id\" must be between {} and {} (the game and its unused card data own ids below; 65535 means \"no card\")", kFirstExtraCardId, kLastExtraCardId);
             return false;
         }
 
@@ -349,7 +350,7 @@ namespace
             std::stable_sort(units.begin(), units.end(), [](uint32_t a, uint32_t b) { return (a & 0xFFFF) < (b & 0xFFFF); });   // the game's order
             c.Related = std::move(units);
         }
-        // "password": 8 digits (Yu-Gi-Oh-BetterCardShop's Enter Password page, through Card_FindByPassword)
+        // "password": 8 digits (the Card Store's Enter Password page: RIX game:password, through Card_FindByPassword)
         if (j.contains("password") && j["password"].is_number_integer() && j["password"].get<int64_t>() > 0 && j["password"].get<int64_t>() <= 99999999)
             c.Password = static_cast<uint32_t>(j["password"].get<int64_t>());
         // the texts per language: English's index letters / sort name at the top, the other languages under "text"
@@ -1255,6 +1256,24 @@ namespace
 
         // OpenPackAndGrantCards only stores a pulled card when its internal id is below 10166 (cmp eax, 27B6h).
         PatchImm32(0x14085C2FD, 0xFFFF);
+
+        // WidenSavedCardChecks: every function that indexes the saved card table by Konami id loads the bound with `mov reg, 4E20h`
+        // and compares the id against it with a 16-bit cmp; an id at or past it reads as "not owned" and is never granted. Core's table
+        // covers every id below 0xFFFF (the game's "no card"), so the bound becomes that. (find_bytes "20 4E 00 00"; the duel engine's
+        // hits and sub_1407C73C0's "LP >= 20000" are other things and stay.)
+        static constexpr uintptr_t kSavedCardChecks[] = {
+            0x14082C7B1,                            // GrantRewardCardsToSave (duelist reward cards)
+            0x14085C0C7, 0x14085C16B, 0x14085C205,  // OpenPackAndGrantCards (pack weights, pulled cards)
+            0x140870596,                            // RecountOwnedCards (unique cards owned)
+            0x14088017E,                            // sub_14087FC60 (campaign rewards widget)
+            0x140881A3F, 0x140881BA3, 0x140881D82,  // sub_140881810 (campaign rewards: deck template cards)
+            0x140881F85,                            // sub_140881F30 (campaign rewards: grant one card)
+            0x140882207, 0x1408823C3,               // sub_1408821C0 (campaign rewards)
+            0x1408BF73D,                            // Card_IsNewlyOwned (the NEW mark)
+            0x1408BFEBD,                            // Card_MarkSeen
+        };
+        for (uintptr_t site : kSavedCardChecks)
+            PatchImm32(site, kSavedCardTableSize);
     }
 }
 

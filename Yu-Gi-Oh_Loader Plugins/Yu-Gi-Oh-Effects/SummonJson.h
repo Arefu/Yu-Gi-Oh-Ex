@@ -13,7 +13,7 @@
 namespace SummonJson
 {
     constexpr int kFirstExtraCardId = 0x3BC4;   // 15300, as in Yu-Gi-Oh-Cards/Card.h
-    constexpr int kLastExtraCardId = 0x4E1F;
+    constexpr int kLastExtraCardId = 0xFFFE;    // 65534, as in Yu-Gi-Oh-Cards/Card.h
 
     struct Entry
     {

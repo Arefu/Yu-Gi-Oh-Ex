@@ -95,7 +95,7 @@ namespace
 
     const wchar_t* CardName(uint16_t id)
     {
-        if (id < 3900 || id > 19999)
+        if (id < 3900 || id > 0xFFFE)   // the last custom id (Yu-Gi-Oh-Cards/Card.h)
             return L"";
         const wchar_t* name = GameMemory::CallCardText(kGetCardName, id);
         return name ? name : L"?";

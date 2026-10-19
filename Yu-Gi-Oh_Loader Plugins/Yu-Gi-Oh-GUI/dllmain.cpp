@@ -205,6 +205,11 @@ HRESULT __stdcall CreateDeviceSwapChainAndSetupDearImGui(
             FeatureLevels, SDKVersion, pSwapChainDesc, ppSwapChain,
             ppDevice, pFeatureLevel, ppImmediateContext);
 
+    // D3D11CreateDevice comes through here too (no swap chain): Media Foundation's video processor makes one on its decoder thread for
+    // Yu-Gi-Oh-Media's mp4s. Only the game's first device with a swap chain gets the overlay.
+    if (FAILED(result) || !ppSwapChain || !*ppSwapChain || !ppDevice || !*ppDevice || !ppImmediateContext || !*ppImmediateContext || pSwapChain)
+        return result;
+
     pDevice = *ppDevice;
     pContext = *ppImmediateContext;
     pSwapChain = *ppSwapChain;

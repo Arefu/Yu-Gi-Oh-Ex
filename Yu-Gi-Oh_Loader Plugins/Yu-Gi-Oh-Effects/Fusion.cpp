@@ -23,7 +23,7 @@ namespace
     // (Card_GetRealIdForBorrowed) before g_Recipes is asked, and a custom material id is handed out as the id it plays under
     // (Card_GetActiveDuelSessionId), so the game's same-name check compares like with like.
     constexpr int kFirstExtraCardId = 0x3BC4;   // 15300, as in Yu-Gi-Oh-Cards/Card.h
-    constexpr int kLastExtraCardId = 0x4E1F;
+    constexpr int kLastExtraCardId = 0xFFFE;    // 65534, as in Yu-Gi-Oh-Cards/Card.h
     constexpr size_t kMinMaterials = 2;
     constexpr size_t kMaxMaterials = 5; // the game's 4+ table has five slots
 

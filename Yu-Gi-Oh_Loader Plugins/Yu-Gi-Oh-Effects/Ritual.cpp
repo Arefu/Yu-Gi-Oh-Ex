@@ -22,7 +22,7 @@ namespace
     constexpr int kGameRows = 96;
     constexpr int kMaxRows = 127;                     // the readers compare the row index with an imm8 (cmp esi, 60h)
     constexpr int kFirstExtraCardId = 0x3BC4;         // 15300, as in Yu-Gi-Oh-Cards/Card.h
-    constexpr int kLastExtraCardId = 0x4E1F;
+    constexpr int kLastExtraCardId = 0xFFFE;          // 65534, as in Yu-Gi-Oh-Cards/Card.h
 
     struct Row
     {

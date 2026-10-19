@@ -8,11 +8,13 @@
 #include "Limit.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
-// Custom cards live between kFirstExtraCardId and the end of the table the game saves card ownership in (0x4E20 entries, indexed by Konami id).
-// The last vanilla Konami id is 14968, but the game ships effect rows and id lists for 14969-15234 (cards it has no data for): a custom card
-// numbered there inherits a ghost card's effect, hand-effect flag and trigger entries. Numbering starts at 15300, past all of them.
+// Custom cards live between kFirstExtraCardId and kLastExtraCardId (Konami ids). The last vanilla Konami id is 14968, but the game ships effect
+// rows and id lists for 14969-15234 (cards it has no data for): a custom card numbered there inherits a ghost card's effect, hand-effect flag
+// and trigger entries. Numbering starts at 15300, past all of them. The top is the last id before 0xFFFF (the game's "no card"): the save's own
+// card table stops at 19999, so Yu-Gi-Oh-Core keeps a 65536-entry one and stores ids past 19999 in the save extension (Core CardTable.cpp);
+// FULL_CARD_PROPS has 65536 entries and Limits' id tables 0xFFFF. Until 2026-10-19 the top was 19999 (4,700 cards).
 constexpr int kFirstExtraCardId = 0x3BC4;   // 15300
-constexpr int kLastExtraCardId = 0x4E1F;
+constexpr int kLastExtraCardId = 0xFFFE;    // 65534
 
 constexpr uintptr_t kInternalCardPropsAddress = YGO::Addr::INTERNAL_ID_CARD_PROPS;
 constexpr size_t kVanillaCardPropCount = 10166;
@@ -107,7 +109,7 @@ namespace Card
         bool SameNameAlways = true;
         // Everything else about the card is in its cards.json entry too (WolfX's New cards page writes it; docs/CustomCards.md):
         // "genres": its genres (FULL_CARD_PROPS +0x38, used over genres.json); "related": its Related cards units (u16 card | u16 tag << 16,
-        // used over relatedcards.json); "password": 8 digits Yu-Gi-Oh-BetterCardShop's Enter Password page unlocks it with (Card_FindByPassword).
+        // used over relatedcards.json); "password": 8 digits the Card Store's Enter Password page unlocks it with (Card_FindByPassword).
         std::optional<uint64_t> Genres;
         std::optional<std::vector<uint32_t>> Related;
         uint32_t Password = 0;
