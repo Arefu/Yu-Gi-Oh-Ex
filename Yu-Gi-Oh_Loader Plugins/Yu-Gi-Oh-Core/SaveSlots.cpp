@@ -21,7 +21,8 @@ namespace
     constexpr const char* kIniSection = "Yu-Gi-Oh-Core";
 
     // Portraits the slots get when saves.json does not name one (sprites in pdui/chars, without "_neutral").
-    constexpr const char* kDefaultAvatars[SaveSlots::MaxSlots] = { "yugimuto", "jadenyuki", "yuseifudo", "yumatsukumo", "yuya" };
+    constexpr const char* kDefaultAvatars[] = { "yugimuto", "jadenyuki", "yuseifudo", "yumatsukumo", "yuya" };
+    const char* DefaultAvatar(int index) { return kDefaultAvatars[index % std::size(kDefaultAvatars)]; }
 
     // The save file (see the savegame library): magic at 0, stats at 0x24 (100 x u64), player section at 0xFD8 (wallet u64 at +0x10),
     // card table at 0x5DC8 (20000 bytes, copies in bits 0-2).
@@ -43,7 +44,17 @@ namespace
     {
         std::wstring Name;
         std::string Avatar;   // sprite key
+        std::string File;     // the save file's name, next to the GameSaveName one
     };
+
+    // The name slot `index` (1-based) had before slots carried their own file: the GameSaveName file, or "-N" before its extension.
+    std::string NumberedFile(int number)
+    {
+        const std::filesystem::path& primary = Save::PrimarySavePath();
+        if (number <= 1)
+            return primary.filename().string();
+        return primary.stem().string() + std::format("-{}", number) + primary.extension().string();
+    }
 
     std::mutex g_Lock;
     json g_File = json::object();   // saves.json as read, so unknown fields survive a rewrite
@@ -102,18 +113,24 @@ namespace
                 Logger::WriteLog(std::format("{} is not valid JSON, using the default save slots", JsonPath().string()), MODULE_NAME, 1);
         }
 
-        const json* slots = g_File.contains("slots") && g_File["slots"].is_array() ? &g_File["slots"] : nullptr;
+        json* slots = g_File.contains("slots") && g_File["slots"].is_array() ? &g_File["slots"] : nullptr;
         const int count = slots ? std::clamp(static_cast<int>(slots->size()), 1, SaveSlots::MaxSlots) : kDefaultSlots;
 
+        int nextFile = g_File.contains("nextFile") && g_File["nextFile"].is_number_integer() ? g_File["nextFile"].get<int>() : 0;
         for (int i = 0; i < count; ++i)
         {
             Slot slot;
             slot.Name = std::format(L"Duelist {}", i + 1);
-            slot.Avatar = kDefaultAvatars[i];
+            slot.Avatar = DefaultAvatar(i);
+            slot.File = NumberedFile(i + 1);
 
             if (slots && (*slots)[i].is_object())
             {
-                const json& entry = (*slots)[i];
+                json& entry = (*slots)[i];
+                if (entry.contains("file") && entry["file"].is_string() && !entry["file"].get<std::string>().empty())
+                    slot.File = std::filesystem::path(entry["file"].get<std::string>()).filename().string();   // a name, never a path
+                else
+                    entry["file"] = slot.File;   // pinned now, so a later delete cannot move another slot onto it
                 if (entry.contains("name") && entry["name"].is_string() && !entry["name"].get<std::string>().empty())
                     slot.Name = Widen(entry["name"].get<std::string>());
                 if (entry.contains("avatar") && entry["avatar"].is_string() && !entry["avatar"].get<std::string>().empty())
@@ -121,17 +138,21 @@ namespace
                 else if (entry.contains("avatar") && entry["avatar"].is_number_integer())
                     slot.Avatar = "#" + std::to_string(entry["avatar"].get<int>());   // a character id, resolved when shown (chardata loads later)
             }
+            nextFile = (std::max)(nextFile, i + 2);
             g_Slots.push_back(std::move(slot));
         }
+        g_File["nextFile"] = nextFile;
 
         if (!slots)
         {
             // The defaults go into the file the first time a slot is picked, so there is one to edit.
             json list = json::array();
             for (int i = 0; i < count; ++i)
-                list.push_back({ { "name", std::format("Duelist {}", i + 1) }, { "avatar", kDefaultAvatars[i] } });
+                list.push_back({ { "name", std::format("Duelist {}", i + 1) }, { "avatar", DefaultAvatar(i) }, { "file", g_Slots[i].File } });
             g_File["slots"] = std::move(list);
         }
+        else if (static_cast<int>(slots->size()) > count)
+            g_File["slots"].erase(g_File["slots"].begin() + count, g_File["slots"].end());
 
         const bool hasLast = g_File.contains("lastSlot") && g_File["lastSlot"].is_number_integer();
         g_LastSlot = std::clamp(hasLast ? g_File["lastSlot"].get<int>() : 1, 1, count);
@@ -183,18 +204,15 @@ int SaveSlots::LastSlot()
 
 bool SaveSlots::ShouldAsk()
 {
-    return g_ForcedSlot == 0 && Count() > 1;
+    return g_ForcedSlot == 0;   // also with one slot: the screen is where slots are added
 }
 
 std::filesystem::path SaveSlots::PathOf(int slot)
 {
     const std::filesystem::path& primary = Save::PrimarySavePath();
-    if (slot <= 1)
+    if (slot < 1 || slot > Count())
         return primary;
-    std::filesystem::path name = primary.stem();
-    name += std::format("-{}", slot);
-    name += primary.extension();
-    return primary.parent_path() / name;
+    return primary.parent_path() / g_Slots[slot - 1].File;
 }
 
 std::wstring SaveSlots::NameOf(int slot)
@@ -211,7 +229,7 @@ std::string SaveSlots::AvatarSpriteOf(int slot)
     {
         key = CharacterKey(std::atoi(key.c_str() + 1));
         if (key.empty())
-            key = kDefaultAvatars[slot - 1];
+            key = DefaultAvatar(slot - 1);
     }
     return key + "_neutral";
 }
@@ -259,4 +277,88 @@ void SaveSlots::Select(int slot)
     g_LastSlot = slot;
     WriteJson();
     Logger::WriteLog(std::format("Save slot {} picked ({})", slot, PathOf(slot).string()), MODULE_NAME, 0);
+}
+
+int SaveSlots::Add()
+{
+    std::lock_guard<std::mutex> guard(g_Lock);
+    if (Count() >= MaxSlots)
+        return 0;
+    int number = g_File.value("nextFile", Count() + 1);
+    std::error_code error;
+    while (std::filesystem::exists(Save::PrimarySavePath().parent_path() / NumberedFile(number), error))   // never a file that is there
+        ++number;
+    Slot slot;
+    slot.Name = std::format(L"Duelist {}", Count() + 1);
+    slot.Avatar = DefaultAvatar(Count());
+    slot.File = NumberedFile(number);
+    g_File["slots"].push_back({ { "name", std::format("Duelist {}", Count() + 1) }, { "avatar", slot.Avatar }, { "file", slot.File } });
+    g_File["nextFile"] = number + 1;
+    g_Slots.push_back(std::move(slot));
+    WriteJson();
+    Logger::WriteLog(std::format("Save slot {} added ({})", Count(), g_Slots.back().File), MODULE_NAME, 0);
+    return Count();
+}
+
+bool SaveSlots::Delete(int slot)
+{
+    std::lock_guard<std::mutex> guard(g_Lock);
+    if (slot < 1 || slot > Count())
+        return false;
+
+    const std::filesystem::path save = PathOf(slot);
+    std::error_code error;
+    for (const std::filesystem::path& file : { save, std::filesystem::path(save.string() + ".series.bin") })
+    {
+        std::filesystem::remove(file, error);   // false without an error = there was no file
+        if (error)
+        {
+            Logger::WriteLog(std::format("Could not erase {}: {}", file.string(), error.message()), MODULE_NAME, 2);
+            return false;
+        }
+    }
+
+    if (Count() > 1)
+    {
+        g_Slots.erase(g_Slots.begin() + (slot - 1));
+        g_File["slots"].erase(g_File["slots"].begin() + (slot - 1));
+        if (g_LastSlot > slot || g_LastSlot > Count())
+            --g_LastSlot;
+        g_LastSlot = std::clamp(g_LastSlot, 1, Count());
+    }
+    Save::SetSavePath(PathOf(g_LastSlot));   // the game's path never points at the moved file
+    WriteJson();
+    Logger::WriteLog(std::format("Save slot {} deleted ({} erased)", slot, save.filename().string()), MODULE_NAME, 0);
+    return true;
+}
+
+void SaveSlots::SetAvatar(int slot, const std::string& key)
+{
+    std::lock_guard<std::mutex> guard(g_Lock);
+    if (slot < 1 || slot > Count() || key.empty())
+        return;
+    g_Slots[slot - 1].Avatar = key;
+    g_File["slots"][slot - 1]["avatar"] = key;
+    WriteJson();
+}
+
+std::string SaveSlots::AvatarKeyOf(int slot)
+{
+    const std::string sprite = AvatarSpriteOf(slot);
+    return sprite.size() > 8 ? sprite.substr(0, sprite.size() - 8) : sprite;   // without "_neutral"
+}
+
+std::vector<std::string> SaveSlots::AvatarKeys()
+{
+    std::vector<std::string> keys;
+    for (int id = 1; id < kCharacterCount; ++id)
+    {
+        const std::string key = CharacterKey(id);
+        if (!key.empty() && std::find(keys.begin(), keys.end(), key) == keys.end())
+            keys.push_back(key);
+    }
+    for (const char* key : kDefaultAvatars)   // before chardata has loaded there are at least these
+        if (std::find(keys.begin(), keys.end(), key) == keys.end())
+            keys.push_back(key);
+    return keys;
 }

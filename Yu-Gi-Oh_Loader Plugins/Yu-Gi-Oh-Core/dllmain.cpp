@@ -2,8 +2,10 @@
 #include <format>
 #include <string>
 
+#include "CardTable.h"
 #include "Crash.h"
 #include "Credits.h"
+#include "Packs.h"
 #include "Detours.h"
 #include "Host.h"
 #include "Loading.h"
@@ -87,6 +89,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         // Credits: the built-in thanks, Yu-Gi-Oh-Ex\credits.json, what plugins add and the plugin list, then the game's own credits (Credits.h).
         Credits::Install();
 
+        // Limit breakers no store plugin owns: booster packs from Yu-Gi-Oh-Ex/packs.json (new packs in the game's free slots, new shop rows).
+        Packs::Install();
+
         // Core is what keeps the base game unaltered: if the save could not be redirected the game would write the Steam save, so the player is asked.
         if (!Save::Install())
         {
@@ -102,6 +107,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             // Save slots: which file the game starts on, and the save-select screen between the title and the main menu.
             SaveSlots::Install();
             SaveScreen::Install();
+            // The saved card table for every Konami id (ids past the save's 20000 in the save extension); card plugins widen the game's checks.
+            CardTable::Install();
         }
         break;
     }
