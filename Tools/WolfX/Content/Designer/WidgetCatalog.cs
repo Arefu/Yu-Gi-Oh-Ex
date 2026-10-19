@@ -141,14 +141,14 @@ namespace WolfEx.Designer
                 {
                     Id = "entryDigit", Name = "Digit wheel", Category = Category_Page, GameClass = "widget_EntryDigit",
                     Support = InGame.Code, Size = new(110, 260), DefaultText = "0", DefaultTextSize = 64, HasHighlight = true,
-                    Notes = "One 0-9 wheel with arrows (the Live code entry). YuGiOh-RIX.h EntryDigit::CreateFromLayout; BetterCardShop's password page uses eight.",
+                    Notes = "One 0-9 wheel with arrows (the Live code entry). YuGiOh-RIX.h EntryDigit::CreateFromLayout; the BOB Card Store's password page uses eight.",
                     Paint = PaintDigit,
                 },
                 new()
                 {
                     Id = "trunk", Name = "Card trunk", Category = Category_Page, GameClass = "RIX::widget_TrunkZone",
                     Support = InGame.Code, Size = new(1300, 860),
-                    Notes = "The deck editor's card grid. YuGiOh-RIX.h Trunk::CreateFromLayout; BetterCardShop fills it with every card. Drawn with placeholder cards.",
+                    Notes = "The deck editor's card grid. YuGiOh-RIX.h Trunk::CreateFromLayout; the BOB Card Store shows every card (\"cards\": \"all\"). Drawn with placeholder cards.",
                     Paint = PaintTrunk,
                 },
                 new()

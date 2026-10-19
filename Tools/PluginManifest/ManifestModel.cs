@@ -13,6 +13,8 @@ namespace PluginManifest
         [JsonPropertyName("dlls")] public List<string> Dlls { get; set; } = new();
         /// <summary>The Yu-Gi-Oh-Ex files this plugin applies ("cards.json", a folder as "pages" + backslash); WolfX writes content.json from it.</summary>
         [JsonPropertyName("content")] public List<string> Content { get; set; } = new();
+        /// <summary>Older plugins this one took over: names, or { "name", "note" } (kept as written).</summary>
+        [JsonPropertyName("replaces")] public List<JsonElement> Replaces { get; set; } = new();
 
         private static readonly JsonSerializerOptions Options = new()
         {
@@ -48,6 +50,7 @@ namespace PluginManifest
             if (Requires.Count > 0) fields["requires"] = Requires;
             if (Dlls.Count > 0) fields["dlls"] = Dlls;
             if (Content.Count > 0) fields["content"] = Content;
+            if (Replaces.Count > 0) fields["replaces"] = Replaces;
             return JsonSerializer.Serialize(fields, Options) + Environment.NewLine;
         }
     }

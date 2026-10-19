@@ -224,7 +224,7 @@ namespace WolfX
 
             // Shop
             Add("Shop", "Packs", PackDefinitionsEditor, null, "Standard: main\\packdefdata_<lang>.bin and the packs' cards in packs.zib.");
-            Content("Shop", "New packs", new PacksPanel(), "Additional: Yu-Gi-Oh-Ex\\packs.json, new packs for the shop (needs Yu-Gi-Oh-BetterCardShop). The game's own packs are on Packs.");
+            Content("Shop", "New packs", new PacksPanel(), "Additional: Yu-Gi-Oh-Ex\\packs.json, new packs for the shop (Yu-Gi-Oh-Core). The game's own packs are on Packs.");
             Content("Shop", "Unlocks", new UnlocksPanel(), "Additional: Yu-Gi-Oh-Ex\\unlocks.json, cards every profile owns (needs Yu-Gi-Oh-MoreCards).");
 
             // Text

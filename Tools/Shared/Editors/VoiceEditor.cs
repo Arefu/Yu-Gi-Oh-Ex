@@ -6,6 +6,8 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using Types;
 using WolfX.Types;
+using static Wolf.Editors.TriggerChoices;
+using Uses = Wolf.Editors.TriggerUses;
 
 namespace Wolf.Editors
 {
@@ -18,16 +20,6 @@ namespace Wolf.Editors
     public sealed class VoiceEditor : UserControl, IGameEditor
     {
         public const string FileName = "voices.json";
-
-        public sealed class Choice<T>(T key, string text)
-        {
-            public T Key { get; } = key;
-            public string Text { get; } = text;
-        }
-
-        /// <summary>Which of a row's extra columns an event uses (the others are greyed out).</summary>
-        [Flags]
-        private enum Uses { None = 0, Amount = 1, Cards = 2, How = 4, Reason = 8, Kind = 16, Chain = 32, Standing = 64 }
 
         /// <summary>The events (voices.json "when" + "who"), as the sentence the editor shows. Key = when, or when:opponent.</summary>
         private static readonly (string Key, string Text, Uses Uses)[] WhenChoices =
@@ -62,44 +54,7 @@ namespace Wolf.Editors
             ("draw", "the duel is a draw", Uses.None),
         ];
 
-        /// <summary>voices.json "how" on a summon line.</summary>
-        private static readonly (string Key, string Text)[] SummonKinds =
-        [
-            ("any", "any way"),
-            ("normal", "Normal / Tribute Summon"),
-            ("flip", "Flip Summon"),
-            ("special", "Special Summon (any kind)"),
-            ("fusion", "Fusion Summon"),
-            ("synchro", "Synchro Summon"),
-            ("xyz", "Xyz Summon"),
-            ("link", "Link Summon"),
-            ("ritual", "Ritual Summon"),
-            ("pendulum", "Pendulum Summon"),
-        ];
-
-        /// <summary>voices.json "kind" on an activate / set / destroyed line.</summary>
-        private static readonly (string Key, string Text)[] CardKinds = [("any", "any card"), ("monster", "a monster"), ("spell", "a Spell"), ("trap", "a Trap")];
-
-        /// <summary>voices.json "response" on an activate line (null = either).</summary>
-        private static readonly (string Key, string Text)[] ChainChoices = [("either", "either"), ("start", "starts a chain"), ("response", "in response")];
-
-        /// <summary>voices.json "standing" on a turnStart line: the speaker's LP against the other duelist's.</summary>
-        private static readonly (string Key, string Text)[] Standings = [("any", "any"), ("winning", "winning on LP"), ("losing", "losing on LP"), ("even", "even on LP")];
-
-        /// <summary>voices.json "once": at most once per duel (true), once per turn ("turn"), or every time (false).</summary>
-        private static readonly (string Key, string Text)[] OnceChoices = [("duel", "once per duel"), ("turn", "once per turn"), ("never", "every time")];
-
-        /// <summary>voices.json "reason" on a win / lose line: the game's DuelWinReason (index = number), docs/StatsAndMatchResults.md.</summary>
-        private static readonly (string Key, string Text)[] WinReasons =
-        [
-            ("any", "any reason"), ("lp", "LP reduced to 0"), ("deckOut", "deck-out"), ("timeLimit", "time / turn limit"), ("surrender", "surrender"),
-            ("rules", "broke the rules"), ("exodia", "Exodia the Forbidden One"), ("destinyBoard", "Destiny Board"), ("yataLock", "Yata-Garasu lock"),
-            ("lastTurn", "Last Turn"), ("finalCountdown", "Final Countdown"), ("effect", "a match-winning effect (11)"), ("vennominaga", "Vennominaga"),
-            ("exodius", "Exodius the Ultimate Forbidden Lord"), ("effect14", "a match-winning effect (14)"), ("leo", "Number 88: Gimmick Puppet of Leo"),
-            ("disasterLeo", "Number C88: Gimmick Puppet Disaster Leo"), ("jackpot7", "Jackpot 7"), ("effect18", "a match-winning effect (18)"),
-            ("relaySoul", "Relay Soul"), ("ghostrickAngel", "Ghostrick Angel of Mischief"), ("phantasmSpiral", "Phantasm Spiral Assault"),
-            ("faWinners", "F.A. Winners"), ("flyingElephant", "Flying Elephant"), ("exodiaDefender", "Exodia, the Legendary Defender"),
-        ];
+        // "how", "kind", "response", "standing", "once" and "reason" choices: TriggerChoices (shared with the Videos page).
 
         private sealed class LineRow
         {
@@ -699,17 +654,6 @@ namespace Wolf.Editors
                 }
             }
             catch (Exception ex) when (ex is InvalidDataException or JsonException or IOException) { }
-        }
-
-        private static double? Num(JsonNode? node) => node is JsonValue value && value.TryGetValue<double>(out double d) ? d : null;
-
-        /// <summary>"reason" is a name ("exodia") or the DuelWinReason number.</summary>
-        private static string ReasonKey(JsonNode? node)
-        {
-            if (Num(node) is double number)
-                return number >= 0 && number < WinReasons.Length ? WinReasons[(int)number].Key : "any";
-            string text = node?.ToString() ?? "";
-            return WinReasons.FirstOrDefault(r => string.Equals(r.Key, text, StringComparison.OrdinalIgnoreCase)).Key ?? "any";
         }
 
         private void Read(JsonObject root)

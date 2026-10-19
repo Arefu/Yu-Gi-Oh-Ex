@@ -290,7 +290,7 @@ namespace Wolf.Mods
         [
             "Yu-Gi-Oh-Core", "Yu-Gi-Oh-RIX", "Yu-Gi-Oh-MoreCards", "Yu-Gi-Oh-Campaign", "Yu-Gi-Oh-Effects", "Yu-Gi-Oh-Media",
             "Yu-Gi-Oh-AnimeCards", "Yu-Gi-Oh-MP", "Yu-Gi-Oh-TagDuel", "Yu-Gi-Oh-Console", "Yu-Gi-Oh-GUI", "Yu-Gi-Oh-PatchMeOut",
-            "Yu-Gi-Oh-BetterCardShop", "Yu-Gi-Oh-Funky", "Yu-Gi-Oh-SpeedHacks",
+            "Yu-Gi-Oh-Funky", "Yu-Gi-Oh-SpeedHacks",
         ];
 
         /// <summary>What content.json files name when there is no manifest to ask (same table as WolfX's ContentManifest).</summary>
@@ -300,7 +300,7 @@ namespace Wolf.Mods
             ("relatedcards.json", "Yu-Gi-Oh-MoreCards"), ("text.json", "Yu-Gi-Oh-MoreCards"),
             ("characters.json", "Yu-Gi-Oh-Campaign"), ("decks.json", "Yu-Gi-Oh-Campaign"), ("storyduels.json", "Yu-Gi-Oh-Campaign"),
             ("storyscripts.json", "Yu-Gi-Oh-Campaign"),
-            ("packs.json", "Yu-Gi-Oh-BetterCardShop"), ("prices.json", "Yu-Gi-Oh-BetterCardShop"),
+            ("packs.json", "Yu-Gi-Oh-Core"),
             ("summoning.json", "Yu-Gi-Oh-Effects"), ("effects.json", "Yu-Gi-Oh-Effects"),
             ("music.json", "Yu-Gi-Oh-Media"), ("voices.json", "Yu-Gi-Oh-Media"), ("videos.json", "Yu-Gi-Oh-Media"),
             (@"pages\", "Yu-Gi-Oh-RIX"), (@"menus\", "Yu-Gi-Oh-RIX"),
@@ -473,6 +473,23 @@ namespace Wolf.Mods
 
         public static bool IsStock(string plugin) => StockPlugins.Contains(plugin, StringComparer.OrdinalIgnoreCase);
 
+        /// <summary>Old plugin name -> the installed plugin whose manifest "replaces" it (renamed, merged or retired plugins).</summary>
+        public static Dictionary<string, string> Successors(string? pluginsFolder)
+        {
+            var map = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            if (pluginsFolder == null || !Directory.Exists(pluginsFolder))
+                return map;
+            foreach (string folder in new[] { pluginsFolder, Path.Combine(pluginsFolder, "YGO-Ex") }.Where(Directory.Exists))
+                foreach (string manifest in Directory.EnumerateFiles(folder, "*.json"))
+                {
+                    string name = Path.GetFileNameWithoutExtension(manifest);
+                    if (File.Exists(Path.Combine(folder, name + ".dll")))
+                        foreach (var (old, _) in RetiredPlugins.Replaces(manifest))
+                            map.TryAdd(old, name);
+                }
+            return map;
+        }
+
         /// <summary>The plugins a Yu-Gi-Oh-Ex folder's content needs: its content.json (WolfX writes it), else what its files are known to need.</summary>
         public static IReadOnlyList<string> ContentPlugins(string contentFolder)
         {
@@ -563,11 +580,17 @@ namespace Wolf.Mods
             var issues = new List<ModIssue>();
             var active = modsInOrder.Where(m => m.Enabled || m.IsLocal).ToList();
             var installed = InstalledPlugins(pluginsFolder);
+            var successors = Successors(pluginsFolder);
 
             foreach (Mod mod in active)
             {
                 foreach (ModRequirement need in mod.NeededPlugins())
                 {
+                    if (successors.TryGetValue(need.Plugin, out string? successor) && installed.Contains(successor))
+                    {
+                        issues.Add(new ModIssue(IssueLevel.Info, mod.Id, $"Asks for {need.Plugin}, which is now {successor}: that one is used instead."));
+                        continue;
+                    }
                     if (installed.Contains(need.Plugin) || mod.BundledPlugins().Contains(need.Plugin, StringComparer.OrdinalIgnoreCase))
                         continue;
                     string where = need.Url.Length > 0 ? "get it from the link" : IsStock(need.Plugin) ? "it comes with Yu-Gi-Oh-Ex, install the full set" : "no link given, ask the mod's author";

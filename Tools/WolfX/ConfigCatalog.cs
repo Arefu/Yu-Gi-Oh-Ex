@@ -132,30 +132,25 @@
             new("Yu-Gi-Oh-Core", "GameSaveName", SettingKind.Text, "savegame-ex.dat",
                 "File name of the save the game always uses (Yu-Gi-Oh-Core is always loaded). Your original savegame.dat is never touched."),
             new("Yu-Gi-Oh-Core", "SaveSlot", SettingKind.Number, "0",
-                "0 = after the title screen, pick a save slot on the save-select screen. 1 to 5 = always load that slot and skip the screen. Slot 1 is the GameSaveName file, slot N the same name with -N (savegame-ex-2.dat); names and avatars are in Yu-Gi-Oh-Ex\\saves.json."),
+                "0 = after the title screen, pick a save slot on the save-select screen. 1 to 99 = always load that slot and skip the screen. Each slot's file, name and avatar are in Yu-Gi-Oh-Ex\\saves.json (slots are added and deleted on the save-select screen)."),
+            new("Yu-Gi-Oh-Core", "ReplacedNotice", SettingKind.Text, "",
+                "Written by the loader: the leftover (renamed, merged or retired) plugins it last told you about, so it says so only once. Clear it to see the message again."),
 
             new("Yu-Gi-Oh-SpeedHacks", "Speed", SettingKind.Number, "2", "Duel speed multiplier. 1 is normal."),
             new("Yu-Gi-Oh-SpeedHacks", "NoAnimations", SettingKind.Toggle, "1", "Skip card and monster animations in duels."),
             new("Yu-Gi-Oh-SpeedHacks", "NoMovies", SettingKind.Toggle, "1", "Skip the cutscene movies."),
 
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-ShowOwnedCards", SettingKind.Toggle, "0",
-                "Also list the cards you already have three copies of in the Card Shop. Off = only cards you can still buy are listed."),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-PasswordCost", SettingKind.Number, "1000",
-                "DP to unlock a card with its password (three copies). Yu-Gi-Oh-Ex\\prices.json can set a card's own password price."),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-MonsterPrice", SettingKind.Choice, "attack",
-                "How the Card Shop prices one copy of a monster. attack = ATK x 1.8 / 5. classic = Forbidden Memories' price curve (doubles every ~590 ATK+DEF). custom = BetterShop-MonsterFormula. flat = BetterShop-Cost. Yu-Gi-Oh-Ex\\prices.json can set a card's own price.",
-                ["attack", "classic", "custom", "flat"]),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-MonsterFormula", SettingKind.Text, "ATK * 1.8 / 5",
-                "Used when BetterShop-MonsterPrice is custom. Names: ATK, DEF (a Link monster's is 0.8 x ATK), LEVEL, RARE (1 or 0), LINK (1 or 0). + - * / ^ and brackets; min, max, exp, log, sqrt, round, floor, ceil."),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-SpellTrapPrice", SettingKind.Choice, "rarity",
-                "How the Card Shop prices spells and traps. rarity = what a typical monster of the same pack rarity costs. custom = BetterShop-SpellTrapFormula. flat = BetterShop-Cost.",
-                ["rarity", "custom", "flat"]),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-SpellTrapFormula", SettingKind.Text, "500 + 500 * RARE",
-                "Used when BetterShop-SpellTrapPrice is custom. RARE is 1 for a card in a pack's rare slot, else 0."),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-Cost", SettingKind.Number, "500", "DP for one copy when a price setting is flat."),
+
+
+
+
+
+
 
             new("Yu-Gi-Oh-AnimeCards", "HideLevelBadge", SettingKind.Choice, "1",
                 "The level/rank number the duel draws over the monsters in your hand (and the badge on other card views). 0 = show it (vanilla), 1 = hide it in the hand, 2 = hide it everywhere. The anime frames already show the stars on the card. Restart the game after changing it.", ["0", "1", "2"]),
+            new("Yu-Gi-Oh-AnimeCards", "HideFieldStats", SettingKind.Choice, "1",
+                "The stat plate under face-up monsters on the field (level badge, ATK / DEF, attribute and type icons). 1 = hide it (the anime frames show these on the card), 0 = show it (vanilla). Link arrows stay. Restart the game after changing it.", ["0", "1"]),
             new("Yu-Gi-Oh-AnimeCards", "UseLargeAtkDefFont", SettingKind.Toggle, "1", "Draw ATK/DEF with the game's larger (32 px) number font, so the scaled numbers stay sharper."),
             new("Yu-Gi-Oh-AnimeCards", "CustomAtkX", SettingKind.Number, "107.5", "ATK number: centre X on the 400 x 580 card face (the left box)."),
             new("Yu-Gi-Oh-AnimeCards", "CustomAtkY", SettingKind.Number, "526.5", "ATK number: centre Y on the card face."),

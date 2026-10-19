@@ -30,13 +30,14 @@ namespace WolfEx
             ["menu"] = "menu", ["slider"] = "slider", ["digits"] = "digits", ["card"] = "cardInfo", ["cardInfo"] = "cardInfo",
             ["series"] = "seriesTabs", ["seriesTabs"] = "seriesTabs", ["characters"] = "characters", ["decks"] = "decks",
             ["deck"] = "deckInfo", ["deckInfo"] = "deckInfo", ["cards"] = "cardGrid", ["cardGrid"] = "cardGrid", ["image"] = "image", ["text"] = "text",
+            ["user"] = "user", ["related"] = "relatedCards", ["relatedCards"] = "relatedCards", ["box"] = "cardBox", ["cardBox"] = "cardBox",
         };
 
         // the field a value written straight after the widget word fills ("text "Hello"", "digits 4", "card 4007")
         private static readonly Dictionary<string, string> Positional = new()
         {
             ["menu"] = "id", ["slider"] = "label", ["digits"] = "count", ["cardInfo"] = "card", ["deckInfo"] = "deck",
-            ["cardGrid"] = "cards", ["image"] = "resource", ["text"] = "text", ["characters"] = "series",
+            ["cardGrid"] = "cards", ["cardBox"] = "cards", ["image"] = "resource", ["text"] = "text", ["characters"] = "series",
         };
 
         // fields written in any case in a script -> their spelling in the page file
@@ -44,13 +45,13 @@ namespace WolfEx
         [
             "id", "x", "y", "width", "height", "items", "source", "spacing", "action", "bind", "min", "max", "default", "onChange", "description",
             "label", "count", "card", "series", "deck", "side", "cards", "filterX", "filterY", "resource", "sprite", "alpha", "text", "textSize",
-            "align", "colour", "visible", "enabled", "values", "toggle", "title",
+            "align", "colour", "visible", "enabled", "values", "toggle", "title", "cols", "rows", "cellWidth", "cellHeight", "gap", "frame",
         ];
 
-        public static readonly string[] Widgets = ["menu", "slider", "digits", "card", "series", "characters", "decks", "deck", "cards", "image", "text"];
+        public static readonly string[] Widgets = ["menu", "slider", "digits", "card", "series", "characters", "decks", "deck", "cards", "image", "text", "user", "related", "box"];
         public static readonly string[] Actions = ["page", "back", "goto", "call", "quit", "set", "toggle", "add", "show_card", "reset_filter", "message", "confirm", "video", "popup", "if",
             "give_dp", "take_dp", "give_card", "take_card", "unlock", "lock", "unlock_character", "sound"];
-        public static readonly string[] Keywords = ["header", "button", "choice", "rows", "on", "at", "size", "bind", "default", "description", "enabled", "onchange", "yes", "else", "and", "not", "key", "true", "false"];
+        public static readonly string[] Keywords = ["header", "button", "edit", "hidden", "value", "use", "choice", "rows", "on", "at", "size", "bind", "default", "description", "enabled", "onchange", "yes", "else", "and", "not", "key", "true", "false"];
 
         // ---------------------------------------------------------------- tokens
 
@@ -107,10 +108,25 @@ namespace WolfEx
                     while (i < source.Length && (char.IsLetterOrDigit(source[i]) || source[i] == '_' || source[i] == '.')) i++;
                     string word = source[start..i];
                     // var:name / config:Section/Key - the name runs to a space or punctuation (config keys hold '-' and '/')
-                    if (i < source.Length && source[i] == ':' && (word.Equals("var", StringComparison.OrdinalIgnoreCase) || word.Equals("config", StringComparison.OrdinalIgnoreCase) || word.Equals("game", StringComparison.OrdinalIgnoreCase)))
+                    if (i < source.Length && source[i] == ':' && (word.Equals("var", StringComparison.OrdinalIgnoreCase) || word.Equals("config", StringComparison.OrdinalIgnoreCase) || word.Equals("game", StringComparison.OrdinalIgnoreCase) || word.Equals("value", StringComparison.OrdinalIgnoreCase)))
                     {
                         int nameStart = ++i;
-                        while (i < source.Length && !char.IsWhiteSpace(source[i]) && ",;{}()[]=!<>".IndexOf(source[i]) < 0) i++;
+                        while (i < source.Length && !char.IsWhiteSpace(source[i]) && ",;}()[]=!<>".IndexOf(source[i]) < 0)
+                        {
+                            if (source[i] == '{')
+                            {
+                                // a value inside the name: game:owned.{var:card}
+                                for (int depth = 0; i < source.Length; i++)
+                                {
+                                    if (source[i] == '{') depth++;
+                                    else if (source[i] == '}' && --depth == 0) break;
+                                    else if (source[i] == '\n') throw new Error(line, column, "a '{' in a name is missing its '}'");
+                                }
+                                if (i >= source.Length)
+                                    throw new Error(line, column, "a '{' in a name is missing its '}'");
+                            }
+                            i++;
+                        }
                         if (i == nameStart)
                             throw new Error(line, column, $"{word}: needs a name");
                         tokens.Add(new Token(T.Ref, word.ToLowerInvariant() + ":" + source[nameStart..i], line, column));
@@ -197,6 +213,9 @@ namespace WolfEx
                 var page = new JsonObject { ["version"] = 2 };
                 var elements = new JsonArray();
                 var buttons = new JsonArray();
+                var edits = new JsonArray();
+                var values = new JsonObject();
+                var uses = new JsonArray();
                 bool header = false;
                 while (Peek.Kind != T.End)
                 {
@@ -212,18 +231,49 @@ namespace WolfEx
                     }
                     else if (AcceptWord("button"))
                         buttons.Add(MenuButton(buttons.Count));
+                    else if (AcceptWord("edit"))
+                        edits.Add(GameButtonEdit());
+                    else if (AcceptWord("value"))
+                    {
+                        // value name = "text";   (a number is fine too) - read as {value:name}, or by name inside {= ...}
+                        if (Peek.Kind != T.Word)
+                            throw Fail($"expected the value's name but found {Shown(Peek)}");
+                        string name = Next().Text;
+                        if (values.ContainsKey(name))
+                            throw Fail($"the value {name} is already defined");
+                        Expect("=");
+                        values[name] = Peek.Kind is T.Str or T.Num ? Next().Text : throw Fail($"expected the value's text (in quotes) or a number but found {Shown(Peek)}");
+                        Expect(";");
+                    }
+                    else if (AcceptWord("use"))
+                    {
+                        // use "card-store-prices";   another page file's values, here too
+                        uses.Add(ExpectName("the page file's name"));
+                        Expect(";");
+                    }
                     else if (Peek.Kind == T.Word && Kinds.TryGetValue(Peek.Text, out string? kind))
                     {
                         Next();
                         elements.Add(Widget(kind));
                     }
                     else
-                        throw Fail($"expected header, button or a widget ({string.Join(", ", Widgets)}) but found {Shown(Peek)}");
+                        throw Fail($"expected header, value, use, button, edit or a widget ({string.Join(", ", Widgets)}) but found {Shown(Peek)}");
                 }
                 if (!header)
                     page["header"] = pageName;
+                if (uses.Count > 0)
+                    page["use"] = uses;
+                if (values.Count > 0)
+                    page["values"] = values;
                 page["elements"] = elements;
-                return new Result(page, buttons.Count == 0 ? null : new JsonObject { ["buttons"] = buttons });
+                JsonObject? menus = null;
+                if (buttons.Count > 0 || edits.Count > 0)
+                {
+                    menus = [];
+                    if (buttons.Count > 0) menus["buttons"] = buttons;
+                    if (edits.Count > 0) menus["edit"] = edits;
+                }
+                return new Result(page, menus);
             }
 
             // button on main "Label" "description" [page name] [key "k"] [if ...] -> action;   (a button on a game menu: menus\<page>.json)
@@ -257,15 +307,37 @@ namespace WolfEx
                 return button;
             }
 
+            // edit cardShop ["Label" ["description"]] [hidden] [-> action];   one of the game's own main menu buttons (docs/MenuFiles.md names)
+            private JsonObject GameButtonEdit()
+            {
+                if (Peek.Kind != T.Word && Peek.Kind != T.Str)
+                    throw Fail($"expected one of the game's buttons (cardShop, deckEditor, quitGame ...) but found {Shown(Peek)}");
+                var edit = new JsonObject { ["item"] = Next().Text };
+                if (Peek.Kind == T.Str)
+                {
+                    edit["label"] = Next().Text;
+                    if (Peek.Kind == T.Str)
+                        edit["description"] = Next().Text;
+                }
+                while (!Accept(";"))
+                {
+                    if (AcceptWord("hidden"))
+                        edit["hidden"] = true;
+                    else if (AcceptWord("description"))
+                        edit["description"] = ExpectString("the description");
+                    else if (Accept("->"))
+                        edit["action"] = Action();
+                    else
+                        throw Fail($"expected a label, hidden, -> or ';' but found {Shown(Peek)}");
+                }
+                return edit;
+            }
+
             private JsonObject Widget(string kind)
             {
                 var widget = new JsonObject { ["kind"] = kind };
-                if (Positional.TryGetValue(kind, out string? field) && Peek.Kind is T.Str or T.Num or T.Ref || (kind == "menu" && Peek.Kind == T.Word && !IsKeywordHere()))
-                {
-                    if (field == null)
-                        throw Fail($"{kind} takes no value before its fields");
+                if (Positional.TryGetValue(kind, out string? field) && (Peek.Kind is T.Str or T.Num or T.Ref || (Peek.Kind == T.Word && !IsKeywordHere())))
                     widget[field] = Value();
-                }
                 Fields(widget, kind == "menu");
                 if (kind == "menu")
                 {
@@ -319,7 +391,13 @@ namespace WolfEx
                         target["onChange"] = Action();
                     }
                     else if (AcceptWord("rows"))
-                        target["source"] = ExpectString("the list source a plugin registered");
+                    {
+                        // rows 2 = a card box's grid height; rows "plugin.list" = a plugin fills the menu
+                        if (Peek.Kind == T.Str)
+                            target["source"] = Next().Text;
+                        else
+                            target["rows"] = Value();
+                    }
                     else if (Peek.Kind == T.Word)
                     {
                         string name = Next().Text;
@@ -443,10 +521,10 @@ namespace WolfEx
                         not = !not;
                     }
                     else if (Accept(">="))
-                        part["atLeast"] = Number(ExpectNumberOrRef());
+                        part["atLeast"] = ExpectNumberOrRef();
                     else if (Accept("<"))
                     {
-                        part["atLeast"] = Number(ExpectNumberOrRef());
+                        part["atLeast"] = ExpectNumberOrRef();
                         not = !not;
                     }
                     if (not)
@@ -457,7 +535,8 @@ namespace WolfEx
                 return parts.Count == 1 ? parts[0]!.DeepClone() : parts;
             }
 
-            private double ExpectNumberOrRef() => ExpectNumber("a number");
+            // the right side of >= / <: a number, a value (game:price.{var:card}, sent as "{...}" for RIX to expand) or a text
+            private JsonNode ExpectNumberOrRef() => Amount("a number or a value");
 
             // an amount: a number, or "{var:x}" text RIX expands when the action runs
             private JsonNode Amount(string what) => Peek.Kind == T.Num ? Number(ExpectNumber(what))
@@ -645,6 +724,11 @@ namespace WolfEx
             var w = new StringBuilder();
             if (page["header"] is JsonValue header)
                 w.Append("header ").Append(Quote(header.ToString())).Append(";\n");
+            foreach (var used in (page["use"] as JsonArray ?? []).OfType<JsonValue>())
+                w.Append("use ").Append(Quote(used.ToString())).Append(";\n");
+            if (page["values"] is JsonObject values)
+                foreach (var (name, value) in values)
+                    w.Append("value ").Append(name).Append(" = ").Append(Quote(value?.ToString() ?? "")).Append(";\n");
             if (menus?["buttons"] is JsonArray buttons)
             {
                 foreach (var b in buttons.OfType<JsonObject>())
@@ -654,6 +738,18 @@ namespace WolfEx
                     if (b["page"] is JsonValue p) w.Append(" page ").Append(Name(p.ToString()));
                     if (b["key"] is JsonValue k) w.Append(" key ").Append(Quote(k.ToString()));
                     w.Append(" -> ").Append(ActionText(b["action"], 1)).Append(";\n");
+                }
+            }
+            if (menus?["edit"] is JsonArray edits)
+            {
+                foreach (var e in edits.OfType<JsonObject>())
+                {
+                    w.Append("edit ").Append(Name((string?)e["item"] ?? ""));
+                    if (e["label"] is JsonValue l) w.Append(' ').Append(Quote(l.ToString()));
+                    if (e["description"] is JsonValue d) w.Append(e["label"] == null ? " description " : " ").Append(Quote(d.ToString()));
+                    if (e["hidden"] is JsonValue h && h.TryGetValue(out bool hide) && hide) w.Append(" hidden");
+                    if (e["action"] != null) w.Append(" -> ").Append(ActionText(e["action"], 1));
+                    w.Append(";\n");
                 }
             }
             foreach (var element in (page["elements"] as JsonArray ?? []).OfType<JsonObject>())
@@ -754,10 +850,10 @@ namespace WolfEx
                 return string.Join(" and ", all.Where(p => p != null).Select(p => ConditionText(p!)));
             if (when is not JsonObject o)
                 return "var:true";
-            string reference = o["var"] != null ? "var:" + o["var"] : o["game"] != null ? "game:" + o["game"] : "config:" + o["config"];
+            string reference = o["var"] != null ? "var:" + o["var"] : o["game"] != null ? "game:" + o["game"] : o["value"] != null ? "value:" + o["value"] : "config:" + o["config"];
             bool not = o["not"] is JsonValue n && n.TryGetValue(out bool b) && b;
             if (o["atLeast"] is JsonNode least)
-                return $"{reference} {(not ? "<" : ">=")} {least.ToJsonString().Trim('"')}";
+                return $"{reference} {(not ? "<" : ">=")} {AmountText(least)}";
             if (o["equals"] is JsonNode equals)
                 return $"{reference} {(not ? "!=" : "=")} {Quote(equals.ToString())}";
             return (not ? "not " : "") + reference;
@@ -790,7 +886,7 @@ namespace WolfEx
             if (o.ContainsKey("showCard")) return $"show_card({Arg("showCard")})";
             if (o.ContainsKey("resetFilter")) return "reset_filter";
             string Tail() => (o["then"] != null ? " -> " + ActionText(o["then"], depth) : "") + (o["else"] != null ? " else " + ActionText(o["else"], depth) : "");
-            string Amt(string key) => o[key] is JsonValue v && v.GetValueKind() == JsonValueKind.String && v.ToString() is var t && t.StartsWith('{') && t.EndsWith('}') ? t[1..^1] : o[key]!.ToJsonString();
+            string Amt(string key) => AmountText(o[key]!);
             string Copies() => o["copies"] != null ? ", " + o["copies"]!.ToJsonString() : "";
             if (o.ContainsKey("giveDp")) return $"give_dp({Amt("giveDp")})" + Tail();
             if (o.ContainsKey("takeDp")) return $"take_dp({Amt("takeDp")})" + Tail();
@@ -819,6 +915,11 @@ namespace WolfEx
             return value is JsonValue b && b.TryGetValue(out bool yes) && yes ? key : $"{key}({ValueText(value!)})";
         }
 
+        private static string AmountText(JsonNode value) =>
+            value is JsonValue v && v.GetValueKind() == JsonValueKind.String && v.ToString() is var t
+                ? (t.StartsWith('{') && t.EndsWith('}') && IsRef(t[1..^1]) ? t[1..^1] : Quote(t))
+                : value.ToJsonString(Indented);
+
         private static string ValueText(JsonNode value) => value switch
         {
             JsonArray list => "[" + string.Join(", ", list.Select(v => v == null ? "\"\"" : ValueText(v))) + "]",
@@ -827,7 +928,20 @@ namespace WolfEx
         };
 
         private static bool IsRef(string s) =>
-            (s.StartsWith("var:", StringComparison.Ordinal) || s.StartsWith("config:", StringComparison.Ordinal) || s.StartsWith("game:", StringComparison.Ordinal)) && s.IndexOfAny([' ', ',', ';', '{', '}', '(', ')', '[', ']', '=', '!', '"']) < 0 && s.Length > s.IndexOf(':') + 1;
+            (s.StartsWith("var:", StringComparison.Ordinal) || s.StartsWith("config:", StringComparison.Ordinal) || s.StartsWith("game:", StringComparison.Ordinal) || s.StartsWith("value:", StringComparison.Ordinal)) && RefName(s) && s.Length > s.IndexOf(':') + 1;
+
+        // a value name: no spaces or punctuation outside { } (balanced)
+        private static bool RefName(string s)
+        {
+            int depth = 0;
+            foreach (char c in s)
+            {
+                if (c == '{') depth++;
+                else if (c == '}') { if (--depth < 0) return false; }
+                else if (depth == 0 && " ,;()[]=!\"<>".IndexOf(c) >= 0) return false;
+            }
+            return depth == 0;
+        }
 
         private static bool IsName(string s) => s.Length > 0 && (char.IsLetter(s[0]) || s[0] == '_') && s.All(c => char.IsLetterOrDigit(c) || c == '_' || c == '.')
             && !Keywords.Contains(s, StringComparer.OrdinalIgnoreCase) && !KnownFields.Contains(s, StringComparer.OrdinalIgnoreCase) && s != "at" && s != "size" && s != "if";

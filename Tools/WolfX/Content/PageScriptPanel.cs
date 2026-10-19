@@ -157,10 +157,10 @@ namespace WolfEx
                     text = "// Made from " + name + ".json. Saving writes this script beside it.\n" + PageScript.Decompile(page, menus);
                 }
                 _name = name;
+                SetEditable(true);   // first: Scintilla ignores Text while ReadOnly (no page open yet), so the first page opened came up empty
                 _editor.Text = text.Replace("\r\n", "\n");
                 _savedText = File.Exists(ScriptPath(name)) ? _editor.Text : "";
                 _editor.EmptyUndoBuffer();
-                SetEditable(true);
                 Check();
             }
             catch (Exception ex) when (ex is IOException or JsonException or InvalidOperationException or InvalidCastException or UnauthorizedAccessException)
@@ -188,9 +188,9 @@ namespace WolfEx
                 return;
             }
             _name = name;
+            SetEditable(true);   // before the text: Scintilla ignores Text while ReadOnly
             _editor.Text = Template.Replace("{name}", name);
             _savedText = "";
-            SetEditable(true);
             Check();
             SetStatus($"New page {name}: not saved yet.");
         }
@@ -287,8 +287,10 @@ namespace WolfEx
 
         private void ShowReference() => MessageBox.Show(this,
             "header \"Title\";\n" +
-            "button on main \"Label\" \"help\" -> action;      (a button on a game menu)\n\n" +
-            "Widgets: menu, text, image, slider, digits, card, cards, decks, deck, series, characters\n" +
+            "button on main \"Label\" \"help\" -> action;      (a button on a game menu)\n" +
+            "edit cardShop -> page(\"my-page\");      (changes one of the game's main menu buttons)\n" +
+            "use \"other-page\";   value name = \"text {var:x}\";      (read as {value:name}, value:name, or by name inside {= ...})\n\n" +
+            "Widgets: menu, text, image, slider, digits, card, cards, box, decks, deck, series, characters, user, related\n" +
             "  fields: at x, y   size w, h   bind var:x   default v   if <condition>   -> action   onchange action   (any other: name value)\n" +
             "  menu name ... { button \"A\" \"help\" -> ...; choice \"B\" [\"x\", \"y\"] bind var:b; toggle \"C\" bind var:c; rows \"plugin.list\"; }\n\n" +
             "Actions: page(\"name\")  back  goto(deckEditor)  video(\"intro\")  call(\"plugin.action\")  quit\n" +
@@ -299,6 +301,8 @@ namespace WolfEx
             "  { a; b; c; } runs several in order\n\n" +
             "Conditions: var:x   not var:x   var:x = \"v\"   var:x != \"v\"   game:dp >= 1000   game:dp < 1000   joined with and\n" +
             "Values in text: {var:x} {config:Section/Key} {game:dp} {game:owned.4007} {game:cardname.4007} {game:unlocked.card_shop} {game:character.12} {game:language}\n\n" +
+            "Cards: {game:atk.ID} def level kind spell trap monster link known rare rarity   {game:median.VALUE.rare}   {name|fallback}\n" +
+            "Maths: {= clamp(round(ATK * 1.8 / 5), 100, 999999)}   if(test, a, b)  min max round floor ceil abs exp log sqrt   < <= == != and or not\n\n" +
             "Full reference: docs/PageScript.md", "BOB for pages");
     }
 

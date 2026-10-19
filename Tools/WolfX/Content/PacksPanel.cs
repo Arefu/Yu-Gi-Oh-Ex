@@ -9,7 +9,7 @@ using Types;
 namespace WolfEx
 {
     /// <summary>
-    /// Yu-Gi-Oh-Ex/packs.json, read by Yu-Gi-Oh-BetterCardShop (Packs.cpp, docs/Packs.md):
+    /// Yu-Gi-Oh-Ex/packs.json, read by Yu-Gi-Oh-Core (Packs.cpp, docs/Packs.md):
     /// "packs" - cards added to (or replacing) the shop's reward packs, and "newPacks" - packs the game doesn't have, each in a free
     /// pack id (the game has 128 slots and uses 36) with its own name, series (shop tab), cost, picture (an existing pack's), unlock rule,
     /// title and text per language, and common/rare cards. Nothing in the game files is changed.
@@ -822,8 +822,8 @@ namespace WolfEx
                     lblCommon.Text = "Common cards (card ids, separated by commas or spaces):";
                     lblRare.Text = "Rare cards:";
                     _info.Text = pack.Native
-                        ? $"A new pack in slot {pack.Id}, in one of the game's rows: saved into the game's pack files (Ex patch); Yu-Gi-Oh-BetterCardShop adds its picture and unlock. {_rowCap} packs per row."
-                        : $"A new pack in slot {pack.Id}, in a new row: saved in packs.json, which Yu-Gi-Oh-BetterCardShop adds to the shop. {_rowCap} packs per row.";
+                        ? $"A new pack in slot {pack.Id}, in one of the game's rows: saved into the game's pack files (Ex patch); Yu-Gi-Oh-Core adds its picture and unlock. {_rowCap} packs per row."
+                        : $"A new pack in slot {pack.Id}, in a new row: saved in packs.json, which Yu-Gi-Oh-Core adds to the shop. {_rowCap} packs per row.";
                     _name.Text = pack.Name;
                     _id.Value = Math.Clamp(pack.Id, 0, PackSlots - 1);
                     _series.SelectedIndex = Math.Max(0, _rowChoices.IndexOf(pack.Series));

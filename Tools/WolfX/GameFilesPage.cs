@@ -51,6 +51,8 @@ namespace WolfX
             tools.Items.Add(Button("Open the game folder", "Show the game folder in Explorer", () => ShowFolder(_gameFiles?.GameFolder)));
             tools.Items.Add(new ToolStripSeparator());
             tools.Items.Add(Button("Check content compatibility...", "Report required plugins, missing dependencies and unsupported exports", CheckCompatibility));
+            tools.Items.Add(Button("Retired plugins...", "Plugins left over from an older Yu-Gi-Oh-Ex (renamed, merged or retired): see why, and move them to Plugins\\_retired",
+                () => Wolf.Mods.RetiredPlugins.ShowDialog(this, _gameFiles == null ? null : ContentManifest.PluginsFolder(_gameFiles.GameFolder))));
             tools.Items.Add(Button("All plugin settings...", "Every Config.ini setting of every plugin (the same list as the game's Plugins > Plugin Settings)", () =>
             {
                 using var config = new global::WolfX.WolfX.File_Type_UI.Config();

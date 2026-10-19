@@ -197,7 +197,7 @@ namespace WolfEx
             public bool AtkUnknown, DefUnknown;
 
             /// <summary>
-            /// The card's password ("password" in cards.json, kept in Extra; 0 = none): Yu-Gi-Oh-BetterCardShop's Enter Password page unlocks
+            /// The card's password ("password" in cards.json, kept in Extra; 0 = none): the Card Store's Enter Password page (BOB, docs/examples/card-store) unlocks
             /// it with these 8 digits, as bin\CARD_Pass.bin does for the game's cards.
             /// </summary>
             public int Password

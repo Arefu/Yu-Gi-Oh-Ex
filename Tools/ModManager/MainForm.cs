@@ -309,6 +309,13 @@ namespace ModManager
                 item.ForeColor = issue.Level switch { IssueLevel.Error => Color.Firebrick, IssueLevel.Warning => Color.DarkOrange, _ => SystemColors.WindowText };
                 _problems.Items.Add(item);
             }
+            foreach (var leftover in RetiredPlugins.Find(_plugins))
+            {
+                var item = new ListViewItem("Leftover") { Tag = "retired", ForeColor = Color.DarkOrange };
+                item.SubItems.Add("");
+                item.SubItems.Add($"{leftover.Folder}\\{leftover.Name}.dll isn't loaded, it was {leftover.Why}. Double-click to move it to Plugins\\_retired.");
+                _problems.Items.Add(item);
+            }
             if (_problems.Items.Count == 0)
                 _problems.Items.Add(new ListViewItem(["", "", "Nothing: every mod that is on has what it needs, and none of them clash."]));
             _problems.EndUpdate();
@@ -316,6 +323,12 @@ namespace ModManager
 
         private void Problems_DoubleClick(object? sender, EventArgs e)
         {
+            if (_problems.SelectedItems.Count > 0 && _problems.SelectedItems[0].Tag is "retired")
+            {
+                RetiredPlugins.ShowDialog(this, _plugins);
+                Reload();
+                return;
+            }
             if (_problems.SelectedItems.Count == 0 || _problems.SelectedItems[0].Tag is not ModIssue issue)
                 return;
             if (issue.Url != null)
