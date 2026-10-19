@@ -13,9 +13,9 @@ namespace WolfEx
     /// </summary>
     internal sealed partial class UnlocksPanel : UserControl, IContentPanel
     {
-        // The game's own card ids run from 3900 to 14968; the save can hold ids up to 19999.
+        // The game's own card ids run from 3900 to 14968, custom ones from 15300 to 65534 (ids past 19999 are kept by Yu-Gi-Oh-Core).
         private const int MinId = 1;
-        private const int MaxId = 19999;
+        private const int MaxId = 65534;
 
         private sealed class Row
         {
@@ -33,7 +33,7 @@ namespace WolfEx
         {
             InitializeComponent();
             _grid.DataSource = _rows;
-            _info.Text = "Ids 3900-14968 are the game's cards, 15300-19999 are new cards. \"Add from game data\" lists what a new profile starts with.";
+            _info.Text = "Ids 3900-14968 are the game's cards, 15300-65534 are new cards. \"Add from game data\" lists what a new profile starts with.";
         }
 
         private void btnAddByName_Click(object? sender, EventArgs e) => AddByName();

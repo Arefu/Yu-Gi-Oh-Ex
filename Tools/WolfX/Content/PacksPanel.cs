@@ -24,7 +24,7 @@ namespace WolfEx
     internal sealed partial class PacksPanel : UserControl, IContentPanel
     {
         private const int MinId = 1;
-        private const int MaxId = 19999;
+        private const int MaxId = 65534;   // the last custom card id (Yu-Gi-Oh-Cards Card.h)
         private const int PackSlots = 128;
         private const int GameRows = 6;
         private const int AutoRow = -1;           // PackEntry.Series: no "series", the plugin picks the first new row with room

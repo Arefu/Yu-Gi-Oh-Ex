@@ -1,4 +1,4 @@
-#include "../../Yu-Gi-Oh-GUI Plugins/Yu-Gi-Oh-BetterCardShop/Packs.cpp"
+#include "../../Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Core/Packs.cpp"
 #include <iostream>
 
 // Run the actual installed x64 patch against a synthetic shop screen. No game,

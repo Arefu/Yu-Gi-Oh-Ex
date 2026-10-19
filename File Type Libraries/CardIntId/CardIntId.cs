@@ -23,7 +23,7 @@ namespace Types
         public const int InternalCount = 10166;
 
         /// <summary>The Konami ids custom cards use (the Yu-Gi-Oh-Cards plugin: kFirstExtraCardId..kLastExtraCardId).</summary>
-        public const int FirstCustomId = 15300, LastCustomId = 19999;
+        public const int FirstCustomId = 15300, LastCustomId = 65534;   // 65535 is the game's "no card"; ids past 19999 are kept by Yu-Gi-Oh-Core's card table
 
         public const string GamePath = @"bin\CARD_INTID.bin";
 

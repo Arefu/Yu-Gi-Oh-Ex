@@ -86,9 +86,10 @@ namespace WolfEx
         // cards.json's "linkmarkers" names, in bit order (Yu-Gi-Oh-MoreCards Card.cpp LinkMarkerBits)
         internal static readonly string[] LinkMarkerNames = ["Top-Left", "Top", "Top-Right", "Left", "Right", "Bottom-Left", "Bottom", "Bottom-Right"];
 
-        // The plugin accepts ids from the first one after the game's own to the last one the save can hold.
+        // The plugin accepts ids from the first one after the game's own to the last before 65535 (the game's "no card"); ids past 19999,
+        // which the save's own card table can't hold, are kept by Yu-Gi-Oh-Core.
         private const int MinId = 15300;   // the game has effect data for ids 14969-15234; see docs/EffectSystem.md
-        private const int MaxId = 19999;
+        private const int MaxId = 65534;
 
         private static readonly string[] ImageExtensions = [".png", ".jpg", ".jpeg"];
 

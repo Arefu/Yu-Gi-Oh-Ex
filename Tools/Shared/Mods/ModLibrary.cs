@@ -597,9 +597,9 @@ namespace Wolf.Mods
                     issues.Add(new ModIssue(IssueLevel.Error, mod.Id, $"Needs the plugin {need.Plugin}, which isn't installed ({where}).", need.Url.Length > 0 ? need.Url : null));
                 }
                 var (added, changed) = mod.CardIds();
-                var outside = added.Where(id => id > 19999).ToList();
+                var outside = added.Where(id => id > 65534).ToList();
                 if (outside.Count > 0)
-                    issues.Add(new ModIssue(IssueLevel.Error, mod.Id, $"Card ids {Ranges(outside)} are above 19999; the game's save has no room for them."));
+                    issues.Add(new ModIssue(IssueLevel.Error, mod.Id, $"Card ids {Ranges(outside)} are above 65534; 65535 is the game's \"no card\"."));
             }
 
             // the same new card id in two mods: the later one replaces the earlier (Cards plugin), and the save can't tell them apart
