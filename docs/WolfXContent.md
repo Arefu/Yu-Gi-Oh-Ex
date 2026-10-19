@@ -60,7 +60,7 @@ Each page's header says which files it writes and which plugin its JSON needs.
 | Strings | `strings\Strings_STEAM_<L>.BND`, `main\ui\credits\credits.dat` | | |
 | Forbidden & Limited | `bin\pd_limits.bin` | | |
 | New cards / Effects | | `cards.json` + art (effects inside it) | Yu-Gi-Oh-MoreCards (+ Yu-Gi-Oh-Effects for effects) |
-| New packs | | `packs.json` | Yu-Gi-Oh-BetterCardShop |
+| New packs | | `packs.json` | Yu-Gi-Oh-Core |
 | Unlocks | | `unlocks.json` | Yu-Gi-Oh-MoreCards |
 | Pages / Menus | | `pages\*.json`, `menus\menus.json` | Yu-Gi-Oh-RIX |
 

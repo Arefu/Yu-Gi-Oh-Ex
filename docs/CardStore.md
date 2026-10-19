@@ -6,6 +6,10 @@ not yet tried in game.
 The main menu's Card Shop button opens the Card Store (RIX pages): Booster Packs (the game's shop), Card Shop (every card, buy one copy at
 a time) and Enter Password (eight digits, three copies of the card).
 
+**The store and its prices are BOB page scripts now** (docs/PageScript.md, "Worked example: the Card Store"; docs/examples/card-store).
+Yu-Gi-Oh-BetterCardShop is retired (2026-10-19). The pricing research below still holds: `card-store-prices.bob` writes the same rules as
+values, and its settings replace the old `BetterShop-*` Config.ini keys and `prices.json`.
+
 ## What a card costs
 
 The order is:

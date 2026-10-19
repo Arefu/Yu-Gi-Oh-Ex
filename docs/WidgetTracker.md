@@ -66,7 +66,7 @@ To add a class to RIX, the recipe used for the Trunk, CardDetails and EntryDigit
 | `widget_CardDetails (RIX 'CardInfo')` | 0x140A7DAE0 | 0x140883380 | 0x140883BA0 | deck editor card panel | plugin code |
 | `widget_CardDetailsDuel` | 0x140A7DD40 | 0x140885210 | 0x140885D60 |  |  |
 | `widget_CardDetailsFull` | 0x140A7DED8 | 0x140888080 | 0x140888660 |  |  |
-| `RIX::widget_CardDisplay` | 0x140A7E098 | 0x14088B5A0 | 0x14088BC10 |  |  |
+| `RIX::widget_CardDisplay` (= widget_CardGrid) | 0x140A7E098 | 0x14088B5A0 | 0x14088BC10 | Random Pack Store screen+2256, Battle Pack Draft, trunk+720 (568 bytes) | page file |
 | `RIX::widget_CardDisplayFlex` | 0x140A7E200 | 0x14088D100 | 0x14088D820 |  |  |
 | `RIX::widget_CardSortBar` | 0x140A7E2E0 | 0x14088F450 | 0x14088F700 |  |  |
 | `RIX::widget_DeckCardsZone` | 0x140A7E800 | 0x140892670 | 0x1408931C0 | deck editor |  |

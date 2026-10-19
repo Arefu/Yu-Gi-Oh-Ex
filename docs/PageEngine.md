@@ -10,6 +10,9 @@ is how each new widget gets worked out before real pages use it.
 
 Status (2026-10-14): built, **not yet tested in game**.
 
+Pages can also be written as BOB scripts in WolfX (Art & menus > Page scripts), compiled into these files: see docs/PageScript.md. That file also lists the game actions (`giveDp`, `takeDp`, `giveCard`, `takeCard`, `unlock`, `lock`, `unlockCharacter`, `sound`) and the read-only `game:` values (`{game:dp}`, conditions with `"game"` and `"atLeast"`) added on 2026-10-19. Names may nest
+(`{game:cardname.{var:card}}`), `atLeast` may be a `"{...}"` value, and plugins add values with `RIX_RegisterPageValue`.
+
 ## Files
 
 - Pages: `<game>\Yu-Gi-Oh-Ex\pages\<name>.json`. Version 1 pages (the WolfX page designer's) still open the old way, on the Battle Pack screen.
@@ -46,6 +49,7 @@ focus a control. Every element can have `"visible": <condition>`.
 | `decks` | `widget_RecipeZone`: Free Duel's deck grid with its category tabs (the player's decks) | `bind` (the deck id), `onChange`, `action`; L / R change the tab, so the mouse moves focus away |
 | `deckInfo` | `widget_RecipeInfo`: the deck panel beside it | `deck` (an id or `"{var:...}"`), `side` (0 yours, 1 the opponent's look) |
 | `cardGrid` | `widget_TrunkZone`: the deck editor's card grid with its filter and sort bar | `cards` (`owned`, default, or `all`; may be `"{var:...}"`, the grid refills when it changes), `bind` (the highlighted card id), `onChange`, `action` (on a confirmed card), `filterX` / `filterY` (the filter panel's centre, 1568.5 / 120). As in the deck editor: the wheel scrolls while the mouse is on the grid's own area, Filter opens the editor's filter panel, a right-click opens the full card view |
+| `cardBox` | `widget_CardDisplay`: the Random Pack Store's box of the cards a pack gave (the trunk's grid is one too) | `cards` (ids split by anything not a digit, `"{var:...}"`, or a JSON array; refilled when it changes), `cols` (4) / `rows` (2), `cellWidth` (255.17) / `cellHeight` (370), `gap` (10), `frame` (true), `bind` (the highlighted card id), `onChange`, `action` (on a confirmed card). More cards than cells scroll; a right-click opens the full card view; L / R leave the box |
 | `image` | a sprite of a `.dfymoo` sheet (decoration) | `resource`, `sprite`, `alpha` |
 | `text` | text in the UI font (decoration) | `text` (with `{var:...}` / `{config:...}`), `textSize`, `align`, `colour` |
 
@@ -128,12 +132,15 @@ pointers into them; a covered or closed page hides them.
     Then `Refill(true)`, `FillPlayerDecks`, `Refill(false)`. Every frame, `Tick` then `HandleInput(w, pressed | L/R, &clicked)`. Focus look: `SetFocused`.
   - **Deck panel**: `widget_RecipeInfo::Constructor`, then `CreateFromLayout(w, root, z, screen+88, x, y, 2 + side, side, 0)`, then `ShowDeck(w, &id)`.
 - **Card grid**: as BetterCardShop's Card Shop (`YuGiOh-RIX.h` `Trunk`). The counts in the grid are written from the save every frame (the game's count function answers 0 above id 14968).
+- **Card box** (`ScreenRandomPackStore::SetupWidgets` 0x14085CB30, `Update` 0x14085C7C0 state 4): `widget_CardDisplay::Constructor` (568 bytes), then
+  `CreateFromLayout(w, root, z, screen+88, &desc)` with a 96-byte `RIX_CardDisplayDesc` (`YuGiOh-RIX.h` `CardBox::Desc`), then `SetCursorScale(1.03)`.
+  `SetCards(w, n, ids, -1, null, null)` (null counters = no numbers). Every frame `ProcessInput(w, pressed, held, &action, &clicked)` (action 3 = confirm / click)
+  and `GetSelectedCardId`.
 - **Message boxes**: `Screen::ShowMessageText` / `ShowYesNo` on the page screen.
 
 ## Next widgets to lift
 
 Candidates from `docs/WidgetTracker.md`:
-- `widget_CardDisplay` / `widget_Card`
 - the deck editor's own deck list (`widget_DeckList`)
 - `widget_TextScroll` as a body text
 - the settings row (`widget_SettingsLine`)

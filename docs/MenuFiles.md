@@ -52,6 +52,8 @@ Several steps: `"action": [ { "goto": "credits" }, { "call": "funky.toggleTools"
 ## Edits to the game's own main menu buttons
 
 `item` is one of the `look` names. `label` and `description` replace the text; `hidden: true` removes the button from its page.
+`action` (same steps as a new button's) replaces what the button does - also over a plugin's `RIX_SetMainMenuItemAction`:
+`{ "item": "cardShop", "action": { "page": "card-store" } }` is how the BOB Card Store takes over the Card Shop button.
 Everything is applied when the game starts.
 
 ## Not supported yet

@@ -243,16 +243,38 @@ Built 2026-10-19, untested in game. `Video.cpp`. The plugin was renamed from Yu-
 
 - **`movies\<name>.mp4`** in `Yu-Gi-Oh-Ex` (or a mod, `YGO::Mods::Find`) plays wherever the game would play `movies/<name>.bik`:
   the 23 summon cut-ins (`moviesĀ7.mp4` = Blue-Eyes White Dragon's) and `movies\exodia.mp4` (the Exodia finish).
-- **`movies\<card id>.mp4` for any other card** (custom cards too) plays as that card's summon cut-in when it is summoned
-  (`Video::OnSummon`, from the voice lines' field watch). Cards the game has a cut-in for keep the game's timing.
+- **`movies\<card id>.mp4` for any other card** (custom cards too) plays **full screen** when it is summoned (`Video::OnSummon`, from
+  the voice lines' field watch), and the duel waits for it (offline: `Hook_PumpAndMirror` returns "busy" while `Video::FullScreenBusy`).
+  Cards the game has a cut-in for keep the game's movie screen and timing. (Starting the game's movie screen ourselves - a copy of
+  `SpecialMovie_PlayByCardId` - played the sound but never drew over the field and left the summon animation waiting, with the game
+  still taking input; removed 2026-10-19.)
 - **Full screen, anywhere** (startup, menus, duels, story): letterboxed on black over the whole game, Esc or a click skips it.
   - **`videos.json`** (Yu-Gi-Oh-Ex or a mod, merged): `{ "startup": ["intro"], "storyDuels": { "186": { "before": "a", "after": "b" } } }`.
     Startup videos play as soon as the game's swap chain exists; `before` as the story duel's engine starts, `after` at its result.
   - **Menus and pages:** every `movies\<name>.mp4` is registered as the RIX action `video:<name>`; menu files and pages take
     `{"video": "<name>"}` (or `{"call": "video:<name>"}`). WolfX Menus: action "play a video".
   - **`Video_Play("name")`** (export) for other plugins.
+- **On duel events** (2026-10-19, untested): `videos.json` `"duel"` entries take the same conditions as voice lines (`when`, `cards`,
+  `how`, `kind`, `response`, `standing`, `amount`, `reason`, `against`, `chance`, `once`; parsed and matched by `Trigger.h`, which
+  Voice.cpp uses too), plus:
+  ```json
+  { "duel": [ { "when": "summon", "who": "me", "cards": [14571], "how": "special", "videos": ["my_cutin"], "once": "turn" } ] }
+  ```
+  - **`who`** is about the player at the keyboard: `me` (default), `opponent`, `any`. **`duelist`**: only when this character is the
+    one doing it. `inHand` isn't offered for videos.
+  - **`videos`** (or `video`): dealt from a shuffled bag like voice files, played full screen with the duel held (as above). One
+    entry plays per event (random among those that fit).
+  - Every event Voice.cpp finds goes to `Video::OnEvent` before the voice's one-line-at-a-time check, so a video is never blocked by
+    a line playing.
 - **WolfX: Sound > Videos** lists the mp4s (what each plays as), adds one by name or as a card's cut-in (card picker), renames, deletes,
-  previews in Windows' player, and edits videos.json (startup list in order, story duel before / after).
+  previews in Windows' player, and edits videos.json in four sidebar sections (each a full page, with counts): **Videos**, **In duels** (the `"duel"` grid, laid out like Voice Over: When,
+  Who, Amount, Cards, Summoned, Card kind, Chain, LP standing, Win by, Duelist, Against, Videos, Chance, Once, with
+  the selected row spelled out as a sentence), **Game start** (ticked list, move up / down), **Story duels** (every story duel, searchable,
+  "only duels with videos"; the selected duel's Before / After videos picked on the right, with Play). The shared choice lists are
+  `Tools/Shared/Editors/TriggerChoices.cs`.
+- **GUI plugin + mp4s:** Media Foundation's video processor makes its own D3D11 device on the decoder thread. Yu-Gi-Oh-GUI's
+  `D3D11CreateDeviceAndSwapChain` hook used to treat that as the game's device and crashed (`ppSwapChain` is null); it now only takes
+  the first call that has a swap chain (fixed 2026-10-19).
 - Formats: whatever Windows Media Foundation decodes. H.264 + AAC in an .mp4 always works; H.265 needs the HEVC extension.
 
 ### How it works
@@ -280,3 +302,9 @@ for afterwards) and answer 0. Esc or a click only skips the video.
 screen. `StoryScene_PlayLine` (0x14082F890) is hooked: for a VIDEO line it queues the video and returns 1, as the game does for its BG /
 PROP commands, so the scene moves on to the next line, which waits under the video (no input reaches the game while it plays). Without
 Yu-Gi-Oh-Media the game skips the line (an unknown command). WolfX Story editor: **Video** step (lists the movies folder).
+
+## Story scene audio (VOICE / SOUND)
+
+Story scenes can play audio files from `Yu-Gi-Oh-Ex\voices` under their text: a `command` / `VOICE` / `<name>` line plays as the next
+text line shows and stops when the player moves past it (subtitles), `SOUND` plays to its end. Same `StoryScene_PlayLine` hook as VIDEO
+(Video.cpp). Details: docs/StoryScenes.md "VOICE and SOUND commands".

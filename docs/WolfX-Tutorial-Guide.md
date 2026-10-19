@@ -87,7 +87,7 @@ Which page needs which plugin (from `docs/WolfXContent.md`, worth a table in the
 | Card genres / Related cards / Unlocks | genres.json / relatedcards.json / unlocks.json | Yu-Gi-Oh-MoreCards |
 | Text tables | text.json | Yu-Gi-Oh-MoreCards |
 | Characters / Decks / Story editor | characters.json / decks.json / storyduels.json + storyscripts.json | Yu-Gi-Oh-Campaign |
-| New packs | packs.json | Yu-Gi-Oh-BetterCardShop |
+| New packs | packs.json | Yu-Gi-Oh-Core |
 | Pages / Menus | pages\, menus\menus.json | Yu-Gi-Oh-RIX |
 | Card links, Tutorials (new numbers), Sprite sheets (new sheets) | cardlinks.json, tutorials\, sprites\ | none yet - saved, but nothing reads them |
 
@@ -377,7 +377,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 
 #### New packs
 
-* **Purpose**: `packs.json` - cards added to the game's packs, and new packs. Needs **Yu-Gi-Oh-BetterCardShop**.
+* **Purpose**: `packs.json` - cards added to the game's packs, and new packs. Applied by **Yu-Gi-Oh-Core** (always on).
 * **Options**: pack list, New pack, Remove new pack; per pack: extra common / rare card ids (or "Add ... by name..."), "Replace the game's
   cards in this pack (instead of adding to them)"; for new packs: title and text per language.
 * **Teach**: the way to make custom cards buyable.

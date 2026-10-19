@@ -4,8 +4,9 @@ The shop's booster packs are defined in `main/packdefdata_<L>.bin` (E F G I J S)
 (`packdata_<name>.bin`). The parser is `File Type Libraries/PackDef` (`PackDefFile`, `PackContents`). All six packdefdata
 files round-trip byte for byte (36 packs each).
 
-**Yu-Gi-Oh-BetterCardShop** (`Packs.cpp`) applies `Yu-Gi-Oh-Ex/packs.json`, which WolfEx's Packs tab writes. This moved there
-from Yu-Gi-Oh-Cards (2026-10-01). Cards no longer touches packs.
+**Yu-Gi-Oh-Core** (`Packs.cpp`) applies `Yu-Gi-Oh-Ex/packs.json`, which WolfX's New packs page writes. It moved from Yu-Gi-Oh-Cards to
+Yu-Gi-Oh-BetterCardShop (2026-10-01), then to Core (2026-10-19): Core holds the limit breakers no store plugin owns, so anyone can build a
+store over BOB pages without packs depending on it. Core starts it when it is injected (its log lines are in Core's log).
 
 ## The game (IDB)
 
@@ -74,7 +75,7 @@ from Yu-Gi-Oh-Cards (2026-10-01). Cards no longer touches packs.
     - `title`/`text`: per language, falling back to English.
     - `common`/`rare`: both need cards.
 
-## How BetterCardShop does it
+## How Core does it
 
 - Hooks `LoadPackDefinitions`. After the game's load, it applies "packs" (a new card list per changed pack, kept alive) and
   fills each new pack's slot: id, series, cost, kind 'R', name, card list, and title/text through the game's own

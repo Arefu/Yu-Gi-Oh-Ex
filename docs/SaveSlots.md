@@ -1,6 +1,6 @@
 # Save slots and the save-select screen (Yu-Gi-Oh-Core)
 
-Up to five separate profiles, picked on a new screen between the title screen and the main menu. Everything lives in
+Up to 99 separate profiles, picked on a new screen between the title screen and the main menu. Everything lives in
 Yu-Gi-Oh-Core (`SaveSlots.cpp`, `SaveScreen.cpp`, `Save.cpp`) because Core is always loaded and already owns the save redirect.
 
 ## Files
@@ -8,25 +8,32 @@ Yu-Gi-Oh-Core (`SaveSlots.cpp`, `SaveScreen.cpp`, `Save.cpp`) because Core is al
 | File | What |
 | --- | --- |
 | `savegame-ex.dat` (the `GameSaveName` file) | Slot 1. The only slot that is ever seeded from the Steam save (`SeedFromGameSave`). |
-| `savegame-ex-2.dat` ... `savegame-ex-5.dat` | Slots 2 to 5: the same name with `-N` before the extension. A new slot starts as a new profile. |
-| `Yu-Gi-Oh-Ex\saves.json` | What the screen shows, and the slot played last. |
+| `savegame-ex-N.dat` | Other slots: the same name with `-N` before the extension. A new slot starts as a new profile. |
+| `Yu-Gi-Oh-Ex\saves.json` | What the screen shows, each slot's file, and the slot played last. |
 
 ```json
 {
   "lastSlot": 1,
+  "nextFile": 4,
   "slots": [
-    { "name": "Duelist 1", "avatar": "yugimuto" },
-    { "name": "Duelist 2", "avatar": "jadenyuki" },
-    { "name": "Duelist 3", "avatar": 12 }
+    { "name": "Duelist 1", "avatar": "yugimuto", "file": "savegame-ex.dat" },
+    { "name": "Duelist 2", "avatar": "jadenyuki", "file": "savegame-ex-2.dat" },
+    { "name": "Duelist 3", "avatar": 12, "file": "savegame-ex-3.dat" }
   ]
 }
 ```
 
-* The number of entries is the number of slots (1 to 5). Without the file there are 3, and the file is written the first time a slot is picked.
+* The number of entries is the number of slots (1 to 99). Without the file there are 3, and the file is written the first time a slot is picked.
+* `file` is the slot's own save file. An entry without one gets the name its position used to give it (slot 1 the `GameSaveName` file, slot N `-N`),
+  which is then written in, so deleting a slot never moves another slot's file. A new slot takes `-<nextFile>`, a number that is never reused.
+* **The screen:** one row of five slots; Up / Down / the wheel change rows, and the game's scroll bar (`widget_BarV`, the tutorial list's
+  recipe) on the right shows where you are (hidden with one row). After the slots comes a **New Save** tile: it adds a slot and goes straight into
+  a new game in it (an empty slot also starts straight away, no question). **Delete** (X, or the help bar prompt) asks Yes / No, then erases the
+  file and removes the slot; the last slot left is only emptied. **Change Picture** (Y) steps through every character portrait on the selected
+  slot with left / right (or the wheel); confirm keeps it (`avatar` in saves.json), Back puts the old one back. The screen now shows with one slot too, since it is where slots are added. Dragging the bar with the mouse is not wired up.
 * `avatar` is a portrait from the `pdui/chars` sheet, given as the sprite name without `_neutral` (273 of them: `yugimuto`, `setokaiba`,
   `Playmaker`...), or a character id (that character's portrait, read from the game's character table).
-* `[Yu-Gi-Oh-Core] SaveSlot=N` in Config.ini (1 to 5) always loads slot N and skips the screen. `0` (or no line) shows the screen. With one slot
-  there is no screen either.
+* `[Yu-Gi-Oh-Core] SaveSlot=N` in Config.ini always loads slot N and skips the screen. `0` (or no line) shows the screen.
 
 ## The flow
 
@@ -36,7 +43,7 @@ Yu-Gi-Oh-Core (`SaveSlots.cpp`, `SaveScreen.cpp`, `Save.cpp`) because Core is al
    `ScreenTitle::Update` changes the pending id to **100**, the save-select screen.
 4. Picking a slot (`SaveSlots::Select`) points the save redirect at its file, writes `lastSlot`, and goes to `ScreenSignIn` with `GotoScreen`.
    SignIn reads the save (the vanilla "second read" after Play), applies its settings and opens the main menu (8). Nothing is reloaded by hand.
-5. An **empty** slot asks "Start a new game in this slot?" first. With no file, the game writes out the profile that is in memory
+5. An **empty** slot starts a new game straight away. With no file, the game writes out the profile that is in memory
    (`YGO::SAVE::Profile_WriteLiveBlob`), which would be the slot the title screen read, so Core resets it with the game's own
    `GetOrInitProfileBuffer(manager, nullptr)` (`InitNewBlob`) before SignIn runs. A file that is not a save shows "This save file can't be read."
 6. Back (cancel) returns to the title screen; Play brings the save-select screen back.
@@ -74,5 +81,5 @@ Screen ids: **6 is `ScreenSignIn`, 8 is `ScreenMainMenu`** (`YuGiOh-UI.h` had 6 
 ## Not done yet
 
 * Not tested in game. The layout (header, frame spacing, text sizes) is a first guess.
-* Choosing the avatar / name in game (they are only in `saves.json` for now); a "Change save" button on the main menu (SignIn from 8 reloads the
+* Choosing the name in game (only in `saves.json` for now; the picture has Change Picture); a "Change save" button on the main menu (SignIn from 8 reloads the
   current profile, so main menu -> save-select -> SignIn should work), deleting a slot.

@@ -50,6 +50,18 @@ A plugin that is on but whose requirement is off or missing is **blocked**: it i
 which is off"). Switching a plugin on in the list switches on what it requires; switching one off switches off what requires it. Requirements load
 before the plugins that need them.
 
+## Replaced plugins
+
+`"replaces"` lists older plugins this one took over (renamed, merged in, or retired): each entry is a name, or `{ "name": "...", "note": "..." }`.
+Copying a new build over an old folder leaves the old DLLs behind, so:
+
+- The loader never loads a replaced plugin. Anything that asks for it by name (`requires`, content.json) gets the plugin that replaced it.
+- The old Config.ini switch moves to the new plugin and the old line is removed.
+- The player is told once which leftover files can go. `[Yu-Gi-Oh-Core] ReplacedNotice` remembers which ones were already shown.
+- To clean up, use WolfX **Files > Game files & loading > Retired plugins...** or the Mod Manager's orange **Leftover** rows (double-click). Both move the files to `Plugins\_retired\<date>`; nothing is deleted.
+
+Current entries: Media replaces Music; MoreCards replaces Yu-Gi-Oh-Cards and ZCards; Core replaces BetterLoad, SaveMe, BetterCardShop (now BOB pages + Core packs) and Tracer.
+
 ## The tool
 
 `Tools/PluginManifest` (`PluginManifest.exe`, built to `Binaries\<config>\Tools`) makes and edits these files: pick a DLL, set the title and
