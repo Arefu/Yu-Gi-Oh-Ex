@@ -1,78 +1,58 @@
-# Card Store prices (Yu-Gi-Oh-BetterCardShop)
-
-Written 2026-10-02. Code: `Yu-Gi-Oh-GUI Plugins/Yu-Gi-Oh-BetterCardShop/Prices.cpp` (prices), `StorePages.cpp` (the pages). **Status:** built,
-not yet tried in game.
+# Card Store prices
 
 The main menu's Card Shop button opens the Card Store (RIX pages): Booster Packs (the game's shop), Card Shop (every card, buy one copy at
 a time) and Enter Password (eight digits, three copies of the card).
 
-**The store and its prices are BOB page scripts now** (docs/PageScript.md, "Worked example: the Card Store"; docs/examples/card-store).
-Yu-Gi-Oh-BetterCardShop is retired (2026-10-19). The pricing research below still holds: `card-store-prices.bob` writes the same rules as
-values, and its settings replace the old `BetterShop-*` Config.ini keys and `prices.json`.
+The store and its prices are BOB page scripts (docs/PageScript.md, "Worked example: the Card Store"; docs/examples/card-store). Every
+price is a BOB value in `pages/card-store-prices.bob`, worked out for the card in `var:card` when it is read. To change what things cost,
+edit that file; there are no Config.ini keys or `prices.json`. (This was the Yu-Gi-Oh-BetterCardShop plugin until 2026-10-19; its code
+is deleted.)
 
 ## What a card costs
 
-The order is:
+The pages read three values: `price` (Card Shop, one copy), `password_price` (Enter Password, three copies) and, through them,
+`base_price`. The order is:
 
-1. **`Yu-Gi-Oh-Ex\prices.json`** (optional): a fixed price for single cards, by Konami id.
-2. **The settings** (Config.ini `[Yu-Gi-Oh-BetterCardShop]`, or WolfX's Config Editor).
+1. **A fixed price** for one card beats every rule: `value fixed.<card id> = "5000";` (Card Shop) and
+   `value fixedpassword.<card id> = "2500";` (Enter Password). These are used exactly as written (0 = free, no 100 DP floor).
+2. **The settings** at the top of the file:
 
-```json
-{ "cards": [
-    { "id": 4007, "price": 5000, "password": 2500 },
-    { "id": 4041, "price": 150 }
-] }
-```
-
-`price` is the Card Shop price and `password` is the Enter Password price. Either one can be left out. These prices are used exactly as
-written (0 = free, and the 100 DP floor does not apply). The file is read again each time a Card Store page opens.
-
-| Key | Default | Meaning |
+| Value | Default | Meaning |
 |---|---|---|
-| `BetterShop-PasswordCost` | 1000 | Enter Password, any card (three copies). |
-| `BetterShop-MonsterPrice` | attack | One of `attack`, `classic`, `custom` or `flat`; see below. |
-| `BetterShop-MonsterFormula` | `ATK * 1.8 / 5` | Used by `custom`. |
-| `BetterShop-SpellTrapPrice` | rarity | One of `rarity`, `custom` or `flat`. |
-| `BetterShop-SpellTrapFormula` | `500 + 500 * RARE` | Used by `custom`. |
-| `BetterShop-Cost` | 500 | The flat price. |
+| `password_cost` | 1000 | Enter Password, any card (three copies). |
+| `monster_price` | `{value:attack_price}` | Which monster rule: `attack_price`, `classic_price`, `formula_price` or `flat_price`. |
+| `spell_trap_price` | `{value:rarity_price}` | Which spell/trap rule: `rarity_price`, `spell_formula_price` or `flat_price`. |
+| `flat_price` | 500 | The flat price. |
 
 **Monster rules:**
 
-* **attack:** ATK × 1.8 ÷ 5. Blue-Eyes costs 1,080 DP, Dark Magician 900 DP, a typical common (ATK 1400) 500 DP and a typical rare (ATK 2200)
-  790 DP.
-* **classic:** the Forbidden Memories curve (below), 11.56 × e^(0.001179 × (ATK + DEF)), capped at 10,000. A typical common costs about
-  200 DP, a typical rare about 1,060 DP and Blue-Eyes about 7,540 DP.
-* **custom:** the Monster formula setting.
-* **flat:** `BetterShop-Cost`.
-* A Link monster has no DEF, so its DEF counts as 0.8 × ATK. That is the average of the game's other monsters (0.797).
-* A monster whose ATK is `?` (68 cards, such as the Egyptian Gods) gets its value from its effect, so it is priced like a spell or trap by
-  rarity.
+* **attack_price:** ATK x 1.8 / 5. Blue-Eyes costs 1,080 DP, Dark Magician 900 DP, a typical common (ATK 1400) 500 DP and a typical rare
+  (ATK 2200) 790 DP.
+* **classic_price:** the Forbidden Memories curve (below), 11.56 x e^(0.001179 x (ATK + DEF)), capped at 10,000. A typical common costs
+  about 200 DP, a typical rare about 1,060 DP and Blue-Eyes about 7,540 DP.
+* **formula_price:** your own formula (it starts as a copy of attack_price).
+* **flat_price:** the flat price.
+* A Link monster has no DEF, so the `DEF` value is 0.8 x ATK for one. That is the average of the game's other monsters (0.797).
+* A monster whose ATK is `?` (68 cards, such as the Egyptian Gods; `game:known` is 0) gets its value from its effect, so it is priced
+  by `rarity_price`.
 
 **Spell/Trap rules:**
 
-* **rarity:** the median price of the loaded monsters of the same rarity under the current monster rule. With `attack` that is 790 DP for a
-  rare and 500 DP for a common.
-* **custom:** the Spell/Trap formula setting.
-* **flat:** `BetterShop-Cost`.
+* **rarity_price:** the median `monster_price` of the monsters of the same rarity (`game:median`). With `attack_price` that is 790 DP for
+  a rare and 500 DP for a common.
+* **spell_formula_price:** your own formula (it starts as 500 + 500 x RARE).
+* **flat_price:** the flat price.
 
-**Formulas:**
-
-* Operators: `+ - * / ^` and brackets.
-* Names (case doesn't matter):
-  * `ATK`, `DEF`;
-  * `LEVEL` (level, rank or link rating);
-  * `RARE` (1 for a card in a pack's rare slot, else 0);
-  * `LINK` (1 or 0).
-* Functions: `min max exp log sqrt round floor ceil`.
-* A formula that can't be read is logged once, and the built-in rule is used instead.
-
-Formula prices are rounded to 10 DP and kept between 100 and 999,999.
+**Writing a formula:** a rule is a BOB `{= ...}` expression (docs/PageScript.md "Values and maths"). The file defines the card's numbers
+as values you can name inside it: `ATK`, `DEF`, `LEVEL` (level, rank or link rating), `RARE` (1 for a card in a pack's rare slot, else
+0) and `LINK` (1 or 0). You can also add a value of your own and point `monster_price` or `spell_trap_price` at it. The built-in rules
+round to 10 DP and keep the price between 100 and 999,999 with `clamp(round(x / 10) * 10, 100, 999999)`.
 
 ## Rarity
 
 Every card the game ships is in exactly one rarity. Its packs (`g_PackRecords`, the contents are a u16 common count, a u16 rare count,
 then the common ids, then the rare ids) list **2,094 rare** and **7,933 common** cards, with none in both and none missing.
-`Packs::RareCards()` reads the packs as loaded, so packs.json additions count. A custom card that is in no pack is common.
+`game:rare` reads the packs as loaded, so packs.json additions count. A custom card that is in no pack is common.
 
 | | rare share |
 |---|---|
@@ -118,7 +98,7 @@ using the 533 monsters that are for sale:
   * Ookazi 35,000;
   * every trap and most strong magic 999,999.
 
-  There was no formula for them. That is why this plugin uses rarity for spells and traps rather than inventing a stat.
+  There was no formula for them. That is why the store uses rarity for spells and traps rather than inventing a stat.
 
 **The game's own economy.** A booster pack costs 400 DP (the first one 200). Each pack draws from about 248 commons and 66 rares. If a pack
 gives one rare, a specific rare takes about 66 packs on average (~26,000 DP; the slot count per pack is not checked). So any of the rules

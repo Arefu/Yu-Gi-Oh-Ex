@@ -138,7 +138,7 @@ DemoMenuButtons=1    ; adds "Debug Tools" and "Credits" to the main menu and "Fu
 * Game widgets can be built on any screen: `widget_Base::CreateNode` (`0x14087C030`) makes a node under the screen's root (screen + 72), so a
   widget is constructed in your own memory and `CreateFromLayout(widget, root, z, screen + 88, x, y)`. The declarations (trunk, card info,
   entry digits, input, more MenuKit) are in `YuGiOh-RIX.h`.
-* Yu-Gi-Oh-BetterCardShop (`StorePages.cpp`, no longer built since 2026-10-19: the store is BOB pages, docs/PageScript.md): the main menu's Card Shop opened **Card Store** (Booster Packs = the game's card shop, screen 29;
+* Yu-Gi-Oh-BetterCardShop (`StorePages.cpp`, retired 2026-10-19 and deleted from the repo: the store is BOB pages, docs/PageScript.md): the main menu's Card Shop opened **Card Store** (Booster Packs = the game's card shop, screen 29;
   **Card Shop** = every card in its own `widget_TrunkZone` + `widget_CardInfo`, list filled like `TrunkView_BuildCardList` with the bounds read
   from the game's code; **Enter Password** = eight `widget_EntryDigit`s and an **Unlock** button (a page with both widgets and a button,
   `ButtonsY` 820, `ButtonsX` 1215 - the menu's root node at screen + 7840 is moved with `RIX::Node::SetX`) and a `widget_CardInfo` on the

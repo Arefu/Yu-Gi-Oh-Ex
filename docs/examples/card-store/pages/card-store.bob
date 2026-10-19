@@ -1,4 +1,4 @@
-// The Card Store, written in BOB (docs/PageScript.md). It replaced Yu-Gi-Oh-BetterCardShop's C++ store (StorePages.cpp, kept, not built).
+// The Card Store, written in BOB (docs/PageScript.md). It replaced Yu-Gi-Oh-BetterCardShop's C++ store (StorePages.cpp, since deleted).
 // The edit line below points the main menu's Card Shop button at this page (WolfX writes it to menus\bob-card-store.json).
 header "Card Store";
 
