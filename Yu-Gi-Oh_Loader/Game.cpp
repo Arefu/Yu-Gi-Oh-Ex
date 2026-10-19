@@ -168,6 +168,32 @@ void Game::LookForPlugins()
     }
 
     YGO::Manifest::ClaimOwned(plugins);
+    YGO::Manifest::MarkReplaced(plugins);
+
+    // Renamed / merged / retired plugins (a manifest's "replaces", Yu-Gi-Oh-Manifest.h): an old plugin's switch moves to the plugin that
+    // replaced it (Yu-Gi-Oh-Music=1 -> Yu-Gi-Oh-Media=1) and the old line goes, whether or not the old DLL is still there.
+    for (YGO::Manifest::Plugin& successor : plugins)
+    {
+        if (!successor.ReplacedBy.empty())
+            continue;
+        for (const auto& old : successor.Details.Replaces)
+        {
+            for (const char* prefix : { "", "YGO-Ex/" })
+            {
+                const std::string key = prefix + old.Name;
+                const int flag = ReadFlag(key);
+                if (flag == 2)
+                    continue;
+                if (flag == 1 && !successor.Enabled)
+                {
+                    successor.Enabled = true;
+                    WritePrivateProfileStringA(Section, successor.Key.c_str(), "1", ConfigPath);
+                }
+                WritePrivateProfileStringA(Section, key.c_str(), nullptr, ConfigPath);   // removes the line
+                OutputDebugStringA(("Yu-Gi-Oh_Loader: Config.ini " + key + " moved to " + successor.Key + "\n").c_str());
+            }
+        }
+    }
 
     // Content made with WolfX (Yu-Gi-Oh-Ex\content.json) switches on the plugins it needs, and says which are not installed. So do the
     // mods that are on (<game>\Mods, Yu-Gi-Oh-Mods.h): their own content.json and the plugins their mod.json "requires" (with a link).
@@ -180,8 +206,8 @@ void Game::LookForPlugins()
         YGO::Manifest::ContentNeed required{ "Mod \"" + mod.Name + "\"", {} };
         for (const YGO::Mods::Requirement& need : mod.Requires)
         {
-            if (YGO::Manifest::Find(plugins, need.Plugin))
-                required.Plugins.push_back(need.Plugin);
+            if (const YGO::Manifest::Plugin* current = YGO::Manifest::Current(plugins, need.Plugin))   // or the plugin that replaced it
+                required.Plugins.push_back(current->Name);
             else
                 missing.push_back(required.File + " needs " + need.Plugin + (need.Url.empty() ? "" : " - get it from " + need.Url));
         }
@@ -199,12 +225,36 @@ void Game::LookForPlugins()
     }
     YGO::Manifest::Resolve(plugins);
 
+    std::string leftovers, leftoverNames;
     for (const YGO::Manifest::Plugin& plugin : plugins)
     {
+        if (!plugin.ReplacedBy.empty())
+        {
+            // a leftover file from an older Yu-Gi-Oh-Ex: never loaded, no line of its own
+            WritePrivateProfileStringA(Section, plugin.Key.c_str(), nullptr, ConfigPath);
+            leftovers += "  " + std::string(plugin.Gui ? "Plugins\\YGO-Ex\\" : "Plugins\\") + plugin.Name + ".dll - replaced by " + plugin.ReplacedBy +
+                         (plugin.ReplacedNote.empty() ? std::string() : " (" + plugin.ReplacedNote + ")") + "\n";
+            leftoverNames += (leftoverNames.empty() ? "" : ",") + plugin.Name;
+            continue;
+        }
         // The list shows what is on, including the plugins that are enforced; an old value is never lost for one that is only switched off.
         WritePrivateProfileStringA(Section, plugin.Key.c_str(), plugin.Enabled ? "1" : "0", ConfigPath);
         if (plugin.Enabled && !plugin.Active)
             OutputDebugStringA(("Yu-Gi-Oh_Loader: " + plugin.Name + " is not loaded, it " + plugin.Problem + "\n").c_str());
+    }
+
+    // Told once per set of leftovers ([Yu-Gi-Oh-Core] ReplacedNotice remembers which were shown).
+    if (!leftovers.empty())
+    {
+        char shown[1024] = {};
+        GetPrivateProfileStringA(Section, "ReplacedNotice", "", shown, sizeof(shown), ConfigPath);
+        if (leftoverNames != shown)
+        {
+            const std::string text = "These plugin files are left over from an older Yu-Gi-Oh-Ex. They were not loaded:\n\n" + leftovers +
+                "\nYou can delete them, or let WolfX (Files > Game files & loading) or the Mod Manager move them to Plugins\\_retired.";
+            MessageBoxA(nullptr, text.c_str(), "Yu-Gi-Oh-Ex", MB_OK | MB_ICONINFORMATION);
+            WritePrivateProfileStringA(Section, "ReplacedNotice", leftoverNames.c_str(), ConfigPath);
+        }
     }
 
     gDlls.clear();
