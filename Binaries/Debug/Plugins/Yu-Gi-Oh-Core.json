@@ -1,9 +1,10 @@
 {
   "title": "Core",
-  "description": "The save, plugin list, game data loading, the crash log and small game tweaks. Always on.",
+  "description": "The save, plugin list, game data loading, the crash log, small game tweaks and limit breakers (booster packs from packs.json). Always on.",
   "enforced": true,
   "content": [
-    "credits.json"
+    "credits.json",
+    "packs.json"
   ],
   "settings": [
     {
@@ -116,6 +117,24 @@
       "kind": "toggle",
       "default": "0",
       "help": "Act as the Japanese release of the game (its logo and Japanese-only text layouts)."
+    }
+  ],
+  "replaces": [
+    {
+      "name": "Yu-Gi-Oh-BetterLoad",
+      "note": "merged into Core: archive name, loose files, WolfX's patch archive"
+    },
+    {
+      "name": "Yu-Gi-Oh-SaveMe",
+      "note": "the save redirect is part of Core"
+    },
+    {
+      "name": "Yu-Gi-Oh-BetterCardShop",
+      "note": "retired: the Card Store and its prices are BOB pages (docs/examples/card-store), booster packs are in Core"
+    },
+    {
+      "name": "Yu-Gi-Oh-Tracer",
+      "note": "retired: a debugging plugin that is no longer needed"
     }
   ]
 }

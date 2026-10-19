@@ -14,5 +14,15 @@
       "default": "0",
       "help": "Keep saved copies of unavailable custom cards when switching mods or when cards.json fails to load. Off resets those cards as before. Restart the game after changing this option."
     }
+  ],
+  "replaces": [
+    {
+      "name": "Yu-Gi-Oh-Cards",
+      "note": "renamed to Yu-Gi-Oh-MoreCards"
+    },
+    {
+      "name": "Yu-Gi-Oh-ZCards",
+      "note": "merged into Yu-Gi-Oh-MoreCards"
+    }
   ]
 }

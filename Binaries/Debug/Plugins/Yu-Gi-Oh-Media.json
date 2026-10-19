@@ -6,5 +6,11 @@
     "voices.json",
     "videos.json",
     "movies"
+  ],
+  "replaces": [
+    {
+      "name": "Yu-Gi-Oh-Music",
+      "note": "renamed to Yu-Gi-Oh-Media (music, voices and videos)"
+    }
   ]
 }
