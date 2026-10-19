@@ -533,6 +533,51 @@ namespace YGO
             inline auto Update = reinterpret_cast<void(__fastcall*)(void* Info, float Seconds, int Held, int)>(0x140884ED0);
         }
 
+        // RIX::widget_BarV: the game's scroll bar (vertical; the tutorial list, character grid, deck list ...). ScreenSelectTutorial::SetupWidgets
+        // builds it with CreateFromLayout(bar, root, 5, screen+88, 1743, 182.5, 750) and SetScaleX(node, 3.0); SetRange after each scroll.
+        namespace ScrollBar
+        {
+            constexpr size_t Size = 160;
+            constexpr size_t Node = 16;
+            inline auto Construct = reinterpret_cast<void*(__fastcall*)(void* Bar)>(0x14087AEF0);
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Bar, SharedNode* Parent, int Z, void* Owner, float X, float Y, float Height)>(0x14087B980);
+            inline auto SetRange = reinterpret_cast<void(__fastcall*)(void* Bar, float First, float Visible, float Total)>(0x14087BD60);   // Total 0 hides it
+            inline auto SetScaleX = reinterpret_cast<void(__fastcall*)(void* Node, float Scale)>(0x14075A340);
+        }
+
+        // RIX::widget_CardDisplay (the same class as widget_CardGrid): a framed box of cols x rows card cells with a cursor, which scrolls
+        // when there are more cards than cells. The Random Pack Store shows the cards a pack gave in one (screen+2256,
+        // ScreenRandomPackStore::SetupWidgets 0x14085CB30); the trunk's grid is one too (trunk+720).
+        namespace CardBox
+        {
+            constexpr size_t Size = 568;
+            struct Desc   // RIX_CardDisplayDesc, copied to +336
+            {
+                const char* Name = "CardDisplay";
+                float X = 0, Y = 0;
+                const wchar_t* Title = nullptr;
+                int Cols = 4, Rows = 2;
+                float CellW = 255.17f, CellH = 370.0f;
+                float FrameX = 0, FrameY = 0;          // the TextFrame's offset
+                float CountX = 200.0f, CountY = 0;     // the "n cards" text
+                bool ShowCount = false;
+                int CountFontSize = 36;
+                bool ShowFrame = true;
+                float PadX = 20, PadY = 20, GapX = 10, GapY = 10;
+                int CardStyle = 2;
+                void* FrameArg = nullptr;
+            };
+            static_assert(sizeof(Desc) == 96);
+            inline auto Construct = reinterpret_cast<void*(__fastcall*)(void* Box)>(0x14088B5A0);
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Box, SharedNode* Parent, int Z, void* Owner, Desc* Layout)>(0x14088BC10);
+            inline auto SetCursorScale = reinterpret_cast<void(__fastcall*)(void* Box, float Scale)>(0x14088C480);   // the store: 1.03
+            // Expected -1 = no "n / m"; counters null = no numbers on the cells (what the store passes).
+            inline auto SetCards = reinterpret_cast<void(__fastcall*)(void* Box, unsigned Count, const uint16_t* Ids, int Expected, void* Owned, void* InDeck)>(0x14088C490);
+            // Per frame. Action gets 3 on confirm / a click (Clicked = 1 for the mouse); true when the cursor moved.
+            inline auto ProcessInput = reinterpret_cast<char(__fastcall*)(void* Box, int Pressed, int Held, int* Action, char* Clicked)>(0x14088B7C0);
+            inline auto GetSelectedCardId = reinterpret_cast<uint16_t(__fastcall*)(void* Box)>(0x14088BBB0);       // 0xFFFF none
+        }
+
         // One digit wheel of the player match code entry (widget_EntryDigit: a number in a box, an arrow above and below).
         namespace EntryDigit
         {

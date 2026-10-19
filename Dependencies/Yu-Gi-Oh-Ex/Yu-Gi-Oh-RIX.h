@@ -254,6 +254,12 @@ RIX_API int __cdecl RIX_GetPageVar(const char* Name, char* Buffer, int BufferSiz
 RIX_API int __cdecl RIX_RegisterPageList(const char* Name, RIX_PageListCallback Callback, void* User);
 RIX_API void __cdecl RIX_PageListAdd(void* List, const wchar_t* Label, const wchar_t* Description, const char* Value);
 
+/* Page values (added to version 7 on 2026-10-19, so an older RIX may lack it: RIX::Functions().RegisterPageValue can be null).
+   "{game:<Name>.<Argument>}" in a page (and "game:<Name>.<Argument>" in conditions) calls Callback(Argument, Buffer, BufferSize, User),
+   which writes the value as UTF-8 and returns its length (0 = no value). Called on the game's thread, every frame a page shows it. */
+typedef int(__cdecl* RIX_PageValueCallback)(const char* Argument, char* Buffer, int BufferSize, void* User);
+RIX_API int __cdecl RIX_RegisterPageValue(const char* Name, RIX_PageValueCallback Callback, void* User);
+
 #ifdef __cplusplus
 }
 
@@ -290,6 +296,7 @@ namespace RIX
         int(__cdecl* GetPageVar)(const char*, char*, int) = nullptr;
         int(__cdecl* RegisterPageList)(const char*, RIX_PageListCallback, void*) = nullptr;
         void(__cdecl* PageListAdd)(void*, const wchar_t*, const wchar_t*, const char*) = nullptr;
+        int(__cdecl* RegisterPageValue)(const char*, RIX_PageValueCallback, void*) = nullptr;   // may be null (an older RIX)
     };
 
     inline Api& Functions()
@@ -340,6 +347,7 @@ namespace RIX
         RIX_BIND(GetPageVar);
         RIX_BIND(RegisterPageList);
         RIX_BIND(PageListAdd);
+        RIX_BIND(RegisterPageValue);
 #undef RIX_BIND
         return true;
     }
