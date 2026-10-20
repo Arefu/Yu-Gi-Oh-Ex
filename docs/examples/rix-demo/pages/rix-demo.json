@@ -27,22 +27,8 @@
             "x": 200,
             "y": 220,
             "width": 660,
-            "height": 300,
+            "height": 400,
             "items": [
-                {
-                    "label": "Card grid",
-                    "description": "widget_TrunkZone - the deck editor card grid (wheel scrolling, the Filter panel), with the card details beside it.",
-                    "action": {
-                        "page": "rix-demo-cards"
-                    }
-                },
-                {
-                    "label": "Card box",
-                    "description": "widget_CardDisplay - the Random Pack Store's box of pulled cards, filled from a list of ids.",
-                    "action": {
-                        "page": "rix-demo-box"
-                    }
-                },
                 {
                     "label": "Working widgets",
                     "description": "Menus, volume bar, digits, card details, Free Duel pickers, deck picker, message boxes.",

@@ -59,6 +59,15 @@ namespace
         Save::SetExtension(kExtensionTag, data.data(), static_cast<int>(data.size()));   // empty = no entry (the save stays the game's size)
     }
 
+    // A blob the game keeps on the stack is a temporary (a save being read or checked). g_Table must never take it over: once that function
+    // returns, FlushToBlob would write 20000 bytes into a dead stack frame (crash 2026-10-20: zeroed stack, return to address 0).
+    bool OnThisStack(const unsigned char* blob)
+    {
+        ULONG_PTR low = 0, high = 0;
+        GetCurrentThreadStackLimits(&low, &high);
+        return reinterpret_cast<ULONG_PTR>(blob) >= low && reinterpret_cast<ULONG_PTR>(blob) < high;
+    }
+
     // g_Table takes over a live blob: its low part from the blob, its high part from the save that was read (or none: a new profile).
     void TakeBlob(unsigned char* blob, bool fromSave)
     {
@@ -82,8 +91,10 @@ namespace
         auto* table = reinterpret_cast<unsigned char*(__fastcall*)(unsigned int)>(orig_GetCardUnlockTable)(profile);
         if (!table)
             return table;
-        std::lock_guard<std::mutex> guard(g_Lock);
         unsigned char* blob = table - kBlobTable;
+        if (OnThisStack(blob))
+            return table;   // a temporary blob: the game reads its own table
+        std::lock_guard<std::mutex> guard(g_Lock);
         if (blob != g_Blob)
         {
             FlushToBlob();
@@ -95,7 +106,7 @@ namespace
     char __fastcall Hook_ValidateAndMerge(unsigned char* file, unsigned char* live)
     {
         const char ok = reinterpret_cast<char(__fastcall*)(unsigned char*, unsigned char*)>(orig_ValidateAndMerge)(file, live);
-        if (ok && live && live != file)
+        if (ok && live && live != file && !OnThisStack(live))
         {
             std::lock_guard<std::mutex> guard(g_Lock);
             TakeBlob(live, true);   // the merge rewrote the blob's table from the file; the extension of that file came with it
@@ -106,7 +117,7 @@ namespace
     char __fastcall Hook_ValidateAndMergeLegacy(unsigned char* file, unsigned char* live)
     {
         const char ok = reinterpret_cast<char(__fastcall*)(unsigned char*, unsigned char*)>(orig_ValidateAndMergeLegacy)(file, live);
-        if (ok && live && live != file)
+        if (ok && live && live != file && !OnThisStack(live))
         {
             std::lock_guard<std::mutex> guard(g_Lock);
             TakeBlob(live, true);
@@ -117,6 +128,8 @@ namespace
     void __fastcall Hook_InitNewBlob(unsigned char* blob)
     {
         reinterpret_cast<void(__fastcall*)(unsigned char*)>(orig_InitNewBlob)(blob);
+        if (OnThisStack(blob))
+            return;
         std::lock_guard<std::mutex> guard(g_Lock);
         if (blob == g_Blob || !g_Blob)
             TakeBlob(blob, false);   // a new profile owns nothing past the game's ids either

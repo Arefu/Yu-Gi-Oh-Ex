@@ -289,10 +289,17 @@ bool Patch::Install()
         else
             Logger::WriteLog(std::format("No patch archive ({}.toc not found)", name), MODULE_NAME, 0);
     }
-    g_layers.push_back(std::move(local));
-
     // Then the mods that are on, the last in the load order first (Yu-Gi-Oh-Mods.h): Mods\<id>\YGO_2020\ and Mods\<id>\YGO_2020-Ex.
     const std::vector<YGO::Mods::Mod> mods = YGO::Mods::Active(game);
+    if (YGO::Mods::IsExclusive(mods))
+    {
+        // a clean-slate mod: the workspace's own game-file changes stay out (the layer is kept, empty, as the first one)
+        local.Loose.clear();
+        local.PatchName.clear();
+        Logger::WriteLog(std::format("Mod {} is exclusive: only its game-file changes load (not YGO_2020 / YGO_2020-Ex in the game folder)", mods.front().Name), MODULE_NAME, 0);
+    }
+    g_layers.push_back(std::move(local));
+
     bool mergeCurrent = false;
     if (const auto merged = YGO::Mods::MergeCache::Find(game, mods, archive, patchFirst, &mergeCurrent); !merged.empty())
     {

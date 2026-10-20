@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "header": "Progress bar",
+    "elements": [
+        {
+            "kind": "text",
+            "x": 616,
+            "y": 840,
+            "width": 1190,
+            "textSize": 30,
+            "align": "left",
+            "text": "{var:demo.done|10} of 40"
+        },
+        {
+            "kind": "progress",
+            "x": 616,
+            "y": 935,
+            "value": "{var:demo.done|10}",
+            "max": "40"
+        },
+        {
+            "kind": "slider",
+            "x": 949,
+            "y": 400,
+            "label": "Filled",
+            "bind": "var:demo.done",
+            "default": "10",
+            "min": 0,
+            "max": 40,
+            "description": "Moves the bar below (widget_BarH, from the card loading screen)."
+        }
+    ]
+}

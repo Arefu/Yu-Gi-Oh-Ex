@@ -31,6 +31,7 @@ namespace
     constexpr int kScreenId = 100;              // not used by the game (its ids end at 43)
     constexpr int kScreenTitle = 5;
     constexpr int kScreenSignIn = 6;            // reads the save after Play, then goes to the main menu (8)
+    constexpr int kScreenMainMenu = 8;
     constexpr int kScreenTypeCardShop = 3;
     constexpr size_t kScreenSize = 0x290 + 0x70; // RIX::ScreenBase plus slack
 
@@ -96,10 +97,13 @@ namespace
         R::SharedNode Details[kDetailLines];
         std::wstring NameText;                   // the text nodes read these for as long as they live
         std::wstring DetailText[kDetailLines];
+        bool Blocked = false;                    // made with other "newSave" plugins (SaveSlots::CanPlay): the details say why
     };
 
     void* g_Screen = nullptr;
     bool g_Failed = false;
+    int g_LastScreen = -1;                       // the main record's current screen last frame
+    bool g_BackFromGame = false;                 // the title was reached by backing out of the main menu
     void* g_Vftable[1 + kVftableSlots];         // [0] = the base's RTTI locator, the screen points at [1]
     std::vector<SlotView> g_Views;
     R::SharedNode g_Header, g_HeaderText;
@@ -118,6 +122,7 @@ namespace
     const wchar_t* const kPickTitleText = L"Choose a picture";
     void* g_Bar = nullptr;                       // widget_BarV
     std::wstring g_DeleteText;                   // the Yes/No box reads it while open
+    std::wstring g_BlockedText;                  // ... and the message box this one
 
     const wchar_t* const kHeaderText = L"Select a Save";
     const wchar_t* const kBadFileText = L"This save file can't be read.";
@@ -279,6 +284,13 @@ namespace
             {
                 view.DetailText[0] = L"Unreadable save file";
             }
+            else if (!SaveSlots::CanPlay(slot))
+            {
+                view.Blocked = true;
+                const std::vector<std::wstring> why = SaveSlots::WhyNot(slot);
+                for (int line = 0; line < kDetailLines && line < static_cast<int>(why.size()); ++line)
+                    view.DetailText[line] = why[line];
+            }
             else
             {
                 view.DetailText[0] = std::format(L"{} DP", Short(summary.Wallet));
@@ -296,7 +308,8 @@ namespace
             for (int line = 0; line < kDetailLines; ++line)
                 if (!view.DetailText[line].empty())
                     view.Details[line] = R::Dfx::AddText(root, view.DetailText[line].c_str(), 12, view.X, kDetailsTop + line * kDetailsLine,
-                                                         kFrameWidth, 20, R::Dfx::TextAlign::Centre, line == 0 ? 0xFFFFFFFF : 0xFFC8C8C8);
+                                                         kFrameWidth, 20, R::Dfx::TextAlign::Centre,
+                                                         view.Blocked ? 0xFFFF9080 : line == 0 ? 0xFFFFFFFF : 0xFFC8C8C8);
         }
 
         ShowSelection();
@@ -358,11 +371,23 @@ namespace
 
     void Continue(int slot, bool newGame)
     {
-        SaveSlots::Select(slot);
+        SaveSlots::Select(slot, newGame);
         if (newGame)
             ResetLiveProfile();
         R::PlayUISound(kSoundConfirm);
         R::GotoScreenFrom(g_Screen, kScreenSignIn);   // SignIn reads the save from the slot's file, then opens the main menu
+    }
+
+    int g_PendingPlay = 0;   // the blocked slot the "play anyway" box is asking about
+
+    void OnPlayAnyway()
+    {
+        const int slot = g_PendingPlay;
+        g_PendingPlay = 0;
+        if (slot <= 0)
+            return;
+        Logger::WriteLog(std::format("Save slot {} played with different plugins than it was made with", slot), MODULE_NAME, 1);
+        Continue(slot, false);
     }
 
     void Choose(int slot)
@@ -377,6 +402,19 @@ namespace
         {
             R::EmptyFunction none;
             R::ShowMessageText(g_Screen, kSoundError, kBadFileText, &none);
+            return;
+        }
+        if (!SaveSlots::CanPlay(slot))
+        {
+            // A plugin that changes the game this much ("newSave" in its manifest) expects saves made with it, and its saves expect it:
+            // loading the other kind can mix their cards, decks and progress. Yes plays it anyway (the save keeps its old tags).
+            g_BlockedText = L"This save was made with different plugins.";
+            for (const std::wstring& line : SaveSlots::WhyNot(slot))
+                g_BlockedText += L"\n" + line;
+            g_BlockedText += L"\nThings might break. Play it anyway?";
+            g_PendingPlay = slot;
+            std::function<void()> onYes = &OnPlayAnyway;
+            R::ShowYesNo(g_Screen, kSoundError, g_BlockedText.c_str(), &onYes);
             return;
         }
         Continue(slot, false);
@@ -695,8 +733,9 @@ namespace
         if (!g_Screen)
             return;
         int* record = MainRecord(ui);
-        if (record && record[0] == kScreenTitle && record[2] == kScreenSignIn)
+        if (record && record[0] == kScreenTitle && (record[2] == kScreenSignIn || g_BackFromGame))
         {
+            g_BackFromGame = false;   // backing out of the game lands here, not on the title
             record[2] = kScreenId;
             *reinterpret_cast<int*>(static_cast<char*>(g_Screen) + 60) = kScreenTitle;   // where Back goes (GotoScreen bookkeeping)
         }
@@ -717,6 +756,17 @@ namespace
             if (record && record[0] == kScreenTitle)
                 Create(ui);
             return;
+        }
+
+        // Back on the main menu goes to the title (the game saves first); from there this screen takes over, so the player picks a slot.
+        if (int* record = MainRecord(ui))
+        {
+            if (record[0] != g_LastScreen)
+            {
+                if (record[0] == kScreenTitle && g_LastScreen == kScreenMainMenu)
+                    g_BackFromGame = true;
+                g_LastScreen = record[0];
+            }
         }
         ScreenBase_Tick(g_Screen, ui);
     }

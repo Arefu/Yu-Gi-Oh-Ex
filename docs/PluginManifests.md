@@ -46,6 +46,21 @@ A `<DLL name>.json` next to a DLL (`Plugins\Yu-Gi-Oh-Cards.json`, `Plugins\YGO-E
 | `dlls` | More DLLs (same folder) that belong to this plugin. They have no entry of their own and load with it, just before it. |
 | `content` | The files in `<game>\Yu-Gi-Oh-Ex` this plugin applies (`"cards.json"`, `"pages\\"` for a folder). WolfX reads it to keep `Yu-Gi-Oh-Ex\content.json` up to date, and the loader switches on the plugins that file names (see [WolfXContent.md](WolfXContent.md)). |
 
+| `newSave` | The plugin changes the game so much that it needs a save made with it (an overhaul such as Forbidden Memories). `true` uses the DLL's name as the save tag; a string (`"forbidden-memories"`) names the tag, so several plugins of one overhaul can share it. See below. |
+
+### Plugins that need a new save
+
+Each save slot remembers the save tags of the plugins that were loaded when its profile was started (`"tags"` in `saves.json`, see
+[SaveSlots.md](SaveSlots.md)). A slot with a save file can only be played when its tags are **exactly** the tags of the plugins loaded now:
+
+- an old save while a `newSave` plugin is on: "Needs a new save: <title>";
+- a save made with that plugin while it is off: "Made with <title> (off)".
+
+Such a slot shows the reasons in red on the save-select screen, and picking it says why and points to **New Save**. Empty slots and New Save
+always work and take the current tags. `SaveSlot=N` in Config.ini is ignored (the screen shows) when slot N can't be played. Nothing is deleted
+or changed in the old saves: switching the plugin off again makes them playable again. The tags are taken once, when the game starts
+(what loads this run); switching plugins in game only counts after a restart, as for everything else.
+
 A plugin that is on but whose requirement is off or missing is **blocked**: it is not loaded and the list says why ("Not loaded: it needs Yu-Gi-Oh-GUI,
 which is off"). Switching a plugin on in the list switches on what it requires; switching one off switches off what requires it. Requirements load
 before the plugins that need them.

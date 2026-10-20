@@ -290,7 +290,9 @@ namespace WolfEx
             "button on main \"Label\" \"help\" -> action;      (a button on a game menu)\n" +
             "edit cardShop -> page(\"my-page\");      (changes one of the game's main menu buttons)\n" +
             "use \"other-page\";   value name = \"text {var:x}\";      (read as {value:name}, value:name, or by name inside {= ...})\n\n" +
-            "Widgets: menu, text, image, slider, digits, card, cards, box, decks, deck, series, characters, user, related\n" +
+            "Widgets: menu, text, image, slider, digits, card, cards, box, decks, deck, deckcards, series, characters, user, related, progress, option, pack, tag, spinner\n" +
+            "  deckcards {var:deck}   progress {var:done} max 40   option \"Difficulty\" values [\"Easy\", \"Hard\"] bind var:d   pack 3\n" +
+            "  tag \"Main Deck {var:count}\" width 400   spinner at 1800, 980\n" +
             "  fields: at x, y   size w, h   bind var:x   default v   if <condition>   -> action   onchange action   (any other: name value)\n" +
             "  menu name ... { button \"A\" \"help\" -> ...; choice \"B\" [\"x\", \"y\"] bind var:b; toggle \"C\" bind var:c; rows \"plugin.list\"; }\n\n" +
             "Actions: page(\"name\")  back  goto(deckEditor)  video(\"intro\")  call(\"plugin.action\")  quit\n" +

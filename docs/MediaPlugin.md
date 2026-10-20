@@ -112,6 +112,8 @@ them into `voices\<character id>\`).
   "volume": 1.0,
   "duck": 0.5,
   "gap": 3,
+  "pause": true,
+  "skip": true,
   "characters": {
     "12": [
       { "when": "duelStart", "files": ["12/intro1.mp3", "12/intro2.mp3"] },
@@ -130,7 +132,8 @@ them into `voices\<character id>\`).
   `g_DuelSideCharacters[0]` for the local player, `[1]` for the opponent.
 - **`when`:** `duelStart`, `turnStart`, `battlePhase`, `summon`, `attack`, `directAttack`, `lethalAttack`, `activate`, `set`,
   `destroyed`, `inHand`, `damage`, `lowLP`, `win`, `lose`, `draw` (2026-10-19 additions untested in game):
-  - `duelStart`: both duelists' lines play at the same time (they overlap), one each.
+  - `duelStart`: both duelists' lines play one after the other (the player's first), one each. They used to overlap, which made
+    both unintelligible (changed 2026-10-20).
   - `turnStart`: **`standing`** `winning` / `losing` / `even` (the speaker's LP against the other's); **`amount`** = only when the
     speaker's LP is at or below it.
   - `attack` / `directAttack` / `lethalAttack`: the most specific one with a line is said: an attack whose damage (ATK, or ATK minus
@@ -138,7 +141,9 @@ them into `voices\<character id>\`).
     monster in the target zone), else any attack.
   - `activate`: msg 0x2D (a2 = card, a3 = chain link id; 0x11 `ChainLinkResolve` closes it). **`response`** `true` = only while
     another link is open (a Trap springing in response), `false` = only to start a chain. **`kind`** `monster` / `spell` / `trap`.
-  - `set`: a card that turns up face-down in a Monster, Spell & Trap or Field Zone. `kind` as above.
+  - `set`: a card that turns up face-down in a Monster, Spell & Trap or Field Zone. `kind` as above. A monster Set from the hand
+    reads face-up at its 0x51 (hand to field) before its position lands; it waits as "deferred" and becomes a `set` once it reads
+    face-down (it used to time out into a Special Summon, 2026-10-20 fix).
   - `destroyed`: a card that left the field while its owner's Graveyard grew, in a message that summoned nothing (tributes and
     materials don't count). `kind` as above.
   - `summon` **`how`** also takes `fusion`, `synchro`, `xyz`, `link`, `ritual`, `pendulum` (g_EventRecord +0x10: 1 = proper summon,
@@ -162,10 +167,14 @@ them into `voices\<character id>\`).
 - **`once`** (default **true**): at most once per duel; `"turn"` = at most once per turn (two Dark Magicians attacking say one
   line); `false` = every time. **`chance`**: percent (default 100). **`volume`**: on top of the rest.
 - **Top level:** `volume` (on top of the game's **sound effect** volume, which voice lines follow), `duck` (the plugin's music level
-  while a line plays, 0-1; the game's own Wwise music is not ducked), `gap` (seconds of quiet after a line before the next).
-- One line at a time: if a line is playing or the gap hasn't passed, other events are skipped (not queued; inHand waits). Duel
-  start and the result (win / lose / draw) always get through and replace the line playing. When both duelists have a line for the
-  same event, one of them is picked.
+  while a line plays, 0-1; the game's own Wwise music is not ducked), `gap` (seconds of quiet after a line before the next),
+  `pause` (default true: the duel waits while a line plays), `skip` (default true: while it waits, a left click, Space or Enter
+  ends the line early).
+- One line at a time, never over another: lines are queued and played in turn. With `pause` the duel itself waits
+  (`HoldForLine`: PumpAndMirror returns busy while a line is pending or playing, offline only, only when it would pop a message,
+  30 s at most), so a later event can't happen mid-line. Without it, an event while a line plays or the gap runs is skipped
+  (inHand waits). Duel start and the result (win / lose / draw) always get through, queued after the line playing. When both
+  duelists have a line for the same event, one of them is picked. A skip click also reaches the game.
 - **The result line is said before the finish animation** (the Exodia video, YOU WIN / YOU LOSE): the hook holds the message queue
   at `DuelResult` until the line ends (30 s at most). Offline duels only; online the line plays as the animation starts.
 

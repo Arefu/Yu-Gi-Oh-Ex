@@ -9,6 +9,9 @@
 //   digits   widget_EntryDigit (the Live setting code wheel), one per digit
 //   cardInfo widget_CardDetails (the deck editor's card panel)
 //   cardBox  widget_CardDisplay (the Random Pack Store's box of pulled cards): Constructor, CreateFromLayout(desc), SetCards, ProcessInput
+//   deckView widget_DeckCardsZone (the Battle Pack edit screen's deck panel): Constructor, CreateFromLayout, SetDeck, ProcessInput
+//   progress widget_BarH (the loading screen's bar): Constructor, CreateFromLayout(desc), SetRange
+//   option   widget_SettingsLine (a Live setting row): Constructor, CreateFromLayout, SetLabel / SetValue, SetFocused
 //   message / confirm  the screen's widget_Dialog (screen+432): ShowMessageText / ShowYesNo
 //   image / text       plain DFX layers (decoration)
 //
@@ -938,6 +941,18 @@ namespace
         std::string RelatedCard = "\x1";
         void* CardBox = nullptr;
         std::string BoxCards = "\x1";        // the expanded "cards" the box was filled with
+        void* DeckView = nullptr;
+        std::string ViewDeck = "\x1";        // the expanded "deck" the panel shows
+        void* Progress = nullptr;
+        std::string ShownProgress = "\x1";   // "value/max" the bar was filled with
+        void* Option = nullptr;
+        std::wstring OptionLabel, OptionValue;
+        bool OptionFocused = false;
+        void* Pack = nullptr;
+        std::string ShownPack = "\x1";       // the expanded "pack" the wrapper shows
+        void* Tag = nullptr;
+        std::string ShownTag = "\x1";        // the expanded "text" the tag shows
+        void* Spinner = nullptr;
         bool FilterOpen = false;
         std::string ShownCards;              // the "cards" value the grid was filled with
         int Selected = -1;                   // the character / deck / card last written to the binding
@@ -1541,6 +1556,105 @@ namespace
         R::CardBox::SetCards(element.CardBox, static_cast<unsigned>(ids.size()), ids.data(), -1, nullptr, nullptr);   // as the store
     }
 
+    void* DeckRecord(unsigned id)
+    {
+        __try { return R::DeckView::DeckFromId(0xFFFFFFFD, id); }
+        __except (EXCEPTION_EXECUTE_HANDLER) { return nullptr; }
+    }
+
+    // "deck": a deck id as the deck picker binds it (-1 / empty = none). As ScreenBattlePackEdit::RefreshDeck.
+    void ShowDeckView(Element& element, bool force = false)
+    {
+        const std::string deck = Expand(Str(element.Source, "deck"));
+        if (!force && deck == element.ViewDeck)
+            return;
+        element.ViewDeck = deck;
+        char* zone = static_cast<char*>(element.DeckView);
+        void* record = deck.empty() || deck == "-1" ? nullptr : DeckRecord(static_cast<unsigned>(std::atoi(deck.c_str())));
+        if (record)
+            R::DeckView::RebuildCounts(zone + R::DeckView::Counts, record);
+        R::DeckView::SetDeck(zone, record);
+        R::DeckView::RefreshSections(zone);
+        R::DeckView::RefreshCounts(zone);
+    }
+
+    // "value" of "max" (both may be "{var:...}").
+    void ShowProgress(Element& element)
+    {
+        const std::string value = Expand(Str(element.Source, "value", "0")), max = Expand(Str(element.Source, "max", "100"));
+        if (value + "/" + max == element.ShownProgress)
+            return;
+        element.ShownProgress = value + "/" + max;
+        const float total = std::strtof(max.c_str(), nullptr);
+        const float done = std::clamp(std::strtof(value.c_str(), nullptr), 0.0f, total > 0 ? total : 0.0f);
+        R::ProgressBar::SetRange(element.Progress, 0.0f, total > 0 ? done : 0.0f, total > 0 ? total : 1.0f);
+    }
+
+    // The value shown is the label of the bound value among "values" (as a menu choice item).
+    void ShowOption(Element& element)
+    {
+        const auto values = ChoiceValues(element.Source);
+        const std::string current = element.Bind.Get(Str(element.Source, "default"));
+        std::string shown = current;
+        for (const auto& [label, value] : values)
+            if (value == current)
+                shown = label;
+        const std::wstring label = Wide(Expand(Str(element.Source, "label")));
+        const std::wstring value = Wide(Expand(shown));
+        if (label != element.OptionLabel)
+        {
+            element.OptionLabel = label;
+            R::OptionRow::SetLabel(element.Option, reinterpret_cast<int64_t>(element.OptionLabel.c_str()));
+        }
+        if (value != element.OptionValue)
+        {
+            element.OptionValue = value;
+            R::OptionRow::SetValue(element.Option, reinterpret_cast<int64_t>(element.OptionValue.c_str()));
+            // the text only redraws when its colour state changes: flip the focus and back
+            R::WidgetSetFocused(element.Option, !element.OptionFocused);
+            R::WidgetSetFocused(element.Option, element.OptionFocused);
+        }
+    }
+
+    void ChangeOption(Element& element, int by)
+    {
+        const auto values = ChoiceValues(element.Source);
+        if (values.empty())
+            return;
+        const std::string current = element.Bind.Get(Str(element.Source, "default"));
+        int index = 0;
+        for (size_t i = 0; i < values.size(); ++i)
+            if (values[i].second == current)
+                index = static_cast<int>(i);
+        index = (index + by + static_cast<int>(values.size())) % static_cast<int>(values.size());
+        element.Bind.Set(values[index].second);
+        R::PlayUISound(kSoundStep);
+        ShowOption(element);
+        if (element.Source.contains("onChange"))
+            RunAction(element.Source["onChange"]);
+    }
+
+    // "pack": a pack id (may be "{var:...}"); the wrapper itself shows a locked pack as locked.
+    void ShowPack(Element& element, bool force = false)
+    {
+        const std::string pack = Expand(Str(element.Source, "pack"));
+        if (!force && pack == element.ShownPack)
+            return;
+        element.ShownPack = pack;
+        R::PackWrapper::SetPack(element.Pack, static_cast<unsigned>(std::atoi(pack.c_str())));
+    }
+
+    // "text" (may name values); empty hides the frame.
+    void ShowTag(Element& element, bool force = false)
+    {
+        const std::string text = Expand(Str(element.Source, "text"));
+        if (!force && text == element.ShownTag)
+            return;
+        element.ShownTag = text;
+        const std::wstring wide = Wide(text);
+        R::TextFrame::SetText(element.Tag, text.empty() ? 0 : reinterpret_cast<int64_t>(wide.c_str()), 1);
+    }
+
     void BuildWidgets(Element& element)
     {
         char* screen = static_cast<char*>(g_Screen);
@@ -1661,6 +1775,66 @@ namespace
             if (element.Height <= 0)
                 element.Height = desc.Rows * desc.CellH + (desc.Rows - 1) * desc.GapY + 2 * desc.PadY;
         }
+        else if (element.Kind == "deckView")
+        {
+            // ScreenBattlePackEdit::SetupWidgets (it puts the panel at 646, 120)
+            element.DeckView = NewWidget(32768);
+            R::DeckView::Construct(element.DeckView);
+            R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
+            R::DeckView::CreateFromLayout(element.DeckView, &parent, 2 + element.Z, R::ScreenOwner(screen), element.X, element.Y);
+            R::DeckView::SetCellStyle(element.DeckView, 2);
+            R::DeckView::SetMode(element.DeckView, 2);
+            R::DeckView::SetMainLimit(element.DeckView, static_cast<int>(Num(element.Source, "mainLimit", 40)));
+            R::DeckView::SelectSection(element.DeckView, 0, 0);
+        }
+        else if (element.Kind == "progress")
+        {
+            element.Progress = NewWidget(512);
+            R::ProgressBar::Construct(element.Progress);
+            const R::ProgressBar::Desc desc{ element.X, element.Y, element.Width > 0 ? element.Width : 1190.0f, element.Height > 0 ? element.Height : 34.0f };
+            R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
+            R::ProgressBar::CreateFromLayout(element.Progress, &parent, 3 + element.Z, R::ScreenOwner(screen), &desc);
+        }
+        else if (element.Kind == "option")
+        {
+            // as ScreenLiveSetting::SetupWidgets: x / y = the row's centre line (its rows sit at 1437 + 0, 120 + 133 + 130 i)
+            element.Option = NewWidget(512);
+            R::OptionRow::Construct(nullptr, element.Option, 1);
+            const float labelWidth = Num(element.Source, "labelWidth", 480.0f);
+            int labelBits = 0;
+            std::memcpy(&labelBits, &labelWidth, sizeof(labelBits));
+            const bool arrows = !Field(element.Source, "arrows").is_boolean() || Field(element.Source, "arrows").get<bool>();
+            R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
+            R::OptionRow::CreateFromLayout(element.Option, &parent, 10 + element.Z, R::ScreenOwner(screen), element.X, element.Y, arrows ? 1 : 0,
+                                           Num(element.Source, "valueWidth", 300.0f), labelBits);
+            ShowOption(element);
+        }
+        else if (element.Kind == "pack")
+        {
+            // as ScreenRandomPackStore::SetupWidgets (x / y = the pack's centre)
+            element.Pack = NewWidget(R::PackWrapper::Size);
+            R::PackWrapper::Construct(element.Pack);
+            R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
+            R::PackWrapper::CreateFromLayout(element.Pack, &parent, 4 + element.Z, R::ScreenOwner(screen), element.X, element.Y);
+            ShowPack(element, true);
+        }
+        else if (element.Kind == "tag")
+        {
+            element.Tag = NewWidget(R::TextFrame::Size);
+            R::TextFrame::Construct(element.Tag);
+            R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
+            R::TextFrame::CreateFromLayout(element.Tag, &parent, 4 + element.Z, R::ScreenOwner(screen), element.X, element.Y, element.Width);
+            ShowTag(element, true);
+        }
+        else if (element.Kind == "spinner")
+        {
+            // as ScreenMainMenu::SetupWidgets: the rings turn by the screen's own animation list
+            element.Spinner = NewWidget(R::LoadSpinner::Size);
+            R::LoadSpinner::Construct(element.Spinner);
+            R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
+            R::LoadSpinner::CreateFromLayout(element.Spinner, &parent, 4 + element.Z, R::ScreenOwner(screen), element.X, element.Y,
+                                             reinterpret_cast<char*>(screen) + R::LoadSpinner::ScreenAnims);
+        }
         else if (element.Kind == "cardInfo")
         {
             element.CardInfo = NewWidget(R::CardInfo::Size);
@@ -1713,9 +1887,23 @@ namespace
             R::WidgetSetVisible(element.Tick, on);
         for (void* digit : element.Digits)
             R::WidgetSetVisible(digit, on);
-        for (void* widget : { element.Series, element.Chars, element.Decks, element.DeckInfo, element.Trunk, element.User, element.Related, element.CardBox })
+        for (void* widget : { element.Series, element.Chars, element.Decks, element.DeckInfo, element.Trunk, element.User, element.Related, element.CardBox,
+                               element.DeckView, element.Progress, element.Option, element.Pack, element.Tag, element.Spinner })
             if (widget)
                 R::WidgetSetVisible(widget, on);
+        if (on && element.Tag)
+            ShowTag(element, true);   // SetText shows the frame again (an empty text keeps it hidden)
+        if (on && element.Pack)
+            ShowPack(element, true);   // owned counts may have changed
+        if (on && element.DeckView)
+            ShowDeckView(element, true);   // again each time it shows: the deck may have been edited
+        if (on && element.Progress)
+        {
+            element.ShownProgress = "\x1";
+            ShowProgress(element);
+        }
+        if (on && element.Option)
+            ShowOption(element);
         if (element.Filter && (!on || !element.FilterOpen))
         {
             R::WidgetSetVisible(element.Filter, false);
@@ -1861,9 +2049,10 @@ namespace
                 element.Height = Num(source, "height", 0);
                 element.Z = static_cast<int>(Num(source, "z", 0));
                 element.Bind = Binding::Parse(Str(source, "bind"));
-                static const char* kFocusable[] = { "menu", "slider", "digits", "seriesTabs", "characters", "decks", "cardGrid", "relatedCards", "cardBox" };
+                static const char* kFocusable[] = { "menu", "slider", "digits", "seriesTabs", "characters", "decks", "cardGrid", "relatedCards", "cardBox", "deckView", "option", "pack" };
                 element.Focusable = std::any_of(std::begin(kFocusable), std::end(kFocusable), [&](const char* k) { return element.Kind == k; });
-                static const char* kKnown[] = { "menu", "slider", "digits", "cardInfo", "image", "text", "seriesTabs", "characters", "decks", "deckInfo", "cardGrid", "user", "relatedCards", "cardBox" };
+                static const char* kKnown[] = { "menu", "slider", "digits", "cardInfo", "image", "text", "seriesTabs", "characters", "decks", "deckInfo", "cardGrid", "user", "relatedCards", "cardBox",
+                                              "deckView", "progress", "option", "pack", "tag", "spinner" };
                 if (std::none_of(std::begin(kKnown), std::end(kKnown), [&](const char* k) { return element.Kind == k; }))
                     Logger::WriteLog(std::format("Page '{}': element kind '{}' is not one the engine builds (yet)", name, element.Kind), MODULE_NAME, 1);
             }
@@ -1891,6 +2080,17 @@ namespace
                 R::WidgetSetFocused(element.Related, focused);
             if (element.CardBox)
                 R::WidgetSetFocused(element.CardBox, focused);
+            if (element.DeckView)
+                R::WidgetSetFocused(element.DeckView, focused);
+            if (element.DeckView && focused)
+                R::DeckView::SelectSection(element.DeckView, *reinterpret_cast<unsigned*>(static_cast<char*>(element.DeckView) + R::DeckView::Section), 0);   // the row cursor again
+            if (element.Option)
+            {
+                element.OptionFocused = focused;
+                R::WidgetSetFocused(element.Option, focused);   // its own look: highlight + arrows
+            }
+            if (element.Pack)
+                R::WidgetSetFocused(element.Pack, focused);
         }
     }
 
@@ -1979,6 +2179,12 @@ namespace
         {
             if (!Visible(element))
                 continue;
+            if (element.Kind == "text" && element.Node.Node && Expand(Str(element.Source, "text")) != element.Shown)
+            {
+                // a text naming a value a control changes (a slider moved): follow it
+                RemoveDecoration(element);
+                BuildDecoration(element);
+            }
             if (element.Chars && Expand(Str(element.Source, "series", "0")) != element.CharSeries)
                 FillCharacters(element);
             if (element.DeckInfo)
@@ -1987,6 +2193,16 @@ namespace
                 ShowRelated(element);
             if (element.CardBox)
                 FillCardBox(element);
+            if (element.DeckView)
+                ShowDeckView(element);
+            if (element.Progress)
+                ShowProgress(element);
+            if (element.Option)
+                ShowOption(element);
+            if (element.Pack)
+                ShowPack(element);
+            if (element.Tag)
+                ShowTag(element);
             if (element.Decks)
                 R::DeckSelectList::Tick(element.Decks);
             if (element.Trunk)
@@ -2013,6 +2229,9 @@ namespace
                     continue;
                 const bool over = element.Tick ? SliderHit(element.Tick, mouse)
                                 : element.Trunk ? Area_HitTest(static_cast<char*>(element.Trunk) + kTrunkArea, mouse)
+                                : element.DeckView && !(element.Width > 0 && element.Height > 0) ? R::DeckView::HitTest(element.DeckView, mouse)
+                                : element.Option ? R::OptionRow::HitTest(element.Option, mouse)
+                                : element.Pack && !(element.Width > 0 && element.Height > 0) ? std::abs(mx - element.X) <= 105.5f && std::abs(my - element.Y) <= 150.0f
                                 : element.Width > 0 && element.Height > 0 && Inside(element, mx - element.X, my - element.Y, element.Width, element.Height);
                 if (over)
                 {
@@ -2226,6 +2445,80 @@ namespace
                 const int tabs = R::DeckSelectList::TabButtons(R::InputState);
                 if (tabs & 0x20000000) MoveFocus(page, -1);
                 else if (tabs & 0x40000000) MoveFocus(page, 1);
+            }
+            else if (element.DeckView)
+            {
+                // the panel moves between Main / Extra / Side itself; a right-click / 0x8000 = the full card view; L / R leave it
+                pressed |= Input_TakeRightClick(R::InputState, 0x8000u);
+                int section = -1;
+                R::DeckView::ProcessInput(element.DeckView, pressed & ~0x8000, held, &section);
+                const int selected = R::DeckView::GetSelectedCardId(element.DeckView);
+                if (selected != element.Selected)
+                {
+                    element.Selected = selected;
+                    element.Bind.Set(selected == 0xFFFF ? std::string() : std::to_string(selected));
+                    if (element.Source.contains("onChange"))
+                        RunAction(element.Source["onChange"]);
+                }
+                if (pressed & 0x8000)
+                    ShowFullCard(selected);
+                else if ((section >= 2 || (pressed & kConfirm)) && selected != 0xFFFF)   // a click on a card, or confirm (as Battle Pack's 0x1000)
+                {
+                    R::PlayUISound(kSoundConfirm);
+                    if (element.Source.contains("action"))
+                        RunAction(element.Source["action"]);
+                }
+                const int tabs = R::DeckSelectList::TabButtons(R::InputState);
+                if (tabs & 0x20000000) MoveFocus(page, -1);
+                else if (tabs & 0x40000000) MoveFocus(page, 1);
+            }
+            else if (element.Pack)
+            {
+                // a click on the pack = confirm; a locked pack (as the store) can't be picked
+                if (R::Input::MouseActive() && R::Input::MouseClickPending() && std::abs(mx - element.X) <= 105.5f && std::abs(my - element.Y) <= 150.0f
+                    && R::Input::TakeMouseClick(R::InputState, kConfirm))
+                    pressed |= kConfirm;
+                if (pressed & kConfirm)
+                {
+                    const bool locked = !R::PackWrapper::Unlocked(element.Pack);
+                    R::PlayUISound(locked ? kSoundError : kSoundConfirm);
+                    if (!locked)
+                    {
+                        element.Bind.Set(element.ShownPack);
+                        if (element.Source.contains("action"))
+                            RunAction(element.Source["action"]);
+                    }
+                }
+                else if (pressed & (kUp | kLeft)) MoveFocus(page, -1);
+                else if (pressed & (kDown | kRight)) MoveFocus(page, 1);
+            }
+            else if (element.Option)
+            {
+                // a click on an arrow steps the value; anywhere else on the row = confirm
+                if (R::Input::MouseActive() && R::Input::MouseClickPending() && R::OptionRow::HitTest(element.Option, mouse)
+                    && R::Input::TakeMouseClick(R::InputState, kConfirm))
+                {
+                    const float arrow = static_cast<float>(Num(element.Source, "valueWidth", 300)) * 0.5f + 54.0f;
+                    const bool arrows = !Field(element.Source, "arrows").is_boolean() || Field(element.Source, "arrows").get<bool>();
+                    const float at = mx - element.X;
+                    if (arrows && at <= 30.0f - arrow) pressed |= kLeft;
+                    else if (arrows && at >= arrow - 30.0f) pressed |= kRight;
+                    else pressed |= kConfirm;
+                }
+                if (pressed & kLeft) ChangeOption(element, -1);
+                else if (pressed & kRight) ChangeOption(element, 1);
+                else if (pressed & kConfirm)
+                {
+                    if (element.Source.contains("action"))
+                    {
+                        R::PlayUISound(kSoundConfirm);
+                        RunAction(element.Source["action"]);
+                    }
+                    else
+                        ChangeOption(element, 1);
+                }
+                else if (pressed & kUp) MoveFocus(page, -1);
+                else if (pressed & kDown) MoveFocus(page, 1);
             }
             else if (element.Trunk)
             {

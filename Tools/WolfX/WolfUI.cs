@@ -165,8 +165,23 @@ namespace WolfX
             Controls.Add(status);
             Controls.SetChildIndex(MenuBar, Controls.Count - 1);   // the menu stays on top
             Load += (_, _) => split.SplitterDistance = 190;
-            FormClosing += (_, e) => e.Cancel = !ConfirmDiscard("close WolfX");
+            FormClosing += (_, e) => e.Cancel = !SkipCloseConfirm && !ConfirmDiscard("close WolfX");
+
+            // Updates (Updater.cs): Tools > Check for updates, and a check at startup at most every 8 hours
+            toolsToolStripMenuItem.DropDownItems.Add(new ToolStripSeparator());
+            toolsToolStripMenuItem.DropDownItems.Add(new ToolStripMenuItem("Check for &updates...", null, (_, _) => Updater.CheckNow(this))
+            {
+                ToolTipText = $"Look for a newer Yu-Gi-Oh-Ex release on GitHub and install it (this is {(Updater.LocalBuild ? "a local build, " : "")}{Updater.Details})",
+            });
+            Shown += (_, _) => Updater.CheckAtStartup(this);
+
+            var help = new ToolStripMenuItem("&Help");
+            help.DropDownItems.Add(new ToolStripMenuItem("&About WolfX...", null, (_, _) => { using var about = new AboutBox(); about.ShowDialog(this); }));
+            MenuBar.Items.Add(help);
         }
+
+        /// <summary>Set by the updater once the user agreed to close (it already asked about unsaved changes).</summary>
+        internal static bool SkipCloseConfirm { get; set; }
 
         private void BuildPages()
         {
@@ -632,7 +647,7 @@ namespace WolfX
             return true;
         }
 
-        private bool ConfirmDiscard(string doing)
+        internal bool ConfirmDiscard(string doing)
         {
             if (!CommitPendingEdits(this)) return false;
             var dirty = _pages.Where(page => page.Editor?.Dirty == true).Select(page => page.Title).ToList();

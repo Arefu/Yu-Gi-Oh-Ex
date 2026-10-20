@@ -64,6 +64,12 @@ text "You have {game:dp} DP and {game:owned.4007} Blue-Eyes." at 1000, 220 width
 | `user` | user | (the player's name, avatar and DP, top right) |
 | `related` | relatedCards | |
 | `box` | cardBox | the card ids (`box "4007, 4041" cols 4 rows 2`) |
+| `deckcards` | deckView | the deck id (`deckcards "{var:deck}" bind var:card`): the deck's Main / Extra / Side cards and stats |
+| `progress` | progress | the value (`progress "{var:done}" max 40 at 616, 935`) |
+| `option` | option | the label (`option "Difficulty" values ["Easy" = "0", "Hard" = "1"] bind var:d at 1437, 253`) |
+| `pack` | pack | the pack id (`pack {var:packId} at 506, 575`) |
+| `tag` | tag | the text (`tag "Main Deck {var:count}" width 400 at 700, 300`) |
+| `spinner` | spinner | - (`spinner at 1700, 300`) |
 
 Fields: `at x, y`, `size w, h`, `if <condition>` (visible), `enabled <condition>`, `-> action`, `onchange action`, `rows "plugin.list"`.
 **Any other field is written as `name value`** and passes straight into the page file (`bind var:x`, `default "5"`, `textSize 26`,

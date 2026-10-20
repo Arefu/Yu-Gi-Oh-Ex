@@ -132,8 +132,19 @@ namespace Card
         bool HasName = false, HasDescription = false;
         std::wstring Name, Description;   // the game table keeps pointers into these, so they must not change after loading
         std::optional<int> Attack, Defense, Level, Attribute, Type, Kind, Icon;
+        std::string ImagePath;                 // "image": new art for the game's card (relative to the content folder it came from)
+        std::vector<unsigned char> ImageBytes; // read the first time the game asks
+        bool ImageTried = false;
     };
     extern std::vector<CardOverride> Overrides;
+    // The override with new art for this Konami id, or nullptr (Hook_Get_IllustrationData).
+    CardOverride* FindOverrideImage(uint16_t id);
+
+    // cardpool.json { "cards": [ Konami / custom ids ] }, joined across mods: when any copy lists cards, only those exist for the
+    // player. Every other card counts as not owned (trunk, deck editor, deck checks), so it can't be seen or used.
+    bool InCardPool(uint16_t id);
+    bool CardPoolActive();
+    size_t LoadCardPool();
 
     // The custom card with this password ("password" in cards.json), or 0. Exported as Card_FindByPassword for YuGiOh-PASS.h.
     uint16_t FindByPassword(uint32_t password);
@@ -223,6 +234,16 @@ namespace Card
     // false in the file to keep them and only add to them).
     extern bool ReplaceDefaultUnlocks;
 
+    // unlocks.json "starter": a new profile is dealt a random deck, once. Each group deals Count
+    // cards by weight; the cards are owned and become the profile's first saved deck.
+    //   "starter": { "deckName": "Starter Deck", "groups": [ { "count": 16, "cards": [[4007, 48], [4008, 24]] } ] }
+    struct StarterGroup
+    {
+        int Count;
+        std::vector<std::pair<int, uint32_t>> Pool;   // card id, weight
+    };
+    extern std::vector<StarterGroup> StarterGroups;
+    extern std::wstring StarterDeckName;
 
     // Registers the extra cards and, the first time it runs, applies the patches and hooks.
     // Runs after every card table setup, since the game rebuilds its tables on a language change.

@@ -6,6 +6,7 @@
 #include <array>
 #include <atomic>
 #include <charconv>
+#include <deque>
 #include <format>
 #include <fstream>
 #include <map>
@@ -71,6 +72,8 @@ namespace Voice
             float Volume = 1.0f;
             float Duck = 0.5f;                // the plugin's music level while a line plays
             uint32_t GapMs = 3000;            // quiet time after a line before the next (duel start and end don't wait)
+            bool Pause = true;                // offline: the duel waits while a line plays, so the next one can't talk over it
+            bool Skip = true;                 // while it waits: a click, Space or Enter ends the line early
             std::map<int, std::vector<Line>> Characters;
         };
 
@@ -89,9 +92,11 @@ namespace Voice
         std::mt19937 g_Random{ std::random_device{}() };
 
         std::mutex g_PendingLock;
-        std::optional<Request> g_Pending;
-        std::optional<Request> g_PendingAlongside;   // said at the same time as g_Pending (both duelists' duel-start lines)
+        std::deque<Request> g_Pending;                // said one after another, never over each other (both duelists' duel-start lines)
         std::atomic<bool> g_Busy{ false };            // a line is pending or playing
+        std::atomic<bool> g_Holding{ false };         // the duel is held for a line (HoldForLine): skip input ends it
+        std::atomic<bool> g_Pause{ true };
+        std::atomic<bool> g_Skip{ true };
         std::atomic<uint64_t> g_QuietUntil{ 0 };
 
         std::atomic<bool> g_InDuel{ false };
@@ -170,6 +175,10 @@ namespace Voice
                         config.Duck = std::clamp(Float(root, "duck", 0.5f), 0.0f, 1.0f);
                     if (root.contains("gap"))
                         config.GapMs = static_cast<uint32_t>(std::max(0.0f, Float(root, "gap", 3.0f)) * 1000.0f);
+                    if (auto it = root.find("pause"); it != root.end() && it->is_boolean())
+                        config.Pause = it->get<bool>();
+                    if (auto it = root.find("skip"); it != root.end() && it->is_boolean())
+                        config.Skip = it->get<bool>();
 
                     int lines = 0;
                     if (auto characters = root.find("characters"); characters != root.end() && characters->is_object())
@@ -238,6 +247,8 @@ namespace Voice
                     handLines |= line.Event == When::InHand;
             g_HasHandLines = handLines;
             g_Volume = config.Volume;
+            g_Pause = config.Pause;
+            g_Skip = config.Skip;
             std::lock_guard lock(g_ConfigLock);
             g_Config = std::move(config);
         }
@@ -296,25 +307,17 @@ namespace Voice
             Candidate& pick = candidates[std::uniform_int_distribution<size_t>(0, candidates.size() - 1)(g_Random)];
             Request request = Take(pick);
             std::lock_guard pending(g_PendingLock);
-            g_Pending = std::move(request);
+            g_Pending.push_back(std::move(request));
             g_Busy = true;
             return true;
         }
 
-        // Duel start: each duelist's line, said at the same time (they overlap, like the anime's "Duel!").
+        // Duel start: each duelist's line, one after the other (said together, neither could be made out).
         bool SayTogether(std::vector<Candidate>& first, std::vector<Candidate>& second)
         {
-            if (first.empty())
-                return Say(second);
-            if (second.empty())
-                return Say(first);
-            Request a = Take(first[std::uniform_int_distribution<size_t>(0, first.size() - 1)(g_Random)]);
-            Request b = Take(second[std::uniform_int_distribution<size_t>(0, second.size() - 1)(g_Random)]);
-            std::lock_guard pending(g_PendingLock);
-            g_Pending = std::move(a);
-            g_PendingAlongside = std::move(b);
-            g_Busy = true;
-            return true;
+            const bool a = Say(first);
+            const bool b = Say(second);
+            return a || b;
         }
 
         bool Quiet()
@@ -537,13 +540,33 @@ namespace Voice
             {
                 const uint16_t card = g_Deferred->Card;
                 g_Deferred.reset();
-                Summoned(side, card, How::Normal);
+                if (slot.Present && !slot.FaceUp)
+                    Fire(Happening{ .Event = When::Set, .Side = side, .Card = card });   // a Normal Set: face-down by now
+                else
+                    Summoned(side, card, How::Normal);
             }
         }
 
+        // A card that came from the hand reads face-up at its 0x51, before its position is applied: a Set turns face-down a few messages
+        // later (and has no 0x2B), so it is a Set, not a Special Summon. WatchField's own Set check misses it (it was already on the field).
         void TickDeferred()
         {
-            if (g_Deferred && --g_Deferred->PopsLeft <= 0)
+            if (!g_Deferred)
+                return;
+            const Slot slot = ReadSlot(g_Deferred->Side, g_Deferred->Zone);
+            if (!slot.Present || slot.Instance != g_Deferred->Instance)
+            {
+                g_Deferred.reset();   // gone again before it settled
+                return;
+            }
+            if (!slot.FaceUp)
+            {
+                const Deferred deferred = *g_Deferred;
+                g_Deferred.reset();
+                Fire(Happening{ .Event = When::Set, .Side = deferred.Side, .Card = deferred.Card });
+                return;
+            }
+            if (--g_Deferred->PopsLeft <= 0)
             {
                 const Deferred deferred = *g_Deferred;
                 g_Deferred.reset();
@@ -638,6 +661,10 @@ namespace Voice
             g_NormalSummoned.clear();
             g_LastHandMove = {};
             g_Deferred.reset();
+            {
+                std::lock_guard pending(g_PendingLock);
+                g_Pending.clear();   // the last duel's leftovers
+            }
             g_InDuel = true;
             g_DuelStartPending = true;   // said when the duel's first message runs, not during loading
             Logger::Log("Voice: duel started (watching summons, attacks and activations)", MODULE_NAME, 0);
@@ -733,6 +760,25 @@ namespace Voice
             return true;
         }
 
+        // voices.json "pause": while a line is pending or playing the duel waits (offline only, and only when this call would pop a
+        // message), so the next event's line can't talk over it. Skip input (Tick) ends the line early.
+        bool HoldForLine(uint32_t count)
+        {
+            static uint64_t holdUntil = 0;
+            const bool hold = g_Pause && g_InDuel && g_Busy && count != 0 && DS::Read<uint32_t>(kNetDuel) == 0 &&
+                              DS::Read<uint32_t>(kQueueStage) == 0 && !AnimBusy();
+            if (!hold)
+            {
+                holdUntil = 0;
+                g_Holding = false;
+                return false;
+            }
+            if (holdUntil == 0)
+                holdUntil = GetTickCount64() + 30000;   // a stuck or very long file never holds the duel for good
+            g_Holding = GetTickCount64() < holdUntil;
+            return g_Holding;
+        }
+
         // Same approach as the MP DuelRecorder: compare the queue before and after; if Count dropped, the front entry was popped
         // and is now executing (the order the player sees things in).
         uint64_t __fastcall Hook_PumpAndMirror()
@@ -741,7 +787,7 @@ namespace Voice
 
             const uint32_t countBefore = DS::Read<uint32_t>(DS::MsgQueueCount);
             const DuelMsg first = countBefore ? *reinterpret_cast<const DuelMsg*>(DS::MsgQueue + 0x10) : DuelMsg{};
-            if (HoldForResult(countBefore, first))
+            if (HoldForResult(countBefore, first) || HoldForLine(countBefore))
                 return 1;
             // A full-screen video (a card's cut-in, videos.json "duel") holds the duel like the game's own cut-ins do. Offline only.
             if (g_InDuel && Video::FullScreenBusy() && DS::Read<uint32_t>(kNetDuel) == 0)
@@ -825,16 +871,38 @@ namespace Voice
 
     void Tick()
     {
-        std::optional<Request> request, alongside;
+        // While the duel waits for a line: a click, Space or Enter ends it (the next queued line, if any, starts).
+        static bool skipWasDown = false;
+        bool skipDown = false;
+        if (g_Skip && g_Holding)
         {
-            std::lock_guard lock(g_PendingLock);
-            request.swap(g_Pending);
-            alongside.swap(g_PendingAlongside);
+            DWORD pid = 0;
+            GetWindowThreadProcessId(GetForegroundWindow(), &pid);
+            skipDown = pid == GetCurrentProcessId() && ((GetAsyncKeyState(VK_LBUTTON) & 0x8000) || (GetAsyncKeyState(VK_SPACE) & 0x8000) ||
+                                                        (GetAsyncKeyState(VK_RETURN) & 0x8000));
+            if (skipDown && !skipWasDown && Player::IsVoicePlaying())
+            {
+                Player::StopVoice();
+                Logger::Log("Voice: line skipped", MODULE_NAME, 0);
+            }
         }
-        if (request && !Player::PlayVoice(request->Path, request->Volume))
-            request.reset();
-        if (alongside)
-            Player::PlayVoiceAlongside(alongside->Path, alongside->Volume);
+        skipWasDown = skipDown;
+
+        // One line at a time: the next starts once the one playing has finished.
+        if (!Player::IsVoicePlaying())
+        {
+            std::optional<Request> request;
+            {
+                std::lock_guard lock(g_PendingLock);
+                if (!g_Pending.empty())
+                {
+                    request = std::move(g_Pending.front());
+                    g_Pending.pop_front();
+                }
+            }
+            if (request)
+                Player::PlayVoice(request->Path, request->Volume);
+        }
 
         static bool wasPlaying = false;
         const bool playing = Player::IsVoicePlaying();
@@ -850,7 +918,7 @@ namespace Voice
         wasPlaying = playing;
         {
             std::lock_guard lock(g_PendingLock);
-            g_Busy = playing || g_Pending.has_value();
+            g_Busy = playing || !g_Pending.empty();
         }
 
         float duck;

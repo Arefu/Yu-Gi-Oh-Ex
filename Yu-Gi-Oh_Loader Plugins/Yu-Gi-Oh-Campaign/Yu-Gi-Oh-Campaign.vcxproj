@@ -102,6 +102,7 @@
     <ClCompile Include="Characters.cpp" />
     <ClCompile Include="Decks.cpp" />
     <ClCompile Include="DuelistRules.cpp" />
+    <ClCompile Include="Progress.cpp" />
     <ClCompile Include="Series.cpp" />
     <ClCompile Include="StoryDuels.cpp" />
     <ClCompile Include="StoryScripts.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="Arenas.h" />
     <ClInclude Include="Decks.h" />
     <ClInclude Include="DuelistRules.h" />
+    <ClInclude Include="Progress.h" />
     <ClInclude Include="Series.h" />
     <ClInclude Include="StoryDuels.h" />
     <ClInclude Include="StoryScripts.h" />

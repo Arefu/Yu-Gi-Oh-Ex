@@ -7,6 +7,7 @@
 #include <string>
 #include <format>
 #include <iostream>
+#include <intrin.h>
 
 #include "Detours.h"
 #include "Logger.h"
@@ -34,6 +35,17 @@ inline void* ResolveVA(uintptr_t va)
 static float kStarsX = 200.0f;
 static float kStarsY = 465.5f;
 static float kStarsMaxWidth = 240.0f;
+static bool kStarsAlignRight = false;   // StarsAlign=1
+
+// The card name (font 27, top-left 31,46; JP 31,52; squeezed to 301 px, docs/CardRendering.md). Hidden unless ShowName=1.
+constexpr float kNameX0 = 31.0f, kNameY0 = 46.0f, kNameY0Jp = 52.0f;
+static bool kShowName = false;
+static bool kHideSpellTrapIcon = false;   // HideSpellTrapIcon=1: no Quick-Play / Continuous / Equip ... icon
+static float kNameX = 31.0f, kNameY = 46.0f, kNameWidth = 0.0f;   // NameWidth 0 = the game's 301
+
+// FullArtIllustration=1: the illustration is stretched over the whole 400 x 580 face (instead of CardArtScale / offsets). The frame,
+// stars, attribute and ATK/DEF are all still drawn as usual.
+static bool kFullCardArt = false;
 
 // The following tunables are read from Config.ini, section
 // [Yu-Gi-Oh-AnimeCards], falling back to the defaults below if the file,
@@ -57,6 +69,7 @@ static float kLinkAttributeX = 198.5f;
 static float kLinkAttributeY = 469.0f;
 // The frame's circle is 45 px across; the icon is drawn from the 48 px sprites (see Hook_IconId_Attribute) so it stays sharp.
 static float kAttributeSize = 48.0f;
+static bool kSpellTrapAttribute = false;   // Config SpellTrapAttribute: spells / traps show their SPELL / TRAP icon too
 
 static float kAtkTextScale = 3.10;
 static float kDefTextScale = 3.40;
@@ -164,10 +177,24 @@ extern "C" void Hook_sub_1408795A0(void* a1, float x0, float y0, float x1, float
         return;
     }
 
+    if (kFullCardArt)
+    {
+        const bool art = (NearlyEqual(x0, kArtNormalX0) && NearlyEqual(y0, kArtNormalY0) &&
+            NearlyEqual(x1, kArtNormalX1) && NearlyEqual(y1, kArtNormalY1)) ||
+            (NearlyEqual(x0, kArtLinkX0) && NearlyEqual(y0, kArtLinkY0) &&
+            NearlyEqual(x1, kArtLinkX1) && NearlyEqual(y1, kArtLinkY1));
+        if (art)
+        {
+            orig_sub_1408795A0(a1, kCardImgX0, kCardImgY0, kCardImgX1, kCardImgY1, u0, v0, u1, v1, a10, color);
+            return;
+        }
+    }
+
     if (IsAttributeIcon(x0, y0, x1, y1))
     {
-        // Spell and Trap frames have their symbol drawn in; monsters get the icon in the frame's circle.
-        if ((game_IsMonster(g_currentCardId) & 0xFF) == 0)
+        // Spell and Trap frames have their symbol drawn in; monsters get the icon in the frame's circle. With SpellTrapAttribute=1
+        // (frames without a symbol, such as Forbidden Memories') spells and traps get their SPELL / TRAP icon in the same place.
+        if ((game_IsMonster(g_currentCardId) & 0xFF) == 0 && !kSpellTrapAttribute)
             return;
         const bool link = (game_IsLink(g_currentCardId) & 0xFF) != 0;
         const float cx = link ? kLinkAttributeX : kAttributeX;
@@ -185,7 +212,8 @@ extern "C" void Hook_sub_1408795A0(void* a1, float x0, float y0, float x1, float
         const float fit = rowWidth > kStarsMaxWidth ? kStarsMaxWidth / rowWidth : 1.0f;
         const float w = (x1 - x0) * fit;
         const float h = (y1 - y0) * fit;
-        const float left = kStarsX - rowWidth * fit * 0.5f;
+        // StarsAlign=1: the row ends at StarsX (Forbidden Memories lays its stars out from the right), else it is centred on it
+        const float left = kStarsAlignRight ? kStarsX - rowWidth * fit : kStarsX - rowWidth * fit * 0.5f;
         const float nx0 = left + g_starIndex * g_starStep * fit;
         const float ny0 = kStarsY < 0.0f ? y0 : kStarsY - h * 0.5f;
         ++g_starIndex;
@@ -222,6 +250,14 @@ extern "C" void Hook_sub_1408795A0(void* a1, float x0, float y0, float x1, float
 
     bool isSTIcon = NearlyEqual(x0, kSTIconX0) &&
         (NearlyEqual(y0, kSTIconY0_NonJp) || NearlyEqual(y0, kSTIconY0_Jp));
+
+    if (isSTIcon && kHideSpellTrapIcon)
+    {
+        // HideSpellTrapIcon=1 (Forbidden Memories cards have no Quick-Play / Continuous / Equip icon): a zero-size quad, so the batch
+        // still gets its 6 vertices (see the line above ATK/DEF below).
+        orig_sub_1408795A0(a1, x0, y0, x0, y0, u0, v0, u1, v1, a10, 0);
+        return;
+    }
 
     if (isSTIcon)
     {
@@ -291,6 +327,21 @@ static fn_Get_FontById orig_Get_FontById = nullptr; // sub_140872C60: the loaded
 inline bool UseLargeAtkDefFont()
 {
     return kUseLargeAtkDefFont && orig_Get_FontById && orig_Get_FontById(kLargeAtkDefFontId) != nullptr;
+}
+
+// AtkLabel / DefLabel (Config): text in front of the numbers ("ATK/", "DEF/" on Forbidden Memories cards). The 32 px number font only has
+// digits, so labelled numbers keep the card's own font and AtkTextScale / DefTextScale.
+static wchar_t g_AtkLabel[16] = L"";
+static wchar_t g_DefLabel[16] = L"";
+
+inline bool HasAtkDefLabels()
+{
+    return g_AtkLabel[0] != 0 || g_DefLabel[0] != 0;
+}
+
+inline unsigned int NumberFont(unsigned int fontId)
+{
+    return UseLargeAtkDefFont() && !HasAtkDefLabels() ? kLargeAtkDefFontId : fontId;
 }
 
 // Native pixel size of the large ATK/DEF font, from the fbin the game loaded.
@@ -424,13 +475,13 @@ extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, flo
     if (fontId == kAtkDefCombinedFontId)
     {
         unsigned int atk = orig_YGO_Get_EffectiveDefFromFullCardProps(g_currentCardId);
-        wchar_t buf[16];
+        wchar_t buf[48];
         if (atk == 0xFFFF)
-            swprintf(buf, 16, L"?");
+            swprintf(buf, 48, L"%s?", g_AtkLabel);
         else
-            swprintf(buf, 16, L"%u", atk);
+            swprintf(buf, 48, L"%s%u", g_AtkLabel, atk);
         return orig_sub_140766540(slotPtr, x, y, 0.0f, color,
-            UseLargeAtkDefFont() ? kLargeAtkDefFontId : fontId,
+            NumberFont(fontId),
             (const unsigned short*)buf, kCentredAlign, flags | kNoWrap, arg10);
     }
 
@@ -466,15 +517,20 @@ extern "C" __int64 Hook_sub_140766540(__int64 slotPtr, __int64 x, __int64 y, flo
         }
 
         unsigned int def = orig_sub_14081A610(g_currentCardId);
-        wchar_t buf[16];
+        wchar_t buf[48];
         if (def == 0xFFFF)
-            swprintf(buf, 16, L"?");
+            swprintf(buf, 48, L"%s?", g_DefLabel);
         else
-            swprintf(buf, 16, L"%u", def);
+            swprintf(buf, 48, L"%s%u", g_DefLabel, def);
+        // With labels both numbers use the ATK/DEF font, so "ATK 3000" and "DEF 2500" come out the same size.
         return orig_sub_140766540(slotPtr, x, y, 0.0f, color,
-            UseLargeAtkDefFont() ? kLargeAtkDefFontId : fontId,
+            HasAtkDefLabels() ? kAtkDefCombinedFontId : NumberFont(fontId),
             (const unsigned short*)buf, kCentredAlign, flags | kNoWrap, arg10);
     }
+
+    // ShowName=1: the card's name stays (frames with a name bar, such as Forbidden Memories'), squeezed to NameWidth.
+    if (kShowName && fontId == GetFontTable().v[0])
+        return orig_sub_140766540(slotPtr, x, y, kNameWidth > 0.0f ? kNameWidth : boxWidth, color, fontId, wstr, count, flags, arg10);
 
     static const unsigned short kBlank[2] = { L' ', 0 };
     return orig_sub_140766540(slotPtr, x, y, boxWidth, color, fontId,
@@ -497,6 +553,11 @@ extern "C" void* Hook_sub_140877EC0(void* out, float x, float y, float z)
         tx = kCustomAtkX; ty = kCustomAtkY;
         scale = kAtkTextScale;
     }
+    else if (kShowName && NearlyEqual(x, kNameX0) && (NearlyEqual(y, kNameY0) || NearlyEqual(y, kNameY0Jp)))
+    {
+        // the name's top-left: NameX / NameY (the Japanese build draws it 6 px lower, kept)
+        return orig_sub_140877EC0(out, kNameX, kNameY + (y - kNameY0), z);
+    }
     else if (NearlyEqual(x, kAbilitySlotX))
     {
         tx = kCustomDefX; ty = kCustomDefY;
@@ -511,7 +572,7 @@ extern "C" void* Hook_sub_140877EC0(void* out, float x, float y, float z)
 
     // Fonts are plain bitmaps at one pixel size (see docs/CardRendering.md), so any scale above 1 blurs them. With the 32 px font the
     // numbers are drawn at its native size, unscaled; AtkTextScale / DefTextScale only apply to the 18 px fonts.
-    if (UseLargeAtkDefFont())
+    if (UseLargeAtkDefFont() && !HasAtkDefLabels())
         scale = 1.0f;
 
     if (scale != 1.0f)
@@ -615,6 +676,21 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 
         kUseLargeAtkDefFont = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "UseLargeAtkDefFont", 1, ".\\Config.ini") != 0;
         kHideLevelBadge = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "HideLevelBadge", 1, ".\\Config.ini");
+        kSpellTrapAttribute = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "SpellTrapAttribute", 0, ".\\Config.ini") != 0;
+        kStarsAlignRight = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "StarsAlign", 0, ".\\Config.ini") == 1;
+        kShowName = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "ShowName", 0, ".\\Config.ini") != 0;
+        kHideSpellTrapIcon = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "HideSpellTrapIcon", 0, ".\\Config.ini") != 0;
+        kFullCardArt = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "FullArtIllustration", 0, ".\\Config.ini") != 0;
+        for (auto [key, target] : { std::pair{ "NameX", &kNameX }, std::pair{ "NameY", &kNameY }, std::pair{ "NameWidth", &kNameWidth } })
+        {
+            GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", key, "", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+            cfgEnd = nullptr;
+            const float value = std::strtof(cfgBuf, &cfgEnd);
+            if (cfgEnd != cfgBuf)
+                *target = value;
+        }
+        GetPrivateProfileStringW(L"Yu-Gi-Oh-AnimeCards", L"AtkLabel", L"", g_AtkLabel, 16, L".\\Config.ini");
+        GetPrivateProfileStringW(L"Yu-Gi-Oh-AnimeCards", L"DefLabel", L"", g_DefLabel, 16, L".\\Config.ini");
         orig_DuelCardView_UpdateLevelBadge = (fn_DuelCardView_UpdateLevelBadge)ResolveVA(0x1407C6980);
         kHideFieldStats = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "HideFieldStats", 1, ".\\Config.ini");
         orig_DuelCardView_Refresh = (fn_DuelCardView_Refresh)ResolveVA(0x1407C6660);

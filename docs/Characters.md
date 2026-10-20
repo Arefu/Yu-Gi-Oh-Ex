@@ -63,6 +63,30 @@ Yu-Gi-Oh-Campaign hooks `LoadCharacterData` (fills the slots again after every r
 `FreeDuel_BuildOpponentList` and `Collection_FormatCharacterCount` (for the unlock bits). Name and bio go through the game's own
 `std::wstring::assign`.
 
+**hideEmptySeries** (top level of characters.json, `true`) hides the series tabs in Free Duel and Duelist Challenges that no
+selectable character with a defined deck is in. The game's tab list is 0-5, filled in the shared screen's OnEnter (0x1408415F0,
+vector<int> at +4096). Campaign hooks that OnEnter and filters the list.
+
+A Free Duel / Challenge opponent counts as unlocked when **their deck's** state is set (player section +0x38 + 4 * deck;
+`FreeDuel_BuildOpponentList`). When a series has no unlocked opponent, the screen shows message 706, "No opponents are unlocked
+for this series yet".
+
+## progress.json (Yu-Gi-Oh-Campaign, Progress.cpp)
+
+```json
+{ "unlockAllCharacters": true, "modes": { "duelistChallenges": true, "battlePacks": true, "cardShop": true } }
+```
+
+This is progress a profile has from the start. Campaign writes it into the save every time the main menu lays out a page
+(`RIX::ScreenMainMenu::LayoutPage` 0x1408583D0, hooked).
+* **unlockAllCharacters:** sets every defined character's bit (player section +0x18). Free Duel, Duelist Challenges and the
+  collection all read those bits.
+* **modes:** the main menu's lock bits at player section **+0xB94**. Bit 0 = Duelist Challenges (item 2), bit 1 = Battle Packs
+  (item 7), bit 2 = Card Shop (item 9). `LayoutPage` greys an item out and `ActivateItem` shows a "locked" message while its bit is 0.
+  `DuelResult_GrantRewards` sets the bits as you play.
+
+Bits are only ever set, never cleared, so leaving the file out keeps whatever a save has already earned.
+
 With Campaign enabled, multiple characters may point at the same deck without changing its canonical owner. Selectable, series, SKU and deck-validity checks still apply. The Characters panel exposes **Unlocked from start** for existing and new characters; it grants access in the current profile and does not clear earned progress when unchecked. No save-slot editing is needed. Deck and character dropdowns include live additions from their open editor tabs, including changes not yet saved.
 
 Built, but not yet run in the game. Yu-Gi-Oh-Campaign is new, so switch it on in Config.ini: `[Yu-Gi-Oh-Core]`

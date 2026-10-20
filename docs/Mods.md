@@ -38,6 +38,17 @@ Every part is optional. In the zip they can sit at the top or inside one folder.
 }
 ```
 
+`"newSave": "forbidden-memories"` (or `true` = the folder name) marks an overhaul that needs a save made with it, the same as a
+plugin manifest's `newSave` ([PluginManifests.md](PluginManifests.md#plugins-that-need-a-new-save)): Yu-Gi-Oh-Core only loads save slots
+made with exactly the tags of the plugins and mods that are on.
+
+`"exclusive": true` makes the mod a clean slate (`YGO::Mods::Active` / `IsExclusive`):
+* While it is on, it loads alone; the last exclusive mod in the load order wins.
+* No other mod's content or game files load.
+* `<game>\Yu-Gi-Oh-Ex` (WolfX's workspace JSON) isn't read, and neither are the game folder's loose `YGO_2020\` files and the
+  `YGO_2020-Ex` patch (Core Patch.cpp).
+* Files the game writes still go to `<game>\Yu-Gi-Oh-Ex` (`LocalContentFolder`).
+
 `requires` lists plugin DLL names (no `.dll`). A plain name is fine for plugins that come with Yu-Gi-Oh-Ex; give a `url` for anything
 else. The mod's `Yu-Gi-Oh-Ex\content.json` (WolfX writes it) also counts: the plugins it names are needed too.
 

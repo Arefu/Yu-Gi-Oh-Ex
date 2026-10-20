@@ -860,6 +860,7 @@ namespace WolfX
         {
             if (_binding || _shown is not int id || Record(id) is not { } record)
                 return;
+            var summonWas = (record.Kind, record.Icon, record.Level);
             record.Kind = (CARDS_INFO.CARD_Kind)ChoiceOf(_kind);
             record.Attribute = (CARDS_INFO.CARD_Attribute)ChoiceOf(_attribute);
             record.Type = (CARDS_INFO.CARD_Type)ChoiceOf(_type);
@@ -881,6 +882,9 @@ namespace WolfX
             };
             UpdateFieldStates(record);
             Changed(id, CardPropTable.GamePath);
+            // the Summoning tab shows the part the kind uses (Fusion / Xyz / Link ...): a card turned into one needs it bound again
+            if (summonWas != (record.Kind, record.Icon, record.Level))
+                ShowSummon();
         }
 
         private void PasswordEdited()

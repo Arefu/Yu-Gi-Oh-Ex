@@ -26,6 +26,9 @@ namespace WolfEx
 
         private readonly BindingList<Row> _rows = [];
         private string _gameFolder = "";
+        // "starter" (a random starter deck dealt to a new profile, Yu-Gi-Oh-MoreCards): kept as read and written back unchanged
+        private JsonNode? _starter;
+        private const string InfoText = "Ids 3900-14968 are the game's cards, 15300-65534 are new cards. \"Add from game data\" lists what a new profile starts with.";
 
         public string Title => "Unlocks";
 
@@ -33,7 +36,7 @@ namespace WolfEx
         {
             InitializeComponent();
             _grid.DataSource = _rows;
-            _info.Text = "Ids 3900-14968 are the game's cards, 15300-65534 are new cards. \"Add from game data\" lists what a new profile starts with.";
+            _info.Text = InfoText;
         }
 
         private void btnAddByName_Click(object? sender, EventArgs e) => AddByName();
@@ -82,6 +85,8 @@ namespace WolfEx
             _gameFolder = gameFolder;
             _rows.Clear();
             _replace.Checked = true;
+            _starter = null;
+            _info.Text = InfoText;
 
             string path = Path.Combine(extraCardsFolder, "unlocks.json");
             if (!File.Exists(path))
@@ -95,6 +100,13 @@ namespace WolfEx
 
                 _replace.Checked = !(JsonNode.Parse(json, documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip }) is JsonObject root
                     && root["replaceDefaults"] is JsonValue flag && flag.TryGetValue<bool>(out bool value) && !value);
+                if (JsonNode.Parse(json, documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip }) is JsonObject withStarter
+                    && withStarter["starter"] is JsonObject starter)
+                {
+                    _starter = starter.DeepClone();
+                    int groups = (starter["groups"] as JsonArray)?.Count ?? 0;
+                    _info.Text = $"This file also deals a new profile a random starter deck ({groups} card group(s), \"starter\"); it is kept when saving. " + InfoText;
+                }
             }
             catch (Exception ex)
             {
@@ -131,6 +143,8 @@ namespace WolfEx
                 array.Add(new JsonObject { ["id"] = row.Id, ["copies"] = row.Copies });
 
             var root = new JsonObject { ["replaceDefaults"] = _replace.Checked, ["cards"] = array };
+            if (_starter != null)
+                root["starter"] = _starter.DeepClone();
             var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true };
             ContentSaveBatch.WriteText(Path.Combine(extraCardsFolder, "unlocks.json"), root.ToJsonString(options) + "\n");
             return true;

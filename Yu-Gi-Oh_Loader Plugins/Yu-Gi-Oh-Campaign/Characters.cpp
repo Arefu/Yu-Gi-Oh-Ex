@@ -2,6 +2,9 @@
 #include "Common.h"
 
 #include <Windows.h>
+#include <algorithm>
+#include <cstdlib>
+#include <intrin.h>
 #include <cctype>
 #include <cstdint>
 #include <deque>
@@ -55,6 +58,60 @@ namespace
 
     CharacterRecord* Record(uint32_t id) { return id < kCharacterSlots ? reinterpret_cast<CharacterRecord*>(kCharacterRecords) + id : nullptr; }
 
+    // Free Duel / Duelist Challenges share one screen class. Its OnEnter (0x1408415F0, named RIX::ScreenHardChallenge::OnEnter in the
+    // IDB) fills the series tab list (vector<int> at +4096) with 0-5, hands it to widget_pickSeries::SetList (+656) and refreshes
+    // (sub_140841B10). characters.json "hideEmptySeries": true drops the tabs no selectable character with a defined deck is in.
+    using FreeDuelOnEnter_t = void(__fastcall*)(int64_t screen, int64_t previous);
+    uintptr_t orig_FreeDuelOnEnter = 0x1408415F0;
+    const auto PickSeriesSetList = reinterpret_cast<void(__fastcall*)(int64_t list, int64_t ids)>(0x1408A76E0);
+    const auto FreeDuelRefreshSeries = reinterpret_cast<void(__fastcall*)(int64_t screen)>(0x140841B10);
+    const auto DeckIsDefined = reinterpret_cast<bool(__fastcall*)(int deck)>(0x1407FE4D0);
+    bool g_HideEmptySeries = false;
+
+    // characters.json "seriesNames": { "0": { "E": "Forbidden Memories" } } - the Free Duel / Duelist Challenges series tab's text.
+    // Campaign_GetSeriesLabel (0x1407564C0) serves the campaign's series list and rewards too; only widget_pickSeries' two calls get ours.
+    std::map<int, std::map<char, std::wstring>> g_SeriesNames;
+    using SeriesLabel_t = const wchar_t*(__fastcall*)(unsigned int series);
+    uintptr_t orig_SeriesLabel = 0x1407564C0;
+
+    const wchar_t* __fastcall Hook_SeriesLabel(unsigned int series)
+    {
+        const uintptr_t caller = reinterpret_cast<uintptr_t>(_ReturnAddress());
+        const bool pickSeries = (caller >= 0x1408A7530 && caller < 0x1408A76D9) || (caller >= 0x1408A7740 && caller < 0x1408A786C);
+        if (pickSeries)
+            if (auto it = g_SeriesNames.find(static_cast<int>(series)); it != g_SeriesNames.end())
+                if (const std::wstring* text = Pick(it->second))
+                    return text->c_str();
+        return reinterpret_cast<SeriesLabel_t>(orig_SeriesLabel)(series);
+    }
+
+    bool SeriesHasOpponents(int series)
+    {
+        for (uint32_t id = 0; id < kCharacterSlots; ++id)
+        {
+            const CharacterRecord* record = Record(id);
+            if (record->Key && record->Selectable && record->Series == series && record->Deck >= 0 && DeckIsDefined(record->Deck))
+                return true;
+        }
+        return false;
+    }
+
+    void __fastcall Hook_FreeDuelOnEnter(int64_t screen, int64_t previous)
+    {
+        const int* before = *reinterpret_cast<int**>(screen + 4104);
+        reinterpret_cast<FreeDuelOnEnter_t>(orig_FreeDuelOnEnter)(screen, previous);
+        int* begin = *reinterpret_cast<int**>(screen + 4096);
+        int*& end = *reinterpret_cast<int**>(screen + 4104);
+        if (end == before || begin == end)
+            return;   // the game kept its list (coming back from a duel or deck pick)
+        int* kept = std::remove_if(begin, end, [](int series) { return !SeriesHasOpponents(series); });
+        if (kept == begin || kept == end)
+            return;   // every tab empty, or none: leave the game's list
+        end = kept;
+        PickSeriesSetList(screen + 656, screen + 4096);
+        FreeDuelRefreshSeries(screen);
+    }
+
     // ---- characters.json ----
 
     struct Entry
@@ -81,6 +138,17 @@ namespace
             return; // characters.json is optional
         try
         {
+            if (root.is_object())
+                g_HideEmptySeries = root.value("hideEmptySeries", false);
+            if (auto names = root.find("seriesNames"); names != root.end() && names->is_object())
+                for (auto& [key, texts] : names->items())
+                {
+                    std::map<char, std::wstring> byLanguage;
+                    nlohmann::json wrapper{ { "t", texts } };
+                    ReadTexts(wrapper, "t", byLanguage);
+                    if (!byLanguage.empty())
+                        g_SeriesNames[std::atoi(key.c_str())] = std::move(byLanguage);
+                }
             auto list = root.find("characters");
             if (list == root.end() || !list->is_array())
                 return;
@@ -224,6 +292,10 @@ namespace Characters
         }
         else
             Logger::WriteLog("Shared character decks unavailable: opponent-list ownership check differs", MODULE_NAME, 2);
+        if (g_HideEmptySeries)
+            DetourAttach(&(PVOID&)orig_FreeDuelOnEnter, Hook_FreeDuelOnEnter);
+        if (!g_SeriesNames.empty())
+            DetourAttach(&(PVOID&)orig_SeriesLabel, Hook_SeriesLabel);
         if (g_entries.empty())
             return;
         DetourAttach(&(PVOID&)orig_LoadCharacterData, Hook_LoadCharacterData);

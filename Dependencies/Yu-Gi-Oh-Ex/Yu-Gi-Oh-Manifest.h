@@ -15,7 +15,9 @@
                                                      WolfX reads it to write Yu-Gi-Oh-Ex\content.json
           "replaces": [ "Yu-Gi-Oh-Music",            older plugins this one took over (renamed, merged in, or retired with this one
                         { "name": "Yu-Gi-Oh-Old",    answering for them), each a name or { "name", "note" }: see "Replaced plugins" below
-                          "note": "Now a BOB page." } ]
+                          "note": "Now a BOB page." } ],
+          "newSave": "forbidden-memories"            this plugin needs a save made with it (true = the DLL's name as the tag): Yu-Gi-Oh-Core
+                                                     only loads save slots whose tags are exactly the tags of the loaded plugins
         }
 
     Replaced plugins: someone who copies a new build over an old folder keeps the old DLLs (Yu-Gi-Oh-Music.dll next to Yu-Gi-Oh-Media.dll).
@@ -61,6 +63,8 @@ namespace YGO
             std::vector<std::string> Content;    // the Yu-Gi-Oh-Ex files it applies ("cards.json", "pages\\")
             struct Replaced { std::string Name, Note; };
             std::vector<Replaced> Replaces;      // older plugins this one took over (DLL names without ".dll")
+            bool NewSave = false;                // needs a save made with it ("newSave")
+            std::string SaveTag;                 // the tag that save carries; empty = the DLL's name (see SaveTagOf)
             bool Found = false;                  // a manifest file was read
         };
 
@@ -169,6 +173,17 @@ namespace YGO
                     }
                 }
             }
+            for (const char* key : { "newSave", "NewSave" })
+            {
+                auto it = root.find(key);
+                if (it != root.end() && it->is_boolean())
+                    info.NewSave = it->get<bool>();
+                else if (it != root.end() && it->is_string() && !it->get<std::string>().empty())
+                {
+                    info.NewSave = true;
+                    info.SaveTag = it->get<std::string>();
+                }
+            }
             for (const char* key : { "dlls", "Dlls" })
             {
                 auto it = root.find(key);
@@ -182,6 +197,17 @@ namespace YGO
                 }
             }
             return info;
+        }
+
+        // The tag a save made with this plugin carries (lower case), or "" when it doesn't need its own save.
+        inline std::string SaveTagOf(const Plugin& plugin)
+        {
+            if (!plugin.Details.NewSave)
+                return {};
+            std::string tag = plugin.Details.SaveTag.empty() ? plugin.Name : plugin.Details.SaveTag;
+            for (char& c : tag)
+                c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+            return tag;
         }
 
         inline const Plugin* Find(const std::vector<Plugin>& plugins, const std::string& name)

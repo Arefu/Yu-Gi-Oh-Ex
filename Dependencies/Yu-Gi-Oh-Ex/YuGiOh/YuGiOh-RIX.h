@@ -578,6 +578,122 @@ namespace YGO
             inline auto GetSelectedCardId = reinterpret_cast<uint16_t(__fastcall*)(void* Box)>(0x14088BBB0);       // 0xFFFF none
         }
 
+        // RIX::widget_DeckCardsZone: the deck editor's deck panel (the deck's name, Main / Extra / Side card rows, the 10-row stats bar and
+        // a sort bar). ScreenBattlePackEdit::SetupWidgets (0x140827790) builds it at (646, 120), then SetCellStyle(2), SetMode(2) and
+        // SetFocused(1); OnEnter / RefreshDeck (0x140827D90) show a deck with RebuildCounts(zone + Counts, deck), SetDeck, RefreshSections,
+        // RefreshCounts. The stats bar reads the zone's own DeckStateHelper (+3432).
+        namespace DeckView
+        {
+            constexpr size_t Size = 3432 + 52 + 0x567A;   // the helper is the last member
+            constexpr size_t Counts = 3432;
+            inline auto Construct = reinterpret_cast<void*(__fastcall*)(void* Zone)>(0x140892670);
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Zone, SharedNode* Parent, int Z, void* Owner, float X, float Y)>(0x1408931C0);
+            inline auto SetCellStyle = reinterpret_cast<void(__fastcall*)(void* Zone, int Style)>(0x1408937E0);
+            inline auto SetMode = reinterpret_cast<void(__fastcall*)(void* Zone, int Mode)>(0x140893830);
+            inline auto SetMainLimit = reinterpret_cast<void(__fastcall*)(void* Zone, int Limit)>(0x1408937D0);     // 40 (30 in the short format)
+            inline auto SelectSection = reinterpret_cast<void(__fastcall*)(void* Zone, unsigned Section, char Quiet)>(0x140893660);   // 0 main, 1 extra, 2 side
+            // The deck record (YGO::SAVE::DeckListItem) from a deck id (0-31 a save deck, 32 + n deckdata deck n, 732-736 a battle pack slot).
+            inline auto DeckFromId = reinterpret_cast<void*(__fastcall*)(unsigned Profile, unsigned DeckId)>(0x14081AB40);
+            inline auto RebuildCounts = reinterpret_cast<void(__fastcall*)(void* Helper, void* Deck)>(0x140755E30);  // Deck_RebuildCardCountTables
+            inline auto SetDeck = reinterpret_cast<void(__fastcall*)(void* Zone, void* Deck)>(0x140893740);          // null = empty
+            inline auto RefreshSections = reinterpret_cast<void(__fastcall*)(void* Zone)>(0x140893A30);
+            inline auto RefreshCounts = reinterpret_cast<void(__fastcall*)(void* Zone)>(0x1408939B0);
+            // Per frame while focused: up / down at a row's edge move between Main / Extra / Side, 0x4000 sorts. Section gets the section + 2
+            // when a card was confirmed (clicked / confirm). True when something changed.
+            inline auto ProcessInput = reinterpret_cast<char(__fastcall*)(void* Zone, int Pressed, int Held, int* Section)>(0x1408929C0);
+            inline auto GetSelectedCardId = reinterpret_cast<uint16_t(__fastcall*)(void* Zone)>(0x140893060);       // 0xFFFF none
+            constexpr size_t Section = 3088;              // ListState: its first int = the current section (0 main, 1 extra, 2 side)
+            constexpr size_t Rows = 936;                  // the three card rows (widget_DeckCardList), 648 bytes each
+            // A widget's own box under the mouse (what ProcessInput tests each row with).
+            inline auto WidgetHitTest = reinterpret_cast<bool(__fastcall*)(void* Widget, int64_t Mouse)>(0x140782DA0);
+            inline bool HitTest(void* Zone, int64_t Mouse)
+            {
+                for (int i = 0; i < 3; ++i)
+                    if (WidgetHitTest(static_cast<char*>(Zone) + Rows + 648 * i, Mouse))
+                        return true;
+                return false;
+            }
+        }
+
+        // RIX::widget_BarH: the loading screen's progress bar (load_bar_outer / load_bar_inner). The card loading screen (0x1407B73C0)
+        // builds it with CreateFromLayout(bar, root, 3, 0, &{616, 935, 1190, 34}); SetRange(bar, 0, done, total) fills it.
+        namespace ProgressBar
+        {
+            constexpr size_t Size = 184;
+            struct Desc { float X, Y, Width, Height; };
+            inline auto Construct = reinterpret_cast<void*(__fastcall*)(void* Bar)>(0x14087A970);
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Bar, SharedNode* Parent, int Z, void* Owner, const Desc* Layout)>(0x14087AB80);
+            inline auto SetRange = reinterpret_cast<void(__fastcall*)(void* Bar, float First, float Visible, float Total)>(0x14087AE00);   // Total 0: unchanged
+        }
+
+        // RIX::widget_SettingsLine: one row of the Live setting screen (a label, a value and, when Arrows, the left / right arrows shown while
+        // focused). ScreenLiveSetting::SetupWidgets (0x140854E60) builds ten with CreateFromLayout(row, node, 2 + i, screen+88, 0, 133 + 130 i,
+        // 1, 300, bits of 480.0f) under a node at (1437, 120); LiveSetting_RefreshRows (0x140856500) writes the values. Label / value take a
+        // string id or a wchar_t* (as Screen::SetHeaderText); the game copies the text.
+        namespace OptionRow
+        {
+            constexpr size_t Size = 240;
+            inline auto Construct = reinterpret_cast<void*(__fastcall*)(void* Vector, void* Rows, int64_t Count)>(0x1408568E0);   // Vector unused
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Row, SharedNode* Parent, int Z, void* Owner, float X, float Y, uint8_t Arrows, float ValueWidth, int LabelWidthBits)>(0x1408B3350);
+            inline auto SetLabel = reinterpret_cast<void(__fastcall*)(void* Row, int64_t Text)>(0x1408B3850);
+            inline auto SetValue = reinterpret_cast<void(__fastcall*)(void* Row, int64_t Text)>(0x1408B3880);
+            // The whole row (label, value and arrows) under the mouse (ScreenLiveSetting's mouse focus, 0x140854560).
+            inline auto HitTest = reinterpret_cast<bool(__fastcall*)(void* Row, int64_t Mouse)>(0x1408B38E0);
+            // Row-local x of the arrows' centres: -(ValueWidth / 2 + 54) and +(ValueWidth / 2 + 54) (CreateFromLayout). The value
+            // text only redraws when SetFocused changes its colour state (+344 cleared), so a new value needs a focus flip.
+        }
+
+        // RIX::widget_PackWrapper: one booster pack of the Random Pack Store (its picture, title, price and owned counts). The store
+        // builds six at (506 + 235 i, 575) (ScreenRandomPackStore::SetupWidgets) and fills them with SetPack (BoosterShop_RefreshRows).
+        // About 211 x 300 around its position.
+        namespace PackWrapper
+        {
+            constexpr size_t Size = 216;
+            constexpr size_t PackId = 208;      // unsigned, what SetPack was given
+            constexpr size_t Complete = 212;    // char: every card of the pack owned three times
+            inline auto Construct = reinterpret_cast<void*(__fastcall*)(void* Wrapper)>(0x1408A2F50);
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Wrapper, SharedNode* Parent, int Z, void* Owner, float X, float Y)>(0x1408A30D0);
+            // A locked pack (save unlock bit off; checked for ids below 128) shows "wrap_locked" with no title.
+            inline auto SetPack = reinterpret_cast<void(__fastcall*)(void* Wrapper, unsigned PackId)>(0x1408A34A0);
+            // SetPack's own test: a pack record exists and (id >= 128 or its unlock bit at save +2944 is on).
+            inline bool Unlocked(void* Wrapper)
+            {
+                const unsigned id = *reinterpret_cast<unsigned*>(static_cast<char*>(Wrapper) + PackId);
+                if (!reinterpret_cast<void*(__fastcall*)(unsigned)>(0x14080E340)(id))   // YGO::GAME::Get_PackRecord
+                    return false;
+                if (id >= 128)
+                    return true;
+                const char* save = static_cast<const char*>(reinterpret_cast<void*(__fastcall*)(unsigned)>(0x1407F80A0)(0xFFFFFFFD));   // Get_PlayerSection
+                return (*reinterpret_cast<const unsigned*>(save + 2944 + 4 * (id >> 5)) >> (id & 31)) & 1;
+            }
+        }
+
+        // RIX::widget_TextFrame: the framed title tag of the card boxes (widget_CardDisplay / CardDisplayFlex): a text in a box that
+        // grows with the text, up to MaxWidth (0 = no limit).
+        namespace TextFrame
+        {
+            constexpr size_t Size = 120;
+            inline auto Construct = reinterpret_cast<void*(__fastcall*)(void* Frame)>(0x1408B4F90);
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Frame, SharedNode* Parent, int Z, void* Owner, float X, float Y, float MaxWidth)>(0x1408B5080);
+            // A string id or wchar_t* (the game copies it); Fit sizes the box to the text; 0 hides the frame.
+            inline auto SetText = reinterpret_cast<void(__fastcall*)(void* Frame, int64_t Text, char Fit)>(0x1408B51F0);
+        }
+
+        // widget_LoadSpinner: the loading rings (load_ring_inner / outer turning both ways), the main menu's (+0x4A0) and the card loading
+        // screen's (574, 952). The rings turn by two endless animations CreateFromLayout adds to the screen's animation list (ScreenBase +0x78).
+        namespace LoadSpinner
+        {
+            constexpr size_t Size = 128;
+            constexpr size_t ScreenAnims = 0x78;
+            inline void Construct(void* Spinner)   // inline in the game (ScreenMainMenu::Constructor)
+            {
+                reinterpret_cast<void(__fastcall*)(void*)>(0x14087BF90)(Spinner);   // widget_Base::Constructor
+                *reinterpret_cast<uintptr_t*>(Spinner) = 0x140A57B98;               // widget_LoadSpinner vftable
+                std::memset(static_cast<char*>(Spinner) + 48, 0, Size - 48);
+            }
+            inline auto CreateFromLayout = reinterpret_cast<void(__fastcall*)(void* Spinner, SharedNode* Parent, int Z, void* Owner, float X, float Y, void* Anims)>(0x1408A0C00);
+        }
+
         // One digit wheel of the player match code entry (widget_EntryDigit: a number in a box, an arrow above and below).
         namespace EntryDigit
         {

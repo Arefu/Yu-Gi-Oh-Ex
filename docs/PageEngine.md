@@ -50,6 +50,12 @@ focus a control. Every element can have `"visible": <condition>`.
 | `deckInfo` | `widget_RecipeInfo`: the deck panel beside it | `deck` (an id or `"{var:...}"`), `side` (0 yours, 1 the opponent's look) |
 | `cardGrid` | `widget_TrunkZone`: the deck editor's card grid with its filter and sort bar | `cards` (`owned`, default, or `all`; may be `"{var:...}"`, the grid refills when it changes), `bind` (the highlighted card id), `onChange`, `action` (on a confirmed card), `filterX` / `filterY` (the filter panel's centre, 1568.5 / 120). As in the deck editor: the wheel scrolls while the mouse is on the grid's own area, Filter opens the editor's filter panel, a right-click opens the full card view |
 | `cardBox` | `widget_CardDisplay`: the Random Pack Store's box of the cards a pack gave (the trunk's grid is one too) | `cards` (ids split by anything not a digit, `"{var:...}"`, or a JSON array; refilled when it changes), `cols` (4) / `rows` (2), `cellWidth` (255.17) / `cellHeight` (370), `gap` (10), `frame` (true), `bind` (the highlighted card id), `onChange`, `action` (on a confirmed card). More cards than cells scroll; a right-click opens the full card view; L / R leave the box |
+| `deckView` | `widget_DeckCardsZone`: the deck editor's / Battle Pack edit screen's deck panel (the deck's name, Main / Extra / Side card rows, the stats bar, the sort bar) | `deck` (a deck id as `decks` binds it, or `"{var:...}"`; -1 / empty = none; re-read each time the page shows), `mainLimit` (40), `bind` (the highlighted card id), `onChange`, `action` (on a confirmed card). Up / down move between the rows, the sort button sorts, a right-click opens the full card view, L / R leave it. The Battle Pack edit screen puts it at 646, 120 |
+| `progress` | `widget_BarH`: the card loading screen's progress bar | `value`, `max` (100) (numbers or `"{var:...}"`), `x` / `y` / `width` / `height` (the loading screen's: 616, 935, 1190, 34). Not focusable |
+| `option` | `widget_SettingsLine`: one row of the Player Match setting screen (label, value, arrows while focused) | `label`, `values` (as a menu choice: `["a", "b"]` or `[{ "label", "value" }]`, or `"toggle": true`), `bind`, `default`, `onChange`, `action` (on confirm; without one confirm steps the value), `arrows` (true), `valueWidth` (300), `labelWidth` (480). `x` / `y` = the row's centre line: the game's rows are at 1437, 253 + 130 per row. Left / right change the value; a click on an arrow steps it |
+| `pack` | `widget_PackWrapper`: one booster pack of the Random Pack Store (picture, name, price, owned counts) | `pack` (a pack id, may be `{var:...}`), `bind` (gets the pack id on confirm), `action`. `x` / `y` = the pack's centre (about 211 x 300); the store's six are at 506 + 235 per pack, 575. A locked pack shows locked and can't be picked |
+| `tag` | `widget_TextFrame`: the framed title tag of the card boxes (a text in a box that grows with it) | `text` (may name values; empty hides the tag), `width` (the most the box grows to; 0 = no limit). Not focusable |
+| `spinner` | `widget_LoadSpinner`: the loading rings (main menu, card loading screen at 574, 952) | `x`, `y` only. The rings turn by the screen's own animations |
 | `image` | a sprite of a `.dfymoo` sheet (decoration) | `resource`, `sprite`, `alpha` |
 | `text` | text in the UI font (decoration) | `text` (with `{var:...}` / `{config:...}`), `textSize`, `align`, `colour` |
 
@@ -136,14 +142,35 @@ pointers into them; a covered or closed page hides them.
   `CreateFromLayout(w, root, z, screen+88, &desc)` with a 96-byte `RIX_CardDisplayDesc` (`YuGiOh-RIX.h` `CardBox::Desc`), then `SetCursorScale(1.03)`.
   `SetCards(w, n, ids, -1, null, null)` (null counters = no numbers). Every frame `ProcessInput(w, pressed, held, &action, &clicked)` (action 3 = confirm / click)
   and `GetSelectedCardId`.
+- **Status (2026-10-19)**: card grid and card box are done and work in game. Known, accepted: the grid's position is off,
+  and the box does not size correctly (`cellWidth` / `cellHeight` / `cols` / `rows` do not scale well).
+- **Deck panel** (`ScreenBattlePackEdit::SetupWidgets` 0x140827790, `RefreshDeck` 0x140827D90): `widget_DeckCardsZone::Constructor`, then
+  `CreateFromLayout(w, root, z, screen+88, x, y)`, `SetCellStyle(2)`, `SetMode(2)`. A deck: `Deck_FromId(profile, id)` (0x14081AB40),
+  `Deck_RebuildCardCountTables(w+3432, deck)`, `SetDeck(w, deck)`, `RefreshSections`, `RefreshCounts`. Every frame while focused
+  `ProcessInput(w, pressed, held, &section)` (section + 2 on a confirmed card) and `GetSelectedCardId`. The stats bar
+  (`widget_DeckStats` at w+208) reads the zone's `DeckStateHelper` (w+3432) through its vftable: slot 2 = count of category i (10), slot 3 = total.
+- **Progress bar** (the card loading screen 0x1407B73C0): `widget_BarH::Constructor`, `CreateFromLayout(w, root, z, owner, &{x, y, w, h})`,
+  then `SetRange(w, 0, done, total)` (the same maths as `widget_BarV`).
+- **Option row** (`ScreenLiveSetting::SetupWidgets` 0x140854E60, `LiveSetting_RefreshRows` 0x140856500): `widget_SettingsLine::Constructor`
+  is the array constructor (`(unused, rows, count)`, 240 bytes each), then `CreateFromLayout(row, parent, z, owner, x, y, arrows, 300,
+  bits of 480.0f)`. `SetLabel` / `SetValue` take a string id or a `wchar_t*`; its `SetFocused` shows the highlight and the arrows.
 - **Message boxes**: `Screen::ShowMessageText` / `ShowYesNo` on the page screen.
 
 ## Next widgets to lift
 
+Done 2026-10-19: `deckView`, `progress`, `option`, `pack` (working); `tag`, `spinner` (untested). `widget_KeyEntry::CreatePart2` was really
+`widget_LoadSpinner::CreateFromLayout` (renamed); the controls row itself is still a candidate. Checked and dropped:
+- `widget_DeckList` is the inside of `widget_RecipeZone` (already `decks`) and `widget_UserDeckZone`; not a widget of its own.
+- `widget_TextScroll` is a one-line marquee (newlines become `-`, the header uses it), not a body text: a later `ticker` kind at most.
+
 Candidates from `docs/WidgetTracker.md`:
-- the deck editor's own deck list (`widget_DeckList`)
-- `widget_TextScroll` as a body text
-- the settings row (`widget_SettingsLine`)
-- `widget_UserSlot`
+- `widget_UserDeckZone`: the deck editor's list of the player's own decks
+- `widget_CardSortBar` on its own, `widget_CardDisplayFlex` (a deck row that wraps)
+- `widget_CampaignRewards` / `widget_RewardWindow`: the campaign's reward panel
+- `widget_DuelStatsPItem` / `widget_RawDuelStats`: the duel result statistics
+- `ScreenLiveLeaderboard::widget_Row`: a leaderboard row (for the MP service's own boards)
+- `widget_UserSlot`: a lobby player slot (name, avatar, ready)
+- `widget_KeyEntry`: a controls row (key + action)
+- `widget_TextScroll` as a `ticker`
 
 Each gets a demo page, then a `kind`.

@@ -37,7 +37,7 @@
             "x": 200,
             "y": 180,
             "width": 660,
-            "height": 760,
+            "height": 840,
             "items": [
                 {
                     "label": "Menu buttons",
@@ -89,6 +89,55 @@
                     }
                 },
                 {
+                    "label": "Card grid",
+                    "description": "widget_TrunkZone - the deck editor card grid (wheel scrolling, the Filter panel), with the card details beside it.",
+                    "action": {
+                        "page": "rix-demo-cards"
+                    }
+                },
+                {
+                    "label": "Card box",
+                    "description": "widget_CardDisplay - the Random Pack Store's box of pulled cards, filled from a list of ids.",
+                    "action": {
+                        "page": "rix-demo-box"
+                    }
+                },
+                {
+                    "label": "Deck panel",
+                    "description": "widget_DeckCardsZone - the Battle Pack edit screen's deck panel: Main / Extra / Side rows and the stats bar.",
+                    "action": {
+                        "page": "rix-demo-deckview"
+                    }
+                },
+                {
+                    "label": "Progress bar",
+                    "description": "widget_BarH - the card loading screen's progress bar.",
+                    "action": {
+                        "page": "rix-demo-progress"
+                    }
+                },
+                {
+                    "label": "Option rows",
+                    "description": "widget_SettingsLine - the label / value / arrows rows of the Player Match setting screen.",
+                    "action": {
+                        "page": "rix-demo-option"
+                    }
+                },
+                {
+                    "label": "Booster packs",
+                    "description": "widget_PackWrapper - the Random Pack Store's booster packs.",
+                    "action": {
+                        "page": "rix-demo-pack"
+                    }
+                },
+                {
+                    "label": "Tags + spinner",
+                    "description": "widget_TextFrame (the card boxes' title tag) and widget_LoadSpinner (the loading rings).",
+                    "action": {
+                        "page": "rix-demo-tag"
+                    }
+                },
+                {
                     "label": "Back",
                     "description": "Back to the previous page.",
                     "action": {
@@ -96,7 +145,7 @@
                     }
                 }
             ],
-            "spacing": 84
+            "spacing": 56
         }
     ]
 }

@@ -63,6 +63,13 @@ game's `.ydc`, or when the deck is new.
 * **A game id** changes that deck; only the fields the entry gives are applied.
 * **A free id** makes a new deck. It needs a `file` name; that name never has to exist in decks.zib when `cards` is given.
 * **unlocked** (new decks, default false) marks the deck unlocked in the save.
+* **hideGameDecks** (top level, `true`): the deck lists show the profile's saved decks (ids 0-31) and, of the unlocked decks, only
+  the ones decks.json lists. This covers the deck editor and the Free Duel / campaign deck pickers. Campaign hooks
+  `DeckSelectList_FillDecks` (0x1408AD890), which fills tab 0 (vector<u32> at +1208) and then calls RebuildTabs (0x1408AE5B0).
+* **random** `{"count": 40, "cards": [[4007, 48], [4041, 24], ...]}` deals the main deck again before every duel: `count` picks by weight
+  ([Konami id, weight] pairs), with at most 3 copies of a card. Yu-Gi-Oh-Campaign deals
+  it into the template when the decks load and in every `RebuildLiveUnlockCounts`, which runs after each duel and when a profile loads.
+  `cards.main` is ignored, while `extra` and `side` still apply. WolfX keeps the setting (`Deck.RandomCount` / `RandomPool` in DeckDataTable.cs).
 
 Yu-Gi-Oh-Campaign:
 * **`LoadDeckDataFile` (hooked):** applies the records and writes the titles with the game's `std::wstring::assign`. This runs before the

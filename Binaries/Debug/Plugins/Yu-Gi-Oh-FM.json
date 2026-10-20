@@ -1,0 +1,23 @@
+{
+  "title": "Forbidden Memories rules",
+  "description": "Yu-Gi-Oh! Forbidden Memories' duel rules for the Forbidden Memories mod: no Tributes, and fusion from the hand step by step without Polymerization (Fuse on a hand monster's menu). Reads the mod's fm.json. Work in progress, logs every step.",
+  "content": [
+    "fm.json"
+  ],
+  "settings": [
+    {
+      "key": "FusionsInMainDeck",
+      "title": "Fusions in the main deck",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Fusion monsters are main deck cards, Normal Summoned or Set from the hand like any monster, as in Forbidden Memories (there is no Extra Deck)."
+    },
+    {
+      "key": "NoTributes",
+      "title": "No Tributes",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Any monster can be Normal Summoned or Set without Tributes, as in Forbidden Memories (one Normal Summon per turn stays)."
+    }
+  ]
+}

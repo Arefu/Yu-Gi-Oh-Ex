@@ -31,6 +31,8 @@ namespace WolfEx
             ["series"] = "seriesTabs", ["seriesTabs"] = "seriesTabs", ["characters"] = "characters", ["decks"] = "decks",
             ["deck"] = "deckInfo", ["deckInfo"] = "deckInfo", ["cards"] = "cardGrid", ["cardGrid"] = "cardGrid", ["image"] = "image", ["text"] = "text",
             ["user"] = "user", ["related"] = "relatedCards", ["relatedCards"] = "relatedCards", ["box"] = "cardBox", ["cardBox"] = "cardBox",
+            ["deckcards"] = "deckView", ["deckView"] = "deckView", ["progress"] = "progress", ["option"] = "option",
+            ["pack"] = "pack", ["tag"] = "tag", ["spinner"] = "spinner",
         };
 
         // the field a value written straight after the widget word fills ("text "Hello"", "digits 4", "card 4007")
@@ -38,6 +40,7 @@ namespace WolfEx
         {
             ["menu"] = "id", ["slider"] = "label", ["digits"] = "count", ["cardInfo"] = "card", ["deckInfo"] = "deck",
             ["cardGrid"] = "cards", ["cardBox"] = "cards", ["image"] = "resource", ["text"] = "text", ["characters"] = "series",
+            ["deckView"] = "deck", ["progress"] = "value", ["option"] = "label", ["pack"] = "pack", ["tag"] = "text",
         };
 
         // fields written in any case in a script -> their spelling in the page file
@@ -46,9 +49,10 @@ namespace WolfEx
             "id", "x", "y", "width", "height", "items", "source", "spacing", "action", "bind", "min", "max", "default", "onChange", "description",
             "label", "count", "card", "series", "deck", "side", "cards", "filterX", "filterY", "resource", "sprite", "alpha", "text", "textSize",
             "align", "colour", "visible", "enabled", "values", "toggle", "title", "cols", "rows", "cellWidth", "cellHeight", "gap", "frame",
+            "mainLimit", "arrows", "valueWidth", "labelWidth", "pack",
         ];
 
-        public static readonly string[] Widgets = ["menu", "slider", "digits", "card", "series", "characters", "decks", "deck", "cards", "image", "text", "user", "related", "box"];
+        public static readonly string[] Widgets = ["menu", "slider", "digits", "card", "series", "characters", "decks", "deck", "cards", "image", "text", "user", "related", "box", "deckcards", "progress", "option", "pack", "tag", "spinner"];
         public static readonly string[] Actions = ["page", "back", "goto", "call", "quit", "set", "toggle", "add", "show_card", "reset_filter", "message", "confirm", "video", "popup", "if",
             "give_dp", "take_dp", "give_card", "take_card", "unlock", "lock", "unlock_character", "sound"];
         public static readonly string[] Keywords = ["header", "button", "edit", "hidden", "value", "use", "choice", "rows", "on", "at", "size", "bind", "default", "description", "enabled", "onchange", "yes", "else", "and", "not", "key", "true", "false"];

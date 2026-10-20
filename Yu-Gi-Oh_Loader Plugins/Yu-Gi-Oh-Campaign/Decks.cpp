@@ -2,6 +2,7 @@
 #include "Common.h"
 
 #include <Windows.h>
+#include <algorithm>
 #include <cstdint>
 #include <cstring>
 #include <deque>
@@ -9,6 +10,7 @@
 #include <fstream>
 #include <map>
 #include <optional>
+#include <random>
 #include <string>
 #include <vector>
 
@@ -82,12 +84,16 @@ namespace
         std::map<char, std::wstring> Titles, Texts2, Texts3;
         bool HasCards = false;
         std::vector<uint16_t> Main, Extra, Side;
+        // "random": the main deck is dealt again from a weighted pool before every duel; 0 = fixed cards
+        int RandomCount = 0;
+        std::vector<std::pair<uint16_t, uint32_t>> RandomPool;   // Konami id, weight
         bool Unlocked = false;    // new decks only
         bool IsNew = false;       // decided when applied: the game had no deck in the slot
         bool Native = false;      // "native": WolfX wrote it into deckdata; only its unlock (and custom cards) are ours
     };
 
     std::deque<Entry> g_entries;  // deque: records point at FileName strings
+    bool g_HideGameDecks = false; // "hideGameDecks" (Hook_FillDecks)
 
     std::vector<uint16_t> Cards(const nlohmann::json& cards, const char* key)
     {
@@ -110,6 +116,8 @@ namespace
             return; // decks.json is optional
         try
         {
+            if (root.is_object())
+                g_HideGameDecks = root.value("hideGameDecks", false);
             auto list = root.find("decks");
             if (list == root.end() || !list->is_array())
                 return;
@@ -144,6 +152,22 @@ namespace
                         Logger::WriteLog(std::format("decks.json: deck {} has more than 60 main / 15 extra / 15 side cards, its cards were skipped", entry.Id), MODULE_NAME, 2);
                         entry.HasCards = false;
                     }
+                }
+                if (auto random = json.find("random"); random != json.end() && random->is_object())
+                {
+                    if (auto pool = random->find("cards"); pool != random->end() && pool->is_array())
+                        for (auto& pair : *pool)
+                            if (pair.is_array() && pair.size() == 2 && pair[0].is_number_integer() && pair[1].is_number_integer()
+                                && pair[0].get<int>() > 0 && pair[0].get<int>() <= 0xFFFF && pair[1].get<int>() > 0)
+                                entry.RandomPool.emplace_back(static_cast<uint16_t>(pair[0].get<int>()), pair[1].get<uint32_t>());
+                    entry.RandomCount = std::clamp(random->value("count", 40), 1, 60);
+                    if (entry.RandomPool.empty())
+                    {
+                        Logger::WriteLog(std::format("decks.json: deck {} has \"random\" without cards, it was skipped", entry.Id), MODULE_NAME, 2);
+                        entry.RandomCount = 0;
+                    }
+                    else
+                        entry.HasCards = true;   // the main deck is dealt in ApplyCards; extra and side stay as given
                 }
                 if (auto unlocked = json.find("unlocked"); unlocked != json.end() && unlocked->is_boolean())
                     entry.Unlocked = unlocked->get<bool>();
@@ -212,6 +236,31 @@ namespace
             Logger::WriteLog(std::format("Decks: {} changed, {} new", changed, added), MODULE_NAME, 0);
     }
 
+    // A "random" deck's main deck: count picks by weight, at most 3 copies of a card (fewer cards when the pool runs out).
+    std::vector<uint16_t> Deal(const Entry& entry)
+    {
+        static std::mt19937 random{ std::random_device{}() };
+        std::vector<std::pair<uint16_t, uint32_t>> pool = entry.RandomPool;
+        std::map<uint16_t, int> copies;
+        std::vector<uint16_t> main;
+        while (static_cast<int>(main.size()) < entry.RandomCount && !pool.empty())
+        {
+            uint64_t total = 0;
+            for (const auto& [id, weight] : pool)
+                total += weight;
+            uint64_t roll = std::uniform_int_distribution<uint64_t>(0, total - 1)(random);
+            size_t pick = 0;
+            while (roll >= pool[pick].second)
+                roll -= pool[pick++].second;
+            const uint16_t id = pool[pick].first;
+            main.push_back(id);
+            if (++copies[id] == 3)
+                pool.erase(pool.begin() + static_cast<ptrdiff_t>(pick));
+        }
+        std::sort(main.begin(), main.end());
+        return main;
+    }
+
     // After the game read decks.zib: the decks with "cards" get them (Konami ids, as a .ydc holds them).
     void ApplyCards()
     {
@@ -227,10 +276,11 @@ namespace
                 wcsncpy_s(deck->Name, title->c_str(), _TRUNCATE);
             else
                 wcsncpy_s(deck->Name, record->Title.c_str(), _TRUNCATE);
-            deck->MainCount = static_cast<int16_t>(entry.Main.size());
+            const std::vector<uint16_t> main = entry.RandomCount ? Deal(entry) : entry.Main;
+            deck->MainCount = static_cast<int16_t>(main.size());
             deck->ExtraCount = static_cast<int16_t>(entry.Extra.size());
             deck->SideCount = static_cast<int16_t>(entry.Side.size());
-            std::copy(entry.Main.begin(), entry.Main.end(), deck->Main);
+            std::copy(main.begin(), main.end(), deck->Main);
             std::copy(entry.Extra.begin(), entry.Extra.end(), deck->Extra);
             std::copy(entry.Side.begin(), entry.Side.end(), deck->Side);
             deck->RecordSlot = record->Slot;
@@ -269,9 +319,46 @@ namespace
         ApplyCards();
     }
 
+    // "random" decks are dealt again for the next duel (this runs after every duel and when a profile loads).
+    void DealRandomDecks()
+    {
+        for (const Entry& entry : g_entries)
+        {
+            DeckTemplate* deck = Template(entry.Id);
+            if (!entry.RandomCount || !deck || !deck->IsValid)
+                continue;
+            const std::vector<uint16_t> main = Deal(entry);
+            std::fill(std::begin(deck->Main), std::end(deck->Main), uint16_t{ 0 });
+            std::copy(main.begin(), main.end(), deck->Main);
+            deck->MainCount = static_cast<int16_t>(main.size());
+        }
+    }
+
+    // decks.json "hideGameDecks": true - the deck lists (deck editor, Free Duel / campaign deck pickers) show the profile's saved decks
+    // (ids 0-31) and only the decks.json decks (32 + id) of the unlocked ones. DeckSelectList_FillDecks (0x1408AD890; FillPlayerDecks
+    // 0x1408ADB70 and 0x1408ADB80 call it) fills tab 0 (vector<u32> at +1208) and then RebuildTabs (0x1408AE5B0) makes the other tabs.
+    uintptr_t orig_FillDecks = 0x1408AD890;
+    const auto RebuildDeckTabs = reinterpret_cast<void(__fastcall*)(int64_t list)>(0x1408AE5B0);
+
+    void __fastcall Hook_FillDecks(int64_t list, int mask, char flag)
+    {
+        reinterpret_cast<void(__fastcall*)(int64_t, int, char)>(orig_FillDecks)(list, mask, flag);
+        uint32_t* begin = *reinterpret_cast<uint32_t**>(list + 1208);
+        uint32_t*& end = *reinterpret_cast<uint32_t**>(list + 1216);
+        uint32_t* kept = std::remove_if(begin, end, [](uint32_t id)
+        {
+            return id >= 32 && std::none_of(g_entries.begin(), g_entries.end(), [&](const Entry& entry) { return entry.Id + 32 == id; });
+        });
+        if (kept == end)
+            return;
+        end = kept;
+        RebuildDeckTabs(list);
+    }
+
     int64_t __fastcall Hook_RebuildLiveUnlockCounts(unsigned int profile)
     {
         UnlockNewDecks();
+        DealRandomDecks();
         return reinterpret_cast<RebuildLiveUnlockCounts_t>(orig_RebuildLiveUnlockCounts)(profile);
     }
 }
@@ -286,6 +373,8 @@ namespace Decks
         DetourAttach(&(PVOID&)orig_LoadDeckDataFile, Hook_LoadDeckDataFile);
         DetourAttach(&(PVOID&)orig_LoadDeckTemplates, Hook_LoadDeckTemplates);
         DetourAttach(&(PVOID&)orig_RebuildLiveUnlockCounts, Hook_RebuildLiveUnlockCounts);
+        if (g_HideGameDecks)
+            DetourAttach(&(PVOID&)orig_FillDecks, Hook_FillDecks);
     }
 
     void ApplyIfLoaded()

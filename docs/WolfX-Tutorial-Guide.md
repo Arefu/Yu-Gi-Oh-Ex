@@ -387,6 +387,11 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 * **Purpose**: `unlocks.json` - cards every profile owns (Yu-Gi-Oh-MoreCards).
 * **Options**: Add by name..., Add by id, Remove selected, Add from game data (what a new profile starts with), Import JSON..., "Owned at
   least (0-3)" per card, "Replace the game's default unlocks".
+* **Starter deck**: `"starter": {"deckName": "Starter Deck", "groups": [{"count": 16, "cards": [[id, weight], ...]}]}` deals a new profile a
+  random deck once. A profile counts as new when it has no saved deck and owns none of the starter's cards. Each group deals `count` cards
+  by weight, with at most 3 copies of a card. The cards become owned and the deck goes into saved deck slot 1 (`DealStarterIfNew` in
+  Yu-Gi-Oh-Cards Card.cpp). WolfX shows that the block is there and keeps it
+  when saving, but doesn't edit it yet.
 * **Warn**: test with a spare save profile (see Save editor warnings).
 
 ### TEXT

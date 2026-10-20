@@ -138,6 +138,80 @@
       "hidden": true
     },
     {
+      "key": "ShowName",
+      "title": "Show the name",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Keep the card's name on the face (for frames with a name bar, such as Forbidden Memories'). Anime frames hide it."
+    },
+    {
+      "key": "NameX",
+      "title": "Name X",
+      "kind": "number",
+      "default": "31",
+      "help": "With ShowName: x of the name's top-left corner on the 400 x 580 face.",
+      "min": 0,
+      "max": 400,
+      "step": 1
+    },
+    {
+      "key": "NameY",
+      "title": "Name Y",
+      "kind": "number",
+      "default": "46",
+      "help": "With ShowName: y of the name's top-left corner on the 400 x 580 face.",
+      "min": 0,
+      "max": 580,
+      "step": 1
+    },
+    {
+      "key": "NameWidth",
+      "title": "Name width",
+      "kind": "number",
+      "default": "0",
+      "help": "With ShowName: longer names are squeezed to this width (0 = the game's 301 px).",
+      "min": 0,
+      "max": 400,
+      "step": 1
+    },
+    {
+      "key": "HideSpellTrapIcon",
+      "title": "Hide Spell / Trap property icon",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Hide the Quick-Play / Continuous / Equip / Field / Ritual / Counter icon on spells and traps (Forbidden Memories cards have none)."
+    },
+    {
+      "key": "StarsAlign",
+      "title": "Level stars",
+      "kind": "choice",
+      "default": "0",
+      "choices": [ "0", "1" ],
+      "labels": { "0": "Centred", "1": "From the right" },
+      "help": "0 = the level stars are centred on StarsX, 1 = the row ends at StarsX (right to left, as on Forbidden Memories cards)."
+    },
+    {
+      "key": "AtkLabel",
+      "title": "ATK label",
+      "kind": "text",
+      "default": "",
+      "help": "Text in front of the ATK number (\"ATK \" on Forbidden Memories cards)."
+    },
+    {
+      "key": "DefLabel",
+      "title": "DEF label",
+      "kind": "text",
+      "default": "",
+      "help": "Text in front of the DEF number (\"DEF \" on Forbidden Memories cards)."
+    },
+    {
+      "key": "SpellTrapAttribute",
+      "title": "Spell / Trap icon",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Spells and traps show their SPELL / TRAP icon where monsters show the attribute (for frames without a symbol, such as Forbidden Memories')."
+    },
+    {
       "key": "AttributeSize",
       "title": "Attribute size",
       "kind": "number",

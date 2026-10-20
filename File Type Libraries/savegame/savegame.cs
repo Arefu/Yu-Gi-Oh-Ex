@@ -17,7 +17,8 @@ namespace savegame
     ///   0x0FD8  player        wallet, unlocked characters, per deck state (2968 bytes)
     ///   0x1B70  section       6 blocks of 50 six dword entries (7256 bytes) - not decoded yet
     ///   0x37C8  decks         32 x 304 bytes
-    ///   0x5DC8  card table    20000 bytes, one per Konami card id
+    ///   0x5DC8  card table    20000 bytes, one per Konami card id (ids 20000-65534: Yu-Gi-Oh-Core's extension, CardTable)
+    ///   0xABE8  (after the blob) Yu-Gi-Oh-Core's save extension, when a plugin stored anything (SaveExtension)
     /// </summary>
     public sealed class SaveFile
     {
@@ -44,9 +45,19 @@ namespace savegame
 
         private readonly byte[] _data;
 
-        /// <summary>The bytes after the game's 44008 (Yu-Gi-Oh-Core's save extension: plugin data by tag, "YGEX"...). Kept as they are and
-        /// written back after the blob; empty for a plain save.</summary>
-        public byte[] Extension { get; } = [];
+        /// <summary>Yu-Gi-Oh-Core's save extension: plugin data by tag after the game's 44008 bytes (Save.cpp). Every entry is kept and
+        /// written back; the card table's ids past 19999 are the "cards.high" entry.</summary>
+        public SaveExtension ExtensionData { get; }
+
+        /// <summary>The bytes after the game's 44008, as they would be written now (empty for a plain save).</summary>
+        public byte[] Extension
+        {
+            get
+            {
+                Cards.StoreHigh(ExtensionData);
+                return ExtensionData.ToBytes();
+            }
+        }
 
         public SaveFile(byte[] data)
         {
@@ -54,11 +65,10 @@ namespace savegame
                 throw new InvalidDataException($"A save file is {Size} bytes, this one is {data.Length}.");
 
             _data = data.Length == Size ? data : data[..Size];
-            if (data.Length > Size)
-                Extension = data[Size..];
+            ExtensionData = SaveExtension.Parse(data.Length > Size ? data[Size..] : []);
 
             Player = new PlayerData(_data, PlayerOffset);
-            Cards = new CardTable(_data, CardTableOffset);
+            Cards = new CardTable(_data, CardTableOffset, ExtensionData);
             Section = new ProfileSection(_data, SectionOffset);
 
             Decks = new DeckSlot[DeckCount];
@@ -160,7 +170,8 @@ namespace savegame
                 throw new InvalidDataException("Cannot save an unsupported Link Evolution header.");
             string target = Path.GetFullPath(path);
             string temporary = target + "." + Guid.NewGuid().ToString("N") + ".tmp";
-            var pending = new SaveFile((byte[])_data.Clone());
+            // the copy gets the extension too (it used to be built from the blob alone, which dropped every plugin's data on save)
+            var pending = new SaveFile([.. _data, .. Extension]);
             byte[] bytes = pending.ToBytes(updateChecksum);
             string? backup = null;
             try
@@ -178,7 +189,7 @@ namespace savegame
                 else
                     File.Move(temporary, target);
                 // A failed write must not advance the in-memory counter or checksum.
-                bytes.CopyTo(_data, 0);
+                Array.Copy(bytes, _data, Size);
                 LastBackupPath = backup;
             }
             finally
@@ -249,28 +260,67 @@ namespace savegame
         Chains, DecksCreated, CardsEarned,
     }
 
-    /// <summary>Which cards the player owns and how many copies. One byte per Konami card id.</summary>
+    /// <summary>
+    /// Which cards the player owns and how many copies. One byte per Konami card id, for every id up to 65534: the save's own table holds
+    /// 0..19999, and Yu-Gi-Oh-Core keeps the ids past it (custom cards up to 65534) in the save extension, entry "cards.high" = u16 id +
+    /// u8 byte per card that has any bits set (Yu-Gi-Oh-Core CardTable.cpp).
+    /// </summary>
     public sealed class CardTable
     {
+        public const string HighTag = "cards.high";
+
         private readonly byte[] _data;
         private readonly int _offset;
+        private readonly byte[] _high = new byte[MaxId + 1 - SaveFile.CardTableSize];
 
-        internal CardTable(byte[] data, int offset)
+        /// <summary>The last card id (65535 is the game's "no card").</summary>
+        public const int MaxId = 0xFFFE;
+
+        internal CardTable(byte[] data, int offset, SaveExtension extension)
         {
             _data = data;
             _offset = offset;
+            if (extension.Get(HighTag) is { } high)
+                for (int i = 0; i + 3 <= high.Length; i += 3)
+                {
+                    int id = high[i] | high[i + 1] << 8;
+                    if (id >= SaveFile.CardTableSize && id <= MaxId)
+                        _high[id - SaveFile.CardTableSize] = high[i + 2];
+                }
         }
 
-        public int Length => SaveFile.CardTableSize;
+        /// <summary>Puts the ids past 19999 into the extension (or takes the entry out when there are none), as Core writes them.</summary>
+        internal void StoreHigh(SaveExtension extension)
+        {
+            var bytes = new List<byte>();
+            for (int i = 0; i < _high.Length; i++)
+                if (_high[i] != 0)
+                {
+                    int id = i + SaveFile.CardTableSize;
+                    bytes.Add((byte)(id & 0xFF));
+                    bytes.Add((byte)(id >> 8));
+                    bytes.Add(_high[i]);
+                }
+            extension.Set(HighTag, bytes.Count > 0 ? [.. bytes] : null);
+        }
+
+        /// <summary>Ids 0..Length-1 (the save's table and Yu-Gi-Oh-Core's extension together).</summary>
+        public int Length => MaxId + 1;
 
         /// <summary>Highest number of copies the game keeps track of.</summary>
         public const int MaxCopies = 3;
 
         /// <summary>Bits 0-2 are the copies. Bit 3 is set once the player has seen the card (the game sets it for the cards
         /// it grants at the start); an owned card without it is shown as new. Bits 4-7 are kept, their meaning is not known.</summary>
-        public byte GetRaw(int id) => _data[_offset + Check(id)];
+        public byte GetRaw(int id) => Check(id) < SaveFile.CardTableSize ? _data[_offset + id] : _high[id - SaveFile.CardTableSize];
 
-        public void SetRaw(int id, byte value) => _data[_offset + Check(id)] = value;
+        public void SetRaw(int id, byte value)
+        {
+            if (Check(id) < SaveFile.CardTableSize)
+                _data[_offset + id] = value;
+            else
+                _high[id - SaveFile.CardTableSize] = value;
+        }
 
         public int GetCopies(int id) => GetRaw(id) & 7;
 
@@ -300,14 +350,88 @@ namespace savegame
 
         public void Clear()
         {
-            Array.Clear(_data, _offset, Length);
+            Array.Clear(_data, _offset, SaveFile.CardTableSize);
+            Array.Clear(_high);
         }
 
         private static int Check(int id)
         {
-            if ((uint)id >= SaveFile.CardTableSize)
-                throw new ArgumentOutOfRangeException(nameof(id), $"The save keeps ownership for ids 0 to {SaveFile.CardTableSize - 1}.");
+            if ((uint)id > MaxId)
+                throw new ArgumentOutOfRangeException(nameof(id), $"Card ids run from 0 to {MaxId}.");
             return id;
+        }
+    }
+
+    /// <summary>
+    /// Yu-Gi-Oh-Core's save extension (Save.cpp TakeExtension / ExtensionBytes): after the 44008-byte blob, "YGEX", u32 version (1), u32
+    /// count, then per entry a 32-byte zero-padded tag, u32 size and the data. Entries are written sorted by tag, as Core's std::map does.
+    /// Bytes after the blob that aren't in this format are kept as they are (Core drops them at its next save).
+    /// </summary>
+    public sealed class SaveExtension
+    {
+        private const uint Version = 1;
+        private const int TagSize = 32;
+        private static readonly byte[] Magic = "YGEX"u8.ToArray();
+
+        private readonly SortedDictionary<string, byte[]> _entries = new(StringComparer.Ordinal);
+        private byte[]? _unknown;
+
+        public IReadOnlyDictionary<string, byte[]> Entries => _entries;
+
+        public byte[]? Get(string tag) => _entries.TryGetValue(tag, out var data) ? data : null;
+
+        /// <summary>Sets an entry; null or empty takes it out.</summary>
+        public void Set(string tag, byte[]? data)
+        {
+            if (data is not { Length: > 0 })
+                _entries.Remove(tag);
+            else
+                _entries[tag] = data;
+        }
+
+        public static SaveExtension Parse(byte[] bytes)
+        {
+            var extension = new SaveExtension();
+            if (bytes.Length == 0)
+                return extension;
+            if (bytes.Length < 12 || !bytes.AsSpan(0, 4).SequenceEqual(Magic) || BinaryPrimitives.ReadUInt32LittleEndian(bytes.AsSpan(4)) != Version)
+            {
+                extension._unknown = bytes;
+                return extension;
+            }
+            uint count = BinaryPrimitives.ReadUInt32LittleEndian(bytes.AsSpan(8));
+            int at = 12;
+            for (uint i = 0; i < count && bytes.Length - at >= TagSize + 4; i++)
+            {
+                string tag = System.Text.Encoding.ASCII.GetString(bytes, at, TagSize).TrimEnd('\0');
+                at += TagSize;
+                int size = (int)BinaryPrimitives.ReadUInt32LittleEndian(bytes.AsSpan(at));
+                at += 4;
+                if (size < 0 || bytes.Length - at < size)
+                    break;
+                extension._entries[tag] = bytes[at..(at + size)];
+                at += size;
+            }
+            return extension;
+        }
+
+        public byte[] ToBytes()
+        {
+            if (_entries.Count == 0)
+                return _unknown ?? [];
+            var bytes = new List<byte>(Magic);
+            void U32(uint value) { var b = new byte[4]; BinaryPrimitives.WriteUInt32LittleEndian(b, value); bytes.AddRange(b); }
+            U32(Version);
+            U32((uint)_entries.Count);
+            foreach (var (tag, data) in _entries)
+            {
+                var name = new byte[TagSize];
+                System.Text.Encoding.ASCII.GetBytes(tag, 0, Math.Min(tag.Length, TagSize - 1), name, 0);
+                bytes.AddRange(name);
+                U32((uint)data.Length);
+                bytes.AddRange(data);
+            }
+            return [.. bytes];
         }
     }
 

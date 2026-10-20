@@ -1,0 +1,65 @@
+{
+    "version": 2,
+    "header": "Option rows",
+    "elements": [
+        {
+            "kind": "option",
+            "x": 1437,
+            "y": 253,
+            "label": "Difficulty",
+            "bind": "var:demo.optDifficulty",
+            "default": "1",
+            "values": [
+                {
+                    "label": "Easy",
+                    "value": "0"
+                },
+                {
+                    "label": "Normal",
+                    "value": "1"
+                },
+                {
+                    "label": "Hard",
+                    "value": "2"
+                }
+            ],
+            "description": "widget_SettingsLine - left / right change the value."
+        },
+        {
+            "kind": "option",
+            "x": 1437,
+            "y": 383,
+            "label": "Life points",
+            "bind": "var:demo.optLp",
+            "default": "8000",
+            "values": [
+                "2000",
+                "4000",
+                "8000",
+                "12000",
+                "16000"
+            ],
+            "description": "The same row with plain values (as the Player Match screen's LP row)."
+        },
+        {
+            "kind": "option",
+            "x": 1437,
+            "y": 513,
+            "label": "Sound",
+            "bind": "var:demo.optSound",
+            "toggle": true,
+            "description": "toggle: Off / On."
+        },
+        {
+            "kind": "option",
+            "x": 1437,
+            "y": 643,
+            "label": "Show values",
+            "arrows": false,
+            "description": "A row without arrows: confirm runs its action.",
+            "action": {
+                "message": "Difficulty {var:demo.optDifficulty}, LP {var:demo.optLp}, sound {var:demo.optSound}."
+            }
+        }
+    ]
+}

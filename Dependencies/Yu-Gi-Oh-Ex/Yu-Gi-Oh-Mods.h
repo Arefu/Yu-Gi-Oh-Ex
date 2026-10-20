@@ -19,6 +19,8 @@
           "details": "Longer text, shown by the Mod Manager.",
           "requires": [ "Yu-Gi-Oh-MoreCards",             plugin DLL names (no .dll) the mod needs ...
                         { "plugin": "Yu-Gi-Oh-Foo", "url": "https://..." } ]   ... with where to get one that isn't part of Yu-Gi-Oh-Ex
+          "newSave": "tag",                               needs a save made with it
+          "exclusive": true                               a clean slate: no other mod, and not <game>\Yu-Gi-Oh-Ex / YGO_2020 / YGO_2020-Ex
         }
 
     <game>\Mods\modlist.json (written by the Mod Manager) is the load order and what is switched on:
@@ -66,6 +68,8 @@ namespace YGO
             std::filesystem::path Folder;    // <game>\Mods\<id>
             std::string Name, Version, Author, Website, Description, Details;
             std::vector<Requirement> Requires;
+            std::string SaveTag;             // "newSave": needs a save made with it (true = the folder name); empty = any save
+            bool Exclusive = false;          // "exclusive": a clean slate - only this mod's content and game-file changes load
             bool Enabled = true;
             bool Listed = false;             // modlist.json names it
         };
@@ -128,6 +132,10 @@ namespace YGO
             mod.Website = text("website");
             mod.Description = text("description");
             mod.Details = text("details");
+            if (auto it = root.find("newSave"); it != root.end())
+                mod.SaveTag = it->is_string() ? it->get<std::string>() : it->is_boolean() && it->get<bool>() ? mod.Id : std::string();
+            if (auto it = root.find("exclusive"); it != root.end() && it->is_boolean())
+                mod.Exclusive = it->get<bool>();
             if (auto it = root.find("requires"); it != root.end() && it->is_array())
             {
                 for (const auto& item : *it)
@@ -202,7 +210,8 @@ namespace YGO
             return ordered;
         }
 
-        // The mods that load, lowest priority first.
+        // The mods that load, lowest priority first. An "exclusive" mod that is on is a clean slate: it loads alone (the last such mod in
+        // the load order), and <game>\Yu-Gi-Oh-Ex / <game>\YGO_2020-Ex (WolfX's workspace) are not read either (see IsExclusive).
         inline std::vector<Mod> Active(const std::filesystem::path& gameFolder)
         {
             std::vector<Mod> active;
@@ -211,7 +220,17 @@ namespace YGO
                 if (mod.Enabled)
                     active.push_back(std::move(mod));
             }
+            for (auto it = active.rbegin(); it != active.rend(); ++it)
+            {
+                if (it->Exclusive)
+                    return { std::move(*it) };
+            }
             return active;
+        }
+
+        inline bool IsExclusive(const std::vector<Mod>& active)
+        {
+            return active.size() == 1 && active.front().Exclusive;
         }
 
         // ---- inside the game (the game folder is the folder YuGiOh.exe is in) ----
@@ -227,30 +246,33 @@ namespace YGO
             return folder;
         }
 
-        // The content folders, lowest priority first: each active mod's Yu-Gi-Oh-Ex folder that exists, then <game>\Yu-Gi-Oh-Ex (always
-        // listed, even before it exists: it is where new files get written).
+        // The content folders, lowest priority first: each active mod's Yu-Gi-Oh-Ex folder that exists, then <game>\Yu-Gi-Oh-Ex (listed
+        // even before it exists). With an exclusive mod on, only that mod's folder.
         inline const std::vector<std::filesystem::path>& ContentFolders()
         {
             static const std::vector<std::filesystem::path> folders = []
             {
                 std::vector<std::filesystem::path> list;
                 std::error_code error;
-                for (const Mod& mod : Active(GameFolder()))
+                const std::vector<Mod> active = Active(GameFolder());
+                for (const Mod& mod : active)
                 {
                     const auto content = mod.Folder / L"Yu-Gi-Oh-Ex";
                     if (std::filesystem::is_directory(content, error))
                         list.push_back(content);
                 }
-                list.push_back(GameFolder() / L"Yu-Gi-Oh-Ex");
+                if (!IsExclusive(active))
+                    list.push_back(GameFolder() / L"Yu-Gi-Oh-Ex");
                 return list;
             }();
             return folders;
         }
 
-        // <game>\Yu-Gi-Oh-Ex: WolfX's workspace and the place for files the game writes (exported decks, ...).
+        // <game>\Yu-Gi-Oh-Ex: WolfX's workspace and the place for files the game writes (exported decks, ...), exclusive mod or not.
         inline const std::filesystem::path& LocalContentFolder()
         {
-            return ContentFolders().back();
+            static const std::filesystem::path folder = GameFolder() / L"Yu-Gi-Oh-Ex";
+            return folder;
         }
 
         // A content folder as a UTF-8 string ending in a backslash (what "$folder" holds).

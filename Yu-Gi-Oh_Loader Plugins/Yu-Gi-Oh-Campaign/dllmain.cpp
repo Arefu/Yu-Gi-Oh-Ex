@@ -7,6 +7,7 @@
 #include "Decks.h"
 #include "DuelistRules.h"
 #include "Detours.h"
+#include "Progress.h"
 #include "Series.h"
 #include "StoryDuels.h"
 #include "StoryScripts.h"
@@ -22,6 +23,7 @@
 //   campaigns.json    -> new campaign series past the game's 6, a scrolling series list (Series.cpp)
 //   storyscripts.json -> the story scenes' dialog (StoryScripts.cpp)
 //   tutorials\*.json   -> new tutorials (27-99) in Help > Tutorial (Tutorials.cpp)
+//   progress.json     -> progress a profile has from the start: every character, main menu modes (Progress.cpp)
 // Free Duel uses the same character and deck data.
 // AI deck: the opponent plays a deck you pick on the deck picker, keeping their portrait (AiDeck.cpp).
 
@@ -45,6 +47,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         StoryScripts::Attach();
         Tutorials::Attach();
         AiDeck::Attach();
+        Progress::Attach();
         LONG error = DetourTransactionCommit();
         Logger::WriteLog(std::format("Campaign hooks attached: {}", error), MODULE_NAME, error == 0 ? 0 : 2);
 

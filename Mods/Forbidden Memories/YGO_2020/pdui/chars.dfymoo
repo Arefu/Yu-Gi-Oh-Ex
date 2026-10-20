@@ -1,0 +1,702 @@
+i tk2d 1
+w 1950
+h 1950
+~
+n AI_neutral
+s 1 1 128 128
+~
+n AkiraZaizen_neutral
+s 131 1 103 128
+o 17 0 128 128
+~
+n AlexisRhodesARCV_neutral
+s 261 1 125 127
+o 0 1 128 128
+~
+n AsterPhoenixARCV_neutral
+s 391 1 111 128
+o 6 0 128 128
+~
+n AuraSentia_neutral
+s 521 1 127 103
+o 0 25 128 128
+~
+n BloodShepherd_neutral
+s 651 1 128 128
+~
+n BlueAngel_neutral
+s 781 1 128 128
+~
+n BlueGirl_neutral
+s 911 1 128 122
+o 0 6 128 128
+~
+n BlueMaiden_neutral
+s 1041 1 128 128
+~
+n Bohman_neutral
+s 1171 1 128 128
+~
+n Chojiro_neutral
+s 1301 1 104 127
+o 12 1 128 128
+~
+n CrowHoganARCV_neutral
+s 1431 1 128 128
+~
+n DeclanAkaba_neutral
+s 1561 1 128 128
+~
+n DennisMacfield_neutral
+s 1691 1 128 128
+~
+n DuelChaser227_neutral
+s 1821 1 128 128
+~
+n GhostGal_neutral
+s 1 131 128 128
+~
+n GoreBountyHunter_neutral
+s 131 131 128 128
+~
+n Gore_neutral
+s 261 131 128 128
+~
+n JeanMichelRoget_neutral
+s 391 131 128 123
+o 0 5 128 128
+~
+n KiteTenjoARCV_neutral
+s 521 131 128 128
+~
+n KnightofHanoi_neutral
+s 651 131 128 128
+~
+n Lightning_neutral
+s 781 131 128 107
+o 0 21 128 128
+~
+n Lulu_neutral
+s 911 131 113 126
+o 10 2 128 128
+~
+n ObeliskForce_neutral
+s 1041 131 128 128
+~
+n Playmaker_neutral
+s 1171 131 128 128
+~
+n Rin_neutral
+s 1301 131 123 126
+o 2 2 128 128
+~
+n Roboppi_neutral
+s 1431 131 128 128
+~
+n ShayObsidian_neutral
+s 1561 131 128 128
+~
+n Sledgehammer_neutral
+s 1691 131 128 128
+~
+n Soulburner_neutral
+s 1821 131 128 128
+~
+n Specter_neutral
+s 1 261 123 128
+o 1 0 128 128
+~
+n Tsukikage_neutral
+s 131 261 128 128
+~
+n VarisVer1_neutral
+s 261 261 128 128
+~
+n VarisVer2_neutral
+s 391 261 128 128
+~
+n Windy_neutral
+s 521 261 118 128
+o 6 0 128 128
+~
+n Yuri_neutral
+s 651 261 128 128
+~
+n Yusho_neutral
+s 781 261 128 128
+~
+n Zarc_neutral
+s 911 261 128 128
+~
+n adriangecko_neutral
+s 1041 261 128 128
+~
+n akizaizinski_neutral
+s 1171 261 128 126
+o 0 2 128 128
+~
+n alexisrhodes_neutral
+s 1301 261 122 128
+o 0 0 128 128
+~
+n alister_neutral
+s 1431 261 128 121
+o 0 7 128 128
+~
+n alito_barian_neutral
+s 1561 261 128 128
+~
+n alito_neutral
+s 1691 261 128 128
+~
+n amnael_neutral
+s 1821 261 128 128
+~
+n andre_neutral
+s 1 391 128 128
+~
+n annakaboom_neutral
+s 131 391 128 128
+~
+n antinomy_neutral
+s 261 391 128 128
+~
+n aporia_neutral
+s 391 391 128 128
+~
+n arkana_neutral
+s 521 391 128 128
+~
+n asterphoenix_neutral
+s 651 391 112 128
+o 8 0 128 128
+~
+n astral_neutral
+s 781 391 128 128
+~
+n atticusrhodes_neutral
+s 911 391 128 126
+o 0 2 128 128
+~
+n axelbrodie_neutral
+s 1041 391 128 118
+o 0 10 128 128
+~
+n banditkeith_neutral
+s 1171 391 128 128
+~
+n bastionmisawa_neutral
+s 1301 391 128 128
+~
+n blairflannigan_neutral
+s 1431 391 127 128
+o 0 0 128 128
+~
+n bolttanner_neutral
+s 1561 391 128 128
+~
+n bonz_neutral
+s 1691 391 128 128
+~
+n breo_neutral
+s 1821 391 128 128
+~
+n broder_neutral
+s 1 521 128 128
+~
+n bronkstone_neutral
+s 131 521 128 128
+~
+n camula_neutral
+s 261 521 128 128
+~
+n carlycarmine_dark_neutral
+s 391 521 128 124
+o 0 4 128 128
+~
+n carlycarmine_glasses_neutral
+s 521 521 128 125
+o 0 3 128 128
+~
+n carlycarmine_neutral
+s 651 521 128 124
+o 0 4 128 128
+~
+n cathykatherine_neutral
+s 781 521 128 114
+o 0 14 128 128
+~
+n celina_neutral
+s 911 521 128 128
+~
+n chazzprinceton_blue_neutral
+s 1041 521 128 128
+~
+n chazzprinceton_neutral
+s 1171 521 128 128
+~
+n chumleyhuffington_neutral
+s 1301 521 128 111
+o 0 17 128 128
+~
+n crowhogan_neutral
+s 1431 521 128 128
+~
+n dartz_neutral
+s 1561 521 128 120
+o 0 8 128 128
+~
+n devack_neutral
+s 1691 521 128 128
+~
+n dextra_neutral
+s 1821 521 107 125
+o 11 3 128 128
+~
+n donthousand_neutral
+s 1 651 128 128
+~
+n dragan_neutral
+s 131 651 128 128
+~
+n drfaker_neutral
+s 261 651 128 128
+~
+n dumon_barian_neutral
+s 391 651 128 127
+o 0 1 128 128
+~
+n dumon_neutral
+s 521 651 128 127
+o 0 1 128 128
+~
+n flipturner_neutral
+s 651 651 114 115
+o 10 13 128 128
+~
+n girag_barian_neutral
+s 781 651 128 128
+~
+n girag_neutral
+s 911 651 128 128
+~
+n gogenzaka_neutral
+s 1041 651 128 128
+~
+n greiger_dark_neutral
+s 1171 651 128 126
+o 0 2 128 128
+~
+n greiger_neutral
+s 1301 651 128 128
+~
+n halldor_neutral
+s 1431 651 128 128
+~
+n hokuto_neutral
+s 1561 651 126 128
+o 2 0 128 128
+~
+n hunterpace_neutral
+s 1691 651 128 128
+~
+n icon_char_locked
+s 1821 651 91 121
+o 18 7 128 128
+~
+n in4m8_neutral
+s 1 781 128 128
+~
+n infn8_neutral
+s 131 781 128 126
+o 0 2 128 128
+~
+n ishizuishtar_neutral
+s 261 781 128 128
+~
+n jackatlas_neutral
+s 391 781 128 128
+~
+n jackatlasarcv_neutral
+s 521 781 128 128
+~
+n jadenyuki_neutral
+s 651 781 128 126
+o 0 2 128 128
+~
+n jean_neutral
+s 781 781 128 128
+~
+n jesseanderson_neutral
+s 911 781 127 128
+o 1 0 128 128
+~
+n jimcook_neutral
+s 1041 781 128 128
+~
+n joeywheeler_neutral
+s 1171 781 128 128
+~
+n kagemaru_neutral
+s 1301 781 128 128
+~
+n kalinkessler_dark_neutral
+s 1431 781 128 128
+~
+n kalinkessler_neutral
+s 1561 781 128 128
+~
+n kitetenjo_neutral
+s 1691 781 127 128
+o 0 0 128 128
+~
+n leo_neutral
+s 1821 781 108 128
+o 0 0 128 128
+~
+n lester_neutral
+s 1 911 128 114
+o 0 14 128 128
+~
+n maivalentine_alternate_neutral
+s 131 911 128 128
+~
+n maivalentine_neutral
+s 261 911 128 128
+~
+n makotsunami_neutral
+s 391 911 128 128
+~
+n marcelbonaparte_neutral
+s 521 911 128 128
+~
+n masumi_neutral
+s 651 911 99 124
+o 15 4 128 128
+~
+n maximillionpegasus_neutral
+s 781 911 128 128
+~
+n mistytredwell_dark_neutral
+s 911 911 124 128
+o 2 0 128 128
+~
+n mistytredwell_neutral
+s 1041 911 124 128
+o 2 0 128 128
+~
+n mizar_barian_neutral
+s 1171 911 122 128
+o 5 0 128 128
+~
+n mizar_neutral
+s 1301 911 122 128
+o 5 0 128 128
+~
+n mrarmstrong_neutral
+s 1431 911 128 128
+~
+n nash_neutral
+s 1561 911 128 128
+~
+n nelsonandrews_neutral
+s 1691 911 127 128
+o 1 0 128 128
+~
+n nightshroud_neutral
+s 1821 911 128 128
+~
+n nistro_neutral
+s 1 1041 128 128
+~
+n number96_neutral
+s 131 1041 128 128
+~
+n odion_neutral
+s 261 1041 128 122
+o 0 6 128 128
+~
+n panik_neutral
+s 391 1041 128 128
+~
+n primo_neutral
+s 521 1041 128 128
+~
+n quattro_neutral
+s 651 1041 128 128
+~
+n quinton_neutral
+s 781 1041 128 128
+~
+n rafael_neutral
+s 911 1041 128 128
+~
+n rayshadows_neutral
+s 1041 1041 113 128
+o 0 0 128 128
+~
+n reginaldkastle_neutral
+s 1171 1041 128 126
+o 0 2 128 128
+~
+n rexgoodwin_dark_neutral
+s 1301 1041 128 128
+~
+n rexgoodwin_neutral
+s 1431 1041 128 128
+~
+n rexraptor_neutral
+s 1561 1041 128 128
+~
+n rio_neutral
+s 1691 1041 128 122
+o 0 6 128 128
+~
+n romangoodwin_neutral
+s 1821 1041 128 128
+~
+n sartoriuskumar_neutral
+s 1 1171 128 128
+~
+n sayer_neutral
+s 131 1171 128 128
+~
+n seeker_neutral
+s 261 1171 126 128
+o 2 0 128 128
+~
+n setokaiba_neutral
+s 391 1171 128 128
+~
+n sheppard_neutral
+s 521 1171 128 123
+o 0 5 128 128
+~
+n sherryleblanc_neutral
+s 651 1171 128 128
+~
+n shingo_neutral
+s 781 1171 128 128
+~
+n sora_neutral
+s 911 1171 109 128
+o 6 0 128 128
+~
+n strings_neutral
+s 1041 1171 108 128
+o 0 0 128 128
+~
+n syrustruesdale_neutral
+s 1171 1171 128 128
+~
+n tania_neutral
+s 1301 1171 127 128
+o 1 0 128 128
+~
+n teagardner_neutral
+s 1431 1171 114 125
+o 7 3 128 128
+~
+n tetsutrudge_neutral
+s 1561 1171 128 128
+~
+n theloniousviper_neutral
+s 1691 1171 128 128
+~
+n titan_neutral
+s 1821 1171 128 128
+~
+n trey_neutral
+s 1 1301 104 114
+o 11 14 128 128
+~
+n tyrannohassleberry_neutral
+s 131 1301 128 115
+o 0 13 128 128
+~
+n valon_neutral
+s 261 1301 128 128
+~
+n vector_neutral
+s 391 1301 128 128
+~
+n velliancrowler_neutral
+s 521 1301 128 128
+~
+n vetrix_neutral
+s 651 1301 128 114
+o 0 14 128 128
+~
+n weevilunderwood_neutral
+s 781 1301 124 125
+o 1 3 128 128
+~
+n yaiba_neutral
+s 911 1301 128 128
+~
+n yamibakura_neutral
+s 1041 1301 128 128
+~
+n yamimarik_neutral
+s 1171 1301 128 128
+~
+n yamiyugi_neutral
+s 1301 1301 128 128
+~
+n yubel_neutral
+s 1431 1301 128 128
+~
+n yugimuto_neutral
+s 1561 1301 128 128
+~
+n yugo_neutral
+s 1691 1301 128 128
+~
+n yumatsukumo_neutral
+s 1821 1301 128 128
+~
+n yuseifudo_neutral
+s 1 1431 128 128
+~
+n yuseifudo_notattoo_neutral
+s 131 1431 128 128
+~
+n yuto_neutral
+s 261 1431 128 128
+~
+n yuya_neutral
+s 391 1431 128 128
+~
+n yuzu_neutral
+s 521 1431 128 121
+o 0 7 128 128
+~
+n zanetruesdale_neutral
+s 651 1431 128 128
+~
+n zexal_neutral
+s 781 1431 128 128
+~
+n zexaliii_neutral
+s 911 1431 128 128
+~
+n zone_neutral
+s 1041 1431 128 128
+~
+n fmduelist01_neutral
+s 1171 1431 128 128
+~
+n fmduelist02_neutral
+s 1301 1431 128 128
+~
+n fmduelist03_neutral
+s 1431 1431 128 128
+~
+n fmduelist04_neutral
+s 1561 1431 128 128
+~
+n fmduelist05_neutral
+s 1691 1431 128 128
+~
+n fmduelist06_neutral
+s 1821 1431 128 128
+~
+n fmduelist07_neutral
+s 1 1561 128 128
+~
+n fmduelist08_neutral
+s 131 1561 128 128
+~
+n fmduelist09_neutral
+s 261 1561 128 128
+~
+n fmduelist10_neutral
+s 391 1561 128 128
+~
+n fmduelist11_neutral
+s 521 1561 128 128
+~
+n fmduelist12_neutral
+s 651 1561 128 128
+~
+n fmduelist13_neutral
+s 781 1561 128 128
+~
+n fmduelist14_neutral
+s 911 1561 128 128
+~
+n fmduelist15_neutral
+s 1041 1561 128 128
+~
+n fmduelist16_neutral
+s 1171 1561 128 128
+~
+n fmduelist17_neutral
+s 1301 1561 128 128
+~
+n fmduelist18_neutral
+s 1431 1561 128 128
+~
+n fmduelist19_neutral
+s 1561 1561 128 128
+~
+n fmduelist20_neutral
+s 1691 1561 128 128
+~
+n fmduelist21_neutral
+s 1821 1561 128 128
+~
+n fmduelist22_neutral
+s 1 1691 128 128
+~
+n fmduelist23_neutral
+s 131 1691 128 128
+~
+n fmduelist24_neutral
+s 261 1691 128 128
+~
+n fmduelist25_neutral
+s 391 1691 128 128
+~
+n fmduelist26_neutral
+s 521 1691 128 128
+~
+n fmduelist27_neutral
+s 651 1691 128 128
+~
+n fmduelist28_neutral
+s 781 1691 128 128
+~
+n fmduelist29_neutral
+s 911 1691 128 128
+~
+n fmduelist30_neutral
+s 1041 1691 128 128
+~
+n fmduelist31_neutral
+s 1171 1691 128 128
+~
+n fmduelist32_neutral
+s 1301 1691 128 128
+~
+n fmduelist33_neutral
+s 1431 1691 128 128
+~
+n fmduelist34_neutral
+s 1561 1691 128 128
+~
+n fmduelist35_neutral
+s 1691 1691 128 128
+~
+n fmduelist36_neutral
+s 1821 1691 128 128
+~
+n fmduelist37_neutral
+s 1 1821 128 128
+~
+n fmduelist38_neutral
+s 131 1821 128 128
+~
+n fmduelist39_neutral
+s 261 1821 128 128
+~

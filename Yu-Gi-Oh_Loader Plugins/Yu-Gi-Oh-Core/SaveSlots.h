@@ -12,7 +12,7 @@
 // GameSaveName one; an entry without it gets the old name for its position (slot 1 the GameSaveName file, slot N "-N" before the
 // extension), written back so deleting a slot never renames another slot's file. New slots take "-<nextFile>", a number never reused.
 // "avatar" is a portrait in pdui/chars (the sprite name without "_neutral") or a character id (its portrait).
-// [Yu-Gi-Oh-Core] SaveSlot=N in Config.ini always loads slot N and skips the screen.
+// [Yu-Gi-Oh-Core] SaveSlot=N in Config.ini always loads slot N and skips the screen (unless slot N can't be played, see CanPlay).
 namespace SaveSlots
 {
     constexpr int MaxSlots = 99;
@@ -41,8 +41,16 @@ namespace SaveSlots
     std::string AvatarSpriteOf(int slot); // "<key>_neutral"
     Summary Read(int slot);
 
-    // Makes slot the one the game reads and writes, and remembers it as lastSlot in saves.json.
-    void Select(int slot);
+    // Makes slot the one the game reads and writes, and remembers it as lastSlot in saves.json. newGame = a new profile starts in it: the
+    // slot takes the save tags of the plugins loaded now.
+    void Select(int slot, bool newGame);
+
+    // Plugins whose manifest has "newSave" need a save made with them. A slot entry keeps the tags it was made with
+    // ("tags": [ { "tag": "forbidden-memories", "title": "Forbidden Memories" } ]); a slot with a save file can only be played when its
+    // tags are exactly the loaded plugins' tags (no tags = a plain save, fine while no such plugin loads). An empty slot always can.
+    bool CanPlay(int slot);
+    // Why it can't, one short line per reason ("Needs a new save: Forbidden Memories", "Made with Forbidden Memories (off)").
+    std::vector<std::wstring> WhyNot(int slot);
 
     // A new empty slot at the end; returns its number (0 when there are MaxSlots already).
     int Add();

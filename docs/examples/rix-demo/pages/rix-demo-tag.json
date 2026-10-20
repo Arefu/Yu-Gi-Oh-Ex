@@ -1,0 +1,60 @@
+{
+    "version": 2,
+    "header": "Tags + spinner",
+    "elements": [
+        {
+            "kind": "tag",
+            "x": 700,
+            "y": 300,
+            "text": "Main Deck {var:demo.tagCount|40}"
+        },
+        {
+            "kind": "tag",
+            "x": 700,
+            "y": 400,
+            "text": "A long tag that is cut at 300 wide by its max width",
+            "width": 300
+        },
+        {
+            "kind": "tag",
+            "x": 700,
+            "y": 500,
+            "text": "{var:demo.tagShown|}"
+        },
+        {
+            "kind": "slider",
+            "x": 949,
+            "y": 700,
+            "label": "Count",
+            "bind": "var:demo.tagCount",
+            "default": "40",
+            "min": 0,
+            "max": 60,
+            "description": "The first tag follows this value (the box grows with the text)."
+        },
+        {
+            "kind": "option",
+            "x": 1437,
+            "y": 850,
+            "label": "Third tag",
+            "bind": "var:demo.tagShown",
+            "default": "",
+            "values": [
+                {
+                    "label": "Hidden",
+                    "value": ""
+                },
+                {
+                    "label": "Shown",
+                    "value": "Now you see me"
+                }
+            ],
+            "description": "An empty text hides a tag."
+        },
+        {
+            "kind": "spinner",
+            "x": 1700,
+            "y": 300
+        }
+    ]
+}

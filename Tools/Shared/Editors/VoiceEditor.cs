@@ -84,6 +84,8 @@ namespace Wolf.Editors
         private readonly NumericUpDown _volume = new() { Minimum = 0, Maximum = 2, DecimalPlaces = 2, Increment = 0.05m, Value = 1, Width = 60 };
         private readonly NumericUpDown _duck = new() { Minimum = 0, Maximum = 100, Increment = 5, Value = 50, Width = 55 };
         private readonly NumericUpDown _gap = new() { Minimum = 0, Maximum = 120, DecimalPlaces = 1, Increment = 0.5m, Value = 3, Width = 55 };
+        private readonly CheckBox _pause = new() { Text = "Duel waits for a line", Checked = true, AutoSize = true, Margin = new Padding(8, 5, 3, 3) };
+        private readonly CheckBox _skip = new() { Text = "Click / Space / Enter skips it", Checked = true, AutoSize = true, Margin = new Padding(3, 5, 3, 3) };
         private readonly TextBox _filter = new() { Dock = DockStyle.Top, PlaceholderText = "Find a character..." };
         private readonly CheckBox _onlyVoiced = new() { Dock = DockStyle.Bottom, Text = "Only characters with lines", AutoSize = true };
         private readonly ListBox _characters = new() { Dock = DockStyle.Fill, IntegralHeight = false };
@@ -128,7 +130,8 @@ namespace Wolf.Editors
 
             var defaults = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true, WrapContents = true, Padding = new Padding(4, 2, 4, 2) };
             defaults.Controls.AddRange([Caption("Voices folder (in Yu-Gi-Oh-Ex):"), _folder, Caption("Volume:"), _volume,
-                Caption("Music while talking (%):"), _duck, Caption("Quiet time after a line (s):"), _gap]);
+                Caption("Music while talking (%):"), _duck, Caption("Quiet time after a line (s):"), _gap, _pause, _skip]);
+            _pause.CheckedChanged += (_, _) => _skip.Enabled = _pause.Checked;   // skipping ends the wait
 
             _filter.TextChanged += (_, _) => FillCharacters();
             _onlyVoiced.CheckedChanged += (_, _) => FillCharacters();
@@ -608,6 +611,7 @@ namespace Wolf.Editors
             _volume.Value = 1;
             _duck.Value = 50;
             _gap.Value = 3;
+            _pause.Checked = _skip.Checked = true;
             string path = files.ExPath(FileName);
             string note = "no voices.json yet";
             if (File.Exists(path))
@@ -663,6 +667,8 @@ namespace Wolf.Editors
             _volume.Value = (decimal)Math.Clamp(Num(root["volume"]) ?? 1, 0, 2);
             _duck.Value = (decimal)Math.Clamp(Math.Round((Num(root["duck"]) ?? 0.5) * 100), 0, 100);
             _gap.Value = (decimal)Math.Clamp(Num(root["gap"]) ?? 3, 0, 120);
+            _pause.Checked = root["pause"] is not JsonValue pause || !pause.TryGetValue<bool>(out bool pauseOn) || pauseOn;
+            _skip.Checked = root["skip"] is not JsonValue skip || !skip.TryGetValue<bool>(out bool skipOn) || skipOn;
             if (root["characters"] is not JsonObject characters)
                 return;
             foreach (var (id, list) in characters)
@@ -718,6 +724,10 @@ namespace Wolf.Editors
                 root["volume"] = (double)_volume.Value;
             root["duck"] = (double)_duck.Value / 100;
             root["gap"] = (double)_gap.Value;
+            if (!_pause.Checked)
+                root["pause"] = false;
+            if (!_skip.Checked)
+                root["skip"] = false;
             var characters = new JsonObject();
             foreach (var (id, rows) in _rows.Where(p => p.Value.Count > 0).OrderBy(p => p.Key))
             {

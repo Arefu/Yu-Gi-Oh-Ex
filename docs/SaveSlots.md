@@ -34,6 +34,10 @@ Yu-Gi-Oh-Core (`SaveSlots.cpp`, `SaveScreen.cpp`, `Save.cpp`) because Core is al
 * `avatar` is a portrait from the `pdui/chars` sheet, given as the sprite name without `_neutral` (273 of them: `yugimuto`, `setokaiba`,
   `Playmaker`...), or a character id (that character's portrait, read from the game's character table).
 * `[Yu-Gi-Oh-Core] SaveSlot=N` in Config.ini always loads slot N and skips the screen. `0` (or no line) shows the screen.
+* `tags` (`[ { "tag": "forbidden-memories", "title": "Forbidden Memories" } ]`) = the save tags of the `newSave` plugins that were loaded when
+  the slot's profile started (written when a new game starts in the slot; no `tags` = a plain save). A slot with a file plays only when these are
+  exactly the loaded plugins' tags; otherwise the screen shows why in red and won't load it, and `SaveSlot=N` falls back to the screen. See
+  [PluginManifests.md](PluginManifests.md#plugins-that-need-a-new-save).
 
 ## The flow
 

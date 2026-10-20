@@ -7,6 +7,17 @@ cards (genres, related cards, links, password, name order, index letters). WolfX
 
 Game cards are unchanged: their edits go into the game's files (WolfX patch archive) or the page's own Yu-Gi-Oh-Ex JSON.
 
+## Changing the game's cards, and the card pool
+
+An entry whose `id` is a game card's Konami id changes that card instead of adding one: `name`, `description`, `atk`, `def`, `level`,
+`kind`, `attribute`, `type`, `icon`, and (2026-10-19) **`image`**, new art for it (a 304 x 304 JPEG, relative to the content folder the
+entry came from), served by MoreCards' `Hook_Get_IllustrationData`.
+
+`cardpool.json` (`{ "cards": [ids] }`, joined across mods; MoreCards `LoadCardPool`): when any copy lists cards, only those exist for the
+player. Every other card reads as not owned in the trunk, deck editor and deck checks (the four read-only callers of
+`Get_LiveUnlockCounts`), so it can't be seen or used. The save keeps its copies; removing the file brings them back. The
+Forbidden Memories mod uses it. Untested in game.
+
 ## Ownership when content is unavailable
 
 MoreCards resets saved ownership for unavailable custom cards by default, retaining the original behavior when switching mods.
