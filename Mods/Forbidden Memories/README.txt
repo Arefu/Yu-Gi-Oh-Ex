@@ -1,6 +1,10 @@
 Yu-Gi-Oh! Forbidden Memories mod (test build 0.4)
 =================================================
 
+Yu-Gi-Oh! and all related names, card art, data and graphics are (c) Konami / Kazuki Takahashi.
+Forbidden Memories card data and graphics were read from the FM (USA) disc and belong to Konami.
+This is an unofficial, non-commercial fan project, not affiliated with or endorsed by Konami.
+
 What it does
 - Only Forbidden Memories' 722 cards exist, with FM's ATK/DEF, levels, types, attributes, art and card frames.
 - The 20 FM cards this game lacks are added as new cards (ids 30000 + FM number).
