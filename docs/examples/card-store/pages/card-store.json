@@ -11,27 +11,34 @@
       "x": 160,
       "y": 220,
       "width": 660,
-      "height": 400,
+      "height": 500,
       "items": [
         {
-          "label": "Booster Packs",
-          "description": "Buy booster packs of random cards.",
-          "action": {
-            "goto": "cardShop"
-          }
-        },
-        {
-          "label": "Card Shop",
+          "label": "Buy Cards",
           "description": "Buy the single cards you want, one copy at a time.",
           "action": {
             "page": "card-store-shop"
           }
         },
         {
-          "label": "Enter Password",
+          "label": "Password",
           "description": "Enter a card\u0027s eight digit password.",
           "action": {
             "page": "card-store-password"
+          }
+        },
+        {
+          "label": "Buy Booster Packs",
+          "description": "Buy booster packs of random cards.",
+          "action": {
+            "goto": "cardShop"
+          }
+        },
+        {
+          "label": "Buy Decks",
+          "description": "Buy a ready-made deck: it goes into your decks, with 3 of every card in it.",
+          "action": {
+            "page": "booster-blast-decks"
           }
         },
         {
@@ -41,15 +48,6 @@
           }
         }
       ]
-    },
-    {
-      "kind": "text",
-      "text": "You have {game:dp} DP.",
-      "x": 1000,
-      "y": 240,
-      "width": 760,
-      "textSize": 30,
-      "align": "left"
     }
   ]
 }

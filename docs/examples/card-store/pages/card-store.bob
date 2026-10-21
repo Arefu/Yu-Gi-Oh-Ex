@@ -6,11 +6,11 @@ edit cardShop -> page("card-store");
 
 user;   // the player's name, avatar and DP, top right (as on the Battle Pack screen)
 
-menu store at 160, 220 size 660, 400 {
-    button "Booster Packs" "Buy booster packs of random cards." -> goto(cardShop);
-    button "Card Shop" "Buy the single cards you want, one copy at a time." -> page("card-store-shop");
-    button "Enter Password" "Enter a card's eight digit password." -> page("card-store-password");
+menu store at 160, 220 size 660, 500 {
+    button "Buy Cards" "Buy the single cards you want, one copy at a time." -> page("card-store-shop");
+    button "Password" "Enter a card's eight digit password." -> page("card-store-password");
+    button "Buy Booster Packs" "Buy booster packs of random cards." -> goto(cardShop);
+    // ready-made decks: the Booster Blast mod's page (pages\booster-blast-decks.bob)
+    button "Buy Decks" "Buy a ready-made deck: it goes into your decks, with 3 of every card in it." -> page("booster-blast-decks");
     button "Back" -> back;
 }
-
-text "You have {game:dp} DP." at 1000, 240 width 760 textSize 30 align left;

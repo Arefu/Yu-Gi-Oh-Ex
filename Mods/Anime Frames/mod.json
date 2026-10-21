@@ -1,5 +1,7 @@
 {
   "name": "Anime Frames",
   "version": "1.0",
-  "description": "Anime-style card frames for every card kind."
+  "description": "Anime-style card frames for every card kind.",
+  "details": "Replaces the card frames, and its Config.ini moves the ATK/DEF text and the art to fit them (Anime Cards settings, used while the mod is on).",
+  "requires": [ "Yu-Gi-Oh-AnimeCards" ]
 }
