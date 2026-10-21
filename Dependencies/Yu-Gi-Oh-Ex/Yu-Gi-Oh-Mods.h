@@ -9,6 +9,7 @@
         YGO_2020-Ex.toc / .dat   changed game files (WolfX's patch archive, Core Patch.h)
         YGO_2020\                changed game files as loose files (<path inside the archive>, e.g. YGO_2020\bin\pd_limits.bin)
         Plugins\                 plugin DLLs the Mod Manager installs with the mod (not read from here by the game)
+        Config.ini               plugin settings the mod needs, read over the player's Config.ini while it's on (Yu-Gi-Oh-Core ModConfig.h)
 
     mod.json (every field optional):
 
@@ -27,7 +28,8 @@
 
         { "mods": [ { "id": "anime-frames", "enabled": true }, { "id": "yugi-kaiba-format", "enabled": false } ] }
 
-    Later mods win. A mod folder that isn't listed loads after the listed ones (by name) and is on, so copying a folder in works.
+    Later mods win. A mod folder that isn't listed is OFF until it is switched on in the Mod Manager (which lists it), so a mod never
+    loads without the player choosing it.
     <game>\Yu-Gi-Oh-Ex and <game>\YGO_2020-Ex (WolfX's own workspace) always load last, on top of every mod.
 
     How content plugins read their files (instead of <game>\Yu-Gi-Oh-Ex\<file>):
@@ -169,7 +171,7 @@ namespace YGO
             return std::filesystem::is_regular_file(folder / L"mod.json", error);
         }
 
-        // Every mod in <game>\Mods, in load order (modlist.json's order, then unlisted folders by name), switched on or off as listed.
+        // Every mod in <game>\Mods, in load order (modlist.json's order, then unlisted folders by name, off), switched on or off as listed.
         inline std::vector<Mod> Installed(const std::filesystem::path& gameFolder)
         {
             std::vector<Mod> found;
@@ -202,10 +204,13 @@ namespace YGO
                     ordered.push_back(*it);
                 }
             }
-            for (const Mod& mod : found)
+            for (Mod& mod : found)
             {
                 if (!mod.Listed)
+                {
+                    mod.Enabled = false;   // never switched on in the Mod Manager: a copied-in mod waits for the player to turn it on
                     ordered.push_back(mod);
+                }
             }
             return ordered;
         }

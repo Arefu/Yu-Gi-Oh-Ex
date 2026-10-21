@@ -94,6 +94,17 @@ CORE_API void __cdecl Core_AddSaveWriteFilter(CoreSaveWriteFilter Filter, void* 
 CORE_API int __cdecl Core_GetSaveExtension(const char* Tag, void* Out, int Size);
 CORE_API void __cdecl Core_SetSaveExtension(const char* Tag, const void* Data, int Size);
 
+/* Deck size limits while the game runs (docs/DeckLimits.md): the fewest/most Main Deck cards a usable deck has and the deck editor's Extra and
+   Side caps, clamped to 1-60 / MinMain-60 / 0-15 / 0-15 (a deck holds 60/15/15). A negative MinMain puts back Config.ini's limits
+   ([Yu-Gi-Oh-Core] MinMainDeck...). Applies at once (the deck lists check decks again when they are shown). For Yu-Gi-Oh-MP's lobby rules.
+   Added after version 1 like AddCredits: NULL with an older Core. */
+CORE_API void __cdecl Core_SetDeckLimits(int MinMain, int MaxMain, int MaxExtra, int MaxSide);
+
+/* The duel format for ONLINE duels (docs/DuelFormat.md): 0 Master, 1 Speed, 2 Rush. Offline duels use [Yu-Gi-Oh-Core] DuelFormat; online duels
+   use this, which every player in the duel must set the same (Yu-Gi-Oh-MP sends the host's choice through the lobby). The online starting LP
+   stays the lobby's LP setting. Taken at the start of each duel. Added after version 1 like AddCredits: NULL with an older Core. */
+CORE_API void __cdecl Core_SetOnlineDuelFormat(int Format);
+
 #ifdef __cplusplus
 }
 
@@ -114,6 +125,8 @@ namespace Core
         void(__cdecl* AddSaveWriteFilter)(CoreSaveWriteFilter, void*) = nullptr;   // NULL with a Core that predates it
         int(__cdecl* GetSaveExtension)(const char*, void*, int) = nullptr;           // NULL with a Core that predates it
         void(__cdecl* SetSaveExtension)(const char*, const void*, int) = nullptr;    // NULL with a Core that predates it
+        void(__cdecl* SetDeckLimits)(int, int, int, int) = nullptr;                  // NULL with a Core that predates it
+        void(__cdecl* SetOnlineDuelFormat)(int) = nullptr;                           // NULL with a Core that predates it
     };
 
     inline Api& Functions()
@@ -151,6 +164,8 @@ namespace Core
         CORE_BIND(AddSaveWriteFilter);
         CORE_BIND(GetSaveExtension);
         CORE_BIND(SetSaveExtension);
+        CORE_BIND(SetDeckLimits);
+        CORE_BIND(SetOnlineDuelFormat);
 #undef CORE_BIND
         return true;
     }
