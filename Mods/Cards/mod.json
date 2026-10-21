@@ -1,0 +1,10 @@
+{
+  "name": "Cards",
+  "version": "0.1",
+  "author": "Yu-Gi-Oh-Ex",
+  "description": "Every card released after the game (mid-2019 on) and their tokens: stats, text and art. Effects come later.",
+  "details": "Made by Tools/Scripts/make_cards_mod.py from YGOPRODeck (docs/Card Lists/Missing Cards.csv). Art is in Yu-Gi-Oh-Ex/art/<kind>/, one folder per kind. Tokens use the art of the card that summons them, as Konami's games do. Ids: tokens 21000+, cards 21100+, fixed in card-ids.json. No card has an effect yet, and none are owned (copies 0) until booster packs are added.",
+  "requires": [
+    "Yu-Gi-Oh-MoreCards"
+  ]
+}

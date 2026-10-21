@@ -2,7 +2,7 @@
   "name": "Forbidden Memories",
   "version": "0.4",
   "description": "Yu-Gi-Oh! Forbidden Memories: its 722 cards only, with FM stats, art and frames.",
-  "details": "Test build. Every FM card: the 702 this game has get FM's ATK/DEF, level, type, attribute and art; the 20 it lacks are new cards (ids 30000 + FM number). Only FM cards exist (cardpool.json), the shop's packs hold FM cards, a new profile is dealt FM's random 40-card starter deck (FM's 7 starter groups), and every Free Duel opponent plays an FM duelist's deck, dealt again before each duel from that duelist's FM deck odds. FM card frames for every frame kind. Needs a new save. Set [Yu-Gi-Oh-AnimeCards] CardArtScale=1.05, CardArtOffsetX=18.5, CardArtOffsetY=38 to fit the art in FM's window. fm.json (guardian stars, starchips, fusions, equips, rituals) is for the coming Yu-Gi-Oh-FM rules plugin. Data and graphics read from the FM (USA) disc.",
+  "details": "Test build. Every FM card: the 702 this game has get FM's ATK/DEF, level, type, attribute and art; the 20 it lacks are new cards (ids 30000 + FM number). Only FM cards exist (cardpool.json), the shop's packs hold FM cards, a new profile is dealt FM's random 40-card starter deck (FM's 7 starter groups), and every Free Duel opponent plays an FM duelist's deck, dealt again before each duel from that duelist's FM deck odds. FM card frames for every frame kind. Needs a new save. The card layout and rule settings come with the mod (its Config.ini), so there is nothing to edit. fm.json (guardian stars, starchips, fusions, equips, rituals) feeds the Yu-Gi-Oh-FM rules plugin (fusion from the hand and no Tributes so far). Data and graphics read from the FM (USA) disc.",
   "requires": [
     "Yu-Gi-Oh-MoreCards",
     "Yu-Gi-Oh-AnimeCards",

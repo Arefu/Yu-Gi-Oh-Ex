@@ -21,22 +21,10 @@ Install
 3. Enable the mod in the Mod Manager (it is exclusive: turn other mods off).
 4. Start a NEW save. The mod needs its own profile; old saves will not work with it.
 
-IMPORTANT - change the Anime Cards settings
-The FM card frames need these Yu-Gi-Oh-AnimeCards settings. Set them by hand for now,
-in Config.ini under [Yu-Gi-Oh-AnimeCards] (or in the plugin's settings in WolfX):
-
-  [Yu-Gi-Oh-AnimeCards]
-  CardArtScale=1.05
-  CardArtOffsetX=18.5
-  CardArtOffsetY=38
-  ShowName=1
-  HideSpellTrapIcon=1
-  StarsAlign=1
-  AtkLabel=ATK
-  DefLabel=DEF
-  SpellTrapAttribute=1
-
-(AtkLabel and DefLabel end with a space.)
-Without these the art will not fit FM's window and the card faces will look wrong.
-Set them back to the defaults when you go back to normal anime frames.
-A later WolfX version may apply these settings for you when the mod is enabled.
+Settings - nothing to edit
+The mod brings its own settings in its Config.ini (the Anime Cards layout that fits the
+art, name, stars and ATK/DEF into FM's frames, and the FM rules). Yu-Gi-Oh-Core uses them
+instead of yours while the mod is switched on, and your own Config.ini goes back to being
+used when you switch it off. Needs a Yu-Gi-Oh-Core from 2026-10-22 or later.
+To change one, edit the mod's Config.ini, or in WolfX use File > Edit a mod, then
+Tools > Config Editor. [Yu-Gi-Oh-Core] ModConfig=0 in your Config.ini turns mod settings off.
