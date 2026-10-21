@@ -11,7 +11,7 @@
 #include "Save.h"
 #include "SaveScreen.h"
 #include "SaveSlots.h"
-#include "YuGiOh/YuGiOh-RIX.h"
+#include "Yu-Gi-Oh-RIX.h"
 #include "YuGiOh/YuGiOh-SAVE.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
@@ -375,7 +375,13 @@ namespace
         if (newGame)
             ResetLiveProfile();
         R::PlayUISound(kSoundConfirm);
-        R::GotoScreenFrom(g_Screen, kScreenSignIn);   // SignIn reads the save from the slot's file, then opens the main menu
+        // SignIn reads the save from the slot's file, then fades into the main menu itself. Hand off to it as the title's Play does (pending
+        // screen, no fade): GotoScreen faded out to SignIn first, so loading showed two transitions (the flicker). The bookkeeping GotoScreen
+        // does is kept, so a failed load returns here.
+        *reinterpret_cast<int*>(static_cast<char*>(g_Screen) + 64) = kScreenSignIn;
+        if (void* signIn = R::FindScreenObject(kScreenSignIn))
+            *reinterpret_cast<int*>(static_cast<char*>(signIn) + 60) = kScreenId;
+        R::SetPendingScreen(R::GetUI(), kScreenSignIn);
     }
 
     int g_PendingPlay = 0;   // the blocked slot the "play anyway" box is asking about

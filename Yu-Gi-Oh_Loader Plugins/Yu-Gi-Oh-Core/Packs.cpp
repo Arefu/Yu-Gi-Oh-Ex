@@ -21,7 +21,6 @@
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Mods.h"
 #include "../../Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-RIX.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
-#include "YuGiOh/YuGiOh-RIX.h"
 
 namespace
 {
@@ -78,6 +77,7 @@ namespace
     uintptr_t orig_Pack_GetArtName = 0x14080E390;        // YGO::GAME::Pack_GetArtName
     uintptr_t orig_BuildPackList = 0x14085D6E0;          // YGO::UI::BoosterShop_BuildPackList
     uintptr_t orig_SetupShopHelp = 0x14085DDB0;
+    uintptr_t orig_RefreshRows = 0x14085DF30;            // YGO::UI::BoosterShop_RefreshRows: puts the visible packs in the 6 wrappers
     constexpr size_t kShopCursor = 0x11B0; // selected index, total count, first visible index, visible count
     constexpr size_t kShopState = 0x1150;  // 1 = choosing a booster pack
     constexpr size_t kShopHelp = 0x108;
@@ -115,9 +115,15 @@ namespace
         std::vector<uint16_t> Common, Rare;
     };
 
+    // Limit breaker: the game has 128 pack slots (g_PackRecords, Get_PackRecord returns null past 127, the shop lists 0-127, a pack's
+    // unlock bit is in the save's u32[4] at +0xB80 and widget_PackWrapper::SetPack shows any id past 127 as locked). So new packs have no
+    // fixed id: they take turns in the slots the game leaves empty (92 of them). Showing a shop row puts that row's packs in first, then
+    // as many others as fit, and sets each slot's unlock bit from the pack's rule. The game only ever sees ids under 128, and how many
+    // new packs there can be has no limit. "native" packs (WolfX wrote them into the game's own pack files) keep their real id.
     struct NewPack                // "newPacks"
     {
-        uint32_t Id = 0;
+        uint32_t Id = 0;          // "native" only: its id in the game's pack files. Other packs get a slot when shown (Slot).
+        int Slot = -1;            // the free slot it is in right now, or -1
         std::string Name, Art, UnlockWith;
         uint32_t Series = 0, Cost = 0;
         bool AutoRow = false;             // no "series": goes in the first new row with room
@@ -129,7 +135,10 @@ namespace
 
     std::vector<PackChange> g_changes;
     std::deque<NewPack> g_newPacks;       // deque: records point into Name/Contents
-    std::unordered_set<uint32_t> g_ours;  // ids of the new packs
+    std::unordered_set<uint32_t> g_ours;  // ids of the native new packs
+    std::vector<uint32_t> g_freeSlots;    // the slots the game leaves empty, found once after its first pack load
+    NewPack* g_inSlot[kPackCount] = {};   // which new pack each slot holds right now
+    int g_shownRow = -1;                  // the row whose packs were put in the slots first (-1: none yet)
     struct ShopRow                        // "rows": a new row's name and the game row (1-6) whose banner it borrows
     {
         std::map<char, std::wstring> Names;
@@ -232,9 +241,11 @@ namespace
                 std::string why;
                 if (pack.Name.empty())
                     why = "no \"name\"";
-                else if (pack.Id >= kPackCount)
-                    why = "\"id\" must be 0-127";
-                else if (g_ours.count(pack.Id))
+                else if (std::any_of(g_newPacks.begin(), g_newPacks.end(), [&](const NewPack& other) { return other.Name == pack.Name; }))
+                    why = "another new pack has that name";
+                else if (pack.Native && pack.Id >= kPackCount)
+                    why = "a native pack's \"id\" must be 0-127";
+                else if (pack.Native && g_ours.count(pack.Id))
                     why = "another new pack has id " + std::to_string(pack.Id);
                 else if (!pack.Native && (pack.Common.empty() || pack.Rare.empty()))
                     why = "it needs cards in both \"common\" and \"rare\"";
@@ -247,7 +258,8 @@ namespace
                 pack.Contents.push_back(static_cast<uint16_t>(pack.Rare.size()));
                 pack.Contents.insert(pack.Contents.end(), pack.Common.begin(), pack.Common.end());
                 pack.Contents.insert(pack.Contents.end(), pack.Rare.begin(), pack.Rare.end());
-                g_ours.insert(pack.Id);
+                if (pack.Native)
+                    g_ours.insert(pack.Id);
                 g_newPacks.push_back(std::move(pack));
             }
 
@@ -280,28 +292,32 @@ namespace
         }
     }
 
-    // Puts the new packs in rows, once, after the game's packs are loaded: a row holds at most as many packs as the game's fullest row.
-    // Packs with a "series" keep it (a full row overflows into the next new row); packs without one fill the new rows after the game's.
+    // Puts the new packs in rows, once, after the game's packs are loaded. Packs with a "series" keep it: a row can hold as many packs as
+    // there are free slots (it is shown alone), and a fuller one overflows into the next new row. Packs without one fill the new rows after
+    // the game's, as many to a row as the game's fullest row.
     void AssignRows()
     {
         if (g_rowsAssigned)
             return;
         g_rowsAssigned = true;
         std::map<uint32_t, uint32_t> used;
-        uint32_t cap = 0;
+        uint32_t autoCap = 0;
         for (uint32_t i = 0; i < kPackCount; ++i)
         {
             const PackRecord* record = Record(i);
-            if (record->Kind == kRewardPack && record->Series < kGameRows && !g_ours.count(i))
-                cap = (std::max)(cap, ++used[record->Series]);
+            if (record->Kind == kRewardPack && record->Series < kGameRows && !g_ours.count(i) && !g_inSlot[i])
+                autoCap = (std::max)(autoCap, ++used[record->Series]);
         }
-        if (cap == 0)
-            cap = 6;
+        if (autoCap == 0)
+            autoCap = 6;
         auto place = [&](NewPack& pack, uint32_t row)
         {
+            // a row shows six packs and never scrolls (the user's rule, 2026-10-21): a fuller row overflows into the next new row. Native
+            // packs sit in the game's own rows and slots.
+            const uint32_t cap = pack.AutoRow ? autoCap : pack.Native ? kPackCount : static_cast<uint32_t>(kVisiblePacks);
             while (used[row] >= cap)
                 row = (std::max)(row + 1, kGameRows);
-            if (!pack.AutoRow && row != pack.Series)
+            if (!pack.AutoRow && row != pack.Series && row >= kGameRows)
                 Logger::WriteLog("New pack \"" + pack.Name + "\": row " + std::to_string(pack.Series) + " is full (" + std::to_string(cap) +
                     " packs), put in row " + std::to_string(row), MODULE_NAME, 1);
             pack.Series = row;
@@ -316,7 +332,8 @@ namespace
                 place(pack, kGameRows);
         for (const auto& [row, shopRow] : g_rows)
             g_rowCount = (std::max)(g_rowCount, row + 1);
-        Logger::WriteLog("Shop rows: " + std::to_string(g_rowCount) + " (" + std::to_string(cap) + " packs per row)", MODULE_NAME, 0);
+        Logger::WriteLog("Shop rows: " + std::to_string(g_rowCount) + " (" + std::to_string(autoCap) + " packs per automatic row, " +
+            std::to_string(g_freeSlots.size()) + " free pack slots)", MODULE_NAME, 0);
     }
 
     // The slot holds this new pack: ours (filled from packs.json) or the game's own record of it ("native").
@@ -325,12 +342,25 @@ namespace
         return record && record->Name && (record->Name == pack.Name.c_str() || pack.Name == record->Name);
     }
 
+    // The new pack in a slot right now (a shared slot's current pack, or a native pack's own slot).
     const NewPack* FindNew(uint32_t id)
     {
+        if (id < kPackCount && g_inSlot[id])
+            return g_inSlot[id];
         for (const NewPack& pack : g_newPacks)
-            if (pack.Id == id)
+            if (pack.Native && pack.Id == id)
                 return &pack;
         return nullptr;
+    }
+
+    // The slots the game leaves empty after its own packs load (and that no native pack takes). Found once: later reloads see our packs in them.
+    void FindFreeSlots()
+    {
+        if (!g_freeSlots.empty())
+            return;
+        for (uint32_t i = 0; i < kPackCount; ++i)
+            if (Record(i)->Kind == 0 && !Record(i)->Name && !g_ours.count(i))
+                g_freeSlots.push_back(i);
     }
 
     // ---- applying ----
@@ -343,7 +373,7 @@ namespace
         for (uint32_t i = 0; i < kPackCount; ++i)
         {
             PackRecord* record = Record(i);
-            if (!record->Name || !record->Contents || record->Kind != kRewardPack || g_ours.count(i))
+            if (!record->Name || !record->Contents || record->Kind != kRewardPack || g_ours.count(i) || g_inSlot[i])
                 continue;
             for (const PackChange& change : g_changes)
             {
@@ -386,68 +416,123 @@ namespace
         return texts.empty() ? none : texts.begin()->second;
     }
 
-    // "newPacks": fills their slots (again after every reload: the language, and so the title, may have changed).
+    void FillRecord(PackRecord* record, uint32_t id, const NewPack& pack)
+    {
+        record->Id = id;
+        record->Series = pack.Series;
+        record->Cost = pack.Cost;
+        record->Kind = kRewardPack;
+        record->Name = pack.Name.c_str();
+        record->Contents = const_cast<uint16_t*>(pack.Contents.data());
+        record->BattleData = nullptr;
+        const std::wstring& title = Pick(pack.Titles);
+        const std::wstring& text = Pick(pack.Texts);
+        WStringAssign(&record->Title, title.c_str(), title.size());
+        WStringAssign(&record->Text, text.c_str(), text.size());
+    }
+
+    // Whether a new pack is open: "never" stays shut, no "unlockWith" is open from the start, otherwise it opens with the named pack (a
+    // game pack's unlock bit in the save, or another new pack's own rule; depth guards a loop of packs naming each other).
+    bool IsUnlocked(const NewPack& pack, int depth = 0)
+    {
+        if (_stricmp(pack.UnlockWith.c_str(), "never") == 0 || depth > 16)
+            return false;
+        if (pack.UnlockWith.empty())
+            return true;
+        for (const NewPack& other : g_newPacks)
+            if (!other.Native && other.Name == pack.UnlockWith)
+                return IsUnlocked(other, depth + 1);
+        const uint8_t* player = GetPlayerSection(0xFFFFFFFD);
+        if (!player)
+            return false;
+        const auto* bits = reinterpret_cast<const uint32_t*>(player + kUnlockBits);
+        for (uint32_t i = 0; i < kPackCount; ++i)
+            if (!g_inSlot[i] && Record(i)->Name && pack.UnlockWith == Record(i)->Name)
+                return (bits[i >> 5] >> (i & 31) & 1) != 0;
+        return false;
+    }
+
+    // Puts the new packs in the free slots: the given row's first (the one the shop is showing), then the others in order while slots
+    // last. Each slot's unlock bit is set from its pack's rule, so the bits a slot had for an earlier pack never leak to the next.
+    void FillSlots(int row)
+    {
+        g_shownRow = row;
+        for (uint32_t id : g_freeSlots)
+        {
+            if (g_inSlot[id])
+                g_inSlot[id]->Slot = -1;
+            g_inSlot[id] = nullptr;
+            PackRecord* record = Record(id);
+            record->Kind = 0;
+            record->Series = 0xFFFFFFFF;
+            record->Name = nullptr;
+            record->Contents = nullptr;
+        }
+        uint8_t* player = GetPlayerSection(0xFFFFFFFD);
+        auto* bits = player ? reinterpret_cast<uint32_t*>(player + kUnlockBits) : nullptr;
+        size_t next = 0;
+        auto put = [&](NewPack& pack)
+        {
+            if (pack.Native || pack.Slot >= 0 || next >= g_freeSlots.size())
+                return;
+            const uint32_t id = g_freeSlots[next++];
+            FillRecord(Record(id), id, pack);
+            pack.Slot = static_cast<int>(id);
+            g_inSlot[id] = &pack;
+        };
+        for (NewPack& pack : g_newPacks)
+            if (static_cast<int>(pack.Series) == row)
+                put(pack);
+        for (NewPack& pack : g_newPacks)
+            put(pack);
+        if (bits)
+            for (uint32_t id : g_freeSlots)
+            {
+                if (g_inSlot[id] && IsUnlocked(*g_inSlot[id]))
+                    bits[id >> 5] |= 1u << (id & 31);
+                else
+                    bits[id >> 5] &= ~(1u << (id & 31));
+            }
+    }
+
+    // "newPacks": native packs are the game's own records (only checked); the rest go in the free slots (again after every reload: the
+    // language, and so the title, may have changed).
     void ApplyNewPacks()
     {
         for (NewPack& pack : g_newPacks)
-        {
-            PackRecord* record = Record(pack.Id);
-            if (pack.Native)
-            {
-                if (!IsPack(record, pack))
-                    Logger::WriteLog("New pack \"" + pack.Name + "\" should be in the game's pack files (id " + std::to_string(pack.Id) +
-                        ") but isn't: save it again in WolfX", MODULE_NAME, 2);
-                continue;   // the game loaded it (cards, texts, row, cost)
-            }
-            if (record->Kind != 0 && record->Name != pack.Name.c_str())
-            {
-                Logger::WriteLog("New pack \"" + pack.Name + "\": id " + std::to_string(pack.Id) + " is the game's pack \"" +
-                    std::string(record->Name ? record->Name : "?") + "\", skipped (pick an id the game doesn't use)", MODULE_NAME, 2);
-                continue;
-            }
-            record->Id = pack.Id;
-            record->Series = pack.Series;
-            record->Cost = pack.Cost;
-            record->Kind = kRewardPack;
-            record->Name = pack.Name.c_str();
-            record->Contents = pack.Contents.data();
-            record->BattleData = nullptr;
-            const std::wstring& title = Pick(pack.Titles);
-            const std::wstring& text = Pick(pack.Texts);
-            WStringAssign(&record->Title, title.c_str(), title.size());
-            WStringAssign(&record->Text, text.c_str(), text.size());
-        }
+            if (pack.Native && !IsPack(Record(pack.Id), pack))
+                Logger::WriteLog("New pack \"" + pack.Name + "\" should be in the game's pack files (id " + std::to_string(pack.Id) +
+                    ") but isn't: save it again in WolfX", MODULE_NAME, 2);
+        const size_t shared = static_cast<size_t>(std::count_if(g_newPacks.begin(), g_newPacks.end(), [](const NewPack& p) { return !p.Native; }));
+        static bool told = false;
+        if (!told && shared > g_freeSlots.size())
+            Logger::WriteLog(std::to_string(shared) + " new packs share " + std::to_string(g_freeSlots.size()) +
+                " free pack slots: each shop row puts its own packs in when it is shown", MODULE_NAME, 0);
+        told = true;
+        FillSlots(g_shownRow);
     }
 
     void Apply()
     {
+        FindFreeSlots();
         AssignRows();
         ApplyChanges();
         ApplyNewPacks();
     }
 
-    // Sets the unlock bits of the new packs whose rule is met (always, or when their "unlockWith" pack is unlocked).
+    // Native new packs: sets their unlock bit once their rule is met (their slot is their own, so the bit stays in the save).
     void UnlockNewPacks()
     {
         uint8_t* player = GetPlayerSection(0xFFFFFFFD);
-        if (!player || g_newPacks.empty())
+        if (!player)
             return;
         auto* bits = reinterpret_cast<uint32_t*>(player + kUnlockBits);
-        auto has = [bits](uint32_t id) { return (bits[id >> 5] >> (id & 31) & 1) != 0; };
         for (const NewPack& pack : g_newPacks)
         {
-            if (has(pack.Id) || _stricmp(pack.UnlockWith.c_str(), "never") == 0 || !IsPack(Record(pack.Id), pack))
+            if (!pack.Native || (bits[pack.Id >> 5] >> (pack.Id & 31) & 1) || !IsPack(Record(pack.Id), pack) || !IsUnlocked(pack))
                 continue;
-            bool open = pack.UnlockWith.empty();
-            if (!open)
-                for (uint32_t i = 0; i < kPackCount && !open; ++i)
-                    if (Record(i)->Name && pack.UnlockWith == Record(i)->Name)
-                        open = has(i);
-            if (open)
-            {
-                bits[pack.Id >> 5] |= 1u << (pack.Id & 31);
-                Logger::WriteLog("New pack \"" + pack.Name + "\" unlocked", MODULE_NAME, 0);
-            }
+            bits[pack.Id >> 5] |= 1u << (pack.Id & 31);
+            Logger::WriteLog("New pack \"" + pack.Name + "\" unlocked", MODULE_NAME, 0);
         }
     }
 
@@ -530,7 +615,7 @@ namespace
 
     char* __fastcall Hook_Pack_GetArtName(PackRecord* record, char* outString)
     {
-        if (record && g_ours.count(record->Id))
+        if (record)
             if (const NewPack* pack = FindNew(record->Id); pack && !pack->Art.empty() && IsPack(record, *pack))
             {
                 PackRecord borrowed = {};
@@ -543,6 +628,7 @@ namespace
     void __fastcall Hook_BuildPackList(int64_t screen, int series)
     {
         UnlockNewPacks();
+        FillSlots(series);   // this row's packs into the free slots first, with their unlock bits
         reinterpret_cast<BuildPackList_t>(orig_BuildPackList)(screen, series);
         // A tab change can switch between an overflowing and an ordinary list.
         Hook_SetupShopHelp(screen);
@@ -581,19 +667,85 @@ namespace
         else
             std::snprintf(name, sizeof(name), "wrap_series_%u", art);
         SelectLayerByName(animoo, name);
-        if (it != g_rows.end() && !it->second.Names.empty() && RIX::Load())
+        // no row name is drawn over the banner (the user's choice, 2026-10-21): "rows" names are kept in packs.json for editors only
+    }
+
+    // ---- the "more packs" indicator: a row with more packs than the 6 wrappers gets the game's arrows beside the wrappers where there
+    // are more that way (pdui/doShared), and under them a meter of one block per pack in the row, tall for the packs on screen and short
+    // for the rest (the Options volume meter's blocks, pdui/Settings Level1-10). Drawn through RIX. ----
+
+    // The 6 wrappers (BoosterShop_RefreshRows / widget_PackWrapper): x 506 + 235 i, y 575, 211 x 300.
+    constexpr float kWrapLeft = 506, kWrapStep = 235, kWrapTop = 575, kWrapWidth = 211, kWrapHeight = 300;
+    constexpr float kArrowWidth = 58, kArrowHeight = 71;          // arrow_left1 / arrow_right1
+    constexpr float kBlockWidth = 36, kBlockGap = 8;              // pdui/Settings "LevelN": 36 wide
+    constexpr float kTallHeight = 52, kShortHeight = 28;          // Level4 (packs on screen), Level2 (the rest)
+    constexpr float kMeterBottom = kWrapTop + kWrapHeight + 18 + kTallHeight;
+    constexpr int kIndicatorZ = 900;
+    using RefreshRows_t = void(__fastcall*)(int64_t screen);
+    std::vector<void*> g_moreNodes;                                // the arrows and the meter's blocks
+    struct { int64_t Screen = 0; int Top = -1, Count = -1, Shown = -1; } g_moreDrawn;
+
+    void RemoveMoreIndicator()
+    {
+        for (void* node : g_moreNodes)
+            if (node && RIX::Load())
+                RIX::Functions().RemoveNode(node);
+        g_moreNodes.clear();
+        g_moreDrawn = {};
+    }
+
+    void ShowMoreIndicator(int64_t screen)
+    {
+        const auto* list = reinterpret_cast<const int*>(screen + kShopCursor);   // selected, count, first visible, visible
+        const int count = list[1], top = list[2], shown = (std::max)(1, (std::min)(list[3], kVisiblePacks));
+        if (g_moreDrawn.Screen == screen && g_moreDrawn.Top == top && g_moreDrawn.Count == count && g_moreDrawn.Shown == shown)
+            return;   // nothing moved
+        RemoveMoreIndicator();
+        if (*reinterpret_cast<const int*>(screen + kShopState) != 1 || count <= shown || !RIX::Load())
+            return;
+        g_moreDrawn = { screen, top, count, shown };
+        auto* shop = reinterpret_cast<void*>(screen);
+        const float middle = kWrapTop + (kWrapHeight - kArrowHeight) / 2;
+        const float right = kWrapLeft + kWrapStep * (kVisiblePacks - 1) + kWrapWidth;
+        if (top > 0)
+            g_moreNodes.push_back(RIX::Functions().AddImage(shop, "pdui/doShared", "arrow_left1", kIndicatorZ, kWrapLeft - kArrowWidth - 14, middle, kArrowWidth, kArrowHeight));
+        if (top + shown < count)
+            g_moreNodes.push_back(RIX::Functions().AddImage(shop, "pdui/doShared", "arrow_right1", kIndicatorZ, right + 14, middle, kArrowWidth, kArrowHeight));
+        // the meter, centred under the wrappers: one block per page of packs, the page shown tall (the last page is the last full six)
+        const int pages = (count + shown - 1) / shown;
+        const int page = top + shown >= count ? pages - 1 : top / shown;
+        const float room = right - kWrapLeft;
+        const float step = (std::min)(kBlockWidth + kBlockGap, room / pages);
+        const float block = (std::min)(kBlockWidth, step - 2);
+        const float left = kWrapLeft + (room - step * pages + (step - block)) / 2;
+        for (int i = 0; i < pages; ++i)
         {
-            const std::wstring& label = Pick(it->second.Names);
-            g_labelNode = RIX::Functions().AddText(reinterpret_cast<void*>(screen), label.c_str(), 1000, g_rowLabel.X, g_rowLabel.Y, 0.0f,
-                g_rowLabel.Size, RIX_ALIGN_CENTRE, g_rowLabel.Colour);
+            const bool onScreen = i == page;
+            const float height = onScreen ? kTallHeight : kShortHeight;
+            g_moreNodes.push_back(RIX::Functions().AddImage(shop, "pdui/Settings", onScreen ? "Level4" : "Level2", kIndicatorZ,
+                left + step * i, kMeterBottom - height, block, height));
         }
     }
 
-    // The label belongs to the shop screen: take it off as the shop is left.
+    void __fastcall Hook_RefreshRows(int64_t screen)
+    {
+        // pages, not scrolling: the first visible pack is always a page start (0, 6, 12 ...), the last page the last six, so moving past
+        // the sixth pack flips to the next six. The purchase fix (FixScrolledPurchaseIndex) reads the same first-visible field.
+        auto* list = reinterpret_cast<int*>(screen + kShopCursor);   // selected, count, first visible, visible
+        const int shown = (std::max)(1, (std::min)(list[3], kVisiblePacks));
+        if (list[1] > shown && list[0] >= 0 && list[0] < list[1])
+            list[2] = (std::min)(list[0] / shown * shown, list[1] - shown);
+        reinterpret_cast<RefreshRows_t>(orig_RefreshRows)(screen);
+        ShowMoreIndicator(screen);
+    }
+
+    // The label and the indicator belong to the shop screen: take them off as the shop is left; the indicator also goes while the shop
+    // is doing anything else (opening a pack), and comes back with the next pack list refresh.
     void __fastcall Hook_ShopSetState(int64_t screen, int state, double unused)
     {
         if (state == 6 || state == 7)
             RemoveRowLabel();
+        RemoveMoreIndicator();
         reinterpret_cast<ShopSetState_t>(orig_ShopSetState)(screen, state, unused);
     }
 }
@@ -603,10 +755,12 @@ namespace Packs
     std::unordered_set<uint16_t> RareCards()
     {
         std::unordered_set<uint16_t> rares;
+        for (const NewPack& pack : g_newPacks)   // every new pack, not only the ones in a slot right now
+            rares.insert(pack.Rare.begin(), pack.Rare.end());
         for (uint32_t i = 0; i < kPackCount; ++i)
         {
             const PackRecord* record = Record(i);
-            if (record->Kind != kRewardPack || !record->Contents)
+            if (record->Kind != kRewardPack || !record->Contents || g_inSlot[i])
                 continue;
             const uint16_t commons = record->Contents[0];
             const uint16_t count = record->Contents[1];
@@ -637,6 +791,16 @@ namespace Packs
             DetourAttach(&(PVOID&)orig_Pack_GetArtName, Hook_Pack_GetArtName);
             DetourAttach(&(PVOID&)orig_BuildPackList, Hook_BuildPackList);
             DetourAttach(&(PVOID&)orig_SetupShopHelp, Hook_SetupShopHelp);
+            // rows past the game's 6 (lost when packs moved here from BetterCardShop on 2026-10-19)
+            const bool newRows = !g_rows.empty() || std::any_of(g_newPacks.begin(), g_newPacks.end(),
+                [](const NewPack& pack) { return pack.AutoRow || pack.Series >= kGameRows; });
+            if (newRows)
+            {
+                DetourAttach(&(PVOID&)orig_ShopOpen, Hook_ShopOpen);
+                DetourAttach(&(PVOID&)orig_ShowSeriesArt, Hook_ShowSeriesArt);
+            }
+            DetourAttach(&(PVOID&)orig_ShopSetState, Hook_ShopSetState);
+            DetourAttach(&(PVOID&)orig_RefreshRows, Hook_RefreshRows);
         }
         LONG error = DetourTransactionCommit();
         Logger::WriteLog("Pack hooks attached: " + std::to_string(error), MODULE_NAME, error == 0 ? 0 : 2);

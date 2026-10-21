@@ -5,11 +5,14 @@
 #include "CardTable.h"
 #include "Crash.h"
 #include "Credits.h"
+#include "DeckLimits.h"
+#include "DuelFormat.h"
 #include "Packs.h"
 #include "Detours.h"
 #include "Host.h"
 #include "Loading.h"
 #include "Logger.h"
+#include "ModConfig.h"
 #include "Patch.h"
 #include "Save.h"
 #include "Tweaks.h"
@@ -46,6 +49,10 @@ extern "C"
 
     CORE_API void __cdecl Core_SetSaveExtension(const char* Tag, const void* Data, int Size) { Save::SetExtension(Tag, Data, Size); }
 
+    CORE_API void __cdecl Core_SetDeckLimits(int MinMain, int MaxMain, int MaxExtra, int MaxSide) { DeckLimits::Set(MinMain, MaxMain, MaxExtra, MaxSide); }
+
+    CORE_API void __cdecl Core_SetOnlineDuelFormat(int Format) { DuelFormat::SetOnline(Format); }
+
     CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size)
     {
         const std::u8string name = Save::CurrentSavePath().filename().u8string();
@@ -67,6 +74,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     {
         DetourRestoreAfterWith();
         Host::SetModule(hModule);
+
+        // Mods' own Config.ini settings (ModConfig.h): first, so every setting read after this (Core's own and every plugin's) follows them.
+        ModConfig::Install();
 
         // crash_log.txt + crash.dmp for any plugin's crash (Crash.h), then the small game tweaks (Tweaks.h).
         Crash::Install();
@@ -91,6 +101,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 
         // Limit breakers no store plugin owns: booster packs from Yu-Gi-Oh-Ex/packs.json (new packs in the game's free slots, new shop rows).
         Packs::Install();
+        // Deck size limits (MinMainDeck/MaxMainDeck/MaxExtraDeck/MaxSideDeck) and the engine's dormant Speed/Rush rules (DuelFormat).
+        DeckLimits::Install();
+        DuelFormat::Install();
 
         // Core is what keeps the base game unaltered: if the save could not be redirected the game would write the Steam save, so the player is asked.
         if (!Save::Install())
