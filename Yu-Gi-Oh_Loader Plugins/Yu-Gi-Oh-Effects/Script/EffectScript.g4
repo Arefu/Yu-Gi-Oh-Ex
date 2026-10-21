@@ -37,7 +37,7 @@
 //   lock(spell, opponent);                       // only the opponent's Spells; lock(monster, spelltrap_zone) = Skill Drain
 //
 // Regenerate the C# parser (from the repo root; the WolfX project compiles the output):
-//   java -jar Dependencies\ANTLR\antlr-4.13.2-complete.jar -Dlanguage=CSharp -visitor -no-listener -package WolfEx.EffectScriptGenerated -o Tools\WolfX\Content\EffectScriptGenerated "Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4"
+//   java -jar Dependencies\ANTLR\antlr-4.13.2-complete.jar -Dlanguage=CSharp -visitor -no-listener -Xexact-output-dir -package WolfEx.EffectScriptGenerated -o Tools\WolfX\Content\EffectScriptGenerated "Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4"
 grammar EffectScript;
 
 // The wrapper is optional: "on flip: burn(500);" is a whole script, "effect \"Name\" { on flip: burn(500); }" means the same.
@@ -60,7 +60,10 @@ handLimitStatement : 'hand_limit' '(' NUMBER (',' lockArg)* ')' ';'? ;
 asScript   : 'as' '(' (NUMBER | STRING) ')' ('with' statPart (',' statPart)*)? ';'? ;
 statPart   : ('atk' | 'def') NUMBER ;
 effect     : 'effect' STRING? '{' effectBody '}' ;
-effectBody : asScript | trigger? requireClause? costClause? chain ';'? limit? ;
+effectBody : asScript | trigger? requireClause? costClause? chain ';'? quickMark? limit? ;
+
+// "(Quick Effect)": spell speed 2, usable in either player's turn and in a chain (Yu-Gi-Oh-Effects "quick", docs/EffectSystem.md section 52).
+quickMark  : 'quick' ';'? ;
 
 // A cost paid when the effect is activated ("Discard 1 card; ...", "Pay 800 LP; ..."): the game's own cost functions, docs/EffectSystem.md section 34.
 costClause : 'cost' (discardCost | payCost | selfCost | detachCost | tributeCost) ':' ;
@@ -91,13 +94,15 @@ summonFrom : 'hand' | 'deck' | 'grave' | 'banished' | IDENT ;
 summonBy   : 'effect' | 'own' | kind | STRING | NUMBER | IDENT ;
 triggerName : 'normal_summoned' | 'special_summoned' | 'summoned' | 'normal_or_special_summoned' | 'flip'
             | 'destroyed_by_battle' | 'sent_to_grave' | 'sent_from_field_to_grave'
-            | 'standby_phase' | 'end_phase' | 'destroys_by_battle' | 'battle_damage' | 'attack_declared' | 'ignition' ;
+            | 'standby_phase' | 'end_phase' | 'destroys_by_battle' | 'battle_damage' | 'attack_declared' | 'ignition'
+            | 'in_grave' ;   // "If this card is in your GY: You can ...": activated from the GY (the GY / hand effects table, no cost)
 
 // One action, or several joined with 'then' (run in order, each after the previous resolved).
 chain      : action ('then' action)* ;
 
 action     : drawAction | searchAction | reviveAction | destroyAction | gainAction | burnAction | sendAction | equipAction
-           | summonAction | salvageAction | banishAction | gainAtkAction | returnAction | negateAction | lockTurnAction | damageAction ;
+           | summonAction | salvageAction | banishAction | banishFromAction | gainAtkAction | returnAction | negateAction | lockTurnAction
+           | damageAction ;
 
 // draw / gain_lp / damage take an optional player: own (default for draw / gain_lp), opponent, any (= both players). A chain of these, or one
 // that names a player, is run by Yu-Gi-Oh-Effects itself ("steps": the game's draw and life point functions, docs/EffectSystem.md section 50).
@@ -109,9 +114,12 @@ lockTurnAction : 'lock_turn' '(' lockTurnArg ')' ;
 lockTurnArg    : IDENT | kind ;
 searchAction  : 'search' '(' 'deck' (',' choices)? ')' ;
 reviveAction  : 'revive' '(' graveyard (',' choices)? ')' ;
-destroyAction : 'destroy' '(' scope (',' side)? (',' selector)? ')' ;   // 'all' matching cards, or 'target' 1 chosen card
-scope      : 'all' | 'target' ;
-sendAction    : 'send_to_grave' '(' 'deck' (',' choices)? ')' ;   // send 1 card from your Deck to the Graveyard
+// 'all' matching cards, 'target' 1 card chosen at activation, or 'one' card chosen when it resolves (no target; the plugin's own field pick,
+// docs/EffectSystem.md section 56)
+destroyAction : 'destroy' '(' scope (',' side)? (',' selector)? ')' ;
+scope      : 'all' | 'target' | 'one' ;
+// send 1 matching card from your Deck / hand / Extra Deck to the Graveyard (not the Deck: the plugin's own pick-and-act machine, section 55)
+sendAction    : 'send_to_grave' '(' ('deck' | 'hand' | 'extra') (',' choices)? ')' ;
 gainAction    : 'gain_lp' '(' NUMBER (',' side)? ')' ;     // you (or the named player) gain N Life Points
 damageAction  : 'damage' '(' NUMBER (',' side)? ')' ;      // N damage to the named player (default: your opponent, like burn)
 burnAction    : 'burn' '(' NUMBER ')' ;        // inflict N damage to your opponent
@@ -122,6 +130,8 @@ returnAction  : 'return_to_hand' '(' 'target' (',' side)? (',' selector)? ')' ; 
 gainAtkAction : 'gain_atk' '(' (side ',')? NUMBER ')' ;   // target 1 face-up monster (on the field / you control); it gains N ATK until the end of this turn
 salvageAction : 'add_to_hand' '(' ('grave' | 'banished') (',' choices)? ')' ;   // add 1 matching card from your GY / banished cards to your hand
 banishAction  : 'banish' '(' scope (',' side)? (',' selector)? ')' ;   // banish 'all' matching cards, or 'target' 1 chosen card (as destroy)
+// banish 1 matching card from your Deck / hand / Extra Deck / GY (own machine, sections 55-56)
+banishFromAction : 'banish' '(' ('deck' | 'hand' | 'extra' | 'grave') (',' choices)? ')' ;
 // Negate the activation of a card / effect, and if you do, destroy it (docs/EffectSystem.md section 39). First argument = what: spell, trap,
 // monster (a monster effect), spelltrap, any, or a card ("Monster Reborn" / id). Then any of: opponent (only the opponent's), your_turn,
 // opponent_turn, battle_phase, targets_one, effect (an effect too, not only a card's activation), and a Spell/Trap property: normal, counter,
