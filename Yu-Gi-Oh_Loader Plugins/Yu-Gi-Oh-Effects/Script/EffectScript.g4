@@ -90,7 +90,7 @@ trigger    : 'on' triggerName summonConditions? ':' ;
 //   fusion | synchro | xyz | ritual | link (Summoned as its kind)   pendulum   tribute [N]
 summonConditions : '(' summonCondition (',' summonCondition)* ')' ;
 summonCondition  : 'from' summonFrom | 'by' summonBy | ('tribute' | IDENT) NUMBER? ;
-summonFrom : 'hand' | 'deck' | 'grave' | 'banished' | IDENT ;
+summonFrom : 'hand' | 'deck' | 'extra' | 'grave' | 'banished' | IDENT ;   // every zone word that is a keyword elsewhere must be listed, IDENT never matches a keyword
 summonBy   : 'effect' | 'own' | kind | STRING | NUMBER | IDENT ;
 triggerName : 'normal_summoned' | 'special_summoned' | 'summoned' | 'normal_or_special_summoned' | 'flip'
             | 'destroyed_by_battle' | 'sent_to_grave' | 'sent_from_field_to_grave'
