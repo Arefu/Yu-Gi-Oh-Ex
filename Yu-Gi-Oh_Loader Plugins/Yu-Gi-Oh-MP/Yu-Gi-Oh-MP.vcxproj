@@ -107,6 +107,7 @@
     <ClCompile Include="LiveSetting.cpp" />
     <ClCompile Include="ServerMenu.cpp" />
     <ClCompile Include="BanList.cpp" />
+    <ClCompile Include="BanListPicker.cpp" />
     <ClCompile Include="P2P.cpp" />
     <ClCompile Include="Session.cpp" />
     <ClCompile Include="Steam.cpp" />

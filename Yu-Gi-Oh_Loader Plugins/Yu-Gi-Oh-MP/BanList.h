@@ -10,6 +10,8 @@
 //   Off    - every card at 3 copies
 //   Custom - a list from Yu-Gi-Oh-Ex\banlists\*.json (any active mod's too; WolfX Forbidden & Limited > Save as MP list):
 //            { "name": "...", "forbidden": [Konami ids], "limited": [...], "semiLimited": [...] }, every other card at 3
+//            Optional: "allowed": [Konami ids] = the card pool (every game card not in it is Forbidden: a period format such as Goat), and
+//            "date" ("2005-04-01"), "era" ("GX"), "formats" (["Goat", "Cyber"]), "category" ("TCG") for the picker page (BanListPicker.h).
 //
 // The game keeps a card's limit (0 Forbidden, 1 Limited, 2 Semi-Limited, 3 Unlimited) in two tables, both filled when the card data loads:
 //   - the Konami id props (KONAMI_ID_CARD_PROPS 0x142847E50, 0x30 each, 0x3A79 of them) +0x20, from bin/pd_limits.bin
@@ -25,6 +27,11 @@ namespace BanList
     {
         std::string Name;
         std::vector<uint16_t> Forbidden, Limited, SemiLimited;
+        std::vector<uint16_t> Allowed;       // sorted; empty = every card
+        std::string Date, Era, Category;
+        std::vector<std::string> Formats;
+
+        bool InPool(uint16_t id) const;
     };
 
     // Attaches the rebuild hook; call inside a Detours transaction.
@@ -37,11 +44,12 @@ namespace BanList
     Mode CurrentMode();
     const List& CurrentList();   // the custom list in use (empty unless Custom)
 
-    // The lists in banlists\*.json (read on first use, then kept).
+    // The lists in banlists\*.json (read on first use, then kept), oldest "date" first (lists without one last, by name).
     const std::vector<List>& Saved();
 
     // A list as one lobby data string and back: the name, a newline, then base64 of the list in pd_limits.bin's own layout (three blocks of
-    // u16 count + u16 Konami ids), about 2.7 characters a card. The game's own list (228 cards) is about 620 characters.
+    // u16 count + u16 Konami ids), about 2.7 characters a card. The game's own list (228 cards) is about 620 characters. A fourth block holds
+    // "allowed" (a period list's pool: a few thousand cards, so several lobby data parts).
     std::string Encode(const List& list);
     bool Decode(const std::string& text, List& list);
 }

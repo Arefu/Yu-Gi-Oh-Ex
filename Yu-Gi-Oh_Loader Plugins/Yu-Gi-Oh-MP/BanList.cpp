@@ -76,8 +76,12 @@ namespace
                 FullLimit(id) = kUnlimited;
         if (g_Mode == BanList::Mode::Custom)
         {
-            for (uint16_t id : g_List.SemiLimited) SetLimit(id, kSemiLimited);
-            for (uint16_t id : g_List.Limited) SetLimit(id, kLimited);
+            if (!g_List.Allowed.empty())   // a period list: the cards not out yet are Forbidden
+                for (size_t id = 0; id < kKonamiCount; ++id)
+                    if (!g_List.InPool(static_cast<uint16_t>(id)))
+                        SetLimit(id, kForbidden);
+            for (uint16_t id : g_List.SemiLimited) if (g_List.InPool(id)) SetLimit(id, kSemiLimited);
+            for (uint16_t id : g_List.Limited) if (g_List.InPool(id)) SetLimit(id, kLimited);
             for (uint16_t id : g_List.Forbidden) SetLimit(id, kForbidden);
         }
         g_Applied = true;
@@ -89,7 +93,7 @@ namespace
         if (g_Mode == BanList::Mode::Custom)
         {
             auto has = [id](const std::vector<uint16_t>& ids) { return std::find(ids.begin(), ids.end(), static_cast<uint16_t>(id)) != ids.end(); };
-            if (has(g_List.Forbidden)) return kForbidden;
+            if (has(g_List.Forbidden) || !g_List.InPool(static_cast<uint16_t>(id))) return kForbidden;
             if (has(g_List.Limited)) return kLimited;
             if (has(g_List.SemiLimited)) return kSemiLimited;
         }
@@ -185,6 +189,8 @@ namespace BanList
     Mode CurrentMode() { return g_Mode; }
     const List& CurrentList() { return g_List; }
 
+    bool List::InPool(uint16_t id) const { return Allowed.empty() || std::binary_search(Allowed.begin(), Allowed.end(), id); }
+
     const std::vector<List>& Saved()
     {
         static std::vector<List> lists;
@@ -203,6 +209,15 @@ namespace BanList
                 list.Forbidden = Ids(json, "forbidden");
                 list.Limited = Ids(json, "limited");
                 list.SemiLimited = Ids(json, "semiLimited");
+                list.Allowed = Ids(json, "allowed");
+                std::sort(list.Allowed.begin(), list.Allowed.end());
+                list.Date = json.value("date", std::string());
+                list.Era = json.value("era", std::string());
+                list.Category = json.value("category", std::string());
+                if (auto it = json.find("formats"); it != json.end() && it->is_array())
+                    for (const auto& format : *it)
+                        if (format.is_string())
+                            list.Formats.push_back(format.get<std::string>());
                 lists.push_back(std::move(list));
             }
             catch (const std::exception& e)
@@ -210,6 +225,8 @@ namespace BanList
                 Logger::WriteLog(std::format("Ban list {} skipped: {}", path.string(), e.what()), MODULE_NAME, 1);
             }
         }
+        std::stable_sort(lists.begin(), lists.end(), [](const List& a, const List& b)
+            { return a.Date.empty() != b.Date.empty() ? !a.Date.empty() : a.Date != b.Date ? a.Date < b.Date : a.Name < b.Name; });
         Logger::WriteLog(std::format("{} custom ban list(s) in banlists\\", lists.size()), MODULE_NAME, 0);
         return lists;
     }
@@ -217,7 +234,7 @@ namespace BanList
     std::string Encode(const List& list)
     {
         std::vector<uint8_t> bytes;
-        for (const auto* ids : { &list.Forbidden, &list.Limited, &list.SemiLimited })
+        for (const auto* ids : { &list.Forbidden, &list.Limited, &list.SemiLimited, &list.Allowed })
         {
             const uint16_t count = static_cast<uint16_t>(ids->size());
             bytes.push_back(static_cast<uint8_t>(count));
@@ -242,7 +259,7 @@ namespace BanList
             return true;   // a name only
         const std::vector<uint8_t> bytes = FromBase64(text.substr(newline + 1));
         size_t at = 0;
-        for (auto* ids : { &list.Forbidden, &list.Limited, &list.SemiLimited })
+        for (auto* ids : { &list.Forbidden, &list.Limited, &list.SemiLimited, &list.Allowed })
         {
             if (at + 2 > bytes.size())
                 break;
