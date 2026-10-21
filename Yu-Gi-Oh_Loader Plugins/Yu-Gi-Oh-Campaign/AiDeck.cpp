@@ -12,7 +12,6 @@
 #include "Logger.h"
 #include "Yu-Gi-Oh-Memory.h"
 #include "Yu-Gi-Oh-RIX.h"
-#include "YuGiOh/YuGiOh-RIX.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 namespace
