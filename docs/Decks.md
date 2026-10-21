@@ -4,10 +4,10 @@
 `File Type Libraries/DeckData`:
 * `DeckDataFile` reads and writes one language's file;
 * `DeckDataTable` holds all languages together, plus the cards;
-* `DeckJson` handles WolfEx's `decks.json`.
+* `DeckJson` handles WolfX's `decks.json`.
 
-The editor is `Tools/Shared/Editors/DeckEditor.cs`, the **Decks** tab in WolfX and WolfEx. WolfX's older single-file "Deck Data" page is
-still there. **Yu-Gi-Oh-Campaign** (`Decks.cpp`) applies `decks.json` to the game.
+The editor is `Tools/Shared/Editors/DeckEditor.cs`, WolfX's **Decks** page (the older single-file "Deck Data" page was removed).
+**Yu-Gi-Oh-Campaign** (`Decks.cpp`) applies `decks.json` to the game.
 
 ## File layout
 
@@ -51,7 +51,7 @@ ids. The limits are **60 / 15 / 15** (`g_DeckSectionMaxSizes`); a bigger count m
     recipe is available.
   * +0xB28 is a 700-bit set.
 
-## decks.json (WolfEx → Yu-Gi-Oh-Campaign)
+## decks.json (WolfX → Yu-Gi-Oh-Campaign)
 
 ```json
 { "decks": [ { "id": 546, "file": "my_deck", "series": 0, "character": 192, "signatureCard": 4007, "sku": 1, "unlocked": true,

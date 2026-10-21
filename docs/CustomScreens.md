@@ -44,7 +44,7 @@ All addresses are in `YuGiOh.exe.i64`.
 
 ## Drawing on it
 
-Use the Dfx helpers in `Dependencies/Yu-Gi-Oh-Ex/YuGiOh/YuGiOh-RIX.h` on `R::ScreenRoot(screen)`:
+Use the Dfx helpers in `Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-RIX.h` on `R::ScreenRoot(screen)`:
 
 - `AddImage(root, sheet, sprite, z, x, y)` places any sprite from a `.dfymoo` sheet, top-left anchored.
   - `SetScaleXY(node, -1, 1)` flips one: x then becomes its right edge.

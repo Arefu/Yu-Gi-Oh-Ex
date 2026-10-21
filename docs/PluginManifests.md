@@ -18,7 +18,7 @@ Its interface is `Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Core.h` (`Core::Load()` find
 
 ## The plugin list in Config.ini
 
-`[Yu-Gi-Oh-Core]` (next to Core's own settings; older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read) has one line per plugin: `Yu-Gi-Oh-Cards=1` for a DLL in `Plugins\` (the loader injects it when it can load) and
+`[Yu-Gi-Oh-Core]` (next to Core's own settings; older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read) has one line per plugin: `Yu-Gi-Oh-MoreCards=1` for a DLL in `Plugins\` (the loader injects it when it can load) and
 `YGO-Ex/Yu-Gi-Oh-Funky=1` for one in `Plugins\YGO-Ex\` (Core starts it). New plugins are added as `0`. Enforced plugins are always written as `1`.
 `PluginsPerPage` (3 to 5) is in the same section.
 
@@ -86,8 +86,7 @@ a plugin requiring itself and requirement cycles.
 ## Yu-Gi-Oh-GUI
 
 Yu-Gi-Oh-GUI is the shared ImGui host: it is the one plugin that hooks the game's Direct3D present and owns the ImGui context, and it hands that context to
-every plugin that draws a window (Funky, SpeedHacks) and calls their `ProcessWindow` each frame. (BetterCardShop no longer has a window: it is
-made of Yu-Gi-Oh-RIX pages in the game's own UI, so it requires Yu-Gi-Oh-RIX instead.) That way no plugin hooks DirectX itself, and two
+every plugin that draws a window (Funky, SpeedHacks) and calls their `ProcessWindow` each frame. That way no plugin hooks DirectX itself, and two
 hooks cannot fight over the swap chain. A plugin that draws a window lists `Yu-Gi-Oh-GUI` in `requires`; that is a real dependency, not a leftover.
 
 What the GUI does **not** do any more is manage plugins: the tick list it used to show is gone. Which plugins are on is decided in the in-game Plugins menu

@@ -3,9 +3,9 @@
 `main/scriptdata_<L>.bin` (E F G I J S) holds the scenes played before and after campaign duels. The parser is
 `File Type Libraries/ScriptData` (`StoryScriptTable`, `StoryScriptJson`).
 
-Scenes are edited in the **Story editor** tab (`Tools/Shared/Editors/StoryDuelEditor.cs` + `SceneEditor.cs`, in WolfX and WolfEx), next to
+Scenes are edited in the **Story editor** tab (`Tools/Shared/Editors/StoryDuelEditor.cs` + `SceneEditor.cs`, in WolfX), next to
 the duel they belong to: pick a duel, then its **Intro / Win / Lose scene** tabs. **Yu-Gi-Oh-Campaign** (`StoryScripts.cpp`) applies
-WolfEx's `storyscripts.json` to the game.
+WolfX's `storyscripts.json` to the game.
 
 ## Scenes and duels
 
@@ -89,7 +89,7 @@ expression's picture `<key>[_<costume>]_<expression>.png` drawn over it (same si
 **What's approximate:** sprites are drawn at their own size, standing on the stage's bottom edge and centred on the slot's x. The
 dialogue box is drawn by the editor, not taken from the game's `campaign_dialog` sheet. Fades aren't animated.
 
-## storyscripts.json (WolfEx → Yu-Gi-Oh-Campaign)
+## storyscripts.json (WolfX → Yu-Gi-Oh-Campaign)
 
 ```json
 { "scripts": [ { "name": "MyDuel_INTRO", "lines": [

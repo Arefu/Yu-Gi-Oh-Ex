@@ -64,10 +64,11 @@ store over BOB pages without packs depending on it. Core starts it when it is in
 - **"packs":** cards added to a game pack, or replacing its cards with `"replace": true` (same as before the move).
   A replaced list that would be empty keeps the game's cards.
 - **"newPacks":** packs the game doesn't have.
-    - `id`: 0-127 and not a game pack's id. WolfEx picks the next free id, and it should stay the same because the save's
-      unlock bit is by id.
-    - `name`: letters, digits and `_`.
-    - `series`: the shop tab.
+    - `id`: only for `"native": true` packs (0-127, the id WolfX wrote into the game's pack files). Other packs have no fixed id
+      since 2026-10-21 (see *No pack limit* below); an `id` on them is ignored.
+    - `name`: letters, digits and `_`, unique: it is the pack's identity.
+    - `series`: the shop tab. A row a mod names can hold as many packs as there are free slots (92 in the stock game); packs
+      without `series` fill new rows as full as the game's fullest row.
     - `art`: an existing pack's name, whose picture is shown. Without it, the picture is `wrap_<name>`, which only works if the
       game has that picture.
     - `unlockWith`: leave it out to have the pack open from the start, `"never"` to keep it locked, or a pack name to unlock it
@@ -82,14 +83,34 @@ store over BOB pages without packs depending on it. Core starts it when it is in
   `std::wstring::assign` so the game can free them. This runs again after every reload, for the language.
   Core starts the plugin after the first load, so `Packs::Install` also applies once straight away.
 - Hooks `Pack_GetArtName`: a new pack with `art` gets `wrap_<art>`.
-- Hooks `BoosterShop_BuildPackList`: before a tab is built, it sets the unlock bits of the new packs whose rule is met.
-  The bits are kept in the save. A game without the plugin ignores them, because the slot is empty there.
+- Hooks `BoosterShop_BuildPackList`: before a tab is built, it puts that tab's new packs in the free slots and sets their
+  unlock bits (see below). Native packs' bits are set once their rule is met and stay in the save.
+- Hooks `BoosterShop_Open` / `ShowSeriesArt` / `SetState` when there are rows past the game's 6 (row count, borrowed banner,
+  row name label).
 - It works without RIX, but the plugin's manifest requires Core and RIX.
-- A new pack whose id is a game pack's is skipped, with a log line.
 
-## WolfEx
+## No pack limit (2026-10-21)
 
-Packs tab:
+The game has 128 pack slots: `Get_PackRecord` (0x14080E340, 29 callers) returns null past 127, `BuildPackList` lists 0-127,
+and `widget_PackWrapper::SetPack` (0x1408A34A0) shows any id past 127 as `wrap_locked`, because a pack's unlock is a bit in
+the save's 128-bit field. The game uses 36, so 92 are free.
+
+Instead of patching all of that, the new packs take turns in the free slots:
+
+- After the game's first pack load Core notes the empty slots (`FindFreeSlots`).
+- `FillSlots(row)` empties them, puts the shown row's packs in first and then as many others as fit (so screens outside the
+  shop still see as many new packs as possible), and sets each free slot's unlock bit from its pack's rule. A slot's bit
+  is rewritten every time, so one pack's bit never carries over to the next pack in that slot.
+- The shop only shows one row at a time, and buying a pack reads the slot while that row is shown, so the game only ever sees
+  ids under 128. There is no limit on the number of new packs; a row can hold up to the number of free slots.
+- A new pack's unlocked state comes from its rule each time (open, `never`, or "with pack X", where X may be a game pack or
+  another new pack), so the save needs no new data for packs. If packs ever unlock by something that has to be remembered
+  (progress, purchases), that goes in a Core save extension like the card table's ids past 19999 (`CardTable.cpp`).
+- `Packs::RareCards()` covers every new pack, not only the ones in a slot.
+
+## WolfX
+
+Packs page (new packs also have their own **New packs** page):
 
 - Game packs keep the "extra cards" editor.
 - **New pack** adds one in the next free id, with a name, shop tab, cost, picture, unlock rule, title and text per language,

@@ -4,8 +4,8 @@ Two Indx + Text pairs the game loads in `YGO::CARDS::Setup_CardPropTable` (0x140
 Russian**: it's the Japanese text with ruby readings (`$R特殊(とくしゅ)`); `g_LanguageLetterTable` (0x140A51D30) maps language id 6 to 'r'.
 
 Parser: `File Type Libraries/TextTable` (`Types.TextTable`, `TextTableJson`); round-trips all 28 files byte for byte. Editor:
-`Tools/Shared/Editors/TextTableEditor` - the WolfX "Text tables" tab (files on disk, existing entries) and the WolfEx "Text tables" tab
-(the game's tables plus `Yu-Gi-Oh-Ex/text.json`, can add entries).
+`Tools/Shared/Editors/TextTableEditor` - WolfX's "Text tables" page (changes to the game's entries go into the Ex patch; added
+entries go to `Yu-Gi-Oh-Ex/text.json`).
 
 ## Format
 
@@ -47,4 +47,4 @@ in How to Play.
 
 The plugin hooks `Get_WordText` and `Get_DlgText` (MS Detours). An entry in the JSON wins over the game's: a number past the game's
 entries adds one, a number it has replaces it. The text for the current language is used, else English, else any. It's re-read after
-each card setup (a language change). WolfEx writes only what differs from the game, keeping the other table's section.
+each card setup (a language change). WolfX writes only what differs from the game, keeping the other table's section.

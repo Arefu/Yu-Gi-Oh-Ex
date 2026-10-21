@@ -2,8 +2,8 @@
 
 `main/dueldata_<L>.bin` (E F G I J S) holds the campaign's story duels: which series and position each one has, who plays whom with
 which decks, the arena, the pack it unlocks, and its title, description and loss tip. The parser is `File Type Libraries/DuelData`
-(`StoryDuelTable`, `StoryDuelJson`). The editor is `Tools/Shared/Editors/StoryDuelEditor.cs`, the **Story editor** tab in both WolfX and WolfEx
-(its Duel tab; the scene tabs beside it edit the duel's dialog, [StoryScenes.md](StoryScenes.md)). **Yu-Gi-Oh-Campaign** (`StoryDuels.cpp`) applies WolfEx's `storyduels.json` to the game.
+(`StoryDuelTable`, `StoryDuelJson`). The editor is `Tools/Shared/Editors/StoryDuelEditor.cs`, the **Story editor** page in WolfX
+(its Duel tab; the scene tabs beside it edit the duel's dialog, [StoryScenes.md](StoryScenes.md)). **Yu-Gi-Oh-Campaign** (`StoryDuels.cpp`) applies WolfX's `storyduels.json` to the game.
 
 The dialog before and after each duel is not in this file: it's in `main/scriptdata_<L>.bin`, found by the duel's key
 ([StoryScenes.md](StoryScenes.md)).
@@ -55,7 +55,7 @@ u32 count (183), u32 0, then count x 0x5C-byte records, then the strings. The st
   The last order that fits is 48, so the editor and plugin limit Order to 1-48.
 * `StoryDuel_FindDialogScript` (0x14082D660) looks up `<Key>_INTRO` / `_OUTRO` / `_OUTRO_LOSE` in `g_pStoryScriptFile` (scriptdata).
 
-## storyduels.json (WolfEx → Yu-Gi-Oh-Campaign)
+## storyduels.json (WolfX → Yu-Gi-Oh-Campaign)
 
 ```json
 { "duels": [ { "id": 186, "series": 0, "order": 33, "key": "MyDuel",

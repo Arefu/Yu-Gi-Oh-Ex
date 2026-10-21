@@ -137,7 +137,7 @@ DemoMenuButtons=1    ; adds "Debug Tools" and "Credits" to the main menu and "Fu
   A callback's `RIX_GotoScreen` changes screen from the Battle Pack screen, so that screen's Back returns to the page.
 * Game widgets can be built on any screen: `widget_Base::CreateNode` (`0x14087C030`) makes a node under the screen's root (screen + 72), so a
   widget is constructed in your own memory and `CreateFromLayout(widget, root, z, screen + 88, x, y)`. The declarations (trunk, card info,
-  entry digits, input, more MenuKit) are in `YuGiOh-RIX.h`.
+  entry digits, input, more MenuKit) are in `Yu-Gi-Oh-RIX.h`.
 * Yu-Gi-Oh-BetterCardShop (`StorePages.cpp`, retired 2026-10-19 and deleted from the repo: the store is BOB pages, docs/PageScript.md): the main menu's Card Shop opened **Card Store** (Booster Packs = the game's card shop, screen 29;
   **Card Shop** = every card in its own `widget_TrunkZone` + `widget_CardInfo`, list filled like `TrunkView_BuildCardList` with the bounds read
   from the game's code; **Enter Password** = eight `widget_EntryDigit`s and an **Unlock** button (a page with both widgets and a button,
@@ -153,7 +153,7 @@ DemoMenuButtons=1    ; adds "Debug Tools" and "Credits" to the main menu and "Fu
 `Yu-Gi-Oh-RIX` adds a **Plugins** button to Help & Options. It opens a list on the main menu (one button per plugin, `Name: On/Off`),
 Back returns to Help & Options.
 
-* The list is in `[Yu-Gi-Oh-Core]` in `Config.ini` (Core owns it; RIX only draws the menu through Core's toggles. Older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read): `Yu-Gi-Oh-Cards=1` for a DLL in `Plugins\` (the loader injects it when 1), `YGO-Ex/Yu-Gi-Oh-Funky=1`
+* The list is in `[Yu-Gi-Oh-Core]` in `Config.ini` (Core owns it; RIX only draws the menu through Core's toggles. Older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read): `Yu-Gi-Oh-MoreCards=1` for a DLL in `Plugins\` (the loader injects it when 1), `YGO-Ex/Yu-Gi-Oh-Funky=1`
   for a DLL in `Plugins\YGO-Ex\` (Yu-Gi-Oh-Core starts it when 1, once the main menu is up). The loader adds every plugin it finds as 0; `Yu-Gi-Oh-RIX` is always loaded.
 * `PluginsPerPage` (3 to 7, default 6) is in the same section; the first page has a button that changes it.
 * A button shows the DLL's name and no description. `<DLL name>.json` next to the DLL changes that:

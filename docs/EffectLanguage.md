@@ -10,7 +10,7 @@ draw(2);
 draw(1) then search(deck, monster where race = Zombie);   // draw / LP steps first, then one action
 ```
 
-A script is just the effect itself, no wrapper needed (`effect "Name" { ... }` around it means the same and is optional). Written in the WolfEx **Effects** tab, compiled there (ANTLR, `Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Effects/Script/EffectScript.g4`), saved on the card as `effectScript` (the text) and `effectClone` (what the game runs). The plugin never sees the text.
+A script is just the effect itself, no wrapper needed (`effect "Name" { ... }` around it means the same and is optional). Written on WolfX's **Effects** page, compiled there (ANTLR, `Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Effects/Script/EffectScript.g4`), saved on the card as `effectScript` (the text) and `effectClone` (what the game runs). The plugin never sees the text.
 
 ## Why it stays simple
 
@@ -32,7 +32,7 @@ Race and attribute names are the game's (Dragon ... Creator God; Light, Dark, Wa
 2. Decompile their slot 0/2/4 handlers; find the id-keyed table or ladder that supplies the parameter.
 3. Hook that lookup for the active clone in `EffectClone.cpp` (see `Hook_GetDraw`, `Hook_GetRow`, `Hook_Collect`).
 4. Add the JSON key to `EffectClone.cpp`, one grammar rule, and one branch in `EffectScriptCompiler.cs`.
-5. Add a test card in `Desktop\New folder\tests`, rename what you found in IDA, note it in EffectSystem.md.
+5. Add a test card (a small test cards.json), rename, retype and comment what you found in IDA, note it in EffectSystem.md, and add the BAB block (`Tools\WolfX\Content\Blocks\effect-blocks.js`).
 
 ## Current actions (all confirmed in a duel except where noted)
 
@@ -60,24 +60,22 @@ on flip: burn(500);
 
 **Ctrl+Space** in the editor lists what can follow at the caret (triggers after `on`, actions after `then`, races after `race =`, archetype names after `archetype =`, ...) with a hint beside the highlighted entry; typing two letters offers it by itself.
 
-## In WolfEx (Effects tab)
+## In WolfX (Effects page)
 
 The card list has a checkbox per card (plus "Check all shown" with the filter box, "Clear all checks"). Write a script in the editor (Scintilla: colours, line numbers, keyword completion, red squiggle at the compile error), **Apply script to all checked**. **Attach from card text...** reads the text of every Normal Spell (or of the checked cards) and attaches the effect where its first sentence is a plain supported effect; the remaining sentences are stored in `effectNotImplemented` on the card.
 
 **Blocks** (the first tab since 2026-10-14; the Script tab is the text behind them): one **hat block per effect**, headlined by when it happens - "When this card is [Summoned] from / by / as", "When [this card is flipped / destroyed by battle / sent to the GY / declares an attack ...]", "During [your Standby Phase / the End Phase]", "You can (ignition)", "Activate (a Spell / Trap, or a self cost)". Every hat has the same slots: name (the effect's name, for the choose-an-effect prompt), only if, cost, do (actions, run in order = then), only once per turn. Several effects = several hats, read top to bottom. Beside them: "act exactly like the game card" (as) and the Lock block. Changing the blocks rewrites the script; typing in the script redraws them. A new action = one entry in `Tools\WolfX\Content\Blocks\effect-blocks.js` (ACTIONS / COSTS); a new trigger = an entry in HATS' lists. Until then a script using it shows a note over the (locked) blocks and is left alone. See docs/WolfXContent.md.
 
-**Effect library tab:** the game's own cards written in EffectScript wherever the language can say it (about 1170 cards; ~250 are exactly the one effect, the rest carry a "~" and a note of what the script does not cover - e.g. "must have the same name", "ATK <= 1500"). Monster cards show their trigger as a comment. Select a card to read its text and script; **Use as template** puts the script into the Effects tab for the card selected there. The data is `Tools\WolfEx\effect_reference.json`, made from the game's tables by `docs\effect-scripts\build_effect_reference.py` (re-run it after learning to decode a new effect type). `Desktop\New folder\Attach-Effects.py` does the same for a whole cards.json without opening the editor (run it after each Delta.ps1).
+**Effect library tab:** the game's own cards written in EffectScript wherever the language can say it (about 1170 cards; ~250 are exactly the one effect, the rest carry a "~" and a note of what the script does not cover - e.g. "must have the same name", "ATK <= 1500"). Monster cards show their trigger as a comment. Select a card to read its text and script; **Use as template** puts the script into the Effects tab for the card selected there. The data is `Tools\WolfX\Content\effect_reference.json`, made from the game's tables by `docs\effect-scripts\build_effect_reference.py` (re-run it after learning to decode a new effect type). `WolfX.exe --attach-effects <cards.json> <report> <work csv>` attaches effects from card text to a whole cards.json without opening the editor.
 
 ## Chaining ("then") - what is built and what is not
 
-Stage 1 (built, confirmed): draw / life point steps run back to back ahead of the card's last action. Stage 2 (an interactive action followed by another action) is design only:
-
-Every slot 0 in the game is a step machine (one call = one step, returns the next step; see EffectSystem.md section 12). A chain is therefore a small sequencer of our own that runs the first action's machine until it finishes, resets the step variable, and starts the second - with the same clone impersonation wrapped around each. Costs and conditions (`if you control no monsters`, `pay 800 LP`) fit the same way as slot 2 wrappers. This is the next language feature after the single actions are all proven; until then a script with `then` compiles to an error rather than a card that silently does half of it.
+Stage 1 (built, confirmed): draw / life point steps run back to back ahead of the card's last action. Stage 2 (built 2026-10-21, not run in a duel): any action can come before `then` (`search(...) then special_summon(...)`); each runs its own game machine to the end before the next starts (EffectSystem.md section 53). Only the last action may target.
 
 ## Also planned
 
 - `discard(N)`, `send(deck -> grave, selector)`, `banish`, `gain_lp(N)` / `pay_lp(N)`, `special_summon(hand, selector)`, `negate` - each needs its vanilla source found first (the backlog groups in `effects_backlog_grouped.xlsx` say which are most common: search 765, destroy 337, draw 255, burn 205).
-- Bulk attach in WolfEx (select many cards, paste one script).
+- (Some of the above are built since: discard / Tribute / banish-self costs, special summon from the hand, negate. What's still missing is in [GLOSSARY.md](../GLOSSARY.md#effects) and `docs/Card Lists/Effects To Write.csv`.)
 
 ## Costs paid with the card, conditions, Special Summon this card, ATK (2026-10-02, EffectSystem.md section 37)
 

@@ -12,7 +12,7 @@ How to use it:
 * Part 4 is a suggested series order, Part 5 the known gaps to check before recording, Part 6 a glossary.
 
 Sources for the details: `docs/WolfXContent.md` (the save rules, the archive), `docs/EffectLanguage.md` (EffectScript), `docs/CardRendering.md`
-(how the game draws a card), `docs/PluginManifests.md`, `TESTING.md`.
+(how the game draws a card), `docs/PluginManifests.md`, and [GLOSSARY.md](../GLOSSARY.md) for what every part does and how far along it is.
 
 > Status markers used below: **[tested]** = checked working; **[untested in game]** = WolfX writes it, but nobody has yet confirmed the game
 > shows it; **[limit]** = a known restriction worth saying out loud.
@@ -485,7 +485,7 @@ Each episode: goal shown up front -> steps -> save -> in-game result -> how to u
 
 ## Part 5 - Check before recording
 
-* In-game confirmation still open: binary toc loading (TESTING.md 6), content.json plugin switching (TESTING.md 7), several effect triggers.
+* In-game confirmation still open for many features: check the status tags in [GLOSSARY.md](../GLOSSARY.md) before recording one.
 * Use the **Debug** build (`Binaries\Debug\Tools\WolfX.exe`) or rebuild Release first: the Release build can lag behind.
 * The block editor needs the Edge WebView2 Runtime (Windows 10/11 have it; say what to do if the Blocks tab shows the "needs WebView2" note).
 * Use a spare save profile for anything touching unlocks or the save editor.
@@ -498,7 +498,7 @@ Each episode: goal shown up front -> steps -> save -> in-game result -> how to u
 * **DAT / TOC** - the game's archive (YGO_2020.dat) and its table of contents (YGO_2020.toc).
 * **Extracted folder** - files copied out of the archive.
 * **Yu-Gi-Oh-Ex folder** - where additional content (JSON + art) lives.
-* **Plugin** - a DLL the launcher loads into the game (MoreCards, Effects, Campaign, BetterCardShop, RIX...).
+* **Plugin** - a DLL the launcher loads into the game (Core, RIX, MoreCards, Effects, Campaign, Media...). The full list is in [GLOSSARY.md](../GLOSSARY.md#plugins).
 * **content.json** - WolfX's list of which plugins your content needs.
 * **Konami id / internal id / password** - see 1.5.
 * **Kind** - the card's kind number (Normal, Effect, Fusion, Link...), which decides its frame.

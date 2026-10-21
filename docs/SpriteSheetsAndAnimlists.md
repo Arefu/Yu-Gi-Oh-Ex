@@ -1,11 +1,12 @@
 # Sprite sheets (.dfymoo) and animlists
 
-The same two editors are in **WolfX** and **WolfEx**. The code is shared in `Tools/Shared/Editors`, and the file formats are parsed by the `Dfymoo` and `Animlist` libraries in `File Type Libraries`.
+The two editors are WolfX's **Sprite sheets** and **Animlists** pages. The code is shared in `Tools/Shared/Editors`, and the file formats are parsed by the `Dfymoo` and `Animlist` libraries in `File Type Libraries`.
 
-* **WolfX** ("Sprite Sheets (dfymoo)" and "Animlists" tabs) opens and saves files on disk, such as an unpacked YGO_2020.
-* **WolfEx** ("Sprite sheets" and "Animlists" tabs) can also:
-  * **Open from game**: reads `YGO_2020.dat`, or your loose override if there is one.
-  * **Save as a loose override** in `<game>\YGO_2020\<same path>`. The game loads that file instead of its own, the same way the Anime Frames mod replaces the card frames.
+* They read the open game data (the archive, your Ex patch, loose files, or a mod you're editing) and save changes into the Ex patch
+  (`YGO_2020-Ex.dat`), so the game loads your copy instead of its own. The game's `YGO_2020.dat` is never written.
+* They can also:
+  * **Replace sprite image** and **Add sprite from PNG** (the sheet grows to fit).
+  * A mod can carry the same files loose in its own `YGO_2020\<same path>` folder, the way the Anime Frames mod replaces the card frames.
   * **New for game** (animlists): replaces one of the game's title animations.
 
 ## Sprite sheets

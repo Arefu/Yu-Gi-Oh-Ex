@@ -78,7 +78,7 @@ This is the first screen the mods add rather than borrow. How the game's screens
 The game builds its screens in `RIX::App::Initialize` and adds two scheduler jobs for each (a one-shot `Load`, a repeating `Tick`). Core does the same
 by hand once the title screen is up: game `operator new`, `ScreenBase::Constructor`, a copy of the base vftable with slots 0 (destructor: never
 frees), 8, 12, 13 and 14 replaced, `SetScreenId(100)`, `SetScreenType(3)`, `Load`, `Activate`, and its `Tick` is called from a detour of
-`RunJobs` right after the main scheduler's jobs. Widgets are the plain DFX images / text of `YuGiOh-RIX.h` (`Dfx::AddImage`, `Dfx::AddText`).
+`RunJobs` right after the main scheduler's jobs. Widgets are the plain DFX images / text of `Yu-Gi-Oh-RIX.h` (`Dfx::AddImage`, `Dfx::AddText`).
 
 Screen ids: **6 is `ScreenSignIn`, 8 is `ScreenMainMenu`** (`YuGiOh-UI.h` had 6 as the main menu; fixed).
 

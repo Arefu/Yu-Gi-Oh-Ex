@@ -57,7 +57,7 @@ text "You have {game:dp} DP and {game:owned.4007} Blue-Eyes." at 1000, 220 width
 | `digits` | digits | how many wheels |
 | `card` | cardInfo | the card |
 | `cards` | cardGrid | `owned` / `all` |
-| `decks` | decks | |
+| `decks` | decks | - (the game's deck picker: the player's decks; `list "578, 579"` shows those deck ids instead: 0-31 saved, 32 + n the game's deck n, e.g. decks a page sells; `hide "{save:shop.bought.#}"` leaves out each listed deck whose text (`#` = its id) is set, and `reload` lists them again) |
 | `deck` | deckInfo | the deck |
 | `series` | seriesTabs | |
 | `characters` | characters | the series |
@@ -93,10 +93,13 @@ Menu items: `button "Label" ["help"] ...;`, `choice "Label" ["help"] ["A", "B"] 
 | `if <condition> -> action else action` | branches |
 | `popup "Title" [at x, y] { button "A" -> ...; }` | the game's popup list |
 | `show_card(4007)`, `reset_filter`, `sound(39)` | full card view, reset the card grid filter, a UI sound |
+| `reload` | builds this page again from its file (list sources fill their rows again: a filter variable changed); focus and menu cursors are kept |
 | `give_dp(500)` | adds DP to the profile (up to 999,999,999) |
 | `take_dp(500) -> action else action` | takes DP if the profile has enough, then runs the first action; otherwise the `else` (or the error sound) |
 | `give_card(4007[, copies])` | gives copies (up to the save's 3), marked as seen |
 | `take_card(4007[, copies]) -> action else action` | takes copies if the profile has them |
+| `give_deck(578[, copies]) -> action else action` | saves one of the game's decks (32 + its deckdata id, e.g. a `decks.json` deck) in the profile's first empty deck slot, as a deck of its own to play and edit, and gives its cards (added to the copies owned, up to 3; with `copies`, every card of the deck at least that many); the `else` runs when no slot is free |
+| `set` / `toggle` / `add` targets | may hold values in their name: `set(save:shop.bought.{var:deck}, "1")` |
 | `unlock(card_shop)` / `lock(...)` | the main menu buttons a new profile has greyed out: `card_shop`, `battle_packs`, `duelist_challenge` |
 | `unlock_character(12)` | a chardata id (0-239) shows in Free Duel |
 
@@ -112,9 +115,12 @@ Values (in conditions and in any text as `{...}`):
 | | |
 | --- | --- |
 | `var:name` | a page variable (shared by all pages and with plugins) |
+| `save:name` | a page variable kept **in the profile's save** (Yu-Gi-Oh-Core's save extension, tag `rix.save`), so each save slot has its own; written with the game's next save. For what a page must remember: `set(save:shop.bought.{var:deck}, "1")` |
 | `config:Section/Key` | a Config.ini line (new keys must go into WolfX's ConfigCatalog) |
 | `game:dp` | the profile's DP |
-| `game:owned.<id>` | copies of a card the profile owns (0-3) |
+| `game:owned.<id>` | copies of a card the profile owns (0-3); every card id, custom cards past 19999 too (Core's card table) |
+| `game:deckname.<id>` | a deck's name: a saved deck (0-31) or one of the game's decks (32 + deckdata id) |
+| `game:freedecks` | how many of the profile's 32 saved deck slots are empty |
 | `game:cardname.<id>` | a card's name |
 | `game:unlocked.<menu>` | 1 when `card_shop` / `battle_packs` / `duelist_challenge` is unlocked |
 | `game:character.<id>` | 1 when a character is unlocked |
@@ -179,6 +185,16 @@ if (RIX::Functions().RegisterPageValue)                                         
 Copy `pages\*` into `Yu-Gi-Oh-Ex\pages` and `menus\bob-card-store.json` into `Yu-Gi-Oh-Ex\menus`, and open the scripts in WolfX
 (Art & menus > Page scripts) to change them. The old plugin's Config.ini `BetterShop-*` settings and `prices.json` are gone: the settings
 and fixed prices are lines of `card-store-prices.bob`. Booster packs (`packs.json`) are Core's (docs/Packs.md).
+
+## Worked example: the ban list picker
+
+`Mods\Ban Lists` (built 2026-10-21, untested) holds every TCG Forbidden & Limited List as `Yu-Gi-Oh-Ex\banlists\<date> <name>.json`
+(formatlibrary.com; `"allowed"` = the cards out in the TCG by that date, so each is a period format) and `pages\banlists.bob`. The host's
+"Ban list" row (Game / Off / the picked list / **Choose a list...**) opens the page. Yu-Gi-Oh-MP (`BanListPicker.cpp`) supplies only what a
+page can't know: `rows "mp.banlists"` (the lists matching `var:banlist.era` / `var:banlist.year`, 8 a page by `var:banlist.page`),
+`call("mp.banlist.use")` (the list whose index is in `var:banlist`), `call("mp.banlist.game")` / `call("mp.banlist.off")`, and
+`game:mp.banlist` / `.count` / `.pages` / `.pagetext`. The filters, paging and layout are the script's: a filter's `onchange` resets
+the page and `reload`s.
 
 ## Adding to the language
 

@@ -2,7 +2,7 @@
 
 `bin/CARD_Link.bin` lists what each card's text mentions: other cards, archetypes and counters.
 The parser is `File Type Libraries/CardLink` (`Types.CardLinkTable`, `Types.CardLinkJson`). The editor is
-`Tools/Shared/Editors/CardLinkEditor.cs`, on the **Card links** tab in both WolfX and WolfEx.
+`Tools/Shared/Editors/CardLinkEditor.cs`, on WolfX's **Card links** page (also inside the Card Manager and New cards pages).
 
 ## Layout
 
@@ -60,13 +60,13 @@ The copy in `Remaining Files\bin` differs from the game's own copy in `YGO_2020.
 Battleguard (4018) points to Pot of Greed (4844) in Remaining Files, and to Lava Battleguard (4560) in the game's copy. The game's
 copy is the real one: the two Battleguards mention each other. The Remaining Files copy looks like it was edited by hand.
 
-## WolfX / WolfEx
+## WolfX
 
-* **WolfX:** open a CARD_Link.bin, edit it, then save. A `.bak` of the original is kept. It only warns about problems your changes
-  add: a duplicate link, a card linking to itself, a target of 0, or links out of order.
-* **WolfEx:** opens the game's table with `Yu-Gi-Oh-Ex\cardlinks.json` on top. **New card...** gives links to any card,
-  custom cards (15300+) included. **Add card... / Archetypes... / Add counter...** add targets, and **Remove** (or Delete) removes
-  them. Save writes only the differences to cardlinks.json:
+* **Game cards:** edit, then save; the changed CARD_Link.bin goes into the Ex patch (`YGO_2020-Ex.dat`). It only warns about problems
+  your changes add: a duplicate link, a card linking to itself, a target of 0, or links out of order.
+* **Custom cards** (15300+) keep their links in their own `cards.json` entry (`"links"`). **Add card... / Archetypes... / Add counter...**
+  add targets, and **Remove** (or Delete) removes them. `Yu-Gi-Oh-Ex\cardlinks.json` only keeps cards that cards.json doesn't have,
+  as differences:
 
 ```json
 { "cards": [ { "card": 15300, "name": "My Card",

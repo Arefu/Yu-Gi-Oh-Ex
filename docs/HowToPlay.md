@@ -3,7 +3,7 @@
 The game's Help > How to Play screen (`RIX::ScreenHelpHowToPlay`) reads `main/howto_db/howtoplay_#.bin`, `#` being the language letter
 (E, F, G, I, J, S ship with the game). It's loaded with `LoadFileFromArchives`, so a loose `<game>\YGO_2020\main\howto_db\howtoplay_E.bin`
 replaces the archive's copy. Parser: `File Type Libraries/HowToPlay` (`Types.HowToPlayFile`); editor: `Tools/Shared/Editors/HowToPlayEditor`
-(WolfX "How to Play" tab for files on disk, WolfEx "How to Play" tab for the game's files, saved as loose overrides).
+(WolfX "How to Play" page; changes are saved into the Ex patch).
 
 ## Format (big-endian), RIX::ScreenHelpHowToPlay::LoadDatabase 0x1408485E0
 

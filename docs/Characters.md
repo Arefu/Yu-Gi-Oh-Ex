@@ -2,8 +2,8 @@
 
 `main/chardata_<L>.bin` (E F G I J S) holds the duelists: the characters you duel and collect. It sets each one's name, bio,
 portrait, series tab, deck, arena and content pack. The parser is `File Type Libraries/CharData` (`CharacterTable`,
-`CharacterJson`). The editor is `Tools/Shared/Editors/CharacterEditor.cs`, on the **Characters** tab in both WolfX and WolfEx.
-**Yu-Gi-Oh-Campaign** (`Characters.cpp`) applies WolfEx's `characters.json` to the game.
+`CharacterJson`). The editor is `Tools/Shared/Editors/CharacterEditor.cs`, on WolfX's **Characters** page.
+**Yu-Gi-Oh-Campaign** (`Characters.cpp`) applies WolfX's `characters.json` to the game.
 
 ## File layout
 
@@ -43,7 +43,7 @@ order (key, name, bio) with no padding.
   * `Collection_FormatCharacterCount` shows "unlocked/total (+ DLC)".
 * `ChallengeBonus_1407C7040`: in Challenge mode, beating the character whose deck matches gives a 50 bonus.
 
-## characters.json (WolfEx → Yu-Gi-Oh-Campaign)
+## characters.json (WolfX → Yu-Gi-Oh-Campaign)
 
 ```json
 { "characters": [ { "id": 192, "key": "yugimuto", "series": 0, "deck": 5, "selectable": 1, "sku": 1, "arena": 2, "unlocked": true,

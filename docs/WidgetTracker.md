@@ -18,7 +18,7 @@ For the fields and background of each class, see [Widgets.md](Widgets.md); for w
   * 3: SetEnabled (`0x14087C240`)
   * 4: release nodes (`0x14087BFC0`)
   * Classes that override slot 1 have their own highlighted look; for example `YGO_FRONT::widget_MenuItem`, `widget_UserSlot` and `ScreenHelpControls::widget_Category`.
-* **RIX** column: **page file** = a page designed in WolfEx builds it in the game; **plugin code** = `YuGiOh-RIX.h` can build it from a plugin; empty = not yet.
+* **RIX** column: **page file** = a page designed in WolfX builds it in the game; **plugin code** = `Yu-Gi-Oh-RIX.h` can build it from a plugin; empty = not yet.
 
 To add a class to RIX, the recipe used for the Trunk, CardDetails and EntryDigit:
 
@@ -26,7 +26,7 @@ To add a class to RIX, the recipe used for the Trunk, CardDetails and EntryDigit
 2. Read its `CreateFromLayout` for the arguments: usually `(widget, parent shared_ptr BY VALUE, z, owner = screen+88, x, y[, screenData = screen+120])`.
 3. Find its per-frame `Update` / input function (called from the screen that owns it).
 4. Find what feeds it data (a card id, a list, a string id).
-5. Wrap all of that in `YuGiOh-RIX.h`, and teach `MenuFile.cpp` the page element that uses it.
+5. Wrap all of that in `Yu-Gi-Oh-RIX.h`, and teach `MenuFile.cpp` the page element that uses it.
 
 | Class | vftable | Constructor | Builder(s) | Built by / notes | RIX |
 | --- | --- | --- | --- | --- | --- |
