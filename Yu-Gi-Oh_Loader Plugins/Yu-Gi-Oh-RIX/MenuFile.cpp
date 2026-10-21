@@ -29,7 +29,7 @@
 #include <json.hpp>
 
 #include "Logger.h"
-#include "YuGiOh/YuGiOh-RIX.h"
+#include "Yu-Gi-Oh-RIX.h"
 #include "Yu-Gi-Oh-Mods.h"
 
 namespace

@@ -12,7 +12,7 @@
 #include "Yu-Gi-Oh-Core.h"
 
 #include "MainMenu.h"
-#include "YuGiOh/YuGiOh-RIX.h"
+#include "Yu-Gi-Oh-RIX.h"
 
 namespace
 {
@@ -426,7 +426,7 @@ namespace
             return;
         }
 
-        // The game's own Yes/No box, put together by hand (see ShowYesNo in YuGiOh-RIX.h) so that No goes on to Help & Options too.
+        // The game's own Yes/No box, put together by hand (see ShowYesNo in Yu-Gi-Oh-RIX.h) so that No goes on to Help & Options too.
         static const wchar_t* text = L"You have changed which plugins are on. The game has to restart for that to take effect. Restart now?";
         std::function<void()> yes = &RestartGame;
         std::function<void()> no = &GoToOptions;

@@ -42,12 +42,13 @@
 
 #include "Logger.h"
 #include "MainMenu.h"
-#include "YuGiOh/YuGiOh-RIX.h"
+#include "Yu-Gi-Oh-RIX.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 #include "YuGiOh/YuGiOh-CARDS.h"
 #include "YuGiOh/YuGiOh-SAVE.h"
 #include "YuGiOh/YuGiOh-PASS.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "Yu-Gi-Oh-Core.h"   // the save extension (save: variables)
 
 namespace R = YGO::RIX;
 using json = nlohmann::json;
@@ -132,7 +133,7 @@ namespace
     auto Chars_SetList = reinterpret_cast<void(__fastcall*)(void*, R::Vector*)>(0x1408A67E0);
     auto Chars_Input = reinterpret_cast<void(__fastcall*)(void*, int pressed, int held, char* confirmed)>(0x1408A50B0);
     auto Chars_Selected = reinterpret_cast<unsigned(__fastcall*)(void*)>(0x1408A52A0);   // g_CharacterRecords index, 0 = none / locked
-    // RIX::widget_RecipeZone (Free Duel +1456, YuGiOh-RIX.h DeckSelectList) and RIX::widget_RecipeInfo (+2864 yours, +3448 the opponent's)
+    // RIX::widget_RecipeZone (Free Duel +1456, Yu-Gi-Oh-RIX.h DeckSelectList) and RIX::widget_RecipeInfo (+2864 yours, +3448 the opponent's)
     auto Decks_Construct = reinterpret_cast<void*(__fastcall*)(void*)>(0x1408AD1C0);
     auto Decks_Create = reinterpret_cast<void(__fastcall*)(void*, R::SharedNode*, int, void*, float, float, int, float)>(0x1408ADC70);
     auto Info_Construct = reinterpret_cast<void*(__fastcall*)(void*)>(0x1408AA5C0);
@@ -346,7 +347,44 @@ namespace
     // A binding: "var:name" or "config:Section/Key".
     // ---- the game's own values pages can read and change (docs/PageScript.md "Game"): the profile's DP and cards, guarded like the
     // Card Store reads them (the save sections are only there once a profile is loaded)
-    constexpr int kSaveCardCount = 20000;   // the save's card table: one byte per card id, bits 0-2 = copies owned, bit 3 = seen
+    // the card table: one byte per card id, bits 0-2 = copies owned, bit 3 = seen. Yu-Gi-Oh-Core (always on) makes Get_CardUnlockTable
+    // hand out a table for every Konami id (the save's 20000 bytes plus its extension), so custom cards past 19999 count too.
+    constexpr int kSaveCardCount = 0xFFFF;   // 65535 is the game's "no card"
+    constexpr int kSavedDecks = 32;          // deck ids 0-31: the profile's saved decks; 32 + n: the game's deck n (deckdata)
+    constexpr int kLastDeckId = 731;
+
+    // YGO::SAVE::DeckListItem (0x130): a saved deck and a deck template have the same layout
+    struct SavedDeck
+    {
+        wchar_t Name[33];
+        uint16_t MainCount, ExtraCount, SideCount;
+        uint16_t Cards[90];   // main, then extra, then side
+        uint8_t Rest[0x12C - 252];
+        uint8_t IsValid;
+        uint8_t Pad[3];
+    };
+    static_assert(sizeof(SavedDeck) == 0x130, "SavedDeck layout drifted");
+
+    SavedDeck* GameDeck(int id)
+    {
+        __try
+        {
+            return reinterpret_cast<SavedDeck*(__fastcall*)(unsigned, unsigned)>(YGO::Addr::Deck_FromId)(YGO::SAVE::CURRENT_PROFILE, static_cast<unsigned>(id));
+        }
+        __except (EXCEPTION_EXECUTE_HANDLER)
+        {
+            return nullptr;
+        }
+    }
+
+    // the first saved deck slot with nothing in it, or -1
+    int FreeDeckSlot()
+    {
+        for (int slot = 0; slot < kSavedDecks; ++slot)
+            if (const SavedDeck* deck = GameDeck(slot); deck && deck->MainCount == 0 && deck->ExtraCount == 0 && deck->SideCount == 0)
+                return slot;
+        return -1;
+    }
     constexpr int kFullSet = 3;
 
     uint64_t* GameWallet()
@@ -570,6 +608,22 @@ namespace
         }
         if (name == "language")
             return std::to_string(*reinterpret_cast<const int*>(YGO::Addr::g_iGameLanguageID));
+        if (name.rfind("deckname.", 0) == 0)
+        {
+            // a deck's name: a saved deck (0-31) or one of the game's decks (32 + its deckdata id)
+            const int id = std::atoi(name.c_str() + 9);
+            const SavedDeck* deck = id >= 0 && id <= kLastDeckId ? GameDeck(id) : nullptr;
+            return deck ? Narrow(std::wstring(deck->Name, wcsnlen(deck->Name, 33))) : std::string();
+        }
+        if (name == "freedecks")
+        {
+            // how many of the 32 saved deck slots are empty (give_deck needs one)
+            int free = 0;
+            for (int slot = 0; slot < kSavedDecks; ++slot)
+                if (const SavedDeck* deck = GameDeck(slot); deck && deck->MainCount == 0 && deck->ExtraCount == 0 && deck->SideCount == 0)
+                    ++free;
+            return GamePlayer() ? std::to_string(free) : std::string();
+        }
         const size_t dot = name.find('.');
         const auto source = g_ValueSources.find(name.substr(0, dot));
         if (source != g_ValueSources.end())
@@ -592,9 +646,50 @@ namespace
         return {};
     }
 
+    // save:<name> - page variables kept in the profile's save (Yu-Gi-Oh-Core's save extension, tag "rix.save": a JSON object of texts), so a
+    // page can remember things per save (a deck that was bought, a reward that was claimed). They follow the save read last, so each save
+    // slot has its own; empty when no save has been read (or Core is too old).
+    constexpr const char* kSaveVarsTag = "rix.save";
+
+    json ReadSaveVars()
+    {
+        if (!Core::Load() || !Core::Functions().GetSaveExtension)
+            return json::object();
+        const int size = Core::Functions().GetSaveExtension(kSaveVarsTag, nullptr, 0);
+        if (size <= 0)
+            return json::object();
+        std::string text(static_cast<size_t>(size), '\0');
+        Core::Functions().GetSaveExtension(kSaveVarsTag, text.data(), size);
+        json vars = json::parse(text, nullptr, false);
+        return vars.is_object() ? vars : json::object();
+    }
+
+    std::string ReadSaveVar(const std::string& name)
+    {
+        const json vars = ReadSaveVars();
+        auto it = vars.find(name);
+        return it != vars.end() && it->is_string() ? it->get<std::string>() : std::string();
+    }
+
+    void WriteSaveVar(const std::string& name, const std::string& value)
+    {
+        if (!Core::Load() || !Core::Functions().SetSaveExtension)
+        {
+            Logger::WriteLog("Page: save:" + name + " can't be kept (Yu-Gi-Oh-Core has no save extension)", MODULE_NAME, 1);
+            return;
+        }
+        json vars = ReadSaveVars();
+        if (value.empty())
+            vars.erase(name);
+        else
+            vars[name] = value;
+        const std::string text = vars.empty() ? std::string() : vars.dump();
+        Core::Functions().SetSaveExtension(kSaveVarsTag, text.data(), static_cast<int>(text.size()));   // written with the game's next save
+    }
+
     struct Binding
     {
-        enum Kind { None, Var, Config, Game, Value } Type = None;
+        enum Kind { None, Var, Config, Game, Value, Save } Type = None;
         std::string Name;
 
         static Binding Parse(const std::string& text)
@@ -604,6 +699,7 @@ namespace
             else if (text.rfind("config:", 0) == 0) { b.Type = Config; b.Name = text.substr(7); }
             else if (text.rfind("game:", 0) == 0) { b.Type = Game; b.Name = text.substr(5); }
             else if (text.rfind("value:", 0) == 0) { b.Type = Value; b.Name = text.substr(6); }
+            else if (text.rfind("save:", 0) == 0) { b.Type = Save; b.Name = text.substr(5); }
             return b;
         }
 
@@ -612,6 +708,7 @@ namespace
             std::string value;
             if (Type == Var) { auto it = g_Vars.find(Name); value = it != g_Vars.end() ? it->second : std::string(); }
             else if (Type == Config) value = ReadConfig(Name);
+            else if (Type == Save) value = ReadSaveVar(Name);
             else if (Type == Game) value = GameValue(Name);
             else if (Type == Value)
             {
@@ -631,6 +728,7 @@ namespace
         {
             if (Type == Var) g_Vars[Name] = value;
             else if (Type == Config) WriteConfig(Name, value);
+            else if (Type == Save) WriteSaveVar(Name, value);
             // game: values are read only; the giveDp / takeDp / giveCard actions change them
         }
     };
@@ -876,6 +974,7 @@ namespace
         else if (when.contains("config")) value = Binding{ Binding::Config, Expand(Str(when, "config")) }.Get();
         else if (when.contains("game")) value = GameValue(Expand(Str(when, "game")));
         else if (when.contains("value")) value = Binding{ Binding::Value, Expand(Str(when, "value")) }.Get();
+        else if (when.contains("save")) value = Binding{ Binding::Save, Expand(Str(when, "save")) }.Get();
         bool result;
         if (when.contains("atLeast"))
             result = !value.empty() && std::strtoll(value.c_str(), nullptr, 10) >= std::strtoll(Expand(when["atLeast"].is_string() ? when["atLeast"].get<std::string>() : when["atLeast"].dump()).c_str(), nullptr, 10);
@@ -1706,7 +1805,44 @@ namespace
             R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
             Decks_Create(element.Decks, &parent, 5 + element.Z, R::ScreenOwner(screen), element.X, element.Y, 1, 0.0f);
             R::DeckSelectList::Refresh(element.Decks, true);   // OnEnter
-            R::DeckSelectList::FillPlayerDecks(element.Decks);  // SetState(2)
+            // "list": the decks to show (ids, comma separated: 0-31 saved decks, 32 + n the game's deck n, e.g. a decks.json deck a page
+            // sells); without it the player's own decks (Free Duel's SetState(2)). Tab 0 holds every deck; the game makes the category
+            // tabs from it (the recipe Campaign's DeckSelectList_FillDecks hook uses too).
+            // "hide": a text with # for the deck id; a listed deck is left out when it expands to something other than "" / "0"
+            // (hide "{save:shop.bought.#}": the decks this save has bought). A page shows the list again with reload.
+            const std::string listed = Expand(Str(element.Source, "list"));
+            const std::string hide = Str(element.Source, "hide");
+            auto hidden = [&](long id)
+            {
+                if (hide.empty())
+                    return false;
+                std::string text = hide;
+                for (size_t at = text.find('#'); at != std::string::npos; at = text.find('#', at + 1))
+                    text.replace(at, 1, std::to_string(id));
+                const std::string value = Expand(text);
+                return !value.empty() && value != "0";
+            };
+            if (listed.empty())
+                R::DeckSelectList::FillPlayerDecks(element.Decks);  // SetState(2)
+            else
+            {
+                R::Vector* ids = R::DeckSelectList::Ids(element.Decks, 0);
+                ids->End = ids->Begin;
+                for (const char* at = listed.c_str(); *at;)
+                {
+                    char* end = nullptr;
+                    const long id = std::strtol(at, &end, 10);
+                    if (end == at)
+                    {
+                        ++at;
+                        continue;
+                    }
+                    if (id >= 0 && id <= kLastDeckId && !hidden(id))
+                        R::DeckSelectList::Push(ids, static_cast<unsigned int>(id));
+                    at = end;
+                }
+                R::DeckSelectList::RebuildTabs(element.Decks);
+            }
             R::DeckSelectList::Refresh(element.Decks, false);
             const std::string bound = element.Bind.Get();
             if (!bound.empty())
@@ -2464,9 +2600,14 @@ namespace
                     ShowFullCard(selected);
                 else if ((section >= 2 || (pressed & kConfirm)) && selected != 0xFFFF)   // a click on a card, or confirm (as Battle Pack's 0x1000)
                 {
-                    R::PlayUISound(kSoundConfirm);
+                    // the page's action, or without one the card's full view (as the right-click)
                     if (element.Source.contains("action"))
+                    {
+                        R::PlayUISound(kSoundConfirm);
                         RunAction(element.Source["action"]);
+                    }
+                    else
+                        ShowFullCard(selected);
                 }
                 const int tabs = R::DeckSelectList::TabButtons(R::InputState);
                 if (tabs & 0x20000000) MoveFocus(page, -1);
@@ -2666,6 +2807,33 @@ namespace
         R::GoBack(g_Screen);   // to the screen the first page was opened from (screen+60)
     }
 
+    // Builds the top page again from its file, so list sources fill their rows again (a filter variable changed). The focused element and
+    // each menu's cursor are kept; the old page is retired, not freed (the action running now belongs to one of its widgets).
+    void ReloadTop()
+    {
+        Page* old = Top();
+        json root;
+        if (!old || !g_Shown || !ReadJson(PageFile(old->Name), root))
+            return;
+        std::vector<unsigned> cursors;
+        for (Element& element : old->Elements)
+            cursors.push_back(element.Menu ? Menu_Cursor(element.Menu) : 0);
+        std::unique_ptr<Page> page = LoadPage(old->Name, root);
+        page->Focus = old->Focus;
+        HidePage(*old);
+        g_Retired.push_back(std::move(g_Stack.back()));
+        g_Stack.back() = std::move(page);
+        ShowPage(*Top());
+        size_t i = 0;
+        for (Element& element : Top()->Elements)
+        {
+            if (i < cursors.size() && element.Menu && cursors[i] < element.Items.size())
+                R::MenuKit::SelectIndex(element.Menu, cursors[i]);
+            ++i;
+        }
+        FocusChanged(*Top());
+    }
+
     // ---------------------------------------------------------------- actions
 
     void __cdecl RunPendingYes();
@@ -2679,6 +2847,8 @@ namespace
             PageScreen::TryOpen(Str(step, "page")) || Menu::OpenPage(Str(step, "page"));
         else if (step.contains("back"))
             GoBack();
+        else if (step.contains("reload"))
+            ReloadTop();
         else if (step.contains("goto"))
         {
             const json& target = step["goto"];
@@ -2699,16 +2869,17 @@ namespace
         }
         else if (step.contains("quit"))
             R::RequestQuit(R::GetGlobalInstance());
+        // the target's name may hold values: set(save:shop.bought.{var:deck}, "1") sets save:shop.bought.578
         else if (step.contains("set"))
-            Binding::Parse(Str(step, "set")).Set(Expand(Str(step, "value")));
+            Binding::Parse(Expand(Str(step, "set"))).Set(Expand(Str(step, "value")));
         else if (step.contains("toggle"))
         {
-            const Binding b = Binding::Parse(Str(step, "toggle"));
+            const Binding b = Binding::Parse(Expand(Str(step, "toggle")));
             b.Set(b.Get() == "1" ? "0" : "1");
         }
         else if (step.contains("add"))
         {
-            const Binding b = Binding::Parse(Str(step, "add"));
+            const Binding b = Binding::Parse(Expand(Str(step, "add")));
             b.Set(std::to_string(std::atoi(b.Get("0").c_str()) + static_cast<int>(Num(step, "value", 1))));
         }
         else if (step.contains("popup"))
@@ -2812,6 +2983,44 @@ namespace
                 Logger::WriteLog(std::format("Page action: can't unlock character {}", id), MODULE_NAME, 1);
             else
                 player[YGO::SAVE::PlayerSection::UnlockedCharacters + id / 8] |= static_cast<uint8_t>(1 << (id % 8));
+        }
+        else if (step.contains("giveDeck"))
+        {
+            // { "giveDeck": 578, "copies": 3, "else": <action when it can't> } - copies a deck (32 + a deckdata id, e.g. a decks.json deck)
+            // into the profile's first empty saved deck slot, as a deck the player built, and gives its cards: the copies the deck holds are
+            // added to the copies owned, and with "copies" every card of it is topped up to at least that many (up to the save's 3).
+            // "else" runs when no slot is free or the deck is empty.
+            const json& deck = step["giveDeck"];
+            const int id = std::atoi(Expand(deck.is_string() ? deck.get<std::string>() : deck.dump()).c_str());
+            const SavedDeck* source = id >= kSavedDecks && id <= kLastDeckId ? GameDeck(id) : nullptr;
+            const int slot = source ? FreeDeckSlot() : -1;
+            SavedDeck* target = slot >= 0 ? GameDeck(slot) : nullptr;
+            uint8_t* table = GameCardTable();
+            const int count = source ? source->MainCount + source->ExtraCount + source->SideCount : 0;
+            if (!source || !target || !table || count == 0 || count > 90)
+            {
+                Logger::WriteLog(std::format("Page action: can't give deck {} ({})", id, !source ? "not one of the game's decks" :
+                    !table ? "no profile loaded" : count == 0 || count > 90 ? "it has no cards" : "no empty saved deck slot"), MODULE_NAME, 1);
+                if (step.contains("else"))
+                    RunAction(step["else"]);
+                else
+                    R::PlayUISound(kSoundError);
+            }
+            else
+            {
+                std::memcpy(target, source, sizeof(SavedDeck));
+                target->IsValid = 1;
+                std::map<int, int> copies;
+                for (int i = 0; i < count; ++i)
+                    ++copies[source->Cards[i]];
+                const int atLeast = static_cast<int>(Num(step, "copies", 0));
+                for (const auto& [card, n] : copies)
+                    if (card > 0 && card < kSaveCardCount)
+                        table[card] = static_cast<uint8_t>((table[card] & ~7) | (std::min)(kFullSet, (std::max)((table[card] & 7) + n, atLeast)) | 8);
+                Logger::WriteLog(std::format("Page action: deck {} saved in deck slot {} ({} cards)", id, slot, count), MODULE_NAME, 0);
+                if (step.contains("then"))
+                    RunAction(step["then"]);
+            }
         }
         else if (step.contains("sound"))
             R::PlayUISound(static_cast<int>(Num(step, "sound", kSoundConfirm)));

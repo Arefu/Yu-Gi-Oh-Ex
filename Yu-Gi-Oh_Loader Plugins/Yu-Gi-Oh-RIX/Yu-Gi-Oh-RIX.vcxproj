@@ -105,7 +105,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-RIX.h" />
-    <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-RIX.h" />
     <ClInclude Include="Pages.h" />
     <ClInclude Include="PageScreen.h" />
     <ClInclude Include="Logger.h" />

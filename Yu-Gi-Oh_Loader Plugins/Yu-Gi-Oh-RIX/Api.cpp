@@ -14,7 +14,6 @@
 #include "MainMenu.h"
 #include "PluginMenu.h"
 
-#include "YuGiOh/YuGiOh-RIX.h"
 
 extern "C"
 {
