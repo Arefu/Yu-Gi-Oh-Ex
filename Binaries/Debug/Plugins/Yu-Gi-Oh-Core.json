@@ -15,6 +15,58 @@
       "help": "Duel rules: on = the game's own 2020 rules (Master Rule 5), off = 2019 rules (Master Rule 4). Core sets the engine's rules byte when the game starts, so restart after changing it."
     },
     {
+      "key": "DuelFormat",
+      "title": "Duel format",
+      "kind": "choice",
+      "default": "master",
+      "help": "Duel format for offline duels, using the rules built into the game's duel engine. speed = Speed Duel: 4000 LP, 4-card hand, 3 monster and 3 spell/trap zones, no draw on the first turn, no Main Phase 2. rush = Rush Duel: 8000 LP, draw until you hold 5, unlimited Normal Summons, 3 + 3 zones and no Extra Monster Zones, no Main Phase 2, no chains. The field still shows 5 zones; Skills and Maximum monsters are not in the engine. Online duels use the host's Duel format row on the match settings screen (Yu-Gi-Oh-MP) instead. Restart after changing it.",
+      "choices": [
+        "master",
+        "speed",
+        "rush"
+      ]
+    },
+    {
+      "key": "MinMainDeck",
+      "title": "Min Main Deck",
+      "kind": "number",
+      "default": "40",
+      "help": "Fewest Main Deck cards a deck may have (1 to 60). Speed Duel decks are 20 to 30. Restart after changing it.",
+      "min": 1,
+      "max": 60,
+      "step": 1
+    },
+    {
+      "key": "MaxMainDeck",
+      "title": "Max Main Deck",
+      "kind": "number",
+      "default": "60",
+      "help": "Most Main Deck cards a deck may have (MinMainDeck to 60; a deck holds at most 60). Decks over the limit can't be picked for a duel until cards are taken out. Restart after changing it.",
+      "min": 1,
+      "max": 60,
+      "step": 1
+    },
+    {
+      "key": "MaxExtraDeck",
+      "title": "Max Extra Deck",
+      "kind": "number",
+      "default": "15",
+      "help": "Most Extra Deck cards the deck editor lets you add (0 to 15; Speed Duel uses 5). The game only checks the Main Deck's size, so a deck that already has more stays usable. Restart after changing it.",
+      "min": 0,
+      "max": 15,
+      "step": 1
+    },
+    {
+      "key": "MaxSideDeck",
+      "title": "Max Side Deck",
+      "kind": "number",
+      "default": "15",
+      "help": "Most Side Deck cards the deck editor lets you add (0 to 15). Restart after changing it.",
+      "min": 0,
+      "max": 15,
+      "step": 1
+    },
+    {
       "key": "PluginsPath",
       "title": "Plugins path",
       "kind": "path",
@@ -117,6 +169,13 @@
       "kind": "toggle",
       "default": "0",
       "help": "Act as the Japanese release of the game (its logo and Japanese-only text layouts)."
+    },
+    {
+      "key": "ModConfig",
+      "title": "Mod settings",
+      "kind": "toggle",
+      "default": "1",
+      "help": "Let switched-on mods set plugin settings from their own Config.ini (Mods\\<mod>\\Config.ini), so a mod works without you editing yours. A mod's value wins over yours while the mod is on. Off = only your Config.ini is read."
     }
   ],
   "replaces": [
