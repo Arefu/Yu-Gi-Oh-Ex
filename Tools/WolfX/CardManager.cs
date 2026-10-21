@@ -101,6 +101,7 @@ namespace WolfX
         // (.zib, Konami id) -> new picture (game JPEG), or null = take it out of that .zib; written into the art .zib files on Save
         private readonly Dictionary<(string Zib, int Id), byte[]?> _pendingArt = [];
         private List<CardEntry> _rows = [];
+        private WolfEx.KindFilter? _kindFilter;
         private int? _shown;
         private bool _binding;
 
@@ -118,6 +119,11 @@ namespace WolfX
             _show.SelectedIndex = 0;
             _show.SelectedIndexChanged += (_, _) => Refill();
             _listTools.Items.Add(_show);
+            // the "Kinds" drop-down: hides kinds from the list (display only)
+            _kindFilter = new WolfEx.KindFilter(() =>CardCatalog.Get(this).Cards.Where(c => c.Id > 0).Select(c => KindText(c.Id))
+                .Concat(_customCards.Cards.Select(c => c.Kind)));
+            _kindFilter.Changed += () => Refill();
+            _listTools.Items.Add(_kindFilter);
             _list.Columns.Add("Id", 56);
             _list.Columns.Add("Name", 170);
             _list.Columns.Add("Kind", 80);
@@ -678,6 +684,7 @@ namespace WolfX
             _rows = cards
                 .Where(c => show switch { 1 => !c.IsCustom, 2 => c.IsCustom || Custom(c.Id) != null, 3 => _changedCards.Contains(c.Id), _ => true })
                 .Where(c => find.Length == 0 || c.Id.ToString() == find || NameOf(c.Id).Contains(find, StringComparison.OrdinalIgnoreCase))
+                .Where(c => _kindFilter == null || _kindFilter.Shows(KindText(c.Id)))
                 .OrderBy(c => c.Id).ToList();
             _list.VirtualListSize = _rows.Count;
             _list.SelectedIndices.Clear();

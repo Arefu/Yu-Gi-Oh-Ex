@@ -16,9 +16,9 @@ namespace WolfEx
 
         private static readonly string[] Actions = { "draw", "gain_lp", "burn", "search", "revive", "send_to_grave", "destroy", "equip", "special_summon", "add_to_hand", "banish", "negate" };
         private static readonly string[] Keywords = { "effect", "then", "where", "and", "deck", "grave", "opponent_grave", "either_grave", "all", "target", "own", "opponent", "any",
-            "monster", "spell", "trap", "card", "race", "attribute", "level", "atk", "def", "archetype", "name", "on", "once_per_turn", "as", "with", "hand", "also", "cost", "discard", "pay_lp", "banished",
+            "monster", "spell", "trap", "card", "race", "attribute", "level", "atk", "def", "archetype", "name", "on", "once_per_turn", "quick", "as", "with", "hand", "also", "cost", "discard", "pay_lp", "banished",
             "normal_summoned", "special_summoned", "summoned", "normal_or_special_summoned", "flip", "destroyed_by_battle", "sent_to_grave", "sent_from_field_to_grave",
-            "standby_phase", "end_phase", "destroys_by_battle", "battle_damage", "attack_declared", "ignition" };
+            "standby_phase", "end_phase", "destroys_by_battle", "battle_damage", "attack_declared", "ignition", "in_grave" };
         private static readonly string[] Values = { "Dragon", "Zombie", "Fiend", "Pyro", "SeaSerpent", "Rock", "Machine", "Fish", "Dinosaur", "Insect", "Beast", "BeastWarrior", "Plant", "Aqua",
             "Warrior", "WingedBeast", "Fairy", "Spellcaster", "Thunder", "Reptile", "Psychic", "Wyrm", "Cyberse", "DivineBeast", "Light", "Dark", "Water", "Fire", "Earth", "Wind", "Divine" };
 

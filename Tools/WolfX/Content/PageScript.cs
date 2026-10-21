@@ -53,8 +53,8 @@ namespace WolfEx
         ];
 
         public static readonly string[] Widgets = ["menu", "slider", "digits", "card", "series", "characters", "decks", "deck", "cards", "image", "text", "user", "related", "box", "deckcards", "progress", "option", "pack", "tag", "spinner"];
-        public static readonly string[] Actions = ["page", "back", "goto", "call", "quit", "set", "toggle", "add", "show_card", "reset_filter", "message", "confirm", "video", "popup", "if",
-            "give_dp", "take_dp", "give_card", "take_card", "unlock", "lock", "unlock_character", "sound"];
+        public static readonly string[] Actions = ["page", "back", "goto", "call", "quit", "set", "toggle", "add", "show_card", "reset_filter", "reload", "message", "confirm", "video", "popup", "if",
+            "give_dp", "take_dp", "give_card", "take_card", "give_deck", "unlock", "lock", "unlock_character", "sound"];
         public static readonly string[] Keywords = ["header", "button", "edit", "hidden", "value", "use", "choice", "rows", "on", "at", "size", "bind", "default", "description", "enabled", "onchange", "yes", "else", "and", "not", "key", "true", "false"];
 
         // ---------------------------------------------------------------- tokens
@@ -111,8 +111,8 @@ namespace WolfEx
                     int start = i;
                     while (i < source.Length && (char.IsLetterOrDigit(source[i]) || source[i] == '_' || source[i] == '.')) i++;
                     string word = source[start..i];
-                    // var:name / config:Section/Key - the name runs to a space or punctuation (config keys hold '-' and '/')
-                    if (i < source.Length && source[i] == ':' && (word.Equals("var", StringComparison.OrdinalIgnoreCase) || word.Equals("config", StringComparison.OrdinalIgnoreCase) || word.Equals("game", StringComparison.OrdinalIgnoreCase) || word.Equals("value", StringComparison.OrdinalIgnoreCase)))
+                    // var:name / config:Section/Key / save:name - the name runs to a space or punctuation (config keys hold '-' and '/')
+                    if (i < source.Length && source[i] == ':' && (word.Equals("var", StringComparison.OrdinalIgnoreCase) || word.Equals("config", StringComparison.OrdinalIgnoreCase) || word.Equals("game", StringComparison.OrdinalIgnoreCase) || word.Equals("value", StringComparison.OrdinalIgnoreCase) || word.Equals("save", StringComparison.OrdinalIgnoreCase)))
                     {
                         int nameStart = ++i;
                         while (i < source.Length && !char.IsWhiteSpace(source[i]) && ",;}()[]=!<>".IndexOf(source[i]) < 0)
@@ -599,6 +599,7 @@ namespace WolfEx
                     case "back": Bare(); return new JsonObject { ["back"] = true };
                     case "quit": Bare(); return new JsonObject { ["quit"] = true };
                     case "reset_filter": Bare(); return new JsonObject { ["resetFilter"] = true };
+                    case "reload": Bare(); return new JsonObject { ["reload"] = true };
                     case "page": return new JsonObject { ["page"] = OneArg(() => ExpectName("the page's name")) };
                     case "video": return new JsonObject { ["video"] = OneArg(() => ExpectName("the video's name")) };
                     case "call": return new JsonObject { ["call"] = OneArg(() => ExpectString("the plugin action's name")) };
@@ -655,6 +656,18 @@ namespace WolfEx
                     case "take_dp": return Transaction(new JsonObject { ["takeDp"] = OneNode(() => Amount("the DP")) });
                     case "give_card": return CardStep("giveCard");
                     case "take_card": return Transaction(CardStep("takeCard"));
+                    // give_deck(578) [-> when it was saved] [else when no deck slot is free]: one of the game's decks (32 + deckdata id)
+                    // into the profile's saved decks, with its cards
+                    case "give_deck":
+                    {
+                        // give_deck(578[, copies]): copies = every card of the deck topped up to at least that many
+                        Expect("(");
+                        var step = new JsonObject { ["giveDeck"] = Amount("a deck id (32 + its deckdata id)") };
+                        if (Accept(","))
+                            step["copies"] = Number(ExpectNumber("the copies"));
+                        Expect(")");
+                        return Transaction(step);
+                    }
                     case "unlock":
                     case "lock":
                     {
@@ -854,7 +867,8 @@ namespace WolfEx
                 return string.Join(" and ", all.Where(p => p != null).Select(p => ConditionText(p!)));
             if (when is not JsonObject o)
                 return "var:true";
-            string reference = o["var"] != null ? "var:" + o["var"] : o["game"] != null ? "game:" + o["game"] : o["value"] != null ? "value:" + o["value"] : "config:" + o["config"];
+            string reference = o["var"] != null ? "var:" + o["var"] : o["game"] != null ? "game:" + o["game"] : o["value"] != null ? "value:" + o["value"]
+                : o["save"] != null ? "save:" + o["save"] : "config:" + o["config"];
             bool not = o["not"] is JsonValue n && n.TryGetValue(out bool b) && b;
             if (o["atLeast"] is JsonNode least)
                 return $"{reference} {(not ? "<" : ">=")} {AmountText(least)}";
@@ -889,6 +903,7 @@ namespace WolfEx
             if (o.ContainsKey("add")) return $"add({o["add"]}, {o["value"]?.ToJsonString() ?? "1"})";
             if (o.ContainsKey("showCard")) return $"show_card({Arg("showCard")})";
             if (o.ContainsKey("resetFilter")) return "reset_filter";
+            if (o.ContainsKey("reload")) return "reload";
             string Tail() => (o["then"] != null ? " -> " + ActionText(o["then"], depth) : "") + (o["else"] != null ? " else " + ActionText(o["else"], depth) : "");
             string Amt(string key) => AmountText(o[key]!);
             string Copies() => o["copies"] != null ? ", " + o["copies"]!.ToJsonString() : "";
@@ -896,6 +911,7 @@ namespace WolfEx
             if (o.ContainsKey("takeDp")) return $"take_dp({Amt("takeDp")})" + Tail();
             if (o.ContainsKey("giveCard")) return $"give_card({Amt("giveCard")}{Copies()})";
             if (o.ContainsKey("takeCard")) return $"take_card({Amt("takeCard")}{Copies()})" + Tail();
+            if (o.ContainsKey("giveDeck")) return $"give_deck({Amt("giveDeck")}{Copies()})" + Tail();
             if (o.ContainsKey("unlock")) return $"unlock({o["unlock"]})";
             if (o.ContainsKey("lock")) return $"lock({o["lock"]})";
             if (o.ContainsKey("unlockCharacter")) return $"unlock_character({Amt("unlockCharacter")})";
@@ -932,7 +948,7 @@ namespace WolfEx
         };
 
         private static bool IsRef(string s) =>
-            (s.StartsWith("var:", StringComparison.Ordinal) || s.StartsWith("config:", StringComparison.Ordinal) || s.StartsWith("game:", StringComparison.Ordinal) || s.StartsWith("value:", StringComparison.Ordinal)) && RefName(s) && s.Length > s.IndexOf(':') + 1;
+            (s.StartsWith("var:", StringComparison.Ordinal) || s.StartsWith("config:", StringComparison.Ordinal) || s.StartsWith("game:", StringComparison.Ordinal) || s.StartsWith("value:", StringComparison.Ordinal) || s.StartsWith("save:", StringComparison.Ordinal)) && RefName(s) && s.Length > s.IndexOf(':') + 1;
 
         // a value name: no spaces or punctuation outside { } (balanced)
         private static bool RefName(string s)

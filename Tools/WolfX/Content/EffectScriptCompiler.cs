@@ -302,9 +302,11 @@ namespace WolfEx
                     "revive" => "Special Summon a monster from the GY",
                     "special_summon" => "Special Summon a monster",
                     "add_to_hand" => "Add a card to your hand",
-                    "send_to_grave" => "Send a card from your Deck to the GY",
+                    "send_to_grave" => a.GetChild(0).GetChild(2).GetText() == "hand" ? "Send a card from your hand to the GY" : "Send a card from your Deck to the GY",
                     "destroy" => "Destroy",
-                    "banish" => "Banish",
+                    "banish" => a.GetChild(0) is EffectScriptParser.BanishFromActionContext from
+                        ? (from.GetChild(2).GetText() == "hand" ? "Banish a card from your hand" : "Banish a card from your Deck")
+                        : "Banish",
                     "gain_atk" => $"A monster gains {n} ATK",
                     "return_to_hand" => "Return a card to the hand",
                     "negate" => "Negate an activation",
@@ -368,6 +370,9 @@ namespace WolfEx
                 var compiled = UsesSteps(actions) ? StepsAction(actions) : CompileAction(actions[^1]);
                 if (body.limit() != null)
                     compiled["oncePerTurn"] = true;
+                // a Quick Effect: Yu-Gi-Oh-Effects answers spell speed 2 for it (its donor card's speed would decide otherwise)
+                if (body.quickMark() != null)
+                    compiled["quick"] = true;
                 if (body.requireClause() is { } require)
                 {
                     if (require.condName().selector() is { } controls)
@@ -442,7 +447,22 @@ namespace WolfEx
                         ? new JsonObject { ["from"] = DiscardCostSource, ["amount"] = int.Parse(discard.NUMBER().GetText()) }
                         : new JsonObject { ["from"] = PayCostSource, ["amount"] = int.Parse(cost2.payCost().NUMBER().GetText()), ["check"] = "always" };   // Delinquent Duo's own condition is "the opponent has a card in hand"
                 }
-                if (body.trigger() is { } trigger)
+                if (body.trigger() is { } graveTrigger && graveTrigger.triggerName().GetText() == "in_grave")
+                {
+                    // "If this card is in your GY: You can ...": activated from the GY. The GY / hand effects table (table 2) is asked for a card
+                    // there; Quillbolt Hedgehog's row in it has no cost, and the action's slots are composed onto it ("actionFrom"). "inGrave"
+                    // keeps it to the GY (the same table answers for the banished cards); docs/EffectSystem.md section 51.
+                    if (graveTrigger.summonConditions() != null)
+                        throw new ScriptError("'on in_grave' takes no (from ..., by ...) conditions.");
+                    if (actions[^1].summonAction()?.summonZone().GetText() is "self" or "self_grave")
+                        throw new ScriptError("special_summon(self) from the GY is special_summon(self_grave); it needs no 'on in_grave:'.");
+                    if (!compiled.ContainsKey("actionFrom"))
+                        compiled["actionFrom"] = compiled["from"]!.GetValue<int>();
+                    compiled["from"] = SummonSelfGraveSource;
+                    compiled["trigger"] = "in_grave";
+                    AddRequire(compiled, "inGrave");
+                }
+                else if (body.trigger() is { } trigger)
                 {
                     if (actions[^1].summonAction()?.summonZone().GetText() is "self" or "self_grave")
                         throw new ScriptError("special_summon(self) is activated from the hand; it cannot have an 'on ...:' trigger.");
@@ -464,20 +484,52 @@ namespace WolfEx
                 }
                 if (actions.Length > 1 && !compiled.ContainsKey("steps"))
                 {
-                    // The runtime runs "immediate" effects (draw, life points: they finish in one call) ahead of the card's last action, which may
-                    // be interactive (search, revive, ...). An interactive action followed by anything is not runnable yet (docs/EffectLanguage.md).
+                    // The runtime's resolver runs the earlier actions in order, each its own game machine, then the card's last action (the one
+                    // the row and trigger come from, docs/EffectSystem.md section 53). Only the last one gets the activation's target.
                     var before = new JsonArray();
                     foreach (var earlier in actions[..^1])
                     {
-                        if (earlier.drawAction() == null && earlier.gainAction() == null && earlier.burnAction() == null)
-                            throw new ScriptError("only draw, gain_lp and burn can come before another action with 'then'; put search / revive / destroy / send_to_grave last.");
+                        if (System.Text.RegularExpressions.Regex.IsMatch(earlier.GetText(), "target"))
+                            throw new ScriptError("only the last action with 'then' can target (the target is chosen when the card is activated); put the targeting action last.");
                         before.Add(CompileAction(earlier));
                     }
                     compiled["before"] = before;
+                    // Magnet Circle LV2's machine (0x140160080) picks the monster when the card is activated, so a card an earlier step put in
+                    // the hand was never offered (in-duel 2026-10-21). Unexpected Dai's generic machine (0x140163830) collects at resolution:
+                    // with the hand scan it offers the hand as it is then. Its activation check is "a match exists", which the earlier steps
+                    // may only make true, so it is "always".
+                    if (compiled["from"]?.GetValue<int>() == SummonHandSource && !compiled.ContainsKey("actionFrom"))
+                    {
+                        compiled["from"] = SummonDeckSource;
+                        compiled["condition"] = "always";
+                    }
+                    // Searches and Special Summons in a chain run on the plugin's own pick-and-act machine (docs/EffectSystem.md section 54):
+                    // the list is built when the step runs, the source card only gives the row and the filter.
+                    foreach (var step in before.OfType<JsonObject>().Append(compiled))
+                        MarkOwnMachine(step);
                 }
                 return compiled;
             }
         }
+
+        // "own": "toHand" for a search / salvage, "summon" for a Special Summon from a list ("deck.scan" ending in Summon), "toGrave" for a send.
+        private static void MarkOwnMachine(JsonObject step)
+        {
+            if (step.ContainsKey("own") || step["deck"] is not JsonObject deck || deck["scan"]?.GetValue<string>() is not string scan)
+                return;
+            int source = step["actionFrom"]?.GetValue<int>() ?? step["from"]!.GetValue<int>();
+            if (scan.EndsWith("Summon"))
+                step["own"] = "summon";
+            else if (source is SearchSource or SalvageSource)
+                step["own"] = "toHand";
+            else if (source == SendSource)
+                step["own"] = "toGrave";
+        }
+
+        // A move the game has no list machine for (send from the hand, banish from the Deck / hand): Foolish Burial's row with the plugin's own
+        // pick-and-act machine (Foolish Burial's movers, docs/EffectSystem.md section 55); its activation check counts through this filter.
+        private static JsonObject OwnMove(string own, JsonObject filter) =>
+            new() { ["from"] = SendSource, ["condition"] = "listHasMatch", ["deck"] = filter, ["own"] = own };
 
         // on special_summoned(from grave, by effect): -> "summonCondition" (Yu-Gi-Oh-Effects checks it against the summon event, docs/EffectSystem.md section 46).
         private static readonly string[] SummonZones = ["hand", "deck", "extra", "grave", "banished", "spelltrap"];
@@ -553,7 +605,7 @@ namespace WolfEx
             if (action.gainAction() != null || action.burnAction() != null || action.damageAction() != null) return "burn";
             if (action.searchAction() != null) return "search";
             if (action.reviveAction() != null) return "revive";
-            if (action.sendAction() != null) return "send_to_grave";
+            if (action.sendAction() != null || action.banishFromAction() != null) return "send_to_grave";   // same donor row (Foolish Burial)
             if (action.equipAction() != null) throw new ScriptError("equip(...) is a Spell; it cannot have an 'on ...:' trigger.");
             if (action.gainAtkAction() != null) return "gain_atk";
             if (action.returnAction() != null) return "return_target";
@@ -755,7 +807,12 @@ namespace WolfEx
             }
 
             if (action.sendAction() is { } send)
-                return new JsonObject { ["from"] = SendSource, ["deck"] = DeckFilter(send.choices(), "deck") };
+                return send.GetChild(2).GetText() == "deck"
+                    ? new JsonObject { ["from"] = SendSource, ["deck"] = DeckFilter(send.choices(), "deck") }
+                    : OwnMove("toGrave", DeckFilter(send.choices(), "hand"));
+
+            if (action.banishFromAction() is { } banishFrom)
+                return OwnMove("banish", DeckFilter(banishFrom.choices(), banishFrom.GetChild(2).GetText()));
 
             if (action.gainAction()?.side() != null)
                 throw new ScriptError("gain_lp(N, player) can only be chained with other draw / gain_lp / damage actions so far.");

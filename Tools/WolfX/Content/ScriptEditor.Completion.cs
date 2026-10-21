@@ -28,6 +28,7 @@ namespace WolfEx
             ["battle_damage"] = "When this card inflicts battle damage to your opponent (by a direct attack, for the sources the game has).",
             ["attack_declared"] = "When this card declares an attack. (No clean game card to borrow from yet.)",
             ["ignition"] = "Once per turn: you can activate this effect (from the field, in your Main Phase).",
+            ["in_grave"] = "If this card is in your GY: you can activate this effect (from the GY, in your Main Phase; no cost).",
             ["equip"] = "equip(atk N[, def N])\r\nEquip Spell: the equipped monster gains N ATK / DEF. The card must have the Equip icon.",
             ["as"] = "as(<Konami id> | \"Card name\") [with atk N, def N];\r\nBehave exactly like that game card (its whole effect). In a duel the card plays under that id when it is free.",
             ["with"] = "with atk N, def N\r\nThis card's own ATK/DEF amounts for an equip / boost card.",
@@ -35,7 +36,7 @@ namespace WolfEx
             ["special_summon"] = "special_summon(hand | deck | grave, <selector>)\r\nSpecial Summon 1 matching monster from your hand, Deck or GY.",
             ["add_to_hand"] = "add_to_hand(grave, <selector>)\r\nAdd 1 matching card from your GY to your hand.",
             ["hand"] = "Your hand.",
-            ["banish"] = "banish(all | target, [own | opponent | any,] <selector>)\r\nall = every matching card on the field; target = you choose 1 matching card. Same filters as destroy.",
+            ["banish"] = "banish(all | target, [own | opponent | any,] <selector>)\r\nall = every matching card on the field; target = you choose 1 matching card. Same filters as destroy.\r\nbanish(deck | hand, <selector>): banish 1 matching card from your Deck / hand (you pick from a list).",
             ["banished"] = "Your banished cards.",
             ["negate"] = "negate(spell | trap | monster | spelltrap | any | \"Card\" [, opponent] [, your_turn | opponent_turn] [, battle_phase] [, targets_one] [, effect] [, normal | counter | field | equip | continuous | quickplay | ritual])\r\nA Spell/Trap (or with cost tribute_self, a monster Quick Effect): negate the activation, and if you do, destroy it.",
             ["cost"] = "cost discard(N): ... / cost pay_lp(N): ...\r\nA cost paid when the effect is activated, written before the action.",
@@ -47,9 +48,10 @@ namespace WolfEx
             ["burn"] = "burn(N)\r\nInflict N damage to your opponent.",
             ["search"] = "search(deck, <selector>)\r\nAdd 1 matching card from your Deck to your hand (you pick from a list).",
             ["revive"] = "revive(grave | opponent_grave | either_grave, <selector>)\r\nSpecial Summon 1 matching monster from a Graveyard.",
-            ["send_to_grave"] = "send_to_grave(deck, <selector>)\r\nSend 1 matching card from your Deck to the Graveyard.",
+            ["send_to_grave"] = "send_to_grave(deck | hand, <selector>)\r\nSend 1 matching card from your Deck / hand to the Graveyard.",
             ["destroy"] = "destroy(all | target, [own | opponent | any,] <selector>)\r\nall = every matching monster; target = you choose 1 matching card (monster, or spell for a Spell/Trap).",
             ["once_per_turn"] = "once_per_turn;\r\nYou can only use this effect once per turn (per card name). Written last, after the action.",
+            ["quick"] = "quick;\r\nA Quick Effect (spell speed 2): usable in either player's turn and in response to other effects. After the action, before once_per_turn.",
             ["then"] = "a then b\r\nRuns a, then b. Only draw / gain_lp / burn can come before another action.",
             ["deck"] = "Your Deck.",
             ["grave"] = "Your Graveyard.",
@@ -79,7 +81,7 @@ namespace WolfEx
         private static Dictionary<string, string> ValueDocs => _valueDocs ??= Values.ToDictionary(v => v, v => "A monster " + (Array.IndexOf(Values, v) < 25 ? "Type" : "Attribute") + ".");
 
         private static readonly string[] Triggers = { "normal_summoned", "special_summoned", "summoned", "normal_or_special_summoned", "flip", "destroyed_by_battle", "sent_to_grave", "sent_from_field_to_grave",
-            "standby_phase", "end_phase", "destroys_by_battle", "battle_damage", "attack_declared", "ignition" };
+            "standby_phase", "end_phase", "destroys_by_battle", "battle_damage", "attack_declared", "ignition", "in_grave" };
         private static readonly string[] Kinds = { "monster", "spell", "trap", "card" };
         private static readonly string[] Fields = { "race", "attribute", "level", "atk", "archetype", "name" };
         private static string[] Races => Values.Take(25).ToArray();
@@ -261,8 +263,9 @@ namespace WolfEx
                 case "then": return (Actions.ToList(), partial.Length, false);
                 case "where":
                 case "and": return (Fields.ToList(), partial.Length, false);
-                case ")": return (new List<string> { "then", "once_per_turn" }, partial.Length, false);
-                case ";" when previous.Count > 0 && !previous.Any(m => m.Value == "once_per_turn"): return (new List<string> { "once_per_turn" }, partial.Length, false);
+                case ")": return (new List<string> { "then", "quick", "once_per_turn" }, partial.Length, false);
+                case ";" when previous.Count > 0 && !previous.Any(m => m.Value == "once_per_turn"):
+                    return (previous.Any(m => m.Value == "quick") ? new List<string> { "once_per_turn" } : new List<string> { "quick", "once_per_turn" }, partial.Length, false);
                 case "(":
                     return beforeLast switch
                     {

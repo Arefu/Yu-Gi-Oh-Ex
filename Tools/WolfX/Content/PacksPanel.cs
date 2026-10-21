@@ -536,6 +536,12 @@ namespace WolfEx
                 ours.Add(pack.Name);
             if (native.Count == 0 && _nativeLoaded.Count == 0)
                 return true;
+            foreach (var pack in native.Where(p => p.Id >= PackSlots))
+            {
+                problems.Add($"\"{pack.Name}\" is in one of the game's rows, which needs a pack id under {PackSlots} (it has {pack.Id}): " +
+                             "move it to a new row or Automatic (Yu-Gi-Oh-Core has no limit there), or remove another pack in the game's rows.");
+                return false;
+            }
 
             var files = Wolf.Editors.GameFolderFiles.Current;
             if (files?.Available != true)
@@ -748,22 +754,18 @@ namespace WolfEx
 
         // ---- new packs ----
 
+        // Ids under 128 first (a pack in the game's rows needs one); past them the id only names it here: Yu-Gi-Oh-Core shares the
+        // game's free pack slots between the new rows, so there is no limit on packs (docs/Packs.md, No pack limit).
         private int NextFreeId()
         {
-            for (int id = 0; id < PackSlots; id++)
+            for (int id = 0; ; id++)
                 if (!_gameIds.Contains(id) && !_packs.Any(p => p.IsNew && p.Id == id))
                     return id;
-            return -1;
         }
 
         private void AddNewPack()
         {
             int id = NextFreeId();
-            if (id < 0)
-            {
-                MessageBox.Show("All 128 pack ids are used.", "Packs", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             string name = $"custom_{id}";
             var pack = new PackEntry
             {

@@ -1,4 +1,4 @@
-﻿namespace WolfX.WolfX.File_Type_UI
+namespace WolfX.WolfX.File_Type_UI
 {
     public enum SettingKind { Toggle, Number, Text, Path, Choice }
 
@@ -31,8 +31,7 @@
         }
 
         /// <summary>
-        /// <see cref="All"/> plus the settings the installed plugins list in their manifests ("settings" in &lt;DLL&gt;.json, the list the in-game
-        /// Plugin Settings screen shows): a manifest's entry replaces the built-in one for the same [section] key, and a plugin this list doesn't
+        /// <see cref="All"/> plus the settings the installed plugins list in their manifests ("settings" in &lt;DLL&gt;.json): a manifest's entry replaces the built-in one for the same [section] key, and a plugin this list doesn't
         /// know brings its own. <paramref name="configFile"/> is the game's Config.ini (its folder and [Yu-Gi-Oh-Core] PluginsPath find the plugins).
         /// </summary>
         public static List<ConfigSetting> WithManifests(string configFile)
@@ -101,8 +100,21 @@
 
             new("Yu-Gi-Oh-Core", "PauseInBackground", SettingKind.Toggle, "0", "Pause the game when its window loses focus (off = it keeps running)."),
             new("Yu-Gi-Oh-Core", "JapaneseVersion", SettingKind.Toggle, "0", "Act as the Japanese release of the game (its logo and Japanese-only text layouts)."),
+            new("Yu-Gi-Oh-Core", "ModConfig", SettingKind.Toggle, "1",
+                "Let switched-on mods set plugin settings from their own Config.ini (Mods\\<mod>\\Config.ini), so a mod works without you editing yours. A mod's value wins over yours while the mod is on. Off = only your Config.ini is read."),
             new("Yu-Gi-Oh-Core", "EngineRules2020", SettingKind.Toggle, "0",
                 "Duel rules: on = the game's own 2020 rules (Master Rule 5), off = 2019 rules (Master Rule 4). Core sets the engine's rules byte when the game starts, so restart after changing it."),
+            new("Yu-Gi-Oh-Core", "DuelFormat", SettingKind.Choice, "master",
+                "Duel format for offline duels, using the rules built into the game's duel engine. speed = Speed Duel: 4000 LP, 4-card hand, 3 monster and 3 spell/trap zones, no draw on the first turn, no Main Phase 2. rush = Rush Duel: 8000 LP, draw until you hold 5, unlimited Normal Summons, 3 + 3 zones and no Extra Monster Zones, no Main Phase 2, no chains. The field still shows 5 zones; Skills and Maximum monsters are not in the engine. Online duels use the host's Duel format row on the match settings screen (Yu-Gi-Oh-MP) instead. Restart after changing it.",
+                ["master", "speed", "rush"]),
+            new("Yu-Gi-Oh-Core", "MinMainDeck", SettingKind.Number, "40",
+                "Fewest Main Deck cards a deck may have (1 to 60). Speed Duel decks are 20 to 30. Restart after changing it."),
+            new("Yu-Gi-Oh-Core", "MaxMainDeck", SettingKind.Number, "60",
+                "Most Main Deck cards a deck may have (MinMainDeck to 60; a deck holds at most 60). Decks over the limit can't be picked for a duel until cards are taken out. Restart after changing it."),
+            new("Yu-Gi-Oh-Core", "MaxExtraDeck", SettingKind.Number, "15",
+                "Most Extra Deck cards the deck editor lets you add (0 to 15; Speed Duel uses 5). The game only checks the Main Deck's size, so a deck that already has more stays usable. Restart after changing it."),
+            new("Yu-Gi-Oh-Core", "MaxSideDeck", SettingKind.Number, "15",
+                "Most Side Deck cards the deck editor lets you add (0 to 15). Restart after changing it."),
 
             new("Yu-Gi-Oh-Core", "PluginsPath", SettingKind.Path, "",
                 "The loader's Plugins folder, e.g. <repo>\\Binaries\\Debug\\Plugins\\. The Effects plugin reads its files from a folder named Effects inside it. Must end with a backslash."),

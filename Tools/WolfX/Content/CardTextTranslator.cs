@@ -95,6 +95,13 @@ namespace WolfEx
                         bodies[^1] = (bodies[^1].Script, true);
                     continue;
                 }
+                if (!bullet && Covered(sentence, kind) is { } covered)
+                {
+                    // a summoning rule the card's kind or summoning data already gives the game (or, noted, one it can't enforce exactly)
+                    if (covered.Length > 0)
+                        looser.Add($"{covered} ({Short(sentence)})");
+                    continue;
+                }
                 if (Restriction.IsMatch(sentence))
                 {
                     // "Gains these effects while ...": its bullets only hold under that condition, so they are not run either.
@@ -133,6 +140,41 @@ namespace WolfEx
                 return new Result("", 0, notRun, looser);
             string joined = string.Join(" also ", bodies.Select(b => b.Script + ((b.Opt || allOnce) ? "; once_per_turn" : "")));
             return new Result(joined + ";", bodies.Count, notRun, looser);
+        }
+
+        /// <summary>
+        /// A summoning rule the game already has from elsewhere, so it is not an effect to run: "" when the card's kind or summoning data gives
+        /// it exactly, a note when the game can't enforce it exactly (the card still plays), null when it is not one of these.
+        /// <list type="bullet">
+        /// <item>"Cannot be Normal Summoned/Set." on a card whose kind can't be Normal Summoned (the Special-Summon-only kinds, Extra Deck
+        /// and Ritual monsters: KIND_TABLE DeckSection 1 / 2);</item>
+        /// <item>"You can Ritual Summon this card with "X"." on a Ritual Monster: the Ritual table pair ("ritualSpell");</item>
+        /// <item>"Must be Fusion / Synchro / Xyz / Link / Ritual Summoned." on that kind;</item>
+        /// <item>"Must (first) be Special Summoned (with / by) ..." and "You can only Special Summon this card once per turn (this way)."
+        /// on any monster: noted, the game doesn't hold the card to them.</item>
+        /// </list>
+        /// </summary>
+        internal static string? Covered(string sentence, string kind)
+        {
+            string s = sentence.Trim().TrimEnd('.');
+            bool extra = Regex.IsMatch(kind, "^(?:Fusion|Synchro|Xyz|Link)", Opt);
+            bool ritual = kind.StartsWith("Ritual", StringComparison.OrdinalIgnoreCase);
+            bool specialOnly = kind.Contains("SpecialSummonOnly", StringComparison.OrdinalIgnoreCase) || extra || ritual;
+            if (Regex.IsMatch(s, "^Cannot be Normal Summoned(?:/Set| or Set)?$", Opt))
+                return specialOnly ? "" : null;
+            if (ritual && Regex.IsMatch(s, "^You can Ritual Summon this card with (?:\"[^\"]+\"|a \"[^\"]+\" card|any Ritual Spell)$", Opt))
+                return "";
+            var must = Regex.Match(s, "^Must be (Fusion|Synchro|Xyz|Link|Ritual) Summoned$", Opt);
+            if (must.Success)
+                return kind.StartsWith(must.Groups[1].Value, StringComparison.OrdinalIgnoreCase) ? "" : null;
+            if (kind is "Spell" or "Trap")
+                return null;
+            if (Regex.IsMatch(s, "^Must (?:first )?be (?:Special Summoned|Special Summoned \\(from your hand\\)) (?:with|by|from)\\b", Opt)
+                || Regex.IsMatch(s, "^Must (?:first )?be Special Summoned by (?:card effect|its own effect|a card effect)", Opt))
+                return "summon restriction not enforced";
+            if (Regex.IsMatch(s, "^You can only Special Summon (?:this card|\"[^\"]+\") once per turn(?: this way)?$", Opt))
+                return "once-per-turn summon limit not enforced";
+            return null;
         }
 
         private const string Bullet = "\u25CF ";
@@ -242,7 +284,8 @@ namespace WolfEx
             if (semi > 0)
             {
                 string first = s.Substring(0, semi).Trim();
-                string? c = Cost(first);
+                // after "If this card is in your GY": "You can banish it;" = banish this card from the GY
+                string? c = Cost(first) ?? (cx.InGrave && Regex.IsMatch(first, "^banish it$", Opt) ? "banish_self" : null);
                 if (c != null)
                 {
                     cost = c;
@@ -270,8 +313,8 @@ namespace WolfEx
                 return (require != null ? $"if {require}: " : "") + (cost != null ? $"cost {cost}: " : "") + action;
             }
 
-            if (quick && cx.IsMonster)
-                cx.Looser.Add("Quick Effect read as an ignition effect");
+            // "(Quick Effect)": spell speed 2 (EffectScript "quick"; Yu-Gi-Oh-Effects answers the speed for it, docs/EffectSystem.md section 52)
+            bool markQuick = quick && cx.IsMonster;
             bool selfSummon = action.StartsWith("special_summon(self");
             if (require != null && require.StartsWith("controls(") && Regex.IsMatch(action, "^(?:destroy|banish|return_to_hand)\\("))
                 return Why("conflict: if controls(...) with " + action.Split('(')[0]);
@@ -287,6 +330,10 @@ namespace WolfEx
                 cx.Looser.Add("trigger dropped: activated by paying the cost");
                 trigger = null;
             }
+            // "If this card is in your GY: You can ...": activated from the GY (EffectScript on in_grave:). A self cost already places it
+            // (banish this card from your GY), and "Special Summon this card" from the GY has its own donor.
+            if (cx.InGrave && cx.IsMonster && trigger == null && !selfCost && !selfSummon)
+                trigger = "in_grave";
             if (cx.IsMonster && trigger == null && !selfCost && !selfSummon)
                 trigger = "ignition";
             if (!cx.IsMonster && trigger != null)
@@ -318,6 +365,8 @@ namespace WolfEx
             if (require != null) script.Append($"if {require}: ");
             if (cost != null) script.Append($"cost {cost}: ");
             script.Append(action);
+            if (markQuick)
+                script.Append("; quick");
             return script.ToString();
         }
 
@@ -458,9 +507,18 @@ namespace WolfEx
                 require = "no_monsters";
                 return true;
             }
-            if (Regex.IsMatch(head, "^If this card is in your GY$", Opt))
+            if (Regex.IsMatch(head, "^(?:During your Main Phase, |Once per turn, )?(?:if|If) this card is in your GY$", Opt))
             {
                 cx.InGrave = true;   // "Special Summon this card" is then from the GY; a cost (banish this card) says it itself
+                if (head.StartsWith("Once", StringComparison.OrdinalIgnoreCase))
+                    cx.OncePerTurn = true;
+                return true;
+            }
+            if (Regex.IsMatch(head, "^(?:During your Main Phase, )?(?:if|If) this card is in your GY, except the turn it was sent (?:there|to the GY)$", Opt)
+                || Regex.IsMatch(head, "^During your Main Phase, except the turn this card was sent to the GY$", Opt))
+            {
+                cx.InGrave = true;
+                cx.Looser.Add("can also be used the turn it was sent to the GY");
                 return true;
             }
             if (Regex.IsMatch(head, "^If this card is in your hand$", Opt))
@@ -573,11 +631,54 @@ namespace WolfEx
 
         private const string Where = "(?: on the field| your opponent controls| you control| your opponent has)?";
 
+        // Follow-ups that are a whole action of their own run after it with "then" (the general resolver, docs/EffectSystem.md section 53);
+        // the rest ("then Special Summon it") are dropped and noted.
+        private static readonly string[] ChainTails = { ", then ", ". Then, ", ", also ", ", and if you do, ", " and if you do, " };
+
         private static string? Action(string text, Context cx)
         {
+            string? first = ActionPart(text, cx, out var follow);
+            if (first == null)
+                return null;
+            foreach (var (joint, tail) in follow)
+            {
+                // Only the last action may target (its target is picked at activation), as the compiler checks.
+                int looser = cx.Looser.Count;
+                string step = tail;
+                if (Regex.IsMatch(step, "^you can ", Opt))
+                {
+                    step = step.Substring(8);
+                    cx.Looser.Add("\"then you can\" is not optional: it always runs");
+                }
+                string? next = Regex.IsMatch(first, "target") ? null : Action(step, cx);
+                if (next == null)
+                {
+                    cx.Looser.RemoveRange(looser, cx.Looser.Count - looser);
+                    cx.Looser.Add("not run:" + joint.TrimEnd('.', ' ').TrimStart(',', '.') + " " + tail);
+                    continue;
+                }
+                if (joint.Contains("if you do"))
+                    cx.Looser.Add("\"and if you do\" read as then (runs even if the first part did nothing)");
+                first += " then " + next;
+            }
+            return first;
+        }
+
+        private static string? ActionPart(string text, Context cx, out List<(string Joint, string Tail)> follow)
+        {
             string s = text.Trim().TrimEnd('.');
+            follow = new();
+            foreach (string tail in ChainTails)
+            {
+                int at = TopLevelIndex(s, tail);
+                if (at > 0)
+                {
+                    follow.Insert(0, (tail, s.Substring(at + tail.Length)));
+                    s = s.Substring(0, at);
+                }
+            }
             // Follow-ups the game will not run: dropped and noted.
-            foreach (string tail in new[] { ", and if you do, ", ", then ", ", also ", ". Then, ", ", but ", ", and ", " and if you do, " })
+            foreach (string tail in new[] { ", but ", ", and " })
             {
                 int at = TopLevelIndex(s, tail);
                 if (at > 0)
@@ -621,8 +722,10 @@ namespace WolfEx
 
             if ((m = Rx("add 1 (?<sel>.+?) from your Deck to your hand").Match(s)).Success)
                 return Selector(m.Groups["sel"].Value, cx, out var sel) ? $"search(deck{sel})" : null;
-            if ((m = Rx("send 1 (?<sel>.+?) from your Deck to the GY").Match(s)).Success)
-                return Selector(m.Groups["sel"].Value, cx, out var sel) ? $"send_to_grave(deck{sel})" : null;
+            if ((m = Rx("send 1 (?<sel>.+?) from your (?<zone>Deck|hand) to the GY").Match(s)).Success)
+                return Selector(m.Groups["sel"].Value, cx, out var sel) ? $"send_to_grave({m.Groups["zone"].Value.ToLowerInvariant()}{sel})" : null;
+            if ((m = Rx("banish 1 (?<sel>.+?) from your (?<zone>Deck|hand)").Match(s)).Success)
+                return Selector(m.Groups["sel"].Value, cx, out var sel) ? $"banish({m.Groups["zone"].Value.ToLowerInvariant()}{sel})" : null;
             if ((m = Rx("Special Summon 1 (?<sel>.+?) from your (?<zone>hand|Deck|GY|hand or GY|hand or Deck|Deck or GY|hand, Deck, or GY)").Match(s)).Success)
             {
                 string zone = m.Groups["zone"].Value.ToLowerInvariant();

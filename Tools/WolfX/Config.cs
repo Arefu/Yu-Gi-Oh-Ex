@@ -4,10 +4,17 @@ using System.Text;
 
 namespace WolfX.WolfX.File_Type_UI
 {
-    /// <summary>Edits the game's Config.ini: one row per setting any of the plugins reads, with a hint for the selected one.</summary>
+    /// <summary>
+    /// Edits the game's Config.ini: one row per setting any of the plugins reads, with a hint for the selected one. Settings a switched-on mod
+    /// sets from its own Config.ini are marked (the game uses the mod's value, Yu-Gi-Oh-Core ModConfig.h). While WolfX is editing a mod, it edits
+    /// that mod's Config.ini instead, without the settings a mod can't set.
+    /// </summary>
     public partial class Config : Form
     {
         private string _path = "";
+        private string _catalogFile = "";   // the game's Config.ini: finds the plugins (and their manifests); _path unless editing a mod
+        private string? _modName;            // editing this mod's Config.ini
+        private Dictionary<string, (string Value, string Mod)> _fromMods = new(StringComparer.OrdinalIgnoreCase);
         private bool _loading;
 
         [DllImport("kernel32", CharSet = CharSet.Unicode)]
@@ -38,7 +45,10 @@ namespace WolfX.WolfX.File_Type_UI
 
         private static bool CanPick(ConfigSetting s) => s.Kind == SettingKind.Path || s.From != null;
 
-        private string GameFolder => _path.Length > 0 ? Path.GetDirectoryName(_path) ?? "" : "";
+        private string GameFolder => _catalogFile.Length > 0 ? Path.GetDirectoryName(_catalogFile) ?? "" : "";
+
+        private (string Value, string Mod)? FromMod(ConfigSetting s) =>
+            _modName == null && _fromMods.TryGetValue(Wolf.Mods.ModLibrary.SettingKey(s.Section, s.Key), out var set) ? set : null;
 
         /// <summary>A path inside the game folder is kept relative to it (the plugins resolve from there); one outside it stays whole.</summary>
         private string Relative(string path)
@@ -110,6 +120,13 @@ namespace WolfX.WolfX.File_Type_UI
 
         private void Config_Load(object sender, EventArgs e)
         {
+            // editing a mod: its own Config.ini (Save creates it), with the game's for the plugin list
+            if (Wolf.Editors.GameFolderFiles.Current is { IsMod: true, ModFolder: { } modFolder } mod && mod.GameFolder.Length > 0)
+            {
+                _modName = Path.GetFileName(modFolder);
+                LoadFile(Path.Combine(modFolder, Wolf.Mods.ModLibrary.SettingsFileName), Path.Combine(mod.GameFolder, "Config.ini"));
+                return;
+            }
             var folders = GameFolders().ToList();
             var existing = folders.Select(f => Path.Combine(f, "Config.ini")).FirstOrDefault(File.Exists);
             if (existing != null) { LoadFile(existing); return; }
@@ -144,17 +161,32 @@ namespace WolfX.WolfX.File_Type_UI
             return rows.OrderBy(r => r.Key.StartsWith(ConfigCatalog.GuiPluginPrefix, StringComparison.OrdinalIgnoreCase)).ThenBy(r => r.Key, StringComparer.OrdinalIgnoreCase).ToList();
         }
 
-        private void LoadFile(string file)
+        private void LoadFile(string file, string? catalogFile = null)
         {
             _path = file;
+            _catalogFile = catalogFile ?? file;
             _loading = true;
             grid.Rows.Clear();
-            pathBox.Text = file.Length == 0 ? "No Config.ini found - use Browse" : file;
-            statusLabel.Text = file.Length > 0 && !File.Exists(file) ? "The game folder has no Config.ini yet: Save creates it." : "";
+            pathBox.Text = file.Length == 0 ? "No Config.ini found - use Browse" : _modName != null ? $"{file}  (the mod's own settings)" : file;
+            statusLabel.Text = _modName != null
+                ? $"Editing the settings of mod {_modName}: they're used instead of the player's while the mod is on. Save writes only what you set."
+                : file.Length > 0 && !File.Exists(file) ? "The game folder has no Config.ini yet: Save creates it." : "";
+            colInFile.HeaderText = _modName != null ? "Set by the mod" : "Set in Config.ini";
 
-            // Core's section holds its settings and the plugin list: every key that isn't a known setting is a plugin
-            var settings = ConfigCatalog.WithManifests(file);
-            var pluginRows = PluginRows(file, settings);
+            // Core's section holds its settings and the plugin list: every key that isn't a known setting is a plugin.
+            // A mod can't switch plugins or set what Core keeps to the player (ModLibrary.ModMaySet), so those rows are left out for a mod.
+            var settings = ConfigCatalog.WithManifests(_catalogFile);
+            if (_modName != null)
+                settings = [.. settings.Where(s => Wolf.Mods.ModLibrary.ModMaySet(s.Section, s.Key))];
+            List<ConfigSetting> pluginRows = _modName != null ? [] : PluginRows(file, settings);
+            try
+            {
+                _fromMods = _modName == null && GameFolder.Length > 0 ? Wolf.Mods.ModLibrary.ModSettings(GameFolder) : new(StringComparer.OrdinalIgnoreCase);
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException)
+            {
+                _fromMods = new(StringComparer.OrdinalIgnoreCase);
+            }
             _pluginRows.Clear();
             _pluginRows.UnionWith(pluginRows);
             // grouped by plugin, each plugin's on/off line first, then its settings in catalog order
@@ -172,6 +204,13 @@ namespace WolfX.WolfX.File_Type_UI
                 row.Cells[colSetting.Index].Value = IsPluginRow(setting) ? "Load this plugin" : setting.Key;
                 row.Cells[colDefault.Index].Value = setting.Default;
                 row.Cells[colInFile.Index].Value = present ? "yes" : "";
+                if (FromMod(setting) is { } fromMod)
+                {
+                    // the game reads the mod's value while the mod is on
+                    row.Cells[colInFile.Index].Value = $"mod {fromMod.Mod}: {fromMod.Value}";
+                    row.Cells[colInFile.Index].ToolTipText = $"The mod \"{fromMod.Mod}\" sets this to {fromMod.Value} in its own Config.ini. The game uses that while the mod is on.";
+                    row.DefaultCellStyle.ForeColor = Color.DarkBlue;
+                }
 
                 switch (setting.Kind)
                 {
@@ -194,6 +233,9 @@ namespace WolfX.WolfX.File_Type_UI
             }
 
             _loading = false;
+            int overridden = grid.Rows.Cast<DataGridViewRow>().Count(r => r.Tag is ConfigSetting s && FromMod(s) != null);
+            if (overridden > 0 && statusLabel.Text.Length == 0)
+                statusLabel.Text = $"{overridden} setting(s) are set by switched-on mods (blue): the game uses the mod's value while it's on.";
             saveButton.Enabled = file.Length > 0;
             reloadButton.Enabled = file.Length > 0;
             BuildTree();
@@ -287,7 +329,10 @@ namespace WolfX.WolfX.File_Type_UI
             if (grid.CurrentRow?.Tag is ConfigSetting s)
             {
                 helpTitle.Text = $"[{s.Section}]  {s.Key}";
-                helpText.Text = s.Help + (s.Default.Length > 0 ? $"\r\n\r\nDefault: {s.Default}" : "\r\n\r\nDefault: (empty)");
+                helpText.Text = s.Help + (s.Default.Length > 0 ? $"\r\n\r\nDefault: {s.Default}" : "\r\n\r\nDefault: (empty)")
+                                + (FromMod(s) is { } fromMod
+                                    ? $"\r\n\r\nThe mod \"{fromMod.Mod}\" sets this to {fromMod.Value}: the game uses that while the mod is on, whatever is set here."
+                                    : "");
             }
             else
             {
@@ -350,10 +395,14 @@ namespace WolfX.WolfX.File_Type_UI
         {
             using var open = new OpenFileDialog { Filter = "Config Files (*.ini)|*.ini", Title = "Select Config File",
                                                   InitialDirectory = Directory.Exists(GameFolder) ? GameFolder : "" };
-            if (open.ShowDialog() == DialogResult.OK) LoadFile(open.FileName);
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                _modName = null;
+                LoadFile(open.FileName);
+            }
         }
 
-        private void reloadButton_Click(object sender, EventArgs e) => LoadFile(_path);
+        private void reloadButton_Click(object sender, EventArgs e) => LoadFile(_path, _catalogFile);
 
         private void resetButton_Click(object sender, EventArgs e)
         {
@@ -374,7 +423,7 @@ namespace WolfX.WolfX.File_Type_UI
                 WritePrivateProfileString(s.Section, s.Key, value, _path);
                 written++;
             }
-            LoadFile(_path);
+            LoadFile(_path, _catalogFile);
             statusLabel.Text = $"Saved {written} setting(s).";
         }
     }

@@ -561,6 +561,7 @@ namespace WolfEx
         {
             string find = _find.Text.Trim();
             _rows = _cards.Where(c => find.Length == 0 || c.Id.ToString() == find || c.Name.Contains(find, StringComparison.OrdinalIgnoreCase))
+                .Where(c => _kindFilter.Shows(c.Kind))
                 .OrderBy(c => c.Id).ToList();
             _binding = true;
             try

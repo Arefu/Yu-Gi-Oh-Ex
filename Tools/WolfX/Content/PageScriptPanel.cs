@@ -297,7 +297,7 @@ namespace WolfEx
             "  menu name ... { button \"A\" \"help\" -> ...; choice \"B\" [\"x\", \"y\"] bind var:b; toggle \"C\" bind var:c; rows \"plugin.list\"; }\n\n" +
             "Actions: page(\"name\")  back  goto(deckEditor)  video(\"intro\")  call(\"plugin.action\")  quit\n" +
             "  set(var:x, \"text\")  toggle(var:x)  add(var:x, 1)  message(\"..\")  confirm(\"..\") -> action  if <condition> -> action else action\n" +
-            "  popup \"Title\" { button ... }  show_card(4007)  reset_filter  sound(39)\n" +
+            "  popup \"Title\" { button ... }  show_card(4007)  reset_filter  reload  sound(39)\n" +
             "  give_dp(500)  take_dp(500) -> action else action  give_card(4007, 1)  take_card(4007) -> .. else ..\n" +
             "  unlock(card_shop | battle_packs | duelist_challenge)  lock(..)  unlock_character(12)\n" +
             "  { a; b; c; } runs several in order\n\n" +

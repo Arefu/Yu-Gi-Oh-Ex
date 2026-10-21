@@ -124,15 +124,27 @@ namespace WolfX
                 ToolTipText = "Copy WolfX's patch archive (every game file you changed, e.g. the ban list or card art) as a .toc / .dat pair to share",
             };
             var modManager = new ToolStripMenuItem("Open the Mod Ma&nager", null, (_, _) => OpenModManager());
+            // Edit a mod: every page reads and saves the mod's own files (Mods\<id>\Yu-Gi-Oh-Ex, YGO_2020-Ex, YGO_2020\) over the game's archive
+            var editMod = new ToolStripMenuItem("E&dit a mod")
+            {
+                ToolTipText = "Open an installed mod (Mods\\<name>) in WolfX: what you save goes into the mod's folder",
+            };
+            var modDetails = new ToolStripMenuItem("Mod de&tails...", null, (_, _) => EditModDetails())
+            {
+                ToolTipText = "The version and author in the mod's mod.json (its name and description stay as the mod was made)",
+            };
             var exit = new ToolStripMenuItem("E&xit", null, (_, _) => Close());
-            file.DropDownItems.AddRange([openArchive, openExtracted, _recent, new ToolStripSeparator(), saveAll, new ToolStripSeparator(), folder, exFolder,
+            file.DropDownItems.AddRange([openArchive, openExtracted, editMod, modDetails, _recent,new ToolStripSeparator(), saveAll, new ToolStripSeparator(), folder, exFolder,
                                          restore, new ToolStripSeparator(), exportMod, exportPatch, modManager, new ToolStripSeparator(), exit]);
             file.DropDownOpening += (_, _) =>
             {
                 restore.Enabled = GameFolderFiles.Current?.HasChanges == true;
+                restore.Text = GameFolderFiles.Current?.IsMod == true ? "Remove the mod's &patch (its changed game files)..." : "Remove WolfX's &patch (back to the game's own data)...";
                 folder.Enabled = exFolder.Enabled = exportMod.Enabled = GameFolderFiles.Current != null;
                 exportPatch.Enabled = GameFolderFiles.Current?.HasChanges == true;
                 FillRecent();
+                FillMods(editMod);
+                modDetails.Visible = GameFolderFiles.Current?.IsMod == true;
             };
             MenuBar.Items.Insert(0, file);
             toolsToolStripMenuItem.DropDownItems.Remove(loadGameToolStripMenuItem);
@@ -461,6 +473,22 @@ namespace WolfX
         {
             if (GameFolderFiles.Current is not { } files)
                 return;
+            if (files.IsMod)
+            {
+                // the mod being edited is already a mod folder: save, then zip it as the Mod Manager's Export does
+                if (MessageBox.Show(this, "The .zip is made from what is saved. Save everything first?", "Export as mod",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes && !SaveAll())
+                    return;
+                var mod = Wolf.Mods.ModLibrary.Load(files.GameFolder).FirstOrDefault(m => m.Folder.Equals(files.ModFolder, StringComparison.OrdinalIgnoreCase));
+                if (mod == null)
+                    return;
+                using var save = new SaveFileDialog { Filter = "Mod (*.zip)|*.zip", FileName = mod.Id + ".zip", Title = "Export as mod" };
+                if (save.ShowDialog(this) != DialogResult.OK)
+                    return;
+                Wolf.Mods.ModLibrary.Export(mod, save.FileName);
+                SetStatus($"Exported {mod.Info.Name} to {save.FileName}.");
+                return;
+            }
             if (MessageBox.Show(this, "The mod is made from what is saved. Save everything first?", "Export as mod",
                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes && !SaveAll())
                 return;
@@ -476,7 +504,7 @@ namespace WolfX
         {
             if (GameFolderFiles.Current is not { } files)
                 return;
-            string toc = Path.Combine(files.GameFolder, files.PatchName + ".toc"), dat = Path.ChangeExtension(toc, ".dat");
+            string toc = files.PatchToc, dat = Path.ChangeExtension(toc, ".dat");
             if (!File.Exists(toc) || !File.Exists(dat))
             {
                 MessageBox.Show(this, "There is no patch archive yet: save a change to a game file first.", "Export changed game files", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -506,6 +534,100 @@ namespace WolfX
                 start.ArgumentList.Add(files.GameFolder);
             }
             System.Diagnostics.Process.Start(start);
+        }
+
+        /// <summary>File > Edit a mod: the installed mods of the open game (or the Steam install), and the way back to your own files.</summary>
+        private void FillMods(ToolStripMenuItem menu)
+        {
+            menu.DropDownItems.Clear();
+            string? game = GameFolderFiles.Current?.GameFolder is { } open && File.Exists(Path.Combine(open, "YGO_2020.toc")) ? open : GameLocator.FindSteamInstall();
+            if (GameFolderFiles.Current is { IsMod: true } current)
+            {
+                menu.DropDownItems.Add(new ToolStripMenuItem("Your own files (Yu-Gi-Oh-Ex folder)", null, (_, _) => OpenPath(current.GameFolder)));
+                menu.DropDownItems.Add(new ToolStripSeparator());
+            }
+            var mods = game != null ? Wolf.Mods.ModLibrary.Load(game) : [];
+            foreach (var mod in mods)
+            {
+                string label = mod.Info.Name + (mod.Info.Version.Length > 0 ? $" {mod.Info.Version}" : "") + (mod.Enabled ? "" : " (off)");
+                menu.DropDownItems.Add(new ToolStripMenuItem(label, null, (_, _) => OpenPath(mod.Folder))
+                {
+                    Checked = GameFolderFiles.Current?.ModFolder?.Equals(mod.Folder, StringComparison.OrdinalIgnoreCase) == true,
+                    ToolTipText = mod.Folder,
+                });
+            }
+            if (mods.Count == 0)
+                menu.DropDownItems.Add(new ToolStripMenuItem(game == null ? "(open the game first)" : "(no mods installed)") { Enabled = false });
+        }
+
+        /// <summary>
+        /// File > Mod details: the mod being edited's version and author. Name and description are shown but not changed (they are the mod's
+        /// identity). Only those two keys of mod.json are touched, so anything else in it (requires, newSave, exclusive) stays as it is.
+        /// </summary>
+        private void EditModDetails()
+        {
+            if (GameFolderFiles.Current is not { IsMod: true, ModFolder: { } folder })
+                return;
+            string path = Path.Combine(folder, Wolf.Mods.ModInfo.FileName);
+            System.Text.Json.Nodes.JsonObject root;
+            try
+            {
+                root = System.Text.Json.Nodes.JsonNode.Parse(File.ReadAllText(path),
+                           documentOptions: new System.Text.Json.JsonDocumentOptions { CommentHandling = System.Text.Json.JsonCommentHandling.Skip, AllowTrailingCommas = true })
+                       as System.Text.Json.Nodes.JsonObject ?? new System.Text.Json.Nodes.JsonObject();
+            }
+            catch (Exception ex) when (ex is System.Text.Json.JsonException or IOException)
+            {
+                MessageBox.Show(this, $"{path}\n\nmod.json can't be read: {ex.Message}", "Mod details", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string Text(string key) => root[key] is System.Text.Json.Nodes.JsonValue value && value.TryGetValue(out string? text) ? text : "";
+
+            using var form = new Form
+            {
+                Text = "Mod details", FormBorderStyle = FormBorderStyle.FixedDialog, MaximizeBox = false, MinimizeBox = false,
+                StartPosition = FormStartPosition.CenterParent, AutoSize = true, AutoSizeMode = AutoSizeMode.GrowAndShrink, Padding = new Padding(10),
+            };
+            var grid = new TableLayoutPanel { ColumnCount = 2, AutoSize = true, Dock = DockStyle.Fill };
+            TextBox Row(string label, string value, bool locked)
+            {
+                grid.Controls.Add(new Label { Text = label, AutoSize = true, Anchor = AnchorStyles.Left, Margin = new Padding(3, 6, 3, 3) });
+                var box = new TextBox { Text = value, Width = 320, ReadOnly = locked };
+                grid.Controls.Add(box);
+                return box;
+            }
+            Row("Name", Text("name").Length > 0 ? Text("name") : Path.GetFileName(folder), locked: true);
+            Row("Description", Text("description"), locked: true);
+            var version = Row("Version", Text("version"), locked: false);
+            var author = Row("Author", Text("author"), locked: false);
+            var ok = new Button { Text = "Save", DialogResult = DialogResult.OK };
+            var cancel = new Button { Text = "Cancel", DialogResult = DialogResult.Cancel };
+            var buttons = new FlowLayoutPanel { FlowDirection = FlowDirection.RightToLeft, AutoSize = true, Dock = DockStyle.Fill };
+            buttons.Controls.AddRange([cancel, ok]);
+            grid.Controls.Add(new Label());
+            grid.Controls.Add(buttons);
+            form.Controls.Add(grid);
+            form.AcceptButton = ok;
+            form.CancelButton = cancel;
+            if (form.ShowDialog(this) != DialogResult.OK)
+                return;
+
+            void Put(string key, string value)
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    root.Remove(key);
+                else
+                    root[key] = value.Trim();
+            }
+            Put("version", version.Text);
+            Put("author", author.Text);
+            string temp = path + ".tmp";
+            File.WriteAllText(temp, root.ToJsonString(new System.Text.Json.JsonSerializerOptions
+            {
+                WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+            }), new System.Text.UTF8Encoding(false));
+            File.Move(temp, path, overwrite: true);
+            SetStatus($"Saved the version and author in {path}.");
         }
 
         private void FillRecent()
@@ -553,8 +675,10 @@ namespace WolfX
             _missing.Visible = missing.Count > 0;
             _restore.Visible = files.HasChanges;
             UpdateTitle(files);
-            SetStatus(files.IsExtracted
-                ? $"Opened the extracted folder {files.Folder}: changes are saved as files there. New content goes to {files.ExFolder}."
+            SetStatus(files.IsMod
+                ? $"Editing the mod in {files.ModFolder}: game files are saved to its {files.PatchName}.dat (or its YGO_2020 folder), new content to {files.ExFolder}."
+                : files.IsExtracted
+                ?$"Opened the extracted folder {files.Folder}: changes are saved as files there. New content goes to {files.ExFolder}."
                 : $"Opened YGO_2020.dat (never written): changes go to {files.PatchName}.dat, which Yu-Gi-Oh-Core loads over it. New content goes to {files.ExFolder}.");
             if (_shown == null)
             {
@@ -614,7 +738,7 @@ namespace WolfX
             string what = files.IsExtracted ? "extracted folder" :
                 files.Patch != null ? $"YGO_2020.dat + {files.PatchName} ({files.PatchedFiles.Count} files changed)" :
                 files.Archive?.IsModified == true ? "YGO_2020.dat (edited in place by an older WolfX)" : "YGO_2020.dat";
-            Text = $"WolfX - {what} - {files.Folder}";
+            Text = files.IsMod ? $"WolfX - editing mod {Path.GetFileName(files.ModFolder)} ({what}) - {files.Folder}" : $"WolfX - {what} - {files.Folder}";
         }
 
         private void ShowMissing()

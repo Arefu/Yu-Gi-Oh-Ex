@@ -17,6 +17,9 @@ namespace WolfEx
             Dock = DockStyle.Fill, View = View.Details, FullRowSelect = true, GridLines = true, VirtualMode = true, HideSelection = false, MultiSelect = false,
         };
         private List<CardModel> _rows = [];
+        private KindFilter? _kindFilterField;
+        // the "Kinds" drop-down: hides kinds from the list (display only)
+        private KindFilter _kindFilter => _kindFilterField ??= new KindFilter(() =>_cards.Select(c => c.Kind));
 
         // ---- the card ----
         private readonly ToolStrip _tools = new() { GripStyle = ToolStripGripStyle.Hidden };
@@ -95,6 +98,8 @@ namespace WolfEx
             _listTools.Items.Add(new ToolStripLabel("Find:"));
             _find.TextChanged += (_, _) => Refill(Selected);
             _listTools.Items.Add(_find);
+            _kindFilter.Changed += () => Refill(Selected);
+            _listTools.Items.Add(_kindFilter);
             _list.Columns.Add("Id", 56);
             _list.Columns.Add("Name", 170);
             _list.Columns.Add("Kind", 90);

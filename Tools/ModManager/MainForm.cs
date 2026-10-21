@@ -380,6 +380,14 @@ namespace ModManager
                 if (!mod.IsLocal)
                     Add("Folder: " + mod.Folder, color: SystemColors.GrayText);
 
+                var settings = mod.Settings();
+                if (settings.Count > 0)
+                {
+                    Add("Settings (from its Config.ini, used instead of yours while it's on)", bold: false, color: SystemColors.GrayText).Font = new Font(Font, FontStyle.Bold);
+                    foreach (var (section, key, value) in settings)
+                        Add($"[{section}] {key} = {value}").Margin = new Padding(12, 0, 0, 2);
+                }
+
                 var needs = mod.NeededPlugins();
                 var installed = ModLibrary.InstalledPlugins(_plugins);
                 var bundled = mod.BundledPlugins();

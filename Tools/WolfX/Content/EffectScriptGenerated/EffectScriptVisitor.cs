@@ -81,6 +81,12 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitEffectBody([NotNull] EffectScriptParser.EffectBodyContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.quickMark"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitQuickMark([NotNull] EffectScriptParser.QuickMarkContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.costClause"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -290,6 +296,12 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitBanishAction([NotNull] EffectScriptParser.BanishActionContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.banishFromAction"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitBanishFromAction([NotNull] EffectScriptParser.BanishFromActionContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.negateAction"/>.
 	/// </summary>
