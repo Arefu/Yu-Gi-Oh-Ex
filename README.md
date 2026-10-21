@@ -19,6 +19,8 @@ Your save is never the Steam one: Yu-Gi-Oh-Core keeps it in `savegame-ex.dat` in
 
 I would suggest checking the Project's [Wiki Page](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki) and the `docs\` folder: almost everything I know about the game is written down there.
 
+For the full list of what every plugin, tool and mod can do (and what's still being worked on), see the **[Feature Glossary](GLOSSARY.md)**.
+
 ## Guides
 
 There's a guide on the wiki for every page in WolfX, covering every button and option on it. **Start with [Opening The Game In WolfX](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki/WolfX-%E2%80%90-Opening-The-Game)**, it explains where your changes go.
@@ -34,7 +36,7 @@ There's a guide on the wiki for every page in WolfX, covering every button and o
 ## Features
 
 Hey you, I see you looking at this page wondering what on Earth you're doing being dragged here by no doubt some random guy on a Discord saying "Hey bro, trust me it's good". Well I am sure it is.
-To save time, and brain power remembering them all, here are the important parts.
+To save time, and brain power remembering them all, here are the important parts. The [Feature Glossary](GLOSSARY.md) has everything.
 
 ### Tools (`Tools\`)
 
@@ -54,19 +56,19 @@ To save time, and brain power remembering them all, here are the important parts
 
 - **Changes the game's files can hold** go into the game's own formats, in the patch archive **`YGO_2020-Ex.dat`** (Yu-Gi-Oh-Core mounts it); the game's `YGO_2020.dat` is never written.
 - **What the game can't hold** (custom cards, series past the game's 6, rows past its shop tabs...) goes to **JSON in `<game>\Yu-Gi-Oh-Ex\`**, which a plugin applies.
-- **Mods** are folders in `<game>\Mods`, stacked at runtime.
+- **Mods** are folders in `<game>\Mods`, stacked at runtime. A mod can bring its own `Config.ini` with the plugin settings it needs, so nobody has to edit theirs.
 
 ### Plugins (`Yu-Gi-Oh_Loader Plugins\`, `Yu-Gi-Oh-GUI Plugins\`)
 
 | Plugin | What it does |
 |---|---|
-| **Core** | Always on. The save redirect and save slots, the plugin list, game data loading (the Ex patch), the crash log, credits. |
+| **Core** | Always on. The save redirect and save slots, the plugin list, game data loading (the Ex patch), mods' own settings, booster packs and new shop rows, Speed/Rush duels and deck size limits, the crash log, credits. |
 | **RIX** | Always on. The in-game menus: new main menu buttons, RIX pages, the Plugins list, widgets for other plugins. |
 | **More Cards** | Custom cards, unlocks, card genres, related cards and text tables. |
 | **Effects** | Custom card effects, Fusion / Ritual / Synchro / Xyz / Link rules, and changed effects for game cards. |
 | **Campaign** | Characters, decks, story duels and scenes, new tutorials, and new campaign series past the game's 6. |
-| **Better Card Shop** | The Card Store (packs, every card, passwords), new packs and new shop rows. |
-| **Music** | Your own music in place of the game's (per arena, per opponent, per story duel), and voice lines in duels. |
+| **Media** | Your own music in place of the game's (per arena, per opponent, per story duel), voice lines in duels, and mp4 videos (cutscenes, summon cut-ins). |
+| **Forbidden Memories rules** | Forbidden Memories' duel rules for the FM mod: fusion from the hand and no Tributes. |
 | **Tag Duel** | Local tag duels (2 vs 2) and handicap duels (1 vs 2, 2 vs 1) with solo life points. |
 | **Anime Cards** | Makes the anime style cards draw properly. |
 | **Patch Me Out** | Quick duels: skip rock-paper-scissors, choose who goes first, set the starting LP. |
@@ -74,7 +76,9 @@ To save time, and brain power remembering them all, here are the important parts
 | **Console** | The log window (`console.log`). |
 | **GUI** | The F1 window; plugins that draw windows need it. |
 | **Funky** | My debug tools. |
-| **Multiplayer** | Logs the online duel system, for reverse engineering. |
+| **Multiplayer** | Connect to a Yu-Gi-Oh-Ex server (sign-in, ban lists, duel tracking), per-lobby ban lists, the duel recorder (`Duels.log`), and logging of the online duel system. |
+
+The Card Store (packs, every card, passwords) is a BOB page script now, not a plugin: see `docs/examples/card-store`.
 
 ### Reverse engineering
 
