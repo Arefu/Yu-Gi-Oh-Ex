@@ -36,6 +36,9 @@
       - ReadMerged("packs.json"): every copy merged into one document, lowest priority first: arrays are joined, objects merged key by key,
         anything else is replaced by the later copy. Every object in a top-level array gets "$folder": the content folder it came from
         (UTF-8, ends in a backslash), so relative paths ("image": "art\\x.png") resolve against the right mod.
+      - ReadMergedShared("cards.json", "cards"): the same, read once per plugin DLL and shared (read-only) by every part of it that asks,
+        for big files several readers need (a 3.6 MB cards.json costs ~0.5 s to parse in a Debug build, 28 ms in Release).
+        ReleaseShared() drops this DLL's copies once its readers are done (a holder's shared_ptr keeps its own alive).
       - Files("music.json"): every copy, lowest priority first, for readers that read each one with its own folder.
       - Find("pages\\menu.json"): the copy that wins, or an empty path.
     The list is worked out once per process; changing mods needs a restart (like plugins).
@@ -48,6 +51,9 @@
 #include <cctype>
 #include <filesystem>
 #include <fstream>
+#include <map>
+#include <memory>
+#include <mutex>
 #include <string>
 #include <vector>
 
@@ -406,6 +412,43 @@ namespace YGO
                     Detail::Merge(merged, std::move(root));
             }
             return merged;
+        }
+
+        namespace Detail
+        {
+            struct SharedCache
+            {
+                std::mutex Lock;
+                std::map<std::string, std::shared_ptr<const nlohmann::json>> Documents;   // relative + arrayKey -> the merged document
+            };
+            // One per DLL that includes this header (an inline function's static lives in each module).
+            inline SharedCache& Shared()
+            {
+                static SharedCache cache;
+                return cache;
+            }
+        }
+
+        // ReadMerged, parsed once per DLL: every later call gets the same read-only document. problems are only filled by the call that read.
+        inline std::shared_ptr<const nlohmann::json> ReadMergedShared(const std::string& relative, const char* arrayKey = nullptr,
+            std::vector<std::string>* problems = nullptr)
+        {
+            Detail::SharedCache& cache = Detail::Shared();
+            const std::string key = relative + '\n' + (arrayKey ? arrayKey : "");
+            std::lock_guard<std::mutex> guard(cache.Lock);
+            if (auto it = cache.Documents.find(key); it != cache.Documents.end())
+                return it->second;
+            auto document = std::make_shared<const nlohmann::json>(ReadMerged(relative, arrayKey, problems));
+            cache.Documents.emplace(key, document);
+            return document;
+        }
+
+        // Drops this DLL's shared documents (call when its readers are done; holders keep theirs).
+        inline void ReleaseShared()
+        {
+            Detail::SharedCache& cache = Detail::Shared();
+            std::lock_guard<std::mutex> guard(cache.Lock);
+            cache.Documents.clear();
         }
 
         // An entry's "$folder" (from ReadMerged), else <game>\Yu-Gi-Oh-Ex\.
