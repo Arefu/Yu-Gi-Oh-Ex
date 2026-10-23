@@ -347,7 +347,8 @@ namespace
         uint32_t*& end = *reinterpret_cast<uint32_t**>(list + 1216);
         uint32_t* kept = std::remove_if(begin, end, [](uint32_t id)
         {
-            return id >= 32 && std::none_of(g_entries.begin(), g_entries.end(), [&](const Entry& entry) { return entry.Id + 32 == id; });
+            // built-in decks only: Core's extra user decks (ids 1024 up) stay
+            return id >= 32 && id < 32 + kDeckSlots && std::none_of(g_entries.begin(), g_entries.end(), [&](const Entry& entry) { return entry.Id + 32 == id; });
         });
         if (kept == end)
             return;
