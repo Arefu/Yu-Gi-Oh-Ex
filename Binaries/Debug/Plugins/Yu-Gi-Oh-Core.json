@@ -1,6 +1,6 @@
 {
   "title": "Core",
-  "description": "The save, plugin list, game data loading, the crash log, small game tweaks and limit breakers (booster packs from packs.json). Always on.",
+  "description": "The save, plugin list, game data loading, the crash log, small game tweaks and limit breakers (booster packs from packs.json, 256 user deck slots). Always on.",
   "enforced": true,
   "content": [
     "credits.json",
@@ -194,6 +194,10 @@
     {
       "name": "Yu-Gi-Oh-Tracer",
       "note": "retired: a debugging plugin that is no longer needed"
+    },
+    {
+      "name": "Yu-Gi-Oh-DeckSlots",
+      "note": "merged into Core (thanks Toon Jinzo): 256 user deck slots, kept in the save; its savegame-ex-extradecks.dat is imported once"
     }
   ]
 }
