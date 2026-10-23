@@ -3021,7 +3021,8 @@ namespace
     void LoadClones()
     {
         // every mod's cards.json and the game folder's, merged (Yu-Gi-Oh-Mods.h)
-        nlohmann::json root = YGO::Mods::ReadMerged("cards.json", "cards");
+        const auto shared = YGO::Mods::ReadMergedShared("cards.json", "cards");   // parsed once for the whole plugin
+        const nlohmann::json& root = *shared;
         const nlohmann::json* list = root.is_object() && root.contains("cards") && root["cards"].is_array() ? &root["cards"] : nullptr;
 
         for (size_t i = 0; list && i < list->size(); ++i)
@@ -3065,7 +3066,8 @@ namespace
         // card has no effect at all. The card keeps its own id in duels, so lists that name the card itself (its own triggers in the engine's
         // per-id ladders that no hook covers) can still answer for it; the four effect tables, the hooked ladders, id tests, trigger lists and
         // evaluators answer with the override.
-        nlohmann::json overrides = YGO::Mods::ReadMerged("effects.json", "cards");
+        const auto sharedOverrides = YGO::Mods::ReadMergedShared("effects.json", "cards");
+        const nlohmann::json& overrides = *sharedOverrides;
         const nlohmann::json* games = overrides.is_object() && overrides.contains("cards") && overrides["cards"].is_array() ? &overrides["cards"] : nullptr;
         for (size_t i = 0; games && i < games->size(); ++i)
         {

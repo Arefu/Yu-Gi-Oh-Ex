@@ -305,7 +305,8 @@ namespace
 
     void Load(const char* file, bool needsOverridden)
     {
-        nlohmann::json root = YGO::Mods::ReadMerged(file, "cards");
+        const auto shared = YGO::Mods::ReadMergedShared(file, "cards");   // the same parse EffectClone / SummonJson use
+        const nlohmann::json& root = *shared;
         if (!root.is_object() || !root.contains("cards") || !root["cards"].is_array())
             return;
         for (const auto& entry : root["cards"])

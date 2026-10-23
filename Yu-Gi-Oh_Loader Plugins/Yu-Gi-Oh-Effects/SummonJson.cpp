@@ -8,16 +8,17 @@
 
 namespace
 {
-    nlohmann::json g_Cards;
-    nlohmann::json g_Summoning;
+    // Kept for the game's life: the entries point into them.
+    std::shared_ptr<const nlohmann::json> g_Cards;
+    std::shared_ptr<const nlohmann::json> g_Summoning;
     std::vector<SummonJson::Entry> g_Entries;
     bool g_Loaded = false;
 
-    // Every mod's copy and the game folder's, merged (Yu-Gi-Oh-Mods.h); null when there is none.
-    nlohmann::json Read(const std::string& name)
+    // Every mod's copy and the game folder's, merged (Yu-Gi-Oh-Mods.h); null when there is none. Shared with EffectClone / Lock (one parse).
+    std::shared_ptr<const nlohmann::json> Read(const std::string& name)
     {
         std::vector<std::string> problems;
-        nlohmann::json root = YGO::Mods::ReadMerged(name, "cards", &problems);
+        auto root = YGO::Mods::ReadMergedShared(name, "cards", &problems);
         for (const std::string& problem : problems)
             Logger::WriteLog(problem + ", its summoning requirements are left out", MODULE_NAME, 2);
         return root;
@@ -63,8 +64,8 @@ const std::vector<SummonJson::Entry>& SummonJson::Entries()
         g_Loaded = true;
         g_Cards = Read("cards.json");
         g_Summoning = Read("summoning.json");
-        Add(g_Cards, "cards.json", true);
-        Add(g_Summoning, "summoning.json", false);
+        Add(*g_Cards, "cards.json", true);
+        Add(*g_Summoning, "summoning.json", false);
     }
     return g_Entries;
 }

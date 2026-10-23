@@ -13,6 +13,7 @@
 #include "Lock.h"
 #include "Logger.h"
 #include "Config.h"
+#include "Yu-Gi-Oh-Mods.h"
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
@@ -45,6 +46,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         EffectDispatch::Setup();
         Lock::Setup();
         DetourTransactionCommit();
+        YGO::Mods::ReleaseShared();   // the readers above are done with the shared cards.json / effects.json
 
         break;;
     }
