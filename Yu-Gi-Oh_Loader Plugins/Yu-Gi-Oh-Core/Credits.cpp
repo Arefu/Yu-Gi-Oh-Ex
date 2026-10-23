@@ -57,7 +57,7 @@ namespace
         { L"ssjriou", { L"EH WHO CARES - I answered a question 8 months ago, I guess?" }, {} },
         { L"Death", { L"I don't mod LE anymore but will give you an answer that is three times longer than needed and make you forget what you asked in the first place." }, {} },
         { L"Very Tired Anna", { L"We are gonna make Link Evolution great again and yugiboomers are gonna pay for it." }, {} },
-        { L"Toon Jinzo", { L"I'm really just here for the anime card frames" }, {} }
+        { L"Toon Jinzo", { L"I'm really just here for the anime card frames", L"(and the 256 deck slots: Yu-Gi-Oh-DeckSlots, now part of Core)" }, {} }
     };
 
     std::mutex g_Lock;
