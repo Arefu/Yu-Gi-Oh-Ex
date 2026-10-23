@@ -291,6 +291,33 @@ namespace
         return valid;
     }
 
+    // ---------------------------------------------------------------- how many Tuners
+    //
+    // Synchro_GetTunerCount (0x14007CAF0) is a hardcoded switch: 2 for Red Nova Dragon, Vylon Omega, Hot Red Dragon Archfiend King Calamity,
+    // Tyrant Red Dragon Archfiend and Crystron Quariongandrax, else 1. Synchro_CanSelectMaterial makes the first that many picks Tuners
+    // (the row's Tuner code) and the rest non-Tuners; the row's material count already counts every Tuner. The AI and the summon
+    // animation read the same function, so "tuners" is answered here. Every custom Synchro card is listed (1 by default) so one that
+    // borrows a 2-Tuner card's id isn't given that card's count. Capped at 2: Duel__Msg__Handle_4C only tallies a second Tuner's Level.
+    using TunerCount_t = int(__fastcall*)(int synchroCardId);
+    TunerCount_t orig_TunerCount = reinterpret_cast<TunerCount_t>(0x14007CAF0);   // Synchro_GetTunerCount
+    constexpr int kMaxTuners = 2;
+
+    struct TunerCount
+    {
+        uint16_t id;
+        bool custom;
+        int tuners;
+    };
+    std::vector<TunerCount> g_TunerCounts;
+
+    int __fastcall Hook_TunerCount(int synchroCardId)
+    {
+        for (const TunerCount& t : g_TunerCounts)
+            if ((t.custom ? SummonJson::EngineId(t.id) : t.id) == synchroCardId)
+                return t.tuners;
+        return orig_TunerCount(synchroCardId);
+    }
+
     bool HasNamedMaterial(const Table& table, int lastSlot)
     {
         for (const auto& o : table.overrides)
@@ -300,11 +327,72 @@ namespace
         return false;
     }
 
+    // ---------------------------------------------------------------- custom archetypes
+    //
+    // Each check tests an archetype with `lea r, [code-98]; cmp r, 1A2h; ja` before Is_CardInNamedArchetype (which the Cards plugin's hook
+    // answers for custom archetypes, 419 up). A code past 516 misses the test and falls through: the Synchro check's switch then answers
+    // "usable" for any monster. When a requirement names a custom archetype the bound is widened to Fusion's range (code <= 2496).
+    constexpr int kFirstArchetypeCode = 98, kLastGameArchetypeCode = 516, kLastArchetypeCode = 2496;
+    constexpr uint32_t kGameArchetypeBound = kLastGameArchetypeCode - kFirstArchetypeCode;   // 0x1A2
+
+    struct BoundSite
+    {
+        uintptr_t address;
+        int offset;   // the imm32 in the cmp
+    };
+    const BoundSite kArchetypeBounds[] = {
+        { 0x14007D8C9, 2 },   // Synchro_CardMatchesMaterialSlot (0x14007D4B0): cmp edx, 1A2h
+        { 0x14003F761, 1 },   // Xyz_GetMaterialLevelIfUsable (0x14003F3C0): cmp eax, 1A2h
+        { 0x1405B295F, 2 },   // Link_CardIsValidMaterial (0x1405B2500), condition / material: cmp edx, 1A2h
+        { 0x1405B35CC, 3 },   // Link_CardIsValidMaterial, including: cmp r15d, 1A2h
+    };
+
+    bool IsCustomArchetype(int code) { return code > kLastGameArchetypeCode && code <= kLastArchetypeCode; }
+
+    bool UsesCustomArchetype(const Table& table)
+    {
+        for (const auto& o : table.overrides)
+            for (int slot = 1; o.hasRow && slot < table.words; ++slot)
+                if (IsCustomArchetype(o.row[slot]))
+                    return true;
+        return false;
+    }
+
+    void WidenArchetypeChecks()
+    {
+        // the game's own rows never hold 517..2496 (they would change meaning); checked so a different exe is left alone
+        for (const Table* table : { &g_Synchro, &g_Xyz, &g_Link })
+            for (int r = 0; r < table->gameRows; ++r)
+                for (int w = 1; w < table->words; ++w)
+                {
+                    const int code = reinterpret_cast<const volatile int16_t*>(table->game)[r * table->words + w];
+                    if (IsCustomArchetype(code))
+                    {
+                        Logger::WriteLog(std::format("{}: a game row uses material code {}, custom archetypes in Synchro/Xyz/Link stay off", table->name,
+                            code), MODULE_NAME, 2);
+                        return;
+                    }
+                }
+        for (const BoundSite& site : kArchetypeBounds)
+            if (*reinterpret_cast<const volatile uint32_t*>(site.address + site.offset) != kGameArchetypeBound)
+            {
+                Logger::WriteLog(std::format("The archetype test at 0x{:X} is not the expected instruction (different exe?), custom archetypes in "
+                    "Synchro/Xyz/Link stay off", site.address), MODULE_NAME, 2);
+                return;
+            }
+        const uint32_t bound = kLastArchetypeCode - kFirstArchetypeCode;
+        bool ok = true;
+        for (const BoundSite& site : kArchetypeBounds)
+            ok &= CodePatch::WriteBytes(site.address + site.offset, &bound, sizeof(bound));
+        Logger::WriteLog(ok ? "Synchro/Xyz/Link archetype tests widened to custom archetypes" : "Could not widen the Synchro/Xyz/Link archetype tests",
+            MODULE_NAME, ok ? 0 : 2);
+    }
+
     // ---------------------------------------------------------------- JSON
 
     bool AllowedCode(int code, bool synchro)
     {
-        if (code == 0 || (code >= 1 && code <= 31) || (code >= 98 && code <= 516))
+        if (code == 0 || (code >= 1 && code <= 31) || (code >= kFirstArchetypeCode && code <= kLastArchetypeCode))
             return true;
         if (code == 72 || code == 73 || code == 83 || code == 94 || code == 97)   // 97: the game's per-card rule (kept for game cards)
             return true;
@@ -330,7 +418,7 @@ namespace
         }
         if (code < 0 || code > SummonJson::kLastExtraCardId || !AllowedCode(code, synchro))
         {
-            error = std::format("\"{}\" {} is not a material the game's {} check knows (race, attribute, archetype up to 418, normal, gemini, pendulum{})",
+            error = std::format("\"{}\" {} is not a material the game's {} check knows (race, attribute, archetype, normal, gemini, pendulum{})",
                 key, value.dump(), synchro ? "Synchro" : "Xyz", synchro ? ", synchro, a card" : ", a card");
             return false;
         }
@@ -342,7 +430,8 @@ namespace
     // when its last material is picked (one of them must match). Codes the check knows, anything else in "including" can never be met.
     bool AllowedLinkCode(int code, bool including)
     {
-        if (code == 0 || (code >= 1 && code <= 31) || (code >= 98 && code <= 516) || code == 95 || code == 97 || code >= kFirstCardCode)
+        if (code == 0 || (code >= 1 && code <= 31) || (code >= kFirstArchetypeCode && code <= kLastArchetypeCode) || code == 95 || code == 97 ||
+            code >= kFirstCardCode)
             return true;   // a card by name: "including" is the game's, the other two through Hook_LinkValidMaterial
         if (including)
             return code == 75 || code == 90;                                      // Synchro, Tuner
@@ -375,8 +464,8 @@ namespace
         if (code < 0 || code > SummonJson::kLastExtraCardId || !AllowedLinkCode(code, including))
         {
             error = std::format("\"{}\" {} is not a material the game's Link check knows ({})", key, value.dump(),
-                including ? "race, attribute, archetype up to 418, link, synchro, tuner, a card" :
-                            "race, attribute, archetype up to 418, level, normal, effect, xyz, pendulum, link, notToken, a card");
+                including ? "race, attribute, archetype, link, synchro, tuner, a card" :
+                            "race, attribute, archetype, level, normal, effect, xyz, pendulum, link, notToken, a card");
             return false;
         }
         out = static_cast<int16_t>(code);
@@ -434,18 +523,31 @@ namespace
                 std::string error;
                 const int count = ParseCount(synchro, 2);
                 const bool exactly = synchro.value("exactly", false);
+                const int tuners = synchro.contains("tuners") && synchro["tuners"].is_number_integer() ? synchro["tuners"].get<int>() : 1;
                 if (!ParseCode(synchro, "tuner", true, o.row[1], error) || !ParseCode(synchro, "nonTuner", true, o.row[2], error))
                     Logger::WriteLog(std::format("{}: {}, skipped", source.label, error), MODULE_NAME, 2);
                 else if (count < 2 || count > 20)
-                    Logger::WriteLog(std::format("{}: \"synchro\" materials (the Tuner plus the non-Tuners) must be 2 to 20, skipped", source.label), MODULE_NAME, 2);
+                    Logger::WriteLog(std::format("{}: \"synchro\" materials (the Tuners plus the non-Tuners) must be 2 to 20, skipped", source.label), MODULE_NAME, 2);
+                else if (tuners < 1 || tuners > kMaxTuners || tuners >= count)
+                    Logger::WriteLog(std::format("{}: \"synchro\" tuners must be 1 to {} and fewer than the materials ({}), skipped", source.label,
+                        kMaxTuners, count), MODULE_NAME, 2);
                 else
                 {
                     o.row[3] = static_cast<int16_t>(exactly ? -count : count);
                     put(g_Synchro, synchroAt, o);
+                    if (source.custom || synchro.contains("tuners"))
+                    {
+                        std::erase_if(g_TunerCounts, [&](const TunerCount& t) { return t.id == id && t.custom == source.custom; });
+                        g_TunerCounts.push_back({ id, source.custom, tuners });
+                    }
                 }
             }
             else if (source.custom && kind.find("Synchro") != std::string::npos)
+            {
                 put(g_Synchro, synchroAt, Table::Override{ id, true, false, {} });
+                std::erase_if(g_TunerCounts, [&](const TunerCount& t) { return t.id == id && t.custom; });
+                g_TunerCounts.push_back({ id, true, 1 });
+            }
 
             if (entry.contains("link") && entry["link"].is_object())
             {
@@ -511,10 +613,17 @@ namespace
 void SynchroXyz::Setup()
 {
     Load();
+    if (UsesCustomArchetype(g_Synchro) || UsesCustomArchetype(g_Xyz) || UsesCustomArchetype(g_Link))
+        WidenArchetypeChecks();
     const bool xyzNamed = HasNamedMaterial(g_Xyz, 1), linkNamed = HasNamedMaterial(g_Link, 2);
     if (Install(g_Xyz, RefreshXyz, xyzNamed ? reinterpret_cast<uintptr_t>(orig_XyzMaterialLevel) : 0) && xyzNamed)
         DetourAttach(&(PVOID&)orig_XyzMaterialLevel, Hook_XyzMaterialLevel);
     Install(g_Synchro, RefreshSynchro);
+    if (!g_TunerCounts.empty())
+    {
+        DetourAttach(&(PVOID&)orig_TunerCount, Hook_TunerCount);
+        Logger::WriteLog(std::format("Synchro: Tuner counts for {} card(s) (Synchro_GetTunerCount hooked)", g_TunerCounts.size()), MODULE_NAME, 0);
+    }
     if (Install(g_Link, RefreshLink, linkNamed ? reinterpret_cast<uintptr_t>(orig_LinkValidMaterial) : 0) && linkNamed)
         DetourAttach(&(PVOID&)orig_LinkValidMaterial, Hook_LinkValidMaterial);
 }
