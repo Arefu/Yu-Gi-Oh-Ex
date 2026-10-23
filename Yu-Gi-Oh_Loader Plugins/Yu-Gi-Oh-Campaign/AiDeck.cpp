@@ -350,6 +350,16 @@ namespace
         for (unsigned int id = 0; id < kSaveDecks; ++id)
             if (static_cast<int>(id) != storyDeck && HasCards(id))
                 List::Push(ids, id);
+        // Core's extra user decks (ids 1024 up), right after the save's
+        static auto extraDecks = reinterpret_cast<int(__cdecl*)(int*)>(GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-Core.dll"), "Core_GetExtraUserDecks"));
+        int firstExtra = 0;
+        const int extras = extraDecks ? extraDecks(&firstExtra) : 0;
+        for (int k = 0; k < extras; ++k)
+        {
+            const unsigned int id = static_cast<unsigned int>(firstExtra + k);
+            if (static_cast<int>(id) != storyDeck && HasCards(id))
+                List::Push(ids, id);
+        }
         for (int index = 0; index < kDeckRecords; ++index)
         {
             const unsigned int id = kFirstRecordDeck + index;
@@ -472,7 +482,16 @@ namespace
             orig_GotoDuel(UIScheduler(ui), ui, 0);
         }
         else
+        {
+            // FreeDuel_HandleInput's start (state 3) sets side 0 from the list's selected deck: Set_DuelSideDeck(0, it) and
+            // Set_DuelSideCharacter(0, its RecordSlot, the owner's portrait). The list holds the opponent's pick now, so your deck goes
+            // back first (else you play their deck under its owner's face).
+            List::FillPlayerDecks(p.List);
+            List::Refresh(p.List, false);
+            if (p.PlayerDeck >= 0)
+                List::SelectDeckId(p.List, p.PlayerDeck);
             *reinterpret_cast<int*>(p.Screen + kFreeState) = kFreeStart;   // FreeDuel_HandleInput starts it next frame
+        }
     }
 
     // ---- the review step (tag Free Duel): TagDuel's exports draw it; this screen keeps the input.
