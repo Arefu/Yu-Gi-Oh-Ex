@@ -1,0 +1,31 @@
+{
+  "version": "1.3.0",
+  "title": "Multiplayer",
+  "description": "Online server client (Multiplayer > Connect to Server: sign-in, server ban list, duel tracking) and the online duel system logging.",
+  "settings": [
+    {
+      "key": "ServerUrl",
+      "title": "Server url",
+      "kind": "text",
+      "default": "",
+      "help": "Base URL of the multiplayer server (YgoMp, e.g. http://localhost:5080). Multiplayer > Connect to Server signs in here. Empty = offline: the duel recorder (Duels.log) and logging still work."
+    },
+    {
+      "key": "ClaimCode",
+      "title": "Claim code",
+      "kind": "text",
+      "default": "",
+      "help": "Sign in with a code the server's host minted (YgoMp.SelfHost mint) instead of Steam: for Epic/GOG copies. Empty = Steam."
+    },
+    {
+      "key": "DisplayName",
+      "title": "Display name",
+      "kind": "text",
+      "default": "",
+      "help": "The name a claim code's account gets the first time it signs in."
+    }
+  ],
+  "requires": [
+    "Yu-Gi-Oh-RIX"
+  ]
+}

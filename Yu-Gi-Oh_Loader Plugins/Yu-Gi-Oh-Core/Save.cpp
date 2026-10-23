@@ -155,14 +155,6 @@ void Save::ApplySharedVolume(unsigned char* blob)
         std::memcpy(blob + kVolumeOffset, g_Volume, kVolumeSize);
 }
 
-// A setting from [Yu-Gi-Oh-Core], or the default.
-static int ReadIntSetting(const char* key, int fallback)
-{
-    return static_cast<int>(GetPrivateProfileIntA(kIniSection, key, static_cast<UINT>(fallback), g_IniPath.c_str()));
-}
-static std::mutex g_SeedLock;
-static bool g_Seeded = false;
-
 static void SetPendingOp(int64_t manager, int op)
 {
     reinterpret_cast<void(__fastcall*)(int64_t, int)>(Manager_SetPendingOp)(manager, op);
@@ -256,42 +248,35 @@ static bool ReadLocalSave(const std::filesystem::path& path, std::vector<unsigne
     return static_cast<bool>(file.read(reinterpret_cast<char*>(data.data()), size));
 }
 
-// The first time the local save is asked for and doesn't exist, it starts as a copy of the
-// Steam save (if there is one). After that the two are never synced. Only slot 1 (the GameSaveName file)
-// is seeded: the other save slots start as new profiles.
-static void SeedFromSteamOnce()
+// The Steam Cloud save (your vanilla progress) is copied into a slot only when you ask for it on the save-select
+// screen (SaveScreen.cpp), never automatically - so a save you deleted stays deleted. Only the primary slot is
+// offered the copy; new numbered slots start as fresh profiles.
+bool Save::SteamSaveExists()
 {
-    std::lock_guard<std::mutex> guard(g_SeedLock);
-    if (g_Seeded)
-        return;
+    void* storage = SteamRemoteStorage();
+    if (!storage)
+        return false;
+    void** vtable = *reinterpret_cast<void***>(storage);
+    auto fileExists = reinterpret_cast<bool(__fastcall*)(void*, const char*)>(vtable[kFileExistsSlot]);
+    auto getFileSize = reinterpret_cast<int(__fastcall*)(void*, const char*)>(vtable[kGetFileSizeSlot]);
+    return fileExists(storage, kSteamSaveName) && getFileSize(storage, kSteamSaveName) > 0;
+}
 
-    const std::filesystem::path path = CurrentPath();
-    if (path != g_PrimarySavePath)
-        return;   // not seeded yet: slot 1 can still be seeded if it is picked later
-    g_Seeded = true;
-
-    std::error_code error;
-    if (std::filesystem::exists(path, error))
-        return;
-
-    // SeedFromGameSave=0 (optional) starts the local save as a brand-new profile instead of a copy of the Steam save.
-    if (ReadIntSetting("SeedFromGameSave", 1) == 0)
-    {
-        Logger::WriteLog(std::format("SeedFromGameSave=0: {} will start as a new profile", path.string()), MODULE_NAME, 0);
-        return;
-    }
-
+bool Save::SeedFromSteam(const std::filesystem::path& dest)
+{
     std::vector<unsigned char> steamSave;
     if (!ReadSteamSave(steamSave))
     {
-        Logger::WriteLog(std::format("No Steam save to copy, {} will start as a new profile made by the game", path.string()), MODULE_NAME, 0);
-        return;
+        Logger::WriteLog("No Steam save to copy from", MODULE_NAME, 1);
+        return false;
     }
-
-    if (WriteLocalSave(path, steamSave.data(), steamSave.size()))
-        Logger::WriteLog(std::format("Copied the Steam save ({} bytes) to {}", steamSave.size(), path.string()), MODULE_NAME, 0);
-    else
-        Logger::WriteLog(std::format("Could not write {}", path.string()), MODULE_NAME, 2);
+    if (!WriteLocalSave(dest, steamSave.data(), steamSave.size()))
+    {
+        Logger::WriteLog(std::format("Could not write {}", dest.string()), MODULE_NAME, 2);
+        return false;
+    }
+    Logger::WriteLog(std::format("Copied the Steam save ({} bytes) to {}", steamSave.size(), dest.string()), MODULE_NAME, 0);
+    return true;
 }
 
 // ---------------------------------------------------------------------
@@ -301,8 +286,6 @@ static void SeedFromSteamOnce()
 
 static void __fastcall Hook_QuerySaveFileExists(int64_t manager)
 {
-    SeedFromSteamOnce();
-
     std::error_code error;
     if (std::filesystem::exists(CurrentPath(), error))
     {
@@ -409,8 +392,6 @@ void Save::SetExtension(const char* tag, const void* data, int size)
 
 static void __fastcall Hook_ReadSaveFile(int64_t manager)
 {
-    SeedFromSteamOnce();
-
     const std::filesystem::path path = CurrentPath();
     std::vector<unsigned char> file;
     if (!ReadLocalSave(path, file))

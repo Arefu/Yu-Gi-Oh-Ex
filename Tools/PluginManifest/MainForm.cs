@@ -113,12 +113,14 @@ namespace PluginManifest
 
         private ManifestModel Collect()
         {
-            var manifest = new ManifestModel
-            {
-                Title = titleBox.Text.Trim(),
-                Description = descriptionBox.Text.Trim(),
-                Enforced = enforcedBox.Checked,
-            };
+            // Start from what is on disk so fields this form does not edit (content, replaces, newSave, settings,
+            // author, version) are kept, then overlay the ones it owns. Otherwise saving would strip them out.
+            var manifest = _current != null ? ManifestModel.Read(_current.ManifestPath) : new ManifestModel();
+            manifest.Title = titleBox.Text.Trim();
+            manifest.Description = descriptionBox.Text.Trim();
+            manifest.Enforced = enforcedBox.Checked;
+            manifest.Requires = new();
+            manifest.Dlls = new();
             foreach (var item in requiresList.CheckedItems) manifest.Requires.Add(NameOf(item));
             foreach (var item in dllsList.CheckedItems) manifest.Dlls.Add(NameOf(item));
             return manifest;

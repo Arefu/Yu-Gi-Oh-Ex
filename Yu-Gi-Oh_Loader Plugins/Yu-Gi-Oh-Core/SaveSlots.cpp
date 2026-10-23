@@ -12,6 +12,7 @@
 #include "Logger.h"
 #include "Save.h"
 #include "SaveSlots.h"
+#include "Yu-Gi-Oh-Mods.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 using json = nlohmann::json;
@@ -160,7 +161,6 @@ namespace
         json* slots = g_File.contains("slots") && g_File["slots"].is_array() ? &g_File["slots"] : nullptr;
         const int count = slots ? std::clamp(static_cast<int>(slots->size()), 1, SaveSlots::MaxSlots) : kDefaultSlots;
 
-        int nextFile = g_File.contains("nextFile") && g_File["nextFile"].is_number_integer() ? g_File["nextFile"].get<int>() : 0;
         for (int i = 0; i < count; ++i)
         {
             Slot slot;
@@ -183,10 +183,9 @@ namespace
                     slot.Avatar = "#" + std::to_string(entry["avatar"].get<int>());   // a character id, resolved when shown (chardata loads later)
                 slot.Tags = TagsFrom(entry);
             }
-            nextFile = (std::max)(nextFile, i + 2);
             g_Slots.push_back(std::move(slot));
         }
-        g_File["nextFile"] = nextFile;
+        g_File.erase("nextFile");   // legacy counter: Add() now reuses the lowest free file number
 
         if (!slots)
         {
@@ -258,6 +257,13 @@ int SaveSlots::LastSlot()
 bool SaveSlots::ShouldAsk()
 {
     return g_ForcedSlot == 0;   // also with one slot: the screen is where slots are added
+}
+
+bool SaveSlots::IsModded()
+{
+    if (!g_RunTags.empty())   // a loaded plugin declared a "newSave" tag (e.g. Forbidden Memories)
+        return true;
+    return !YGO::Mods::Active(std::filesystem::path(Save::GameFolder())).empty();
 }
 
 std::filesystem::path SaveSlots::PathOf(int slot)
@@ -395,16 +401,28 @@ int SaveSlots::Add()
     std::lock_guard<std::mutex> guard(g_Lock);
     if (Count() >= MaxSlots)
         return 0;
-    int number = g_File.value("nextFile", Count() + 1);
+
+    // The lowest free file number (2 and up; number 1 is the primary GameSaveName file, kept for the original
+    // slot 1). Reusing freed numbers keeps the names tidy instead of climbing forever as slots are added and
+    // deleted - a deleted "savegame-ex-2.dat" is handed to the next new slot, not left as a permanent gap.
     std::error_code error;
-    while (std::filesystem::exists(Save::PrimarySavePath().parent_path() / NumberedFile(number), error))   // never a file that is there
+    auto taken = [&](int n)
+    {
+        const std::string file = NumberedFile(n);
+        for (const Slot& existing : g_Slots)
+            if (_stricmp(existing.File.c_str(), file.c_str()) == 0)
+                return true;
+        return std::filesystem::exists(Save::PrimarySavePath().parent_path() / file, error);
+    };
+    int number = 2;
+    while (taken(number))
         ++number;
+
     Slot slot;
     slot.Name = std::format(L"Duelist {}", Count() + 1);
     slot.Avatar = DefaultAvatar(Count());
     slot.File = NumberedFile(number);
     g_File["slots"].push_back({ { "name", std::format("Duelist {}", Count() + 1) }, { "avatar", slot.Avatar }, { "file", slot.File } });
-    g_File["nextFile"] = number + 1;
     g_Slots.push_back(std::move(slot));
     WriteJson();
     Logger::WriteLog(std::format("Save slot {} added ({})", Count(), g_Slots.back().File), MODULE_NAME, 0);

@@ -7,6 +7,8 @@ namespace PluginManifest
     public sealed class ManifestModel
     {
         [JsonPropertyName("title")] public string Title { get; set; } = "";
+        [JsonPropertyName("author")] public string Author { get; set; } = "";
+        [JsonPropertyName("version")] public string Version { get; set; } = "";
         [JsonPropertyName("description")] public string Description { get; set; } = "";
         [JsonPropertyName("enforced")] public bool Enforced { get; set; }
         [JsonPropertyName("requires")] public List<string> Requires { get; set; } = new();
@@ -17,6 +19,8 @@ namespace PluginManifest
         [JsonPropertyName("replaces")] public List<JsonElement> Replaces { get; set; } = new();
         /// <summary>Needs a save made with it: true (tag = the DLL's name) or a tag string (kept as written).</summary>
         [JsonPropertyName("newSave")] public JsonElement? NewSave { get; set; }
+        /// <summary>The Config.ini settings this plugin reads (WolfX's Config editor merges them over its built-in list). Kept as written.</summary>
+        [JsonPropertyName("settings")] public List<JsonElement> Settings { get; set; } = new();
 
         private static readonly JsonSerializerOptions Options = new()
         {
@@ -47,6 +51,8 @@ namespace PluginManifest
         {
             var fields = new Dictionary<string, object>();
             if (Title.Length > 0) fields["title"] = Title;
+            if (Author.Length > 0) fields["author"] = Author;
+            if (Version.Length > 0) fields["version"] = Version;
             if (Description.Length > 0) fields["description"] = Description;
             if (Enforced) fields["enforced"] = true;
             if (Requires.Count > 0) fields["requires"] = Requires;
@@ -54,6 +60,7 @@ namespace PluginManifest
             if (Content.Count > 0) fields["content"] = Content;
             if (Replaces.Count > 0) fields["replaces"] = Replaces;
             if (NewSave is { ValueKind: JsonValueKind.True or JsonValueKind.String } newSave) fields["newSave"] = newSave;
+            if (Settings.Count > 0) fields["settings"] = Settings;
             return JsonSerializer.Serialize(fields, Options) + Environment.NewLine;
         }
     }

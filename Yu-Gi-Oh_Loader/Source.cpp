@@ -57,12 +57,16 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         }
     }
 
-    Game::Locate();
+    // Find the game. If Steam didn't register it (non-Steam copy, or the key was never written),
+    // ask the player to point at YuGiOh.exe. If they decline or cancel, there's nothing to launch.
+    if (!Game::Locate() && !Game::PromptForGame())
+        return 0;
+
     Game::CreateConfig("Config.ini");
     Game::LookForPlugins();
     Game::CheckForLoadOrder();
 
     SortPluginsByMods();
 
-    Game::Start();
+    return Game::Start() ? 0 : 1;
 }

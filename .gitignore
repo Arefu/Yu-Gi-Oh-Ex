@@ -24,7 +24,11 @@ mono_crash.*
 *.txt
 *.bnd
 *.deps.json
-# Build results - We're going to ship my Binaries
+# Build results. Binaries/ is build output (plugins, tools and their runtime deps) and is no longer committed -
+# canary builds are retired, a build regenerates it. The things that used to be committed here now live in source:
+# each plugin's manifest (<DLL>.json) is in its plugin folder and copied in by Directory.Build.targets; the tools'
+# data and Blocks come from Tools\WolfX\Content; .NET runtimeconfig.json and NuGet native deps come from build/restore.
+Binaries/
 [Dd]ebugPublic/
 [Rr]eleases/
 x86/
@@ -375,21 +379,11 @@ Binaries/*/Tools/YGO_2020/
 # Stray screenshots
 Screenshot*.png
 
-# C++ build intermediates (MSVC module scan output etc.)
-# NOTE: x64/ is bare/unanchored, so it matches ANY directory named x64
-# anywhere in the tree -- including Binaries/build/x64/, which is where
-# ScintillaNET's native DLL has to ship for WolfEx to run at all (see
-# ScintillaNET.Scintilla.LocateNativeDllDirectory()). That's what was
-# causing "Unable to locate the Scintilla.NET satellite assemblies" --
-# the folder was being stripped out of every commit, shipped Binaries/
-# snapshot included. Carve it back out explicitly.
+# C++ build intermediates (MSVC module scan output etc.). x64/ is bare/unanchored, so it matches any directory
+# named x64 anywhere in the tree. Binaries/ as a whole is ignored above (build output), so the native runtime deps
+# that used to be carved back in here (ScintillaNET's Binaries/build/x64 for WolfEx, the WebView2 Tools\x64|x86)
+# are restored by NuGet on build instead of being committed.
 x64/
-!Binaries/build/x64/
-!Binaries/build/x64/**
-!Binaries/Debug/Tools/x64
-!Binaries/Debug/Tools/x86
-!Binaries/Release/Tools/x64
-!Binaries/Release/Tools/x86
 
 *.dt.d.json
 *.dt.module.json

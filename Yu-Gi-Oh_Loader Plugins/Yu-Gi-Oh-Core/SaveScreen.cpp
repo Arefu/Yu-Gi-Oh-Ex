@@ -396,11 +396,70 @@ namespace
         Continue(slot, false);
     }
 
+    // ---- "copy your Steam save?" when an empty primary slot is picked (a box whose No also acts, Yu-Gi-Oh-RIX.h Dialog*)
+
+    int g_PendingSeed = 0;      // the empty primary slot the seed box is asking about
+    std::wstring g_SeedText;    // the box reads it while open
+
+    void OnSeedYes()
+    {
+        const int slot = g_PendingSeed;
+        g_PendingSeed = 0;
+        if (slot <= 0)
+            return;
+        if (!Save::SeedFromSteam(SaveSlots::PathOf(slot)))
+        {
+            R::EmptyFunction none;
+            R::ShowMessageText(g_Screen, kSoundError, L"Your Steam save couldn't be copied, so a new game was started instead.", &none);
+            Continue(slot, true);   // fall back to a fresh profile
+            return;
+        }
+        Continue(slot, false);      // load the save we just copied in
+    }
+
+    void OnSeedNo()
+    {
+        const int slot = g_PendingSeed;
+        g_PendingSeed = 0;
+        if (slot <= 0)
+            return;
+        Continue(slot, true);       // start a brand-new profile
+    }
+
+    // The screen's own dialog (screen+432) with Yes and No both wired, built like ShowYesNo (see LiveSetting.cpp).
+    void ShowSeedDialog(const std::wstring& text)
+    {
+        char* dialog = static_cast<char*>(g_Screen) + 432;
+        R::DialogClear(dialog);
+        R::DialogSetMode(dialog, 1);
+        R::DialogSetText(dialog, text.c_str());
+        std::function<void()> yes = &OnSeedYes;   // plain function pointers fit the small buffer the game takes over
+        R::DialogAddItem(dialog, R::DialogLabelYes, &yes, -1);
+        std::function<void()> no = &OnSeedNo;
+        R::DialogAddItem(dialog, R::DialogLabelNo, &no, -1);
+        using SetVisible_t = void(__fastcall*)(char*, bool);
+        (*reinterpret_cast<SetVisible_t**>(dialog))[3](dialog, true);   // vtable slot 3 = SetVisible
+        *reinterpret_cast<int*>(static_cast<char*>(g_Screen) + 48) = 1; // the screen sends its input to the dialog
+    }
+
     void Choose(int slot)
     {
         const SaveSlots::Summary summary = SaveSlots::Read(slot);
         if (!summary.Exists)
         {
+            // The primary slot can start from your Steam save (your vanilla progress) instead of empty. Offer it when there
+            // is a Steam save to copy; with mods on, warn first that the save was made without them. New numbered slots and
+            // the no-Steam-save case just start a fresh profile.
+            if (SaveSlots::PathOf(slot).filename() == Save::PrimarySavePath().filename() && Save::SteamSaveExists())
+            {
+                g_PendingSeed = slot;
+                g_SeedText = SaveSlots::IsModded()
+                    ? L"Copy your Steam save into this game?\n\nIt was made without mods, so loading it with mods on may break "
+                      L"cards, decks or progress.\n\nYes copies it. No starts a new profile."
+                    : L"Copy your existing Steam save into this game?\n\nYes copies it. No starts a brand-new profile.";
+                ShowSeedDialog(g_SeedText);
+                return;
+            }
             Continue(slot, true);   // an empty slot starts its new game straight away
             return;
         }

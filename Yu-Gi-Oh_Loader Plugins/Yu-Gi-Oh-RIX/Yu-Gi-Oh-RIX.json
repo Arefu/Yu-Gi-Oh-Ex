@@ -1,0 +1,13 @@
+{
+  "version": "1.3.0",
+  "title": "RIX",
+  "description": "The in-game menus, this list included. Always on.",
+  "enforced": true,
+  "requires": [
+    "Yu-Gi-Oh-Core"
+  ],
+  "content": [
+    "pages\\",
+    "menus\\"
+  ]
+}

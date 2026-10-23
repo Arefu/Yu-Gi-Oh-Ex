@@ -8,16 +8,20 @@ namespace Save
     // working directory, so they are right however the game was started.
     const std::string& GameFolder();
 
-    // Reads [Yu-Gi-Oh-Core] from Config.ini (GameSaveName, SeedFromGameSave).
-    // The game's save file I/O is always
-    // redirected to savegame-ex.dat in the game folder (GameSaveName can rename it), in the exact
-    // same format the game writes to Steam Cloud. If it doesn't exist the first run copies the
-    // Steam save into it, or lets the game start a new profile when there is no Steam save.
+    // Reads [Yu-Gi-Oh-Core] from Config.ini (GameSaveName). The game's save file I/O is always redirected to
+    // savegame-ex.dat in the game folder (GameSaveName can rename it), in the exact same format the game writes
+    // to Steam Cloud. The Steam save is only ever copied in on request (SeedFromSteam), never automatically.
     bool Install();
     // False when the redirect could not be put in: the game must not run then, it would write the Steam save.
 
-    // The GameSaveName file (save slot 1; the only one ever seeded from the Steam save).
+    // The GameSaveName file (save slot 1; the only slot offered a copy of the Steam save).
     const std::filesystem::path& PrimarySavePath();
+
+    // The Steam Cloud save (your vanilla progress). SteamSaveExists reports whether there is one to copy; SeedFromSteam
+    // copies it into `dest` (a save slot's file) on request from the save-select screen. Nothing is copied automatically,
+    // so a save you delete stays deleted.
+    bool SteamSaveExists();
+    bool SeedFromSteam(const std::filesystem::path& dest);
 
     // The file the game reads and writes now, and switching it (save slots). Thread safe; the game's next read or write uses
     // the new file, so only switch it while no save is being read or written (before ScreenSignIn loads the save).

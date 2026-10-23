@@ -147,6 +147,7 @@ Plugin source is in `Yu-Gi-Oh_Loader Plugins\` (injected by the loader) and `Yu-
 | Feature | Status |
 |---|---|
 | Starts the game and injects every switched-on plugin from its own `Plugins` folder (points `PluginsPath` at itself each launch, so Debug runs Debug plugins and Release runs Release). | Working |
+| Finds the game: Steam's registry key, else an HKCU copy of it. If neither is set (a non-Steam copy, or Steam didn't record it), asks you to locate `YuGiOh.exe` with an open-file dialog and saves the folder to HKCU (no admin needed). | Built |
 | Reads plugin manifests: a plugin with a missing requirement is *blocked* (not loaded, and the list says why). | Built |
 | Applies mods: each mod's `requires` and `content.json`, with a message box naming missing plugins. | Built |
 | `content.json`: switches on the plugins your WolfX content needs. | Built |
@@ -159,8 +160,9 @@ Always on. Kept small on purpose: the save, the plugin list, game data loading, 
 
 | Feature | What it does | Status |
 |---|---|---|
-| **Save redirect** | Uses `savegame-ex.dat` in the game folder instead of the Steam save (seeded once from Steam if `SeedFromGameSave`). | Working |
-| **Save slots** | Up to 99 slots (`savegame-ex-N.dat`), names and pictures in `saves.json`. A brand-new save-select screen (screen id 100) appears after the title screen, with a scroll bar, Delete, New Save and Change Picture. `SaveSlot=N` skips the screen. Volume is shared across slots. Back from the main menu returns to the slot screen. | Working (the scroll bar's own clicks do nothing) |
+| **Save redirect** | Uses `savegame-ex.dat` in the game folder instead of the Steam save. The Steam save is only ever copied in on request (see Steam-save seeding), never automatically. | Working |
+| **Save slots** | Up to 99 slots (`savegame-ex-N.dat`), names and pictures in `saves.json`. A brand-new save-select screen (screen id 100) appears after the title screen, with a scroll bar, Delete, New Save and Change Picture. `SaveSlot=N` skips the screen. Volume is shared across slots. Back from the main menu returns to the slot screen. A new slot reuses the lowest free file number instead of climbing forever. | Working (the scroll bar's own clicks do nothing) |
+| **Steam-save seeding** | Picking the empty primary slot offers to copy your Steam save (your vanilla progress) into it, or start fresh. With mods on it warns first that the save was made without them. Nothing is seeded automatically, so a deleted save stays deleted. | Built, untested |
 | **New-save tags** | A plugin or mod can demand a fresh save (`"newSave": true` or a tag in its manifest or `mod.json`). Slots that don't match are shown in red with the reason, with a "play anyway" choice. | Built |
 | **Save extension** | Tagged extra blocks after the game's 44,008 bytes (`Core_GetSaveExtension` / `Core_SetSaveExtension`), so plugins never need to change the game's save layout. Save-write filters (`Core_AddSaveWriteFilter`) can rewrite the save before it's written, with the checksum fixed. | Built |
 | **Mod settings** | A mod's own `Config.ini` is read over yours while the mod is on (every plugin's settings, no plugin changes needed). See [Mod settings](#mod-settings-configini). | Built |

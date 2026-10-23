@@ -6,7 +6,7 @@
 nothing that belongs to one feature:
 
 * **The save.** The game's save I/O is redirected to `savegame-ex.dat` (never the Steam save), whether or not the Cards plugin is on.
-  `SeedFromGameSave` and `GameSaveName` are in `[Yu-Gi-Oh-Core]` (`[Yu-Gi-Oh-MoreCards]` is still read for them).
+  `GameSaveName` is in `[Yu-Gi-Oh-Core]`. The Steam save is copied in only on request from the save-select screen, never automatically.
 * **The plugin list.** Which plugins exist, are on, and can load; switching them (`Core_SetPluginEnabled`, which also switches on what a plugin
   requires and off what requires it). The in-game Plugins menu (RIX), the GUI window and the loader all agree through
   `Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Manifest.h`.

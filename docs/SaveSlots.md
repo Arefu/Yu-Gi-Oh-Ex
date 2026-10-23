@@ -7,14 +7,13 @@ Yu-Gi-Oh-Core (`SaveSlots.cpp`, `SaveScreen.cpp`, `Save.cpp`) because Core is al
 
 | File | What |
 | --- | --- |
-| `savegame-ex.dat` (the `GameSaveName` file) | Slot 1. The only slot that is ever seeded from the Steam save (`SeedFromGameSave`). |
+| `savegame-ex.dat` (the `GameSaveName` file) | Slot 1. The only slot offered a copy of the Steam save (see **Seeding** below). |
 | `savegame-ex-N.dat` | Other slots: the same name with `-N` before the extension. A new slot starts as a new profile. |
 | `Yu-Gi-Oh-Ex\saves.json` | What the screen shows, each slot's file, and the slot played last. |
 
 ```json
 {
   "lastSlot": 1,
-  "nextFile": 4,
   "slots": [
     { "name": "Duelist 1", "avatar": "yugimuto", "file": "savegame-ex.dat" },
     { "name": "Duelist 2", "avatar": "jadenyuki", "file": "savegame-ex-2.dat" },
@@ -25,10 +24,12 @@ Yu-Gi-Oh-Core (`SaveSlots.cpp`, `SaveScreen.cpp`, `Save.cpp`) because Core is al
 
 * The number of entries is the number of slots (1 to 99). Without the file there are 3, and the file is written the first time a slot is picked.
 * `file` is the slot's own save file. An entry without one gets the name its position used to give it (slot 1 the `GameSaveName` file, slot N `-N`),
-  which is then written in, so deleting a slot never moves another slot's file. A new slot takes `-<nextFile>`, a number that is never reused.
+  which is then written in, so deleting a slot never moves another slot's file. A new slot takes the **lowest free** `-N` number (checking both the
+  other slots and what is on disk), so a number freed by a delete is reused instead of climbing forever (`Add`). Number 1 is kept for the primary slot.
 * **The screen:** one row of five slots; Up / Down / the wheel change rows, and the game's scroll bar (`widget_BarV`, the tutorial list's
   recipe) on the right shows where you are (hidden with one row). After the slots comes a **New Save** tile: it adds a slot and goes straight into
-  a new game in it (an empty slot also starts straight away, no question). **Delete** (X, or the help bar prompt) asks Yes / No, then erases the
+  a new game in it (an empty slot also starts straight away, no question — except the primary slot when a Steam save exists, see **Seeding**).
+  **Delete** (X, or the help bar prompt) asks Yes / No, then erases the
   file and removes the slot; the last slot left is only emptied. **Change Picture** (Y) steps through every character portrait on the selected
   slot with left / right (or the wheel); confirm keeps it (`avatar` in saves.json), Back puts the old one back. The screen now shows with one slot too, since it is where slots are added. Dragging the bar with the mouse is not wired up.
 * `avatar` is a portrait from the `pdui/chars` sheet, given as the sprite name without `_neutral` (273 of them: `yugimuto`, `setokaiba`,
@@ -51,6 +52,19 @@ Yu-Gi-Oh-Core (`SaveSlots.cpp`, `SaveScreen.cpp`, `Save.cpp`) because Core is al
    (`YGO::SAVE::Profile_WriteLiveBlob`), which would be the slot the title screen read, so Core resets it with the game's own
    `GetOrInitProfileBuffer(manager, nullptr)` (`InitNewBlob`) before SignIn runs. A file that is not a save shows "This save file can't be read."
 6. Back (cancel) returns to the title screen; Play brings the save-select screen back.
+
+## Seeding from the Steam save
+
+The game's Steam Cloud save is your vanilla progress. It is **never copied automatically** — so a save you delete stays deleted (an auto-reseed
+used to resurrect `savegame-ex.dat`). Instead, when you confirm an **empty primary slot** (`savegame-ex.dat`) and a Steam save exists, Core asks
+with a Yes / No box (`SaveScreen.cpp`, the screen's `widget_Dialog` at `screen + 432`, both buttons wired like `ShowYesNo`):
+
+* **Yes** copies the Steam save into the slot (`Save::SeedFromSteam`) and loads it.
+* **No** starts a brand-new profile.
+
+If the run is **modded** (`SaveSlots::IsModded` — any active pack in `<game>\Mods`, or any loaded `newSave` plugin), the box first warns that the
+Steam save was made without mods and loading it may break cards, decks or progress. You can still say Yes (you are warned); the slot keeps its own
+tags, and the normal `CanPlay` tag check still applies the next time it is loaded. New numbered slots and the no-Steam-save case just start fresh.
 
 **Volume is shared, nothing else is.** The save's settings block at 0x14 is music volume, then sound effects / ambient volume (0..10 each,
 read by `ApplySavedAudioSettings`), then two unknown values. Core remembers those two volumes from the first save read (the title's early read)

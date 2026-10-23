@@ -139,8 +139,6 @@ namespace WolfX.WolfX.File_Type_UI
                 "Who goes first when NoJanken skips rock-paper-scissors: P1 = you, P2 = your opponent, random = either.", ["random", "P1", "P2"]),
             new("Yu-Gi-Oh-PatchMeOut", "StartingLP", SettingKind.Number, "8000", "Life points each duelist starts a duel with."),
 
-            new("Yu-Gi-Oh-Core", "SeedFromGameSave", SettingKind.Toggle, "1",
-                "The first time savegame-ex.dat is created, copy your Steam save into it so your progress carries over."),
             new("Yu-Gi-Oh-Core", "GameSaveName", SettingKind.Text, "savegame-ex.dat",
                 "File name of the save the game always uses (Yu-Gi-Oh-Core is always loaded). Your original savegame.dat is never touched."),
             new("Yu-Gi-Oh-Core", "SaveSlot", SettingKind.Number, "0",

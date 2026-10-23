@@ -468,7 +468,7 @@ namespace Wolf.Mods
 
         /// <summary>
         /// False for what a mod may not set (Core ignores it, ModConfig.h): what loads and which save is used ([Yu-Gi-Oh-Core] plugin switches,
-        /// PluginsPath, ModConfig, GameSaveName, SeedFromGameSave, SaveSlot, ReplacedNotice), and all of [Yu-Gi-Oh-MP] (the server and sign-in).
+        /// PluginsPath, ModConfig, GameSaveName, SaveSlot, ReplacedNotice), and all of [Yu-Gi-Oh-MP] (the server and sign-in).
         /// </summary>
         public static bool ModMaySet(string section, string key)
         {
@@ -476,7 +476,7 @@ namespace Wolf.Mods
                 return false;
             if (!section.Equals("Yu-Gi-Oh-Core", StringComparison.OrdinalIgnoreCase))
                 return true;
-            string[] core = ["PluginsPath", "ModConfig", "GameSaveName", "SeedFromGameSave", "SaveSlot", "ReplacedNotice"];
+            string[] core = ["PluginsPath", "ModConfig", "GameSaveName", "SaveSlot", "ReplacedNotice"];
             return !core.Contains(key, StringComparer.OrdinalIgnoreCase)
                    && !key.StartsWith("Yu-Gi-Oh-", StringComparison.OrdinalIgnoreCase) && !key.Contains('/');
         }

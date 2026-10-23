@@ -6,10 +6,44 @@
 #include <vector>
 #include <sstream>
 #include <Windows.h>
+#include <commdlg.h>
 
 #include "Game.h"
 #include "Yu-Gi-Oh-Manifest.h"
 #include "Yu-Gi-Oh-Mods.h"
+
+#pragma comment(lib, "Comdlg32.lib")
+
+// Steam's own uninstall entry for Legacy of the Duelist (app 1150640). Steam writes InstallLocation
+// here under HKLM. We read it, and when Steam didn't (a non-Steam copy), we keep the player's chosen
+// path under the SAME key in HKCU - no new file, and HKCU needs no admin rights the way HKLM does.
+static const char* kUninstallKey = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640";
+
+static bool ReadInstallLocation(HKEY root, char* out, DWORD cb)
+{
+    HKEY hKey;
+    if (RegOpenKeyExA(root, kUninstallKey, 0, KEY_READ, &hKey) != ERROR_SUCCESS)
+        return false;
+    DWORD type = 0;
+    DWORD size = cb - 1;   // leave room to null-terminate
+    const LSTATUS r = RegQueryValueExA(hKey, "InstallLocation", NULL, &type, (LPBYTE)out, &size);
+    RegCloseKey(hKey);
+    if (r != ERROR_SUCCESS || (type != REG_SZ && type != REG_EXPAND_SZ))
+        return false;
+    out[size] = 0;   // RegQueryValueEx may or may not count the terminator; make sure of it
+    return true;
+}
+
+static void SaveGamePath(const std::string& folder)
+{
+    // HKCU mirror of Steam's key: remembered across restarts, written without elevation.
+    HKEY hKey;
+    if (RegCreateKeyExA(HKEY_CURRENT_USER, kUninstallKey, 0, NULL, 0, KEY_WRITE, NULL, &hKey, NULL) == ERROR_SUCCESS)
+    {
+        RegSetValueExA(hKey, "InstallLocation", 0, REG_SZ, (const BYTE*)folder.c_str(), (DWORD)folder.size() + 1);
+        RegCloseKey(hKey);
+    }
+}
 
 TCHAR Game::gGamePath[MAX_PATH];
 TCHAR Game::gGameLocation[MAX_PATH];
@@ -18,27 +52,77 @@ std::vector<std::string> Game::gDlls;
 std::vector <std::string> Game::gModsToLoad;
 std::vector<LPCSTR> Game::gPlugins;
 
+// YuGiOh.exe lives in <folder>; sets both the folder and the full exe path if it is really there.
+bool Game::TrySetFolder(const char* folder)
+{
+    if (!folder || !*folder)
+        return false;
+
+    std::string f = folder;
+    while (!f.empty() && (f.back() == '\\' || f.back() == '/'))
+        f.pop_back();
+
+    const std::string exe = f + "\\YuGiOh.exe";
+    if (!PathFileExistsA(exe.c_str()))
+        return false;
+
+    strncpy(Game::gGamePath, f.c_str(), MAX_PATH - 1);
+    Game::gGamePath[MAX_PATH - 1] = 0;
+    strncpy(Game::gGameLocation, exe.c_str(), MAX_PATH - 1);
+    Game::gGameLocation[MAX_PATH - 1] = 0;
+    return true;
+}
+
 BOOL Game::Locate()
 {
-    HKEY hKey;
-    char lGamePath[MAX_PATH];
-    DWORD dwSize = sizeof(lGamePath);
-    if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_READ, &hKey) == ERROR_SUCCESS)
-    {
-        if (RegQueryValueExA(hKey, "InstallLocation", NULL, NULL, (LPBYTE)lGamePath, &dwSize) == ERROR_SUCCESS)
-        {
-            strncpy(Game::gGamePath, lGamePath, MAX_PATH);
-            strncat(Game::gGameLocation, lGamePath, strlen(lGamePath));
-            strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
-        }
-        else
-            return FALSE;
-
-        RegCloseKey(hKey);
+    char path[MAX_PATH] = {};
+    // Steam's key first (the normal case), then our HKCU mirror (a non-Steam copy the player located).
+    if (ReadInstallLocation(HKEY_LOCAL_MACHINE, path, sizeof(path)) && TrySetFolder(path))
         return TRUE;
-    }
-    else
+    if (ReadInstallLocation(HKEY_CURRENT_USER, path, sizeof(path)) && TrySetFolder(path))
+        return TRUE;
+    return FALSE;
+}
+
+// Steam didn't register the game. Let the player point us at YuGiOh.exe themselves.
+BOOL Game::PromptForGame()
+{
+    if (MessageBoxA(NULL,
+        "Yu-Gi-Oh! Legacy of the Duelist couldn't be found automatically.\n\n"
+        "This happens when the game wasn't installed through Steam, or Steam didn't record where it is.\n\n"
+        "Would you like to locate YuGiOh.exe yourself?",
+        "Yu-Gi-Oh_Loader - Game not found", MB_ICONQUESTION | MB_YESNO) != IDYES)
         return FALSE;
+
+    char file[MAX_PATH] = {};
+    OPENFILENAMEA ofn = { sizeof(ofn) };
+    ofn.hwndOwner = NULL;
+    ofn.lpstrFilter = "YuGiOh.exe\0YuGiOh.exe\0All programs (*.exe)\0*.exe\0";
+    ofn.lpstrFile = file;
+    ofn.nMaxFile = MAX_PATH;
+    ofn.lpstrTitle = "Locate YuGiOh.exe";
+    // OFN_NOCHANGEDIR: the dialog must not change our working directory out from under the loader.
+    ofn.Flags = OFN_FILEMUSTEXIST | OFN_PATHMUSTEXIST | OFN_HIDEREADONLY | OFN_NOCHANGEDIR;
+
+    if (!GetOpenFileNameA(&ofn))
+        return FALSE;   // cancelled, or an error (GetOpenFileName returns 0 for both)
+
+    // The folder that holds the exe is the game folder.
+    std::string folder = file;
+    const size_t slash = folder.find_last_of("\\/");
+    if (slash != std::string::npos)
+        folder.resize(slash);
+
+    if (!TrySetFolder(folder.c_str()))
+    {
+        MessageBoxA(NULL,
+            "That folder doesn't contain YuGiOh.exe, so it can't be the game folder.",
+            "Yu-Gi-Oh_Loader", MB_ICONERROR | MB_OK);
+        return FALSE;
+    }
+
+    SaveGamePath(folder);   // remember it for next time
+    return TRUE;
 }
 
 // The folder this loader runs from (no trailing slash). Its Plugins\ folder is the one the game uses: the loader injects from it and writes it
@@ -92,21 +176,6 @@ BOOL Game::Start()
     PROCESS_INFORMATION processInfo;
 
     return DetourCreateProcessWithDllsA(gGameLocation, NULL, NULL, NULL, FALSE, 0, NULL, gGamePath, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
-}
-
-BOOL Game::Start(LPWSTR CustomPath)
-{
-    STARTUPINFO info = { sizeof(info) };
-    PROCESS_INFORMATION processInfo;
-
-    Set_GamePath(CustomPath);
-
-    Game::LookForPlugins();
-    if (!CoreIsInjected(gDlls))
-        return FALSE;
-    ExportLoaderPath();
-
-    return DetourCreateProcessWithDllsA(gGameLocation, NULL, NULL, NULL, TRUE, NULL, NULL, NULL, &info, &processInfo, gDlls.size(), gPlugins.data(), NULL);
 }
 
 // The DLLs in a folder, by name without ".dll".
@@ -269,23 +338,6 @@ void Game::LookForPlugins()
     }
     for (const std::string& dll : gDlls)
         gPlugins.push_back(dll.c_str());
-}
-
-void Game::Set_GamePath(LPWSTR Path)
-{
-    char charPath[MAX_PATH];
-    wcstombs(charPath, Path, MAX_PATH);
-
-    strncpy(Game::gGamePath, charPath, MAX_PATH);
-    strncat(Game::gGameLocation, charPath, strlen(charPath));
-    strncat(Game::gGameLocation, "\\YuGiOh.exe", sizeof("\\YuGiOh.exe"));
-
-    HKEY hKey;
-    if (RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 1150640", 0, KEY_WRITE, &hKey) == ERROR_SUCCESS)
-    {
-        RegSetValueExA(hKey, "InstallLocation", 0, REG_SZ, (LPBYTE)charPath, strlen(charPath));
-        RegCloseKey(hKey);
-    }
 }
 
 void Game::CreateConfig(LPCSTR ConfigName)

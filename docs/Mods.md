@@ -76,7 +76,7 @@ NoTributes=1
 * **Rules:** the same as Windows: spaces around keys and values are trimmed, a value in matching quotes loses them (`"ATK "` keeps its
   space), lines starting with `;` or `#` are comments. UTF-8 (with or without a BOM) or UTF-16 with a BOM.
 * **What a mod can't set** (Core skips it and logs a warning): in `[Yu-Gi-Oh-Core]` the plugin switches (`Yu-Gi-Oh-*`, `YGO-Ex/*`; use
-  `requires` instead), `PluginsPath`, `ModConfig`, `GameSaveName`, `SeedFromGameSave`, `SaveSlot` and `ReplacedNotice`; and all of
+  `requires` instead), `PluginsPath`, `ModConfig`, `GameSaveName`, `SaveSlot` and `ReplacedNotice`; and all of
   `[Yu-Gi-Oh-MP]`, so a mod can never point the server address or the sign-in code somewhere else.
 * **Writes** (a plugin saving a setting) always go to the player's Config.ini.
 * **Turning it off:** `[Yu-Gi-Oh-Core] ModConfig=0` in the player's Config.ini.

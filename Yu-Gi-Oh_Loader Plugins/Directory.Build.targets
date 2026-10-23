@@ -1,0 +1,10 @@
+<Project>
+  <!-- Every plugin keeps its manifest (<DLL>.json) next to its source, version-controlled. This copies it to the output
+       Plugins folder on build so Binaries stays in step with source and the manifest is the one canonical copy. It only
+       runs when a source manifest exists, so a plugin without one is left untouched. Auto-imported by every project under
+       this folder - no per-project edits. (GUI plugins need their own copy of this file in their folder.) -->
+  <Target Name="CopyPluginManifest" AfterTargets="Build" Condition="Exists('$(ProjectDir)$(TargetName).json')">
+    <Copy SourceFiles="$(ProjectDir)$(TargetName).json" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <Message Importance="high" Text="Plugin manifest -&gt; $(OutDir)$(TargetName).json" />
+  </Target>
+</Project>

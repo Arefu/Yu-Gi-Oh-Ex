@@ -6,11 +6,11 @@
 
 // Save slots: separate profiles, each its own save file. Yu-Gi-Oh-Ex\saves.json holds them and what the save-select screen shows:
 //
-//   { "lastSlot": 1, "nextFile": 4, "slots": [ { "name": "Duelist 1", "avatar": "yugimuto", "file": "savegame-ex.dat" }, ... ] }
+//   { "lastSlot": 1, "slots": [ { "name": "Duelist 1", "avatar": "yugimuto", "file": "savegame-ex.dat" }, ... ] }
 //
 // The number of entries is the number of slots (1 to MaxSlots, 3 when there is no file). "file" is the slot's save file next to the
 // GameSaveName one; an entry without it gets the old name for its position (slot 1 the GameSaveName file, slot N "-N" before the
-// extension), written back so deleting a slot never renames another slot's file. New slots take "-<nextFile>", a number never reused.
+// extension), written back so deleting a slot never renames another slot's file. A new slot takes the lowest free "-N" number (Add).
 // "avatar" is a portrait in pdui/chars (the sprite name without "_neutral") or a character id (its portrait).
 // [Yu-Gi-Oh-Core] SaveSlot=N in Config.ini always loads slot N and skips the screen (unless slot N can't be played, see CanPlay).
 namespace SaveSlots
@@ -35,6 +35,10 @@ namespace SaveSlots
     int Count();
     int LastSlot();                       // 1-based
     bool ShouldAsk();                     // show the save-select screen (no SaveSlot in Config.ini)
+
+    // True when the run is "modded": any active pack in <game>\Mods, or any loaded plugin that needs its own save (a
+    // "newSave" tag). The save-select screen uses it to warn before copying the vanilla Steam save into a modded run.
+    bool IsModded();
 
     std::filesystem::path PathOf(int slot);
     std::wstring NameOf(int slot);

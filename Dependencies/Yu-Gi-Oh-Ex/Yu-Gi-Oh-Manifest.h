@@ -6,8 +6,11 @@
 
         {
           "title": "Speed Hacks",                    what the plugin list calls it (default: the DLL's name)
+          "author": "You",                           who made it (default: nothing)
+          "version": "1.0",                          its version (default: nothing)
           "description": "Faster game.",             one short line shown under it (default: nothing)
           "enforced": true,                          it can not be turned off (default: false)
+          "settings": [ ... ],                       the Config.ini settings it reads (WolfX's Config editor shows them); see ConfigCatalog.cs
           "requires": [ "Yu-Gi-Oh-Core", "Yu-Gi-Oh-GUI" ],  DLL names (no .dll) that have to be on for this one to load
           "dlls": [ "Yu-Gi-Oh-FooHelper" ],          more DLLs (same folder) that belong to this plugin: they are not listed on their own,
                                                      and they load with it, just before it
@@ -56,6 +59,8 @@ namespace YGO
         struct Info
         {
             std::string Title;
+            std::string Author;
+            std::string Version;
             std::string Description;
             bool Enforced = false;
             std::vector<std::string> Requires;   // DLL names without ".dll"
@@ -126,6 +131,8 @@ namespace YGO
                 return {};
             };
             info.Title = text({ "title", "Title", "name" });
+            info.Author = text({ "author", "Author" });
+            info.Version = text({ "version", "Version" });
             info.Description = text({ "description", "Description", "desc", "Desc" });
 
             for (const char* key : { "enforced", "Enforced" })
