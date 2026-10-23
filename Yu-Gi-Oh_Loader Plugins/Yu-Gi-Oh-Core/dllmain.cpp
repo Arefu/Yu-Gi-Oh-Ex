@@ -18,6 +18,7 @@
 #include "Tweaks.h"
 #include "SaveScreen.h"
 #include "SaveSlots.h"
+#include "UserDecks.h"
 #include "Yu-Gi-Oh-Core.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
@@ -52,6 +53,13 @@ extern "C"
     CORE_API void __cdecl Core_SetDeckLimits(int MinMain, int MaxMain, int MaxExtra, int MaxSide) { DeckLimits::Set(MinMain, MaxMain, MaxExtra, MaxSide); }
 
     CORE_API void __cdecl Core_SetOnlineDuelFormat(int Format) { DuelFormat::SetOnline(Format); }
+
+    CORE_API int __cdecl Core_GetExtraUserDecks(int* FirstId)
+    {
+        if (FirstId)
+            *FirstId = static_cast<int>(UserDecks::kFirstExtraId);
+        return UserDecks::kExtraDecks;
+    }
 
     CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size)
     {
@@ -122,6 +130,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             SaveScreen::Install();
             // The saved card table for every Konami id (ids past the save's 20000 in the save extension); card plugins widen the game's checks.
             CardTable::Install();
+            // 256 user deck slots (the save holds 32; the rest in the save extension), from Toon Jinzo's Yu-Gi-Oh-DeckSlots (UserDecks.h).
+            UserDecks::Install();
         }
         break;
     }

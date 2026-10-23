@@ -112,6 +112,7 @@
     <ClCompile Include="Save.cpp" />
     <ClCompile Include="SaveScreen.cpp" />
     <ClCompile Include="SaveSlots.cpp" />
+    <ClCompile Include="UserDecks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Yu-Gi-Oh.def" />
@@ -131,6 +132,7 @@
     <ClInclude Include="Save.h" />
     <ClInclude Include="SaveScreen.h" />
     <ClInclude Include="SaveSlots.h" />
+    <ClInclude Include="UserDecks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
