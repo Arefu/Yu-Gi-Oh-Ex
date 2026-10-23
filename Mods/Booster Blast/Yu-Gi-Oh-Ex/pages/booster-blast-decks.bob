@@ -1,0 +1,23 @@
+// Structure Decks (Booster Blast, made by Tools/Scripts/make_pack_mods.py): the Card Store sells each set that is one ready-made deck.
+// The game's deck picker lists them (decks list "..."); confirm on one to buy it for value:price: it goes into your decks with its
+// cards (give_deck, docs/PageScript.md).
+header "Structure Decks";
+
+value deck_price = "1000";   // one Structure Deck; per deck: value price.<deck id> = "1500";
+value price = "{value:price.{var:bb.deck}|{value:deck_price}}";
+
+user;
+
+// a deck can be bought once per save: save:bb.bought.<deck id> remembers it (in the save), and the list leaves bought decks out
+decks list "578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593" hide "{save:bb.bought.#}" at 118.5, 171 size 500, 760 bind var:bb.deck
+    description "Confirm on a deck to buy it: it goes into your decks, with 3 of every card in it. L / R change the tab."
+    -> if game:freedecks < 1 -> { sound(71); message("All 32 of your deck slots are in use. Delete a deck in the Deck Editor first."); }
+       else if game:dp < value:price
+           -> { sound(71); message("{game:deckname.{var:bb.deck}} costs {value:price} DP. You have {game:dp} DP."); }
+       else confirm("Buy {game:deckname.{var:bb.deck}} for {value:price} DP? You have {game:dp} DP.")
+           -> take_dp(value:price) -> give_deck(var:bb.deck, 3)
+               -> { set(save:bb.bought.{var:bb.deck}, "1"); sound(52); message("{game:deckname.{var:bb.deck}} is in your decks, with 3 of every card."); reload; }
+               else { give_dp(value:price); message("The deck could not be saved; your DP was given back."); };
+
+// the highlighted deck's cards, as the deck editor shows a deck (Main / Extra rows, the stats bar): the Battle Pack edit screen's place
+deckcards "{var:bb.deck}" at 646, 120 bind var:bb.card description "The deck's cards. Right-click a card for its details; L / R go back to the decks.";

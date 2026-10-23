@@ -10,7 +10,7 @@
 #include "Logger.h"
 #include "Yu-Gi-Oh-Memory.h"
 #include "PluginMenu.h"
-#include "YuGiOh/YuGiOh-RIX.h"
+#include "Yu-Gi-Oh-RIX.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 // Traced in YuGiOh.exe.i64 (ScreenHelpVideo, vftable 0x140A75A18). The screen keeps its widgets as 32 byte "entries" (two shared_ptrs: [0..1] the

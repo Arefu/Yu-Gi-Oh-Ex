@@ -1,47 +1,39 @@
-﻿using System.Text.RegularExpressions;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace Yami_Yugi.Workers
 {
     internal static class Unpacker
     {
+        private static readonly Regex Spaces = new(@"  +", RegexOptions.Compiled);
+
         internal static void Unpack(string[] Args)
         {
             var File = new FileInfo(Args[0]);
-            var Archive = new FileInfo($"{File.FullName.Replace("toc", "dat")}");
+            var Archive = new FileInfo(Path.ChangeExtension(File.FullName, ".dat"));
             var Folder = Path.GetFileNameWithoutExtension(File.FullName);
             Console.Out.WriteLine($"Unpacking {Archive.Name} with {File.Name}");
             Directory.CreateDirectory(Folder);
 
-            using var Stream = System.IO.File.Open(Archive.FullName, FileMode.Open, FileAccess.Read);
-            using var BinaryReader = new BinaryReader(Stream);
+            // streamed: each file goes through Streaming's 1 MB buffer, never whole into memory
+            using var Dat = new FileStream(Archive.FullName, FileMode.Open, FileAccess.Read, FileShare.Read, Streaming.BufferSize, FileOptions.SequentialScan);
             foreach (string Line in System.IO.File.ReadLines(File.FullName))
             {
-                if (Line == "UT") continue;
+                if (Line == "UT" || Line.Trim().Length == 0)
+                    continue;
 
-                var CLine = Line.TrimStart(' ');
-                CLine = Regex.Replace(CLine, @"  +", " ", RegexOptions.Compiled);
-                var Information = CLine.Split(' ', 3);
+                var Information = Spaces.Replace(Line.TrimStart(' '), " ").Split(' ', 3);
+                long Size = long.Parse(Information[0], NumberStyles.HexNumber);
+                string Name = Information[2];
 
-                new FileInfo($"{Folder}/{Information[2]}").Directory?.Create();
+                string Target = Path.Combine(Folder, Name);
+                Directory.CreateDirectory(Path.GetDirectoryName(Target)!);
+                Console.Out.WriteLine($"Unpacking: {Name}, It's {Size} Bytes Big.");
 
-                Information[0] = Int32.Parse(Information[0], System.Globalization.NumberStyles.HexNumber).ToString();
+                using (var Output = new FileStream(Target, FileMode.Create, FileAccess.Write, FileShare.None, Streaming.BufferSize))
+                    Streaming.CopyExactly(Dat, Output, Size);
 
-                Console.Out.WriteLine($"Unpacking: {Information[2]}, It's {Information[0]} Bytes Big.");
-
-                var Bytes = Convert.ToInt32(Information[0]);
-                if (Bytes % 4 != 0)
-                {
-                    while (Bytes % 4 != 0)
-                    {
-                        Bytes = Bytes + 1;
-                    }
-                }
-
-                using var BinaryWriter = new BinaryWriter(System.IO.File.Open($"{Folder}/{Information[2]}", FileMode.Create, FileAccess.Write));
-                BinaryWriter.Write(BinaryReader.ReadBytes(Convert.ToInt32(Information[0]))); //This Chonks on BIG Files. Also uses LOTS of RAM.
-                BinaryWriter.Flush();
-
-                BinaryReader.BaseStream.Position += Bytes - Convert.ToInt32(Information[0]);
+                Dat.Position += Streaming.Padded(Size) - Size;   // the archive's 4-byte padding
             }
         }
     }

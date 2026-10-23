@@ -29,6 +29,8 @@ namespace Wolf.Editors
     /// </summary>
     public sealed class GameFolderFiles : IGameFiles
     {
+        public CharacterTable? CharacterChoices { get; set; }
+        public DeckData.DeckDataTable? DeckChoices { get; set; }
         /// <summary>The files a full set of game data has; missing ones are reported when a folder is opened.</summary>
         public static readonly (string Path, string What)[] RequiredFiles =
         [
@@ -51,10 +53,14 @@ namespace Wolf.Editors
         /// <summary>The name of the game's own archive (<c>[Yu-Gi-Oh-Core] Archive</c>, YGO_2020 when not set), without .toc.</summary>
         public string ArchiveName { get; } = "YGO_2020";
 
-        /// <summary>The game folder (the one with YuGiOh.exe and YGO_2020.toc).</summary>
-        public GameFolderFiles(string gameFolder)
+        /// <summary>
+        /// The game folder (the one with YuGiOh.exe and YGO_2020.toc). With <paramref name="modFolder"/> (&lt;game&gt;\Mods\&lt;id&gt;) a mod is
+        /// edited instead of the game folder's own files: its Yu-Gi-Oh-Ex, YGO_2020-Ex.toc / .dat and YGO_2020\ loose files, over the game's archive.
+        /// </summary>
+        public GameFolderFiles(string gameFolder, string? modFolder = null)
         {
             GameFolder = gameFolder;
+            ModFolder = modFolder;
             // the archive the game opens: [Yu-Gi-Oh-Core] Archive, YGO_2020 when it isn't set
             string archive = LoadSetting("Archive", "YGO_2020");
             ArchiveName = archive.Length > 0 ? archive : "YGO_2020";
@@ -85,9 +91,18 @@ namespace Wolf.Editors
         {
             if (_extracted != null)
                 return;
+            _patchFirst = LoadSetting("FileOrder", "loose").Equals("patch", StringComparison.OrdinalIgnoreCase);
+            if (ModFolder != null)
+            {
+                // a mod's layout is fixed (ModLibrary.Mod): YGO_2020-Ex.toc / .dat and YGO_2020\, which the game always reads
+                _patchName = "YGO_2020-Ex";
+                _looseFolderName = "YGO_2020";
+                _looseActive = true;
+                _patch = TocArchive.TryOpen(PatchToc);
+                return;
+            }
             string name = LoadSetting("PatchArchive", "YGO_2020-Ex");
             _patchName = name.Length > 0 ? name : "YGO_2020-Ex";
-            _patchFirst = LoadSetting("FileOrder", "loose").Equals("patch", StringComparison.OrdinalIgnoreCase);
             string folder = LoadSetting("FolderName", "YGO_2020");
             _looseFolderName = folder.Length > 0 ? folder : "YGO_2020";
             _looseActive = LoadSetting("LooseLoading", "0") == "1";
@@ -114,7 +129,13 @@ namespace Wolf.Editors
         [System.Runtime.InteropServices.DllImport("kernel32", CharSet = System.Runtime.InteropServices.CharSet.Unicode)]
         private static extern int GetPrivateProfileString(string section, string key, string fallback, System.Text.StringBuilder value, int size, string file);
 
-        private string PatchToc => Path.Combine(GameFolder, PatchName + ".toc");
+        /// <summary>The patch archive's .toc (its .dat is next to it): in the game folder, or in the mod being edited.</summary>
+        public string PatchToc => Path.Combine(ModFolder ?? GameFolder, PatchName + ".toc");
+
+        /// <summary>The mod being edited (&lt;game&gt;\Mods\&lt;id&gt;), or null for the game folder's own files.</summary>
+        public string? ModFolder { get; }
+
+        public bool IsMod => ModFolder != null;
 
         /// <summary>
         /// Throws when the patch would be the game's own archive ([..] PatchArchive set to YGO_2020, or to the Archive the game opens):
@@ -134,7 +155,7 @@ namespace Wolf.Editors
         /// <summary>The files the patch archive holds (what WolfX changed in the game's archive).</summary>
         public IReadOnlyList<string> PatchedFiles => _patch?.Paths.ToList() ?? [];
 
-        private GameFolderFiles(string extractedFolder, string exParent)
+        private GameFolderFiles(string extractedFolder, string exParent, bool extracted)
         {
             _extracted = extractedFolder;
             GameFolder = exParent;
@@ -160,6 +181,14 @@ namespace Wolf.Editors
             folder = Path.GetFullPath(folder);
             if (File.Exists(folder))
                 folder = Path.GetDirectoryName(folder) ?? folder;   // YGO_2020.dat or .toc itself was picked
+            // a mod (<game>\Mods\<id> with a mod.json): edited over the game's archive
+            if (File.Exists(Path.Combine(folder, "mod.json")) && Path.GetDirectoryName(folder) is { } mods &&
+                Path.GetFileName(mods).Equals("Mods", StringComparison.OrdinalIgnoreCase) && Path.GetDirectoryName(mods) is { } gameFolder &&
+                File.Exists(Path.Combine(gameFolder, "YGO_2020.toc")))
+            {
+                var mod = new GameFolderFiles(gameFolder, folder);
+                return mod._archive != null ? mod : null;
+            }
             if (File.Exists(Path.Combine(folder, "YGO_2020.toc")))
             {
                 var game = new GameFolderFiles(folder);
@@ -168,7 +197,7 @@ namespace Wolf.Editors
             if (!RequiredFiles.Any(file => File.Exists(Path.Combine(folder, file.Path))) && !Directory.Exists(Path.Combine(folder, "bin")))
                 return null;
             // An extracted folder: Yu-Gi-Oh-Ex goes next to it (inside the game folder, when it is one of its folders).
-            return new GameFolderFiles(folder, Path.GetDirectoryName(folder) ?? folder);
+            return new GameFolderFiles(folder, Path.GetDirectoryName(folder) ?? folder, extracted: true);
         }
 
         /// <summary>True for an extracted folder, false for the game folder (the .dat).</summary>
@@ -180,11 +209,11 @@ namespace Wolf.Editors
         /// <summary>The archive, for the game folder.</summary>
         public TocArchive? Archive => _archive;
 
-        /// <summary>What was opened: the extracted folder or the game folder.</summary>
-        public string Folder => _extracted ?? GameFolder;
+        /// <summary>What was opened: the extracted folder, the mod or the game folder.</summary>
+        public string Folder => _extracted ?? ModFolder ?? GameFolder;
 
-        /// <summary>Where loose files are: the extracted folder, or &lt;game&gt;\&lt;FolderName&gt; (default YGO_2020).</summary>
-        public string OverrideFolder => _extracted ?? Path.Combine(GameFolder, _looseFolderName);
+        /// <summary>Where loose files are: the extracted folder, or &lt;game or mod&gt;\&lt;FolderName&gt; (default YGO_2020).</summary>
+        public string OverrideFolder => _extracted ?? Path.Combine(ModFolder ?? GameFolder, _looseFolderName);
 
         public bool Available => _archive != null || _extracted != null;
 
@@ -194,7 +223,7 @@ namespace Wolf.Editors
         /// &lt;game&gt;\Yu-Gi-Oh-Ex: additional content, as JSON a person can read (plus PNGs for pictures). The launcher plugins read it
         /// and apply it to the game.
         /// </summary>
-        public string ExFolder => Path.Combine(GameFolder, "Yu-Gi-Oh-Ex");
+        public string ExFolder => Path.Combine(ModFolder ?? GameFolder, "Yu-Gi-Oh-Ex");
 
         /// <summary>A file in the Yu-Gi-Oh-Ex folder ("tutorials\steam_tutorial_05_E.json").</summary>
         public string ExPath(string relative) => Path.Combine(ExFolder, relative.Replace('/', '\\'));
@@ -401,8 +430,8 @@ namespace Wolf.Editors
                 else if (_archive == null || SourceOf(path) == "loose")
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(loose)!);
-                    if (File.Exists(loose) && !File.Exists(loose + ".bak"))
-                        File.Copy(loose, loose + ".bak");   // the first version, once
+                    if (File.Exists(loose) && !File.Exists(loose + ".bak") && ModFolder == null)
+                        File.Copy(loose, loose + ".bak");   // the first version, once (not in a mod: it would be shipped with it)
                     // written next to it first: a source may still be reading the old file (a .zib rewritten from itself)
                     string temp = loose + ".saving";
                     using (var stream = new FileStream(temp, FileMode.Create, FileAccess.Write, FileShare.None, 1 << 20))

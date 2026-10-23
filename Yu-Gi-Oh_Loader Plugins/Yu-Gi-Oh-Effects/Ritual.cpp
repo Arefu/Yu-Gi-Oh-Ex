@@ -22,7 +22,7 @@ namespace
     constexpr int kGameRows = 96;
     constexpr int kMaxRows = 127;                     // the readers compare the row index with an imm8 (cmp esi, 60h)
     constexpr int kFirstExtraCardId = 0x3BC4;         // 15300, as in Yu-Gi-Oh-Cards/Card.h
-    constexpr int kLastExtraCardId = 0x4E1F;
+    constexpr int kLastExtraCardId = 0xFFFE;          // 65534, as in Yu-Gi-Oh-Cards/Card.h
 
     struct Row
     {
@@ -59,16 +59,28 @@ namespace
         return SummonJson::EngineId(id);
     }
 
+    int g_ShownRows = kGameRows;   // the row count the readers' bounds hold now
+    bool PointBounds(int rows);
+
     // Called from the entry stubs: the custom rows with this duel's ids (a custom card's own id outside a duel or when it borrows none).
+    // The readers' row count is a signed byte (127 rows, 31 custom), so not every pair fits at once; but a pair only matters in a duel
+    // its cards are in, and a custom card past 0x3FFF plays under a borrowed id below 0x4000 exactly then. So the custom rows are the
+    // pairs whose monster or spell is in this duel (or has an id the engine uses as it is), up to the room left; the bound follows.
     void __cdecl RefreshRows()
     {
-        for (size_t i = 0; i < g_Pairs.size(); ++i)
+        constexpr int kRoom = kMaxRows - kGameRows;
+        int rows = 0;
+        for (const Row& pair : g_Pairs)
         {
-            g_Table[kGameRows + i].monster = EngineId(g_Pairs[i].monster);
-            g_Table[kGameRows + i].spell = EngineId(g_Pairs[i].spell);
+            const uint16_t monster = EngineId(pair.monster), spell = pair.spell ? EngineId(pair.spell) : 0;
+            if (monster > 0x3FFF || rows >= kRoom)
+                continue;   // not in this duel (or no room left)
+            g_Table[kGameRows + rows++] = { monster, spell };
         }
         for (const auto& [row, spell] : g_GameRowSpells)
             g_Table[row].spell = EngineId(spell);
+        if (kGameRows + rows != g_ShownRows)
+            PointBounds(kGameRows + rows);
     }
 
     // ---------------------------------------------------------------- cards.json
@@ -144,12 +156,7 @@ namespace
                 g_Pairs.push_back({ static_cast<uint16_t>(monster), 0 });
         }
 
-        constexpr size_t kRoom = kMaxRows - kGameRows;
-        if (g_Pairs.size() > kRoom)
-        {
-            Logger::WriteLog(std::format("{} custom Ritual pairs, the table has room for {}: the rest are left out", g_Pairs.size(), kRoom), MODULE_NAME, 2);
-            g_Pairs.resize(kRoom);
-        }
+        // every pair is kept: RefreshRows shows the game only the ones whose cards are in the duel (31 at most at once)
     }
 
     // ---------------------------------------------------------------- moving the table
@@ -173,6 +180,18 @@ namespace
         return true;
     }
 
+    // The readers' row count (cmp <reg>, imm8).
+    bool PointBounds(int rows)
+    {
+        const uint8_t count = static_cast<uint8_t>(rows);
+        bool ok = true;
+        for (uintptr_t site : kBoundSites)
+            ok &= CodePatch::WriteBytes(site, &count, sizeof(count));
+        if (ok)
+            g_ShownRows = rows;
+        return ok;
+    }
+
     bool PointOperandsAtTable(int rows)
     {
         const uintptr_t table = reinterpret_cast<uintptr_t>(g_Table);
@@ -184,10 +203,7 @@ namespace
         }
         const int32_t lea = static_cast<int32_t>(static_cast<int64_t>(table + 2) - static_cast<int64_t>(kLeaSite + kLeaLength));
         ok &= CodePatch::WriteBytes(kLeaSite + 3, &lea, sizeof(lea));
-        const uint8_t count = static_cast<uint8_t>(rows);
-        for (uintptr_t site : kBoundSites)
-            ok &= CodePatch::WriteBytes(site, &count, sizeof(count));
-        return ok;
+        return PointBounds(rows) && ok;
     }
 
 }

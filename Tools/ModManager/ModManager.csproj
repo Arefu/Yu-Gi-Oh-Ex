@@ -17,6 +17,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\File Type Libraries\StartingCollection\StartingCollection.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CharData\CharData.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\PackDef\PackDef.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\TextTable\TextTable.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\RelatedCards\RelatedCards.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\DuelData\DuelData.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\ScriptData\ScriptData.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\BND\BND.csproj" />
+    <ProjectReference Include="..\..\File Type Libraries\CRED\CRED.csproj" />
   </ItemGroup>
 
   <ItemGroup>

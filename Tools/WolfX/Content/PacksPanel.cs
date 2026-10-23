@@ -9,16 +9,25 @@ using Types;
 namespace WolfEx
 {
     /// <summary>
-    /// Yu-Gi-Oh-Ex/packs.json, read by Yu-Gi-Oh-BetterCardShop (Packs.cpp, docs/Packs.md):
+    /// Yu-Gi-Oh-Ex/packs.json, read by Yu-Gi-Oh-Core (Packs.cpp, docs/Packs.md):
     /// "packs" - cards added to (or replacing) the shop's reward packs, and "newPacks" - packs the game doesn't have, each in a free
     /// pack id (the game has 128 slots and uses 36) with its own name, series (shop tab), cost, picture (an existing pack's), unlock rule,
     /// title and text per language, and common/rare cards. Nothing in the game files is changed.
+    /// "rows" - new shop rows (tabs) after the game's 6, each with a name (drawn over a borrowed game banner) and the game row whose banner
+    /// it shows. A row holds at most as many packs as the game's fullest row (6); a pack with no "series" goes in the first new row with
+    /// room. "rowLabel" (where the name is drawn) is kept as it was read.
+    /// Where a new pack goes: the game's loader takes any id below 128 and any row, so a new pack in one of the game's rows (1-6) is
+    /// written into the game's own files (packdefdata_<L>.bin x6 + packs.zib packdata_<name>.bin, in the Ex patch) and kept in packs.json
+    /// as "native": true (the editor's copy; the plugin only adds its picture and unlock). A pack in a new row (or Automatic) can't be
+    /// shown by the game alone, so it lives in packs.json only.
     /// </summary>
     internal sealed partial class PacksPanel : UserControl, IContentPanel
     {
         private const int MinId = 1;
-        private const int MaxId = 19999;
+        private const int MaxId = 65534;   // the last custom card id (Yu-Gi-Oh-Cards Card.h)
         private const int PackSlots = 128;
+        private const int GameRows = 6;
+        private const int AutoRow = -1;           // PackEntry.Series: no "series", the plugin picks the first new row with room
         private static readonly string[] Languages = ["E", "F", "G", "I", "J", "S"];
 
         private sealed class PackEntry
@@ -38,6 +47,7 @@ namespace WolfEx
             public int Cost = 200;
             public string Art = "";
             public string UnlockWith = "";    // "" = from the start, "never", or a pack name
+            public bool Native => Series is >= 0 and < GameRows;   // fits the game's files (see the class comment)
             public Dictionary<string, string> Titles = [];
             public Dictionary<string, string> Texts = [];
 
@@ -45,6 +55,19 @@ namespace WolfEx
             public override string ToString() => $"{Name}  -  {Titles.GetValueOrDefault("E", "(new pack)")}  (id {Id})";
         }
 
+        private sealed class ShopRow
+        {
+            public int Row;
+            public int Art;           // game row 1-6 whose banner it shows, 0 = the plugin's default
+            public string ArtKey = "";  // or a new "wrap_series_<key>" banner added to pdui\SeriesLogo (Sprite sheets page)
+            public Dictionary<string, string> Names = [];
+            public override string ToString() => $"Row {Row + 1}: {Names.GetValueOrDefault("E", "(no name)")}";
+        }
+
+        private readonly List<ShopRow> _rows = [];
+        private readonly HashSet<string> _nativeLoaded = new(StringComparer.OrdinalIgnoreCase);   // new packs packs.json says are in the game files
+        private JsonNode? _rowLabel;              // packs.json "rowLabel", written back as read
+        private int _rowCap = 6;                  // packs per row: the game's fullest row
         private readonly List<PackEntry> _packs = [];
         private readonly HashSet<int> _gameIds = [];
         private readonly Dictionary<int, string> _seriesNames = [];   // series -> the titles of its first packs, to recognise the tab
@@ -69,6 +92,14 @@ namespace WolfEx
         };
         private readonly List<string> _gamePackNames = [];
 
+        // the shop rows editor (top of the left side)
+        private readonly ListBox _rowList = new() { Dock = DockStyle.Top, Height = 80, IntegralHeight = false };
+        private readonly TextBox _rowName = new() { Width = 150 };
+        private readonly ComboBox _rowArt = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 240 };
+        private List<string> _artNames = [];      // _art index - 1 -> "wrap_<x>" of pdui\PackWrappers
+        private List<string> _bannerKeys = [];    // _rowArt index - 1 -> "wrap_series_<key>" of pdui\SeriesLogo
+        private bool _bindingRow;
+
         public string Title => "Packs";
 
         public PacksPanel()
@@ -89,6 +120,7 @@ namespace WolfEx
             remove.Click += (_, _) => RemoveNewPack();
             buttons.Controls.AddRange([add, remove]);
             split.Panel1.Controls.Add(buttons);
+            BuildRowEditor();
 
             var grid = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2, Padding = new Padding(4) };
             void Row(string label, Control control)
@@ -98,9 +130,9 @@ namespace WolfEx
             }
             Row("Name (letters, digits, _):", _name);
             Row("Pack id (free slot, keep it):", _id);
-            Row("Shop tab (series):", _series);
+            Row("Shop row (tab):", _series);
             Row("Cost (DP):", _cost);
-            Row("Picture (an existing pack's):", _art);
+            Row("Picture (pdui\\PackWrappers):", _art);
             Row("Unlocked:", _unlock);
             _texts.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Language", ReadOnly = true, FillWeight = 12 });
             _texts.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Title", FillWeight = 35 });
@@ -127,6 +159,125 @@ namespace WolfEx
             _unlock.SelectedIndexChanged += Editor_Changed;
             _texts.CellValueChanged += (_, _) => Commit();
         }
+
+        private void BuildRowEditor()
+        {
+            var box = new GroupBox { Text = "New shop rows (tabs after the game's 6)", Dock = DockStyle.Top, AutoSize = true, Padding = new Padding(4) };
+            var buttons = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true, WrapContents = false };
+            var add = new Button { Text = "Add row", AutoSize = true };
+            var remove = new Button { Text = "Remove row", AutoSize = true };
+            add.Click += (_, _) => AddRow();
+            remove.Click += (_, _) => RemoveRow();
+            buttons.Controls.AddRange([add, remove]);
+            var fields = new TableLayoutPanel { Dock = DockStyle.Top, AutoSize = true, ColumnCount = 2 };
+            fields.Controls.Add(new Label { Text = "Name:", AutoSize = true, Margin = new Padding(3, 7, 3, 3) });
+            fields.Controls.Add(_rowName);
+            fields.Controls.Add(new Label { Text = "Banner:", AutoSize = true, Margin = new Padding(3, 7, 3, 3) });
+            fields.Controls.Add(_rowArt);
+            for (int row = 1; row <= GameRows; row++)
+                _rowArt.Items.Add($"Game row {row}'s");
+            // docked top: added last = shown first
+            box.Controls.Add(fields);
+            box.Controls.Add(_rowList);
+            box.Controls.Add(buttons);
+            split.Panel1.Controls.Add(box);
+
+            _rowList.SelectedIndexChanged += (_, _) => BindRow();
+            _rowName.TextChanged += (_, _) => CommitRow();
+            _rowArt.SelectedIndexChanged += (_, _) => CommitRow();
+            BindRow();
+        }
+
+        private ShopRow? SelectedRow => _rowList.SelectedIndex >= 0 ? _rows[_rowList.SelectedIndex] : null;
+
+        private void BindRow()
+        {
+            var row = SelectedRow;
+            _rowName.Enabled = _rowArt.Enabled = row != null;
+            _bindingRow = true;
+            try
+            {
+                _rowName.Text = row?.Names.GetValueOrDefault("E", "") ?? "";
+                string key = row == null ? "" : row.ArtKey.Length > 0 ? row.ArtKey : row.Art > 0 ? row.Art.ToString() : "";
+                if (_rowArt.Items.Count > 0)   // filled once the game data is read
+                    _rowArt.SelectedIndex = Math.Min(_rowArt.Items.Count - 1, Math.Max(0, _bannerKeys.IndexOf(key) + 1));
+            }
+            finally { _bindingRow = false; }
+        }
+
+        private void CommitRow()
+        {
+            if (_bindingRow || SelectedRow is not { } row)
+                return;
+            row.Names["E"] = _rowName.Text;
+            string key = _rowArt.SelectedIndex > 0 && _rowArt.SelectedIndex - 1 < _bannerKeys.Count ? _bannerKeys[_rowArt.SelectedIndex - 1] : "";
+            row.Art = int.TryParse(key, out int game) && game is >= 1 and <= GameRows ? game : 0;
+            row.ArtKey = row.Art > 0 || key.Length == 0 ? "" : key;
+            _bindingRow = true;
+            try { _rowList.Items[_rowList.SelectedIndex] = row; }
+            finally { _bindingRow = false; }
+            FillRowChoices();
+        }
+
+        private void AddRow()
+        {
+            int next = _rows.Count == 0 ? GameRows : _rows.Max(r => r.Row) + 1;
+            var row = new ShopRow { Row = next, Names = { ["E"] = $"New row {next + 1}" } };
+            _rows.Add(row);
+            _rowList.Items.Add(row);
+            _rowList.SelectedIndex = _rowList.Items.Count - 1;
+            FillRowChoices();
+        }
+
+        private void RemoveRow()
+        {
+            if (SelectedRow is not { } row)
+                return;
+            foreach (var pack in _packs.Where(p => p.IsNew && p.Series == row.Row))
+                pack.Series = AutoRow;
+            int index = _rowList.SelectedIndex;
+            _rows.RemoveAt(index);
+            _rowList.Items.RemoveAt(index);
+            if (_rowList.Items.Count > 0)
+                _rowList.SelectedIndex = Math.Min(index, _rowList.Items.Count - 1);
+            else
+                BindRow();
+            FillRowChoices();
+            BindSelected();
+        }
+
+        // The pack's row choices: Automatic, the game's rows, then the new ones; each with how full it is.
+        private readonly List<int> _rowChoices = [];
+
+        private void FillRowChoices()
+        {
+            bool binding = _binding;
+            _binding = true;
+            try
+            {
+                _rowChoices.Clear();
+                _series.Items.Clear();
+                _rowChoices.Add(AutoRow);
+                _series.Items.Add($"Automatic (first new row with room, {_rowCap} packs per row)");
+                for (int row = 0; row < GameRows; row++)
+                {
+                    _rowChoices.Add(row);
+                    _series.Items.Add($"{row + 1}: {_seriesNames.GetValueOrDefault(row, "(no game packs)")}  [{RowFill(row)}]");
+                }
+                foreach (var shopRow in _rows.OrderBy(r => r.Row))
+                {
+                    _rowChoices.Add(shopRow.Row);
+                    _series.Items.Add($"{shopRow.Row + 1}: {shopRow.Names.GetValueOrDefault("E", "(no name)")} (new)  [{RowFill(shopRow.Row)}]");
+                }
+            }
+            finally { _binding = binding; }
+        }
+
+        private int GamePacksIn(int row) => _gameRowCounts.GetValueOrDefault(row);
+
+        private string RowFill(int row) => $"{GamePacksIn(row) + _packs.Count(p => p.IsNew && p.Series == row)}/{_rowCap}";
+
+        private readonly Dictionary<int, int> _gameRowCounts = [];
 
         private void List_SelectedIndexChanged(object? sender, EventArgs e) => BindSelected();
 
@@ -162,18 +313,25 @@ namespace WolfEx
 
         public bool Dirty => _snapshot?.Changed == true;
 
-        public void MarkSaved() => (_snapshot ??= new ContentSnapshot(() => new object[] { _packs, _replaceAll })).Mark();
+        public void MarkSaved() => (_snapshot ??= new ContentSnapshot(() => new object[] { _packs, _rows, _replaceAll })).Mark();
+
+        private readonly ContentLoadState _loadState = new();
 
         public void LoadFrom(string extraCardsFolder, string gameFolder)
         {
+            _loadState.Reset();
             _packs.Clear();
             _list.Items.Clear();
             _gameIds.Clear();
             _gamePackNames.Clear();
             _seriesNames.Clear();
+            _gameRowCounts.Clear();
+            _rows.Clear();
+            _rowList.Items.Clear();
 
             string jsonPath = Path.Combine(extraCardsFolder, "packs.json");
-            var additions = ReadAdditions(jsonPath, out _replaceAll);
+            var root = ReadRoot(jsonPath);
+            var additions = ReadAdditions(root, out _replaceAll);
 
             try
             {
@@ -185,6 +343,8 @@ namespace WolfEx
                 if (def != null)
                 {
                     var records = PackDefFile.Parse(def).Records;
+                    // our own new packs written into the game files earlier are not the game's
+                    records = records.Where(record => !_nativeLoaded.Contains(record.Name)).ToList();
                     foreach (var record in records)
                         _gameIds.Add((int)record.Id);
 
@@ -192,6 +352,7 @@ namespace WolfEx
                     foreach (var record in records.Where(record => record.IsReward).OrderBy(record => record.Series).ThenBy(record => record.Id))
                     {
                         _gamePackNames.Add(record.Name);
+                        _gameRowCounts[(int)record.Series] = _gameRowCounts.GetValueOrDefault((int)record.Series) + 1;
                         if (!_seriesNames.ContainsKey((int)record.Series))
                             _seriesNames[(int)record.Series] = record.Title;
                         else if (!_seriesNames[(int)record.Series].Contains(','))
@@ -206,14 +367,38 @@ namespace WolfEx
 
             _kept = additions;
 
-            _packs.AddRange(ReadNewPacks(jsonPath));
-
-            _series.Items.Clear();
-            for (int series = 0; series <= 5; series++)
-                _series.Items.Add($"{series}: {_seriesNames.GetValueOrDefault(series, "(no game packs)")}");
+            _rowCap = _gameRowCounts.Where(kv => kv.Key is >= 0 and < GameRows).Select(kv => kv.Value).DefaultIfEmpty(6).Max();
+            _packs.AddRange(ReadNewPacks(root));
+            _rows.AddRange(ReadRows(jsonPath, out _rowLabel));
+            foreach (var row in _rows)
+                _rowList.Items.Add(row);
+            // a pack placed in a row that has no "rows" entry: give the row one, so it can be picked
+            foreach (int row in _packs.Where(p => p.IsNew && p.Series >= GameRows).Select(p => p.Series).Distinct().Where(r => _rows.All(x => x.Row != r)).ToList())
+            {
+                var shopRow = new ShopRow { Row = row };
+                _rows.Add(shopRow);
+                _rowList.Items.Add(shopRow);
+            }
+            BindRow();
+            FillRowChoices();
+            // pictures: every "wrap_<x>" sprite of pdui\PackWrappers as the game reads it (a sprite added on the Sprite sheets page shows up);
+            // banners: every "wrap_series_<x>" of pdui\SeriesLogo
+            var gameFiles = Wolf.Editors.GameFolderFiles.Current;
+            _artNames = Wolf.Editors.SheetNames.WithPrefix(gameFiles, Wolf.Editors.SheetNames.PackWrappers, "wrap_");
+            if (_artNames.Count == 0)
+                _artNames = [.. _gamePackNames];
             _art.Items.Clear();
-            _art.Items.Add("(none: wrap_<name>, only if the game has that picture)");
-            _art.Items.AddRange([.. _gamePackNames]);
+            _art.Items.Add("(none: wrap_<name>, the pack's own name, when the sheet has it)");
+            foreach (string art in _artNames)
+                _art.Items.Add(_gamePackNames.Contains(art) ? $"{art} (a game pack's)" : $"{art} (new, in the patched sheet)");
+            _bannerKeys = Wolf.Editors.SheetNames.WithPrefix(gameFiles, Wolf.Editors.SheetNames.SeriesLogo, "wrap_series_");
+            if (_bannerKeys.Count == 0)
+                _bannerKeys = [.. Enumerable.Range(1, GameRows).Select(n => n.ToString())];
+            _rowArt.Items.Clear();
+            _rowArt.Items.Add("(default)");
+            foreach (string key in _bannerKeys)
+                _rowArt.Items.Add(int.TryParse(key, out int n) && n is >= 1 and <= GameRows ? $"Game row {n}'s" : $"{key} (new, in the patched sheet)");
+            BindRow();
             _unlock.Items.Clear();
             _unlock.Items.Add("From the start");
             _unlock.Items.Add("Never (stays locked)");
@@ -231,6 +416,7 @@ namespace WolfEx
 
         public bool SaveTo(string extraCardsFolder)
         {
+            _loadState.EnsureLoaded();
             var problems = new List<string>();
             var array = new JsonArray();
 
@@ -272,9 +458,12 @@ namespace WolfEx
                 {
                     ["id"] = pack.Id,
                     ["name"] = pack.Name,
-                    ["series"] = pack.Series,
-                    ["cost"] = pack.Cost,
                 };
+                if (pack.Series != AutoRow)
+                    node["series"] = pack.Series;
+                if (pack.Native)
+                    node["native"] = true;
+                node["cost"] = pack.Cost;
                 if (pack.Art.Length > 0)
                     node["art"] = pack.Art;
                 if (pack.UnlockWith.Length > 0)
@@ -286,25 +475,136 @@ namespace WolfEx
                 newPacks.Add(node);
             }
 
+            foreach (int row in _packs.Where(p => p.IsNew && p.Series != AutoRow).Select(p => p.Series).Distinct())
+            {
+                int count = GamePacksIn(row) + _packs.Count(p => p.IsNew && p.Series == row);
+                if (count > _rowCap)
+                    problems.Add($"Row {row + 1} has {count} packs; a row holds {_rowCap}. Move some to another row or to Automatic.");
+            }
+
+            var rows = new JsonArray();
+            foreach (var row in _rows.OrderBy(r => r.Row))
+            {
+                var node = new JsonObject { ["row"] = row.Row, ["name"] = Texts(row.Names) };
+                if (row.ArtKey.Length > 0)
+                    node["art"] = row.ArtKey;
+                else if (row.Art > 0)
+                    node["art"] = row.Art;
+                rows.Add(node);
+            }
+
             if (problems.Count > 0)
             {
                 MessageBox.Show(string.Join("\n", problems), "Fix these before saving", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
+            if (!WriteNativePacks(problems))
+            {
+                MessageBox.Show(string.Join("\n", problems), "Packs not saved", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             string path = Path.Combine(extraCardsFolder, "packs.json");
-            if (array.Count == 0 && newPacks.Count == 0)
+            if (array.Count == 0 && newPacks.Count == 0 && rows.Count == 0)
             {
                 if (File.Exists(path))
-                    File.Delete(path);
+                    ContentSaveBatch.Remove(path);
                 return true;
             }
 
             var root = new JsonObject { ["replaceDefaults"] = _replaceAll, ["packs"] = array };
             if (newPacks.Count > 0)
                 root["newPacks"] = newPacks;
+            if (rows.Count > 0)
+                root["rows"] = rows;
+            if (_rowLabel != null)
+                root["rowLabel"] = _rowLabel.DeepClone();
             var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
-            File.WriteAllText(path, root.ToJsonString(options) + "\n", new UTF8Encoding(false));
+            ContentSaveBatch.WriteText(path, root.ToJsonString(options) + "\n");
+            return true;
+        }
+
+        // New packs in the game's rows go into the game's own files (in the Ex patch): every language's packdefdata gets their records
+        // (title/text per language, English where one is empty) and packs.zib their card lists. Packs written there before that are now
+        // in a new row, renamed or removed are taken out again.
+        private bool WriteNativePacks(List<string> problems)
+        {
+            var native = _packs.Where(p => p.IsNew && p.Native).ToList();
+            var ours = new HashSet<string>(_nativeLoaded, StringComparer.OrdinalIgnoreCase);
+            foreach (var pack in _packs.Where(p => p.IsNew))
+                ours.Add(pack.Name);
+            if (native.Count == 0 && _nativeLoaded.Count == 0)
+                return true;
+            foreach (var pack in native.Where(p => p.Id >= PackSlots))
+            {
+                problems.Add($"\"{pack.Name}\" is in one of the game's rows, which needs a pack id under {PackSlots} (it has {pack.Id}): " +
+                             "move it to a new row or Automatic (Yu-Gi-Oh-Core has no limit there), or remove another pack in the game's rows.");
+                return false;
+            }
+
+            var files = Wolf.Editors.GameFolderFiles.Current;
+            if (files?.Available != true)
+            {
+                problems.Add("Open the game folder first: new packs in the game's rows are written into its pack files.");
+                return false;
+            }
+            if (Wolf.Editors.GameFolderFiles.GameRunning)
+            {
+                problems.Add("Close the game first: new packs in the game's rows are written into its pack files.");
+                return false;
+            }
+
+            var write = new Dictionary<string, byte[]>();
+            foreach (string language in Languages)
+            {
+                string defPath = Path.Combine("main", $"packdefdata_{language}.bin");
+                if (files.Read(defPath) is not { } data)
+                    continue;
+                var def = PackDefFile.Parse(data);
+                def.Records.RemoveAll(record => ours.Contains(record.Name));
+                foreach (var pack in native)
+                    def.Records.Add(new PackDefRecord
+                    {
+                        Id = (uint)pack.Id, Series = (uint)pack.Series, Cost = (uint)pack.Cost, Kind = (uint)PackKind.Reward, Name = pack.Name,
+                        Title = pack.Titles.GetValueOrDefault(language) is { Length: > 0 } title ? title : pack.Titles.GetValueOrDefault("E", ""),
+                        Text = pack.Texts.GetValueOrDefault(language) is { Length: > 0 } text ? text : pack.Texts.GetValueOrDefault("E", ""),
+                    });
+                def.Records.Sort((a, b) => a.Id.CompareTo(b.Id));
+                write[defPath] = def.ToBytes();
+            }
+
+            if (files.Read("packs.zib") is { } zib)
+            {
+                var archive = ZibArchive.Parse(zib);
+                archive.Entries.RemoveAll(entry => ours.Any(name => entry.Name.Equals($"packdata_{name}.bin", StringComparison.OrdinalIgnoreCase)));
+                foreach (var pack in native)
+                {
+                    var contents = new PackContents();
+                    contents.Common.AddRange(ParseIds(pack.ExtraCommon, problems, pack.Name).Select(id => (ushort)id));
+                    contents.Rare.AddRange(ParseIds(pack.ExtraRare, problems, pack.Name).Select(id => (ushort)id));
+                    archive.Set($"packdata_{pack.Name}.bin", contents.ToBytes());
+                }
+                write["packs.zib"] = archive.ToBytes();
+            }
+            else if (native.Count > 0)
+            {
+                problems.Add("packs.zib isn't in the open game data, so the new packs' cards can't be written.");
+                return false;
+            }
+
+            try
+            {
+                files.Write(write);
+            }
+            catch (Exception ex)
+            {
+                problems.Add($"Could not write the game's pack files: {ex.Message}");
+                return false;
+            }
+            _nativeLoaded.Clear();
+            foreach (var pack in native)
+                _nativeLoaded.Add(pack.Name);
             return true;
         }
 
@@ -330,26 +630,50 @@ namespace WolfEx
             return ids;
         }
 
-        private static JsonNode? ReadRoot(string path)
+        private JsonNode? ReadRoot(string path)
         {
             if (!File.Exists(path))
                 return null;
             try
             {
-                return JsonNode.Parse(File.ReadAllText(path), documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip, AllowTrailingCommas = true });
+                var root = ContentLoadState.Read(path)!;
+                if (root is JsonArray) ContentLoadState.Objects(root, "packs");
+                else if (root is JsonObject obj)
+                {
+                    if (obj.ContainsKey("packs")) ContentLoadState.Objects(obj["packs"], "packs");
+                    if (obj.ContainsKey("newPacks")) ContentLoadState.Objects(obj["newPacks"], "newPacks");
+                    if (obj["packs"] == null && obj["newPacks"] == null)
+                        throw new InvalidDataException("Expected packs or newPacks.");
+                }
+                else throw new InvalidDataException("Expected packs JSON.");
+                var packs = root as JsonArray ?? (root as JsonObject)?["packs"] as JsonArray;
+                if (root is JsonObject options) ContentLoadState.Fields<bool>(options, "replaceDefaults");
+                foreach (JsonObject entry in packs ?? new JsonArray())
+                {
+                    ContentLoadState.Fields<string>(entry, "pack");
+                    ContentLoadState.Fields<bool>(entry, "replace");
+                    if (entry["pack"] == null) throw new InvalidDataException("A pack entry needs its pack name.");
+                }
+                foreach (JsonObject entry in (root as JsonObject)?["newPacks"] as JsonArray ?? new JsonArray())
+                {
+                    ContentLoadState.Fields<int>(entry, "id", "series", "cost");
+                    ContentLoadState.Fields<string>(entry, "name", "art", "unlockWith");
+                    if (entry["id"] == null || entry["name"] == null) throw new InvalidDataException("A new pack needs id and name.");
+                }
+                return root;
             }
             catch (Exception ex)
             {
+                _loadState.Failed(ex);
                 MessageBox.Show($"Could not read {path}:\n{ex.Message}", "Packs", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
 
-        private static Dictionary<string, (string Common, string Rare, bool Replace)> ReadAdditions(string path, out bool replaceAll)
+        private Dictionary<string, (string Common, string Rare, bool Replace)> ReadAdditions(JsonNode? root, out bool replaceAll)
         {
             replaceAll = false;
             var result = new Dictionary<string, (string, string, bool)>();
-            var root = ReadRoot(path);
             var array = root as JsonArray ?? root?["packs"] as JsonArray;
             if (array == null)
                 return result;
@@ -367,10 +691,10 @@ namespace WolfEx
             return result;
         }
 
-        private static List<PackEntry> ReadNewPacks(string path)
+        private List<PackEntry> ReadNewPacks(JsonNode? source)
         {
             var result = new List<PackEntry>();
-            if (ReadRoot(path) is not JsonObject root || root["newPacks"] is not JsonArray array)
+            if (source is not JsonObject root || root["newPacks"] is not JsonArray array)
                 return result;
             foreach (var node in array.OfType<JsonObject>())
             {
@@ -379,7 +703,7 @@ namespace WolfEx
                     IsNew = true,
                     Id = Int(node["id"]) ?? 0,
                     Name = Str(node["name"]),
-                    Series = Int(node["series"]) ?? 0,
+                    Series = Int(node["series"]) ?? AutoRow,
                     Cost = Int(node["cost"]) ?? 200,
                     Art = Str(node["art"]),
                     UnlockWith = Str(node["unlockWith"]),
@@ -389,6 +713,24 @@ namespace WolfEx
                 ReadTexts(node["title"], entry.Titles);
                 ReadTexts(node["text"], entry.Texts);
                 result.Add(entry);
+            }
+            return result;
+        }
+
+        private List<ShopRow> ReadRows(string path, out JsonNode? rowLabel)
+        {
+            var result = new List<ShopRow>();
+            var root = ReadRoot(path) as JsonObject;
+            rowLabel = root?["rowLabel"]?.DeepClone();
+            if (root?["rows"] is not JsonArray array)
+                return result;
+            foreach (var node in array.OfType<JsonObject>())
+            {
+                if (Int(node["row"]) is not int row || row < GameRows || result.Any(r => r.Row == row))
+                    continue;
+                var shopRow = new ShopRow { Row = row, Art = Math.Clamp(Int(node["art"]) ?? 0, 0, GameRows), ArtKey = Str(node["art"]) };
+                ReadTexts(node["name"], shopRow.Names);
+                result.Add(shopRow);
             }
             return result;
         }
@@ -412,31 +754,28 @@ namespace WolfEx
 
         // ---- new packs ----
 
+        // Ids under 128 first (a pack in the game's rows needs one); past them the id only names it here: Yu-Gi-Oh-Core shares the
+        // game's free pack slots between the new rows, so there is no limit on packs (docs/Packs.md, No pack limit).
         private int NextFreeId()
         {
-            for (int id = 0; id < PackSlots; id++)
+            for (int id = 0; ; id++)
                 if (!_gameIds.Contains(id) && !_packs.Any(p => p.IsNew && p.Id == id))
                     return id;
-            return -1;
         }
 
         private void AddNewPack()
         {
             int id = NextFreeId();
-            if (id < 0)
-            {
-                MessageBox.Show("All 128 pack ids are used.", "Packs", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             string name = $"custom_{id}";
             var pack = new PackEntry
             {
-                IsNew = true, Id = id, Name = name, Art = _gamePackNames.FirstOrDefault() ?? "",
+                IsNew = true, Id = id, Name = name, Art = _gamePackNames.FirstOrDefault() ?? "", Series = AutoRow,
                 Titles = { ["E"] = "New Pack" }, Texts = { ["E"] = "" },
             };
             _packs.Add(pack);
             _list.Items.Add(pack);
             _list.SelectedIndex = _list.Items.Count - 1;
+            FillRowChoices();
         }
 
         private void RemoveNewPack()
@@ -484,12 +823,14 @@ namespace WolfEx
                 {
                     lblCommon.Text = "Common cards (card ids, separated by commas or spaces):";
                     lblRare.Text = "Rare cards:";
-                    _info.Text = $"A new pack in slot {pack.Id}. Yu-Gi-Oh-BetterCardShop adds it to the shop tab you pick.";
+                    _info.Text = pack.Native
+                        ? $"A new pack in slot {pack.Id}, in one of the game's rows: saved into the game's pack files (Ex patch); Yu-Gi-Oh-Core adds its picture and unlock. {_rowCap} packs per row."
+                        : $"A new pack in slot {pack.Id}, in a new row: saved in packs.json, which Yu-Gi-Oh-Core adds to the shop. {_rowCap} packs per row.";
                     _name.Text = pack.Name;
                     _id.Value = Math.Clamp(pack.Id, 0, PackSlots - 1);
-                    _series.SelectedIndex = Math.Clamp(pack.Series, 0, _series.Items.Count - 1);
+                    _series.SelectedIndex = Math.Max(0, _rowChoices.IndexOf(pack.Series));
                     _cost.Value = Math.Clamp(pack.Cost, 0, (int)_cost.Maximum);
-                    int art = _gamePackNames.IndexOf(pack.Art);
+                    int art = _artNames.IndexOf(pack.Art);
                     _art.SelectedIndex = art >= 0 ? art + 1 : 0;
                     int unlock = pack.UnlockWith.Length == 0 ? 0 : pack.UnlockWith.Equals("never", StringComparison.OrdinalIgnoreCase) ? 1
                         : _gamePackNames.IndexOf(pack.UnlockWith) is int at and >= 0 ? at + 2 : 0;
@@ -525,9 +866,13 @@ namespace WolfEx
             {
                 pack.Name = _name.Text.Trim();
                 pack.Id = (int)_id.Value;
-                pack.Series = Math.Max(0, _series.SelectedIndex);
+                int newRow = _series.SelectedIndex >= 0 && _series.SelectedIndex < _rowChoices.Count ? _rowChoices[_series.SelectedIndex] : AutoRow;
+                bool moved = newRow != pack.Series;
+                pack.Series = newRow;
+                if (moved)
+                    BeginInvoke(() => { int at = _series.SelectedIndex; FillRowChoices(); _binding = true; try { _series.SelectedIndex = at; } finally { _binding = false; } });
                 pack.Cost = (int)_cost.Value;
-                pack.Art = _art.SelectedIndex > 0 ? _gamePackNames[_art.SelectedIndex - 1] : "";
+                pack.Art = _art.SelectedIndex > 0 && _art.SelectedIndex - 1 < _artNames.Count ? _artNames[_art.SelectedIndex - 1] : "";
                 pack.UnlockWith = _unlock.SelectedIndex switch
                 {
                     <= 0 => "",

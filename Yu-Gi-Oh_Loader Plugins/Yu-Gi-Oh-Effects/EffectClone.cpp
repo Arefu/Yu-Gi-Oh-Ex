@@ -1,5 +1,6 @@
-﻿#include <algorithm>
+#include <algorithm>
 #include <array>
+#include <bit>
 #include <utility>
 #include <filesystem>
 #include "Config.h"
@@ -29,10 +30,18 @@
 namespace
 {
     constexpr int kFirstExtraCardId = 0x3BC4;   // 15300, as in Yu-Gi-Oh-Cards/Card.h
-    constexpr int kLastExtraCardId = 0x4E1F;
+    constexpr int kLastExtraCardId = 0xFFFE;    // 65534, as in Yu-Gi-Oh-Cards/Card.h
     // A game card whose effect is overridden with none ("overridden": true and no "effectClone" in effects.json) clones this card:
     // Blue-Eyes White Dragon is a Normal Monster, in no effect table, id list, ladder or phase table, so every lookup answers "nothing".
     constexpr int kNoEffectSource = 4007;
+
+    struct Row   // the game's 48-byte effect table row
+    {
+        uint16_t Id;
+        uint16_t Extra[3];
+        void* Slot[5];
+    };
+    static_assert(sizeof(Row) == 48, "effect table rows are 48 bytes");
 
     struct Clone
     {
@@ -42,10 +51,40 @@ namespace
         uint16_t FilterRow[6]{};  // the 12-byte row: id, param, flagsExtra (u32), flags (u32)
         std::vector<Clone> Pre;       // "before": steps that run first, in one call, ahead of this one (chaining, see SlotThunk<0>)
         bool OncePerTurn = false;     // "You can only use this effect once per turn" (per card name): the row's limit class becomes 5, see WrappedRow
+        // "quick": a Quick Effect (spell speed 2: usable in either player's turn and in a chain). Speed is by card id in the game
+        // (Get_DefaultSpellSpeedForCard 0x140743C30: IdList_QuickEffectMonsters_783), so a composed effect would get its donor's speed;
+        // the speed ladder (IdLadder 3, Get_EffectSpellSpeed_ByEffectId 0x14012FC50) answers 2 for it instead.
+        bool Quick = false;
+        // The limit class used for OncePerTurn: 5 (marker key 1001) normally; 6 (key 1002, the engine's second independent limit) for the
+        // second once-per-turn effect of a card, so "(1) ... once per turn; (2) ... once per turn" are counted apart (ParseEffect).
+        uint16_t LimitClass = 5;
         bool HasLp = false;           // replaces the life point changes of a Life Point effect (see Hook_LpChanges)
         int LpOwn = 0, LpOpp = 0;     // signed change for the effect's controller / the opponent (negative = damage)
         bool HasDeckFilter = false;   // replaces which Deck cards a "search the Deck" effect can find (see BuildDeckFilter)
         uint8_t DeckRow[24]{};        // synthetic row of the game's deck filter table (0x140AD2A80): id, param, -1, scan fn, flags
+        // "except [this card's name]" ("deck": {"exceptSelf": true}, on by default from the compiler): the row's name test (param) becomes
+        // minus the id the card plays under this duel, set just before the row is used (PrepareDeckRow). Only when the row has no other name
+        // test (an archetype / card filter already uses the one param), then it is left out.
+        bool ExceptSelf = false;
+        bool ExceptSelfAfter = false;   // the name test is taken (archetype / card filter): this card's name is dropped from the matches instead
+        uint16_t Owner = 0;           // the card this effect belongs to (custom id, or the overridden game card's id)
+        std::wstring Label;           // "label": this effect's text in the choose-an-effect prompt (its name, or the compiler's summary)
+        // "steps": immediate actions the plugin runs itself, in order, with the game's own functions (Slot0_RunSteps): draw / gain / damage
+        // for own / opponent / both players. The row (how the card is activated) still comes from From.
+        struct StepOp { int Op = 0; int N = 0; int Who = 0; };   // Op: 0 draw, 1 gain LP, 2 damage; Who: 0 own, 1 opponent, 2 both
+        std::vector<StepOp> Steps;
+        // "own": the plugin's own pick-and-act machine instead of the source card's slot 0 (Slot0_OwnPickAndAct): the list is built from the
+        // "deck" filter when the step runs, the player picks, then 1 = each pick to the hand, 2 = each pick Special Summoned, 3 = sent to the
+        // GY, 4 = banished (3 / 4: from the Deck, Extra Deck or hand; 4 also from the GY), 5 = destroyed (a card on the field, picked with the
+        // game's field prompt instead of a list: Slot0_OwnFieldDestroy).
+        int Own = 0;
+        bool HandList = false;   // "deck.scan": "handSummon": an "own" step builds the hand list itself (OwnHandList), see Hook_Collect
+        bool FieldPick = false;  // "deck.scan": "field": the cards on the field ("deck.side": own / opponent / any), tested by FieldZoneMatches
+        int FieldSide = 2;       // 0 own, 1 opponent, 2 either side
+        // "deck": {..., "or": [{...}, ...]}: more alternatives, one synthetic row each (same scan); Collect / Count run them all and keep each
+        // card once. The game's own row-index callers (Get_DeckFilterIndexForEffect, "is there a match" checks) only see the first.
+        struct AltRow { uint8_t Row[24]{}; bool ExceptSelf = false; bool ExceptSelfAfter = false; };
+        std::vector<AltRow> OrRows;
         bool HasStats = false;        // "stats": { "atk": N, "def": N } - replaces the ATK/DEF a stat table gives (equip / union / boost), see Hook_RowSearch
         int16_t StatRow[4]{};         // synthetic row handed back: source id, ATK, DEF, 0
         // Slot functions that replace the source row's own (0 = keep): a new effect composed from the game's pieces. So far slot 2, the
@@ -75,6 +114,18 @@ namespace
         uint16_t NegateFlags = 0;     // 0x1 a card's activation only, 0x2 the opponent's only, 0x10 / 0x20 your / the opponent's turn, 0x40 Battle Phase, 0x400 targets exactly 1 card
         int NegateProperty = -1;      // Spell/Trap property the negated card must have (0 Normal, 1 Counter, 2 Field, 3 Equip, 4 Continuous, 5 Quick-Play, 6 Ritual); -1 any
         std::string Trigger;          // the EffectScript trigger this effect was compiled for ("normal_summoned", "sent_to_grave" ...), "" = none / unknown
+        // "summonCondition": how the card must have been summoned for a summon trigger to fire (docs/EffectSystem.md section 46), checked
+        // against the event record in Hook_EventEvaluator.
+        struct SummonCondition
+        {
+            bool Any = false;          // a condition was given
+            uint32_t FromZones = 0;    // bit per zone it came from (13 hand, 14 Extra Deck, 15 Deck, 16 GY, 17 banished, 7-11 Spell & Trap Zones); 0 = any
+            enum class By { Any, Effect, NotEffect, Own, Spell, Trap, Monster, Card, Archetype } ByWhat = By::Any;
+            int ByValue = 0;           // the card id (Card) or archetype code (Archetype)
+            bool Proper = false;       // Fusion / Synchro / Xyz / Ritual / Link Summoned (the record's flag bit 0; the card's own kind says which)
+            bool Pendulum = false;     // Pendulum Summoned (flag 0x40)
+            int MinTributes = 0;       // Tribute Summoned with at least this many Tributes
+        } Summon;
         // A card with several effects ("If Normal Summoned: ... If sent to the GY: ..."): each further effect borrows its own vanilla card.
         // The engine asks for a card's effects table by table (summon / FLIP rows, leave-field rows, ignition rows) and per event, so every
         // lookup is routed to the part whose source answers it (RouteByRow / RouteByTrigger). Parts have no parts of their own.
@@ -171,6 +222,26 @@ namespace
         return all;
     }
 
+    // The native record copier preserves word 20 verbatim, including in compact
+    // chain records. Keep the native sub-effect number in its low byte.
+    Clone* g_MenuPart = nullptr;
+    uint16_t ChoiceTag(Clone& root, const Clone* part)
+    {
+        const auto parts = AllParts(root);
+        for (size_t i = 0; i < parts.size() && i < 127; ++i)
+            if (parts[i] == part) return static_cast<uint16_t>(0x8000 | ((i + 1) << 8));
+        return 0;
+    }
+
+    struct NativeChoiceScope
+    {
+        uint16_t* Record;
+        uint16_t Tag;
+        explicit NativeChoiceScope(uint16_t* record) : Record(record), Tag(record[20] & 0xFF00)
+        { if (Tag & 0x8000) record[20] &= 0xFF; else Tag = 0; }
+        ~NativeChoiceScope() { if (Tag) Record[20] = Tag | (Record[20] & 0xFF); }
+    };
+
     // Does an effect compiled for `trigger` belong to the event in an effect record's word3 (docs/EffectSystem.md sections 29-30)?
     bool TriggerFitsEvent(const std::string& trigger, uint16_t event)
     {
@@ -178,7 +249,7 @@ namespace
         {
         case 7: case 9: return trigger == "normal_summoned" || trigger == "special_summoned" || trigger == "summoned" || trigger == "normal_or_special_summoned";
         case 8: return trigger == "flip" || trigger == "summoned";
-        case 13: case 21: return trigger == "flip";
+        case 12: case 13: case 21: return trigger == "flip";   // 12 / 13: Duel_ChangePosition_OfferFlip_Ev12or13 (0x140084E50), 21: battle
         case 31: case 32: case 33: return trigger == "sent_to_grave" || trigger == "sent_from_field_to_grave" || trigger == "destroyed_by_battle";
         case 2: return trigger == "standby_phase";
         case 6: return trigger == "end_phase";
@@ -196,41 +267,131 @@ namespace
     {
         switch (event)
         {
-        case 2: case 6: case 7: case 8: case 9: case 13: case 15: case 18: case 19: case 21: case 22: case 31: case 32: case 33: return true;
+        case 2: case 6: case 7: case 8: case 9: case 12: case 13: case 15: case 18: case 19: case 21: case 22: case 31: case 32: case 33: return true;
         default: return false;
         }
     }
 
-    // The part of a multi-effect card whose source has a row for this lookup (same table selector word4, index word2, event word3). When several
-    // do (two effects in the same table, e.g. a FLIP and a Normal Summon effect), the one whose trigger fits the record's event wins; then the first.
+    // Is `trigger` one of the event triggers above (summoned, sent to the GY, FLIP, ...)? "ignition", "in_grave" and no trigger are not: they are
+    // activated by the player, with no event in the record.
+    bool IsEventTrigger(const std::string& trigger)
+    {
+        for (uint16_t event : { 2, 6, 7, 8, 9, 12, 13, 15, 18, 19, 21, 22, 31, 32, 33 })
+            if (TriggerFitsEvent(trigger, event))
+                return true;
+        return false;
+    }
+
+    // ---- choosing between effects of the same kind ----------------------------------------------------------------------------
+    // Two effects a lookup cannot tell apart (two ignition effects, two effects for the same event) are chosen by the PLAYER, the way the game's
+    // own "(1) ... (2) ..." cards work (Rainbow Dragon 7171; docs/EffectSystem.md section 45): the card is offered once, its slot 3
+    // (Slot3_EffectChoice_SelectThenCost 0x1401FCB00 for game cards) shows the "select an effect" prompt with the usable effects, and from then on
+    // every lookup of that activation means the chosen effect. The game keeps the choice in the effect record (word19 - 1 = the row,
+    // Effect_GetRowIndexForRecord 0x1400DE070); a borrowed source's machines may use that word for themselves, so the plugin keeps it apart,
+    // per card instance (word11), until the effect resolves.
+    std::map<std::pair<uint16_t, uint16_t>, int> g_Choices;      // (custom id, card instance) -> index in AllParts
+    std::map<std::pair<uint16_t, uint16_t>, size_t> g_Sequence;   // (custom id, card instance) -> the "before" step running (Pre.size() = its own step)
+    std::map<std::pair<uint16_t, uint16_t>, uint32_t> g_SequenceStart;   // ... and the step value its resolution started with
+    std::set<std::pair<uint16_t, uint16_t>> g_ChoicePrompted;    // the prompt is up; the answer is read on the next slot 3 call
+    struct { bool Active = false; std::pair<uint16_t, uint16_t> Key; int Index = 0; } g_Probe;   // ComputeChoiceMask trying one effect
+    uint16_t g_PromptId = 0;    // while the prompt is built: the card it is for ...
+    int g_PromptCount = 0;      // ... and how many effects it lists (EffectChoice_GetCount's answer)
+    // The option texts of the last prompt per card (engine id): option n = the n-th candidate, drawn by the UI after the prompt is built.
+    std::map<uint16_t, std::vector<std::wstring>> g_PromptLabels;
+
+    std::pair<uint16_t, uint16_t> ChoiceKey(const uint16_t* effect)
+    {
+        const unsigned short real = BorrowedRealId(effect[0]);
+        return { static_cast<uint16_t>(real ? real : effect[0]), effect[11] };
+    }
+
+    // The effect chosen for this record's card (or being tried), as an index in AllParts; -1 = none yet.
+    int ChosenIndex(const uint16_t* effect)
+    {
+        const auto key = ChoiceKey(effect);
+        if (g_Probe.Active && g_Probe.Key == key)
+            return g_Probe.Index;
+        auto it = g_Choices.find(key);
+        return it == g_Choices.end() ? -1 : it->second;
+    }
+
+    // The parts of a multi-effect card that answer this lookup (same table selector word4, index word2, event word3): those whose source has a
+    // real row for it, narrowed to the ones whose trigger fits the record's event when any does (a FLIP and a Normal Summon effect share a table).
+    // Table 0 returns a generic Spell/Trap row even for a source without one; such a part is only used when no part has a real row.
+    std::vector<Clone*> Candidates(Clone* clone, uint16_t* effect)
+    {
+        std::vector<Clone*> rows, fitting, generic;
+        if (!clone || clone->Parts.empty() || !effect)
+            return rows;
+        const uint16_t saved = effect[0];
+        for (Clone* part : AllParts(*clone))
+        {
+            effect[0] = static_cast<uint16_t>(part->From);
+            if (const Row* row = static_cast<const Row*>(orig_GetEntry(effect)))
+            {
+                if (row->Id != part->From)
+                {
+                    generic.push_back(part);
+                    continue;
+                }
+                if (!part->Trigger.empty() && part->Trigger != "ignition" && IsKnownTriggerEvent(effect[3])
+                    && !TriggerFitsEvent(part->Trigger, effect[3]))
+                    continue;
+                rows.push_back(part);
+                if (TriggerFitsEvent(part->Trigger, effect[3]))
+                    fitting.push_back(part);
+            }
+        }
+        effect[0] = saved;
+        if (!fitting.empty())
+            return fitting;
+        // Event 0 = an activation check (ignition, from the GY / hand): no event offered it, so an event-trigger part can't be meant. Without this a
+        // "sent from the field to the GY" part (Botanical Girl's Kind2 row) listed before a banish-from-GY part (Rose Lover's Kind2 row) won the
+        // lookup below and the GY effect was never offered. Only when another part is left (a record that lost its event still finds its effect).
+        if (effect[3] == 0 && std::any_of(rows.begin(), rows.end(), [](const Clone* part) { return !IsEventTrigger(part->Trigger); }))
+            std::erase_if(rows, [](const Clone* part) { return IsEventTrigger(part->Trigger); });
+        // An event the plugin can't place: never ask the player to choose between effects of DIFFERENT triggers (a FLIP and a Standby effect
+        // both have table 1 rows); the effects sharing the first one's trigger stay.
+        if (rows.size() > 1)
+            std::erase_if(rows, [&](const Clone* part) { return part->Trigger != rows.front()->Trigger; });
+        return !rows.empty() ? rows : generic;
+    }
+
+    // The part of a multi-effect card this lookup means: the part picked from the effect menu, or the one tagged in the record (word20 bit 15,
+    // index in bits 8-14); else the only candidate, else the one the player chose at the "select an effect" prompt, else the first.
     Clone* RouteByRow(Clone* clone, uint16_t* effect)
     {
         if (!clone || clone->Parts.empty() || !effect)
             return clone;
-        const uint16_t saved = effect[0];
-        Clone* first = nullptr;
-        Clone* fitting = nullptr;
-        for (Clone* part : AllParts(*clone))
+        const std::vector<Clone*> all = AllParts(*clone);
+        if (g_MenuPart && std::find(all.begin(), all.end(), g_MenuPart) != all.end())
+            return g_MenuPart;
+        if (effect[20] & 0x8000)
         {
-            effect[0] = static_cast<uint16_t>(part->From);
-            if (orig_GetEntry(effect))
-            {
-                if (!first)
-                    first = part;
-                if (!fitting && TriggerFitsEvent(part->Trigger, effect[3]))
-                    fitting = part;
-            }
+            const size_t index = ((effect[20] >> 8) & 0x7F);
+            if (index && index <= all.size()) return all[index - 1];
+            return nullptr;
         }
-        effect[0] = saved;
-        return fitting ? fitting : first ? first : clone;
+        const std::vector<Clone*> pool = Candidates(clone, effect);
+        if (pool.empty())
+            return clone;
+        if (pool.size() > 1)
+        {
+            const int chosen = ChosenIndex(effect);
+            if (chosen >= 0 && chosen < static_cast<int>(all.size()) && std::find(pool.begin(), pool.end(), all[chosen]) != pool.end())
+                return all[chosen];
+        }
+        return pool.front();
     }
 
     constexpr const char* kSummonTriggers[] = { "normal_summoned", "special_summoned", "summoned", "normal_or_special_summoned", "flip" };
     constexpr const char* kLeaveTriggers[] = { "sent_to_grave", "sent_from_field_to_grave", "destroyed_by_battle" };
     constexpr const char* kBattleListTriggers[] = { "attack_declared", "battle_damage" };
 
-    // The part whose trigger is one of `triggers` (the main effect when none is).
-    Clone* RouteByTrigger(Clone* clone, std::span<const char* const> triggers)
+    // Explicit triggers take precedence. Raw {from, parts} clones have no trigger metadata:
+    // choose a source with an actual row in the event's table, rather than always the main source.
+    // A generic Spell/Trap fallback is not evidence of a monster event effect.
+    Clone* RouteByTrigger(Clone* clone, std::span<const char* const> triggers, int table = -1)
     {
         if (!clone || clone->Parts.empty())
             return clone;
@@ -238,6 +399,21 @@ namespace
             for (const char* t : triggers)
                 if (part->Trigger == t)
                     return part;
+        if (table >= 0)
+        {
+            for (Clone* part : AllParts(*clone))
+            {
+                if (!part->Trigger.empty())
+                    continue;
+                uint16_t record[0x20]{};
+                record[0] = static_cast<uint16_t>(part->From);
+                record[4] = static_cast<uint16_t>(table);
+                const Row* row = static_cast<const Row*>(orig_GetEntry(record));
+                if (row && row->Id == part->From)
+                    return part;
+            }
+            return nullptr;
+        }
         return clone;
     }
 
@@ -285,18 +461,279 @@ namespace
     // branch ("no targets", never playable). So the row handed back holds wrappers, one per slot the source row uses, that swap the source
     // id into the record for the duration of that slot call and restore it after: the effect runs exactly as the source card's would.
 
-    struct Row   // the game's 48-byte effect table row
-    {
-        uint16_t Id;
-        uint16_t Extra[3];
-        void* Slot[5];
-    };
-    static_assert(sizeof(Row) == 48, "effect table rows are 48 bytes");
-
     // Draw and life point effects resolve completely within a single call (no player interaction), so they can be run back to back.
     bool IsImmediate(const Clone& c)
     {
-        return c.HasLp || c.Draw >= 0 || c.From == 4844 /* Pot of Greed */ || c.From == 4345 /* Red Medicine */ || c.From == 4350 /* Hinotama */;
+        return !c.Steps.empty() || c.HasLp || c.Draw >= 0 || c.From == 4844 /* Pot of Greed */ || c.From == 4345 /* Red Medicine */ || c.From == 4350 /* Hinotama */;
+    }
+
+    // ---- the plugin's own resolver ("steps") --------------------------------------------------------------------------------
+    // The game's action functions, called directly (docs/EffectSystem.md sections 49 / 50). Each finishes in one call, so a list of them is one
+    // resolve step: the slot returns 0 (done) after running them all.
+    const auto Draw_ExecuteDraw = reinterpret_cast<int64_t(__fastcall*)(uint16_t*, int, int, uint32_t)>(0x1400A1C10);         // (record, player, count, flags)
+    const auto LP_ApplyGain = reinterpret_cast<uint32_t(__fastcall*)(uint16_t*, int, int)>(0x1400A15F0);                      // LP_ApplyGain_Internal (record, side, amount)
+    const auto LP_ApplyDamage = reinterpret_cast<uint32_t(__fastcall*)(uint16_t*, int, int)>(0x14009E4C0);                    // LP_ApplyDamage_Internal (record, side, amount)
+
+    uint64_t __fastcall Slot0_RunSteps(uint16_t* effect, uint64_t, uint64_t, uint64_t)
+    {
+        const Clone* clone = g_Active;
+        if (!clone || !effect)
+            return 0;
+        const int controller = effect[1] & 1;   // the record's player (as LP_ApplyChangeFromParamTable reads it)
+        for (const Clone::StepOp& step : clone->Steps)
+        {
+            for (int player = 0; player < 2; ++player)
+            {
+                const bool own = player == controller;
+                if ((step.Who == 0 && !own) || (step.Who == 1 && own))
+                    continue;
+                switch (step.Op)
+                {
+                case 0: Draw_ExecuteDraw(effect, player, step.N, 0); break;
+                case 1: LP_ApplyGain(effect, player, step.N); break;
+                case 2: LP_ApplyDamage(effect, player, step.N); break;
+                }
+            }
+        }
+        return 0;
+    }
+
+    // ---- the plugin's own pick-and-act machine ("own") -----------------------------------------------------------------------
+    // No card's slot 0: the steps of the game's search machine (Slot0_AddFromDeckToHand_StateMachine 0x14016D5A0) with the act swapped per
+    // Clone::Own. The list is collected when the step runs (not at activation), so a card an earlier step put in the hand can be picked.
+    // The record's id (effect[0]) is the step's source, which routes the collect hook to this step's "deck" filter (DeckFilterClone).
+    const auto Get_DeckFilterParam = reinterpret_cast<uint32_t(__fastcall*)(uint16_t*)>(0x14008CE70);         // Get_DeckFilterParamForEffect_Ladder
+    const auto Deck_Collect = reinterpret_cast<int64_t(__fastcall*)(int, int, uint32_t)>(0x1400C0290);         // Deck_CollectMatchingCards (hooked: our filter)
+    const auto UI_ShowNoneMessage = reinterpret_cast<void(__fastcall*)(int, uint32_t)>(0x14005E940);          // (player, 0x15): "no card to choose"
+    const auto UI_ShowPrompt = reinterpret_cast<void(__fastcall*)(int, uint32_t)>(0x14005E8D0);               // UI_ShowPromptText (player, 0x33)
+    const auto UI_BeginListSelect = reinterpret_cast<int64_t(__fastcall*)(int, int, int, uint32_t)>(0x14005DE00);   // (player, 6 = pick 1, id, param)
+    const auto Resolution_BeginScope = reinterpret_cast<void(__fastcall*)(int)>(0x1400A81A0);
+    const auto Card_MoveListCardToHand = reinterpret_cast<int64_t(__fastcall*)(uint16_t*, int, uint32_t*, int)>(0x14008A3F0);   // (record, player, card, 1)
+    const auto Chain_AddEffectLink = reinterpret_cast<int64_t(__fastcall*)(int16_t, uint32_t*, int16_t, int16_t, uint32_t, int16_t)>(0x1400F2450);
+    const auto Msg_EndOfListEffect = reinterpret_cast<void(__fastcall*)(int)>(0x1400A7DD0);                    // message 86 (sub_1400A7DD0)
+    const auto Net_SendSimple = reinterpret_cast<int64_t(__fastcall*)(int, int, void*, int)>(0x14000E990);     // Duel__NetEvent__SendSimple
+    // The movers of Foolish Burial's machine (Slot0_SelectFromListAndMove_StateMachine 0x140178460, step 125), both raise the moved events:
+    // Deck (15) / Extra Deck (14): (player, from zone, 0 = GY / 1 = banish, card instance, flags 0, effect id); the hand: (player, card instance,
+    // flags 0 = "sent" (event 33, 0x4000 = discard, event 32), 16 = GY / 17 = banish, effect id).
+    const auto Move_NonFieldCardToGraveOrBanish = reinterpret_cast<int64_t(__fastcall*)(int, int, int, int, uint32_t, int)>(0x1400A6F40);   // _Ev31
+    const auto Move_HandCardToGraveOrBanish = reinterpret_cast<int64_t(__fastcall*)(int, int, uint32_t, uint32_t, int)>(0x140088D90);       // _Ev32
+    const auto Card_GetPositionByInstance = reinterpret_cast<uint32_t(__fastcall*)(int)>(0x140044480);   // zone in bits 8-15 (13 hand, 14 Extra, 15 Deck, 16 GY)
+    // Banish rules. Can_PlayerBanish (0x14005C630, player): not under Imperial Iron Wall / the opponent's Chaos Hunter / flag 11243; the Deck /
+    // hand movers fall back to the GY without it, so an own banish step checks it first. Can_BanishFromGrave (0x14005C700, player, the GY's
+    // owner): that, plus flag 5248, the opponent's Kycoo the Ghost Destroyer, Necrovalley (unless the owner has Gravekeeper's Chief).
+    const auto Can_PlayerBanish = reinterpret_cast<int64_t(__fastcall*)(int)>(0x14005C630);
+    const auto Can_BanishFromGrave = reinterpret_cast<int64_t(__fastcall*)(int, uint32_t)>(0x14005C700);
+    // A GY card by an effect, as the "banish the targeted GY cards" machine (0x140178110) does it: the card's slot in the duel state
+    // (Card_GetSlotPtrByInstance 0x140044C10), then Effect_BanishGraveCard (0x140089D30: record, banishing player, slot, flags; it adds
+    // 0x400 "by an effect" and calls Move_GraveCardToBanished 0x140089E70, which raises the moved event).
+    const auto Card_GetSlotPtrByInstance = reinterpret_cast<uint32_t*(__fastcall*)(int)>(0x140044C10);
+    const auto Effect_BanishGraveCard = reinterpret_cast<int64_t(__fastcall*)(uint16_t*, int, uint32_t*, int)>(0x140089D30);
+
+    // A chain ("before" steps) whose first step is an own pick-and-act step: activation needs its list to have a card (SlotThunk<2>).
+    bool FirstStepIsOwn(const Clone& clone)
+    {
+        return !clone.Pre.empty() && clone.Pre[0].Own;
+    }
+
+    bool g_OwnStepFoundNothing = false;   // set by Slot0_OwnPickAndAct when its list is empty; read and cleared by the sequencer
+
+    uint64_t __fastcall Slot0_OwnPickAndAct(uint16_t* effect, uint64_t, uint64_t, uint64_t)
+    {
+        const Clone* clone = g_Active;
+        if (!clone || !effect)
+            return 0;
+        const int player = (effect[1] ^ effect[5]) & 1;
+        const int id = effect[0];
+        uint32_t& step = *reinterpret_cast<uint32_t*>(0x14349C13C);
+        switch (step)
+        {
+        case 128:
+            if ((clone->Own == 4 && !(Can_PlayerBanish(player) & 0xFF)) || Deck_Collect(player, id, Get_DeckFilterParam(effect)) <= 0)
+            {
+                Logger::WriteLog(std::format("Own step (source {}): nothing matches{}", id, clone->Own == 4 ? " (or banishing is not allowed)" : ""), MODULE_NAME, 1);
+                UI_ShowNoneMessage(player, 0x15);
+                g_OwnStepFoundNothing = true;   // "X, then Y": the sequencer stops here (Y needs X)
+                return 0;
+            }
+            // the prompt the game shows before such a list: 0x33 the search's "add to your hand", 0x30 the summon's
+            // (Slot0_Generic_TargetedEffect_StateMachine step 127, Unexpected Dai), 0x3A Foolish Burial's (its machine's step 128; also used
+            // for banish, the game has no banish-from-Deck list machine to take one from)
+            UI_ShowPrompt(player, clone->Own == 1 ? 0x33 : clone->Own == 2 ? 0x30 : 0x3A);
+            return 126;
+        case 126:
+            UI_BeginListSelect(player, 6, id, Get_DeckFilterParam(effect));
+            return 125;
+        case 125:
+        {
+            // A pick-1 list (mode 6) leaves the picked INDEX at 0x14349C5C8 and the list at 0x14349C5D8 (the search machine's one-card path,
+            // 0x14016DE3D); Get_SelectedListCard and the count at +0x3802 are for multi-pick lists only (they moved nothing, in-duel 2026-10-21).
+            uint32_t* const picked = reinterpret_cast<uint32_t*>(0x14349C5D8) + *reinterpret_cast<const int16_t*>(0x14349C5C8);
+            static constexpr const char* kActs[] = { "", "to hand", "summon", "to GY", "banish", "destroy" };
+            Logger::WriteLog(std::format("Own step (source {}, {}): picked list entry {} = card {}", id, kActs[clone->Own],
+                *reinterpret_cast<const int16_t*>(0x14349C5C8), *picked & 0x3FFF), MODULE_NAME, 1);
+            if (clone->Own != 2)
+            {
+                // as the search / Foolish Burial machines: one resolution scope around the move, then tell the other side (online duel)
+                Resolution_BeginScope(1);
+                if (clone->Own == 1)
+                    Card_MoveListCardToHand(effect, player, picked, 1);
+                else
+                {
+                    // the list entry's card instance, as Foolish Burial's machine unpacks it
+                    const int instance = ((*picked & 0x4000) != 0) + 2 * static_cast<int>(*picked >> 23);
+                    const int zone = (Card_GetPositionByInstance(instance) >> 8) & 0xFF;
+                    const bool banish = clone->Own == 4;
+                    if (zone == 13)
+                        Move_HandCardToGraveOrBanish(player, instance, 0, banish ? 17 : 16, id);
+                    else if (zone == 14 || zone == 15)
+                        Move_NonFieldCardToGraveOrBanish(player, zone, banish ? 1 : 0, instance, 0, id);
+                    else if (zone == 16 && banish)
+                    {
+                        uint32_t* const slot = Card_GetSlotPtrByInstance(instance);
+                        if (slot && (Can_BanishFromGrave(player, static_cast<uint32_t>(instance & 1)) & 0xFF))
+                            Effect_BanishGraveCard(effect, player, slot, 0);
+                        else
+                            Logger::WriteLog(std::format("Own step (source {}): card {} cannot be banished from the GY now", id, *picked & 0x3FFF), MODULE_NAME, 1);
+                    }
+                    else
+                        Logger::WriteLog(std::format("Own step (source {}): card {} is in zone {}, not moved (Deck, Extra Deck, hand; banish also the GY)",
+                            id, *picked & 0x3FFF, zone), MODULE_NAME, 2);
+                }
+                --*reinterpret_cast<int32_t*>(0x14349C180);
+                if (*reinterpret_cast<const int32_t*>(0x143497C40 + 0x37B0))
+                {
+                    uint32_t payload = 0;
+                    Net_SendSimple(8, -1, &payload, 2);   // NetEv_ResolutionScope
+                }
+                return 100;
+            }
+            // Special Summon: the engine's summon link, as Unexpected Dai's machine queues it (0x140163830 step 124: mode 1, count 2)
+            Chain_AddEffectLink(static_cast<int16_t>(player), picked, 1, 2, static_cast<uint32_t>(id) << 16, 0);
+            return 120;
+        }
+        case 120:
+        case 100:
+            Msg_EndOfListEffect(player);
+            return 0;
+        default:
+            return 0;
+        }
+    }
+
+    // ---- the plugin's own field destroy ("own": "destroy") ------------------------------------------------------------------
+    // "Destroy 1 card on the field" without a target: the card is picked at resolution with the game's field prompt, as its own field-pick
+    // destroy machine does it (sub_14017AFD0, read in IDA 2026-10-22):
+    //   126: UI_ShowPromptText(player, 0x62); prompt owner +0x385E = player; prompt kind +0x3832 (qword) = 9; zone test +0x387A = callback;
+    //        +0x384A = the record's id; answered flag +0x3842 (qword) = 0 -> 125. The engine tick shows the prompt while +0x3832 is set (AI:
+    //        sub_1400BAA70) and resolves nothing until it is answered.
+    //   125: answered (+0x3842), the answer kind +0x3856 == 12 and sub_140063120(+0x383E) (the picked zone is still selectable) - else back
+    //        to 126. Side +0x3862, zone +0x3866 + index +0x386A. Action_DestroyZoneMask(record, 1 << (zone + 16 * side), 16, 2) queues the
+    //        destruction (Effect_RunSlot1Action_Driver's flags), which Duel__Engine__Tick runs (sub_1400D53E0) BEFORE it calls the chain
+    //        resolver (sub_1400AF730) again - so a step after it sees the card gone.
+    // The kind-9 zone test (Pick_GetCardFlags 0x1400632D0) is called as (resolving record, side, zone) for zones 0..12; non-zero = selectable.
+    constexpr uintptr_t kDuelState = 0x143497C40;
+    Clone* g_FieldPick = nullptr;   // the own destroy step whose prompt is up (the zone test runs between slot calls, without g_Active)
+    int g_SlotInstance = -1;        // the card instance (record word 11) of the slot running now: Hook_Count's "except this card" for a field step
+
+    // Does the card in (side, zone) pass the step's "deck" row? The zone's InPlay_Card (24 bytes from +0x4C: CARDID, ..., UNK_03 at +0x14
+    // with 0x20 = "not counted", as Check_TargetStillValid 0x1400DFEE0 skips it); kind bits 2 / 4 / 8 of the row (none = any); a monster
+    // through Scan_CardMatchesRowFlags (0x14052B540: race / attribute / Level by the zone's effective values, ATK); the row's name test.
+    bool FieldZoneMatches(const Clone& clone, int player, int side, int zone, int selfInstance)
+    {
+        if (zone < 0 || zone > 12)
+            return false;
+        if ((clone.FieldSide == 0 && side != player) || (clone.FieldSide == 1 && side == player))
+            return false;
+        const uintptr_t entry = kDuelState + static_cast<uintptr_t>(side & 1) * 0xD94 + 0x4C + 24 * static_cast<uintptr_t>(zone);
+        uint32_t* const card = reinterpret_cast<uint32_t*>(entry);
+        const int cardId = static_cast<int>(*card & 0x3FFF);
+        if (cardId == 0 || (*reinterpret_cast<const uint32_t*>(entry + 0x14) & 0x20))
+            return false;
+        const int instance = ((*card & 0x4000) != 0) + 2 * static_cast<int>(*card >> 23);
+        if ((clone.ExceptSelf || clone.ExceptSelfAfter) && instance == selfInstance)
+            return false;   // "except this card": this card itself, not its name (a field card is one card)
+        const uint32_t rowFlags = *reinterpret_cast<const uint32_t*>(clone.DeckRow + 16);
+        const uint32_t kinds = (rowFlags & 0xE) ? (rowFlags & 0xE) : 0xE;
+        const int type = reinterpret_cast<int(__fastcall*)(int)>(YGO::Addr::Card_GetTypeFromFullCardPropsByKonamiId)(cardId);
+        bool ok;
+        if (type == 13) ok = (kinds & 4) != 0;        // Spell
+        else if (type == 14) ok = (kinds & 8) != 0;   // Trap
+        else
+        {
+            using Matches_t = int64_t(__fastcall*)(int64_t, uint32_t, int, int, int, uint32_t*, uint32_t);
+            ok = (kinds & 2) && (reinterpret_cast<Matches_t>(0x14052B540)(0, static_cast<uint32_t>(side & 1), zone, 0,
+                *reinterpret_cast<const uint16_t*>(clone.DeckRow), card, rowFlags | 2) & 0xFF);
+        }
+        if (!ok)
+            return false;
+        const auto IsSameName = reinterpret_cast<int64_t(__fastcall*)(int, int)>(0x1407EBA00);    // j_Card_IsSameName
+        const auto InArchetype = reinterpret_cast<int64_t(__fastcall*)(int, int)>(0x1407EB9E0);   // Is_CardInNamedArchetype
+        const int nameTest = *reinterpret_cast<const int16_t*>(clone.DeckRow + 2);
+        return !((nameTest >= 3000 && !IsSameName(cardId, nameTest)) || (nameTest > 0 && nameTest < 3000 && !InArchetype(cardId, nameTest))
+            || (nameTest <= -3000 && IsSameName(cardId, -nameTest)) || (nameTest < -1 && nameTest > -3000 && InArchetype(cardId, -nameTest)));
+    }
+
+    int OwnFieldCount(const Clone& clone, int player, int selfInstance)
+    {
+        int count = 0;
+        for (int side = 0; side < 2; ++side)
+            for (int zone = 0; zone <= 12; ++zone)
+                count += FieldZoneMatches(clone, player, side, zone, selfInstance) ? 1 : 0;
+        return count;
+    }
+
+    // The kind-9 prompt's zone test.
+    int64_t __fastcall FieldPick_ZoneTest(uint16_t* record, uint32_t side, uint32_t zone)
+    {
+        if (!g_FieldPick || !record)
+            return 0;
+        return FieldZoneMatches(*g_FieldPick, (record[1] ^ record[5]) & 1, static_cast<int>(side & 1), static_cast<int>(zone), record[11]) ? 1 : 0;
+    }
+
+    uint64_t __fastcall Slot0_OwnFieldDestroy(uint16_t* effect, uint64_t, uint64_t, uint64_t)
+    {
+        Clone* clone = g_Active;
+        if (!clone || !effect)
+            return 0;
+        const int player = (effect[1] ^ effect[5]) & 1;   // whose side is "own" (as Cond_ListHasEnoughMatches counts); the prompt is record[1]'s
+        uint32_t& step = *reinterpret_cast<uint32_t*>(0x14349C13C);
+        const auto PickStillSelectable = reinterpret_cast<int64_t(__fastcall*)(int)>(0x140063120);
+        const auto Action_DestroyZoneMask = reinterpret_cast<int64_t(__fastcall*)(uint16_t*, int, int, int)>(0x1400D5150);
+        switch (step)
+        {
+        case 128:
+            if (OwnFieldCount(*clone, player, effect[11]) == 0)
+            {
+                Logger::WriteLog(std::format("Own destroy (source {}): no card on the field matches", effect[0]), MODULE_NAME, 1);
+                g_OwnStepFoundNothing = true;   // "X, then Y": the sequencer stops here
+                return 0;
+            }
+            [[fallthrough]];
+        case 126:
+            g_FieldPick = clone;
+            UI_ShowPrompt(effect[1], 0x62);
+            *reinterpret_cast<uint32_t*>(kDuelState + 0x385E) = effect[1];
+            *reinterpret_cast<uint64_t*>(kDuelState + 0x3832) = 9;
+            *reinterpret_cast<uint64_t*>(kDuelState + 0x387A) = reinterpret_cast<uint64_t>(&FieldPick_ZoneTest);
+            *reinterpret_cast<uint32_t*>(kDuelState + 0x384A) = effect[0];
+            *reinterpret_cast<uint64_t*>(kDuelState + 0x3842) = 0;
+            return 125;
+        case 125:
+        {
+            if (*reinterpret_cast<const uint32_t*>(kDuelState + 0x3842) == 0 || *reinterpret_cast<const uint32_t*>(kDuelState + 0x3856) != 12
+                || !(PickStillSelectable(*reinterpret_cast<const int32_t*>(kDuelState + 0x383E)) & 0xFF))
+                return 126;
+            const int side = *reinterpret_cast<const int32_t*>(kDuelState + 0x3862);
+            const int zone = *reinterpret_cast<const int32_t*>(kDuelState + 0x3866) + *reinterpret_cast<const int32_t*>(kDuelState + 0x386A);
+            g_FieldPick = nullptr;
+            Logger::WriteLog(std::format("Own destroy (source {}): side {} zone {}", effect[0], side & 1, zone), MODULE_NAME, 1);
+            Action_DestroyZoneMask(effect, 1 << (zone + 16 * (side & 1)), 16, 2);
+            return 0;
+        }
+        default:
+            g_FieldPick = nullptr;
+            return 0;
+        }
     }
 
     // The effect row of an action source card (Clone::ActionFrom): its first row in any of the four tables, cached.
@@ -327,10 +764,13 @@ namespace
         Clone* clone = RouteByRow(Find(effect[0], borrowedWithoutClone), effect);
         if (!clone)
             return 0;   // cannot happen for a row we built; a defensive default
+        struct InstanceScope { int Saved; explicit InstanceScope(int now) : Saved(g_SlotInstance) { g_SlotInstance = now; } ~InstanceScope() { g_SlotInstance = Saved; } }
+            instanceScope(effect[11]);
 
         // The same source row the wrapper was built from (the record's other fields are unchanged, so the lookup picks the same row).
         const uint16_t saved = effect[0];
         effect[0] = static_cast<uint16_t>(clone->From);
+        NativeChoiceScope nativeChoice(effect);
         const Row* row = static_cast<const Row*>(orig_GetEntry(effect));
         void* fn = clone->SlotOverride[SlotIndex] ? reinterpret_cast<void*>(clone->SlotOverride[SlotIndex]) : row ? row->Slot[SlotIndex] : nullptr;
         uint16_t impersonate = static_cast<uint16_t>(clone->From);
@@ -372,6 +812,25 @@ namespace
 
         if constexpr (SlotIndex == 2)
         {
+            // A chain whose FIRST step picks from a list ("own") can only be activated while that list has a card - the game's rule for a
+            // list effect (Slot2_Condition_ListHasMatch 0x1400FB620: Deck_CountMatchingCards >= 1, answered by Hook_Count with the step's
+            // filter). Later steps are not checked: an earlier step may be what makes them possible (search, then summon it).
+            if (FirstStepIsOwn(*clone))
+            {
+                Clone& first = clone->Pre[0];
+                effect[0] = static_cast<uint16_t>(first.ActionFrom ? first.ActionFrom : first.From);
+                Clone* previousActive = g_Active;
+                g_Active = &first;
+                const auto Deck_Count = reinterpret_cast<int64_t(__fastcall*)(int, int, uint32_t)>(0x1400C0320);   // Deck_CountMatchingCards (hooked)
+                const int64_t found = Deck_Count((effect[1] ^ effect[5]) & 1, effect[0], Get_DeckFilterParam(effect));
+                g_Active = previousActive;
+                if (found < 1)
+                {
+                    effect[0] = saved;
+                    return 0;
+                }
+                effect[0] = impersonate;
+            }
             // The required checks, each run as the row's card (they read the record's player / zone / card instance only).
             for (const uint64_t check : clone->Require)
             {
@@ -391,24 +850,76 @@ namespace
 
         Clone* previous = g_Active;
 
-        // Chaining: "before" steps are immediate effects (draw, life points) that finish in ONE call of their slot 0. They run ahead of
-        // this card's own step: on every call when the own step is immediate too, else only on the first call of the resolution (the
-        // engine's step variable 0x14349C13C is 128 there; an interactive step - search, revive, ... - is called again for each later step).
+        // Chaining - the general resolver (docs/EffectSystem.md section 53): "before" steps run ahead of this card's own step, in order, each
+        // as its own source card. Every slot 0 is a step machine: one call = one step, it returns the next step (stored in the step variable
+        // 0x14349C13C, 128 = start) and 0 when done. An immediate step (draw, life points) finishes in one call, so a run of them is done
+        // back to back; an interactive one (search, revive, ...) is called again until it returns 0, then the step variable is set back to 128
+        // and 128 is returned, so the engine calls slot 0 again and the next step starts fresh. Which step is running is kept per card
+        // instance (g_Sequence) until the effect resolves. Their targets: only the card's own (last) step has the activation's target.
         if constexpr (SlotIndex == 0)
         {
-            if (!clone->Pre.empty() && (IsImmediate(*clone) || *reinterpret_cast<const uint32_t*>(0x14349C13C) == 128))
+            uint32_t* const stepVariable = reinterpret_cast<uint32_t*>(0x14349C13C);
+            const auto key = ChoiceKey(effect);
+            // No entry = a fresh resolution. Its first step value is kept and given to every later machine as its start: it is not always 128
+            // (in-duel 2026-10-21: a hand-summon main step, source 6572, did not start at 128, and a check for 128 skipped the search before it).
+            if (!g_Sequence.contains(key))
             {
-                for (Clone& step : clone->Pre)
-                {
-                    effect[0] = static_cast<uint16_t>(step.From);
-                    const Row* stepRow = static_cast<const Row*>(orig_GetEntry(effect));
-                    void* stepFn = stepRow ? stepRow->Slot[0] : nullptr;
-                    g_Active = &step;
-                    if (stepFn)
-                        reinterpret_cast<uint64_t(__fastcall*)(uint16_t*, uint64_t, uint64_t, uint64_t)>(stepFn)(effect, a2, a3, a4);
-                }
-                effect[0] = impersonate;
+                g_SequenceStart[key] = *stepVariable;
+                if (!clone->Pre.empty())
+                    Logger::WriteLog(std::format("Card {} resolves {} step(s) then its own (source {}), starting at step value {}", key.first, clone->Pre.size(),
+                        clone->From, *stepVariable), MODULE_NAME, 1);
             }
+            size_t index = g_Sequence.contains(key) ? g_Sequence[key] : 0;
+            while (index < clone->Pre.size())
+            {
+                Clone& step = clone->Pre[index];
+                effect[0] = static_cast<uint16_t>(step.From);
+                const Row* stepRow = static_cast<const Row*>(orig_GetEntry(effect));
+                void* stepFn = stepRow ? stepRow->Slot[0] : nullptr;
+                if (step.ActionFrom)
+                {
+                    const Row* action = ActionRow(step.ActionFrom);
+                    stepFn = action ? action->Slot[0] : nullptr;
+                    effect[0] = static_cast<uint16_t>(step.ActionFrom);
+                }
+                if (step.SlotOverride[0])
+                    stepFn = reinterpret_cast<void*>(step.SlotOverride[0]);
+                g_Active = &step;
+                g_OwnStepFoundNothing = false;
+                const uint64_t stepResult = stepFn ? reinterpret_cast<uint64_t(__fastcall*)(uint16_t*, uint64_t, uint64_t, uint64_t)>(stepFn)(effect, a2, a3, a4) : 0;
+                g_Active = previous;
+                effect[0] = saved;
+                if (g_OwnStepFoundNothing)
+                {
+                    // "X, then Y": X did nothing, so Y does not happen; the effect has resolved
+                    g_OwnStepFoundNothing = false;
+                    Logger::WriteLog(std::format("Card {}: step {} found nothing, the rest of the chain is not run", key.first, index + 1), MODULE_NAME, 1);
+                    g_Sequence.erase(key);
+                    g_Choices.erase(key);
+                    if (g_Resolving == &step || g_Resolving == clone)
+                        g_Resolving = nullptr;
+                    return 0;
+                }
+                if (stepResult & 0xFF)
+                {
+                    // still running: called again for its next step. Between the calls the pick screen tests cards by the step's id
+                    // (DeckFilterClone through g_Resolving), so the step is the one resolving.
+                    g_Sequence[key] = index;
+                    g_Resolving = &step;
+                    return stepResult;
+                }
+                ++index;
+                if (!IsImmediate(step))
+                {
+                    // an interactive step finished: the next one starts on the engine's next call
+                    g_Sequence[key] = index;
+                    g_Resolving = clone;
+                    *stepVariable = g_SequenceStart[key];
+                    return g_SequenceStart[key];
+                }
+            }
+            g_Sequence[key] = index;
+            effect[0] = impersonate;
         }
 
         g_Active = clone;
@@ -417,13 +928,20 @@ namespace
             result = reinterpret_cast<uint64_t(__fastcall*)(uint16_t*, uint64_t, uint64_t, uint64_t)>(fn)(effect, a2, a3, a4);
         else if constexpr (SlotIndex == 2)
         {
-            if (clone->CostFrom || !clone->Require.empty())
+            if (clone->CostFrom || !clone->Require.empty() || FirstStepIsOwn(*clone))
                 result = 2;   // the slot only exists for the cost / required checks, which passed; no condition of its own = allowed (as Slot_ReturnConst2)
         }
         g_Active = previous;
         effect[0] = saved;
         if constexpr (SlotIndex == 0)
+        {
             g_Resolving = (result & 0xFF) ? clone : (g_Resolving == clone ? nullptr : g_Resolving);
+            if (!(result & 0xFF))
+            {
+                g_Choices.erase(ChoiceKey(effect));   // resolved: the card's next activation chooses again
+                g_Sequence.erase(ChoiceKey(effect));  // and starts its steps from the first
+            }
+        }
         static std::unordered_map<uint64_t, int> calls;
         if (++calls[(static_cast<uint64_t>(saved) << 8) | SlotIndex] <= 3)
             Logger::WriteLog(std::format("Slot {} of custom id {} (source {}) called: step variable {}, result {}", SlotIndex, saved, clone->From,
@@ -449,10 +967,15 @@ namespace
                 bool ignore;
                 if (Clone* clone = RouteByRow(Find(effect[0], ignore), effect))
                 {
+                    // the spell speed ladder: a Quick Effect is speed 2 whatever its donor card is (Clone::Quick)
+                    if constexpr (N == 3)
+                        if (clone->Quick)
+                            return 2;
                     const uint16_t saved = effect[0];
                     const uint16_t previousShown = g_ShowingSource;
                     effect[0] = static_cast<uint16_t>(clone->From);
                     g_ShowingSource = effect[0];
+                    NativeChoiceScope nativeChoice(effect);
                     const uint64_t result = Orig(effect, a2, a3, a4);
                     g_ShowingSource = previousShown;
                     effect[0] = saved;
@@ -566,7 +1089,100 @@ namespace
             g_Swap.OfferResult = result;
             return result;
         }
-        return orig_OfferByRef(ref, a2, a3);
+        bool ignore;
+        Clone* root = Find(static_cast<uint16_t>(ref), ignore);
+        // A one-effect clone is offered only for its own trigger: a lent source id brings ALL of the source's id-keyed triggers along (Black
+        // Mamba plays as Edge Imp Chain 11688 and was offered Edge Imp Chain's sent-to-the-GY effect when Dark Hole destroyed it, in-duel
+        // 2026-10-14). The event is bits 25-30 of the reference (section 29).
+        if (root && root->Parts.empty() && !g_MenuPart && !root->Trigger.empty() && root->Trigger != "ignition")
+        {
+            const uint16_t event = static_cast<uint16_t>((ref >> 25) & 0x3F);
+            if (IsKnownTriggerEvent(event) && !TriggerFitsEvent(root->Trigger, event))
+                return 0;
+        }
+        if (!root || root->Parts.empty() || g_MenuPart)
+            return orig_OfferByRef(ref, a2, a3);
+        int64_t result = 0;
+        for (Clone* part : AllParts(*root))
+        {
+            uint16_t probe[0x20]{};
+            probe[0] = static_cast<uint16_t>(part->From);
+            probe[1] = ref >> 31;
+            probe[2] = (ref >> 16) & 0x1F;
+            probe[3] = (ref >> 25) & 0x3F;
+            probe[4] = (ref >> 21) & 7;
+            if (!part->Trigger.empty() && IsKnownTriggerEvent(probe[3]) && !TriggerFitsEvent(part->Trigger, probe[3])) continue;
+            const Row* row = static_cast<const Row*>(orig_GetEntry(probe));
+            if (!row || row->Id != part->From) continue;
+            g_MenuPart = part;
+            const int64_t offered = orig_OfferByRef(ref, a2, a3);
+            if (offered) result = offered;
+        }
+        g_MenuPart = nullptr;
+        return result;
+    }
+
+    using MenuOffer_t = int64_t(__fastcall*)(uint32_t, int16_t, void*, uint32_t);
+    MenuOffer_t orig_MenuOffer = reinterpret_cast<MenuOffer_t>(0x1400AB050);
+    using InsertOffer_t = int64_t(__fastcall*)(int, uint32_t, int16_t, uint32_t);
+    InsertOffer_t orig_InsertOffer = reinterpret_cast<InsertOffer_t>(0x1400AA860);
+
+    int64_t __fastcall Hook_MenuOffer(uint32_t ref, int16_t instance, void* chain, uint32_t param)
+    {
+        bool ignore;
+        Clone* root = Find(static_cast<uint16_t>(ref), ignore);
+        if (!root || root->Parts.empty() || g_MenuPart)
+            return orig_MenuOffer(ref, instance, chain, param);
+        int64_t result = 0;
+        for (Clone* part : AllParts(*root))
+        {
+            uint16_t probe[0x20]{};
+            probe[0] = static_cast<uint16_t>(part->From);
+            probe[1] = ref >> 31;
+            probe[2] = (ref >> 16) & 0x1F;
+            probe[3] = (ref >> 25) & 0x3F;
+            probe[4] = (ref >> 21) & 7;
+            if (!part->Trigger.empty() && IsKnownTriggerEvent(probe[3]) && !TriggerFitsEvent(part->Trigger, probe[3])) continue;
+            const Row* row = static_cast<const Row*>(orig_GetEntry(probe));
+            if (!row || row->Id != part->From) continue;
+            g_MenuPart = part;
+            const int64_t offered = orig_MenuOffer(ref, instance, chain, param);
+            if (offered) result = offered;
+        }
+        g_MenuPart = nullptr;
+        return result;
+    }
+
+    int64_t __fastcall Hook_InsertOffer(int kind, uint32_t ref, int16_t instance, uint32_t param)
+    {
+        bool ignore;
+        Clone* root = Find(static_cast<uint16_t>(ref), ignore);
+        if (!root || root->Parts.empty() || !g_MenuPart)
+            return orig_InsertOffer(kind, ref, instance, param);
+        const uint16_t tag = ChoiceTag(*root, g_MenuPart);
+        auto* records = reinterpret_cast<uint16_t*>(kind ? 0x14349BC80 : 0x14349B580);
+        auto* count = reinterpret_cast<uint32_t*>(kind ? 0x14349C000 : 0x14349C020);
+        const uint32_t before = *count;
+        // The two queues occupy 16 and 32 records respectively. Expanding a
+        // card's choices must never write past the native buffers.
+        if (before >= (kind ? 16u : 32u)) return 0;
+        std::vector<std::pair<uint16_t*, uint16_t>> hidden;
+        // Native duplicate detection compares card instance and table, but not
+        // the selected effect. Hide sibling choices for this one insertion.
+        for (uint32_t i = 0; i < before; ++i)
+        {
+            uint16_t* record = records + i * (0x38 / 2);
+            if (record[0] == static_cast<uint16_t>(ref) && (record[20] & 0xFF00) != tag)
+            { hidden.emplace_back(record, record[0]); record[0] = 0; }
+        }
+        const int64_t result = orig_InsertOffer(kind, ref, instance, param);
+        for (const auto& [record, id] : hidden) record[0] = id;
+        for (uint32_t i = before; i < *count; ++i)
+        {
+            uint16_t* record = records + i * (0x38 / 2);
+            record[20] = tag | (record[20] & 0xFF);
+        }
+        return result;
     }
 
     // The first 0x40 bytes of the event record as 16-bit words, for the trace.
@@ -576,6 +1192,53 @@ namespace
         for (int i = 0; i < 0x40; i += 2)
             text += std::format("{}{:X}", i ? " " : "", *reinterpret_cast<const uint16_t*>(record + i));
         return text;
+    }
+
+    // Does the summon event in the record (0x14349C560) meet a part's "summonCondition"? Record words, decoded from the evaluator's own per-card
+    // checks (docs/EffectSystem.md section 46): +0x0A the zone the monster came from, +0x10 flags (bit 0 = properly Summoned as its kind:
+    // Fusion/Synchro/Xyz/Ritual/Link; 0x40 = Pendulum Summoned), +0x12 the card whose effect Special Summoned it (0 = not by an effect),
+    // +0x30 the number of Tributes of a Tribute Summon.
+    bool SummonMatches(const Clone& root, const Clone& part, const uint8_t* record, uint16_t raw)
+    {
+        const auto& s = part.Summon;
+        if (!s.Any)
+            return true;
+        const uint16_t from = *reinterpret_cast<const uint16_t*>(record + 0x0A);
+        const uint16_t flags = *reinterpret_cast<const uint16_t*>(record + 0x10);
+        const uint16_t by = *reinterpret_cast<const uint16_t*>(record + 0x12);
+        const uint16_t tributes = *reinterpret_cast<const uint16_t*>(record + 0x30);
+        if (s.FromZones && (from >= 32 || !(s.FromZones & (1u << from))))
+            return false;
+        if (s.Proper && !(flags & 1))
+            return false;
+        if (s.Pendulum && !(flags & 0x40))
+            return false;
+        if (s.MinTributes && tributes < s.MinTributes)
+            return false;
+        using By = Clone::SummonCondition::By;
+        const auto typeOf = [](int id) { return reinterpret_cast<int(__fastcall*)(int)>(YGO::Addr::Card_GetTypeFromFullCardPropsByKonamiId)(id); };
+        switch (s.ByWhat)
+        {
+        case By::Any: return true;
+        case By::Effect: return by != 0;
+        case By::NotEffect: return by == 0;
+        case By::Own:
+        {
+            // Its own effect: while a clone's effect resolves the engine records the id it runs under (a part's source / action card).
+            if (by == raw || by == BorrowedRealId(raw))
+                return true;
+            for (const Clone* p : AllParts(const_cast<Clone&>(root)))
+                if (by == p->From || (p->ActionFrom && by == p->ActionFrom))
+                    return true;
+            return false;
+        }
+        case By::Spell: return by != 0 && typeOf(by) == 13;
+        case By::Trap: return by != 0 && typeOf(by) == 14;
+        case By::Monster: return by != 0 && reinterpret_cast<int64_t(__fastcall*)(int)>(0x140742DF0)(by) != 0;   // Kind_IsMonster
+        case By::Card: return by == s.ByValue;
+        case By::Archetype: return by != 0 && reinterpret_cast<int64_t(__fastcall*)(int, int)>(0x1407EB9E0)(by, s.ByValue) != 0;   // Is_CardInNamedArchetype
+        }
+        return true;
     }
 
     void __fastcall Hook_EventEvaluator(int eventType)
@@ -589,7 +1252,19 @@ namespace
         const uint16_t raw = recordCarriesId ? *reinterpret_cast<uint16_t*>(record + 0xE) : static_cast<uint16_t>(orig_CardIdAt(*reinterpret_cast<uint16_t*>(record + 2), *reinterpret_cast<uint16_t*>(record + 4), 1));
 
         bool ignore;
-        Clone* clone = raw ? RouteByTrigger(Find(raw, ignore), kSummonTriggers) : nullptr;
+        Clone* root = raw ? Find(raw, ignore) : nullptr;
+        if (root && !root->Parts.empty() && !g_MenuPart)
+        {
+            for (Clone* part : AllParts(*root))
+            {
+                if (!part->Trigger.empty() && !TriggerFitsEvent(part->Trigger, static_cast<uint16_t>(eventType))) continue;
+                g_MenuPart = part;
+                Hook_EventEvaluator(eventType);
+            }
+            g_MenuPart = nullptr;
+            return;
+        }
+        Clone* clone = g_MenuPart ? g_MenuPart : RouteByTrigger(root, kSummonTriggers, 1);
 
         // Trace: the event record of every custom card AND of every vanilla card a clone borrows from, side by side, to see which words differ.
         if (g_Trace && raw)
@@ -654,7 +1329,19 @@ namespace
         uint32_t& instance = *reinterpret_cast<uint32_t*>(kCardInstances + 8 * static_cast<uintptr_t>(*ref & 0x1FF));
         const uint16_t raw = static_cast<uint16_t>(instance & 0x3FFF);
         bool ignore;
-        Clone* clone = raw ? RouteByTrigger(Find(raw, ignore), kLeaveTriggers) : nullptr;
+        Clone* root = raw ? Find(raw, ignore) : nullptr;
+        if (root && !root->Parts.empty() && !g_MenuPart)
+        {
+            for (Clone* part : AllParts(*root))
+            {
+                if (!part->Trigger.empty() && !TriggerFitsEvent(part->Trigger, static_cast<uint16_t>(eventType))) continue;
+                g_MenuPart = part;
+                Hook_MoveEvaluator(eventType, ref, a3, a4);
+            }
+            g_MenuPart = nullptr;
+            return;
+        }
+        Clone* clone = g_MenuPart ? g_MenuPart : RouteByTrigger(root, kLeaveTriggers, 2);
         // A custom card without a clone is NOT skipped here (unlike the summon evaluator): this evaluator may also let other cards react to the move.
         if (!clone)
             return orig_MoveEvaluator(eventType, ref, a3, a4);
@@ -1138,12 +1825,13 @@ namespace
         return true;
     }
 
-    // One wrapped row per (custom card, source row); rows are never freed (the engine may hold the pointer).
-    std::map<std::pair<const void*, uint16_t>, Row*> g_Wrapped;
+    // Each part has its own overrides, even when two parts borrow the same row.
+    // Rows are never freed (the engine may hold the pointer).
+    std::map<std::tuple<const void*, uint16_t, const Clone*>, Row*> g_Wrapped;
 
     Row* WrappedRow(const Row* source, uint16_t customId, const Clone& clone)
     {
-        auto key = std::make_pair(static_cast<const void*>(source), customId);
+        auto key = std::make_tuple(static_cast<const void*>(source), customId, &clone);
         auto it = g_Wrapped.find(key);
         if (it != g_Wrapped.end())
             return it->second;
@@ -1161,7 +1849,7 @@ namespace
         if (nibble == 1 || nibble == 5 || nibble == 6 || nibble == 9 || nibble == 10)
             limit &= ~static_cast<uint16_t>(0xF);
         if (clone.OncePerTurn)
-            limit = (limit & ~static_cast<uint16_t>(0xF)) | 5;
+            limit = (limit & ~static_cast<uint16_t>(0xF)) | clone.LimitClass;
         for (int i = 0; i < 5; ++i)
         {
             // An empty slot stays empty: the engine treats it as "none". A few slot functions are compared BY ADDRESS elsewhere in the engine (a row whose
@@ -1171,8 +1859,15 @@ namespace
             const bool identityTagged = i == 3 && (fn == 0x1401F94C0 || fn == 0x1401F9470 || fn == 0x1401F9630 || fn == 0x1401F9920 || fn == 0x1402007F0);
             // Composed effect: slots 0, 1, 2, 4 exist when the action card has them (SlotThunk runs them as the action card).
             const Row* action = clone.ActionFrom && i != 3 ? ActionRow(clone.ActionFrom) : nullptr;
-            if ((clone.CostFrom && (i == 2 || i == 3)) || (i == 2 && !clone.Require.empty()))
+            // Slot 2 also exists for a chain whose first step picks from a list: its "the list has a card" check lives there (SlotThunk<2>),
+            // and a row without a condition (Hinotama's) is never asked - summon then burn was playable with no monster (in-duel 2026-10-21).
+            if ((clone.CostFrom && (i == 2 || i == 3)) || (i == 2 && (!clone.Require.empty() || FirstStepIsOwn(clone))))
                 wrapped->Slot[i] = kThunks[i];   // the composed cost (slot 3) and its payability / required checks (slot 2)
+            // This handler asks for the donor's native sub-effects (e.g. Stratos's
+            // search/destroy menu). A composed action already defines the effect;
+            // retaining that menu can cancel it when no donor option is legal.
+            else if (i == 3 && clone.ActionFrom && !clone.SlotOverride[i] && fn == 0x140201950)
+                wrapped->Slot[i] = nullptr;
             else if (clone.ActionFrom && i != 3)
                 wrapped->Slot[i] = clone.SlotOverride[i] || (action && action->Slot[i]) ? kThunks[i] : nullptr;
             else
@@ -1180,6 +1875,161 @@ namespace
         }
         g_Wrapped[key] = wrapped;
         return wrapped;
+    }
+
+    // ---- the "select an effect" row (see g_Choices) -------------------------------------------------------------------------------
+    using Driver_t = uint64_t(__fastcall*)(uint16_t*, uint64_t);
+    const Driver_t Check_CanActivate_Driver = reinterpret_cast<Driver_t>(0x1400E0C30);
+    using ShowPrompt_t = int16_t(__fastcall*)(uint16_t*, uint32_t, uint32_t);
+    const ShowPrompt_t EffectChoice_ShowPrompt = reinterpret_cast<ShowPrompt_t>(0x14005F630);   // the game's list, labels id + (n << 14)
+    using ChoiceCount_t = int64_t(__fastcall*)(int);
+    ChoiceCount_t orig_ChoiceCount = reinterpret_cast<ChoiceCount_t>(0x1401FA6D0);   // EffectChoice_GetCount: 2 for any card it does not know
+    constexpr uint32_t kSelectEffectText = 259;            // the prompt text Slot3_EffectChoice_SelectThenCost uses for most cards
+    constexpr uintptr_t kPromptAnswer = 0x14349B442;       // DuelState field_3802: the option the player picked (0-based)
+
+    int64_t __fastcall Hook_ChoiceCount(int id)
+    {
+        if (g_PromptCount && id == g_PromptId)
+            return g_PromptCount;
+        return orig_ChoiceCount(id);
+    }
+
+    // The prompt's option labels. EffectChoice_GetLabel (0x1401FA760, id, n) gives a DLG text index (a table of game cards' labels) or
+    // id + (n << 14); the text builder (Duel_PromptText 0x14077AE30) turns an id >= 3000 into the n-th "●" line of that card's text. A custom card
+    // has no such lines (blank CHOICE 1 / 2 in-duel 2026-10-14), so for our prompt the label is always card | n << 14 (a lent source id must not
+    // bring its own table labels), and the builder answers it with the part's "label".
+    using ChoiceLabel_t = int64_t(__fastcall*)(int, int);
+    ChoiceLabel_t orig_ChoiceLabel = reinterpret_cast<ChoiceLabel_t>(0x1401FA760);
+    int64_t __fastcall Hook_ChoiceLabel(int id, int n)
+    {
+        if (g_PromptCount && id == g_PromptId && n >= 0 && n < g_PromptCount && n < 4 && id <= 0x3FFF)
+            return id | (n << 14);
+        return orig_ChoiceLabel(id, n);
+    }
+
+    // MSVC std::wstring as the game lays it out (Release STL: 16-byte buffer / pointer, size, capacity); filled through the game's own assign.
+    struct GameWString { union { wchar_t Buffer[8]; wchar_t* Pointer; }; size_t Size; size_t Capacity; };
+    using PromptText_t = GameWString*(__fastcall*)(GameWString*, int);
+    PromptText_t orig_PromptText = reinterpret_cast<PromptText_t>(0x14077AE30);
+    const auto GameWStringAssign = reinterpret_cast<void(__fastcall*)(GameWString*, const wchar_t*, size_t)>(0x140751310);   // std::wstring::assign
+
+    GameWString* __fastcall Hook_PromptText(GameWString* out, int id)
+    {
+        if (id >= 3000)
+        {
+            auto it = g_PromptLabels.find(static_cast<uint16_t>(id & 0x3FFF));
+            const size_t n = static_cast<size_t>(id >> 14);
+            if (it != g_PromptLabels.end() && n < it->second.size() && !it->second[n].empty())
+            {
+                const std::wstring& text = it->second[n];
+                out->Size = 0;
+                out->Capacity = 7;
+                out->Buffer[0] = 0;
+                GameWStringAssign(out, text.c_str(), text.size());
+                return out;
+            }
+        }
+        return orig_PromptText(out, id);
+    }
+
+    // Bit n = effect n of the lookup's candidates can be activated now: the full check (limit class, condition, targets) run with that effect chosen.
+    uint32_t ComputeChoiceMask(Clone* root, uint16_t* effect, uint64_t link, const std::vector<Clone*>& pool)
+    {
+        const std::vector<Clone*> all = AllParts(*root);
+        const auto saved = g_Probe;
+        uint32_t mask = 0;
+        for (size_t n = 0; n < pool.size() && n < 5; ++n)
+        {
+            g_Probe = { true, ChoiceKey(effect), static_cast<int>(std::find(all.begin(), all.end(), pool[n]) - all.begin()) };
+            if (Check_CanActivate_Driver(effect, link) & 0xFF)
+                mask |= 1u << n;
+        }
+        g_Probe = saved;
+        return mask;
+    }
+
+    uint64_t __fastcall ChoiceSlot2(uint16_t* effect, uint64_t link, uint64_t, uint64_t)
+    {
+        bool ignore;
+        Clone* root = Find(effect[0], ignore);
+        if (!root)
+            return 0;
+        return ComputeChoiceMask(root, effect, link, Candidates(root, effect)) ? 2 : 0;
+    }
+
+    // The chosen effect's own slot 3 (its cost), or done (1) when it has none.
+    uint64_t RunChosenSlot3(uint16_t* effect, uint64_t a2, uint64_t a3, uint64_t a4);
+
+    // Slot 3 of the select row: pick the effect (the only usable one, or the player's answer to the prompt), then pay that effect's cost.
+    // 0 = call again (the prompt is up), as the game's own chooser returns.
+    uint64_t __fastcall ChoiceSlot3(uint16_t* effect, uint64_t a2, uint64_t a3, uint64_t a4)
+    {
+        bool ignore;
+        Clone* root = Find(effect[0], ignore);
+        if (!root)
+            return 1;
+        const auto key = ChoiceKey(effect);
+        if (ChosenIndex(effect) >= 0)
+            return RunChosenSlot3(effect, a2, a3, a4);
+
+        const std::vector<Clone*> pool = Candidates(root, effect);
+        const std::vector<Clone*> all = AllParts(*root);
+        auto choose = [&](size_t n) {
+            n = (std::min)(n, pool.size() - 1);
+            g_Choices[key] = static_cast<int>(std::find(all.begin(), all.end(), pool[n]) - all.begin());
+            Logger::WriteLog(std::format("Card {} activates its effect {} (source {})", key.first, g_Choices[key] + 1, pool[n]->From), MODULE_NAME, 0);
+        };
+        if (g_ChoicePrompted.erase(key))
+        {
+            choose(*reinterpret_cast<const uint16_t*>(kPromptAnswer));
+            return RunChosenSlot3(effect, a2, a3, a4);
+        }
+        const uint32_t mask = ComputeChoiceMask(root, effect, a2, pool);
+        if (std::popcount(mask) <= 1)
+        {
+            choose(mask ? static_cast<size_t>(std::countr_zero(mask)) : 0);
+            return RunChosenSlot3(effect, a2, a3, a4);
+        }
+        g_PromptId = effect[0];
+        g_PromptCount = static_cast<int>((std::min)(pool.size(), size_t{ 5 }));
+        auto& labels = g_PromptLabels[static_cast<uint16_t>(effect[0] & 0x3FFF)];
+        labels.clear();
+        for (const Clone* part : pool)
+            labels.push_back(part->Label);
+        EffectChoice_ShowPrompt(effect, kSelectEffectText, mask);
+        g_PromptCount = 0;
+        g_ChoicePrompted.insert(key);
+        return 0;
+    }
+
+    // One select row per custom card: the first candidate's row (table, event wiring) with no limit class of its own (each effect's is checked
+    // in the mask), slot 1 empty (targets are checked per effect too), slots 2 and 3 the chooser's; resolving (slot 0, 4) is the chosen effect's.
+    Row* ChoiceRow(const Row* first, uint16_t customId)
+    {
+        static std::map<std::pair<const void*, uint16_t>, Row*> rows;
+        auto& row = rows[{ first, customId }];
+        if (!row)
+        {
+            row = new Row(*first);
+            row->Id = customId;
+            row->Extra[0] &= ~static_cast<uint16_t>(0xF);
+            row->Slot[0] = kThunks[0];
+            row->Slot[1] = nullptr;
+            row->Slot[2] = reinterpret_cast<void*>(&ChoiceSlot2);
+            row->Slot[3] = reinterpret_cast<void*>(&ChoiceSlot3);
+            row->Slot[4] = first->Slot[4] ? kThunks[4] : nullptr;
+        }
+        return row;
+    }
+
+    void* __fastcall Hook_GetEntry(uint16_t* effect);
+
+    uint64_t RunChosenSlot3(uint16_t* effect, uint64_t a2, uint64_t a3, uint64_t a4)
+    {
+        const Row* row = static_cast<const Row*>(Hook_GetEntry(effect));   // the chosen effect's own row now
+        if (!row || !row->Slot[3] || row->Slot[3] == reinterpret_cast<void*>(&ChoiceSlot3))
+            return 1;
+        return reinterpret_cast<uint64_t(__fastcall*)(uint16_t*, uint64_t, uint64_t, uint64_t)>(row->Slot[3])(effect, a2, a3, a4);
     }
 
     void* __fastcall Hook_GetEntry(uint16_t* effect)
@@ -1198,7 +2048,8 @@ namespace
                 return const_cast<Row*>(ActionRow(effect[0]));
 
         bool borrowedWithoutClone;
-        Clone* clone = RouteByRow(Find(effect[0], borrowedWithoutClone), effect);
+        Clone* root = Find(effect[0], borrowedWithoutClone);
+        Clone* clone = RouteByRow(root, effect);
         {
             // Trace: full call stack of the lookups that matter (a monster's event record, word3 7 / word4 1, and every custom-card lookup), once per card and caller.
             static std::set<std::tuple<uint16_t, uint16_t, uint16_t, uintptr_t>> traced;
@@ -1228,6 +2079,7 @@ namespace
         LogLookup(effect);
         const uint16_t saved = effect[0];
         effect[0] = static_cast<uint16_t>(clone->From);
+        NativeChoiceScope nativeChoice(effect);
         const Row* source = static_cast<const Row*>(orig_GetEntry(effect));
         effect[0] = saved;
         {
@@ -1242,6 +2094,9 @@ namespace
             return nullptr;
 
         const unsigned short real = BorrowedRealId(saved);
+        // Several effects answer this lookup and none is chosen yet: the select row, which offers the card once and asks which effect.
+        if (root && !root->Parts.empty() && ChosenIndex(effect) < 0 && Candidates(root, effect).size() > 1)
+            return ChoiceRow(source, real ? real : saved);
         return WrappedRow(source, real ? real : saved, *clone);
     }
 
@@ -1393,6 +2248,18 @@ namespace
     constexpr uintptr_t kMatchFlags = 0x14349CA88;    // 300 x u16
     constexpr uint64_t kDeckScanFn = 0x14052F2A0;     // the scan used by "search the Deck" rows (Reinforcement of the Army)
 
+    // "deck.scan": "extra". The game's Extra Deck row scans (0x14052EF40 and siblings) all pass behaviour bits to ScanGeneric_ExtraDeck
+    // (0x14052C090: zone 14, list flags 0x1C) - 16 = "can be Special Summoned", ... - so none lists "any matching card". This calls it with 0:
+    // only the row's name test (sub_14052B440) and flag tests (monster / race / attribute / Level / ATK), as the row wrappers pass them
+    // (player, row id, row param as a signed word, no callback, 0, the flags dword at +16, mode).
+    int64_t __fastcall Scan_ExtraDeck_Any(const uint8_t* row, uint32_t player)
+    {
+        using ScanGeneric_t = int64_t(__fastcall*)(uint32_t, uint32_t, int, void*, int64_t, uint32_t, int16_t);
+        const auto ScanGeneric_ExtraDeck = reinterpret_cast<ScanGeneric_t>(0x14052C090);
+        return ScanGeneric_ExtraDeck(player, *reinterpret_cast<const uint16_t*>(row), *reinterpret_cast<const int16_t*>(row + 2), nullptr, 0,
+            *reinterpret_cast<const uint32_t*>(row + 16), 0);
+    }
+
     Clone* DeckFilterClone(uint16_t id)
     {
         if (g_Active)
@@ -1419,6 +2286,7 @@ namespace
     // (in-duel 2026-10-02). So the row the index points at is overwritten with the clone's own row (its id kept) while the clone owns that
     // id - inside its slots, or for the duel when the id is lent to it - and the vanilla bytes are put back at the next lookup that is not
     // the clone's (the table is made writable at setup, only when some clone has a "deck" filter).
+    void PrepareDeckRow(Clone& clone);
     constexpr uintptr_t kDeckFilterTable = 0x140AD2A80;
     constexpr int kDeckFilterRows = 5924;
     using DeckFilterIndex_t = int64_t(__fastcall*)(int, int, uint32_t);
@@ -1460,11 +2328,11 @@ namespace
                 memcpy(vanilla.data(), row, 24);
                 g_PatchedDeckRows.emplace(index, vanilla);
             }
+            PrepareDeckRow(*clone);
             memcpy(row + 2, clone->DeckRow + 2, 22);   // everything but the id the table is sorted by
-            static int logged = 0;
-            if (!g_Active && ++logged <= 5)
-                Logger::WriteLog(std::format("Deck filter row {} asked by id {} outside a slot: answered with the filter of the clone of {}", index, id,
-                    clone->From), MODULE_NAME, 0);
+            if (g_Trace)
+                Logger::WriteLog(std::format("Deck filter row {} asked by id {}{}: answered with the filter of the clone of {}", index, id,
+                    g_Active ? " in a slot" : " outside a slot", clone->From), MODULE_NAME, 0);
         }
         else if (patched != g_PatchedDeckRows.end())
         {
@@ -1474,10 +2342,156 @@ namespace
         return index;
     }
 
-    void RunDeckScan(const Clone& clone, int player)
+    // The except-self name test needs the id the card plays under in THIS duel (it may be lent its source's id, or a scratch id).
+    void ExceptSelfRow(uint8_t* row, bool exceptSelf, uint16_t owner)
+    {
+        if (exceptSelf && owner)
+            *reinterpret_cast<int16_t*>(row + 2) = static_cast<int16_t>(-static_cast<int>(EngineIdFor(owner)));
+    }
+
+    void PrepareDeckRow(Clone& clone)
+    {
+        ExceptSelfRow(clone.DeckRow, clone.ExceptSelf, clone.Owner);
+    }
+
+    // Drops the matches named like the clone's card from [from, count) of the game's match list.
+    void DropOwnName(const Clone& clone, int16_t from)
+    {
+        auto& count = *reinterpret_cast<int16_t*>(kMatchHeader + 2);
+        auto* list = reinterpret_cast<uint32_t*>(kMatchList);
+        auto* flags = reinterpret_cast<uint16_t*>(kMatchFlags);
+        const auto IsSameName = reinterpret_cast<int64_t(__fastcall*)(int, int)>(0x1407EBA00);   // j_Card_IsSameName
+        const int self = EngineIdFor(clone.Owner);
+        int16_t kept = from;
+        for (int16_t i = from; i < count && i < 300; ++i)
+        {
+            const int id = static_cast<int>(list[i] & 0x3FFF);
+            if (id == self || IsSameName(id, self))
+                continue;
+            list[kept] = list[i];
+            flags[kept] = flags[i];
+            ++kept;
+        }
+        count = kept;
+    }
+
+    // Runs the clone's row and every "or" row; the matches of all of them land in the game's match list (kMatchList / kMatchFlags, count at
+    // kMatchHeader + 2), each card once. Returns how many it added.
+    int RunDeckScan(Clone& clone, int player)
     {
         using Scan_t = int64_t(__fastcall*)(const void*, uint32_t);
-        reinterpret_cast<Scan_t>(*reinterpret_cast<const uint64_t*>(clone.DeckRow + 8))(clone.DeckRow, static_cast<uint32_t>(player));
+        // The scan runs on the source card's own slot of the game's filter table, with our row copied in: the scanners do not work on a row
+        // outside the table (Barian's Hope's hand pick counted 0 for every card with a copied row, in-duel 2026-10-14). The slot is put back
+        // exactly as it was (vanilla, or our row when Hook_DeckFilterIndex has it patched).
+        const int64_t index = orig_DeckFilterIndex(player, clone.ActionFrom ? clone.ActionFrom : clone.From, 0);
+        uint8_t* slot = index >= 0 && index < kDeckFilterRows ? reinterpret_cast<uint8_t*>(kDeckFilterTable + static_cast<uintptr_t>(index) * 24) : nullptr;
+        std::array<uint8_t, 24> kept{};
+        if (slot)
+            memcpy(kept.data(), slot, 24);
+        auto scan = [player, slot](const uint8_t* row) {
+            const uint8_t* run = row;
+            if (slot)
+            {
+                memcpy(slot + 2, row + 2, 22);   // everything but the id the table is sorted by
+                run = slot;
+            }
+            reinterpret_cast<Scan_t>(*reinterpret_cast<const uint64_t*>(run + 8))(run, static_cast<uint32_t>(player));
+        };
+        struct Restore { uint8_t* Slot; const std::array<uint8_t, 24>& Bytes; ~Restore() { if (Slot) memcpy(Slot, Bytes.data(), 24); } } restore{ slot, kept };
+        auto& count = *reinterpret_cast<int16_t*>(kMatchHeader + 2);
+        auto* list = reinterpret_cast<uint32_t*>(kMatchList);
+        auto* flags = reinterpret_cast<uint16_t*>(kMatchFlags);
+        const auto IsSameName = reinterpret_cast<int64_t(__fastcall*)(int, int)>(0x1407EBA00);   // j_Card_IsSameName
+        // drop the matches named like this card from [from, count) (the "except this card" of a row whose name test is taken)
+        auto exceptSelf = [&](int16_t from) {
+            const int self = EngineIdFor(clone.Owner);
+            int16_t kept = from;
+            for (int16_t i = from; i < count && i < 300; ++i)
+            {
+                const int id = static_cast<int>(list[i] & 0x3FFF);
+                if (id == self || IsSameName(id, self))
+                    continue;
+                list[kept] = list[i];
+                flags[kept] = flags[i];
+                ++kept;
+            }
+            count = kept;
+        };
+        const int16_t before = count;
+        PrepareDeckRow(clone);
+        scan(clone.DeckRow);
+        if (clone.ExceptSelfAfter && clone.Owner)
+            exceptSelf(before);
+        for (Clone::AltRow& alt : clone.OrRows)
+        {
+            ExceptSelfRow(alt.Row, alt.ExceptSelf, clone.Owner);
+            const int16_t start = count;
+            scan(alt.Row);
+            if (alt.ExceptSelfAfter && clone.Owner)
+                exceptSelf(start);
+        }
+        if (!clone.OrRows.empty())
+        {
+            int16_t kept = before;
+            for (int16_t i = before; i < count && i < 300; ++i)
+            {
+                if (std::find(list + before, list + kept, list[i]) != list + kept)
+                    continue;   // the same card matched an earlier alternative
+                list[kept] = list[i];
+                flags[kept] = flags[i];
+                ++kept;
+            }
+            count = kept;
+        }
+        return count - before;
+    }
+
+    // The hand list of an "own" summon step, built by the plugin. The game's hand scan (0x14052EE40 -> 0x14052C8D0) adds "can this be Special
+    // Summoned by the SOURCE card's effect" checks keyed by the row's card id: under Unexpected Dai's id no hand monster passed, under Magnet
+    // Circle LV2's a Level 4 Normal Monster did not (in-duel 2026-10-21). Here only the card test is the game's (Scan_CardMatchesRowFlags
+    // 0x14052B540: type, race, attribute, Level from the hand with le/ge, ATK) plus the row's name test; whether the summon is legal is left to
+    // the engine's summon queue. Entries as the game writes them (sub_14052B310): the packed hand card, flags = player | zone 13 << 1.
+    int OwnHandList(Clone& clone, int player, bool write = true)
+    {
+        using Matches_t = int64_t(__fastcall*)(int64_t, uint32_t, int, int, int, uint32_t*, uint32_t);
+        const auto CardMatchesRowFlags = reinterpret_cast<Matches_t>(0x14052B540);
+        const auto IsSameName = reinterpret_cast<int64_t(__fastcall*)(int, int)>(0x1407EBA00);          // j_Card_IsSameName
+        const auto InArchetype = reinterpret_cast<int64_t(__fastcall*)(int, int)>(0x1407EB9E0);         // Is_CardInNamedArchetype
+        PrepareDeckRow(clone);
+        const uint32_t rowFlags = *reinterpret_cast<const uint32_t*>(clone.DeckRow + 16);
+        const int nameTest = *reinterpret_cast<const int16_t*>(clone.DeckRow + 2);
+        const int rowId = *reinterpret_cast<const uint16_t*>(clone.DeckRow);
+        // write = false (a count, Hook_Count): nothing in the game's list changes
+        int16_t counted = 0;
+        auto& count = write ? *reinterpret_cast<int16_t*>(kMatchHeader + 2) : counted;
+        auto* list = reinterpret_cast<uint32_t*>(kMatchList);
+        auto* flags = reinterpret_cast<uint16_t*>(kMatchFlags);
+        if (write)
+            *reinterpret_cast<uint32_t*>(kMatchHeader) = 0;
+        const uintptr_t side = 0x143497C40 + static_cast<uintptr_t>(player & 1) * 0xD94;
+        const uint32_t inHand = *reinterpret_cast<const uint32_t*>(side + 0x0C);
+        for (uint32_t i = 0; i < inHand && i < 120 && count < 300; ++i)
+        {
+            uint32_t* card = reinterpret_cast<uint32_t*>(side + 0x19C + 4 * i);
+            const int cardId = static_cast<int>(*card & 0x3FFF);
+            if (!CardMatchesRowFlags(0, static_cast<uint32_t>(player), 13, static_cast<int>(i), rowId, card, rowFlags))
+                continue;
+            if ((nameTest >= 3000 && !IsSameName(cardId, nameTest)) || (nameTest > 0 && nameTest < 3000 && !InArchetype(cardId, nameTest))
+                || (nameTest <= -3000 && IsSameName(cardId, -nameTest)) || (nameTest < -1 && nameTest > -3000 && InArchetype(cardId, -nameTest)))
+                continue;
+            if (clone.ExceptSelfAfter && clone.Owner && (cardId == EngineIdFor(clone.Owner) || IsSameName(cardId, EngineIdFor(clone.Owner))))
+                continue;
+            if (write)
+            {
+                list[count] = *card;
+                flags[count] = static_cast<uint16_t>((player & 1) | (13 << 1));
+            }
+            ++count;
+        }
+        if (g_Trace)
+            Logger::WriteLog(std::format("Own hand list (owner {}, {}): {} of {} hand card(s), row flags {:X} name test {}", clone.Owner,
+                write ? "list" : "count", count, inHand, rowFlags, nameTest), MODULE_NAME, 0);
+        return count;
     }
 
     int64_t __fastcall Hook_Collect(int player, uint16_t id, uint32_t param)
@@ -1485,11 +2499,30 @@ namespace
         Clone* clone = DeckFilterClone(id);
         if (!clone)
             return orig_Collect(player, id, param);
+        if (clone->Own && clone->HandList)
+            return OwnHandList(*clone, player);
+        if (clone->FieldPick)
+            return OwnFieldCount(*clone, player & 1, g_SlotInstance);   // no list: the field prompt picks (Slot0_OwnFieldDestroy)
+        if (clone->OrRows.empty())
+        {
+            // the game's own collect on the source's table row, which Hook_DeckFilterIndex answers with ours
+            orig_Collect(player, id, param);
+            if (clone->ExceptSelfAfter && clone->Owner)
+                DropOwnName(*clone, 0);
+            const int16_t found = *reinterpret_cast<int16_t*>(kMatchHeader + 2);
+            if (g_Trace)
+                Logger::WriteLog(std::format("Collect for id {} (clone of {}, owner {}, the game's scan): {} candidate(s)", id, clone->From, clone->Owner, found), MODULE_NAME, 0);
+            return found;
+        }
         *reinterpret_cast<uint32_t*>(kMatchHeader) = 0;
         memset(reinterpret_cast<void*>(kMatchList), 0, 1200);
         memset(reinterpret_cast<void*>(kMatchFlags), 0, 600);
         RunDeckScan(*clone, player);
-        return *reinterpret_cast<int16_t*>(kMatchHeader + 2);
+        const int16_t found = *reinterpret_cast<int16_t*>(kMatchHeader + 2);
+        if (g_Trace)
+            Logger::WriteLog(std::format("Collect for id {} (clone of {}, owner {}): {} candidate(s), row flags {:X} param {}", id, clone->From, clone->Owner,
+                found, *reinterpret_cast<const uint32_t*>(clone->DeckRow + 16), *reinterpret_cast<const int16_t*>(clone->DeckRow + 2)), MODULE_NAME, 0);
+        return found;
     }
 
     int64_t __fastcall Hook_Count(int player, uint16_t id, uint32_t param)
@@ -1497,11 +2530,25 @@ namespace
         Clone* clone = DeckFilterClone(id);
         if (!clone)
             return orig_Count(player, id, param);
+        if (clone->Own && clone->HandList)
+            return OwnHandList(*clone, player, false);
+        if (clone->FieldPick)
+            return OwnFieldCount(*clone, player & 1, g_SlotInstance);
+        if (clone->OrRows.empty())
+        {
+            // the game's own count: its parameter (a pick screen asks per card) keeps its meaning; the row is ours via Hook_DeckFilterIndex
+            const int64_t n = orig_Count(player, id, param);
+            if (g_Trace)
+                Logger::WriteLog(std::format("Count for id {} param {:X} (clone of {}, the game's scan): {} match(es)", id, param, clone->From, n), MODULE_NAME, 0);
+            return n;
+        }
         const int16_t before = *reinterpret_cast<int16_t*>(kMatchHeader + 2);
-        RunDeckScan(*clone, player);
-        const int16_t after = *reinterpret_cast<int16_t*>(kMatchHeader + 2);
+        const int added = RunDeckScan(*clone, player);
         *reinterpret_cast<int16_t*>(kMatchHeader + 2) = before;
-        return after - before;
+        if (g_Trace)
+            Logger::WriteLog(std::format("Count for id {} param {:X} (clone of {}, {}): {} match(es)", id, param, clone->From,
+                g_Active ? "in a slot" : "outside a slot", added), MODULE_NAME, 0);
+        return added;
     }
 
     // "deck": { "scan": "deck|grave|graveSummon|opponentGrave|bothGravesSummon", "type": "monster|spell|trap|any", "race": "Dragon", "attribute": "Dark", "level": 4, "levelOp": "le|ge|eq",
@@ -1573,6 +2620,7 @@ namespace
         // where the candidates come from: the scan function of the list filter row (names in IDA: YGO::Effects::Scan_*)
         uint64_t scanFn = kDeckScanFn;
         const std::string scan = f.value("scan", std::string("deck"));
+        c.HandList = scan == "handSummon";
         if (scan == "grave") scanFn = 0x14052F4D0;                  // Scan_Grave_Own
         else if (scan == "graveSummon") scanFn = 0x14052EC80;       // Scan_Grave_Own_SummonableOnly (revive)
         else if (scan == "opponentGrave") scanFn = 0x14052EE00;     // Scan_Grave_Opponent
@@ -1582,9 +2630,43 @@ namespace
         else if (scan == "handSummon") scanFn = 0x14052EE40;        // hand, flag 2: monsters that can be Special Summoned from the hand
         else if (scan == "hand") scanFn = 0x14052F490;              // hand, flag 1: any card in the hand
         else if (scan == "banished") scanFn = 0x140532BF0;          // banished cards, flag 0x40
-        else if (scan != "deck") { error = "deck.scan must be deck, deckSummon, hand, handSummon, grave, graveSummon, opponentGrave, bothGravesSummon or banished"; return false; }
+        else if (scan == "extra") scanFn = reinterpret_cast<uint64_t>(&Scan_ExtraDeck_Any);   // Extra Deck, the row's own tests only
+        else if (scan == "field")
+        {
+            // no list: an own destroy step picks with the game's field prompt (Slot0_OwnFieldDestroy); the row only carries the tests
+            c.FieldPick = true;
+            const std::string side = f.value("side", std::string("any"));
+            c.FieldSide = side == "own" ? 0 : side == "opponent" ? 1 : side == "any" ? 2 : -1;
+            if (c.FieldSide < 0) { error = "deck.side must be own, opponent or any"; return false; }
+        }
+        else if (scan != "deck") { error = "deck.scan must be deck, deckSummon, hand, handSummon, extra, field, grave, graveSummon, opponentGrave, bothGravesSummon or banished"; return false; }
 
+        if (f.contains("or"))
+        {
+            if (!f["or"].is_array()) { error = "deck.or must be a list of filters"; return false; }
+            for (const nlohmann::json& alt : f["or"])
+            {
+                Clone other;
+                other.From = c.From;
+                if (!alt.is_object() || alt.contains("or") || !BuildDeckFilter(alt, other, error))
+                {
+                    if (error.empty()) error = "deck.or: each alternative is a filter object (no nested or)";
+                    return false;
+                }
+                Clone::AltRow row;
+                memcpy(row.Row, other.DeckRow, sizeof(row.Row));
+                row.ExceptSelf = other.ExceptSelf;
+                row.ExceptSelfAfter = other.ExceptSelfAfter;
+                c.OrRows.push_back(row);
+            }
+        }
         c.HasDeckFilter = true;
+        // A "can be Special Summoned" scan passes the row's param to the summon-legality check as the summoning card's id
+        // (ScanGeneric_Deck: sub_14052B3E0(param) -> sub_14005AC50), so a negative name test there fails EVERY card (Barian's Hope,
+        // in-duel 2026-10-14). Those scans drop this card's name from the results afterwards instead.
+        const bool summonScan = scan == "graveSummon" || scan == "bothGravesSummon" || scan == "deckSummon" || scan == "handSummon";
+        c.ExceptSelf = f.value("exceptSelf", false) && param == 0 && !summonScan;
+        c.ExceptSelfAfter = f.value("exceptSelf", false) && (param != 0 || summonScan);
         uint8_t* row = c.DeckRow;
         *reinterpret_cast<uint16_t*>(row + 0) = static_cast<uint16_t>(c.From);
         *reinterpret_cast<int16_t*>(row + 2) = param;
@@ -1604,6 +2686,15 @@ namespace
         return ((position >> 8) & 0xFF) == 13 ? 1 : 0;
     }
 
+    // "This card is in the GY" (zone 16), for "If this card is in your GY: You can ..." (EffectScript "on in_grave:"). The GY / hand effects
+    // table (table 2) is asked for every card past the field (Check_CanActivateKind3AtZone 0x140107930: zone > 12 -> table 2), so the donor's
+    // row would also be offered from the banished cards; this keeps the effect to the GY.
+    uint64_t __fastcall Check_InGrave(uint16_t* effect, uint64_t, uint64_t, uint64_t)
+    {
+        const uint32_t position = reinterpret_cast<uint32_t(__fastcall*)(int)>(0x140044480)(effect[11]);
+        return ((position >> 8) & 0xFF) == 16 ? 1 : 0;
+    }
+
     // "You can Tribute 1 monster": you control a monster that can be Tributed (the game's per-zone test sub_14001D700, as Cond_CanTributeSelf uses
     // it). The game's Tribute-1 cards each have their own conditions (Tribute Doll needs a Level 7 in the hand), so none is borrowed for this.
     uint64_t __fastcall Check_CanTributeOne(uint16_t* effect, uint64_t, uint64_t, uint64_t)
@@ -1614,6 +2705,34 @@ namespace
             if ((orig_CardIdAt(player, zone, 1) & 0x3FFF) != 0 && (reinterpret_cast<CanTribute_t>(0x14001D700)(player, player, zone, 1) & 0xFF))
                 return 1;
         return 0;
+    }
+
+    // The cost pickers' per-zone filter (Pick_ZoneFilter_BySlot2 0x1400DFE30, (record, player, zone)): it asks the row's slot 2 whether a zone
+    // can be picked (Cost_TributeOne's picker and its "any candidate" check). A clone's slot 2 is its activation condition (Slot_ReturnConst2
+    // for "always"), which answers yes for every zone - empty ones too (Swordsoul Auspice Chunjun, in-duel 2026-10-14). A clone with the
+    // "canTributeOne" cost answers with the Tribute test instead: a monster of the record's player in zones 0-6 that can be Tributed.
+    using PickFilter_t = int64_t(__fastcall*)(uint16_t*, uint32_t, int);
+    PickFilter_t orig_PickFilter = reinterpret_cast<PickFilter_t>(0x1400DFE30);
+
+    int64_t __fastcall Hook_PickFilter(uint16_t* effect, uint32_t player, int zone)
+    {
+        Clone* clone = nullptr;
+        if (effect)
+        {
+            if (g_Active && g_Active->CostFrom && effect[0] == g_Active->CostFrom)
+                clone = g_Active;   // inside the cost slot: the record shows the cost card
+            else
+            {
+                bool borrowedWithoutClone;
+                clone = RouteByRow(Find(effect[0], borrowedWithoutClone), effect);
+            }
+        }
+        if (!clone || clone->CostCheck != reinterpret_cast<uint64_t>(&Check_CanTributeOne))
+            return orig_PickFilter(effect, player, zone);
+        const int own = effect[1] & 1;
+        if (static_cast<int>(player & 1) != own || zone < 0 || zone > 6 || (orig_CardIdAt(own, zone, 1) & 0x3FFF) == 0)
+            return 0;
+        return reinterpret_cast<int64_t(__fastcall*)(int, int, int, int)>(0x14001D700)(own, own, zone, 1) & 0xFF ? 1 : 0;
     }
 
     // The game's checks by name (docs/EffectSystem.md section 37); each reads only the record (player, zone, card instance). 0 = unknown.
@@ -1630,6 +2749,7 @@ namespace
             // target scan through Target_Generic_FromFilterRow, which reads the clone's own row through Hook_GetRow).
             { "controlsMatch", 0x1400FE510 },
             { "inHand", reinterpret_cast<uint64_t>(&Check_InHand) },   // this card is in the hand (the plugin's own check, see Check_InHand)
+            { "inGrave", reinterpret_cast<uint64_t>(&Check_InGrave) },  // this card is in the GY (the plugin's own check, see Check_InGrave)
             { "canDetach", 0x1400FBFF0 },                // this Xyz Monster has enough materials to detach ("detach" of them; Thunder End Dragon)
             { "canTributeOne", reinterpret_cast<uint64_t>(&Check_CanTributeOne) },   // you control a monster that can be Tributed
             // No check (Slot_ReturnConst2). For "pay N LP": the LP cost card's own condition is card-specific (Delinquent Duo 0x140251110 =
@@ -1640,6 +2760,56 @@ namespace
             if (name == n)
                 return address;
         return 0;
+    }
+
+    // "summonCondition": { "from": ["hand", "deck", "extra", "grave", "banished", "spelltrap"], "by": "effect" | "not_effect" | "own" | "spell" |
+    // "trap" | "monster" | { "card": id } | { "archetype": code }, "proper": true, "pendulum": true, "tributes": N }
+    bool ParseSummonCondition(const nlohmann::json& j, Clone::SummonCondition& s, const std::string& label)
+    {
+        using By = Clone::SummonCondition::By;
+        s.Any = true;
+        auto fromZone = [&](const std::string& name) {
+            static const std::pair<const char*, uint32_t> zones[] = { {"hand", 1u << 13}, {"extra", 1u << 14}, {"extra_deck", 1u << 14}, {"deck", 1u << 15},
+                {"grave", 1u << 16}, {"gy", 1u << 16}, {"banished", 1u << 17}, {"spelltrap", 0x1Fu << 7} };
+            for (const auto& z : zones)
+                if (name == z.first) { s.FromZones |= z.second; return true; }
+            Logger::WriteLog(std::format("{}: summonCondition \"from\": unknown zone \"{}\"", label, name), MODULE_NAME, 2);
+            return false;
+        };
+        if (j.contains("from"))
+        {
+            if (j["from"].is_string() && !fromZone(j["from"].get<std::string>()))
+                return false;
+            if (j["from"].is_array())
+                for (const auto& z : j["from"])
+                    if (!z.is_string() || !fromZone(z.get<std::string>()))
+                        return false;
+        }
+        if (j.contains("by"))
+        {
+            const auto& by = j["by"];
+            if (by.is_object() && by.contains("card") && by["card"].is_number_integer())
+                s.ByWhat = By::Card, s.ByValue = by["card"].get<int>();
+            else if (by.is_object() && by.contains("archetype") && by["archetype"].is_number_integer())
+                s.ByWhat = By::Archetype, s.ByValue = by["archetype"].get<int>();
+            else if (by.is_string())
+            {
+                static const std::pair<const char*, By> words[] = { {"effect", By::Effect}, {"not_effect", By::NotEffect}, {"own", By::Own},
+                    {"spell", By::Spell}, {"trap", By::Trap}, {"monster", By::Monster} };
+                const std::string word = by.get<std::string>();
+                auto it = std::find_if(std::begin(words), std::end(words), [&](const auto& w) { return word == w.first; });
+                if (it == std::end(words))
+                {
+                    Logger::WriteLog(std::format("{}: summonCondition \"by\": unknown \"{}\"", label, word), MODULE_NAME, 2);
+                    return false;
+                }
+                s.ByWhat = it->second;
+            }
+        }
+        s.Proper = j.value("proper", false);
+        s.Pendulum = j.value("pendulum", false);
+        s.MinTributes = j.value("tributes", 0);
+        return true;
     }
 
     bool ParseStep(const nlohmann::json& clone, Clone& c, const std::string& label)
@@ -1657,8 +2827,11 @@ namespace
         }
         c.From = from;
         c.OncePerTurn = clone.value("oncePerTurn", false);
+        c.Quick = clone.value("quick", false);
         if (clone.contains("trigger") && clone["trigger"].is_string())
             c.Trigger = clone["trigger"].get<std::string>();
+        if (clone.contains("summonCondition") && clone["summonCondition"].is_object() && !ParseSummonCondition(clone["summonCondition"], c.Summon, label))
+            return false;
         if (clone.contains("cost") && clone["cost"].is_object() && clone["cost"].contains("from") && clone["cost"]["from"].is_number_integer())
         {
             c.CostFrom = clone["cost"]["from"].get<int>();
@@ -1694,13 +2867,57 @@ namespace
                 const uint64_t check = CheckByName(n);
                 if (!check)
                 {
-                    Logger::WriteLog(std::format("{}: unknown \"require\" check \"{}\" (canBanishSelfFromGrave, canDiscardSelf, canTributeSelf, canSummonSelf, canSummonSelfFromGrave, noMonsters, controlsMatch, inHand, canDetach, canTributeOne), skipped", label, n), MODULE_NAME, 2);
+                    Logger::WriteLog(std::format("{}: unknown \"require\" check \"{}\" (canBanishSelfFromGrave, canDiscardSelf, canTributeSelf, canSummonSelf, canSummonSelfFromGrave, noMonsters, controlsMatch, inHand, inGrave, canDetach, canTributeOne), skipped", label, n), MODULE_NAME, 2);
                     return false;
                 }
                 c.Require.push_back(check);
             }
         }
         c.DetachCount = clone.value("detach", 0);
+        if (clone.contains("steps") && clone["steps"].is_array())
+        {
+            for (const nlohmann::json& step : clone["steps"])
+            {
+                Clone::StepOp op;
+                const std::string kind = step.value("op", std::string());
+                const std::string who = step.value("who", std::string("own"));
+                op.Op = kind == "draw" ? 0 : kind == "gain" ? 1 : kind == "damage" ? 2 : -1;
+                op.Who = who == "own" ? 0 : who == "opponent" ? 1 : who == "both" ? 2 : -1;
+                op.N = step.value("n", 0);
+                if (op.Op < 0 || op.Who < 0 || op.N < 0)
+                {
+                    Logger::WriteLog(std::format("{}: effectClone steps: unknown step {}, skipped", label, step.dump()), MODULE_NAME, 2);
+                    return false;
+                }
+                c.Steps.push_back(op);
+            }
+            c.SlotOverride[0] = reinterpret_cast<uint64_t>(&Slot0_RunSteps);
+        }
+        if (clone.contains("own") && clone["own"].is_string())
+        {
+            // The plugin's own pick-and-act machine (Slot0_OwnPickAndAct); needs the "deck" filter for its list.
+            const std::string own = clone["own"].get<std::string>();
+            c.Own = own == "toHand" ? 1 : own == "summon" ? 2 : own == "toGrave" ? 3 : own == "banish" ? 4 : own == "destroy" ? 5 : 0;
+            if (!c.Own || !clone.contains("deck"))   // the filter itself is parsed further down
+            {
+                Logger::WriteLog(std::format("{}: \"own\" must be toHand, summon, toGrave, banish or destroy, with a \"deck\" filter; skipped", label), MODULE_NAME, 2);
+                return false;
+            }
+            const bool fieldScan = clone["deck"].is_object() && clone["deck"].value("scan", std::string()) == "field";
+            if ((c.Own == 5) != fieldScan)
+            {
+                Logger::WriteLog(std::format("{}: \"own\": \"destroy\" goes with \"deck.scan\": \"field\" (and only it); skipped", label), MODULE_NAME, 2);
+                return false;
+            }
+            c.SlotOverride[0] = reinterpret_cast<uint64_t>(c.Own == 5 ? &Slot0_OwnFieldDestroy : &Slot0_OwnPickAndAct);
+        }
+        if (clone.contains("label") && clone["label"].is_string())
+        {
+            const std::string utf8 = clone["label"].get<std::string>();
+            const int n = MultiByteToWideChar(CP_UTF8, 0, utf8.data(), static_cast<int>(utf8.size()), nullptr, 0);
+            c.Label.assign(static_cast<size_t>(n), L'\0');
+            MultiByteToWideChar(CP_UTF8, 0, utf8.data(), static_cast<int>(utf8.size()), c.Label.data(), n);
+        }
         if (clone.contains("negate") && clone["negate"].is_object())
         {
             std::string error;
@@ -1748,6 +2965,15 @@ namespace
         return true;
     }
 
+    void SetOwner(Clone& c, uint16_t owner)
+    {
+        c.Owner = owner;
+        for (Clone& pre : c.Pre)
+            SetOwner(pre, owner);
+        for (Clone& part : c.Parts)
+            SetOwner(part, owner);
+    }
+
     // An "effectClone" object: its main step, "before" steps and "parts". False (logged) when it cannot be used.
     bool ParseEffect(const nlohmann::json& clone, Clone& c, const std::string& label)
     {
@@ -1758,9 +2984,9 @@ namespace
             for (const nlohmann::json& stepJson : clone["before"])
             {
                 Clone step;
-                if (!ParseStep(stepJson, step, label) || !IsImmediate(step))
+                if (!ParseStep(stepJson, step, label))
                 {
-                    Logger::WriteLog(std::format("{}: \"before\" steps must be draw / life point effects, skipped", label), MODULE_NAME, 2);
+                    Logger::WriteLog(std::format("{}: a \"before\" step cannot be used, skipped", label), MODULE_NAME, 2);
                     return false;
                 }
                 c.Pre.push_back(step);
@@ -1769,6 +2995,11 @@ namespace
         // A card's further effects: "parts": [ { "from": ..., "trigger": ..., ... }, ... ] (each one step, its own source; see Clone::Parts).
         if (clone.contains("parts") && clone["parts"].is_array())
         {
+            if (clone["parts"].size() >= 127)
+            {
+                Logger::WriteLog(std::format("{}: at most 127 independent effects are supported, skipped", label), MODULE_NAME, 2);
+                return false;
+            }
             for (const nlohmann::json& partJson : clone["parts"])
             {
                 Clone part;
@@ -1777,6 +3008,12 @@ namespace
             }
             Logger::WriteLog(std::format("{}: {} effect(s) ({} borrowed from {})", label, 1 + c.Parts.size(), c.From,
                 [&] { std::string s; for (const Clone& p : c.Parts) s += std::format(", {}", p.From); return s; }()), MODULE_NAME, 0);
+            // Two once-per-turn effects are two limits: the second one counts on the engine's key 1002 (class 6), as the game's own
+            // "(1) ... (2) ..." cards do. A third shares key 1001 with the first (the engine has only the two).
+            int limited = 0;
+            for (Clone* part : AllParts(c))
+                if (part->OncePerTurn && ++limited == 2)
+                    part->LimitClass = 6;
         }
         return true;
     }
@@ -1795,8 +3032,9 @@ namespace
 
             const std::string label = std::format("cards.json entry {} (\"{}\")", i, entry.value("name", std::string()));
             const nlohmann::json& clone = entry["effectClone"];
-            // A script that is only lock(...) compiles to {"lock": {...}}: no effect to clone (Lock.cpp plays the lock).
-            if (clone.is_object() && !clone.contains("from") && clone.contains("lock"))
+            // A script that is only lock(...) / hand_limit(...) compiles to {"lock": {...}} / {"handLimit": {...}}: no effect to clone
+            // (Lock.cpp plays them).
+            if (clone.is_object() && !clone.contains("from") && (clone.contains("lock") || clone.contains("handLimit")))
                 continue;
             if (!entry.contains("id") || !entry["id"].is_number_integer() || !clone.is_object()
                 || !clone.contains("from") || !clone["from"].is_number_integer())
@@ -1815,7 +3053,10 @@ namespace
 
             Clone c;
             if (ParseEffect(clone, c, label))
+            {
+                SetOwner(c, static_cast<uint16_t>(id));
                 g_Clones[static_cast<uint16_t>(id)] = std::move(c);
+            }
         }
 
         // The game's own cards with a changed effect: Yu-Gi-Oh-Ex\effects.json (WolfX, Effects page, "Game cards"), merged over the mods.
@@ -1849,6 +3090,7 @@ namespace
                 c.From = kNoEffectSource;   // no effect at all (a lock-only override keeps just its lock, Lock.cpp)
             else if (!ParseEffect(clone, c, label))
                 continue;
+            SetOwner(c, static_cast<uint16_t>(id));
             g_Clones[static_cast<uint16_t>(id)] = std::move(c);
             g_Overridden.insert(static_cast<uint16_t>(id));
             Logger::WriteLog(clone.is_null() ? std::format("{}: game card {} has no effect now", label, id)
@@ -1864,7 +3106,8 @@ size_t EffectClone::Count()
 
 void EffectClone::Setup()
 {
-    g_Trace = std::filesystem::exists(std::filesystem::path(Config::Get_WorkingDirectory()) / "trace.txt");
+    // Config.ini [Yu-Gi-Oh-Effects] Trace=1: the diagnostic log lines (lookups, slot calls, deck filter rows, candidate counts).
+    g_Trace = GetPrivateProfileIntA("Yu-Gi-Oh-Effects", "Trace", 0, ".\\Config.ini") != 0;
     if (g_Trace)
         Logger::WriteLog("trace.txt found: effect lookup tracing is on", MODULE_NAME, 0);
     LoadClones();
@@ -1878,14 +3121,20 @@ void EffectClone::Setup()
 
     DetourAttach(&(PVOID&)orig_GetEntry, Hook_GetEntry);
     DetourAttach(&(PVOID&)orig_GetDraw, Hook_GetDraw);
+    DetourAttach(&(PVOID&)orig_ChoiceCount, Hook_ChoiceCount);
+    DetourAttach(&(PVOID&)orig_ChoiceLabel, Hook_ChoiceLabel);
+    DetourAttach(&(PVOID&)orig_PromptText, Hook_PromptText);
     DetourAttach(&(PVOID&)orig_GetRow, Hook_GetRow);
     DetourAttach(&(PVOID&)orig_LpChanges, Hook_LpChanges);
     DetourAttach(&(PVOID&)orig_Collect, Hook_Collect);
     DetourAttach(&(PVOID&)orig_Count, Hook_Count);
+    DetourAttach(&(PVOID&)orig_PickFilter, Hook_PickFilter);
     AttachLadders(std::make_integer_sequence<int, 7>());
     AttachIdTests(std::make_integer_sequence<int, 7>());
     DetourAttach(&(PVOID&)orig_CardIdAt, Hook_CardIdAt);
     DetourAttach(&(PVOID&)orig_OfferByRef, Hook_OfferByRef);
+    DetourAttach(&(PVOID&)orig_MenuOffer, Hook_MenuOffer);
+    DetourAttach(&(PVOID&)orig_InsertOffer, Hook_InsertOffer);
     DetourAttach(&(PVOID&)orig_EventEvaluator, Hook_EventEvaluator);
     DetourAttach(&(PVOID&)orig_MoveEvaluator, Hook_MoveEvaluator);
     DetourAttach(&(PVOID&)orig_ListSearch, Hook_ListSearch);

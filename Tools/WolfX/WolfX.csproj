@@ -15,6 +15,10 @@
     <OutputPath>$(SolutionDir)Binaries\$(Configuration)\Tools\</OutputPath>
     <LangVersion>preview</LangVersion>
     <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    <!-- Version: from the git tag (VersionFromGit below, also in Visual Studio); the release workflow passes /p:Version=<tag> /p:ReleaseBuild=true.
+         Only a ReleaseBuild updates itself in place (Updater.cs): a local build runs from Binaries\<config> and must not be overwritten. -->
+    <Version>0.0.0</Version>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
 
   </PropertyGroup>
 
@@ -78,7 +82,7 @@
   <ItemGroup>
     <!-- Content\EffectScriptGenerated\ is ANTLR-generated from Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4
          (the same grammar the C++ side's proof-of-concept parser uses) - regenerate with:
-         java -jar Dependencies\ANTLR\antlr-4.13.2-complete.jar -Dlanguage=CSharp -visitor -no-listener -package WolfEx.EffectScriptGenerated -o Tools\WolfX\Content\EffectScriptGenerated "Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4" -->
+         java -jar Dependencies\ANTLR\antlr-4.13.2-complete.jar -Dlanguage=CSharp -visitor -no-listener -Xexact-output-dir -package WolfEx.EffectScriptGenerated -o Tools\WolfX\Content\EffectScriptGenerated "Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4" -->
     <PackageReference Include="Antlr4.Runtime.Standard" Version="4.13.1" />
     <PackageReference Include="Scintilla.NET" Version="5.3.2.9" />
     <!-- The Effects page's block editor: Blockly (Content\Blocks) in a WebView2 -->
@@ -97,6 +101,30 @@
     <!-- The game's own Fusion / Ritual / Synchro / Xyz requirements (Card Manager, Summoning tab); made by docs\effect-scripts\build_summon_tables.py -->
     <None Include="Content\summon_tables.json" Link="summon_tables.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>ReleaseBuild</_Parameter1>
+      <_Parameter2>$(ReleaseBuild)</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <!-- A local build's version: the latest v* tag (git describe), e.g. 1.1.11, with "1.1.11-3-gabc1234-dirty" as the informational
+       version (3 commits after the tag, uncommitted changes). No git or no tag: stays 0.0.0. -->
+  <Target Name="VersionFromGit" BeforeTargets="GetAssemblyVersion;GenerateAssemblyInfo" Condition="'$(ReleaseBuild)' != 'true'">
+    <Exec Command="git describe --tags --long --dirty --match v*" WorkingDirectory="$(MSBuildProjectDirectory)" ConsoleToMSBuild="true"
+          IgnoreExitCode="true" StandardOutputImportance="low" StandardErrorImportance="low">
+      <Output TaskParameter="ConsoleOutput" PropertyName="GitDescribe" />
+      <Output TaskParameter="ExitCode" PropertyName="GitExitCode" />
+    </Exec>
+    <PropertyGroup Condition="'$(GitExitCode)' == '0'">
+      <GitVersion>$([System.Text.RegularExpressions.Regex]::Match($(GitDescribe), '^[vV]?(\d+\.\d+\.\d+)').Groups[1].Value)</GitVersion>
+      <Version Condition="'$(GitVersion)' != ''">$(GitVersion)</Version>
+      <FileVersion Condition="'$(GitVersion)' != ''">$(GitVersion).0</FileVersion>
+      <AssemblyVersion Condition="'$(GitVersion)' != ''">$(GitVersion).0</AssemblyVersion>
+      <InformationalVersion>$(GitDescribe.TrimStart('v').TrimStart('V'))</InformationalVersion>
+    </PropertyGroup>
+  </Target>
 
   <ItemGroup>
     <!-- The editors in Tools/Shared/Editors -->

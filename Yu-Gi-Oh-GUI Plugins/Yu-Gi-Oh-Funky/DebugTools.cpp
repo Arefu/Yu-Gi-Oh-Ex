@@ -13,7 +13,6 @@
 #include "YuGiOh/YuGiOh-CARDS.h"
 #include "YuGiOh/YuGiOh-DUEL.h"
 #include "YuGiOh/YuGiOh-DUELSTATE.h"
-#include "YuGiOh/YuGiOh-RIX.h"
 #include "YuGiOh/YuGiOh-SAVE.h"
 #include "YuGiOh/YuGiOh-GAME.h"
 #include "YuGiOh/YuGiOh-UTIL.h"

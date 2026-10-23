@@ -1,7 +1,7 @@
 # Menu files (codeless buttons)
 
 Every `*.json` in `<game folder>\Yu-Gi-Oh-Ex\menus\` is read by the Yu-Gi-Oh-RIX plugin when the game starts. Nothing is compiled and no
-game file is changed. The WolfEx **Menus** tab edits `menus.json` in that folder; any other file there is read too (files load in name order).
+game file is changed. WolfX's **Menus** page edits `menus.json` in that folder; any other file there is read too (files load in name order).
 Mistakes are reported in the game's console (`ERROR ... [Yu-Gi-Oh-RIX] ...`) and only that button is skipped.
 
 ```json
@@ -45,13 +45,15 @@ Buttons are listed in the order they appear in the files, after the game's own.
 | `{ "press": "cardShop" }` | Press one of the game's main menu buttons (same names as `look`). |
 | `{ "quit": true }` | Quit the game (what the game's own Quit button does). |
 | `{ "call": "funky.toggleTools" }` | Run an action a plugin registered with `RIX_RegisterAction`. Yu-Gi-Oh-Funky registers `funky.toggleTools`. |
-| `{ "page": "myPage" }` | Open a page made on the WolfEx **Pages** tab (`Yu-Gi-Oh-Ex\pages\myPage.json`, see [PageDesigner.md](PageDesigner.md)). |
+| `{ "page": "myPage" }` | Open a page made on WolfX's **Pages** or **Page scripts** page (`Yu-Gi-Oh-Ex\pages\myPage.json`, see [PageDesigner.md](PageDesigner.md)). |
 
-Several steps: `"action": [ { "goto": "credits" }, { "call": "funky.toggleTools" } ]` (the WolfEx tab keeps these but only edits single steps).
+Several steps: `"action": [ { "goto": "credits" }, { "call": "funky.toggleTools" } ]` (the WolfX page keeps these but only edits single steps).
 
 ## Edits to the game's own main menu buttons
 
 `item` is one of the `look` names. `label` and `description` replace the text; `hidden: true` removes the button from its page.
+`action` (same steps as a new button's) replaces what the button does - also over a plugin's `RIX_SetMainMenuItemAction`:
+`{ "item": "cardShop", "action": { "page": "card-store" } }` is how the BOB Card Store takes over the Card Shop button.
 Everything is applied when the game starts.
 
 ## Not supported yet

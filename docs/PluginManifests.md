@@ -18,7 +18,7 @@ Its interface is `Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Core.h` (`Core::Load()` find
 
 ## The plugin list in Config.ini
 
-`[Yu-Gi-Oh-Core]` (next to Core's own settings; older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read) has one line per plugin: `Yu-Gi-Oh-Cards=1` for a DLL in `Plugins\` (the loader injects it when it can load) and
+`[Yu-Gi-Oh-Core]` (next to Core's own settings; older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read) has one line per plugin: `Yu-Gi-Oh-MoreCards=1` for a DLL in `Plugins\` (the loader injects it when it can load) and
 `YGO-Ex/Yu-Gi-Oh-Funky=1` for one in `Plugins\YGO-Ex\` (Core starts it). New plugins are added as `0`. Enforced plugins are always written as `1`.
 `PluginsPerPage` (3 to 5) is in the same section.
 
@@ -46,9 +46,36 @@ A `<DLL name>.json` next to a DLL (`Plugins\Yu-Gi-Oh-Cards.json`, `Plugins\YGO-E
 | `dlls` | More DLLs (same folder) that belong to this plugin. They have no entry of their own and load with it, just before it. |
 | `content` | The files in `<game>\Yu-Gi-Oh-Ex` this plugin applies (`"cards.json"`, `"pages\\"` for a folder). WolfX reads it to keep `Yu-Gi-Oh-Ex\content.json` up to date, and the loader switches on the plugins that file names (see [WolfXContent.md](WolfXContent.md)). |
 
+| `newSave` | The plugin changes the game so much that it needs a save made with it (an overhaul such as Forbidden Memories). `true` uses the DLL's name as the save tag; a string (`"forbidden-memories"`) names the tag, so several plugins of one overhaul can share it. See below. |
+
+### Plugins that need a new save
+
+Each save slot remembers the save tags of the plugins that were loaded when its profile was started (`"tags"` in `saves.json`, see
+[SaveSlots.md](SaveSlots.md)). A slot with a save file can only be played when its tags are **exactly** the tags of the plugins loaded now:
+
+- an old save while a `newSave` plugin is on: "Needs a new save: <title>";
+- a save made with that plugin while it is off: "Made with <title> (off)".
+
+Such a slot shows the reasons in red on the save-select screen, and picking it says why and points to **New Save**. Empty slots and New Save
+always work and take the current tags. `SaveSlot=N` in Config.ini is ignored (the screen shows) when slot N can't be played. Nothing is deleted
+or changed in the old saves: switching the plugin off again makes them playable again. The tags are taken once, when the game starts
+(what loads this run); switching plugins in game only counts after a restart, as for everything else.
+
 A plugin that is on but whose requirement is off or missing is **blocked**: it is not loaded and the list says why ("Not loaded: it needs Yu-Gi-Oh-GUI,
 which is off"). Switching a plugin on in the list switches on what it requires; switching one off switches off what requires it. Requirements load
 before the plugins that need them.
+
+## Replaced plugins
+
+`"replaces"` lists older plugins this one took over (renamed, merged in, or retired): each entry is a name, or `{ "name": "...", "note": "..." }`.
+Copying a new build over an old folder leaves the old DLLs behind, so:
+
+- The loader never loads a replaced plugin. Anything that asks for it by name (`requires`, content.json) gets the plugin that replaced it.
+- The old Config.ini switch moves to the new plugin and the old line is removed.
+- The player is told once which leftover files can go. `[Yu-Gi-Oh-Core] ReplacedNotice` remembers which ones were already shown.
+- To clean up, use WolfX **Files > Game files & loading > Retired plugins...** or the Mod Manager's orange **Leftover** rows (double-click). Both move the files to `Plugins\_retired\<date>`; nothing is deleted.
+
+Current entries: Media replaces Music; MoreCards replaces Yu-Gi-Oh-Cards and ZCards; Core replaces BetterLoad, SaveMe, BetterCardShop (now BOB pages + Core packs) and Tracer.
 
 ## The tool
 
@@ -59,8 +86,7 @@ a plugin requiring itself and requirement cycles.
 ## Yu-Gi-Oh-GUI
 
 Yu-Gi-Oh-GUI is the shared ImGui host: it is the one plugin that hooks the game's Direct3D present and owns the ImGui context, and it hands that context to
-every plugin that draws a window (Funky, SpeedHacks) and calls their `ProcessWindow` each frame. (BetterCardShop no longer has a window: it is
-made of Yu-Gi-Oh-RIX pages in the game's own UI, so it requires Yu-Gi-Oh-RIX instead.) That way no plugin hooks DirectX itself, and two
+every plugin that draws a window (Funky, SpeedHacks) and calls their `ProcessWindow` each frame. That way no plugin hooks DirectX itself, and two
 hooks cannot fight over the swap chain. A plugin that draws a window lists `Yu-Gi-Oh-GUI` in `requires`; that is a real dependency, not a leftover.
 
 What the GUI does **not** do any more is manage plugins: the tick list it used to show is gone. Which plugins are on is decided in the in-game Plugins menu

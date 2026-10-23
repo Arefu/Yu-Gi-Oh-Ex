@@ -19,20 +19,20 @@ Correction from the tracker:
 
 ## What Yu-Gi-Oh-RIX covers (2026-09-29)
 
-RIX covers **7 of the 112** widget classes. Everything else is catalogued here and in the WolfEx page designer ([PageDesigner.md](PageDesigner.md)), which draws all of them as a preview, but nothing builds them yet.
+This table is the plugin-code view as of 2026-09-29, when RIX covered 7 of the 112 widget classes. The page engine has lifted many more since: the current list is "Working widgets" in [PageEngine.md](PageEngine.md) and the RIX column of [WidgetTracker.md](WidgetTracker.md). WolfX's page designer ([PageDesigner.md](PageDesigner.md)) previews all of them.
 
 | Widget | How RIX covers it | Where |
 | --- | --- | --- |
 | `MenuKit::widget_Item` (menu button) | Built from files with no code: main menu and options buttons (`menus/*.json`), and page buttons (`pages/*.json`, up to 4, 100 px apart) | `Yu-Gi-Oh-RIX.h` (`RIX_AddMainMenuButton`, `RIX_OpenPage`), MenuFile.cpp |
 | `widget_Title` / `MenuKit::widget_Header` (screen title) | The page header text (files or `RIX_PageDesc::Header`); the game keeps its position | Pages.cpp (`SetHeaderText` hook) |
 | `MenuKit::widget_Description` | Each button's description | same |
-| `widget_Dialog` (message, Yes/No) | Plugin code: `ShowMessageText`, `ShowYesNo`, `DialogClear` / `SetMode` / `SetText` / `AddItem` | `YuGiOh/YuGiOh-RIX.h` |
-| `widget_Help` (prompt bar) | Plugin code: `HelpClear` / `HelpAdd` / `HelpLayout`, `Input::HelpBarPressed` | `YuGiOh/YuGiOh-RIX.h` |
-| `widget_TrunkZone` (card grid) | Plugin code: `Trunk::Construct` / `CreateFromLayout` / list building / `Update` | `YuGiOh/YuGiOh-RIX.h`; used by BetterCardShop |
-| `widget_CardInfo` (card picture and text) | Plugin code: `CardInfo::Construct` / `CreateFromLayout` / `SetWidth` / `SetCard` / `Update` | `YuGiOh/YuGiOh-RIX.h`; used by BetterCardShop |
-| `widget_EntryDigit` (0-9 wheel) | Plugin code: `EntryDigit::Construct` / `CreateFromLayout` / `SetValue` / `SetSelected` / `HitTest` | `YuGiOh/YuGiOh-RIX.h`; BetterCardShop's password page |
-| Pictures (`DFX::TLayerAnimoo`) and text (`DFX::TLayerText`) | Built from page files (`image`, `text` elements); plugin code: `Dfx::AddImage`, `Dfx::AddText`, `Dfx::RemoveImage` | `YuGiOh/YuGiOh-RIX.h`, MenuFile.cpp |
-| `widget_Base` (any widget) | `SetEnabled`, `WidgetSetFocused`, `WidgetSetVisible`, `NodeSetX` / `NodeSetY` / `NodeSetPosition`, `ParentRef` | `YuGiOh/YuGiOh-RIX.h` |
+| `widget_Dialog` (message, Yes/No) | Plugin code: `ShowMessageText`, `ShowYesNo`, `DialogClear` / `SetMode` / `SetText` / `AddItem` | `Yu-Gi-Oh-RIX.h` |
+| `widget_Help` (prompt bar) | Plugin code: `HelpClear` / `HelpAdd` / `HelpLayout`, `Input::HelpBarPressed` | `Yu-Gi-Oh-RIX.h` |
+| `widget_TrunkZone` (card grid) | Plugin code: `Trunk::Construct` / `CreateFromLayout` / list building / `Update` | `Yu-Gi-Oh-RIX.h`; page engine `cardGrid` |
+| `widget_CardInfo` (card picture and text) | Plugin code: `CardInfo::Construct` / `CreateFromLayout` / `SetWidth` / `SetCard` / `Update` | `Yu-Gi-Oh-RIX.h`; page engine card details |
+| `widget_EntryDigit` (0-9 wheel) | Plugin code: `EntryDigit::Construct` / `CreateFromLayout` / `SetValue` / `SetSelected` / `HitTest` | `Yu-Gi-Oh-RIX.h`; page engine digits (the Card Store's password page) |
+| Pictures (`DFX::TLayerAnimoo`) and text (`DFX::TLayerText`) | Built from page files (`image`, `text` elements); plugin code: `Dfx::AddImage`, `Dfx::AddText`, `Dfx::RemoveImage` | `Yu-Gi-Oh-RIX.h`, MenuFile.cpp |
+| `widget_Base` (any widget) | `SetEnabled`, `WidgetSetFocused`, `WidgetSetVisible`, `NodeSetX` / `NodeSetY` / `NodeSetPosition`, `ParentRef` | `Yu-Gi-Oh-RIX.h` |
 
 Traced in IDA but not wrapped yet:
 
@@ -172,7 +172,7 @@ Under the hood they call `Clear 0x1408987F0`, `SetMode 0x1408988A0` (0 message, 
 | `widget_TrunkZone`, `widget_TrunkBookmark`, `widget_TrunkFilterBar`, `widget_TrunkFilterCategory/Categories` | Card collection ("trunk") and its filter bar. |
 | `widget_TrunkFilterMaskOption(s)` | Bitmask filter options (attribute, type, ...). Probably the closest thing to a multi-select tick list, but not decoded, so treat that as a guess. |
 | `widget_TrunkFilterNumOption(s)` | Numeric range filter options. |
-| DeckSelectList + DeckInfoPanel (decoded 2026-10-07) | The deck picker with category tabs (Free Duel screen+1456, campaign deck screen+664) and the deck panel beside it. Deck ids: 0-31 save, 32+n deckdata n, 732-736 battle pack. Ids per tab are game `std::vector<u32>` at +1208 (24 bytes each, tab 0 = all; fill tab 0, then RebuildTabs + Refresh(false)). Functions in `YuGiOh-RIX.h` (`YGO::RIX::DeckSelectList`, `DeckInfoPanel`); used by Campaign AiDeck.cpp. |
+| DeckSelectList + DeckInfoPanel (decoded 2026-10-07) | The deck picker with category tabs (Free Duel screen+1456, campaign deck screen+664) and the deck panel beside it. Deck ids: 0-31 save, 32+n deckdata n, 732-736 battle pack. Ids per tab are game `std::vector<u32>` at +1208 (24 bytes each, tab 0 = all; fill tab 0, then RebuildTabs + Refresh(false)). Functions in `Yu-Gi-Oh-RIX.h` (`YGO::RIX::DeckSelectList`, `DeckInfoPanel`); used by Campaign AiDeck.cpp. |
 
 ## Duel widgets (YGO_FRONT)
 

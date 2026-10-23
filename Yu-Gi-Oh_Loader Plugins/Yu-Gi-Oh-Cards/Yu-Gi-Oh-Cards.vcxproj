@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
+    <ClInclude Include="MissingArt.h" />
     <ClInclude Include="Limit.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="Save.h" />

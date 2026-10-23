@@ -23,7 +23,8 @@ namespace WolfX
             ("relatedcards.json", "Yu-Gi-Oh-MoreCards"), ("text.json", "Yu-Gi-Oh-MoreCards"),
             ("characters.json", "Yu-Gi-Oh-Campaign"), ("decks.json", "Yu-Gi-Oh-Campaign"), ("storyduels.json", "Yu-Gi-Oh-Campaign"),
             ("storyscripts.json", "Yu-Gi-Oh-Campaign"), (@"tutorials\", "Yu-Gi-Oh-Campaign"),
-            ("packs.json", "Yu-Gi-Oh-BetterCardShop"),
+            ("packs.json", "Yu-Gi-Oh-Core"),
+            ("music.json", "Yu-Gi-Oh-Media"), ("voices.json", "Yu-Gi-Oh-Media"), ("videos.json", "Yu-Gi-Oh-Media"),
             ("summoning.json", "Yu-Gi-Oh-Effects"), ("effects.json", "Yu-Gi-Oh-Effects"),
             (@"pages\", "Yu-Gi-Oh-RIX"), (@"menus\", "Yu-Gi-Oh-RIX"),
         ];
@@ -40,18 +41,18 @@ namespace WolfX
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
         private static extern int GetPrivateProfileString(string section, string key, string fallback, StringBuilder value, int size, string file);
 
+        internal static string IniValue(string gameFolder, string section, string key, string fallback)
+        {
+            var value = new StringBuilder(32768);
+            GetPrivateProfileString(section, key, fallback, value, value.Capacity, Path.Combine(gameFolder, "Config.ini"));
+            return value.ToString();
+        }
+
         /// <summary>The plugin folder the game uses: [Yu-Gi-Oh-Core] PluginsPath in its Config.ini, else &lt;game&gt;\Plugins.</summary>
         public static string PluginsFolder(string gameFolder)
         {
-            string ini = Path.Combine(gameFolder, "Config.ini");
-            if (File.Exists(ini))
-            {
-                var value = new StringBuilder(1024);
-                GetPrivateProfileString("Yu-Gi-Oh-Core", "PluginsPath", "", value, value.Capacity, ini);
-                if (value.Length > 0 && Directory.Exists(value.ToString()))
-                    return value.ToString();
-            }
-            return Path.Combine(gameFolder, "Plugins");
+            string configured = IniValue(gameFolder, "Yu-Gi-Oh-Core", "PluginsPath", "");
+            return Path.GetFullPath(Path.Combine(gameFolder, configured.Length > 0 ? configured : "Plugins"));
         }
 
         /// <summary>Content pattern ("cards.json", "pages\") -> the plugins that apply it, from the manifests and <see cref="Known"/>.</summary>
@@ -96,17 +97,19 @@ namespace WolfX
         /// The content entries for the folder: each top-level file and sub-folder ("pages\") a plugin applies, and the ones WolfX makes that
         /// nothing applies yet. Anything else there (backups, pictures cards.json points at, Core's saves.json) is left out.
         /// </summary>
-        public static List<(string File, List<string> Plugins)> Build(GameFolderFiles files)
+        public static List<(string File, List<string> Plugins)> Build(GameFolderFiles files) => Build(files.GameFolder, files.ExFolder);
+
+        internal static List<(string File, List<string> Plugins)> Build(string gameFolder, string exFolder)
         {
             var result = new List<(string, List<string>)>();
-            if (!Directory.Exists(files.ExFolder))
+            if (!Directory.Exists(exFolder))
                 return result;
-            var claims = Claims(files.GameFolder);
+            var claims = Claims(gameFolder);
             List<string> PluginsFor(string entry) =>
                 claims.Where(c => c.Key.EndsWith('\\') ? entry.StartsWith(c.Key, StringComparison.OrdinalIgnoreCase) : c.Key.Equals(entry, StringComparison.OrdinalIgnoreCase))
                     .SelectMany(c => c.Value).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
 
-            foreach (string file in Directory.EnumerateFiles(files.ExFolder, "*.json").OrderBy(f => f, StringComparer.OrdinalIgnoreCase))
+            foreach (string file in Directory.EnumerateFiles(exFolder, "*.json").OrderBy(f => f, StringComparer.OrdinalIgnoreCase))
             {
                 string name = Path.GetFileName(file);
                 if (name.Equals(FileName, StringComparison.OrdinalIgnoreCase))
@@ -115,11 +118,19 @@ namespace WolfX
                 if (plugins.Count == 0 && !NotAppliedYet.Contains(name, StringComparer.OrdinalIgnoreCase))
                     continue;
                 // a card with an effect needs the effect engine as well
-                if (name.Equals("cards.json", StringComparison.OrdinalIgnoreCase) && File.ReadAllText(file).Contains("\"effectClone\"", StringComparison.Ordinal))
-                    plugins.Add("Yu-Gi-Oh-Effects");
+                if (name.Equals("cards.json", StringComparison.OrdinalIgnoreCase))
+                {
+                    try
+                    {
+                        using var json = JsonDocument.Parse(File.ReadAllText(file), ContentCompatibility.JsonOptions);
+                        if (ContentCompatibility.HasCompiledEffect(json.RootElement) && !plugins.Contains("Yu-Gi-Oh-Effects", StringComparer.OrdinalIgnoreCase))
+                            plugins.Add("Yu-Gi-Oh-Effects");
+                    }
+                    catch (JsonException) { /* The compatibility report identifies malformed content. */ }
+                }
                 result.Add((name, plugins));
             }
-            foreach (string folder in Directory.EnumerateDirectories(files.ExFolder).OrderBy(f => f, StringComparer.OrdinalIgnoreCase))
+            foreach (string folder in Directory.EnumerateDirectories(exFolder).OrderBy(f => f, StringComparer.OrdinalIgnoreCase))
             {
                 if (!Directory.EnumerateFiles(folder, "*", SearchOption.AllDirectories).Any())
                     continue;

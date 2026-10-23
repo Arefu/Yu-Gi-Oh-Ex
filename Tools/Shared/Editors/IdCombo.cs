@@ -183,6 +183,9 @@ namespace Wolf.Editors
                 read.Clear();
             }
             list.AddRange(read.Count > 0 ? read : KnownArenas);
+            foreach (var arena in ArenaFile.Current().Entries)   // new arenas (arenas.json, Yu-Gi-Oh-Campaign)
+                if (!list.Any(a => a.Item1 == arena.Id))
+                    list.Add((arena.Id, arena.Name() + " (new)"));
             return list;
         }
 

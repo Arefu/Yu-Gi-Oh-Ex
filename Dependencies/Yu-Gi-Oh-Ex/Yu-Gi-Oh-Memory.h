@@ -17,9 +17,13 @@ namespace YGO::Memory
     enum class Protection { Restore, LeaveWritable };   // LeaveWritable: PAGE_EXECUTE_READWRITE stays (data that later holds a jump stub)
 
     // Copies Size bytes to Address. False when the range could not be made writable (nothing written).
-    inline bool WriteBytes(uintptr_t Address, const void* Data, size_t Size, Protection After = Protection::Restore)
+    // Keep the destination as a runtime pointer. MSVC's optimized inlined memcpy can turn a constant game address above 4 GiB
+    // into a store to address zero (RIX's video-settings arrow table), even while VirtualProtect receives the correct address.
+    __declspec(noinline) inline bool WriteBytes(uintptr_t Address, const void* Data, size_t Size, Protection After = Protection::Restore)
     {
-        void* target = reinterpret_cast<void*>(Address);
+        // volatile: in Release the address is a constant (0x140C8E9BC...) once this is inlined, and MSVC then stored straight to it with a
+        // 32-bit absolute operand - [0] after the high bits were lost - which crashed Yu-Gi-Oh-RIX on load (2026-10-11). Read at run time instead.
+        void* volatile target = reinterpret_cast<void*>(Address);
         DWORD old = 0;
         if (!VirtualProtect(target, Size, PAGE_EXECUTE_READWRITE, &old))
             return false;

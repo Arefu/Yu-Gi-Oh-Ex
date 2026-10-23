@@ -4,10 +4,10 @@
 `File Type Libraries/DeckData`:
 * `DeckDataFile` reads and writes one language's file;
 * `DeckDataTable` holds all languages together, plus the cards;
-* `DeckJson` handles WolfEx's `decks.json`.
+* `DeckJson` handles WolfX's `decks.json`.
 
-The editor is `Tools/Shared/Editors/DeckEditor.cs`, the **Decks** tab in WolfX and WolfEx. WolfX's older single-file "Deck Data" page is
-still there. **Yu-Gi-Oh-Campaign** (`Decks.cpp`) applies `decks.json` to the game.
+The editor is `Tools/Shared/Editors/DeckEditor.cs`, WolfX's **Decks** page (the older single-file "Deck Data" page was removed).
+**Yu-Gi-Oh-Campaign** (`Decks.cpp`) applies `decks.json` to the game.
 
 ## File layout
 
@@ -51,7 +51,7 @@ ids. The limits are **60 / 15 / 15** (`g_DeckSectionMaxSizes`); a bigger count m
     recipe is available.
   * +0xB28 is a 700-bit set.
 
-## decks.json (WolfEx → Yu-Gi-Oh-Campaign)
+## decks.json (WolfX → Yu-Gi-Oh-Campaign)
 
 ```json
 { "decks": [ { "id": 546, "file": "my_deck", "series": 0, "character": 192, "signatureCard": 4007, "sku": 1, "unlocked": true,
@@ -63,6 +63,13 @@ game's `.ydc`, or when the deck is new.
 * **A game id** changes that deck; only the fields the entry gives are applied.
 * **A free id** makes a new deck. It needs a `file` name; that name never has to exist in decks.zib when `cards` is given.
 * **unlocked** (new decks, default false) marks the deck unlocked in the save.
+* **hideGameDecks** (top level, `true`): the deck lists show the profile's saved decks (ids 0-31) and, of the unlocked decks, only
+  the ones decks.json lists. This covers the deck editor and the Free Duel / campaign deck pickers. Campaign hooks
+  `DeckSelectList_FillDecks` (0x1408AD890), which fills tab 0 (vector<u32> at +1208) and then calls RebuildTabs (0x1408AE5B0).
+* **random** `{"count": 40, "cards": [[4007, 48], [4041, 24], ...]}` deals the main deck again before every duel: `count` picks by weight
+  ([Konami id, weight] pairs), with at most 3 copies of a card. Yu-Gi-Oh-Campaign deals
+  it into the template when the decks load and in every `RebuildLiveUnlockCounts`, which runs after each duel and when a profile loads.
+  `cards.main` is ignored, while `extra` and `side` still apply. WolfX keeps the setting (`Deck.RandomCount` / `RandomPool` in DeckDataTable.cs).
 
 Yu-Gi-Oh-Campaign:
 * **`LoadDeckDataFile` (hooked):** applies the records and writes the titles with the game's `std::wstring::assign`. This runs before the
@@ -80,3 +87,7 @@ Yu-Gi-Oh-Campaign:
 * **"Used by"** in the Decks tab lists every character and story duel that uses the selected deck.
 
 Built, but not yet run in the game. Yu-Gi-Oh-Campaign must be switched on in Config.ini: `[Yu-Gi-Oh-Core]` `Yu-Gi-Oh-Campaign=1`.
+
+## Import / export (WolfX Decks page)
+
+`Tools/Shared/Editors/DeckFiles.cs`. **Import deck...** reads a `.ydk` (YGOPro / EDOPro / Master Duel exports: `#main`, `#extra`, `!side`, one card password per line) or a `.ydc` (the game's format) into a new deck or the selected deck's cards. Passwords become Konami ids through `bin\CARD_Pass.bin` (password per internal id) + `bin\CARD_IntID.bin` (internal -> Konami id), with the custom cards' `"password"` from `cards.json` on top (10,084 passwords in the game). Passwords that match no card are listed and left out; past 60 / 15 / 15 the rest is cut. **Export deck...** writes the selected deck as `.ydk` (a card with no password is written as `0` with a comment) or `.ydc`.

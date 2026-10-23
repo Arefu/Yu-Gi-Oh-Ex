@@ -221,6 +221,31 @@ parked partner in and parks the one who just played. So the engine does support 
 - Fix (Yu-Gi-Oh-TagDuel): before `Engine_Init` it fills seats 2 and 3 (`[Yu-Gi-Oh-TagDuel] PartnerDeck` / `OpponentPartnerDeck` .ydc,
   else a copy of the teammate's deck). `DeckMode=shared` detours the swap to a no-op so partners play one hand and deck.
 
+### Online co-op tag duel - NOT DONE (built 2026-10-19, untested, parked)
+
+**Status: not done.** The code below compiles but has never run between two machines. Parked on 2026-10-19 by the user; come back to it
+before calling online tag duels working. Don't build on it until it has been tested.
+
+The idea: each player and their own AI partner against the other player and theirs, over the game's normal 2-member Player Match lobby.
+The turn player's machine simulates the duel (see the model above), so each AI partner can run on its own player's machine and reach the
+other machine as ordinary engine messages, exactly as that player's own turns do.
+
+- **Yu-Gi-Oh-TagDuel:** `TagDuel_SetOnlineCoop(bool)` / `TagDuel_IsOnlineCoop()`. In `Engine_Init`, online with co-op armed: seat
+  controllers local seat = 0 (human), local + 2 = 1 (AI, runs here), both remote seats = 2 (network), through the game's seat controller
+  table. Partner decks are a copy of the teammate's deck and partner portraits the teammate's character, so both machines build the same
+  four seats from the two decks the game exchanged. Disarmed at the result screen. Menu: Tag Duel > **Co-Op (Online)** arms it and presses
+  the main menu's Player Match item (falls back to `GotoScreen(RIX_SCREEN_PLAYER_MATCH)`).
+- **Yu-Gi-Oh-MP (`LiveSetting.cpp`):** the host publishes lobby data `extag` = `coop` / `off` (next to the ban list keys); a joining player's
+  `QNet__OnLobbyEnter` hook arms or disarms TagDuel to match, and logs when the host wants co-op but TagDuel isn't loaded.
+
+Still open (why it is not done):
+1. **Never tested.** The key unknown: does the mirroring machine accept an AI-controlled seat as a plain network seat (does the simulating
+   machine send the AI's decisions the way it sends a human's)? Needs a two-machine test with both `console.log` files.
+2. The partner swap (`Duel_LoadEngineFromFrontBlock`) and the partner decks must come out identical on both machines; only reasoned, not seen.
+3. Pressing Player Match from a RIX page is unverified.
+4. Choosing your own partner / partner deck online is not built (it needs the choice sent to the other machine).
+5. 4 human players is out of scope: the lobby holds 2 members and QNet one peer.
+
 ## Header correction and logging stubs (2026-09-30, param pass)
 
 - Lobby message header, confirmed from the senders' stack layouts: `byte0 = seat`, `byte1 = 0xFF`, `byte2 = type`, `byte3 = length`, `byte4 = value`. IDB struct `NetLobbyMsg`. The senders build it as one `u16` (0x01FF = type 1, 0x02FF = type 2, ...), which is how the old names got the type wrong. `Duel__NetLobby__WaitForAllReady_Update`'s retry is type 7 (0x07FF), not type 4.

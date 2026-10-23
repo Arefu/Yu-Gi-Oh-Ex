@@ -5,7 +5,8 @@ the tutorial number (01-26), `#` the language letter (E, F, G, I, J, S ship with
 so a loose `<game>\YGO_2020\duel\tutorial\steam_tutorial_05_E.bin` replaces the archive's copy.
 
 Parser: `File Type Libraries/Tutorial` (`Types.TutorialFile`, `TutorialPlayback`). Editor: `Tools/Shared/Editors/TutorialEditor` - the
-WolfX "Tutorials" tab (files on disk) and the WolfEx "Tutorials" tab (the game's files, saved as loose overrides; "New tutorial...").
+WolfX "Tutorials" page (changes to the game's tutorials go into the Ex patch; "New tutorial..." makes new ones as
+`Yu-Gi-Oh-Ex\tutorials\*.json`, numbered 27-99, which Yu-Gi-Oh-Campaign lists in Help > Tutorial).
 The library round-trips all 156 shipped files byte for byte, both binary and script form.
 
 ## Format (little-endian), YGO::TUTORIAL::LoadScriptFile 0x1408709D0

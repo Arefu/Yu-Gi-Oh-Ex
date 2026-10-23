@@ -103,8 +103,11 @@
     <ClCompile Include="DuelRecorder.cpp" />
     <ClCompile Include="EngineHooks.cpp" />
     <ClCompile Include="Http.cpp" />
+    <ClCompile Include="Live.cpp" />
     <ClCompile Include="LiveSetting.cpp" />
+    <ClCompile Include="ServerMenu.cpp" />
     <ClCompile Include="BanList.cpp" />
+    <ClCompile Include="BanListPicker.cpp" />
     <ClCompile Include="P2P.cpp" />
     <ClCompile Include="Session.cpp" />
     <ClCompile Include="Steam.cpp" />
@@ -117,7 +120,9 @@
     <ClInclude Include="DuelRecorder.h" />
     <ClInclude Include="EngineHooks.h" />
     <ClInclude Include="Http.h" />
+    <ClInclude Include="Live.h" />
     <ClInclude Include="Logger.h" />
+    <ClInclude Include="ServerMenu.h" />
     <ClInclude Include="P2P.h" />
     <ClInclude Include="Session.h" />
     <ClInclude Include="Steam.h" />

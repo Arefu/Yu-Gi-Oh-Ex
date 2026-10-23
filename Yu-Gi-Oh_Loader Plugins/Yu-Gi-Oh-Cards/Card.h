@@ -8,11 +8,13 @@
 #include "Limit.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
-// Custom cards live between kFirstExtraCardId and the end of the table the game saves card ownership in (0x4E20 entries, indexed by Konami id).
-// The last vanilla Konami id is 14968, but the game ships effect rows and id lists for 14969-15234 (cards it has no data for): a custom card
-// numbered there inherits a ghost card's effect, hand-effect flag and trigger entries. Numbering starts at 15300, past all of them.
+// Custom cards live between kFirstExtraCardId and kLastExtraCardId (Konami ids). The last vanilla Konami id is 14968, but the game ships effect
+// rows and id lists for 14969-15234 (cards it has no data for): a custom card numbered there inherits a ghost card's effect, hand-effect flag
+// and trigger entries. Numbering starts at 15300, past all of them. The top is the last id before 0xFFFF (the game's "no card"): the save's own
+// card table stops at 19999, so Yu-Gi-Oh-Core keeps a 65536-entry one and stores ids past 19999 in the save extension (Core CardTable.cpp);
+// FULL_CARD_PROPS has 65536 entries and Limits' id tables 0xFFFF. Until 2026-10-19 the top was 19999 (4,700 cards).
 constexpr int kFirstExtraCardId = 0x3BC4;   // 15300
-constexpr int kLastExtraCardId = 0x4E1F;
+constexpr int kLastExtraCardId = 0xFFFE;    // 65534
 
 constexpr uintptr_t kInternalCardPropsAddress = YGO::Addr::INTERNAL_ID_CARD_PROPS;
 constexpr size_t kVanillaCardPropCount = 10166;
@@ -97,7 +99,7 @@ namespace Card
         // archetypes that exist only for custom cards.
         std::vector<int> Archetypes;
         // The vanilla card whose effect this card borrows ("effectClone": { "from": N } in cards.json, applied by Yu-Gi-Oh-Effects).
-        // In a duel the card plays under that id when it is free (see BorrowSourceId), so every id-keyed rule of the engine treats it as the source.
+        // Single-effect clones play under that id when free. Multi-effect clones use 0 here: each effect is routed independently.
         uint16_t CloneFrom = 0;
         // The card whose name this one is treated as ("sameName": { "card": N, "always": true } in cards.json; 0 = its own name). The game's
         // own cards get theirs from bin/CARD_Same.bin in Setup_CardPropTable, which never reads ids past 14968 (docs/CardSame.md). Always:
@@ -107,7 +109,7 @@ namespace Card
         bool SameNameAlways = true;
         // Everything else about the card is in its cards.json entry too (WolfX's New cards page writes it; docs/CustomCards.md):
         // "genres": its genres (FULL_CARD_PROPS +0x38, used over genres.json); "related": its Related cards units (u16 card | u16 tag << 16,
-        // used over relatedcards.json); "password": 8 digits Yu-Gi-Oh-BetterCardShop's Enter Password page unlocks it with (Card_FindByPassword).
+        // used over relatedcards.json); "password": 8 digits the Card Store's Enter Password page unlocks it with (Card_FindByPassword).
         std::optional<uint64_t> Genres;
         std::optional<std::vector<uint32_t>> Related;
         uint32_t Password = 0;
@@ -130,8 +132,19 @@ namespace Card
         bool HasName = false, HasDescription = false;
         std::wstring Name, Description;   // the game table keeps pointers into these, so they must not change after loading
         std::optional<int> Attack, Defense, Level, Attribute, Type, Kind, Icon;
+        std::string ImagePath;                 // "image": new art for the game's card (relative to the content folder it came from)
+        std::vector<unsigned char> ImageBytes; // read the first time the game asks
+        bool ImageTried = false;
     };
     extern std::vector<CardOverride> Overrides;
+    // The override with new art for this Konami id, or nullptr (Hook_Get_IllustrationData).
+    CardOverride* FindOverrideImage(uint16_t id);
+
+    // cardpool.json { "cards": [ Konami / custom ids ] }, joined across mods: when any copy lists cards, only those exist for the
+    // player. Every other card counts as not owned (trunk, deck editor, deck checks), so it can't be seen or used.
+    bool InCardPool(uint16_t id);
+    bool CardPoolActive();
+    size_t LoadCardPool();
 
     // The custom card with this password ("password" in cards.json), or 0. Exported as Card_FindByPassword for YuGiOh-PASS.h.
     uint16_t FindByPassword(uint32_t password);
@@ -221,6 +234,16 @@ namespace Card
     // false in the file to keep them and only add to them).
     extern bool ReplaceDefaultUnlocks;
 
+    // unlocks.json "starter": a new profile is dealt a random deck, once. Each group deals Count
+    // cards by weight; the cards are owned and become the profile's first saved deck.
+    //   "starter": { "deckName": "Starter Deck", "groups": [ { "count": 16, "cards": [[4007, 48], [4008, 24]] } ] }
+    struct StarterGroup
+    {
+        int Count;
+        std::vector<std::pair<int, uint32_t>> Pool;   // card id, weight
+    };
+    extern std::vector<StarterGroup> StarterGroups;
+    extern std::wstring StarterDeckName;
 
     // Registers the extra cards and, the first time it runs, applies the patches and hooks.
     // Runs after every card table setup, since the game rebuilds its tables on a language change.

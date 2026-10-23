@@ -1,0 +1,17 @@
+// Card Shop: every card in the deck editor's grid; confirm on one to buy a copy. The price is value:price from card-store-prices.bob,
+// worked out for the card in var:card (the grid's highlighted card). The number on each card is the copies you own.
+header "Card Shop";
+use "card-store-prices";
+
+user;
+
+card "{var:card}" at 260, 120 width 486.5;
+
+cards all at 528.5, 120 size 1350, 860 bind var:card
+    description "Confirm on a card to buy one copy."
+    -> if game:owned.{var:card} >= 3
+           -> message("You already have 3 copies of {game:cardname.{var:card}}.")
+       else if game:dp < value:price
+           -> { sound(71); message("{game:cardname.{var:card}} costs {value:price} DP. You have {game:dp} DP."); }
+       else confirm("Buy {game:cardname.{var:card}} for {value:price} DP? You have {game:dp} DP and {game:owned.{var:card}} of it.")
+           -> take_dp(value:price) -> { give_card(var:card); sound(52); };

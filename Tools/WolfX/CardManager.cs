@@ -101,6 +101,7 @@ namespace WolfX
         // (.zib, Konami id) -> new picture (game JPEG), or null = take it out of that .zib; written into the art .zib files on Save
         private readonly Dictionary<(string Zib, int Id), byte[]?> _pendingArt = [];
         private List<CardEntry> _rows = [];
+        private WolfEx.KindFilter? _kindFilter;
         private int? _shown;
         private bool _binding;
 
@@ -118,6 +119,11 @@ namespace WolfX
             _show.SelectedIndex = 0;
             _show.SelectedIndexChanged += (_, _) => Refill();
             _listTools.Items.Add(_show);
+            // the "Kinds" drop-down: hides kinds from the list (display only)
+            _kindFilter = new WolfEx.KindFilter(() =>CardCatalog.Get(this).Cards.Where(c => c.Id > 0).Select(c => KindText(c.Id))
+                .Concat(_customCards.Cards.Select(c => c.Kind)));
+            _kindFilter.Changed += () => Refill();
+            _listTools.Items.Add(_kindFilter);
             _list.Columns.Add("Id", 56);
             _list.Columns.Add("Name", 170);
             _list.Columns.Add("Kind", 80);
@@ -139,6 +145,7 @@ namespace WolfX
             _tools.Items.Add(Button("Save", "Save this page: game cards into the game's files (Ctrl+S)", () => Save()));
             _tools.Items.Add(new ToolStripSeparator());
             _tools.Items.Add(Button("New custom card...", "Make a new card on the New cards page (saved to cards.json)", () => OpenCustomCard?.Invoke(0)));
+            _tools.Items.Add(Button("Delete card...", "Delete the selected game card: the game then has no card with its id (bin\\CARD_IntID.bin in the Ex patch). At your own risk", DeleteCard));
 
             // preview + summary above the tabs, with a splitter between them; the card scales to the height it gets
             var upright = new SplitContainer { Dock = DockStyle.Fill, Orientation = Orientation.Horizontal };
@@ -282,7 +289,7 @@ namespace WolfX
         private void BuildProperties()
         {
             foreach (var kind in Enum.GetValues<CARDS_INFO.CARD_Kind>().Where(k => (int)k >= 0))
-                _kind.Items.Add(new Choice((int)kind, $"{(int)kind}: {CardNames.KindName((int)kind)}"));
+                _kind.Items.Add(new Choice((int)kind, $"{(int)kind}: {CardNames.KindLabel((int)kind)}"));
             for (int a = 0; a <= 9; a++)
                 _attribute.Items.Add(new Choice(a, a == 0 ? "0: (none)" : $"{a}: {CardNames.AttributeName(a)}"));
             foreach (var type in Enum.GetValues<CARDS_INFO.CARD_Type>())
@@ -512,6 +519,9 @@ namespace WolfX
             _changedCards.Clear();
             _pendingArt.Clear();
             _summoning = SummoningFile.Load(files.ExPath(SummoningFile.FileName));
+            if (_summoning.LoadError is { } error)
+                MessageBox.Show("Could not read summoning.json. Saving summoning changes is blocked until you repair it and reopen the folder.\n" + error,
+                    "Summoning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             try
             {
                 _idMap = files.Read(CardIdMap.GamePath) is { } ids ? CardIdMap.Parse(ids) : null;
@@ -551,6 +561,7 @@ namespace WolfX
         /// <summary>Writes the files that changed, then the pages shown inside (genres, related cards, links) when they have changes.</summary>
         public bool Save()
         {
+            if (!WolfUI.CommitPendingEdits(this)) return false;
             if (_files == null)
                 return false;
             try
@@ -576,6 +587,8 @@ namespace WolfX
                     write[CardKanaTable.KanaPath(2, language)] = kana2;
                     write[CardKanaTable.KanaPath(3, language)] = kana3;
                 }
+                if (_idMap != null && _changedFiles.Contains(CardIdMap.GamePath))
+                    write[CardIdMap.GamePath] = _idMap.ToBytes();
                 if (_changedFiles.Contains(Card_Pass.GamePath))
                     write[Card_Pass.GamePath] = Card_Pass.ToBytes(_passwords);
                 if (_changedFiles.Contains(Card_Named.GamePath))
@@ -598,10 +611,6 @@ namespace WolfX
                     }
                     _pendingArt.Clear();
                 }
-                _changedFiles.Clear();
-                _changedCards.Clear();
-                _list.Invalidate();
-
                 int pages = 0;
                 if (_summoning?.Dirty == true)
                 {
@@ -613,13 +622,26 @@ namespace WolfX
                     if (editor is IGameEditor { Dirty: true } page)
                     {
                         if (!page.Save())
+                        {
+                            _status.Text = "Not fully saved: a linked editor could not save its changes. Pending edits are retained.";
                             return false;
+                        }
                         pages++;
                     }
                 }
                 // a custom card's requirements, genres, related cards or links changed here: all of them are its cards.json entry
-                if (_customCards.Dirty && _customCards.SaveRequested?.Invoke() == true)
+                if (_customCards.Dirty)
+                {
+                    if (_customCards.SaveRequested?.Invoke() != true)
+                    {
+                        _status.Text = "Not fully saved: custom card changes could not be saved. Pending edits are retained.";
+                        return false;
+                    }
                     pages++;
+                }
+                _changedFiles.Clear();
+                _changedCards.Clear();
+                _list.Invalidate();
                 _status.Text = (write.Count > 0 ? $"Saved {write.Count} files into {_files.Describe(CardPropTable.GamePath)}" : "No card files changed") +
                                (art > 0 ? $"; {art} card picture{(art == 1 ? "" : "s")} into {_files.Describe(CardArt.CensoredZib)}" : "") +
                                (pages > 0 ? $"; saved {pages} of summoning.json, cards.json and the genres / related cards / links pages." : ".");
@@ -662,6 +684,7 @@ namespace WolfX
             _rows = cards
                 .Where(c => show switch { 1 => !c.IsCustom, 2 => c.IsCustom || Custom(c.Id) != null, 3 => _changedCards.Contains(c.Id), _ => true })
                 .Where(c => find.Length == 0 || c.Id.ToString() == find || NameOf(c.Id).Contains(find, StringComparison.OrdinalIgnoreCase))
+                .Where(c => _kindFilter == null || _kindFilter.Shows(KindText(c.Id)))
                 .OrderBy(c => c.Id).ToList();
             _list.VirtualListSize = _rows.Count;
             _list.SelectedIndices.Clear();
@@ -811,6 +834,27 @@ namespace WolfX
 
         // ---- edits ----
 
+        // Deleting a game card: CARD_IntID.bin maps it to internal id 0, which the game treats as "no such card" (Is_ValidCardId), so it
+        // leaves the trunk, the shop and packs and can't be drawn; its rows in the other tables stay (they are indexed by internal id, and
+        // removing one would move every card after it). Decks, packs, starter collections and saves that still name it may break.
+        private void DeleteCard()
+        {
+            if (_idMap == null || _shown is not int id || InternalOf(id) == 0)
+            {
+                _status.Text = "Pick a game card first (custom cards are deleted on the New cards page).";
+                return;
+            }
+            if (MessageBox.Show(this,
+                    $"Delete {NameOf(id)} ({id}) from the game?\n\nThe game will have no card with this id (bin\\CARD_IntID.bin, in the Ex patch; the original stays " +
+                    "in YGO_2020.dat). Decks, packs, the starting collection and saves that use it can break, and the game may crash where it expects it. " +
+                    "This is at your own risk.\n\nDelete it?", "Delete card", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+                return;
+            _idMap.Set(id, 0);
+            Changed(id, CardIdMap.GamePath);
+            Refill();
+            _status.Text = $"{id} deleted (saved when you press Save). Restore it by setting its internal id back on the Card ids page.";
+        }
+
         private void Changed(int id, string file)
         {
             _changedFiles.Add(file);
@@ -823,6 +867,7 @@ namespace WolfX
         {
             if (_binding || _shown is not int id || Record(id) is not { } record)
                 return;
+            var summonWas = (record.Kind, record.Icon, record.Level);
             record.Kind = (CARDS_INFO.CARD_Kind)ChoiceOf(_kind);
             record.Attribute = (CARDS_INFO.CARD_Attribute)ChoiceOf(_attribute);
             record.Type = (CARDS_INFO.CARD_Type)ChoiceOf(_type);
@@ -844,6 +889,9 @@ namespace WolfX
             };
             UpdateFieldStates(record);
             Changed(id, CardPropTable.GamePath);
+            // the Summoning tab shows the part the kind uses (Fusion / Xyz / Link ...): a card turned into one needs it bound again
+            if (summonWas != (record.Kind, record.Icon, record.Level))
+                ShowSummon();
         }
 
         private void PasswordEdited()

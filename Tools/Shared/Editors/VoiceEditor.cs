@@ -6,11 +6,13 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using Types;
 using WolfX.Types;
+using static Wolf.Editors.TriggerChoices;
+using Uses = Wolf.Editors.TriggerUses;
 
 namespace Wolf.Editors
 {
     /// <summary>
-    /// The Voice Over page: Yu-Gi-Oh-Ex\voices.json for Yu-Gi-Oh-Music (docs/MusicPlugin.md "Voice lines"). Each character gets lines
+    /// The Voice Over page: Yu-Gi-Oh-Ex\voices.json for Yu-Gi-Oh-Media (docs/MediaPlugin.md "Voice lines"). Each character gets lines
     /// to say when something happens in a duel ("Kaiba says one of these when my opponent attacks"). Every row reads as a sentence,
     /// shown under the grid. Lines are at most once per duel by default and never repeat a file until all of the row's files have played.
     /// Added files are copied into voices\&lt;character id&gt;\.
@@ -19,28 +21,28 @@ namespace Wolf.Editors
     {
         public const string FileName = "voices.json";
 
-        public sealed class Choice<T>(T key, string text)
-        {
-            public T Key { get; } = key;
-            public string Text { get; } = text;
-        }
-
-        /// <summary>Which of a row's extra columns an event uses (the others are greyed out).</summary>
-        [Flags]
-        private enum Uses { None = 0, Amount = 1, Cards = 2, How = 4, Reason = 8 }
-
         /// <summary>The events (voices.json "when" + "who"), as the sentence the editor shows. Key = when, or when:opponent.</summary>
         private static readonly (string Key, string Text, Uses Uses)[] WhenChoices =
         [
             ("duelStart", "the duel starts", Uses.None),
-            ("turnStart", "my turn starts", Uses.None),
-            ("turnStart:opponent", "my opponent's turn starts", Uses.None),
+            ("turnStart", "my turn starts (my LP at or below Amount; 0 = any)", Uses.Amount | Uses.Standing),
+            ("turnStart:opponent", "my opponent's turn starts", Uses.Standing),
             ("battlePhase", "I enter the Battle Phase", Uses.None),
             ("battlePhase:opponent", "my opponent enters the Battle Phase", Uses.None),
             ("summon", "I summon a monster", Uses.Cards | Uses.How),
             ("summon:opponent", "my opponent summons a monster", Uses.Cards | Uses.How),
             ("attack", "I attack", Uses.Cards),
             ("attack:opponent", "my opponent attacks", Uses.Cards),
+            ("directAttack", "I attack directly", Uses.Cards),
+            ("directAttack:opponent", "my opponent attacks me directly", Uses.Cards),
+            ("lethalAttack", "my attack will win the duel if it lands", Uses.Cards),
+            ("lethalAttack:opponent", "my opponent's attack will win the duel if it lands", Uses.Cards),
+            ("activate", "I activate a card or effect", Uses.Cards | Uses.Kind | Uses.Chain),
+            ("activate:opponent", "my opponent activates a card or effect", Uses.Cards | Uses.Kind | Uses.Chain),
+            ("set", "I Set a card", Uses.Cards | Uses.Kind),
+            ("set:opponent", "my opponent Sets a card", Uses.Cards | Uses.Kind),
+            ("destroyed", "my card is destroyed", Uses.Cards | Uses.Kind),
+            ("destroyed:opponent", "my opponent's card is destroyed", Uses.Cards | Uses.Kind),
             ("inHand", "I hold cards in my hand", Uses.Amount | Uses.Cards),
             ("inHand:opponent", "my opponent holds cards in their hand", Uses.Amount | Uses.Cards),
             ("damage", "I take damage (at least Amount)", Uses.Amount),
@@ -52,26 +54,7 @@ namespace Wolf.Editors
             ("draw", "the duel is a draw", Uses.None),
         ];
 
-        /// <summary>voices.json "how" on a summon line.</summary>
-        private static readonly (string Key, string Text)[] SummonKinds =
-        [
-            ("any", "any way"),
-            ("normal", "Normal / Tribute Summon"),
-            ("flip", "Flip Summon"),
-            ("special", "Special Summon"),
-        ];
-
-        /// <summary>voices.json "reason" on a win / lose line: the game's DuelWinReason (index = number), docs/StatsAndMatchResults.md.</summary>
-        private static readonly (string Key, string Text)[] WinReasons =
-        [
-            ("any", "any reason"), ("lp", "LP reduced to 0"), ("deckOut", "deck-out"), ("timeLimit", "time / turn limit"), ("surrender", "surrender"),
-            ("rules", "broke the rules"), ("exodia", "Exodia the Forbidden One"), ("destinyBoard", "Destiny Board"), ("yataLock", "Yata-Garasu lock"),
-            ("lastTurn", "Last Turn"), ("finalCountdown", "Final Countdown"), ("effect", "a match-winning effect (11)"), ("vennominaga", "Vennominaga"),
-            ("exodius", "Exodius the Ultimate Forbidden Lord"), ("effect14", "a match-winning effect (14)"), ("leo", "Number 88: Gimmick Puppet of Leo"),
-            ("disasterLeo", "Number C88: Gimmick Puppet Disaster Leo"), ("jackpot7", "Jackpot 7"), ("effect18", "a match-winning effect (18)"),
-            ("relaySoul", "Relay Soul"), ("ghostrickAngel", "Ghostrick Angel of Mischief"), ("phantasmSpiral", "Phantasm Spiral Assault"),
-            ("faWinners", "F.A. Winners"), ("flyingElephant", "Flying Elephant"), ("exodiaDefender", "Exodia, the Legendary Defender"),
-        ];
+        // "how", "kind", "response", "standing", "once" and "reason" choices: TriggerChoices (shared with the Videos page).
 
         private sealed class LineRow
         {
@@ -81,11 +64,14 @@ namespace Wolf.Editors
             public string Cards => CardList.Count == 0 ? "" : string.Join(", ", CardList.Select(CardCatalog.NameOf));
             public string How { get; set; } = "any";
             public string Reason { get; set; } = "any";
+            public string Kind { get; set; } = "any";
+            public string Chain { get; set; } = "either";
+            public string Standing { get; set; } = "any";
             public int Against { get; set; } = -1;
             public List<string> FileList { get; set; } = [];
             public string Files => FileList.Count == 0 ? "(double-click to pick files)" : string.Join(", ", FileList.Select(Path.GetFileName));
             public int Chance { get; set; } = 100;
-            public bool Once { get; set; } = true;
+            public string Once { get; set; } = "duel";
             public double Volume { get; set; } = 1;
         }
 
@@ -98,6 +84,8 @@ namespace Wolf.Editors
         private readonly NumericUpDown _volume = new() { Minimum = 0, Maximum = 2, DecimalPlaces = 2, Increment = 0.05m, Value = 1, Width = 60 };
         private readonly NumericUpDown _duck = new() { Minimum = 0, Maximum = 100, Increment = 5, Value = 50, Width = 55 };
         private readonly NumericUpDown _gap = new() { Minimum = 0, Maximum = 120, DecimalPlaces = 1, Increment = 0.5m, Value = 3, Width = 55 };
+        private readonly CheckBox _pause = new() { Text = "Duel waits for a line", Checked = true, AutoSize = true, Margin = new Padding(8, 5, 3, 3) };
+        private readonly CheckBox _skip = new() { Text = "Click / Space / Enter skips it", Checked = true, AutoSize = true, Margin = new Padding(3, 5, 3, 3) };
         private readonly TextBox _filter = new() { Dock = DockStyle.Top, PlaceholderText = "Find a character..." };
         private readonly CheckBox _onlyVoiced = new() { Dock = DockStyle.Bottom, Text = "Only characters with lines", AutoSize = true };
         private readonly ListBox _characters = new() { Dock = DockStyle.Fill, IntegralHeight = false };
@@ -125,7 +113,7 @@ namespace Wolf.Editors
 
         public IReadOnlyCollection<string> Files => [CharacterTable.GamePath('E')];
 
-        public string SavesTo => $"Additional: Yu-Gi-Oh-Ex\\{FileName} and the files in its voices folder (needs Yu-Gi-Oh-Music).";
+        public string SavesTo => $"Additional: Yu-Gi-Oh-Ex\\{FileName} and the files in its voices folder (needs Yu-Gi-Oh-Media).";
 
         public bool Dirty => _files != null && Build().ToJsonString() != _savedJson;
 
@@ -142,7 +130,8 @@ namespace Wolf.Editors
 
             var defaults = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true, WrapContents = true, Padding = new Padding(4, 2, 4, 2) };
             defaults.Controls.AddRange([Caption("Voices folder (in Yu-Gi-Oh-Ex):"), _folder, Caption("Volume:"), _volume,
-                Caption("Music while talking (%):"), _duck, Caption("Quiet time after a line (s):"), _gap]);
+                Caption("Music while talking (%):"), _duck, Caption("Quiet time after a line (s):"), _gap, _pause, _skip]);
+            _pause.CheckedChanged += (_, _) => _skip.Enabled = _pause.Checked;   // skipping ends the wait
 
             _filter.TextChanged += (_, _) => FillCharacters();
             _onlyVoiced.CheckedChanged += (_, _) => FillCharacters();
@@ -257,6 +246,9 @@ namespace Wolf.Editors
             nameof(LineRow.Cards) => Uses.Cards,
             nameof(LineRow.How) => Uses.How,
             nameof(LineRow.Reason) => Uses.Reason,
+            nameof(LineRow.Kind) => Uses.Kind,
+            nameof(LineRow.Chain) => Uses.Chain,
+            nameof(LineRow.Standing) => Uses.Standing,
             _ => null,
         };
 
@@ -310,17 +302,25 @@ namespace Wolf.Editors
                 ValueMember = nameof(Choice<string>.Key), DisplayMember = nameof(Choice<string>.Text), Width = 170, FlatStyle = FlatStyle.Flat,
                 ToolTipText = "Win / lose lines: only when the duel is won this way (Exodia, deck-out, surrender...). Said before the finish animation.",
             };
+            DataGridViewComboBoxColumn Combo(string header, string property, (string Key, string Text)[] items, int width, string tip) => new()
+            {
+                HeaderText = header, DataPropertyName = property, DataSource = items.Select(k => new Choice<string>(k.Key, k.Text)).ToList(),
+                ValueMember = nameof(Choice<string>.Key), DisplayMember = nameof(Choice<string>.Text), Width = width, FlatStyle = FlatStyle.Flat, ToolTipText = tip,
+            };
             _grid.Columns.AddRange(
             [
                 when,
                 new DataGridViewTextBoxColumn { HeaderText = "Amount", DataPropertyName = nameof(LineRow.Amount), Width = 60, ToolTipText = "Damage: at least this much. LP: this many or fewer. In hand: how many of the cards (0 = all of them)." },
                 new DataGridViewTextBoxColumn { HeaderText = "Cards (double-click)", DataPropertyName = nameof(LineRow.Cards), ReadOnly = true, Width = 180, ToolTipText = "Summon / attack: only these cards. In hand: the cards to hold." },
                 how,
+                Combo("Card kind", nameof(LineRow.Kind), CardKinds, 95, "Activate / Set / destroyed lines: only this kind of card"),
+                Combo("Chain", nameof(LineRow.Chain), ChainChoices, 105, "Activate lines: only when it starts a chain, or only in response to another card (a Trap springing)"),
+                Combo("LP standing", nameof(LineRow.Standing), Standings, 105, "Turn start lines: only when the speaker is winning / losing / even on LP"),
                 reason,
                 against,
                 new DataGridViewTextBoxColumn { HeaderText = "Files (double-click)", DataPropertyName = nameof(LineRow.Files), ReadOnly = true, AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill, MinimumWidth = 160 },
                 new DataGridViewTextBoxColumn { HeaderText = "Chance %", DataPropertyName = nameof(LineRow.Chance), Width = 65 },
-                new DataGridViewCheckBoxColumn { HeaderText = "Once", DataPropertyName = nameof(LineRow.Once), Width = 45, ToolTipText = "At most once per duel" },
+                Combo("Once", nameof(LineRow.Once), OnceChoices, 105, "Once per duel, once per turn (two Dark Magicians attacking: one line), or every time"),
                 new DataGridViewTextBoxColumn { HeaderText = "Volume", DataPropertyName = nameof(LineRow.Volume), Width = 55 },
             ]);
         }
@@ -370,6 +370,23 @@ namespace Wolf.Editors
                 case "attack" when row.CardList.Count > 0:
                     when = (opponent ? "my opponent attacks with " : "I attack with ") + cards;
                     break;
+                case "directAttack" or "lethalAttack" when row.CardList.Count > 0:
+                    when += $" (with {cards})";
+                    break;
+                case "activate" or "set" or "destroyed":
+                    if (row.CardList.Count > 0)
+                        when += $" ({cards})";
+                    else if (row.Kind != "any")
+                        when += $" ({CardKinds.FirstOrDefault(k => k.Key == row.Kind).Text})";
+                    if (row.When.StartsWith("activate") && row.Chain != "either")
+                        when += row.Chain == "response" ? ", in response to another card" : ", to start a chain";
+                    break;
+                case "turnStart":
+                    when = when.Replace(" (my LP at or below 0; 0 = any)", "").Replace(" (my LP at or below Amount; 0 = any)", "")
+                               .Replace($" (my LP at or below {row.Amount}; 0 = any)", $" with my LP at {row.Amount} or below");
+                    if (row.Standing != "any")
+                        when += $" while {(opponent ? "they are" : "I am")} {Standings.FirstOrDefault(k => k.Key == row.Standing).Text}";
+                    break;
                 case "inHand":
                 {
                     int needed = row.Amount > 0 ? Math.Min(row.Amount, row.CardList.Count) : row.CardList.Count;
@@ -392,7 +409,7 @@ namespace Wolf.Editors
                 parts.Add($"only against {NameOf(row.Against)}");
             if (row.Chance < 100)
                 parts.Add($"{row.Chance}% of the time");
-            parts.Add(row.Once ? "at most once per duel" : "every time");
+            parts.Add(row.Once switch { "turn" => "at most once per turn", "never" => "every time", _ => "at most once per duel" });
             _sentence.Text = string.Join(", ", parts) + ".";
         }
 
@@ -594,6 +611,7 @@ namespace Wolf.Editors
             _volume.Value = 1;
             _duck.Value = 50;
             _gap.Value = 3;
+            _pause.Checked = _skip.Checked = true;
             string path = files.ExPath(FileName);
             string note = "no voices.json yet";
             if (File.Exists(path))
@@ -642,17 +660,6 @@ namespace Wolf.Editors
             catch (Exception ex) when (ex is InvalidDataException or JsonException or IOException) { }
         }
 
-        private static double? Num(JsonNode? node) => node is JsonValue value && value.TryGetValue<double>(out double d) ? d : null;
-
-        /// <summary>"reason" is a name ("exodia") or the DuelWinReason number.</summary>
-        private static string ReasonKey(JsonNode? node)
-        {
-            if (Num(node) is double number)
-                return number >= 0 && number < WinReasons.Length ? WinReasons[(int)number].Key : "any";
-            string text = node?.ToString() ?? "";
-            return WinReasons.FirstOrDefault(r => string.Equals(r.Key, text, StringComparison.OrdinalIgnoreCase)).Key ?? "any";
-        }
-
         private void Read(JsonObject root)
         {
             if (root["folder"] is JsonValue folder && folder.TryGetValue<string>(out var f))
@@ -660,6 +667,8 @@ namespace Wolf.Editors
             _volume.Value = (decimal)Math.Clamp(Num(root["volume"]) ?? 1, 0, 2);
             _duck.Value = (decimal)Math.Clamp(Math.Round((Num(root["duck"]) ?? 0.5) * 100), 0, 100);
             _gap.Value = (decimal)Math.Clamp(Num(root["gap"]) ?? 3, 0, 120);
+            _pause.Checked = root["pause"] is not JsonValue pause || !pause.TryGetValue<bool>(out bool pauseOn) || pauseOn;
+            _skip.Checked = root["skip"] is not JsonValue skip || !skip.TryGetValue<bool>(out bool skipOn) || skipOn;
             if (root["characters"] is not JsonObject characters)
                 return;
             foreach (var (id, list) in characters)
@@ -682,7 +691,10 @@ namespace Wolf.Editors
                         Reason = ReasonKey(node["reason"]),
                         Against = (int)(Num(node["against"]) ?? -1),
                         Chance = (int)Math.Clamp(Num(node["chance"]) ?? 100, 0, 100),
-                        Once = node["once"] is not JsonValue once || !once.TryGetValue<bool>(out bool o) || o,
+                        Once = node["once"] is JsonValue once ? (once.TryGetValue<bool>(out bool o) ? (o ? "duel" : "never") : once.ToString() == "turn" ? "turn" : "duel") : "duel",
+                        Kind = CardKinds.FirstOrDefault(k => string.Equals(k.Key, node["kind"]?.ToString(), StringComparison.OrdinalIgnoreCase)).Key ?? "any",
+                        Chain = node["response"] is JsonValue response && response.TryGetValue<bool>(out bool r) ? (r ? "response" : "start") : "either",
+                        Standing = Standings.FirstOrDefault(k => string.Equals(k.Key, node["standing"]?.ToString(), StringComparison.OrdinalIgnoreCase)).Key ?? "any",
                         Volume = Num(node["volume"]) ?? 1,
                     };
                     if (node["files"] is JsonArray fileList)
@@ -712,6 +724,10 @@ namespace Wolf.Editors
                 root["volume"] = (double)_volume.Value;
             root["duck"] = (double)_duck.Value / 100;
             root["gap"] = (double)_gap.Value;
+            if (!_pause.Checked)
+                root["pause"] = false;
+            if (!_skip.Checked)
+                root["skip"] = false;
             var characters = new JsonObject();
             foreach (var (id, rows) in _rows.Where(p => p.Value.Count > 0).OrderBy(p => p.Key))
             {
@@ -728,7 +744,7 @@ namespace Wolf.Editors
                         if (row.Amount > 0)
                             line["count"] = row.Amount;
                     }
-                    else if (uses.HasFlag(Uses.Amount))
+                    else if (uses.HasFlag(Uses.Amount) && (row.Amount != 0 || when[0] != "turnStart"))
                         line["amount"] = row.Amount;
                     if (uses.HasFlag(Uses.Cards) && row.CardList.Count > 0)
                         line["cards"] = new JsonArray([.. row.CardList.Select(c => JsonValue.Create(c))]);
@@ -736,12 +752,18 @@ namespace Wolf.Editors
                         line["how"] = row.How;
                     if (uses.HasFlag(Uses.Reason) && row.Reason != "any")
                         line["reason"] = row.Reason;
+                    if (uses.HasFlag(Uses.Kind) && row.Kind != "any")
+                        line["kind"] = row.Kind;
+                    if (uses.HasFlag(Uses.Chain) && row.Chain != "either")
+                        line["response"] = row.Chain == "response";
+                    if (uses.HasFlag(Uses.Standing) && row.Standing != "any")
+                        line["standing"] = row.Standing;
                     if (row.Against >= 0)
                         line["against"] = row.Against;
                     line["files"] = new JsonArray([.. row.FileList.Select(f => JsonValue.Create(f))]);
                     if (row.Chance != 100)
                         line["chance"] = row.Chance;
-                    line["once"] = row.Once;
+                    line["once"] = row.Once switch { "turn" => JsonValue.Create("turn"), "never" => JsonValue.Create(false), _ => JsonValue.Create(true) };
                     if (row.Volume != 1)
                         line["volume"] = row.Volume;
                     lines.Add(line);
@@ -785,7 +807,7 @@ namespace Wolf.Editors
                 return false;
             }
             _savedJson = root.ToJsonString();
-            _status.Text = $"Saved {_files.ExPath(FileName)}. Yu-Gi-Oh-Music reads it when the game starts.";
+            _status.Text = $"Saved {_files.ExPath(FileName)}. Yu-Gi-Oh-Media reads it when the game starts.";
             return true;
         }
     }

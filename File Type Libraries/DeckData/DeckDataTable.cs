@@ -41,6 +41,11 @@ namespace DeckData
         /// <summary>The cards (from decks.zib); null when they weren't loaded or the .ydc is missing.</summary>
         public YdcDeck? Cards { get; set; }
 
+        /// <summary>decks.json "random" (Yu-Gi-Oh-Campaign): the main deck is dealt again before every duel, RandomCount picks by weight from
+        /// RandomPool (Konami id, weight), at most 3 copies each. RandomCount 0 = the fixed cards.</summary>
+        public int RandomCount { get; set; }
+        public List<(ushort Id, int Weight)> RandomPool { get; } = [];
+
         public string Title(char language = 'E') => Pick(Titles, language);
 
         public static string Pick(Dictionary<char, string> texts, char language) =>
@@ -51,8 +56,9 @@ namespace DeckData
             var copy = new Deck
             {
                 Id = Id, Slot = Slot, Series = Series, SignatureCard = SignatureCard, Padding14 = Padding14, CharacterId = CharacterId, Sku = Sku, FileName = FileName,
-                Cards = Cards == null ? null : YdcDeck.Parse(Cards.ToBytes()),
+                Cards = Cards == null ? null : YdcDeck.Parse(Cards.ToBytes()), RandomCount = RandomCount,
             };
+            copy.RandomPool.AddRange(RandomPool);
             foreach (var (l, t) in Titles) copy.Titles[l] = t;
             foreach (var (l, t) in Texts2) copy.Texts2[l] = t;
             foreach (var (l, t) in Texts3) copy.Texts3[l] = t;
@@ -65,8 +71,8 @@ namespace DeckData
             SameTexts(Titles, other.Titles) && SameTexts(Texts2, other.Texts2) && SameTexts(Texts3, other.Texts3);
 
         public bool SameCards(Deck other) =>
-            (Cards == null && other.Cards == null) ||
-            (Cards != null && other.Cards != null && Cards.Main.SequenceEqual(other.Cards.Main) && Cards.Extra.SequenceEqual(other.Cards.Extra) && Cards.Side.SequenceEqual(other.Cards.Side));
+            RandomCount == other.RandomCount && RandomPool.SequenceEqual(other.RandomPool) && ((Cards == null && other.Cards == null) ||
+            (Cards != null && other.Cards != null && Cards.Main.SequenceEqual(other.Cards.Main) && Cards.Extra.SequenceEqual(other.Cards.Extra) && Cards.Side.SequenceEqual(other.Cards.Side)));
 
         private static bool SameTexts(Dictionary<char, string> a, Dictionary<char, string> b) =>
             a.Keys.Union(b.Keys).All(l => a.GetValueOrDefault(l, "") == b.GetValueOrDefault(l, ""));
@@ -287,6 +293,12 @@ namespace DeckData
             if (d.Texts3.Values.Any(t => t.Length > 0)) json["text3"] = Texts(d.Texts3);
             if (withCards && d.Cards != null)
                 json["cards"] = new JsonObject { ["main"] = Ids(d.Cards.Main), ["extra"] = Ids(d.Cards.Extra), ["side"] = Ids(d.Cards.Side) };
+            if (d.RandomCount > 0)
+                json["random"] = new JsonObject
+                {
+                    ["count"] = d.RandomCount,
+                    ["cards"] = new JsonArray(d.RandomPool.Select(p => (JsonNode)new JsonArray((int)p.Id, p.Weight)).ToArray()),
+                };
             return json;
         }
 
@@ -337,6 +349,14 @@ namespace DeckData
                     ydc.Extra.AddRange(Cards(cards["extra"]));
                     ydc.Side.AddRange(Cards(cards["side"]));
                     d.Cards = ydc;
+                }
+                if (node["random"] is JsonObject random)
+                {
+                    d.RandomPool.Clear();
+                    foreach (var pair in (random["cards"] as JsonArray ?? []).OfType<JsonArray>())
+                        if (pair.Count == 2 && Int(pair[0]) is int pooled && pooled > 0 && pooled <= 0xFFFF && Int(pair[1]) is int weight && weight > 0)
+                            d.RandomPool.Add(((ushort)pooled, weight));
+                    d.RandomCount = d.RandomPool.Count > 0 ? Math.Clamp(Int(random["count"]) ?? 40, 1, 60) : 0;
                 }
                 if (existing != null)
                     table.Decks[table.Decks.IndexOf(existing)] = d;

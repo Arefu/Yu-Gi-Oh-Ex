@@ -31,6 +31,14 @@ namespace WolfEx
         private const int TargetDestroySource = 4838;   // Remove Trap (Target 1 X; destroy it - filter row driven)
         private const int GainSource = 4345;      // Red Medicine
         private const int BurnSource = 4350;      // Hinotama
+        // lock_turn(...): the card whose resolve step adds the turn marker the lock builder reads; a Spell borrows Magic Deflector's row.
+        private const int LockTurnSpellRow = 10298;   // Magic Deflector (Normal Spell)
+        private static readonly Dictionary<string, int> LockTurnSources = new()
+        {
+            ["trap"] = 8223,               // Trap Stun: Traps on the field negated this turn
+            ["spell"] = 10298,             // Magic Deflector: Equip / Field / Continuous / Quick-Play Spells negated this turn
+            ["defense_position"] = 4799,   // Gorgon's Eye: Defense Position monsters' effects negated this turn
+        };
         // Axe of Despair: an Equip Spell for any monster whose only other effect (Tribute 1 monster to put it back on top of the Deck) is optional.
         // Its ATK/DEF come from the game's equip table, which Yu-Gi-Oh-Effects answers with the card's own "stats" (docs/EffectSystem.md section 31).
         private const int EquipSource = 4310;
@@ -126,11 +134,17 @@ namespace WolfEx
             try
             {
                 var lockJson = CompileLock(tree.lockStatement());
+                var handJson = CompileHandLimit(tree.handLimitStatement());
                 var result = CompileScript(tree);
                 if (lockJson != null)
                 {
                     result ??= [];
                     result["lock"] = lockJson;
+                }
+                if (handJson != null)
+                {
+                    result ??= [];
+                    result["handLimit"] = handJson;
                 }
                 if (result == null)
                     throw new ScriptError("The script is empty.");
@@ -142,6 +156,44 @@ namespace WolfEx
             }
         }
 
+        // The narrow monster locks: lock(monster, light) negates only LIGHT monsters' effects. Each is one slot of the game's lock state
+        // (Lock.cpp kFilters), so one per lock, for both players' monsters.
+        public static readonly string[] LockMonsterFilters = ["light", "a_counter", "except_koaki_meiru", "from_main_deck", "from_extra_deck",
+            "fusion_synchro_xyz", "extra_monster_zone", "except_tribute_summoned", "summoned_this_turn", "defense_position"];
+
+        // hand_limit(N, ...) -> "handLimit": {"limit": N, "side": "opponent" | "you" | "both", "zone": ...} (Yu-Gi-Oh-Effects Lock.cpp). One per card.
+        private static JsonObject? CompileHandLimit(EffectScriptParser.HandLimitStatementContext[] statements)
+        {
+            if (statements.Length == 0)
+                return null;
+            if (statements.Length > 1)
+                throw new ScriptError("A card has one hand_limit(...).");
+            int limit = int.Parse(statements[0].NUMBER().GetText());
+            if (limit > 60)
+                throw new ScriptError("hand_limit: the limit must be 0..60.");
+            string? side = null;
+            string? zone = null;   // not written: Yu-Gi-Oh-Effects takes it from the card (Spell / Trap -> Spell & Trap Zone)
+            foreach (var arg in statements[0].lockArg())
+            {
+                switch (arg.GetText())
+                {
+                    case "opponent": side = "opponent"; break;
+                    case "own": side = "you"; break;
+                    case "both": side = "both"; break;
+                    case "monster_zone": zone = "monster"; break;
+                    case "spelltrap_zone": zone = "spelltrap"; break;
+                    case "any_zone": zone = "any"; break;
+                    default: throw new ScriptError($"hand_limit: unknown word '{arg.GetText()}' (opponent, own, both; monster_zone, spelltrap_zone, any_zone).");
+                }
+            }
+            if (side == null)
+                throw new ScriptError("hand_limit: say whose hand it limits: opponent, own or both (e.g. hand_limit(3, opponent)).");
+            var hand = new JsonObject { ["limit"] = limit, ["side"] = side };
+            if (zone != null)
+                hand["zone"] = zone;
+            return hand;
+        }
+
         // lock(...) -> the "lock" object Yu-Gi-Oh-Effects Lock.cpp reads (docs/EffectSystem.md section 44). One lock per card.
         private static JsonObject? CompileLock(EffectScriptParser.LockStatementContext[] statements)
         {
@@ -150,7 +202,8 @@ namespace WolfEx
             if (statements.Length > 1)
                 throw new ScriptError("A card has one lock(...): put every word in it, e.g. lock(trap, spell).");
             var json = new JsonObject { ["traps"] = false };
-            string side = "both", zone = "monster";
+            string side = "both";
+            string? zone = null;   // not written: from the card
             foreach (var arg in statements[0].lockArg())
             {
                 switch (arg.GetText())
@@ -168,15 +221,24 @@ namespace WolfEx
                     case "monster_zone": zone = "monster"; break;
                     case "spelltrap_zone": zone = "spelltrap"; break;
                     case "any_zone": zone = "any"; break;
+                    case var word when LockMonsterFilters.Contains(word):
+                        if (json["monsterFilter"] != null)
+                            throw new ScriptError("lock: one monster filter per lock (" + json["monsterFilter"] + " and " + word + ").");
+                        json["monsters"] = true;
+                        json["monsterFilter"] = word;
+                        break;
                     default:
                         throw new ScriptError($"lock: unknown word '{arg.GetText()}' (trap, spell, monster, continuous_trap, continuous_spell, field_spell, " +
-                                              "equip_spell; both, opponent, own; monster_zone, spelltrap_zone, any_zone).");
+                                              "equip_spell; both, opponent, own; monster_zone, spelltrap_zone, any_zone; " + string.Join(", ", LockMonsterFilters) + ").");
                 }
             }
             if (json.Count == 1 && json["traps"]!.GetValue<bool>() == false)
                 throw new ScriptError("lock(...) needs at least one of trap, spell, monster, continuous_trap, continuous_spell, field_spell, equip_spell.");
+            if (json["monsterFilter"] != null && side != "both")
+                throw new ScriptError("lock: a monster filter covers both players' monsters (the game keeps one slot for it); leave out opponent / own.");
             json["side"] = side;
-            json["zone"] = zone;
+            if (zone != null)
+                json["zone"] = zone;
             return json;
         }
 
@@ -188,26 +250,29 @@ namespace WolfEx
                 {
                     // The whole behaviour of one game card. In a duel Yu-Gi-Oh-MoreCards lends this card that id when it is free, so every
                     // id-keyed rule of the engine treats it as that card (docs/EffectSystem.md section 32).
-                    int from = asScript.NUMBER() != null ? int.Parse(asScript.NUMBER().GetText()) : CardIdByName(asScript.STRING().GetText().Trim('"'));
-                    var asCompiled = new JsonObject { ["from"] = from };
-                    if (asScript.statPart().Length > 0)
-                        asCompiled["stats"] = Stats(asScript.statPart());
-                    return asCompiled;
+                    return CompileAs(asScript);
                 }
 
                 // One body per effect: effect { } blocks, or bodies joined with 'also'. The first is the card's main effect, the others become "parts".
                 var bodies = tree.effect().Length > 0 ? tree.effect().Select(e => e.effectBody()).ToArray() : tree.effectBody();
+                var names = tree.effect().Length > 0 ? tree.effect().Select(e => e.STRING()?.GetText().Trim('"') ?? "").ToArray() : new string[bodies.Length];
                 if (bodies.Length == 0)
                     return null;
                 var main = CompileBody(bodies[0]);
                 if (bodies.Length > 1)
                 {
+                    // "label": what the choose-an-effect prompt shows for each effect (Yu-Gi-Oh-Effects hooks the prompt's text, see EffectClone.cpp
+                    // Hook_ChoiceText): the effect's name, else a short summary of what it does.
+                    main["label"] = Label(names[0], bodies[0]);
                     var parts = new JsonArray();
-                    foreach (var other in bodies.Skip(1))
+                    for (int i = 1; i < bodies.Length; i++)
                     {
-                        if (other.chain().action().Length > 1)
+                        var other = bodies[i];
+                        if (other.chain()?.action().Length > 1)
                             throw new ScriptError("'then' is only supported in a card's first effect so far.");
-                        parts.Add(CompileBody(other));
+                        var part = CompileBody(other);
+                        part["label"] = Label(names[i], other);
+                        parts.Add(part);
                     }
                     main["parts"] = parts;
                 }
@@ -215,14 +280,99 @@ namespace WolfEx
             }
         }
 
+        // The prompt text of one effect: its name, else its actions in a few words ("Draw 1 card, then inflict 500 damage").
+        private static string Label(string? name, EffectScriptParser.EffectBodyContext body)
+        {
+            if (!string.IsNullOrWhiteSpace(name))
+                return name.Trim();
+            if (body.asScript() is { } asScript)
+                return "Use the effect of " + asScript.GetChild(2).GetText().Trim('"');
+            var actions = body.chain()?.action() ?? [];
+            static string Number(Antlr4.Runtime.Tree.IParseTree node) =>
+                System.Text.RegularExpressions.Regex.Match(node.GetText(), @"\d+").Value;
+            var words = actions.Select(a =>
+            {
+                string n = Number(a);
+                return a.GetChild(0).GetChild(0).GetText() switch
+                {
+                    "draw" => n == "1" ? "Draw 1 card" : $"Draw {n} cards",
+                    "burn" or "damage" => $"Inflict {n} damage",
+                    "gain_lp" => $"Gain {n} LP",
+                    "search" => "Add a card from your Deck to your hand",
+                    "revive" => "Special Summon a monster from the GY",
+                    "special_summon" => "Special Summon a monster",
+                    "add_to_hand" => "Add a card to your hand",
+                    "send_to_grave" => a.GetChild(0).GetChild(2).GetText() == "hand" ? "Send a card from your hand to the GY" : "Send a card from your Deck to the GY",
+                    "destroy" => "Destroy",
+                    "banish" => a.GetChild(0) is EffectScriptParser.BanishFromActionContext from
+                        ? (from.GetChild(2).GetText() == "hand" ? "Banish a card from your hand" : "Banish a card from your Deck")
+                        : "Banish",
+                    "gain_atk" => $"A monster gains {n} ATK",
+                    "return_to_hand" => "Return a card to the hand",
+                    "negate" => "Negate an activation",
+                    "equip" => "Equip",
+                    var other => other,
+                };
+            });
+            string label = string.Join(", then ", words);
+            return label.Length > 0 ? char.ToUpperInvariant(label[0]) + label[1..] : "Effect";
+        }
+
+        // Draw / life point actions the plugin runs itself ("steps", Yu-Gi-Oh-Effects Slot0_RunSteps): used for a chain of them, or one that
+        // names a player (draw(1, opponent), gain_lp(500, any), damage(300, own)). A single plain draw / gain_lp / burn keeps its game card.
+        private static bool IsImmediate(EffectScriptParser.ActionContext a) =>
+            a.drawAction() != null || a.gainAction() != null || a.burnAction() != null || a.damageAction() != null;
+
+        private static bool UsesSteps(EffectScriptParser.ActionContext[] actions) =>
+            actions.All(IsImmediate) && (actions.Length > 1 || actions.Any(a => a.drawAction()?.side() != null || a.gainAction()?.side() != null || a.damageAction() != null));
+
+        private static JsonObject StepsAction(EffectScriptParser.ActionContext[] actions)
+        {
+            static string Who(EffectScriptParser.SideContext? side, string fallback) => side?.GetText() switch
+            {
+                null => fallback,
+                "own" => "own",
+                "opponent" => "opponent",
+                _ => "both",   // any
+            };
+            var steps = new JsonArray();
+            foreach (var a in actions)
+            {
+                if (a.drawAction() is { } draw)
+                    steps.Add(new JsonObject { ["op"] = "draw", ["n"] = int.Parse(draw.NUMBER().GetText()), ["who"] = Who(draw.side(), "own") });
+                else if (a.gainAction() is { } gain)
+                    steps.Add(new JsonObject { ["op"] = "gain", ["n"] = int.Parse(gain.NUMBER().GetText()), ["who"] = Who(gain.side(), "own") });
+                else if (a.burnAction() is { } burn)
+                    steps.Add(new JsonObject { ["op"] = "damage", ["n"] = int.Parse(burn.NUMBER().GetText()), ["who"] = "opponent" });
+                else if (a.damageAction() is { } damage)
+                    steps.Add(new JsonObject { ["op"] = "damage", ["n"] = int.Parse(damage.NUMBER().GetText()), ["who"] = Who(damage.side(), "opponent") });
+            }
+            // the row (how the card is activated) is Pot of Greed's; what it does is the steps
+            return new JsonObject { ["from"] = DrawSource, ["condition"] = "always", ["steps"] = steps };
+        }
+
+        private static JsonObject CompileAs(EffectScriptParser.AsScriptContext source)
+        {
+            int from = source.NUMBER() != null ? int.Parse(source.NUMBER().GetText()) : CardIdByName(source.STRING().GetText().Trim('"'));
+            var result = new JsonObject { ["from"] = from };
+            if (source.statPart().Length > 0)
+                result["stats"] = Stats(source.statPart());
+            return result;
+        }
+
         // One effect: its action(s), trigger and once-per-turn limit -> one effectClone step.
         private static JsonObject CompileBody(EffectScriptParser.EffectBodyContext body)
         {
+            if (body.asScript() is { } cloneStatement)
+                return CompileAs(cloneStatement);
             {
                 var actions = body.chain().action();
-                var compiled = CompileAction(actions[^1]);
+                var compiled = UsesSteps(actions) ? StepsAction(actions) : CompileAction(actions[^1]);
                 if (body.limit() != null)
                     compiled["oncePerTurn"] = true;
+                // a Quick Effect: Yu-Gi-Oh-Effects answers spell speed 2 for it (its donor card's speed would decide otherwise)
+                if (body.quickMark() != null)
+                    compiled["quick"] = true;
                 if (body.requireClause() is { } require)
                 {
                     if (require.condName().selector() is { } controls)
@@ -297,7 +447,22 @@ namespace WolfEx
                         ? new JsonObject { ["from"] = DiscardCostSource, ["amount"] = int.Parse(discard.NUMBER().GetText()) }
                         : new JsonObject { ["from"] = PayCostSource, ["amount"] = int.Parse(cost2.payCost().NUMBER().GetText()), ["check"] = "always" };   // Delinquent Duo's own condition is "the opponent has a card in hand"
                 }
-                if (body.trigger() is { } trigger)
+                if (body.trigger() is { } graveTrigger && graveTrigger.triggerName().GetText() == "in_grave")
+                {
+                    // "If this card is in your GY: You can ...": activated from the GY. The GY / hand effects table (table 2) is asked for a card
+                    // there; Quillbolt Hedgehog's row in it has no cost, and the action's slots are composed onto it ("actionFrom"). "inGrave"
+                    // keeps it to the GY (the same table answers for the banished cards); docs/EffectSystem.md section 51.
+                    if (graveTrigger.summonConditions() != null)
+                        throw new ScriptError("'on in_grave' takes no (from ..., by ...) conditions.");
+                    if (actions[^1].summonAction()?.summonZone().GetText() is "self" or "self_grave")
+                        throw new ScriptError("special_summon(self) from the GY is special_summon(self_grave); it needs no 'on in_grave:'.");
+                    if (!compiled.ContainsKey("actionFrom"))
+                        compiled["actionFrom"] = compiled["from"]!.GetValue<int>();
+                    compiled["from"] = SummonSelfGraveSource;
+                    compiled["trigger"] = "in_grave";
+                    AddRequire(compiled, "inGrave");
+                }
+                else if (body.trigger() is { } trigger)
                 {
                     if (actions[^1].summonAction()?.summonZone().GetText() is "self" or "self_grave")
                         throw new ScriptError("special_summon(self) is activated from the hand; it cannot have an 'on ...:' trigger.");
@@ -314,22 +479,112 @@ namespace WolfEx
                         compiled["from"] = AnyTriggerSource(name);
                     }
                     compiled["trigger"] = name;
+                    if (trigger.summonConditions() is { } conditions)
+                        compiled["summonCondition"] = CompileSummonConditions(name, conditions);
                 }
-                if (actions.Length > 1)
+                if (actions.Length > 1 && !compiled.ContainsKey("steps"))
                 {
-                    // The runtime runs "immediate" effects (draw, life points: they finish in one call) ahead of the card's last action, which may
-                    // be interactive (search, revive, ...). An interactive action followed by anything is not runnable yet (docs/EffectLanguage.md).
+                    // The runtime's resolver runs the earlier actions in order, each its own game machine, then the card's last action (the one
+                    // the row and trigger come from, docs/EffectSystem.md section 53). Only the last one gets the activation's target.
                     var before = new JsonArray();
                     foreach (var earlier in actions[..^1])
                     {
-                        if (earlier.drawAction() == null && earlier.gainAction() == null && earlier.burnAction() == null)
-                            throw new ScriptError("only draw, gain_lp and burn can come before another action with 'then'; put search / revive / destroy / send_to_grave last.");
+                        if (System.Text.RegularExpressions.Regex.IsMatch(earlier.GetText(), "target"))
+                            throw new ScriptError("only the last action with 'then' can target (the target is chosen when the card is activated); put the targeting action last.");
                         before.Add(CompileAction(earlier));
                     }
                     compiled["before"] = before;
+                    // Magnet Circle LV2's machine (0x140160080) picks the monster when the card is activated, so a card an earlier step put in
+                    // the hand was never offered (in-duel 2026-10-21). Unexpected Dai's generic machine (0x140163830) collects at resolution:
+                    // with the hand scan it offers the hand as it is then. Its activation check is "a match exists", which the earlier steps
+                    // may only make true, so it is "always".
+                    if (compiled["from"]?.GetValue<int>() == SummonHandSource && !compiled.ContainsKey("actionFrom"))
+                    {
+                        compiled["from"] = SummonDeckSource;
+                        compiled["condition"] = "always";
+                    }
+                    // Searches and Special Summons in a chain run on the plugin's own pick-and-act machine (docs/EffectSystem.md section 54):
+                    // the list is built when the step runs, the source card only gives the row and the filter.
+                    foreach (var step in before.OfType<JsonObject>().Append(compiled))
+                        MarkOwnMachine(step);
                 }
                 return compiled;
             }
+        }
+
+        // "own": "toHand" for a search / salvage, "summon" for a Special Summon from a list ("deck.scan" ending in Summon), "toGrave" for a send.
+        private static void MarkOwnMachine(JsonObject step)
+        {
+            if (step.ContainsKey("own") || step["deck"] is not JsonObject deck || deck["scan"]?.GetValue<string>() is not string scan)
+                return;
+            int source = step["actionFrom"]?.GetValue<int>() ?? step["from"]!.GetValue<int>();
+            if (scan.EndsWith("Summon"))
+                step["own"] = "summon";
+            else if (source is SearchSource or SalvageSource)
+                step["own"] = "toHand";
+            else if (source == SendSource)
+                step["own"] = "toGrave";
+        }
+
+        // A move the game has no list machine for (send from the hand, banish from the Deck / hand): Foolish Burial's row with the plugin's own
+        // pick-and-act machine (Foolish Burial's movers, docs/EffectSystem.md section 55); its activation check counts through this filter.
+        private static JsonObject OwnMove(string own, JsonObject filter) =>
+            new() { ["from"] = SendSource, ["condition"] = "listHasMatch", ["deck"] = filter, ["own"] = own };
+
+        // on special_summoned(from grave, by effect): -> "summonCondition" (Yu-Gi-Oh-Effects checks it against the summon event, docs/EffectSystem.md section 46).
+        private static readonly string[] SummonZones = ["hand", "deck", "extra", "grave", "banished", "spelltrap"];
+        private static readonly string[] KindWords = ["fusion", "synchro", "xyz", "ritual", "link"];
+
+        private static JsonObject CompileSummonConditions(string trigger, EffectScriptParser.SummonConditionsContext conditions)
+        {
+            if (trigger is not ("normal_summoned" or "special_summoned" or "summoned" or "normal_or_special_summoned"))
+                throw new ScriptError($"'{trigger}' is not a summon trigger; (from ..., by ...) only go with normal_summoned / special_summoned / summoned.");
+            var result = new JsonObject();
+            var from = new JsonArray();
+            foreach (var condition in conditions.summonCondition())
+            {
+                if (condition.summonFrom() is { } zone)
+                {
+                    string z = zone.GetText() == "gy" ? "grave" : zone.GetText();
+                    if (!SummonZones.Contains(z))
+                        throw new ScriptError($"'from {z}': the zones are {string.Join(", ", SummonZones)}.");
+                    from.Add(z);
+                }
+                else if (condition.summonBy() is { } by)
+                {
+                    if (result.ContainsKey("by"))
+                        throw new ScriptError("one 'by ...' per trigger.");
+                    string text = by.GetText();
+                    if (by.NUMBER() != null)
+                        result["by"] = new JsonObject { ["card"] = int.Parse(text) };
+                    else if (by.STRING() != null)
+                    {
+                        string archetype = text.Trim('"');
+                        int code = ArchetypeCatalog.CodeOf(archetype);
+                        if (code == 0) throw new ScriptError($"unknown archetype \"{archetype}\" (see Archetypes.json).");
+                        result["by"] = new JsonObject { ["archetype"] = code };
+                    }
+                    else if (text is "effect" or "not_effect" or "own" or "spell" or "trap" or "monster")
+                        result["by"] = text;
+                    else
+                        throw new ScriptError($"'by {text}': use effect, not_effect, own, spell, trap, monster, an archetype \"Name\" or a card id.");
+                }
+                else
+                {
+                    string word = condition.GetChild(0).GetText();
+                    if (KindWords.Contains(word))
+                        result["proper"] = true;   // Summoned as its kind; the card's own kind says which (an Xyz Monster is Xyz Summoned ...)
+                    else if (word == "pendulum")
+                        result["pendulum"] = true;
+                    else if (word == "tribute")
+                        result["tributes"] = condition.NUMBER() is { } n ? int.Parse(n.GetText()) : 1;
+                    else
+                        throw new ScriptError($"'{word}': the summon conditions are from ..., by ..., fusion / synchro / xyz / ritual / link, pendulum, tribute [N].");
+                }
+            }
+            if (from.Count > 0)
+                result["from"] = from;
+            return result;
         }
 
         // "require": the game's own checks run before the effect's condition (Yu-Gi-Oh-Effects knows them by these names).
@@ -347,10 +602,10 @@ namespace WolfEx
         private static string ActionKey(EffectScriptParser.ActionContext action)
         {
             if (action.drawAction() != null) return "draw";
-            if (action.gainAction() != null || action.burnAction() != null) return "burn";   // the life point handler takes any amount, either direction
+            if (action.gainAction() != null || action.burnAction() != null || action.damageAction() != null) return "burn";
             if (action.searchAction() != null) return "search";
             if (action.reviveAction() != null) return "revive";
-            if (action.sendAction() != null) return "send_to_grave";
+            if (action.sendAction() != null || action.banishFromAction() != null) return "send_to_grave";   // same donor row (Foolish Burial)
             if (action.equipAction() != null) throw new ScriptError("equip(...) is a Spell; it cannot have an 'on ...:' trigger.");
             if (action.gainAtkAction() != null) return "gain_atk";
             if (action.returnAction() != null) return "return_target";
@@ -358,6 +613,7 @@ namespace WolfEx
             if (action.salvageAction() != null) return "add_from_grave";
             if (action.banishAction() is { } banishKey) return banishKey.scope().GetText() == "all" ? "banish_all" : "banish_target";
             if (action.negateAction() != null) return "negate";
+            if (action.lockTurnAction() != null) return "lock_turn";
             var destroy = action.destroyAction();
             return destroy.scope().GetText() == "all" ? "destroy_all" : "destroy_target";
         }
@@ -490,26 +746,26 @@ namespace WolfEx
             {
                 if (summon.summonZone().GetText() == "self")
                 {
-                    if (summon.selector() != null) throw new ScriptError("special_summon(self) takes no selector.");
+                    if (summon.choices() != null) throw new ScriptError("special_summon(self) takes no selector.");
                     return new JsonObject { ["from"] = SummonSelfSource, ["condition"] = "always", ["require"] = new JsonArray("inHand", "canSummonSelf") };
                 }
                 if (summon.summonZone().GetText() == "self_grave")
                 {
-                    if (summon.selector() != null) throw new ScriptError("special_summon(self_grave) takes no selector.");
+                    if (summon.choices() != null) throw new ScriptError("special_summon(self_grave) takes no selector.");
                     return new JsonObject { ["from"] = SummonSelfGraveSource, ["condition"] = "always", ["require"] = new JsonArray("canSummonSelfFromGrave") };
                 }
                 return summon.summonZone().GetText() switch
                 {
-                    "hand" => new JsonObject { ["from"] = SummonHandSource, ["deck"] = DeckFilter(summon.selector(), "handSummon") },
-                    "deck" => new JsonObject { ["from"] = SummonDeckSource, ["condition"] = "listHasMatch", ["deck"] = DeckFilter(summon.selector(), "deckSummon") },
-                    _ => new JsonObject { ["from"] = ReviveSource, ["deck"] = DeckFilter(summon.selector(), "graveSummon") },
+                    "hand" => new JsonObject { ["from"] = SummonHandSource, ["deck"] = DeckFilter(summon.choices(), "handSummon") },
+                    "deck" => new JsonObject { ["from"] = SummonDeckSource, ["condition"] = "listHasMatch", ["deck"] = DeckFilter(summon.choices(), "deckSummon") },
+                    _ => new JsonObject { ["from"] = ReviveSource, ["deck"] = DeckFilter(summon.choices(), "graveSummon") },
                 };
             }
 
             if (action.salvageAction() is { } salvage)
                 return salvage.GetChild(2).GetText() == "banished"
-                    ? new JsonObject { ["from"] = SalvageBanishedSource, ["deck"] = DeckFilter(salvage.selector(), "banished") }
-                    : new JsonObject { ["from"] = SalvageSource, ["deck"] = DeckFilter(salvage.selector(), "grave") };
+                    ? new JsonObject { ["from"] = SalvageBanishedSource, ["deck"] = DeckFilter(salvage.choices(), "banished") }
+                    : new JsonObject { ["from"] = SalvageSource, ["deck"] = DeckFilter(salvage.choices(), "grave") };
 
             if (action.banishAction() is { } banish)
             {
@@ -530,10 +786,14 @@ namespace WolfEx
                 return new JsonObject { ["from"] = NegateSource, ["negate"] = NegateSpec(negate) };
 
             if (action.drawAction() is { } draw)
+            {
+                if (draw.side() != null)
+                    throw new ScriptError("draw(N, player) can only be chained with other draw / gain_lp / damage actions so far.");
                 return new JsonObject { ["from"] = DrawSource, ["draw"] = int.Parse(draw.NUMBER().GetText()) };
+            }
 
             if (action.searchAction() is { } search)
-                return new JsonObject { ["from"] = SearchSource, ["deck"] = DeckFilter(search.selector(), "deck") };
+                return new JsonObject { ["from"] = SearchSource, ["deck"] = DeckFilter(search.choices(), "deck") };
 
             if (action.reviveAction() is { } revive)
             {
@@ -543,15 +803,32 @@ namespace WolfEx
                     "opponent_grave" => "opponentGrave",
                     _ => "bothGravesSummon",
                 };
-                return new JsonObject { ["from"] = ReviveSource, ["deck"] = DeckFilter(revive.selector(), scan) };
+                return new JsonObject { ["from"] = ReviveSource, ["deck"] = DeckFilter(revive.choices(), scan) };
             }
 
             if (action.sendAction() is { } send)
-                return new JsonObject { ["from"] = SendSource, ["deck"] = DeckFilter(send.selector(), "deck") };
+                return send.GetChild(2).GetText() == "deck"
+                    ? new JsonObject { ["from"] = SendSource, ["deck"] = DeckFilter(send.choices(), "deck") }
+                    : OwnMove("toGrave", DeckFilter(send.choices(), "hand"));
 
+            if (action.banishFromAction() is { } banishFrom)
+                return OwnMove("banish", DeckFilter(banishFrom.choices(), banishFrom.GetChild(2).GetText()));
+
+            if (action.gainAction()?.side() != null)
+                throw new ScriptError("gain_lp(N, player) can only be chained with other draw / gain_lp / damage actions so far.");
             if (action.gainAction() is { } gain)
                 return new JsonObject { ["from"] = GainSource, ["lp"] = new JsonObject { ["gain"] = int.Parse(gain.NUMBER().GetText()) } };
 
+            if (action.lockTurnAction() is { } lockTurn)
+            {
+                string what = lockTurn.lockTurnArg().GetText();
+                if (!LockTurnSources.TryGetValue(what, out int marker))
+                    throw new ScriptError($"lock_turn: unknown '{what}' ({string.Join(", ", LockTurnSources.Keys)}).");
+                var turn = new JsonObject { ["from"] = LockTurnSpellRow, ["condition"] = "always" };
+                if (marker != LockTurnSpellRow)
+                    turn["actionFrom"] = marker;
+                return turn;
+            }
             if (action.burnAction() is { } burn)
                 return new JsonObject { ["from"] = BurnSource, ["lp"] = new JsonObject { ["damage"] = int.Parse(burn.NUMBER().GetText()) } };
 
@@ -641,6 +918,17 @@ namespace WolfEx
         private static string KindOf(EffectScriptParser.SelectorContext? selector) => selector?.kind()?.GetText() ?? "card";
 
         // search / revive: a monster/spell/trap type plus any mix of race, attribute and one level comparison.
+        // Several alternatives ("monster where race = Warrior or monster where race = Dragon"): the first is the filter, the others go in
+        // "or" with the same scan; Yu-Gi-Oh-Effects runs one scan per alternative and keeps each card once.
+        private static JsonObject DeckFilter(EffectScriptParser.ChoicesContext? choices, string scan)
+        {
+            var selectors = choices?.selector() ?? [];
+            var deck = DeckFilter(selectors.FirstOrDefault(), scan);
+            if (selectors.Length > 1)
+                deck["or"] = new JsonArray(selectors.Skip(1).Select(s => (JsonNode)DeckFilter(s, scan)).ToArray());
+            return deck;
+        }
+
         private static JsonObject DeckFilter(EffectScriptParser.SelectorContext? selector, string scan)
         {
             var deck = new JsonObject { ["scan"] = scan };
@@ -696,6 +984,10 @@ namespace WolfEx
                         throw new ScriptError($"'{c.Field}' conditions are not supported by search/revive yet.");
                 }
             }
+            // "except <this card>" unless the selector says 'including self' (Yu-Gi-Oh-Effects: the row's name test, when no archetype / card
+            // filter already uses it).
+            if (selector?.includingSelf() == null)
+                deck["exceptSelf"] = true;
             return deck;
         }
 

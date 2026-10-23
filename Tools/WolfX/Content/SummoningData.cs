@@ -91,6 +91,8 @@ namespace WolfEx
         private readonly string _path;
         private readonly SortedDictionary<int, JsonObject> _cards = [];
 
+        private readonly ContentLoadState _loadState = new();
+        public string? LoadError => _loadState.Error;
         public bool Dirty { get; private set; }
 
         private SummoningFile(string path) => _path = path;
@@ -100,14 +102,14 @@ namespace WolfEx
             var file = new SummoningFile(path);
             try
             {
-                if (File.Exists(path) && JsonNode.Parse(File.ReadAllText(path)) is JsonObject root && root["cards"] is JsonArray cards)
-                    foreach (var entry in cards.OfType<JsonObject>())
-                        if (entry["id"] is JsonValue id && id.TryGetValue<int>(out int value))
-                            file._cards[value] = (JsonObject)entry.DeepClone();
+                if (ContentLoadState.Read(path) is { } root)
+                    foreach (JsonObject entry in ContentLoadState.Cards(root))
+                        file._cards[entry["id"]!.GetValue<int>()] = (JsonObject)entry.DeepClone();
             }
-            catch (JsonException)
+            catch (Exception ex) when (ex is IOException or InvalidDataException or UnauthorizedAccessException or JsonException or InvalidOperationException)
             {
-                // a broken file starts empty; saving writes a good one
+                file._cards.Clear();
+                file._loadState.Failed(ex);
             }
             return file;
         }
@@ -138,6 +140,7 @@ namespace WolfEx
 
         public void Save()
         {
+            _loadState.EnsureLoaded();
             var list = new JsonArray();
             foreach (var (id, entry) in _cards)
             {
@@ -152,12 +155,12 @@ namespace WolfEx
             if (list.Count == 0)
             {
                 if (File.Exists(_path))
-                    File.Delete(_path);
+                    ContentSaveBatch.Remove(_path);
             }
             else
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(_path)!);
-                File.WriteAllText(_path, new JsonObject { ["cards"] = list }.ToJsonString(new JsonSerializerOptions { WriteIndented = true }));
+                ContentSaveBatch.WriteText(_path, new JsonObject { ["cards"] = list }.ToJsonString(new JsonSerializerOptions { WriteIndented = true }));
             }
             Dirty = false;
         }

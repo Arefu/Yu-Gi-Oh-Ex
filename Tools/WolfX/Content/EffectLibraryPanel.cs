@@ -18,7 +18,7 @@ namespace WolfEx
     /// The entries are a tree: "What it does" groups them by genre (the game's own effect categories, bin\CARD_Genre.bin of the open game data -
     /// a card with several genres is under each of them), "Script action" by what the script does first (search, revive, draw ...).
     /// </summary>
-    internal sealed class EffectLibraryPanel : UserControl
+    internal sealed class EffectLibraryPanel : UserControl, IGameEditor
     {
         private enum Origin { Game, Edited, Mine }
 
@@ -31,6 +31,7 @@ namespace WolfEx
             public Origin Origin;
             public string Action = "";   // the script's main action ("search", "destroy" ...)
             public ulong Genres;          // CARD_Genre bits of the game card (0 = none or no game data)
+            public string LockGroup = ""; // LockCatalog group of a continuous lock card ("" = not one)
 
             public override string ToString() =>
                 (Origin == Origin.Mine ? "★ " : Origin == Origin.Edited ? "✎ " : "") + (Complete || Origin == Origin.Mine ? "" : "~ ") + Name;
@@ -57,13 +58,19 @@ namespace WolfEx
         private readonly ToolStrip _tools = new() { GripStyle = ToolStripGripStyle.Hidden, Dock = DockStyle.Top };
         private readonly ToolStripButton _save, _new, _check, _revert, _use, _copy;
         private bool _binding;
+        private readonly ContentLoadState _loadState = new();
+        public bool Dirty => _unsaved.Count > 0;
+        public bool Save() => SaveLibrary();
+        public void Open(GameFolderFiles files) { } // The library belongs to the user, not the game folder.
+        public IReadOnlyCollection<string> Files => [];
+        public string SavesTo => "Your effect library: " + UserFile;
 
         /// <summary>Raised when the user wants the script in the Effects tab (the handler switches tabs and returns whether it was applied).</summary>
         public Func<string, bool>? UseTemplate;
 
         public EffectLibraryPanel()
         {
-            _save = Button("Save to my library", "Keep your changes and entries (Ctrl+S): %APPDATA%\\WolfX\\effect_library.json", SaveLibrary);
+            _save = Button("Save to my library", "Keep your changes and entries (Ctrl+S): %APPDATA%\\WolfX\\effect_library.json", () => SaveLibrary());
             _new = Button("New entry", "An entry of your own: a script you want to reuse", NewEntry);
             _check = Button("Check", "Compile the script and say whether the game can run it", Check);
             _revert = Button("Revert", "", RevertOrDelete);
@@ -190,10 +197,40 @@ namespace WolfEx
                 }
             }
 
+            // the continuous locks (Jinzo, Spell Canceller, Skill Drain ...): named in the game's code, not its tables, so not in effect_reference.json
+            foreach (var lockCard in LockCatalog.Cards)
+            {
+                var entry = _all.FirstOrDefault(e => e.Id == lockCard.Id);
+                if (entry == null)
+                    _all.Add(entry = new Entry { Id = lockCard.Id, Name = lockCard.Name, Kind = "", Origin = Origin.Game });
+                entry.LockGroup = lockCard.Group;
+                if (entry.GameScript.Length > 0)
+                    continue;   // the tables already describe it
+                entry.Script = entry.GameScript = lockCard.Script;
+                entry.Complete = lockCard.Complete;
+                entry.Action = ActionOf(lockCard.Script);
+                if (lockCard.Note.Length > 0)
+                    entry.Notes = [.. entry.Notes, lockCard.Note];
+            }
+
             // yours: edits of game entries (by id) and your own entries
             try
             {
-                if (File.Exists(UserFile) && JsonNode.Parse(File.ReadAllText(UserFile))?["entries"] is JsonArray mine)
+                if (ContentLoadState.Read(UserFile) is { } root)
+                {
+                    var mine = ContentLoadState.Objects((root as JsonObject)?["entries"], "entries");
+                    foreach (JsonObject node in mine)
+                    {
+                        foreach (string field in new[] { "name", "kind", "text", "script" })
+                            if (node[field] != null && (node[field] is not JsonValue text || !text.TryGetValue<string>(out _)))
+                                throw new InvalidDataException("Library field must be text: " + field);
+                        if (node["mine"] != null && (node["mine"] is not JsonValue mineFlag || !mineFlag.TryGetValue<bool>(out _)))
+                            throw new InvalidDataException("Library mine flag must be true or false.");
+                        if (node["mine"]?.GetValue<bool>() != true && (node["id"] is not JsonValue id || !id.TryGetValue<int>(out _)))
+                            throw new InvalidDataException("Edited library entries need an integer card id.");
+                        if (node["mine"]?.GetValue<bool>() != true && !_all.Any(entry => entry.Id == node["id"]!.GetValue<int>()))
+                            throw new InvalidDataException("The reference for an edited library card is unavailable. Restore effect_reference.json before saving.");
+                    }
                     foreach (var node in mine.OfType<JsonObject>())
                     {
                         string script = node["script"]?.GetValue<string>() ?? "";
@@ -209,17 +246,19 @@ namespace WolfEx
                             game.Origin = Origin.Edited;
                         }
                     }
+                }
             }
-            catch (Exception e) when (e is IOException or JsonException or InvalidOperationException)
+            catch (Exception e) when (e is IOException or InvalidDataException or UnauthorizedAccessException or JsonException or InvalidOperationException)
             {
-                _status.Text = $"Could not read {UserFile}: {e.Message}";
+                _loadState.Failed(e);
+                _status.Text = $"Could not read {UserFile}: {e.Message}. Repair the file and restart WolfX before saving.";
             }
             if (_status.Text.Length == 0)
                 _status.Text = $"{_all.Count(e => e.Origin != Origin.Mine)} game cards with an effect the language can describe, {_all.Count(e => e.Origin == Origin.Mine)} of your own. " +
                                "~ = the card does more than the script says; ✎ = you changed it; ★ = your own entry.";
         }
 
-        private void SaveLibrary()
+        private bool SaveLibrary()
         {
             var entries = new JsonArray();
             foreach (var entry in _all)
@@ -231,15 +270,18 @@ namespace WolfEx
             }
             try
             {
-                Directory.CreateDirectory(Path.GetDirectoryName(UserFile)!);
+                _loadState.EnsureLoaded();
                 var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true };
-                File.WriteAllText(UserFile, new JsonObject { ["entries"] = entries }.ToJsonString(options) + "\n", new UTF8Encoding(false));
+                ContentSaveBatch.WriteText(UserFile, new JsonObject { ["entries"] = entries }.ToJsonString(options) + "\n");
                 _unsaved.Clear();
+                Show(Current);
                 _status.Text = $"Saved {entries.Count} entr{(entries.Count == 1 ? "y" : "ies")} to {UserFile}.";
+                return true;
             }
-            catch (Exception e) when (e is IOException or UnauthorizedAccessException)
+            catch (Exception e) when (e is IOException or InvalidDataException or UnauthorizedAccessException)
             {
                 _status.Text = "Not saved: " + e.Message;
+                return false;
             }
         }
 
@@ -248,7 +290,7 @@ namespace WolfEx
         /// <summary>One category node: its name and which entries belong to it.</summary>
         private sealed record Category(string Name, Func<Entry, bool> Match);
 
-        private const string GenreRoot = "What it does", ActionRoot = "Script action";
+        private const string GenreRoot = "What it does", ActionRoot = "Script action", LockRoot = "Continuous locks";
         private readonly List<(string Root, Category Category)> _categories = [];
         private bool _filling;
 
@@ -318,6 +360,9 @@ namespace WolfEx
                 string action = group.Key;
                 _categories.Add((ActionRoot, new Category(action.Length == 0 ? "(no action)" : action, e => e.Action == action)));
             }
+            // every card Duel_BuildContinuousLockState names (LockCatalog), by kind: also the ones lock(...) can't say yet
+            foreach (string group in LockCatalog.Groups)
+                _categories.Add((LockRoot, new Category(group, e => e.LockGroup == group)));
             Refill();
         }
 
@@ -373,10 +418,16 @@ namespace WolfEx
             {
                 _tree.Nodes.Clear();
                 var all = _all.Where(Passes).ToList();
-                foreach (string rootName in new[] { GenreRoot, ActionRoot })
+                foreach (string rootName in new[] { GenreRoot, ActionRoot, LockRoot })
                 {
                     var root = _tree.Nodes.Add(rootName, rootName);
                     var categories = _categories.Where(c => c.Root == rootName).ToList();
+                    if (all.Count == 0)
+                    {
+                        root.Nodes.Add("No matching entries. Clear the search or filters.");
+                        root.Expand();
+                        continue;
+                    }
                     if (categories.Count == 0)
                         root.Nodes.Add(rootName == GenreRoot ? "(no genres: the game data has no bin\\CARD_Genre.bin)" : "(no entries)");
                     foreach (var (_, category) in categories)
@@ -407,7 +458,8 @@ namespace WolfEx
             TreeNode? target = null;
             if (select != null)
             {
-                var categoryNode = _tree.Nodes.Find(selectedPath.Split('/').LastOrDefault() ?? "", true)
+                string categoryKey = selectedPath.Split('/').LastOrDefault() ?? "";
+                var categoryNode = categoryKey.Length == 0 ? null : _tree.Nodes.Find(categoryKey, true)
                     .FirstOrDefault(n => PathOf(n) == selectedPath && n.Tag is Category);
                 if (categoryNode == null)
                     categoryNode = _tree.Nodes.Cast<TreeNode>().SelectMany(r => r.Nodes.Cast<TreeNode>())
@@ -512,6 +564,7 @@ namespace WolfEx
                 Refill(entry);
                 Show(entry);
             }
+            _unsaved.Add(entry); // Deleting or reverting also needs retry/close protection if saving fails.
             SaveLibrary();
         }
 

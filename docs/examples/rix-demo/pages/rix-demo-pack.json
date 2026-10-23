@@ -1,0 +1,72 @@
+{
+    "version": 2,
+    "header": "Booster packs",
+    "elements": [
+        {
+            "kind": "pack",
+            "x": 506,
+            "y": 575,
+            "pack": "1",
+            "bind": "var:demo.pack",
+            "description": "widget_PackWrapper - pack 1: its picture, name, price and owned counts (a locked pack shows locked).",
+            "action": {
+                "message": "Pack {var:demo.pack}."
+            }
+        },
+        {
+            "kind": "pack",
+            "x": 741,
+            "y": 575,
+            "pack": "2",
+            "bind": "var:demo.pack",
+            "description": "widget_PackWrapper - pack 2: its picture, name, price and owned counts (a locked pack shows locked).",
+            "action": {
+                "message": "Pack {var:demo.pack}."
+            }
+        },
+        {
+            "kind": "pack",
+            "x": 976,
+            "y": 575,
+            "pack": "3",
+            "bind": "var:demo.pack",
+            "description": "widget_PackWrapper - pack 3: its picture, name, price and owned counts (a locked pack shows locked).",
+            "action": {
+                "message": "Pack {var:demo.pack}."
+            }
+        },
+        {
+            "kind": "pack",
+            "x": 1211,
+            "y": 575,
+            "pack": "4",
+            "bind": "var:demo.pack",
+            "description": "widget_PackWrapper - pack 4: its picture, name, price and owned counts (a locked pack shows locked).",
+            "action": {
+                "message": "Pack {var:demo.pack}."
+            }
+        },
+        {
+            "kind": "slider",
+            "x": 949,
+            "y": 900,
+            "label": "Pack id",
+            "bind": "var:demo.packId",
+            "default": "5",
+            "min": 1,
+            "max": 40,
+            "description": "Picks the pack the right-hand wrapper shows."
+        },
+        {
+            "kind": "pack",
+            "x": 1506,
+            "y": 575,
+            "pack": "{var:demo.packId|5}",
+            "bind": "var:demo.pack",
+            "description": "This one follows the slider below.",
+            "action": {
+                "message": "Pack {var:demo.pack}."
+            }
+        }
+    ]
+}

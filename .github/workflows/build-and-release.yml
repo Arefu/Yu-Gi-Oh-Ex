@@ -21,8 +21,14 @@ jobs:
       - name: Set up MSBuild
         uses: microsoft/setup-msbuild@v2
 
+      # WolfX's updater (Tools\WolfX\Updater.cs) compares its own version with the latest release's tag: v1.4.0 -> 1.4.0
+      - name: Version from the tag
+        run: |
+          $version = "${{ github.ref_name }}".TrimStart('v', 'V').Split('-')[0]
+          "RELEASE_VERSION=$version" | Out-File -FilePath $env:GITHUB_ENV -Append
+
       - name: Build solution
-        run: msbuild WolfX.sln /p:Configuration=Release
+        run: msbuild WolfX.sln /p:Configuration=Release /p:Version=${{ env.RELEASE_VERSION }} /p:InformationalVersion=${{ env.RELEASE_VERSION }} /p:ReleaseBuild=true
 
       # The File Type Libraries build into Binaries\Release\Libraries, but every tool that uses one gets its own copy in Tools
       # (project references copy locally) and nothing loads from Libraries, so the folder would only duplicate them in the zip.

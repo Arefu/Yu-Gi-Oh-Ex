@@ -6,12 +6,15 @@
 #include <filesystem>
 #include <fstream>
 #include <intrin.h>
+#include <map>
 #include <mutex>
+#include <random>
 #include <unordered_map>
 #include <unordered_set>
 
 #include <json.hpp>
 
+#include "MissingArt.h"
 #include "Card.h"
 #include "Detours.h"
 #include "Genres.h"
@@ -20,14 +23,16 @@
 #include "Save.h"
 #include "Text.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "EffectSourceLending.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 // The game's card id window: Konami ids 3900..14968 index its fixed-size tables.
 constexpr uint32_t kVanillaKonamiIdBase = 3900;
 constexpr uint32_t kVanillaKonamiIdCount = 0x2B3D;
 
-// Entries in the table the save file keeps card ownership in.
-constexpr uint32_t kSavedCardTableSize = 0x4E20;
+// Entries in the card ownership table Get_CardUnlockTable hands out: Yu-Gi-Oh-Core's (CardTable.cpp) covers every id below 0xFFFF; the save's
+// own stopped at 0x4E20. The game's id checks are widened to match (WidenSavedCardChecks).
+constexpr uint32_t kSavedCardTableSize = 0xFFFF;
 
 // The unlock count table the trunk reads is sized for the vanilla cards only.
 constexpr size_t kUnlockBufferSize = 0xFFFF;
@@ -98,11 +103,14 @@ namespace
         { "Toon", 6 }, { "Spirit", 7 }, { "Union", 8 }, { "Gemini", 9 }, { "Token", 10 }, { "Spell", 13 }, { "Trap", 14 },
         { "TunerNormal", 15 }, { "TunerEffect", 16 }, { "Synchro", 17 }, { "SynchroEffect", 18 }, { "SynchroTunerEffect", 19 },
         { "Xyz", 22 }, { "XyzEffect", 23 }, { "FlipEffect", 24 }, { "Pendulum", 25 }, { "PendulumEffect", 26 },
-        { "SpecialSummonedEffect", 27 }, { "ToonEffect", 28 }, { "SpiritEffect", 29 }, { "Tuner", 30 }, { "TunerFlipEffect", 32 },
+        { "EffectSpecialSummonOnly", 27 }, { "ToonSpecialSummonOnly", 28 }, { "SpiritSpecialSummonOnly", 29 },
+        { "TunerEffectSpecialSummonOnly", 30 }, { "TunerFlipEffect", 32 },
         { "PendulumTunerEffect", 33 }, { "XyzPendulumEffect", 34 }, { "PendulumFlipEffect", 35 }, { "SynchroPendulumEffect", 36 },
-        { "UnionTunerEffect", 37 }, { "RitualSpiritEffect", 38 }, { "FusionTuner", 39 }, { "PendulumEffectAlt", 40 },
+        { "UnionTunerEffect", 37 }, { "RitualSpiritEffect", 38 }, { "FusionTuner", 39 }, { "PendulumEffectSpecialSummonOnly", 40 },
         { "FusionPendulumEffect", 41 }, { "Link", 42 }, { "LinkEffect", 43 }, { "PendulumTunerNormal", 44 },
         { "PendulumSpiritEffect", 45 },
+        // Older names for 27-30 and 40 (27-31/40 = KIND_TABLE DeckSection 1, cannot be Normal Summoned; 20/21 Dark Tuner/Synchro crash).
+        { "SpecialSummonedEffect", 27 }, { "ToonEffect", 28 }, { "SpiritEffect", 29 }, { "Tuner", 30 }, { "PendulumEffectAlt", 40 },
     };
     const NamedValue AttributeNames[] = {
         { "Special", Card::SPECIAL }, { "Light", Card::LIGHT }, { "Dark", Card::DARK },
@@ -248,7 +256,7 @@ namespace
         int id = j["id"].get<int>();
         if (id < kFirstExtraCardId || id > kLastExtraCardId)
         {
-            why = std::format("\"id\" must be between {} and {} (the game and its unused card data own ids below, its save has no room above)", kFirstExtraCardId, kLastExtraCardId);
+            why = std::format("\"id\" must be between {} and {} (the game and its unused card data own ids below; 65535 means \"no card\")", kFirstExtraCardId, kLastExtraCardId);
             return false;
         }
 
@@ -268,13 +276,11 @@ namespace
             }
         }
 
-        // The effect source (Yu-Gi-Oh-Effects reads the rest of "effectClone"): the card is lent this id in a duel when it is free.
-        if (j.contains("effectClone") && j["effectClone"].is_object() && j["effectClone"].contains("from") && j["effectClone"]["from"].is_number_integer())
-        {
-            const int from = j["effectClone"]["from"].get<int>();
-            if (from >= static_cast<int>(kVanillaKonamiIdBase) && from < static_cast<int>(kVanillaKonamiIdBase + kVanillaKonamiIdCount))
-                c.CloneFrom = static_cast<uint16_t>(from);
-        }
+        // Only a single-effect clone has one source identity to lend. Multi-effect
+        // cards keep their own identity and let Effects route each table/event.
+        if (j.contains("effectClone"))
+            c.CloneFrom = YGO::Effects::SingleEffectSource(j["effectClone"], kVanillaKonamiIdBase,
+                kVanillaKonamiIdBase + kVanillaKonamiIdCount);
 
         // the art is relative to the content folder the card came from (a mod's Yu-Gi-Oh-Ex or the game's)
         c.Folder = YGO::Mods::FolderOf(j);
@@ -346,7 +352,7 @@ namespace
             std::stable_sort(units.begin(), units.end(), [](uint32_t a, uint32_t b) { return (a & 0xFFFF) < (b & 0xFFFF); });   // the game's order
             c.Related = std::move(units);
         }
-        // "password": 8 digits (Yu-Gi-Oh-BetterCardShop's Enter Password page, through Card_FindByPassword)
+        // "password": 8 digits (the Card Store's Enter Password page: RIX game:password, through Card_FindByPassword)
         if (j.contains("password") && j["password"].is_number_integer() && j["password"].get<int64_t>() > 0 && j["password"].get<int64_t>() <= 99999999)
             c.Password = static_cast<uint32_t>(j["password"].get<int64_t>());
         // the texts per language: English's index letters / sort name at the top, the other languages under "text"
@@ -427,6 +433,8 @@ namespace
         number("atk", o.Attack);
         number("def", o.Defense);
         number("level", o.Level);
+        if (j.contains("image") && j["image"].is_string() && !j["image"].get<std::string>().empty())
+            o.ImagePath = YGO::Mods::FolderOf(j) + j["image"].get<std::string>();
 
         auto named = [&](const char* key, const NamedValue* names, size_t count, std::optional<int>& out)
         {
@@ -592,8 +600,45 @@ namespace Card
         return ExtraCards.size();
     }
 
+    CardOverride* FindOverrideImage(uint16_t id)
+    {
+        // the last entry for an id wins (a later mod over an earlier one)
+        for (auto it = Overrides.rbegin(); it != Overrides.rend(); ++it)
+            if (it->ID == id && !it->ImagePath.empty())
+                return &*it;
+        return nullptr;
+    }
+
+    static std::unordered_set<uint16_t> g_CardPool;   // empty = every card exists
+
+    bool CardPoolActive()
+    {
+        return !g_CardPool.empty();
+    }
+
+    bool InCardPool(uint16_t id)
+    {
+        return g_CardPool.empty() || g_CardPool.contains(id);
+    }
+
+    size_t LoadCardPool()
+    {
+        std::vector<std::string> problems;
+        nlohmann::json root = YGO::Mods::ReadMerged("cardpool.json", "cards", &problems);
+        for (const std::string& problem : problems)
+            Logger::WriteLog(problem + ", its card pool is left out", MODULE_NAME, 2);
+        g_CardPool.clear();
+        if (root.is_object() && root.contains("cards") && root["cards"].is_array())
+            for (const auto& id : root["cards"])
+                if (id.is_number_integer() && id.get<int>() >= 1 && id.get<int>() <= kLastExtraCardId)
+                    g_CardPool.insert(static_cast<uint16_t>(id.get<int>()));
+        return g_CardPool.size();
+    }
+
     std::vector<Unlock> Unlocks;
     bool ReplaceDefaultUnlocks = false;
+    std::vector<StarterGroup> StarterGroups;
+    std::wstring StarterDeckName;
 
     size_t LoadUnlocksFromJson(const std::string& path)
     {
@@ -633,7 +678,27 @@ namespace Card
 
             Unlocks.push_back({ id, std::clamp(entry.value("copies", 3), 0, 3) });
         }
-        return Unlocks.size();
+
+        StarterGroups.clear();
+        if (auto starter = root.find("starter"); starter != root.end() && starter->is_object())
+        {
+            const std::string name = starter->value("deckName", std::string("Starter Deck"));
+            StarterDeckName.assign(name.begin(), name.end());
+            if (auto groups = starter->find("groups"); groups != starter->end() && groups->is_array())
+                for (const auto& json : *groups)
+                {
+                    StarterGroup group{ std::clamp(json.value("count", 0), 0, 60), {} };
+                    if (auto cards = json.find("cards"); cards != json.end() && cards->is_array())
+                        for (const auto& pair : *cards)
+                            if (pair.is_array() && pair.size() == 2 && pair[0].is_number_integer() && pair[1].is_number_integer()
+                                && pair[0].get<int>() >= 1 && pair[0].get<int>() <= kLastExtraCardId && pair[1].get<int>() > 0)
+                                group.Pool.emplace_back(pair[0].get<int>(), pair[1].get<uint32_t>());
+                    if (group.Count > 0 && !group.Pool.empty())
+                        StarterGroups.push_back(std::move(group));
+                }
+            Logger::WriteLog(std::format("unlocks.json: a new profile is dealt a starter deck from {} group(s)", StarterGroups.size()), MODULE_NAME, 0);
+        }
+        return Unlocks.size() + StarterGroups.size();
     }
 
 }
@@ -1252,6 +1317,24 @@ namespace
 
         // OpenPackAndGrantCards only stores a pulled card when its internal id is below 10166 (cmp eax, 27B6h).
         PatchImm32(0x14085C2FD, 0xFFFF);
+
+        // WidenSavedCardChecks: every function that indexes the saved card table by Konami id loads the bound with `mov reg, 4E20h`
+        // and compares the id against it with a 16-bit cmp; an id at or past it reads as "not owned" and is never granted. Core's table
+        // covers every id below 0xFFFF (the game's "no card"), so the bound becomes that. (find_bytes "20 4E 00 00"; the duel engine's
+        // hits and sub_1407C73C0's "LP >= 20000" are other things and stay.)
+        static constexpr uintptr_t kSavedCardChecks[] = {
+            0x14082C7B1,                            // GrantRewardCardsToSave (duelist reward cards)
+            0x14085C0C7, 0x14085C16B, 0x14085C205,  // OpenPackAndGrantCards (pack weights, pulled cards)
+            0x140870596,                            // RecountOwnedCards (unique cards owned)
+            0x14088017E,                            // sub_14087FC60 (campaign rewards widget)
+            0x140881A3F, 0x140881BA3, 0x140881D82,  // sub_140881810 (campaign rewards: deck template cards)
+            0x140881F85,                            // sub_140881F30 (campaign rewards: grant one card)
+            0x140882207, 0x1408823C3,               // sub_1408821C0 (campaign rewards)
+            0x1408BF73D,                            // Card_IsNewlyOwned (the NEW mark)
+            0x1408BFEBD,                            // Card_MarkSeen
+        };
+        for (uintptr_t site : kSavedCardChecks)
+            PatchImm32(site, kSavedCardTableSize);
     }
 }
 
@@ -1314,6 +1397,27 @@ bool __fastcall Hook_Get_IllustrationData(int64_t a1, uint16_t konamiId, void** 
     Card::ExtraCard* card = it != Card::ExtraLoadIDs.end() ? Card::FindExtraCard(realId) : nullptr;
     if (!card)
     {
+        // A game card with new art ("image" on its cards.json entry).
+        if (Card::CardOverride* o = Card::FindOverrideImage(realId))
+        {
+            if (!o->ImageTried)
+            {
+                o->ImageTried = true;
+                std::ifstream file(std::filesystem::path(Utf8ToWide(o->ImagePath)), std::ios::binary);
+                if (file)
+                    o->ImageBytes.assign(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
+                else
+                    Logger::WriteLog(std::format("Could not open image \"{}\" for card {}", o->ImagePath, realId), MODULE_NAME, 2);
+            }
+            if (!o->ImageBytes.empty())
+                if (void* copy = GameMalloc(o->ImageBytes.size()))
+                {
+                    std::memcpy(copy, o->ImageBytes.data(), o->ImageBytes.size());
+                    *buffer = copy;
+                    *size = o->ImageBytes.size();
+                    return true;
+                }
+        }
         if (realId >= kFirstExtraCardId)
             Logger::WriteLog(std::format("Illustration asked for id {}, which is not a loaded custom card", realId), MODULE_NAME, 1);
         return reinterpret_cast<Get_IllustrationData_t>(orig_Get_IllustrationData)(a1, konamiId, buffer, size);
@@ -1360,6 +1464,15 @@ bool __fastcall Hook_Get_IllustrationData(int64_t a1, uint16_t konamiId, void** 
         }
     }
 
+    // No picture (none set, or the file is missing): the "missing texture" checkerboard built into this DLL (MissingArt.h), so it is
+    // plain to see which cards still need art; Blue-Eyes White Dragon's art only if that copy fails.
+    if (void* copy = GameMalloc(MissingArt::kSize))
+    {
+        std::memcpy(copy, MissingArt::kJpeg, MissingArt::kSize);
+        *buffer = copy;
+        *size = MissingArt::kSize;
+        return true;
+    }
     return reinterpret_cast<Get_IllustrationData_t>(orig_Get_IllustrationData)(a1, kPlaceholderImageId, buffer, size);
 }
 
@@ -1388,9 +1501,110 @@ static bool WantsExtendedUnlockCounts(const void* returnAddress)
     }
 }
 
+// A card id (game or extra) -> its internal id, 0 if there is none.
+static int InternalIdOfCard(int id)
+{
+    auto extra = Card::ExtraLoadIDs.find(static_cast<uint16_t>(id));
+    if (extra != Card::ExtraLoadIDs.end())
+        return static_cast<int>(extra->second);
+    if (id >= static_cast<int>(kVanillaKonamiIdBase) && id < static_cast<int>(kVanillaKonamiIdBase + kVanillaKonamiIdCount))
+        return static_cast<int>(Limits::InternalIDTable[id - kVanillaKonamiIdBase]);
+    return 0;
+}
+
+// unlocks.json "starter": a new profile (none of the starter's cards owned) is dealt its deck once. The cards go into the save's card
+// table and the deck into a saved deck slot (marked valid, +300), so the next call finds the profile no longer new. Runs for
+// every caller, so RebuildLiveUnlockCounts (which calls Get_LiveUnlockCounts first, then reads the save's card table) counts the cards.
+static void DealStarterIfNew(unsigned int profile)
+{
+    unsigned char* saved = Card::StarterGroups.empty() ? nullptr : Save::GetCardUnlockTable(profile);
+    if (!saved)
+        return;
+    struct SavedDeck { wchar_t Name[33]; uint16_t MainCount, ExtraCount, SideCount; uint16_t Cards[90]; uint8_t Rest[0x12C - 252]; uint8_t IsValid; uint8_t Pad[3]; };
+    static_assert(sizeof(SavedDeck) == 0x130, "SavedDeck layout drifted");
+    const auto DeckFromId = reinterpret_cast<SavedDeck*(__fastcall*)(unsigned int profile, unsigned int deckId)>(YGO::Addr::Deck_FromId);
+    auto savedIdOf = [](int id)   // the id the game keeps this card's count under
+    {
+        const int internalId = InternalIdOfCard(id);
+        if (id <= static_cast<int>(kVanillaKonamiIdBase + kVanillaKonamiIdCount - 1) && internalId > 0 && Limits::KonamiIDTable[internalId] != 0)
+            return static_cast<int>(Limits::KonamiIDTable[internalId]);
+        return id;
+    };
+    // A new profile already has the game's starter deck in a slot (copied from Get_InitialDeckTemplateByIndex): the dealt deck replaces
+    // it. Otherwise it goes into the first empty slot.
+    const auto InitialTemplate = reinterpret_cast<const SavedDeck*(__fastcall*)(int index)>(0x14076E880);   // YGO::SAVE::Get_InitialDeckTemplateByIndex
+    auto isGameStarter = [&](const SavedDeck* slot)
+    {
+        for (int i = 0; i < 8; ++i)
+        {
+            const SavedDeck* starter = InitialTemplate(i);
+            if (!starter)
+                return false;
+            if (starter->MainCount != slot->MainCount || slot->MainCount > 60)
+                continue;
+            std::vector<uint16_t> a(slot->Cards, slot->Cards + slot->MainCount), b(starter->Cards, starter->Cards + starter->MainCount);
+            std::sort(a.begin(), a.end());
+            std::sort(b.begin(), b.end());
+            if (a == b)
+                return true;
+        }
+        return false;
+    };
+    SavedDeck* slot = nullptr;
+    for (unsigned int deck = 0; deck < 32 && !slot; ++deck)
+        if (SavedDeck* candidate = DeckFromId(profile, deck); candidate && candidate->MainCount != 0 && isGameStarter(candidate))
+            slot = candidate;
+    for (unsigned int deck = 0; deck < 32 && !slot; ++deck)
+        if (SavedDeck* candidate = DeckFromId(profile, deck); candidate && candidate->MainCount == 0)
+            slot = candidate;
+    if (!slot)
+        return;
+    for (const Card::StarterGroup& group : Card::StarterGroups)
+        for (const auto& [id, weight] : group.Pool)
+            if (const int savedId = savedIdOf(id); savedId < static_cast<int>(kSavedCardTableSize) && (saved[savedId] & 7) != 0)
+                return;
+
+    static std::mt19937 random{ std::random_device{}() };
+    std::map<int, int> copies;
+    std::vector<uint16_t> main;
+    for (const Card::StarterGroup& group : Card::StarterGroups)
+    {
+        std::vector<std::pair<int, uint32_t>> pool;
+        for (const auto& card : group.Pool)
+            if (copies[card.first] < 3)
+                pool.push_back(card);
+        for (int i = 0; i < group.Count && !pool.empty() && main.size() < 60; ++i)
+        {
+            uint64_t total = 0;
+            for (const auto& [id, weight] : pool)
+                total += weight;
+            uint64_t roll = std::uniform_int_distribution<uint64_t>(0, total - 1)(random);
+            size_t pick = 0;
+            while (roll >= pool[pick].second)
+                roll -= pool[pick++].second;
+            const int id = pool[pick].first;
+            main.push_back(static_cast<uint16_t>(id));
+            if (++copies[id] == 3)
+                pool.erase(pool.begin() + static_cast<ptrdiff_t>(pick));
+        }
+    }
+    std::sort(main.begin(), main.end());
+
+    std::memset(slot, 0, sizeof(SavedDeck));
+    wcsncpy_s(slot->Name, Card::StarterDeckName.c_str(), _TRUNCATE);
+    slot->MainCount = static_cast<uint16_t>(main.size());
+    std::copy(main.begin(), main.end(), slot->Cards);
+    slot->IsValid = 1;
+    for (const auto& [id, n] : copies)
+        if (const int savedId = savedIdOf(id); n > 0 && savedId < static_cast<int>(kSavedCardTableSize))
+            saved[savedId] = static_cast<unsigned char>((saved[savedId] & ~7) | (std::max)(saved[savedId] & 7, n) | 8);   // bit 3: not "new"
+    Logger::WriteLog(std::format("New profile: dealt a {}-card starter deck ({} different cards) into a saved deck slot", main.size(), copies.size()), MODULE_NAME, 0);
+}
+
 unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
 {
     unsigned char* original = reinterpret_cast<unsigned char*(__fastcall*)(unsigned int)>(orig_Get_LiveUnlockCounts)(profile);
+    DealStarterIfNew(profile);
 
     if (!original || !WantsExtendedUnlockCounts(_ReturnAddress()))
         return original;
@@ -1404,13 +1618,15 @@ unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
         buffer.assign(kUnlockBufferSize, 0); // sized once so the pointer handed out stays valid
 
     std::memcpy(buffer.data(), original, kVanillaCardIdCount);
+    std::fill(buffer.begin() + kVanillaCardIdCount, buffer.end(), 0);
 
     unsigned char* saved = Save::GetCardUnlockTable(profile);
 
-    // A custom card the profile owns but cards.json no longer has (it was removed or skipped) has no name, art or details, and shows in
-    // the trunk as an empty card. Its copies are dropped from the profile's card table; putting the card back in cards.json does not restore them,
-    // but unlocks.json / the card's "copies" grant them again.
-    if (saved)
+    // Read once per launch. Resetting unavailable cards remains the default for mod switches;
+    // persistence is opt-in. Both modes keep unavailable cards out of the display buffer.
+    static const bool preserveUnavailableCards = GetPrivateProfileIntW(
+        L"Yu-Gi-Oh-MoreCards", L"PreserveUnavailableCards", 0, L".\\Config.ini") != 0;
+    if (saved && !preserveUnavailableCards)
     {
         std::string removed;
         int removedCount = 0;
@@ -1486,15 +1702,17 @@ unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
     }
 
     for (const Card::Unlock& unlock : Card::Unlocks)
-    {
-        int internalId = 0;
-        auto extra = Card::ExtraLoadIDs.find(static_cast<uint16_t>(unlock.Id));
-        if (extra != Card::ExtraLoadIDs.end())
-            internalId = static_cast<int>(extra->second);
-        else if (unlock.Id >= static_cast<int>(kVanillaKonamiIdBase) && unlock.Id < static_cast<int>(kVanillaKonamiIdBase + kVanillaKonamiIdCount))
-            internalId = Limits::InternalIDTable[unlock.Id - kVanillaKonamiIdBase];
+        grant(unlock.Id, InternalIdOfCard(unlock.Id), unlock.Copies);
 
-        grant(unlock.Id, internalId, unlock.Copies);
+    // cardpool.json: a card outside the pool is not there for the player (the save keeps its copies; only this view drops them).
+    if (Card::CardPoolActive())
+    {
+        for (size_t internalId = 1; internalId < kVanillaCardIdCount && internalId < kUnlockBufferSize; ++internalId)
+            if (buffer[internalId] && !Card::InCardPool(Limits::KonamiIDTable[internalId]))
+                buffer[internalId] = 0;
+        for (const auto& [id, internalId] : Card::ExtraLoadIDs)
+            if (!Card::InCardPool(id) && static_cast<size_t>(internalId) < kUnlockBufferSize)
+                buffer[internalId] = 0;
     }
 
     return buffer.data();
@@ -1798,6 +2016,8 @@ void Card::Install()
             Logger::WriteLog(std::format("Loaded {} unlock(s) from unlocks.json", unlocks), MODULE_NAME, 0);
         if (unlocks && ReplaceDefaultUnlocks)
             Logger::WriteLog("unlocks.json replaces the game's starting cards", MODULE_NAME, 0);
+        if (size_t pool = LoadCardPool())
+            Logger::WriteLog(std::format("cardpool.json: only {} card(s) exist for the player", pool), MODULE_NAME, 0);
 
         // An unloaded slot is { refcount 0, cacheIndex -1 }.
         for (auto& slot : ImageSlotTable)

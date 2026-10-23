@@ -1,0 +1,16 @@
+{
+  "title": "Media",
+  "description": "Your own music, voice lines for characters in duels, and mp4 videos (cutscenes, summon cut-ins) in place of or alongside the game's.",
+  "content": [
+    "music.json",
+    "voices.json",
+    "videos.json",
+    "movies"
+  ],
+  "replaces": [
+    {
+      "name": "Yu-Gi-Oh-Music",
+      "note": "renamed to Yu-Gi-Oh-Media (music, voices and videos)"
+    }
+  ]
+}

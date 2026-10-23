@@ -1,0 +1,67 @@
+{
+    "version": 2,
+    "header": "Card grid",
+    "elements": [
+        {
+            "kind": "cardGrid",
+            "x": 528.5,
+            "y": 120,
+            "width": 1350,
+            "height": 860,
+            "cards": "{var:demo.gridShow}",
+            "bind": "var:demo.gridCard",
+            "description": "The deck editor card grid, with its filters and sorting. Confirm on a card.",
+            "action": {
+                "message": "Card {var:demo.gridCard}."
+            }
+        },
+        {
+            "kind": "cardInfo",
+            "x": 1316,
+            "y": 120,
+            "width": 486.5,
+            "card": "{var:demo.gridCard}"
+        },
+        {
+            "kind": "menu",
+            "id": "demo.gridMenu",
+            "x": 1316,
+            "y": 760,
+            "width": 486,
+            "height": 240,
+            "items": [
+                {
+                    "label": "Show",
+                    "description": "Which cards the grid lists (the grid is filled again when this changes).",
+                    "bind": "var:demo.gridShow",
+                    "default": "owned",
+                    "values": [
+                        {
+                            "label": "Owned cards",
+                            "value": "owned"
+                        },
+                        {
+                            "label": "Every card",
+                            "value": "all"
+                        }
+                    ]
+                },
+                {
+                    "label": "Reset filter",
+                    "description": "The reset of the filter panel, run from a button.",
+                    "action": {
+                        "resetFilter": true
+                    }
+                },
+                {
+                    "label": "Full details",
+                    "description": "widget_CardDetailsFull for the highlighted card (a right-click on the grid does the same).",
+                    "action": {
+                        "showCard": "{var:demo.gridCard}"
+                    }
+                }
+            ],
+            "spacing": 80
+        }
+    ]
+}

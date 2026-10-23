@@ -23,6 +23,34 @@ namespace Campaign
     };
     static_assert(sizeof(GameWString) == 0x20, "GameWString layout drifted");
 
+    struct StoryDuelSide
+    {
+        int32_t Character;        // chardata id
+        int32_t Deck;             // deckdata index (the duel uses + 32)
+        const char* Costume;      // portrait "<character key>_<costume>_neutral"; "" = normal
+    };
+
+    struct StoryDuelRecord        // g_StoryDuelRecords entry (0xB0)
+    {
+        int32_t Id;               // 0 = empty slot
+        int32_t Pad4;
+        StoryDuelSide Sides[2];   // [0] player, [1] opponent
+        int32_t Arena;
+        int32_t Sku;              // the loader turns the file's -1 into 1
+        int32_t RewardPack;       // pack unlocked on the first win; the loader turns -1 into 0 (= none)
+        int32_t Pad34;
+        const char* Key;          // dialog scripts <key>_INTRO/_OUTRO/_OUTRO_LOSE (scriptdata)
+        GameWString Title, Description, Tip;
+        int32_t Series;
+        int32_t Order;
+        int32_t ExcludeFromDeckUnlock;
+        int32_t PadAC;
+    };
+    static_assert(sizeof(StoryDuelRecord) == 0xB0, "StoryDuelRecord layout drifted");
+
+    constexpr uintptr_t kStoryDuelTable = YGO::Addr::g_StoryDuelRecords;   // g_StoryDuelRecords[226]
+    constexpr uint32_t kStoryDuelCount = 226;
+
     using WStringAssign_t = void*(__fastcall*)(GameWString* self, const wchar_t* text, size_t count);
     using GetPlayerSection_t = uint8_t*(__fastcall*)(unsigned int profile);
 

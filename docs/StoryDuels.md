@@ -2,8 +2,8 @@
 
 `main/dueldata_<L>.bin` (E F G I J S) holds the campaign's story duels: which series and position each one has, who plays whom with
 which decks, the arena, the pack it unlocks, and its title, description and loss tip. The parser is `File Type Libraries/DuelData`
-(`StoryDuelTable`, `StoryDuelJson`). The editor is `Tools/Shared/Editors/StoryDuelEditor.cs`, the **Story editor** tab in both WolfX and WolfEx
-(its Duel tab; the scene tabs beside it edit the duel's dialog, [StoryScenes.md](StoryScenes.md)). **Yu-Gi-Oh-Campaign** (`StoryDuels.cpp`) applies WolfEx's `storyduels.json` to the game.
+(`StoryDuelTable`, `StoryDuelJson`). The editor is `Tools/Shared/Editors/StoryDuelEditor.cs`, the **Story editor** page in WolfX
+(its Duel tab; the scene tabs beside it edit the duel's dialog, [StoryScenes.md](StoryScenes.md)). **Yu-Gi-Oh-Campaign** (`StoryDuels.cpp`) applies WolfX's `storyduels.json` to the game.
 
 The dialog before and after each duel is not in this file: it's in `main/scriptdata_<L>.bin`, found by the duel's key
 ([StoryScenes.md](StoryScenes.md)).
@@ -55,7 +55,7 @@ u32 count (183), u32 0, then count x 0x5C-byte records, then the strings. The st
   The last order that fits is 48, so the editor and plugin limit Order to 1-48.
 * `StoryDuel_FindDialogScript` (0x14082D660) looks up `<Key>_INTRO` / `_OUTRO` / `_OUTRO_LOSE` in `g_pStoryScriptFile` (scriptdata).
 
-## storyduels.json (WolfEx → Yu-Gi-Oh-Campaign)
+## storyduels.json (WolfX → Yu-Gi-Oh-Campaign)
 
 ```json
 { "duels": [ { "id": 186, "series": 0, "order": 33, "key": "MyDuel",
@@ -83,3 +83,9 @@ The plugin skips an entry and logs why if:
 **A new duel has no dialog until it has `<key>_INTRO` / `_OUTRO` scenes**: make them in the Story editor's scene tabs.
 
 Built, but not yet run in the game. Yu-Gi-Oh-Campaign must be switched on in Config.ini: `[Yu-Gi-Oh-Core]` `Yu-Gi-Oh-Campaign=1`.
+
+## Tutorial duels and reverse duels (2026-10-11)
+
+* The game: `CampaignMenu_Update` (0x140860040) makes a campaign duel a tutorial only when it is **order 1**, not the reverse duel, and the menu flag (+5736) is set; the number is `g_CampaignSeriesTutorial[series]` (0x140A77E68, 21-26). `TutorialStoryDuel_SetupSeats` (0x14081EE80) seats order 1 of series (number - 21) and adds the tutorial's extra cards (0x140A710B0: two 0-ended u16 lists per tutorial 21-26). `Set_ArenaIdFromDuel` (0x1407695B0) also stores the current story duel id (`Get_CurrentStoryDuelId` 0x140768D60).
+* **Any duel as a tutorial:** storyduels.json `"tutorial": N` on a duel (21-99; 27+ are new tutorials from the Tutorials page), `0` = never. Yu-Gi-Oh-Campaign hooks `Set_IsTutorialDuel` (0x140769B00) when CampaignMenu_Update calls it and seats the duel's own players (`Hook_SetupTutorialSeats`), with the game tutorial's extra cards for 21-26. The game files have no field for this, so a game duel's setting is a small `{ "id", "tutorial" }` entry. WolfX Story editor: **Plays as tutorial**.
+* **Reverse duels for order 1:** two one-byte patches in Yu-Gi-Oh-Campaign: the reverse button test in CampaignMenu_Update (0x14086058A, mask 0xFFFFFFFD -> 0xFFFFFFFF) and the reverse unlock after a win in DuelResult_GrantRewards (0x14088066B, `cmp Order, 1` -> `cmp Order, 0`). The reverse duel is never a tutorial. An order-1 duel won before this unlocks its reverse the next time it is won.

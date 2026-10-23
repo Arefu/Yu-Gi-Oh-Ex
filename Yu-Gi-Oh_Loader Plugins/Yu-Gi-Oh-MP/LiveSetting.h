@@ -13,6 +13,14 @@
 // (QNet__OnLobbyEnter); players without the plugin keep their own list for their own deck (the duel itself never checks it).
 // A joiner is asked first (Yes = play the host's list, No = leave the lobby); until then their own game list applies.
 // Back on the screen or leaving the lobby turns the ban list back on.
+//
+// A "Duel format" row (2026-10-22), also hosting only: Master / Speed Duel / Rush Duel, the duel engine's own rules (Yu-Gi-Oh-Core
+// DuelFormat.h). It borrows slot 7 (the Join button's, never shown when hosting) and is handed to the game as slot 5 while the cursor is on
+// it (LiveSetting.cpp kFormatSlot). Lobby data "exformat" = master / speed / rush; every Yu-Gi-Oh-MP player sets it with
+// Core_SetOnlineDuelFormat (the online duel is lockstep: a player without Yu-Gi-Oh-MP plays Master and the duel desyncs, so the host
+// should kick players on the "No Yu-Gi-Oh-MP" line). Deck limits follow (Core_SetDeckLimits): Speed 20-30 / Extra 5, Rush 40-60 / 15,
+// Master = the player's own Config.ini limits; the deck list on this screen is filled again when the host changes it. Back on the screen or
+// leaving the lobby puts Master back.
 namespace LiveSetting
 {
     // Attaches the hooks; call inside a Detours transaction.

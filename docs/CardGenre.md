@@ -5,7 +5,7 @@ card details page shows them as a list of icons and names. The duel code also ch
 for example the AI's card evaluation.
 
 The parser is `File Type Libraries/CardGenre` (`CardGenreTable`, `CardGenreJson`). The editor is
-`Tools/Shared/Editors/CardGenreEditor.cs`, on the **Card genres** tab in both WolfX and WolfEx.
+`Tools/Shared/Editors/CardGenreEditor.cs`, on WolfX's **Card genres** page (also inside the Card Manager and New cards pages).
 
 ## Layout
 
@@ -59,12 +59,13 @@ id is bit + 175.
   `Genre_IconId` and `Get_GenreName`.
 * The IDB has the enum `CardGenreBit`.
 
-## WolfX / WolfEx
+## WolfX
 
-* **WolfX:** open a CARD_Genre.bin. CARD_IntID.bin must be in the same folder. Tick and untick genres, then save; a `.bak` of the
-  original is kept. A card that isn't in CARD_IntID.bin, such as a custom card, has no slot in the file.
-* **WolfEx:** opens the game's genres with `Yu-Gi-Oh-Ex\genres.json` on top. **New card...** gives genres to any card, custom
-  cards included. Save writes each changed card's full genre list:
+* **Game cards:** tick and untick genres, then save. The changed CARD_Genre.bin goes into the Ex patch (`YGO_2020-Ex.dat`); the game's
+  own archive is never written.
+* **Custom cards** have no slot in the file (it's indexed by internal id), so their genres go into their own `cards.json` entry
+  (`"genres"`). `Yu-Gi-Oh-Ex\genres.json` only keeps cards that cards.json doesn't have, each with its full genre list (older files
+  are moved into cards.json on save):
 
 ```json
 { "cards": [ { "card": 15300, "name": "My Card", "genres": [ "DRAW", "SPSUMMON", "LINK" ] } ] }

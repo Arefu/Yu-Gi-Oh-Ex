@@ -22,7 +22,8 @@ namespace WolfEx
             var scriptTab = new TabPage("Script") { UseVisualStyleBackColor = true };
             scriptTab.Controls.Add(source);
             _blocksTab.Controls.Add(Blocks);
-            TabPages.AddRange([scriptTab, _blocksTab]);
+            TabPages.AddRange([_blocksTab, scriptTab]);   // the blocks are the main way to write an effect; the script is the text behind them
+            Blocks.ShowScript(_source.Text);
 
             SelectedIndexChanged += (_, _) =>
             {

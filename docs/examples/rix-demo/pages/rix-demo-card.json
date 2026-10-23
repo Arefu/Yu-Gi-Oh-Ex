@@ -1,0 +1,89 @@
+{
+    "version": 2,
+    "header": "Card details",
+    "elements": [
+        {
+            "kind": "cardInfo",
+            "x": 1180,
+            "y": 130,
+            "width": 486.5,
+            "card": "{var:demo.card}"
+        },
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 200,
+            "width": 860,
+            "text": "widget_CardDetails (Constructor, CreateFromLayout, SetWidth, SetCard, Update): the deck editor's panel. Its card is \"{var:demo.card}\" here.",
+            "textSize": 24,
+            "align": "left"
+        },
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 330,
+            "width": 860,
+            "text": "Pick a card, or type a card id into the wheels.",
+            "textSize": 24,
+            "align": "left",
+            "colour": "#FFC8E6FF"
+        },
+        {
+            "kind": "menu",
+            "id": "demo.cardPick",
+            "x": 200,
+            "y": 420,
+            "width": 760,
+            "height": 200,
+            "items": [
+                {
+                    "label": "Card",
+                    "description": "A choice item bound to demo.card.",
+                    "bind": "var:demo.card",
+                    "default": "4007",
+                    "values": [
+                        {
+                            "label": "Blue-Eyes White Dragon",
+                            "value": "4007"
+                        },
+                        {
+                            "label": "Dark Magician",
+                            "value": "4041"
+                        },
+                        {
+                            "label": "Kuriboh",
+                            "value": "4064"
+                        },
+                        {
+                            "label": "Pot of Greed",
+                            "value": "4844"
+                        },
+                        {
+                            "label": "Mirror Force",
+                            "value": "4887"
+                        }
+                    ]
+                },
+                {
+                    "label": "Back",
+                    "description": "Back to the previous page.",
+                    "action": {
+                        "back": true
+                    }
+                }
+            ]
+        },
+        {
+            "kind": "digits",
+            "id": "demo.cardDigits",
+            "x": 300,
+            "y": 760,
+            "width": 700,
+            "height": 240,
+            "count": 5,
+            "spacing": 140,
+            "bind": "var:demo.card",
+            "description": "Type a card id (4007 = Blue-Eyes)."
+        }
+    ]
+}

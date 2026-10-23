@@ -1,0 +1,37 @@
+{
+    "version": 2,
+    "header": "Opponents",
+    "elements": [
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 160,
+            "width": 1520,
+            "text": "widget_pickCharacter, filled the way FreeDuel_BuildOpponentList does (selectable, in the series, owned, with their own deck). Series {var:demo.series}.",
+            "textSize": 24,
+            "align": "left"
+        },
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 960,
+            "width": 0,
+            "text": "Character: {var:demo.character}",
+            "textSize": 30,
+            "align": "left"
+        },
+        {
+            "kind": "characters",
+            "x": 960,
+            "y": 553,
+            "width": 1600,
+            "height": 600,
+            "series": "{var:demo.series}",
+            "bind": "var:demo.character",
+            "description": "The Free Duel opponent grid. Confirm on a character.",
+            "action": {
+                "message": "You picked character {var:demo.character}."
+            }
+        }
+    ]
+}

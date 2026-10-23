@@ -1,0 +1,78 @@
+{
+    "version": 2,
+    "header": "Message boxes",
+    "elements": [
+        {
+            "kind": "text",
+            "x": 1000,
+            "y": 220,
+            "width": 800,
+            "text": "widget_Dialog at screen+432: Screen::ShowMessageText for OK, Screen::ShowYesNo for Yes / No.",
+            "textSize": 24,
+            "align": "left"
+        },
+        {
+            "kind": "text",
+            "x": 1000,
+            "y": 400,
+            "width": 800,
+            "text": "Last answer: {var:demo.answer}",
+            "textSize": 30,
+            "align": "left"
+        },
+        {
+            "kind": "menu",
+            "id": "demo.dialogs",
+            "x": 200,
+            "y": 220,
+            "width": 660,
+            "height": 400,
+            "items": [
+                {
+                    "label": "Show a message",
+                    "description": "An OK box.",
+                    "action": {
+                        "message": "Hello from a page file."
+                    }
+                },
+                {
+                    "label": "Ask Yes / No",
+                    "description": "Yes sets demo.answer.",
+                    "action": [
+                        {
+                            "set": "var:demo.answer",
+                            "value": "No (or not answered)"
+                        },
+                        {
+                            "confirm": "Do you like this demo?",
+                            "yes": {
+                                "set": "var:demo.answer",
+                                "value": "Yes"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "label": "Count up",
+                    "description": "Adds 1 to demo.count: {var:demo.count}.",
+                    "action": [
+                        {
+                            "add": "var:demo.count",
+                            "value": 1
+                        },
+                        {
+                            "message": "demo.count is now {var:demo.count}."
+                        }
+                    ]
+                },
+                {
+                    "label": "Back",
+                    "description": "Back to the previous page.",
+                    "action": {
+                        "back": true
+                    }
+                }
+            ]
+        }
+    ]
+}

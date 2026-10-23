@@ -111,6 +111,7 @@ namespace Wolf.Editors
             _tools.Items.Add(_language);
             _tools.Items.Add(new ToolStripSeparator());
             _tools.Items.Add(Button("New tutorial...", "Start a new tutorial (a blank one or a copy of this one) under a number", NewTutorial));
+            _tools.Items.Add(Button("Delete tutorial...", "Delete this new tutorial (27-99) in every language. The game's own (1-26) are built into Help > Tutorial and stay", DeleteTutorial));
             _tools.Items.Add(Button("Copy to languages...", "Write this tutorial as the other languages' files too (e.g. a new tutorial, before it's translated)", CopyToLanguages));
             _tools.Items.Add(_where);
 
@@ -440,6 +441,29 @@ namespace Wolf.Editors
             {
                 MessageBox.Show(this, $"Couldn't read {path}:\n{ex.Message}", "Tutorials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void DeleteTutorial()
+        {
+            if (_gameFiles == null || !_fromGame)
+                return;
+            if (!IsNewNumber)
+            {
+                MessageBox.Show(this, $"Tutorial {_number} is one of the game's: Help > Tutorial lists it from a table in the exe, so it stays. Change its steps instead.",
+                    "Delete tutorial", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            string folder = _gameFiles.ExPath(TutorialFile.JsonFolder);
+            var files = Directory.Exists(folder)
+                ? Directory.GetFiles(folder, Path.GetFileNameWithoutExtension(TutorialFile.JsonName(_number, 'E'))[..^1] + "*.json").ToList()
+                : [];
+            if (MessageBox.Show(this, $"Delete tutorial {_number} ({files.Count} language file(s))? Story duels set to play it go back to no tutorial.",
+                    "Delete tutorial", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) != DialogResult.Yes)
+                return;
+            foreach (string file in files)
+                File.Delete(file);
+            _status.Text = $"Tutorial {_number} deleted.";
+            OpenFromGame(1, _gameLanguage);
         }
 
         private void OpenFromDisk()

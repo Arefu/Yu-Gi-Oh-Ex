@@ -206,7 +206,7 @@ namespace Wolf.Editors
                 foreach (var (konami, name) in _customNames.OrderBy(c => c.Key))
                 {
                     string note = konami is >= CardIdMap.FirstCustomId and <= CardIdMap.LastCustomId ? "your new card (the plugin gives it a slot)"
-                        : _map.InternalOf(konami) != 0 ? "your changes to this game card" : "id outside the custom range (15300-19999)";
+                        : _map.InternalOf(konami) != 0 ? "your changes to this game card" : $"id outside the custom range ({CardIdMap.FirstCustomId}-{CardIdMap.LastCustomId})";
                     if (Matches(konami, _map.InternalOf(konami), name))
                         rows.Add(new Row(konami, _map.InternalOf(konami), note + (name.Length > 0 ? $": {name}" : "")));
                 }
@@ -269,7 +269,7 @@ namespace Wolf.Editors
 
         // ---- free ids (WolfEx) ----
 
-        /// <summary>The first Konami id in the custom range (15300-19999) that no cards.json card uses.</summary>
+        /// <summary>The first Konami id in the custom range (15300-65534) that no cards.json card uses.</summary>
         private int? NextFreeId()
         {
             for (int id = CardIdMap.FirstCustomId; id <= CardIdMap.LastCustomId; id++)
@@ -286,7 +286,7 @@ namespace Wolf.Editors
                 _status.Text = $"Copied {id}: the next free Konami id for a new card in cards.json.";
             }
             else
-                _status.Text = "Every custom id (15300-19999) is used.";
+                _status.Text = $"Every custom id ({CardIdMap.FirstCustomId}-{CardIdMap.LastCustomId}) is used.";
         }
     }
 }

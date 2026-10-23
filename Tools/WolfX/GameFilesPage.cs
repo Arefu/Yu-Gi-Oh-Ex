@@ -50,7 +50,10 @@ namespace WolfX
             tools.Items.Add(Button("Open the loose folder", "Show the loose folder in Explorer", () => ShowFolder(_gameFiles?.OverrideFolder)));
             tools.Items.Add(Button("Open the game folder", "Show the game folder in Explorer", () => ShowFolder(_gameFiles?.GameFolder)));
             tools.Items.Add(new ToolStripSeparator());
-            tools.Items.Add(Button("All plugin settings...", "Every Config.ini setting of every plugin (the same list as the game's Plugins > Plugin Settings)", () =>
+            tools.Items.Add(Button("Check content compatibility...", "Report required plugins, missing dependencies and unsupported exports", CheckCompatibility));
+            tools.Items.Add(Button("Retired plugins...", "Plugins left over from an older Yu-Gi-Oh-Ex (renamed, merged or retired): see why, and move them to Plugins\\_retired",
+                () => Wolf.Mods.RetiredPlugins.ShowDialog(this, _gameFiles == null ? null : ContentManifest.PluginsFolder(_gameFiles.GameFolder))));
+            tools.Items.Add(Button("All plugin settings...", "Every Config.ini setting of every plugin", () =>
             {
                 using var config = new global::WolfX.WolfX.File_Type_UI.Config();
                 config.ShowDialog(this);
@@ -71,6 +74,34 @@ namespace WolfX
         }
 
         private static Label Note(string text) => new() { Text = text, AutoSize = true, ForeColor = SystemColors.GrayText, Margin = new Padding(8, 7, 3, 3) };
+
+        private void CheckCompatibility()
+        {
+            if (_gameFiles == null) return;
+            try
+            {
+                var report = ContentCompatibility.Check(_gameFiles.GameFolder, _gameFiles.ExFolder);
+                using var dialog = new Form { Text = "Content compatibility", Width = 1000, Height = 520, StartPosition = FormStartPosition.CenterParent, MinimizeBox = false };
+                var grid = new DataGridView { Dock = DockStyle.Fill, ReadOnly = true, AllowUserToAddRows = false, AllowUserToDeleteRows = false,
+                    RowHeadersVisible = false, AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells, AutoGenerateColumns = false };
+                grid.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+                grid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Content", DataPropertyName = "Content", Width = 160 });
+                grid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Requires", DataPropertyName = "Plugins", Width = 260 });
+                grid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Status", DataPropertyName = "Status", AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill });
+                grid.DataSource = report;
+                var note = new Label { Dock = DockStyle.Top, Height = 72, Padding = new Padding(8), Text =
+                    $"Content folder: {_gameFiles.ExFolder}\nPlugins folder: {ContentManifest.PluginsFolder(_gameFiles.GameFolder)}\n" +
+                    (report.Count == 0 ? "No additional content was found. " : $"{report.Count} content entries; {report.Count(e => e.Problem)} need attention. ") +
+                    "Checks files on disk; verify changes in game after saving." };
+                dialog.Controls.Add(grid);
+                dialog.Controls.Add(note);
+                dialog.ShowDialog(this);
+            }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or ArgumentException)
+            {
+                MessageBox.Show(this, "Could not check compatibility:\n" + ex.Message, "Content compatibility", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private static ToolStripButton Button(string text, string tip, Action click)
         {

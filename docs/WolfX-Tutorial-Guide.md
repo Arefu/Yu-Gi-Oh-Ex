@@ -12,7 +12,7 @@ How to use it:
 * Part 4 is a suggested series order, Part 5 the known gaps to check before recording, Part 6 a glossary.
 
 Sources for the details: `docs/WolfXContent.md` (the save rules, the archive), `docs/EffectLanguage.md` (EffectScript), `docs/CardRendering.md`
-(how the game draws a card), `docs/PluginManifests.md`, `TESTING.md`.
+(how the game draws a card), `docs/PluginManifests.md`, and [GLOSSARY.md](../GLOSSARY.md) for what every part does and how far along it is.
 
 > Status markers used below: **[tested]** = checked working; **[untested in game]** = WolfX writes it, but nobody has yet confirmed the game
 > shows it; **[limit]** = a known restriction worth saying out loud.
@@ -87,7 +87,7 @@ Which page needs which plugin (from `docs/WolfXContent.md`, worth a table in the
 | Card genres / Related cards / Unlocks | genres.json / relatedcards.json / unlocks.json | Yu-Gi-Oh-MoreCards |
 | Text tables | text.json | Yu-Gi-Oh-MoreCards |
 | Characters / Decks / Story editor | characters.json / decks.json / storyduels.json + storyscripts.json | Yu-Gi-Oh-Campaign |
-| New packs | packs.json | Yu-Gi-Oh-BetterCardShop |
+| New packs | packs.json | Yu-Gi-Oh-Core |
 | Pages / Menus | pages\, menus\menus.json | Yu-Gi-Oh-RIX |
 | Card links, Tutorials (new numbers), Sprite sheets (new sheets) | cardlinks.json, tutorials\, sprites\ | none yet - saved, but nothing reads them |
 
@@ -98,7 +98,7 @@ Which page needs which plugin (from `docs/WolfXContent.md`, worth a table in the
 | **Konami id** | 4007 | the id everything in WolfX and the plugins uses. Game cards are 3900-14968 |
 | **internal id** | 101 | the row in the game's card files (CARD_Prop, names, text). Mapped by `CARD_IntID.bin` (Card ids page) |
 | **password** | 89631139 | the 8 digits printed on the card; used by the in-game password machine |
-| **custom card id** | 15300-19999 | new cards. 14969-15234 are "ghost" ids the game keeps effect data for - don't use them |
+| **custom card id** | 15300-65534 | new cards. 14969-15234 are "ghost" ids the game keeps effect data for - don't use them |
 
 ### 1.6 Languages
 
@@ -216,7 +216,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
   **Properties, Text, Art**. Toolbar: Save, New card, Duplicate, Delete..., **Genres, related cards, links...** (opens the card in the Card
   Manager, which has those tabs).
 * **Options**:
-  * Card id (15300-19999; New card picks the next free one).
+  * Card id (15300-65534; New card picks the next free one).
   * Kind, Attribute, Type, Level / Rank / Link rating, ATK, DEF, Spell/Trap icon, **Link arrows** (saved as `linkmarkers`),
     **Pendulum scale** (`scale`), Archetypes (a new archetype gets the next free code from 419 and is added to Archetypes.json).
   * **Same name as** (`sameName`): the card whose name this one counts as, always or while an effect says so (MoreCards applies it).
@@ -377,7 +377,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 
 #### New packs
 
-* **Purpose**: `packs.json` - cards added to the game's packs, and new packs. Needs **Yu-Gi-Oh-BetterCardShop**.
+* **Purpose**: `packs.json` - cards added to the game's packs, and new packs. Applied by **Yu-Gi-Oh-Core** (always on).
 * **Options**: pack list, New pack, Remove new pack; per pack: extra common / rare card ids (or "Add ... by name..."), "Replace the game's
   cards in this pack (instead of adding to them)"; for new packs: title and text per language.
 * **Teach**: the way to make custom cards buyable.
@@ -387,6 +387,11 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 * **Purpose**: `unlocks.json` - cards every profile owns (Yu-Gi-Oh-MoreCards).
 * **Options**: Add by name..., Add by id, Remove selected, Add from game data (what a new profile starts with), Import JSON..., "Owned at
   least (0-3)" per card, "Replace the game's default unlocks".
+* **Starter deck**: `"starter": {"deckName": "Starter Deck", "groups": [{"count": 16, "cards": [[id, weight], ...]}]}` deals a new profile a
+  random deck once. A profile counts as new when it has no saved deck and owns none of the starter's cards. Each group deals `count` cards
+  by weight, with at most 3 copies of a card. The cards become owned and the deck goes into saved deck slot 1 (`DealStarterIfNew` in
+  Yu-Gi-Oh-Cards Card.cpp). WolfX shows that the block is there and keeps it
+  when saving, but doesn't edit it yet.
 * **Warn**: test with a spare save profile (see Save editor warnings).
 
 ### TEXT
@@ -480,7 +485,7 @@ Each episode: goal shown up front -> steps -> save -> in-game result -> how to u
 
 ## Part 5 - Check before recording
 
-* In-game confirmation still open: binary toc loading (TESTING.md 6), content.json plugin switching (TESTING.md 7), several effect triggers.
+* In-game confirmation still open for many features: check the status tags in [GLOSSARY.md](../GLOSSARY.md) before recording one.
 * Use the **Debug** build (`Binaries\Debug\Tools\WolfX.exe`) or rebuild Release first: the Release build can lag behind.
 * The block editor needs the Edge WebView2 Runtime (Windows 10/11 have it; say what to do if the Blocks tab shows the "needs WebView2" note).
 * Use a spare save profile for anything touching unlocks or the save editor.
@@ -493,7 +498,7 @@ Each episode: goal shown up front -> steps -> save -> in-game result -> how to u
 * **DAT / TOC** - the game's archive (YGO_2020.dat) and its table of contents (YGO_2020.toc).
 * **Extracted folder** - files copied out of the archive.
 * **Yu-Gi-Oh-Ex folder** - where additional content (JSON + art) lives.
-* **Plugin** - a DLL the launcher loads into the game (MoreCards, Effects, Campaign, BetterCardShop, RIX...).
+* **Plugin** - a DLL the launcher loads into the game (Core, RIX, MoreCards, Effects, Campaign, Media...). The full list is in [GLOSSARY.md](../GLOSSARY.md#plugins).
 * **content.json** - WolfX's list of which plugins your content needs.
 * **Konami id / internal id / password** - see 1.5.
 * **Kind** - the card's kind number (Normal, Effect, Fusion, Link...), which decides its frame.

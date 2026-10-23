@@ -29,11 +29,11 @@ namespace WolfEx
         private static readonly string[] OptionItems = ["howToPlay", "controllerSettings", "settings", "videoSettings", "credits"];
 
         // "quit" stays at 4 (it has no argument); "page" opens Yu-Gi-Oh-Ex/pages/<name>.json, made on the Pages tab
-        private static readonly string[] ActionKinds = ["nothing", "goto", "press", "call", "quit", "page"];
+        private static readonly string[] ActionKinds = ["nothing", "goto", "press", "call", "quit", "page", "video"];
 
         private string _pagesFolder = "";
 
-        private static bool TakesArgument(int kind) => kind is > 0 and < 4 or 5;
+        private static bool TakesArgument(int kind) => kind is > 0 and < 4 or 5 or 6;
 
         private sealed class ButtonModel
         {
@@ -155,7 +155,7 @@ namespace WolfEx
                 _look.Text = looks.Contains(look) ? look : looks[Math.Min(looks.Length - 1, 2)];
                 _page.Enabled = _menu.Text != "options" && _menu.Enabled;
 
-                string[] choices = _actionType.SelectedIndex switch { 1 => Screens, 2 => MainItems, 5 => PageNames(), _ => [] };
+                string[] choices = _actionType.SelectedIndex switch { 1 => Screens, 2 => MainItems, 5 => PageNames(), 6 => VideoNames(), _ => [] };
                 _actionArg.Items.Clear();
                 _actionArg.Items.AddRange(choices);
                 _actionArg.Enabled = TakesArgument(_actionType.SelectedIndex) && _actionType.Enabled;
@@ -228,6 +228,13 @@ namespace WolfEx
 
         private static string FilePath(string extraCardsFolder) => Path.Combine(extraCardsFolder, "menus", "menus.json");
 
+        // movies\<name>.mp4 next to the pages folder (Yu-Gi-Oh-Media plays them full screen: {"video": "<name>"}).
+        private string[] VideoNames()
+        {
+            string movies = Path.Combine(Path.GetDirectoryName(_pagesFolder.TrimEnd('\\', '/')) ?? "", "movies");
+            return Directory.Exists(movies) ? Directory.GetFiles(movies, "*.mp4").Select(f => Path.GetFileNameWithoutExtension(f)!).OrderBy(n => n).ToArray() : [];
+        }
+
         private string[] PageNames() =>
             Directory.Exists(_pagesFolder)
                 ? Directory.GetFiles(_pagesFolder, "*.json").Select(f => Path.GetFileNameWithoutExtension(f)!).OrderBy(n => n).ToArray()
@@ -239,8 +246,11 @@ namespace WolfEx
 
         public void MarkSaved() => (_snapshot ??= new ContentSnapshot(() => new object[] { _buttons, _gameRows })).Mark();
 
+        private readonly ContentLoadState _loadState = new();
+
         public void LoadFrom(string extraCardsFolder, string gameFolder)
         {
+            _loadState.Reset();
             _pagesFolder = Path.Combine(extraCardsFolder, "pages");
             _buttons.Clear();
             _list.Items.Clear();
@@ -255,11 +265,14 @@ namespace WolfEx
                     var root = JsonNode.Parse(File.ReadAllText(path), documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip }) as JsonObject
                         ?? throw new InvalidDataException("expected an object with \"buttons\" and \"edit\"");
 
-                    foreach (var node in (root["buttons"] as JsonArray)?.OfType<JsonObject>() ?? [])
+                    if (root.ContainsKey("edit")) ContentLoadState.Objects(root["edit"], "edit");
+                    foreach (var node in ContentLoadState.Objects(root.ContainsKey("buttons") ? root["buttons"] : new JsonArray(), "buttons").OfType<JsonObject>())
                         _buttons.Add(ReadButton(node));
 
                     foreach (var node in (root["edit"] as JsonArray)?.OfType<JsonObject>() ?? [])
                     {
+                        ContentLoadState.Fields<string>(node, "item", "label", "description");
+                        ContentLoadState.Fields<bool>(node, "hidden");
                         var row = _gameRows.FirstOrDefault(r => string.Equals(r.Item, Text(node, "item"), StringComparison.OrdinalIgnoreCase));
                         if (row == null)
                             continue;
@@ -270,6 +283,8 @@ namespace WolfEx
                 }
                 catch (Exception ex)
                 {
+                    _loadState.Failed(ex);
+                    foreach (var row in _gameRows) (row.Label, row.Description, row.Hidden) = ("", "", false);
                     MessageBox.Show($"Could not read {path}:\n{ex.Message}", "Menus", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     _buttons.Clear();
                 }
@@ -287,6 +302,7 @@ namespace WolfEx
 
         public bool SaveTo(string extraCardsFolder)
         {
+            _loadState.EnsureLoaded();
             _game.EndEdit();
 
             var problems = new List<string>();
@@ -324,14 +340,14 @@ namespace WolfEx
             if (buttons.Count == 0 && edits.Count == 0)
             {
                 if (File.Exists(path))
-                    File.Delete(path);
+                    ContentSaveBatch.Remove(path);
                 return true;
             }
 
             Directory.CreateDirectory(Path.GetDirectoryName(path)!);
             var root = new JsonObject { ["buttons"] = buttons, ["edit"] = edits };
             var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
-            File.WriteAllText(path, root.ToJsonString(options) + "\n", new UTF8Encoding(false));
+            ContentSaveBatch.WriteText(path, root.ToJsonString(options) + "\n");
             return true;
         }
 
@@ -342,6 +358,7 @@ namespace WolfEx
 
         private static ButtonModel ReadButton(JsonObject node)
         {
+            ContentLoadState.Fields<string>(node, "key", "menu", "page", "label", "description", "look");
             var button = new ButtonModel
             {
                 Key = Text(node, "key"),

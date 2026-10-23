@@ -66,7 +66,7 @@ namespace ModManager
             var order = new Label
             {
                 Dock = DockStyle.Bottom, Height = 22, Padding = new Padding(4, 4, 0, 0), ForeColor = SystemColors.GrayText,
-                Text = "Ticked mods load from the top down: a mod lower in the list wins when two change the same thing. Your own files always load last.",
+                Text = "Independent mod changes merge. A mod lower in the list wins conflicts. Your own files always load last.",
             };
             listArea.Controls.Add(order);
 
@@ -272,6 +272,11 @@ namespace ModManager
         {
             var active = _mods.Where(m => m.Enabled).Append(_local!).ToList();
             _issues = ModLibrary.Check(active, _plugins);
+            try { _issues.AddRange(ModLibrary.PrepareMerges(_game, _mods)); }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidDataException or System.Text.Json.JsonException)
+            {
+                _issues.Add(new ModIssue(IssueLevel.Error, null, "Binary merge archive could not be prepared: " + ex.Message));
+            }
 
             foreach (ListViewItem item in _list.Items)
             {
@@ -304,6 +309,13 @@ namespace ModManager
                 item.ForeColor = issue.Level switch { IssueLevel.Error => Color.Firebrick, IssueLevel.Warning => Color.DarkOrange, _ => SystemColors.WindowText };
                 _problems.Items.Add(item);
             }
+            foreach (var leftover in RetiredPlugins.Find(_plugins))
+            {
+                var item = new ListViewItem("Leftover") { Tag = "retired", ForeColor = Color.DarkOrange };
+                item.SubItems.Add("");
+                item.SubItems.Add($"{leftover.Folder}\\{leftover.Name}.dll isn't loaded, it was {leftover.Why}. Double-click to move it to Plugins\\_retired.");
+                _problems.Items.Add(item);
+            }
             if (_problems.Items.Count == 0)
                 _problems.Items.Add(new ListViewItem(["", "", "Nothing: every mod that is on has what it needs, and none of them clash."]));
             _problems.EndUpdate();
@@ -311,6 +323,12 @@ namespace ModManager
 
         private void Problems_DoubleClick(object? sender, EventArgs e)
         {
+            if (_problems.SelectedItems.Count > 0 && _problems.SelectedItems[0].Tag is "retired")
+            {
+                RetiredPlugins.ShowDialog(this, _plugins);
+                Reload();
+                return;
+            }
             if (_problems.SelectedItems.Count == 0 || _problems.SelectedItems[0].Tag is not ModIssue issue)
                 return;
             if (issue.Url != null)
@@ -361,6 +379,14 @@ namespace ModManager
                 Add("Changes: " + mod.Summary());
                 if (!mod.IsLocal)
                     Add("Folder: " + mod.Folder, color: SystemColors.GrayText);
+
+                var settings = mod.Settings();
+                if (settings.Count > 0)
+                {
+                    Add("Settings (from its Config.ini, used instead of yours while it's on)", bold: false, color: SystemColors.GrayText).Font = new Font(Font, FontStyle.Bold);
+                    foreach (var (section, key, value) in settings)
+                        Add($"[{section}] {key} = {value}").Margin = new Padding(12, 0, 0, 2);
+                }
 
                 var needs = mod.NeededPlugins();
                 var installed = ModLibrary.InstalledPlugins(_plugins);
@@ -523,6 +549,13 @@ namespace ModManager
             if (ModLibrary.IsGameRunning())
             {
                 MessageBox.Show(this, "The game is already running. Close it first: mods are applied when it starts.", Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            try { ModLibrary.PrepareMerges(_game, _mods); }
+            catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidDataException or System.Text.Json.JsonException)
+            {
+                MessageBox.Show(this, "The binary merge archive couldn't be prepared: " + ex.Message, Text,
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Process.Start(new ProcessStartInfo(loader) { WorkingDirectory = Path.GetDirectoryName(loader)!, UseShellExecute = true });

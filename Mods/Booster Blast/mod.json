@@ -1,0 +1,13 @@
+{
+  "name": "Booster Blast",
+  "version": "0.1",
+  "author": "Yu-Gi-Oh-Ex",
+  "description": "89 booster packs and 16 Structure Decks of the cards released after the game, as the real sets.",
+  "details": "Turn on with the Cards mod. Each booster pack is a whole set the Cards mod's cards debuted in (by TCG date), reprints of cards the game already has included, in a shop row per year; OCG-only cards, promos and older cards the game never had get a pack each in the Extras row (Card Store > Buy Booster Packs). Structure Decks are bought on Card Store > Buy Decks (pages\\booster-blast-decks.bob), whole and once per save, into your saved decks with 3 of every card. Yu-Gi-Oh-Core shares the game's free pack slots between rows, so there is no limit on packs.",
+  "requires": [
+    "Yu-Gi-Oh-Core",
+    "Yu-Gi-Oh-MoreCards",
+    "Yu-Gi-Oh-Campaign",
+    "Yu-Gi-Oh-RIX"
+  ]
+}

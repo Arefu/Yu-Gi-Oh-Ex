@@ -10,6 +10,7 @@
 #include "Logger.h"
 #include "Save.h"
 #include "Yu-Gi-Oh-Manifest.h"
+#include "Yu-Gi-Oh-Mods.h"
 
 namespace
 {
@@ -218,6 +219,31 @@ namespace Host
     {
         std::lock_guard<std::recursive_mutex> guard(g_Lock);
         RefreshLocked();
+    }
+
+    std::vector<SaveTag> SaveTags()
+    {
+        std::lock_guard<std::recursive_mutex> guard(g_Lock);
+        if (g_List.empty())
+            RefreshLocked();
+        std::vector<SaveTag> tags;
+        for (const Runtime& runtime : g_List)
+        {
+            const std::string tag = YGO::Manifest::SaveTagOf(runtime.P);
+            if (!runtime.P.Active || tag.empty())
+                continue;
+            if (std::none_of(tags.begin(), tags.end(), [&](const SaveTag& known) { return known.Tag == tag; }))
+                tags.push_back({ tag, runtime.P.Details.Title.empty() ? runtime.P.Name : runtime.P.Details.Title });
+        }
+        // A mod that is on can ask for it too ("newSave" in its mod.json); a plugin and a mod of one overhaul share the tag.
+        for (const YGO::Mods::Mod& mod : YGO::Mods::Active(YGO::Mods::GameFolder()))
+        {
+            const std::string tag = Lower(mod.SaveTag);
+            if (!tag.empty() && std::none_of(tags.begin(), tags.end(), [&](const SaveTag& known) { return known.Tag == tag; }))
+                tags.push_back({ tag, mod.Name });
+        }
+        std::sort(tags.begin(), tags.end(), [](const SaveTag& a, const SaveTag& b) { return a.Tag < b.Tag; });
+        return tags;
     }
 
     int Count()

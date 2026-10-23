@@ -18,7 +18,7 @@ For the fields and background of each class, see [Widgets.md](Widgets.md); for w
   * 3: SetEnabled (`0x14087C240`)
   * 4: release nodes (`0x14087BFC0`)
   * Classes that override slot 1 have their own highlighted look; for example `YGO_FRONT::widget_MenuItem`, `widget_UserSlot` and `ScreenHelpControls::widget_Category`.
-* **RIX** column: **page file** = a page designed in WolfEx builds it in the game; **plugin code** = `YuGiOh-RIX.h` can build it from a plugin; empty = not yet.
+* **RIX** column: **page file** = a page designed in WolfX builds it in the game; **plugin code** = `Yu-Gi-Oh-RIX.h` can build it from a plugin; empty = not yet.
 
 To add a class to RIX, the recipe used for the Trunk, CardDetails and EntryDigit:
 
@@ -26,7 +26,7 @@ To add a class to RIX, the recipe used for the Trunk, CardDetails and EntryDigit
 2. Read its `CreateFromLayout` for the arguments: usually `(widget, parent shared_ptr BY VALUE, z, owner = screen+88, x, y[, screenData = screen+120])`.
 3. Find its per-frame `Update` / input function (called from the screen that owns it).
 4. Find what feeds it data (a card id, a list, a string id).
-5. Wrap all of that in `YuGiOh-RIX.h`, and teach `MenuFile.cpp` the page element that uses it.
+5. Wrap all of that in `Yu-Gi-Oh-RIX.h`, and teach `MenuFile.cpp` the page element that uses it.
 
 | Class | vftable | Constructor | Builder(s) | Built by / notes | RIX |
 | --- | --- | --- | --- | --- | --- |
@@ -44,20 +44,20 @@ To add a class to RIX, the recipe used for the Trunk, CardDetails and EntryDigit
 | `RIX::widget_CommandMenu` | 0x140A7E4E8 | 0x1408900A0 | - | deck editor |  |
 | `RIX::widget_CommandMenu::widget_helpItem` | 0x140A7E4B8 | 0x140890170 | 0x140890890, part 0x140890CF0 |  |  |
 | `RIX::widget_CommandMenuItem` | 0x140A7E488 | 0x1408918F0 | 0x140891A70 |  |  |
-| `RIX::widget_TextFrame` | 0x140A81348 | 0x1408B4F90 | 0x1408B5080 |  |  |
+| `RIX::widget_TextFrame` | 0x140A81348 | 0x1408B4F90 | 0x1408B5080 (max width) | Card boxes' title tag (120 bytes); SetText 0x1408B51F0, Refit 0x1408B52B0; page `tag` 2026-10-19, untested | page file |
 | `widget_BlockText` | 0x140A7D240 | 0x14087C250 | 0x14087C4D0 |  |  |
 | `YGO_FRONT::widget_TextCrawl` | 0x140A73DD8 | 0x1408B4430 | 0x1408B4620 |  |  |
-| `YGO_FRONT::widget_TextScroll` | 0x140A813A0 | 0x1408B54D0 | 0x1408B5730, parts 0x1408B5C80 0x1408B5E50 |  |  |
+| `YGO_FRONT::widget_TextScroll` | 0x140A813A0 | 0x1408B54D0 | 0x1408B5730, parts 0x1408B5C80 0x1408B5E50 | every screen's header; a one-line marquee (SetText 0x1408B5A60 turns newlines into `-`), not a body text | page file (header only) |
 | `YGO_FRONT::widget_TouchText` | 0x140A52870 | 0x1408B3B40 | 0x1408B3F10 | inline in Battle Pack Draft/Store, Campaign Dialog, Card Shop, Side Deck Swap |  |
 | `widget_EntryDigit` | 0x140A76118 | 0x140853240 | 0x14089DE70 | Live setting (session code) | plugin code |
 | `widget_EntryCode` | 0x140A76148 | inline | 0x14089DB80 | ScreenLiveSetting::Constructor |  |
 | `RIX::ScreenHelpSetting::tickLine_t` | (none) | 0x14084B770 | 0x14084B9B0 (Setup) | settings volume bars |  |
-| `RIX::widget_SettingsLine` | 0x140A760E8 | 0x1408568E0 | - |  |  |
+| `RIX::widget_SettingsLine` | 0x140A760E8 | 0x1408568E0 (array: unused, rows, count) | 0x1408B3350 | Live setting rows (240 bytes); SetLabel 0x1408B3850, SetValue 0x1408B3880; page `option` 2026-10-19, works | page file |
 | `RIX::ScreenLiveSetting::widget_Item` | 0x140A76178 | inline | - | ScreenLiveSetting::Constructor |  |
-| `RIX::widget_KeyEntry` | 0x140A7FCA8 | 0x14089FE90 | 0x1408A0930, part 0x1408A0C00 | controller settings |  |
+| `RIX::widget_KeyEntry` | 0x140A7FCA8 | 0x14089FE90 | 0x1408A0930 | controller settings (0x1408A0C00 is widget_LoadSpinner's, not this) |  |
 | `RIX::ScreenHelpControls::widget_Category` | 0x140A74AD0 | 0x1408421A0 | - |  |  |
 | `RIX::ScreenHelpControls::widget_KeyMapping` | 0x140A74B00 | 0x1408421F0 | 0x140842400, part 0x140842600 |  |  |
-| `RIX::widget_BarH` | 0x140A7CF80 | 0x14087A970 | 0x14087AB80 |  |  |
+| `RIX::widget_BarH` | 0x140A7CF80 | 0x14087A970 | 0x14087AB80 | card loading screen progress bar (184 bytes); SetRange 0x14087AE00; page `progress` 2026-10-19, untested | page file |
 | `RIX::widget_BarV` | 0x140A7D198 | 0x14087AEF0 | 0x14087B980 |  |  |
 | `widget_User` | 0x140A82108 | 0x1408C0A60 | 0x1408C0C90 |  |  |
 | `widget_UserSlot` | 0x140A73E78 | 0x1408404B0 (with PlayerName) | - |  |  |
@@ -66,21 +66,21 @@ To add a class to RIX, the recipe used for the Trunk, CardDetails and EntryDigit
 | `widget_CardDetails (RIX 'CardInfo')` | 0x140A7DAE0 | 0x140883380 | 0x140883BA0 | deck editor card panel | plugin code |
 | `widget_CardDetailsDuel` | 0x140A7DD40 | 0x140885210 | 0x140885D60 |  |  |
 | `widget_CardDetailsFull` | 0x140A7DED8 | 0x140888080 | 0x140888660 |  |  |
-| `RIX::widget_CardDisplay` | 0x140A7E098 | 0x14088B5A0 | 0x14088BC10 |  |  |
+| `RIX::widget_CardDisplay` (= widget_CardGrid) | 0x140A7E098 | 0x14088B5A0 | 0x14088BC10 | Random Pack Store screen+2256, Battle Pack Draft, trunk+720 (568 bytes); page `cardBox` done 2026-10-19 (works, sizing does not scale well) | page file |
 | `RIX::widget_CardDisplayFlex` | 0x140A7E200 | 0x14088D100 | 0x14088D820 |  |  |
 | `RIX::widget_CardSortBar` | 0x140A7E2E0 | 0x14088F450 | 0x14088F700 |  |  |
-| `RIX::widget_DeckCardsZone` | 0x140A7E800 | 0x140892670 | 0x1408931C0 | deck editor |  |
+| `RIX::widget_DeckCardsZone` | 0x140A7E800 | 0x140892670 | 0x1408931C0 | deck editor, Battle Pack edit (+3200) and draft; SetDeck 0x140893740, ProcessInput 0x1408929C0; page `deckView` 2026-10-19, untested | page file |
 | `RIX::widget_DeckCardsZoneSide` | 0x140A7EA28 | 0x140893EF0 | 0x140894390, part 0x140894D00 | deck editor |  |
 | `RIX::widget_DeckItem` | 0x140A7EB70 | 0x140896B70 | - |  |  |
-| `RIX::widget_DeckList` | 0x140A7EBA0 | 0x140895B10 | 0x140896150 |  |  |
-| `RIX::widget_DeckStats` | 0x140A7ECC0 | 0x140896C80 | 0x140896E10 |  |  |
+| `RIX::widget_DeckList` | 0x140A7EBA0 | 0x140895B10 | 0x140896150 | inside RecipeZone and UserDeckZone only | page file (in `decks`) |
+| `RIX::widget_DeckStats` | 0x140A7ECC0 | 0x140896C80 | 0x140896E10 | inside DeckCardsZone (+208); SetSource 0x140897390, Refresh 0x1408973A0 (10 categories from the source's vftable) | page file (in `deckView`) |
 | `RIX::widget_UserDeckSortBar` | 0x140A821D8 | 0x1408C1180 | 0x1408C1400 |  |  |
 | `RIX::widget_UserDeckZone` | 0x140A822F0 | 0x1408C1AA0 | 0x1408C2150, part 0x1408C2800 |  |  |
 | `RIX::widget_RecipeFilterBar` | 0x140A80888 | 0x1408A9E80 | 0x1408AA150 |  |  |
 | `RIX::widget_RecipeInfo` | 0x140A80998 | 0x1408AA5C0 | 0x1408AACC0 |  |  |
 | `RIX::widget_RecipeZone` | 0x140A80AC8 | 0x1408AD1C0 | 0x1408ADC70 |  |  |
 | `RIX::widget_RecommendedList` | 0x140A80C30 | 0x1408AE6F0 | 0x1408AEEA0 |  |  |
-| `RIX::widget_TrunkZone` | 0x140A81F08 | 0x1408BE760 | 0x1408BF050 | deck editor card grid | plugin code |
+| `RIX::widget_TrunkZone` | 0x140A81F08 | 0x1408BE760 | 0x1408BF050 | deck editor card grid; page `cardGrid` done 2026-10-19 (filters work, positioning off) | page file |
 | `RIX::widget_TrunkBookmark` | 0x140A81528 | 0x1408B6250 | 0x1408B62A0 |  |  |
 | `RIX::widget_TrunkFilterBar` | 0x140A81608 | 0x1408B67A0 | 0x1408B69F0 |  |  |
 | `RIX::widget_TrunkFilterCategories` | 0x140A817B0 | 0x1408B7160 | 0x1408B8B00 |  |  |
@@ -91,7 +91,7 @@ To add a class to RIX, the recipe used for the Trunk, CardDetails and EntryDigit
 | `RIX::widget_TrunkFilterNumOption` | 0x140A81AD8 | 0x1408BC5F0 | 0x1408BC840 |  |  |
 | `widget_PackZone` | 0x140A71AE0 | inline | - | ScreenBattlePackDraft::Constructor |  |
 | `widget_PackPicker` | 0x140A71FD0 | 0x140828230 | - |  |  |
-| `RIX::widget_PackWrapper` | 0x140A771B0 | 0x1408A2F50 | 0x1408A30D0, part 0x1408A3A50 |  |  |
+| `RIX::widget_PackWrapper` | 0x140A771B0 | 0x1408A2F50 | 0x1408A30D0, part 0x1408A3A50 | Booster pack (216 bytes); SetPack 0x1408A34A0 (was misnamed DeckSelect_UpdateOwnedCardCounts); page `pack` 2026-10-19, works | page file |
 | `RIX::ScreenBattlePackStore::widget_Reports` | 0x140A72000 | inline | - | ScreenBattlePackStore::Constructor |  |
 | `RIX::widget_ReportWindow` | 0x140A80E70 | 0x1408B0660 | 0x1408B1160, part 0x1408B1420 |  |  |
 | `RIX::widget_ReportWindow::widget_ReportItem` | 0x140A80E40 | 0x1408B1C10 | - |  |  |
@@ -114,7 +114,7 @@ To add a class to RIX, the recipe used for the Trunk, CardDetails and EntryDigit
 | `RIX::widget_pickCharacter` | 0x140A80200 | 0x1408A4C50 | 0x1408A5540, part 0x1408A5910 |  |  |
 | `RIX::widget_pickCharacter::widget_Item` | 0x140A801D0 | 0x1408A6B60 | - |  |  |
 | `RIX::widget_pickSeries` | 0x140A80418 | 0x1408A6DD0 | 0x1408A7220, part 0x1408A7870 |  |  |
-| `widget_LoadSpinner` | 0x140A57B98 | 0x1407B71F0 | - | also inline in 8 screens (Main Menu, Live screens, ...) |  |
+| `widget_LoadSpinner` | 0x140A57B98 | 0x1407B71F0 | 0x1408A0C00 (x, y, screen +0x78 animation list) | also inline in 8 screens (Main Menu, Live screens, ...), 128 bytes; page `spinner` 2026-10-19, untested | page file |
 | `YGO_FRONT::widget_PlayerHUD` | 0x140A52810 | 0x1407708D0 | - | with widget_Life inline |  |
 | `YGO_FRONT::widget_PlayerHUD::widget_Face` | 0x140A52760 | 0x140770830 | - |  |  |
 | `YGO_FRONT::widget_PlayerHUD::widget_Life` | 0x140A52790 | inline | - | widget_PlayerHUD::Constructor |  |

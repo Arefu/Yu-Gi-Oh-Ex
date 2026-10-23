@@ -11,6 +11,15 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>$(SolutionDir)Binaries\$(Configuration)\Tools\</OutputPath>
+    <!-- Low memory: files are streamed through a 1 MB buffer (Workers/Streaming.cs); these keep the runtime small too, and cap the heap
+         so a runaway can never take the machine down. -->
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
   </PropertyGroup>
+
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.GC.ConserveMemory" Value="7" />
+    <RuntimeHostConfigurationOption Include="System.GC.HeapHardLimit" Value="268435456" />
+  </ItemGroup>
 
 </Project>

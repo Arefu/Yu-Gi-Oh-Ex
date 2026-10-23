@@ -21,6 +21,21 @@
       "hidden": true
     },
     {
+      "key": "HideFieldStats",
+      "title": "Hide field stat plate",
+      "kind": "choice",
+      "default": "1",
+      "help": "The stat plate under face-up monsters on the field (level badge, ATK / DEF, attribute and type icons). 1 = hide it (the anime frames show these on the card), 0 = show it (vanilla). Link arrows stay. Restart the game after changing it.",
+      "choices": [
+        "0",
+        "1"
+      ],
+      "labels": {
+        "0": "Show it",
+        "1": "Hide it"
+      }
+    },
+    {
       "key": "UseLargeAtkDefFont",
       "title": "Use large atk def font",
       "kind": "toggle",

@@ -3,13 +3,15 @@
 //   {
 //     "buttons": [ { "key": "mymod.credits", "menu": "main", "page": "main", "label": "Credits", "description": "...",
 //                    "look": "helpAndOptions", "action": { "goto": "credits" } } ],
-//     "edit":    [ { "item": "quit", "label": "Exit to Desktop", "hidden": false } ]
+//     "edit":    [ { "item": "quit", "label": "Exit to Desktop", "hidden": false },
+//                  { "item": "cardShop", "action": { "page": "card-store" } } ]   (a new action for one of the game's buttons)
 //   }
 //
 // Pages made in the WolfEx page designer live in <game folder>\Yu-Gi-Oh-Ex\pages\<name>.json and are opened by the action
 // { "page": "<name>" } (see docs/PageDesigner.md). The file is read again when it changed, so a page can be edited and re-opened
 // without restarting the game.
 #include "MainMenu.h"
+#include "PageScreen.h"
 #include "Pages.h"
 
 #include <Windows.h>
@@ -27,7 +29,7 @@
 #include <json.hpp>
 
 #include "Logger.h"
-#include "YuGiOh/YuGiOh-RIX.h"
+#include "Yu-Gi-Oh-RIX.h"
 #include "Yu-Gi-Oh-Mods.h"
 
 namespace
@@ -146,7 +148,7 @@ namespace
     {
         if (!node.is_object() || node.size() != 1)
         {
-            problem = "an action is an object with one of goto, press, call, page or quit";
+            problem = "an action is an object with one of goto, press, call, page, video or quit";
             return false;
         }
 
@@ -182,9 +184,15 @@ namespace
             step.Type = Step::Page;
             step.Name = node["page"].get<std::string>();
         }
+        else if (node.contains("video") && node["video"].is_string())
+        {
+            // { "video": "intro" } = { "call": "video:intro" }: Yu-Gi-Oh-Media registers an action per movies\<name>.mp4
+            step.Type = Step::Call;
+            step.Name = "video:" + node["video"].get<std::string>();
+        }
         else
         {
-            problem = "an action is goto, press, call, page or quit";
+            problem = "an action is goto, press, call, page, video or quit";
             return false;
         }
         return true;
@@ -452,6 +460,9 @@ namespace
 
     bool OpenPageFile(const std::string& name)
     {
+        // "version": 2 pages open on the page engine's own screen (PageScreen.cpp)
+        if (PageScreen::TryOpen(name))
+            return true;
         std::shared_ptr<PageFile> page = ReadPageFile(name);
         if (!page)
             return false;
@@ -550,6 +561,20 @@ namespace
             description = Wide(node["description"].get<std::string>());
 
         Menu::EditVanilla(item, hasLabel ? &label : nullptr, hasDescription ? &description : nullptr, node.value("hidden", false));
+
+        // "action": the button does this instead of what the game (or a plugin's RIX_SetMainMenuItemAction) gave it
+        if (node.contains("action"))
+        {
+            Action action;
+            std::string problem;
+            if (!ParseAction(node["action"], action, problem))
+                return Logger::WriteLog(where + ": " + problem, MODULE_NAME, 2);
+            g_Actions.push_back(std::move(action));
+            if (!Menu::SetVanillaAction(item, &RunButtonAction, &g_Actions.back()))
+                Logger::WriteLog(where + ": the button's action could not be replaced", MODULE_NAME, 2);
+            else
+                Logger::WriteLog(std::format("{}: the game's \"{}\" button runs a new action", file, node["item"].get<std::string>()), MODULE_NAME, 0);
+        }
     }
 
     void LoadFile(const std::filesystem::path& path)
@@ -605,6 +630,12 @@ namespace Menu
     bool OpenPage(const std::string& name)
     {
         return OpenPageFile(name);
+    }
+
+    int ScreenIdByName(const std::string& name)
+    {
+        int id = -1;
+        return Lookup(kScreens, json(name), id) ? id : -1;
     }
 
     void LoadMenuFiles()

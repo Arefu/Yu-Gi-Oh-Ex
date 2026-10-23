@@ -33,19 +33,29 @@ bool Http::ParseUrl(const std::string& url, bool& https, std::wstring& host, uns
 
 nlohmann::json Http::PostJson(const std::string& baseUrl, const std::string& route, const nlohmann::json& body, const std::string& bearerToken)
 {
+    return Request(L"POST", baseUrl, route, &body, bearerToken);
+}
+
+nlohmann::json Http::GetJson(const std::string& baseUrl, const std::string& route, const std::string& bearerToken)
+{
+    return Request(L"GET", baseUrl, route, nullptr, bearerToken);
+}
+
+nlohmann::json Http::Request(const wchar_t* method, const std::string& baseUrl, const std::string& route, const nlohmann::json* body, const std::string& bearerToken)
+{
     bool https;
     std::wstring host, path;
     unsigned short port;
     if (!ParseUrl(baseUrl, https, host, port, path))
     {
-        Logger::WriteLog(std::format("Http::PostJson: ServerUrl '{}' is not a usable URL", baseUrl), MODULE_NAME, 2);
+        Logger::WriteLog(std::format("Http: ServerUrl '{}' is not a usable URL", baseUrl), MODULE_NAME, 2);
         return nlohmann::json();
     }
     path += std::wstring(route.begin(), route.end());
 
     HINTERNET session = WinHttpOpen(L"Yu-Gi-Oh-MP/1.0", WINHTTP_ACCESS_TYPE_DEFAULT_PROXY, WINHTTP_NO_PROXY_NAME, WINHTTP_NO_PROXY_BYPASS, 0);
     HINTERNET connection = session ? WinHttpConnect(session, host.c_str(), port, 0) : nullptr;
-    HINTERNET request = connection ? WinHttpOpenRequest(connection, L"POST", path.c_str(), nullptr, WINHTTP_NO_REFERER,
+    HINTERNET request = connection ? WinHttpOpenRequest(connection, method, path.c_str(), nullptr, WINHTTP_NO_REFERER,
         WINHTTP_DEFAULT_ACCEPT_TYPES, https ? WINHTTP_FLAG_SECURE : 0) : nullptr;
 
     nlohmann::json result;
@@ -55,7 +65,7 @@ nlohmann::json Http::PostJson(const std::string& baseUrl, const std::string& rou
         if (!bearerToken.empty())
             headers += L"Authorization: Bearer " + std::wstring(bearerToken.begin(), bearerToken.end()) + L"\r\n";
 
-        const std::string payload = body.dump();
+        const std::string payload = body ? body->dump() : std::string();
         if (WinHttpSendRequest(request, headers.c_str(), static_cast<DWORD>(headers.size()),
                 const_cast<char*>(payload.data()), static_cast<DWORD>(payload.size()), static_cast<DWORD>(payload.size()), 0)
             && WinHttpReceiveResponse(request, nullptr))
@@ -70,13 +80,17 @@ nlohmann::json Http::PostJson(const std::string& baseUrl, const std::string& rou
                     break;
                 response.append(chunk, 0, read);
             }
+            DWORD status = 0, statusSize = sizeof(status);
+            WinHttpQueryHeaders(request, WINHTTP_QUERY_STATUS_CODE | WINHTTP_QUERY_FLAG_NUMBER, WINHTTP_HEADER_NAME_BY_INDEX, &status, &statusSize, WINHTTP_NO_HEADER_INDEX);
+            if (status >= 400)
+                Logger::WriteLog(std::format("Http {}: HTTP {} {}", route, status, response.substr(0, 200)), MODULE_NAME, 2);
             result = nlohmann::json::parse(response, nullptr, false, true);
             if (result.is_discarded())
-                Logger::WriteLog(std::format("Http::PostJson {}: response was not JSON ({} bytes)", route, response.size()), MODULE_NAME, 2);
+                Logger::WriteLog(std::format("Http {}: response was not JSON ({} bytes)", route, response.size()), MODULE_NAME, 2);
         }
         else
         {
-            Logger::WriteLog(std::format("Http::PostJson {}: request failed (WinHTTP error {})", route, GetLastError()), MODULE_NAME, 2);
+            Logger::WriteLog(std::format("Http {}: request failed (WinHTTP error {})", route, GetLastError()), MODULE_NAME, 2);
         }
         WinHttpCloseHandle(request);
     }

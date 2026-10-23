@@ -3,9 +3,9 @@
 `main/scriptdata_<L>.bin` (E F G I J S) holds the scenes played before and after campaign duels. The parser is
 `File Type Libraries/ScriptData` (`StoryScriptTable`, `StoryScriptJson`).
 
-Scenes are edited in the **Story editor** tab (`Tools/Shared/Editors/StoryDuelEditor.cs` + `SceneEditor.cs`, in WolfX and WolfEx), next to
+Scenes are edited in the **Story editor** tab (`Tools/Shared/Editors/StoryDuelEditor.cs` + `SceneEditor.cs`, in WolfX), next to
 the duel they belong to: pick a duel, then its **Intro / Win / Lose scene** tabs. **Yu-Gi-Oh-Campaign** (`StoryScripts.cpp`) applies
-WolfEx's `storyscripts.json` to the game.
+WolfX's `storyscripts.json` to the game.
 
 ## Scenes and duels
 
@@ -89,7 +89,7 @@ expression's picture `<key>[_<costume>]_<expression>.png` drawn over it (same si
 **What's approximate:** sprites are drawn at their own size, standing on the stage's bottom edge and centred on the slot's x. The
 dialogue box is drawn by the editor, not taken from the game's `campaign_dialog` sheet. Fades aren't animated.
 
-## storyscripts.json (WolfEx → Yu-Gi-Oh-Campaign)
+## storyscripts.json (WolfX → Yu-Gi-Oh-Campaign)
 
 ```json
 { "scripts": [ { "name": "MyDuel_INTRO", "lines": [
@@ -107,3 +107,29 @@ Yu-Gi-Oh-Campaign hooks `LoadStoryScriptData`, which runs at start and on a lang
 4. frees the game's block and stores its own in `g_pStoryScriptFile`.
 
 Built, but not yet run in the game. Yu-Gi-Oh-Campaign must be switched on in Config.ini: `[Yu-Gi-Oh-Core]` `Yu-Gi-Oh-Campaign=1`.
+
+## VIDEO command (Yu-Gi-Oh-Media, 2026-10-19)
+
+`command` / `VIDEO` / `<name>` plays `Yu-Gi-Oh-Ex\movies\<name>.mp4` full screen (docs/MediaPlugin.md "Videos"). The game itself skips the line.
+
+## VOICE and SOUND commands (Yu-Gi-Oh-Media, 2026-10-19)
+
+Spoken lines with the text as their subtitle:
+
+```json
+{ "who": "command", "position": "VOICE", "expression": "yugi_intro_01" },
+{ "who": "yugimuto", "position": "LEFT", "expression": "smile", "text": { "E": "It's time to duel!" } },
+{ "who": "command", "position": "SOUND", "expression": "thunder" }
+```
+
+| Position | Plays `Yu-Gi-Oh-Ex\voices\<expression>` | Stops |
+| --- | --- | --- |
+| `VOICE` | as the next text line shows (that line is its subtitle); one at a time | when the player moves on to the text line after it, when another VOICE starts, or when the scene goes back |
+| `SOUND` | straight away, alongside a VOICE | at its end (a sound effect, or one recording spoken over several text boxes) |
+
+`<expression>` is the file name with or without its extension (`.ogg`, `.wav`, `.mp3` or `.flac` are tried); mods' `voices` folders count
+too. The volume is the voice lines' (`voices.json` "volume", the game's sound effect volume) and the plugin's music ducks under them
+like under duel voice lines. Both lines are skipped by the game (they show nothing), like VIDEO.
+
+In WolfX's scene editor: **Voice** puts a VOICE step just before the selected text line (pick the file in Expression; the list is the
+`voices` folder), **Sound** adds a SOUND step after the selected step. Not yet run in the game.

@@ -278,9 +278,9 @@ namespace Types
             foreach (var c in table.Characters.OrderBy(c => c.Id))
             {
                 var game = baseline.Find(c.Id);
-                if (game != null && game.SameAs(c))
+                if (game != null && game.SameAs(c) && !(unlocked != null && unlocked.GetValueOrDefault(c.Id)))
                     continue;
-                bool? flag = game == null ? (unlocked != null && unlocked.TryGetValue(c.Id, out bool u) ? u : true) : null;
+                bool? flag = unlocked != null && unlocked.TryGetValue(c.Id, out bool u) ? u : game == null ? true : null;
                 array.Add(ToJson(c, flag));
             }
             return new JsonObject
@@ -319,6 +319,7 @@ namespace Types
                     if (unlocked != null)
                         unlocked[id] = node["unlocked"] is JsonValue flag && flag.TryGetValue(out bool value) ? value : true;
                 }
+                if (existing != null && unlocked != null && node["unlocked"] is JsonValue existingFlag && existingFlag.TryGetValue(out bool existingValue)) unlocked[id] = existingValue;
                 applied++;
             }
             return applied;

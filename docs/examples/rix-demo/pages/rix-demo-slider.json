@@ -1,0 +1,65 @@
+{
+    "version": 2,
+    "header": "Volume bar",
+    "elements": [
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 220,
+            "width": 1500,
+            "text": "ScreenHelpSetting::tickLine_t: tickLine_t::Constructor, then Setup (the ticks and the bar from pdui/settings), a tick node per level.",
+            "textSize": 24,
+            "align": "left"
+        },
+        {
+            "kind": "text",
+            "x": 200,
+            "y": 300,
+            "width": 1500,
+            "text": "Left / right (or a click on the bar) changes it. Bound to demo.volume, 0 to 100 in steps of 10.",
+            "textSize": 24,
+            "align": "left",
+            "colour": "#FFC8E6FF"
+        },
+        {
+            "kind": "slider",
+            "id": "demo.volume",
+            "x": 300,
+            "y": 470,
+            "width": 520,
+            "height": 120,
+            "bind": "var:demo.volume",
+            "min": 0,
+            "max": 100,
+            "default": "50",
+            "label": "Demo volume",
+            "description": "The game's volume bar, bound to the page variable demo.volume."
+        },
+        {
+            "kind": "text",
+            "x": 300,
+            "y": 600,
+            "width": 0,
+            "text": "Volume: {var:demo.volume}",
+            "textSize": 30,
+            "align": "left"
+        },
+        {
+            "kind": "menu",
+            "id": "demo.sliderBack",
+            "x": 200,
+            "y": 760,
+            "width": 660,
+            "height": 100,
+            "items": [
+                {
+                    "label": "Back",
+                    "description": "Back to the previous page.",
+                    "action": {
+                        "back": true
+                    }
+                }
+            ]
+        }
+    ]
+}

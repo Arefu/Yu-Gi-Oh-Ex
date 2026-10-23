@@ -51,6 +51,12 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitLockArg([NotNull] EffectScriptParser.LockArgContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.handLimitStatement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitHandLimitStatement([NotNull] EffectScriptParser.HandLimitStatementContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.asScript"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -74,6 +80,12 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitEffectBody([NotNull] EffectScriptParser.EffectBodyContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.quickMark"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitQuickMark([NotNull] EffectScriptParser.QuickMarkContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.costClause"/>.
 	/// </summary>
@@ -135,6 +147,30 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitTrigger([NotNull] EffectScriptParser.TriggerContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.summonConditions"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSummonConditions([NotNull] EffectScriptParser.SummonConditionsContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.summonCondition"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSummonCondition([NotNull] EffectScriptParser.SummonConditionContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.summonFrom"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSummonFrom([NotNull] EffectScriptParser.SummonFromContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.summonBy"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSummonBy([NotNull] EffectScriptParser.SummonByContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.triggerName"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -158,6 +194,18 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitDrawAction([NotNull] EffectScriptParser.DrawActionContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.lockTurnAction"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLockTurnAction([NotNull] EffectScriptParser.LockTurnActionContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.lockTurnArg"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLockTurnArg([NotNull] EffectScriptParser.LockTurnArgContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.searchAction"/>.
 	/// </summary>
@@ -194,6 +242,12 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitGainAction([NotNull] EffectScriptParser.GainActionContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.damageAction"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitDamageAction([NotNull] EffectScriptParser.DamageActionContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.burnAction"/>.
 	/// </summary>
@@ -243,6 +297,12 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitBanishAction([NotNull] EffectScriptParser.BanishActionContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.banishFromAction"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitBanishFromAction([NotNull] EffectScriptParser.BanishFromActionContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.negateAction"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -272,6 +332,18 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitSelector([NotNull] EffectScriptParser.SelectorContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.includingSelf"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIncludingSelf([NotNull] EffectScriptParser.IncludingSelfContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.choices"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitChoices([NotNull] EffectScriptParser.ChoicesContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.kind"/>.
 	/// </summary>

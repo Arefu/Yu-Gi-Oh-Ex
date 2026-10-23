@@ -42,6 +42,17 @@ extern "C" __declspec(dllexport) void __cdecl TagDuel_SetSeatControllers(const i
 }
 
 // For Yu-Gi-Oh-MP: true = it handles tag duels in online matches (and sets the seat controllers); until then TagDuel stays out of them.
+// Online co-op tag duel (you + your AI partner vs the other player + theirs). Yu-Gi-Oh-MP calls these to agree with the lobby's host.
+extern "C" __declspec(dllexport) void __cdecl TagDuel_SetOnlineCoop(bool on)
+{
+    TagDuel::SetOnlineCoop(on);
+}
+
+extern "C" __declspec(dllexport) bool __cdecl TagDuel_IsOnlineCoop()
+{
+    return TagDuel::IsOnlineCoop();
+}
+
 extern "C" __declspec(dllexport) void __cdecl TagDuel_AllowInMultiplayer(bool on)
 {
     TagDuel::AllowInMultiplayer(on);
@@ -229,10 +240,21 @@ namespace
         RIX::Functions().OpenPage(&page);
     }
 
-    // Co-op isn't ready: the game's "unable" sound (YGO::UI::PlayUISound 0x14086C280, slot 71) and nothing else.
-    void __cdecl OnComingSoonPressed(int buttonId, void* user)
+    // Co-Op: you and an AI partner against another player and theirs, online. Needs Yu-Gi-Oh-MP on both machines (it tells a joining
+    // player's game that the lobby is a co-op tag duel); without it, the game's "unable" sound (YGO::UI::PlayUISound 0x14086C280, slot 71).
+    // Arms the next online duel and presses the main menu's Player Match button (lobbies to host or join).
+    void __cdecl OnCoopPressed(int buttonId, void* user)
     {
-        reinterpret_cast<void(__fastcall*)(int)>(0x14086C280)(71);
+        if (!TagDuel::MultiplayerPluginLoaded())
+        {
+            Logger::WriteLog("Tag Duel Co-Op needs Yu-Gi-Oh-MP (it agrees the tag duel with the other player)", MODULE_NAME, 1);
+            reinterpret_cast<void(__fastcall*)(int)>(0x14086C280)(71);
+            return;
+        }
+        TagDuel::SetOnlineCoop(true);
+        RIX::Functions().ClosePage();
+        if (!RIX::Functions().PressMainMenuItem(RIX_ITEM_MULTIPLAYER_A))
+            RIX::Functions().GotoScreen(RIX_SCREEN_PLAYER_MATCH);
     }
 
     // ---- the review page: who plays which seat with which deck, then "Let's Duel!" (Back returns to Free Duel).
@@ -421,7 +443,7 @@ namespace
         }
     }
 
-    // The main menu's Tag Duel button: Local (the seat screen, then Free Duel) or Co-Op (online, not ready).
+    // The main menu's Tag Duel button: Local (the seat screen, then Free Duel) or Co-Op (online).
     void __cdecl OnTagDuelButtonPressed(int buttonId, void* user)
     {
         RIX_PageDesc page{};
@@ -430,7 +452,8 @@ namespace
         page.ButtonCount = 2;
         page.Buttons[0] = { L"Local", L"Two on two, or a handicap duel (1 vs 2 / 2 vs 1), on this machine: choose who is AI and who is human.",
                             &OnLocalPressed, nullptr };
-        page.Buttons[1] = { L"Co-Op (Coming Soon)", L"Coming soon: tag duels with other players.", &OnComingSoonPressed, nullptr };
+        page.Buttons[1] = { L"Co-Op (Online)", L"You and an AI partner against another player and their AI partner. Host a Player Match lobby (the other "
+                            L"player joins it); both need Yu-Gi-Oh-MP and Yu-Gi-Oh-TagDuel. Experimental.", &OnCoopPressed, nullptr };
         const int opened = RIX::Functions().OpenPage(&page);
         Logger::WriteLog(std::format("Tag Duel page {}", opened ? "opened" : "FAILED to open"), MODULE_NAME, opened ? 0 : 2);
     }

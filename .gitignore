@@ -398,3 +398,5 @@ x64/
 # Stray output folders from building a project without the solution's SolutionDir
 /Tools/**/Binaries/
 /File Type Libraries/**/Binaries/
+
+# The project IDA database (YuGiOh.exe.i64) is not tracked; share it outside git (LICENSE-IDB.md still applies).

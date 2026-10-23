@@ -11,7 +11,7 @@
 
 #include "Logger.h"
 #include "MainMenu.h"
-#include "YuGiOh/YuGiOh-RIX.h"
+#include "Yu-Gi-Oh-RIX.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 // Traced in YuGiOh.exe.i64 (RIX::ScreenBattlePackStore, vftable 0x140A72030; the constructor's comment has the layout):

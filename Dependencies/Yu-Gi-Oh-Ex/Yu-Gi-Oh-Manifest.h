@@ -13,7 +13,18 @@
                                                      and they load with it, just before it
           "content": [ "cards.json", "pages\\" ]       the files in <game>\Yu-Gi-Oh-Ex this plugin applies to the game ("x\\" = a folder);
                                                      WolfX reads it to write Yu-Gi-Oh-Ex\content.json
+          "replaces": [ "Yu-Gi-Oh-Music",            older plugins this one took over (renamed, merged in, or retired with this one
+                        { "name": "Yu-Gi-Oh-Old",    answering for them), each a name or { "name", "note" }: see "Replaced plugins" below
+                          "note": "Now a BOB page." } ],
+          "newSave": "forbidden-memories"            this plugin needs a save made with it (true = the DLL's name as the tag): Yu-Gi-Oh-Core
+                                                     only loads save slots whose tags are exactly the tags of the loaded plugins
         }
+
+    Replaced plugins: someone who copies a new build over an old folder keeps the old DLLs (Yu-Gi-Oh-Music.dll next to Yu-Gi-Oh-Media.dll).
+    A plugin that another installed plugin's manifest "replaces" never loads (Resolve: Problem = "replaced by ..."), and anything that
+    asks for it by name - another manifest's "requires", content.json - gets the plugin that replaced it (Current). Yu-Gi-Oh-Core moves
+    the old Config.ini switch to the new plugin and tells the player once which leftover files can go; WolfX and ModManager offer to move
+    them to Plugins\_retired.
 
     <game>\Yu-Gi-Oh-Ex\content.json (written by WolfX whenever the content changes) lists the content there and the plugins it needs:
 
@@ -50,6 +61,10 @@ namespace YGO
             std::vector<std::string> Requires;   // DLL names without ".dll"
             std::vector<std::string> Dlls;       // more DLLs that belong to this plugin (names without ".dll")
             std::vector<std::string> Content;    // the Yu-Gi-Oh-Ex files it applies ("cards.json", "pages\\")
+            struct Replaced { std::string Name, Note; };
+            std::vector<Replaced> Replaces;      // older plugins this one took over (DLL names without ".dll")
+            bool NewSave = false;                // needs a save made with it ("newSave")
+            std::string SaveTag;                 // the tag that save carries; empty = the DLL's name (see SaveTagOf)
             bool Found = false;                  // a manifest file was read
         };
 
@@ -64,6 +79,8 @@ namespace YGO
             bool Enabled = false; // switched on (enforced plugins always are)
             bool Active = false;  // switched on AND everything it requires is active: this is what loads
             std::string Problem;  // why an enabled plugin is not active
+            std::string ReplacedBy;    // another installed plugin's manifest "replaces" this one: it never loads (a leftover file)
+            std::string ReplacedNote;  // that manifest's note about it
         };
 
         inline bool SameName(const std::string& a, const std::string& b)
@@ -141,6 +158,32 @@ namespace YGO
                     }
                 }
             }
+            for (const char* key : { "replaces", "Replaces" })
+            {
+                auto it = root.find(key);
+                if (it != root.end() && it->is_array())
+                {
+                    for (const auto& item : *it)
+                    {
+                        if (item.is_string())
+                            info.Replaces.push_back({ StripDll(item.get<std::string>()), {} });
+                        else if (item.is_object() && item.contains("name") && item["name"].is_string())
+                            info.Replaces.push_back({ StripDll(item["name"].get<std::string>()),
+                                                      item.contains("note") && item["note"].is_string() ? item["note"].get<std::string>() : std::string() });
+                    }
+                }
+            }
+            for (const char* key : { "newSave", "NewSave" })
+            {
+                auto it = root.find(key);
+                if (it != root.end() && it->is_boolean())
+                    info.NewSave = it->get<bool>();
+                else if (it != root.end() && it->is_string() && !it->get<std::string>().empty())
+                {
+                    info.NewSave = true;
+                    info.SaveTag = it->get<std::string>();
+                }
+            }
             for (const char* key : { "dlls", "Dlls" })
             {
                 auto it = root.find(key);
@@ -156,6 +199,17 @@ namespace YGO
             return info;
         }
 
+        // The tag a save made with this plugin carries (lower case), or "" when it doesn't need its own save.
+        inline std::string SaveTagOf(const Plugin& plugin)
+        {
+            if (!plugin.Details.NewSave)
+                return {};
+            std::string tag = plugin.Details.SaveTag.empty() ? plugin.Name : plugin.Details.SaveTag;
+            for (char& c : tag)
+                c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+            return tag;
+        }
+
         inline const Plugin* Find(const std::vector<Plugin>& plugins, const std::string& name)
         {
             for (const Plugin& plugin : plugins)
@@ -164,6 +218,47 @@ namespace YGO
                     return &plugin;
             }
             return nullptr;
+        }
+
+        // Fills ReplacedBy / ReplacedNote: a plugin some other installed plugin's manifest "replaces" (call before Resolve; Resolve does).
+        inline void MarkReplaced(std::vector<Plugin>& plugins)
+        {
+            for (Plugin& plugin : plugins)
+            {
+                plugin.ReplacedBy.clear();
+                plugin.ReplacedNote.clear();
+            }
+            for (const Plugin& successor : plugins)
+            {
+                for (const Info::Replaced& old : successor.Details.Replaces)
+                {
+                    for (Plugin& plugin : plugins)
+                    {
+                        if (&plugin != &successor && SameName(plugin.Name, old.Name) && !SameName(plugin.Name, successor.Name))
+                        {
+                            plugin.ReplacedBy = successor.Name;
+                            plugin.ReplacedNote = old.Note;
+                        }
+                    }
+                }
+            }
+        }
+
+        // The plugin that answers for a name: the plugin itself, unless it is missing or replaced, then the one whose "replaces" names it.
+        inline const Plugin* Current(const std::vector<Plugin>& plugins, const std::string& name)
+        {
+            const Plugin* plugin = Find(plugins, name);
+            if (plugin && plugin->ReplacedBy.empty())
+                return plugin;
+            for (const Plugin& successor : plugins)
+            {
+                for (const Info::Replaced& old : successor.Details.Replaces)
+                {
+                    if (SameName(old.Name, name) && successor.ReplacedBy.empty())
+                        return &successor;
+                }
+            }
+            return plugin;
         }
 
         // A DLL named in another plugin's "dlls" (same folder) belongs to that plugin: it loses its own entry and goes into the owner's Owned list.
@@ -253,8 +348,8 @@ namespace YGO
             {
                 for (const std::string& name : need.Plugins)
                 {
-                    if (Find(plugins, name))
-                        pending.push_back(name);
+                    if (const Plugin* current = Current(plugins, name))
+                        pending.push_back(current->Name);
                     else
                         missing.push_back(need.File + " needs " + name);
                 }
@@ -269,7 +364,8 @@ namespace YGO
                         continue;
                     plugin.Enabled = true;
                     for (const std::string& required : plugin.Details.Requires)
-                        pending.push_back(required);
+                        if (const Plugin* current = Current(plugins, required))
+                            pending.push_back(current->Name);
                 }
             }
             return missing;
@@ -278,12 +374,16 @@ namespace YGO
         // Fills Active and Problem from Enabled (and Enforced, which forces a plugin on).
         inline void Resolve(std::vector<Plugin>& plugins)
         {
+            MarkReplaced(plugins);
             for (Plugin& plugin : plugins)
             {
                 if (plugin.Details.Enforced)
                     plugin.Enabled = true;
-                plugin.Active = plugin.Enabled;
+                plugin.Active = plugin.Enabled && plugin.ReplacedBy.empty();
                 plugin.Problem.clear();
+                if (!plugin.ReplacedBy.empty())
+                    plugin.Problem = "replaced by " + plugin.ReplacedBy + (plugin.ReplacedNote.empty() ? std::string() : " (" + plugin.ReplacedNote + ")") +
+                                     ": a leftover file, it is not loaded";
             }
 
             // A plugin drops out when something it requires is missing or not active; that can drop others, so repeat until nothing changes.
@@ -296,7 +396,7 @@ namespace YGO
                         continue;
                     for (const std::string& required : plugin.Details.Requires)
                     {
-                        const Plugin* other = Find(plugins, required);
+                        const Plugin* other = Current(plugins, required);
                         if (!other)
                             plugin.Problem = "needs " + required + ", which is not installed";
                         else if (!other->Active)
@@ -340,9 +440,10 @@ namespace YGO
                     bool ready = true;
                     for (const std::string& required : plugins[*it].Details.Requires)
                     {
+                        const Plugin* current = Current(plugins, required);
                         for (size_t j = 0; j < plugins.size(); ++j)
                         {
-                            if (SameName(plugins[j].Name, required) && plugins[j].Active && !placed[j])
+                            if (current && &plugins[j] == current && plugins[j].Active && !placed[j])
                                 ready = false;
                         }
                     }

@@ -13,7 +13,7 @@
 
 #include "Logger.h"
 #include "Yu-Gi-Oh-Memory.h"
-#include "YuGiOh/YuGiOh-RIX.h"
+#include "Yu-Gi-Oh-RIX.h"
 #include "YuGiOh/YuGiOh-SAVE.h"
 
 using namespace YGO::RIX;

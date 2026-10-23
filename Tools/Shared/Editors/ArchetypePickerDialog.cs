@@ -110,8 +110,15 @@ namespace Wolf.Editors
             prompt.CancelButton = cancel;
             if (prompt.ShowDialog(this) != DialogResult.OK || string.IsNullOrWhiteSpace(box.Text) || _addNew == null)
                 return;
-            _selected.Add(_addNew(box.Text.Trim()));
-            Fill();
+            try
+            {
+                _selected.Add(_addNew(box.Text.Trim()));
+                Fill();
+            }
+            catch (Exception ex) when (ex is IOException or InvalidDataException or UnauthorizedAccessException or System.Text.Json.JsonException or InvalidOperationException or OverflowException)
+            {
+                MessageBox.Show(this, "Archetype was not added: " + ex.Message, "Archetypes", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

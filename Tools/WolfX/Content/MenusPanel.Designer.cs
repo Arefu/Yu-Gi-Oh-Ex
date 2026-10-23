@@ -310,7 +310,7 @@ namespace WolfEx
             _actionType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             _actionType.FormattingEnabled = true;
             _actionType.Margin = new Padding(3);
-            _actionType.Items.AddRange(new object[] { "nothing", "goto a screen", "press a game button", "call a plugin action", "quit the game", "open a page" });
+            _actionType.Items.AddRange(new object[] { "nothing", "goto a screen", "press a game button", "call a plugin action", "quit the game", "open a page", "play a video" });
             _actionType.Name = "_actionType";
             _actionType.SelectedIndexChanged += Editor_Changed;
             // 

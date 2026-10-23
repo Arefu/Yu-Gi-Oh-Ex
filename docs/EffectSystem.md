@@ -79,10 +79,10 @@ Three kinds: (1) function-pointer rows = effect handlers (about 25 tables), (2) 
   (returns `draw`, or the source's count). A borrowed duel id (custom card above 16383, see `docs`/ygo-duel-id-remap-plan memory) is mapped back through `Card_GetRealIdForBorrowed`
   (exported by Yu-Gi-Oh-Cards); a borrowed id whose card has no clone gets NO effect instead of the vanilla owner's.
   **Built, not yet run in a duel.**
-* The old table-relocation code in Yu-Gi-Oh-Effects (`Effects_FunctionTable`, `Table_140B15B30`, `CardsThatMakeYouDraw`, with its `Memory`/`File` helpers) was **removed** (2026-09-28; it is in git history): it copied and zeroed the game's tables and patched instruction bytes, and had a wrong size. The abandoned C++ ANTLR parser (`Script/EffectScript.*`, generated files) went too; `Script/EffectScript.g4` stays (WolfEx generates its C# parser from it).
+* The old table-relocation code in Yu-Gi-Oh-Effects (`Effects_FunctionTable`, `Table_140B15B30`, `CardsThatMakeYouDraw`, with its `Memory`/`File` helpers) was **removed** (2026-09-28; it is in git history): it copied and zeroed the game's tables and patched instruction bytes, and had a wrong size. The abandoned C++ ANTLR parser (`Script/EffectScript.*`, generated files) went too; `Script/EffectScript.g4` stays (WolfX generates its C# parser from it).
 * `EffectDispatch.cpp`: passthrough logger on `EffectCondition_CheckCardUsableAtTiming`.
 * `Fusion.cpp`: custom fusion recipes.
-* WolfEx "Effects" tab compiles EffectScript (`Script/EffectScript.g4`, v0 = `draw(N)`) to JSON `effect`; the runtime does not read it yet. The natural next step is for the compiler to emit `effectClone` (a draw-N script = Pot of Greed's handlers + count).
+* WolfX's "Effects" page compiles EffectScript (`Script/EffectScript.g4`) to `effectClone` on the card (at the time of this note the v0 compiler only wrote a JSON `effect` the runtime didn't read; `effectClone` replaced it).
 
 ## 6. How to give a custom card an effect (current plan)
 
@@ -247,7 +247,7 @@ Findings from the first monster-clone tests (Abyssrhine cloning Armageddon Knigh
 
 ## 23. Custom ids start at 15300 (ghost ids 14969 - 15234)
 
-The game ships effect code and id lists for cards it has no card data for: 198 ids between 14969 and 15234 have rows in the four effect tables (and `word_140BF8BC0`, a "has a hand effect" list, holds 14996-14999 ...). Custom cards used to be numbered from 14969, so each landed on a ghost: a custom Abyss Shark (14996) was offered "activate from the hand" because 14996 is in the hand-effect list. Custom ids now start at **15300** (`kFirstExtraCardId` in Yu-Gi-Oh-Cards/Card.h, Yu-Gi-Oh-Effects, WolfEx `CardsPanel.MinId`, `-StartId` of Delta.ps1 / Cards.ps1); the cap stays 19999 (the save's 20,000-byte card table), i.e. 4,700 custom cards. Ids above 16383 borrow a vanilla id per duel as before; the save holds real ids only.
+The game ships effect code and id lists for cards it has no card data for: 198 ids between 14969 and 15234 have rows in the four effect tables (and `word_140BF8BC0`, a "has a hand effect" list, holds 14996-14999 ...). Custom cards used to be numbered from 14969, so each landed on a ghost: a custom Abyss Shark (14996) was offered "activate from the hand" because 14996 is in the hand-effect list. Custom ids now start at **15300** (`kFirstExtraCardId` in Yu-Gi-Oh-Cards/Card.h, Yu-Gi-Oh-Effects, WolfEx `CardsPanel.MinId`, `-StartId` of Delta.ps1 / Cards.ps1); the cap was 19999 (the save's 20,000-byte card table, 4,700 custom cards) until 2026-10-19 and is now 65534: Yu-Gi-Oh-Core's CardTable.cpp hands the game a 65,536-byte card table (ids past 19999 kept in the save extension, tag "cards.high") and Yu-Gi-Oh-MoreCards widens the game's 14 `mov reg,4E20h` table bounds to 0xFFFF. Ids above 16383 borrow a vanilla id per duel as before; the save holds real ids only.
 
 `card_ids.json` (the "never renumber" registry) was renumbered once on 2026-09-28: the 331 cards that had ids below 15300 moved to the free ids from 19302 up (mapping in `id_remap_15300.json`, backup `card_ids.pre15300.bak`). Existing saves and decks that hold custom ids must be deleted or re-made (the -ex save was deleted). Safety net in EffectClone: a custom id in 15300-16383 with no clone gets no effect (`IsPlainCustomId`).
 
@@ -381,6 +381,8 @@ Made by scanning every call to the offer functions (`Offer_EffectByCardRef`, `Of
 | 6 | End Phase ("during the End Phase") | `Phase_EndPhase_RunHandlers` 0x1401558E0, rows at 0x140B12310 (552, u16 id at +8, flag bytes +0xA/+0xB) + 0x140B14590 (19) | table of {handler, id} | **hooked** (same AttachPhaseHandlers), test 15 |
 | 7 / 8 / 9 | summon / Flip Summon / special + material | section 29 | | working |
 | 11 | a card is Set (Worm Illidan) | `Eval_CardSetTriggers_Ev11` | named-card helper | **hooked** (named helpers) |
+| 12 | **flipped face-up** too: `Duel_ChangePosition_OfferFlip_Ev12or13` (0x140084E50) offers event 12 + flag, FLIP monsters only (seen in-duel 2026-10-14: Book of Taiyou on Bunny Ear Enthusiast) | position change | `Kind_IsFlipMonster` | fits "flip" since 2026-10-14 (it was unknown, so a FLIP + Standby card got the choose-an-effect prompt) |
+| - | **one-effect clones are offered only for their own trigger** (2026-10-14): `Hook_OfferByRef` drops an offer whose event (ref bits 25-30) is known and does not fit the clone's trigger. A lent source id brings every id-keyed trigger of the source along: Black Mamba (as Edge Imp Chain 11688) dealt its 300 when Dark Hole sent it to the GY. | | | fixed, untested |
 | 13 / 21 | flipped by an effect / after damage calculation and battle flips (D.D. Warrior, FLIP in battle) | `ChangeBattlePosition_FlipTrigger`, `Eval_AfterDamageCalcTriggers_Ev21` | | FLIP working; other 21 uses untested |
 | 14 | damage calculation (Cipher Soldier "during damage calculation") | `sub_1402114C0` | named-card helpers + a few per-id compares | **hooked** (named helpers) |
 | 15 | inflicts battle damage | `Eval_BattleDamageTriggers_Ev15` | inline list `EventIdList_BattleDamage_Ev15` | **hooked** (inline stub), test 14 |
@@ -458,7 +460,22 @@ Under its source's id the card IS the source to every id-keyed rule: lists ("can
 * trigger lists / leave-field and stat tables: the first part whose source is in the list / has a row.
 * phase handlers and named-card helpers: every part is registered.
 * plain id tests: the highest answer over the parts (e.g. "is a FLIP monster" if any part is).
-Source-id lending (section 32) lends the MAIN effect's source.
+Source-id lending (section 32) applies only to single-effect clones. A card with non-empty `parts` keeps its custom id (or a scratch id above
+the duel engine's 14-bit limit), so the first source's properties and hard-coded identity cannot decide how the other effects behave.
+
+**Pendulum order fix (2026-10-12):** raw clones without `trigger` metadata choose a source with a real row in the summon or leave-field table.
+Row routing prefers an exact source row over the engine's generic Spell/Trap fallback. Wrapped rows are cached per part so their overrides
+cannot collide. The Stratos (6784) / Pot of Greed (4844) combination is covered in both orders by the production-hook regression tests in
+`Tests/EffectRouting`, including slot resolution and draw counts. Those tests mock vanilla engine lookups; they do not replace live duel testing.
+
+WolfX supports `as(6784); also as(4844);`, its reverse, multiple named `effect { as(...); }` blocks, and mixtures of cloned and scripted effects.
+Clone blocks now stack with other effect blocks and all are preserved when converting between script and blocks. These are separate effects,
+not a resolution chain: `then` still describes actions within one effect. Multiple sources in different tables or with distinct supported
+events can be routed independently. Trigger and activation offers also enumerate compatible effects sharing a table and event. A per-part
+tag in the queued record preserves the selected effect through lookup and resolution, while native calls see their original sub-effect number.
+Duplicate suppression distinguishes sibling effects but still rejects repeated offers of the same effect, and respects native queue capacities.
+Up to 127 independently selectable parts are supported. Independent per-effect use limits are not added; native card-wide limits still apply.
+Composed actions omit Stratos's unrelated native HERO choice menu unless an explicit cost or slot override requires it; raw clones retain it.
 
 **New list scans** (the list-filter wrappers decompiled: zone scanner + behaviour flag): `deckSummon` 0x14052EE80 (Deck, 4 = can be Special Summoned), `handSummon` 0x14052EE40 (hand, 2), `hand` 0x14052F490 (hand, 1 = any), `banished` 0x140532BF0 (0x40). Known before: `deck` 0x14052F2A0 (0), `grave` 0x14052F4D0 (0), `graveSummon` 0x14052EC80 (8), `opponentGrave` 0x14052EE00 (0x40001), Extra Deck 0x140531D30 (0x842). Magnet Circle LV2's machine 0x140160080 is HAND-ONLY (checks zone 13, reads the hand array).
 
@@ -680,6 +697,11 @@ effect" drops the entry. The Effect library's "Use" fills the selected game card
 
 ## 44. Continuous locks: Jinzo, Royal Decree, Spell Canceller, Skill Drain (2026-10-11)
 
+The effect library includes curated lock templates from `docs/effect-scripts/lock_reference.py`, even when the original card has no effect-table row.
+Spell Canceller is `lock(spell);`. Jinzo, Royal Decree, Skill Drain, and Silent Swordsman LV7 are marked partial with notes for exceptions,
+activation-order behavior, costs, or additional restrictions the template does not reproduce. These templates are not activated-effect trigger sources.
+The generator merges them on every refresh. Run `python docs/effect-scripts/test_lock_reference.py` to check the shipped entries and refresh behavior.
+
 Jinzo (4758) "Trap Cards, and their effects on the field, cannot be activated. Negate all Trap effects on the field." has no row in any effect table. The
 engine rebuilds a **lock state** (an int struct on the caller's stack) whenever it needs it, in `Duel_BuildContinuousLockState` (0x14010EAA0), from
 **hard-coded card ids**. Six callers use it, among them:
@@ -716,5 +738,169 @@ is face-up in its zone and not exempt.
 * Words: trap, spell, monster, continuous_trap, continuous_spell, field_spell, equip_spell; both, opponent, own; monster_zone, spelltrap_zone, any_zone.
 * One lock per card. It goes before or after any effect, and a script may be only a lock.
 
+**Every card the builder names (re-read 2026-10-14)** is in `Tools/WolfX/Content/LockCatalog.cs` and shows in the Effect library under its own **Continuous locks** root, by kind. **Narrow monster locks are lock words now** (`Duel_IsMonsterEffectNegatedByLocks` 0x1401103A0 reads one int each; Lock.cpp `kFilters` writes the lock card's activation number into it): `light` (+56), `a_counter` (+52, counter 6800), `except_koaki_meiru` (+60, archetype 70), `from_main_deck` (+64, UNK_02 0x80000), `from_extra_deck` (+68, UNK_02 0x200000), `fusion_synchro_xyz` (+76), `extra_monster_zone` (+80), `except_tribute_summoned` (+84, UNK_02 & 8), `summoned_this_turn` (+36/+40, UNK_03 & 4), `defense_position` (+104). One per lock, both players only; JSON `"monsterFilter"`. Blocks: the Lock block's "monster effects of only"; the Lock dialog's picker. The this-turn locks (flag markers: Trap Stun 8223, Gishki Emilia 9592, 6208, 12013, 13551, 5753, 7275, 8313, 4799, 11096, 14122, 11994, 10298, 4942-4945), Powersink Stone 9155, Moon Dance Ritual 10821 and the exemptions (11274, 4819, 9156) are keyed on the card id, so the library template is `as("Card")` (source-id lending). 15148 is a not-in-game id. All untested in a duel.
+
 **WolfX:** a "Lock" block category, and a **Lock...** button on the Effects page. The button's dialog has presets (Jinzo, Spell Canceller,
 Skill Drain) and writes the script line. For a game card that keeps its own effect, the lock goes into effects.json as `"lock"` instead.
+
+## 45. Several effects of the same kind: the player chooses (2026-10-11)
+
+**How the game does it.** Cards such as Rainbow Dragon (7171, two ignition effects) or Cyber Raider (4760) have several CONSECUTIVE rows with the same id in one table. `Effect_GetRowIndexForRecord` (0x1400DE070, called by `Get_EffectTableEntryForCard`) picks the row: for the 237 ids of `EffectChoice_IdList` (0x140AF6A70) it is record word19 (+0x26) - 1 (word20/21 for 14940/15132/14755); `EffectRowByEvent_List` {id, event} picks row 1 when word3 is the event; `EffectRowByZone_List` {id, zone} by word2; then a per-id ladder. The rows of such a card share slot 2 `Slot2_EffectChoice_AnyAvailable` (0x1400FB8D0) and slot 3 `Slot3_EffectChoice_SelectThenCost` (0x1401FCB00):
+* `EffectChoice_GetAvailableMask` (0x1401FA890): bit n = effect n can be used now (`EffectChoice_ConditionTable` 0x140B24E00 {id, cond1..3}, run with word19 = n+1, plus per-id ladders).
+* slot 3, stage counter at 0x14349B580+754: 0 -> mask; a single option is auto-picked for some ids, else `EffectChoice_ShowPrompt` (0x14005F630, text 259) lists `EffectChoice_GetCount` (0x1401FA6D0: 2 unless listed) options labelled by `EffectChoice_GetLabel` (0x1401FA760: `EffectChoice_LabelTable`, default id + (n << 14)); returns 0 (call again). 1 -> the answer (DuelState +0x3802, 0-based) -> word19 = answer + 1. 2 and on -> the chosen effect's cost (`EffectChoice_CostTable` 0x140B223D0).
+* Once per turn per effect: class 5 (key 1001) and class 6 (key 1002) are two independent limits (section 20); some cards key 1001 by the effect number.
+
+**Custom cards (Yu-Gi-Oh-Effects EffectClone.cpp).** When more than one part answers a lookup (`Candidates`: the parts whose source has a row, narrowed to the ones whose trigger fits the event), the lookup returns a select row (`ChoiceRow`): the first candidate's row with no limit class, slot 1 empty, slot 2 `ChoiceSlot2` (any effect usable: `ComputeChoiceMask` runs the full `Check_CanActivate_Driver` with each effect chosen in turn - limit class, condition, targets), slot 3 `ChoiceSlot3` (one usable effect -> chosen; else the game's prompt with the mask, `Hook_ChoiceCount` answering the number of effects; the next call reads the answer) and then the chosen effect's own slot 3 (cost). The choice is kept by the plugin per (custom id, card instance word11) in `g_Choices`, not in word19 (a borrowed source's machines may use that word), and dropped when the chosen effect's slot 0 finishes. After the choice every lookup (`RouteByRow`, ladders, slots) means the chosen effect. The second once-per-turn effect of a card gets limit class 6. Built 2026-10-11, untested.
+
+**Open:** the prompt's option labels are the game's default (custom id + (n << 14)), not checked in a duel - if they show nothing useful, hook `EffectChoice_GetLabel`. A choice cancelled before it resolves keeps the card on that effect until it resolves once. "Once per turn: activate 1 of these effects" gives each bullet its own limit (the second gets key 1002), so both can be used in one turn.
+
+**WolfX:** `CardTextTranslator` no longer drops a second effect of the same kind, and keeps every bullet of "activate 1 of these effects".
+
+## 46. Summon conditions: how the card was summoned (2026-10-11)
+
+**The summon event record** (0x14349C560, the one `Eval_EventTriggersCardEffect_ByCardId` reads; decoded from its per-card checks and the cards they belong to):
+| offset | meaning | evidence |
+|---|---|---|
+| +0x0A (u16) | zone the monster came from: 13 hand, 14 Extra Deck, 15 Deck, 16 GY, 17 banished, 7-11 Spell & Trap Zones | Gilasaurus / Archfiend Commander test 13; Molten Zombie, Felgrand, Tengu 16; Esper Girl, Mental Seeker 17; Impcantations 15; Nebula / Cosmo Neos 14; Vision HEROs 7-11 |
+| +0x10 (u16) flags | bit 0 = Summoned properly as its kind (Fusion / Synchro / Xyz / Ritual / Link Summon); 0x40 = Pendulum Summoned | Neo Galaxy-Eyes, Five-Headed Link Dragon, Saffira (bit 0); Aether, D/D/D Supreme King Kaiser, Magician of Hope (0x40) |
+| +0x12 (u16) | id of the card whose effect Special Summoned it (0 = not by an effect); compared with the card itself ("by its own effect": the Aesir), archetypes, Spell (`Check_LinkIsSpellEffect`) | |
+| +0x30 (u16) | number of Tributes of a Tribute Summon (event 7) | Moisture Creature / Gilford / Barbaros (>= 3); the Monarchs list needs it non-zero |
+
+**Runtime (EffectClone.cpp).** `"summonCondition": { "from": [zones], "by": "effect" | "not_effect" | "own" | "spell" | "trap" | "monster" | {"card": id} | {"archetype": code}, "proper": true, "pendulum": true, "tributes": N }` on an effect (or part). `Hook_EventEvaluator`, for events 7 and 9, picks the first summon effect whose trigger fits the event and whose condition the record meets (`SummonMatches`); when the card has conditions and none is met, the evaluator does not run for it (no offer). "own": the record holds the id the clone's effect ran under (a part's source / action card) or the card's own id. Spell / Trap = card type 13 / 14; monster = `Kind_IsMonster`; archetype = `Is_CardInNamedArchetype`. The source the compiler borrows for the trigger must fire on every summon of that kind (Sacred Crane, Genex Blastfan ...), the condition narrows it.
+
+**Language:** `on special_summoned(from grave, by effect): ...`, `on normal_summoned(tribute 2): ...`, `on special_summoned(xyz): ...`, `on special_summoned(by "Dark World", from hand): ...`, `pendulum`, `by own`. Only with normal_summoned / special_summoned / summoned / normal_or_special_summoned. Blocks: the Effect block's "if summoned: from / by / as" row. `CardTextTranslator` reads "If this card is Special Summoned from the GY by a card effect", "If this card is Xyz / Pendulum / Tribute Summoned" ... exactly (it used to read them as any Special Summon).
+
+**Built 2026-10-11, untested in a duel.** Open: a choice between two summon effects (section 45) does not look at the conditions. Next family: the leave-the-field conditions (the move ref already carries from-zone, from-field, by-battle, section 29).
+
+## 47. Hand size limit, choose-an-effect labels, except-this-card with a name test (2026-10-14)
+
+**Hand size limit.** The turn runs a table of step functions (0x140ACD6D8, index `field_37BA`): 0 `sub_140147A00`, 1 Draw Phase, 2 Standby Phase,
+3 Main Phase (Battle inside), 4 `Phase_EndPhase_RunHandlers` (0x1401558E0), 5 `Duel_TurnStep5_CheckTurnOrTimeLimit` (0x140147DD0). The End Phase runner
+walks the 552-row handler table 0x140B12310; the row `EndPhase_DiscardToHandLimit` (0x140155830) moves the step to 11 and, when the hand
+(`PlayerState.iNumberOfCardsInHand`) is over `Duel_GetHandLimit(player)` (0x14005D120), sets up the discard-N prompt. `Duel_GetHandLimit`: 6;
+none (0xFFFF) while Infinite Cards is face-up; 5 while the OPPONENT has Enervating Mist (or flag marker 5535 on the player); 3 while Finite Cards
+(12341) is face-up unless the player has Silent Wobby. Callers: the End Phase row, `sub_140284300`, `sub_14050FEC0` (AI / UI) - one hook covers all.
+**Built (Lock.cpp, untested):** `"handLimit": {"limit": N, "side": "opponent" (default) | "you" | "both", "zone": "monster" | "spelltrap" | "any"}` on
+a card or in its effectClone; `Hook_HandLimit` lowers the limit while the card is face-up in its zone and not negated (the lock state is built
+with our locks, so a custom Skill Drain stops it). Language `hand_limit(3);` `hand_limit(4, both, spelltrap_zone);`; BAB "While face-up" category.
+
+**Choose-an-effect labels.** `EffectChoice_GetLabel` (0x1401FA760, id, n): sorted {card, label} rows at 0x140B241B0 (labels < 3000 = DLG text
+indices, the duel prompt table, 689 entries); else id + (n << 14). `EffectChoice_ShowPrompt` keeps them as u16. `Duel_PromptText` (0x14077AE30):
+< 3000 = `Get_DlgText`; else the text after the (n+1)-th U+25CF bullet of card (id & 0x3FFF)'s description - which is why a custom card showed
+blank CHOICE 1 / 2. **Built (EffectClone.cpp, untested):** `Hook_ChoiceLabel` answers card | n << 14 for our prompt (a lent source's table labels
+never leak in), `ChoiceSlot3` records the candidates' labels per card, `Hook_PromptText` answers them (game std::wstring filled with the game's own
+assign 0x140751310). The compiler gives every effect of a several-effect card a `"label"`: the `effect "Name"` name, else a summary
+("Draw 1 card", "Inflict 500 damage, then ..."). At most 4 options (2 bits of n).
+
+**Except this card with an archetype / card filter.** A match-list entry is the card's dword (`sub_14003D120(player, zone, index)`), id = low 14
+bits. When the row's name test is taken, `RunDeckScan` drops the matches named like this card (`j_Card_IsSameName` 0x1407EBA00) after each scan
+(`ExceptSelfAfter`). The ~58 direct row-index callers (Get_DeckFilterIndexForEffect) still see the plain row.
+
+## 48. "For the rest of this turn" locks: lock_turn(...) (2026-10-14)
+
+`Action_AddTurnFlagMarker` (0x140177EE0) is slot 0 of the this-turn cards: it pushes MsgQueue 0x35 FlagMarker_Add with arg2 = the effect
+RECORD's card id and arg3 = the current turn (Trap Stun 8223, Gorgon's Eye 4799, Magic Deflector 10298; Koa'ki Meiru Hydro Barrier 8313 kind 2
+= until the next Standby Phase; Dark Contract with Errors 12013 does its own result first). `Duel_BuildContinuousLockState` reads the markers by
+id (section 44: 8223 -> both players' Traps, 10298 -> +108, 4799 -> +104). A composed custom effect runs its action as the action card
+(impersonation), so the marker it adds IS that card's: no hook needed.
+
+**Built (compiler + BAB, untested in a duel):** `lock_turn(trap | spell | defense_position);` = `{"from": 10298 (Magic Deflector's Normal Spell
+row), "condition": "always", "actionFrom": <8223 | 4799>}`; with a trigger the usual trigger x action composition (any monster with the trigger,
+actionFrom the marker card). BAB: "for the rest of this turn, negate ..." in Actions. The Effect library's Trap Stun / Gorgon's Eye / Magic
+Deflector now use it (complete). Others of the family (Armored Glass 4942 ... Metal Detector 4945, White Howling, Triangle Ecstasy Spark) use
+other slot functions with conditions - not mapped yet.
+
+## 49. Engine primitives for our own resolver (research, 2026-10-14)
+
+The long-term BAB goal (fully custom effects from parts) needs a resolve step of our own that calls the engine's actions directly. Found so far:
+
+| primitive | address | call | notes |
+|---|---|---|---|
+| draw N | `Draw_ExecuteDraw` 0x1400A1C10 | (record, player, count, flags) | whole draw in one call: draw-blocking cards (Protector of the Sanctuary, markers 9279 / 12005 / 13547 / 14144), deck -> hand, UI messages, on-draw triggers; returns -1 when the deck runs out, 1 = drew |
+| effect damage | `Damage_Player` 0x14009DE50 | (player, amount) | MsgQueue 0x24 (arg2 3 = effect damage) + animation 45; the LP handler applies it |
+| turn marker | `Action_AddTurnFlagMarker` 0x140177EE0 | slot 0 | MsgQueue 0x35 FlagMarker_Add, keyed on the record id (section 48) |
+| to GY / banish | `Move_NonFieldCardToGraveOrBanish_Ev31` 0x1400A6F40, `Move_HandCardToGraveOrBanish_Ev32` 0x140088D90, `Move_FieldCardToGraveOrBanish_Ev33` 0x1400A7750 | (player, zone, ..., index, ..., by card) | fire the leave / sent-to-GY events (section 29) |
+| destroy zones | `Action_DestroyZoneMask` 0x1400D5150 | | |
+| hand limit | `Duel_GetHandLimit` 0x14005D120 | (player) | section 47 |
+
+Immediate steps (draw, LP, markers) can run back to back inside one slot 0 call, the way chaining stage 1 already runs draw / LP "before" steps.
+Interactive steps (choose a card, target) are step machines (section 12) and still need the game's own machines - the sequencer of section
+"Chaining" in EffectLanguage.md. Next: add-to-hand from the GY / Deck without a selection, Special Summon by id, change ATK.
+
+## 50. The plugin's own resolver: "steps" (2026-10-14)
+
+First piece of "custom effects from parts": an effect's slot 0 can be the plugin's `Slot0_RunSteps` instead of a game card's machine. It runs
+`"steps": [{"op": "draw" | "gain" | "damage", "n": N, "who": "own" | "opponent" | "both"}, ...]` in order with the game's functions -
+`Draw_ExecuteDraw` (0x1400A1C10, record, player, count, 0), `LP_ApplyGain_Internal` (0x1400A15F0, record, side, amount), `LP_ApplyDamage_Internal`
+(0x14009E4C0) - for the record's player `record[1]` (as `LP_ApplyChangeFromParamTable` reads it) and/or the other one, then returns 0 (finished:
+all of them are immediate). The row (activation: Spell / trigger) still comes from `from` (Pot of Greed 4844 for a Spell, the trigger composition
+otherwise) with `"condition": "always"`.
+Compiler: a chain made only of draw / gain_lp / burn / damage, or one that names a player (`draw(1, opponent)`, `gain_lp(500, any)`, new
+`damage(N[, own | opponent | any])`), compiles to steps; a single plain draw / gain_lp / burn keeps its game card (unchanged, tested). Mixing a
+player-named step with an interactive action (search ...) is an error for now. BAB: draw / gain LP / damage blocks have a "whose" dropdown.
+Built 2026-10-14, untested in a duel (test 8). Not yet: Resolution_BeginScope around a both-players LP change (the game does it for two-sided
+changes; watch the LP animation), card moves (field cards: `Action_DestroyZoneMask` queues ONE pending move, so only as a last step; GY/Deck -> hand
+mover not found yet), choices/targets (step machines).
+
+## 51. Effects activated from the GY: on in_grave (2026-10-21)
+
+**How the game offers them.** `Check_CanActivateKind3AtZone` (0x140107930): a card past the field (zone > 12: hand 13, GY 16, banished 17) gets record word4 = 2, so its effect is looked up in `EffectTable_Kind2` (0x140B85A50, the GY / leave-field table), and goes straight to the chain-speed and offer gates. There is **no id list for the GY**; only the hand has one (`Id_HasHandEffect` 0x140743FA0: three lists, read by `HandCard_GetCommandFlags` and the offer gate). A field card gets word4 = 3 after `Has_Kind3EffectEntry`.
+
+**The rows.** Every game card activated from the GY or hand has a Kind2 row with event (word at +2) **0** and slot 2 `Slot_Delegate_ToSecondaryTable_FE560` (0x1400FE620); slot 3 is what it pays:
+
+| Card | From | Slot 3 (cost) |
+|---|---|---|
+| Quillbolt Hedgehog 7701, Glow-Up Bulb 9095 (event 9), Spore 8795 (event 9) | GY | none / Spore 0x1401F99D0 |
+| Mezuki 7359, Bujingi Turtle 10621, Breakthrough Skill 10437, Skill Prisoner 10964 | GY | `Cost_BanishSelfFromGrave` 0x1401FA670 |
+| Swift Scarecrow 9078 | hand | discard self 0x1401FCEB0 |
+| Effect Veiler 8933, Ghost Ogre 11708 | hand | send self from hand 0x1401FF020 |
+
+**Language.** `on in_grave: <action>` ("If this card is in your GY: You can ..."): `from` = Quillbolt Hedgehog 7701 (its Kind2 row has no cost), the action composed onto it (`actionFrom`), `"trigger": "in_grave"`, `"require": ["inGrave"]`. `inGrave` is Yu-Gi-Oh-Effects' own `Check_InGrave` (the card's position zone 16, as `Check_InHand` reads 13): the same table answers for the banished cards, so without it the effect could be activated from there too. Costs still work with it (`cost pay_lp(N)`, `discard(N)`, `tribute(1)`); `cost banish_self:` already places an effect in the GY (Rose Lover's row) and needs no trigger. Spells/Traps: not yet (the donor is a monster row). Hand effects (`Id_HasHandEffect`'s lists) are not covered: a custom card is on none of them.
+
+**Translator.** `CardTextTranslator` reads "If this card is in your GY", "During your Main Phase, if this card is in your GY" and "..., except the turn it was sent there" (noted in `effectLooser`) as `on in_grave:` for a monster's action; "You can banish it;" after such a head is `cost banish_self`. Before this, the head was accepted but the effect was written as a field ignition effect (fixed). Over the Cards mod: 51 part-translated cards get their GY effect; whole cards still wait on their other sentences. Built, not run in a duel.
+
+## 52. Quick Effects: quick (2026-10-21)
+
+**Spell speed is by card id.** `Check_CanChainAtSpeed_ByEffectId` (0x140108910) lets an effect respond in a chain (or be used outside its own open window) when `Get_EffectSpellSpeed_ByEffectId` (0x14012FC50) says 2 or more. That function is a per-card ladder that ends in `Get_DefaultSpellSpeedForCard` (0x140743C30, named 2026-10-21): Trap 2 (Counter Trap 3), Quick-Play Spell 2, a monster 2 only when its id is in `IdList_QuickEffectMonsters_783` (0x140BF8470), else 1. So a composed effect would get its donor card's speed.
+
+**Yu-Gi-Oh-Effects.** `"quick": true` on an effect (`Clone::Quick`): the speed ladder (`IdLadder<3>`) answers 2 for it before the donor is asked. **Language:** `quick;` after the action, before `once_per_turn` (`on in_grave: draw(1); quick; once_per_turn;`); BAB: the "Quick Effect" checkbox on every effect hat. **Translator:** "(Quick Effect)" on a monster's effect writes `quick` (it used to read it as an ignition effect, noted in `effectLooser`). Timing heads ("During the Main Phase", "During your opponent's turn") are still read as any time the game offers it. Built, not run in a duel.
+
+## 53. The general resolver: any action then any action (2026-10-21)
+
+**Protocol (from Slot0_AddFromDeckToHand_StateMachine 0x14016D5A0).** A slot 0 is a step machine: it reads the step variable 0x14349C13C (128 = start), does one step and returns the next one (126 prompt, 125 pick, 100 apply, ...); 0 = done.
+
+**Yu-Gi-Oh-Effects.** `"before"` steps are no longer limited to draw / life points. `SlotThunk<0>` runs them in order, each as its own source card (`from`, `actionFrom`, own filters via `g_Active`), then the card's own step. A step still running (non-zero) is returned as is; an interactive step that finishes sets the step variable back to 128 and returns 128 so the engine calls again and the next machine starts fresh; immediate steps run back to back in one call. The running step is kept per card instance in `g_Sequence` (same key as `g_Choices`) and cleared when the effect resolves. Only the last (own) step has the activation's target, so the compiler refuses a targeting action before `then`. Not confirmed in IDA that the resolve driver itself stores the return value in the step variable (the thunk writes it either way). **In-duel 2026-10-21:** search then draw, send then draw, summon then burn, draw then search all work. Search then hand summon: the first version skipped the search (it only ran the steps when it read step value 128 at that moment). Now a resolution with no `g_Sequence` entry is fresh, and every later machine starts at the value the resolution started with (`g_SequenceStart`, logged once per resolution; it was 128). Retest: the search ran, but the summon offered only cards already in hand. Magnet Circle LV2's machine (`Slot0_SummonSelected_StateMachine` 0x140160080) summons the card picked at **activation**. So a chained `special_summon(hand, ...)` now compiles to Unexpected Dai (11740, `Slot0_Generic_TargetedEffect_StateMachine` 0x140163830), which collects at step 128 (resolution) through the hooked `Deck_CollectMatchingCards`, with the hand scan and `"condition": "always"` (the match may only exist after the earlier steps). Superseded by section 54 for the action itself (the row stays 11740).
+
+## 54. Own resolver steps: pick and act (2026-10-21)
+
+The first step away from borrowing whole card routines: `"own": "toHand" | "summon"` on an effect or a `before` step replaces the source card's slot 0 with the plugin's `Slot0_OwnPickAndAct`. The source card still gives the row (how it is activated) and the record id that routes the collect hook to the step's `deck` filter. The machine is the game's search machine taken apart (`Slot0_AddFromDeckToHand_StateMachine` 0x14016D5A0), with the act swapped:
+
+| Step | Does |
+|---|---|
+| 128 | `Deck_CollectMatchingCards(player, id, Get_DeckFilterParamForEffect_Ladder)` (hooked, our filter). None: `UI_ShowNoneMessage(player, 0x15)` (0x14005E940), done. Else `UI_ShowPromptText(player, 0x33)` → 126 |
+| 126 | `UI_BeginCardListSelect(player, 6, id, param)` (collects again for a human; the AI picks via sub_1400BC130) → 125 |
+| 125 | the pick: a pick-1 list (mode 6) leaves the picked **index** at 0x14349C5C8 (word), the card is `list[index]` at 0x14349C5D8 (the search machine's one-card path). `Get_SelectedListCard(n)` / the count at 0x143497C40+0x3802 are for multi-pick lists only: the first build used them and moved nothing (in-duel 2026-10-21). **toHand:** `Resolution_BeginScope(1)`, `Card_MoveListCardToHand(record, player, card, 1)` (0x14008A3F0), scope counter 0x14349C180 minus 1, online: `Duel__NetEvent__SendSimple(8, -1, &0, 2)` → 100. **summon:** `Chain_AddEffectLink(player, card, 1, 2, id << 16, 0)` (the engine's summon queue, as Unexpected Dai's step 124) → 120 |
+| 100 / 120 | `Msg_EndOfListEffect(player)` (0x1400A7DD0, message 86), done |
+
+The list is built when the step runs, so "search then Special Summon" can pick the searched card. Between calls the pick screen tests cards by the step's id through `g_Resolving`, which the sequencer now sets to the running `before` step. **Compiler:** in a `then` chain, steps with a search / salvage source become `toHand` and steps with a `*Summon` scan become `summon` (`MarkOwnMachine`); single actions keep their proven donors. **Hand list (2026-10-21):** in-duel the summon step offered too little. The game's hand scan (`Scan_Hand_SpecialSummonable` 0x14052EE40 → `Scan_HandCard_Impl` 0x14052C8D0) adds `Check_CanSpecialSummonByEffect` keyed by the row's card id: under Unexpected Dai's id no hand monster passed, under Magnet Circle LV2's a Level 4 Normal Monster (The Dragon Dwelling in the Cave) did not. An own summon step with `"scan": "handSummon"` now builds the list itself (`OwnHandList`, answered from `Hook_Collect`): each hand card through `Scan_CardMatchesRowFlags` (0x14052B540: type, race, attribute, Level in hand with le/ge, ATK) and the row's name test, written as `MatchList_AddZoneCard` (0x14052B310) writes it (packed card; flags = player | 13 << 1). Whether the summon is legal is left to the engine's summon queue. In-duel 2026-10-21: search then summon the searched card works (card 9725 searched and summoned).
+
+**Rules (2026-10-21):** *Activation:* a chain whose first step is an own step can only be activated while its list has a card - the game's list-effect rule (`Slot2_Condition_ListHasMatch` 0x1400FB620: `Deck_CountMatchingCards` >= 1), run in `SlotThunk<2>` with the first step's filter; `Hook_Count` answers an own hand step with `OwnHandList(write = false)` (counts without touching the game's list). Later steps are not checked (an earlier step may make them possible). *"X, then Y":* an own step that finds nothing sets `g_OwnStepFoundNothing`; the sequencer then ends the effect without the rest (summon then burn burned with nothing summoned before). *Prompt:* 0x33 (search's "add to your hand") for toHand, 0x30 (the summon list's, Unexpected Dai step 127) for summon. **Slot 2 must exist:** `Check_CanActivate_Driver` (0x1400E0C30) treats a missing slot 2 as allowed, so a borrowed row without a condition (Hinotama, summon then burn) never ran the list check (in-duel: playable with no monster; at resolution the chain did stop, no burn). `WrappedRow` now gives slot 2 to a row whose clone `FirstStepIsOwn`; the thunk answers 2 (allowed, no targets) after the check. Slot 2 contract: 0 refuse, 1 allowed + target mask from slot 1, >1 allowed. **AI / online:** `ListSelect_PostRequest` (0x1400BC130) files the pick; the answer is collected between calls through the hooked collect (served via `g_Resolving`) into the same pick index. In-duel: 19601 search then summon the searched card works end to end. Next own steps: send to GY, destroy, banish (the act at 125 is the only difference). Send to GY and banish: section 55.
+
+## 55. Own steps: send to the GY, banish (2026-10-22)
+
+**The movers (from Foolish Burial's machine).** `Slot0_SelectFromListAndMove_StateMachine` (0x140178460, Foolish Burial family, 263+122 rows) moves each pick at step 125 by the list entry's zone (entry flags `& 0x3E`: 30 = Deck, 26 = hand, else Extra Deck):
+
+| From | Function | Arguments |
+|---|---|---|
+| Deck 15 / Extra Deck 14 | `Move_NonFieldCardToGraveOrBanish_Ev31` 0x1400A6F40 | (player, from zone, **0 = GY / 1 = banish**, card instance, flags 0, effect id). Banish falls back to the GY when banishing is not allowed (`sub_14005C630`). Raises event 31. |
+| hand 13 | `Move_HandCardToGraveOrBanish_Ev32` 0x140088D90 (via `Hand_SendListCardToGrave` 0x140089410) | (player, card instance, flags: 0 = "sent" event 33 / 0x4000 = discard event 32, **16 = GY / 17 = banish**, effect id > 0 = by an effect) |
+
+Card instance from a packed list entry: `((packed & 0x4000) != 0) + 2 * (packed >> 23)` (as the machine unpacks it). Its multi-pick path walks picks with `ListSelect_SetCurrentByPickNumber` (0x14005E7B0); the own machine stays on the pick-1 path of section 54.
+
+**Yu-Gi-Oh-Effects.** `"own": "toGrave" | "banish"` (Clone::Own 3 / 4): `Slot0_OwnPickAndAct` step 125 reads the picked card's zone from `Card_GetPositionByInstance` and calls the mover above in one resolution scope (as toHand). The prompt is Foolish Burial's 0x3A for both (no game card banishes from a Deck list, so there is no banish prompt to take). Picks from any other zone are logged and not moved.
+
+**Language / compiler.** `send_to_grave(deck | hand, selector)`, new `banish(deck | hand, selector)` (rule `banishFromAction`; `banish(all | target, ...)` is unchanged). A single `send_to_grave(deck, ...)` keeps Foolish Burial's machine (proven); in a `then` chain it becomes own `toGrave` (`MarkOwnMachine`). From the hand, and every banish from a list, compile to Foolish Burial's row + `"condition": "listHasMatch"` + `own` (`OwnMove`). With a trigger, the action key is `send_to_grave` (the usual composition). BAB: "send from [your Deck | your hand] to the GY", new "banish from [your Deck | your hand]" block (`ys_banish_from`; ACTIONS entries can carry `rule` / `block` when two grammar rules share a word). Translator: "send 1 X from your hand to the GY", "banish 1 X from your Deck / hand".
+
+**Not yet:** the Extra Deck as a list (the generic scanner `ScanGeneric_Deck` 0x14052B8C0 is Deck only; the mover already takes zone 14), banish from the GY (`Cost_BanishSelfFromGrave` 0x1401FA670 is self only), destroy as an own step. Test cards 19605 (send then draw, own), 19606 (banish from Deck), 19607 (hand to GY then draw) in the game's Yu-Gi-Oh-Ex\cards.json; built, not run in a duel.
+
+**Routing fix (same day).** A card with a trigger part and a GY part in the same table (Kind2: "sent from the field to the GY" via Botanical Girl 7892, and "banish this card from your GY" via Rose Lover 9409) never offered the GY effect: the GY activation check comes with event 0, both parts have Kind2 rows, and `Candidates` kept only the parts sharing the FIRST part's trigger. Now an event-0 lookup drops event-trigger parts (`IsEventTrigger`) when a part without one is left.

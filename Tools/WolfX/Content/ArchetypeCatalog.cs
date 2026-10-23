@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using CARD_Named;
@@ -22,25 +22,41 @@ namespace WolfEx
         /// Reads the custom archetypes from Yu-Gi-Oh-Ex/Archetypes.json ({ "archetypes": [ { "code": 419, "name": "...", "names": { "E": "..." } } ] };
         /// the file also lists the game's own, which come from the library's embedded copy and are ignored here).
         /// </summary>
+        public static string? LoadError { get; private set; }
+
+        private static JsonObject ReadRoot()
+        {
+            if (!File.Exists(_path)) return new JsonObject { ["archetypes"] = new JsonArray() };
+            var root = JsonNode.Parse(File.ReadAllText(_path), documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip });
+            if (root is not JsonObject obj || obj["archetypes"] is not JsonArray entries)
+                throw new InvalidDataException("Expected an object with an archetypes array; the existing file was left unchanged.");
+            var codes = new HashSet<int>();
+            foreach (var entry in entries)
+                if (entry is not JsonObject item || item["code"] is not JsonValue value || !value.TryGetValue<int>(out int code) ||
+                    code <= 0 || !codes.Add(code) || item["name"] is not JsonValue name || !name.TryGetValue<string>(out _))
+                    throw new InvalidDataException("Invalid or duplicate archetype entry; the existing file was left unchanged.");
+            return obj;
+        }
+
         public static void Load(string extraCardsFolder)
         {
             _path = Path.Combine(extraCardsFolder, "Archetypes.json");
             _custom.Clear();
-            if (!File.Exists(_path))
-                return;
-
+            LoadError = null;
             try
             {
-                if (JsonNode.Parse(File.ReadAllText(_path))?["archetypes"] is not JsonArray entries)
-                    return;
-                foreach (var entry in entries.OfType<JsonObject>())
+                var entries = (JsonArray)ReadRoot()["archetypes"]!;
+                foreach (var entry in entries.Cast<JsonObject>())
                 {
-                    int code = entry["code"]?.GetValue<int>() ?? 0;
-                    if (code >= FirstCustomCode)
-                        _custom[code] = entry["name"]?.GetValue<string>() ?? $"Archetype {code}";
+                    int code = entry["code"]!.GetValue<int>();
+                    if (code >= FirstCustomCode) _custom[code] = entry["name"]!.GetValue<string>();
                 }
             }
-            catch { /* a bad Archetypes.json just means no custom names */ }
+            catch (Exception ex) when (ex is IOException or InvalidDataException or UnauthorizedAccessException or JsonException or InvalidOperationException)
+            {
+                _custom.Clear();
+                LoadError = $"Could not read {_path}: {ex.Message} Repair the file before adding an archetype.";
+            }
         }
 
         public static string NameOf(int code) => _custom.TryGetValue(code, out var name) ? name : Card_Named.NameOf(code);
@@ -61,17 +77,18 @@ namespace WolfEx
         /// <summary>A new custom archetype: the next free code from 419 up, added to Archetypes.json (the rest of the file is kept as it is).</summary>
         public static int Add(string name)
         {
-            int code = Math.Max(FirstCustomCode, _custom.Count == 0 ? 0 : _custom.Keys.Max() + 1);
-            _custom[code] = name;
-
-            JsonObject root = [];
-            try { if (File.Exists(_path) && JsonNode.Parse(File.ReadAllText(_path)) is JsonObject existing) root = existing; } catch { }
-            var entries = root["archetypes"] as JsonArray ?? [];
+            if (string.IsNullOrWhiteSpace(_path)) throw new InvalidOperationException("Pick the game folder first.");
+            if (string.IsNullOrWhiteSpace(name)) throw new InvalidDataException("An archetype needs a name.");
+            // Re-read before writing: a failed load or an external edit must never become an empty replacement.
+            JsonObject root = ReadRoot();
+            var entries = (JsonArray)root["archetypes"]!;
+            int highest = entries.Cast<JsonObject>().Select(e => e["code"]!.GetValue<int>()).DefaultIfEmpty(FirstCustomCode - 1).Max();
+            int code = Math.Max(FirstCustomCode, checked(highest + 1));
             entries.Add(new JsonObject { ["code"] = code, ["name"] = name, ["names"] = new JsonObject { ["E"] = name } });
-            root["archetypes"] = entries;
-
             var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
-            File.WriteAllText(_path, root.ToJsonString(options) + Environment.NewLine, new UTF8Encoding(false));
+            ContentSaveBatch.Write(new Dictionary<string, byte[]> { [_path] = ContentSaveBatch.Text(root.ToJsonString(options) + Environment.NewLine) });
+            _custom[code] = name;
+            LoadError = null;
             return code;
         }
     }

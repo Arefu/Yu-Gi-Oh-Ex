@@ -231,7 +231,7 @@ namespace WolfEx
                                        "takes it away from its own spell. Saved as \"ritualMonsters\".",
                 Section.Synchro => "1 Tuner + non-Tuners whose Levels add up to this card's Level. Each side can be any monster, a Type, an Attribute, " +
                                    "an archetype, a kind or (Tuner/non-Tuner) one named card. Saved as \"synchro\"; without it the game's generic rule applies.",
-                Section.Xyz => $"Monsters of the card's Rank ({target!.Level}) as their Level, optionally all of a Type, Attribute, archetype or kind. " +
+                Section.Xyz => $"Monsters of the card's Rank ({target!.Level}) as their Level, optionally all of a Type, Attribute, archetype, kind or one named card. " +
                                "Saved as \"xyz\"; without it the game's generic rule applies (2 materials).",
                 Section.Link => "What the Link Materials must be. Konami puts \"2+ Effect Monsters\" / \"except Tokens\" in the first slot and " +
                                 "\"1 Normal Monster\" / \"2 Spellcaster monsters\" in the second; the game tests both on EVERY material (how many is the " +
@@ -687,7 +687,7 @@ namespace WolfEx
         private const string NotToken = "notToken";   // code 96, read by SynchroXyz.cpp's Link parser
 
         private readonly Mode _mode;
-        private bool AllowsCard => _mode is Mode.Synchro or Mode.LinkIncluding;
+        private static bool AllowsCard => true;   // Xyz and Link's two per-material slots through Yu-Gi-Oh-Effects' named-card hooks
         private readonly ComboBox _category = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 120 };
         private readonly ComboBox _value = new() { DropDownStyle = ComboBoxStyle.DropDownList, Width = 260 };
         private readonly System.Windows.Forms.Button _pick = new() { Text = "Pick card...", AutoSize = true };

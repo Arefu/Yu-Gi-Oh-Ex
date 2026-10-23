@@ -37,13 +37,13 @@
 //   lock(spell, opponent);                       // only the opponent's Spells; lock(monster, spelltrap_zone) = Skill Drain
 //
 // Regenerate the C# parser (from the repo root; the WolfX project compiles the output):
-//   java -jar Dependencies\ANTLR\antlr-4.13.2-complete.jar -Dlanguage=CSharp -visitor -no-listener -package WolfEx.EffectScriptGenerated -o Tools\WolfX\Content\EffectScriptGenerated "Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4"
+//   java -jar Dependencies\ANTLR\antlr-4.13.2-complete.jar -Dlanguage=CSharp -visitor -no-listener -Xexact-output-dir -package WolfEx.EffectScriptGenerated -o Tools\WolfX\Content\EffectScriptGenerated "Yu-Gi-Oh_Loader Plugins\Yu-Gi-Oh-Effects\Script\EffectScript.g4"
 grammar EffectScript;
 
 // The wrapper is optional: "on flip: burn(500);" is a whole script, "effect \"Name\" { on flip: burn(500); }" means the same.
 // Several effects on one card: several effect { } blocks, or bodies joined with 'also' (each borrows its own game card; the runtime routes
 // every lookup to the effect whose source answers it, docs/EffectSystem.md section 33).
-script     : lockStatement* (effect+ | effectBody ('also' effectBody)* | asScript)? lockStatement* EOF ;
+script     : (lockStatement | handLimitStatement)* (effect+ | effectBody ('also' effectBody)* | asScript)? (lockStatement | handLimitStatement)* EOF ;
 
 // A continuous lock while this card is face-up and its effects aren't negated (Yu-Gi-Oh-Effects Lock.cpp, docs/EffectSystem.md section 44).
 // Words (checked by the compiler): what - trap, spell, monster (monster effects negated), continuous_trap, continuous_spell, field_spell,
@@ -51,11 +51,19 @@ script     : lockStatement* (effect+ | effectBody ('also' effectBody)* | asScrip
 lockStatement : 'lock' '(' lockArg (',' lockArg)* ')' ';'? ;
 lockArg       : IDENT | kind | 'opponent' | 'own' | 'any' | 'field' | 'equip' ;
 
+// While this card is face-up (and not negated): a player's hand size limit in the End Phase becomes N (Yu-Gi-Oh-Effects Lock.cpp, the hook on
+// Duel_GetHandLimit 0x14005D120). Who (required): opponent, own, both; where this card must be: monster_zone (default), spelltrap_zone, any_zone.
+//   hand_limit(3, opponent);  hand_limit(4, both, spelltrap_zone);
+handLimitStatement : 'hand_limit' '(' NUMBER (',' lockArg)* ')' ';'? ;
+
 // The whole behaviour of one game card (by its Konami id, or a name from the effect library), optionally with this card's own stat amounts.
 asScript   : 'as' '(' (NUMBER | STRING) ')' ('with' statPart (',' statPart)*)? ';'? ;
 statPart   : ('atk' | 'def') NUMBER ;
 effect     : 'effect' STRING? '{' effectBody '}' ;
-effectBody : trigger? requireClause? costClause? chain ';'? limit? ;
+effectBody : asScript | trigger? requireClause? costClause? chain ';'? quickMark? limit? ;
+
+// "(Quick Effect)": spell speed 2, usable in either player's turn and in a chain (Yu-Gi-Oh-Effects "quick", docs/EffectSystem.md section 52).
+quickMark  : 'quick' ';'? ;
 
 // A cost paid when the effect is activated ("Discard 1 card; ...", "Pay 800 LP; ..."): the game's own cost functions, docs/EffectSystem.md section 34.
 costClause : 'cost' (discardCost | payCost | selfCost | detachCost | tributeCost) ':' ;
@@ -76,32 +84,54 @@ limit      : 'once_per_turn' ';'? ;
 
 // When the effect happens, for a MONSTER effect. No trigger = a Spell (activated from the hand / field). A card that lists no trigger gets the
 // behaviour of a vanilla Normal Spell; with a trigger it borrows a vanilla monster that has that trigger and that action (trigger_sources.json).
-trigger    : 'on' triggerName ':' ;
+trigger    : 'on' triggerName summonConditions? ':' ;
+// How the card must have been summoned, for the summon triggers: on special_summoned(from grave, by effect): / on normal_summoned(tribute 2):
+//   from hand | deck | extra | grave | banished | spelltrap      by effect | not_effect | own | spell | trap | monster | "Archetype" | <card id>
+//   fusion | synchro | xyz | ritual | link (Summoned as its kind)   pendulum   tribute [N]
+summonConditions : '(' summonCondition (',' summonCondition)* ')' ;
+summonCondition  : 'from' summonFrom | 'by' summonBy | ('tribute' | IDENT) NUMBER? ;
+summonFrom : 'hand' | 'deck' | 'extra' | 'grave' | 'banished' | IDENT ;   // every zone word that is a keyword elsewhere must be listed, IDENT never matches a keyword
+summonBy   : 'effect' | 'own' | kind | STRING | NUMBER | IDENT ;
 triggerName : 'normal_summoned' | 'special_summoned' | 'summoned' | 'normal_or_special_summoned' | 'flip'
             | 'destroyed_by_battle' | 'sent_to_grave' | 'sent_from_field_to_grave'
-            | 'standby_phase' | 'end_phase' | 'destroys_by_battle' | 'battle_damage' | 'attack_declared' | 'ignition' ;
+            | 'standby_phase' | 'end_phase' | 'destroys_by_battle' | 'battle_damage' | 'attack_declared' | 'ignition'
+            | 'in_grave' ;   // "If this card is in your GY: You can ...": activated from the GY (the GY / hand effects table, no cost)
 
 // One action, or several joined with 'then' (run in order, each after the previous resolved).
 chain      : action ('then' action)* ;
 
 action     : drawAction | searchAction | reviveAction | destroyAction | gainAction | burnAction | sendAction | equipAction
-           | summonAction | salvageAction | banishAction | gainAtkAction | returnAction | negateAction ;
+           | summonAction | salvageAction | banishAction | banishFromAction | gainAtkAction | returnAction | negateAction | lockTurnAction
+           | damageAction ;
 
-drawAction    : 'draw' '(' NUMBER ')' ;
-searchAction  : 'search' '(' 'deck' (',' selector)? ')' ;
-reviveAction  : 'revive' '(' graveyard (',' selector)? ')' ;
-destroyAction : 'destroy' '(' scope (',' side)? (',' selector)? ')' ;   // 'all' matching cards, or 'target' 1 chosen card
-scope      : 'all' | 'target' ;
-sendAction    : 'send_to_grave' '(' 'deck' (',' selector)? ')' ;   // send 1 card from your Deck to the Graveyard
-gainAction    : 'gain_lp' '(' NUMBER ')' ;     // you gain N Life Points
+// draw / gain_lp / damage take an optional player: own (default for draw / gain_lp), opponent, any (= both players). A chain of these, or one
+// that names a player, is run by Yu-Gi-Oh-Effects itself ("steps": the game's draw and life point functions, docs/EffectSystem.md section 50).
+drawAction    : 'draw' '(' NUMBER (',' side)? ')' ;
+// For the rest of this turn: trap (Traps on the field negated, Trap Stun), spell (Equip / Field / Continuous / Quick-Play Spells negated, Magic
+// Deflector), defense_position (Defense Position monsters' effects negated, Gorgon's Eye). The card's resolve step adds that card's turn
+// marker (Action_AddTurnFlagMarker 0x140177EE0), which the game's lock builder reads (docs/EffectSystem.md section 48).
+lockTurnAction : 'lock_turn' '(' lockTurnArg ')' ;
+lockTurnArg    : IDENT | kind ;
+searchAction  : 'search' '(' 'deck' (',' choices)? ')' ;
+reviveAction  : 'revive' '(' graveyard (',' choices)? ')' ;
+// 'all' matching cards, 'target' 1 card chosen at activation, or 'one' card chosen when it resolves (no target; the plugin's own field pick,
+// docs/EffectSystem.md section 56)
+destroyAction : 'destroy' '(' scope (',' side)? (',' selector)? ')' ;
+scope      : 'all' | 'target' | 'one' ;
+// send 1 matching card from your Deck / hand / Extra Deck to the Graveyard (not the Deck: the plugin's own pick-and-act machine, section 55)
+sendAction    : 'send_to_grave' '(' ('deck' | 'hand' | 'extra') (',' choices)? ')' ;
+gainAction    : 'gain_lp' '(' NUMBER (',' side)? ')' ;     // you (or the named player) gain N Life Points
+damageAction  : 'damage' '(' NUMBER (',' side)? ')' ;      // N damage to the named player (default: your opponent, like burn)
 burnAction    : 'burn' '(' NUMBER ')' ;        // inflict N damage to your opponent
 equipAction   : 'equip' '(' statPart (',' statPart)* ')' ;
-summonAction  : 'special_summon' '(' summonZone (',' selector)? ')' ;   // Special Summon 1 matching monster from your hand / Deck / GY, or this card from the hand
+summonAction  : 'special_summon' '(' summonZone (',' choices)? ')' ;   // Special Summon 1 matching monster from your hand / Deck / GY, or this card from the hand
 summonZone    : 'hand' | 'deck' | 'grave' | 'self' | 'self_grave' ;   // self = this card from the hand, self_grave = this card from the GY
 returnAction  : 'return_to_hand' '(' 'target' (',' side)? (',' selector)? ')' ;   // target 1 matching card on the field; return it to the hand
 gainAtkAction : 'gain_atk' '(' (side ',')? NUMBER ')' ;   // target 1 face-up monster (on the field / you control); it gains N ATK until the end of this turn
-salvageAction : 'add_to_hand' '(' ('grave' | 'banished') (',' selector)? ')' ;   // add 1 matching card from your GY / banished cards to your hand
+salvageAction : 'add_to_hand' '(' ('grave' | 'banished') (',' choices)? ')' ;   // add 1 matching card from your GY / banished cards to your hand
 banishAction  : 'banish' '(' scope (',' side)? (',' selector)? ')' ;   // banish 'all' matching cards, or 'target' 1 chosen card (as destroy)
+// banish 1 matching card from your Deck / hand / Extra Deck / GY (own machine, sections 55-56)
+banishFromAction : 'banish' '(' ('deck' | 'hand' | 'extra' | 'grave') (',' choices)? ')' ;
 // Negate the activation of a card / effect, and if you do, destroy it (docs/EffectSystem.md section 39). First argument = what: spell, trap,
 // monster (a monster effect), spelltrap, any, or a card ("Monster Reborn" / id). Then any of: opponent (only the opponent's), your_turn,
 // opponent_turn, battle_phase, targets_one, effect (an effect too, not only a card's activation), and a Spell/Trap property: normal, counter,
@@ -113,7 +143,13 @@ graveyard  : 'grave' | 'opponent_grave' | 'either_grave' ;
 side       : 'own' | 'opponent' | 'any' ;
 
 // "monster where race = Dragon and level <= 4"  (the kind word and the where-part are both optional)
-selector   : (kind ('where' condition ('and' condition)*)? | 'where'? condition ('and' condition)*) ;
+// A search / revive / add-to-hand never picks a card with this card's own name ("except <this card>", as real cards say it) unless the
+// selector ends with 'including self'.
+selector   : (kind ('where' condition ('and' condition)*)? | 'where'? condition ('and' condition)*) includingSelf? ;
+includingSelf : 'including' 'self' ;
+// The cards a search / revive / add-to-hand / Special Summon / send may pick: one selector, or several joined with 'or' (any of them):
+//   search(deck, monster where race = Warrior or monster where race = Dragon)
+choices    : selector ('or' selector)* ;
 kind       : 'monster' | 'spell' | 'trap' | 'card' ;
 condition  : field op value ;
 field      : 'race' | 'attribute' | 'level' | 'atk' | 'archetype' | 'name' ;

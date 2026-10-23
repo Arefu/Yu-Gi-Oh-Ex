@@ -2,12 +2,17 @@
 #include <format>
 #include <string>
 
+#include "CardTable.h"
 #include "Crash.h"
 #include "Credits.h"
+#include "DeckLimits.h"
+#include "DuelFormat.h"
+#include "Packs.h"
 #include "Detours.h"
 #include "Host.h"
 #include "Loading.h"
 #include "Logger.h"
+#include "ModConfig.h"
 #include "Patch.h"
 #include "Save.h"
 #include "Tweaks.h"
@@ -38,6 +43,16 @@ extern "C"
 
     CORE_API void __cdecl Core_AddCredits(const char* Heading, const char* Lines) { Credits::Add(Heading ? Heading : "", Lines ? Lines : ""); }
 
+    CORE_API void __cdecl Core_AddSaveWriteFilter(CoreSaveWriteFilter Filter, void* User) { Save::AddWriteFilter(Filter, User); }
+
+    CORE_API int __cdecl Core_GetSaveExtension(const char* Tag, void* Out, int Size) { return Save::GetExtension(Tag, Out, Size); }
+
+    CORE_API void __cdecl Core_SetSaveExtension(const char* Tag, const void* Data, int Size) { Save::SetExtension(Tag, Data, Size); }
+
+    CORE_API void __cdecl Core_SetDeckLimits(int MinMain, int MaxMain, int MaxExtra, int MaxSide) { DeckLimits::Set(MinMain, MaxMain, MaxExtra, MaxSide); }
+
+    CORE_API void __cdecl Core_SetOnlineDuelFormat(int Format) { DuelFormat::SetOnline(Format); }
+
     CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size)
     {
         const std::u8string name = Save::CurrentSavePath().filename().u8string();
@@ -60,6 +75,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         DetourRestoreAfterWith();
         Host::SetModule(hModule);
 
+        // Mods' own Config.ini settings (ModConfig.h): first, so every setting read after this (Core's own and every plugin's) follows them.
+        ModConfig::Install();
+
         // crash_log.txt + crash.dmp for any plugin's crash (Crash.h), then the small game tweaks (Tweaks.h).
         Crash::Install();
         Tweaks::Install();
@@ -81,6 +99,12 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         // Credits: the built-in thanks, Yu-Gi-Oh-Ex\credits.json, what plugins add and the plugin list, then the game's own credits (Credits.h).
         Credits::Install();
 
+        // Limit breakers no store plugin owns: booster packs from Yu-Gi-Oh-Ex/packs.json (new packs in the game's free slots, new shop rows).
+        Packs::Install();
+        // Deck size limits (MinMainDeck/MaxMainDeck/MaxExtraDeck/MaxSideDeck) and the engine's dormant Speed/Rush rules (DuelFormat).
+        DeckLimits::Install();
+        DuelFormat::Install();
+
         // Core is what keeps the base game unaltered: if the save could not be redirected the game would write the Steam save, so the player is asked.
         if (!Save::Install())
         {
@@ -96,6 +120,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             // Save slots: which file the game starts on, and the save-select screen between the title and the main menu.
             SaveSlots::Install();
             SaveScreen::Install();
+            // The saved card table for every Konami id (ids past the save's 20000 in the save extension); card plugins widen the game's checks.
+            CardTable::Install();
         }
         break;
     }

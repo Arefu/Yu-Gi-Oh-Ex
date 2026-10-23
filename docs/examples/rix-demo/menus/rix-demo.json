@@ -1,0 +1,14 @@
+{
+    "buttons": [
+        {
+            "key": "rix.demo",
+            "menu": "main",
+            "page": "main",
+            "label": "Demo Page",
+            "description": "The RIX page engine demo: the game's own widgets on new pages.",
+            "action": {
+                "page": "rix-demo"
+            }
+        }
+    ]
+}

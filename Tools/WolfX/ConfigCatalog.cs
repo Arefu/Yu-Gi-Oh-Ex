@@ -1,4 +1,4 @@
-﻿namespace WolfX.WolfX.File_Type_UI
+namespace WolfX.WolfX.File_Type_UI
 {
     public enum SettingKind { Toggle, Number, Text, Path, Choice }
 
@@ -31,8 +31,7 @@
         }
 
         /// <summary>
-        /// <see cref="All"/> plus the settings the installed plugins list in their manifests ("settings" in &lt;DLL&gt;.json, the list the in-game
-        /// Plugin Settings screen shows): a manifest's entry replaces the built-in one for the same [section] key, and a plugin this list doesn't
+        /// <see cref="All"/> plus the settings the installed plugins list in their manifests ("settings" in &lt;DLL&gt;.json): a manifest's entry replaces the built-in one for the same [section] key, and a plugin this list doesn't
         /// know brings its own. <paramref name="configFile"/> is the game's Config.ini (its folder and [Yu-Gi-Oh-Core] PluginsPath find the plugins).
         /// </summary>
         public static List<ConfigSetting> WithManifests(string configFile)
@@ -85,6 +84,9 @@
 
         public static readonly ConfigSetting[] All =
         [
+            new("Yu-Gi-Oh-MoreCards", "PreserveUnavailableCards", SettingKind.Toggle, "0",
+                "Keep saved copies of unavailable custom cards when switching mods or when cards.json fails to load. Off resets those cards as before. Restart the game after changing this option."),
+
             new("Yu-Gi-Oh-Loader", "LoadOrder", SettingKind.Text, "",
                 "Names of plugin DLLs (without .dll) the loader loads first, in this order, separated by spaces. Plugins not listed load afterwards."),
 
@@ -98,8 +100,21 @@
 
             new("Yu-Gi-Oh-Core", "PauseInBackground", SettingKind.Toggle, "0", "Pause the game when its window loses focus (off = it keeps running)."),
             new("Yu-Gi-Oh-Core", "JapaneseVersion", SettingKind.Toggle, "0", "Act as the Japanese release of the game (its logo and Japanese-only text layouts)."),
+            new("Yu-Gi-Oh-Core", "ModConfig", SettingKind.Toggle, "1",
+                "Let switched-on mods set plugin settings from their own Config.ini (Mods\\<mod>\\Config.ini), so a mod works without you editing yours. A mod's value wins over yours while the mod is on. Off = only your Config.ini is read."),
             new("Yu-Gi-Oh-Core", "EngineRules2020", SettingKind.Toggle, "0",
                 "Duel rules: on = the game's own 2020 rules (Master Rule 5), off = 2019 rules (Master Rule 4). Core sets the engine's rules byte when the game starts, so restart after changing it."),
+            new("Yu-Gi-Oh-Core", "DuelFormat", SettingKind.Choice, "master",
+                "Duel format for offline duels, using the rules built into the game's duel engine. speed = Speed Duel: 4000 LP, 4-card hand, 3 monster and 3 spell/trap zones, no draw on the first turn, no Main Phase 2. rush = Rush Duel: 8000 LP, draw until you hold 5, unlimited Normal Summons, 3 + 3 zones and no Extra Monster Zones, no Main Phase 2, no chains. The field still shows 5 zones; Skills and Maximum monsters are not in the engine. Online duels use the host's Duel format row on the match settings screen (Yu-Gi-Oh-MP) instead. Restart after changing it.",
+                ["master", "speed", "rush"]),
+            new("Yu-Gi-Oh-Core", "MinMainDeck", SettingKind.Number, "40",
+                "Fewest Main Deck cards a deck may have (1 to 60). Speed Duel decks are 20 to 30. Restart after changing it."),
+            new("Yu-Gi-Oh-Core", "MaxMainDeck", SettingKind.Number, "60",
+                "Most Main Deck cards a deck may have (MinMainDeck to 60; a deck holds at most 60). Decks over the limit can't be picked for a duel until cards are taken out. Restart after changing it."),
+            new("Yu-Gi-Oh-Core", "MaxExtraDeck", SettingKind.Number, "15",
+                "Most Extra Deck cards the deck editor lets you add (0 to 15; Speed Duel uses 5). The game only checks the Main Deck's size, so a deck that already has more stays usable. Restart after changing it."),
+            new("Yu-Gi-Oh-Core", "MaxSideDeck", SettingKind.Number, "15",
+                "Most Side Deck cards the deck editor lets you add (0 to 15). Restart after changing it."),
 
             new("Yu-Gi-Oh-Core", "PluginsPath", SettingKind.Path, "",
                 "The loader's Plugins folder, e.g. <repo>\\Binaries\\Debug\\Plugins\\. The Effects plugin reads its files from a folder named Effects inside it. Must end with a backslash."),
@@ -118,6 +133,7 @@
             new("Yu-Gi-Oh-Core", "FileOrder", SettingKind.Choice, "loose",
                 "Which copy of a game file wins when both exist: loose = a loose file (LooseLoading, FolderName) wins over WolfX's patch archive; patch = WolfX's patch wins. Either way the game's own YGO_2020.dat comes last. WolfX follows the same setting.", ["loose", "patch"]),
 
+            new("Yu-Gi-Oh-Effects", "Trace", SettingKind.Toggle, "0", "Write the effect diagnostics to the log: effect lookups, slot calls, deck filter rows and candidate counts (for finding why an effect does nothing)."),
             new("Yu-Gi-Oh-PatchMeOut", "NoJanken", SettingKind.Toggle, "1", "Skip rock-paper-scissors at the start of a duel (offline duels; online duels still play it)."),
             new("Yu-Gi-Oh-PatchMeOut", "JankenFirst", SettingKind.Choice, "random",
                 "Who goes first when NoJanken skips rock-paper-scissors: P1 = you, P2 = your opponent, random = either.", ["random", "P1", "P2"]),
@@ -128,30 +144,25 @@
             new("Yu-Gi-Oh-Core", "GameSaveName", SettingKind.Text, "savegame-ex.dat",
                 "File name of the save the game always uses (Yu-Gi-Oh-Core is always loaded). Your original savegame.dat is never touched."),
             new("Yu-Gi-Oh-Core", "SaveSlot", SettingKind.Number, "0",
-                "0 = after the title screen, pick a save slot on the save-select screen. 1 to 5 = always load that slot and skip the screen. Slot 1 is the GameSaveName file, slot N the same name with -N (savegame-ex-2.dat); names and avatars are in Yu-Gi-Oh-Ex\\saves.json."),
+                "0 = after the title screen, pick a save slot on the save-select screen. 1 to 99 = always load that slot and skip the screen. Each slot's file, name and avatar are in Yu-Gi-Oh-Ex\\saves.json (slots are added and deleted on the save-select screen)."),
+            new("Yu-Gi-Oh-Core", "ReplacedNotice", SettingKind.Text, "",
+                "Written by the loader: the leftover (renamed, merged or retired) plugins it last told you about, so it says so only once. Clear it to see the message again."),
 
             new("Yu-Gi-Oh-SpeedHacks", "Speed", SettingKind.Number, "2", "Duel speed multiplier. 1 is normal."),
             new("Yu-Gi-Oh-SpeedHacks", "NoAnimations", SettingKind.Toggle, "1", "Skip card and monster animations in duels."),
             new("Yu-Gi-Oh-SpeedHacks", "NoMovies", SettingKind.Toggle, "1", "Skip the cutscene movies."),
 
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-ShowOwnedCards", SettingKind.Toggle, "0",
-                "Also list the cards you already have three copies of in the Card Shop. Off = only cards you can still buy are listed."),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-PasswordCost", SettingKind.Number, "1000",
-                "DP to unlock a card with its password (three copies). Yu-Gi-Oh-Ex\\prices.json can set a card's own password price."),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-MonsterPrice", SettingKind.Choice, "attack",
-                "How the Card Shop prices one copy of a monster. attack = ATK x 1.8 / 5. classic = Forbidden Memories' price curve (doubles every ~590 ATK+DEF). custom = BetterShop-MonsterFormula. flat = BetterShop-Cost. Yu-Gi-Oh-Ex\\prices.json can set a card's own price.",
-                ["attack", "classic", "custom", "flat"]),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-MonsterFormula", SettingKind.Text, "ATK * 1.8 / 5",
-                "Used when BetterShop-MonsterPrice is custom. Names: ATK, DEF (a Link monster's is 0.8 x ATK), LEVEL, RARE (1 or 0), LINK (1 or 0). + - * / ^ and brackets; min, max, exp, log, sqrt, round, floor, ceil."),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-SpellTrapPrice", SettingKind.Choice, "rarity",
-                "How the Card Shop prices spells and traps. rarity = what a typical monster of the same pack rarity costs. custom = BetterShop-SpellTrapFormula. flat = BetterShop-Cost.",
-                ["rarity", "custom", "flat"]),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-SpellTrapFormula", SettingKind.Text, "500 + 500 * RARE",
-                "Used when BetterShop-SpellTrapPrice is custom. RARE is 1 for a card in a pack's rare slot, else 0."),
-            new("Yu-Gi-Oh-BetterCardShop", "BetterShop-Cost", SettingKind.Number, "500", "DP for one copy when a price setting is flat."),
+
+
+
+
+
+
 
             new("Yu-Gi-Oh-AnimeCards", "HideLevelBadge", SettingKind.Choice, "1",
                 "The level/rank number the duel draws over the monsters in your hand (and the badge on other card views). 0 = show it (vanilla), 1 = hide it in the hand, 2 = hide it everywhere. The anime frames already show the stars on the card. Restart the game after changing it.", ["0", "1", "2"]),
+            new("Yu-Gi-Oh-AnimeCards", "HideFieldStats", SettingKind.Choice, "1",
+                "The stat plate under face-up monsters on the field (level badge, ATK / DEF, attribute and type icons). 1 = hide it (the anime frames show these on the card), 0 = show it (vanilla). Link arrows stay. Restart the game after changing it.", ["0", "1"]),
             new("Yu-Gi-Oh-AnimeCards", "UseLargeAtkDefFont", SettingKind.Toggle, "1", "Draw ATK/DEF with the game's larger (32 px) number font, so the scaled numbers stay sharper."),
             new("Yu-Gi-Oh-AnimeCards", "CustomAtkX", SettingKind.Number, "107.5", "ATK number: centre X on the 400 x 580 card face (the left box)."),
             new("Yu-Gi-Oh-AnimeCards", "CustomAtkY", SettingKind.Number, "526.5", "ATK number: centre Y on the card face."),
@@ -164,6 +175,16 @@
             new("Yu-Gi-Oh-AnimeCards", "LinkAttributeX", SettingKind.Number, "198.5", "Attribute icon on the Link frame: centre X."),
             new("Yu-Gi-Oh-AnimeCards", "LinkAttributeY", SettingKind.Number, "469", "Attribute icon on the Link frame: centre Y."),
             new("Yu-Gi-Oh-AnimeCards", "AttributeSize", SettingKind.Number, "48", "Attribute icon size in pixels on the card face (48 covers the frame's 45 px circle)."),
+            new("Yu-Gi-Oh-AnimeCards", "StarsAlign", SettingKind.Choice, "0", "0 = the level stars are centred on StarsX, 1 = the row ends at StarsX (right to left, as on Forbidden Memories cards).", new[] { "0", "1" }),
+            new("Yu-Gi-Oh-AnimeCards", "AtkLabel", SettingKind.Text, "", "Text in front of the ATK number (\"ATK \" on Forbidden Memories cards). With a label the numbers use the card's own font and the text scales."),
+            new("Yu-Gi-Oh-AnimeCards", "DefLabel", SettingKind.Text, "", "Text in front of the DEF number (\"DEF \" on Forbidden Memories cards)."),
+            new("Yu-Gi-Oh-AnimeCards", "ShowName", SettingKind.Toggle, "0", "Keep the card's name on the face (for frames with a name bar, such as Forbidden Memories'). Anime frames hide it."),
+            new("Yu-Gi-Oh-AnimeCards", "NameX", SettingKind.Number, "31", "With ShowName: x of the name's top-left corner on the 400 x 580 face."),
+            new("Yu-Gi-Oh-AnimeCards", "NameY", SettingKind.Number, "46", "With ShowName: y of the name's top-left corner on the 400 x 580 face."),
+            new("Yu-Gi-Oh-AnimeCards", "NameWidth", SettingKind.Number, "0", "With ShowName: longer names are squeezed to this width (0 = the game's 301 px)."),
+            new("Yu-Gi-Oh-AnimeCards", "FullArtIllustration", SettingKind.Toggle, "0", "Make illustration full art: the art fills the whole 400 x 580 card (ignores CardArtScale / offsets). Frame, stars, attribute and ATK/DEF stay."),
+            new("Yu-Gi-Oh-AnimeCards", "HideSpellTrapIcon",SettingKind.Toggle, "0", "Hide the Quick-Play / Continuous / Equip / Field / Ritual / Counter icon on spells and traps (Forbidden Memories cards have none)."),
+            new("Yu-Gi-Oh-AnimeCards", "SpellTrapAttribute", SettingKind.Toggle, "0", "Spells and traps show their SPELL / TRAP icon where monsters show the attribute (for frames without a symbol, such as Forbidden Memories')."),
             new("Yu-Gi-Oh-AnimeCards", "StarsX", SettingKind.Number, "200", "Level/rank stars: the row is centred on this X."),
             new("Yu-Gi-Oh-AnimeCards", "StarsY", SettingKind.Number, "465.5", "Level/rank stars: centre Y (the band between the art and the ATK/DEF boxes). Below 0 keeps the game's own height."),
             new("Yu-Gi-Oh-AnimeCards", "StarsMaxWidth", SettingKind.Number, "240", "Widest the star row may be before it's shrunk to fit (keeps it clear of the attribute circle)."),
@@ -181,7 +202,11 @@
                 "A .ydc deck for the opponent's tag partner. Empty = a copy of the opponent's deck."),
 
             new("Yu-Gi-Oh-MP", "ServerUrl", SettingKind.Text, "",
-                "Base URL of the multiplayer server (sign-in, event reports). Empty = offline: the duel recorder (Duels.log) and logging still work."),
+                "Base URL of the multiplayer server (YgoMp, e.g. http://localhost:5080). Multiplayer > Connect to Server signs in here. Empty = offline: the duel recorder (Duels.log) and logging still work."),
+            new("Yu-Gi-Oh-MP", "ClaimCode", SettingKind.Text, "",
+                "Sign in with a code the server's host minted (YgoMp.SelfHost mint) instead of Steam: for Epic/GOG copies. Empty = Steam."),
+            new("Yu-Gi-Oh-MP", "DisplayName", SettingKind.Text, "",
+                "The name a claim code's account gets the first time it signs in."),
 
             new("Yu-Gi-Oh-Funky", "DemoMenuButtons", SettingKind.Toggle, "0",
                 "Add the demo buttons to the game's menus (Debug Tools and Credits on the main menu, Funky Tools in options). Needs Yu-Gi-Oh-RIX."),

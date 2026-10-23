@@ -11,16 +11,26 @@ namespace WolfEx
     {
         private readonly CheckBox _traps = Check("Trap Cards (can't be activated; Trap effects on the field negated)");
         private readonly CheckBox _spells = Check("Spell Cards (the same for Spells)");
-        private readonly CheckBox _monsters = Check("Monster effects (face-up monsters' effects are negated, like Skill Drain)");
+        private readonly CheckBox _monsters = Check("Monster effects (the effects of face-up monsters are negated)");
         private readonly CheckBox _continuousTraps = Check("Continuous Traps can't be activated (both players)");
         private readonly CheckBox _continuousSpells = Check("Continuous Spells can't be activated (both players)");
         private readonly CheckBox _fieldSpells = Check("Field Spells can't be activated (both players)");
         private readonly CheckBox _equipSpells = Check("Equip Spells can't be activated (both players)");
         private readonly ComboBox _side = Combo(["both players", "the opponent only", "its controller only"]);
-        private readonly ComboBox _zone = Combo(["a Monster Zone", "a Spell/Trap Zone", "any zone"]);
+        private readonly ComboBox _zone = Combo(["its own zone (from the card)", "a Monster Zone", "a Spell/Trap Zone", "any zone"]);
+        private readonly ComboBox _filter = Combo(["every monster", .. FilterNames]);
+
+        // the narrow monster locks (EffectScriptCompiler.LockMonsterFilters, Lock.cpp kFilters), in the same order
+        private static readonly string[] FilterNames = ["LIGHT monsters", "monsters with an A-Counter", "monsters except Koa'ki Meiru",
+            "monsters Special Summoned from the Main Deck", "monsters Special Summoned from the Extra Deck", "Fusion, Synchro and Xyz monsters",
+            "monsters in the Extra Monster Zones", "monsters except Tribute Summoned ones", "monsters Special Summoned this turn",
+            "Defense Position monsters"];
+
+        private static string? FilterName(string? word) =>
+            Array.IndexOf(EffectScriptCompiler.LockMonsterFilters, word ?? "") is int i and >= 0 ? FilterNames[i] : null;
 
         private static readonly string[] SideKeys = ["both", "opponent", "you"];
-        private static readonly string[] ZoneKeys = ["monster", "spelltrap", "any"];
+        private static readonly string[] ZoneKeys = ["auto", "monster", "spelltrap", "any"];   // auto: not written, Yu-Gi-Oh-Effects takes it from the card
 
         /// <summary>The lock after OK; null = no lock (Remove lock, or nothing ticked).</summary>
         public JsonObject? Result { get; private set; }
@@ -36,24 +46,27 @@ namespace WolfEx
             Padding = new Padding(10);
 
             var flow = new FlowLayoutPanel { FlowDirection = FlowDirection.TopDown, AutoSize = true, WrapContents = false, Dock = DockStyle.Fill };
-            flow.Controls.Add(Note("While this card is face-up and its effects aren't negated, the game treats it like Jinzo (4758), Spell Canceller " +
-                                   "(5594) or Skill Drain (5740): the cards ticked here can't be activated and are negated on the field."));
+            flow.Controls.Add(Note("While this card is face-up in the zone below and its effects aren't negated, the cards ticked here can't be " +
+                                   "activated and their effects on the field are negated."));
             flow.Controls.Add(Heading("Lock"));
             foreach (var box in new[] { _traps, _spells, _monsters })
                 flow.Controls.Add(box);
+            flow.Controls.Add(Row(new Label { Text = "Monster effects of only:", AutoSize = true, Margin = new Padding(3, 7, 3, 3) }, _filter));
+            _filter.SelectedIndexChanged += (_, _) =>
+            {
+                if (_filter.SelectedIndex > 0)
+                {
+                    _monsters.Checked = true;
+                    _side.SelectedIndex = 0;   // one slot for both players' monsters
+                }
+                _side.Enabled = _filter.SelectedIndex == 0;
+            };
             flow.Controls.Add(Row(new Label { Text = "Affects:", AutoSize = true, Margin = new Padding(3, 7, 3, 3) }, _side));
             flow.Controls.Add(Heading("Only certain Spell / Trap types (either player)"));
             foreach (var box in new[] { _continuousTraps, _continuousSpells, _fieldSpells, _equipSpells })
                 flow.Controls.Add(box);
             flow.Controls.Add(Row(new Label { Text = "Works while this card is in:", AutoSize = true, Margin = new Padding(3, 7, 3, 3) }, _zone));
 
-            var jinzo = new Button { Text = "Jinzo", AutoSize = true };
-            jinzo.Click += (_, _) => Fill(new JsonObject { ["traps"] = true, ["side"] = "both", ["zone"] = "monster" });
-            var canceller = new Button { Text = "Spell Canceller", AutoSize = true };
-            canceller.Click += (_, _) => Fill(new JsonObject { ["traps"] = false, ["spells"] = true, ["side"] = "both", ["zone"] = "monster" });
-            var skillDrain = new Button { Text = "Skill Drain", AutoSize = true };
-            skillDrain.Click += (_, _) => Fill(new JsonObject { ["traps"] = false, ["monsters"] = true, ["side"] = "both", ["zone"] = "spelltrap" });
-            flow.Controls.Add(Row(new Label { Text = "Presets:", AutoSize = true, Margin = new Padding(3, 7, 3, 3) }, jinzo, canceller, skillDrain));
 
             var ok = new Button { Text = "OK", DialogResult = DialogResult.OK, AutoSize = true };
             var remove = new Button { Text = "Remove lock", DialogResult = DialogResult.OK, AutoSize = true };
@@ -65,7 +78,7 @@ namespace WolfEx
             AcceptButton = ok;
             CancelButton = cancel;
 
-            Fill(current ?? new JsonObject { ["traps"] = true, ["side"] = "both", ["zone"] = "monster" });
+            Fill(current ?? new JsonObject { ["traps"] = true, ["side"] = "both" });
             remove.Enabled = current != null;
         }
 
@@ -80,7 +93,8 @@ namespace WolfEx
             _fieldSpells.Checked = Flag("fieldSpells", false);
             _equipSpells.Checked = Flag("equipSpells", false);
             _side.SelectedIndex = Math.Max(0, Array.IndexOf(SideKeys, lockJson["side"]?.GetValue<string>() ?? "both"));
-            _zone.SelectedIndex = Math.Max(0, Array.IndexOf(ZoneKeys, lockJson["zone"]?.GetValue<string>() ?? "monster"));
+            _zone.SelectedIndex = Math.Max(0, Array.IndexOf(ZoneKeys, lockJson["zone"]?.GetValue<string>() ?? "auto"));
+            _filter.SelectedIndex = Array.IndexOf(EffectScriptCompiler.LockMonsterFilters, lockJson["monsterFilter"]?.GetValue<string>() ?? "") + 1;
         }
 
         private JsonObject? Build()
@@ -93,8 +107,11 @@ namespace WolfEx
             foreach (var (box, key) in boxes.Skip(1))
                 if (box.Checked)
                     json[key] = true;
-            json["side"] = SideKeys[_side.SelectedIndex];
-            json["zone"] = ZoneKeys[_zone.SelectedIndex];
+            if (_monsters.Checked && _filter.SelectedIndex > 0)
+                json["monsterFilter"] = EffectScriptCompiler.LockMonsterFilters[_filter.SelectedIndex - 1];
+            json["side"] = json["monsterFilter"] != null ? "both" : SideKeys[_side.SelectedIndex];
+            if (_zone.SelectedIndex > 0)
+                json["zone"] = ZoneKeys[_zone.SelectedIndex];
             return json;
         }
 
@@ -109,7 +126,7 @@ namespace WolfEx
                 ("continuousTraps", "continuous_trap", false), ("continuousSpells", "continuous_spell", false), ("fieldSpells", "field_spell", false),
                 ("equipSpells", "equip_spell", false) })
                 if (Flag(key, fallback))
-                    words.Add(word);
+                    words.Add(word == "monster" && lockJson["monsterFilter"]?.GetValue<string>() is { } filter ? filter : word);
             if (words.Count == 0)
                 return "";
             switch (lockJson["side"]?.GetValue<string>())
@@ -119,6 +136,7 @@ namespace WolfEx
             }
             switch (lockJson["zone"]?.GetValue<string>())
             {
+                case "monster": words.Add("monster_zone"); break;
                 case "spelltrap": words.Add("spelltrap_zone"); break;
                 case "any": words.Add("any_zone"); break;
             }
@@ -142,7 +160,7 @@ namespace WolfEx
             var what = new List<string>();
             if (Flag("traps", true)) what.Add("Traps");
             if (Flag("spells", false)) what.Add("Spells");
-            if (Flag("monsters", false)) what.Add("monster effects");
+            if (Flag("monsters", false)) what.Add(FilterName(lockJson["monsterFilter"]?.GetValue<string>()) is { } only ? "effects of " + only : "monster effects");
             if (Flag("continuousTraps", false)) what.Add("Continuous Traps");
             if (Flag("continuousSpells", false)) what.Add("Continuous Spells");
             if (Flag("fieldSpells", false)) what.Add("Field Spells");

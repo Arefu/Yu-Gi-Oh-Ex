@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using Wolf.Editors;
@@ -39,10 +39,10 @@ namespace WolfEx
             ("Flip Effect", 24),
             ("Pendulum", 25),
             ("Pendulum Effect", 26),
-            ("Special Summoned Effect", 27),
-            ("Toon Effect", 28),
-            ("Spirit Effect", 29),
-            ("Tuner", 30),
+            ("Effect Special Summon Only", 27),
+            ("Toon Special Summon Only", 28),
+            ("Spirit Special Summon Only", 29),
+            ("Tuner Effect Special Summon Only", 30),
             ("Tuner Flip Effect", 32),
             ("Pendulum Tuner Effect", 33),
             ("Xyz Pendulum Effect", 34),
@@ -51,13 +51,16 @@ namespace WolfEx
             ("Union Tuner Effect", 37),
             ("Ritual Spirit Effect", 38),
             ("Fusion Tuner", 39),
-            ("Pendulum Effect Alt", 40),
+            ("Pendulum Effect Special Summon Only", 40),
             ("Fusion Pendulum Effect", 41),
             ("Link", 42),
             ("Link Effect", 43),
             ("Pendulum Tuner Normal", 44),
             ("Pendulum Spirit Effect", 45),
         };
+        // Names older cards.json files used for 27-30 and 40 (before the kinds were checked against the exe's KIND_TABLE).
+        private static readonly (string Name, int Value)[] OldKindNames =
+            [("Special Summoned Effect", 27), ("Toon Effect", 28), ("Spirit Effect", 29), ("Tuner", 30), ("Pendulum Effect Alt", 40)];
         internal static readonly (string Name, int Value)[] Attributes =
         {
             ("Special", 0), ("Light", 1), ("Dark", 2), ("Water", 3), ("Fire", 4),
@@ -83,9 +86,10 @@ namespace WolfEx
         // cards.json's "linkmarkers" names, in bit order (Yu-Gi-Oh-MoreCards Card.cpp LinkMarkerBits)
         internal static readonly string[] LinkMarkerNames = ["Top-Left", "Top", "Top-Right", "Left", "Right", "Bottom-Left", "Bottom", "Bottom-Right"];
 
-        // The plugin accepts ids from the first one after the game's own to the last one the save can hold.
+        // The plugin accepts ids from the first one after the game's own to the last before 65535 (the game's "no card"); ids past 19999,
+        // which the save's own card table can't hold, are kept by Yu-Gi-Oh-Core.
         private const int MinId = 15300;   // the game has effect data for ids 14969-15234; see docs/EffectSystem.md
-        private const int MaxId = 19999;
+        private const int MaxId = 65534;
 
         private static readonly string[] ImageExtensions = [".png", ".jpg", ".jpeg"];
 
@@ -194,7 +198,7 @@ namespace WolfEx
             public bool AtkUnknown, DefUnknown;
 
             /// <summary>
-            /// The card's password ("password" in cards.json, kept in Extra; 0 = none): Yu-Gi-Oh-BetterCardShop's Enter Password page unlocks
+            /// The card's password ("password" in cards.json, kept in Extra; 0 = none): the Card Store's Enter Password page (BOB, docs/examples/card-store) unlocks
             /// it with these 8 digits, as bin\CARD_Pass.bin does for the game's cards.
             /// </summary>
             public int Password
@@ -428,10 +432,15 @@ namespace WolfEx
 
         public void MarkSaved() => (_snapshot ??= new ContentSnapshot(() => _cards)).Mark();
 
+        private readonly ContentLoadState _loadState = new();
+
         public void LoadFrom(string extraCardsFolder, string gameFolder)
         {
+            _loadState.Reset();
             _folder = extraCardsFolder;
             ArchetypeCatalog.Load(extraCardsFolder);
+            if (ArchetypeCatalog.LoadError is { } archetypeError)
+                MessageBox.Show(archetypeError, "Archetypes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             _cards.Clear();
             _summary.Art = GameFolderFiles.Current is { } files ? new WorkspaceCardArt(files) : null;
 
@@ -441,12 +450,13 @@ namespace WolfEx
                 try
                 {
                     var root = JsonNode.Parse(File.ReadAllText(path), documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip });
-                    var array = root as JsonArray ?? root?["cards"] as JsonArray ?? throw new InvalidDataException("expected a \"cards\" array");
+                    var array = ContentLoadState.Cards(root ?? throw new InvalidDataException("Expected cards JSON."));
                     foreach (var node in array.OfType<JsonObject>())
                         _cards.Add(ReadCard(node));
                 }
                 catch (Exception ex)
                 {
+                    _loadState.Failed(ex);
                     MessageBox.Show($"Could not read {path}:\n{ex.Message}", "New cards", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     _cards.Clear();
                 }
@@ -460,6 +470,7 @@ namespace WolfEx
 
         public bool SaveTo(string extraCardsFolder)
         {
+            _loadState.EnsureLoaded();
             var problems = new List<string>();
             foreach (var group in _cards.GroupBy(card => card.Id).Where(g => g.Count() > 1))
                 problems.Add($"ID {group.Key} is used by more than one card.");
@@ -485,53 +496,7 @@ namespace WolfEx
 
             try
             {
-                foreach (var card in _cards.Where(card => card.PendingArt != null))
-                {
-                    // The game decodes PNG and JPEG by their header, so the picture is copied as it is.
-                    string extension = Path.GetExtension(card.PendingArt!).ToLowerInvariant();
-                    string name = card.Id + (extension == ".jpeg" ? ".jpg" : extension);
-
-                    foreach (string old in ImageExtensions.Select(ext => Path.Combine(extraCardsFolder, card.Id + ext)))
-                    {
-                        if (File.Exists(old) && !string.Equals(Path.GetFileName(old), name, StringComparison.OrdinalIgnoreCase))
-                            File.Delete(old);
-                    }
-
-                    string target = Path.Combine(extraCardsFolder, name);
-                    if (!string.Equals(Path.GetFullPath(card.PendingArt!), Path.GetFullPath(target), StringComparison.OrdinalIgnoreCase))
-                        File.Copy(card.PendingArt!, target, overwrite: true);
-
-                    card.Image = name;
-                    card.PendingArt = null;
-                }
-
-                // the uncensored picture: <id>_uncensored.<ext>, replaced or removed the same way
-                foreach (var card in _cards.Where(card => card.PendingUncensored != null || card.DropUncensored))
-                {
-                    string? extension = card.PendingUncensored is { } pending ? Path.GetExtension(pending).ToLowerInvariant() : null;
-                    string? name = extension == null ? null : card.Id + "_uncensored" + (extension == ".jpeg" ? ".jpg" : extension);
-                    foreach (string old in ImageExtensions.Select(ext => Path.Combine(extraCardsFolder, card.Id + "_uncensored" + ext)))
-                    {
-                        if (File.Exists(old) && !string.Equals(Path.GetFileName(old), name, StringComparison.OrdinalIgnoreCase))
-                            File.Delete(old);
-                    }
-                    if (name != null)
-                    {
-                        string target = Path.Combine(extraCardsFolder, name);
-                        if (!string.Equals(Path.GetFullPath(card.PendingUncensored!), Path.GetFullPath(target), StringComparison.OrdinalIgnoreCase))
-                            File.Copy(card.PendingUncensored!, target, overwrite: true);
-                    }
-                    card.ImageUncensored = name ?? "";
-                    card.PendingUncensored = null;
-                    card.DropUncensored = false;
-                }
-
-                var array = new JsonArray();
-                foreach (var card in _cards.OrderBy(card => card.Id))
-                    array.Add(WriteCard(card));
-
-                var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
-                File.WriteAllText(Path.Combine(extraCardsFolder, "cards.json"), new JsonObject { ["cards"] = array }.ToJsonString(options) + "\n", new UTF8Encoding(false));
+                SaveFiles(extraCardsFolder);
             }
             catch (Exception ex)
             {
@@ -544,6 +509,49 @@ namespace WolfEx
             return true;
         }
 
+        // The model is updated only after every artwork and JSON change has committed.
+        internal void SaveFiles(string folder)
+        {
+            _loadState.EnsureLoaded();
+            var files = new Dictionary<string, byte[]>(StringComparer.OrdinalIgnoreCase);
+            var removals = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            var updates = new List<Action>();
+            var array = new JsonArray();
+            string StageArt(int id, string suffix, string? source)
+            {
+                string? extension = source == null ? null : Path.GetExtension(source).ToLowerInvariant();
+                string name = extension == null ? "" : id + suffix + (extension == ".jpeg" ? ".jpg" : extension);
+                foreach (string old in ImageExtensions.Select(ext => Path.Combine(folder, id + suffix + ext)))
+                    if (!string.Equals(Path.GetFileName(old), name, StringComparison.OrdinalIgnoreCase))
+                        removals.Add(old);
+                if (source != null)
+                    files[Path.Combine(folder, name)] = File.ReadAllBytes(source);
+                return name;
+            }
+            foreach (var card in _cards.OrderBy(card => card.Id))
+            {
+                var json = WriteCard(card);
+                if (card.PendingArt != null)
+                {
+                    string name = StageArt(card.Id, "", card.PendingArt);
+                    json["image"] = name;
+                    updates.Add(() => { card.Image = name; card.PendingArt = null; });
+                }
+                if (card.PendingUncensored != null || card.DropUncensored)
+                {
+                    string name = StageArt(card.Id, "_uncensored", card.PendingUncensored);
+                    if (name.Length == 0) json.Remove("imageUncensored");
+                    else json["imageUncensored"] = name;
+                    updates.Add(() => { card.ImageUncensored = name; card.PendingUncensored = null; card.DropUncensored = false; });
+                }
+                array.Add(json);
+            }
+            var options = new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping };
+            files[Path.Combine(folder, "cards.json")] = ContentSaveBatch.Text(new JsonObject { ["cards"] = array }.ToJsonString(options) + "\n");
+            ContentSaveBatch.Write(files, removals);
+            foreach (var update in updates) update();
+        }
+
         // ---------------------------------------------------------------- model <-> UI
 
         private CardModel? Selected => _list.SelectedIndices.Count > 0 && _list.SelectedIndices[0] < _rows.Count ? _rows[_list.SelectedIndices[0]] : null;
@@ -553,6 +561,7 @@ namespace WolfEx
         {
             string find = _find.Text.Trim();
             _rows = _cards.Where(c => find.Length == 0 || c.Id.ToString() == find || c.Name.Contains(find, StringComparison.OrdinalIgnoreCase))
+                .Where(c => _kindFilter.Shows(c.Kind))
                 .OrderBy(c => c.Id).ToList();
             _binding = true;
             try
@@ -637,7 +646,7 @@ namespace WolfEx
                 Select(_type, card.Type);
                 Select(_attribute, card.Attribute);
                 Select(_icon, card.Icon);
-                _level.Value = Math.Clamp(card.Level, 1, 12);
+                _level.Value = Math.Clamp(card.Level, 0, 13);   // the props hold 0-15; 7 game monsters are Level 0
                 _atk.Value = Math.Clamp(card.Atk, 0, 9990);
                 _def.Value = Math.Clamp(card.Def, 0, 9990);
                 _atkUnknown.Checked = card.AtkUnknown;
@@ -941,7 +950,9 @@ namespace WolfEx
             Description = ReadString(json, "description"),
             Image = ReadString(json, "image"),
             ImageUncensored = ReadString(json, "imageUncensored"),
-            Kind = ReadEnum(json, "kind", Kinds, "Normal"),
+            Kind = ReadEnum(json, "kind", Kinds, "Normal") is var kind && kind == "Normal" && json["kind"] is JsonValue old && old.TryGetValue<string>(out var oldName)
+                && OldKindNames.FirstOrDefault(k => string.Equals(k.Name, oldName, StringComparison.OrdinalIgnoreCase)) is { Name: not null } alias
+                ? Kinds.First(k => k.Value == alias.Value).Name : kind,
             Type = ReadEnum(json, "type", Types, "Warrior"),
             Attribute = ReadEnum(json, "attribute", Attributes, "Light"),
             Icon = ReadEnum(json, "icon", Icons, "Normal"),

@@ -1,0 +1,49 @@
+{
+    "version": 2,
+    "header": "RIX Demo",
+    "elements": [
+        {
+            "kind": "text",
+            "x": 1000,
+            "y": 230,
+            "width": 760,
+            "text": "Every control on these pages is one of the game widgets, lifted from the screen that owns it and built on a screen of RIX’s own.",
+            "textSize": 30,
+            "align": "left"
+        },
+        {
+            "kind": "text",
+            "x": 1000,
+            "y": 420,
+            "width": 760,
+            "text": "Being worked on is listed first; the widgets that already work are under Working widgets.",
+            "textSize": 26,
+            "align": "left",
+            "colour": "#FFC8E6FF"
+        },
+        {
+            "kind": "menu",
+            "id": "demo.pick",
+            "x": 200,
+            "y": 220,
+            "width": 660,
+            "height": 400,
+            "items": [
+                {
+                    "label": "Working widgets",
+                    "description": "Menus, volume bar, digits, card details, Free Duel pickers, deck picker, message boxes.",
+                    "action": {
+                        "page": "rix-demo-done"
+                    }
+                },
+                {
+                    "label": "Back",
+                    "description": "Back to the previous page.",
+                    "action": {
+                        "back": true
+                    }
+                }
+            ]
+        }
+    ]
+}

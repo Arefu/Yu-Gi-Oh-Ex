@@ -9,7 +9,7 @@ using Types;
 namespace Wolf.Editors
 {
     /// <summary>
-    /// The Music page: Yu-Gi-Oh-Ex\music.json for Yu-Gi-Oh-Music (docs/MusicPlugin.md). Which file (or which of the game's own tracks) plays
+    /// The Music page: Yu-Gi-Oh-Ex\music.json for Yu-Gi-Oh-Media (docs/MediaPlugin.md). Which file (or which of the game's own tracks) plays
     /// for each of the game's music slots: everywhere, or only in an arena, against an opponent, or in one story duel (the most specific wins).
     /// Several rows for the same slot = one of them is picked at random each time the slot starts. Added files are copied into the music folder.
     /// </summary>
@@ -83,7 +83,7 @@ namespace Wolf.Editors
 
         public IReadOnlyCollection<string> Files => [@"main\arenadata_E.bin", CharacterTable.GamePath('E'), StoryDuelTable.GamePath('E')];
 
-        public string SavesTo => $"Additional: Yu-Gi-Oh-Ex\\{FileName} and the files in its music folder (needs Yu-Gi-Oh-Music).";
+        public string SavesTo => $"Additional: Yu-Gi-Oh-Ex\\{FileName} and the files in its music folder (needs Yu-Gi-Oh-Media).";
 
         public bool Dirty => _files != null && Build().ToJsonString() != _savedJson;
 
@@ -676,7 +676,7 @@ namespace Wolf.Editors
                 return false;
             }
             _savedJson = root.ToJsonString();
-            _status.Text = $"Saved {_files.ExPath(FileName)}. Yu-Gi-Oh-Music reads it when the game starts.";
+            _status.Text = $"Saved {_files.ExPath(FileName)}. Yu-Gi-Oh-Media reads it when the game starts.";
             return true;
         }
     }

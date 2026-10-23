@@ -1,3 +1,4 @@
+#include <format>
 #include <string>
 
 #include <json.hpp>
@@ -11,6 +12,21 @@
 namespace
 {
     std::string g_Token;
+    std::string g_DisplayName;
+
+    bool TakeToken(const nlohmann::json& response, const char* route)
+    {
+        if (!response.is_object() || !response.contains("token") || !response["token"].is_string())
+        {
+            const std::string error = response.is_object() && response.contains("error") && response["error"].is_string() ? response["error"].get<std::string>() : "no reply";
+            Logger::WriteLog(std::format("MP {} did not return a token ({}) - is the server running and is ServerUrl right?", route, error), MODULE_NAME, 2);
+            return false;
+        }
+        g_Token = response["token"].get<std::string>();
+        g_DisplayName = response.value("displayName", std::string());
+        Logger::WriteLog(std::format("Signed in to the MP server as {}", g_DisplayName), MODULE_NAME, 0);
+        return true;
+    }
 
     std::string ToHex(const std::vector<uint8_t>& bytes)
     {
@@ -54,16 +70,31 @@ bool Auth::AuthenticateWithSteam()
     request["steamId"] = std::to_string(steamId);
     request["ticket"] = ToHex(ticket);
 
-    const nlohmann::json response = Http::PostJson(serverUrl, "/auth/steam", request);
-    if (!response.is_object() || !response.contains("token") || !response["token"].is_string())
-    {
-        Logger::WriteLog("MP /auth/steam did not return a token - is the service running and is ServerUrl right?", MODULE_NAME, 2);
-        return false;
-    }
+    return TakeToken(Http::PostJson(serverUrl, "/auth/steam", request), "/auth/steam");
+}
 
-    g_Token = response["token"].get<std::string>();
-    Logger::WriteLog("Authenticated with the MP service", MODULE_NAME, 0);
-    return true;
+bool Auth::AuthenticateWithClaim(const std::string& code, const std::string& displayName)
+{
+    const std::string serverUrl = Config::Get_ServerUrl();
+    if (serverUrl.empty() || code.empty())
+        return false;
+
+    nlohmann::json request;
+    request["code"] = code;
+    if (!displayName.empty())
+        request["displayName"] = displayName;
+    return TakeToken(Http::PostJson(serverUrl, "/auth/claim", request), "/auth/claim");
+}
+
+const std::string& Auth::Get_DisplayName()
+{
+    return g_DisplayName;
+}
+
+void Auth::Clear()
+{
+    g_Token.clear();
+    g_DisplayName.clear();
 }
 
 bool Auth::HasToken()

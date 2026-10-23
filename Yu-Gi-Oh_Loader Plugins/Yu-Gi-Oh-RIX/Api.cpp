@@ -1,5 +1,6 @@
 // The functions other plugins call, declared in Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-RIX.h. Plain C so any language can use them.
 #include <Windows.h>
+#include <algorithm>
 #include <cstdint>
 #include <format>
 #include <memory>
@@ -8,14 +9,20 @@
 #define RIX_EXPORTS
 #include "Yu-Gi-Oh-RIX.h"
 #include "Pages.h"
+#include "PageScreen.h"
 #include "Logger.h"
 #include "MainMenu.h"
+#include "PluginMenu.h"
 
-#include "YuGiOh/YuGiOh-RIX.h"
 
 extern "C"
 {
     int __cdecl RIX_GetVersion(void) { return RIX_API_VERSION; }
+
+    int __cdecl RIX_RegisterPluginOptions(const char* key, const wchar_t* label, const wchar_t* description, RIX_ButtonCallback callback, void* user)
+    {
+        return PluginMenu::RegisterOptions(key, label, description, callback, user) ? 1 : 0;
+    }
 
     int __cdecl RIX_AddMainMenuButton(const RIX_ButtonDesc* button) { return button ? Menu::Add(*button) : -1; }
 
@@ -113,6 +120,49 @@ extern "C"
                              : align == RIX_ALIGN_RIGHT ? YGO::RIX::Dfx::TextAlign::Right : YGO::RIX::Dfx::TextAlign::Left;
         handle->Node = YGO::RIX::Dfx::AddText(YGO::RIX::ScreenRoot(screen), handle->Text.c_str(), z, x, y, width, pixelSize, alignment, colour);
         return handle->Node.Node ? handle.release() : nullptr;
+    }
+
+    int __cdecl RIX_OpenPageFile(const char* name) { return name && PageScreen::TryOpen(name) ? 1 : 0; }
+
+    void __cdecl RIX_SetPageVar(const char* name, const char* value)
+    {
+        if (name && *name)
+            PageScreen::SetVar(name, value ? value : "");
+    }
+
+    int __cdecl RIX_GetPageVar(const char* name, char* buffer, int bufferSize)
+    {
+        if (!name)
+            return -1;
+        const std::string value = PageScreen::GetVar(name);
+        if (buffer && bufferSize > 0)
+        {
+            const size_t count = (std::min)(value.size(), static_cast<size_t>(bufferSize - 1));
+            memcpy(buffer, value.data(), count);
+            buffer[count] = '\0';
+        }
+        return static_cast<int>(value.size());
+    }
+
+    int __cdecl RIX_RegisterPageList(const char* name, RIX_PageListCallback callback, void* user)
+    {
+        if (!name || !*name || !callback)
+            return 0;
+        PageScreen::RegisterList(name, callback, user);
+        return 1;
+    }
+
+    void __cdecl RIX_PageListAdd(void* list, const wchar_t* label, const wchar_t* description, const char* value)
+    {
+        PageScreen::ListAdd(list, label, description, value);
+    }
+
+    int __cdecl RIX_RegisterPageValue(const char* name, RIX_PageValueCallback callback, void* user)
+    {
+        if (!name || !*name || !callback)
+            return 0;
+        PageScreen::RegisterValue(name, callback, user);
+        return 1;
     }
 
     void __cdecl RIX_RemoveNode(void* node)

@@ -1,0 +1,26 @@
+// The ban list picker (Ban Lists mod). The host's "Ban list" row on the match settings screen opens it with "Choose a list...".
+// The lists are Yu-Gi-Oh-Ex\banlists\*.json; Yu-Gi-Oh-MP fills the list menu (rows "mp.banlists") from the filters below, and
+// call("mp.banlist.use") plays the chosen one. A filter change starts at page 1 again and rebuilds the rows (reload).
+header "Ban List";
+
+menu filters at 160, 220 size 660, 600 spacing 90 {
+    choice "Era" "Only the lists of one era." ["All" = "all", "DM" = "DM", "GX" = "GX", "5D's" = "5D's", "ZEXAL" = "ZEXAL", "ARC-V" = "ARC-V",
+        "VRAINS" = "VRAINS", "SEVENS" = "SEVENS", "GO RUSH!!" = "GO RUSH!!"] bind var:banlist.era default "all"
+        onchange { set(var:banlist.year, "all"); set(var:banlist.page, "0"); reload; };
+    choice "Year" "Only the lists that came out in one year." ["All" = "all", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009",
+        "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"]
+        bind var:banlist.year default "all" onchange { set(var:banlist.page, "0"); reload; };
+    button "Next page" "More lists." if game:mp.banlist.pages >= 2 -> { add(var:banlist.page, 1); reload; };
+    button "Previous page" if game:mp.banlist.pages >= 2 -> { add(var:banlist.page, -1); reload; };
+    button "Game's list" "The game's own Forbidden & Limited List." -> { call("mp.banlist.game"); back; };
+    button "No list" "Every card at 3 copies." -> { call("mp.banlist.off"); back; };
+    button "Back" -> back;
+}
+
+menu banlist at 1000, 260 size 760, 720 spacing 85 {
+    rows "mp.banlists" -> { call("mp.banlist.use"); back; };
+}
+
+text "In use: {game:mp.banlist}" at 160, 900 width 700 textSize 26 align left;
+text "{game:mp.banlist.count} lists - {game:mp.banlist.pagetext}" at 1000, 200 width 760 textSize 26 align left;
+text "No list matches these filters." if game:mp.banlist.count < 1 at 1000, 300 width 760 textSize 26 align left;

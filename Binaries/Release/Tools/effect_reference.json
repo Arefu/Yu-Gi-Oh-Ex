@@ -438,6 +438,25 @@
    "action": "search"
   },
   {
+   "id": 4758,
+   "name": "Jinzo",
+   "kind": "Effect",
+   "icon": "",
+   "text": "Trap Cards, and their effects on the field, cannot be activated. Negate all Trap effects on the field.",
+   "script": "lock(trap);\n// not covered by the script: Amplifier can make the original Jinzo lock affect only the opponent; this template locks both players.",
+   "trigger": "",
+   "complete": false,
+   "sourceOk": false,
+   "unread": 0,
+   "notes": [
+    "Amplifier can make the original Jinzo lock affect only the opponent; this template locks both players."
+   ],
+   "table": "hardcoded lock",
+   "cost": "",
+   "firstClause": false,
+   "action": "lock"
+  },
+  {
    "id": 4770,
    "name": "Skull-Mark Ladybug",
    "kind": "Effect",
@@ -576,6 +595,25 @@
    "cost": "",
    "firstClause": false,
    "action": "draw"
+  },
+  {
+   "id": 4866,
+   "name": "Royal Decree",
+   "kind": "Trap",
+   "icon": "",
+   "text": "Negate all other Trap effects on the field.",
+   "script": "lock(trap, spelltrap_zone);\n// not covered by the script: The original uses an activation-order threshold and excludes itself; this template locks all Traps, including activation.",
+   "trigger": "",
+   "complete": false,
+   "sourceOk": false,
+   "unread": 0,
+   "notes": [
+    "The original uses an activation-order threshold and excludes itself; this template locks all Traps, including activation."
+   ],
+   "table": "hardcoded lock",
+   "cost": "",
+   "firstClause": false,
+   "action": "lock"
   },
   {
    "id": 4868,
@@ -1341,6 +1379,23 @@
    "action": "destroy_target"
   },
   {
+   "id": 5594,
+   "name": "Spell Canceller",
+   "kind": "Effect",
+   "icon": "",
+   "text": "Spell Cards, and their effects on the field, cannot be activated. Negate all Spell effects on the field.",
+   "script": "lock(spell);",
+   "trigger": "",
+   "complete": true,
+   "sourceOk": false,
+   "unread": 0,
+   "notes": [],
+   "table": "hardcoded lock",
+   "cost": "",
+   "firstClause": false,
+   "action": "lock"
+  },
+  {
    "id": 5625,
    "name": "XZ-Tank Cannon",
    "kind": "Fusion_Effect",
@@ -1462,6 +1517,25 @@
    "cost": "",
    "firstClause": false,
    "action": "draw"
+  },
+  {
+   "id": 5740,
+   "name": "Skill Drain",
+   "kind": "Trap",
+   "icon": "",
+   "text": "Activate this card by paying 1000 LP. Negate the effects of all face-up monsters while they are face-up on the field (but their effects can still be activated).",
+   "script": "lock(monster, spelltrap_zone);\n// not covered by the script: The 1000 LP activation cost and original activation-order threshold are not reproduced.",
+   "trigger": "",
+   "complete": false,
+   "sourceOk": false,
+   "unread": 0,
+   "notes": [
+    "The 1000 LP activation cost and original activation-order threshold are not reproduced."
+   ],
+   "table": "hardcoded lock",
+   "cost": "",
+   "firstClause": false,
+   "action": "lock"
   },
   {
    "id": 5766,
@@ -2012,6 +2086,25 @@
    "cost": "",
    "firstClause": true,
    "action": "search"
+  },
+  {
+   "id": 6166,
+   "name": "Silent Swordsman LV7",
+   "kind": "Effect",
+   "icon": "",
+   "text": "Cannot be Normal Summoned/Set. Must be Special Summoned by \"Silent Swordsman LV5\". Negate all Spell effects on the field.",
+   "script": "lock(spell);\n// not covered by the script: Summoning restrictions are not expressed; this template also prevents Spell activation.",
+   "trigger": "",
+   "complete": false,
+   "sourceOk": false,
+   "unread": 0,
+   "notes": [
+    "Summoning restrictions are not expressed; this template also prevents Spell activation."
+   ],
+   "table": "hardcoded lock",
+   "cost": "",
+   "firstClause": false,
+   "action": "lock"
   },
   {
    "id": 6267,

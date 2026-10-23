@@ -1,0 +1,95 @@
+{
+  "version": 2,
+  "header": "Structure Decks",
+  "values": {
+    "deck_price": "1000",
+    "price": "{value:price.{var:bb.deck}|{value:deck_price}}"
+  },
+  "elements": [
+    {
+      "kind": "user"
+    },
+    {
+      "kind": "decks",
+      "list": "578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593",
+      "hide": "{save:bb.bought.#}",
+      "x": 118.5,
+      "y": 171,
+      "width": 500,
+      "height": 760,
+      "bind": "var:bb.deck",
+      "description": "Confirm on a deck to buy it: it goes into your decks, with 3 of every card in it. L / R change the tab.",
+      "action": {
+        "if": {
+          "game": "freedecks",
+          "atLeast": 1,
+          "not": true
+        },
+        "then": [
+          {
+            "sound": 71
+          },
+          {
+            "message": "All 32 of your deck slots are in use. Delete a deck in the Deck Editor first."
+          }
+        ],
+        "else": {
+          "if": {
+            "game": "dp",
+            "atLeast": "{value:price}",
+            "not": true
+          },
+          "then": [
+            {
+              "sound": 71
+            },
+            {
+              "message": "{game:deckname.{var:bb.deck}} costs {value:price} DP. You have {game:dp} DP."
+            }
+          ],
+          "else": {
+            "confirm": "Buy {game:deckname.{var:bb.deck}} for {value:price} DP? You have {game:dp} DP.",
+            "yes": {
+              "takeDp": "{value:price}",
+              "then": {
+                "giveDeck": "{var:bb.deck}",
+                "copies": 3,
+                "then": [
+                  {
+                    "set": "save:bb.bought.{var:bb.deck}",
+                    "value": "1"
+                  },
+                  {
+                    "sound": 52
+                  },
+                  {
+                    "message": "{game:deckname.{var:bb.deck}} is in your decks, with 3 of every card."
+                  },
+                  {
+                    "reload": true
+                  }
+                ],
+                "else": [
+                  {
+                    "giveDp": "{value:price}"
+                  },
+                  {
+                    "message": "The deck could not be saved; your DP was given back."
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "kind": "deckView",
+      "deck": "{var:bb.deck}",
+      "x": 646,
+      "y": 120,
+      "bind": "var:bb.card",
+      "description": "The deck\u0027s cards. Right-click a card for its details; L / R go back to the decks."
+    }
+  ]
+}

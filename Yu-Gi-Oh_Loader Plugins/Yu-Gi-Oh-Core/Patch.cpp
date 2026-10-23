@@ -15,6 +15,7 @@
 #include "Logger.h"
 #include "Patch.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "MergeArchive.h"
 
 namespace
 {
@@ -288,10 +289,29 @@ bool Patch::Install()
         else
             Logger::WriteLog(std::format("No patch archive ({}.toc not found)", name), MODULE_NAME, 0);
     }
-    g_layers.push_back(std::move(local));
-
     // Then the mods that are on, the last in the load order first (Yu-Gi-Oh-Mods.h): Mods\<id>\YGO_2020\ and Mods\<id>\YGO_2020-Ex.
     const std::vector<YGO::Mods::Mod> mods = YGO::Mods::Active(game);
+    if (YGO::Mods::IsExclusive(mods))
+    {
+        // a clean-slate mod: the workspace's own game-file changes stay out (the layer is kept, empty, as the first one)
+        local.Loose.clear();
+        local.PatchName.clear();
+        Logger::WriteLog(std::format("Mod {} is exclusive: only its game-file changes load (not YGO_2020 / YGO_2020-Ex in the game folder)", mods.front().Name), MODULE_NAME, 0);
+    }
+    g_layers.push_back(std::move(local));
+
+    bool mergeCurrent = false;
+    if (const auto merged = YGO::Mods::MergeCache::Find(game, mods, archive, patchFirst, &mergeCurrent); !merged.empty())
+    {
+        Layer layer;
+        layer.Label = "merged mod changes";
+        layer.PatchName = merged;
+        layer.PatchFirst = true;
+        g_layers.push_back(std::move(layer));
+        Logger::WriteLog("Binary mod merge archive validated; independent mod changes combine", MODULE_NAME, 0);
+    }
+    else if (!mergeCurrent && std::filesystem::exists(game / L"Mods" / L"merged.json"))
+        Logger::WriteLog("No current binary merge archive: refresh mods in the Mod Manager; ordinary load order applies", MODULE_NAME, 2);
     for (auto it = mods.rbegin(); it != mods.rend(); ++it)
     {
         Layer layer;
@@ -305,7 +325,7 @@ bool Patch::Install()
         if (!layer.Loose.empty() || !layer.PatchName.empty())
             g_layers.push_back(std::move(layer));
     }
-    Logger::WriteLog(std::format("{} mod(s) on, {} change game files", mods.size(), g_layers.size() - 1), MODULE_NAME, 0);
+    Logger::WriteLog(std::format("{} mod(s) on, {} game-file overlay layer(s)", mods.size(), g_layers.size() - 1), MODULE_NAME, 0);
 
     const bool anyPatch = std::any_of(g_layers.begin(), g_layers.end(), [](const Layer& layer) { return !layer.PatchName.empty(); });
 

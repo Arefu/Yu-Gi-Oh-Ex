@@ -12,6 +12,7 @@
 #include "BanList.h"
 #include "Detours.h"
 #include "P2P.h"
+#include "ServerMenu.h"
 #include "Session.h"
 #include "Steam.h"
 
@@ -157,6 +158,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         BanList::Attach();
         LiveSetting::Attach();
         DetourTransactionCommit();
+
+        ServerMenu::Setup();   // "Connect to Server" on the Multiplayer page (Yu-Gi-Oh-RIX)
         break;
     }
     return TRUE;

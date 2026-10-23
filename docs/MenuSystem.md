@@ -89,6 +89,11 @@ if (RIX::Load())   // finds the module the loader already loaded
 | `RIX_GetMainMenuButton(id, out)` / `...Count` / `...IdAt` | read back |
 | `RIX_PressMainMenuItem(item)` | presses one of the game's 13 buttons (main menu open) |
 | `RIX_IsMainMenuOpen`, `RIX_GetCurrentScreenId`, `RIX_GotoScreen(id)` | screens |
+| `RIX_AddImage(screen, sheet, sprite, z, x, y, w, h)` | one sprite of a .dfymoo sheet on any game screen (1920 x 1080 UI pixels, top-left anchored); `w`/`h` 0 = own size, **negative = flipped that way in the same box** (an up arrow from `pdui/doShared` `arrow_1`). Returns a handle for `RIX_RemoveNode` |
+| `RIX_AddText(screen, text, z, x, y, w, size, align, colour)` | text in the game's UI font |
+| `RIX_RemoveNode(handle)` | takes an image or text off its screen (do it before the screen goes) |
+
+Images: only sprites listed in a `.dfymoo` sheet load (`pdui/doShared`: `arrow_1` (down arrow), `arrow_2` (its hover look), `avatarbox`, `optionbox`, `menuheader`, `characterframe_large`, `statsbar_vertical`, `lock`, ...). Loose PNGs such as `pdui\shared\scrollbar_blue_track.png` are not found, and passing a PNG path as the sheet **crashes** the game's layer loader (`YuGiOh.exe+0x747A98`). The pointer position the game's own hit tests use is two ints at 0x142924070 (window pixels, which match UI pixels in a 1920 x 1080 window). Used by Yu-Gi-Oh-Campaign `Series.cpp` for the campaign series list's up / down arrows (docs/CampaignSeries.md).
 
 Rules: buttons added at start-up appear the first time the menu is built; buttons added later appear the next time the game builds the
 menu (a restart always works); label / description / page changes and removals apply on the next main menu frame. Callbacks run on the
@@ -132,8 +137,8 @@ DemoMenuButtons=1    ; adds "Debug Tools" and "Credits" to the main menu and "Fu
   A callback's `RIX_GotoScreen` changes screen from the Battle Pack screen, so that screen's Back returns to the page.
 * Game widgets can be built on any screen: `widget_Base::CreateNode` (`0x14087C030`) makes a node under the screen's root (screen + 72), so a
   widget is constructed in your own memory and `CreateFromLayout(widget, root, z, screen + 88, x, y)`. The declarations (trunk, card info,
-  entry digits, input, more MenuKit) are in `YuGiOh-RIX.h`.
-* Yu-Gi-Oh-BetterCardShop (`StorePages.cpp`): the main menu's Card Shop opens **Card Store** (Booster Packs = the game's card shop, screen 29;
+  entry digits, input, more MenuKit) are in `Yu-Gi-Oh-RIX.h`.
+* Yu-Gi-Oh-BetterCardShop (`StorePages.cpp`, retired 2026-10-19 and deleted from the repo: the store is BOB pages, docs/PageScript.md): the main menu's Card Shop opened **Card Store** (Booster Packs = the game's card shop, screen 29;
   **Card Shop** = every card in its own `widget_TrunkZone` + `widget_CardInfo`, list filled like `TrunkView_BuildCardList` with the bounds read
   from the game's code; **Enter Password** = eight `widget_EntryDigit`s and an **Unlock** button (a page with both widgets and a button,
   `ButtonsY` 820, `ButtonsX` 1215 - the menu's root node at screen + 7840 is moved with `RIX::Node::SetX`) and a `widget_CardInfo` on the
@@ -148,7 +153,7 @@ DemoMenuButtons=1    ; adds "Debug Tools" and "Credits" to the main menu and "Fu
 `Yu-Gi-Oh-RIX` adds a **Plugins** button to Help & Options. It opens a list on the main menu (one button per plugin, `Name: On/Off`),
 Back returns to Help & Options.
 
-* The list is in `[Yu-Gi-Oh-Core]` in `Config.ini` (Core owns it; RIX only draws the menu through Core's toggles. Older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read): `Yu-Gi-Oh-Cards=1` for a DLL in `Plugins\` (the loader injects it when 1), `YGO-Ex/Yu-Gi-Oh-Funky=1`
+* The list is in `[Yu-Gi-Oh-Core]` in `Config.ini` (Core owns it; RIX only draws the menu through Core's toggles. Older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read): `Yu-Gi-Oh-MoreCards=1` for a DLL in `Plugins\` (the loader injects it when 1), `YGO-Ex/Yu-Gi-Oh-Funky=1`
   for a DLL in `Plugins\YGO-Ex\` (Yu-Gi-Oh-Core starts it when 1, once the main menu is up). The loader adds every plugin it finds as 0; `Yu-Gi-Oh-RIX` is always loaded.
 * `PluginsPerPage` (3 to 7, default 6) is in the same section; the first page has a button that changes it.
 * A button shows the DLL's name and no description. `<DLL name>.json` next to the DLL changes that:
@@ -178,3 +183,5 @@ Mouse hover does not select the new row. Positions (label 650, value 750, Apply 
 Plugins > Plugin Settings and its own screen (RIX `SettingsScreen.cpp`, screen id 101) were removed on 2026-10-04 at the user's request
 (not wanted in game). The Plugins button in Help & Options opens the on/off plugin list again. Plugin settings are edited in WolfX's
 Config Editor, which reads the manifests' `"settings"` lists. How to make a screen of our own is still in docs/CustomScreens.md.
+
+**Plugins & Settings hub (2026-10-14).** The Help & Options button is now "Plugins & Settings" and opens a hub page (still the main menu's own page, RIX `PluginMenu.cpp`, no screen of its own) with two buttons: **Plugins** (the on/off list, applied by a restart) and **Settings** (the options loaded plugins register with `RIX_RegisterPluginOptions`, e.g. Campaign's "Custom Opponent Decks"; applied at once; the row's help text names the plugin). Back from a list returns to the hub; Back from the hub leaves (restart prompt if a plugin was switched). Manifest `"settings"` are still edited in WolfX.

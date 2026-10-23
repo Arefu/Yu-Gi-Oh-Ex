@@ -1,4 +1,8 @@
 {
   "title": "Effects",
-  "description": "My effect table work. Early and a bit broken."
+  "description": "Custom card effects, fusion/ritual/synchro/xyz/link rules and game card effect overrides.",
+  "content": [
+    "effects.json",
+    "summoning.json"
+  ]
 }

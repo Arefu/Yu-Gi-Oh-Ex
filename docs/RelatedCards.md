@@ -7,7 +7,7 @@ In the deck editor, the **Related cards** panel lists the cards related to the s
 * `bin/taginfo_<L>.bin` (E F G I J S, no R): what each tag means.
 
 The parser is `File Type Libraries/RelatedCards` (`TagDataTable`, `TagInfoTable`, `TagInfo`, `RelatedCardsJson`). The editor is
-`Tools/Shared/Editors/RelatedCardsEditor.cs`, on the **Related cards** tab in both WolfX and WolfEx.
+`Tools/Shared/Editors/RelatedCardsEditor.cs`, on WolfX's **Related cards** page (also inside the Card Manager and New cards pages).
 
 ## tagdata.bin
 
@@ -77,12 +77,11 @@ Name tags. For Affects and Matches tags it builds the line from the conditions: 
 * IDB types: `TagInfoRecord`, `TagCondition`, `TagInfoFile`, `TagDataEntry`, `RelatedCardUnit`, and the enums `TagGroup`,
   `TagCondType`, `TagCompareOp`.
 
-## WolfX / WolfEx
+## WolfX
 
-* **WolfX:** open the bin folder. It needs tagdata.bin, taginfo_*.bin and CARD_IntID.bin. Edit, then save back into the files;
-  a `.bak` of each original is kept. tagdata.bin is indexed by internal id, so a card that isn't in CARD_IntID.bin, such as a
-  custom card, can't be saved there.
-* **WolfEx:** opens the game's data with `Yu-Gi-Oh-Ex\relatedcards.json` on top, and saves only the differences:
+* **Game cards:** edit, then save; the changed tagdata.bin / taginfo_*.bin go into the Ex patch (`YGO_2020-Ex.dat`).
+* **Custom cards** can't be saved in tagdata.bin (it's indexed by internal id), so their related cards go into their own
+  `cards.json` entry (`"related"`). New tags, and cards cards.json doesn't have, go to `Yu-Gi-Oh-Ex\relatedcards.json` as differences:
 
 ```json
 { "tags":  [ { "id": 1802, "group": "name", "key": "MyArchetype", "text": { "E": "Related to: My Archetype" } } ],

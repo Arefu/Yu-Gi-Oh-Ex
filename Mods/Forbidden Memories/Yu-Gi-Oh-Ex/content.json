@@ -1,0 +1,57 @@
+{
+  "content": [
+    {
+      "file": "cards.json",
+      "plugins": [
+        "Yu-Gi-Oh-MoreCards"
+      ]
+    },
+    {
+      "file": "cardpool.json",
+      "plugins": [
+        "Yu-Gi-Oh-MoreCards"
+      ]
+    },
+    {
+      "file": "unlocks.json",
+      "plugins": [
+        "Yu-Gi-Oh-MoreCards"
+      ]
+    },
+    {
+      "file": "characters.json",
+      "plugins": [
+        "Yu-Gi-Oh-Campaign"
+      ]
+    },
+    {
+      "file": "decks.json",
+      "plugins": [
+        "Yu-Gi-Oh-Campaign"
+      ]
+    },
+    {
+      "file": "progress.json",
+      "plugins": [
+        "Yu-Gi-Oh-Campaign"
+      ]
+    },
+    {
+      "file": "packs.json",
+      "plugins": [],
+      "note": "applied by Yu-Gi-Oh-Core"
+    },
+    {
+      "file": "fm.json",
+      "plugins": [
+        "Yu-Gi-Oh-FM"
+      ]
+    },
+    {
+      "file": "menus\\",
+      "plugins": [
+        "Yu-Gi-Oh-RIX"
+      ]
+    }
+  ]
+}

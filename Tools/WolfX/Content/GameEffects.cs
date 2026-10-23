@@ -33,17 +33,16 @@ namespace WolfEx
         public static Dictionary<int, JsonObject> Load(string path)
         {
             var entries = new Dictionary<int, JsonObject>();
-            try
-            {
-                if (File.Exists(path) && JsonNode.Parse(File.ReadAllText(path)) is JsonObject root && root["cards"] is JsonArray cards)
-                    foreach (var entry in cards.OfType<JsonObject>())
-                        if (entry["id"] is JsonValue id && id.TryGetValue<int>(out int value))
-                            entries[value] = (JsonObject)entry.DeepClone();
-            }
-            catch (JsonException)
-            {
-                // a broken file starts empty; saving writes a good one
-            }
+            if (ContentLoadState.Read(path) is { } root)
+                foreach (JsonObject entry in ContentLoadState.Cards(root))
+                {
+                    ContentLoadState.Fields<string>(entry, "name", "effectScript");
+                    ContentLoadState.Fields<bool>(entry, "overridden");
+                    foreach (string field in new[] { "effectClone", "lock" })
+                        if (entry.ContainsKey(field) && entry[field] is not JsonObject)
+                            throw new InvalidDataException("Expected an object: " + field);
+                    entries[entry["id"]!.GetValue<int>()] = (JsonObject)entry.DeepClone();
+                }
             return entries;
         }
 
@@ -103,6 +102,8 @@ namespace WolfEx
                 if (entry.IsCustom || entry.Id <= 0 || entry.Id >= 15300)
                     continue;
                 reference.TryGetValue(entry.Id, out var known);
+                if (string.IsNullOrEmpty(known.Script) && LockCatalog.Find(entry.Id) is { IsLock: true } lockCard)
+                    known.Script = lockCard.Script;   // a continuous lock: in the game's code, not its tables (LockCatalog)
                 int i = ids?.InternalOf(entry.Id) ?? 0;
                 string text = english != null && i > 0 && i < english.Descs.Count ? english.Descs[i] : known.Text ?? "";
                 list.Add(new GameEffectCard { Id = entry.Id, Name = entry.Name, Kind = known.Kind ?? "", Text = text, GameScript = known.Script ?? "" });

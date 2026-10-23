@@ -143,6 +143,30 @@ namespace Wolf.Mods
         public string LooseFolder => Path.Combine(Folder, IsLocal ? ModLibrary.LocalLooseFolderName(Folder) : "YGO_2020");
         public string PatchToc => Path.Combine(Folder, "YGO_2020-Ex.toc");
         public string PluginFolder => Path.Combine(Folder, "Plugins");
+        /// <summary>The mod's own plugin settings (Yu-Gi-Oh-Core ModConfig.h): read on top of the player's Config.ini while the mod is on.</summary>
+        public string ConfigFile => Path.Combine(Folder, ModLibrary.SettingsFileName);
+
+        /// <summary>mod.json "exclusive": a clean slate that loads alone (Yu-Gi-Oh-Mods.h Active).</summary>
+        public bool IsExclusive
+        {
+            get
+            {
+                try
+                {
+                    string json = Path.Combine(Folder, ModInfo.FileName);
+                    return File.Exists(json) && JsonNode.Parse(File.ReadAllText(json), documentOptions: ModLibrary.ReadOptions)?["exclusive"] is JsonValue value
+                           && value.TryGetValue(out bool exclusive) && exclusive;
+                }
+                catch (Exception ex) when (ex is JsonException or IOException)
+                {
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>The settings this mod's Config.ini sets that Core lets a mod set (ModLibrary.ModMaySet).</summary>
+        public IReadOnlyList<(string Section, string Key, string Value)> Settings() =>
+            IsLocal ? [] : [.. ModLibrary.ReadIni(ConfigFile).Where(s => ModLibrary.ModMaySet(s.Section, s.Key))];
 
         private List<string>? _gameFiles;
         private List<string>? _contentFiles;
@@ -239,6 +263,9 @@ namespace Wolf.Mods
             int plugins = BundledPlugins().Count;
             if (plugins > 0)
                 parts.Add($"{plugins} plugin{(plugins == 1 ? "" : "s")}");
+            int settings = Settings().Count;
+            if (settings > 0)
+                parts.Add($"{settings} setting{(settings == 1 ? "" : "s")}");
             return parts.Count == 0 ? "nothing" : string.Join(", ", parts);
         }
 
@@ -276,7 +303,7 @@ namespace Wolf.Mods
     /// <summary>
     /// Mods: content packs in &lt;game&gt;\Mods\&lt;id&gt;\ that the game loads on top of each other (docs/Mods.md). Installing, removing,
     /// ordering, packing and checking them. The game side is Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Mods.h; both follow the same rules:
-    /// &lt;game&gt;\Mods\modlist.json is the order (later wins) and what is on, unlisted folders load after the listed ones (by name) and are on,
+    /// &lt;game&gt;\Mods\modlist.json is the order (later wins) and what is on, unlisted folders come after the listed ones (by name) and are off,
     /// and the game folder's own Yu-Gi-Oh-Ex / YGO_2020-Ex always load last.
     /// </summary>
     public static class ModLibrary
@@ -288,9 +315,9 @@ namespace Wolf.Mods
         /// <summary>The plugins that come with Yu-Gi-Oh-Ex, so a mod needing one doesn't need a link.</summary>
         public static readonly string[] StockPlugins =
         [
-            "Yu-Gi-Oh-Core", "Yu-Gi-Oh-RIX", "Yu-Gi-Oh-MoreCards", "Yu-Gi-Oh-Campaign", "Yu-Gi-Oh-Effects", "Yu-Gi-Oh-Music",
+            "Yu-Gi-Oh-Core", "Yu-Gi-Oh-RIX", "Yu-Gi-Oh-MoreCards", "Yu-Gi-Oh-Campaign", "Yu-Gi-Oh-Effects", "Yu-Gi-Oh-Media",
             "Yu-Gi-Oh-AnimeCards", "Yu-Gi-Oh-MP", "Yu-Gi-Oh-TagDuel", "Yu-Gi-Oh-Console", "Yu-Gi-Oh-GUI", "Yu-Gi-Oh-PatchMeOut",
-            "Yu-Gi-Oh-BetterCardShop", "Yu-Gi-Oh-Funky", "Yu-Gi-Oh-SpeedHacks",
+            "Yu-Gi-Oh-Funky", "Yu-Gi-Oh-SpeedHacks",
         ];
 
         /// <summary>What content.json files name when there is no manifest to ask (same table as WolfX's ContentManifest).</summary>
@@ -300,9 +327,9 @@ namespace Wolf.Mods
             ("relatedcards.json", "Yu-Gi-Oh-MoreCards"), ("text.json", "Yu-Gi-Oh-MoreCards"),
             ("characters.json", "Yu-Gi-Oh-Campaign"), ("decks.json", "Yu-Gi-Oh-Campaign"), ("storyduels.json", "Yu-Gi-Oh-Campaign"),
             ("storyscripts.json", "Yu-Gi-Oh-Campaign"),
-            ("packs.json", "Yu-Gi-Oh-BetterCardShop"), ("prices.json", "Yu-Gi-Oh-BetterCardShop"),
+            ("packs.json", "Yu-Gi-Oh-Core"),
             ("summoning.json", "Yu-Gi-Oh-Effects"), ("effects.json", "Yu-Gi-Oh-Effects"),
-            ("music.json", "Yu-Gi-Oh-Music"), ("voices.json", "Yu-Gi-Oh-Music"),
+            ("music.json", "Yu-Gi-Oh-Media"), ("voices.json", "Yu-Gi-Oh-Media"), ("videos.json", "Yu-Gi-Oh-Media"),
             (@"pages\", "Yu-Gi-Oh-RIX"), (@"menus\", "Yu-Gi-Oh-RIX"),
         ];
 
@@ -399,10 +426,15 @@ namespace Wolf.Mods
                 }
                 catch (Exception ex) when (ex is JsonException or IOException)
                 {
-                    // a broken list: every mod on, by name (what the game does too)
+                    // a broken list: every mod off, by name (what the game does too)
                 }
             }
-            ordered.AddRange(found.Where(m => !ordered.Contains(m)));
+            // never switched on here: off until the player ticks it (the game does the same, Yu-Gi-Oh-Mods.h Installed)
+            foreach (Mod mod in found.Where(m => !ordered.Contains(m)))
+            {
+                mod.Enabled = false;
+                ordered.Add(mod);
+            }
             return ordered;
         }
 
@@ -423,6 +455,85 @@ namespace Wolf.Mods
                 list.Add(new JsonObject { ["id"] = mod.Id, ["enabled"] = mod.Enabled });
             var root = new JsonObject { ["mods"] = list };
             WriteAtomic(Path.Combine(ModsFolder(gameFolder), ListFileName), root.ToJsonString(WriteOptions));
+            PrepareMerges(gameFolder, mods.ToList());
+        }
+
+        public static IReadOnlyList<ModIssue> PrepareMerges(string gameFolder, IReadOnlyList<Mod> mods) =>
+            ModMergeArchive.Prepare(gameFolder, mods, IniValue(gameFolder, "Yu-Gi-Oh-Core", "Archive", "YGO_2020"),
+                IniValue(gameFolder, "Yu-Gi-Oh-Core", "FileOrder", "loose").Equals("patch", StringComparison.OrdinalIgnoreCase));
+
+        // ---- settings: a mod's own Config.ini (Yu-Gi-Oh-Core ModConfig.h, docs/Mods.md "Settings") ----
+
+        public const string SettingsFileName = "Config.ini";
+
+        /// <summary>
+        /// False for what a mod may not set (Core ignores it, ModConfig.h): what loads and which save is used ([Yu-Gi-Oh-Core] plugin switches,
+        /// PluginsPath, ModConfig, GameSaveName, SeedFromGameSave, SaveSlot, ReplacedNotice), and all of [Yu-Gi-Oh-MP] (the server and sign-in).
+        /// </summary>
+        public static bool ModMaySet(string section, string key)
+        {
+            if (section.Equals("Yu-Gi-Oh-MP", StringComparison.OrdinalIgnoreCase))
+                return false;
+            if (!section.Equals("Yu-Gi-Oh-Core", StringComparison.OrdinalIgnoreCase))
+                return true;
+            string[] core = ["PluginsPath", "ModConfig", "GameSaveName", "SeedFromGameSave", "SaveSlot", "ReplacedNotice"];
+            return !core.Contains(key, StringComparer.OrdinalIgnoreCase)
+                   && !key.StartsWith("Yu-Gi-Oh-", StringComparison.OrdinalIgnoreCase) && !key.Contains('/');
+        }
+
+        /// <summary>The [Section] Key=Value lines of an ini file, read the way Core reads a mod's: spaces trimmed, matching quotes dropped,
+        /// lines starting with ';' or '#' skipped. A missing file has none.</summary>
+        public static List<(string Section, string Key, string Value)> ReadIni(string path)
+        {
+            var settings = new List<(string, string, string)>();
+            if (!File.Exists(path))
+                return settings;
+            string section = "";
+            foreach (string raw in File.ReadAllLines(path))
+            {
+                string line = raw.Trim();
+                if (line.Length == 0 || line[0] is ';' or '#')
+                    continue;
+                if (line[0] == '[')
+                {
+                    int close = line.IndexOf(']');
+                    section = (close < 0 ? line[1..] : line[1..close]).Trim();
+                    continue;
+                }
+                int equals = line.IndexOf('=');
+                if (section.Length == 0 || equals <= 0)
+                    continue;
+                string key = line[..equals].Trim();
+                string value = line[(equals + 1)..].Trim();
+                if (value.Length >= 2 && value[0] is '"' or '\'' && value[^1] == value[0])
+                    value = value[1..^1];
+                if (key.Length > 0)
+                    settings.Add((section, key, value));
+            }
+            return settings;
+        }
+
+        /// <summary>The key <see cref="ModSettings"/> uses for a setting (compare it ignoring case).</summary>
+        public static string SettingKey(string section, string key) => section + "\n" + key;
+
+        /// <summary>
+        /// What the switched-on mods set, as the game sees it: SettingKey(section, key) -> the value and the mod's name. Later mods win, and an
+        /// exclusive mod that is on loads alone (like Core). Empty when the player turned mod settings off ([Yu-Gi-Oh-Core] ModConfig=0).
+        /// </summary>
+        public static Dictionary<string, (string Value, string Mod)> ModSettings(string gameFolder)
+        {
+            var settings = new Dictionary<string, (string Value, string Mod)>(StringComparer.OrdinalIgnoreCase);
+            if (IniValue(gameFolder, "Yu-Gi-Oh-Core", "ModConfig", "1").Trim() == "0")
+                return settings;
+            var active = Load(gameFolder).Where(m => m.Enabled).ToList();
+            Mod? exclusive = active.LastOrDefault(m => m.IsExclusive);
+            IEnumerable<Mod> loading = exclusive != null ? new[] { exclusive } : active;
+            foreach (Mod mod in loading)
+            {
+                foreach (var (section, key, value) in mod.Settings())
+                    settings[SettingKey(section, key)] = (value, mod.Info.Name);
+            }
+            return settings;
         }
 
         private static void WriteAtomic(string path, string text)
@@ -467,6 +578,23 @@ namespace Wolf.Mods
         }
 
         public static bool IsStock(string plugin) => StockPlugins.Contains(plugin, StringComparer.OrdinalIgnoreCase);
+
+        /// <summary>Old plugin name -> the installed plugin whose manifest "replaces" it (renamed, merged or retired plugins).</summary>
+        public static Dictionary<string, string> Successors(string? pluginsFolder)
+        {
+            var map = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            if (pluginsFolder == null || !Directory.Exists(pluginsFolder))
+                return map;
+            foreach (string folder in new[] { pluginsFolder, Path.Combine(pluginsFolder, "YGO-Ex") }.Where(Directory.Exists))
+                foreach (string manifest in Directory.EnumerateFiles(folder, "*.json"))
+                {
+                    string name = Path.GetFileNameWithoutExtension(manifest);
+                    if (File.Exists(Path.Combine(folder, name + ".dll")))
+                        foreach (var (old, _) in RetiredPlugins.Replaces(manifest))
+                            map.TryAdd(old, name);
+                }
+            return map;
+        }
 
         /// <summary>The plugins a Yu-Gi-Oh-Ex folder's content needs: its content.json (WolfX writes it), else what its files are known to need.</summary>
         public static IReadOnlyList<string> ContentPlugins(string contentFolder)
@@ -558,20 +686,26 @@ namespace Wolf.Mods
             var issues = new List<ModIssue>();
             var active = modsInOrder.Where(m => m.Enabled || m.IsLocal).ToList();
             var installed = InstalledPlugins(pluginsFolder);
+            var successors = Successors(pluginsFolder);
 
             foreach (Mod mod in active)
             {
                 foreach (ModRequirement need in mod.NeededPlugins())
                 {
+                    if (successors.TryGetValue(need.Plugin, out string? successor) && installed.Contains(successor))
+                    {
+                        issues.Add(new ModIssue(IssueLevel.Info, mod.Id, $"Asks for {need.Plugin}, which is now {successor}: that one is used instead."));
+                        continue;
+                    }
                     if (installed.Contains(need.Plugin) || mod.BundledPlugins().Contains(need.Plugin, StringComparer.OrdinalIgnoreCase))
                         continue;
                     string where = need.Url.Length > 0 ? "get it from the link" : IsStock(need.Plugin) ? "it comes with Yu-Gi-Oh-Ex, install the full set" : "no link given, ask the mod's author";
                     issues.Add(new ModIssue(IssueLevel.Error, mod.Id, $"Needs the plugin {need.Plugin}, which isn't installed ({where}).", need.Url.Length > 0 ? need.Url : null));
                 }
                 var (added, changed) = mod.CardIds();
-                var outside = added.Where(id => id > 19999).ToList();
+                var outside = added.Where(id => id > 65534).ToList();
                 if (outside.Count > 0)
-                    issues.Add(new ModIssue(IssueLevel.Error, mod.Id, $"Card ids {Ranges(outside)} are above 19999; the game's save has no room for them."));
+                    issues.Add(new ModIssue(IssueLevel.Error, mod.Id, $"Card ids {Ranges(outside)} are above 65534; 65535 is the game's \"no card\"."));
             }
 
             // the same new card id in two mods: the later one replaces the earlier (Cards plugin), and the save can't tell them apart
@@ -599,7 +733,8 @@ namespace Wolf.Mods
                         owners[file] = list = [];
                     list.Add(mod);
                 }
-            foreach (var group in owners.Where(o => o.Value.Count > 1).GroupBy(o => (Winner: o.Value[^1], Losers: string.Join("|", o.Value.Take(o.Value.Count - 1).Select(m => m.Id)))))
+            // Mod-to-mod overlaps are reconciled by PrepareMerges; local files deliberately remain whole-file overrides.
+            foreach (var group in owners.Where(o => o.Value.Count > 1 && o.Value[^1].IsLocal).GroupBy(o => (Winner: o.Value[^1], Losers: string.Join("|", o.Value.Take(o.Value.Count - 1).Select(m => m.Id)))))
             {
                 Mod winner = group.Key.Winner;
                 var losers = group.First().Value.Take(group.First().Value.Count - 1).ToList();
@@ -643,7 +778,7 @@ namespace Wolf.Mods
             public IEnumerable<string> PluginDlls => Plugins.Where(p => p.EndsWith(".dll", StringComparison.OrdinalIgnoreCase)).Select(Path.GetFileName).OfType<string>();
         }
 
-        private static readonly string[] ModMarkers = ["mod.json", "info.ini", "yu-gi-oh-ex/", "ygo_2020/", "ygo_2020-ex.toc", "plugins/"];
+        private static readonly string[] ModMarkers = ["mod.json", "info.ini", "yu-gi-oh-ex/", "ygo_2020/", "ygo_2020-ex.toc", "plugins/", "config.ini"];
 
         /// <summary>Reads a mod .zip (mod.json at the top, or inside one folder). Throws InvalidDataException when it isn't a mod.</summary>
         public static Package Inspect(string zipPath)
@@ -658,7 +793,7 @@ namespace Wolf.Mods
             {
                 var tops = names.Select(n => n.Split('/')[0]).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
                 root = tops.Count == 1 && IsMod(tops[0] + "/") ? tops[0] + "/" : throw new InvalidDataException(
-                    "This .zip isn't a mod: it needs a mod.json, a Yu-Gi-Oh-Ex folder, a YGO_2020 folder or a YGO_2020-Ex patch at the top (or in one folder).");
+                    "This .zip isn't a mod: it needs a mod.json, a Yu-Gi-Oh-Ex folder, a YGO_2020 folder, a YGO_2020-Ex patch or a Config.ini at the top (or in one folder).");
             }
 
             string fallback = root.Length > 0 ? root.TrimEnd('/') : Path.GetFileNameWithoutExtension(zipPath);
@@ -751,6 +886,7 @@ namespace Wolf.Mods
                 }
             }
             // a mod without mod.json gets one (from its Info.ini or the zip's name), so the Mod Manager and the game agree on its name
+            ModDelta.Normalize(gameFolder, staging);
             if (!File.Exists(Path.Combine(staging, ModInfo.FileName)))
                 File.WriteAllText(Path.Combine(staging, ModInfo.FileName), package.Info.ToJsonText(), new UTF8Encoding(false));
 
@@ -761,7 +897,7 @@ namespace Wolf.Mods
             if (installPlugins && pluginsFolder != null)
                 CopyPlugins(Path.Combine(target, "Plugins"), pluginsFolder);
 
-            // keep an updated mod's place and state; a new one goes last (on top), switched on
+            // keep an updated mod's place and state; a new one goes last (on top), off until the player switches it on
             List<Mod> updated = Load(gameFolder);
             var order = new List<Mod>();
             foreach (Mod old in mods)

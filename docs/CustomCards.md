@@ -1,11 +1,49 @@
 # Custom cards: everything in cards.json
 
-`<game>\Yu-Gi-Oh-Ex\cards.json` holds every custom card (ids 15300-19999) and **everything about it**: stats, text in every
+`<game>\Yu-Gi-Oh-Ex\cards.json` holds every custom card (ids 15300-65534; who owns ids past 19999 is kept by Yu-Gi-Oh-Core's CardTable.cpp in the save extension) and **everything about it**: stats, text in every
 language, art, archetypes, same name, summoning requirements, effect, and the parts the game keeps in other tables for its own
 cards (genres, related cards, links, password, name order, index letters). WolfX's **New cards** page writes it; Yu-Gi-Oh-MoreCards
 (`Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Cards`) reads it.
 
 Game cards are unchanged: their edits go into the game's files (WolfX patch archive) or the page's own Yu-Gi-Oh-Ex JSON.
+
+## Changing the game's cards, and the card pool
+
+An entry whose `id` is a game card's Konami id changes that card instead of adding one: `name`, `description`, `atk`, `def`, `level`,
+`kind`, `attribute`, `type`, `icon`, and (2026-10-19) **`image`**, new art for it (a 304 x 304 JPEG, relative to the content folder the
+entry came from), served by MoreCards' `Hook_Get_IllustrationData`.
+
+`cardpool.json` (`{ "cards": [ids] }`, joined across mods; MoreCards `LoadCardPool`): when any copy lists cards, only those exist for the
+player. Every other card reads as not owned in the trunk, deck editor and deck checks (the four read-only callers of
+`Get_LiveUnlockCounts`), so it can't be seen or used. The save keeps its copies; removing the file brings them back. The
+Forbidden Memories mod uses it. Untested in game.
+
+## Ownership when content is unavailable
+
+MoreCards resets saved ownership for unavailable custom cards by default, retaining the original behavior when switching mods.
+To keep those copies instead, enable **PreserveUnavailableCards** in More Cards' plugin settings or add this to `Config.ini`:
+
+```ini
+[Yu-Gi-Oh-MoreCards]
+PreserveUnavailableCards=1
+```
+
+Restart the game after changing the option. `0` (or an omitted key) resets unavailable custom ids; `1` preserves them when a card
+is removed or its JSON cannot be loaded. In both modes, only loaded cards appear in the trunk. With preservation enabled, restoring
+the same card id makes its saved copies available again. The `copies` value remains a minimum grant, so use `copies: 0` when checking
+persistence. This cannot recover counts already erased without a backup or a new grant. The option applies while MoreCards is loaded.
+
+To verify a MoreCards build, use Core with a separate toolkit save and back up both that profile and the Steam save:
+
+1. Enable `PreserveUnavailableCards=1`. Give card 15300 two copies in the test save, keep it out of saved decks, and load a valid `cards.json` entry with `copies: 0`.
+2. Open Deck Edit and check that the trunk shows two copies. Save and exit normally.
+3. Temporarily remove `cards.json`, relaunch, and open the trunk. The unavailable card should be hidden. Save and exit.
+4. Repeat with malformed JSON, then restore the valid entry and relaunch. The trunk should show two copies again without a grant.
+5. Check the saved ownership bytes after every save, including another absent custom id and id 19999. Verify valid checksums,
+   an increased save counter, and an unchanged Steam save. Restore the original content and configuration after testing.
+6. Repeat from a fresh copy of the test save with the option omitted, then explicitly set to `0`. Opening the trunk should reset
+   unavailable custom ids, while preserving ownership for loaded cards. Restore the removed entry and check that it receives no
+   copies without a grant. Use a separate save for each mode so the intentional reset does not destroy the preservation fixture.
 
 ## Keys (besides id, name, description, image, kind, type, attribute, icon, level, atk, def, scale, linkmarkers, limitation, copies, archetypes, sameName, effectClone, effectScript, summoning keys)
 
@@ -37,3 +75,7 @@ Genre keys / tag conditions / link targets: docs/CardGenre.md, docs/RelatedCards
   The uncensored picture is `"imageUncensored"` (New cards > Art).
 
 Untested in game (2026-10-04): built only.
+
+## A card without art
+
+A custom card with no `"image"`, or whose file is missing, shows the **missing-texture checkerboard** (magenta and black, 8 x 8, a 304 x 304 JPEG like the game's card art), built into Yu-Gi-Oh-MoreCards as raw bytes (`MissingArt.h`, made by `Tools/Scripts/make_missing_art.py`). Before 2026-10-11 it borrowed Blue-Eyes White Dragon's art.

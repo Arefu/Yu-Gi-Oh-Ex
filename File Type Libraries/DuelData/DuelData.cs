@@ -39,6 +39,10 @@ namespace Types
         /// <summary>1 = not needed for "beat every story duel of a character to unlock their deck" (the two crossover duels).</summary>
         public int ExcludeFromDeckUnlock { get; set; }
 
+        /// <summary>The tutorial this duel plays as (21-99; Yu-Gi-Oh-Campaign), 0 = never; null = the game's rule (order 1 of a series is its
+        /// tutorial). Not in dueldata: storyduels.json "tutorial".</summary>
+        public int? Tutorial { get; set; }
+
         /// <summary>ASCII; names the dialog scripts &lt;key&gt;_INTRO / _OUTRO / _OUTRO_LOSE in scriptdata_&lt;lang&gt;.bin.</summary>
         public string Key { get; set; } = "";
 
@@ -60,6 +64,7 @@ namespace Types
             var fresh = new StoryDuel
             {
                 Id = Id, Series = Series, Order = Order, Arena = Arena, RewardPack = RewardPack, Sku = Sku, ExcludeFromDeckUnlock = ExcludeFromDeckUnlock, Key = Key,
+                Tutorial = Tutorial,
             };
             for (int side = 0; side < 2; side++)
             {
@@ -76,7 +81,7 @@ namespace Types
         /// <summary>Everything except the translated texts.</summary>
         public bool SameNumbers(StoryDuel other) =>
             Id == other.Id && Series == other.Series && Order == other.Order && Arena == other.Arena && RewardPack == other.RewardPack &&
-            Sku == other.Sku && ExcludeFromDeckUnlock == other.ExcludeFromDeckUnlock && Key == other.Key &&
+            Sku == other.Sku && ExcludeFromDeckUnlock == other.ExcludeFromDeckUnlock && Key == other.Key && Tutorial == other.Tutorial &&
             Characters.SequenceEqual(other.Characters) && Decks.SequenceEqual(other.Decks) && Costumes.SequenceEqual(other.Costumes);
 
         public bool SameAs(StoryDuel other) =>
@@ -100,6 +105,8 @@ namespace Types
 
         /// <summary>The save keeps 24 bytes per (series, order) in a 1208-byte block per series: orders above 48 would run into the next series.</summary>
         public const int MaxOrder = 48;
+        /// <summary>Series 0-5 are the game's; 6-63 are new series (Yu-Gi-Oh-Campaign, campaigns.json), which the game itself doesn't list.</summary>
+        public const int MaxSeries = 63;
 
         public static readonly string[] SeriesNames = ["Duel Monsters", "GX", "5D's", "ZEXAL", "ARC-V", "VRAINS"];
 
@@ -258,8 +265,8 @@ namespace Types
             {
                 if (d.Id <= 0 || d.Id >= SlotCount)
                     problems.Add($"Duel {d.Id}: the id must be 1-{SlotCount - 1}.");
-                if (d.Series < 0 || d.Series > 5)
-                    problems.Add($"Duel {d.Id}: the series must be 0-5.");
+                if (d.Series < 0 || d.Series > MaxSeries)
+                    problems.Add($"Duel {d.Id}: the series must be 0-{MaxSeries} (0-5 the game's, 6+ a new series from campaigns.json).");
                 if (d.Order < 1 || d.Order > MaxOrder)
                     problems.Add($"Duel {d.Id}: the order must be 1-{MaxOrder}.");
                 if (string.IsNullOrEmpty(d.Key))
@@ -319,6 +326,8 @@ namespace Types
             };
             if (d.ExcludeFromDeckUnlock != 0)
                 json["excludeFromDeckUnlock"] = d.ExcludeFromDeckUnlock;
+            if (d.Tutorial is int tutorial)
+                json["tutorial"] = tutorial;
             json["title"] = Texts(d.Titles);
             json["description"] = Texts(d.Descriptions);
             json["tip"] = Texts(d.Tips);
@@ -376,6 +385,7 @@ namespace Types
                 d.RewardPack = Int(node["rewardPack"]) ?? d.RewardPack;
                 d.Sku = Int(node["sku"]) ?? d.Sku;
                 d.ExcludeFromDeckUnlock = Int(node["excludeFromDeckUnlock"]) ?? d.ExcludeFromDeckUnlock;
+                d.Tutorial = Int(node["tutorial"]) ?? d.Tutorial;
                 string[] sides = ["player", "opponent"];
                 for (int side = 0; side < 2; side++)
                 {
