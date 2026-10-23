@@ -155,7 +155,7 @@ Plugin source is in `Yu-Gi-Oh_Loader Plugins\` (injected by the loader) and `Yu-
 
 ### Core (`Yu-Gi-Oh-Core`)
 
-Always on. Kept small on purpose: the save, the plugin list, game data loading, mod settings, credits, save slots, a few light tweaks, and generic limit breakers and rule switches. Docs: [SaveSlots.md](docs/SaveSlots.md), [PluginManifests.md](docs/PluginManifests.md), [CustomScreens.md](docs/CustomScreens.md), [Packs.md](docs/Packs.md), [Mods.md](docs/Mods.md), [DuelFormat.md](docs/DuelFormat.md), [DeckLimits.md](docs/DeckLimits.md).
+Always on. Kept small on purpose: the save, the plugin list, game data loading, mod settings, credits, save slots, a few light tweaks, and generic limit breakers and rule switches. Docs: [SaveSlots.md](docs/SaveSlots.md), [PluginManifests.md](docs/PluginManifests.md), [CustomScreens.md](docs/CustomScreens.md), [Packs.md](docs/Packs.md), [Mods.md](docs/Mods.md), [DuelFormat.md](docs/DuelFormat.md), [DeckLimits.md](docs/DeckLimits.md), [UserDecks.md](docs/UserDecks.md).
 
 | Feature | What it does | Status |
 |---|---|---|
@@ -172,6 +172,7 @@ Always on. Kept small on purpose: the save, the plugin list, game data loading, 
 | **Crash log** | `crash_log.txt` (module + offset, call stack) and `crash.dmp` in the game folder on a fatal crash. | Working |
 | **Tweaks** | `PauseInBackground` (default off) and `JapaneseVersion`. `EngineRules2020` is still written but the game never reads the bit (see [Duel rules](#game-systems-weve-mapped)). | Built |
 | **Deck size limits** | `MinMainDeck` / `MaxMainDeck` / `MaxExtraDeck` / `MaxSideDeck` (e.g. 20-30 / 5 for Speed Duel): patches the game's one legality check and the deck editor caps, and the numbers in the game's text. Limits only go down (a deck holds 60/15/15). [DeckLimits.md](docs/DeckLimits.md) | Built, untested |
+| **256 user decks** | Toon Jinzo's Yu-Gi-Oh-DeckSlots, now in Core (it replaces the plugin): 224 more user deck slots (ids 1024-1247) after the save's 32, kept in the save extension `UserDecks` so they follow save slots; a DeckSlots `<save>-extradecks.dat` is imported once. `Core_GetExtraUserDecks` for plugins. [UserDecks.md](docs/UserDecks.md) | Built, untested |
 | **Duel format** | `DuelFormat=speed / rush` switches on Konami's Speed and Rush Duel rules that are already in the duel engine but never enabled (LP, hand, 3 zones, no Main Phase 2, Rush draw-to-5, unlimited summons, no chains). Online: the host's **Duel format** row on the match settings screen (Yu-Gi-Oh-MP, lobby data `exformat`, deck sizes follow). The field still draws 5 zones. [DuelFormat.md](docs/DuelFormat.md) | Built, untested |
 
 ### RIX (`Yu-Gi-Oh-RIX`)
@@ -233,7 +234,7 @@ The card effect engine for new cards, and changed effects for game cards. The ga
 | **Equips and boosts** | `equip(atk, def)` and stat boosts through the game's ATK/DEF tables. | Built |
 | **Fusion recipes** | Fixed materials, or generic ones ("Dragon", "DARK", "level>=5", archetypes, "tuner", "non-X", any-of). 246 of 250 new Fusions have recipes written from their text. | Built |
 | **Ritual** | Ritual Monster to Ritual Spell pairs, beyond the game's 96-row table. Custom Ritual Spells use `as("Black Luster Ritual")`. | Built |
-| **Synchro / Xyz / Link** | Material rules (counts, tuner and non-tuner codes, Link materials, named-card materials). | Built |
+| **Synchro / Xyz / Link** | Material rules (counts, tuner and non-tuner codes, Link materials, named-card materials). Custom archetypes as materials and 2-Tuner Synchros (`"tuners": 2`) added 2026-10-23, untested. | Built |
 | **Game card effect overrides** | `effects.json` with `"overridden": true`: a game card gets a different effect (or none). | Built |
 | **`summoning.json`** | Summoning rules for game cards, edited from the Card Manager. | Built |
 | **Tracing** | An empty `trace.txt` next to the plugin turns on detailed effect tracing. | Working |
