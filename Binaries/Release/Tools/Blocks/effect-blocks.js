@@ -25,6 +25,7 @@ const TRIGGERS = [
   ['this card inflicts battle damage', 'battle_damage'],
   ['this card declares an attack', 'attack_declared'],
   ['you choose to use it (ignition, once per turn)', 'ignition'],
+  ['you choose to use it while this card is in your GY', 'in_grave'],
 ];
 
 // How the card must have been summoned (summon triggers only): on special_summoned(from grave, by effect, xyz):
@@ -44,7 +45,7 @@ const SUMMONED = [['Normal Summoned', 'normal_summoned'], ['Special Summoned', '
 const EVENTS = [['this card is flipped face-up (FLIP)', 'flip'], ['this card is destroyed by battle', 'destroyed_by_battle'],
   ['this card is sent to the GY', 'sent_to_grave'], ['this card is sent from the field to the GY', 'sent_from_field_to_grave'],
   ['this card destroys a monster by battle', 'destroys_by_battle'], ['this card inflicts battle damage', 'battle_damage'],
-  ['this card declares an attack', 'attack_declared']];
+  ['this card declares an attack', 'attack_declared'], ['you use it while this card is in your GY', 'in_grave']];
 const PHASES = [['your Standby Phase', 'standby_phase'], ['the End Phase', 'end_phase']];
 const dropdown = (name, options) => ({ type: 'field_dropdown', name, options });
 const HATS = [
@@ -87,7 +88,10 @@ const ACTIONS = [
            ['the effects of Defense Position monsters', 'defense_position']] }],
   },
   { name: 'search', text: 'add from your Deck to your hand: %SEL', args: [{ kind: 'lit', value: 'deck' }, { kind: 'sel', field: 'SEL' }] },
-  { name: 'send_to_grave', text: 'send from your Deck to the GY: %SEL', args: [{ kind: 'lit', value: 'deck' }, { kind: 'sel', field: 'SEL' }] },
+  {
+    name: 'send_to_grave', text: 'send from %FROM to the GY: %SEL',
+    args: [{ kind: 'pick', token: true, field: 'FROM', options: [['your Deck', 'deck'], ['your hand', 'hand']] }, { kind: 'sel', field: 'SEL' }],
+  },
   {
     name: 'revive', text: 'Special Summon from %GY : %SEL',
     args: [{ kind: 'pick', rule: 'graveyard', field: 'GY', options: [['your GY', 'grave'], ["your opponent's GY", 'opponent_grave'], ['either GY', 'either_grave']] },
@@ -105,9 +109,14 @@ const ACTIONS = [
            { kind: 'pick', rule: 'side', field: 'SIDE', optional: true, options: SIDE }, { kind: 'sel', field: 'SEL' }],
   },
   {
-    name: 'banish', text: 'banish %SCOPE card(s) %SIDE : %SEL',
+    name: 'banish', rule: 'banishAction', text: 'banish %SCOPE card(s) %SIDE : %SEL',
     args: [{ kind: 'pick', rule: 'scope', field: 'SCOPE', options: [['1 chosen', 'target'], ['all', 'all']] },
            { kind: 'pick', rule: 'side', field: 'SIDE', optional: true, options: SIDE }, { kind: 'sel', field: 'SEL' }],
+  },
+  {
+    // same script word as the block above, another grammar rule: block = its own block type (ys_banish_from)
+    name: 'banish', rule: 'banishFromAction', block: 'banish_from', text: 'banish from %FROM : %SEL',
+    args: [{ kind: 'pick', token: true, field: 'FROM', options: [['your Deck', 'deck'], ['your hand', 'hand']] }, { kind: 'sel', field: 'SEL' }],
   },
   {
     name: 'return_to_hand', text: 'return 1 chosen card %SIDE to the hand: %SEL',
@@ -137,6 +146,9 @@ const ACTIONS = [
     args: [{ kind: 'stat', stat: 'atk', field: 'ATK' }, { kind: 'stat', stat: 'def', field: 'DEF' }],
   },
 ];
+
+// an action's block type: ys_<script word>, or ys_<block> when two grammar rules share the word (banish)
+const blockType = (action) => 'ys_' + (action.block || action.name);
 
 // rule = the grammar rule of the cost; num = it takes a number
 const COSTS = [
@@ -198,6 +210,7 @@ function defineBlocks() {
       ['only if %1', [{ type: 'input_value', name: 'REQ', check: 'Req' }]],
       ['cost %1', [{ type: 'input_value', name: 'COST', check: 'Cost' }]],
       ['do %1', [{ type: 'input_statement', name: 'DO', check: 'Action' }]],
+      ['Quick Effect (either turn, in a chain) %1', [{ type: 'field_checkbox', name: 'QUICK', checked: false }]],
       ['only once per turn %1', [{ type: 'field_checkbox', name: 'ONCE', checked: false }]],
     ];
     const def = { type: hat.type, colour: COLOUR.effect, tooltip: hat.tooltip };
@@ -246,7 +259,7 @@ function defineBlocks() {
     for (const arg of action.args)
       if (arg.field) fields[arg.field] = actionField(arg);
     const { msg, args } = message(action.text, fields);
-    defs.push({ type: 'ys_' + action.name, message0: msg, args0: args, previousStatement: 'Action', nextStatement: 'Action', colour: COLOUR.action,
+    defs.push({ type: blockType(action), message0: msg, args0: args, previousStatement: 'Action', nextStatement: 'Action', colour: COLOUR.action,
       inputsInline: true, tooltip: 'Script: ' + action.name + '(...)' });
   }
   defs.push({
@@ -287,7 +300,9 @@ function toolbox() {
       { kind: 'category', name: 'Cost', colour: COLOUR.cost, contents: [...COSTS.map((c) => block('ys_cost_' + c.word)), block('ys_cost_self')] },
       {
         kind: 'category', name: 'Actions', colour: COLOUR.action,
-        contents: ACTIONS.map((a) => (a.args.some((arg) => arg.kind === 'sel') ? withSelector('ys_' + a.name, a.name === 'destroy' || a.name === 'banish' || a.name === 'return_to_hand' ? 'card' : 'monster') : block('ys_' + a.name))),
+        contents: ACTIONS.map((a) => (a.args.some((arg) => arg.kind === 'sel')
+          ? withSelector(blockType(a), a.name === 'destroy' || a.name === 'banish' || a.name === 'return_to_hand' || a.name === 'send_to_grave' ? 'card' : 'monster')
+          : block(blockType(a)))),
       },
       {
         kind: 'category', name: 'Which cards', colour: COLOUR.cards,
@@ -326,7 +341,7 @@ function selectorText(block) {
 }
 
 function actionText(block) {
-  const action = ACTIONS.find((a) => 'ys_' + a.name === block.type);
+  const action = ACTIONS.find((a) => blockType(a) === block.type);
   if (!action) return '';
   const parts = [];
   for (const arg of action.args) {
@@ -367,6 +382,7 @@ function effectBody(block) {
   const cost = costText(block.getInputTargetBlock('COST'));
   if (cost) text += 'cost ' + cost + ': ';
   text += actions.join(' then ') + ';';
+  if (block.getFieldValue('QUICK') === 'TRUE') text += ' quick;';
   if (block.getFieldValue('ONCE') === 'TRUE') text += ' once_per_turn;';
   return text;
 }
@@ -474,10 +490,10 @@ function chain(states) {
 function actionState(actionNode) {
   const inner = actionNode.c[0];
   const name = inner.c[0];
-  const action = ACTIONS.find((a) => a.name === name);
+  const action = ACTIONS.find((a) => a.name === name && (!a.rule || a.rule === inner.r));
   if (!action) throw new Unsupported('the block editor has no block for ' + name + '(...) yet');
   const items = inner.c.slice(1).filter((c) => !['(', ')', ','].includes(c));
-  const state = { type: 'ys_' + action.name, fields: {}, inputs: {} };
+  const state = { type: blockType(action), fields: {}, inputs: {} };
   let i = 0;
   for (const arg of action.args) {
     const item = items[i];
@@ -525,7 +541,7 @@ function effectState(body, name) {
   const t = trigger ? text(rule(trigger, 'triggerName')) : 'NONE';
   const hat = HATS.find((h) => h.has(t));
   if (!hat) throw new Unsupported('no block for the trigger ' + t + ' yet');
-  const state = { type: hat.type, fields: { NAME: name || '', ONCE: !!rule(body, 'limit') }, inputs: {} };
+  const state = { type: hat.type, fields: { NAME: name || '', QUICK: !!rule(body, 'quickMark'), ONCE: !!rule(body, 'limit') }, inputs: {} };
   if (t !== 'NONE' && t !== 'ignition') state.fields.TRIGGER = t;
   const conditions = trigger && rule(trigger, 'summonConditions');
   if (conditions) {
@@ -624,7 +640,7 @@ function send() {
 }
 
 function starter() {
-  return [{ type: 'ys_activate', fields: { NAME: '', ONCE: false } }];
+  return [{ type: 'ys_activate', fields: { NAME: '', QUICK: false, ONCE: false } }];
 }
 
 // Called by WolfX with {tree} / {error} / {empty}.
