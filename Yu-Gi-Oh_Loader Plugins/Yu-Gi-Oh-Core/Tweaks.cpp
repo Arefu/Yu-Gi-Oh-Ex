@@ -1,4 +1,5 @@
 #include "Tweaks.h"
+#include "HookDiagnostics.h"
 
 #include <Windows.h>
 #include <format>
@@ -30,13 +31,14 @@ namespace Tweaks
         const std::string ini = Save::GameFolder() + "Config.ini";
         const bool pause = GetPrivateProfileIntA("Yu-Gi-Oh-Core", "PauseInBackground", 0, ini.c_str()) != 0;
         const bool japanese = GetPrivateProfileIntA("Yu-Gi-Oh-Core", "JapaneseVersion", 0, ini.c_str()) != 0;
-        DetourTransactionBegin();
-        DetourUpdateThread(GetCurrentThread());
+        if (!HookDiagnostics::Begin("Core tweaks", MODULE_NAME, Logger::WriteLog))
+            return;
         if (!pause)
             DetourAttach(&orig_PauseWhenUnfocused, Hook_PauseWhenUnfocused);
         if (japanese)
             DetourAttach(&orig_UseJPLogo, Hook_UseJPLogo);
-        DetourTransactionCommit();
+        if (HookDiagnostics::Commit("Core tweaks", MODULE_NAME, Logger::WriteLog) != NO_ERROR)
+            return;
         Logger::WriteLog(std::format("Pause in background: {}, Japanese version: {}", pause ? "on" : "off", japanese ? "on" : "off"), MODULE_NAME, 0);
     }
 }

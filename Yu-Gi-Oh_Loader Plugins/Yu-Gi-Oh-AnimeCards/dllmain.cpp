@@ -1,4 +1,5 @@
 #include <Windows.h>
+#include "HookDiagnostics.h"
 #include <cstdint>
 #include <cmath>
 #include <cwchar>
@@ -712,8 +713,18 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 
         orig_sub_14081A670 = (fn_sub_14081A670)ResolveVA(0x14081A670);
         orig_sub_14081A730 = (fn_sub_14081A730)ResolveVA(0x14081A730);
-        DetourTransactionBegin();
-        DetourUpdateThread(GetCurrentThread());
+        orig_Get_CardTypeFromFullCardPropsByKonamiId = (fn_Get_CardTypeFromFullCardPropsByKonamiId)ResolveVA(YGO::Addr::Card_GetTypeFromFullCardPropsByKonamiId);
+
+        // TODO: fill in the real RVA for Get_SpellTrapCardPropertyFromFullCardProps
+        // (only seen as thunk j_YGO::CARDS::Get_SpellTrapCardPropertyFromFullCardProps
+        // so far — the thunk's own target address in your IDB is what belongs here).
+        // Leaving this at 0 will resolve to GameBase() - kImageBase, which is NOT a
+        // valid function pointer — do not attach/build until this is corrected.
+        orig_Get_SpellTrapCardPropertyFromFullCardProps =
+            (fn_Get_SpellTrapCardPropertyFromFullCardProps)ResolveVA(0x014081A630 /* TODO */);
+
+        if (!HookDiagnostics::Begin("Anime card display", MODULE_NAME, Logger::WriteLog))
+            break;
         DetourAttach(&(PVOID&)orig_sub_140766540, Hook_sub_140766540);
         DetourAttach(&(PVOID&)orig_sub_140877EC0, Hook_sub_140877EC0);
         DetourAttach(&(PVOID&)orig_sub_1408795A0, Hook_sub_1408795A0);
@@ -728,8 +739,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             orig_DuelHand_DrawLevelNumber = (fn_DuelHand_DrawLevelNumber)ResolveVA(0x14078B0B0);
             DetourAttach(&(PVOID&)orig_DuelHand_DrawLevelNumber, Hook_DuelHand_DrawLevelNumber);
         }
-        LONG err = DetourTransactionCommit();
-        (void)err;
+         DetourAttach(&(PVOID&)orig_Get_SpellTrapCardPropertyFromFullCardProps,Hook_Get_SpellTrapCardPropertyFromFullCardProps); // uncomment once RVA above is fixed
+        HookDiagnostics::Commit("Anime card display", MODULE_NAME, Logger::WriteLog);
 
         break;
     }
