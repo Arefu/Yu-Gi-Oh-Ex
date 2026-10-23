@@ -451,6 +451,16 @@ void Save::AddWriteFilter(int(__cdecl* filter)(unsigned char*, int, void*), void
     g_WriteFilters.push_back({ filter, user });
 }
 
+static std::vector<void(__cdecl*)()> g_WrittenListeners;
+
+void Save::AddWrittenListener(void(__cdecl* listener)())
+{
+    if (!listener)
+        return;
+    std::lock_guard<std::mutex> guard(g_FilterLock);
+    g_WrittenListeners.push_back(listener);
+}
+
 // The bytes to write: the game's blob, or a filtered copy of it with its checksum redone (the save counter is the game's, already bumped).
 static const unsigned char* FilteredBlob(const unsigned char* blob, std::vector<unsigned char>& copy)
 {
@@ -490,7 +500,17 @@ static void __fastcall Hook_WriteSaveFile(int64_t manager)
     SetPendingOp(manager, 0);
 
     if (!ok)
+    {
         Logger::WriteLog(std::format("Could not write {}", path.string()), MODULE_NAME, 2);
+        return;
+    }
+    std::vector<void(__cdecl*)()> listeners;
+    {
+        std::lock_guard<std::mutex> guard(g_FilterLock);
+        listeners = g_WrittenListeners;
+    }
+    for (auto listener : listeners)
+        listener();
 }
 
 const std::filesystem::path& Save::PrimarySavePath()

@@ -30,6 +30,8 @@ namespace Save
 
     // Core_AddSaveWriteFilter: filters run on a copy of every blob the game writes (see Yu-Gi-Oh-Core.h).
     void AddWriteFilter(int(__cdecl* filter)(unsigned char*, int, void*), void* user);
+    // Called on the save thread after a save file (blob + extension) was written to disk.
+    void AddWrittenListener(void(__cdecl* listener)());
 
     // Core_GetSaveExtension / Core_SetSaveExtension: plugin data after the blob in the save file (see Yu-Gi-Oh-Core.h).
     int GetExtension(const char* tag, void* out, int size);
