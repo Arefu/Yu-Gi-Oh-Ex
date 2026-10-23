@@ -127,7 +127,7 @@ namespace WolfEx
             >= 32 and <= 43 => $"level:{code - 31}",
             >= 44 and <= 55 => $"level>={code - 43}",
             >= 56 and <= 67 => $"level<={code - 55}",
-            >= 98 and <= 516 => $"archetype:{code - 98}",
+            >= 98 and <= 2496 => $"archetype:{code - 98}",   // 517.. custom archetypes (419 up)
             2497 => "ritual",
             2498 => "Illusion",
             2499 => "monster",

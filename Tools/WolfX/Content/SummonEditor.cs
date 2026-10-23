@@ -34,6 +34,13 @@ namespace WolfEx
     internal sealed class SummonEditor : UserControl
     {
         private const int MinMaterials = 2, MaxMaterials = 5;
+        /// <summary>The most Tuners a Synchro can take (Yu-Gi-Oh-Effects SynchroXyz.cpp kMaxTuners).</summary>
+        public const int MaxTuners = 2;
+
+        /// <summary>The game's own 2-Tuner Synchros (Synchro_GetTunerCount 0x14007CAF0); every other game Synchro takes 1.</summary>
+        private static readonly HashSet<int> GameTwoTuners = [9119, 9394, 12080, 12449, 12781];
+
+        private static int DefaultTuners(SummonTarget target) => target.GameCard && GameTwoTuners.Contains(target.Id) ? 2 : 1;
 
         private enum Section { None, Fusion, RitualMonster, RitualSpell, Synchro, Xyz, Link }
 
@@ -72,6 +79,7 @@ namespace WolfEx
         // Synchro
         private readonly Panel _synchroBox = new() { Dock = DockStyle.Fill, Padding = new Padding(6) };
         private readonly MaterialCodePicker _tuner = new(synchro: true), _nonTuner = new(synchro: true);
+        private readonly NumericUpDown _synchroTuners = new() { Minimum = 1, Maximum = MaxTuners, Width = 60 };
         private readonly NumericUpDown _synchroCount = new() { Minimum = 2, Maximum = 20, Width = 60 };
         private readonly CheckBox _synchroExactly = new() { Text = "exactly (no more non-Tuners)", AutoSize = true, Margin = new Padding(8, 6, 3, 3) };
         private readonly Label _synchroState = new() { AutoSize = true, MaximumSize = new Size(560, 0), Margin = new Padding(3, 8, 3, 3) };
@@ -148,14 +156,15 @@ namespace WolfEx
 
             // Synchro: Tuner, non-Tuners, how many
             var synchroFlow = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true, FlowDirection = FlowDirection.TopDown, WrapContents = false };
-            synchroFlow.Controls.Add(Row(Caption("Tuner:"), _tuner));
+            synchroFlow.Controls.Add(Row(Caption("Tuners:"), _synchroTuners, _tuner));
             synchroFlow.Controls.Add(Row(Caption("non-Tuners:"), _nonTuner));
-            synchroFlow.Controls.Add(Row(Caption("Materials in all (the Tuner + the non-Tuners):"), _synchroCount, _synchroExactly));
+            synchroFlow.Controls.Add(Row(Caption("Materials in all (the Tuners + the non-Tuners):"), _synchroCount, _synchroExactly));
             synchroFlow.Controls.Add(Row(SmallButton("Read card text", SynchroFromText), SmallButton("Use the generic rule", () => SetKey("synchro", null))));
             synchroFlow.Controls.Add(_synchroState);
             _synchroBox.Controls.Add(synchroFlow);
             _tuner.ValueChanged += SynchroEdited;
             _nonTuner.ValueChanged += SynchroEdited;
+            _synchroTuners.ValueChanged += SynchroEdited;
             _synchroCount.ValueChanged += SynchroEdited;
             _synchroExactly.CheckedChanged += SynchroEdited;
 
@@ -229,8 +238,9 @@ namespace WolfEx
                                          "Generic Ritual Spells (Advanced Ritual Art and the like) can summon it either way. Saved as \"ritualSpell\".",
                 Section.RitualSpell => "The Ritual Monsters this Ritual Spell summons. A monster has one Ritual Spell: picking a monster here " +
                                        "takes it away from its own spell. Saved as \"ritualMonsters\".",
-                Section.Synchro => "1 Tuner + non-Tuners whose Levels add up to this card's Level. Each side can be any monster, a Type, an Attribute, " +
-                                   "an archetype, a kind or (Tuner/non-Tuner) one named card. Saved as \"synchro\"; without it the game's generic rule applies.",
+                Section.Synchro => "1 or 2 Tuners + non-Tuners whose Levels add up to this card's Level. Each side can be any monster, a Type, an Attribute, " +
+                                   "an archetype, a kind or (Tuner/non-Tuner) one named card; with 2 Tuners both meet the Tuner condition. " +
+                                   "Saved as \"synchro\"; without it the game's generic rule applies.",
                 Section.Xyz => $"Monsters of the card's Rank ({target!.Level}) as their Level, optionally all of a Type, Attribute, archetype, kind or one named card. " +
                                "Saved as \"xyz\"; without it the game's generic rule applies (2 materials).",
                 Section.Link => "What the Link Materials must be. Konami puts \"2+ Effect Monsters\" / \"except Tokens\" in the first slot and " +
@@ -507,21 +517,30 @@ namespace WolfEx
             _tuner.CardName = _nonTuner.CardName = CardName;
             _tuner.Value = synchro?["tuner"];
             _nonTuner.Value = synchro?["nonTuner"];
-            _synchroCount.Value = Math.Clamp(synchro?["materials"] is JsonValue n && n.TryGetValue<int>(out int count) ? count : 2, 2, 20);
+            int tuners = Tuners(synchro, target);
+            _synchroTuners.Value = Math.Clamp(tuners, 1, MaxTuners);
+            _synchroCount.Minimum = tuners + 1;
+            _synchroCount.Value = Math.Clamp(synchro?["materials"] is JsonValue n && n.TryGetValue<int>(out int count) ? count : tuners + 1, tuners + 1, 20);
             _synchroExactly.Checked = synchro?["exactly"] is JsonValue e && e.TryGetValue<bool>(out bool exactly) && exactly;
             _synchroState.Text = synchro == null
-                ? "No requirements set: the game's generic rule (1 Tuner + 1 or more non-Tuners). Change anything above to set them."
-                : SynchroText(synchro);
+                ? $"No requirements set: the game's generic rule ({tuners} Tuner{(tuners == 1 ? "" : "s")} + 1 or more non-Tuners). Change anything above to set them."
+                : SynchroText(synchro, target);
         }
 
-        private string SynchroText(JsonObject synchro)
+        /// <summary>"tuners" when set, else the card's own count (2 for the game's 2-Tuner Synchros, 1 for everything else).</summary>
+        private static int Tuners(JsonObject? synchro, SummonTarget target) =>
+            synchro?["tuners"] is JsonValue t && t.TryGetValue<int>(out int tuners) ? tuners : DefaultTuners(target);
+
+        private string SynchroText(JsonObject synchro, SummonTarget target)
         {
-            int count = synchro["materials"] is JsonValue n && n.TryGetValue<int>(out int c) ? c : 2;
+            int tuners = Tuners(synchro, target);
+            int count = synchro["materials"] is JsonValue n && n.TryGetValue<int>(out int c) ? c : tuners + 1;
             bool exactly = synchro["exactly"] is JsonValue e && e.TryGetValue<bool>(out bool x) && x;
             string tuner = MaterialCodePicker.Describe(synchro["tuner"], CardName);
             string nonTuner = MaterialCodePicker.Describe(synchro["nonTuner"], CardName);
-            int others = count - 1;
-            return $"Reads: 1 {(tuner == "any" ? "" : tuner + " ")}Tuner + {others}{(exactly ? "" : "+")} {(nonTuner == "any" ? "" : nonTuner + " ")}non-Tuner monster{(others == 1 && exactly ? "" : "s")}.";
+            int others = count - tuners;
+            return $"Reads: {tuners} {(tuner == "any" ? "" : tuner + " ")}Tuner{(tuners == 1 ? "" : "s")} + {others}{(exactly ? "" : "+")} " +
+                   $"{(nonTuner == "any" ? "" : nonTuner + " ")}non-Tuner monster{(others == 1 && exactly ? "" : "s")}.";
         }
 
         private void SynchroEdited(object? sender, EventArgs e)
@@ -533,12 +552,24 @@ namespace WolfEx
                 synchro["tuner"] = tuner.DeepClone();
             if (_nonTuner.Value is { } nonTuner)
                 synchro["nonTuner"] = nonTuner.DeepClone();
+            int tuners = (int)_synchroTuners.Value;
+            if (tuners != DefaultTuners(_target))
+                synchro["tuners"] = tuners;
+            _binding = true;   // more Tuners raise the least number of materials
+            try
+            {
+                _synchroCount.Minimum = tuners + 1;
+            }
+            finally
+            {
+                _binding = false;
+            }
             synchro["materials"] = (int)_synchroCount.Value;
             if (_synchroExactly.Checked)
                 synchro["exactly"] = true;
             _target.Data["synchro"] = synchro;
             Changed();
-            _synchroState.Text = SynchroText(synchro);
+            _synchroState.Text = SynchroText(synchro, _target);
         }
 
         private void BindXyz(SummonTarget target)
@@ -670,7 +701,7 @@ namespace WolfEx
 
     /// <summary>
     /// One Synchro, Xyz or Link material condition, the way the game's tables hold it: any monster, a Type, an Attribute, an archetype (the
-    /// game's, up to 418), a kind, a Level (Link) or one named card (Synchro, Link "including"). Each mode offers what that check knows
+    /// game's 1-418, or a custom one from 419: Yu-Gi-Oh-Effects widens the checks' archetype range), a kind, a Level (Link) or one named card (Synchro, Link "including"). Each mode offers what that check knows
     /// (SynchroXyz.cpp AllowedCode / AllowedLinkCode). Codes the pickers cannot say (the game's own rules, e.g. 97) are kept as they are.
     /// </summary>
     internal sealed class MaterialCodePicker : FlowLayoutPanel
@@ -774,7 +805,7 @@ namespace WolfEx
             {
                 "Type" => MaterialCondition.Types.Take(24).Select(t => new Choice(JsonValue.Create(t.Word), t.Text)),
                 "Attribute" => MaterialCondition.AttributeWords.Select(a => new Choice(JsonValue.Create(a.Word), a.Text)),
-                "Archetype" => ArchetypeCatalog.Codes().Where(code => code < ArchetypeCatalog.FirstCustomCode)
+                "Archetype" => ArchetypeCatalog.Codes()
                     .Select(code => new Choice(JsonValue.Create($"archetype:{code}"), $"{ArchetypeCatalog.NameOf(code)} ({code})"))
                     .OrderBy(c => c.Text, StringComparer.OrdinalIgnoreCase),
                 "Kind" => KindChoices(_mode),

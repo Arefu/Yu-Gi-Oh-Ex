@@ -33,10 +33,10 @@ namespace WolfEx
                 int id = alone && cardId != null ? cardId(name) : 0;
                 if (id > 0)
                     found.Add(id);
-                else if (archetypeCodes(name).FirstOrDefault(code => code < ArchetypeCatalog.FirstCustomCode) is int code and > 0)
-                    found.Add($"archetype:{code}");
+                else if (archetypeCodes(name).OrderBy(code => code >= ArchetypeCatalog.FirstCustomCode).FirstOrDefault() is int code and > 0)
+                    found.Add($"archetype:{code}");   // the game's archetype first, else a custom one
                 else
-                    dropped.Add($"\"{name}\" (not a game archetype or card)");
+                    dropped.Add($"\"{name}\" (not an archetype or card)");
                 words = words.Remove(quoted.Index, quoted.Length);
             }
             foreach (string word in words.Split(' ', StringSplitOptions.RemoveEmptyEntries))
@@ -71,11 +71,13 @@ namespace WolfEx
             string left = line[..plus].Trim(), right = line[(plus + 3)..].Trim().TrimEnd('.');
 
             var leftCount = CountPrefix.Match(left);
+            int tuners = 1;
             if (leftCount.Success)
             {
-                if (leftCount.Groups["n"].Value != "1" || leftCount.Groups["plus"].Success)
+                tuners = int.Parse(leftCount.Groups["n"].Value);
+                if (tuners is < 1 or > SummonEditor.MaxTuners || leftCount.Groups["plus"].Success)
                 {
-                    why = $"{leftCount.Value.Trim()} Tuners (the game's table has one Tuner)";
+                    why = $"{leftCount.Value.Trim()} Tuners (the game takes 1 or {SummonEditor.MaxTuners}, an exact number)";
                     return null;
                 }
                 left = left[leftCount.Length..];
@@ -102,7 +104,9 @@ namespace WolfEx
                 synchro["tuner"] = tuner;
             if (nonTuner != null)
                 synchro["nonTuner"] = nonTuner;
-            synchro["materials"] = 1 + nonTuners;
+            if (tuners > 1)
+                synchro["tuners"] = tuners;
+            synchro["materials"] = tuners + nonTuners;
             if (!orMore)
                 synchro["exactly"] = true;
             why = string.Join("; ", dropped);
