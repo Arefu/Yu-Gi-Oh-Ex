@@ -630,11 +630,11 @@ namespace Wolf.Editors
                     return $"{path} into {_gameFiles.Describe(path)}";
                 }
                 Directory.CreateDirectory(Path.GetDirectoryName(json)!);
-                File.WriteAllText(json, _file.ToJson(number, language));
+                ContentFileSave.WriteText(json, _file.ToJson(number, language));
                 return $"{json} (a new tutorial: Yu-Gi-Oh-Campaign adds it to Help > Tutorial)";
             }
             string disk = Path.Combine(_diskFile != null ? Path.GetDirectoryName(_diskFile)! : "", TutorialFile.FileName(number, language));
-            File.WriteAllBytes(disk, _file.ToBytes());
+            ContentFileSave.WriteBytes(disk, _file.ToBytes());
             return disk;
         }
 
@@ -686,8 +686,11 @@ namespace Wolf.Editors
                 }
             }
 
-            Directory.CreateDirectory(Path.GetDirectoryName(target)!);
-            File.WriteAllBytes(target, bytes);
+            if (!ContentFileSave.TryWrite(new Dictionary<string, byte[]> { [target] = bytes }, out string error))
+            {
+                SetStatus(error);
+                return false;
+            }
             _savedBytes = bytes;
             _savedMenu = MenuState();
             if (!_fromGame || saveAs)

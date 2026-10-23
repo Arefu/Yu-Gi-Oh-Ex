@@ -1,4 +1,5 @@
 #include <Windows.h>
+#include "HookDiagnostics.h"
 #include <cstring>
 
 #include "Card.h"
@@ -60,12 +61,12 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     {
         DetourRestoreAfterWith();
 
-        DetourTransactionBegin();
-        DetourUpdateThread(GetCurrentThread());
+        if (!HookDiagnostics::Begin("Card tables, text and related cards", MODULE_NAME, Logger::WriteLog))
+            break;
         DetourAttach(&(PVOID&)orig_Setup_CardPropTable, Hook_Setup_CardPropTable);
         Text::Attach();
         Related::Attach();
-        DetourTransactionCommit();
+        HookDiagnostics::Commit("Card tables, text and related cards", MODULE_NAME, Logger::WriteLog);
         break;
     }
     }

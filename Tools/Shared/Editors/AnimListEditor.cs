@@ -470,10 +470,14 @@ namespace Wolf.Editors
             }
 
             string folder = Path.GetDirectoryName(target)!;
-            Directory.CreateDirectory(folder);
-            File.WriteAllText(target, list.ToText());
+            var pending = new Dictionary<string, byte[]> { [target] = ContentFileSave.Text(list.ToText()) };
             foreach (var (name, bytes) in _imported)
-                File.WriteAllBytes(Path.Combine(folder, name + ".png"), bytes);
+                pending[Path.Combine(folder, name + ".png")] = bytes;
+            if (!ContentFileSave.TryWrite(pending, out string error))
+            {
+                SetStatus(error);
+                return false;
+            }
 
             // pictures now come from the saved folder
             _diskFile = target;
