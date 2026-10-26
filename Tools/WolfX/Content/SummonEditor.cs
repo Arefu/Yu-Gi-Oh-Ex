@@ -68,7 +68,7 @@ namespace WolfEx
 
         // Ritual Monster
         private readonly Panel _ritualMonsterBox = new() { Dock = DockStyle.Fill, Padding = new Padding(6) };
-        private readonly Label _ritualSpell = new() { AutoSize = true, Margin = new Padding(3, 8, 3, 3) };
+        private readonly ListBox _ritualSpells = new() { Dock = DockStyle.Fill, IntegralHeight = false };
 
         // Ritual Spell
         private readonly Panel _ritualSpellBox = new() { Dock = DockStyle.Fill, Padding = new Padding(6) };
@@ -136,11 +136,19 @@ namespace WolfEx
             _fusionBox.Controls.Add(fusionButtons);
             _fusionBox.Controls.Add(new Label { Text = "Fusion Materials (2 to 5, each is one card):", Dock = DockStyle.Top, Height = 20 });
 
-            // Ritual Monster: one Ritual Spell
-            var monsterFlow = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true, FlowDirection = FlowDirection.TopDown, WrapContents = false };
-            monsterFlow.Controls.Add(Row(Caption("Ritual Spell:"), _ritualSpell));
-            monsterFlow.Controls.Add(Row(SmallButton("Choose Ritual Spell...", ChooseRitualSpell), SmallButton("Generic spells only", () => SetRitualSpell(0))));
-            _ritualMonsterBox.Controls.Add(monsterFlow);
+            // Ritual Monster: one or more Ritual Spells
+            var monsterButtons = new FlowLayoutPanel { Dock = DockStyle.Right, AutoSize = true, FlowDirection = FlowDirection.TopDown, WrapContents = false };
+            monsterButtons.Controls.AddRange(
+            [
+                SmallButton("Add Ritual Spells...", AddRitualSpells),
+                SmallButton("Remove", RemoveRitualSpell),
+                SmallButton("Move up", () => MoveRitualSpell(-1)),
+                SmallButton("Move down", () => MoveRitualSpell(1)),
+                SmallButton("Generic spells only", () => SetRitualSpellIds([])),
+            ]);
+            _ritualMonsterBox.Controls.Add(_ritualSpells);
+            _ritualMonsterBox.Controls.Add(monsterButtons);
+            _ritualMonsterBox.Controls.Add(new Label { Text = "Ritual Spells that Ritual Summon this card:", Dock = DockStyle.Top, Height = 20 });
 
             // Ritual Spell: the monsters it summons
             var spellButtons = new FlowLayoutPanel { Dock = DockStyle.Right, AutoSize = true, FlowDirection = FlowDirection.TopDown, WrapContents = false };
@@ -234,10 +242,11 @@ namespace WolfEx
             {
                 Section.Fusion => "Polymerization (and every other Fusion card) needs these materials. A material is a card, or a condition " +
                                   "(\"1 Dragon monster\", \"1 LIGHT Warrior monster\", \"1 non-Tuner\"). Saved as \"fusion\" (Yu-Gi-Oh-Effects).",
-                Section.RitualMonster => "The Ritual Spell that Ritual Summons this monster, with Tributes whose Levels add up to its Level. " +
-                                         "Generic Ritual Spells (Advanced Ritual Art and the like) can summon it either way. Saved as \"ritualSpell\".",
-                Section.RitualSpell => "The Ritual Monsters this Ritual Spell summons. A monster has one Ritual Spell: picking a monster here " +
-                                       "takes it away from its own spell. Saved as \"ritualMonsters\".",
+                Section.RitualMonster => "The Ritual Spells that Ritual Summon this monster (any one of them), with Tributes whose Levels add up to its Level. " +
+                                         "Generic and archetype Ritual Spells (Advanced Ritual Art; Nekroz Mirror/Kaleidoscope/Cycle for a Nekroz) can summon it " +
+                                         "either way. Saved as \"ritualSpell\"; a Ritual Spell's \"ritualMonsters\" adds to this list.",
+                Section.RitualSpell => "The Ritual Monsters this Ritual Spell summons. It is added to each monster's own Ritual Spells (they keep theirs). " +
+                                       "Saved as \"ritualMonsters\".",
                 Section.Synchro => "1 or 2 Tuners + non-Tuners whose Levels add up to this card's Level. Each side can be any monster, a Type, an Attribute, " +
                                    "an archetype, a kind or (Tuner/non-Tuner) one named card; with 2 Tuners both meet the Tuner condition. " +
                                    "Saved as \"synchro\"; without it the game's generic rule applies.",
@@ -260,8 +269,11 @@ namespace WolfEx
                         FillMaterials(target);
                         break;
                     case Section.RitualMonster:
-                        int spell = target.Data["ritualSpell"] is JsonValue value && value.TryGetValue<int>(out int id) ? id : 0;
-                        _ritualSpell.Text = spell == 0 ? "(generic Ritual Spells only)" : CardText(spell);
+                        _ritualSpells.Items.Clear();
+                        foreach (int spell in RitualSpellIds(target))
+                            _ritualSpells.Items.Add(CardText(spell));
+                        if (_ritualSpells.Items.Count == 0)
+                            _ritualSpells.Items.Add("(generic Ritual Spells only)");
                         break;
                     case Section.RitualSpell:
                         _ritualMonsters.Items.Clear();
@@ -458,20 +470,64 @@ namespace WolfEx
 
         // ---------------------------------------------------------------- Ritual
 
-        private void ChooseRitualSpell()
+        /// <summary>"ritualSpell": one id, or a list of ids (0 = generic spells only).</summary>
+        private static List<int> RitualSpellIds(SummonTarget target) => target.Data["ritualSpell"] switch
+        {
+            JsonValue v when v.TryGetValue<int>(out int id) => id > 0 ? [id] : [],
+            JsonArray array => array.Select(n => n is JsonValue v && v.TryGetValue<int>(out int id) ? id : 0).Where(id => id > 0).Distinct().ToList(),
+            _ => [],
+        };
+
+        private void SetRitualSpellIds(List<int> ids)
+        {
+            // one spell stays a plain id (what older plugins read); none: a game monster keeps a row with spell 0 ("generic only"), a custom one has no key
+            SetKey("ritualSpell", ids.Count switch
+            {
+                0 => _target?.GameCard == true ? JsonValue.Create(0) : null,
+                1 => JsonValue.Create(ids[0]),
+                _ => new JsonArray(ids.Select(id => (JsonNode)id).ToArray()),
+            });
+        }
+
+        private void AddRitualSpells()
         {
             if (_target is not { } target)
                 return;
-            using var picker = new CardPickerDialog(CardCatalog.Get(this), $"Ritual Spell for {target.Name}", askCopies: false, maxCopies: 1);
+            using var picker = new CardPickerDialog(CardCatalog.Get(this), $"Ritual Spells for {target.Name}", askCopies: false, maxCopies: 1);
             if (picker.ShowDialog(this) != DialogResult.OK || picker.Result.Count == 0)
                 return;
-            SetRitualSpell(picker.Result[0].Card.Id);
+            var ids = RitualSpellIds(target);
+            foreach (var (picked, _) in picker.Result)
+                if (!ids.Contains(picked.Id))
+                    ids.Add(picked.Id);
+            SetRitualSpellIds(ids);
         }
 
-        private void SetRitualSpell(int spell)
+        private void RemoveRitualSpell()
         {
-            // a game monster keeps a row with spell 0 ("generic only"); a custom one simply has no key
-            SetKey("ritualSpell", spell == 0 && _target?.GameCard != true ? null : JsonValue.Create(spell));
+            if (_target is not { } target || _ritualSpells.SelectedIndex < 0)
+                return;
+            var ids = RitualSpellIds(target);
+            int index = _ritualSpells.SelectedIndex;
+            if (index >= ids.Count)
+                return;
+            ids.RemoveAt(index);
+            SetRitualSpellIds(ids);
+            if (ids.Count > 0)
+                _ritualSpells.SelectedIndex = Math.Min(index, ids.Count - 1);
+        }
+
+        private void MoveRitualSpell(int by)
+        {
+            if (_target is not { } target || _ritualSpells.SelectedIndex < 0)
+                return;
+            var ids = RitualSpellIds(target);
+            int from = _ritualSpells.SelectedIndex, to = from + by;
+            if (from >= ids.Count || to < 0 || to >= ids.Count)
+                return;
+            (ids[from], ids[to]) = (ids[to], ids[from]);
+            SetRitualSpellIds(ids);
+            _ritualSpells.SelectedIndex = to;
         }
 
         private static List<int> RitualMonsterIds(SummonTarget target) =>

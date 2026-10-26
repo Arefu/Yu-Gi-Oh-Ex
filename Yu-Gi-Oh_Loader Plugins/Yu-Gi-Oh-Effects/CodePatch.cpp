@@ -96,3 +96,9 @@ bool CodePatch::AttachRefresh(uintptr_t entry, void(__cdecl* refresh)(), const c
         Logger::WriteLog(std::format("{}: DetourAttach 0x{:X} failed ({})", label, entry, error), MODULE_NAME, 2);
     return error == NO_ERROR;
 }
+
+// Nothing between the stub's entry and `call rax` writes rcx or rdx (pushes and `mov rax`), so the refresh gets the caller's arguments.
+bool CodePatch::AttachRefresh(uintptr_t entry, void(__cdecl* refresh)(uintptr_t rcx, uintptr_t rdx), const char* label)
+{
+    return AttachRefresh(entry, reinterpret_cast<void(__cdecl*)()>(refresh), label);
+}

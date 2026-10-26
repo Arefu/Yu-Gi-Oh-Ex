@@ -1,5 +1,6 @@
 #include <Windows.h>
 #include <detours.h>
+#include <algorithm>
 #include <cstdint>
 #include <cstring>
 #include <format>
@@ -30,11 +31,20 @@ namespace
         uint16_t spell;
     };
 
-    // The custom pairs as cards.json gives them (real ids); g_Table rows kGameRows.. are these as the duel sees them.
-    std::vector<Row> g_Pairs;
+    // A Ritual Monster and the Ritual Spells that summon it (real ids). The table has one row per monster (the readers stop at its first row),
+    // so a monster with several spells has its row's spell column set to the spell being asked about when a reader is entered (PickSpell).
+    struct Pairing
+    {
+        uint16_t monster;
+        std::vector<uint16_t> own;       // "ritualSpell" on the monster (the last entry wins), empty = only the generic spells
+        bool hasOwn = false;
+        std::vector<uint16_t> added;     // "ritualMonsters" on spells naming it (they add up)
+        std::vector<uint16_t> spells;    // what it ends up with: own (or the game row's spell) then added, no repeats
+        int gameRow = -1;                // a game monster's row
+        int row = -1;                    // its row in this duel (-1: not shown, see RefreshRows)
+    };
+    std::vector<Pairing> g_Pairs;
     Row* g_Table = nullptr;
-    // A pair for a monster that already has a game row changes that row (the readers stop at a monster's first row): row index -> real spell id.
-    std::vector<std::pair<int, uint16_t>> g_GameRowSpells;
 
     // Instructions that address the table through the image base register (`movzx eax, word ptr [r9+rax*4+0xAD07C0]` and friends):
     // the disp32 is the table's RVA (+2 for the spell column). Offset = where the disp32 starts in the instruction.
@@ -51,8 +61,10 @@ namespace
     constexpr int kLeaLength = 7;
     // cmp <reg>, 60h: the row count, as the last byte of each.
     constexpr uintptr_t kBoundSites[] = { 0x1400693A4, 0x1400693A9, 0x14006A4A4, 0x14006CE2A };
-    // The readers that can be first to look at the table in a duel: the custom rows are refreshed on entry.
-    constexpr uintptr_t kRefreshEntries[] = { 0x1400692E0, 0x14006CB20, 0x140069EC0 };
+    // The readers that can be first to look at the table in a duel: the custom rows are refreshed on entry. The first two are the only readers
+    // of the spell column and both are handed the spell: Ritual_CanSummonMonsterWithSpell(EffectRecord* rcx: +0 = the spell's id, ...) and
+    // Ritual_GetNthMonsterForSpell(char, int edx = the spell's id, ...). sub_140069EC0 only finds a monster's row (no spell).
+    constexpr uintptr_t kCanSummonEntry = 0x1400692E0, kNthMonsterEntry = 0x14006CB20, kFindRowEntry = 0x140069EC0;
 
     uint16_t EngineId(uint16_t id)
     {
@@ -66,21 +78,64 @@ namespace
     // The readers' row count is a signed byte (127 rows, 31 custom), so not every pair fits at once; but a pair only matters in a duel
     // its cards are in, and a custom card past 0x3FFF plays under a borrowed id below 0x4000 exactly then. So the custom rows are the
     // pairs whose monster or spell is in this duel (or has an id the engine uses as it is), up to the room left; the bound follows.
+    // A row's spell column holds the monster's first spell; PickSpell swaps in another of its spells.
     void __cdecl RefreshRows()
     {
         constexpr int kRoom = kMaxRows - kGameRows;
         int rows = 0;
-        for (const Row& pair : g_Pairs)
+        for (Pairing& pair : g_Pairs)
         {
-            const uint16_t monster = EngineId(pair.monster), spell = pair.spell ? EngineId(pair.spell) : 0;
+            const uint16_t spell = pair.spells.empty() ? 0 : EngineId(pair.spells[0]);
+            if (pair.gameRow >= 0)
+            {
+                pair.row = pair.gameRow;
+                g_Table[pair.row].spell = spell;
+                continue;
+            }
+            const uint16_t monster = EngineId(pair.monster);
             if (monster > 0x3FFF || rows >= kRoom)
-                continue;   // not in this duel (or no room left)
-            g_Table[kGameRows + rows++] = { monster, spell };
+            {
+                pair.row = -1;   // not in this duel (or no room left)
+                continue;
+            }
+            pair.row = kGameRows + rows++;
+            g_Table[pair.row] = { monster, spell };
         }
-        for (const auto& [row, spell] : g_GameRowSpells)
-            g_Table[row].spell = EngineId(spell);
         if (kGameRows + rows != g_ShownRows)
             PointBounds(kGameRows + rows);
+    }
+
+    // `spell` is the id the reader is asked about (as the duel sees it): every monster that lists it among several spells gets it in its row.
+    void PickSpell(uint16_t spell)
+    {
+        if (spell == 0)
+            return;
+        for (const Pairing& pair : g_Pairs)
+        {
+            if (pair.row < 0 || pair.spells.size() < 2)
+                continue;
+            for (uint16_t s : pair.spells)
+            {
+                if (EngineId(s) == spell)
+                {
+                    g_Table[pair.row].spell = spell;
+                    break;
+                }
+            }
+        }
+    }
+
+    void __cdecl RefreshForCanSummon(uintptr_t effect, uintptr_t)
+    {
+        RefreshRows();
+        if (effect)
+            PickSpell(*reinterpret_cast<const uint16_t*>(effect));
+    }
+
+    void __cdecl RefreshForNthMonster(uintptr_t, uintptr_t spell)
+    {
+        RefreshRows();
+        PickSpell(static_cast<uint16_t>(spell));
     }
 
     // ---------------------------------------------------------------- cards.json
@@ -93,20 +148,47 @@ namespace
         return id > 0 && id <= kLastExtraCardId;
     }
 
-    void AddPair(int monster, int spell, const std::string& label)
+    Pairing& PairingFor(int monster)
     {
-        // A monster has one Ritual Spell: the later entry wins (summoning.json is read after cards.json).
-        for (Row& row : g_Pairs)
+        for (Pairing& pair : g_Pairs)
+            if (pair.monster == monster)
+                return pair;
+        return g_Pairs.emplace_back(Pairing{ static_cast<uint16_t>(monster) });
+    }
+
+    void AddUnique(std::vector<uint16_t>& spells, int spell)
+    {
+        if (spell != 0 && std::find(spells.begin(), spells.end(), spell) == spells.end())
+            spells.push_back(static_cast<uint16_t>(spell));
+    }
+
+    // "ritualSpell": an id (0 = only the generic spells) or a list of ids. The later entry wins (summoning.json is read after cards.json).
+    void SetOwnSpells(int monster, const nlohmann::json& value, const std::string& label)
+    {
+        std::vector<uint16_t> spells;
+        int spell = 0;
+        if (value.is_number_integer() && value.get<int>() == 0)
+            ;
+        else if (ValidId(value, spell))
+            AddUnique(spells, spell);
+        else if (value.is_array())
         {
-            if (row.monster == monster)
+            for (const auto& s : value)
             {
-                if (row.spell != spell)
-                    Logger::WriteLog(std::format("{}: Ritual Monster {} had Ritual Spell {} (a monster has one), now {}", label, monster, row.spell, spell), MODULE_NAME, 2);
-                row.spell = static_cast<uint16_t>(spell);
-                return;
+                if (ValidId(s, spell))
+                    AddUnique(spells, spell);
+                else if (!(s.is_number_integer() && s.get<int>() == 0))
+                    Logger::WriteLog(std::format("{}: \"ritualSpell\" entry {} is not a card id, skipped", label, s.dump()), MODULE_NAME, 2);
             }
         }
-        g_Pairs.push_back({ static_cast<uint16_t>(monster), static_cast<uint16_t>(spell) });
+        else
+        {
+            Logger::WriteLog(std::format("{}: \"ritualSpell\" must be a card id or a list of card ids, skipped", label), MODULE_NAME, 2);
+            return;
+        }
+        Pairing& pair = PairingFor(monster);
+        pair.own = std::move(spells);
+        pair.hasOwn = true;
     }
 
     void LoadPairs()
@@ -123,13 +205,7 @@ namespace
                 ritualMonsters.push_back(id);
 
             if (entry.contains("ritualSpell"))
-            {
-                int spell = 0;
-                if (ValidId(entry["ritualSpell"], spell) || (entry["ritualSpell"].is_number_integer() && entry["ritualSpell"].get<int>() == 0))
-                    AddPair(id, spell, label);
-                else
-                    Logger::WriteLog(std::format("{}: \"ritualSpell\" must be a card id, skipped", label), MODULE_NAME, 2);
-            }
+                SetOwnSpells(id, entry["ritualSpell"], label);
             if (entry.contains("ritualMonsters"))
             {
                 if (!entry["ritualMonsters"].is_array())
@@ -141,20 +217,14 @@ namespace
                 {
                     int monster = 0;
                     if (ValidId(m, monster))
-                        AddPair(monster, id, label);
+                        AddUnique(PairingFor(monster).added, id);
                     else
                         Logger::WriteLog(std::format("{}: \"ritualMonsters\" entry {} is not a card id, skipped", label, m.dump()), MODULE_NAME, 2);
                 }
             }
         }
         for (int monster : ritualMonsters)
-        {
-            bool has = false;
-            for (const Row& row : g_Pairs)
-                has |= row.monster == monster;
-            if (!has)
-                g_Pairs.push_back({ static_cast<uint16_t>(monster), 0 });
-        }
+            PairingFor(monster);   // a row with spell 0 when nothing names a spell for it
 
         // every pair is kept: RefreshRows shows the game only the ones whose cards are in the duel (31 at most at once)
     }
@@ -233,25 +303,25 @@ void Ritual::Setup()
         return;
     }
 
-    // The game's rows, then the custom ones. A pair for a monster that already has a game row changes that row instead (the readers stop at
-    // the first row of a monster), and is dropped from the custom rows.
+    // The game's rows, then the custom ones. A monster that already has a game row keeps that row (the readers stop at the first row of a
+    // monster): its spells start from the game's spell unless "ritualSpell" replaces it.
     std::memcpy(g_Table, reinterpret_cast<const void*>(kGameTable), sizeof(Row) * kGameRows);
-    for (auto it = g_Pairs.begin(); it != g_Pairs.end();)
+    int customRows = 0;
+    for (Pairing& pair : g_Pairs)
     {
-        int gameRow = -1;
-        for (int r = 0; r < kGameRows && gameRow < 0; ++r)
-            if (g_Table[r].monster == it->monster)
-                gameRow = r;
-        if (gameRow >= 0)
-        {
-            Logger::WriteLog(std::format("Ritual: game monster {} now uses Ritual Spell {} (was {})", it->monster, it->spell, g_Table[gameRow].spell), MODULE_NAME, 0);
-            g_GameRowSpells.emplace_back(gameRow, it->spell);
-            it = g_Pairs.erase(it);
-        }
-        else
-            ++it;
+        for (int r = 0; r < kGameRows && pair.gameRow < 0; ++r)
+            if (g_Table[r].monster == pair.monster)
+                pair.gameRow = r;
+        if (pair.hasOwn)
+            pair.spells = pair.own;
+        else if (pair.gameRow >= 0)
+            AddUnique(pair.spells, g_Table[pair.gameRow].spell);
+        for (uint16_t spell : pair.added)
+            AddUnique(pair.spells, spell);
+        if (pair.gameRow < 0)
+            ++customRows;
     }
-    const int rows = kGameRows + static_cast<int>(g_Pairs.size());
+    const int rows = kGameRows + customRows;
     RefreshRows();
 
     if (!PointOperandsAtTable(rows))
@@ -259,11 +329,17 @@ void Ritual::Setup()
         Logger::WriteLog("Ritual: could not write the table's operands", MODULE_NAME, 2);
         return;
     }
-    for (uintptr_t entry : kRefreshEntries)
-        CodePatch::AttachRefresh(entry, RefreshRows, "Ritual");
+    CodePatch::AttachRefresh(kCanSummonEntry, RefreshForCanSummon, "Ritual");
+    CodePatch::AttachRefresh(kNthMonsterEntry, RefreshForNthMonster, "Ritual");
+    CodePatch::AttachRefresh(kFindRowEntry, RefreshRows, "Ritual");
 
     std::string list;
-    for (const Row& row : g_Pairs)
-        list += std::format("{}{}->{}", list.empty() ? "" : ", ", row.monster, row.spell);
-    Logger::WriteLog(std::format("Ritual: table moved to 0x{:X}, {} rows ({} custom: {})", reinterpret_cast<uintptr_t>(g_Table), rows, g_Pairs.size(), list), MODULE_NAME, 0);
+    for (const Pairing& pair : g_Pairs)
+    {
+        std::string spells;
+        for (uint16_t spell : pair.spells)
+            spells += std::format("{}{}", spells.empty() ? "" : "/", spell);
+        list += std::format("{}{}{}->{}", list.empty() ? "" : ", ", pair.gameRow >= 0 ? "game " : "", pair.monster, spells.empty() ? "0" : spells);
+    }
+    Logger::WriteLog(std::format("Ritual: table moved to 0x{:X}, {} rows ({} custom; pairs: {})", reinterpret_cast<uintptr_t>(g_Table), rows, customRows, list), MODULE_NAME, 0);
 }

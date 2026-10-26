@@ -9,11 +9,12 @@
 // The table is copied into memory this DLL owns with room for 31 more rows (the readers' bound is an 8 bit compare, 127 at most), the six
 // instructions that address it get the new address and the four bounds go from 96 to the new row count (plain operand writes, not hooks).
 // Custom rows come from Yu-Gi-Oh-Ex\cards.json:
-//   "ritualSpell": id         on a Ritual Monster: the Ritual Spell that summons it
-//   "ritualMonsters": [ids]   on a Ritual Spell: the Ritual Monsters it summons
+//   "ritualSpell": id or [ids]   on a Ritual Monster: the Ritual Spell(s) that summon it (replaces a game monster's own spell)
+//   "ritualMonsters": [ids]      on a Ritual Spell: the Ritual Monsters it summons (added to each monster's spells)
 // and every custom Ritual Monster without either gets a row with spell 0, so the generic spells can summon it. The rows hold the ids the cards
 // play under in the current duel (a custom card can borrow a vanilla id, docs/EffectSystem.md section 32): they are written again when
-// the readers are entered (an entry stub that keeps every register, installed with Detours).
+// the readers are entered (an entry stub that keeps every register, installed with Detours). A monster has one row, so for one with several
+// spells the two readers of the spell column (both handed the spell) get that spell written into its row on entry.
 namespace Ritual
 {
     // Reads the pairs, moves the table and attaches the entry stubs. Call between DetourTransactionBegin and DetourTransactionCommit.
