@@ -18,6 +18,10 @@ namespace TagDuel
     void SetEnabled(bool on);
     bool IsEnabled();
 
+    // The Tag Duel menu's local duel: on like SetEnabled(true), but for ONE duel - the result screen or the main menu turns tag off again
+    // and puts the format back to 2 vs 2 and the partner picks away.
+    void BeginLocalSession();
+
     // Who plays each seat (0 & 2 one team, 1 & 3 the other), as the engine's controller types. Unset = the engine's own choice:
     // the local seat is human, every other seat AI (a local tag duel: you + an AI partner against two AI).
     enum Controller : int { Human = 0, AI = 1, Network = 2 };
@@ -38,6 +42,12 @@ namespace TagDuel
     // What SetPartners stored, by side of the table: [0] your partner, [1] the opponent's partner.
     int PartnerCharacter(int which);
     int PartnerDeck(int which);
+
+    // The character a game deck id belongs to (save deck: its RecordSlot; deckdata deck: its owner), -1 if none. A seat that plays a picked
+    // deck shows this duelist, as vanilla Free Duel does for your deck; the picked character is only the fallback.
+    int DeckCharacter(int deck);
+    // The duelist a seat shows: the deck's character, else `picked`.
+    int SeatCharacter(int deck, int picked);
 
     // Handicap: one side plays alone against a team. The solo duelist plays every one of their side's turns with one hand and deck (the
     // partner seat mirrors them and is never swapped in) and starts with SoloLifePoints; the team starts with the duel's normal LP.

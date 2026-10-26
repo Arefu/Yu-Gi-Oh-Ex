@@ -170,7 +170,7 @@ namespace
             TagDuel::IsSeatHuman(TagDuel::RoleYou) ? "human" : "AI", TagDuel::IsSeatHuman(TagDuel::RolePartner) ? "human" : "AI",
             TagDuel::IsSeatHuman(TagDuel::RoleOpponent) ? "human" : "AI", TagDuel::IsSeatHuman(TagDuel::RoleOpponentPartner) ? "human" : "AI"),
             MODULE_NAME, 69);
-        TagDuel::SetEnabled(true);
+        TagDuel::BeginLocalSession();
         StartFreeDuelFlow();
     }
 
@@ -272,13 +272,20 @@ namespace
         return item ? std::wstring(reinterpret_cast<const wchar_t*>(item)) : L"(no deck)";
     }
 
-    // The character you picked for yourself, else your deck's (what Free Duel itself uses).
+    // Your deck's character (what Free Duel itself uses), else the character you picked for yourself.
     int YourCharacter()
     {
-        if (g_Review.YourCharacter > 0)
-            return g_Review.YourCharacter;
-        const char* item = g_Review.YourDeck >= 0 ? DeckFromId(kCurrentProfile, static_cast<unsigned int>(g_Review.YourDeck)) : nullptr;
-        return item ? *reinterpret_cast<const int*>(item + 0x120) : -1;
+        return TagDuel::SeatCharacter(g_Review.YourDeck, g_Review.YourCharacter > 0 ? g_Review.YourCharacter : -1);
+    }
+
+    int OpponentCharacter()
+    {
+        return TagDuel::SeatCharacter(g_Review.OpponentDeck, g_Review.OpponentCharacter);
+    }
+
+    int PartnerSeatCharacter(int which)
+    {
+        return TagDuel::SeatCharacter(TagDuel::PartnerDeck(which), TagDuel::PartnerCharacter(which));
     }
 
     // What Free Duel's start step (YGO::UI::FreeDuel_HandleInput state 3) does - with your picked character on side 0 - then
@@ -294,7 +301,7 @@ namespace
         reinterpret_cast<void(__fastcall*)(unsigned int)>(0x140769A20)(static_cast<unsigned int>(g_Review.YourDeck));   // remember it as last used
         if (g_Review.OpponentCharacter >= 0 && g_Review.OpponentCharacter < 240)                      // g_CharacterRecords +0x14 = arena
             reinterpret_cast<void(__fastcall*)(int)>(YGO::Addr::Duel_Set_CurrentArenaId)(*reinterpret_cast<const int*>(YGO::Addr::g_CharacterRecords + 0x68 * g_Review.OpponentCharacter + 0x14));
-        setCharacter(1, static_cast<unsigned int>(g_Review.OpponentCharacter));
+        setCharacter(1, static_cast<unsigned int>(OpponentCharacter()));
         setDeck(1, static_cast<unsigned int>(g_Review.OpponentDeck));
 
         Logger::WriteLog("Tag Duel review: Let's Duel!", MODULE_NAME, 0);
@@ -426,10 +433,10 @@ namespace
     void BuildSeats()
     {
         g_Seats[0] = MakeSeat(L"You", TagDuel::RoleYou, YourCharacter(), g_Review.YourDeck, true, kBlueX);
-        g_Seats[1] = MakeSeat(L"Your Partner", TagDuel::RolePartner, TagDuel::PartnerCharacter(0), TagDuel::PartnerDeck(0), true,
+        g_Seats[1] = MakeSeat(L"Your Partner", TagDuel::RolePartner, PartnerSeatCharacter(0), TagDuel::PartnerDeck(0), true,
             kBlueX + kColumnWidth + kColumnGap);
-        g_Seats[2] = MakeSeat(L"Opponent", TagDuel::RoleOpponent, g_Review.OpponentCharacter, g_Review.OpponentDeck, false, kRedX);
-        g_Seats[3] = MakeSeat(L"Opponent's Partner", TagDuel::RoleOpponentPartner, TagDuel::PartnerCharacter(1), TagDuel::PartnerDeck(1), false,
+        g_Seats[2] = MakeSeat(L"Opponent", TagDuel::RoleOpponent, OpponentCharacter(), g_Review.OpponentDeck, false, kRedX);
+        g_Seats[3] = MakeSeat(L"Opponent's Partner", TagDuel::RoleOpponentPartner, PartnerSeatCharacter(1), TagDuel::PartnerDeck(1), false,
             kRedX + kColumnWidth + kColumnGap);
 
         // Handicap: the side that plays alone is one seat, centred in its team's block, with its starting LP.

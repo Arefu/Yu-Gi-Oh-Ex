@@ -144,6 +144,7 @@ namespace
     bool IsBattlePack() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsBattlePackMode) != 0; }
     bool IsChallenge() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsChallengeMode) != 0; }
     bool IsTutorial() { return CallGame<uint8_t>(0x1407694F0) != 0; }
+    bool IsCampaignMode() { return CallGame<uint8_t>(0x1407691A0) != 0; }   // YGO__DUEL__Get_IsCampaignMode
 
     const wchar_t* const kTitlePlayer = L"Your Deck";
 
@@ -238,7 +239,7 @@ namespace
     enum Step { kStepOpponent, kStepPartner, kStepOpponentPartner, kStepReview };
     struct StepText { const wchar_t* Title; const wchar_t* Help; };
     const StepText kSteps[] = {
-        { L"Opponent's Deck", L"Choose the deck your opponent plays. They keep their portrait and name." },
+        { L"Opponent's Deck", L"Choose the deck your opponent plays. In Free Duel the deck's own duelist plays it." },
         { L"Your Partner's Deck", L"Choose the deck your tag partner plays." },
         { L"Opponent's Partner's Deck", L"Choose the deck your opponent's tag partner plays." },
     };
@@ -331,6 +332,19 @@ namespace
             return -1;
         const int deck = reinterpret_cast<const CharacterRecord*>(kCharacterRecords)[character].Deck;
         return deck >= 0 ? deck + kFirstRecordDeck : -1;
+    }
+
+    // The deck's character: who FreeDuel_HandleInput's start puts on side 0 for your deck (YGO::SAVE::DeckListItem +0x120 RecordSlot),
+    // so a picked deck shows its own duelist the vanilla way. A deckdata deck's owner is its g_DeckRecords entry (0x1428FC080, 0x88 each,
+    // +8 CharacterId - DeckRecord_InitFromFileRecord). -1 when the deck names no character.
+    int DeckCharacter(int deckId)
+    {
+        int character = -1;
+        if (deckId >= kFirstRecordDeck && deckId < kFirstRecordDeck + kDeckRecords)
+            character = *reinterpret_cast<const int*>(0x1428FC080 + 0x88 * static_cast<uintptr_t>(deckId - kFirstRecordDeck) + 8);
+        else if (const DeckCards* deck = deckId >= 0 ? DeckFromId(kCurrentProfile, static_cast<unsigned int>(deckId)) : nullptr)
+            character = *reinterpret_cast<const int*>(reinterpret_cast<const char*>(deck) + 0x120);
+        return character > 0 && character < kCharacterCount ? character : -1;
     }
 
     bool HasCards(unsigned int deckId)
@@ -638,8 +652,20 @@ namespace
         return orig_GotoDuel(scheduler, ui, flags);
     }
 
+    // Forget a tag Free Duel's picks: a normal duel after one must not see the old characters (TagDuel ends its session at the result screen).
+    void ResetTagPicks()
+    {
+        g_CharacterStep = kPickYou;
+        g_TagOpponent = -1;
+        g_YourCharacter = -1;
+        g_PartnerCharacters[0] = g_PartnerCharacters[1] = -1;
+        g_HelpShownForStep = -1;
+    }
+
     void __fastcall Hook_FreeDuelInput(void* screen, void* ui)
     {
+        if (!TagDuelOn() && g_TagOpponent >= 0)
+            ResetTagPicks();
         if (!g_CustomDecks && !TagDuelOn())
         {
             g_PendingCharacter = -1;
@@ -713,11 +739,7 @@ namespace
             }
         }
         else if (state < kFreeOpponentList)
-        {
-            g_CharacterStep = kPickYou;   // left the list: start the picks over next time
-            g_TagOpponent = -1;
-            g_HelpShownForStep = -1;
-        }
+            ResetTagPicks();   // left the list: start the picks over next time
 
         if (before == kFreeChoosingDeck && state == kFreeStart && !IsMultiplayer())
         {
@@ -777,15 +799,19 @@ namespace
         }
     }
 
-    // Seat 1 is the opponent in Free Duel and the campaign. Its character (portrait, name) stays; only the cards change.
+    // Seat 1 is the opponent in Free Duel and the campaign. In Free Duel a picked deck brings its own character (portrait, name), as the
+    // game does for your deck; in the campaign the story's character stays and only the cards change.
     void __fastcall Hook_SetupSeat(int seat, int character, const wchar_t* name, void* deck, int profile, void* src, void* extra)
     {
-        // Tag Free Duel: the game took seat 1 from the list's last pick (the opponent's partner); the opponent goes back in.
+        // Tag Free Duel: the game took seat 1 from the list's last pick (the opponent's partner); the opponent's deck's character goes in,
+        // else the opponent picked on the list.
         if (seat == 1 && g_TagOpponent >= 0 && TagDuelOn() && !IsMultiplayer() && !IsChallenge())
         {
-            Logger::WriteLog(std::format("Tag Free Duel: seat 1 = opponent {} ({}) (the list ended on {} ({}))", g_TagOpponent, CharacterName(g_TagOpponent),
+            const int owner = DeckCharacter(g_Picker.OpponentDeck);
+            const int opponent = owner >= 0 ? owner : g_TagOpponent;
+            Logger::WriteLog(std::format("Tag Free Duel: seat 1 = {} ({}) (the list ended on {} ({}))", opponent, CharacterName(opponent),
                 character, CharacterName(character)), MODULE_NAME, 69);
-            character = g_TagOpponent;   // the deck is already theirs: TagDuel_StartReviewedDuel set side 1's deck
+            character = opponent;   // the deck is already theirs: TagDuel_StartReviewedDuel set side 1's deck
             SetDuelSideCharacter(1, static_cast<unsigned int>(character));
         }
         if (seat == 1 && character == g_PendingCharacter && !IsMultiplayer() && !IsBattlePack() && !IsChallenge() && !IsTutorial())
@@ -793,7 +819,15 @@ namespace
             if (DeckCards* chosen = DeckFromId(kCurrentProfile, g_PendingDeck); chosen && chosen->MainCount > 0)
             {
                 deck = chosen;
-                Logger::WriteLog(std::format("Opponent {} plays deck {}", character, g_PendingDeck), MODULE_NAME, 0);
+                const int owner = IsCampaignMode() ? -1 : DeckCharacter(static_cast<int>(g_PendingDeck));
+                if (owner >= 0 && owner != character)
+                {
+                    character = owner;
+                    name = nullptr;   // Duel_SetupSeat names the seat from its character
+                    SetDuelSideCharacter(1, static_cast<unsigned int>(owner));   // what the duel's portrait, music and voices read
+                }
+                Logger::WriteLog(std::format("Opponent {} plays deck {} as {} ({})", g_PendingCharacter, g_PendingDeck, character, CharacterName(character)),
+                    MODULE_NAME, 0);
             }
         }
         orig_SetupSeat(seat, character, name, deck, profile, src, extra);

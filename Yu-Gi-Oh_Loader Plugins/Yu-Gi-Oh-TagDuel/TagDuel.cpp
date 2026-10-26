@@ -256,6 +256,12 @@ namespace
     using GameResultOnEnter_t = __int64(__fastcall*)(__int64, __int64, __int64, __int64);
     GameResultOnEnter_t orig_GameResultOnEnter = reinterpret_cast<GameResultOnEnter_t>(0x14083F7F0);
 
+    // A local tag / handicap duel from the Tag Duel menu (TagDuel::BeginLocalSession). It lasts one duel: the result screen ends it, and so
+    // does the main menu (backing out without dueling). Without this, tag mode, the handicap format and the partner picks stayed on, and the
+    // next normal Free Duel ran the tag picks again with the old choices.
+    std::atomic<bool> g_LocalSession = false;
+    void EndLocalSession(const char* why);
+
     __int64 __fastcall Hook_GameResultOnEnter(__int64 a1, __int64 a2, __int64 a3, __int64 a4)
     {
         ReleaseHeldFlag("result screen");
@@ -267,7 +273,18 @@ namespace
             Call_SetIsTagDuel(false);
             Logger::WriteLog("TagDuel: online co-op duel over - disarmed", MODULE_NAME, 0);
         }
+        EndLocalSession("result screen");
         return result;
+    }
+
+    // RIX::ScreenMainMenu::OnEnter (0x140857E30): the game clears its own duel modes here; a local tag session ends with them.
+    using MainMenuOnEnter_t = __int64(__fastcall*)(__int64 screen, __int64 ui);
+    MainMenuOnEnter_t orig_MainMenuOnEnter = reinterpret_cast<MainMenuOnEnter_t>(0x140857E30);
+
+    __int64 __fastcall Hook_MainMenuOnEnter(__int64 screen, __int64 ui)
+    {
+        EndLocalSession("main menu");
+        return orig_MainMenuOnEnter(screen, ui);
     }
 
     // YGO__DuelSetup__AssignSeatDecksAndDuelists (0x14081E530): offline, outside campaign story / challenge / battle pack / tutorial, it
@@ -326,6 +343,7 @@ namespace
                 deck = CharacterDeck(character);
             if (deck < 0)
                 deck = g_DuelSideDecks[teams[i]];   // the teammate's deck
+            character = TagDuel::SeatCharacter(deck, character);   // a picked deck brings its own duelist (vanilla)
             Call_SetSideCharacter(seat, static_cast<unsigned int>(character));
             Call_SetSideDeck(seat, static_cast<unsigned int>(deck));
             char name[128]{};
@@ -481,6 +499,28 @@ namespace
         }
         return orig_LpSetShown(side, lp);
     }
+
+    // Back to a normal duel: tag off, 2 vs 2, no partner picks waiting. The seat toggles stay (the seat page shows them each time).
+    void EndLocalSession(const char* why)
+    {
+        if (!g_LocalSession.exchange(false))
+            return;
+        if (!g_OnlineCoop)
+            g_Enabled = false;
+        g_Format = TagDuel::TwoOnTwo;
+        g_Armed = false;
+        g_SeatsSetThisDuel = false;
+        for (int i = 0; i < 2; ++i)
+        {
+            g_PartnerCharacter[i] = -1;
+            g_PickedPartnerDeck[i] = -1;
+        }
+        g_SoloParity = -1;
+        g_LpPending = false;
+        if (!Call_GetIsDuelMultiplayer())
+            Call_SetIsTagDuel(false);
+        Logger::WriteLog(std::format("TagDuel: local tag session over ({}) - next duel is a normal one", why), MODULE_NAME, 0);
+    }
 }
 
 void TagDuel::Setup()
@@ -492,8 +532,9 @@ void TagDuel::Setup()
     DetourAttach(&(PVOID&)orig_GameResultOnEnter, Hook_GameResultOnEnter);
     DetourAttach(&(PVOID&)orig_AssignSeatDecks, Hook_AssignSeatDecks);
     DetourAttach(&(PVOID&)orig_LpSetShown, Hook_LpSetShown);
+    DetourAttach(&(PVOID&)orig_MainMenuOnEnter, Hook_MainMenuOnEnter);
     const LONG error = DetourTransactionCommit();
-    Logger::WriteLog(std::format("TagDuel: hooks {} (Engine_Init, Duel_LoadEngineFromFrontBlock, ScreenGameResult OnEnter) - the Tag Duel menu buttons or TagDuel_SetEnabled(true) turn it on",
+    Logger::WriteLog(std::format("TagDuel: hooks {} (Engine_Init, Duel_LoadEngineFromFrontBlock, ScreenGameResult/MainMenu OnEnter) - the Tag Duel menu buttons or TagDuel_SetEnabled(true) turn it on",
         error == NO_ERROR ? "attached" : std::format("FAILED (Detours error {})", error)), MODULE_NAME, error == NO_ERROR ? 0 : 2);
 }
 
@@ -506,6 +547,13 @@ void TagDuel::SetEnabled(bool on)
 bool TagDuel::IsEnabled()
 {
     return g_Enabled;
+}
+
+void TagDuel::BeginLocalSession()
+{
+    Logger::WriteLog("TagDuel::BeginLocalSession()", MODULE_NAME, 0);
+    g_LocalSession = true;
+    g_Enabled = true;
 }
 
 void TagDuel::SetSeatControllers(const int (&controllers)[4])
@@ -531,6 +579,25 @@ void TagDuel::SetPartners(int yourCharacter, int yourDeck, int opponentCharacter
 int TagDuel::PartnerCharacter(int which)
 {
     return which == 0 || which == 1 ? g_PartnerCharacter[which].load() : -1;
+}
+
+// Save decks (0-31, Core's 1024 up): YGO::SAVE::DeckListItem +0x120 RecordSlot, what FreeDuel_HandleInput's start puts on side 0.
+// Deckdata decks (32 + index): g_DeckRecords (0x1428FC080, 0x88 each) +8 CharacterId, the deck's owner (DeckRecord_InitFromFileRecord).
+int TagDuel::DeckCharacter(int deck)
+{
+    int character = -1;
+    if (deck >= 32 && deck < 32 + 700)
+        character = *reinterpret_cast<const int*>(0x1428FC080 + 0x88 * static_cast<uintptr_t>(deck - 32) + 8);
+    else if (deck >= 0)
+        if (const auto* item = reinterpret_cast<const char*>(Call_DeckFromId(kCurrentProfile, static_cast<unsigned int>(deck))))
+            character = *reinterpret_cast<const int*>(item + 0x120);
+    return character > 0 && character < 240 ? character : -1;
+}
+
+int TagDuel::SeatCharacter(int deck, int picked)
+{
+    const int owner = DeckCharacter(deck);
+    return owner >= 0 ? owner : picked;
 }
 
 int TagDuel::PartnerDeck(int which)
