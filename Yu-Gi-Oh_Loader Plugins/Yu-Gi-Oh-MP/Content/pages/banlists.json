@@ -1,0 +1,233 @@
+{
+  "version": 2,
+  "header": "Ban List",
+  "backdrop": 5,
+  "keys": [
+    {
+      "button": "details",
+      "label": "Preview",
+      "action": [
+        {
+          "set": "var:banlist.card",
+          "value": ""
+        },
+        {
+          "page": "banlist-preview"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "kind": "option",
+      "label": "Lists",
+      "values": [
+        {
+          "label": "All",
+          "value": "all"
+        },
+        {
+          "label": "TCG",
+          "value": "TCG"
+        },
+        {
+          "label": "OCG",
+          "value": "OCG"
+        }
+      ],
+      "bind": "var:banlist.category",
+      "default": "all",
+      "description": "TCG (formatlibrary.com) or OCG (yugipedia.com) lists.",
+      "onChange": [
+        {
+          "set": "var:banlist.page",
+          "value": "0"
+        },
+        {
+          "reload": true
+        }
+      ],
+      "x": 450,
+      "y": 190
+    },
+    {
+      "kind": "option",
+      "label": "Era",
+      "values": [
+        {
+          "label": "All",
+          "value": "all"
+        },
+        {
+          "label": "DM",
+          "value": "DM"
+        },
+        {
+          "label": "GX",
+          "value": "GX"
+        },
+        {
+          "label": "5D's",
+          "value": "5D's"
+        },
+        {
+          "label": "ZEXAL",
+          "value": "ZEXAL"
+        },
+        {
+          "label": "ARC-V",
+          "value": "ARC-V"
+        },
+        {
+          "label": "VRAINS",
+          "value": "VRAINS"
+        },
+        {
+          "label": "SEVENS",
+          "value": "SEVENS"
+        },
+        {
+          "label": "GO RUSH!!",
+          "value": "GO RUSH!!"
+        }
+      ],
+      "bind": "var:banlist.era",
+      "default": "all",
+      "description": "Only the lists of one era.",
+      "onChange": [
+        {
+          "set": "var:banlist.year",
+          "value": "all"
+        },
+        {
+          "set": "var:banlist.page",
+          "value": "0"
+        },
+        {
+          "reload": true
+        }
+      ],
+      "x": 450,
+      "y": 310
+    },
+    {
+      "kind": "option",
+      "label": "Year",
+      "values": [
+        {
+          "label": "All",
+          "value": "all"
+        },
+        "1999",
+        "2000",
+        "2001",
+        "2002",
+        "2003",
+        "2004",
+        "2005",
+        "2006",
+        "2007",
+        "2008",
+        "2009",
+        "2010",
+        "2011",
+        "2012",
+        "2013",
+        "2014",
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "bind": "var:banlist.year",
+      "default": "all",
+      "description": "Only the lists that came out in one year.",
+      "onChange": [
+        {
+          "set": "var:banlist.page",
+          "value": "0"
+        },
+        {
+          "reload": true
+        }
+      ],
+      "x": 450,
+      "y": 430
+    },
+    {
+      "kind": "option",
+      "label": "Page",
+      "values": "{game:mp.banlist.pagelist}",
+      "bind": "var:banlist.page",
+      "default": "0",
+      "visible": {
+        "game": "mp.banlist.pages",
+        "atLeast": 2
+      },
+      "description": "More lists.",
+      "onChange": {
+        "reload": true
+      },
+      "x": 450,
+      "y": 550
+    },
+    {
+      "kind": "text",
+      "text": "No ban lists found.",
+      "visible": {
+        "game": "mp.banlist.saved",
+        "atLeast": 1,
+        "not": true
+      },
+      "x": 1000,
+      "y": 330,
+      "width": 820,
+      "textSize": 22,
+      "align": "left"
+    },
+    {
+      "kind": "text",
+      "text": "No list matches these filters.",
+      "visible": {
+        "game": "mp.banlist.nomatch",
+        "atLeast": 1
+      },
+      "x": 1000,
+      "y": 330,
+      "width": 820,
+      "textSize": 22,
+      "align": "left"
+    },
+    {
+      "kind": "menu",
+      "id": "banlist",
+      "x": 1000,
+      "y": 110,
+      "width": 820,
+      "height": 860,
+      "spacing": 106,
+      "highlight": "var:banlist.preview",
+      "source": "mp.banlists",
+      "action": [
+        {
+          "call": "mp.banlist.use"
+        },
+        {
+          "back": true
+        },
+        {
+          "reload": true
+        }
+      ],
+      "items": []
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+// The ban list picker (Yu-Gi-Oh-MP's own page). The host's More Options page (Create Match > More Options) opens it from its "Ban list"
+// button; "back; reload;" puts More Options back with its "Ban list: ..." label redone. Left: the filters. Right: the lists
+// (Yu-Gi-Oh-MP fills rows "mp.banlists": Game's list and No list first, then the saved lists matching var:banlist.category / .era / .year,
+// 8 rows a page; the list in use has a tick). The help bar's Preview key (3) opens banlist-preview.bob for the list under the cursor
+// (var:banlist.preview, the rows menu's "highlight").
+// The lists are every banlists folder's *.json: Plugins\Yu-Gi-Oh-MP\banlists (the 170 shipped), mods', then Yu-Gi-Oh-Ex\banlists (yours).
+header "Ban List";
+backdrop 5;
+
+// the filters: the Create Match screen's setting rows (label above, < value > below; x / y = the value's centre)
+option "Lists" values ["All" = "all", "TCG" = "TCG", "OCG" = "OCG"] bind var:banlist.category default "all"
+    description "TCG (formatlibrary.com) or OCG (yugipedia.com) lists."
+    onchange { set(var:banlist.page, "0"); reload; } at 450, 190;
+option "Era" values ["All" = "all", "DM" = "DM", "GX" = "GX", "5D's" = "5D's", "ZEXAL" = "ZEXAL", "ARC-V" = "ARC-V", "VRAINS" = "VRAINS",
+    "SEVENS" = "SEVENS", "GO RUSH!!" = "GO RUSH!!"] bind var:banlist.era default "all" description "Only the lists of one era."
+    onchange { set(var:banlist.year, "all"); set(var:banlist.page, "0"); reload; } at 450, 310;
+option "Year" values ["All" = "all", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011",
+    "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026"]
+    bind var:banlist.year default "all" description "Only the lists that came out in one year."
+    onchange { set(var:banlist.page, "0"); reload; } at 450, 430;
+// "Page 1 of 3=0|Page 2 of 3=1|..." from Yu-Gi-Oh-MP, so the row has as many values as there are pages
+option "Page" values "{game:mp.banlist.pagelist}" bind var:banlist.page default "0" if game:mp.banlist.pages >= 2
+    description "More lists." onchange { reload; } at 450, 550;
+
+// the help bar's "3 Preview" (the game's Show Details button)
+key details "Preview" -> { set(var:banlist.card, ""); page("banlist-preview"); };
+
+// the lists, where the cards used to be (8 a page, spaced so the buttons don't overlap)
+text "No ban lists found." if game:mp.banlist.saved < 1 at 1000, 330 width 820 textSize 22 align left;
+text "No list matches these filters." if game:mp.banlist.nomatch >= 1 at 1000, 330 width 820 textSize 22 align left;
+
+menu banlist at 1000, 110 size 820, 860 spacing 106 highlight var:banlist.preview {
+    rows "mp.banlists" -> { call("mp.banlist.use"); back; reload; };
+}

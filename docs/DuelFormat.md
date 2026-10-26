@@ -14,10 +14,10 @@ duel start paths go through ClearState: `DuelSetup_ClearAndInit` (one deck per s
 Online duels use a separate value, `Core_SetOnlineDuelFormat` (Yu-Gi-Oh-Core.h), because both players' engines run in lockstep and a
 different format on one side would desync them. Yu-Gi-Oh-MP sets it from the lobby:
 
-* The host's match settings screen (screen 34) has a **Duel format** row (Master / Speed Duel / Rush Duel) under Ban list, when
-  hosting (not Ranked). It borrows the Join button's slot 7 (no free slot is left) and is handed to the game as slot 5 while the cursor
-  is on it, because slot 7 is an action (confirm = Join) and gets no left/right keys (MP `LiveSetting.cpp`, IDB comments on
-  `LiveSetting_RowsInput` / `LiveSetting_ChangeOption`).
+* The host picks it on the **More Options** page (Master / Speed Duel / Rush Duel), opened by the **More Options** button beside
+  Create on the match settings screen (screen 34) when hosting a casual match (Ranked has fixed rules). The button is a copy of Create
+  (MP `LiveSetting.cpp`); the page is `mp-match-settings.bob`, shipped with Yu-Gi-Oh-MP (`Content\pages`) (MP `MatchSettingsPage.cpp` gives it its actions). Until 2026-10-25 the format was its own row borrowing
+  the Join button's slot 7: it ran off the panel and relabelled Join when joining.
 * Lobby data `exformat` = `master` / `speed` / `rush`; every Yu-Gi-Oh-MP player sets the format when entering the lobby. The lobby's
   settings panel shows a "Duel format" line when it isn't Master. A player without Yu-Gi-Oh-MP plays Master and the duel desyncs:
   the host sees them on the "No Yu-Gi-Oh-MP" line and should kick them.

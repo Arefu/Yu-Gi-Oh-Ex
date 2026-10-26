@@ -1,0 +1,15 @@
+// A ban list's cards (Yu-Gi-Oh-MP; the ban list picker's Preview). The list is var:banlist.preview, the picker's highlighted row.
+// Laid out like the deck screens: the deck panel in the middle with its Main / Extra / Side rows as Forbidden / Limited / Semi-Limited
+// (RIX deckView "sections"; each row counts its cards and fans them when it has more than fit; RIX rebuilds it bigger when a list needs
+// more room). The card panel (the trunk's card picture and text) waits off the left edge and slides out when you move onto a card;
+// Back or a right-click puts it away again, and Back once more returns to the lists.
+header "{game:mp.banlist.title.{var:banlist.preview}}";
+backdrop 5;
+
+card "{var:banlist.card}" slide true at 260, 120 width 486.5;
+
+// hover / keys pick a card (var:banlist.card, shown on the left); fullView false = no full-screen card view
+deckcards "" fullView false bind var:banlist.card title "{game:mp.banlist.title.{var:banlist.preview}}" sections [
+    ["Forbidden", "{game:mp.banlist.cards.forbidden.{var:banlist.preview}}"],
+    ["Limited", "{game:mp.banlist.cards.limited.{var:banlist.preview}}"],
+    ["Semi-Limited", "{game:mp.banlist.cards.semi.{var:banlist.preview}}"]] at 544, 120;

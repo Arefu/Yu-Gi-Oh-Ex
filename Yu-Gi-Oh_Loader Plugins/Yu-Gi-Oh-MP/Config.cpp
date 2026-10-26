@@ -17,6 +17,18 @@ std::string Config::Get_WorkingDirectory()
     return std::string(Path).append("\\MP");
 }
 
+std::wstring Config::Get_ContentFolder()
+{
+    HMODULE self = nullptr;
+    GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+        reinterpret_cast<LPCWSTR>(&Config::Get_ContentFolder), &self);
+    wchar_t path[MAX_PATH]{};
+    GetModuleFileNameW(self, path, MAX_PATH);
+    std::wstring folder(path);
+    folder.resize(folder.find_last_of(L"\\/") + 1);
+    return folder + L"Yu-Gi-Oh-MP";
+}
+
 namespace
 {
     std::string Read(const char* key)

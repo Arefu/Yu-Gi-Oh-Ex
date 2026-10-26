@@ -97,7 +97,8 @@ NoTributes=1
 * A folder in `Mods` that isn't listed comes after the listed ones (by name) and is **off**: no mod loads until the player switches it on in
   the Mod Manager (File > Open the Mod Manager in WolfX). Installing a mod with the Mod Manager also adds it switched off.
 * WolfX's File > Edit a mod opens an installed mod as its workspace: every page reads and saves that mod's `Yu-Gi-Oh-Ex\`,
-  `YGO_2020-Ex.toc/.dat` and `YGO_2020\` over the game's own archive (other mods and your own files are not read).
+  `YGO_2020-Ex.toc/.dat` and `YGO_2020\` over the game's own archive (other mods and your own files are not read). WolfX never
+  starts in a mod: when the last thing open was one, it starts on the game folder (your own files) instead.
 * Only folders with a `mod.json` are mods (the Mod Manager writes one when it installs a .zip without it). Anything else in `Mods` (archive copies such as `Vanilla\YGO_2020.toc`, extracted files) is ignored by the game and hidden by the Mod Manager.
 * The game folder's own `Yu-Gi-Oh-Ex` and `YGO_2020-Ex` (what you make with WolfX) **always load last**, on top of every mod.
 * Changes apply the next time the game starts (like plugins).

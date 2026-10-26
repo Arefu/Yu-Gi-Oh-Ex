@@ -1,0 +1,16 @@
+// More Options (Yu-Gi-Oh-MP's own page):the host's "More Options" button beside Create on the Create Match screen opens it (casual matches
+// only; Ranked keeps the game's rules). Yu-Gi-Oh-MP (MatchSettingsPage.cpp) sets var:mp.format from the lobby before it opens and gives:
+// call("mp.format.apply") plays the format in var:mp.format; {game:mp.banlist} = the list in use. Add a setting = a new row or item here.
+// Descriptions stay short: the help bar is one line (a long one scrolls off the screen).
+header "More Options";
+backdrop 5;   // the online match screens' background
+
+// a setting row like Video Settings' (label above, < value > in the option box; left / right change it)
+option "Duel format" values ["Master" = "master", "Speed Duel" = "speed", "Rush Duel" = "rush"] bind var:mp.format default "master"
+    description "Master, Speed Duel or Rush Duel rules. Every player needs Yu-Gi-Oh-MP."
+    onchange { call("mp.format.apply"); } at 960, 320;
+
+menu settings at 560, 420 size 800, 260 spacing 125 {
+    button "Ban list: {game:mp.banlist}" "The game's list, no list, or a saved TCG / OCG list." -> page("banlists");
+    button "Done" -> back;
+}

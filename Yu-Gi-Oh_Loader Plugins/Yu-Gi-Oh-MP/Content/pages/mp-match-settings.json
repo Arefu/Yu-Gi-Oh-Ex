@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "header": "More Options",
+  "backdrop": 5,
+  "elements": [
+    {
+      "kind": "option",
+      "label": "Duel format",
+      "values": [
+        {
+          "label": "Master",
+          "value": "master"
+        },
+        {
+          "label": "Speed Duel",
+          "value": "speed"
+        },
+        {
+          "label": "Rush Duel",
+          "value": "rush"
+        }
+      ],
+      "bind": "var:mp.format",
+      "default": "master",
+      "description": "Master, Speed Duel or Rush Duel rules. Every player needs Yu-Gi-Oh-MP.",
+      "onChange": [
+        {
+          "call": "mp.format.apply"
+        }
+      ],
+      "x": 960,
+      "y": 320
+    },
+    {
+      "kind": "menu",
+      "id": "settings",
+      "x": 560,
+      "y": 420,
+      "width": 800,
+      "height": 260,
+      "spacing": 125,
+      "items": [
+        {
+          "label": "Ban list: {game:mp.banlist}",
+          "description": "The game's list, no list, or a saved TCG / OCG list.",
+          "action": {
+            "page": "banlists"
+          }
+        },
+        {
+          "label": "Done",
+          "action": {
+            "back": true
+          }
+        }
+      ]
+    }
+  ]
+}

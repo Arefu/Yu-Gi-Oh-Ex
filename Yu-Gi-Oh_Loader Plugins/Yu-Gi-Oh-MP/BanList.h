@@ -44,7 +44,11 @@ namespace BanList
     Mode CurrentMode();
     const List& CurrentList();   // the custom list in use (empty unless Custom)
 
-    // The lists in banlists\*.json (read on first use, then kept), oldest "date" first (lists without one last, by name).
+    // The game's own list (pd_limits.bin, as loaded) as a List named "Game", whatever is applied now (empty before the card data loads).
+    List GameList();
+
+    // The lists in every banlists folder: <mod>\banlists, <mod>\Yu-Gi-Oh-Ex\banlists and <game>\Yu-Gi-Oh-Ex\banlists, subfolders
+    // included (read on first use, then kept), oldest "date" first (lists without one last, by name).
     const std::vector<List>& Saved();
 
     // A list as one lobby data string and back: the name, a newline, then base64 of the list in pd_limits.bin's own layout (three blocks of

@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <cstring>
 #include <cstdint>
+#include <cwctype>
+#include <filesystem>
 #include <format>
 #include <fstream>
 #include <sstream>
@@ -11,6 +13,7 @@
 
 #include <json.hpp>
 
+#include "Config.h"
 #include "Detours.h"
 #include "Logger.h"
 #include "Yu-Gi-Oh-Mods.h"
@@ -20,6 +23,7 @@ namespace
 {
     constexpr uintptr_t kKonamiProps = YGO::Addr::KONAMI_ID_CARD_PROPS;   // YGO::CARDS::KONAMI_ID_CARD_PROPS
     constexpr size_t kKonamiStride = 0x30, kKonamiCount = 0x3A79, kKonamiLimit = 0x20;
+    constexpr size_t kFirstCard = 3900;   // Konami ids below are not cards
     constexpr uintptr_t kFullProps = YGO::Addr::FULL_CARD_PROPS;     // YGO::CARDS::FULL_CARD_PROPS
     constexpr size_t kFullStride = 0xA0, kFullCount = 65536, kFullLimit = 0x64;
     constexpr int32_t kForbidden = 0, kLimited = 1, kSemiLimited = 2, kUnlimited = 3;
@@ -31,6 +35,46 @@ namespace
     BanList::List g_List;
     std::vector<int32_t> g_GameLimits;   // the Konami table's limits as the game loaded them
     bool g_Applied = false;              // the tables currently hold our values
+
+    // Every *.json under a banlists folder (subfolders too, e.g. TCG\ and OCG\), lowest priority first: the lists this plugin ships
+    // (Plugins\Yu-Gi-Oh-MP\banlists, source Content\banlists: 82 TCG + 88 OCG), each active mod's <mod>\banlists and
+    // <mod>\Yu-Gi-Oh-Ex\banlists, then <game>\Yu-Gi-Oh-Ex\banlists (a player's own lists: plugin updates never touch them). A later file
+    // with the same path under its banlists folder replaces the earlier one.
+    std::vector<std::filesystem::path> ListFiles()
+    {
+        std::vector<std::filesystem::path> roots{ std::filesystem::path(Config::Get_ContentFolder()) / L"banlists" };
+        const std::vector<YGO::Mods::Mod> active = YGO::Mods::Active(YGO::Mods::GameFolder());
+        for (const auto& mod : active)
+        {
+            roots.push_back(mod.Folder / L"banlists");
+            roots.push_back(mod.Folder / L"Yu-Gi-Oh-Ex" / L"banlists");
+        }
+        if (!YGO::Mods::IsExclusive(active))
+            roots.push_back(YGO::Mods::LocalContentFolder() / L"banlists");
+
+        std::vector<std::pair<std::wstring, std::filesystem::path>> files;   // (relative path, lowercase) -> file
+        std::error_code error;
+        for (const auto& root : roots)
+        {
+            for (std::filesystem::recursive_directory_iterator it(root, error), end; !error && it != end; it.increment(error))
+            {
+                if (!it->is_regular_file(error) || _wcsicmp(it->path().extension().c_str(), L".json") != 0)
+                    continue;
+                std::wstring key = it->path().lexically_relative(root).wstring();
+                std::transform(key.begin(), key.end(), key.begin(), ::towlower);
+                auto same = std::find_if(files.begin(), files.end(), [&](const auto& file) { return file.first == key; });
+                if (same != files.end())
+                    same->second = it->path();
+                else
+                    files.emplace_back(std::move(key), it->path());
+            }
+            error.clear();
+        }
+        std::vector<std::filesystem::path> paths;
+        for (auto& file : files)
+            paths.push_back(std::move(file.second));
+        return paths;
+    }
 
     int32_t& KonamiLimit(size_t id) { return *reinterpret_cast<int32_t*>(kKonamiProps + id * kKonamiStride + kKonamiLimit); }
     int32_t& FullLimit(size_t id) { return *reinterpret_cast<int32_t*>(kFullProps + id * kFullStride + kFullLimit); }
@@ -189,6 +233,31 @@ namespace BanList
     Mode CurrentMode() { return g_Mode; }
     const List& CurrentList() { return g_List; }
 
+    List GameList()
+    {
+        List list;
+        list.Name = "Game";
+        if (!Loaded())
+            return list;
+        const auto cardName = reinterpret_cast<const wchar_t*(__fastcall*)(short)>(YGO::Addr::Card_GetNameFromKonamiId);
+        for (size_t id = kFirstCard; id < kKonamiCount; ++id)
+        {
+            const int32_t limit = g_Applied && id < g_GameLimits.size() ? g_GameLimits[id] : KonamiLimit(id);   // applied: the kept copy
+            if (limit >= 3)
+                continue;
+            const wchar_t* name = cardName(static_cast<short>(id));   // unused ids read 0 too: only real cards count
+            if (!name || !*name)
+                continue;
+            if (limit == 0)
+                list.Forbidden.push_back(static_cast<uint16_t>(id));
+            else if (limit == 1)
+                list.Limited.push_back(static_cast<uint16_t>(id));
+            else if (limit == 2)
+                list.SemiLimited.push_back(static_cast<uint16_t>(id));
+        }
+        return list;
+    }
+
     bool List::InPool(uint16_t id) const { return Allowed.empty() || std::binary_search(Allowed.begin(), Allowed.end(), id); }
 
     const std::vector<List>& Saved()
@@ -198,7 +267,7 @@ namespace BanList
         if (read)
             return lists;
         read = true;
-        for (const auto& path : YGO::Mods::FilesIn("banlists", L".json"))
+        for (const auto& path : ListFiles())
         {
             try
             {

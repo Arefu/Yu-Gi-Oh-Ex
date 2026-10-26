@@ -1,10 +1,7 @@
 {
   "name": "Ban Lists",
-  "version": "1.0",
-  "description": "Every TCG Forbidden & Limited List (May 2002 - September 2026) for online lobbies, picked by era and year.",
-  "details": "82 TCG lists sourced from formatlibrary.com; card release dates from ygoprodeck.com. Each list only allows the cards released in the TCG by its date (a period format: Goat, Edison, HAT...). Hosting a match: Ban list > Choose a list... opens the picker page (pages\\banlists.bob). Joiners with Yu-Gi-Oh-MP get the host's list from the lobby. The Yugi-Kaiba Format folder is the older single-player pd_limits mod for May 2002.",
-  "requires": [
-    "Yu-Gi-Oh-MP",
-    "Yu-Gi-Oh-RIX"
-  ]
+  "version": "1.2",
+  "description": "Every TCG (May 2002 - September 2026) and OCG (August 1999 - October 2026) Forbidden & Limited List as a single-player mod.",
+  "details": "PD Limits\\TCG and PD Limits\\OCG hold every list as a single-player mod that replaces the game's own list (pd_limits.bin): copy the one you want into the game's Mods folder. For online lobbies the same 82 TCG (formatlibrary.com) and 88 OCG (yugipedia.com) lists ship with Yu-Gi-Oh-MP itself (Create Match > More Options > Ban list); this mod isn't needed for that.",
+  "requires": []
 }

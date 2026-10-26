@@ -7,7 +7,7 @@
 #include "Logger.h"
 #include "Yu-Gi-Oh-Memory.h"
 #include "BanList.h"
-#include "BanListPicker.h"
+#include "MatchSettingsPage.h"
 #include "Steam.h"
 #include "Yu-Gi-Oh-RIX.h"
 
@@ -27,20 +27,18 @@
 
 namespace
 {
-    constexpr int kSlot = 5;                 // the free setting slot
+    constexpr int kSlot = 5;                 // the free setting slot: our "More Options" row
     constexpr int kCreate = 6;               // the action row when hosting
     constexpr size_t kSlots = 3848, kSlotSize = 48;          // +0 label, +8 description, +16 options (begin, end, capacity)
     constexpr size_t kChosen = 4328;         // int per slot
     constexpr size_t kRows = 3824;           // std::vector<int> of slot numbers
     constexpr size_t kCursor = 4368;         // ListState: +0 cursor
-    constexpr size_t kMode = 3736;           // 1 = the settings rows have the input
-    constexpr int kLeft = 4, kRight = 8;
-    constexpr int kOptionGame = 0, kOptionOff = 1, kOptionPicked = 2, kOptionChoose = 3;   // Picked = the list chosen on the picker page
+    constexpr int kLeft = 4, kRight = 8, kConfirm = 0x1000;   // the input masks LiveSetting_RowsInput / ChangeOption get
 
     struct Vector { char* Begin; char* End; char* Capacity; };
     struct Option { int64_t Text; int64_t Unused; };
 
-    constexpr int kRankedMatch = 1;          // g_LiveMatchType 1: fixed rules, the game shows it no settings, so no ban list row either
+    constexpr int kRankedMatch = 1;          // g_LiveMatchType 1: fixed rules, the game shows it no settings, so no custom settings row either
     // Lobby data (only Yu-Gi-Oh-MP reads it): "exbanmode" = game / off / custom; the custom list (BanList::Encode) in "exbanlist0",
     // "exbanlist1"... with "exbanparts" = how many, so a joiner plays the host's list without having the file. Steam keeps up to 8 KB per
     // value, so the list is split; any list fits (the game's own is about 620 characters).
@@ -77,6 +75,11 @@ namespace
     Screen_t orig_BuildRows = reinterpret_cast<Screen_t>(0x140855B00);      // LiveSetting_BuildRows
     Input_t orig_RowsInput = reinterpret_cast<Input_t>(0x140853D70);        // LiveSetting_RowsInput
     Change_t orig_ChangeOption = reinterpret_cast<Change_t>(0x140855DD0);   // LiveSetting_ChangeOption
+    using Rows_t = int64_t(__fastcall*)(char* screen);
+    Rows_t orig_LayoutRows = reinterpret_cast<Rows_t>(0x140856180);         // LiveSetting_LayoutRows
+    Rows_t orig_RefreshRows = reinterpret_cast<Rows_t>(0x140856500);        // LiveSetting_RefreshRows (LiveSetting_OnEnter returns its value)
+    using Update_t = void(__fastcall*)(char* screen, void* ui);
+    Update_t orig_Update = reinterpret_cast<Update_t>(0x140854CD0);         // RIX::ScreenLiveSetting::Update
     Screen_t orig_Back = reinterpret_cast<Screen_t>(0x1408539B0);           // LiveSetting_Back (cancel: saves the settings, GoBack)
 
     // The game's Steam lobby calls (QNet), hooked to add our lobby data.
@@ -129,15 +132,6 @@ namespace
     const auto GrowOptions = reinterpret_cast<void*(__fastcall*)(Vector* vec, char* where, const Option* value)>(0x140852C20);
     const auto GrowInts = reinterpret_cast<void*(__fastcall*)(Vector* vec, char* where, const int* value)>(0x140746A20);
 
-    const wchar_t* const kLabel = L"Ban list";
-    const wchar_t* const kDescription = L"Game: the game's own Forbidden/Limited list. Off: every card at 3 copies. Choose a list: pick one of the saved lists by era and year.";
-    const wchar_t* const kGame = L"Game";
-    const wchar_t* const kOff = L"Off";
-    const wchar_t* const kChoose = L"Choose a list...";
-    wchar_t g_PickedText[96] = L"(no list chosen)";   // the options point at it, so it is rewritten in place
-    BanList::List g_Picked;                            // the last list chosen on the picker page
-    int g_RowOption = -1;                              // the row's option after the last sync (to tell the picker's change from the row's)
-
     std::wstring Wide(const std::string& text)
     {
         if (text.empty())
@@ -148,78 +142,21 @@ namespace
         return wide;
     }
 
-    // A custom list in use (the picker page chose it) becomes the "picked" option, its name the option's text.
-    void NotePicked()
-    {
-        if (BanList::CurrentMode() != BanList::Mode::Custom || BanList::CurrentList().Name == g_Picked.Name && !g_Picked.Name.empty())
-            return;
-        g_Picked = BanList::CurrentList();
-        wcsncpy_s(g_PickedText, Wide(g_Picked.Name).c_str(), _TRUNCATE);
-    }
-
-    int OptionForCurrent()
-    {
-        NotePicked();
-        switch (BanList::CurrentMode())
-        {
-        case BanList::Mode::Off:
-            return kOptionOff;
-        case BanList::Mode::Custom:
-            return kOptionPicked;
-        default:
-            return kOptionGame;
-        }
-    }
-
-    // Returns false for "Choose a list..." (and the picked option before anything was picked): the caller opens the picker page.
-    bool UseOption(int option)
-    {
-        if (option == kOptionOff)
-            BanList::UseOff();
-        else if (option == kOptionPicked && !g_Picked.Name.empty())
-            BanList::UseCustom(g_Picked);
-        else if (option == kOptionPicked || option == kOptionChoose)
-            return false;
-        else
-            BanList::UseGame();
-        return true;
-    }
-
     char* Slot(char* screen, int slot) { return screen + kSlots + kSlotSize * slot; }
     int& Chosen(char* screen, int slot) { return *reinterpret_cast<int*>(screen + kChosen + 4 * slot); }
     Vector* Rows(char* screen) { return reinterpret_cast<Vector*>(screen + kRows); }
 
-    // ---- the "Duel format" row: Master / Speed Duel / Rush Duel, the duel engine's own rules (Core DuelFormat.h, docs/DuelFormat.md).
-    // Every player's engine must run the same format (the online duel is lockstep), so the host's choice goes into lobby data "exformat"
-    // and every Yu-Gi-Oh-MP player in the lobby sets it with Core_SetOnlineDuelFormat. Deck sizes follow it: Speed 20-30 main / 5 extra,
-    // Rush 40-60 / 15, Master = the player's own [Yu-Gi-Oh-Core] limits (Core_SetDeckLimits). The deck check on this screen runs before a
-    // joiner reads the lobby, so a joiner's own limits decide which decks they can pick.
-    //
-    // There is no free setting slot left (slot 5 is the ban list), so the row uses slot 7, the Join button's slot, which a host's rows never
-    // show. Slot 7 is an action in LiveSetting_RowsInput (confirm = Join) and gets no left/right keys (only slots < 6 do, see
-    // PatchKeyboardBound), so while the cursor is on it the screen is handed slot 5 instead: rows, slot record and chosen value of 5 and 7 are
-    // swapped around the game's input call and swapped back after (the game sees a normal setting row; the ban list row reads slot 7 then).
-    // Slot 7's label and description are the Join button's outside hosting, so they are put back when not hosting.
-    constexpr int kFormatSlot = 7;
+    // ---- the duel format: Master / Speed Duel / Rush Duel, the duel engine's own rules (Core DuelFormat.h, docs/DuelFormat.md), chosen on
+    // the More Options page (MatchSettingsPage.h). Every player's engine must run the same format (the online duel is lockstep), so the
+    // host's choice goes into lobby data "exformat" and every Yu-Gi-Oh-MP player in the lobby sets it with Core_SetOnlineDuelFormat. Deck
+    // sizes follow it: Speed 20-30 main / 5 extra, Rush 40-60 / 15, Master = the player's own [Yu-Gi-Oh-Core] limits (Core_SetDeckLimits).
+    // The page is its own screen, so coming back runs LiveSetting_OnEnter, which fills the deck list again under the new limits. The deck
+    // check on this screen runs before a joiner reads the lobby, so a joiner's own limits decide which decks they can pick.
     constexpr const char* kLobbyFormat = "exformat";
     const wchar_t* const kFormatLabel = L"Duel format";
-    const wchar_t* const kFormatDescription = L"Master: the normal rules. Speed Duel: 3 monster and 3 spell/trap zones, a 4-card hand, no Main Phase 2, "
-        L"decks of 20 to 30 cards (Extra Deck 5). Rush Duel: draw until you hold 5, unlimited Normal Summons, no chains. Every player needs Yu-Gi-Oh-MP.";
     const wchar_t* const kFormatNames[] = { L"Master", L"Speed Duel", L"Rush Duel" };
     const char* const kFormatKeys[] = { "master", "speed", "rush" };
-    int g_Format = 0;                    // the lobby's format (host: the row; joiner: the host's lobby data)
-    int64_t g_JoinLabel[2] = {};         // slot 7's own label/description (the Join button), kept while the row borrows it
-    bool g_JoinLabelSaved = false;
-    bool g_Swapped = false;              // slots 5 and 7 are swapped (inside the game's input call)
-
-    const auto IsBattlePackMode = reinterpret_cast<bool(__fastcall*)()>(YGO::Addr::Duel_Get_IsBattlePackMode);
-    const auto UseSeatControllerTable = reinterpret_cast<bool(__fastcall*)()>(0x1407694E0);           // YGO::DUEL::Get_UseSeatControllerTable
-    const auto FillUsableDecks = reinterpret_cast<void(__fastcall*)(char* list)>(0x1408ADB80);        // DeckSelectList_FillUsableDecks
-    const auto RefillList = reinterpret_cast<void*(__fastcall*)(char* list, char refillDecks)>(0x1408AE190);   // Refill
-    const auto GetSelectedDeckId = reinterpret_cast<uint32_t*(__fastcall*)(char* list)>(0x1408AE130); // DeckSelectList_GetSelectedDeckId
-    const auto SelectDeckId = reinterpret_cast<char(__fastcall*)(char* list, int deckId)>(0x1408AE2F0); // DeckSelectList_SelectDeckId
-    const auto ShowDeck = reinterpret_cast<void(__fastcall*)(char* panel, uint32_t* deckId)>(0x1408AB9C0); // DeckInfoPanel_ShowDeck
-    const auto ValidateSelectedDeck = reinterpret_cast<void(__fastcall*)(char* screen)>(0x140855F20); // LiveSetting_ValidateSelectedDeck
+    int g_Format = 0;                    // the lobby's format (host: the More Options page; joiner: the host's lobby data)
 
     int FormatFromKey(const char* key)
     {
@@ -248,21 +185,60 @@ namespace
             Core::Functions().SetDeckLimits(-1, 0, 0, 0);
     }
 
-    // The deck list on this screen hides decks the deck check rejects (DeckSelectList_FillDecks mask 7): new limits fill it again, as
-    // LiveSetting_OnEnter does, keeping the selected deck when it is still usable.
-    void RefreshDeckList(char* screen)
+    // ListState +0 is an int cursor (+4 the row count: reading 8 bytes made every cursor look out of range)
+    int CursorSlot(char* screen)
     {
-        if (IsBattlePackMode() || UseSeatControllerTable())
-            return;
-        char* list = screen + 656;
-        const uint32_t* selected = GetSelectedDeckId(list);
-        const int deckId = selected ? static_cast<int>(*selected) : -1;
-        FillUsableDecks(list);
-        RefillList(list, 0);
-        if (deckId >= 0)
-            SelectDeckId(list, deckId);
-        ShowDeck(screen + 2064, GetSelectedDeckId(list));
-        ValidateSelectedDeck(screen);
+        const Vector* rows = Rows(screen);
+        const int cursor = *reinterpret_cast<int32_t*>(screen + kCursor);
+        const int64_t count = (rows->End - rows->Begin) / 4;
+        return cursor >= 0 && cursor < count ? reinterpret_cast<int*>(rows->Begin)[cursor] : -1;
+    }
+
+    // ---- the "More Options" button (hosting a casual match): a second copy of the Create button (RIX::ScreenLiveSetting::widget_Item,
+    // screen+2768) beside it, opening the More Options page. Create moves left to make room. For the keys it is slot 5, a row of the
+    // settings list just before Create whose own row widget is hidden: down from the last setting lands on it, down again on Create,
+    // left/right go between the two buttons. Its description (the help line) sums up what the page set.
+    //
+    // widget_Item (112 bytes): widget_Base (+16 node), +48 text layer holder (+64 the text layer: widget_Text::SetTextById), +80 animoo
+    // holder (+96 its layer). vftable 0x140A76178: +8 SetHighlighted(bool) (0x140855D60), +24 SetVisible(bool). Built by 0x140854B40
+    // (parent node, z, owner = screen+88, x, y: the centre), as RIX::ScreenLiveSetting::SetupWidgets builds Create at (960, 920). The mouse
+    // test is LayerHolder_HitTest(item+80, packed x/y), as LiveSetting_RowsInput's hover test does for Create (-18).
+    const wchar_t* const kLabel = L"More Options";
+    wchar_t g_Summary[160] = L"";   // the slot's description (the help line) points at it, so it is rewritten in place
+    constexpr float kCreateX = 960.0f, kButtonY = 920.0f, kCreateShiftedX = 650.0f, kButtonX = 1270.0f;
+    constexpr size_t kItemSize = 112, kCreateItem = 2768, kRowWidgets = 2696, kRowWidgetSize = 240, kListMode = 3736, kScroll = 4376;
+    constexpr size_t kLeaving = 3816, kDialogOpen = 48;
+
+    const auto ItemBaseConstruct = reinterpret_cast<void(__fastcall*)(char* item)>(0x14087BF90);   // RIX::widget_Base::Constructor
+    const auto ItemCreate = reinterpret_cast<void(__fastcall*)(char* item, YGO::RIX::SharedNode* parent, int z, void* owner, float x, float y)>(0x140854B40);
+    const auto TextSet = reinterpret_cast<void(__fastcall*)(void* text, int64_t idOrText)>(0x14075E000);   // RIX::widget_Text::SetTextById
+    const auto LayerHitTest = reinterpret_cast<bool(__fastcall*)(char* holder, int64_t mouse)>(0x1407858E0);   // RIX::LayerHolder_HitTest
+    const auto SelectVisibleRow = reinterpret_cast<char(__fastcall*)(char* list, int row)>(0x1408688A0);   // RIX::ListState_SelectVisibleRow
+    const auto TakeMouseClick = reinterpret_cast<int(__fastcall*)(void* input, unsigned mask)>(0x1408006B0);
+    const auto RefreshRows = reinterpret_cast<void(__fastcall*)(char* screen)>(0x140856500);   // LiveSetting_RefreshRows (through our hook)
+    constexpr uintptr_t kItemVftable = 0x140A76178, kInput = 0x142924010, kMouse = 0x142924070;   // +0 x/y (2 ints), +8 moved this frame
+
+    std::map<char*, char*> g_Buttons;   // screen -> our button (kept for the game's life, like the lobby lines)
+
+    void ItemHighlight(char* item, bool on) { (*reinterpret_cast<void(__fastcall***)(char*, bool)>(item))[1](item, on); }
+    void ItemShow(char* item, bool on) { (*reinterpret_cast<void(__fastcall***)(char*, bool)>(item))[3](item, on); }
+
+    char* SettingsButton(char* screen)
+    {
+        if (auto found = g_Buttons.find(screen); found != g_Buttons.end())
+            return found->second;
+        auto* item = static_cast<char*>(_aligned_malloc(kItemSize, 16));
+        if (!item)
+            return nullptr;
+        std::memset(item, 0, kItemSize);
+        ItemBaseConstruct(item);
+        *reinterpret_cast<uintptr_t*>(item) = kItemVftable;   // RIX::ScreenLiveSetting::Constructor does the same for Create
+        YGO::RIX::SharedNode parent = YGO::RIX::ParentRef(YGO::RIX::ScreenRoot(screen));   // consumed
+        ItemCreate(item, &parent, 13, screen + 88, kButtonX, kButtonY);
+        TextSet(*reinterpret_cast<void**>(item + 64), reinterpret_cast<int64_t>(kLabel));
+        ItemHighlight(item, false);
+        g_Buttons[screen] = item;
+        return item;
     }
 
     int RowIndex(char* screen, int slot)
@@ -275,38 +251,33 @@ namespace
         return -1;
     }
 
-    // Swaps slots 5 and 7 completely (rows, slot records, chosen values): calling it again undoes it.
-    void SwapFormatAndBanSlots(char* screen, int formatRow, int banRow)
+    int RowCount(char* screen) { return static_cast<int>((Rows(screen)->End - Rows(screen)->Begin) / 4); }
+
+    // Moves the cursor to a row (absolute index) as a mouse hover does, and redraws.
+    void SelectRow(char* screen, int row)
     {
-        int* rows = reinterpret_cast<int*>(Rows(screen)->Begin);
-        std::swap(rows[formatRow], rows[banRow]);
-        char record[kSlotSize];
-        std::memcpy(record, Slot(screen, kSlot), kSlotSize);
-        std::memcpy(Slot(screen, kSlot), Slot(screen, kFormatSlot), kSlotSize);
-        std::memcpy(Slot(screen, kFormatSlot), record, kSlotSize);
-        std::swap(Chosen(screen, kSlot), Chosen(screen, kFormatSlot));
-        g_Swapped = !g_Swapped;
+        if (SelectVisibleRow(screen + kCursor, row - *reinterpret_cast<int32_t*>(screen + kScroll)))
+            RefreshRows(screen);
     }
 
-    // The format row's choice, however it changed (keys, mouse).
-    void SyncFormat(char* screen)
+    void UpdateSummary()
     {
-        if (g_Swapped || RowIndex(screen, kFormatSlot) < 0)
-            return;
-        const int chosen = Chosen(screen, kFormatSlot);
-        if (chosen == g_Format)
-            return;
-        ApplyFormat(chosen);
-        RefreshDeckList(screen);
-        Logger::WriteLog(std::format("Lobby duel format: {}", kFormatKeys[g_Format]), MODULE_NAME, 0);
+        const std::wstring ban = BanList::CurrentMode() == BanList::Mode::Off ? L"off (every card at 3)"
+            : BanList::CurrentMode() == BanList::Mode::Custom ? Wide(BanList::CurrentList().Name) : L"the game's";
+        swprintf_s(g_Summary, L"Duel format: %s. Ban list: %s. Every player in the lobby plays these; Ranked always uses the game's rules.",
+            kFormatNames[g_Format], ban.c_str());
     }
 
-    int CursorSlot(char* screen)
+    // No page (the plugin's pages folder missing, or an old RIX): the screen's own message box says so, rather than the click doing nothing.
+    const wchar_t* const kNoPageText = L"More Options couldn't be opened.\nReinstall Yu-Gi-Oh-MP (its pages folder is missing).";
+
+    void OpenSettingsPage(char* screen)
     {
-        const Vector* rows = Rows(screen);
-        const int64_t cursor = *reinterpret_cast<int64_t*>(screen + kCursor);
-        const int64_t count = (rows->End - rows->Begin) / 4;
-        return cursor >= 0 && cursor < count ? reinterpret_cast<int*>(rows->Begin)[cursor] : -1;
+        if (MatchSettingsPage::Open())
+            return;
+        Logger::WriteLog("More Options: can't open pages\\mp-match-settings (Plugins\\Yu-Gi-Oh-MP\\pages missing, or Yu-Gi-Oh-RIX too old)", MODULE_NAME, 1);
+        YGO::RIX::EmptyFunction none;
+        YGO::RIX::ShowMessageText(screen, -1, kNoPageText, &none);
     }
 
     void PushOption(Vector* options, int64_t text)
@@ -326,39 +297,13 @@ namespace
         orig_BuildOptions(screen);   // it clears every slot's options first, ours too
         char* slot = Slot(screen, kSlot);
         *reinterpret_cast<int64_t*>(slot + 0) = reinterpret_cast<int64_t>(kLabel);
-        *reinterpret_cast<int64_t*>(slot + 8) = reinterpret_cast<int64_t>(kDescription);
+        UpdateSummary();   // LiveSetting_OnEnter builds the options, so coming back from the page shows what it set
+        *reinterpret_cast<int64_t*>(slot + 8) = reinterpret_cast<int64_t>(g_Summary);
         Vector* options = reinterpret_cast<Vector*>(slot + 16);
         options->End = options->Begin;
-        PushOption(options, reinterpret_cast<int64_t>(kGame));
-        PushOption(options, reinterpret_cast<int64_t>(kOff));
-        PushOption(options, reinterpret_cast<int64_t>(g_PickedText));
-        PushOption(options, reinterpret_cast<int64_t>(kChoose));
-        Chosen(screen, kSlot) = g_RowOption = OptionForCurrent();
-        BanListPicker::Register();   // RIX is loaded by now (it may be injected after this plugin)
-
-        // BuildRows ran first (LiveSetting_OnEnter): slot 7 is in the rows only when hosting
-        char* format = Slot(screen, kFormatSlot);
-        if (RowIndex(screen, kFormatSlot) >= 0)
-        {
-            if (!g_JoinLabelSaved)
-            {
-                g_JoinLabel[0] = *reinterpret_cast<int64_t*>(format + 0);
-                g_JoinLabel[1] = *reinterpret_cast<int64_t*>(format + 8);
-                g_JoinLabelSaved = true;
-            }
-            *reinterpret_cast<int64_t*>(format + 0) = reinterpret_cast<int64_t>(kFormatLabel);
-            *reinterpret_cast<int64_t*>(format + 8) = reinterpret_cast<int64_t>(kFormatDescription);
-            Vector* formats = reinterpret_cast<Vector*>(format + 16);
-            formats->End = formats->Begin;
-            for (const wchar_t* name : kFormatNames)
-                PushOption(formats, reinterpret_cast<int64_t>(name));
-            Chosen(screen, kFormatSlot) = g_Format;
-        }
-        else if (g_JoinLabelSaved)
-        {
-            *reinterpret_cast<int64_t*>(format + 0) = g_JoinLabel[0];
-            *reinterpret_cast<int64_t*>(format + 8) = g_JoinLabel[1];
-        }
+        PushOption(options, reinterpret_cast<int64_t>(kLabel));   // never shown (the row widget is hidden); keeps the slot like the others
+        Chosen(screen, kSlot) = 0;
+        MatchSettingsPage::Register();   // RIX is loaded by now (it may be injected after this plugin)
     }
 
     void InsertRowBeforeLast(Vector* rows, int slot)
@@ -375,7 +320,8 @@ namespace
         }
     }
 
-    // Hosting (the last row is Create): the ban list and duel format rows go in just before it.
+    // Hosting a casual match (the last row is Create): slot 5 goes in just before it (the button's place in the key order). Ranked gets
+    // none (fixed rules).
     void __fastcall Hook_BuildRows(char* screen)
     {
         orig_BuildRows(screen);
@@ -384,60 +330,84 @@ namespace
         if (count == 0 || reinterpret_cast<int*>(rows->Begin)[count - 1] != kCreate || LiveMatchType() == kRankedMatch)
             return;
         InsertRowBeforeLast(rows, kSlot);
-        InsertRowBeforeLast(rows, kFormatSlot);
     }
 
-    char __fastcall Hook_ChangeOption(char* screen, int64_t pressed);
-
-    // Applies the row's choice whenever it differs from the list in use, however it was changed (keys, a mouse click on the arrows, which
-    // doesn't move the cursor to the row): checking the cursor slot first missed clicks (2026-10-07).
-    void SyncChoice(char* screen)
+    // After the game places the rows: hide slot 5's row widget, show the button and move Create aside (or put Create back when not hosting).
+    int64_t __fastcall Hook_LayoutRows(char* screen)
     {
-        const int chosen = Chosen(screen, kSlot);
-        const int current = OptionForCurrent();
-        if (chosen == g_RowOption && chosen != current)
-        {
-            Chosen(screen, kSlot) = g_RowOption = current;   // the row wasn't touched: the picker page changed the list
-            return;
-        }
-        if (chosen == current || UseOption(chosen))
-        {
-            g_RowOption = Chosen(screen, kSlot);
-            return;
-        }
-        g_RowOption = current;
-        // the picker page; the row shows the list in use until one is picked (when the page closes this screen builds its options again,
-        // or the next input here notes the new list)
-        Chosen(screen, kSlot) = current;
-        if (!BanListPicker::Open())
-            Logger::WriteLog("Ban list picker: can't open pages\\banlists (needs Yu-Gi-Oh-RIX and the Ban Lists mod)", MODULE_NAME, 1);
+        const int64_t result = orig_LayoutRows(screen);
+        const int row = RowIndex(screen, kSlot);
+        if (row < 0 && !g_Buttons.contains(screen))
+            return result;
+        char* button = SettingsButton(screen);
+        if (!button)
+            return result;
+        if (row >= 0)
+            ItemShow(*reinterpret_cast<char**>(screen + kRowWidgets) + kRowWidgetSize * row, false);
+        ItemShow(button, row >= 0);
+        YGO::RIX::NodeSetX(*reinterpret_cast<void**>(screen + kCreateItem + 16), row >= 0 ? kCreateShiftedX : kCreateX);
+        return result;
     }
 
+    // The button is highlighted like Create: the settings list has the input and the cursor is on its row.
+    int64_t __fastcall Hook_RefreshRows(char* screen)
+    {
+        const int64_t result = orig_RefreshRows(screen);
+        auto found = g_Buttons.find(screen);
+        if (found == g_Buttons.end())
+            return result;
+        const int row = RowIndex(screen, kSlot);
+        ItemHighlight(found->second, row >= 0 && *reinterpret_cast<int*>(screen + kListMode) == 1 && *reinterpret_cast<int32_t*>(screen + kCursor) == row);
+        return result;
+    }
+
+    // The mouse on the button, before the game's input (which never looks at it): hovering selects it, a click opens the page (taken, so
+    // the game doesn't see the click).
+    void ButtonMouse(char* screen)
+    {
+        auto found = g_Buttons.find(screen);
+        const int row = RowIndex(screen, kSlot);
+        if (found == g_Buttons.end() || row < 0 || *(screen + kLeaving) || *reinterpret_cast<int*>(screen + kDialogOpen) != 0)
+            return;
+        const int64_t mouse = *reinterpret_cast<int64_t*>(kMouse);
+        if (!LayerHitTest(found->second + 80, mouse))
+            return;
+        if (*reinterpret_cast<char*>(kMouse + 8) && *reinterpret_cast<int*>(screen + kListMode) == 1)
+            SelectRow(screen, row);
+        if (TakeMouseClick(reinterpret_cast<void*>(kInput), kConfirm))
+            OpenSettingsPage(screen);
+    }
+
+    void __fastcall Hook_Update(char* screen, void* ui)
+    {
+        ButtonMouse(screen);
+        orig_Update(screen, ui);
+    }
+
+    // Keys: confirm on the button's row opens the page (LiveSetting_RowsInput would treat slot 5 as "not an action" and jump to Create, so
+    // the confirm is taken out); right on Create goes to the button (Create gets no left/right from the game: slot 6).
     void __fastcall Hook_RowsInput(char* screen, int pressed)
     {
-        // the cursor on the format row: the game gets it as slot 5 for this call (see kFormatSlot)
-        const int formatRow = RowIndex(screen, kFormatSlot);
-        const int banRow = RowIndex(screen, kSlot);
-        // ListState +0 is an int cursor (+4 the row count)
-        const bool swap = formatRow >= 0 && banRow >= 0 && *reinterpret_cast<int32_t*>(screen + kCursor) == formatRow;
-        if (swap)
-            SwapFormatAndBanSlots(screen, formatRow, banRow);
-        orig_RowsInput(screen, pressed);
-        if (swap)
-            SwapFormatAndBanSlots(screen, formatRow, banRow);
-        SyncChoice(screen);
-        SyncFormat(screen);
+        const int slot = CursorSlot(screen);
+        const bool open = (pressed & kConfirm) != 0 && slot == kSlot;
+        const bool toButton = (pressed & kRight) != 0 && slot == kCreate && RowIndex(screen, kSlot) >= 0;
+        orig_RowsInput(screen, open ? pressed & ~kConfirm : toButton ? pressed & ~kRight : pressed);
+        if (open)
+            OpenSettingsPage(screen);
+        else if (toButton)
+            SelectRow(screen, RowIndex(screen, kSlot));
     }
 
+    // Left on the button goes back to Create; a confirm reaching here (a click on the hidden row can't, but to be safe) opens the page.
     char __fastcall Hook_ChangeOption(char* screen, int64_t pressed)
     {
-        const char result = orig_ChangeOption(screen, pressed);
-        if (!g_Swapped)   // swapped = inside Hook_RowsInput, which syncs once the slots are back
-        {
-            SyncChoice(screen);
-            SyncFormat(screen);
-        }
-        return result;
+        if (CursorSlot(screen) != kSlot)
+            return orig_ChangeOption(screen, pressed);
+        if (pressed & kConfirm)
+            OpenSettingsPage(screen);
+        else if (pressed & kLeft)
+            SelectRow(screen, RowCount(screen) - 1);
+        return 0;
     }
 
     // ---- the lobby screen (RIX::ScreenLiveLobby, screen 36): its match settings panel is a widget_SessionInfo (screen+4192) with five
@@ -874,13 +844,24 @@ namespace
 
 namespace LiveSetting
 {
+    const char* FormatKey() { return kFormatKeys[g_Format]; }
+
+    void SetFormatKey(const char* key)
+    {
+        const int format = FormatFromKey(key);
+        if (format == g_Format)
+            return;
+        ApplyFormat(format);
+        Logger::WriteLog(std::format("Lobby duel format: {}", kFormatKeys[g_Format]), MODULE_NAME, 0);
+    }
+
     // LiveSetting_RowsInput only sends left/right to ChangeOption on rows 0-4 ("cmp dword [r9+r8*4], 5; jb" at 0x1408542D6): our row 5
-    // never got the keys (the key state is polled inside the function, not passed in, so the hook can't see them). Raise the bound to 6;
-    // 6+ are the Create/Join buttons.
+    // never got them. Raise the bound to 6 (6+ are the Create/Join buttons) so left/right on the row reach Hook_ChangeOption, which opens
+    // the More Options page.
     void PatchKeyboardBound()
     {
         // cmp dword [r9+r8*4], 5 -> 6
-        YGO::Memory::PatchBytes(0x1408542D6, { 0x43, 0x83, 0x3C, 0x81, 0x05 }, { 0x43, 0x83, 0x3C, 0x81, 0x06 }, "Ban list row left/right keys");
+        YGO::Memory::PatchBytes(0x1408542D6, { 0x43, 0x83, 0x3C, 0x81, 0x05 }, { 0x43, 0x83, 0x3C, 0x81, 0x06 }, "More Options row left/right keys");
     }
 
     void Attach()
@@ -890,6 +871,9 @@ namespace LiveSetting
         DetourAttach(&reinterpret_cast<PVOID&>(orig_BuildRows), Hook_BuildRows);
         DetourAttach(&reinterpret_cast<PVOID&>(orig_RowsInput), Hook_RowsInput);
         DetourAttach(&reinterpret_cast<PVOID&>(orig_ChangeOption), Hook_ChangeOption);
+        DetourAttach(&reinterpret_cast<PVOID&>(orig_LayoutRows), Hook_LayoutRows);
+        DetourAttach(&reinterpret_cast<PVOID&>(orig_RefreshRows), Hook_RefreshRows);
+        DetourAttach(&reinterpret_cast<PVOID&>(orig_Update), Hook_Update);
         DetourAttach(&reinterpret_cast<PVOID&>(orig_Back), Hook_Back);
         DetourAttach(&reinterpret_cast<PVOID&>(orig_PublishHostLobbyData), Hook_PublishHostLobbyData);
         DetourAttach(&reinterpret_cast<PVOID&>(orig_OnLobbyEnter), Hook_OnLobbyEnter);

@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "header": "{game:mp.banlist.title.{var:banlist.preview}}",
+  "backdrop": 5,
+  "elements": [
+    {
+      "kind": "cardInfo",
+      "card": "{var:banlist.card}",
+      "slide": true,
+      "x": 260,
+      "y": 120,
+      "width": 486.5
+    },
+    {
+      "kind": "deckView",
+      "deck": "",
+      "fullView": false,
+      "bind": "var:banlist.card",
+      "title": "{game:mp.banlist.title.{var:banlist.preview}}",
+      "sections": [
+        [
+          "Forbidden",
+          "{game:mp.banlist.cards.forbidden.{var:banlist.preview}}"
+        ],
+        [
+          "Limited",
+          "{game:mp.banlist.cards.limited.{var:banlist.preview}}"
+        ],
+        [
+          "Semi-Limited",
+          "{game:mp.banlist.cards.semi.{var:banlist.preview}}"
+        ]
+      ],
+      "x": 544,
+      "y": 120
+    }
+  ]
+}

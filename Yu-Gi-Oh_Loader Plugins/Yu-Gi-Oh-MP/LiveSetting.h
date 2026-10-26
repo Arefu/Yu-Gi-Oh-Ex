@@ -1,28 +1,32 @@
 #pragma once
 
-// A "Ban list" row on the game's match settings screen (RIX::ScreenLiveSetting, screen 34: single/match, LP, time limit, open to...)
-// when hosting (not Ranked: fixed rules): Game (the game's list), Off (every card at 3), or a custom list (BanList.h). Changing it applies
-// at once, so the deck list and the deck check on that screen already follow it.
+// A "More Options" button beside Create on the game's match settings screen (RIX::ScreenLiveSetting, screen 34: single/match, LP, time
+// limit, open to...) when hosting a casual match (not Ranked: fixed rules, which is what keeps ranked duels comparable). It opens the More
+// Options page (MatchSettingsPage.h, shipped with this plugin): the duel format and the ban list (Game, Off or a custom list, BanList.h).
+// If the page can't open, the screen's message box says so. The page is its own screen, so coming back rebuilds this one (deck list included).
 //
 // The screen is data driven (names in the IDB): 10 setting slots at +3848 (48 bytes: label, description, options vector {text, 0} x n),
 // the chosen option per slot at +4328, the rows shown at +3824 (slot numbers, the last row is the action: 6 = create, 7 = join...).
-// The game uses slots 0-4 and 6-9; slot 5 is free and becomes "Ban list". LiveSetting_BuildOptions fills the options,
-// LiveSetting_BuildRows picks the rows (the row goes in before Create), LiveSetting_ChangeOption steps a slot's option (any slot < 10),
-// LiveSetting_RowsInput only sends left/right to slots < 5, so the hook sends them for slot 5.
-// Lobby: the host writes lobby data "exbanmode" + "exbanlist" (QNet__PublishHostLobbyData), a joiner with Yu-Gi-Oh-MP reads it on entering
-// (QNet__OnLobbyEnter); players without the plugin keep their own list for their own deck (the duel itself never checks it).
-// A joiner is asked first (Yes = play the host's list, No = leave the lobby); until then their own game list applies.
-// Back on the screen or leaving the lobby turns the ban list back on.
+// The game uses slots 0-4 and 6-9; slot 5 is free: it is the button's place in the key order (a row before Create whose row widget is
+// hidden; LiveSetting.cpp has the button's widget layout). LiveSetting_RowsInput only sends left/right to slots < 5 (patched to < 6).
+// Until 2026-10-25 the ban list and duel format were two rows (the format one borrowing slot 7, the Join button's): the second ran off the
+// panel, and the borrowing also relabelled the Join button "Duel format" when joining.
 //
-// A "Duel format" row (2026-10-22), also hosting only: Master / Speed Duel / Rush Duel, the duel engine's own rules (Yu-Gi-Oh-Core
-// DuelFormat.h). It borrows slot 7 (the Join button's, never shown when hosting) and is handed to the game as slot 5 while the cursor is on
-// it (LiveSetting.cpp kFormatSlot). Lobby data "exformat" = master / speed / rush; every Yu-Gi-Oh-MP player sets it with
-// Core_SetOnlineDuelFormat (the online duel is lockstep: a player without Yu-Gi-Oh-MP plays Master and the duel desyncs, so the host
-// should kick players on the "No Yu-Gi-Oh-MP" line). Deck limits follow (Core_SetDeckLimits): Speed 20-30 / Extra 5, Rush 40-60 / 15,
-// Master = the player's own Config.ini limits; the deck list on this screen is filled again when the host changes it. Back on the screen or
-// leaving the lobby puts Master back.
+// Lobby: the host writes lobby data "exbanmode" + "exbanlist" and "exformat" (QNet__PublishHostLobbyData), a joiner with Yu-Gi-Oh-MP reads
+// them on entering (QNet__OnLobbyEnter); players without the plugin keep their own list for their own deck (the duel itself never checks it).
+// A joiner is asked before playing the host's ban list (Yes = play it, No = leave the lobby); until then their own game list applies.
+// The format is applied straight away (Core_SetOnlineDuelFormat: the online duel is lockstep, a player without Yu-Gi-Oh-MP plays Master and
+// the duel desyncs, so the host should kick players on the "No Yu-Gi-Oh-MP" line). Deck limits follow (Core_SetDeckLimits): Speed 20-30 /
+// Extra 5, Rush 40-60 / 15, Master = the player's own Config.ini limits.
+// Back on the screen or leaving the lobby puts the game's ban list and Master back.
 namespace LiveSetting
 {
     // Attaches the hooks; call inside a Detours transaction.
     void Attach();
+
+    // The lobby's duel format as a lobby data key: master / speed / rush.
+    const char* FormatKey();
+
+    // Plays a duel format (master / speed / rush; anything else = master): Core's online format and the deck limits that go with it.
+    void SetFormatKey(const char* key);
 }

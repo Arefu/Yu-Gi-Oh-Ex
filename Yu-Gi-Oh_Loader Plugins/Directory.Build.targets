@@ -7,4 +7,14 @@
     <Copy SourceFiles="$(ProjectDir)$(TargetName).json" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
     <Message Importance="high" Text="Plugin manifest -&gt; $(OutDir)$(TargetName).json" />
   </Target>
+
+  <!-- Files a plugin ships (pages, default data): <source>\Content\** is copied to <Plugins>\<DLL name>\ on build, so a plugin finds them
+       next to itself (Yu-Gi-Oh-MP: pages\, banlists\). Only runs when the plugin has a Content folder. -->
+  <Target Name="CopyPluginContent" AfterTargets="Build" Condition="Exists('$(ProjectDir)Content')">
+    <ItemGroup>
+      <PluginContent Include="$(ProjectDir)Content\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PluginContent)" DestinationFiles="@(PluginContent->'$(OutDir)$(TargetName)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Message Importance="high" Text="Plugin content -&gt; $(OutDir)$(TargetName)\" />
+  </Target>
 </Project>

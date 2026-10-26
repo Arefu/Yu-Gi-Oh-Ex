@@ -10,6 +10,7 @@ static class Config
 {
 public:
     static std::string Get_WorkingDirectory();   // this plugin's own folder under PluginsPath (cached token, etc.)
+    static std::wstring Get_ContentFolder();     // what the plugin ships: <folder of this DLL>\Yu-Gi-Oh-MP (pages\, banlists\; source Content\)
     static std::string Get_ServerUrl();          // empty if Config.ini or the key is missing - callers must handle that (no MP without it)
     static std::string Get_ClaimCode();
     static std::string Get_DisplayName();

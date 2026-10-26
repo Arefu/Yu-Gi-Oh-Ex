@@ -105,6 +105,7 @@
     <ClCompile Include="Http.cpp" />
     <ClCompile Include="Live.cpp" />
     <ClCompile Include="LiveSetting.cpp" />
+    <ClCompile Include="MatchSettingsPage.cpp" />
     <ClCompile Include="ServerMenu.cpp" />
     <ClCompile Include="BanList.cpp" />
     <ClCompile Include="BanListPicker.cpp" />
