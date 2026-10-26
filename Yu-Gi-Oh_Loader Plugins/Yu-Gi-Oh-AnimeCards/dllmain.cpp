@@ -9,9 +9,13 @@
 #include <format>
 #include <iostream>
 #include <intrin.h>
+#include <algorithm>
+#include <cctype>
+#include <cstring>
 
 #include "Detours.h"
 #include "Logger.h"
+#include "EmbeddedFiles.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
 constexpr uintptr_t kImageBase = YGO::Addr::ImageBase;
@@ -58,9 +62,9 @@ static bool kFullCardArt = false;
 // ATK and DEF are laid out centred on these points (see kCentredAlign): the centres of the two boxes at the bottom of the anime frames
 // (x 31-184 and 215-368, y 497-556). On Link cards the right-hand box is the red rating box and shows the Link rating.
 static float kCustomAtkX = 107.5f;
-static float kCustomAtkY = 526.5f;
+static float kCustomAtkY = 527.5f;
 static float kCustomDefX = 291.5f;
-static float kCustomDefY = 526.5f;
+static float kCustomDefY = 527.5f;
 
 // The attribute icon goes in the frame's circle: bottom right on monster frames, bottom middle on the Link frame. Spell and Trap frames
 // have their symbol drawn into the frame, so their attribute icon is not drawn at all.
@@ -106,6 +110,9 @@ constexpr uint32_t kAtkDefCombinedFontId = 35;
 constexpr uint32_t kLargeAtkDefFontId = 36;
 constexpr float kAtkDefNativeSize = 18.0f;
 static bool kUseLargeAtkDefFont = true;
+// AtkDefScale: how much the 32 px font is enlarged on the card. It is drawn from fontbin/FONT_ID_CARD_ATKDEF_SCALE.png, so a 2x atlas
+// of that font (same .fbin) keeps the enlarged digits sharp: texels map 1:1 at scale 2.
+static float kAtkDefScale = 2.0f;
 constexpr uint32_t kFontSentinel = 0xFFFFFFFFu;
 
 using fn_sub_1408795A0 = void(__fastcall*)(void*, float, float, float, float, float, float, float, float, int, int);
@@ -572,9 +579,10 @@ extern "C" void* Hook_sub_140877EC0(void* out, float x, float y, float z)
     void* result = orig_sub_140877EC0(out, tx, ty, z);
 
     // Fonts are plain bitmaps at one pixel size (see docs/CardRendering.md), so any scale above 1 blurs them. With the 32 px font the
-    // numbers are drawn at its native size, unscaled; AtkTextScale / DefTextScale only apply to the 18 px fonts.
+    // numbers are scaled by AtkDefScale, which stays sharp with a matching high-resolution atlas; AtkTextScale / DefTextScale only
+    // apply to the 18 px fonts.
     if (UseLargeAtkDefFont() && !HasAtkDefLabels())
-        scale = 1.0f;
+        scale = kAtkDefScale;
 
     if (scale != 1.0f)
     {
@@ -586,6 +594,84 @@ extern "C" void* Hook_sub_140877EC0(void* out, float x, float y, float z)
     return result;
 }
 
+// ---------------------------------------------------------------------
+// Built-in game files (EmbeddedFiles.rc): the anime frames (duel/frame/card_*.png) and the 2x ATK/DEF font atlas
+// (fontbin/FONT_ID_CARD_ATKDEF_SCALE.png, digits in the regular Matrix cut), so the DLL works on its own. They are served through the
+// same three archive functions Yu-Gi-Oh-Core hooks for loose files (see Yu-Gi-Oh-Core/Patch.h). This plugin loads after Core, so its
+// hooks run first and the built-in files win. EmbeddedFiles=0 turns them off (loose / mod / archive files are used instead).
+// ---------------------------------------------------------------------
+using fn_LoadFileContent = __int64* (__fastcall*)(void* archive, const char* name, size_t extra);
+using fn_GetFileSize = __int64(__fastcall*)(void* archive, const char* name);
+using fn_HasFile = bool(__fastcall*)(void* archive, const char* name);
+using fn_GameAlloc = void* (__fastcall*)(size_t);
+static fn_LoadFileContent orig_LoadFileContent = nullptr;   // 0x14080DDE0
+static fn_GetFileSize orig_GetFileSize = nullptr;           // 0x14080D290
+static fn_HasFile orig_HasFile = nullptr;                   // 0x14080D270
+static fn_GameAlloc game_Alloc = nullptr;                   // 0x14090D2B8, the allocator the game frees file buffers with
+static HMODULE g_self = nullptr;
+
+// The built-in copy of a game file, or false. Names are compared as the game's archive keeps them: case-insensitive, / or \.
+static bool FindEmbedded(const char* name, const void** data, DWORD* size)
+{
+    if (!name)
+        return false;
+    for (const EmbeddedFile& file : kEmbeddedFiles)
+    {
+        const char* a = name;
+        const char* b = file.Key;
+        for (; *a && *b; ++a, ++b)
+        {
+            const char ca = *a == '/' ? '\\' : static_cast<char>(std::toupper(static_cast<unsigned char>(*a)));
+            if (ca != *b)
+                break;
+        }
+        if (*a || *b)
+            continue;
+        HRSRC res = FindResourceA(g_self, MAKEINTRESOURCEA(file.Id), MAKEINTRESOURCEA(10));   // RT_RCDATA
+        HGLOBAL loaded = res ? LoadResource(g_self, res) : nullptr;
+        if (!loaded)
+            return false;
+        *data = LockResource(loaded);
+        *size = SizeofResource(g_self, res);
+        return *data != nullptr;
+    }
+    return false;
+}
+
+// Same contract as Load_FileContent: a game-allocated buffer of max(size rounded up to 4, size + extra) bytes, zero filled past the data.
+extern "C" __int64* Hook_LoadFileContent(void* archive, const char* name, size_t extra)
+{
+    const void* data = nullptr;
+    DWORD size = 0;
+    if (FindEmbedded(name, &data, &size))
+    {
+        const size_t total = (std::max)((static_cast<size_t>(size) + 3) & ~size_t(3), static_cast<size_t>(size) + extra);
+        if (void* buffer = game_Alloc(total))
+        {
+            std::memset(buffer, 0, total);
+            std::memcpy(buffer, data, size);
+            return static_cast<__int64*>(buffer);
+        }
+    }
+    return orig_LoadFileContent(archive, name, extra);
+}
+
+extern "C" __int64 Hook_GetFileSize(void* archive, const char* name)
+{
+    const void* data = nullptr;
+    DWORD size = 0;
+    if (FindEmbedded(name, &data, &size))
+        return static_cast<__int64>(size);
+    return orig_GetFileSize(archive, name);
+}
+
+extern "C" bool Hook_HasFile(void* archive, const char* name)
+{
+    const void* data = nullptr;
+    DWORD size = 0;
+    return FindEmbedded(name, &data, &size) || orig_HasFile(archive, name);
+}
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
     switch (ul_reason_for_call)
@@ -593,6 +679,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     case DLL_PROCESS_ATTACH:
     {
         Logger::SetupLogger();
+        g_self = hModule;
 
         char cfgBuf[64];
         char* cfgEnd = nullptr;
@@ -602,7 +689,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         cfgEnd = nullptr; float vCustomAtkX = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCustomAtkX = vCustomAtkX;
 
-        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomAtkY", "526.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomAtkY", "527.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
         cfgEnd = nullptr; float vCustomAtkY = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCustomAtkY = vCustomAtkY;
 
@@ -610,7 +697,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         cfgEnd = nullptr; float vCustomDefX = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCustomDefX = vCustomDefX;
 
-        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomDefY", "526.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomDefY", "527.5", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
         cfgEnd = nullptr; float vCustomDefY = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCustomDefY = vCustomDefY;
 
@@ -655,7 +742,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         cfgEnd = nullptr; float vDefTextScale = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kDefTextScale = vDefTextScale;
 
-        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CardArtScale", "1.3", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CardArtScale", "1.4", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
         cfgEnd = nullptr; float vCardArtScale = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCardArtScale = vCardArtScale;
 
@@ -674,6 +761,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "CustomSTIconY", "183", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
         cfgEnd = nullptr; float vCustomSTIconY = std::strtof(cfgBuf, &cfgEnd);
         if (cfgEnd != cfgBuf) kCustomSTIconY = vCustomSTIconY;
+
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "AtkDefScale", "2", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vAtkDefScale = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf && vAtkDefScale > 0.0f) kAtkDefScale = vAtkDefScale;
 
         kUseLargeAtkDefFont = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "UseLargeAtkDefFont", 1, ".\\Config.ini") != 0;
         kHideLevelBadge = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "HideLevelBadge", 1, ".\\Config.ini");
@@ -728,6 +819,16 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             // Only attached when hiding: the hook never calls the original, so it needs none of its arguments.
             orig_DuelHand_DrawLevelNumber = (fn_DuelHand_DrawLevelNumber)ResolveVA(0x14078B0B0);
             DetourAttach(&(PVOID&)orig_DuelHand_DrawLevelNumber, Hook_DuelHand_DrawLevelNumber);
+        }
+        if (GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "EmbeddedFiles", 1, ".\\Config.ini") != 0)
+        {
+            orig_LoadFileContent = (fn_LoadFileContent)ResolveVA(0x14080DDE0);
+            orig_GetFileSize = (fn_GetFileSize)ResolveVA(0x14080D290);
+            orig_HasFile = (fn_HasFile)ResolveVA(0x14080D270);
+            game_Alloc = (fn_GameAlloc)ResolveVA(0x14090D2B8);
+            DetourAttach(&(PVOID&)orig_LoadFileContent, Hook_LoadFileContent);
+            DetourAttach(&(PVOID&)orig_GetFileSize, Hook_GetFileSize);
+            DetourAttach(&(PVOID&)orig_HasFile, Hook_HasFile);
         }
         HookDiagnostics::Commit("Anime card display", MODULE_NAME, Logger::WriteLog);
 
