@@ -39,6 +39,8 @@ namespace YGO::Addr
     inline constexpr uintptr_t Duel_DuelEngine = 0x143330280;
     inline constexpr uintptr_t Duel_DuelEngine_Player1Deck = 0x14333036C;         // Duel_DuelEngine + 0xEC
     inline constexpr uintptr_t Duel_PlayerStates = 0x143497C40;                   // stru_143497C40: Duel::PlayerState x2 (0xD94 bytes each)
+    inline constexpr uintptr_t Duel_TurnPlayer = 0x14349B3B4;                     // int, PlayerState +0x3774 (field_3774)
+    inline constexpr uintptr_t Duel_CurrentPhase = 0x14349B3C8;                   // int, PlayerState +0x3788 (field_3788): 3 = BATTLE, 5 = END (ContEffect_CoversZone)
 
     // ---- cards
     inline constexpr uintptr_t Card_IsInNamedArchetype = 0x14076CFF0;             // Is_CardInNamedArchetype

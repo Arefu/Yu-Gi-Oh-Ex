@@ -99,7 +99,7 @@ TRIGGER_TEXT = [
     ('sent_from_field_to_grave', r'(?:When|If) this card is sent from the field to the (?:GY|Graveyard)'),
     # Added 2026-10-01 with the phase / battle / ignition hooks (docs/EffectSystem.md sections 29-30).
     ('standby_phase', r'(?:Once per turn, )?[Dd]uring (?:each of )?your Standby Phases?'),
-    ('end_phase', r'(?:Once per turn, )?[Dd]uring (?:the|each|your|each of your) End Phases?'),
+    ('end_phase', r'(?:Once per turn, )?[Dd]uring (?:your|each of your) End Phases?'),   # 'the / each End Phase' = each_end_phase (section 60)
     ('destroys_by_battle', r"(?:When|If) this card destroys (?:a|an opponent's|your opponent's) monster by battle(?: and sends it to the (?:GY|Graveyard))?"),
     ('battle_damage', r'(?:When|If) this card inflicts (?:battle damage|Battle Damage) to your opponent(?: by a direct attack)?'),
     ('attack_declared', r'(?:When|If) this card declares an attack'),
@@ -137,7 +137,7 @@ STRICT_TRIGGERS = [
     ('sent_from_field_to_grave', r'(?:When|If) this face-up card (?:on the field )?is sent to the GY'),
     ('sent_to_grave', r'(?:When|If) this card is sent to the GY'),
     ('standby_phase', r'(?:Once per turn, )?[Dd]uring (?:each of )?your Standby Phases?'),
-    ('end_phase', r'(?:Once per turn, )?[Dd]uring (?:the|each|your|each of your) End Phases?'),
+    ('end_phase', r'(?:Once per turn, )?[Dd]uring (?:your|each of your) End Phases?'),   # 'the / each End Phase' = each_end_phase (section 60)
     ('destroys_by_battle', r"(?:When|If) this card destroys (?:a|an opponent's|your opponent's) monster by battle(?: and sends it to the GY)?"),
     ('battle_damage', r"(?:When|If|Each time) this card inflicts battle damage to your opponent(?: by a direct attack)?"),
     ('attack_declared', r'(?:When|If) this card declares an attack'),
@@ -412,6 +412,8 @@ for t in sources:
 # Botanical Girl ("sent from the field to the GY": search, confirmed in a duel through a custom card 2026-10-01, test 13) and Superheavy Samurai
 # Drum ("if this card on the field is destroyed and sent to the GY": revive, leave-field table, test 13): their text starts with "When" / names a
 # condition trigger_class does not read as this trigger.
+# Whose-phase triggers (opponent_ / each_ Standby / End Phase) need no source here: Yu-Gi-Oh-Effects gives them its own row and its own phase
+# row calling the game's handler family (docs/EffectSystem.md sections 60-61, "ownTrigger").
 MANUAL_SOURCES = {('end_phase', 'burn'): [5974], ('attack_declared', 'compose'): [11688],
                   ('sent_from_field_to_grave', 'search'): [7892], ('sent_from_field_to_grave', 'revive'): [11950]}
 for (t, a), ids in MANUAL_SOURCES.items():

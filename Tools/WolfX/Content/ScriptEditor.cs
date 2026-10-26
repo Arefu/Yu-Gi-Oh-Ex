@@ -16,9 +16,18 @@ namespace WolfEx
 
         private static readonly string[] Actions = { "draw", "gain_lp", "burn", "search", "revive", "send_to_grave", "destroy", "equip", "special_summon", "add_to_hand", "banish", "negate" };
         private static readonly string[] Keywords = { "effect", "then", "where", "and", "deck", "grave", "opponent_grave", "either_grave", "all", "target", "own", "opponent", "any",
-            "monster", "spell", "trap", "card", "race", "attribute", "level", "atk", "def", "archetype", "name", "on", "once_per_turn", "quick", "as", "with", "hand", "also", "cost", "discard", "pay_lp", "banished",
+            "monster", "spell", "trap", "card", "race", "attribute", "level", "atk", "def", "archetype", "name", "on", "once_per_turn", "quick", "as", "with", "effect_only", "hand", "also", "or", "cost", "discard", "pay_lp", "banished", "extra",
             "normal_summoned", "special_summoned", "summoned", "normal_or_special_summoned", "flip", "destroyed_by_battle", "sent_to_grave", "sent_from_field_to_grave",
-            "standby_phase", "end_phase", "destroys_by_battle", "battle_damage", "attack_declared", "ignition", "in_grave" };
+            "standby_phase", "end_phase", "destroys_by_battle", "battle_damage", "attack_declared", "ignition", "in_grave",
+            "opponent_standby_phase", "each_standby_phase", "opponent_end_phase", "each_end_phase", "copy",
+            "grave_end_phase", "banished_end_phase", "damage_step_battles", "damage_step_attacks", "aura", "indestructible", "untargetable", "unaffected", "battle", "effects", "opponent_effects", "attacks",
+            "spells", "traps", "monster_effects", "opponent_spells", "opponent_traps", "opponent_monster_effects", "self", "name_as", "field", "only_one",
+            "attack_directly", "once_per_duel", "uses_per_turn", "no_special_summon", "resolved", "except", "controls", "battle_phase", "your_battle_phase", "opponent_battle_phase", "lp_at_most", "lp_lower",
+            "banish_self", "discard_self", "tribute_self", "send_self", "send_self_field", "banish_self_hand", "banish_self_field", "tribute_self_hand",
+            "banish_grave", "banish_self_and",
+            "main_phase", "your_main_phase", "opponent_main_phase", "main_or_battle_phase", "your_main_or_battle_phase", "opponent_main_or_battle_phase",
+            "your_turn", "opponent_turn", "battled", "battle_phase_start", "your_battle_phase_start", "opponent_battle_phase_start",
+            "battle_phase_end", "your_battle_phase_end", "change_position", "set_face_down", "take_control", "negate_effects", "change_atk" };
         private static readonly string[] Values = { "Dragon", "Zombie", "Fiend", "Pyro", "SeaSerpent", "Rock", "Machine", "Fish", "Dinosaur", "Insect", "Beast", "BeastWarrior", "Plant", "Aqua",
             "Warrior", "WingedBeast", "Fairy", "Spellcaster", "Thunder", "Reptile", "Psychic", "Wyrm", "Cyberse", "DivineBeast", "Light", "Dark", "Water", "Fire", "Earth", "Wind", "Divine" };
 

@@ -42,13 +42,22 @@ Race and attribute names are the game's (Dragon ... Creator God; Light, Dark, Wa
 | `gain_lp(N)` / `burn(N)` | gain N Life Points / inflict N damage to the opponent |
 | `search(deck, selector)` | add 1 matching card from the Deck to the hand |
 | `revive(grave \| opponent_grave \| either_grave, selector)` | Special Summon 1 matching monster from a Graveyard |
+| `special_summon(hand \| deck \| grave \| banished \| extra [or ...], selector)` | Special Summon 1 matching monster from your hand / Deck / GY / face-up banished cards / Extra Deck. Join zones with `or` for one list over all of them: `special_summon(hand or deck or grave, monster where level <= 4)` ("from your hand, Deck, or GY"). One of hand / deck / grave keeps its proven game card; several zones, banished or extra use the plugin's own summon step (EffectSystem.md section 57). WolfX blocks: "Special Summon from any of" with a box per zone |
 | `send_to_grave(deck, selector)` | send 1 matching card from the Deck to the Graveyard |
 | `destroy(all, own \| opponent \| any, selector)` | destroy all matching monsters |
 | `destroy(target, side, selector)` | choose 1 matching card (monster, or `spell` for a Spell/Trap) and destroy it |
 | `equip(atk N[, def N])` | Equip Spell: the equipped monster gains N ATK / DEF (borrows Axe of Despair; the card needs the Equip icon) |
 | `as(<id> \| "Card name") [with atk N, def N];` | the card behaves exactly like that game card. In a duel it plays under that card's id whenever the game card is in neither deck (EffectSystem.md section 32), so EVERYTHING the game knows about that card applies - continuous effects, field spells, restrictions, the AI. `with` sets its own ATK/DEF amounts for equip / boost cards |
+| `as(...) effect_only;` | copy ONLY the effect (cards.json `"effectOnly": true`): the card is never lent the game card's id, so it keeps its own kind (monster / Spell / Trap), stats and identity, and the id-keyed rules of the source do not apply. The effect runs through the Effects hooks (section 32's fallback) |
+| `on <trigger>: as(...) [effect_only];` | the card's own monster trigger runs the game card's action: the row comes from a game monster with that trigger, the action from the game card (`actionFrom`, EffectSystem.md section 33). This is how a monster uses a Spell's or Trap's effect, e.g. `on ignition: as("Ojama Trio") effect_only;`. WolfX blocks: the "act exactly like" block's "copy only the effect" box and "used when" list |
 
 Selectors also take `archetype = "Dark World"` (a name from Archetypes.json, or a code) and `name = <Konami id>` (search / send only; built, not yet played). Chaining with `then`: draw / gain_lp / burn steps first, then one action (works, confirmed).
+
+**Several effects.** `a; also b;` = two effects on one card. `a; or b;` (or `effect "A" { ... } or effect "B" { ... }`) = "activate 1 of these effects": the player picks one, and the joined effects share ONE once-per-turn limit (`once_per_turn` on any of them limits the group). Up to 4 effects per `or` group (the game's prompt shows 4). Example, "Once per turn: You can activate 1 of these effects. ● Draw 1 card. ● Gain 1000 LP.": `on ignition: draw(1); once_per_turn; or on ignition: gain_lp(1000);`. A card can have up to 4 independent once-per-turn limits (EffectSystem.md section 58). WolfX blocks: the "or the next effect (activate 1 of these)" box on an effect hat.
+
+**Once per turn.** `once_per_turn;` = "You can only use this effect of X once per turn" (per card name). `once_per_turn(copy);` = "Once per turn: ..." (each copy on the field, once per turn; the game only counts it while the card is on the field). Section 59.
+
+**Whose phase.** `on standby_phase:` / `on end_phase:` = YOUR Standby / End Phase. `on opponent_standby_phase:`, `on each_standby_phase:`, `on opponent_end_phase:`, `on each_end_phase:` = your opponent's / either player's ("during the End Phase" in card text is either player's). Monsters on the field. Section 60.
 
 ## Triggers (monster effects)
 
@@ -56,7 +65,49 @@ Selectors also take `archetype = "Dark World"` (a name from Archetypes.json, or 
 on sent_to_grave: search(deck, monster where atk <= 1500);
 on flip: burn(500);
 ```
-`on <trigger>:` makes it a monster effect: `normal_summoned`, `special_summoned`, `summoned`, `normal_or_special_summoned`, `flip`, `destroyed_by_battle`, `sent_to_grave`, `sent_from_field_to_grave`, `standby_phase`, `end_phase`, `destroys_by_battle`, `battle_damage`, `attack_declared` (no game card to borrow from yet), `ignition` ("Once per turn: you can ..."). The compiler borrows a vanilla MONSTER that has that trigger (by its card text) and that action; `Tools\WolfEx\trigger_sources.json` lists what exists (e.g. there is no vanilla "on summoned: draw", so that pair is an error that names the triggers the game does have for the action). Not written = a Spell. `gain_lp` borrows a `burn` source (the life point handler takes any amount). Summon triggers are confirmed in a duel; `flip` (a Flip Summon, or a set monster flipped by an attack or effect), `destroyed_by_battle`, `sent_to_grave` and `sent_from_field_to_grave` are hooked since 2026-10-01 but not yet played (`tests\12_flip_and_grave.json`, EffectSystem.md section 29). "When this card declares an attack" and "inflicts battle damage" triggers are not supported yet; the compiler output has been checked for nine scripts headlessly (`WolfEx.exe --compile <script file> <result file>`).
+`on <trigger>:` makes it a monster effect: `normal_summoned`, `special_summoned`, `summoned`, `normal_or_special_summoned`, `flip`, `destroyed_by_battle`, `sent_to_grave`, `sent_from_field_to_grave`, `standby_phase`, `end_phase`, `destroys_by_battle`, `battle_damage`, `attack_declared`, `ignition` ("Once per turn: you can ..."), plus the triggers in "More triggers" below (`banished`, `in_hand`, `in_grave`, `opponent_attack_declared`, `attacked`, the summon reactions, the End Phase / Damage Step ones). The compiler borrows a vanilla MONSTER that has that trigger (by its card text) and that action; `Tools\WolfX\Content\trigger_sources.json` lists what exists (e.g. there is no vanilla "on summoned: draw", so that pair is an error that names the triggers the game does have for the action). Not written = a Spell. `gain_lp` borrows a `burn` source (the life point handler takes any amount). Summon triggers are confirmed in a duel; `flip` (a Flip Summon, or a set monster flipped by an attack or effect), `destroyed_by_battle`, `sent_to_grave` and `sent_from_field_to_grave` are hooked since 2026-10-01 but not yet played (`tests\12_flip_and_grave.json`, EffectSystem.md section 29). "When this card declares an attack" is an own trigger since 2026-10-25 (section 67); the phase, move, attack and summon-reaction triggers with no exact game card compile to the plugin's own trigger (`ownTrigger`, sections 61 and 65-68) instead of borrowing a monster. The compiler output has been checked for nine scripts headlessly (`WolfX.exe --compile <script file> <result file>`).
+
+### More triggers (2026-10-21 / 10-25)
+
+| script | card text | EffectSystem.md |
+|---|---|---|
+| `on in_grave:` | "If this card is in your GY: You can ..." (add `quick;` for a Quick Effect) | section 51 |
+| `on in_hand:` | "If this card is in your hand: You can ..." (`on in_hand: X; or on in_grave: X;` for "in your hand or GY") | section 66 |
+| `on banished:` / `on banished(from grave):` | "If this card is banished (from the GY)" | section 65 |
+| `on sent_to_grave(from hand, from field, by effect):` | the move triggers take conditions: from hand / deck / grave / field / monster / spelltrap, by battle / effect | section 65 |
+| `on opponent_attack_declared:` / `on attacked:` | "When an opponent's monster declares an attack" / "When this card is targeted for an attack" | section 67 |
+| `on opponent_special_summoned:` / `on opponent_summoned:` / `on monster_special_summoned:` / `on monster_summoned:` | "If your opponent Special Summons a monster(s)" / "... Normal or Special Summons ..." / "If a monster(s) is Special Summoned" / "... Normal or Special Summoned" | section 68 |
+| `on monster_summoned(is monster where race = Insect, own):` | the summon reactions also take the summoned monster (`is <selector>`: Type / Attribute / archetype / kind) and whose field it went to (`own` / `opponent`): "If an Insect monster(s) is Normal or Special Summoned to your field" | section 87 |
+| `on card_destroyed(is monster where race = Insect, own, by battle):` / `on card_left_field(own, other, by opponent):` / `on card_sent_to_grave(is monster, opponent, from hand, from deck, in_grave):` / `on card_banished:` | ANOTHER card is destroyed / leaves the field / is sent to the GY / is banished: "If a face-up Insect monster(s) you control is destroyed by battle", "If another card(s) you control leaves the field by an opponent's card effect", "If a monster(s) is sent from your opponent's hand or Deck to the GY, while this card is in your GY". `is` (race / attribute / archetype / name), `own` / `opponent` (whose card), `from` field / monster / spelltrap / hand / deck / grave, `by battle` / `effect` / `opponent`, `other`, `in_grave` (this card watches from the GY) | section 91 |
+| `on grave_end_phase:` / `on banished_end_phase:` | "During the End Phase, if this card is in the GY (banished) because it was sent there this turn" | section 79 |
+| `on damage_step_battles:` / `on damage_step_attacks:` | "At the start of the Damage Step, if this card battles / attacks" | section 80 |
+
+Summon triggers take how the card was summoned: `on special_summoned(from grave, by effect):`, `on normal_summoned(tribute 2):`, `on special_summoned(synchro):`.
+
+**Only during the Battle Phase.** `if battle_phase: ...; quick;` (or `your_battle_phase`, `opponent_battle_phase`): "During the (your / your opponent's) Battle Phase". A monster's one must be a Quick Effect (section 81).
+
+**Use limits.** Besides `once_per_turn`: `once_per_duel;` and `uses_per_turn(N);` ("twice per turn", "thrice per turn", section 74).
+
+### More actions (2026-10-25)
+
+| script | does | EffectSystem.md |
+|---|---|---|
+| `set(deck, selector)` | "Set 1 X Spell/Trap directly from your Deck" (the game's set-from-Deck machine) | section 63 |
+| `fusion_summon(selector)` | "Fusion Summon 1 (X) Fusion Monster from your Extra Deck, using monsters from your hand or field as material" (Polymerization's machine, the Extra Deck list filtered). Not yet: fusions that banish / shuffle materials from the GY | section 64 |
+| `add_to_hand(grave \| banished, selector)` | add 1 matching card from your GY / banished cards to your hand | |
+| `banish(all \| target, side, selector)` / `banish(deck \| hand \| extra \| grave, selector)` | banish matching cards on the field, or 1 card from a zone | section 55 |
+| `return_to_hand(target, side, selector)` | target 1 card on the field and return it to the hand | |
+| `gain_atk(side, N)` | target 1 face-up monster: it gains N ATK until the end of this turn | |
+| `damage(N, side)` | N damage to the named player (default your opponent, like `burn`) | |
+| `change_position(target[, side][, selector][, attack \| defense])` | target 1 monster: change its battle position (`attack` = only one in Attack Position: "change it to Defense Position") | section 92 |
+| `set_face_down(target[, side][, selector])` | target 1 monster: change it to face-down Defense Position | section 92 |
+| `take_control(target[, side][, selector])` | target 1 monster: take control of it until the End Phase | section 92 |
+| `negate_effects(target[, side][, selector])` | target 1 face-up monster: negate its effects until the end of this turn | section 92 |
+| `change_atk(target[, side][, selector][, position], [-]N)` | target 1 face-up monster: it gains (`-`: loses) N ATK until the end of this turn | section 92 |
+| `if a and b: ...` | several conditions; new: `main_phase`, `your_main_phase`, `opponent_main_phase`, `main_or_battle_phase` (+ your_ / opponent_), `your_turn`, `opponent_turn`, `battled` (this card battled this turn) | section 93 |
+| `fusion_summon(selector, banish_materials)` | "Fusion Summon 1 X Fusion Monster, by banishing the materials listed on it from your field or GY" (Dragon's Mirror's route) | section 94 |
+| `xyz_also(selector[, xyz_monster][, rank N \| rank_at_least N \| rank_at_most N]);` | "You can also Xyz Summon this card by using 1 X you control" (card-level, like only_one) | section 94 |
+| `on battle_phase_start:` / `your_battle_phase_start` / `opponent_battle_phase_start` / `battle_phase_end` / `your_battle_phase_end` | at the start / end of the (your / your opponent's) Battle Phase (a monster on the field) | section 93 |
 
 **Ctrl+Space** in the editor lists what can follow at the caret (triggers after `on`, actions after `then`, races after `race =`, archetype names after `archetype =`, ...) with a hint beside the highlighted entry; typing two letters offers it by itself.
 
@@ -75,7 +126,7 @@ Stage 1 (built, confirmed): draw / life point steps run back to back ahead of th
 ## Also planned
 
 - `discard(N)`, `send(deck -> grave, selector)`, `banish`, `gain_lp(N)` / `pay_lp(N)`, `special_summon(hand, selector)`, `negate` - each needs its vanilla source found first (the backlog groups in `effects_backlog_grouped.xlsx` say which are most common: search 765, destroy 337, draw 255, burn 205).
-- (Some of the above are built since: discard / Tribute / banish-self costs, special summon from the hand, negate. What's still missing is in [GLOSSARY.md](../GLOSSARY.md#effects) and `docs/Card Lists/Effects To Write.csv`.)
+- (Some of the above are built since: discard / Tribute / banish-self costs, special summon from the hand, negate. What's still missing is in [GLOSSARY.md](../GLOSSARY.md#effects) and `docs/Card Lists/Effects Coverage.xlsx`.)
 
 ## Costs paid with the card, conditions, Special Summon this card, ATK (2026-10-02, EffectSystem.md section 37)
 
@@ -148,6 +199,74 @@ search / revive / add_to_hand / special_summon / send_to_grave take several sele
 
 Who (required, no default): opponent, own, both. Where: monster_zone (default), spelltrap_zone, any_zone. The lowest limit on the field wins; not while this
 card's effects are negated. BAB: "While this card is face-up in ... : ... hand size limit is N" (While face-up category). Compiles to `"handLimit"`.
+
+## Continuous ATK / DEF and cannot be destroyed (2026-10-25)
+
+    aura(atk -500, opponent);                                   // your opponent's monsters lose 500 ATK
+    aura(atk 300, def 300, own, monster where race = Dragon);   // your Dragons gain 300 ATK and DEF
+    indestructible(battle);                                     // this card cannot be destroyed by battle
+    indestructible(battle, effects);                            // ... by battle or card effects
+    indestructible(opponent_effects);                           // ... by your opponent's card effects
+    indestructible(battle, own, monster where race = Warrior);  // your Warriors cannot be destroyed by battle
+    untargetable(opponent_effects);                             // this card cannot be targeted by your opponent's card effects
+    untargetable(attacks);                                      // ... cannot be targeted for attacks
+    unaffected(spells, traps);                                  // this card is unaffected by Spell and Trap effects
+    unaffected(opponent_monster_effects, own);                  // your monsters are unaffected by your opponent's monster effects
+
+Who: self (indestructible's default, this card only), own, opponent, any; aura's default is own. The selector may test race, attribute and archetype.
+Both apply only while this card is face-up and its effects are not negated, and sit beside the card's effects. BAB: "While face-up" category.
+Compile to `"aura"` and `"protect"` (docs/EffectSystem.md sections 69, 71 and 72).
+
+    name_as("Harpie Lady");      // this card's name becomes "Harpie Lady" while on the field or in the GY (the game's own path)
+    name_as(6390, field);        // ... while face-up on the field only
+    only_one;                    // you can only control 1 of this card;   only_one(field): only 1 face-up on the whole field
+    attack_directly;             // this card can attack directly
+    while controls(monster where race = Dinosaur, other): untargetable(attacks);   // "While you control another Dinosaur monster, ..."
+    while in_grave(25): aura(atk 2500, def 2500, self);     // "While you have 25 or more cards in your GY, this card gains 2500 ATK/DEF"
+    while not in_hand(card): aura(atk -800, opponent);      // "While you have no cards in your hand, ..."
+    while has_material and lp_at_most(2000): attack_directly;   // also: defense_position; 'not' = fewer than N
+    aura(atk 400, self, per controls(other, monster where race = Plant));   // "gains 400 ATK for each other Plant monster you control"
+    aura(atk 500, self, per materials);                     // "... for each material attached to it"
+
+`while <tests>:` goes before aura / indestructible / untargetable / unaffected / attack_directly. Count tests: `controls`, `in_grave`,
+`in_hand`, `banished` `(N, own | opponent | any, other, selector)` (N = how many, default 1; the selector may test kind, race, attribute,
+archetype, name), `materials`; plus `has_material`, `defense_position`, `lp_at_most(N)`. docs/EffectSystem.md section 89.
+    on ignition: draw(1); once_per_duel;      // once per Duel
+    on ignition: draw(1); uses_per_turn(2);   // twice per turn (counted per copy on the field)
+    on ignition: draw(1); once_per_turn; no_special_summon(extra, synchro, except monster where attribute = Dark);
+                                 // you cannot Special Summon from the Extra Deck the turn you activate this, except DARK Synchro Monsters
+    on ignition: search(deck, card where archetype = 632); no_special_summon(extra, resolved);
+                                 // "..., also you cannot Special Summon from the Extra Deck for the rest of this turn" (locked once it resolves)
+    if lp_at_most(2000): draw(1);   // "If your LP are 2000 or less: ..."   if lp_lower: = "If your LP are lower than your opponent's"
+    cost send_self: draw(1);        // "You can send this card from your hand to the GY; ..." (a move, not a discard)
+    cost send_self_field: draw(1);  // "You can send this card from the field to the GY; ..."
+    cost banish_self_hand: draw(1);   // banish this card from your hand   (banish_self_field: from the field; tribute_self_hand: Tribute it from your hand)
+    cost tribute_self_hand: draw(1) or cost tribute_self: draw(1); once_per_turn;   // "Tribute this card from your hand or field" (one row per zone)
+    cost banish_grave(1, monster where attribute = Water): draw(1);         // "banish 1 WATER monster from your GY; ..."
+    cost banish_self_and(1, monster where archetype = 74): draw(1);         // "banish this card and 1 "Dragunity" monster from your GY; ..."
+    cost discard(1, spell): draw(1);                         // "discard 1 Spell; ..."   (discard(N) = any N cards)
+    cost tribute(1, monster where race = Dragon): draw(2);   // "Tribute 1 Dragon monster; ..."   (tribute(N) = any N monsters)
+    cost send_hand(1, monster where attribute = Water): draw(1);   // "send 1 WATER monster from your hand to the GY; ..."
+    cost reveal(monster where archetype = 74): draw(1);      // "reveal 1 "Dragunity" monster in your hand; ..."
+    cost send_hand_field(card): draw(1);                     // "send 1 card from your hand or field to the GY; ..."
+
+These pick costs borrow no card: the game's own cost machine for each runs as this card, with this filter (docs/EffectSystem.md section 90).
+
+Moving cards (section 86): `move(what, destination)`. Destinations: `to_hand`, `to_grave` (sent, not destroyed), `to_banished`, `to_deck`
+(shuffled in), `to_deck_top`, `to_deck_bottom`, `to_extra`, `destroy`.
+
+    move(target, opponent, monster, to_deck);          // "target 1 monster your opponent controls; shuffle it into the Deck"
+    move(target, 2, any, card, to_hand);               // "target up to 2 cards on the field; return them to the hand"
+    move(target, 3, opponent, monster, destroy);       // "target up to 3 monsters your opponent controls; destroy them"
+    move(self, to_hand);                               // "return this card to the hand" / "add this card (from the GY) to your hand"
+    move(grave, monster where race = Fish, to_deck);   // "shuffle 1 Fish monster from your GY into the Deck" (picked when it resolves)
+    move(hand or grave, card, to_deck_bottom);         // "place 1 card from your hand or GY on the bottom of the Deck"
+    move(target, any, card, to_deck) then draw(1);     // a target move may be followed by other steps
+
+`target` = chosen on the field when the effect is activated (up to 5 with a count); `self` = this card (on the field, or from the GY / banished
+to the hand, or from the GY to the Deck); `hand` / `grave` = 1 card picked from that list when it resolves, to the Deck or Extra Deck only.
+
+docs/EffectSystem.md sections 73-77 and 82-87. "You can reveal this card in your hand; X" is written `on in_hand: X` (section 83).
 
 ## Effect labels (2026-10-14)
 

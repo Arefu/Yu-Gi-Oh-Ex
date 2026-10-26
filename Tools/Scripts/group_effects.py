@@ -1,5 +1,6 @@
 """
-Groups the effects still to write (docs/Card Lists/Effects To Write.csv, from WolfX --attach-effects) by what they do, in the game's own
+Groups the effects still to write (the work list WolfX --attach-effects writes, saved as Effects To Write.csv; the docs keep the
+Effects Coverage.xlsx made from it by effects_coverage.py) by what they do, in the game's own
 effect categories (CARD_Genre, the names WolfX's Effect library groups by under "What it does"), read from each card's text.
 
     python group_effects.py <Mods/Cards/Yu-Gi-Oh-Ex/cards.json> "<docs/Card Lists>"

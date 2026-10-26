@@ -21,9 +21,11 @@ const output = [];
 for (const test of trees) {
   const states = api.treeToState(test.tree);
   const script = api.generate({ getTopBlocks: () => states.map(mockBlock) });
-  let count = 0;
-  for (const top of states) for (let s = top; s; s = s.next?.block) if (s.type === 'ys_as' || s.type === 'ys_effect') count++;
-  assert.equal(count, 1 + (test.compiled.parts?.length ?? 0), 'Script-to-blocks lost an effect');
+  // one top block per effect: an as(...) block or an effect hat (ys_on_summon, ys_activate ...); locks sit beside them
+  const count = states.filter((s) => s.type !== 'ys_lock' && s.type !== 'ys_hand_limit' && s.type !== 'ys_aura' && s.type !== 'ys_protect' && s.type !== 'ys_name_as' && s.type !== 'ys_only_one' && s.type !== 'ys_attack_directly' && s.type !== 'ys_xyz_also').length;
+  // a script of only continuous statements (lock / hand_limit / aura / indestructible) has no effect hat; a raw row (no donor, no "from") is one
+  const hasEffect = test.compiled.from !== undefined || test.compiled.rawRow === true;
+  assert.equal(count, hasEffect ? 1 + (test.compiled.parts?.length ?? 0) : 0, 'Script-to-blocks lost an effect');
   assert.equal((script.match(/as\(/g) ?? []).length, (test.script.match(/as\(/g) ?? []).length, 'Blocks-to-script lost a clone');
   output.push({script, expected: test.compiled});
   console.log('PASS blocks round trip:', test.script);

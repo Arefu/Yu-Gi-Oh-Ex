@@ -63,7 +63,7 @@ Every heading on this page is a link you can paste (right-click the heading on G
 | **Anime Cards** | Plugin that lays the card face out in the anime style (and the Forbidden Memories style). |
 | **Arenas** | Duel backgrounds. Campaign can add new ones (`arenas.json`). |
 | **BAB** | *Build-a-Block*: the drag-and-drop block editor for effects in WolfX. The main way to write effects. |
-| **Ban Lists** | A mod with 82 real TCG ban lists, picked in game through a BOB page. |
+| **Ban Lists** | A mod holding every real TCG and OCG ban list as a single-player PD Limits mod (the online lists ship with Yu-Gi-Oh-MP). |
 | **BetterCardShop** | **Retired.** The old Card Store plugin. The store is now a BOB page and booster packs moved to Core. |
 | **BetterLoad** | **Retired.** Its jobs (archive name, loose files, the patch archive) were folded into Core. |
 | **BOB** | The script language. It's used for card effects (EffectScript) and for in-game pages (page scripts). |
@@ -171,11 +171,11 @@ Always on. Kept small on purpose: the save, the plugin list, game data loading, 
 | **Plugin list and host** | Owns which plugins load (`[Yu-Gi-Oh-Core]` in `Config.ini`), the on/off toggles with dependency cascade, and starts the GUI-hosted plugins in `Plugins\YGO-Ex\`. C API in `Yu-Gi-Oh-Core.h`. | Working |
 | **Game data loading** | Mounts the Ex patch (`PatchArchive`, default `YGO_2020-Ex`) as a second archive, serves loose files from `YGO_2020\` (`LooseLoading`), the archive name (`Archive`), file order (`FileOrder`), several game instances at once (`AllowMultiInstance`). Mod patches and loose folders are stacked in. | Built (the patch is used by many features; check it in game per feature) |
 | **Credits** | Adds credits before Konami's: built-in thanks, `credits.json` sections, sections other plugins add (`Core_AddCredits`), then a plugin list. | Built |
-| **Crash log** | `crash_log.txt` (module + offset, call stack) and `crash.dmp` in the game folder on a fatal crash. | Working |
+| **Crash log** | `crash_log.txt` (module + offset, call stack) and `crash.dmp` in the game folder on a fatal crash. Since 2026-10-25 also on abort / `std::terminate` (uncaught C++ exception with its type and message) and stack overflow; `console.log` is flushed first (Console's `FlushAllLogs`), and a quiet exit (`ExitProcess`, `TerminateProcess` on itself, `RIX::App::RequestQuit`, closing the console window) is logged to `console.log` with its stack. | Working (the 2026-10-25 additions untested) |
 | **Tweaks** | `PauseInBackground` (default off) and `JapaneseVersion`. `EngineRules2020` is still written but the game never reads the bit (see [Duel rules](#game-systems-weve-mapped)). | Built |
 | **Deck size limits** | `MinMainDeck` / `MaxMainDeck` / `MaxExtraDeck` / `MaxSideDeck` (e.g. 20-30 / 5 for Speed Duel): patches the game's one legality check and the deck editor caps, and the numbers in the game's text. Limits only go down (a deck holds 60/15/15). [DeckLimits.md](docs/DeckLimits.md) | Built, untested |
 | **256 user decks** | Toon Jinzo's Yu-Gi-Oh-DeckSlots, now in Core (it replaces the plugin): 224 more user deck slots (ids 1024-1247) after the save's 32, kept in the save extension `UserDecks` so they follow save slots; a DeckSlots `<save>-extradecks.dat` is imported once. `Core_GetExtraUserDecks` for plugins. [UserDecks.md](docs/UserDecks.md) | Built, untested |
-| **Duel format** | `DuelFormat=speed / rush` switches on Konami's Speed and Rush Duel rules that are already in the duel engine but never enabled (LP, hand, 3 zones, no Main Phase 2, Rush draw-to-5, unlimited summons, no chains). Online: the host's **Duel format** row on the match settings screen (Yu-Gi-Oh-MP, lobby data `exformat`, deck sizes follow). The field still draws 5 zones. [DuelFormat.md](docs/DuelFormat.md) | Built, untested |
+| **Duel format** | `DuelFormat=speed / rush` switches on Konami's Speed and Rush Duel rules that are already in the duel engine but never enabled (LP, hand, 3 zones, no Main Phase 2, Rush draw-to-5, unlimited summons, no chains). Online: the host's **More Options** page, opened from the match settings screen (Yu-Gi-Oh-MP, lobby data `exformat`, deck sizes follow). The field still draws 5 zones. [DuelFormat.md](docs/DuelFormat.md) | Built, untested |
 
 ### RIX (`Yu-Gi-Oh-RIX`)
 
@@ -215,13 +215,15 @@ Source folder `Yu-Gi-Oh-Cards`, built as `Yu-Gi-Oh-MoreCards.dll`. Docs: [Custom
 | **Name sort and search** | Custom cards get a proper name-order rank and are findable in the deck editor search. | Built |
 | **Big ids in duels** | Cards above the duel engine's 14-bit limit (16,383) borrow a free low id for one duel (scratch-pool borrowing). | Working |
 | **Source-id lending** | An effect clone plays under its effect source's game id for the duel, so every id-keyed engine rule (about 290 lists, the AI, win conditions) treats it as that card. | Working |
+| **Effect only** | `as(...) effect_only` (`"effectOnly": true`): copy just a game card's effect; the card is not lent that id and keeps its own kind, stats and identity. `on <trigger>: as(...)` lets a monster use a Spell's or Trap's effect. | Built |
+| **Summon from several zones** | `special_summon(hand or deck or grave or banished or extra, ...)`: one list over every zone named (the game's own banished / Extra Deck summon scans), picked and summoned by the Effects plugin's own step. Blocks: "Special Summon from any of", a box per zone. | Built |
 | **Missing art** | Cards without art show a checkerboard instead of another card's art. | Built |
 | **Custom cards in saved decks** | Custom cards in your saved decks are always owned (protects against save editors that strip them). | Built |
 | **`PreserveUnavailableCards`** | Keeps cards from a mod that's switched off. | Built |
 
 ### Effects (`Yu-Gi-Oh-Effects`)
 
-The card effect engine for new cards, and changed effects for game cards. The game's effects turn out to be table driven (four per-card tables of handler rows) plus about 290 id lists. Effects reuses the game's own machinery first and only writes new logic where it has to. Docs: [EffectSystem.md](docs/EffectSystem.md) (54 sections, read it first), [EffectLanguage.md](docs/EffectLanguage.md).
+The card effect engine for new cards, and changed effects for game cards. The game's effects turn out to be table driven (four per-card tables of handler rows) plus about 290 id lists. Effects reuses the game's own machinery first and only writes new logic where it has to. Docs: [EffectSystem.md](docs/EffectSystem.md) (90 sections, read it first), [EffectLanguage.md](docs/EffectLanguage.md).
 
 | Feature | What it does | Status |
 |---|---|---|
@@ -230,6 +232,10 @@ The card effect engine for new cards, and changed effects for game cards. The ga
 | **Composed effects** | Multi-effect cards ("parts"), trigger from one card with the action of another (`actionFrom`), conditions (`require`, `if no_monsters`, `if controls`), costs (discard, Tribute, banish self, detach, pay LP), gain ATK, return to hand, special summon from hand/Deck/GY, add from GY, effects in the GY (`on in_grave`). | Partial |
 | **Chains** | Steps before an action (draw/LP then destroy); our own resolver that searches, summons, sends to the GY and banishes (Deck / hand) with game primitives instead of copying a donor. | Partial (most chain test cards confirmed; send/banish steps built 2026-10-22, untested) |
 | **Effect choice (stacking)** | Two effects of the same kind on one card use the game's own "choose an effect" prompt, with labels. | Built |
+| **Choice bullets ("activate 1 of these")** | EffectScript `or` joins effects into one choice sharing one once-per-turn limit (`limitGroup`); a card gets up to 4 independent once-per-turn limits (engine classes 5-8). The card-text translator reads "[head:] [cost,] activate 1 of these effects" headers; BAB "or the next effect" box. docs/EffectSystem.md section 58. | Built 2026-10-25, tests pass, not run in a duel |
+| **Once per turn: per copy / per name** | `once_per_turn(copy)` ("Once per turn: ...", engine classes 1-4, a marker on the card's zone) vs `once_per_turn` (per card name, classes 5-8); the translator reads "Once per turn, <head>". docs/EffectSystem.md section 59. | Built 2026-10-25, IDA-transcribed state-machine test passes, not run in a duel |
+| **Whose phase triggers** | `opponent_standby_phase`, `each_standby_phase`, `opponent_end_phase`, `each_end_phase`: the engine's phase handler families, traced. docs/EffectSystem.md section 60. | Built 2026-10-25, IDA-transcribed phase-driver test passes, not run in a duel |
+| **Own triggers (no donor)** | `"ownTrigger"`: the plugin's own effect row (action composed onto it) + its own phase offer (a virtual row after the phase table's last row calling the game's handler family); no game card borrowed. All phase triggers without an exact game match use it. docs/EffectSystem.md section 61. | Built 2026-10-25, state-machine test passes, not run in a duel |
 | **Summon conditions** | Conditions on how a card was summoned (from the GY, by effect, Xyz and so on). | Built |
 | **Negation** | `negate(...)`: negate activations through the game's negation table. | Built |
 | **Continuous locks** | `lock(...)`: Jinzo / Royal Decree / Skill Drain style locks and narrower monster locks. | Built |
@@ -252,7 +258,7 @@ Characters, decks, story duels and scenes, tutorials, campaign series and duel s
 | **Story duels and scenes** | New and changed story duels and their intro, win and lose scenes. Scenes can play videos, voice lines and sounds. A story duel can play as a tutorial. | Built |
 | **New campaign series** | Series past the game's 6 (`campaigns.json`), with logos, unlock rules (`after` a series), arrow scrolling, overall completion, progress kept in the save extension. `hiddenSeries` hides game series. | Built |
 | **New tutorials** | Tutorials numbered 27-99 from `tutorials\*.json` appear in Help > Tutorial, with their own done marks. | Built |
-| **AI deck** | Campaign and Free Duel ask for Your Deck, then the Opponent's Deck (any deck). | Built |
+| **AI deck** | Campaign and Free Duel ask for Your Deck, then the Opponent's Deck (any deck). In Free Duel the opponent shows the picked deck's own duelist, as the game does for your deck; the campaign keeps the story's character. | Built |
 | **New arenas** | `arenas.json`: new duel backgrounds (a picture or an animated animlist folder). | Built |
 | **Per-duelist rules** | `duelistrules.json`: starting LP against a given opponent. | Built |
 | **Campaign progress** | `progress.json`: unlock every character, and switch modes on (Duelist Challenges, Battle Packs, Card Shop). | Built |
@@ -273,7 +279,7 @@ Needs RIX. Uses the engine's own tag mode (teams share one field by seat parity)
 
 | Feature | What it does | Status |
 |---|---|---|
-| **Local tag duel** | Tag Duel button > Local: 2 vs 2 with your partner and both opponents picked as characters on the Free Duel screen, a deck for each seat, and a review step before "Let's Duel!". | Partial |
+| **Local tag duel** | Tag Duel button > Local: 2 vs 2 with your partner and both opponents picked as characters on the Free Duel screen, a deck for each seat, and a review step before "Let's Duel!". Each seat shows its deck's duelist (the picked character when the deck has none). Lasts one duel: the result screen or the main menu turns tag off again, so the next Free Duel is a normal one. | Partial |
 | **Seat controllers** | Each of the 4 seats can be AI or Human (hot-seat). | Built |
 | **Handicap duels** | 1 vs 2 and 2 vs 1, with solo life points (8,000 / 12,000 / 16,000 / 24,000). | Built |
 | **Partner decks** | Separate or shared partner decks (`DeckMode`, `PartnerDeck`, `OpponentPartnerDeck`). | Built |
@@ -288,9 +294,10 @@ Needs RIX. The game's Multiplayer menu is Konami's real Steam online mode (lobbi
 | **Duel recorder** | Writes `Duels.log`: every duel's events, readable and replayable in DuelIt. | Working |
 | **Engine logging** | About 150 passthrough hooks that log the online and duel-flow functions for reverse engineering. | Working |
 | **Connect to Server** | Multiplayer > Connect to Server: sign in (claim code or Steam), get the server's ban list, stream duels live for tracking and stats. | Built |
-| **Ban lists online** | Game / Off / a custom list per lobby, sent to joiners through lobby data; a notice for players without the plugin. | Built |
-| **Ban list picker** | Pick any of the Ban Lists mod's 82 lists by date, era and format from a BOB page. | Built |
-| **No ban list** | A per-lobby On/Off row on the host's match settings. | Built |
+| **More Options page** | Casual hosting: a "More Options" button beside Create opens a page with the duel format (a < value > row like Video Settings') and the ban list button. The pages (`mp-match-settings.bob`, `banlists.bob`) ship with Yu-Gi-Oh-MP (source `Content\pages`, built to `Plugins\Yu-Gi-Oh-MP\pages`); a copy in `Yu-Gi-Oh-Ex\pages` overrides them. Ranked gets none (fixed rules). | Built, untested |
+| **Ban lists online** | Game / Off / a custom list per lobby (set on the More Options page), sent to joiners through lobby data; a notice for players without the plugin. | Built |
+| **Ban list picker** | Pick any of the 170 lists Yu-Gi-Oh-MP ships (plus your own in `Yu-Gi-Oh-Ex\banlists` and any mod's) by TCG/OCG, era and year (the setting screens' < value > rows, plus a Page row, on the left) from a BOB page; the lists are on the right, 8 a page, the one in use ticked (the game's checkmark icon); the help bar's "3 Preview" opens a page with the list under the cursor in the deck editor's deck panel (rows titled Forbidden / Limited / Semi-Limited, with counts), the hovered card's picture and text sliding out from the left edge (Back / right-click puts it away); Game's list and No list are its first rows; "No ban lists found." when there are none. | Built, untested |
+| **No ban list** | "No list" in the ban list picker (More Options > Ban list). | Built |
 | **Anti-cheat helpers** | Environment checks and a duel state hash. Whether the hash matches across two clients is not verified. | Built |
 
 ### Forbidden Memories rules (`Yu-Gi-Oh-FM`)
@@ -326,7 +333,7 @@ A GUI plugin: `Speed` (default 2), `NoAnimations`, `NoMovies`. Status: Working.
 
 ### Console (`Yu-Gi-Oh-Console`)
 
-The log window and `console.log`, filtered by `LogLevel`. Other plugins can write split logs (such as `Duels.log`). Steam's own console noise is dropped. Status: Working.
+The log window and `console.log`, filtered by `LogLevel`. Other plugins can write split logs (such as `Duels.log`). Steam's own console noise is dropped. `FlushAllLogs` (exported) writes out every log at once; Core's crash handler calls it so a crash's log ends at the real last line. Status: Working.
 
 ### GUI (`Yu-Gi-Oh-GUI`)
 
@@ -364,7 +371,7 @@ WolfX ("Retired plugins...") and ModManager move leftover DLLs to `Plugins\_reti
 
 | Use | What it does | Status |
 |---|---|---|
-| **Effect scripts** | Card effects as text (`EffectScript.g4`, compiled by WolfX to `effectClone` data). Triggers, costs, conditions, actions, `as(...)` to copy a card, `equip`, `negate`, `lock`, `hand_limit`, labels. | Partial |
+| **Effect scripts** | Card effects as text (`EffectScript.g4`, compiled by WolfX to `effectClone` data). Triggers, costs, conditions, actions, `as(...)` to copy a card, `equip`, `negate`, `lock`, `hand_limit`, `aura` (continuous ATK/DEF; `per <count>` = "for each"), `while <tests>:` (a condition on aura / protection / attack_directly: you control / in GY / in hand / banished counts, materials, Defense Position, LP), `indestructible` (cannot be destroyed by battle / effects), `untargetable` (by effects / for attacks), `unaffected` (by Spell / Trap / monster effects), `name_as` (this card's name becomes ...), `only_one` (you can only control 1), `attack_directly`, `once_per_duel` / `uses_per_turn(N)`, `no_special_summon` (the turn you activate this, or `resolved`: for the rest of the turn after it resolves), `if controls(card where name = N)`, `grave_end_phase` / `banished_end_phase` / `damage_step_battles` / `damage_step_attacks` triggers, `if battle_phase:` (whose Battle Phase), `if lp_at_most(N):` / `if lp_lower:`, `cost send_self` / `send_self_field` (send this card from the hand / field to the GY), `banish_self_hand` / `banish_self_field` / `tribute_self_hand`, "from your hand or field" costs (two effects joined with `or`), `banish_grave(N, X)` / `banish_self_and(N, X)` (banish cards from the GY as a cost), `discard(N, X)` / `tribute(N, X)` / `send_hand(N, X)` / `reveal(X)` / `send_hand_field(X)` (pick costs with no donor card: the game's own cost machines run as the card, section 90), watcher triggers `card_destroyed` / `card_left_field` / `card_sent_to_grave` / `card_banished` (ANOTHER card destroyed / left the field / sent to the GY / banished, from the field or `in_grave`, section 91), target verbs `change_position` / `set_face_down` / `take_control` / `negate_effects` / `change_atk` (the game's own target machines and result markers, section 92), phase windows `if main_phase / opponent_main_phase / main_or_battle_phase / your_turn / opponent_turn / battled` joined with `and`, Battle Phase triggers `battle_phase_start` / `battle_phase_end` (section 93), `fusion_summon(..., banish_materials)` and `xyz_also(...)` (alternative Xyz Summon, section 94), reveal-this-card costs (read as hand effects), labels. | Partial |
 | **Effect blocks (BAB)** | The same effects as drag-and-drop blocks, in sync with the script; the first tab on the Effects page. | Built |
 | **Card text translator** | Writes effects from a card's English text where every part is understood; also writes Fusion recipes and Ritual pairs. Headless: `--attach-effects`, `--attach-summoning`. | Partial (whole translations only) |
 | **Effect library** | The game's own cards written in BOB (about 1,170), browsable by what they do and by script action; editable. | Built |
@@ -391,7 +398,9 @@ The edit hub. Open the game folder (or an extracted folder, or a mod) and every 
 | **Sound** | Music · Voice Over · Videos |
 | **Files** | Game files & loading · Archives (.zib) · Deck files (.ydc) · Save editor · Config editor |
 
-Also: File > Export as mod / Edit a mod / Open the Mod Manager, File > Export changed game files, Restore original archive, pop-out previews, the vanilla-style card preview, self-update from GitHub releases (Tools > Check for updates, Help > About), "Retired plugins...". Headless switches: `--page`, `--card`, `--render-pages`, `--compile-page`, `--decompile-page`, `--attach-effects`, `--attach-summoning`.
+Config editor: a setting put back to its default is taken out of `Config.ini` on Save (unset = vanilla), and "Reset plugin" puts all of one plugin's settings back.
+
+Also: File > Export as mod / Edit a mod (only ever opened on purpose: WolfX starts on your own files, never in a mod) / Open the Mod Manager, File > Export changed game files, Restore original archive, pop-out previews, the vanilla-style card preview, self-update from GitHub releases (Tools > Check for updates, Help > About), "Retired plugins...". Headless switches: `--page`, `--card`, `--render-pages`, `--compile-page`, `--decompile-page`, `--attach-effects`, `--attach-summoning`.
 
 Docs: [WolfXContent.md](docs/WolfXContent.md), [EditorSafety.md](docs/EditorSafety.md), [WolfX-Tutorial-Guide.md](docs/WolfX-Tutorial-Guide.md).
 
@@ -420,7 +429,7 @@ Mods in this repo (`Mods\`):
 | **Cards** | The 4,413 cards released after the game (from YGOPRODeck), including 53 tokens, with fixed ids, art, archetypes, Fusion recipes and Ritual pairs. The source of truth for new cards. | Built |
 | **Cards - Unlocked** | Owns every card from the Cards mod. Off by default. | Built |
 | **Booster Blast** | 105 booster packs (whole real sets, by year) and 16 structure decks with exact lists, sold from the Card Store's Structure Decks page. Needs Cards. | Built |
-| **Ban Lists** | 82 TCG ban lists as JSON, plus the Yugi-Kaiba Format. | Built |
+| **Ban Lists** | `PD Limits\TCG` / `PD Limits\OCG` single-player mods (Yugi-Kaiba Format included). The online lists and picker page moved into Yu-Gi-Oh-MP (`Content\banlists`, `Content\pages`) on 2026-10-25. | Built |
 | **Forbidden Memories** | An exclusive overhaul: FM's 722 cards with FM stats and art, FM fusions, FM duelists as new characters with their faces and deck pools, random FM starter, FM card frames. Needs Yu-Gi-Oh-FM. | Partial |
 | **Anime Frames** | Anime-style card frames. | Working |
 
@@ -465,7 +474,7 @@ Everything in `<game>\Yu-Gi-Oh-Ex\` (or a mod's `Yu-Gi-Oh-Ex\`), and who reads i
 | `packs.json` | Core | Pack changes, new packs, shop rows. |
 | `credits.json` | Core | Extra credits. |
 | `saves.json` | Core | Save slot names, pictures, tags. |
-| `banlists\*.json` | Multiplayer | Ban lists for online play. |
+| `banlists\**\*.json` (also `<mod>\banlists\`) | Multiplayer | Your own ban lists for online play (WolfX Save as MP list); the 170 defaults ship in `Plugins\Yu-Gi-Oh-MP\banlists`. |
 | `fm.json` | Yu-Gi-Oh-FM | Forbidden Memories data (fusions, duelists, starter). |
 | `content.json` | Loader | Which plugins this content needs. |
 
@@ -550,7 +559,7 @@ Most of the project is **Built** and waiting for a first real test. The big ones
 - Negate a Summon, negate an attack, continuous "negate its effects"; field-spell style "all X gain N".
 - Win-condition cards (Exodia-style) for new cards.
 - A converter from Master Duel effect rows to `effectClone`.
-- About 4,000 new cards still need their effects (`docs/Card Lists/Effects To Write.csv`).
+- About 4,000 new cards still need their effects (`docs/Card Lists/Effects Coverage.xlsx`: Fully read / Partially read / Not read tables with the reason, made by `Tools/Scripts/effects_coverage.py` from a WolfX `--attach-effects` run).
 
 ### Cards
 
