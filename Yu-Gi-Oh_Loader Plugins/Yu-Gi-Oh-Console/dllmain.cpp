@@ -421,6 +421,23 @@ void FlushLogTo(std::string File)
     }
 }
 
+// Flushes console.log and every split log now: Yu-Gi-Oh-Core's crash / abort handler calls it before the game dies, so the log ends at
+// the real last line (the batched lines were lost, a crash's log stopped mid-line, 2026-10-25). The lock is only tried: the crash may be
+// inside WriteLog on this thread (a plain mutex would deadlock), and the process is going anyway.
+extern "C" __declspec(dllexport)
+void FlushAllLogs()
+{
+    const bool locked = g_Lock.try_lock();
+    if (g_File.is_open())
+        g_File.flush();
+    for (auto& entry : g_SplitLogs)
+        if (entry.second)
+            entry.second->File.flush();
+    std::cout.flush();
+    if (locked)
+        g_Lock.unlock();
+}
+
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
     switch (ul_reason_for_call)
