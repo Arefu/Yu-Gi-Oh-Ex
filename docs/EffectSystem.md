@@ -1346,4 +1346,12 @@ Count tests: `controls` / `in_grave` / `in_hand` / `banished` `(N, own | opponen
 
 **Tests.** Test-Compiler: 6 cases + 2 refusals; blocks round trip (`ys_xyz_also` counts as a card-level block). Coverage: fully read 174 (from 166). Not tested in a duel.
 
-**Open.** Ritual Summon actions ("Ritual Summon 1 X Ritual Monster from your hand, by Tributing ...": `Ritual_CanSummonMonsterWithSpell` 0x1400692E0 accepts a spell by table row or by hard-coded id, materials per id), "Immediately after this effect resolves, Synchro / Xyz / Link Summon ...", Fusions that shuffle the materials into the Deck or use the Deck / GY, "(This is treated as an Xyz / Synchro Summon.)" Special Summons.
+**Open (Extra Deck).** Ritual Summon actions ("Ritual Summon 1 X Ritual Monster from your hand, by Tributing ...": `Ritual_CanSummonMonsterWithSpell` 0x1400692E0 accepts a spell by table row or by hard-coded id, materials per id), "Immediately after this effect resolves, Synchro / Xyz / Link Summon ...", Fusions that shuffle the materials into the Deck or use the Deck / GY, "(This is treated as an Xyz / Synchro Summon.)" Special Summons.
+
+## 95. Up to N cards from the GY / banished; GY-target reading fixes (2026-10-26)
+
+**Yu-Gi-Oh-Effects.** `"ownCount": N` on an own pick-and-act step (`Slot0_OwnPickAndAct`): after a pick it goes round again (step 128, the list collected anew so the moved card is gone) until N cards were picked or none is left ("up to N"); not for summon / destroy. `g_OwnPicked` counts per record (id | instance). Effects 1.3.9.
+
+**Language / compiler / blocks / translator.** `add_to_hand(grave | banished, N, selector)` (N > 1 = the own step with the GY / banished movers instead of the salvage donor) and `move(grave, N, selector, to_deck | ...)`. BAB: a count on the add-to-hand block and on the move block for hand / GY moves. Translator: "target (up to) N X in your GY / of your banished X; add them to your hand / shuffle them into the Deck / place them on the bottom of the Deck" (picked when it resolves, "up to" noted). Fixed: "target 1 of your X that is banished or in your GY; Special Summon it / add it to your hand" was taken by the GY-only reading and failed on its selector.
+
+**Tests.** Test-Compiler: 3 cases + 1 refusal. Coverage: fully read 183, 118 attached whole. Not tested in a duel.
