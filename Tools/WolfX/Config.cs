@@ -26,6 +26,7 @@ namespace WolfX.WolfX.File_Type_UI
         private const string Absent = "\u0001<absent>\u0001";
 
         private readonly Button _pick = new() { Text = "Pick...", Anchor = AnchorStyles.Top | AnchorStyles.Right, Size = new Size(90, 25), Enabled = false };
+        private readonly Button _resetPlugin = new() { Text = "Reset plugin", Anchor = AnchorStyles.Top | AnchorStyles.Right, Size = new Size(110, 25) };
 
         public Config()
         {
@@ -36,6 +37,13 @@ namespace WolfX.WolfX.File_Type_UI
             _pick.Click += (_, _) => Pick();
             resetButton.Parent!.Controls.Add(_pick);
             new ToolTip().SetToolTip(_pick, "Browse for this setting's file, folder or archive");
+            // Reset plugin: every setting of the plugin picked on the left back to its default (Save then takes them out of Config.ini)
+            _resetPlugin.Location = new Point(_pick.Left - _resetPlugin.Width - 6, resetButton.Top);
+            _resetPlugin.UseVisualStyleBackColor = true;
+            _resetPlugin.Click += (_, _) => ResetPlugin();
+            resetButton.Parent!.Controls.Add(_resetPlugin);
+            statusLabel.Width = _resetPlugin.Left - statusLabel.Left - 6;   // the status line stops short of the buttons
+            new ToolTip().SetToolTip(_resetPlugin, "Put every setting of this plugin back to its default. Save removes them from Config.ini (vanilla, unset).");
             grid.CellDoubleClick += (_, e) =>
             {
                 if (e.RowIndex >= 0 && e.ColumnIndex == colValue.Index && grid.Rows[e.RowIndex].Tag is ConfigSetting s && CanPick(s))
@@ -411,20 +419,40 @@ namespace WolfX.WolfX.File_Type_UI
             cell.Value = s.Kind == SettingKind.Toggle ? s.Default == "1" : s.Default;
         }
 
+        // The plugin's settings, not its "Load this plugin" line (switching it off is a separate choice).
+        private void ResetPlugin()
+        {
+            if (sectionTree.SelectedNode?.Tag is not Group group) return;
+            foreach (DataGridViewRow row in grid.Rows)
+                if (row.Tag is ConfigSetting s && !IsPluginRow(s) && Owner(s).Equals(group.Name, StringComparison.OrdinalIgnoreCase))
+                    row.Cells[colValue.Index].Value = s.Kind == SettingKind.Toggle ? s.Default == "1" : s.Default;
+            statusLabel.Text = $"{group.Name}'s settings are back to their defaults: Save takes them out of {Path.GetFileName(_path)}.";
+        }
+
         private void saveButton_Click(object sender, EventArgs e)
         {
-            int written = 0;
+            int written = 0, removed = 0;
             foreach (DataGridViewRow row in grid.Rows)
             {
                 var s = (ConfigSetting)row.Tag!;
                 var value = Current(row);
                 bool inFile = row.Cells[colInFile.Index].Value?.ToString() == "yes";
+                if (value == s.Default && !IsPluginRow(s))
+                {
+                    // a default is the same as not set: take the line out, so the plugin's own default (vanilla) applies
+                    if (inFile)
+                    {
+                        WritePrivateProfileString(s.Section, s.Key, null, _path);
+                        removed++;
+                    }
+                    continue;
+                }
                 if (!inFile && value == s.Default) continue;   // leave the file alone for untouched defaults
                 WritePrivateProfileString(s.Section, s.Key, value, _path);
                 written++;
             }
             LoadFile(_path, _catalogFile);
-            statusLabel.Text = $"Saved {written} setting(s).";
+            statusLabel.Text = removed > 0 ? $"Saved {written} setting(s), took {removed} default(s) out of the file." : $"Saved {written} setting(s).";
         }
     }
 }

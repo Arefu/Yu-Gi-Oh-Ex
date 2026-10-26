@@ -76,7 +76,11 @@ namespace WolfX
             _start.OpenArchive = OpenArchive;
             _start.OpenExtracted = OpenExtracted;
             _start.OpenPath = path => OpenPath(path);
+            // start on your own files (the game's YGO_2020.dat + Yu-Gi-Oh-Ex folder): a mod is only edited when it is opened on purpose
             string? remembered = Recent.FirstOrDefault();
+            if (remembered != null && Wolf.Mods.ModLibrary.IsModFolder(remembered) && Path.GetDirectoryName(remembered) is { } mods &&
+                Path.GetFileName(mods).Equals("Mods", StringComparison.OrdinalIgnoreCase))
+                remembered = Path.GetDirectoryName(mods);
             if (remembered != null && GameFolderFiles.Open(remembered) is { } files)
                 Use(files, quiet: true);
             else

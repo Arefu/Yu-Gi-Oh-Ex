@@ -34,7 +34,7 @@ All six shipped languages have the same 202 records; the library round-trips eve
 * `@` + `H`-`Z`: a literal `@`.
 * `@/` / `@|`: the alternate font on / off.
 * `$R` base `(` reading `)`: ruby (furigana) - the reading shows small above the base (Japanese text).
-* `{{`: an inline tag; U+E000-U+F8FF: inline icons.
+* `{{`: an inline tag; U+E000-U+F8FF: inline icons (U+E000 + n = icon n of `YGO::UI::IconId_GetName`, e.g. U+E150 = 336 `ICON_ID_CHECKMARK`; any game text, menu labels too).
 * `\n` (or `\r\n`): new line.
 
 ## Editor
