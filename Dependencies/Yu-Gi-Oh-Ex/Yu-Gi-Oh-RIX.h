@@ -256,9 +256,16 @@ RIX_API void __cdecl RIX_PageListAdd(void* List, const wchar_t* Label, const wch
 
 /* Page values (added to version 7 on 2026-10-19, so an older RIX may lack it: RIX::Functions().RegisterPageValue can be null).
    "{game:<Name>.<Argument>}" in a page (and "game:<Name>.<Argument>" in conditions) calls Callback(Argument, Buffer, BufferSize, User),
-   which writes the value as UTF-8 and returns its length (0 = no value). Called on the game's thread, every frame a page shows it. */
+   which writes the value as UTF-8 and returns its length (0 = no value). Called on the game's thread, every frame a page shows it.
+   BufferSize is 16384 since 2026-10-25 (512 before): enough for a comma list of a few thousand card ids. */
 typedef int(__cdecl* RIX_PageValueCallback)(const char* Argument, char* Buffer, int BufferSize, void* User);
 RIX_API int __cdecl RIX_RegisterPageValue(const char* Name, RIX_PageValueCallback Callback, void* User);
+
+/* Page folders (added to version 7 on 2026-10-25, so an older RIX may lack it: RIX::Functions().AddPageFolder can be null). A plugin that
+   ships its own pages (e.g. Plugins\<plugin>\pages) adds that folder once. A page name is looked for in the active mods' pages, then
+   Yu-Gi-Oh-Ex/pages, then these folders in the order they were added: a copy in Yu-Gi-Oh-Ex/pages or a mod overrides a plugin's page.
+   Returns 1, or 0 for an empty name. */
+RIX_API int __cdecl RIX_AddPageFolder(const wchar_t* Folder);
 
 #ifdef __cplusplus
 }
@@ -297,6 +304,7 @@ namespace RIX
         int(__cdecl* RegisterPageList)(const char*, RIX_PageListCallback, void*) = nullptr;
         void(__cdecl* PageListAdd)(void*, const wchar_t*, const wchar_t*, const char*) = nullptr;
         int(__cdecl* RegisterPageValue)(const char*, RIX_PageValueCallback, void*) = nullptr;   // may be null (an older RIX)
+        int(__cdecl* AddPageFolder)(const wchar_t*) = nullptr;                                     // may be null (an older RIX)
     };
 
     inline Api& Functions()
@@ -348,6 +356,7 @@ namespace RIX
         RIX_BIND(RegisterPageList);
         RIX_BIND(PageListAdd);
         RIX_BIND(RegisterPageValue);
+        RIX_BIND(AddPageFolder);
 #undef RIX_BIND
         return true;
     }
@@ -986,7 +995,31 @@ namespace YGO
             inline auto ProcessInput = reinterpret_cast<char(__fastcall*)(void* Zone, int Pressed, int Held, int* Section)>(0x1408929C0);
             inline auto GetSelectedCardId = reinterpret_cast<uint16_t(__fastcall*)(void* Zone)>(0x140893060);       // 0xFFFF none
             constexpr size_t Section = 3088;              // ListState: its first int = the current section (0 main, 1 extra, 2 side)
-            constexpr size_t Rows = 936;                  // the three card rows (widget_DeckCardList), 648 bytes each
+            constexpr size_t Rows = 936;                  // the three card rows (widget_CardDisplayFlex), 648 bytes each
+            constexpr size_t RowSize = 648;
+            // A row: +80 its title (widget_TextFrame: "Main Deck" = layout +16, string 0x1A3), +216 the count text, +420..+431 the count's
+            // colouring bounds (from the layout; 0 = no colouring), +600 vector of 12-byte cells (+0 the card id).
+            constexpr size_t RowTitle = 80, RowCountColours = 420;
+            // The row's pool of card widgets (+232, 272 bytes each) is made once, at creation: +368 squeezed cards per row x +372 rows, from
+            // the row layouts (g_DeckZoneLayout_Main / Extra / Side, copied to row+336: +32 squeezed cols, +36 rows: 15 x 4, 15 x 1, 15 x 1).
+            // The row places cells by card index, so more cards than the pool write past it (a crash). Up to cols x rows (+360 x +364)
+            // show full size, then they squeeze (fan) up to the pool; rows never scroll.
+            constexpr size_t RowSqueezedCols = 368, RowVisibleRows = 372;
+            inline const uintptr_t RowLayouts[3] = { 0x140A7E550, 0x140A7E5B0, 0x140A7E610 };
+            constexpr size_t LayoutSqueezedCols = 32;
+            constexpr int SectionSqueezedCols[3] = { 50, 80, 80 };   // RIX deckView "sections": pools of 200 / 80 / 80
+            // Fills a row with Count cards (at most its pool, see above), as SortAndFill does (Highlight -1, the zone's +3424 and +3432 as
+            // the last two).
+            inline auto FillRow = reinterpret_cast<void(__fastcall*)(void* Row, unsigned Count, const int16_t* Cards, int Highlight, void* Combo, void* Counts)>(0x14088E1C0);
+            constexpr size_t Combo = 3424;                // passed to FillRow
+            constexpr size_t Header = 96;                 // the deck name's text layer (SetDeck writes the deck's Name there)
+            inline auto SetHeaderText = reinterpret_cast<void(__fastcall*)(void* Layer, const wchar_t* Text)>(0x14075E260);   // copied
+            constexpr size_t Stats = 208;                 // widget_DeckStats (the monster / spell / trap bar), vftable +24 = SetVisible
+            inline void ShowStats(void* Zone, bool Show)
+            {
+                char* stats = static_cast<char*>(Zone) + Stats;
+                (*reinterpret_cast<void(__fastcall***)(void*, bool)>(stats))[3](stats, Show);
+            }
             // A widget's own box under the mouse (what ProcessInput tests each row with).
             inline auto WidgetHitTest = reinterpret_cast<bool(__fastcall*)(void* Widget, int64_t Mouse)>(0x140782DA0);
             inline bool HitTest(void* Zone, int64_t Mouse)
@@ -1024,6 +1057,10 @@ namespace YGO
             inline auto HitTest = reinterpret_cast<bool(__fastcall*)(void* Row, int64_t Mouse)>(0x1408B38E0);
             // Row-local x of the arrows' centres: -(ValueWidth / 2 + 54) and +(ValueWidth / 2 + 54) (CreateFromLayout). The value
             // text only redraws when SetFocused changes its colour state (+344 cleared), so a new value needs a focus flip.
+            // SetFocused (0x1408B37C0) gives the label (+96) and the value (+128) TextColour(focused) and shows the arrows (+144, +176).
+            constexpr size_t LabelText = 96, ValueText = 128;
+            constexpr size_t TextColourAt = 160, TextDrawn = 344;   // in a text: its colour, and the "drawn" flag (0 = draw again)
+            inline auto TextColour = reinterpret_cast<int(__fastcall*)(bool Focused)>(0x140869E80);
         }
 
         // RIX::widget_PackWrapper: one booster pack of the Random Pack Store (its picture, title, price and owned counts). The store
@@ -1126,6 +1163,18 @@ namespace YGO
         namespace DeckInfoPanel
         {
             inline auto ShowDeck = reinterpret_cast<void(__fastcall*)(void* Panel, const unsigned int* DeckId)>(0x1408AB9C0);  // null = empty
+            // Its parts (CreateFromLayout 0x1408AACC0 / ShowDeck): a part's widget (SetEnabled shows it) and the text layer 16 bytes on
+            // (TextLayer_SetWideText, copied). Mode 2 / 3 (Free Duel's) builds all but the signature card (+288 / +416) and validity (+448).
+            constexpr size_t Portrait = 128, PortraitImage = 144;   // the owner's portrait (an image layer)
+            constexpr size_t TypeBox = 192, Type = 224;             // the deck type line (Starter / Story deck / ...); TypeBox shown with it
+            constexpr size_t Source = 256, SourceLine = 384;        // "Source" heading, then its line (the pack / story duel)
+            constexpr size_t SignatureHeading = 288, Signature = 416, Validity = 448;
+            constexpr size_t Owner = 320, Name = 352;               // the owner's name, the deck's name
+            constexpr size_t TextOf = 16;                           // part + 16 = its text layer
+            inline auto CharacterPortrait = reinterpret_cast<void*(__fastcall*)(int Character)>(0x1407FE920);   // cached portrait texture
+            inline auto ImageSetTexture = reinterpret_cast<void(__fastcall*)(void* Image, void* Texture, char Flag)>(0x14075EB80);
+            inline auto ImageRefresh = reinterpret_cast<void(__fastcall*)(void* Image)>(0x14075EDD0);
+            inline auto SetText = reinterpret_cast<void(__fastcall*)(void* Layer, const wchar_t* Text)>(0x14075E260);   // copied
         }
 
         // ---- Free Duel (decoded 2026-10-07): screen 21, RIX::ScreenHardChallenge (vtable 0x140A740F0). The main menu opens it as

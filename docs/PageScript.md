@@ -44,7 +44,11 @@ text "You have {game:dp} DP and {game:owned.4007} Blue-Eyes." at 1000, 220 width
   `quitGame` ... as in docs/MenuFiles.md): its text, hides it, or gives it a new action. Written to the same menu file.
 - `button on <menu> "Label" ["help"] [page <menu page>] [key "k"] -> action;` - a button on one of the game's menus (names as in
   docs/MenuFiles.md, e.g. `main`). It shows after the game restarts.
-- a widget: `<widget> [value] <fields> ;` (a `menu` takes `{ items }` instead of `;`).
+- `key <button> "Label" -> action;` - a prompt on the help bar (between Select and Back) whose button runs the action anywhere on the
+  page: `key details "Preview" -> page("preview");` (`details` = the "3" key with the game's Show Details icon, `option` = 0x4000, or
+  a mask number). Page file: `"keys"`.
+- a widget: `<widget> [value] <fields> ;` (a `menu` takes `{ items }` instead of `;`). `card "{var:card}" slide true ...` = a card
+  panel that slides out from the left edge when the player moves onto a card (Back / right-click puts it away).
 
 ## Widgets
 
@@ -58,7 +62,7 @@ text "You have {game:dp} DP and {game:owned.4007} Blue-Eyes." at 1000, 220 width
 | `card` | cardInfo | the card |
 | `cards` | cardGrid | `owned` / `all` |
 | `decks` | decks | - (the game's deck picker: the player's decks; `list "578, 579"` shows those deck ids instead: 0-31 saved, 32 + n the game's deck n, e.g. decks a page sells; `hide "{save:shop.bought.#}"` leaves out each listed deck whose text (`#` = its id) is set, and `reload` lists them again) |
-| `deck` | deckInfo | the deck |
+| `deck` | deckInfo | the deck (or none: `deck name "..." owner "..." type "..." about "..." character "-1"` fills the panel from the page) |
 | `series` | seriesTabs | |
 | `characters` | characters | the series |
 | `user` | user | (the player's name, avatar and DP, top right) |
@@ -66,7 +70,7 @@ text "You have {game:dp} DP and {game:owned.4007} Blue-Eyes." at 1000, 220 width
 | `box` | cardBox | the card ids (`box "4007, 4041" cols 4 rows 2`) |
 | `deckcards` | deckView | the deck id (`deckcards "{var:deck}" bind var:card`): the deck's Main / Extra / Side cards and stats |
 | `progress` | progress | the value (`progress "{var:done}" max 40 at 616, 935`) |
-| `option` | option | the label (`option "Difficulty" values ["Easy" = "0", "Hard" = "1"] bind var:d at 1437, 253`) |
+| `option` | option | the label (`option "Difficulty" values ["Easy" = "0", "Hard" = "1"] bind var:d at 1437, 253`; `values "{game:...}"` = values a plugin names, `"label=value|..."`) |
 | `pack` | pack | the pack id (`pack {var:packId} at 506, 575`) |
 | `tag` | tag | the text (`tag "Main Deck {var:count}" width 400 at 700, 300`) |
 | `spinner` | spinner | - (`spinner at 1700, 300`) |
@@ -188,12 +192,14 @@ and fixed prices are lines of `card-store-prices.bob`. Booster packs (`packs.jso
 
 ## Worked example: the ban list picker
 
-`Mods\Ban Lists` (built 2026-10-21, untested) holds every TCG Forbidden & Limited List as `Yu-Gi-Oh-Ex\banlists\<date> <name>.json`
-(formatlibrary.com; `"allowed"` = the cards out in the TCG by that date, so each is a period format) and `pages\banlists.bob`. The host's
-"Ban list" row (Game / Off / the picked list / **Choose a list...**) opens the page. Yu-Gi-Oh-MP (`BanListPicker.cpp`) supplies only what a
-page can't know: `rows "mp.banlists"` (the lists matching `var:banlist.era` / `var:banlist.year`, 8 a page by `var:banlist.page`),
-`call("mp.banlist.use")` (the list whose index is in `var:banlist`), `call("mp.banlist.game")` / `call("mp.banlist.off")`, and
-`game:mp.banlist` / `.count` / `.pages` / `.pagetext`. The filters, paging and layout are the script's: a filter's `onchange` resets
+Yu-Gi-Oh-MP ships every TCG and OCG Forbidden & Limited List (`Content\banlists\TCG|OCG\<date> <name>.json`, formatlibrary.com /
+yugipedia.com; `"allowed"` = the cards out by that date, so each is a period format) and `Content\pages\banlists.bob`; the build copies
+them to `Plugins\Yu-Gi-Oh-MP\` and the plugin hands RIX that pages folder (`RIX_AddPageFolder`). A player's own lists go in
+`Yu-Gi-Oh-Ex\banlists` (WolfX Save as MP list), a mod's in `<mod>\banlists`. The host's More Options page (Create Match > **More
+Options**) opens the picker from its **Ban list** button. Yu-Gi-Oh-MP (`BanListPicker.cpp`) supplies only what a page can't know:
+`rows "mp.banlists"` (the lists matching `var:banlist.era` / `var:banlist.year`, 8 a page by `var:banlist.page`), `call("mp.banlist.use")`
+(the list whose index is in `var:banlist`), `call("mp.banlist.game")` / `call("mp.banlist.off")`, and `game:mp.banlist` / `.count` /
+`.saved` / `.nomatch` / `.pages` / `.pagetext`. The filters, paging and layout are the script's: a filter's `onchange` resets
 the page and `reload`s.
 
 ## Adding to the language

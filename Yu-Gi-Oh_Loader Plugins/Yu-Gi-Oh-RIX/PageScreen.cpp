@@ -48,6 +48,7 @@
 #include "YuGiOh/YuGiOh-SAVE.h"
 #include "YuGiOh/YuGiOh-PASS.h"
 #include "Yu-Gi-Oh-Mods.h"
+#include "Yu-Gi-Oh-Memory.h"
 #include "Yu-Gi-Oh-Core.h"   // the save extension (save: variables)
 
 namespace R = YGO::RIX;
@@ -628,7 +629,8 @@ namespace
         const auto source = g_ValueSources.find(name.substr(0, dot));
         if (source != g_ValueSources.end())
         {
-            char buffer[512] = {};
+            static char buffer[16384];   // room for a list of card ids (a card box's "cards"); game thread only
+            buffer[0] = 0;
             const int length = source->second.Callback(dot == std::string::npos ? "" : name.c_str() + dot + 1, buffer, sizeof(buffer), source->second.User);
             return length > 0 ? std::string(buffer, (std::min)(static_cast<size_t>(length), sizeof(buffer) - 1)) : std::string();
         }
@@ -1024,6 +1026,8 @@ namespace
         std::vector<void*> Digits;
         int DigitFocus = 0;
         void* CardInfo = nullptr;
+        bool SlideOut = false;               // "slide": true - the card panel is out (it slides in from the left edge)
+        float SlideX = 0;                    // where its node is now
         void* Series = nullptr;
         R::Vector SeriesList{};
         void* Chars = nullptr;
@@ -1041,12 +1045,17 @@ namespace
         void* CardBox = nullptr;
         std::string BoxCards = "\x1";        // the expanded "cards" the box was filled with
         void* DeckView = nullptr;
-        std::string ViewDeck = "\x1";        // the expanded "deck" the panel shows
+        std::string ViewDeck = "\x1";        // the expanded "deck" (or "sections") the panel shows
+        std::wstring SectionTitles[3];       // "sections" titles (the row title frames point at them)
+        int SectionCols[3]{};                // "sections": squeezed cards per row the panel was built with (its pools; GrowDeckView)
+        std::vector<void*> OldDeckViews;     // panels replaced by a bigger one (hidden, kept: the scene may still point at them)
+        std::wstring ViewTitle;
         void* Progress = nullptr;
         std::string ShownProgress = "\x1";   // "value/max" the bar was filled with
         void* Option = nullptr;
         std::wstring OptionLabel, OptionValue;
         bool OptionFocused = false;
+        R::SharedNode OptionBox{};           // the optionbox sprite behind the value while focused
         void* Pack = nullptr;
         std::string ShownPack = "\x1";       // the expanded "pack" the wrapper shows
         void* Tag = nullptr;
@@ -1068,6 +1077,8 @@ namespace
         int Focus = -1;
         bool Built = false;
         std::wstring HelpText;               // the description last shown on the help bar
+        std::deque<std::wstring> KeyLabels;  // "keys": the help bar prompts' texts (widget_Help points at them)
+        std::vector<R::HelpEntry> KeyEntries;
     };
 
     void* g_Screen = nullptr;
@@ -1079,6 +1090,8 @@ namespace
     bool g_Shown = false;                           // the top page's widgets are on screen
     void* g_PendingFrom = nullptr;                  // a screen change to the page screen that has to wait for the running one
     int g_PendingFrames = 0;
+    int64_t g_LastMouse = 0;
+    int g_MovedFrames = 0;   // frames since the player last moved (keys or mouse): a sliding card panel only comes out for the player's own moves
 
     Page* Top() { return g_Stack.empty() ? nullptr : g_Stack.back().get(); }
 
@@ -1157,15 +1170,24 @@ namespace
         g_FullOpen = false;
     }
 
+    std::vector<std::filesystem::path> g_PluginPageFolders;   // RIX_AddPageFolder, in the order added
+
+    // The mods, then Yu-Gi-Oh-Ex\pages, then the plugins' own page folders (so a copy in either overrides a plugin's page). Nothing found =
+    // the Yu-Gi-Oh-Ex path (it fails to open).
     std::filesystem::path PageFile(const std::string& name)
     {
         std::filesystem::path path = YGO::Mods::Find("pages\\" + name + ".json");
-        if (path.empty())
-        {
-            char exe[MAX_PATH]{};
-            GetModuleFileNameA(nullptr, exe, MAX_PATH);
-            path = std::filesystem::path(exe).parent_path() / "Yu-Gi-Oh-Ex" / "pages" / (name + ".json");
-        }
+        if (!path.empty())
+            return path;
+        char exe[MAX_PATH]{};
+        GetModuleFileNameA(nullptr, exe, MAX_PATH);
+        path = std::filesystem::path(exe).parent_path() / "Yu-Gi-Oh-Ex" / "pages" / (name + ".json");
+        std::error_code error;
+        if (std::filesystem::exists(path, error))
+            return path;
+        for (const auto& folder : g_PluginPageFolders)
+            if (std::filesystem::exists(folder / (name + ".json"), error))
+                return folder / (name + ".json");
         return path;
     }
 
@@ -1214,11 +1236,43 @@ namespace
         }
     }
 
+    // A page key's button: "details" = the game's Show Details prompt (0x8000 / the "3" key, as the Battle Pack edit screen's help entry
+    // 0x140A7A1C0 {0x8000, 3}), "option" = 0x4000; a number = that input mask.
+    R::HelpEntry KeyEntry(const json& key)
+    {
+        const json& button = Field(key, "button");
+        if (button.is_number_integer())
+            return { button.get<int32_t>(), 1, 0 };
+        const std::string name = button.is_string() ? button.get<std::string>() : std::string();
+        if (name == "details")
+            return { 0x8000, 3, 0 };
+        if (name == "option")
+            return { 0x4000, 1, 0 };
+        return { 0, 0, 0 };
+    }
+
     void ResetHelp(Page& page)
     {
         void* help = static_cast<char*>(g_Screen) + kHelp;
         R::HelpClear(help);
         R::HelpAdd(help, reinterpret_cast<const R::HelpEntry*>(kHelpSelect), 1);
+        // "keys": [{ "button": "details", "label": "Preview", "action": ... }] - prompts between Select and Back, as the game's screens
+        page.KeyLabels.clear();
+        page.KeyEntries.clear();
+        const json& keys = Field(page.Root, "keys");
+        for (size_t i = 0; keys.is_array() && i < keys.size(); ++i)
+        {
+            R::HelpEntry entry = KeyEntry(keys[i]);
+            if (!entry.Mask)
+            {
+                Logger::WriteLog(std::format("Page '{}': key {} has no button the engine knows (details, option or a mask)", page.Name, i + 1), MODULE_NAME, 1);
+                continue;
+            }
+            entry.TextId = reinterpret_cast<int64_t>(page.KeyLabels.emplace_back(Wide(Expand(Str(keys[i], "label")))).c_str());
+            page.KeyEntries.push_back(entry);
+        }
+        for (const R::HelpEntry& entry : page.KeyEntries)
+            R::HelpAdd(help, &entry, 1);
         R::HelpAdd(help, reinterpret_cast<const R::HelpEntry*>(kHelpBack), 1);
         R::HelpLayout(help);
         page.HelpText = L"\x1";   // forces the next description
@@ -1262,12 +1316,29 @@ namespace
         return nullptr;
     }
 
-    // A choice item's values: [ "a", "b" ] or [ { "label": "Easy", "value": "0" } ], or "toggle": true (Off / On = 0 / 1).
+    // A choice item's values: [ "a", "b" ] or [ { "label": "Easy", "value": "0" } ], or "toggle": true (Off / On = 0 / 1), or a string
+    // naming values ("{game:...}"), expanded each time: "label=value|label=value" (a part without '=' is both).
     std::vector<std::pair<std::string, std::string>> ChoiceValues(const json& item)
     {
         std::vector<std::pair<std::string, std::string>> values;
         if (item.value("toggle", false))
             return { { "Off", "0" }, { "On", "1" } };
+        if (item.contains("values") && item["values"].is_string())
+        {
+            const std::string text = Expand(item["values"].get<std::string>());
+            for (size_t start = 0; start <= text.size();)
+            {
+                size_t end = text.find('|', start);
+                if (end == std::string::npos)
+                    end = text.size();
+                const std::string part = text.substr(start, end - start);
+                const size_t equals = part.find('=');
+                if (!part.empty())
+                    values.emplace_back(part.substr(0, equals), equals == std::string::npos ? part : part.substr(equals + 1));
+                start = end + 1;
+            }
+            return values;
+        }
         if (item.contains("values") && item["values"].is_array())
             for (const json& v : item["values"])
             {
@@ -1605,8 +1676,53 @@ namespace
         R::Trunk::Refresh(trunk);
     }
 
+    // "name" instead of "deck": the panel filled from the page, no saved deck behind it (a ban list's preview). "name", "owner" (the line
+    // under the portrait), "type", "about" (the Source line) may name values; "character" = whose portrait (-1 / empty = none).
+    void ShowCustomDeckInfo(Element& element)
+    {
+        namespace P = R::DeckInfoPanel;
+        const std::string name = Expand(Str(element.Source, "name")), owner = Expand(Str(element.Source, "owner")),
+                          type = Expand(Str(element.Source, "type")), about = Expand(Str(element.Source, "about")),
+                          character = Expand(Str(element.Source, "character", "-1"));
+        const std::string shown = name + '\x1' + owner + '\x1' + type + '\x1' + about + '\x1' + character;
+        if (shown == element.ShownDeck)
+            return;
+        element.ShownDeck = shown;
+
+        char* panel = static_cast<char*>(element.DeckInfo);
+        auto part = [panel](size_t at) { return *reinterpret_cast<void**>(panel + at); };
+        auto show = [&](size_t at, bool on) { if (part(at)) Node_SetEnabled(part(at), on); };
+        auto text = [&](size_t at, const std::string& value)
+        {
+            show(at, !value.empty());
+            if (void* layer = *reinterpret_cast<void**>(panel + at + P::TextOf))
+                P::SetText(layer, Wide(value).c_str());
+        };
+
+        const int who = character.empty() ? -1 : std::atoi(character.c_str());
+        show(P::Portrait, who >= 0);
+        if (who >= 0 && part(P::PortraitImage))
+        {
+            P::ImageSetTexture(part(P::PortraitImage), P::CharacterPortrait(who), 0);
+            P::ImageRefresh(part(P::PortraitImage));
+        }
+        text(P::Name, name);
+        text(P::Owner, owner);
+        show(P::TypeBox, !type.empty());
+        text(P::Type, type);
+        show(P::Source, !about.empty());
+        text(P::SourceLine, about);
+        for (size_t at : { P::SignatureHeading, P::Signature, P::Validity })
+            show(at, false);
+    }
+
     void ShowDeckInfo(Element& element)
     {
+        if (element.Source.contains("name"))
+        {
+            ShowCustomDeckInfo(element);
+            return;
+        }
         const std::string deck = Expand(Str(element.Source, "deck"));
         if (deck == element.ShownDeck)
             return;
@@ -1626,6 +1742,25 @@ namespace
         Related_SetCard(element.Related, konami == 0xFFFF ? 0 : Related_Count(konami), konami == 0xFFFF ? nullptr : Related_List(konami), konami);
     }
 
+    // Card ids (Konami, 3900+) in a text: separated by anything that is not a digit.
+    std::vector<uint16_t> ParseCardIds(const std::string& text)
+    {
+        std::vector<uint16_t> ids;
+        int value = -1;
+        for (size_t i = 0; i <= text.size(); ++i)
+        {
+            if (i < text.size() && std::isdigit(static_cast<unsigned char>(text[i])))
+                value = (std::min)((value < 0 ? 0 : value * 10) + (text[i] - '0'), 0x10000);
+            else if (value >= 0)
+            {
+                if (value >= 3900 && value < 0xFFFF)
+                    ids.push_back(static_cast<uint16_t>(value));
+                value = -1;
+            }
+        }
+        return ids;
+    }
+
     // "cards": ids separated by anything that is not a digit ("4007, 4008", "{var:pulled}"), or a JSON array of ids.
     void FillCardBox(Element& element)
     {
@@ -1639,19 +1774,7 @@ namespace
         if (text == element.BoxCards)
             return;
         element.BoxCards = text;
-        std::vector<uint16_t> ids;
-        int value = -1;
-        for (size_t i = 0; i <= text.size(); ++i)
-        {
-            if (i < text.size() && std::isdigit(static_cast<unsigned char>(text[i])))
-                value = (value < 0 ? 0 : value * 10) + (text[i] - '0');
-            else if (value >= 0)
-            {
-                if (value >= 3900 && value < 0xFFFF)
-                    ids.push_back(static_cast<uint16_t>(value));
-                value = -1;
-            }
-        }
+        const std::vector<uint16_t> ids = ParseCardIds(text);
         R::CardBox::SetCards(element.CardBox, static_cast<unsigned>(ids.size()), ids.data(), -1, nullptr, nullptr);   // as the store
     }
 
@@ -1661,9 +1784,115 @@ namespace
         __except (EXCEPTION_EXECUTE_HANDLER) { return nullptr; }
     }
 
+    // ScreenBattlePackEdit::SetupWidgets (it puts the panel at 646, 120). With "sections" each row's pool of card widgets (made here, once:
+    // squeezed-cards-per-row x rows from the row layouts, 60 / 15 / 15 for a deck) is element.SectionCols[i] x rows instead: the layouts
+    // are raised for this panel only and put back straight after.
+    void CreateDeckView(Element& element, void* screen)
+    {
+        element.DeckView = NewWidget(32768);
+        R::DeckView::Construct(element.DeckView);
+        R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
+        const bool sections = element.Source.contains("sections");
+        int saved[3]{};
+        if (sections)
+            for (int i = 0; i < 3; ++i)
+            {
+                if (element.SectionCols[i] <= 0)
+                    element.SectionCols[i] = R::DeckView::SectionSqueezedCols[i];
+                saved[i] = *reinterpret_cast<int*>(R::DeckView::RowLayouts[i] + R::DeckView::LayoutSqueezedCols);
+                YGO::Memory::WriteValue(R::DeckView::RowLayouts[i] + R::DeckView::LayoutSqueezedCols, element.SectionCols[i]);
+            }
+        R::DeckView::CreateFromLayout(element.DeckView, &parent, 2 + element.Z, R::ScreenOwner(screen), element.X, element.Y);
+        if (sections)
+            for (int i = 0; i < 3; ++i)
+                YGO::Memory::WriteValue(R::DeckView::RowLayouts[i] + R::DeckView::LayoutSqueezedCols, saved[i]);
+        R::DeckView::SetCellStyle(element.DeckView, 2);
+        R::DeckView::SetMode(element.DeckView, 2);
+        R::DeckView::SetMainLimit(element.DeckView, static_cast<int>(Num(element.Source, "mainLimit", 40)));
+        R::DeckView::SelectSection(element.DeckView, 0, 0);
+    }
+
+    // A section with more cards than its row's pool: the panel is built again with room for them (half as much again, so it rarely
+    // happens twice). The pool can't grow in place (growing its vector would move card widgets the scene already points at), so the old
+    // panel is hidden and kept, like every widget RIX is done with.
+    void GrowDeckView(Element& element, const size_t (&counts)[3])
+    {
+        bool grow = false;
+        for (int i = 0; i < 3; ++i)
+        {
+            const int rows = (std::max)(1, *reinterpret_cast<int*>(static_cast<char*>(element.DeckView) + R::DeckView::Rows + R::DeckView::RowSize * i + R::DeckView::RowVisibleRows));
+            const int need = static_cast<int>((counts[i] * 3 / 2 + rows - 1) / rows);
+            if (static_cast<size_t>(element.SectionCols[i]) * rows < counts[i])
+            {
+                element.SectionCols[i] = (std::max)(element.SectionCols[i], need);
+                grow = true;
+            }
+        }
+        if (!grow || !g_Screen)
+            return;
+        R::WidgetSetVisible(element.DeckView, false);
+        element.OldDeckViews.push_back(element.DeckView);
+        CreateDeckView(element, g_Screen);   // the page's focus code sets the new one's focus when it next changes
+        Logger::WriteLog(std::format("deckView: rows grown to {} / {} / {} cards", element.SectionCols[0] * 4, element.SectionCols[1], element.SectionCols[2]), MODULE_NAME, 0);
+    }
+
+    // "sections": three { "title", "cards" } in place of a deck: the panel's Main / Extra / Side rows retitled and filled straight from
+    // the ids (no deck record; each row holds its widget pool, 200 / 80 / 80 for such a panel, fanned), "title" = the panel's header. The deck
+    // stats bar is hidden (it reads a deck). Each row is filled with widget_CardDisplayFlex's fill (0x14088E1C0), as SortAndFill does.
+    void ShowDeckSections(Element& element, bool force)
+    {
+        const json& sections = element.Source["sections"];
+        std::string key = Expand(Str(element.Source, "title"));
+        std::string titles[3], cards[3];
+        for (size_t i = 0; i < 3 && i < sections.size(); ++i)
+        {
+            const json& section = sections[i];   // { "title", "cards" } or [title, cards] (BOB: sections [["Forbidden", "..."], ...])
+            const bool pair = section.is_array() && section.size() >= 2 && section[0].is_string() && section[1].is_string();
+            titles[i] = Expand(pair ? section[0].get<std::string>() : Str(section, "title"));
+            cards[i] = Expand(pair ? section[1].get<std::string>() : Str(section, "cards"));
+            key += "\x1" + titles[i] + "\x1" + cards[i];
+        }
+        if (!force && key == element.ViewDeck)
+            return;
+        element.ViewDeck = key;
+        std::vector<uint16_t> sectionIds[3];
+        size_t counts[3]{};
+        for (int i = 0; i < 3; ++i)
+            counts[i] = (sectionIds[i] = ParseCardIds(cards[i])).size();
+        GrowDeckView(element, counts);   // a bigger panel first when a row's pool is too small
+        char* zone = static_cast<char*>(element.DeckView);
+        R::DeckView::SetDeck(zone, nullptr);   // empties the panel's own deck and rows
+        element.ViewTitle = Wide(Expand(Str(element.Source, "title")));
+        R::DeckView::SetHeaderText(*reinterpret_cast<void**>(zone + R::DeckView::Header), element.ViewTitle.c_str());   // copied
+        R::DeckView::ShowStats(zone, false);
+        for (int i = 0; i < 3; ++i)
+        {
+            char* row = zone + R::DeckView::Rows + R::DeckView::RowSize * i;
+            std::memset(row + R::DeckView::RowCountColours, 0, 12);   // the Main 40-60 / Extra 15 colouring of the count: off
+            element.SectionTitles[i] = Wide(titles[i]);
+            R::TextFrame::SetText(row + R::DeckView::RowTitle, reinterpret_cast<int64_t>(element.SectionTitles[i].c_str()), 1);
+            std::vector<uint16_t>& ids = sectionIds[i];
+            // never more than the row's pool of card widgets (GrowDeckView made room; this is the safety net): the row places cells by
+            // card index, past the pool it reads over memory (crashed 2026-10-25 with 20 cards in a 15-card row)
+            const size_t pool = static_cast<size_t>(*reinterpret_cast<int*>(row + R::DeckView::RowSqueezedCols)) * *reinterpret_cast<int*>(row + R::DeckView::RowVisibleRows);
+            if (ids.size() > pool)
+            {
+                Logger::WriteLog(std::format("deckView section '{}': {} cards, the row holds {}; the rest are not shown", titles[i], ids.size(), pool), MODULE_NAME, 1);
+                ids.resize(pool);
+            }
+            std::vector<int16_t> list(ids.begin(), ids.end());
+            R::DeckView::FillRow(row, static_cast<unsigned>(list.size()), list.data(), -1, *reinterpret_cast<void**>(zone + R::DeckView::Combo), zone + R::DeckView::Counts);
+        }
+    }
+
     // "deck": a deck id as the deck picker binds it (-1 / empty = none). As ScreenBattlePackEdit::RefreshDeck.
     void ShowDeckView(Element& element, bool force = false)
     {
+        if (element.Source.contains("sections") && element.Source["sections"].is_array())
+        {
+            ShowDeckSections(element, force);
+            return;
+        }
         const std::string deck = Expand(Str(element.Source, "deck"));
         if (!force && deck == element.ViewDeck)
             return;
@@ -1689,6 +1918,25 @@ namespace
         R::ProgressBar::SetRange(element.Progress, 0.0f, total > 0 ? done : 0.0f, total > 0 ? total : 1.0f);
     }
 
+    // The row's own focus look (value + label lit, arrows), then the label back to its plain colour: only the value lights, over the
+    // optionbox sprite (Video Settings' value box) shown behind it.
+    bool Visible(const Element& element);
+    void ShowOptionFocus(Element& element)
+    {
+        R::WidgetSetFocused(element.Option, element.OptionFocused);
+        if (char* label = *reinterpret_cast<char**>(static_cast<char*>(element.Option) + R::OptionRow::LabelText))
+        {
+            const int colour = R::OptionRow::TextColour(false);
+            if (*reinterpret_cast<int*>(label + R::OptionRow::TextColourAt) != colour)
+            {
+                *reinterpret_cast<int*>(label + R::OptionRow::TextColourAt) = colour;
+                *(label + R::OptionRow::TextDrawn) = 0;
+            }
+        }
+        if (element.OptionBox.Node)
+            Node_SetEnabled(element.OptionBox.Node, element.OptionFocused && Visible(element));
+    }
+
     // The value shown is the label of the bound value among "values" (as a menu choice item).
     void ShowOption(Element& element)
     {
@@ -1711,7 +1959,7 @@ namespace
             R::OptionRow::SetValue(element.Option, reinterpret_cast<int64_t>(element.OptionValue.c_str()));
             // the text only redraws when its colour state changes: flip the focus and back
             R::WidgetSetFocused(element.Option, !element.OptionFocused);
-            R::WidgetSetFocused(element.Option, element.OptionFocused);
+            ShowOptionFocus(element);
         }
     }
 
@@ -1912,17 +2160,7 @@ namespace
                 element.Height = desc.Rows * desc.CellH + (desc.Rows - 1) * desc.GapY + 2 * desc.PadY;
         }
         else if (element.Kind == "deckView")
-        {
-            // ScreenBattlePackEdit::SetupWidgets (it puts the panel at 646, 120)
-            element.DeckView = NewWidget(32768);
-            R::DeckView::Construct(element.DeckView);
-            R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
-            R::DeckView::CreateFromLayout(element.DeckView, &parent, 2 + element.Z, R::ScreenOwner(screen), element.X, element.Y);
-            R::DeckView::SetCellStyle(element.DeckView, 2);
-            R::DeckView::SetMode(element.DeckView, 2);
-            R::DeckView::SetMainLimit(element.DeckView, static_cast<int>(Num(element.Source, "mainLimit", 40)));
-            R::DeckView::SelectSection(element.DeckView, 0, 0);
-        }
+            CreateDeckView(element, screen);
         else if (element.Kind == "progress")
         {
             element.Progress = NewWidget(512);
@@ -1941,8 +2179,18 @@ namespace
             std::memcpy(&labelBits, &labelWidth, sizeof(labelBits));
             const bool arrows = !Field(element.Source, "arrows").is_boolean() || Field(element.Source, "arrows").get<bool>();
             R::SharedNode parent = R::ParentRef(R::ScreenRoot(screen));
+            const float valueWidth = Num(element.Source, "valueWidth", 300.0f);
             R::OptionRow::CreateFromLayout(element.Option, &parent, 10 + element.Z, R::ScreenOwner(screen), element.X, element.Y, arrows ? 1 : 0,
-                                           Num(element.Source, "valueWidth", 300.0f), labelBits);
+                                           valueWidth, labelBits);
+            // the highlight box ("box": false = none): pdui/doshared optionbox over the value and the arrows (at +-(valueWidth / 2 + 54))
+            if (!Field(element.Source, "box").is_boolean() || Field(element.Source, "box").get<bool>())
+            {
+                const float width = valueWidth + (arrows ? 2 * 54.0f + 40.0f : 40.0f), height = 70.0f;
+                element.OptionBox = R::Dfx::AddImage(R::ScreenRoot(screen), "pdui/doshared", "optionbox", 9 + element.Z, element.X - width / 2,
+                                                     element.Y - height / 2, width, height);
+                if (element.OptionBox.Node)
+                    Node_SetEnabled(element.OptionBox.Node, false);
+            }
             ShowOption(element);
         }
         else if (element.Kind == "pack")
@@ -2012,6 +2260,31 @@ namespace
         R::WidgetSetVisible(element.CardInfo, card > 0);
     }
 
+    // "slide": true on a card panel: it waits off the left edge and slides out when the player moves onto a card (keys or mouse), the
+    // way the deck screens bring their card panel forward; Back or a right-click slides it away again (the page stays open).
+    bool Slides(const Element& element)
+    {
+        const json& slide = Field(element.Source, "slide");
+        return element.CardInfo && slide.is_boolean() && slide.get<bool>();
+    }
+
+    // x = the panel's node (widget_Base::CreateNode puts it there; the frame and text reach about width / 2 either side): fully off screen
+    float SlideHiddenX(const Element& element) { return -((element.Width > 0 ? element.Width : 486.5f) / 2.0f) - 60.0f; }
+
+    void SlideCard(Element& element, bool jump = false)
+    {
+        const float target = element.SlideOut ? element.X : SlideHiddenX(element);
+        if (jump || std::abs(target - element.SlideX) < 1.0f)
+        {
+            if (!jump && element.SlideX == target)
+                return;
+            element.SlideX = target;
+        }
+        else
+            element.SlideX += (target - element.SlideX) * 0.25f;   // about a third of a second at 60 frames
+        R::NodeSetPosition(WidgetNode(element.CardInfo), element.SlideX, element.Y);
+    }
+
     bool Visible(const Element& element) { return Holds(Field(element.Source, "visible")); }
 
     void SetWidgetsVisible(Element& element, bool on)
@@ -2027,6 +2300,8 @@ namespace
                                element.DeckView, element.Progress, element.Option, element.Pack, element.Tag, element.Spinner })
             if (widget)
                 R::WidgetSetVisible(widget, on);
+        if (element.OptionBox.Node)
+            Node_SetEnabled(element.OptionBox.Node, on && element.OptionFocused);
         if (on && element.Tag)
             ShowTag(element, true);   // SetText shows the frame again (an empty text keeps it hidden)
         if (on && element.Pack)
@@ -2092,8 +2367,15 @@ namespace
                 if (page.Elements[i].Focusable && Visible(page.Elements[i]))
                     page.Focus = static_cast<int>(i);
         }
+        // "backdrop": the screen type ScreenCommonBg::DrawForScreenType draws behind the current screen every frame (screen+40): 3..8 =
+        // background styles 1..6 (3 Card Shop, 4 the option screens, the default; 5 the online match screens), 1 / 2 flat fills
+        *reinterpret_cast<int*>(static_cast<char*>(g_Screen) + 40) = std::clamp(static_cast<int>(Num(page.Root, "backdrop", kScreenTypeOptions)), 1, 8);
         ShowHeader(page);
         ResetHelp(page);
+        // "help": false hides the prompt / description bar at the bottom (widget_Help, screen+264; vftable +24 = the base SetVisible), for a
+        // page whose content reaches the bottom. Shown again by the next page that doesn't say so.
+        const json& help = Field(page.Root, "help");
+        R::WidgetSetVisible(static_cast<char*>(g_Screen) + kHelp, !(help.is_boolean() && !help.get<bool>()));
         for (Element& element : page.Elements)
         {
             if (Visible(element))
@@ -2104,6 +2386,12 @@ namespace
             ShowSlider(element);
             if (!element.Digits.empty())
                 ShowDigits(element);
+            if (Slides(element))
+            {
+                element.SlideOut = false;   // each time the page shows, a sliding card panel starts tucked away
+                SlideCard(element, true);
+                g_MovedFrames = 0;          // and the move that opened the page doesn't bring it out
+            }
         }
         FocusChanged(page);
         g_Shown = true;
@@ -2187,6 +2475,8 @@ namespace
                 element.Bind = Binding::Parse(Str(source, "bind"));
                 static const char* kFocusable[] = { "menu", "slider", "digits", "seriesTabs", "characters", "decks", "cardGrid", "relatedCards", "cardBox", "deckView", "option", "pack" };
                 element.Focusable = std::any_of(std::begin(kFocusable), std::end(kFocusable), [&](const char* k) { return element.Kind == k; });
+                if (source.contains("focusable") && source["focusable"].is_boolean() && !source["focusable"].get<bool>())
+                    element.Focusable = false;   // display only: never focused, no keys / mouse (e.g. a deck panel that only shows cards)
                 static const char* kKnown[] = { "menu", "slider", "digits", "cardInfo", "image", "text", "seriesTabs", "characters", "decks", "deckInfo", "cardGrid", "user", "relatedCards", "cardBox",
                                               "deckView", "progress", "option", "pack", "tag", "spinner" };
                 if (std::none_of(std::begin(kKnown), std::end(kKnown), [&](const char* k) { return element.Kind == k; }))
@@ -2223,7 +2513,7 @@ namespace
             if (element.Option)
             {
                 element.OptionFocused = focused;
-                R::WidgetSetFocused(element.Option, focused);   // its own look: highlight + arrows
+                ShowOptionFocus(element);   // its own look: the value lit + arrows, over the optionbox
             }
             if (element.Pack)
                 R::WidgetSetFocused(element.Pack, focused);
@@ -2271,9 +2561,15 @@ namespace
 
     void Update(Page& page)
     {
-        int pressed = R::Input::GetPressed(R::InputState) | R::Input::GetRepeat(R::InputState);
-        pressed |= R::Input::HelpBarPressed(static_cast<char*>(g_Screen) + kHelp);
+        const int once = R::Input::GetPressed(R::InputState) | R::Input::HelpBarPressed(static_cast<char*>(g_Screen) + kHelp);
+        int pressed = once | R::Input::GetRepeat(R::InputState);
         const int held = R::Input::GetHeld(R::InputState);
+        {
+            const int64_t mouse = R::Input::MousePosition();
+            const bool moved = (pressed & (kUp | kDown | kLeft | kRight)) || (R::Input::MouseActive() && mouse != g_LastMouse);
+            g_LastMouse = mouse;
+            g_MovedFrames = moved ? 3 : (std::max)(0, g_MovedFrames - 1);   // the card changes a frame after the move (the binding is read first)
+        }
 
         if (g_PopupOpen)
         {
@@ -2307,6 +2603,28 @@ namespace
             else
                 Full_Update(g_Full, 1.0f / 60.0f, fullPressed, fullHeld);
             return;
+        }
+        // a sliding card panel that is out: Back or a right-click puts it away (before the page's own Back)
+        for (Element& element : page.Elements)
+            if (element.SlideOut && Visible(element)
+                && ((pressed & kCancel) || R::InputCancelPressed(R::InputState, kCancel) || Input_TakeRightClick(R::InputState, 0x8000u)))
+            {
+                element.SlideOut = false;
+                R::PlayUISound(kSoundBack);
+                SlideCard(element);
+                return;
+            }
+        // "keys": a help bar prompt's button (pressed, not held down) runs its action
+        const json& keys = Field(page.Root, "keys");
+        for (size_t i = 0; keys.is_array() && i < keys.size(); ++i)
+        {
+            const int mask = KeyEntry(keys[i]).Mask;
+            if (mask && (once & mask) && keys[i].contains("action"))
+            {
+                R::PlayUISound(kSoundConfirm);
+                RunAction(keys[i]["action"]);
+                return;
+            }
         }
         const int64_t mouse = R::Input::MousePosition();
         const float mx = static_cast<float>(static_cast<int32_t>(mouse)), my = static_cast<float>(static_cast<int32_t>(mouse >> 32));
@@ -2351,7 +2669,14 @@ namespace
             }
             if (element.CardInfo)
             {
+                const int before = element.ShownCard;
                 ShowCard(element);
+                if (Slides(element))
+                {
+                    if (element.ShownCard != before && element.ShownCard > 0 && g_MovedFrames > 0)
+                        element.SlideOut = true;   // the player moved onto another card
+                    SlideCard(element);
+                }
                 R::CardInfo::Update(element.CardInfo, 1.0f / 60.0f, held, 0);
             }
         }
@@ -2596,8 +2921,14 @@ namespace
                     if (element.Source.contains("onChange"))
                         RunAction(element.Source["onChange"]);
                 }
+                // "fullView": false = never the full card view (browse only: hover / keys still bring a card forward)
+                const json& fullView = Field(element.Source, "fullView");
+                const bool full = !(fullView.is_boolean() && !fullView.get<bool>());
                 if (pressed & 0x8000)
-                    ShowFullCard(selected);
+                {
+                    if (full)
+                        ShowFullCard(selected);
+                }
                 else if ((section >= 2 || (pressed & kConfirm)) && selected != 0xFFFF)   // a click on a card, or confirm (as Battle Pack's 0x1000)
                 {
                     // the page's action, or without one the card's full view (as the right-click)
@@ -2606,7 +2937,7 @@ namespace
                         R::PlayUISound(kSoundConfirm);
                         RunAction(element.Source["action"]);
                     }
-                    else
+                    else if (full)
                         ShowFullCard(selected);
                 }
                 const int tabs = R::DeckSelectList::TabButtons(R::InputState);
@@ -2743,6 +3074,24 @@ namespace
                 }
             }
         }
+
+        // "highlight": "var:<name>" on a menu: the variable follows the highlighted item's value (keys or mouse), so other elements can
+        // preview it (a card box of the list under the cursor); the page's texts and boxes are redone when it changes.
+        bool highlightChanged = false;
+        for (Element& element : page.Elements)
+            if (element.Menu && element.Source.contains("highlight"))
+                if (MenuItem* item = FindItem(element, Menu_IdAt(element.Menu, Menu_Cursor(element.Menu))))
+                {
+                    const Binding target = Binding::Parse(Str(element.Source, "highlight"));
+                    const std::string value = item->Value.empty() ? Narrow(item->Label) : item->Value;
+                    if (target.Get() != value)
+                    {
+                        target.Set(value);
+                        highlightChanged = true;
+                    }
+                }
+        if (highlightChanged && Top() == &page && g_Shown)
+            RefreshPage(page);
 
         if (Top() == &page && g_Shown)
             ShowHelp(page, FocusedDescription(page));
@@ -3191,6 +3540,13 @@ namespace PageScreen
     void RegisterList(const std::string& name, RIX_PageListCallback callback, void* user) { g_Sources[name] = { callback, user }; }
 
     void RegisterValue(const std::string& name, RIX_PageValueCallback callback, void* user) { g_ValueSources[name] = { callback, user }; }
+
+    void AddFolder(const std::wstring& folder)
+    {
+        const std::filesystem::path path(folder);
+        if (std::find(g_PluginPageFolders.begin(), g_PluginPageFolders.end(), path) == g_PluginPageFolders.end())
+            g_PluginPageFolders.push_back(path);
+    }
 
     void ListAdd(void* list, const wchar_t* label, const wchar_t* description, const char* value)
     {

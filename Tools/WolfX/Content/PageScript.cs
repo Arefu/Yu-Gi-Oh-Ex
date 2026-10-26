@@ -49,13 +49,14 @@ namespace WolfEx
             "id", "x", "y", "width", "height", "items", "source", "spacing", "action", "bind", "min", "max", "default", "onChange", "description",
             "label", "count", "card", "series", "deck", "side", "cards", "filterX", "filterY", "resource", "sprite", "alpha", "text", "textSize",
             "align", "colour", "visible", "enabled", "values", "toggle", "title", "cols", "rows", "cellWidth", "cellHeight", "gap", "frame",
-            "mainLimit", "arrows", "valueWidth", "labelWidth", "pack",
+            "mainLimit", "arrows", "valueWidth", "labelWidth", "pack", "fullView", "sections", "highlight", "focusable", "slide",
+            "name", "owner", "type", "about", "character",   // a deckInfo filled from the page (no saved deck)
         ];
 
         public static readonly string[] Widgets = ["menu", "slider", "digits", "card", "series", "characters", "decks", "deck", "cards", "image", "text", "user", "related", "box", "deckcards", "progress", "option", "pack", "tag", "spinner"];
         public static readonly string[] Actions = ["page", "back", "goto", "call", "quit", "set", "toggle", "add", "show_card", "reset_filter", "reload", "message", "confirm", "video", "popup", "if",
             "give_dp", "take_dp", "give_card", "take_card", "give_deck", "unlock", "lock", "unlock_character", "sound"];
-        public static readonly string[] Keywords = ["header", "button", "edit", "hidden", "value", "use", "choice", "rows", "on", "at", "size", "bind", "default", "description", "enabled", "onchange", "yes", "else", "and", "not", "key", "true", "false"];
+        public static readonly string[] Keywords = ["header", "backdrop", "help", "button", "edit", "hidden", "value", "use", "choice", "rows", "on", "at", "size", "bind", "default", "description", "enabled", "onchange", "yes", "else", "and", "not", "key", "true", "false"];
 
         // ---------------------------------------------------------------- tokens
 
@@ -220,6 +221,7 @@ namespace WolfEx
                 var edits = new JsonArray();
                 var values = new JsonObject();
                 var uses = new JsonArray();
+                var keys = new JsonArray();
                 bool header = false;
                 while (Peek.Kind != T.End)
                 {
@@ -232,6 +234,30 @@ namespace WolfEx
                         page["header"] = ExpectString("the header text");
                         header = true;
                         Expect(";");
+                    }
+                    else if (AcceptWord("backdrop"))
+                    {
+                        // the screen type the game draws behind the page: 3..8 = background styles 1..6 (4 = the option screens, the
+                        // default; 5 = the online match screens; 3 = Card Shop), 1 / 2 = flat fills
+                        page["backdrop"] = Number(ExpectNumber("the backdrop (1 to 8)"));
+                        Expect(";");
+                    }
+                    else if (AcceptWord("help"))
+                    {
+                        // help false; hides the prompt / description bar at the bottom of the screen
+                        page["help"] = Value();
+                        Expect(";");
+                    }
+                    else if (AcceptWord("key"))
+                    {
+                        // key details "Preview" -> action;   a help bar prompt whose button runs the action (details = the "3" key)
+                        var key = new JsonObject { ["button"] = Peek.Kind == T.Num ? Number(ExpectNumber("the input mask"))
+                            : Peek.Kind == T.Word ? Next().Text : throw Fail($"expected the key's button (details or option) but found {Shown(Peek)}") };
+                        key["label"] = ExpectString("the prompt's text");
+                        Expect("->");
+                        key["action"] = Action();
+                        Expect(";");
+                        keys.Add(key);
                     }
                     else if (AcceptWord("button"))
                         buttons.Add(MenuButton(buttons.Count));
@@ -261,10 +287,12 @@ namespace WolfEx
                         elements.Add(Widget(kind));
                     }
                     else
-                        throw Fail($"expected header, value, use, button, edit or a widget ({string.Join(", ", Widgets)}) but found {Shown(Peek)}");
+                        throw Fail($"expected header, value, use, key, button, edit or a widget ({string.Join(", ", Widgets)}) but found {Shown(Peek)}");
                 }
                 if (!header)
                     page["header"] = pageName;
+                if (keys.Count > 0)
+                    page["keys"] = keys;
                 if (uses.Count > 0)
                     page["use"] = uses;
                 if (values.Count > 0)
@@ -406,7 +434,8 @@ namespace WolfEx
                     {
                         string name = Next().Text;
                         string key = KnownFields.FirstOrDefault(k => k.Equals(name, StringComparison.OrdinalIgnoreCase)) ?? name;
-                        target[key] = Value();
+                        // values ["All" = "all", "TCG"] (an option's, as a menu choice's), or values "{game:...}" (named values)
+                        target[key] = key == "values" && IsPunct("[") ? Choices() : Value();
                     }
                     else
                         throw Fail($"expected a field (at, size, bind, if, -> ...) but found {Shown(Peek)}");
@@ -741,6 +770,13 @@ namespace WolfEx
             var w = new StringBuilder();
             if (page["header"] is JsonValue header)
                 w.Append("header ").Append(Quote(header.ToString())).Append(";\n");
+            if (page["backdrop"] is JsonValue backdrop)
+                w.Append("backdrop ").Append(backdrop.ToString()).Append(";\n");
+            if (page["help"] is JsonValue help)
+                w.Append("help ").Append(help.ToString().ToLowerInvariant()).Append(";\n");
+            foreach (var key in (page["keys"] as JsonArray ?? []).OfType<JsonObject>())
+                w.Append("key ").Append(key["button"]?.ToString() ?? "details").Append(' ').Append(Quote((string?)key["label"] ?? ""))
+                    .Append(" -> ").Append(ActionText(key["action"], 1)).Append(";\n");
             foreach (var used in (page["use"] as JsonArray ?? []).OfType<JsonValue>())
                 w.Append("use ").Append(Quote(used.ToString())).Append(";\n");
             if (page["values"] is JsonObject values)
@@ -855,6 +891,10 @@ namespace WolfEx
                     case "enabled": w.Append(" enabled ").Append(ConditionText(value)); break;
                     case "action": w.Append(" -> ").Append(ActionText(value, depth)); break;
                     case "onChange": w.Append(" onchange ").Append(ActionText(value, depth)); break;
+                    case "values" when value is JsonArray list:
+                        w.Append(" values [").Append(string.Join(", ", list.Select(v => v is JsonObject c
+                            ? $"{Quote((string?)c["label"] ?? "")} = {Quote((string?)c["value"] ?? "")}" : Quote(v?.ToString() ?? "")))).Append(']');
+                        break;
                     default: w.Append(' ').Append(key).Append(' ').Append(ValueText(value)); break;
                 }
             }

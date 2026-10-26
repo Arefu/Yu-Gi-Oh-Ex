@@ -18,6 +18,9 @@ Pages can also be written as BOB scripts in WolfX (Art & menus > Page scripts), 
 - Pages: `<game>\Yu-Gi-Oh-Ex\pages\<name>.json`. Version 1 pages (the WolfX page designer's) still open the old way, on the Battle Pack screen.
 - The demo: `pages\rix-demo*.json` and `menus\rix-demo.json` (the main menu button). A copy is in `docs/examples/rix-demo`.
 - Open a page from any action with `{ "page": "<name>" }`, from a menu file button, or from a plugin with `RIX_OpenPageFile`.
+- Where `<name>.json` is looked for: the active mods' `pages`, then `Yu-Gi-Oh-Ex\pages`, then the folders plugins add with
+  `RIX_AddPageFolder` (a plugin's own pages, e.g. Yu-Gi-Oh-MP's `Plugins\Yu-Gi-Oh-MP\pages`). A copy earlier in that order overrides.
+  A loader plugin ships such files from a `Content\` folder beside its source: the build copies it to `Plugins\<plugin>\`.
 
 ## File format
 
@@ -35,24 +38,47 @@ Pages can also be written as BOB scripts in WolfX (Art & menus > Page scripts), 
 }
 ```
 
+Page fields: `header`, `elements`, and `"backdrop"` (BOB `backdrop 5;`): the screen type the game's `ScreenCommonBg::DrawForScreenType`
+draws behind the page every frame (screen+40): 3..8 = background styles 1..6 (3 Card Shop, **4 the option screens, the default**,
+5 the online match screens), 1 / 2 flat fills. Each page sets it when it shows. `"help": false` (BOB `help false;`) hides the
+prompt / description bar at the bottom (`widget_Help`, screen+264) for a page whose content reaches the bottom.
+
+`"keys"` (BOB `key details "Preview" -> action;`) adds prompts to the help bar, between Select and Back, as the game's own screens do
+("3 Show Details" on the deck screens): `[{ "button": "details", "label": "Preview", "action": ... }]`. `button` is `details` (0x8000,
+the "3" key, drawn with the game's Show Details icon: help entry 0x140A7A1C0 `{0x8000, 3}`), `option` (0x4000) or an input mask number.
+A press of the button (or a click on its prompt) runs the action from anywhere on the page. Added 2026-10-26, untested.
+
+A card control's `"fullView": false` (`deckView`) keeps hover / keys bringing a card forward but never opens the full-screen card view
+(click, confirm or right-click).
+
+A `cardInfo` with `"slide": true` waits off the left edge and slides out (its node moved with `NodeSetPosition`, eased over about a
+third of a second) when the player moves onto another card with the keys or the mouse; opening the page doesn't bring it out. While
+it is out, Back or a right-click slides it away instead of closing the page. Yu-Gi-Oh-MP's ban list preview uses it. Added
+2026-10-26, untested.
+
+A menu's `"highlight": "var:<name>"` makes the variable follow the highlighted item's value (keys or mouse), and the page's texts, tags
+and card boxes are redone when it changes: a preview of the item under the cursor (Yu-Gi-Oh-MP's ban list picker shows the highlighted
+list's cards that way). `id` only sets its variable on confirm.
+
 Positions are in the game's 1920 x 1080 space, with `x` / `y` as the top left. `width` / `height` are also the box the mouse uses to
-focus a control. Every element can have `"visible": <condition>`.
+focus a control. Every element can have `"visible": <condition>`, and a control `"focusable": false` (display only: never focused, no
+keys or mouse, so a deck panel shows its cards without hover pop-ups).
 
 | `kind` | Game widget (where it comes from) | Fields |
 | --- | --- | --- |
 | `menu` | `RIX::MenuKit::menu`: the button list of the Battle Pack, Help & Options and Pause screens | `items`, `source` (a plugin's list), `spacing` (100), `action` (for list rows), `id` (variable set to the chosen item) |
 | `slider` | `ScreenHelpSetting::tickLine_t`: the 10-tick volume bar of Help & Options > Settings | `bind`, `min` (0), `max` (10), `default`, `onChange`, `description`, `label` (placed like the Settings rows' labels); a click on the bar sets the level under the mouse |
 | `digits` | `widget_EntryDigit`: the code wheels of the Player Match setting screen | `count` (4), `spacing` (140), `bind` (the digits as a number string), `action` (on confirm), `onChange` |
-| `cardInfo` | `widget_CardDetails`: the deck editor's card picture and text | `card` (an id or `"{var:name}"`), `width` (486.5) |
+| `cardInfo` | `widget_CardDetails`: the deck editor's card picture and text | `card` (an id or `"{var:name}"`), `width` (486.5), `slide` (false; true = slides out from the left edge, see above) |
 | `seriesTabs` | `widget_pickSeries`: the Free Duel series row (series 0..5, as Free Duel's OnEnter lists them) | `bind` (the series id), `onChange`, `action` (on confirm); left / right pick |
 | `characters` | `widget_pickCharacter`: the Free Duel opponent grid, filled like `FreeDuel_BuildOpponentList` | `series` (a number or `"{var:...}"`; the list is rebuilt when it changes), `bind` (the character index), `onChange`, `action`; L / R leave the grid |
 | `decks` | `widget_RecipeZone`: Free Duel's deck grid with its category tabs (the player's decks) | `bind` (the deck id), `onChange`, `action`; L / R change the tab, so the mouse moves focus away |
-| `deckInfo` | `widget_RecipeInfo`: the deck panel beside it | `deck` (an id or `"{var:...}"`), `side` (0 yours, 1 the opponent's look) |
+| `deckInfo` | `widget_RecipeInfo`: the deck-slot preview beside Free Duel's deck list (portrait, owner, deck name, type, source) | `deck` (an id or `"{var:...}"`), `side` (0 yours, 1 the opponent's look). **`name`** instead of a deck: the panel is filled from the page with no saved deck behind it: `name` (the deck name line), `owner` (the line by the portrait), `type`, `about` (the Source line), `character` (whose portrait; -1 / empty = none), all may name values. Free Duel's is at 645.5, 171 (x / y = its top-left). Yu-Gi-Oh-MP's ban list picker shows a list this way (Preview) |
 | `cardGrid` | `widget_TrunkZone`: the deck editor's card grid with its filter and sort bar | `cards` (`owned`, default, or `all`; may be `"{var:...}"`, the grid refills when it changes), `bind` (the highlighted card id), `onChange`, `action` (on a confirmed card), `filterX` / `filterY` (the filter panel's centre, 1568.5 / 120). As in the deck editor: the wheel scrolls while the mouse is on the grid's own area, Filter opens the editor's filter panel, a right-click opens the full card view |
 | `cardBox` | `widget_CardDisplay`: the Random Pack Store's box of the cards a pack gave (the trunk's grid is one too) | `cards` (ids split by anything not a digit, `"{var:...}"`, or a JSON array; refilled when it changes), `cols` (4) / `rows` (2), `cellWidth` (255.17) / `cellHeight` (370), `gap` (10), `frame` (true), `bind` (the highlighted card id), `onChange`, `action` (on a confirmed card). More cards than cells scroll; a right-click opens the full card view; L / R leave the box |
-| `deckView` | `widget_DeckCardsZone`: the deck editor's / Battle Pack edit screen's deck panel (the deck's name, Main / Extra / Side card rows, the stats bar, the sort bar) | `deck` (a deck id as `decks` binds it, or `"{var:...}"`; -1 / empty = none; re-read each time the page shows), `mainLimit` (40), `bind` (the highlighted card id), `onChange`, `action` (on a clicked / confirmed card; without one the card's full view opens, as with a right-click). Up / down move between the rows, the sort button sorts, a right-click opens the full card view, L / R leave it. The Battle Pack edit screen puts it at 646, 120 |
+| `deckView` | `widget_DeckCardsZone`: the deck editor's / Battle Pack edit screen's deck panel (the deck's name, Main / Extra / Side card rows, the stats bar, the sort bar) | `deck` (a deck id as `decks` binds it, or `"{var:...}"`; -1 / empty = none; re-read each time the page shows), `mainLimit` (40), `bind` (the highlighted card id), `onChange`, `action` (on a clicked / confirmed card; without one the card's full view opens, as with a right-click). Up / down move between the rows, the sort button sorts, a right-click opens the full card view, L / R leave it. The Battle Pack edit screen puts it at 646, 120. **`sections`** instead of a deck: three `{ "title", "cards" }` (or `["title", "cards"]`, BOB `sections [["Forbidden", "{...}"], ...]`) retitle the Main / Extra / Side rows and fill them straight from the card ids (each shows its count; past its full-size cells a row fans its cards, it never scrolls), `title` = the panel header; the stats bar is hidden. A row's pool of card widgets is fixed when the panel is built (200 / 80 / 80 to start for such a panel); when a section has more cards, RIX builds the panel again with room for half as many more and hides the old one (the game can't grow a pool in place). Yu-Gi-Oh-MP's ban list picker shows Forbidden / Limited / Semi-Limited this way |
 | `progress` | `widget_BarH`: the card loading screen's progress bar | `value`, `max` (100) (numbers or `"{var:...}"`), `x` / `y` / `width` / `height` (the loading screen's: 616, 935, 1190, 34). Not focusable |
-| `option` | `widget_SettingsLine`: one row of the Player Match setting screen (label, value, arrows while focused) | `label`, `values` (as a menu choice: `["a", "b"]` or `[{ "label", "value" }]`, or `"toggle": true`), `bind`, `default`, `onChange`, `action` (on confirm; without one confirm steps the value), `arrows` (true), `valueWidth` (300), `labelWidth` (480). `x` / `y` = the row's centre line: the game's rows are at 1437, 253 + 130 per row. Left / right change the value; a click on an arrow steps it |
+| `option` | `widget_SettingsLine`: one row of the Player Match setting screen (label, value, arrows while focused) | `label`, `values` (as a menu choice: `["a", "b"]` or `[{ "label", "value" }]`, or `"toggle": true`, or a string naming values, expanded each time: `"label=value|label=value"`, e.g. a plugin's page list; menu choices take it too), `bind`, `default`, `onChange`, `action` (on confirm; without one confirm steps the value), `arrows` (true), `valueWidth` (300), `labelWidth` (480). `x` / `y` = the value's centre (the label sits 60 above it, the arrows at +-(valueWidth / 2 + 54)): the game's rows are at 1437, 253 + 130 per row. Focused, only the value lights (RIX puts the label back to its plain colour after the game's `SetFocused`) over a `pdui/doshared` `optionbox` (Video Settings' value box) spanning the value and arrows; `"box": false` drops the box. Left / right change the value; a click on an arrow steps it |
 | `pack` | `widget_PackWrapper`: one booster pack of the Random Pack Store (picture, name, price, owned counts) | `pack` (a pack id, may be `{var:...}`), `bind` (gets the pack id on confirm), `action`. `x` / `y` = the pack's centre (about 211 x 300); the store's six are at 506 + 235 per pack, 575. A locked pack shows locked and can't be picked |
 | `tag` | `widget_TextFrame`: the framed title tag of the card boxes (a text in a box that grows with it) | `text` (may name values; empty hides the tag), `width` (the most the box grows to; 0 = no limit). Not focusable |
 | `spinner` | `widget_LoadSpinner`: the loading rings (main menu, card loading screen at 574, 952) | `x`, `y` only. The rings turn by the screen's own animations |

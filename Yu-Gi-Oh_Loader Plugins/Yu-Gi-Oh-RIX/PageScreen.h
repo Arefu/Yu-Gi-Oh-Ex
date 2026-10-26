@@ -21,5 +21,8 @@ namespace PageScreen
     // A value plugins supply: "game:<name>.<argument>" in pages calls it (RIX_RegisterPageValue).
     void RegisterValue(const std::string& name, RIX_PageValueCallback callback, void* user);
 
+    // A folder of pages a plugin ships (RIX_AddPageFolder), looked in after the mods and Yu-Gi-Oh-Ex\pages.
+    void AddFolder(const std::wstring& folder);
+
     void Install();
 }

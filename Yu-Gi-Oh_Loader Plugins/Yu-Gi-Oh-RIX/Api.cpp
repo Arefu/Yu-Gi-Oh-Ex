@@ -165,6 +165,14 @@ extern "C"
         return 1;
     }
 
+    int __cdecl RIX_AddPageFolder(const wchar_t* folder)
+    {
+        if (!folder || !*folder)
+            return 0;
+        PageScreen::AddFolder(folder);
+        return 1;
+    }
+
     void __cdecl RIX_RemoveNode(void* node)
     {
         std::unique_ptr<WidgetHandle> handle(static_cast<WidgetHandle*>(node));
