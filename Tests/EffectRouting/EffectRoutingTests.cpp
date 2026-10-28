@@ -338,6 +338,44 @@ namespace
         g_Clones.clear();
     }
 
+    // Own ignition (section 96): YGO::Effects::Check_CanActivateKind3AtZone (0x140107930) sets word4 3 for a card on the field and asks
+    // Has_Kind3EffectEntry (0x1400DFD70: the lookup with word2 = the zone, no event); the row it finds is offered by the game's own menu.
+    void TestOwnIgnitionRow()
+    {
+        using nlohmann::json;
+        constexpr uint16_t custom = 15331;
+        g_Clones.clear();
+        Clone parsed;
+        Check(ParseEffect(json{{"from", 4844}, {"ownTrigger", true}, {"trigger", "ignition"}, {"effectOnly", true}}, parsed, "test"), "Own ignition did not parse");
+        g_Clones.emplace(custom, std::move(parsed));
+        uint16_t kind3[0x20]{}, monster[0x20]{}, hand[0x20]{}, summoned[0x20]{};
+        kind3[0] = monster[0] = hand[0] = summoned[0] = custom;
+        kind3[2] = 2; kind3[4] = 3;          // Has_Kind3EffectEntry(id, zone 2)
+        monster[4] = 1; hand[4] = 2;
+        summoned[4] = 3; summoned[3] = 7;    // a known event is never an ignition's
+        Row* row = static_cast<Row*>(Hook_GetEntry(kind3));
+        Check(row && row->Id == custom, "Own ignition row missing for the field ignition table");
+        // the shape of a plain no-cost ignition row (Aquaactress Tetra 11916: {id, class, slot 0, -, slot 2, -, -}): no donor's slot-3 cost
+        Check(row->Slot[0] && !row->Slot[3], "Own ignition row did not compose its action (or kept a cost)");
+        reinterpret_cast<uint64_t(__fastcall*)(uint16_t*, uint64_t, uint64_t, uint64_t)>(row->Slot[0])(kind3, 0, 0, 0);
+        Check(lastSource == 4844, "Own ignition did not resolve as its action card");
+        Check(!Hook_GetEntry(monster) && !Hook_GetEntry(hand) && !Hook_GetEntry(summoned), "Own ignition answered another table or an event");
+        g_Clones.clear();
+
+        // three ignitions joined with 'or' (issue #39's card): one select row in table 3, no slot 3 from any donor, one limit group
+        Clone root, second, third;
+        Check(ParseEffect(json{{"from", 4659}, {"ownTrigger", true}, {"trigger", "ignition"}, {"effectOnly", true}, {"limitGroup", 0}, {"oncePerTurn", true},
+            {"parts", json::array({ json{{"from", 4844}, {"ownTrigger", true}, {"trigger", "ignition"}, {"effectOnly", true}, {"limitGroup", 0}, {"oncePerTurn", true}},
+                                    json{{"from", 4345}, {"ownTrigger", true}, {"trigger", "ignition"}, {"effectOnly", true}, {"limitGroup", 0}, {"oncePerTurn", true}} })}},
+            root, "test"), "Own ignition group did not parse");
+        g_Clones.emplace(custom, std::move(root));
+        Clone* card = &g_Clones.at(custom);
+        Check(Candidates(card, kind3).size() == 3, "The three own ignitions are not all candidates of the table-3 lookup");
+        Row* choice = static_cast<Row*>(Hook_GetEntry(kind3));
+        Check(choice && choice->Id == custom && choice->Slot[3] == reinterpret_cast<void*>(&ChoiceSlot3), "Own ignition group is not offered once with the select row");
+        g_Clones.clear();
+    }
+
     // Own move triggers: Hook_MoveEvaluator offers the card itself the way Eval_CardMovedTriggers does (0x1400A3765), after checking the move
     // reference (bits 0-8 instance, 10-14 from zone, 16 from field, 18 battle, 21-25 to zone) against the trigger and its moveCondition.
     std::vector<std::pair<uint32_t, int16_t>> g_Offers;
@@ -737,6 +775,8 @@ int main()
         std::cout << "PASS phase driver state machine (IDA transcription): your / opponent's / each Standby and End Phase\n";
         TestOwnTriggerStateMachine();
         std::cout << "PASS own trigger (no donor): own row, composed action, virtual phase row after the table's last row\n";
+        TestOwnIgnitionRow();
+        std::cout << "PASS own ignition: table-3 row with no slot-3 cost, resolves as its action, three 'or' ignitions offered once (issue #39)\n";
         TestOwnMoveTriggers();
         std::cout << "PASS own move triggers: move reference checks, the evaluator's offer layout, no donor swap, table 2 row\n";
         TestOwnAttackTriggers();

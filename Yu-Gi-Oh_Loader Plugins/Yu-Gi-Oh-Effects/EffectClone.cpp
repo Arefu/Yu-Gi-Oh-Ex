@@ -449,6 +449,12 @@ namespace
     // that Id_HasHandEffect (0x140743FA0) accepts (IdTest<0> answers yes for an own "in_hand" effect).
     bool OwnRowFits(const Clone& part, const uint16_t* effect)
     {
+        // A field ignition / Quick Effect is table 3 (EffectTable_Kind3): YGO::Effects::Check_CanActivateKind3AtZone (0x140107930) sets word4 3
+        // for a card on the field and asks Has_Kind3EffectEntry (0x1400DFD70, a plain lookup with word2 = the zone), then the speed / offer
+        // gates - no id list, so the own row is offered by the game's own activation menu. A plain no-cost ignition row is {id, limit class,
+        // slot 0, -, slot 2, -, -} (Aquaactress Tetra 11916), which is what the own row plus the composed action is. No event: the record has none.
+        if (part.Trigger == "ignition")
+            return part.OwnTrigger && effect && effect[4] == 3 && !IsKnownTriggerEvent(effect[3]);
         // (the GY / banished End Phase triggers are offered from those zones: table 2 too)
         // (a watcher in the GY is offered by Offer_EffectOfNamedCardInGrave: table 2 too)
         const bool table2 = IsMoveTrigger(part.Trigger) || part.Trigger == "in_hand" || part.Trigger == "grave_end_phase" || part.Trigger == "banished_end_phase"

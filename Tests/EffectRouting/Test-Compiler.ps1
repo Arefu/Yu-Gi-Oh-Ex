@@ -175,6 +175,11 @@ $cases = @(
     @{script='xyz_also(monster where archetype = 153, xyz_monster, rank 4);'; ids=$null
       check={ param($c) $c.xyzAlso.archetype -eq 153 -and $c.xyzAlso.xyz -and $c.xyzAlso.rankMin -eq 4 -and $c.xyzAlso.rankMax -eq 4 }},
     @{script='xyz_also(card where name = 10569); on ignition: draw(1);'; ids=$null; check={ param($c) $c.xyzAlso.name -eq 10569 }},
+    # ignition is an own trigger (table 3, section 96): no game card's row, so no donor's slot-3 cost comes along (issue #39: Caam 9168)
+    @{script='on ignition: draw(1); once_per_turn;'; ids=$null; own='ignition'; check={ param($c) $c.from -eq 4844 -and $c.effectOnly -and $null -eq $c.actionFrom }},
+    @{script='effect "destroy yom" { on ignition: destroy(all, opponent); once_per_turn; } or effect "inflict 1000" { on ignition: damage(1000); once_per_turn; } or effect "gain 1000" { on ignition: gain_lp(1000); once_per_turn; }'
+      ids=$null; groups=@(0,0,0); once=@($true,$true,$true)
+      check={ param($c) $all = @($c) + @($c.parts); @($all | Where-Object { !$_.ownTrigger -or $_.trigger -ne 'ignition' -or $_.from -eq 9168 -or $_.actionFrom -eq 9168 }).Count -eq 0 }},
     @{script='xyz_also(monster, xyz_monster, rank_at_least 5, rank_at_most 6);'; ids=$null; check={ param($c) $c.xyzAlso.rankMin -eq 5 -and $c.xyzAlso.rankMax -eq 6 }},
     # Fusion Summon by banishing the materials from the field / GY (section 94): Dragon's Mirror's route
     @{script='fusion_summon(monster where race = Dragon, banish_materials);'; ids=$null; check={ param($c) $c.from -eq 6433 -and $c.deck.scan -eq 'fusion' }},
@@ -271,7 +276,7 @@ foreach ($case in $cases) {
         $scans = @($compiled.deck.scan) + @($compiled.deck.or | Where-Object { $_ } | ForEach-Object { $_.scan })
         if (($scans -join ',') -ne ($case.scans -join ',')) { throw "Zones changed ($($scans -join ',')): $($case.script)" }
         if ($compiled.own -ne 'summon' -or $compiled.condition -ne 'listHasMatch') { throw "Not an own summon step: $($case.script)" }
-        if ($case.script -match '^on ' -and ($compiled.actionFrom -ne 11740 -or $compiled.trigger -ne 'ignition')) { throw "Triggered zones summon was not composed: $($case.script)" }
+        if ($case.script -match '^on ' -and ($compiled.from -ne 11740 -or !$compiled.ownTrigger -or $compiled.trigger -ne 'ignition')) { throw "Triggered zones summon is not an own ignition on its action: $($case.script)" }
     }
     $parsed = $tree.Invoke($null, @([string]$case.script)) | ConvertFrom-Json
     if ($parsed.error) { throw $parsed.error }

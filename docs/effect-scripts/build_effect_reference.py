@@ -206,11 +206,21 @@ COST_SLOTS = {0x1401FA670: 'banish_self', 0x1401FCEB0: 'discard_self', 0x1401F8B
               0x1401F7FD0: 'discard', 0x1401F7CC0: 'pay_lp', 0x1401FF4D0: 'detach'}
 
 
+# Slot-3 functions that are not costs: the monster-effect wrappers the engine compares by address (Yu-Gi-Oh-Effects WrappedRow keeps them).
+NOT_COST_SLOTS = {0x1401F94C0, 0x1401F9470, 0x1401F9630, 0x1401F9920, 0x1402007F0}
+
+
 def cost_of(slots, text):
-    """-> EffectScript cost ('discard(1)', 'banish_self', ...), '' when the row has no known cost, or None when the amount is not in the text."""
+    """-> EffectScript cost ('discard(1)', 'banish_self', ...), '' when the row has no cost, or None when the amount is not in the text or
+    slot 3 is a cost the language has no word for (Caam, Serenity of Gusto 9168: 0x140206C90 "shuffle 2 Gusto monsters from your GY into the
+    Deck" was read as no cost, so every clone borrowing its row made the player pick Gusto monsters - issue #39)."""
+    if not slots[3] or slots[3] in NOT_COST_SLOTS:
+        return ''
     cost = COST_SLOTS.get(slots[3])
-    if cost in (None, 'banish_self', 'discard_self', 'tribute_self', 'tribute(1)'):
-        return cost or ''
+    if cost is None:
+        return None
+    if cost in ('banish_self', 'discard_self', 'tribute_self', 'tribute(1)'):
+        return cost
     t = normalise_text(text)
     num = r'(\d+|1|a|an|one|two)'
     rx = {'discard': r'\bdiscard ' + num + r' (?:[\w-]+ )?cards?', 'pay_lp': r'\bpay (\d+) LP', 'detach': r'\bdetach ' + num + r' (?:Xyz )?materials?'}[cost]
@@ -367,10 +377,11 @@ for cid in sorted(rows):
     complete = unknown == 0 and len(described) == 1 and len(sentences) <= 1 and not notes
     # one effect only; filter notes do not matter, a clone replaces the filter. A loose trigger or a cost (slot 3 is part of the borrowed row, the
     # clone would pay it too) never makes a trigger source.
-    source_ok = unknown == 0 and len(described) == 1 and len(sentences) <= 1 and not loose and not cost
+    # (cost None = a cost not read: it must stop the row too, not count as "no cost")
+    source_ok = unknown == 0 and len(described) == 1 and len(sentences) <= 1 and not loose and cost == ''
     opt = ' once_per_turn;' if (extra0 & 0xF) in (5, 9) else ''   # the row's use-limit class (docs/EffectSystem.md section 20)
     if cost is None:
-        notes = notes + ['a cost whose amount is not in the text (slot 3 %#x)' % rows_slots[(cid, tname, extra0)][3]]
+        notes = notes + ['a cost the script cannot say (slot 3 %#x)' % rows_slots[(cid, tname, extra0)][3]]
     if tclass:
         script = 'on %s: %s;%s' % (tclass, line, opt)
         if cost:

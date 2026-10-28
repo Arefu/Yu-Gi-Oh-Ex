@@ -1012,7 +1012,9 @@ namespace WolfEx
                     string name = trigger.triggerName().GetText();
                     // a raw action (section 88) never takes a game card that happens to do the same: the trigger row is own or only a place
                     bool raw = compiled["rawRow"]?.GetValue<bool>() == true;
-                    bool direct = !raw & TryTriggerSource(name, ActionKey(actions[^1]), out int source);
+                    // ignition never takes a game card: its own table-3 row is the shape of a plain ignition row (OwnTriggerKind), and a borrowed
+                    // one brought the donor's slot-3 cost along (Caam's "shuffle 2 Gusto monsters" prompt on every ignition, issue #39)
+                    bool direct = !raw & name != "ignition" & TryTriggerSource(name, ActionKey(actions[^1]), out int source);
                     // a move trigger with conditions is always the plugin's own (it checks the move reference itself)
                     if (IsMoveTriggerName(name) && trigger.summonConditions() != null)
                         direct = false;
@@ -1338,7 +1340,8 @@ namespace WolfEx
         // Triggers Yu-Gi-Oh-Effects can give a card with no game card behind them ("ownTrigger", docs/EffectSystem.md section 61): the phase
         // triggers (its own row in the phase tables, calling the game's handler family for whose phase it is).
         private static bool OwnTriggerKind(string trigger) =>
-            trigger is "standby_phase" or "opponent_standby_phase" or "each_standby_phase" or "end_phase" or "opponent_end_phase" or "each_end_phase"
+            trigger == "ignition"   // a row in the field ignition table (table 3), offered by the game's activation menu (section 96)
+            || trigger is "standby_phase" or "opponent_standby_phase" or "each_standby_phase" or "end_phase" or "opponent_end_phase" or "each_end_phase"
             || trigger is "grave_end_phase" or "banished_end_phase"   // the game's End Phase "arrived this turn" handler + the plugin's arrival marker (section 79)
             || trigger is "damage_step_battles" or "damage_step_attacks"   // offered after the start-of-Damage-Step evaluator (section 80)
             // start of the Battle Phase: offered before the game's own pass; end: a row in the end-of-Battle-Phase table (section 93)
