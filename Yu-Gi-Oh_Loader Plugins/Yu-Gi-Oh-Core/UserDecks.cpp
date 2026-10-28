@@ -1,9 +1,10 @@
 #include "UserDecks.h"
 
 #include <Windows.h>
-#include <array>
+#include <algorithm>
 #include <cstdint>
 #include <cstring>
+#include <deque>
 #include <filesystem>
 #include <format>
 #include <fstream>
@@ -74,9 +75,17 @@ namespace
     const auto RebuildDeckTabs = reinterpret_cast<void(__fastcall*)(int64_t list)>(0x1408AE5B0);
     void* const kInputManager = reinterpret_cast<void*>(0x142924010);   // g_InputManager
 
-    std::array<uint8_t, kExtraDecks * kDeckSize> g_Decks{};
-    std::array<DeckValidation, kExtraDecks> g_Validation{};
-    std::array<bool, kExtraDecks> g_ValidationKnown{};
+    struct DeckBytes
+    {
+        uint8_t Bytes[kDeckSize];
+    };
+
+    // The game keeps pointers to a deck (Deck_UserDeckAt) and its validation (Deck_GetValidation), so these are deques: growing them never
+    // moves an element. They only grow; g_Count is how many slots the profile has.
+    std::deque<DeckBytes> g_Decks;
+    std::deque<DeckValidation> g_Validation;
+    std::vector<bool> g_ValidationKnown;
+    unsigned g_Count = 0;
     uint8_t g_EmptyDeck[kDeckSize]{};
     DeckValidation g_OutOfRange{};
     uint8_t* g_Owner = nullptr;   // the profile's save blob the extras belong to
@@ -84,13 +93,28 @@ namespace
     std::filesystem::path g_Imported;   // a Yu-Gi-Oh-DeckSlots file read into this save: deleted once the save holding its decks is written
     bool g_WroteDecks = false;          // the last save write put the decks into the extension
 
-    uint8_t* Deck(unsigned k) { return g_Decks.data() + static_cast<size_t>(k) * kDeckSize; }
+    uint8_t* Deck(unsigned k) { return g_Decks[k].Bytes; }
     bool Used(unsigned k) { return Deck(k)[kUsedOffset] != 0; }
     bool Owns(const uint8_t* blob) { return g_Owner && blob == g_Owner; }
-    void Forget() { g_ValidationKnown.fill(false); }
+    void Forget() { std::fill(g_ValidationKnown.begin(), g_ValidationKnown.end(), false); }
 
-    // An extra deck id (1024..1247) -> its slot, or -1.
-    int ExtraSlot(unsigned id) { return id >= kFirstExtraId && id - kFirstExtraId < static_cast<unsigned>(kExtraDecks) ? static_cast<int>(id - kFirstExtraId) : -1; }
+    // Empty slots for a profile whose decks run up to slot used - 1: those plus kHeadroom free ones.
+    void Reset(unsigned used)
+    {
+        g_Count = (std::min)(used + kHeadroom, static_cast<unsigned>(kMaxExtraDecks));
+        if (g_Decks.size() < g_Count)
+        {
+            g_Decks.resize(g_Count);
+            g_Validation.resize(g_Count);
+            g_ValidationKnown.resize(g_Count);
+        }
+        for (DeckBytes& deck : g_Decks)
+            std::memset(deck.Bytes, 0, kDeckSize);
+        Forget();
+    }
+
+    // An extra deck id (1024 up) -> its slot, or -1.
+    int ExtraSlot(unsigned id) { return id >= kFirstExtraId && id - kFirstExtraId < g_Count ? static_cast<int>(id - kFirstExtraId) : -1; }
 
     DeckValidation* Validation(unsigned k)
     {
@@ -124,7 +148,7 @@ namespace
             ++at;
         const std::vector<int> tail(first + at, first + count);
         vector->Last = first + at;
-        for (unsigned k = 0; k < static_cast<unsigned>(kExtraDecks); ++k)
+        for (unsigned k = 0; k < g_Count; ++k)
             if (Used(k) && (!checkMask || (Validation(k)->Flags & mask) == 0))
                 Push(vector, static_cast<int>(kFirstExtraId + k));
         for (int id : tail)
@@ -144,10 +168,11 @@ namespace
         return (sleeve == 0 || sleeve < 0xF0) && main <= 60 && extra <= 15 && side <= 15;   // the game's own save check, as DeckSlots did
     }
 
-    // {header, decks}: the extension and a Yu-Gi-Oh-DeckSlots file share the layout. Decks past 224 go into free slots (their ids change).
+    // {header, decks}: the extension and a Yu-Gi-Oh-DeckSlots file share the layout. Every deck keeps its slot (and so its id): the slot
+    // count is sized from the file (Reset).
     int ReadDecks(const std::vector<uint8_t>& bytes, const char* from)
     {
-        g_Decks.fill(0);
+        Reset(0);
         FileHeader header{};
         if (bytes.size() < sizeof(header))
             return 0;
@@ -157,41 +182,35 @@ namespace
             Logger::WriteLog(std::format("User decks: {} is not a deck file, ignored", from), MODULE_NAME, 2);
             return 0;
         }
-        const size_t count = (std::min)(static_cast<size_t>(header.Count), (bytes.size() - sizeof(header)) / kDeckSize);
-        int used = 0, invalid = 0, moved = 0, lost = 0;
-        std::vector<const uint8_t*> overflow;
-        for (size_t k = 0; k < count; ++k)
+        const size_t stored = (std::min)(static_cast<size_t>(header.Count), (bytes.size() - sizeof(header)) / kDeckSize);
+        const auto at = [&](size_t k) { return bytes.data() + sizeof(header) + k * kDeckSize; };
+        size_t extent = 0;   // up to the last deck
+        for (size_t k = 0; k < stored; ++k)
+            if (at(k)[kUsedOffset] && ValidDeck(at(k)))
+                extent = k + 1;
+        size_t lost = 0;
+        if (extent > static_cast<size_t>(kMaxExtraDecks))
         {
-            const uint8_t* deck = bytes.data() + sizeof(header) + k * kDeckSize;
-            if (!deck[kUsedOffset])
+            lost = extent - kMaxExtraDecks;   // past what the game can address; not expected from any real save
+            extent = kMaxExtraDecks;
+        }
+        Reset(static_cast<unsigned>(extent));
+        int used = 0, invalid = 0;
+        for (size_t k = 0; k < extent; ++k)
+        {
+            if (!at(k)[kUsedOffset])
                 continue;
-            if (!ValidDeck(deck))
+            if (!ValidDeck(at(k)))
             {
                 ++invalid;
                 continue;
             }
-            if (k < static_cast<size_t>(kExtraDecks))
-                std::memcpy(Deck(static_cast<unsigned>(k)), deck, kDeckSize);
-            else
-                overflow.push_back(deck);
+            std::memcpy(Deck(static_cast<unsigned>(k)), at(k), kDeckSize);
             ++used;
         }
-        for (const uint8_t* deck : overflow)
-        {
-            unsigned free = 0;
-            while (free < static_cast<unsigned>(kExtraDecks) && Used(free))
-                ++free;
-            if (free == static_cast<unsigned>(kExtraDecks))
-            {
-                ++lost;
-                continue;
-            }
-            std::memcpy(Deck(free), deck, kDeckSize);
-            ++moved;
-        }
-        Logger::WriteLog(std::format("User decks: {} extra deck(s) from {}{}{}{}", used - lost, from,
-            invalid ? std::format(", {} invalid cleared", invalid) : "", moved ? std::format(", {} moved into free slots", moved) : "",
-            lost ? std::format(", {} DROPPED (no free slot of {})", lost, kExtraDecks) : ""), MODULE_NAME, lost ? 2 : 0);
+        Logger::WriteLog(std::format("User decks: {} extra deck(s) from {}, {} slots (ids {}-{}){}{}", used, from, g_Count, kFirstExtraId,
+            kFirstExtraId + g_Count - 1, invalid ? std::format(", {} invalid cleared", invalid) : "",
+            lost ? std::format(", {} slot(s) past the game's limit of {} DROPPED", lost, kMaxExtraDecks) : ""), MODULE_NAME, lost ? 2 : 0);
         return used;
     }
 
@@ -216,7 +235,7 @@ namespace
             ReadDecks(bytes, "the save");
             return;
         }
-        g_Decks.fill(0);
+        Reset(0);
         const std::filesystem::path old = DeckSlotsFile();
         std::ifstream file(old, std::ios::binary);
         if (!file)
@@ -257,7 +276,7 @@ namespace
         if (!g_Owner)
             return 0;
         unsigned count = 0;
-        for (unsigned k = 0; k < static_cast<unsigned>(kExtraDecks); ++k)
+        for (unsigned k = 0; k < g_Count; ++k)
             if (Used(k))
                 count = k + 1;
         if (count == 0)
@@ -274,7 +293,8 @@ namespace
         header.DeckSize = kDeckSize;
         header.Count = count;
         std::memcpy(bytes.data(), &header, sizeof(header));
-        std::memcpy(bytes.data() + sizeof(header), g_Decks.data(), count * kDeckSize);
+        for (unsigned k = 0; k < count; ++k)
+            std::memcpy(bytes.data() + sizeof(header) + static_cast<size_t>(k) * kDeckSize, Deck(k), kDeckSize);
         Save::SetExtension(kExtensionTag, bytes.data(), static_cast<int>(bytes.size()));
         return 0;   // the blob itself is not changed
     }
@@ -296,7 +316,7 @@ namespace
     uint8_t* __fastcall Hook_UserDeckAt(unsigned profile, int index)
     {
         const unsigned k = static_cast<unsigned>(index - kSaveDecks);
-        if (index < kSaveDecks || k >= static_cast<unsigned>(kExtraDecks))
+        if (index < kSaveDecks || k >= g_Count)
             return reinterpret_cast<uint8_t*(__fastcall*)(unsigned, int)>(orig_UserDeckAt)(profile, index);
         if (Owns(GetBlob(profile)))
             return Deck(k);
@@ -378,7 +398,7 @@ namespace
     {
         const int64_t result = reinterpret_cast<int64_t(__fastcall*)(unsigned, IntVector*, char)>(orig_ListUserSlots)(profile, vector, usedOnly);
         if (Owns(GetBlob(profile)))
-            for (unsigned k = 0; k < static_cast<unsigned>(kExtraDecks); ++k)
+            for (unsigned k = 0; k < g_Count; ++k)
                 if (Used(k) || !usedOnly)
                     Push(vector, static_cast<int>(kFirstExtraId + k));
         return result;
@@ -408,8 +428,8 @@ namespace
         else
         {
             g_Imported.clear();
-            g_Decks.fill(0);
-            Logger::WriteLog("User decks: a new profile, the extra decks start empty", MODULE_NAME, 0);
+            Reset(0);
+            Logger::WriteLog(std::format("User decks: a new profile, {} empty extra slots", g_Count), MODULE_NAME, 0);
         }
         Forget();
         return result;
@@ -427,8 +447,7 @@ namespace
             if (!g_Owner)
             {
                 g_Owner = blob;
-                g_Decks.fill(0);
-                Forget();
+                Reset(0);
             }
         }
         return blob;
@@ -441,6 +460,8 @@ namespace
         const char* Name;
     };
 }
+
+int UserDecks::ExtraCount() { return static_cast<int>(g_Count); }
 
 void UserDecks::Install()
 {
@@ -472,6 +493,6 @@ void UserDecks::Install()
     }
     Save::AddWriteFilter(WriteDecks, nullptr);
     Save::AddWrittenListener(DecksWritten);
-    Logger::WriteLog(std::format("User decks: {} slots ({} in the save + {} extra, ids {}-{})", kTotalDecks, kSaveDecks, kExtraDecks, kFirstExtraId,
-        kFirstExtraId + kExtraDecks - 1), MODULE_NAME, 0);
+    Logger::WriteLog(std::format("User decks: the save's {} + extra slots from id {} (as many as the save uses + {} free)", kSaveDecks,
+        kFirstExtraId, kHeadroom), MODULE_NAME, 0);
 }

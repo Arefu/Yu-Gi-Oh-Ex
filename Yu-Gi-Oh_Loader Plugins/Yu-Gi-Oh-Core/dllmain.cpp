@@ -58,7 +58,7 @@ extern "C"
     {
         if (FirstId)
             *FirstId = static_cast<int>(UserDecks::kFirstExtraId);
-        return UserDecks::kExtraDecks;
+        return UserDecks::ExtraCount();
     }
 
     CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size)

@@ -105,8 +105,9 @@ CORE_API void __cdecl Core_SetDeckLimits(int MinMain, int MaxMain, int MaxExtra,
    stays the lobby's LP setting. Taken at the start of each duel. Added after version 1 like AddCredits: NULL with an older Core. */
 CORE_API void __cdecl Core_SetOnlineDuelFormat(int Format);
 
-/* The user deck slots past the save's 32 (docs/UserDecks.md, from Toon Jinzo's Yu-Gi-Oh-DeckSlots): returns how many (224) and puts the
-   first one's deck id in FirstId (1024; they run FirstId..FirstId+count-1). Deck_FromId (0x14081AB40) answers them like ids 0-31: an empty
+/* The user deck slots past the save's 32 (docs/UserDecks.md, from Toon Jinzo's Yu-Gi-Oh-DeckSlots): returns how many and puts the
+   first one's deck id in FirstId (1024; they run FirstId..FirstId+count-1). The count is the loaded save's (the slots it uses + 256 free),
+   so ask again rather than keep it. Deck_FromId (0x14081AB40) answers them like ids 0-31: an empty
    slot is a deck with no cards. Added after version 1 like AddCredits: NULL with an older Core (32 slots only). */
 CORE_API int __cdecl Core_GetExtraUserDecks(int* FirstId);
 

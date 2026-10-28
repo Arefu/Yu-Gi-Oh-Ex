@@ -1,7 +1,7 @@
 {
   "title": "Core",
-  "version": "1.3.2",
-  "description": "The save, plugin list, game data loading, the crash log, small game tweaks and limit breakers (booster packs from packs.json, 256 user deck slots). Always on.",
+  "version": "1.3.3",
+  "description": "The save, plugin list, game data loading, the crash log, small game tweaks and limit breakers (booster packs from packs.json, extra user deck slots: as many as the save uses + 256). Always on.",
   "enforced": true,
   "content": [
     "credits.json",
@@ -191,7 +191,7 @@
     },
     {
       "name": "Yu-Gi-Oh-DeckSlots",
-      "note": "merged into Core (thanks Toon Jinzo): 256 user deck slots, kept in the save; its savegame-ex-extradecks.dat is imported once"
+      "note": "merged into Core (thanks Toon Jinzo): extra user deck slots, kept in the save; its savegame-ex-extradecks.dat is imported once"
     }
   ]
 }

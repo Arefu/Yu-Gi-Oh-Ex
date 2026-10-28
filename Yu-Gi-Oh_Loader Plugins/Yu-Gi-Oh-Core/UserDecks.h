@@ -1,11 +1,15 @@
 #pragma once
 
-// 256 user deck slots, a Core limit breaker (2026-10-23). Ported from Toon Jinzo's Yu-Gi-Oh-DeckSlots, which it replaces.
+// Extra user deck slots, a Core limit breaker (2026-10-23). Ported from Toon Jinzo's Yu-Gi-Oh-DeckSlots, which it replaces.
 //
 // The save holds 32 user decks (DeckListItem, 0x130 bytes, at blob +0x37C8). Deck ids are packed: 0-31 user decks (type 1), 32-731 built-in
-// decks (type 2), 732-736 special decks (type 3). The 224 extra decks have ids 1024-1247 (type 1, user deck index 32-255; the same ids
+// decks (type 2), 732-736 special decks (type 3). The extra decks have ids 1024 up (type 1, user deck index 32 up; the same ids
 // Yu-Gi-Oh-DeckSlots used) and live in the save extension "UserDecks" (Save.h), so they follow save slots and the vanilla game never sees
 // them. A Yu-Gi-Oh-DeckSlots side file (<save>-extradecks.dat) is imported the first time a save without the extension is loaded.
+//
+// No fixed cap (issue #40: a cap of 224 dropped decks a DeckSlots save kept past it): when a save is loaded the slot count is the slots it
+// uses (up to its last deck) + kHeadroom free ones, so every deck keeps its slot and id, and the count follows the save as it grows or shrinks.
+// The only hard limit is the game's: Deck_FromId reads the user deck index as an int16 (kMaxExtraDecks).
 //
 // Traced in the IDB 2026-10-23; every hook is a Detour on a function entry (docs/UserDecks.md):
 //   Deck_DecodeId 0x1407F9150          id -> (type, index)
@@ -20,9 +24,12 @@
 namespace UserDecks
 {
     constexpr int kSaveDecks = 32;
-    constexpr int kTotalDecks = 256;
-    constexpr int kExtraDecks = kTotalDecks - kSaveDecks;
+    constexpr int kHeadroom = 256;                        // free slots past the save's last deck
+    constexpr int kMaxExtraDecks = 0x7FFF - kSaveDecks;   // user deck index 32 + k fits Deck_FromId's int16
     constexpr unsigned kFirstExtraId = 1024;
+
+    // The extra slots of the loaded profile (ids kFirstExtraId..kFirstExtraId + count - 1); set when a save is loaded or made.
+    int ExtraCount();
 
     void Install();
 }
