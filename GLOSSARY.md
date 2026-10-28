@@ -258,7 +258,7 @@ Characters, decks, story duels and scenes, tutorials, campaign series and duel s
 | **Story duels and scenes** | New and changed story duels and their intro, win and lose scenes. Scenes can play videos, voice lines and sounds. A story duel can play as a tutorial. | Built |
 | **New campaign series** | Series past the game's 6 (`campaigns.json`), with logos, unlock rules (`after` a series), arrow scrolling, overall completion, progress kept in the save extension. `hiddenSeries` hides game series. | Built |
 | **New tutorials** | Tutorials numbered 27-99 from `tutorials\*.json` appear in Help > Tutorial, with their own done marks. | Built |
-| **AI deck** | Campaign and Free Duel ask for Your Deck, then the Opponent's Deck (any deck). In Free Duel the opponent shows the picked deck's own duelist, as the game does for your deck; the campaign keeps the story's character. | Built |
+| **AI deck** | Campaign and Free Duel ask for Your Deck, then the Opponent's Deck (any deck). In Free Duel the opponent shows the picked deck's own duelist, as the game does for your deck; the campaign keeps the story's character. Duelist Challenges use the challenge deck unless `[Yu-Gi-Oh-Campaign] ChallengePickedDeck=1` (then the picked deck, same duelist; a win still clears the challenge). | Built |
 | **New arenas** | `arenas.json`: new duel backgrounds (a picture or an animated animlist folder). | Built |
 | **Per-duelist rules** | `duelistrules.json`: starting LP against a given opponent. | Built |
 | **Campaign progress** | `progress.json`: unlock every character, and switch modes on (Duelist Challenges, Battle Packs, Card Shop). | Built |

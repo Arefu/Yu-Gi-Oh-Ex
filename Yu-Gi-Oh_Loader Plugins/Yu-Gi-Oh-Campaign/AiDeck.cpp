@@ -143,6 +143,13 @@ namespace
     bool IsMultiplayer() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsDuelMultiplayer) != 0; }
     bool IsBattlePack() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsBattlePackMode) != 0; }
     bool IsChallenge() { return CallGame<uint8_t>(YGO::Addr::Duel_Get_IsChallengeMode) != 0; }
+
+    // Config.ini [Yu-Gi-Oh-Campaign] ChallengePickedDeck (default 0): a Duelist Challenge opponent plays the deck picked for them instead
+    // of their challenge deck. Off by default because a win still clears the challenge. Read at each duel, so a change needs no restart.
+    bool ChallengeUsesPickedDeck()
+    {
+        return GetPrivateProfileIntA("Yu-Gi-Oh-Campaign", "ChallengePickedDeck", 0, (Campaign::GameFolder() + "Config.ini").c_str()) != 0;
+    }
     bool IsTutorial() { return CallGame<uint8_t>(0x1407694F0) != 0; }
     bool IsCampaignMode() { return CallGame<uint8_t>(0x1407691A0) != 0; }   // YGO__DUEL__Get_IsCampaignMode
 
@@ -814,12 +821,13 @@ namespace
             character = opponent;   // the deck is already theirs: TagDuel_StartReviewedDuel set side 1's deck
             SetDuelSideCharacter(1, static_cast<unsigned int>(character));
         }
-        if (seat == 1 && character == g_PendingCharacter && !IsMultiplayer() && !IsBattlePack() && !IsChallenge() && !IsTutorial())
+        if (seat == 1 && character == g_PendingCharacter && !IsMultiplayer() && !IsBattlePack() && !IsTutorial() && (!IsChallenge() || ChallengeUsesPickedDeck()))
         {
             if (DeckCards* chosen = DeckFromId(kCurrentProfile, g_PendingDeck); chosen && chosen->MainCount > 0)
             {
                 deck = chosen;
-                const int owner = IsCampaignMode() ? -1 : DeckCharacter(static_cast<int>(g_PendingDeck));
+                // the campaign and a challenge keep their duelist (it's their duel or challenge); Free Duel takes the deck's owner
+                const int owner = IsCampaignMode() || IsChallenge() ? -1 : DeckCharacter(static_cast<int>(g_PendingDeck));
                 if (owner >= 0 && owner != character)
                 {
                     character = owner;

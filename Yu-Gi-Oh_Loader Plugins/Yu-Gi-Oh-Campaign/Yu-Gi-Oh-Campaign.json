@@ -1,5 +1,5 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "title": "Campaign",
   "description": "The campaign from Yu-Gi-Oh-Ex JSON made by WolfX: changed and new characters (characters.json), decks with their cards (decks.json), story duels (storyduels.json) and their scenes (storyscripts.json), and new tutorials for Help > Tutorial (tutorials\\*.json), and new campaign series (campaigns.json).",
   "content": [
@@ -9,5 +9,14 @@
     "storyscripts.json",
     "campaigns.json",
     "tutorials\\"
+  ],
+  "settings": [
+    {
+      "key": "ChallengePickedDeck",
+      "title": "Use picked deck in Duelist Challenges",
+      "kind": "toggle",
+      "default": "0",
+      "help": "The challenge opponent plays the deck picked for them instead of their challenge deck. A win still clears the challenge."
+    }
   ]
 }
