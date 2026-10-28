@@ -261,7 +261,11 @@ drawAction    : 'draw' '(' NUMBER (',' side)? ')' ;
 // marker (Action_AddTurnFlagMarker 0x140177EE0), which the game's lock builder reads (docs/EffectSystem.md section 48).
 lockTurnAction : 'lock_turn' '(' lockTurnArg ')' ;
 lockTurnArg    : IDENT | kind ;
-searchAction  : 'search' '(' 'deck' (',' choices)? ')' ;
+// add 1 (or up to NUMBER) matching card(s) from your Deck (or GY / banished cards) to your hand: the plugin's own pick-and-act step, no donor
+// (docs/EffectSystem.md section 98)
+searchAction  : 'search' '(' searchZones (',' NUMBER)? (',' choices)? ')' ;
+searchZones   : searchZone ('or' searchZone)* ;
+searchZone    : 'deck' | 'grave' | 'banished' ;
 reviveAction  : 'revive' '(' graveyard (',' choices)? ')' ;
 // 'all' matching cards, 'target' 1 card chosen at activation, or 'one' card chosen when it resolves (no target; the plugin's own field pick,
 // docs/EffectSystem.md section 56)

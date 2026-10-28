@@ -381,6 +381,18 @@ public interface IEffectScriptVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitSearchAction([NotNull] EffectScriptParser.SearchActionContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.searchZones"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSearchZones([NotNull] EffectScriptParser.SearchZonesContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="EffectScriptParser.searchZone"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitSearchZone([NotNull] EffectScriptParser.SearchZoneContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="EffectScriptParser.reviveAction"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

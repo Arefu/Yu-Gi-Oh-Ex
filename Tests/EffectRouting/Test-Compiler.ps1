@@ -25,13 +25,13 @@ $cases = @(
     @{script='on ignition: as(5738) effect_only;'; ids=$null},
     @{script='on in_grave: as(5738);'; ids=$null},
     # Special Summon from several zones: one own summon step on Unexpected Dai's row, one "or" alternative per zone (and selector)
-    @{script='special_summon(hand or deck or grave, monster where level <= 4);'; ids=@(11740); scans=@('handSummon','deckSummon','graveSummon')},
-    @{script='special_summon(banished, monster);'; ids=@(11740); scans=@('banishedSummon')},
-    @{script='special_summon(extra, monster where race = Dragon);'; ids=@(11740); scans=@('extraSummon')},
-    @{script='special_summon(grave or banished, monster where race = Zombie or monster where race = Fiend);'; ids=@(11740); scans=@('graveSummon','graveSummon','banishedSummon','banishedSummon')},
+    @{script='special_summon(hand or deck or grave, monster where level <= 4);'; ids=$null; scans=@('handSummon','deckSummon','graveSummon')},
+    @{script='special_summon(banished, monster);'; ids=$null; scans=@('banishedSummon')},
+    @{script='special_summon(extra, monster where race = Dragon);'; ids=$null; scans=@('extraSummon')},
+    @{script='special_summon(grave or banished, monster where race = Zombie or monster where race = Fiend);'; ids=$null; scans=@('graveSummon','graveSummon','banishedSummon','banishedSummon')},
     @{script='on ignition: special_summon(hand or deck or grave or banished or extra, monster);'; ids=$null; scans=@('handSummon','deckSummon','graveSummon','banishedSummon','extraSummon')},
-    @{script='special_summon(hand, monster);'; ids=@(6572)},   # one zone keeps its game card
-    @{script='special_summon(deck, monster);'; ids=@(11740)},
+    @{script='special_summon(hand, monster);'; ids=$null; scans=@('handSummon')},   # section 98: every zone is the own step on a raw row
+    @{script='special_summon(deck, monster);'; ids=$null; scans=@('deckSummon')},
     # "activate 1 of these effects": 'or' joins effects into one limit group (shared once-per-turn)
     @{script='on ignition: draw(1); once_per_turn; or on ignition: gain_lp(1000);'; ids=$null; groups=@(0,0); once=@($true,$true)},
     @{script='on ignition: draw(1); or on ignition: gain_lp(1000); also on sent_to_grave: draw(1); once_per_turn;'; ids=$null; groups=@(0,0,$null); once=@($false,$false,$true)},
@@ -125,7 +125,8 @@ $cases = @(
     # raw='row': no donor at all (rawRow, no "from"); raw='slots': raw slots on a trigger row's place (section 88)
     @{script='move(target, opponent, monster, to_deck);'; ids=$null; mv='target,deck'; raw='row'},
     @{script='move(target, any, card, to_hand);'; ids=$null; mv='target,hand'; raw='row'},
-    @{script='on special_summoned: move(target, opponent, monster where level <= 4, to_deck_bottom);'; ids=$null; mv='target,deckBottom'; raw='slots'},
+    # section 99: a summon trigger is an own trigger, so a raw action has no donor at all (was raw slots on Green Gadget's row)
+    @{script='on special_summoned: move(target, opponent, monster where level <= 4, to_deck_bottom);'; ids=$null; mv='target,deckBottom'; raw='row'; own='special_summoned'},
     @{script='move(self, to_hand);'; ids=$null; mv='self,hand'; raw='row'},
     @{script='move(target, 2, any, card, to_hand);'; ids=$null; mv='target,hand'; raw='row'},
     @{script='move(target, 3, opponent, monster, destroy);'; ids=$null; mv='target,destroy'; raw='row'},
@@ -169,7 +170,15 @@ $cases = @(
     # up to N cards from the GY / banished, picked one after another (section 95)
     @{script='add_to_hand(banished, 2, monster where race = Cyberse);'; ids=$null
       check={ param($c) $c.rawRow -and $c.own -eq 'toHand' -and $c.ownCount -eq 2 -and $c.deck.scan -eq 'banished' }},
-    @{script='add_to_hand(grave, monster where race = Plant);'; ids=$null; check={ param($c) $c.from -and $null -eq $c.ownCount }},
+    @{script='add_to_hand(grave, monster where race = Plant);'; ids=$null; check={ param($c) $c.rawRow -and $null -eq $c.from -and $c.own -eq 'toHand' -and $c.deck.scan -eq 'grave' -and $null -eq $c.ownCount }},
+    # section 98: search is the own step on a raw row (no Reinforcement of the Army), over every zone named
+    @{script='search(deck, monster where race = Warrior);'; ids=$null; check={ param($c) $c.rawRow -and $null -eq $c.from -and $c.own -eq 'toHand' -and $c.deck.scan -eq 'deck' }},
+    @{script='search(deck or grave, monster where race = Warrior);'; ids=$null; check={ param($c) $c.rawRow -and $c.deck.scan -eq 'deck' -and @($c.deck.or).Count -eq 1 -and @($c.deck.or)[0].scan -eq 'grave' }},
+    @{script='search(grave or banished, 2, card where archetype = 74);'; ids=$null; check={ param($c) $c.ownCount -eq 2 -and $c.deck.scan -eq 'grave' -and @($c.deck.or)[0].scan -eq 'banished' }},
+    @{script='on normal_summoned: search(deck or grave, monster);'; ids=$null; check={ param($c) $c.rawRow -and $c.ownTrigger -and $null -eq $c.from -and $c.trigger -eq 'normal_summoned' -and $null -eq $c.actionFrom -and $c.own -eq 'toHand' }},
+    @{script='on normal_summoned: draw(1);'; ids=$null; own='normal_summoned'; check={ param($c) $c.from -eq 4844 -and $c.ownTrigger -and $null -eq $c.actionFrom }},
+    @{script='on special_summoned(from grave): special_summon(hand, monster where level <= 4);'; ids=$null; own='special_summoned'; check={ param($c) $c.rawRow -and $c.summonCondition -and $null -eq $c.from }},
+    @{script='draw(1) then search(deck, spell);'; ids=$null; check={ param($c) $c.rawRow -and $c.own -eq 'toHand' -and $c.before[0].from -eq 4844 }},
     @{script='move(grave, 3, monster where race = Fish, to_deck) then draw(1);'; ids=$null; check={ param($c) $c.before[0].ownCount -eq 3 -and $c.before[0].own -eq 'toDeck' }},
     # alternative Xyz Summon (section 94)
     @{script='xyz_also(monster where archetype = 153, xyz_monster, rank 4);'; ids=$null
@@ -192,7 +201,10 @@ $cases = @(
       check={ param($c) @($c.require) -contains 'battledThisTurn' }},
     # phase windows (section 93): several conditions with 'and'
     @{script='if opponent_main_phase and no_monsters: special_summon(self); quick;'; ids=$null
-      check={ param($c) @($c.require) -contains 'opponentMainPhase' -and @($c.require) -contains 'noMonsters' }},
+      check={ param($c) @($c.require) -contains 'opponentMainPhase' -and @($c.require) -contains 'noMonsters' -and $c.selfDo -eq 'summonFromHand' }},
+    # section 100: "Special Summon this card from your hand" = own hand effect + the game's summon-self machine, no Watch Cat
+    @{script='special_summon(self);'; ids=$null; own='in_hand'; raw='row'
+      check={ param($c) $c.selfDo -eq 'summonFromHand' -and @($c.require) -contains 'inHand' -and @($c.require) -contains 'canSummonSelf' }},
     @{script='if main_or_battle_phase: destroy(target, opponent, monster); quick;'; ids=$null; requireName='mainOrBattlePhase'},
     @{script='if opponent_turn and lp_at_most(2000): draw(1);'; ids=$null
       check={ param($c) @($c.require) -contains 'opponentTurn' -and @($c.require) -contains 'lpAtMost' -and $c.lpAtMost -eq 2000 }},
@@ -275,8 +287,8 @@ foreach ($case in $cases) {
     if ($case.scans) {
         $scans = @($compiled.deck.scan) + @($compiled.deck.or | Where-Object { $_ } | ForEach-Object { $_.scan })
         if (($scans -join ',') -ne ($case.scans -join ',')) { throw "Zones changed ($($scans -join ',')): $($case.script)" }
-        if ($compiled.own -ne 'summon' -or $compiled.condition -ne 'listHasMatch') { throw "Not an own summon step: $($case.script)" }
-        if ($case.script -match '^on ' -and ($compiled.from -ne 11740 -or !$compiled.ownTrigger -or $compiled.trigger -ne 'ignition')) { throw "Triggered zones summon is not an own ignition on its action: $($case.script)" }
+        if ($compiled.own -ne 'summon' -or $compiled.condition -ne 'listHasMatch' -or ($case.script -notmatch '^on ' -and !$compiled.rawRow) -or $null -ne $compiled.from) { throw "Not an own summon step: $($case.script)" }
+        if ($case.script -match '^on ' -and (!($compiled.rawSlots -or $compiled.rawRow) -or !$compiled.ownTrigger -or $compiled.trigger -ne 'ignition')) { throw "Triggered zones summon is not an own ignition on its action: $($case.script)" }
     }
     $parsed = $tree.Invoke($null, @([string]$case.script)) | ConvertFrom-Json
     if ($parsed.error) { throw $parsed.error }

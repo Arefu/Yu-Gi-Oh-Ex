@@ -471,6 +471,67 @@ namespace
         g_Clones.clear();
     }
 
+    // Own "this card is Normal / Special Summoned" triggers (section 99): offered from Hook_EventEvaluator with the evaluator's own ref layout
+    // (Eval_EventTriggersCardEffect_ByCardId 0x1400E3951-0x1400E3986), gated on the zone's status byte, never evaluated as the action card.
+    std::vector<std::tuple<uint32_t, int16_t, uint32_t>> g_RefOffers;
+    int64_t __fastcall MockRefOffer(uint32_t ref, int16_t slot, uint32_t param) { g_RefOffers.emplace_back(ref, slot, param); return 1; }
+    int g_EvaluatorRuns = 0;
+    void __fastcall MockEventEvaluator(int) { ++g_EvaluatorRuns; }
+    uint32_t __fastcall MockEventParam() { return 0x20005; }
+    void TestOwnSummonTriggers()
+    {
+        using nlohmann::json;
+        constexpr uint16_t custom = 15360;
+        g_Clones.clear();
+        Clone normal, special, both;
+        Check(ParseEffect(json{{"from", 4844}, {"ownTrigger", true}, {"effectOnly", true}, {"trigger", "normal_summoned"}}, normal, "t")
+            && ParseEffect(json{{"from", 4844}, {"ownTrigger", true}, {"effectOnly", true}, {"trigger", "special_summoned"},
+                                {"summonCondition", json{{"from", json::array({"grave"})}}}}, special, "t"), "summon trigger parse");
+        g_Clones.emplace(custom, std::move(normal));
+        g_Clones.emplace(custom + 1, std::move(special));
+        orig_OfferByRef = &MockRefOffer;
+        orig_EventEvaluator = &MockEventEvaluator;
+        g_SummonEventParam = &MockEventParam;
+        auto* record = reinterpret_cast<uint8_t*>(0x14349C560);
+        auto summon = [&](uint16_t id, int player, int zone, uint16_t fromZone, bool live) {
+            memset(record, 0, 0x40);
+            *reinterpret_cast<uint16_t*>(record + 2) = static_cast<uint16_t>(player);
+            *reinterpret_cast<uint16_t*>(record + 4) = static_cast<uint16_t>(zone);
+            *reinterpret_cast<uint16_t*>(record + 0x0A) = fromZone;
+            *reinterpret_cast<uint32_t*>(record + 0x26) = 3;     // the record carries the id (+0xE)
+            *reinterpret_cast<uint16_t*>(record + 0xE) = id;
+            *reinterpret_cast<uint8_t*>(0x143497C40 + 0x53 + player * 0xD94 + 24 * zone) = live ? 1 : 0;
+        };
+        g_RefOffers.clear(); g_EvaluatorRuns = 0;
+        summon(custom, 1, 2, 13, true);
+        Hook_EventEvaluator(7);
+        Check(g_RefOffers.size() == 1, "Normal Summon trigger not offered once");
+        const uint32_t expected = custom | ((((1u << 6 | 7u) << 9) | 2u | 0x20u) << 16);
+        Check(std::get<0>(g_RefOffers[0]) == expected && std::get<1>(g_RefOffers[0]) == 5 && std::get<2>(g_RefOffers[0]) == 0x20005, "Offer ref / slot / param differ from the evaluator's");
+        Check(g_EvaluatorRuns == 0, "An own trigger was evaluated by the game's id branches");
+        g_RefOffers.clear();
+        Hook_EventEvaluator(9);
+        Check(g_RefOffers.empty(), "Normal Summon trigger offered for a Special Summon");
+        summon(custom, 1, 2, 13, false);
+        Hook_EventEvaluator(7);
+        Check(g_RefOffers.empty(), "Offered although the zone's status byte is clear (the evaluator's entry gate)");
+        summon(custom + 1, 0, 3, 16, true);
+        Hook_EventEvaluator(9);
+        Check(g_RefOffers.size() == 1, "Special Summon from the GY not offered");
+        g_RefOffers.clear();
+        summon(custom + 1, 0, 3, 13, true);
+        Hook_EventEvaluator(9);
+        Check(g_RefOffers.empty(), "summonCondition (from the GY) ignored");
+        // the offered lookup (table 1, the event) finds the own row with the action composed onto it
+        uint16_t lookup[0x20]{};
+        lookup[0] = custom; lookup[2] = 2; lookup[3] = 7; lookup[4] = 1;
+        Row* row = static_cast<Row*>(Hook_GetEntry(lookup));
+        Check(row && row->Id == custom && row->Slot[0] && !row->Slot[3], "Own summon trigger row missing or kept a cost");
+        lookup[3] = 9;
+        Check(!Hook_GetEntry(lookup), "Own Normal Summon row answered a Special Summon lookup");
+        g_Clones.clear();
+    }
+
     // Own summon-reaction triggers (Hook_SummonReaction): after the game's pass, offered through the named-card helper to the right player(s).
     std::vector<std::tuple<int, int, int, uint32_t>> g_NamedOffers;
     void __fastcall MockSummonReaction(int) {}
@@ -781,6 +842,8 @@ int main()
         std::cout << "PASS own move triggers: move reference checks, the evaluator's offer layout, no donor swap, table 2 row\n";
         TestOwnAttackTriggers();
         std::cout << "PASS own attack triggers: attacker / attacked player's monster / target, evaluator param, direct attack, replay\n";
+        TestOwnSummonTriggers();
+        std::cout << "PASS own summon triggers: the evaluator's ref / slot / param, zone gate, event, summonCondition, own row (section 99)\n";
         TestOwnSummonReactions();
         std::cout << "PASS own summon-reaction triggers: opponent's Special / Normal-or-Special Summon, any Special Summon, Set ignored\n";
         TestRawPickCosts();
@@ -831,6 +894,30 @@ int main()
             Check(std::equal(saved.begin(), saved.end(), record), "Choice tag or native sub-effect number was lost");
         }
         std::cout << "PASS independently selected effects sharing table, event and source row\n";
+        {
+            // issue #38: a Spell with two effects; the player picks effect 2 at the select row's prompt, and the record that resolves is a copy
+            // whose card instance (word11) differs - the choice must travel in the record (word20 tag), not only in the (card, instance) key
+            uint16_t activation[0x20]{};
+            activation[0] = 15301; activation[2] = 9; activation[11] = 5;
+            Row* select = static_cast<Row*>(Hook_GetEntry(activation));
+            Check(select && select->Slot[3] == reinterpret_cast<void*>(&ChoiceSlot3), "Two-effect Spell is not offered with the select row");
+            g_ChoicePrompted.insert(ChoiceKey(activation));       // the prompt is up ...
+            *reinterpret_cast<uint16_t*>(kPromptAnswer) = 1;      // ... and the player picked the second effect
+            Check(ChoiceSlot3(activation, 0, 0, 0) == 1, "Chosen effect with no cost did not finish slot 3");
+            uint16_t resolving[0x20];
+            std::copy(std::begin(activation), std::end(activation), resolving);
+            resolving[2] = 7; resolving[11] = 9;
+            Row* chosen = static_cast<Row*>(Hook_GetEntry(resolving));
+            Check(chosen && chosen->Slot[3] != reinterpret_cast<void*>(&ChoiceSlot3), "Resolution was offered the select row again");
+            Check(RouteByRow(&root, resolving) == root.Parts.data(), "Resolution lost the chosen effect");
+            Check(Hook_GetDraw(resolving) == 3, "Resolution used the first effect's parameters");
+            reinterpret_cast<uint64_t(__fastcall*)(uint16_t*, uint64_t, uint64_t, uint64_t)>(chosen->Slot[0])(resolving, 0, 0, 0);
+            Check(g_Choices.empty(), "Resolved choice was kept");
+            uint16_t next[0x20]{};
+            next[0] = 15301; next[2] = 9; next[11] = 5;
+            Check(static_cast<Row*>(Hook_GetEntry(next))->Slot[3] == reinterpret_cast<void*>(&ChoiceSlot3), "The next activation did not choose again");
+        }
+        std::cout << "PASS a chosen effect survives into a copied record with another card instance (issue #38)\n";
         orig_OfferByRef = Offer;
         orig_MenuOffer = MenuOffer;
         *reinterpret_cast<uint32_t*>(0x14349C020) = 0;

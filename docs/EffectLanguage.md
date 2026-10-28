@@ -19,7 +19,7 @@ Every action compiles to "borrow the handlers of a vanilla card that already doe
 | action | borrows | parameters written by the compiler |
 |---|---|---|
 | `draw(N)` | Pot of Greed 4844 | `draw` |
-| `search(deck, selector)` | Reinforcement of the Army 5328 | `deck` filter (`scan: deck`) |
+| `search(deck [or grave or banished][, N], selector)` | none: own pick-and-act step on a raw row (section 98) | `deck` filter per zone, `own: toHand`, `ownCount` |
 | `revive(grave \| opponent_grave \| either_grave, selector)` | Monster Reborn 4842 | `deck` filter with a graveyard scan |
 | `destroy(all, own \| opponent \| any, selector)` | Warrior Elimination 4659 | `filter` (one condition) |
 
@@ -40,9 +40,9 @@ Race and attribute names are the game's (Dragon ... Creator God; Light, Dark, Wa
 |---|---|
 | `draw(N)` | draw N |
 | `gain_lp(N)` / `burn(N)` | gain N Life Points / inflict N damage to the opponent |
-| `search(deck, selector)` | add 1 matching card from the Deck to the hand |
+| `search(deck [or grave or banished][, N], selector)` | add 1 (or up to N) matching card(s) from the Deck (or GY / banished cards) to the hand: "add 1 X from your Deck or GY to your hand". No donor card; the Deck half obeys Thunder King Rai-Oh and the like (EffectSystem.md section 98) |
 | `revive(grave \| opponent_grave \| either_grave, selector)` | Special Summon 1 matching monster from a Graveyard |
-| `special_summon(hand \| deck \| grave \| banished \| extra [or ...], selector)` | Special Summon 1 matching monster from your hand / Deck / GY / face-up banished cards / Extra Deck. Join zones with `or` for one list over all of them: `special_summon(hand or deck or grave, monster where level <= 4)` ("from your hand, Deck, or GY"). One of hand / deck / grave keeps its proven game card; several zones, banished or extra use the plugin's own summon step (EffectSystem.md section 57). WolfX blocks: "Special Summon from any of" with a box per zone |
+| `special_summon(hand \| deck \| grave \| banished \| extra [or ...], selector)` | Special Summon 1 matching monster from your hand / Deck / GY / face-up banished cards / Extra Deck. Join zones with `or` for one list over all of them: `special_summon(hand or deck or grave, monster where level <= 4)` ("from your hand, Deck, or GY"). Every zone uses the plugin's own summon step on a raw row, no donor card (EffectSystem.md sections 57, 98). `special_summon(self)` ("Special Summon this card from your hand") is an own hand effect running the game's summon-self machine (section 100). WolfX blocks: "Special Summon from any of" with a box per zone |
 | `send_to_grave(deck, selector)` | send 1 matching card from the Deck to the Graveyard |
 | `destroy(all, own \| opponent \| any, selector)` | destroy all matching monsters |
 | `destroy(target, side, selector)` | choose 1 matching card (monster, or `spell` for a Spell/Trap) and destroy it |
@@ -94,7 +94,7 @@ Summon triggers take how the card was summoned: `on special_summoned(from grave,
 |---|---|---|
 | `set(deck, selector)` | "Set 1 X Spell/Trap directly from your Deck" (the game's set-from-Deck machine) | section 63 |
 | `fusion_summon(selector)` | "Fusion Summon 1 (X) Fusion Monster from your Extra Deck, using monsters from your hand or field as material" (Polymerization's machine, the Extra Deck list filtered). Not yet: fusions that banish / shuffle materials from the GY | section 64 |
-| `add_to_hand(grave \| banished, selector)` | add 1 matching card from your GY / banished cards to your hand | |
+| `add_to_hand(grave \| banished[, N], selector)` | add 1 (or up to N) matching card(s) from your GY / banished cards to your hand; own step, no donor (section 98) | |
 | `banish(all \| target, side, selector)` / `banish(deck \| hand \| extra \| grave, selector)` | banish matching cards on the field, or 1 card from a zone | section 55 |
 | `return_to_hand(target, side, selector)` | target 1 card on the field and return it to the hand | |
 | `gain_atk(side, N)` | target 1 face-up monster: it gains N ATK until the end of this turn | |

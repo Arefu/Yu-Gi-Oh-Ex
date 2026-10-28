@@ -137,7 +137,14 @@ const ACTIONS = [
     args: [{ kind: 'pick', rule: 'lockTurnArg', field: 'WHAT', options: [['Traps on the field', 'trap'], ['Equip, Field, Continuous and Quick-Play Spells', 'spell'],
            ['the effects of Defense Position monsters', 'defense_position']] }],
   },
-  { name: 'search', text: 'add from your Deck to your hand: %SEL', args: [{ kind: 'lit', value: 'deck' }, { kind: 'sel', field: 'SEL' }] },
+  // add up to N cards from any of the ticked zones (one list; the plugin's own step, docs/EffectSystem.md section 98)
+  {
+    name: 'search', text: 'add up to %N card(s) to your hand from your Deck %DECK GY %GY banished cards %BANISHED : %SEL',
+    args: [{ kind: 'zone', rule: 'searchZones', item: 'searchZone', field: 'DECK', value: 'deck', def: true },
+           { kind: 'zone', rule: 'searchZones', item: 'searchZone', field: 'GY', value: 'grave' },
+           { kind: 'zone', rule: 'searchZones', item: 'searchZone', field: 'BANISHED', value: 'banished', last: true },
+           { kind: 'num', field: 'N', def: 1, min: 1, omitOne: true }, { kind: 'sel', field: 'SEL' }],
+  },
   // "Set 1 X Spell/Trap directly from your Deck" (the game's set-from-Deck machine, docs/EffectSystem.md section 63)
   { name: 'set', text: 'Set from your Deck: %SEL', args: [{ kind: 'lit', value: 'deck' }, { kind: 'sel', field: 'SEL' }] },
   // "Fusion Summon 1 X Fusion Monster" with Polymerization's materials (hand or field), docs/EffectSystem.md section 64
@@ -1013,8 +1020,8 @@ function actionState(actionNode) {
     const item = items[i];
     switch (arg.kind) {
       case 'zone':
-        if (isNode(item) && item.r === 'summonZones') {
-          state.fields[arg.field] = rules(item, 'summonZone').some((z) => text(z) === arg.value);
+        if (isNode(item) && item.r === (arg.rule || 'summonZones')) {
+          state.fields[arg.field] = rules(item, arg.item || 'summonZone').some((z) => text(z) === arg.value);
           if (arg.last) i++;
         }
         break;

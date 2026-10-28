@@ -646,8 +646,9 @@ namespace WolfEx
 
             card.Effect = result.Compiled;
             _compiled.Text = result.Compiled!.ToJsonString(new JsonSerializerOptions { TypeInfoResolver = new System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver(), WriteIndented = true });
-            _status.Text = "Compiled OK. Saved with the rest of the cards when you use Save All.";
-            _status.ForeColor = Color.DarkGreen;
+            var notes = EffectNotes.For(result.Compiled!, card.Kind, card.Icon);
+            _status.Text = notes.Count == 0 ? "Compiled OK. Saved with the rest of the cards when you use Save All." : "Compiled. Note: " + string.Join(" ", notes);
+            _status.ForeColor = notes.Count == 0 ? Color.DarkGreen : Color.DarkOrange;
         }
     }
 }

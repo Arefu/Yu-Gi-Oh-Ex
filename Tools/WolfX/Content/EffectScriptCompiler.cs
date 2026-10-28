@@ -1014,7 +1014,9 @@ namespace WolfEx
                     bool raw = compiled["rawRow"]?.GetValue<bool>() == true;
                     // ignition never takes a game card: its own table-3 row is the shape of a plain ignition row (OwnTriggerKind), and a borrowed
                     // one brought the donor's slot-3 cost along (Caam's "shuffle 2 Gusto monsters" prompt on every ignition, issue #39)
-                    bool direct = !raw & name != "ignition" & TryTriggerSource(name, ActionKey(actions[^1]), out int source);
+                    // the summon triggers neither (section 99): the own row and offer are the game's own layout, a game monster's row is a donor
+                    bool direct = !raw & name is not ("ignition" or "normal_summoned" or "special_summoned" or "summoned" or "normal_or_special_summoned")
+                        & TryTriggerSource(name, ActionKey(actions[^1]), out int source);
                     // a move trigger with conditions is always the plugin's own (it checks the move reference itself)
                     if (IsMoveTriggerName(name) && trigger.summonConditions() != null)
                         direct = false;
@@ -1122,8 +1124,9 @@ namespace WolfEx
             _ => "extra",
         };
 
+        // no donor (section 98): a raw row, the own step's movers (Foolish Burial's, called directly) under this card's own id
         private static JsonObject OwnMove(string own, JsonObject filter) =>
-            new() { ["from"] = SendSource, ["condition"] = "listHasMatch", ["deck"] = filter, ["own"] = own };
+            new() { ["rawRow"] = true, ["condition"] = "listHasMatch", ["deck"] = filter, ["own"] = own };
 
         // A trigger's (...) list: "watch" for the watchers (always written: the runtime reads it for every watcher), "moveCondition" for the move
         // triggers, "summonCondition" for the summon triggers.
@@ -1350,6 +1353,8 @@ namespace WolfEx
             || trigger == "in_hand"         // "If this card is in your hand: You can ...": the hand-effect id test answers yes (section 66)
             || trigger is "attack_declared" or "opponent_attack_declared" or "attacked"    // offered after the attack evaluator (section 67)
             || trigger is "opponent_special_summoned" or "opponent_summoned" or "monster_special_summoned" or "monster_summoned"   // after the summon-reaction pass (section 68)
+            // "When this card is Normal / Special Summoned": offered from the summon evaluator with its own ref layout (section 99)
+            || trigger is "normal_summoned" or "special_summoned" or "summoned" or "normal_or_special_summoned"
             || IsWatchTriggerName(trigger);   // after the leave-the-field / move evaluators (section 91)
 
         private static bool IsMoveTriggerName(string trigger) =>
@@ -1590,24 +1595,21 @@ namespace WolfEx
                 if (zones[0] == "self")
                 {
                     if (summon.choices() != null) throw new ScriptError("special_summon(self) takes no selector.");
-                    return new JsonObject { ["from"] = SummonSelfSource, ["condition"] = "always", ["require"] = new JsonArray("inHand", "canSummonSelf") };
+                    // no donor (section 100): the own hand-effect row (table 2, offered by the hand-effect id test, section 66) and the game's
+                    // Slot0_SpecialSummonSelfFromHand run raw under this card's own id
+                    return new JsonObject { ["rawRow"] = true, ["ownTrigger"] = true, ["trigger"] = "in_hand", ["effectOnly"] = true, ["condition"] = "always",
+                        ["require"] = new JsonArray("inHand", "canSummonSelf"), ["selfDo"] = "summonFromHand" };
                 }
                 if (zones[0] == "self_grave")
                 {
                     if (summon.choices() != null) throw new ScriptError("special_summon(self_grave) takes no selector.");
                     return new JsonObject { ["from"] = SummonSelfGraveSource, ["condition"] = "always", ["require"] = new JsonArray("canSummonSelfFromGrave") };
                 }
-                if (zones.Count == 1 && zones[0] is "hand" or "deck" or "grave")   // one zone keeps its proven game card
-                    return zones[0] switch
-                    {
-                        "hand" => new JsonObject { ["from"] = SummonHandSource, ["deck"] = DeckFilter(summon.choices(), "handSummon") },
-                        "deck" => new JsonObject { ["from"] = SummonDeckSource, ["condition"] = "listHasMatch", ["deck"] = DeckFilter(summon.choices(), "deckSummon") },
-                        _ => new JsonObject { ["from"] = ReviveSource, ["deck"] = DeckFilter(summon.choices(), "graveSummon") },
-                    };
-                // Several zones, the banished cards or the Extra Deck: one list over every zone (one "or" alternative per zone and selector, each
-                // with its zone's "can be Special Summoned" scan) on Unexpected Dai's row, picked and summoned by the plugin's own step (the game's
-                // summon queue takes a card from any zone; docs/EffectSystem.md section 57).
-                return new JsonObject { ["from"] = SummonDeckSource, ["condition"] = "listHasMatch", ["deck"] = ZonesFilter(summon.choices(), zones), ["own"] = "summon" };
+                // One list over every zone named (one "or" alternative per zone and selector, each with its zone's "can be Special Summoned"
+                // scan), picked when it resolves and summoned by the plugin's own step (the game's summon queue Chain_AddEffectLink takes a card
+                // from any zone; docs/EffectSystem.md section 57) on a raw row under this card's own id - no donor (section 98). A "target 1
+                // monster in your GY" Special Summon is revive(...), which still targets with Monster Reborn's row.
+                return new JsonObject { ["rawRow"] = true, ["condition"] = "listHasMatch", ["deck"] = ZonesFilter(summon.choices(), zones), ["own"] = "summon" };
             }
 
             if (action.salvageAction() is { } salvage)
@@ -1615,12 +1617,12 @@ namespace WolfEx
                 bool banished = salvage.GetChild(2).GetText() == "banished";
                 int salvageCount = salvage.NUMBER() is { } n ? int.Parse(n.GetText()) : 1;
                 if (salvageCount < 1 || salvageCount > 10) throw new ScriptError("add_to_hand(..., N): N is 1 to 10.");
-                // up to N: Yu-Gi-Oh-Effects' own pick-and-act step, round N times (its GY / banished movers; section 95)
+                // Yu-Gi-Oh-Effects' own pick-and-act step with the GY / banished movers (Effect_AddGraveCardToHand / Effect_AddBanishedCardToHand,
+                // the salvage machine's), no donor; up to N: round N times (section 95)
+                var salvageJson = new JsonObject { ["rawRow"] = true, ["condition"] = "listHasMatch", ["deck"] = ZonesFilter(salvage.choices(), [banished ? "banished" : "grave"], PlainScans), ["own"] = "toHand" };
                 if (salvageCount > 1)
-                    return new JsonObject { ["rawRow"] = true, ["condition"] = "listHasMatch", ["deck"] = ZonesFilter(salvage.choices(), [banished ? "banished" : "grave"], PlainScans), ["own"] = "toHand", ["ownCount"] = salvageCount };
-                return banished
-                    ? new JsonObject { ["from"] = SalvageBanishedSource, ["deck"] = DeckFilter(salvage.choices(), "banished") }
-                    : new JsonObject { ["from"] = SalvageSource, ["deck"] = DeckFilter(salvage.choices(), "grave") };
+                    salvageJson["ownCount"] = salvageCount;
+                return salvageJson;
             }
 
             if (action.banishAction() is { } banish)
@@ -1649,7 +1651,18 @@ namespace WolfEx
             }
 
             if (action.searchAction() is { } search)
-                return new JsonObject { ["from"] = SearchSource, ["deck"] = DeckFilter(search.choices(), "deck") };
+            {
+                // No donor (docs/EffectSystem.md section 98): the plugin's own pick-and-act step is the game's search machine for an id it does
+                // not list (Slot0_AddFromDeckToHand_StateMachine: prompt 0x33, list mode 6, Card_MoveListCardToHand), with the GY / banished
+                // movers for those zones; one list over every zone, the Deck rule (Can_PlayerAddFromDeckToHand) applied to the Deck rows.
+                var zones = search.searchZones().searchZone().Select(z => z.GetText()).Distinct().ToList();
+                int searchCount = search.NUMBER() is { } n ? int.Parse(n.GetText()) : 1;
+                if (searchCount < 1 || searchCount > 10) throw new ScriptError("search(..., N): N is 1 to 10.");
+                var searchJson = new JsonObject { ["rawRow"] = true, ["condition"] = "listHasMatch", ["deck"] = ZonesFilter(search.choices(), zones, PlainScans), ["own"] = "toHand" };
+                if (searchCount > 1)
+                    searchJson["ownCount"] = searchCount;
+                return searchJson;
+            }
             if (action.setAction() is { } set)
                 return new JsonObject { ["from"] = DrawSource, ["actionFrom"] = SetSource, ["deck"] = DeckFilter(set.choices(), "deck") };
             if (action.fusionAction() is { } fusion)
@@ -1672,9 +1685,7 @@ namespace WolfEx
             }
 
             if (action.sendAction() is { } send)
-                return send.GetChild(2).GetText() == "deck"
-                    ? new JsonObject { ["from"] = SendSource, ["deck"] = DeckFilter(send.choices(), "deck") }
-                    : OwnMove("toGrave", DeckFilter(send.choices(), "hand"));
+                return OwnMove("toGrave", DeckFilter(send.choices(), send.GetChild(2).GetText() == "deck" ? "deck" : "hand"));
 
             if (action.banishFromAction() is { } banishFrom)
                 return OwnMove("banish", DeckFilter(banishFrom.choices(), banishFrom.GetChild(2).GetText()));

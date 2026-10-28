@@ -1366,8 +1366,21 @@ namespace WolfEx
             if ((m = Rx("Special Summon this card(?: from your GY)?").Match(s)).Success && cx.IsMonster && (cx.InGrave || s.EndsWith("from your GY", StringComparison.OrdinalIgnoreCase)))
                 return "special_summon(self_grave)";
             if ((m = Rx("Special Summon this card(?: from your hand)?").Match(s)).Success && cx.IsMonster) return "special_summon(self)";
-            if ((m = Rx("add 1 (?<sel>.+?) from your Deck to your hand").Match(s)).Success)
-                return Choices(m.Groups["sel"].Value, cx, out var sel) ? $"search(deck{sel})" : null;
+            // "add 1 X from your Deck or GY to your hand", "add up to 2 X from your Deck", "add 1 X from your GY or banishment", "add 1 of your X
+            // that is banished or in your Deck": one own list over every zone named (EffectSystem.md section 98); "up to N" = picked one by one
+            if ((m = Rx("add (?<up>up to )?(?<n>\\d+) (?:of your )?(?<sel>.+?) from your (?<zone>(?:Deck|GY|banishment)(?:(?:,? or |,? and/or )(?:your )?(?:Deck|GY|banishment))*) to your hand").Match(s)).Success
+                || (m = Rx("add (?<up>up to )?(?<n>\\d+) of your (?<sel>.+?) that (?:is|are) (?<zone>banished or in your (?:Deck|GY)|in your (?:Deck|GY) or banished|in your Deck or GY) to your hand").Match(s)).Success)
+            {
+                int n = int.Parse(m.Groups["n"].Value);
+                if (n > 1 && !m.Groups["up"].Success) return null;   // exactly N: the list is picked one by one, "up to"
+                var zones = Regex.Matches(m.Groups["zone"].Value, "Deck|GY|banish", Opt)
+                    .Select(z => z.Value.ToLowerInvariant() switch { "deck" => "deck", "gy" => "grave", _ => "banished" }).Distinct().ToList();
+                if (!Choices(m.Groups["sel"].Value, cx, out var sel)) return null;
+                string count = n > 1 ? $", {n}" : "";
+                if (zones is ["grave"] or ["banished"])
+                    return $"add_to_hand({zones[0]}{count}{sel})";
+                return $"search({string.Join(" or ", zones)}{count}{sel})";
+            }
             // "Fusion Summon 1 "X" Fusion Monster from your Extra Deck, using monsters from your hand or field as material": Polymerization's
             // machine with its Fusion list filtered (EffectSystem.md section 64); other material zones are noted (Polymerization's are used)
             // "... by banishing (the) Fusion Materials listed / mentioned on it (its materials) from your field and/or GY": Dragon's Mirror's route
@@ -1408,7 +1421,7 @@ namespace WolfEx
                 var zones = Regex.Split(m.Groups["zone"].Value, ", or |, | or ")
                     .Select(z => z.ToLowerInvariant() switch { "hand" => "hand", "deck" => "deck", "extra deck" => "extra", _ => "grave" }).Distinct().ToList();
                 if (!Choices(m.Groups["sel"].Value, cx, out var sel, monsterOnly: true)) return null;
-                return zones is ["grave"] ? $"revive(grave{sel})" : $"special_summon({string.Join(" or ", zones)}{sel})";
+                return $"special_summon({string.Join(" or ", zones)}{sel})";   // picked when it resolves, as the text says (no target)
             }
             // (not "... that is banished or in your GY": the banished-or-GY reading below)
             if ((m = Rx("target 1 (?<sel>.+?) in (?<gy>your GY|your opponent's GY|either GY|any GY); Special Summon (?:it|that target)(?: to your field)?").Match(s)).Success
