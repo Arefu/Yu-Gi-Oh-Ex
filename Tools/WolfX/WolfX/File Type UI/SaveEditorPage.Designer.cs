@@ -29,6 +29,7 @@ namespace WolfX.Types
             btnOpen = new Button();
             btnSave = new Button();
             btnSaveAs = new Button();
+            btnComplete = new Button();
             tabGeneral = new TabPage();
             tabStats = new TabPage();
             tabCards = new TabPage();
@@ -96,13 +97,15 @@ namespace WolfX.Types
             top.Controls.Add(btnOpen, 2, 0);
             top.Controls.Add(btnSave, 3, 0);
             top.Controls.Add(btnSaveAs, 4, 0);
-            top.ColumnCount = 5;
+            top.Controls.Add(btnComplete, 5, 0);
+            top.ColumnCount = 6;
             top.Dock = DockStyle.Top;
             top.Height = 38;
             top.Padding = new Padding(4);
             top.RowCount = 1;
             top.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
             top.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            top.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
             top.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
             top.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
             top.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
@@ -145,7 +148,15 @@ namespace WolfX.Types
             btnSaveAs.UseVisualStyleBackColor = true;
             btnSaveAs.Name = "btnSaveAs";
             btnSaveAs.Click += btnSaveAs_Click;
-            // 
+            //
+            // btnComplete
+            //
+            btnComplete.Text = "Complete save";
+            btnComplete.AutoSize = true;
+            btnComplete.UseVisualStyleBackColor = true;
+            btnComplete.Name = "btnComplete";
+            btnComplete.Click += btnComplete_Click;
+            //
             // tabGeneral
             // 
             tabGeneral.Controls.Add(generalFlow);
@@ -450,6 +461,7 @@ namespace WolfX.Types
         private Button btnOpen;
         private Button btnSave;
         private Button btnSaveAs;
+        private Button btnComplete;
         private TabPage tabGeneral;
         private TabPage tabStats;
         private TabPage tabCards;

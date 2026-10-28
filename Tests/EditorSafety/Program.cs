@@ -17,19 +17,16 @@ byte[] Fixture()
 }
 try
 {
-    Test("Atomic replacement preserves each previous save in a distinct backup", () =>
+    Test("Atomic replacement writes the save and leaves no backup or temporary file", () =>
     {
         string target = Path.Combine(root, "profile.dat");
-        byte[] original = Fixture(); File.WriteAllBytes(target, original);
+        File.WriteAllBytes(target, Fixture());
         var save = SaveFile.Load(target); uint counter = save.SaveCounter;
         save.Player.Wallet = 12345; save.Save(target);
-        string first = save.LastBackupPath!;
-        Check(File.ReadAllBytes(first).SequenceEqual(original), "Backup must exactly match old target.");
         Check(SaveFile.Load(target).ChecksumIsValid && save.SaveCounter == counter + 1, "Successful save must update counter and checksum.");
-        byte[] previous = File.ReadAllBytes(target);
         save.Player.Wallet = 54321; save.Save(target);
-        Check(first != save.LastBackupPath && File.Exists(first), "Repeated saves must retain earlier backups.");
-        Check(File.ReadAllBytes(save.LastBackupPath!).SequenceEqual(previous), "Second backup must retain the last successful version.");
+        Check(SaveFile.Load(target).Player.Wallet == 54321, "Repeated saves must write the latest edits.");
+        Check(Directory.EnumerateFiles(root).Select(Path.GetFileName).SequenceEqual(["profile.dat"]), "Saving must not leave backups or temporary files.");
     });
     Test("Locked target failure preserves disk bytes and in-memory header, then allows retry", () =>
     {
@@ -46,10 +43,10 @@ try
         Check(!Directory.EnumerateFiles(root, "*.tmp").Any(), "Failed write must clean temporary file.");
         save.Save(target); Check(SaveFile.Load(target).Player.Wallet == 6789, "Retry must save pending edits.");
     });
-    Test("New file has valid checksum and no fabricated backup", () =>
+    Test("New file has valid checksum", () =>
     {
         var save = new SaveFile(Fixture()); string target = Path.Combine(root, "new.dat"); save.Save(target);
-        Check(save.LastBackupPath == null && SaveFile.Load(target).ChecksumIsValid, "New target must be valid.");
+        Check(SaveFile.Load(target).ChecksumIsValid, "New target must be valid.");
     });
     Test("Wrong magic, version and declared size are rejected without overwriting", () =>
     {

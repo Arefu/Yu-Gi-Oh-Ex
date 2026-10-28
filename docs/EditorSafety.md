@@ -9,10 +9,12 @@ WolfX's **Files > Save editor** identifies the loaded save beside its path:
 The Open menu excludes files whose size is not 44,008 bytes. Loading additionally validates the magic, version and declared size.
 A supported save with an invalid checksum can still be opened for repair; saving recomputes its checksum.
 
-Saving writes and flushes a temporary file in the target directory, then atomically replaces an existing target. Every replacement
-retains the previous target in a separate `<save>.<UTC date/time>-<unique id>.bak`; the success dialog gives its path. A new target
-does not get a backup. On failure the original target is retained and the in-memory checksum/counter are not advanced, so retrying
-does not add extra save-counter increments. Existing `.bak` files are left intact.
+Saving writes and flushes a temporary file in the target directory, then atomically replaces an existing target. No backup is kept:
+copy the save yourself before editing it. On failure the original target is retained and the in-memory checksum/counter are not
+advanced, so retrying does not add extra save-counter increments.
+
+**Complete save** unlocks everything in the open save (read from the open game data and Yu-Gi-Oh-Ex JSON) and sets the DP to 999,999;
+it is written on the next Save.
 
 **Files > Game files & loading > Check content compatibility…** reports each saved additional-content entry, its required plugins,
 missing DLLs (including transitive manifest dependencies and companion DLLs), unreadable JSON and exports with no runtime consumer.
@@ -44,6 +46,6 @@ From the repository root:
 dotnet run --project Tests/EditorSafety/EditorSafety.csproj --configuration Release
 ```
 
-The dependency-free executable exercises atomic replacement, exact backup contents, repeated saves, locked-target failure/retry,
+The dependency-free executable exercises atomic replacement (no backup or temporary file left), repeated saves, locked-target failure/retry,
 invalid headers, new saves, profile labels, compiled-effect requirements, unsupported content, malformed JSON, transitive dependencies,
 and a configured plugin directory that does not exist. It uses temporary fixtures and never opens the user's actual saves.

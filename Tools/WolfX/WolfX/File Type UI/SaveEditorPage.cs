@@ -40,7 +40,7 @@ namespace WolfX.Types
             top.BringToFront();
             _profile.BringToFront();
             _tabs.BringToFront();
-            btnSave.Enabled = btnSaveAs.Enabled = false;
+            btnSave.Enabled = btnSaveAs.Enabled = btnComplete.Enabled = false;
 
             _characters.Items.AddRange(Enumerable.Range(0, PlayerData.CharacterCount).Select(i => (object)$"#{i}").ToArray());
         }
@@ -152,6 +152,8 @@ namespace WolfX.Types
                 _save.Player.SetCharacterUnlocked(e.Index, e.NewValue == CheckState.Checked);
         }
 
+        private void btnComplete_Click(object? sender, EventArgs e) => CompleteSave();
+
         private void _decks_SelectedIndexChanged(object? sender, EventArgs e) => BindDeck();
 
         private void btnApplyDeck_Click(object? sender, EventArgs e) => ApplyDeck();
@@ -178,7 +180,7 @@ namespace WolfX.Types
                 _pathBox.Text = _path;
                 Bind();
                 _tabs.Enabled = true;
-                btnSave.Enabled = btnSaveAs.Enabled = true;
+                btnSave.Enabled = btnSaveAs.Enabled = btnComplete.Enabled = true;
                 UpdateProfile();
             }
             catch (Exception ex)
@@ -207,9 +209,7 @@ namespace WolfX.Types
                 _path = path;
                 _pathBox.Text = path;
                 UpdateInfo();
-                UpdateProfile();
-                MessageBox.Show($"Saved {path}" + (_save.LastBackupPath is { } backup ? $"\n\nPrevious save backed up to:\n{backup}" : ""), "Save editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                UpdateProfile();            }
             catch (Exception ex)
             {
                 MessageBox.Show($"Could not save:\n{ex.Message}", "Save editor", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -394,6 +394,115 @@ namespace WolfX.Types
                 _cardRows.ResetBindings();
             }
             finally { _binding = false; }
+        }
+
+        // ---- complete save ----
+
+        /// <summary>DP a completed save is given.</summary>
+        private const ulong CompleteWallet = 999_999;
+
+        /// <summary>
+        /// Everything a fully played profile has, from the open game data plus Yu-Gi-Oh-Ex's JSON (new cards, characters, decks, duels):
+        /// 3 seen copies of every card, every character and deck, every pack in the shop, the three locked main menu modes, every
+        /// campaign duel (normal and reverse) and series cleared, and 999,999 DP. Apart from the DP it only sets things, so no earned progress is lost.
+        /// The same fields DuelResult_GrantRewards (0x140880240) writes as the campaign is won.
+        /// </summary>
+        private void CompleteSave()
+        {
+            if (_save == null)
+                return;
+
+            var files = Wolf.Editors.GameFolderFiles.Current;
+            if (files?.Available != true)
+            {
+                MessageBox.Show("Open the game folder first.", "Complete save", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (MessageBox.Show("Unlock everything?", "Complete save", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+                return;
+
+            var problems = new List<string>();
+            var player = _save.Player;
+
+            CardCatalog.Reload();   // cards.json may have new cards since the save was opened
+            foreach (var card in CardCatalog.Get(this).Cards)
+            {
+                if (card.Id < 0 || card.Id >= _save.Cards.Length)
+                    continue;
+                _save.Cards.SetCopies(card.Id, CardTable.MaxCopies);
+                _save.Cards.SetNew(card.Id, false);
+            }
+
+            try
+            {
+                var table = global::Types.CharacterTable.Parse(ReadLanguages(files, global::Types.CharacterTable.AllLanguages, global::Types.CharacterTable.GamePath));
+                global::Types.CharacterJson.Apply(global::Types.CharacterJson.Load(files.ExPath(global::Types.CharacterJson.FileName)), table);
+                foreach (var character in table.Characters.Where(c => c.Id >= 0 && c.Id < PlayerData.CharacterCount))
+                    player.SetCharacterUnlocked(character.Id, true);
+            }
+            catch (Exception ex) when (ex is InvalidDataException or System.Text.Json.JsonException or IOException)
+            {
+                problems.Add("characters: " + ex.Message);
+            }
+
+            try
+            {
+                if (files.Read(DeckData.DeckDataTable.GamePath('E')) is not byte[] deckData)
+                    throw new InvalidDataException($"{DeckData.DeckDataTable.FileName('E')} was not found.");
+                var deckFile = DeckData.DeckDataFile.Parse(deckData);
+                DeckData.DeckJson.ApplyTo(deckFile, DeckData.DeckJson.Load(files.ExPath(DeckData.DeckJson.FileName)), 'E');
+                foreach (var deck in deckFile.Records.Where(d => d.Id < PlayerData.DeckCount))
+                {
+                    // state 0 = locked; the game raises it to 1 (MarkDeckStateKnown) and sets the owned bit when it grants a deck
+                    if (player.GetDeckState((int)deck.Id) == 0)
+                        player.SetDeckState((int)deck.Id, 1);
+                    player.SetDeckOwned((int)deck.Id, true);
+                }
+            }
+            catch (Exception ex) when (ex is InvalidDataException or System.Text.Json.JsonException or IOException or ArgumentException)
+            {
+                problems.Add("decks: " + ex.Message);
+            }
+
+            try
+            {
+                var table = global::Types.StoryDuelTable.Parse(ReadLanguages(files, global::Types.StoryDuelTable.AllLanguages, global::Types.StoryDuelTable.GamePath));
+                global::Types.StoryDuelJson.Apply(global::Types.StoryDuelJson.Load(files.ExPath(global::Types.StoryDuelJson.FileName)), table);
+                // the save has a block for the game's 6 series only; Yu-Gi-Oh-Campaign's new series keep their progress elsewhere
+                foreach (var duel in table.Duels.Where(d => d.Series >= 0 && d.Series < ProfileSection.BlockCount && d.Order >= 1 && d.Order <= global::Types.StoryDuelTable.MaxOrder))
+                {
+                    _save.Section.SetDuelState(duel.Series, duel.Order, reverse: false, DuelState.Cleared);
+                    if (duel.Order != 1)   // order 1 is the series' tutorial and has no reverse duel
+                        _save.Section.SetDuelState(duel.Series, duel.Order, reverse: true, DuelState.Cleared);
+                    _save.Section.SetSeriesState(duel.Series, DuelState.Cleared);
+                }
+            }
+            catch (Exception ex) when (ex is InvalidDataException or System.Text.Json.JsonException or IOException)
+            {
+                problems.Add("campaign: " + ex.Message);
+            }
+
+            // every pack id the shop can have (Yu-Gi-Oh-Core's new packs use the free ids, so all 128); unused ids are never listed
+            for (int pack = 0; pack < PlayerData.FlagCount; pack++)
+                player.SetPackUnlocked(pack, true);
+            player.ModeBits |= PlayerData.AllModes;
+
+            player.Wallet = CompleteWallet;
+
+            Bind();
+            if (problems.Count > 0)
+                MessageBox.Show(string.Join("\n", problems), "Complete save", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private static Dictionary<char, byte[]> ReadLanguages(Wolf.Editors.GameFolderFiles files, char[] languages, Func<char, string> path)
+        {
+            var found = new Dictionary<char, byte[]>();
+            foreach (char language in languages)
+                if (files.Read(path(language)) is byte[] bytes)
+                    found[language] = bytes;
+            if (found.Count == 0)
+                throw new InvalidDataException($"{path('E')} was not found.");
+            return found;
         }
 
         // ---- decks ----

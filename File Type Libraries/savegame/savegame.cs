@@ -15,7 +15,7 @@ namespace savegame
     ///   0x0024  stats         100 x 8 byte counters (SaveStat)
     ///   0x0344  duelist slots 5 x 644 bytes
     ///   0x0FD8  player        wallet, unlocked characters, per deck state (2968 bytes)
-    ///   0x1B70  section       6 blocks of 50 six dword entries (7256 bytes) - not decoded yet
+    ///   0x1B70  campaign      6 series blocks of 50 six dword entries (7256 bytes): duel states, see ProfileSection
     ///   0x37C8  decks         32 x 304 bytes
     ///   0x5DC8  card table    20000 bytes, one per Konami card id (ids 20000-65534: Yu-Gi-Oh-Core's extension, CardTable)
     ///   0xABE8  (after the blob) Yu-Gi-Oh-Core's save extension, when a plugin stored anything (SaveExtension)
@@ -160,10 +160,7 @@ namespace savegame
             return [.. _data, .. Extension];
         }
 
-        /// <summary>The previous on-disk save from the last successful replacement, or null for a new file.</summary>
-        public string? LastBackupPath { get; private set; }
-
-        /// <summary>Write and flush a sibling temporary file, then atomically replace the target with a dated backup.</summary>
+        /// <summary>Write and flush a sibling temporary file, then atomically replace the target with it (no backup is kept).</summary>
         public void Save(string path, bool updateChecksum = true)
         {
             if (!HasValidHeader)
@@ -173,7 +170,6 @@ namespace savegame
             // the copy gets the extension too (it used to be built from the blob alone, which dropped every plugin's data on save)
             var pending = new SaveFile([.. _data, .. Extension]);
             byte[] bytes = pending.ToBytes(updateChecksum);
-            string? backup = null;
             try
             {
                 using (var stream = new FileStream(temporary, FileMode.CreateNew, FileAccess.Write, FileShare.None))
@@ -182,15 +178,11 @@ namespace savegame
                     stream.Flush(flushToDisk: true);
                 }
                 if (File.Exists(target))
-                {
-                    backup = target + "." + DateTime.UtcNow.ToString("yyyyMMdd-HHmmssfff") + "-" + Guid.NewGuid().ToString("N") + ".bak";
-                    File.Replace(temporary, target, backup);
-                }
+                    File.Replace(temporary, target, null);
                 else
                     File.Move(temporary, target);
                 // A failed write must not advance the in-memory counter or checksum.
                 Array.Copy(bytes, _data, Size);
-                LastBackupPath = backup;
             }
             finally
             {
@@ -450,6 +442,7 @@ namespace savegame
         private const int DeckOwnedOffset = 0xB28;
         private const int FlagsOffset = 0xB80;
         public const int FlagCount = 128;
+        private const int ModeBitsOffset = 0xB94;
 
         private readonly byte[] _data;
         private readonly int _offset;
@@ -495,10 +488,27 @@ namespace savegame
 
         public void SetDeckOwned(int deck, bool owned) => SetBit(DeckOwnedOffset, deck, DeckCount, owned);
 
-        /// <summary>A 128 bit set of flags whose meaning is not known yet (the game reads it in one place).</summary>
+        /// <summary>The 128 bit set at +0xB80. It is the set of unlocked packs (see <see cref="IsPackUnlocked"/>).</summary>
         public bool GetFlag(int index) => GetBit(FlagsOffset, index, FlagCount);
 
         public void SetFlag(int index, bool value) => SetBit(FlagsOffset, index, FlagCount, value);
+
+        /// <summary>Packs (packdefdata id, below 128) the Card Shop sells. DuelResult_GrantRewards sets a story duel's reward pack here.</summary>
+        public bool IsPackUnlocked(int pack) => GetFlag(pack);
+
+        public void SetPackUnlocked(int pack, bool unlocked) => SetFlag(pack, unlocked);
+
+        /// <summary>
+        /// The main menu's lock bits at +0xB94: bit 0 Duelist Challenges, bit 1 Battle Packs, bit 2 Card Shop (<see cref="AllModes"/>).
+        /// RIX::ScreenMainMenu::LayoutPage greys an item out while its bit is 0; DuelResult_GrantRewards sets them as the campaign is played.
+        /// </summary>
+        public uint ModeBits
+        {
+            get => BinaryPrimitives.ReadUInt32LittleEndian(_data.AsSpan(_offset + ModeBitsOffset));
+            set => BinaryPrimitives.WriteUInt32LittleEndian(_data.AsSpan(_offset + ModeBitsOffset), value);
+        }
+
+        public const uint AllModes = 7;
 
         private bool GetBit(int start, int index, int count)
         {
@@ -526,9 +536,9 @@ namespace savegame
     }
 
     /// <summary>
-    /// The section at 0x1B70: a version-like pair, then 6 blocks of 302 dwords. Each block is a value, a
-    /// profile-wide number, and 50 entries of 6 dwords. What the entries record is not decoded yet, so they are
-    /// exposed as they are.
+    /// The section at 0x1B70: the campaign. A version-like pair, then 6 blocks of 302 dwords, one per series (0 DM .. 5 VRAINS). Each block
+    /// is the series' state, a profile-wide number, and 50 entries of 6 dwords, one per story duel order: dword 0 is the normal duel's state,
+    /// dword 1 the reverse duel's (<see cref="DuelState"/>; DuelResult_GrantRewards 0x140880240). The other entry dwords are exposed raw.
     /// </summary>
     public sealed class ProfileSection
     {
@@ -568,6 +578,22 @@ namespace savegame
             BinaryPrimitives.WriteUInt32LittleEndian(_data.AsSpan(_offset + 8 + BlockSize * block + 4 * index), value);
         }
 
+        /// <summary>The series' own state (block dword 0): <see cref="DuelState.Cleared"/> once its last duel is won.</summary>
+        public DuelState GetSeriesState(int series) => (DuelState)GetBlockDword(series, 0);
+
+        public void SetSeriesState(int series, DuelState state) => SetBlockDword(series, 0, (uint)state);
+
+        /// <summary>A story duel's state, by series and order (StoryDuel.Order, 1 to 48).</summary>
+        public DuelState GetDuelState(int series, int order, bool reverse) => (DuelState)GetBlockDword(series, 2 + order * EntryDwords + (reverse ? 1 : 0));
+
+        public void SetDuelState(int series, int order, bool reverse, DuelState state)
+        {
+            if ((uint)order >= EntryCount)
+                throw new ArgumentOutOfRangeException(nameof(order));
+
+            SetBlockDword(series, 2 + order * EntryDwords + (reverse ? 1 : 0), (uint)state);
+        }
+
         /// <summary>The 6 dwords of an entry (dword 2 onward of the block).</summary>
         public uint[] GetEntry(int block, int entry)
         {
@@ -579,6 +605,12 @@ namespace savegame
                 values[i] = GetBlockDword(block, 2 + entry * EntryDwords + i);
             return values;
         }
+    }
+
+    /// <summary>A campaign duel's (or series') state. The game only raises it: 0 to 1 when unlocked, 1 to 2 when played, 3 when won.</summary>
+    public enum DuelState : uint
+    {
+        Locked = 0, Unlocked = 1, Played = 2, Cleared = 3,
     }
 
     /// <summary>

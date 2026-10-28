@@ -457,7 +457,8 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 
 #### Save editor
 
-* `savegame.dat` / `savegame-ex.dat`: tabs General (points), Stats, Cards, Characters, Decks; Open..., Save, Save as...
+* `savegame.dat` / `savegame-ex.dat`: tabs General (points), Stats, Cards, Characters, Decks; Open..., Save, Save as..., Complete save (every card x3, character, deck,
+  story duel, pack and main menu mode unlocked, 999,999 DP; needs the game folder open).
 * **Warn loudly**: back up saves first. Editing unlock tables has wiped a save before. Test on a copy / spare slot.
 
 ---
