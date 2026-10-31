@@ -3,7 +3,29 @@
 Decision 2026-10-30: the duel runs on Master Duel's `duel.dll` instead of the game's built-in engine, so every card Master Duel has plays with
 Konami's own effects, with no per-card effect porting. `duel.dll` is the game's own duel engine, extended: the same 48-byte effect rows and
 machines, the same message queue, the same card ids (Konami's database ids: Pot of Greed 4844 in both), the same player-state struct with fields
-inserted. It is loaded from `Plugins\Yu-Gi-Oh-Core\duel.dll` (distribution handled separately; it is not in git). IDB: `duel.dll.i64`.
+inserted. IDB: `duel.dll.i64`.
+
+## Setting it up (2026-11-01)
+
+`duel.dll` ships as a mod, **`Mods\Master Duel Engine`** (in git and in every release's `Mods.zip`; included with Konami's written permission,
+not covered by Yu-Gi-Oh-Ex's license; build `80460 : 20260629`, SHA-256 `97bd4d13...684d43c44`):
+
+```
+Mods\Master Duel Engine\
+  mod.json      name, Konami credit, what it does
+  Config.ini    [Yu-Gi-Oh-Core] MasterDuelEngine=1, MasterDuelLog=0 (read over the player's while the mod is on, docs/Mods.md)
+  duel.dll      Master Duel's engine
+  README.md
+```
+
+1. Install the mod (Mod Manager, or copy the folder into `<game>\Mods\`) and switch it on.
+2. Start the game through the loader. Nothing else: `MasterDuel::Install` (Core, run right after `ModConfig::Install`, so the mod's
+   `MasterDuelEngine=1` is already visible) looks for `duel.dll` in the switched-on mods, the last one in the load order first, and only then
+   in the loader's `Plugins\Yu-Gi-Oh-Core\duel.dll` (the old place, still read).
+3. `console.log`: `Master Duel engine loaded from <path> (... bytes of work memory, revision 80460 : 20260629)`, then the self-test duel.
+
+Switching the mod off brings back the game's engine (and the player's own `MasterDuelEngine`, default 0). An exclusive mod (Forbidden
+Memories) loads alone, so the engine mod is off while it's on.
 
 Plugin roles: **Core** (always on) loads the engine, feeds it the game's card data and redirects the duel to it; it knows nothing about other
 plugins. **Yu-Gi-Oh-MoreCards** and **Yu-Gi-Oh-Effects** are optional: they only call Core's API (`Core_EngineReady`, `Core_EngineProc`,

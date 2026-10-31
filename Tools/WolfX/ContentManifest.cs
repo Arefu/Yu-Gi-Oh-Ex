@@ -48,11 +48,19 @@ namespace WolfX
             return value.ToString();
         }
 
-        /// <summary>The plugin folder the game uses: [Yu-Gi-Oh-Core] PluginsPath in its Config.ini, else &lt;game&gt;\Plugins.</summary>
+        /// <summary>
+        /// The plugin folder the game uses: [Yu-Gi-Oh-Core] PluginsPath in its Config.ini (the loader writes it every launch), else
+        /// &lt;game&gt;\Plugins, else the Plugins folder of the build WolfX is part of (Binaries\&lt;config&gt;\Tools\..\Plugins) - a fresh install
+        /// whose loader hasn't run yet, so the plugins' settings (declared in their manifests) still show.
+        /// </summary>
         public static string PluginsFolder(string gameFolder)
         {
             string configured = IniValue(gameFolder, "Yu-Gi-Oh-Core", "PluginsPath", "");
-            return Path.GetFullPath(Path.Combine(gameFolder, configured.Length > 0 ? configured : "Plugins"));
+            if (configured.Length > 0)
+                return Path.GetFullPath(Path.Combine(gameFolder, configured));
+            string inGame = Path.GetFullPath(Path.Combine(gameFolder, "Plugins"));
+            string beside = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..", "Plugins"));
+            return !Directory.Exists(inGame) && Directory.Exists(beside) ? beside : inGame;
         }
 
         /// <summary>Content pattern ("cards.json", "pages\") -> the plugins that apply it, from the manifests and <see cref="Known"/>.</summary>

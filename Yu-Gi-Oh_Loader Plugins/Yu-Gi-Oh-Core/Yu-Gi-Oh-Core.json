@@ -1,6 +1,6 @@
 {
   "title": "Core",
-  "version": "1.3.7",
+  "version": "1.3.17",
   "description": "The save, plugin list, game data loading, the crash log, small game tweaks and limit breakers (booster packs from packs.json, extra user deck slots: as many as the save uses + 256). Always on.",
   "enforced": true,
   "content": [
@@ -9,11 +9,14 @@
   ],
   "settings": [
     {
-      "key": "EngineRules2020",
-      "title": "Engine rules 2020",
-      "kind": "toggle",
-      "default": "0",
-      "help": "Duel rules: on = the game's own 2020 rules (Master Rule 5), off = 2019 rules (Master Rule 4). Core sets the engine's rules byte when the game starts, so restart after changing it."
+      "key": "MaxPacksPerPurchase",
+      "title": "Most packs per purchase",
+      "kind": "number",
+      "default": "999",
+      "help": "Most booster packs one Card Shop purchase can buy (1 to 9999; 1 = one at a time, as the game does, and the game's own card reveal). In the buy box the single arrows and Left/Right change the count by 1, the double arrows and Up/Down by 10; all the packs open together and the cards are listed once each. Restart after changing it.",
+      "min": 1,
+      "max": 9999,
+      "step": 1
     },
     {
       "key": "DuelFormat",
@@ -170,6 +173,40 @@
       "kind": "toggle",
       "default": "1",
       "help": "Let switched-on mods set plugin settings from their own Config.ini (Mods\\<mod>\\Config.ini), so a mod works without you editing yours. A mod's value wins over yours while the mod is on. Off = only your Config.ini is read."
+    },
+    {
+      "key": "LoadOrder",
+      "section": "Yu-Gi-Oh-Loader",
+      "title": "Load order",
+      "kind": "text",
+      "default": "",
+      "help": "Names of plugin DLLs (without .dll) the loader loads first, in this order, separated by spaces. Plugins not listed load afterwards."
+    },
+    {
+      "key": "MasterDuelEngine",
+      "title": "Master Duel engine",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Play offline duels on Master Duel's duel engine (duel.dll): every card it knows plays with Konami's own effects, the Cards mod's new cards included (by their Konami id). Easiest: switch on the Master Duel Engine mod in the Mod Manager - it brings duel.dll and turns this on. Otherwise Core loads Plugins\\Yu-Gi-Oh-Core\\duel.dll. Core gives it the game's cards and runs one CPU-vs-CPU test duel at start-up (console.log). Experimental: tag, online and tutorial duels stay on the game's own engine. Restart after changing it."
+    },
+    {
+      "key": "MasterDuelLog",
+      "title": "Master Duel log",
+      "kind": "choice",
+      "default": "0",
+      "help": "What console.log shows of Master Duel's engine while a duel runs on it: 0 nothing extra, 1 the first 20 calls of each engine function and animation (then every 500th) plus every turn / phase / input change, 2 every call. For finding what a duel gets stuck on.",
+      "choices": [
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "key": "ReplacedNotice",
+      "title": "Replaced notice",
+      "kind": "text",
+      "default": "",
+      "help": "Written by the loader: the leftover (renamed, merged or retired) plugins it last told you about, so it says so only once. Clear it to see the message again."
     }
   ],
   "replaces": [

@@ -1,5 +1,33 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "title": "Console",
-  "description": "The log window. LogLevel in the Config quietens it."
+  "description": "The log window. LogLevel in the Config quietens it.",
+  "settings": [
+    {
+      "key": "LogLevel",
+      "title": "Log level",
+      "kind": "choice",
+      "default": "info",
+      "help": "Lowest severity shown in the console window. debug shows everything, info hides debug lines, warn shows warnings and errors, error shows errors only.",
+      "choices": [
+        "debug",
+        "info",
+        "warn",
+        "error"
+      ]
+    },
+    {
+      "key": "FileLogLevel",
+      "title": "File log level",
+      "kind": "choice",
+      "default": "debug",
+      "help": "Lowest severity written to console.log. Separate from LogLevel, so the file can keep debug lines the window hides.",
+      "choices": [
+        "debug",
+        "info",
+        "warn",
+        "error"
+      ]
+    }
+  ]
 }

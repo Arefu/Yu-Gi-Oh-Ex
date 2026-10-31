@@ -139,3 +139,70 @@ Platform=x64, then run `Tests/CardShopOverflow/bin/CardShopOverflow.exe`.
 In-game verification remains necessary for prompt layout, tab changes, input
 devices and purchases of locked and complete packs. The regression executable
 does not access the game or its saves.
+
+## Buying many packs (2026-11-01)
+
+Core `BulkPacks.cpp`, `[Yu-Gi-Oh-Core] MaxPacksPerPurchase=999` (1 = the game's one at a time). Replaces the third-party
+"Bulk Booster Purchase" `winmm.dll` (Core logs a warning when a `winmm.dll` is loaded from the game folder).
+
+**For the player:** pick a pack as usual. When you can afford more than one, the buy box shows `«  ‹  1 pack  ›  »`
+(in the box's own font, under the game's buy text, which shows the total cost). Click a single arrow (hold it to keep going) or press Left/Right = 1 less/more
+(wraps between 1 and the most you can afford), a double arrow or Up/Down = 10 more/less (both wrap at the ends: 999 + 10 = 1), mouse wheel = 1. Yes starts opening them (a few packs per frame while the
+wrapper waits, so the game never stops; nothing extra is drawn). Unwrapping before the last pack waits for it. The eight cards flip
+0.12 s apart, the rare too (the game waits an extra second before the rare). Then one flip of eight cards, then the card grid lists each card pulled **once**: new cards first, then rares, then
+the most pulled. Under the grid a page control (arrows and one block per page, the current one tall, like the shop's "more packs"
+meter) turns pages on a click; the mouse wheel over the grid and Up/Down scroll it.
+
+### The game (IDB, type `ScreenRandomPackStore`)
+
+| Function | Address | What it does |
+| --- | --- | --- |
+| `BoosterShop_HandleInput` | 0x14085BAC0 | Unlock bit, full-set and DP checks, then `RIX::Screen::ShowYesNoText` with string 717 (title, cost) |
+| `BoosterShop_BuyYes_DoCall` | 0x14085E850 | Yes callback (lambda vftable 0x140A77390): `OpenPackAndGrantCards`, then `SetState(2)` |
+| `GAME::Store::OpenPackAndGrantCards` | 0x14085BFC0 | One pack: cost, 7 commons + 1 rare, saved table +1 copy each, then the calls below |
+| `g_PackPullWeightByOwned` | 0x140A776D0 | Tickets per copies owned: 10, 10, 10, 1 (a card you have 3 of is 10x rarer) |
+| `YGO::SAVE::RecountOwnedCards` | 0x140870570 | Unique cards owned, uploads the Steam score (called at 0x14085C349) |
+| `RIX::widget_CardGrid::SetCards` | 0x14088C490 | Fills the result grid, loads the cards' art (called at 0x14085C376) |
+| `YGO::SAVE::RebuildLiveUnlockCounts` | 0x1407BB160 | Every deck template and all 732 decks revalidated; Campaign hooks it (called at 0x14085C380) |
+| `YGO::SAVE::RequestAutosave` | 0x140806950 | Queues a save (called at 0x14085C385) |
+| `YGO::UI::BoosterShop_SetState` | 0x14085D790 | 1 packs, 2 wrapper, 3 flip, 4 grid, 5 one card, 6/7 leaving |
+| `BoosterShop_RevealFlipStep` | 0x14085AFC0 | The flip only touches grid cells 0-7, so a longer list is safe |
+| `RIX::widget_Dialog::ProcessInput` | 0x140898040 | The box takes only confirm/cancel and the mouse; arrows are free. Yes runs its callback inside this call |
+| `RIX::GridCursor::Move` | 0x140868D00 | Scrolls a row on the wheel bits 0x20000000 / 0x40000000; the shop's state 4 never passes them |
+
+Screen fields: Dialog +432 (its text layer at +96), CardInfo +1328, ResultGrid +2256 (widget_CardDisplay 4 x 2, its `GridCursor` at
++432: Rows +12, FirstRow +20, VisibleRows +28), State +4432, PulledCards +4448 (`std::vector<u16>`), BuyingPack +4592, DpShown +4624.
+
+### How Core does it
+
+- Hooks `ShowYesNoText`: the box with the shop's Yes lambda gets a count when DP / cost > 1; its text becomes the game's buy line with
+  the total (`widget_Dialog::SetText`). The count row is Core's own nodes on the screen root (z 10010, over the box's 10001):
+  doShared `arrow_right1` (a single chevron, 1 pack; flipped for the left) and `arrow_left1` (a double chevron, 10 packs; flipped
+  for the right), all 58 x 71 at 60%, 12 px apart, and the count in the box's font (read from its text layer's style), at y 640.
+  The box is at (960, 540) with Yes / No at (690, 729) / (1230, 729).
+- Hooks `widget_Dialog::ProcessInput`: a click on an arrow (taken with `TakeMouseClick` so the box ignores it), the d-pad and the wheel
+  (`YGO::Input::TakeWheel` 0x140800900; Tick never hands the box the wheel) change the count; the count is handed to the Yes callback,
+  which runs inside the call.
+- Hooks `OpenPackAndGrantCards`: Yes only starts a job; `ScreenRandomPackStore::Update` opens packs in state 2 (the wrapper waiting
+  for the player) with a 4 ms budget per frame, 12 ms once the player unwrapped (`SetState(3)` is held until the last pack, then made
+  through the function's entry). Each pack runs the game's own function, so every card plugin's patches still apply; DP is checked
+  before each pack. Four **call gates** (DetourAttach on the call instructions, a generated stub that skips the call while a flag is
+  set) hold back the slow calls: `SetCards` for every pack, `RecountOwnedCards` / `RebuildLiveUnlockCounts` / `RequestAutosave` for all
+  but the last. Gating the calls rather than the functions keeps other plugins' hooks on them (Campaign's deck unlocks) to once per
+  purchase. Before the gates, 5 packs took 3 s in one frame; with them it still stuttered, hence the job (the log line gives the time
+  over the wrapper, the last pack with the save work, the grid).
+  Then `PulledCards` is refilled with each card once (grown with the game's own `_Emplace_reallocate` 0x14077C310, so the game can
+  free it) and `SetCards` shows it.
+- Hooks `BoosterShop_SetState` and `ScreenRandomPackStore::Update`:
+    - state 4: the wheel goes to the grid while the mouse is over it or the page control (not gated on the game's MouseActive flag,
+      which drops after a key press and lost notches), and the page control under the grid (y 990, centred on the grid,
+      doShared arrows at 55% and pdui/Settings `Level4` / `Level2` blocks; clicks turn pages through `GridCursor::Move`). The grid
+      fills the screen to the right, so the game's `widget_BarV` scroll bar had no room (tried 2026-11-01).
+    - everything wraps: Core turns on the grid cursor's own switches (`GridCursor` +40 WrapUpDown: up on the first row goes to the
+      last; +44 RowFlowAtEdges: left / right run on into the row before / after), the wheel goes from the bottom back to the top and
+      the other way, and the page arrows always show and go from the last page to the first.
+- Holding an arrow: `GetAsyncKeyState` on the primary button (the game keeps only "clicked this frame"), 400 ms then every 70 ms.
+- The reveal (IDB: `BoosterShop_RevealFlyCardsIn`, `BoosterShop_RevealOnCardLanded`): cards fly in 0.1 s apart over 0.4 s, then flip;
+  `g_BoosterRevealFlipTimings` (0x140A776E0, read only by SetState 3) = {flip stagger 0.25, rare pause 1.0, rare flip 0.6, 0.1}. Core
+  writes 0.12 and 0 (a data write, checked against the traced values first).
+- "pack"/"packs" is English only.

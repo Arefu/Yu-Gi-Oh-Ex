@@ -25,6 +25,8 @@ Designed and tested with the latest Steam build of the game. You should always b
 
 > Your save is never the Steam one: Yu-Gi-Oh-Core keeps it in `savegame-ex.dat` in the game folder (and `savegame-ex-N.dat` for the other save slots).
 
+The wiki's **[How To: Optional Features](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki/How-To-%E2%80%90-Optional-Features)** lists every optional feature and how a player or a mod turns it on and off. **[docs/NewInstall.md](docs/NewInstall.md)** walks through a first start from a stock game folder, every on/off switch (including what the always-on Core changes and the settings that put the base game back), and what a mod can and can't set.
+
 I would suggest checking the Project's [Wiki Page](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki) and the `docs\` folder: almost everything I know about the game is written down there.
 
 ## What's in here

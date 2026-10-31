@@ -97,6 +97,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BulkPacks.cpp" />
     <ClCompile Include="CardTable.cpp" />
     <ClCompile Include="Crash.cpp" />
     <ClCompile Include="Credits.cpp" />
@@ -122,6 +123,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Core.h" />
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Manifest.h" />
+    <ClInclude Include="BulkPacks.h" />
     <ClInclude Include="Credits.h" />
     <ClInclude Include="DeckLimits.h" />
     <ClInclude Include="DuelFormat.h" />

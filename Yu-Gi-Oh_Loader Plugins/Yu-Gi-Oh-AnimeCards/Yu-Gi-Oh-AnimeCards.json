@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.3.1",
   "title": "Anime Cards",
   "description": "Makes the anime style cards draw properly.",
   "settings": [
@@ -187,8 +187,14 @@
       "title": "Level stars",
       "kind": "choice",
       "default": "0",
-      "choices": [ "0", "1" ],
-      "labels": { "0": "Centred", "1": "From the right" },
+      "choices": [
+        "0",
+        "1"
+      ],
+      "labels": {
+        "0": "Centred",
+        "1": "From the right"
+      },
       "help": "0 = the level stars are centred on StarsX, 1 = the row ends at StarsX (right to left, as on Forbidden Memories cards)."
     },
     {
@@ -298,6 +304,13 @@
       "help": "Spell/Trap icon Y position.",
       "step": 0.5,
       "hidden": true
+    },
+    {
+      "key": "FullArtIllustration",
+      "title": "Full art illustration",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Make illustration full art: the art fills the whole 400 x 580 card (ignores CardArtScale / offsets). Frame, stars, attribute and ATK/DEF stay."
     }
   ]
 }

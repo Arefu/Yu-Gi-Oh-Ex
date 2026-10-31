@@ -97,8 +97,13 @@ The loader's `PluginsPath` setting lives in `[Yu-Gi-Oh-Core]` (the old `[Yu-Gi-O
 
 `"settings": [ { "key", "section", "title", "kind", "default", "choices", "help" } ]` lists the plugin's Config.ini settings
 (`section` defaults to the DLL's name; `kind` is toggle, choice, number, text or path). WolfX's Config Editor reads them
-(`ConfigCatalog.WithManifests`), so a new plugin brings its own settings to it. The lists in this repo's manifests were generated from WolfX's
-built-in catalog. (An in-game Plugins > Plugin Settings screen read them too from 2026-10-02 until it was removed on 2026-10-04, together
+(`ConfigCatalog.WithManifests`), so a new plugin brings its own settings to it.
+
+**The manifest is the only place a setting is declared (since 2026-11-01).** WolfX's built-in catalog (`ConfigCatalog.All`) is empty: its
+85 entries moved into the plugins' manifests. Every `GetPrivateProfile*` key a plugin reads goes in its own manifest, in the same change
+(and the plugin's version goes up). A key in another section (the loader's `[Yu-Gi-Oh-Loader] LoadOrder`, which Core's manifest declares)
+gives `"section"`. WolfX finds the manifests through `PluginsPath`, else `<game>\Plugins`, else the `Plugins` folder of the build it ships in
+(a fresh install whose loader hasn't run yet). (An in-game Plugins > Plugin Settings screen read them too from 2026-10-02 until it was removed on 2026-10-04, together
 with Core's `Core_GetPluginSetting` / `CoreSettingInfo`; the loader and Core no longer parse `"settings"`.)
 
 Optional per setting (the fields describe how a value is picked; WolfX uses `from` for its Pick... button):

@@ -1,5 +1,5 @@
 {
-  "version": "1.3.3",
+  "version": "1.3.4",
   "title": "RIX",
   "description": "The in-game menus, this list included. Always on.",
   "enforced": true,
@@ -9,5 +9,14 @@
   "content": [
     "pages\\",
     "menus\\"
+  ],
+  "settings": [
+    {
+      "key": "PluginsPerPage",
+      "title": "Plugins per page",
+      "kind": "number",
+      "default": "5",
+      "help": "How many plugins the in-game Plugins list (Help & Options) shows on one page, 3 to 5. Fewer looks less crowded; there are Next and Previous buttons."
+    }
   ]
 }

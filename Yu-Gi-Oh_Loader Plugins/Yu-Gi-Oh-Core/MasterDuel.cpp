@@ -10,6 +10,7 @@
 #include "Detours.h"
 #include "Loading.h"
 #include "Logger.h"
+#include "Yu-Gi-Oh-Mods.h"
 #include "MasterDuelBridge.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
 
@@ -325,10 +326,21 @@ bool MasterDuel::Install()
     if (Loading::Setting("MasterDuelEngine", "0") != "1")
         return false;
 
-    char path[MAX_PATH] = {};
-    GetModuleFileNameA(GetModuleHandleA("Yu-Gi-Oh-Core.dll"), path, MAX_PATH);
-    std::string dll = path;
-    dll = dll.substr(0, dll.find_last_of("\\/") + 1) + "Yu-Gi-Oh-Core\\duel.dll";
+    // Where duel.dll comes from: a switched-on mod that carries it (Mods\<mod>\duel.dll, e.g. the "Master Duel Engine" mod, whose own
+    // Config.ini also sets MasterDuelEngine=1 - so switching the mod on in the Mod Manager is the whole setup; a later mod wins), else
+    // the loader's Plugins\Yu-Gi-Oh-Core\duel.dll.
+    std::string dll;
+    const std::vector<YGO::Mods::Mod> mods = YGO::Mods::Active(YGO::Mods::GameFolder());
+    for (auto mod = mods.rbegin(); mod != mods.rend() && dll.empty(); ++mod)
+        if (std::error_code error; std::filesystem::is_regular_file(mod->Folder / L"duel.dll", error))
+            dll = YGO::Mods::Utf8((mod->Folder / L"duel.dll").wstring());
+    if (dll.empty())
+    {
+        char path[MAX_PATH] = {};
+        GetModuleFileNameA(GetModuleHandleA("Yu-Gi-Oh-Core.dll"), path, MAX_PATH);
+        dll = path;
+        dll = dll.substr(0, dll.find_last_of("\\/") + 1) + "Yu-Gi-Oh-Core\\duel.dll";
+    }
     g_Engine = LoadLibraryExA(dll.c_str(), nullptr, LOAD_WITH_ALTERED_SEARCH_PATH);
     if (!g_Engine)
     {

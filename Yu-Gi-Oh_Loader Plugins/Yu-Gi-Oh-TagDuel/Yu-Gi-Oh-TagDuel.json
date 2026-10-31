@@ -1,8 +1,35 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "title": "Tag Duel",
   "description": "Local tag duels (2 vs 2) and handicap duels (1 vs 2, 2 vs 1) with solo life points, from the Tag Duel menu button.",
   "requires": [
     "Yu-Gi-Oh-RIX"
+  ],
+  "settings": [
+    {
+      "key": "DeckMode",
+      "title": "Deck mode",
+      "kind": "choice",
+      "default": "separate",
+      "help": "Tag duels: separate = each partner has their own hand and deck (the engine swaps them in at each turn change); shared = partners play one hand and deck.",
+      "choices": [
+        "separate",
+        "shared"
+      ]
+    },
+    {
+      "key": "PartnerDeck",
+      "title": "Partner deck",
+      "kind": "path",
+      "default": "",
+      "help": "A .ydc deck for your tag partner (relative paths are from the game folder). Empty = a copy of your own deck."
+    },
+    {
+      "key": "OpponentPartnerDeck",
+      "title": "Opponent partner deck",
+      "kind": "path",
+      "default": "",
+      "help": "A .ydc deck for the opponent's tag partner. Empty = a copy of the opponent's deck."
+    }
   ]
 }

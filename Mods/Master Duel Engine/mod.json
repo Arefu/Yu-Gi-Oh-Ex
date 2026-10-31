@@ -1,0 +1,7 @@
+{
+  "name": "Master Duel Engine",
+  "version": "1.0",
+  "author": "Konami (duel.dll), Yu-Gi-Oh-Ex (the bridge in Yu-Gi-Oh-Core)",
+  "description": "Offline duels play on Master Duel's own duel engine (duel.dll), so every card it knows plays with Konami's own effects.",
+  "details": "Experimental. Switching this mod on is the whole setup: Yu-Gi-Oh-Core loads this folder's duel.dll (Master Duel build 80460 : 20260629) and the mod's Config.ini turns [Yu-Gi-Oh-Core] MasterDuelEngine on. Core gives the engine the game's cards (and the Cards mod's new cards, by their Konami id), runs one CPU-vs-CPU test duel at start-up (console.log) and plays offline duels on it. Tag, online and tutorial duels stay on the game's own engine. duel.dll is Konami's and is included with Konami's written permission. Switch the mod off to go back to the game's engine."
+}

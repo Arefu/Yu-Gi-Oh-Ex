@@ -2,6 +2,7 @@
 #include <format>
 #include <string>
 
+#include "BulkPacks.h"
 #include "CardTable.h"
 #include "Crash.h"
 #include "Credits.h"
@@ -114,20 +115,13 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         // up its card tables.
         MasterDuel::Install();
 
-        // The duel engine reads g_bEngineRules (0x140C8D1C9) every time a duel starts: 1 = "Engine_Init() 2020 Rules" (Master Rule 5, sets the 0x80 bit
-        // of Duel_DuelEngine.Rules), 0 = "2019 Rules" (Master Rule 4). Nothing else writes it, so writing it here, when Core is injected (before the game's
-        // own code runs), is enough. [Yu-Gi-Oh-Core] EngineRules2020=1 puts the game's own value back.
-        {
-            const std::string ini = Save::GameFolder() + "Config.ini";
-            const bool rules2020 = GetPrivateProfileIntA("Yu-Gi-Oh-Core", "EngineRules2020", 0, ini.c_str()) != 0;
-            *reinterpret_cast<volatile unsigned char*>(YGO::Addr::g_bEngineRules) = rules2020 ? 1 : 0;
-            Logger::WriteLog(std::format("Duel engine rules set to {} (byte 0x140C8D1C9 = {})", rules2020 ? "2020" : "2019", rules2020 ? 1 : 0), MODULE_NAME, 0);
-        }
         // Credits: the built-in thanks, Yu-Gi-Oh-Ex\credits.json, what plugins add and the plugin list, then the game's own credits (Credits.h).
         Credits::Install();
 
         // Limit breakers no store plugin owns: booster packs from Yu-Gi-Oh-Ex/packs.json (new packs in the game's free slots, new shop rows).
         Packs::Install();
+        // Buying many packs at once in the shop's buy box, opened together (BulkPacks.h; MaxPacksPerPurchase).
+        BulkPacks::Install();
         // Deck size limits (MinMainDeck/MaxMainDeck/MaxExtraDeck/MaxSideDeck) and the engine's dormant Speed/Rush rules (DuelFormat).
         DeckLimits::Install();
         DuelFormat::Install();
