@@ -104,6 +104,11 @@ namespace WolfX.WolfX.File_Type_UI
                 "Let switched-on mods set plugin settings from their own Config.ini (Mods\\<mod>\\Config.ini), so a mod works without you editing yours. A mod's value wins over yours while the mod is on. Off = only your Config.ini is read."),
             new("Yu-Gi-Oh-Core", "EngineRules2020", SettingKind.Toggle, "0",
                 "Duel rules: on = the game's own 2020 rules (Master Rule 5), off = 2019 rules (Master Rule 4). Core sets the engine's rules byte when the game starts, so restart after changing it."),
+            new("Yu-Gi-Oh-Core", "MasterDuelEngine", SettingKind.Toggle, "0",
+                "Play offline duels on Master Duel's duel engine (Plugins\\Yu-Gi-Oh-Core\\duel.dll): every card it knows plays with Konami's own effects, the Cards mod's new cards included (by their Konami id). Core gives it the game's cards and runs one CPU-vs-CPU test duel at start-up (console.log). Experimental: tag, online and tutorial duels stay on the game's own engine. Restart after changing it."),
+            new("Yu-Gi-Oh-Core", "MasterDuelLog", SettingKind.Choice, "0",
+                "What console.log shows of Master Duel's engine while a duel runs on it: 0 nothing extra, 1 the first 20 calls of each engine function and animation (then every 500th) plus every turn / phase / input change, 2 every call. For finding what a duel gets stuck on.",
+                ["0", "1", "2"]),
             new("Yu-Gi-Oh-Core", "DuelFormat", SettingKind.Choice, "master",
                 "Duel format for offline duels, using the rules built into the game's duel engine. speed = Speed Duel: 4000 LP, 4-card hand, 3 monster and 3 spell/trap zones, no draw on the first turn, no Main Phase 2. rush = Rush Duel: 8000 LP, draw until you hold 5, unlimited Normal Summons, 3 + 3 zones and no Extra Monster Zones, no Main Phase 2, no chains. The field still shows 5 zones; Skills and Maximum monsters are not in the engine. Online duels use the host's Duel format row on the match settings screen (Yu-Gi-Oh-MP) instead. Restart after changing it.",
                 ["master", "speed", "rush"]),
@@ -149,6 +154,7 @@ namespace WolfX.WolfX.File_Type_UI
             new("Yu-Gi-Oh-SpeedHacks", "Speed", SettingKind.Number, "2", "Duel speed multiplier. 1 is normal."),
             new("Yu-Gi-Oh-SpeedHacks", "NoAnimations", SettingKind.Toggle, "1", "Skip card and monster animations in duels."),
             new("Yu-Gi-Oh-SpeedHacks", "NoMovies", SettingKind.Toggle, "1", "Skip the cutscene movies."),
+            new("Yu-Gi-Oh-SpeedHacks", "SkipLogos", SettingKind.Toggle, "0", "Start-up goes straight to the title screen."),
 
 
 

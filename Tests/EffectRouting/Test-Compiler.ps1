@@ -13,13 +13,14 @@ $cases = @(
     @{script='as(6784); also as(4844);'; ids=@(6784,4844)},
     @{script='as(4844); also as(6784);'; ids=@(4844,6784)},
     @{script='effect "Monster" { as(6784); } effect "Pendulum" { as(4844); }'; ids=@(6784,4844)},
-    @{script='as(6784); also draw(2);'; ids=@(6784,4844)},
-    @{script='draw(2); also as(6784);'; ids=@(4844,6784)},
+    @{script='as(6784); also draw(2);'; ids=@(6784,'draw')},
+    @{script='draw(2); also as(6784);'; ids=@('draw',6784)},
     @{script='as(6784); also as(4844); also as(7892);'; ids=@(6784,4844,7892)},
-    @{script='as(4310) with atk 700; also draw(2);'; ids=@(4310,4844)},
+    @{script='as(4310) with atk 700; also draw(2);'; ids=@(4310,'draw')},
     @{script='lock(spell); as(6784); also as(4844);'; ids=@(6784,4844)},
     @{script='as(6784);'; ids=@(6784)},
-    @{script='draw(2);'; ids=@(4844)},
+    @{script='as(15245);'; ids=@(15245)},   # a card only Master Duel's engine has (Fallen of Albaz): lent under that engine (Core_EngineLend)
+    @{script='draw(2);'; ids=@('draw')},
     @{script='on normal_summoned: draw(1); also on sent_to_grave: draw(2);'; ids=$null},
     @{script='as(5738) effect_only;'; ids=@(5738)},   # Ojama Trio (names need card_names.json next to the host)
     @{script='on ignition: as(5738) effect_only;'; ids=$null},
@@ -44,7 +45,7 @@ $cases = @(
     @{script='on ignition: draw(1); once_per_turn(copy); also on ignition: burn(300); once_per_turn;'; ids=$null; groups=@($null,$null); once=@($false,$true); copy=@($true,$false)},
     # whose phase: the plugin's own trigger ("ownTrigger": own row + own phase row), "from" = the action's card, never lent (effectOnly)
     @{script='on opponent_standby_phase: burn(300);'; ids=$null; phase='opponent_standby_phase'},
-    @{script='on each_standby_phase: draw(1); once_per_turn(copy);'; ids=@(4844); phase='each_standby_phase'},
+    @{script='on each_standby_phase: draw(1); once_per_turn(copy);'; ids=@('draw'); phase='each_standby_phase'},
     @{script='on opponent_end_phase: gain_lp(500);'; ids=$null; phase='opponent_end_phase'},
     @{script='on each_end_phase: search(deck, monster where race = Dragon);'; ids=$null; phase='each_end_phase'},
     @{script='on standby_phase: search(deck, monster where race = Dragon);'; ids=$null; phase='standby_phase'},   # no game card: own trigger too
@@ -112,6 +113,19 @@ $cases = @(
     @{script='cost tribute_self_hand: draw(1) or cost tribute_self: draw(1); once_per_turn;'; ids=$null; groups=@(0,0); once=@($true,$true); costSlot='tributeSelfFromHand'},
     @{script='cost banish_grave(2, monster where race = Dragon): draw(1);'; ids=$null; costPick='2,'},
     @{script='cost banish_self_and(1, monster where archetype = 74): draw(1);'; ids=$null; costPick='1,True'},
+    # self costs with no donor (section 102): the own row of the place + the game's cost in slot 3; no Rose Lover / Hecatrice / Planet Pathfinder / Quillbolt
+    @{script='cost banish_self: search(deck, monster);'; ids=$null; costSlot='banishSelfFromGrave'
+      check={ param($c) $c.rawRow -and $c.ownTrigger -and $c.trigger -eq 'in_grave' -and $null -eq $c.from -and (@($c.require) -contains 'inGrave') -and (@($c.require) -contains 'canBanishSelfFromGrave') }},
+    @{script='cost discard_self: special_summon(deck, monster);'; ids=$null; costSlot='discardSelf'
+      check={ param($c) $c.rawRow -and $c.ownTrigger -and $c.trigger -eq 'in_hand' -and $null -eq $c.from -and (@($c.require) -contains 'inHand') }},
+    @{script='cost tribute_self: search(deck, spell);'; ids=$null; costSlot='tributeSelf'
+      check={ param($c) $c.rawRow -and $c.ownTrigger -and $c.trigger -eq 'ignition' -and $null -eq $c.from -and (@($c.require) -contains 'canTributeSelf') }},
+    @{script='cost banish_self: draw(1);'; ids=$null; costSlot='banishSelfFromGrave'
+      check={ param($c) $c.ownTrigger -and $c.trigger -eq 'in_grave' -and $c.rawRow -and $c.do -eq 'draw' -and $null -eq $c.from -and $null -eq $c.actionFrom }},
+    @{script='cost banish_self_and(1, monster): search(deck, monster);'; ids=$null
+      check={ param($c) $c.rawRow -and $c.ownTrigger -and $c.trigger -eq 'in_grave' -and $c.costPick.self -and $null -eq $c.from }},
+    @{script='on in_grave: search(deck, monster);'; ids=$null
+      check={ param($c) $c.rawRow -and $c.ownTrigger -and $c.trigger -eq 'in_grave' -and $null -eq $c.from -and (@($c.require) -contains 'inGrave') }},
     # raw pick costs (section 90): the game's cost machine runs as this card - no "cost.from" donor, the verb and filter in costPick
     @{script='cost discard(1, spell): draw(1);'; ids=$null; check={ param($c) $p = $c.costPick; $p.verb -eq 'discard' -and $p.raw -and $p.count -eq 1 -and $p.deck.type -eq 'spell' -and $null -eq $c.cost }},
     @{script='cost discard(2): draw(1);'; ids=$null; check={ param($c) $c.costPick.verb -eq 'discard' -and $c.costPick.count -eq 2 -and $null -eq $c.costPick.deck.type -and $null -eq $c.cost }},
@@ -136,6 +150,15 @@ $cases = @(
     # LP requirements (section 82)
     @{script='if lp_at_most(500): draw(1);'; ids=$null; requireName='lpAtMost'},
     @{script='if lp_lower: draw(1);'; ids=$null; requireName='lpLower'},
+    # both Extra Decks (Master Duel's Dogmatika check, duel.dll 0x180286840; docs/Overnight-2026-10-30.md section 5)
+    @{script='if both_extra_decks: draw(1);'; ids=$null; requireName='bothExtraDecks'},
+    @{script='if your_turn and both_extra_decks: draw(1);'; ids=$null; requireName='bothExtraDecks'},
+    # End Phase windows (duel.dll's Life Shaver condition 0x180262AC0 = the opponent's End Phase)
+    @{script='if opponent_end_phase: destroy(target, opponent, monster); quick;'; ids=$null; requireName='opponentEndPhase'},
+    @{script='if your_end_phase: draw(1);'; ids=$null; requireName='yourEndPhase'},
+    @{script='if end_phase: gain_lp(500);'; ids=$null; requireName='endPhase'},
+    # a trigger word and the same condition word in one effect
+    @{script='on end_phase: draw(1); also if opponent_end_phase: burn(300); quick;'; ids=$null},
     # if controls(card where name = N) (section 78): by name, beside a destroy (no filter row needed)
     @{script='if controls(card where name = 4996): destroy(target, opponent, card);'; ids=$null; controlsName=4996},
     # grave_end_phase (section 79): an own trigger, no game card behind it
@@ -176,16 +199,28 @@ $cases = @(
     @{script='search(deck or grave, monster where race = Warrior);'; ids=$null; check={ param($c) $c.rawRow -and $c.deck.scan -eq 'deck' -and @($c.deck.or).Count -eq 1 -and @($c.deck.or)[0].scan -eq 'grave' }},
     @{script='search(grave or banished, 2, card where archetype = 74);'; ids=$null; check={ param($c) $c.ownCount -eq 2 -and $c.deck.scan -eq 'grave' -and @($c.deck.or)[0].scan -eq 'banished' }},
     @{script='on normal_summoned: search(deck or grave, monster);'; ids=$null; check={ param($c) $c.rawRow -and $c.ownTrigger -and $null -eq $c.from -and $c.trigger -eq 'normal_summoned' -and $null -eq $c.actionFrom -and $c.own -eq 'toHand' }},
-    @{script='on normal_summoned: draw(1);'; ids=$null; own='normal_summoned'; check={ param($c) $c.from -eq 4844 -and $c.ownTrigger -and $null -eq $c.actionFrom }},
+    @{script='on normal_summoned: draw(1);'; ids=$null; own='normal_summoned'; check={ param($c) $c.rawRow -and $c.do -eq 'draw' -and $null -eq $c.from -and $c.ownTrigger -and $null -eq $c.actionFrom }},
     @{script='on special_summoned(from grave): special_summon(hand, monster where level <= 4);'; ids=$null; own='special_summoned'; check={ param($c) $c.rawRow -and $c.summonCondition -and $null -eq $c.from }},
-    @{script='draw(1) then search(deck, spell);'; ids=$null; check={ param($c) $c.rawRow -and $c.own -eq 'toHand' -and $c.before[0].from -eq 4844 }},
+    @{script='draw(1) then search(deck, spell);'; ids=$null; check={ param($c) $c.rawRow -and $c.own -eq 'toHand' -and $c.before[0].do -eq 'draw' -and $c.before[0].rawRow }},
+    # revive without Monster Reborn (section 101): Monster Reborn's functions on a raw row, the GY list ours
+    @{script='revive(either_grave, monster);'; ids=$null; check={ param($c) $c.rawRow -and $null -eq $c.from -and $c.targetDo -eq 'revive' -and $c.deck.scan -eq 'bothGravesSummon' }},
+    @{script='revive(grave, monster where race = Zombie);'; ids=$null; check={ param($c) $c.rawRow -and $c.targetDo -eq 'revive' -and $c.deck.scan -eq 'graveSummon' }},
+    @{script='draw(1) then revive(opponent_grave, monster);'; ids=$null; check={ param($c) $c.rawRow -and $c.own -eq 'summon' -and $null -eq $c.targetDo -and $c.deck.scan -eq 'opponentGrave' -and $c.before[0].do -eq 'draw' }},
+    @{script='cost banish_self: revive(grave, monster where archetype = 963) then send_to_grave(hand, card); once_per_turn;'; ids=$null
+      check={ param($c) $c.ownTrigger -and $c.trigger -eq 'in_grave' -and $c.costSlot -eq 'banishSelfFromGrave' -and $c.before[0].own -eq 'summon' -and $null -eq $c.before[0].targetDo }},
+    @{script='on normal_summoned: revive(grave, monster);'; ids=$null; check={ param($c) $c.rawRow -and $c.ownTrigger -and $null -eq $c.from -and $null -eq $c.actionFrom -and $c.targetDo -eq 'revive' }},
     @{script='move(grave, 3, monster where race = Fish, to_deck) then draw(1);'; ids=$null; check={ param($c) $c.before[0].ownCount -eq 3 -and $c.before[0].own -eq 'toDeck' }},
     # alternative Xyz Summon (section 94)
     @{script='xyz_also(monster where archetype = 153, xyz_monster, rank 4);'; ids=$null
       check={ param($c) $c.xyzAlso.archetype -eq 153 -and $c.xyzAlso.xyz -and $c.xyzAlso.rankMin -eq 4 -and $c.xyzAlso.rankMax -eq 4 }},
     @{script='xyz_also(card where name = 10569); on ignition: draw(1);'; ids=$null; check={ param($c) $c.xyzAlso.name -eq 10569 }},
     # ignition is an own trigger (table 3, section 96): no game card's row, so no donor's slot-3 cost comes along (issue #39: Caam 9168)
-    @{script='on ignition: draw(1); once_per_turn;'; ids=$null; own='ignition'; check={ param($c) $c.from -eq 4844 -and $c.effectOnly -and $null -eq $c.actionFrom }},
+    @{script='on ignition: draw(1); once_per_turn;'; ids=$null; own='ignition'; check={ param($c) $c.rawRow -and $c.do -eq 'draw' -and $null -eq $c.from -and $c.effectOnly -and $null -eq $c.actionFrom }},
+    # the plain one-target rows run raw (section 103): Remove Trap / Spiritualism / Hermos, no "from"
+    @{script='destroy(target, opponent, spell);'; ids=$null; check={ param($c) $c.rawRow -and $c.targetDo -eq 'destroy' -and $c.filter.target -and $null -eq $c.from }},
+    @{script='return_to_hand(target, opponent, monster);'; ids=$null; check={ param($c) $c.rawRow -and $c.targetDo -eq 'return' -and $c.filter.target -and $null -eq $c.from }},
+    @{script='banish(target, opponent, monster);'; ids=$null; check={ param($c) $c.rawRow -and $c.targetDo -eq 'banish' -and $null -eq $c.actionFrom -and $null -eq $c.from }},
+    @{script='draw(2) then gain_lp(500);'; ids=$null; check={ param($c) $c.rawRow -and $null -eq $c.from -and @($c.steps).Count -eq 2 }},
     @{script='effect "destroy yom" { on ignition: destroy(all, opponent); once_per_turn; } or effect "inflict 1000" { on ignition: damage(1000); once_per_turn; } or effect "gain 1000" { on ignition: gain_lp(1000); once_per_turn; }'
       ids=$null; groups=@(0,0,0); once=@($true,$true,$true)
       check={ param($c) $all = @($c) + @($c.parts); @($all | Where-Object { !$_.ownTrigger -or $_.trigger -ne 'ignition' -or $_.from -eq 9168 -or $_.actionFrom -eq 9168 }).Count -eq 0 }},
@@ -230,8 +265,10 @@ foreach ($case in $cases) {
     $result = $compile.Invoke($null, @([string]$case.script))
     if (!$result.Ok) { throw "$($case.script): $($result.Error)" }
     $compiled = $result.Compiled.ToJsonString() | ConvertFrom-Json
-    $ids = @($compiled.from)
-    foreach ($part in $compiled.parts) { $ids += $part.from }
+    # a raw part has no "from" (section 103): it is listed by its verb ("draw") instead
+    $idOf = { param($p) if ($null -ne $p.from) { $p.from } elseif ($p.do) { $p.do } else { 'raw' } }
+    $ids = @(& $idOf $compiled)
+    foreach ($part in $compiled.parts) { $ids += & $idOf $part }
     if ($case.ids -and (($ids -join ',') -ne ($case.ids -join ','))) { throw "Source order changed: $($case.script)" }
     if ($case.script -match 'atk 700' -and $compiled.stats.atk -ne 700) { throw 'Clone stats were lost.' }
     if ($case.script -match '^lock' -and !$compiled.lock.spells) { throw 'Lock was lost.' }

@@ -106,6 +106,8 @@
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Host.cpp" />
     <ClCompile Include="Loading.cpp" />
+    <ClCompile Include="MasterDuel.cpp" />
+    <ClCompile Include="MasterDuelBridge.cpp" />
     <ClCompile Include="ModConfig.cpp" />
     <ClCompile Include="Packs.cpp" />
     <ClCompile Include="Patch.cpp" />
@@ -125,6 +127,8 @@
     <ClInclude Include="DuelFormat.h" />
     <ClInclude Include="Host.h" />
     <ClInclude Include="Loading.h" />
+    <ClInclude Include="MasterDuel.h" />
+    <ClInclude Include="MasterDuelBridge.h" />
     <ClInclude Include="ModConfig.h" />
     <ClInclude Include="Packs.h" />
     <ClInclude Include="Patch.h" />

@@ -47,7 +47,10 @@ namespace YGO::Addr
     inline constexpr uintptr_t Card_GetNameFromKonamiId = 0x14076D0F0;            // YGO::CARDS::Get_CardNameFromKonamiId
     inline constexpr uintptr_t Card_GetTypeFromFullCardPropsByKonamiId = 0x14081A650;
     inline constexpr uintptr_t CardFrameTable = 0x140BF7820;                      // 12 bytes per card type
-    inline constexpr uintptr_t g_pCardDataFiles = 0x140C8D3A0;
+    inline constexpr uintptr_t g_pCardDataFiles = 0x140C8D3A0;                    // CardDataFiles* (Size/Data per file: CardProp +0x80, Genre +0x90, Link +0xA0, Same +0xB0, Named +0xC0)
+    inline constexpr uintptr_t Setup_CardPropTable = 0x14076BFC0;                 // (const int*, language): loads the card tables
+    inline constexpr uintptr_t Get_InternalIdFromKonamiId = 0x14076E000;          // (int16 id) -> internal id, -1 = none (Yu-Gi-Oh-MoreCards widens it)
+    inline constexpr uintptr_t Get_CardPropsFromInternalId = 0x1407CAB30;         // (int16 internal id) -> IN_MEMORY_CARD_PROP* (0x30 bytes)
     inline constexpr uintptr_t g_KonamiIds = 0x140D50510;
     inline constexpr uintptr_t g_iInternalIDs = 0x140D55480;                      // YGO::CARDS::g_iInternalIDs
     inline constexpr uintptr_t INTERNAL_ID_CARD_PROPS = 0x1427D0C30;              // YGO::CARDS::INTERNAL_ID_CARD_PROPS

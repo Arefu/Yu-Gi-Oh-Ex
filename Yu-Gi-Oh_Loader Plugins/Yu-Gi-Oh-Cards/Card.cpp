@@ -24,7 +24,17 @@
 #include "Text.h"
 #include "Yu-Gi-Oh-Mods.h"
 #include "EffectSourceLending.h"
+#include "Yu-Gi-Oh-Core.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
+
+// The id Master Duel's duel engine knows a card by (docs/MasterDuelEngine.md): its Konami id ("konamiId"), else its id + 20000, past every real
+// card's Konami id, so the engine never gives it a real card's effect.
+static int EngineIdOf(const Card::ExtraCard& card)
+{
+    if (card.KonamiId)
+        return card.KonamiId;
+    return card.ID + 20000 <= 0xFFFF ? card.ID + 20000 : 0;
+}
 
 // The game's card id window: Konami ids 3900..14968 index its fixed-size tables.
 constexpr uint32_t kVanillaKonamiIdBase = 3900;
@@ -279,8 +289,11 @@ namespace
         // Only a single-effect clone has one source identity to lend. Multi-effect
         // cards keep their own identity and let Effects route each table/event.
         if (j.contains("effectClone"))
+        {
             c.CloneFrom = YGO::Effects::SingleEffectSource(j["effectClone"], kVanillaKonamiIdBase,
                 kVanillaKonamiIdBase + kVanillaKonamiIdCount);
+            c.EngineSource = YGO::Effects::SingleEffectSource(j["effectClone"], 1, 0x10000);
+        }
 
         // the art is relative to the content folder the card came from (a mod's Yu-Gi-Oh-Ex or the game's)
         c.Folder = YGO::Mods::FolderOf(j);
@@ -355,6 +368,8 @@ namespace
         // "password": 8 digits (the Card Store's Enter Password page: RIX game:password, through Card_FindByPassword)
         if (j.contains("password") && j["password"].is_number_integer() && j["password"].get<int64_t>() > 0 && j["password"].get<int64_t>() <= 99999999)
             c.Password = static_cast<uint32_t>(j["password"].get<int64_t>());
+        if (j.contains("konamiId") && j["konamiId"].is_number_integer() && j["konamiId"].get<int64_t>() > 0 && j["konamiId"].get<int64_t>() <= 0xFFFF)
+            c.KonamiId = static_cast<uint16_t>(j["konamiId"].get<int64_t>());
         // the texts per language: English's index letters / sort name at the top, the other languages under "text"
         auto readText = [](const nlohmann::json& from, ExtraCard::LanguageText& to, bool names)
         {
@@ -899,6 +914,9 @@ namespace
                                                                     // Description point into (temp.Name.c_str()) - must outlive the borrow
     std::unordered_set<uint16_t> g_IdsInUseThisDuel;           // every id (real, already borrowed, or a vanilla card in either deck)
                                                                 // seen so far this duel, so a new borrow never collides with it
+    // Master Duel's engine: the engine ids real cards in either deck play under (a card must not be lent one), and the ones lent this duel
+    std::unordered_set<uint16_t> g_EngineIdsInUseThisDuel;
+    std::unordered_map<uint16_t, uint16_t> g_LentEngineIds;     // engine id -> the custom card playing as it
 
     // Undoes every current borrow: restores each borrowed id's real vanilla bytes and clears the session state.
     // Called defensively at the start of a new duel (in case a previous duel's end was missed) and for real
@@ -917,6 +935,36 @@ namespace
         g_SavedVanillaBytes.clear();
         g_BorrowedCopy.clear();
         g_IdsInUseThisDuel.clear();
+        g_EngineIdsInUseThisDuel.clear();
+        g_LentEngineIds.clear();
+    }
+
+    bool EngineLoaded()
+    {
+        return Core::Load() && Core::Functions().EngineProc && Core::Functions().EngineProc("DLL_DuelSysAct") != nullptr;
+    }
+
+    // Under Master Duel's engine a single-effect clone plays AS its source (Core_EngineLend): the engine's own rows and every id-keyed branch of
+    // that card - the ones Konami special-cases included - with the clone's own stats. Not when a real copy of the source is in either deck or
+    // another clone already took it this duel (the clone then keeps its own id and has no effect).
+    void LendEngineSource(uint16_t customId, const Card::ExtraCard& card, uint16_t displayId)
+    {
+        const uint16_t source = card.EngineSource;
+        if (auto it = g_LentEngineIds.find(source); it != g_LentEngineIds.end())
+        {
+            if (it->second != customId)
+                Logger::WriteLog(std::format("Duel: card {} can't play as {}: card {} already does this duel", customId, source, it->second), MODULE_NAME, 1);
+            return;
+        }
+        if (g_EngineIdsInUseThisDuel.contains(source))
+        {
+            Logger::WriteLog(std::format("Duel: card {} can't play as {}: a real copy of it is in this duel", customId, source), MODULE_NAME, 1);
+            return;
+        }
+        if (Core::Functions().EngineLend && Core::Functions().EngineLend(displayId, source, card.ID))
+            g_LentEngineIds[source] = customId;
+        else
+            Logger::WriteLog(std::format("Duel: card {} can't play as {}: Master Duel's engine has no such card", customId, source), MODULE_NAME, 2);
     }
 
     // Finds a vanilla id nothing this duel is using yet, makes it look exactly like `card` (name, art, stats,
@@ -938,6 +986,9 @@ namespace
     // Makes vanilla id `id16` look exactly like `card` for this duel (name, art, stats, frame, genres) and records the borrow.
     uint16_t BorrowInto(uint16_t customId, const Card::ExtraCard& card, uint16_t id16)
     {
+        // Master Duel's engine plays the card under its engine id; the duel screen shows the borrowed id (Core_EngineSetDisplayId)
+        if (Core::Load() && Core::Functions().EngineSetDisplayId)
+            Core::Functions().EngineSetDisplayId(EngineIdOf(card), id16);
         auto* gc = reinterpret_cast<GameCard*>(kFullCardPropsAddress + static_cast<uintptr_t>(id16) * kFullCardPropsStride);
         auto& saved = g_SavedVanillaBytes[id16];
         saved.assign(reinterpret_cast<unsigned char*>(gc), reinterpret_cast<unsigned char*>(gc) + kFullCardPropsStride);
@@ -1059,6 +1110,19 @@ namespace
 
 uint16_t Card::ResolveDuelSessionId(uint16_t id)
 {
+    if (const Card::ExtraCard* card = Card::FindExtraCard(id); card && card->EngineSource && EngineLoaded())
+    {
+        // shown as its vanilla source when that is free (as before), else as any borrowed id or its own; plays as the source in the engine
+        uint16_t display = card->CloneFrom ? BorrowSourceId(id, *card) : 0;
+        if (!display)
+        {
+            display = id <= kDuelIdLimit ? id : BorrowScratchId(id);
+            if (id <= kDuelIdLimit)
+                g_IdsInUseThisDuel.insert(id);
+        }
+        LendEngineSource(id, *card, display);
+        return display;
+    }
     if (const Card::ExtraCard* card = Card::FindExtraCard(id); card && card->CloneFrom)
     {
         if (const uint16_t source = BorrowSourceId(id, *card))
@@ -1862,8 +1926,13 @@ static void ReserveVanillaIds(const int32_t* deck)
     const auto* mainIds = reinterpret_cast<const uint16_t*>(bytes + 12);
     const auto* extraIds = reinterpret_cast<const uint16_t*>(bytes + 162);
     auto reserve = [](uint16_t id) {
-        if (id && id <= kDuelIdLimit && !Card::FindExtraCard(id))
+        const Card::ExtraCard* custom = id ? Card::FindExtraCard(id) : nullptr;
+        if (id && id <= kDuelIdLimit && !custom)
             g_IdsInUseThisDuel.insert(id);
+        // the engine id this card plays under, which no clone may be lent (a clone that lends its source plays as something else)
+        if (id && !(custom && custom->EngineSource))
+            if (const int engine = custom ? EngineIdOf(*custom) : id; engine > 0 && engine <= 0xFFFF)
+                g_EngineIdsInUseThisDuel.insert(static_cast<uint16_t>(engine));
     };
     for (uint32_t i = 0; mainCount <= 75 && i < mainCount; ++i)
         reserve(mainIds[i]);
@@ -2040,6 +2109,9 @@ void Card::Install()
             Logger::WriteLog(std::format("Card {} is internal id {}", card.ID, internalId), MODULE_NAME, 69);
 
         WriteGameTableEntry(card);
+        // Master Duel's engine, when Core runs it: the id it knows the card by (its Konami id, else past every real card's)
+        if (Core::Load() && Core::Functions().EngineMapCard)
+            Core::Functions().EngineMapCard(card.ID, EngineIdOf(card));
     }
 
     if (!firstRun)

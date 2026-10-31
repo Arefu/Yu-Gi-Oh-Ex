@@ -32,6 +32,7 @@ namespace WolfEx
             public string Action = "";   // the script's main action ("search", "destroy" ...)
             public ulong Genres;          // CARD_Genre bits of the game card (0 = none or no game data)
             public string LockGroup = ""; // LockCatalog group of a continuous lock card ("" = not one)
+            public bool Engine;           // "engine": true - added by Tools/Scripts/make_full_effect_library.py as as(<id>), any card Master Duel's engine plays
 
             public override string ToString() =>
                 (Origin == Origin.Mine ? "★ " : Origin == Origin.Edited ? "✎ " : "") + (Complete || Origin == Origin.Mine ? "" : "~ ") + Name;
@@ -188,6 +189,7 @@ namespace WolfEx
                                 Text = node["text"]?.GetValue<string>() ?? "", Script = script, GameScript = script, Complete = node["complete"]?.GetValue<bool>() ?? false,
                                 Notes = (node["notes"] as JsonArray)?.Select(n => n?.GetValue<string>() ?? "").ToArray() ?? [], Origin = Origin.Game,
                                 Action = node["action"]?.GetValue<string>() ?? ActionOf(script),
+                                Engine = node["engine"]?.GetValue<bool>() ?? false,
                             });
                         }
                 }
@@ -291,6 +293,10 @@ namespace WolfEx
         private sealed record Category(string Name, Func<Entry, bool> Match);
 
         private const string GenreRoot = "What it does", ActionRoot = "Script action", LockRoot = "Continuous locks";
+        // every other card Master Duel's engine plays, as(<id>): by kind, then by first letter (12,000+ cards; no node holds thousands)
+        private const string EngineRoot = "Every card (Master Duel engine)";
+        // a filter opens only the categories it narrows down to this many entries or fewer (a one-letter filter matches thousands)
+        private const int MaxAutoOpen = 300;
         private readonly List<(string Root, Category Category)> _categories = [];
         private bool _filling;
 
@@ -352,18 +358,31 @@ namespace WolfEx
                 }
                 foreach (var category in genres.OrderByDescending(c => _all.Count(c.Match)))
                     _categories.Add((GenreRoot, category));
-                if (_all.Any(e => e.Genres == 0))
-                    _categories.Add((GenreRoot, new Category("No genre", e => e.Genres == 0)));
+                if (_all.Any(e => e.Genres == 0 && !e.Engine))
+                    _categories.Add((GenreRoot, new Category("No genre", e => e.Genres == 0 && !e.Engine)));
             }
-            foreach (var group in _all.GroupBy(e => e.Action).OrderByDescending(g => g.Count()))
+            foreach (var group in _all.Where(e => !e.Engine).GroupBy(e => e.Action).OrderByDescending(g => g.Count()))
             {
                 string action = group.Key;
-                _categories.Add((ActionRoot, new Category(action.Length == 0 ? "(no action)" : action, e => e.Action == action)));
+                _categories.Add((ActionRoot, new Category(action.Length == 0 ? "(no action)" : action, e => !e.Engine && e.Action == action)));
             }
+            foreach (var kind in _all.Where(e => e.Engine).GroupBy(e => e.Kind).OrderByDescending(g => g.Count()))
+                foreach (var letter in kind.GroupBy(e => LetterOf(e.Name)).OrderBy(g => g.Key))
+                {
+                    string kindName = kind.Key.Replace('_', ' '), key = letter.Key;
+                    _categories.Add((EngineRoot, new Category($"{kindName} · {key}", e => e.Engine && e.Kind == kind.Key && LetterOf(e.Name) == key)));
+                }
             // every card Duel_BuildContinuousLockState names (LockCatalog), by kind: also the ones lock(...) can't say yet
             foreach (string group in LockCatalog.Groups)
                 _categories.Add((LockRoot, new Category(group, e => e.LockGroup == group)));
             Refill();
+        }
+
+        // A name's first letter for the engine root's groups: A-Z, else "#"
+        private static string LetterOf(string name)
+        {
+            char c = name.Length > 0 ? char.ToUpperInvariant(name[0]) : '#';
+            return c is >= 'A' and <= 'Z' ? c.ToString() : "#";
         }
 
         // ---- the list ----
@@ -418,7 +437,7 @@ namespace WolfEx
             {
                 _tree.Nodes.Clear();
                 var all = _all.Where(Passes).ToList();
-                foreach (string rootName in new[] { GenreRoot, ActionRoot, LockRoot })
+                foreach (string rootName in new[] { GenreRoot, ActionRoot, LockRoot, EngineRoot })
                 {
                     var root = _tree.Nodes.Add(rootName, rootName);
                     var categories = _categories.Where(c => c.Root == rootName).ToList();
@@ -438,7 +457,7 @@ namespace WolfEx
                         var node = root.Nodes.Add(category.Name, $"{category.Name} ({count})");
                         node.Tag = category;
                         node.Nodes.Add(new TreeNode("...") { Tag = null });   // placeholder: filled on opening
-                        if (open.Contains(PathOf(node)) || (filtering && count > 0) || PathOf(node) == selectedPath)
+                        if (open.Contains(PathOf(node)) || (filtering && count > 0 && count <= MaxAutoOpen) || PathOf(node) == selectedPath)
                         {
                             FillCategory(node);
                             node.Expand();

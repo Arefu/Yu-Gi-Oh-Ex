@@ -10,6 +10,7 @@
 #include "Related.h"
 #include "Save.h"
 #include "Text.h"
+#include "Yu-Gi-Oh-Core.h"
 
 typedef char(__fastcall* Setup_CardPropTable_t)(const int* a1, int language);
 static uintptr_t orig_Setup_CardPropTable = 0x14076BFC0;
@@ -47,6 +48,11 @@ char __fastcall Hook_Setup_CardPropTable(const int* a1, int language)
     Related::Load();
 
     CardSearch_BuildIndex(); // after Install: the game built it from the vanilla names
+
+    // Master Duel's duel engine, when Core runs it (docs/MasterDuelEngine.md): its card data again, now with this plugin's cards in the
+    // game's lookups (Core's own refresh ran inside the game's setup, before Install)
+    if (Core::Load() && Core::Functions().EngineRefreshCards && Core::Functions().EngineReady && Core::Functions().EngineReady())
+        Core::Functions().EngineRefreshCards();
 
     return result;
 }

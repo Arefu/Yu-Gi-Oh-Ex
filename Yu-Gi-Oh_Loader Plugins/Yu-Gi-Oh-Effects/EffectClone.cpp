@@ -25,6 +25,8 @@
 
 #include "EffectClone.h"
 #include "Logger.h"
+#include "MasterDuelFunctionMap.h"
+#include "Yu-Gi-Oh-Core.h"
 #include "Yu-Gi-Oh-Memory.h"
 #include "Yu-Gi-Oh-Mods.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
@@ -486,7 +488,9 @@ namespace
             return part.OwnTrigger && effect && effect[4] == 3 && !IsKnownTriggerEvent(effect[3]);
         // (the GY / banished End Phase triggers are offered from those zones: table 2 too)
         // (a watcher in the GY is offered by Offer_EffectOfNamedCardInGrave: table 2 too)
-        const bool table2 = IsMoveTrigger(part.Trigger) || part.Trigger == "in_hand" || part.Trigger == "grave_end_phase" || part.Trigger == "banished_end_phase"
+        // (in_grave, section 102: Check_CanActivateKind3AtZone sets word4 2 for a card past the field and goes straight to the speed / offer
+        // gates - no id list for the GY, so the own row is offered by the game's own GY activation; "inGrave" keeps it out of the banished zone)
+        const bool table2 = IsMoveTrigger(part.Trigger) || part.Trigger == "in_hand" || part.Trigger == "in_grave" || part.Trigger == "grave_end_phase" || part.Trigger == "banished_end_phase"
             || (IsWatchTrigger(part.Trigger) && part.Watch.InGrave);
         return part.OwnTrigger && effect && effect[4] == (table2 ? 2 : 1)
             && (TriggerFitsEvent(part.Trigger, effect[3]) || !IsKnownTriggerEvent(effect[3]));
@@ -1083,7 +1087,7 @@ namespace
     }
 
     // ---- the plugin's own move step ("move", docs/EffectSystem.md section 86) ---------------------------------------------------
-    // The game's target machines all end the same way (Slot0_SelectFirstTargetAndApply / Slot0_ReturnTargetToHand / Slot0_BanishTarget, read
+    // The game's target machines all end the same way (Slot0_DestroyFirstTarget / Slot0_ReturnTargetToHand / Slot0_BanishTarget, read
     // in IDA 2026-10-26): clear the "moved" masks (+0x1B3A, +0x1B42), Has_SelectedTarget(record, i, &zone) (low byte side, high byte zone),
     // Check_TargetStillValid(record, zone word, zone), then Action_DestroyZoneMask(record, zone bits, REASON = the destination zone, flags).
     // DestroyQueue_Process moves the cards when the slot returns (16 + 0x2000002 destroy, 13 hand, 17 banish, 15 Deck with 0x800 bottom /
@@ -3281,6 +3285,182 @@ namespace
         return WrappedRow(source, real ? real : saved, *clone);
     }
 
+    // ---- Master Duel's duel engine (Stage 1, docs/Overnight-2026-10-30.md) ------------------------------------------------------------
+    // Duels run in duel.dll, whose own Get_EffectTableEntryForCard (RVA 0x56C0C0) takes (record, int* row index within the card's run) and
+    // sees ENGINE ids (Konami's, or 40000+ for a card Konami does not have; Core_EngineToDisplay gives the id the clones are keyed on).
+    // What it answers so far: a part with no donor (raw row, section 88) whose slots are game functions with a duel.dll twin
+    // (MasterDuelFunctionMap.h) and that needs no other hook - the plugin's own row with the twins. A donor part already plays under
+    // duel.dll through Core's lend (as(...): the engine runs the donor's own rows and id-keyed rules). Anything that needs the plugin's slot
+    // thunks or another game hook (draw count, filters, steps, own machines, composed cost / action, own triggers but ignition ...) gets no
+    // row until those hooks have duel.dll twins: logged once per card, so the card does nothing rather than something broken.
+    using MdGetEntry_t = void*(__fastcall*)(uint16_t*, int*);
+    MdGetEntry_t orig_MdGetEntry = nullptr;
+    uintptr_t g_DuelBase = 0;
+    int(__cdecl* g_EngineToDisplay)(int) = nullptr;
+    constexpr uint32_t kDuelTimeStamp = 0x6A41C989, kDuelImageSize = 0x1290000;   // build 80460, the one the twins were traced in
+    constexpr uint32_t kDuelRva_GetEffectTableEntryForCard = 0x56C0C0;
+
+    // A "require" check's duel.dll twin (absolute address), 0 when it has none (defined with the checks, CheckByName).
+    uintptr_t MdCheckTwin(uint64_t check);
+
+    // Why this part cannot run under duel.dll yet (nullptr = it can).
+    const char* MdNotPortedWhy(const Clone& c)
+    {
+        if (!c.RawRow) return c.From ? "has a donor (plays through Core's lend instead)" : "not a raw row";
+        if (c.OwnTrigger && c.Trigger != "ignition") return "own trigger (needs the event evaluator hooks)";
+        if (c.HasFilter || c.HasDeckFilter || !c.OrRows.empty() || c.HasStats || c.HasNegate) return "answers a game hook";   // (draw / LP: Hook_MdGetDraw / Hook_MdLpChanges)
+        if (c.CostPick || c.CostFrom || c.ActionFrom || c.DetachCount || !c.Pre.empty()) return "composed cost / action";
+        for (uint64_t check : c.Require)
+            if (!MdCheckTwin(check))
+                return "a \"require\" check with no duel.dll twin";
+        if (!c.Steps.empty() || c.Own || c.MoveScope || c.ResultKey) return "the plugin's own machine";
+        if (c.HasSummonLock || c.UsesPerTurn > 1 || c.Quick) return "a rule answered by a game hook";
+        for (uint64_t slot : c.SlotOverride)
+            if (slot && !YGO::MasterDuelMap::ToDuelRva(slot))
+                return "a slot function with no duel.dll twin";
+        return nullptr;
+    }
+
+    // The part a duel.dll record (engine id) belongs to: Find / RouteByRow see the display id while they route. nullptr for a card with no
+    // clone or a borrowed id without one.
+    Clone* MdClone(uint16_t* effect)
+    {
+        if (!effect || g_Clones.empty())
+            return nullptr;
+        const uint16_t engineId = effect[0];
+        const uint16_t display = static_cast<uint16_t>(g_EngineToDisplay ? g_EngineToDisplay(engineId) : engineId);
+        bool borrowedWithoutClone;
+        effect[0] = display;
+        Clone* clone = RouteByRow(Find(display, borrowedWithoutClone), effect);
+        effect[0] = engineId;
+        return borrowedWithoutClone ? nullptr : clone;
+    }
+
+    // Slot 2 of an own row with "require" checks under duel.dll: each check's twin, then the row's own condition (as SlotThunk<2> does on
+    // the game's engine). The record's id is the engine id throughout (raw rows run under their own id).
+    uint64_t __fastcall MdSlot2_Requires(uint16_t* effect, uint64_t a2, uint64_t a3, uint64_t a4)
+    {
+        using Slot_t = uint64_t(__fastcall*)(uint16_t*, uint64_t, uint64_t, uint64_t);
+        const Clone* clone = MdClone(effect);
+        if (!clone)
+            return 0;
+        const uint16_t engineId = effect[0];
+        const uint16_t display = static_cast<uint16_t>(g_EngineToDisplay ? g_EngineToDisplay(engineId) : engineId);
+        for (uint64_t check : clone->Require)
+        {
+            const uintptr_t fn = MdCheckTwin(check);
+            const bool inDuel = fn >= g_DuelBase && fn < g_DuelBase + kDuelImageSize;   // else the plugin's own (mirrored-state) check
+            effect[0] = inDuel ? engineId : display;
+            const uint64_t ok = reinterpret_cast<Slot_t>(fn)(effect, a2, a3, a4);
+            effect[0] = engineId;
+            if (!(ok & 0xFF))
+                return 0;
+        }
+        const uint32_t rva = clone->SlotOverride[2] ? YGO::MasterDuelMap::ToDuelRva(clone->SlotOverride[2]) : 0;
+        return rva ? reinterpret_cast<Slot_t>(g_DuelBase + rva)(effect, a2, a3, a4) : 1;
+    }
+
+    const Row* MdOwnRow(const Clone& c, uint16_t engineId)
+    {
+        static std::map<std::pair<const Clone*, uint16_t>, Row*> rows;   // never freed: the engine may hold the pointer
+        Row*& row = rows[{ &c, engineId }];
+        if (!row)
+        {
+            row = new Row{};
+            row->Id = engineId;
+            if (c.OncePerTurn || c.OncePerCopy || c.OncePerDuel)
+                row->Extra[0] = c.LimitClass;   // the use-limit classes 1-10 are the game's (duel.dll adds 15)
+            for (int i = 0; i < 5; ++i)
+                if (c.SlotOverride[i])
+                    row->Slot[i] = reinterpret_cast<void*>(g_DuelBase + YGO::MasterDuelMap::ToDuelRva(c.SlotOverride[i]));
+            if (!c.Require.empty())
+                row->Slot[2] = reinterpret_cast<void*>(&MdSlot2_Requires);
+        }
+        return row;
+    }
+
+    void* __fastcall Hook_MdGetEntry(uint16_t* effect, int* index)
+    {
+        Clone* clone = MdClone(effect);
+        if (!clone)
+            return orig_MdGetEntry(effect, index);
+        if (const char* why = MdNotPortedWhy(*clone))
+        {
+            static std::set<std::pair<uint16_t, const Clone*>> logged;
+            if (logged.emplace(effect[0], clone).second)
+                Logger::WriteLog(std::format("duel.dll: card with engine id {}: this effect does not run under Master Duel's engine yet: {}", effect[0], why), MODULE_NAME, 1);
+            return clone->From ? orig_MdGetEntry(effect, index) : nullptr;   // a lent donor's own row is the engine's
+        }
+        if (!OwnRowAnswers(*clone, effect))
+            return nullptr;
+        if (index)
+            *index = 0;
+        return const_cast<Row*>(MdOwnRow(*clone, effect[0]));
+    }
+
+    // duel.dll's Get_NumberOfCardsToDraw (RVA 0x2AB390, same signature as the game's 0x14015EA90): a raw "draw" row's count is its
+    // "draw" (the duel.dll draw machine and its condition, the twins of 0x14015F9C0 / 0x1400FAC40, ask this for the record's id).
+    using MdGetDraw_t = int64_t(__fastcall*)(uint16_t*);
+    MdGetDraw_t orig_MdGetDraw = nullptr;
+    constexpr uint32_t kDuelRva_GetNumberOfCardsToDraw = 0x2AB390;
+
+    int64_t __fastcall Hook_MdGetDraw(uint16_t* effect)
+    {
+        if (const Clone* clone = MdClone(effect); clone && clone->RawRow && clone->Draw >= 0)
+            return clone->Draw;
+        return orig_MdGetDraw(effect);
+    }
+
+    // duel.dll's Get_LifePointChanges (RVA 0x2A4020, as the game's 0x14015AC90: record, int[2] by absolute player, + gain / - damage), asked
+    // by Slot0_AlterLifePoints 0x1802AAD70 -> Effect_AlterLifePoints_Apply 0x18014E7E0: a raw LP row's "lp" amounts.
+    using MdLpChanges_t = int16_t(__fastcall*)(uint16_t*, int32_t*);
+    MdLpChanges_t orig_MdLpChanges = nullptr;
+    constexpr uint32_t kDuelRva_GetLifePointChanges = 0x2A4020;
+
+    int16_t __fastcall Hook_MdLpChanges(uint16_t* effect, int32_t* out)
+    {
+        const int16_t result = orig_MdLpChanges(effect, out);
+        if (const Clone* clone = MdClone(effect); clone && clone->RawRow && clone->HasLp && out)
+        {
+            const int owner = effect[1] & 1;   // the controller
+            out[owner] = clone->LpOwn;
+            out[1 - owner] = clone->LpOpp;
+        }
+        return result;
+    }
+
+    bool AttachMasterDuel()
+    {
+        void* proc = Core::Functions().EngineProc ? Core::Functions().EngineProc("DLL_DuelSysAct") : nullptr;
+        HMODULE duel = nullptr;
+        if (!proc || !GetModuleHandleExA(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS | GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT, static_cast<LPCSTR>(proc), &duel))
+            return false;
+        const auto base = reinterpret_cast<uintptr_t>(duel);
+        const auto* nt = reinterpret_cast<const IMAGE_NT_HEADERS64*>(base + reinterpret_cast<const IMAGE_DOS_HEADER*>(base)->e_lfanew);
+        if (nt->FileHeader.TimeDateStamp != kDuelTimeStamp || nt->OptionalHeader.SizeOfImage != kDuelImageSize)
+        {
+            Logger::WriteLog(std::format("duel.dll is not build 80460 (stamp {:08X}): custom effect rows are off in its duels", nt->FileHeader.TimeDateStamp), MODULE_NAME, 2);
+            return false;
+        }
+        g_DuelBase = base;
+        g_EngineToDisplay = Core::Functions().EngineToDisplay;
+        orig_MdGetEntry = reinterpret_cast<MdGetEntry_t>(base + kDuelRva_GetEffectTableEntryForCard);
+        DetourAttach(&(PVOID&)orig_MdGetEntry, Hook_MdGetEntry);
+        orig_MdGetDraw = reinterpret_cast<MdGetDraw_t>(base + kDuelRva_GetNumberOfCardsToDraw);
+        DetourAttach(&(PVOID&)orig_MdGetDraw, Hook_MdGetDraw);
+        orig_MdLpChanges = reinterpret_cast<MdLpChanges_t>(base + kDuelRva_GetLifePointChanges);
+        DetourAttach(&(PVOID&)orig_MdLpChanges, Hook_MdLpChanges);
+        size_t ported = 0, total = 0;
+        for (auto& [id, clone] : g_Clones)
+            for (Clone* part : AllParts(clone))
+            {
+                ++total;
+                ported += MdNotPortedWhy(*part) == nullptr;
+            }
+        Logger::WriteLog(std::format("duel.dll: effect row lookup hooked; {} of {} custom effects run on it as they are", ported, total), MODULE_NAME, 0);
+        return true;
+    }
+
     int64_t __fastcall Hook_GetDraw(uint16_t* effect)
     {
         if (g_Clones.empty())
@@ -4000,7 +4180,9 @@ namespace
     // "During the (your / your opponent's) Battle / Main / Main or Battle Phase", "During your (opponent's) turn": the duel's current phase
     // (PlayerState +0x3788: 2 / 4 = Main Phase 1 / 2 - the game's own "(phase - 2) & ~2 == 0" test in Effect_IsTargetImmune -, 3 = BATTLE,
     // 5 = END: ContEffect_CoversZone) and the turn player (+0x3774) against the effect's controller (docs/EffectSystem.md sections 81, 93).
-    constexpr int kPhaseBattle = 1 << 3, kPhaseMain = (1 << 2) | (1 << 4), kPhaseAny = -1;
+    // End Phase = 5 in both engines (duel.dll's Life Shaver / Abyss of the Sacred Beasts condition 0x180262AC0 tests DuelState +15388 == 5
+    // with the turn player +15368 = the opponent: the game's +0x3788 / +0x3774 moved by the bridge's 1172-byte shift).
+    constexpr int kPhaseBattle = 1 << 3, kPhaseMain = (1 << 2) | (1 << 4), kPhaseEnd = 1 << 5, kPhaseAny = -1;
     template <int Phases, int Whose>   // Phases: a mask of phase numbers; Whose: 0 either player's, 1 yours, 2 your opponent's
     uint64_t __fastcall Check_Phase(uint16_t* effect, uint64_t, uint64_t, uint64_t)
     {
@@ -4060,6 +4242,16 @@ namespace
             if (part->LpAtMost)
                 return own <= part->LpAtMost ? 1 : 0;
         return 0;
+    }
+
+    // "If both players have a card in their Extra Deck" (Dogmatika: "send 1 monster from each player's Extra Deck"): the Extra Deck count of
+    // each side's Duel::PlayerState::Player (+0x18). Under Master Duel's engine its own check runs instead: 0x180286840 (DuelState +24 and
+    // +3572, the two players' Extra Deck counts; White Knight of Dogmatika 15993, Dogmatika Nation 15285, Dogmatika Lawbringer 22086 - see
+    // MdCheckTwin).
+    uint64_t __fastcall Check_BothExtraDecks(uint16_t*, uint64_t, uint64_t, uint64_t)
+    {
+        const auto extra = [](int side) { return *reinterpret_cast<const uint32_t*>(kDuelState + static_cast<uintptr_t>(side) * 0xD94 + 0x18); };
+        return extra(0) != 0 && extra(1) != 0 ? 1 : 0;
     }
 
     // "You can Tribute 1 monster": you control a monster that can be Tributed (the game's per-zone test sub_14001D700, as Cond_CanTributeSelf uses
@@ -4147,12 +4339,16 @@ namespace
             { "yourMainOrBattlePhase", reinterpret_cast<uint64_t>(&Check_Phase<kPhaseMain | kPhaseBattle, 1>) },
             { "opponentMainOrBattlePhase", reinterpret_cast<uint64_t>(&Check_Phase<kPhaseMain | kPhaseBattle, 2>) },
             { "battledThisTurn", reinterpret_cast<uint64_t>(&Check_BattledThisTurn) },             // this card battled this turn (marker 1024)
+            { "endPhase", reinterpret_cast<uint64_t>(&Check_Phase<kPhaseEnd, 0>) },                // during the End Phase (either player's)
+            { "yourEndPhase", reinterpret_cast<uint64_t>(&Check_Phase<kPhaseEnd, 1>) },
+            { "opponentEndPhase", reinterpret_cast<uint64_t>(&Check_Phase<kPhaseEnd, 2>) },        // Life Shaver, Abyss of the Sacred Beasts
             { "yourTurn", reinterpret_cast<uint64_t>(&Check_Phase<kPhaseAny, 1>) },                // during your turn
             { "opponentTurn", reinterpret_cast<uint64_t>(&Check_Phase<kPhaseAny, 2>) },            // during your opponent's turn
             { "lpAtMost", reinterpret_cast<uint64_t>(&Check_LifePoints<0>) },   // your LP are N or less ("lpAtMost": N)
             { "lpLower", reinterpret_cast<uint64_t>(&Check_LifePoints<1>) },    // your LP are lower than your opponent's
             { "canDetach", 0x1400FBFF0 },                // this Xyz Monster has enough materials to detach ("detach" of them; Thunder End Dragon)
             { "canTributeOne", reinterpret_cast<uint64_t>(&Check_CanTributeOne) },   // you control a monster that can be Tributed
+            { "bothExtraDecks", reinterpret_cast<uint64_t>(&Check_BothExtraDecks) }, // both players have a card in their Extra Deck
             // No check (Slot_ReturnConst2). For "pay N LP": the LP cost card's own condition is card-specific (Delinquent Duo 0x140251110 =
             // "the opponent has a card in hand") and the LP total is not mapped yet, so the payment itself is not checked.
             { "always", 0x1400DE060 },
@@ -4161,6 +4357,27 @@ namespace
             if (name == n)
                 return address;
         return 0;
+    }
+
+    uintptr_t MdCheckTwin(uint64_t check)
+    {
+        if (!g_DuelBase)
+            return 0;
+        if (check == reinterpret_cast<uint64_t>(&Check_BothExtraDecks))
+            return g_DuelBase + 0x286840;   // both players' Extra Deck counts (traced 2026-10-31, docs/Overnight-2026-10-30.md section 5)
+        // The plugin's checks that read only what Core's bridge mirrors from duel.dll into the game's state after every step (turn player
+        // 0x14349B3B4 and phase 0x14349B3C8 are in its global run 0x3770-0x3834, LP in the player blocks): they run as they are, with the
+        // record's display id (MdSlot2_Requires). Not the hand / GY / zone checks: their card instances are not verified to match.
+        static const char* const mirrored[] = { "battlePhase", "yourBattlePhase", "opponentBattlePhase", "mainPhase", "yourMainPhase",
+            "opponentMainPhase", "mainOrBattlePhase", "yourMainOrBattlePhase", "opponentMainOrBattlePhase", "endPhase", "yourEndPhase",
+            "opponentEndPhase", "yourTurn", "opponentTurn",
+            "lpAtMost", "lpLower" };
+        for (const char* name : mirrored)
+            if (check == CheckByName(name))
+                return static_cast<uintptr_t>(check);
+        // a game check: its duel.dll twin (the plugin's own checks read the game's state, which duel.dll does not use: none yet)
+        const uint32_t rva = YGO::MasterDuelMap::ToDuelRva(check);
+        return rva ? g_DuelBase + rva : 0;
     }
 
     // "summonCondition": { "from": ["hand", "deck", "extra", "grave", "banished", "spelltrap"], "by": "effect" | "not_effect" | "own" | "spell" |
@@ -4407,9 +4624,17 @@ namespace
             else if (slot == "banishSelfFromHand") c.SlotOverride[3] = 0x140209040;    // Cost_BanishSelfFromHand (Battlin' Boxer Counterpunch's hand row)
             else if (slot == "banishSelfFromField") c.SlotOverride[3] = 0x1401FD800;   // Cost_BanishSelfFromField (Kozmo Farmgirl, Snowy Canvas)
             else if (slot == "tributeSelfFromHand") c.SlotOverride[3] = 0x14020A140;   // Cost_TributeSelfFromHand (Artifact Lancea's hand row)
+            // section 102, no donor: Cost_BanishSelfFromGrave (Rose Lover, Mezuki: Grave_FindIndexOfInstance(player, word11) +
+            // Move_GraveCardToBanished, no id test)
+            else if (slot == "banishSelfFromGrave") c.SlotOverride[3] = 0x1401FA670;
+            // Cost_DiscardSelf (Hecatrice: Hand_FindIndexOfInstance + Hand_DiscardAt; only 14449 is id-keyed)
+            else if (slot == "discardSelf") c.SlotOverride[3] = 0x1401FCEB0;
+            // Cost_TributeSelf (Planet Pathfinder: Queue_TributeAtZone(player, zone); the archetype-193 GY substitute is a game rule, the
+            // other id branches are 5583 / 6160 / 6797 / 7880 / 9913)
+            else if (slot == "tributeSelf") c.SlotOverride[3] = 0x1401F8BA0;
             else
             {
-                Logger::WriteLog(std::format("{}: unknown \"costSlot\" \"{}\" (sendSelfFromHand, sendSelfFromField, banishSelfFromHand, banishSelfFromField, tributeSelfFromHand), skipped", label, slot), MODULE_NAME, 2);
+                Logger::WriteLog(std::format("{}: unknown \"costSlot\" \"{}\" (sendSelfFromHand, sendSelfFromField, banishSelfFromHand, banishSelfFromField, tributeSelfFromHand, banishSelfFromGrave, discardSelf, tributeSelf), skipped", label, slot), MODULE_NAME, 2);
                 return false;
             }
         }
@@ -4495,7 +4720,7 @@ namespace
                 const uint64_t check = CheckByName(n);
                 if (!check)
                 {
-                    Logger::WriteLog(std::format("{}: unknown \"require\" check \"{}\" (canBanishSelfFromGrave, canDiscardSelf, canTributeSelf, canSummonSelf, canSummonSelfFromGrave, noMonsters, controlsMatch, controlsName, battlePhase, yourBattlePhase, opponentBattlePhase, mainPhase, yourMainPhase, opponentMainPhase, mainOrBattlePhase, yourMainOrBattlePhase, opponentMainOrBattlePhase, yourTurn, opponentTurn, battledThisTurn, lpAtMost, lpLower, inHand, inGrave, canDetach, canTributeOne), skipped", label, n), MODULE_NAME, 2);
+                    Logger::WriteLog(std::format("{}: unknown \"require\" check \"{}\" (canBanishSelfFromGrave, canDiscardSelf, canTributeSelf, canSummonSelf, canSummonSelfFromGrave, noMonsters, controlsMatch, controlsName, battlePhase, yourBattlePhase, opponentBattlePhase, mainPhase, yourMainPhase, opponentMainPhase, mainOrBattlePhase, yourMainOrBattlePhase, opponentMainOrBattlePhase, yourTurn, opponentTurn, battledThisTurn, lpAtMost, lpLower, inHand, inGrave, canDetach, canTributeOne, bothExtraDecks, endPhase, yourEndPhase, opponentEndPhase), skipped", label, n), MODULE_NAME, 2);
                     return false;
                 }
                 c.Require.push_back(check);
@@ -4560,8 +4785,41 @@ namespace
         if (clone.contains("targetDo") && clone["targetDo"].is_string())
         {
             const std::string what = clone["targetDo"].get<std::string>();
+            // "revive": Monster Reborn 4842's row run raw (section 101). Each of its functions takes its default path for an id it does not
+            // list (4842 is in none of them): slot 4 Slot4_SelectFromList_Driver (0x140092910: Deck_CollectMatchingCards with the "deck" list,
+            // prompt 94, UI_BeginCardListSelect mode 6, Record_AddSelectedTarget = the target is chosen at activation), slot 2
+            // Slot2_Condition_Generic_And_FA680 (0x1400F9940: Cond_GenericCanActivate_Ladder's tail = a free Monster Zone + the summon
+            // rule, and Cond_ListHasEnoughMatches), slot 0 Slot0_SpecialSummonTarget_Driver (0x140169590 -> Action_QueueTargetedZoneEffect
+            // with (1, 2): the target checked again, summoned to the activating player's field through Chain_AddEffectLink). No slot 1.
+            if (what == "revive")
+            {
+                c.SlotOverride[0] = 0x140169590;
+                if (!c.SlotOverride[2]) c.SlotOverride[2] = 0x1400F9940;
+                if (!c.SlotOverride[4]) c.SlotOverride[4] = 0x140092910;
+                if (!clone.contains("deck"))
+                {
+                    Logger::WriteLog(std::format("{}: \"targetDo\": \"revive\" needs a \"deck\" list (the GY scan); skipped", label), MODULE_NAME, 2);
+                    return false;
+                }
+            }
+            // The plain one-target Spell rows run raw (section 103); each slot 0 is Has_SelectedTarget(0) + Check_TargetStillValid (which looks
+            // this card's own row up again) + Action_DestroyZoneMask, slot 4 the prompt driver with its text, no id test on these paths:
+            // Slot0_DestroyFirstTarget (Remove Trap 4838: reason 16, flags 0x2000002, prompt 281)
+            else if (what == "destroy") c.SlotOverride[0] = 0x140156D40;
+            // Slot0_ReturnTargetToHand (Spiritualism 5246: reason 13, prompt 348 = Slot4_ActivationPrompt_Text348)
+            else if (what == "return")
+            {
+                c.SlotOverride[0] = 0x140157350;
+                if (!c.SlotOverride[4]) c.SlotOverride[4] = 0x14008CCF0;
+            }
+            // Slot0_BanishTarget (Legendary Knight Hermos 11887: reason 17, face-down only for 12076 / 12767; prompt 293 = _Text293)
+            else if (what == "banish")
+            {
+                c.SlotOverride[0] = 0x140156ED0;
+                if (!c.SlotOverride[4]) c.SlotOverride[4] = 0x14008CD40;
+            }
             // Slot0_ChangeTargetsBattlePosition (Stop Defense / Enemy Controller): toggles each target's position (Duel_ChangePosition_OfferFlip_Ev12or13)
-            if (what == "position") c.SlotOverride[0] = 0x14016B430;
+            else if (what == "position") c.SlotOverride[0] = 0x14016B430;
             // Slot0_SetTargetsFaceDown (Book of Moon): Change_ToFaceDownDefense for each of the record's targets (word 16 = stored target count)
             else if (what == "faceDown") c.SlotOverride[0] = 0x14049BE90;
             // Slot0_TakeControlOfTarget (Mind Control / Change of Heart): target 0, until the End Phase
@@ -4580,11 +4838,14 @@ namespace
             }
             else
             {
-                Logger::WriteLog(std::format("{}: \"targetDo\" must be position, faceDown, control, atk or negate; skipped", label), MODULE_NAME, 2);
+                Logger::WriteLog(std::format("{}: \"targetDo\" must be revive, destroy, return, banish, position, faceDown, control, atk or negate; skipped", label), MODULE_NAME, 2);
                 return false;
             }
-            if (!c.SlotOverride[1]) c.SlotOverride[1] = 0x1401B0FF0;
-            if (!c.SlotOverride[4]) c.SlotOverride[4] = 0x14008CCC0;
+            if (what != "revive")
+            {
+                if (!c.SlotOverride[1]) c.SlotOverride[1] = 0x1401B0FF0;
+                if (!c.SlotOverride[4]) c.SlotOverride[4] = 0x14008CCC0;
+            }
         }
         // "selfDo": "summonFromHand" - "Special Summon this card from your hand" with no donor (section 100): YGO::Effects::Slot0_SpecialSummonSelfFromHand
         // (0x140161E20) run raw. For an id it does not list it needs marker (player, 13, 4064, card instance) - set by the hand-activation flow,
@@ -4599,6 +4860,19 @@ namespace
                 return false;
             }
             c.SlotOverride[0] = 0x140161E20;
+        }
+        // "do": "draw" - Pot of Greed 4844's row run raw (section 103): Effect_DrawCards_Resolve (0x14015F9C0: Get_NumberOfCardsToDraw, the
+        // Mystical Refpanel swap, Draw_ExecuteDraw; only 13977 is id-keyed) and Effect_DrawCards_CanActivate (0x1400FAC40: the count +
+        // Can_PlayerDrawCards). The count is this clone's "draw", which Hook_GetDraw answers for the card's own id.
+        if (clone.contains("do") && clone["do"].is_string())
+        {
+            if (clone["do"].get<std::string>() != "draw" || !clone.contains("draw") || !clone["draw"].is_number_integer() || clone["draw"].get<int>() == 0)
+            {
+                Logger::WriteLog(std::format("{}: \"do\" must be draw, with a \"draw\" count (not 0); skipped", label), MODULE_NAME, 2);
+                return false;
+            }
+            c.SlotOverride[0] = 0x14015F9C0;
+            if (!c.SlotOverride[2]) c.SlotOverride[2] = 0x1400FAC40;
         }
         // "targetSlots": true - this effect chooses the target when it is activated although its own action does not target: the first step of
         // its chain is a "move" of the targets ("Target 1 X; shuffle it into the Deck, then draw 1 card"). Slots 1 / 4 = Remove Trap's
@@ -4675,6 +4949,10 @@ namespace
             c.HasLp = true;
             c.LpOwn = lp.value("gain", 0) - lp.value("selfDamage", 0);
             c.LpOpp = lp.value("opponentGain", 0) - lp.value("damage", 0);
+            // A raw LP row (no donor): Red Medicine / Hinotama's own slot 0, Slot0_AlterLifePoints 0x14015E570 (duel.dll 0x1802AAD70), which
+            // asks Get_LifePointChanges for the amounts - Hook_LpChanges / Hook_MdLpChanges answer with these.
+            if (c.RawRow && !c.SlotOverride[0])
+                c.SlotOverride[0] = 0x14015E570;
         }
         if (clone.contains("deck") && clone["deck"].is_object())
         {
@@ -4893,6 +5171,7 @@ void EffectClone::Setup()
                 g_StatsByAction.emplace(static_cast<uint16_t>(part->ActionFrom), part);
 
     DetourAttach(&(PVOID&)orig_GetEntry, Hook_GetEntry);
+    AttachMasterDuel();
     DetourAttach(&(PVOID&)orig_GetDraw, Hook_GetDraw);
     DetourAttach(&(PVOID&)orig_ChoiceCount, Hook_ChoiceCount);
     DetourAttach(&(PVOID&)orig_ChoiceLabel, Hook_ChoiceLabel);

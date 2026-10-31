@@ -36,7 +36,7 @@ namespace
 
     constexpr uintptr_t kFullCardProps = YGO::Addr::FULL_CARD_PROPS;
     constexpr uintptr_t kFullCardPropsStride = 0xA0;
-    constexpr int kMaxCardId = 0x4E1F;
+    constexpr int kMaxCardId = 0xFFFF;   // FULL_CARD_PROPS has 65536 entries since 2026-10-19 (Yu-Gi-Oh-Cards Card.h); at 19999 the Cards mod's cards (21000+) were dropped
 
     using LoadDeck_t = int64_t(__fastcall*)(char, int32_t*);
     using ShuffleDeck_t = int64_t(__fastcall*)(int);

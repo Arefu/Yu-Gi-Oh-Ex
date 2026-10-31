@@ -224,8 +224,11 @@ def main():
             entry['typeline'] = card.get('typeline', [])
         image = f'art/{FOLDERS[kind]}/{password}.jpg'
         fetch_art(card, content / image, failed)
-        entries.append({'id': id_for(str(password), FIRST_CARD_ID), 'name': card['name'], 'description': description(card), 'copies': 0,
-                        'image': image, **entry, 'password': password})
+        # "konamiId": Konami's database id (YGOPRODeck misc_info konami_id), the id Master Duel's duel.dll knows the card's effect by:
+        # Yu-Gi-Oh-MoreCards gives the card to the engine under it (docs/MasterDuelEngine.md)
+        konami = (card.get('misc_info') or [{}])[0].get('konami_id')
+        entries.append({'id': id_for(str(password), FIRST_CARD_ID), **({'konamiId': konami} if konami else {}), 'name': card['name'],
+                        'description': description(card), 'copies': 0, 'image': image, **entry, 'password': password})
         kinds[kind] += 1
         if done % 250 == 0:
             print(f'{done} / {len(missing)} cards', flush=True)

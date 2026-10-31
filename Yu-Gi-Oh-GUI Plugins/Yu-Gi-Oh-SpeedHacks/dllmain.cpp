@@ -30,9 +30,39 @@ bool speed_Enabled = true;
 bool no_anims = true;
 bool no_movies = true;
 
+bool skip_logos = false;
+
 bool detours_Enabled = false;
 long long AnimationHNDLE = YGO::Addr::UI_Draw_DuelAnimationFromId;
 long long MovieHNDLE = 0x0140875DA0;
+
+// SkipLogos: the start-up logos (screens 1 blank, 2 Other Ocean, 3 rating, 4 Konami) only wait out a time (+776) and then go to the next
+// screen (+784, 0.333 s fade); nothing loads behind them. Instead of the game's Update, the first one goes straight to the title (5) with a
+// black fade that is over in a frame: the game's own fade there is the logo's colour (+712; dark red 0xFFB50015), which flashed. The title
+// still waits for Play; the save is read after a slot is picked (SignIn), as always.
+long long LogoUpdateHNDLE = 0x140805350;    // RIX::LoadingScreenLogo::Update(self, ui, seconds)
+
+void __fastcall _hLogoUpdate(__int64 self, __int64 ui, double)
+{
+    const auto setFadeColour = reinterpret_cast<void(__fastcall*)(unsigned int)>(0x140866A60);                     // RIX::SetFadeColour
+    const auto navigate = reinterpret_cast<char(__fastcall*)(__int64, int, double, int, char)>(0x1408087A0);       // RIX::UI::NavigateToScreen
+    *reinterpret_cast<uint8_t*>(self + 656) = 0;
+    if (*reinterpret_cast<uint8_t*>(self + 788) != 0)   // already on its way (byte314)
+        return;
+    setFadeColour(0xFF000000);
+    if (navigate(ui, 5, 0.01, 272, 0))   // 272 = the game's flags: fade out, switch, fade in
+        *reinterpret_cast<uint8_t*>(self + 788) = 1;
+}
+
+void Setup_LogoDetour()
+{
+    if (!skip_logos)
+        return;
+    DetourTransactionBegin();
+    DetourUpdateThread(GetCurrentThread());
+    DetourAttach(&(PVOID&)LogoUpdateHNDLE, _hLogoUpdate);
+    DetourTransactionCommit();
+}
 
 DWORD WINAPI _hGetTickCount()
 {
@@ -128,6 +158,7 @@ extern "C" __declspec(dllexport) void ProcessDetours()
     _QPC_OffsetTime.QuadPart = _QPC_BaseTime.QuadPart;
 
     Setup_SpeedDetour();
+    Setup_LogoDetour();
 }
 
 extern "C" __declspec(dllexport) void ProcessWindow()
@@ -185,11 +216,13 @@ extern "C" _declspec(dllexport) void ProcessConfig()
     speed = GetPrivateProfileIntA("Yu-Gi-Oh-SpeedHacks", "Speed", 2, ".\\Config.ini");
     no_anims = GetPrivateProfileIntA("Yu-Gi-Oh-SpeedHacks", "NoAnimations", 1, ".\\Config.ini");
     no_movies = GetPrivateProfileIntA("Yu-Gi-Oh-SpeedHacks", "NoMovies", 1, ".\\Config.ini");
+    skip_logos = GetPrivateProfileIntA("Yu-Gi-Oh-SpeedHacks", "SkipLogos", 0, ".\\Config.ini");
 
     using WriteLogFn = void(__cdecl*)(std::string, std::string, int);
     const auto writeLog = reinterpret_cast<WriteLogFn>(GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-Console.dll"), "WriteLog"));
     if (writeLog)
-        writeLog("Speed " + std::to_string(speed) + ", no animations " + std::to_string((int)no_anims) + ", no movies " + std::to_string((int)no_movies),
+        writeLog("Speed " + std::to_string(speed) + ", no animations " + std::to_string((int)no_anims) + ", no movies " + std::to_string((int)no_movies)
+            + ", skip logos " + std::to_string((int)skip_logos),
             "Yu-Gi-Oh-SpeedHacks", 69);
 }
 

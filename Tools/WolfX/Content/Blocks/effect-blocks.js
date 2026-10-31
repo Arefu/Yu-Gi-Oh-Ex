@@ -459,10 +459,10 @@ function defineBlocks() {
   defs.push({ type: 'ys_req_battle_phase', message0: 'it is %1 Battle Phase', args0: [{ type: 'field_dropdown', name: 'WHO',
     options: [['either player\'s', 'battle_phase'], ['your', 'your_battle_phase'], ['your opponent\'s', 'opponent_battle_phase']] }],
     output: 'Req', colour: COLOUR.when, tooltip: 'Only usable during that Battle Phase. Tick "Quick Effect" on the hat: an ignition effect is only usable in the Main Phase.' });
-  // any phase window (Script: if [your_ | opponent_]main_phase / main_or_battle_phase / battle_phase, your_turn / opponent_turn; section 93)
+  // any phase window (Script: if [your_ | opponent_]main_phase / main_or_battle_phase / battle_phase / end_phase, your_turn / opponent_turn; section 93)
   defs.push({ type: 'ys_req_phase', message0: 'it is %1 %2', args0: [
     { type: 'field_dropdown', name: 'WHO', options: [['either player\'s', 'ANY'], ['your', 'your_'], ['your opponent\'s', 'opponent_']] },
-    { type: 'field_dropdown', name: 'WHEN', options: [['Main Phase', 'main_phase'], ['Main or Battle Phase', 'main_or_battle_phase'], ['Battle Phase', 'battle_phase'], ['turn', 'turn']] }],
+    { type: 'field_dropdown', name: 'WHEN', options: [['Main Phase', 'main_phase'], ['Main or Battle Phase', 'main_or_battle_phase'], ['Battle Phase', 'battle_phase'], ['End Phase', 'end_phase'], ['turn', 'turn']] }],
     output: 'Req', colour: COLOUR.when, tooltip: 'Only usable then. A monster effect outside your own Main Phase needs "Quick Effect" ticked on the hat ("either player\'s turn" means any time).' });
   // this card battled this turn (Script: if battled: ...; section 93)
   defs.push({ type: 'ys_req_battled', message0: 'this card battled this turn', output: 'Req', colour: COLOUR.when });
@@ -473,6 +473,9 @@ function defineBlocks() {
   defs.push({ type: 'ys_req_lp_at_most', message0: 'your LP are %1 or less', args0: [{ type: 'field_number', name: 'N', value: 2000, min: 0 }],
     output: 'Req', colour: COLOUR.when });
   defs.push({ type: 'ys_req_lp_lower', message0: 'your LP are lower than your opponent\'s', output: 'Req', colour: COLOUR.when });
+  // both Extra Decks have a card (Script: if both_extra_decks: ...; Master Duel's own Dogmatika check under its engine)
+  defs.push({ type: 'ys_req_both_extra_decks', message0: 'both players have a card in their Extra Deck', output: 'Req', colour: COLOUR.when,
+    tooltip: 'As the Dogmatika cards ask before they send a monster from each player\'s Extra Deck.' });
   for (const cost of COSTS) {
     const { msg, args } = message(cost.text, { N: { type: 'field_number', name: 'N', value: cost.def ?? 1, min: 1, precision: 1 },
       SEL: { type: 'input_value', name: 'SEL', check: 'Selector' } });
@@ -540,7 +543,7 @@ function toolbox() {
       { kind: 'category', name: 'Effect', colour: COLOUR.effect, contents: [...HATS.map((h) => block(h.type)), block('ys_as')] },
       { kind: 'category', name: 'While face-up', colour: COLOUR.lock, contents: [block('ys_lock'), block('ys_hand_limit'), block('ys_aura'), block('ys_protect'), block('ys_name_as'), block('ys_only_one'), block('ys_attack_directly'), withSelector('ys_xyz_also', 'monster'),
         withSelector('ys_count', 'monster'), block('ys_count_self'), block('ys_count_and')] },
-      { kind: 'category', name: 'Only if', colour: COLOUR.when, contents: [block('ys_req_no_monsters'), withSelector('ys_req_controls', 'monster'), block('ys_req_phase'), block('ys_req_battled'), block('ys_req_and'), block('ys_req_lp_at_most'), block('ys_req_lp_lower')] },
+      { kind: 'category', name: 'Only if', colour: COLOUR.when, contents: [block('ys_req_no_monsters'), withSelector('ys_req_controls', 'monster'), block('ys_req_phase'), block('ys_req_battled'), block('ys_req_and'), block('ys_req_lp_at_most'), block('ys_req_lp_lower'), block('ys_req_both_extra_decks')] },
       { kind: 'category', name: 'Cost', colour: COLOUR.cost, contents: [...COSTS.map((c) => block('ys_cost_' + c.word)), block('ys_cost_self'), withSelector('ys_cost_pick', 'monster')] },
       {
         kind: 'category', name: 'Actions', colour: COLOUR.action,
@@ -643,6 +646,7 @@ function reqText(block) {
   if (block.type === 'ys_req_battle_phase') return block.getFieldValue('WHO') || 'battle_phase';
   if (block.type === 'ys_req_lp_at_most') return 'lp_at_most(' + (block.getFieldValue('N') ?? 0) + ')';
   if (block.type === 'ys_req_lp_lower') return 'lp_lower';
+  if (block.type === 'ys_req_both_extra_decks') return 'both_extra_decks';
   if (block.type === 'ys_req_phase') {
     const whoField = block.getFieldValue('WHO'), when = block.getFieldValue('WHEN') || 'main_phase';
     const who = !whoField || whoField === 'ANY' ? '' : whoField;
@@ -1136,12 +1140,13 @@ function effectState(body, name) {
   if (req) {
     const condState = (cond) => {
       const word = String(cond.c[0]);
-      const phase = word.match(/^(your_|opponent_)?(main_phase|main_or_battle_phase|battle_phase|turn)$/);
+      const phase = word.match(/^(your_|opponent_)?(main_phase|main_or_battle_phase|battle_phase|end_phase|turn)$/);
       return word === 'no_monsters' ? { type: 'ys_req_no_monsters' }
         : word === 'battled' ? { type: 'ys_req_battled' }
         : phase ? { type: 'ys_req_phase', fields: { WHO: phase[1] || 'ANY', WHEN: phase[2] } }
         : word === 'lp_at_most' ? { type: 'ys_req_lp_at_most', fields: { N: Number(text(cond).match(/\d+/)[0]) } }
         : word === 'lp_lower' ? { type: 'ys_req_lp_lower' }
+        : word === 'both_extra_decks' ? { type: 'ys_req_both_extra_decks' }
         : { type: 'ys_req_controls', inputs: { SEL: { block: selectorState(rule(cond, 'selector')) } } };
     };
     // "if a and b and c" -> a and (b and c)

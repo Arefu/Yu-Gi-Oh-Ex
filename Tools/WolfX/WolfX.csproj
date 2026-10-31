@@ -96,6 +96,8 @@
     <None Include="Content\Blocks\**" Link="Blocks\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Content\trigger_sources.json" Link="trigger_sources.json" CopyToOutputDirectory="PreserveNewest" />
     <None Include="Content\card_names.json" Link="card_names.json" CopyToOutputDirectory="PreserveNewest" />
+    <!-- as("name") for cards only Master Duel's engine has; made by Tools\Scripts\make_full_effect_library.py (which also fills effect_reference.json) -->
+    <None Include="Content\engine_card_names.json" Link="engine_card_names.json" CopyToOutputDirectory="PreserveNewest" />
     <!-- Vanilla archetype code -> member Konami ids (CARD_Named.bin): FusionMaterialText finds an archetype by its members' names. -->
     <None Include="Content\archetype_members.json" Link="archetype_members.json" CopyToOutputDirectory="PreserveNewest" />
     <!-- The game's own Fusion / Ritual / Synchro / Xyz requirements (Card Manager, Summoning tab); made by docs\effect-scripts\build_summon_tables.py -->

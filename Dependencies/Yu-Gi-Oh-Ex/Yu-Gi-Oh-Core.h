@@ -111,6 +111,35 @@ CORE_API void __cdecl Core_SetOnlineDuelFormat(int Format);
    slot is a deck with no cards. Added after version 1 like AddCredits: NULL with an older Core (32 slots only). */
 CORE_API int __cdecl Core_GetExtraUserDecks(int* FirstId);
 
+/* Master Duel's duel engine (docs/MasterDuelEngine.md): Core loads Plugins\Yu-Gi-Oh-Core\duel.dll when [Yu-Gi-Oh-Core] MasterDuelEngine=1.
+   EngineReady: 1 once it is loaded and has card data. EngineProc: one of its exports by name ("DLL_DuelSysAct", "DLL_SetCardNamed" ...), NULL
+   when it is not loaded; the signatures are in docs/MasterDuelEngine.md. EngineRefreshCards: gives it the game's card data again (every card
+   the game's lookups know, so a plugin that adds cards calls it after adding them); returns the number of cards. Added after version 1 like
+   AddCredits: NULL with an older Core. */
+CORE_API int __cdecl Core_EngineReady(void);
+CORE_API void* __cdecl Core_EngineProc(const char* Name);
+CORE_API int __cdecl Core_EngineRefreshCards(void);
+
+/* Card ids in the engine. duel.dll knows a card's effect by its Konami id (YGOPRODeck konami_id), so a plugin that adds cards gives each one
+   the id the engine should see it as: EngineMapCard(game id, engine id) - its Konami id, or an id from 40000 up for a card Konami does not
+   have (so it never picks up a real card's effect). Call before EngineRefreshCards. The game's duel state only holds 14-bit ids, so for a
+   duel a card with a game id past 16383 plays under a borrowed id: EngineSetDisplayId(engine id, borrowed id) tells Core what to show for it
+   (call it when the duel's decks are loaded). Ids not mapped are the same in both. Added after version 1 like AddCredits. */
+CORE_API void __cdecl Core_EngineMapCard(int GameId, int EngineId);
+CORE_API void __cdecl Core_EngineSetDisplayId(int EngineId, int DisplayId);
+
+/* For this duel only, the card the screen shows as DisplayId plays as engine id EngineId (any card the engine knows): duel.dll's card record
+   for EngineId gets the props of game card PropsGameId (its stats, kind, level ...), so the card keeps its own stats while every one of
+   the engine's rules for EngineId (its effect rows and every id-keyed branch) applies to it. Call when the duel's decks are loaded, at most
+   once per EngineId per duel, and only when no real copy of EngineId is in the duel. Returns 1 when lent, 0 when not (no engine, or the
+   engine has no such card). The records are put back at the next duel. Added after version 1 like AddCredits: NULL with an older Core. */
+CORE_API int __cdecl Core_EngineLend(int DisplayId, int EngineId, int PropsGameId);
+
+/* The id the duel screen shows for an engine id (the game id, or this duel's borrowed id for a card past 16383; a lent card's display id):
+   what a plugin keyed on game ids looks a record's engine id up as inside duel.dll. Ids not mapped come back unchanged. Added after
+   version 1 like AddCredits: NULL with an older Core. */
+CORE_API int __cdecl Core_EngineToDisplay(int EngineId);
+
 #ifdef __cplusplus
 }
 
@@ -134,6 +163,13 @@ namespace Core
         void(__cdecl* SetDeckLimits)(int, int, int, int) = nullptr;                  // NULL with a Core that predates it
         void(__cdecl* SetOnlineDuelFormat)(int) = nullptr;                           // NULL with a Core that predates it
         int(__cdecl* GetExtraUserDecks)(int*) = nullptr;                             // NULL with a Core that predates it
+        int(__cdecl* EngineReady)() = nullptr;                                       // NULL with a Core that predates it
+        void*(__cdecl* EngineProc)(const char*) = nullptr;                           // NULL with a Core that predates it
+        int(__cdecl* EngineRefreshCards)() = nullptr;                                // NULL with a Core that predates it
+        void(__cdecl* EngineMapCard)(int, int) = nullptr;                            // NULL with a Core that predates it
+        void(__cdecl* EngineSetDisplayId)(int, int) = nullptr;                       // NULL with a Core that predates it
+        int(__cdecl* EngineLend)(int, int, int) = nullptr;                           // NULL with a Core that predates it
+        int(__cdecl* EngineToDisplay)(int) = nullptr;                                // NULL with a Core that predates it
     };
 
     inline Api& Functions()
@@ -174,6 +210,13 @@ namespace Core
         CORE_BIND(SetDeckLimits);
         CORE_BIND(SetOnlineDuelFormat);
         CORE_BIND(GetExtraUserDecks);
+        CORE_BIND(EngineReady);
+        CORE_BIND(EngineProc);
+        CORE_BIND(EngineRefreshCards);
+        CORE_BIND(EngineMapCard);
+        CORE_BIND(EngineSetDisplayId);
+        CORE_BIND(EngineLend);
+        CORE_BIND(EngineToDisplay);
 #undef CORE_BIND
         return true;
     }

@@ -238,6 +238,7 @@ archetype, name), `materials`; plus `has_material`, `defense_position`, `lp_at_m
     on ignition: search(deck, card where archetype = 632); no_special_summon(extra, resolved);
                                  // "..., also you cannot Special Summon from the Extra Deck for the rest of this turn" (locked once it resolves)
     if lp_at_most(2000): draw(1);   // "If your LP are 2000 or less: ..."   if lp_lower: = "If your LP are lower than your opponent's"
+    if both_extra_decks: draw(1);   // "if both players have a card in their Extra Deck" (Dogmatika; Master Duel's own check under its engine)
     cost send_self: draw(1);        // "You can send this card from your hand to the GY; ..." (a move, not a discard)
     cost send_self_field: draw(1);  // "You can send this card from the field to the GY; ..."
     cost banish_self_hand: draw(1);   // banish this card from your hand   (banish_self_field: from the field; tribute_self_hand: Tribute it from your hand)

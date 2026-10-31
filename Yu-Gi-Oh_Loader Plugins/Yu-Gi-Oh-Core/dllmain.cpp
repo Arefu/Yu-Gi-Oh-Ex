@@ -12,6 +12,7 @@
 #include "Host.h"
 #include "Loading.h"
 #include "Logger.h"
+#include "MasterDuel.h"
 #include "ModConfig.h"
 #include "Patch.h"
 #include "Save.h"
@@ -61,6 +62,20 @@ extern "C"
         return UserDecks::ExtraCount();
     }
 
+    CORE_API int __cdecl Core_EngineReady(void) { return MasterDuel::Ready() ? 1 : 0; }
+
+    CORE_API void* __cdecl Core_EngineProc(const char* Name) { return reinterpret_cast<void*>(MasterDuel::Proc(Name)); }
+
+    CORE_API int __cdecl Core_EngineRefreshCards(void) { return MasterDuel::RefreshCards(); }
+
+    CORE_API void __cdecl Core_EngineMapCard(int GameId, int EngineId) { MasterDuel::MapCard(GameId, EngineId); }
+
+    CORE_API void __cdecl Core_EngineSetDisplayId(int EngineId, int DisplayId) { MasterDuel::SetDisplayId(EngineId, DisplayId); }
+
+    CORE_API int __cdecl Core_EngineLend(int DisplayId, int EngineId, int PropsGameId) { return MasterDuel::Lend(DisplayId, EngineId, PropsGameId) ? 1 : 0; }
+
+    CORE_API int __cdecl Core_EngineToDisplay(int EngineId) { return EngineId > 0 && EngineId <= 0xFFFF ? MasterDuel::ToDisplay(static_cast<uint16_t>(EngineId)) : EngineId; }
+
     CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size)
     {
         const std::u8string name = Save::CurrentSavePath().filename().u8string();
@@ -94,6 +109,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         // archive whenever it exists and loose files when LooseLoading is on (Patch.h). Before the game mounts its archive, so first.
         Loading::Install();
         Patch::Install();
+
+        // Master Duel's duel engine (MasterDuel.h), when [Yu-Gi-Oh-Core] MasterDuelEngine=1: loaded now, given the card data when the game sets
+        // up its card tables.
+        MasterDuel::Install();
 
         // The duel engine reads g_bEngineRules (0x140C8D1C9) every time a duel starts: 1 = "Engine_Init() 2020 Rules" (Master Rule 5, sets the 0x80 bit
         // of Duel_DuelEngine.Rules), 0 = "2019 Rules" (Master Rule 4). Nothing else writes it, so writing it here, when Core is injected (before the game's

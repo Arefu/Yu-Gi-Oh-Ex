@@ -168,9 +168,11 @@ condName   : 'no_monsters' | 'controls' '(' selector ')'   // you control no mon
            | 'battle_phase' | 'your_battle_phase' | 'opponent_battle_phase'   // during the (your / your opponent's) Battle Phase (section 81)
            | 'main_phase' | 'your_main_phase' | 'opponent_main_phase'   // during the (your / your opponent's) Main Phase (section 93)
            | 'main_or_battle_phase' | 'your_main_or_battle_phase' | 'opponent_main_or_battle_phase'
+           | 'end_phase' | 'your_end_phase' | 'opponent_end_phase'   // during the (your / your opponent's) End Phase
            | 'your_turn' | 'opponent_turn'   // during your / your opponent's turn
            | 'battled'   // this card battled this turn (the game's marker 1024 on its zone)
-           | 'lp_at_most' '(' NUMBER ')' | 'lp_lower' ;   // your LP are N or less / lower than your opponent's (section 82)
+           | 'lp_at_most' '(' NUMBER ')' | 'lp_lower'   // your LP are N or less / lower than your opponent's (section 82)
+           | 'both_extra_decks' ;   // both players have a card in their Extra Deck (Master Duel's own Dogmatika check under duel.dll)
 
 // "You can only use this effect of X once per turn": per card name (the game's use-limit classes 5-8, docs/EffectSystem.md section 20).
 // once_per_turn(copy): "Once per turn: ..." - each copy on the field once per turn (classes 1-4, a marker on the card's own zone, section 59).

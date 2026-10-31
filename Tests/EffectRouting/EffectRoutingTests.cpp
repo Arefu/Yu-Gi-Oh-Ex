@@ -6,6 +6,8 @@ namespace { Clone* RouteByTrigger(Clone* clone, std::span<const char* const> tri
 #include "../../Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Effects/EffectClone.cpp"
 #endif
 #include "EffectSourceLending.h"
+#include "MasterDuelFunctionMap.h"
+#include "MasterDuelMaterialCodes.h"
 #include <iostream>
 #include <stdexcept>
 
@@ -376,6 +378,37 @@ namespace
         g_Clones.clear();
     }
 
+    // Own GY effects and self costs (section 102): a card past the field gets word4 2 from Check_CanActivateKind3AtZone and goes to the gates
+    // with no id list, so an own "in_grave" row answers table 2; "costSlot" names the game's self cost for slot 3 (Rose Lover's
+    // Cost_BanishSelfFromGrave, Hecatrice's Cost_DiscardSelf, Planet Pathfinder's Cost_TributeSelf), no donor row.
+    void TestOwnSelfCosts()
+    {
+        using nlohmann::json;
+        constexpr uint16_t custom = 15332;
+        g_Clones.clear();
+        Clone parsed;
+        Check(ParseEffect(json{{"from", 4844}, {"ownTrigger", true}, {"trigger", "in_grave"}, {"effectOnly", true}, {"costSlot", "banishSelfFromGrave"},
+            {"require", json::array({"inGrave", "canBanishSelfFromGrave"})}}, parsed, "test"), "Own GY effect did not parse");
+        Check(parsed.SlotOverride[3] == 0x1401FA670, "banishSelfFromGrave is not Cost_BanishSelfFromGrave");
+        g_Clones.emplace(custom, std::move(parsed));
+        uint16_t grave[0x20]{}, field[0x20]{}, monster[0x20]{};
+        grave[0] = field[0] = monster[0] = custom;
+        grave[2] = 16; grave[4] = 2;       // Check_CanActivateKind3AtZone: zone > 12 -> word4 2
+        field[2] = 2; field[4] = 3;
+        monster[4] = 1;
+        Row* row = static_cast<Row*>(Hook_GetEntry(grave));
+        Check(row && row->Id == custom && row->Slot[0] && row->Slot[2] && row->Slot[3], "Own GY row missing, or without its action / checks / cost");
+        Check(!Hook_GetEntry(field) && !Hook_GetEntry(monster), "Own GY effect answered the field ignition or monster table");
+        g_Clones.clear();
+
+        Clone discard, tribute, bad;
+        Check(ParseEffect(json{{"rawRow", true}, {"ownTrigger", true}, {"trigger", "in_hand"}, {"costSlot", "discardSelf"}, {"steps", json::array({ json{{"op", "draw"}, {"n", 1}} })}}, discard, "t")
+              && discard.SlotOverride[3] == 0x1401FCEB0, "discardSelf is not Cost_DiscardSelf");
+        Check(ParseEffect(json{{"rawRow", true}, {"ownTrigger", true}, {"trigger", "ignition"}, {"costSlot", "tributeSelf"}, {"steps", json::array({ json{{"op", "draw"}, {"n", 1}} })}}, tribute, "t")
+              && tribute.SlotOverride[3] == 0x1401F8BA0, "tributeSelf is not Cost_TributeSelf");
+        Check(!ParseEffect(json{{"rawRow", true}, {"costSlot", "payWithSoul"}}, bad, "t"), "an unknown costSlot parsed");
+    }
+
     // Own move triggers: Hook_MoveEvaluator offers the card itself the way Eval_CardMovedTriggers does (0x1400A3765), after checking the move
     // reference (bits 0-8 instance, 10-14 from zone, 16 from field, 18 battle, 21-25 to zone) against the trigger and its moveCondition.
     std::vector<std::pair<uint32_t, int16_t>> g_Offers;
@@ -584,7 +617,8 @@ namespace
             Clone c;
             filter["target"] = true;
             Check(ParseEffect(json{{"rawRow", true}, {"filter", filter}, {"targetDo", verb}}, c, "t"), "targetDo parse");
-            Check(c.RawRow && c.SlotOverride[1] == 0x1401B0FF0 && c.SlotOverride[4] == 0x14008CCC0, "targetDo: targeting slots");
+            Check(c.RawRow && c.SlotOverride[1] == 0x1401B0FF0 && c.SlotOverride[4], "targetDo: targeting slots");
+            Check(std::string(verb) == "return" || std::string(verb) == "banish" || c.SlotOverride[4] == 0x14008CCC0, "targetDo: prompt 281");
             return c;
         };
         Clone position = parsed("position", json{{"side", "opponent"}, {"position", "attack"}, {"canChangePosition", true}});
@@ -603,7 +637,26 @@ namespace
         Check(atk.SlotOverride[0] == reinterpret_cast<uint64_t>(&Slot0_OwnTargetResult) && atk.ResultKey == 1040 && atk.ResultValue == -1500, "atk: result key 1040 / amount");
         Clone negate = parsed("negate", json{{"faceUp", true}});
         Check(negate.SlotOverride[0] == reinterpret_cast<uint64_t>(&Slot0_OwnTargetResult) && negate.ResultKey == 1027 && negate.ResultValue == 0, "negate: result key 1027");
+        // revive (section 101): Monster Reborn's own functions, no slot 1, no Remove Trap targeting slots, a list of its own
+        Clone revive;
+        Check(ParseEffect(json{{"rawRow", true}, {"targetDo", "revive"}, {"deck", {{"scan", "graveSummon"}}}}, revive, "t"), "revive parse");
+        Check(revive.RawRow && revive.From == 0 && revive.SlotOverride[0] == 0x140169590 && revive.SlotOverride[1] == 0
+              && revive.SlotOverride[2] == 0x1400F9940 && revive.SlotOverride[3] == 0 && revive.SlotOverride[4] == 0x140092910 && revive.HasDeckFilter,
+              "revive: Monster Reborn's slots 0 / 2 / 4 run raw with the clone's list");
+        // the plain one-target rows (section 103): Remove Trap / Spiritualism / Hermos slot 0 and prompt, the generic target slot 1
+        Clone destroy = parsed("destroy", json{{"side", "opponent"}});
+        Check(destroy.SlotOverride[0] == 0x140156D40 && destroy.SlotOverride[4] == 0x14008CCC0, "destroy: not Remove Trap's slots");
+        Clone bounce = parsed("return", json{{"side", "opponent"}});
+        Check(bounce.SlotOverride[0] == 0x140157350 && bounce.SlotOverride[4] == 0x14008CCF0, "return: not Spiritualism's slots (prompt 348)");
+        Clone banish = parsed("banish", json{{"side", "opponent"}});
+        Check(banish.SlotOverride[0] == 0x140156ED0 && banish.SlotOverride[4] == 0x14008CD40, "banish: not Hermos's slots (prompt 293)");
+        // do draw: Pot of Greed's slots 0 / 2, the count the clone's own
+        Clone draw;
+        Check(ParseEffect(json{{"rawRow", true}, {"do", "draw"}, {"draw", 2}}, draw, "t") && draw.SlotOverride[0] == 0x14015F9C0
+              && draw.SlotOverride[2] == 0x1400FAC40 && draw.Draw == 2 && draw.From == 0 && IsImmediate(draw), "do draw: Pot of Greed's slots, count 2, immediate");
         Clone bad;
+        Check(!ParseEffect(json{{"rawRow", true}, {"do", "draw"}}, bad, "t"), "do draw without a count parsed");
+        Check(!ParseEffect(json{{"rawRow", true}, {"targetDo", "revive"}}, bad, "t"), "targetDo: revive without a list parsed");
         Check(!ParseEffect(json{{"rawRow", true}, {"targetDo", "atk"}}, bad, "t"), "targetDo: atk without an amount parsed");
         Check(!ParseEffect(json{{"rawRow", true}, {"targetDo", "swap"}}, bad, "t"), "targetDo: an unknown verb parsed");
         Check(!ParseEffect(json{{"rawRow", true}, {"filter", {{"position", "sideways"}}}, {"targetDo", "position"}}, bad, "t"), "targetDo: an unknown position parsed");
@@ -838,6 +891,8 @@ int main()
         std::cout << "PASS own trigger (no donor): own row, composed action, virtual phase row after the table's last row\n";
         TestOwnIgnitionRow();
         std::cout << "PASS own ignition: table-3 row with no slot-3 cost, resolves as its action, three 'or' ignitions offered once (issue #39)\n";
+        TestOwnSelfCosts();
+        std::cout << "PASS own GY effects and self costs: table-2 own row, the game's banish / discard / Tribute-self costs in slot 3 (section 102)\n";
         TestOwnMoveTriggers();
         std::cout << "PASS own move triggers: move reference checks, the evaluator's offer layout, no donor swap, table 2 row\n";
         TestOwnAttackTriggers();
@@ -958,6 +1013,34 @@ int main()
         Check(YGO::Effects::SingleEffectSource(json{{"from",5738},{"effectOnly",true}},3900,14969) == 0, "Effect-only clone was lent its source's identity");
         Check(YGO::Effects::SingleEffectSource(json{{"from",5738},{"effectOnly",false}},3900,14969) == 5738, "effectOnly false stopped lending");
         std::cout << "PASS source lending policy in both orders\n";
+        // the game -> Master Duel material codes, against pairs read from both engines' Fusion / Link tables (2026-10-31)
+        {
+            const int pairs[][2] = { { 97, 104 }, { 182, 192 }, { 135, 145 }, { 306, 316 }, { 107, 117 }, { 27, 34 }, { 95, 102 }, { 26, 33 },
+                                     { 463, 473 }, { 73, 80 }, { 0x49, 0x50 }, { 0x4A, 0x51 }, { 3709, 3709 }, { 15245, 15245 }, { 12, 12 } };
+            for (const auto& p : pairs)
+                Check(YGO::Effects::ToMasterDuelMaterialCode(p[0]) == p[1], "Master Duel material code translation");
+            Check(YGO::Effects::ToMasterDuelMaterialCode(2499) == 2499, "a custom code was translated");
+        }
+        std::cout << "PASS game -> Master Duel material codes\n";
+        // the game -> duel.dll function map the Effects plugin's raw rows run through (MasterDuelFunctionMap.h): traced pairs, the slot
+        // overrides the compiler's words use, and no answer for what has no twin
+        {
+            using YGO::MasterDuelMap::ToDuelRva;
+            Check(ToDuelRva(0x1400DFBC0) == 0x56C0C0, "the effect row lookup's twin");
+            Check(ToDuelRva(0x140047060) == 0x0302C0, "Get_CardCodeAtZone's twin");
+            Check(ToDuelRva(0x140094DC0) == 0x488B20, "Slot4_MultiTargetPicker's twin");
+            Check(ToDuelRva(0x1401B0FF0) == 0x1E6DE0, "Target_Generic_FromFilterRow's twin");
+            for (uint64_t slot : { 0x1401FF020ull, 0x1401FCF30ull, 0x140209040ull, 0x1401FD800ull, 0x14020A140ull, 0x1401FA670ull, 0x1401FCEB0ull,
+                                   0x1401F8BA0ull, 0x140208E00ull, 0x1401F99D0ull, 0x1401F8010ull, 0x1401FF090ull, 0x140202770ull, 0x1400DE060ull,
+                                   0x1400FA680ull, 0x14008CCC0ull, 0x140169590ull, 0x1400F9940ull, 0x140092910ull, 0x140156D40ull, 0x140157350ull,
+                                   0x14008CCF0ull, 0x140156ED0ull, 0x14008CD40ull, 0x14016B430ull, 0x14049BE90ull, 0x140177090ull, 0x140161E20ull,
+                                   0x14015F9C0ull, 0x1400FAC40ull })
+                Check(ToDuelRva(slot) != 0, "a word's slot function has no duel.dll twin");
+            Check(ToDuelRva(0x14349C13C) == 0, "a data address was mapped");
+            Check(ToDuelRva(0x1400DFBC1) == 0, "an address inside a function was mapped");
+            Check(ToDuelRva(0x180000000) == 0, "a duel.dll address was mapped");
+        }
+        std::cout << "PASS game -> duel.dll function map\n";
         VirtualFree(page, 0, MEM_RELEASE);
         return 0;
     }

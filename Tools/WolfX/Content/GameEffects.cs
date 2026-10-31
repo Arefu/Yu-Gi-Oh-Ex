@@ -71,7 +71,8 @@ namespace WolfEx
             {
                 if (File.Exists(path) && JsonNode.Parse(File.ReadAllText(path))?["cards"] is JsonArray cards)
                     foreach (var node in cards.OfType<JsonObject>())
-                        if (node["id"]?.GetValue<int>() is int id)
+                        // ("engine" entries are as(<the card itself>), the library's every-card list: no reading of the game's effect)
+                        if (node["id"]?.GetValue<int>() is int id && node["engine"]?.GetValue<bool>() != true)
                             reference[id] = (node["script"]?.GetValue<string>() ?? "", node["text"]?.GetValue<string>() ?? "", node["kind"]?.GetValue<string>() ?? "");
             }
             catch (Exception e) when (e is IOException or JsonException or InvalidOperationException)

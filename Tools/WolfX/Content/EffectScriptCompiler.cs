@@ -31,10 +31,9 @@ namespace WolfEx
         // fusion_summon(...): Polymerization's row and machine; its Fusion list row is replaced by the filter (deck.scan "fusion", section 64)
         private const int FusionSource = 4837;
         private const int FusionBanishSource = 6433;   // Dragon's Mirror: banish the materials from your field / GY (section 94)
-        private const int ReviveSource = 4842;    // Monster Reborn
         private const int DestroySource = 4659;   // Warrior Elimination (destroy-all row driven by a filter)
         private const int SendSource = 5236;      // Foolish Burial
-        private const int TargetDestroySource = 4838;   // Remove Trap (Target 1 X; destroy it - filter row driven)
+        // draw, destroy / return / banish 1 target: no donor (section 103), the rows of Pot of Greed / Remove Trap / Spiritualism / Hermos run raw
         private const int GainSource = 4345;      // Red Medicine
         private const int BurnSource = 4350;      // Hinotama
         // lock_turn(...): the card whose resolve step adds the turn marker the lock builder reads; a Spell borrows Magic Deflector's row.
@@ -58,19 +57,12 @@ namespace WolfEx
         // Pay LP (slot 3 of the effect row): Delinquent Duo "Pay 1000 LP; ...". Discard / Tribute / send / reveal costs have no donor any more
         // (raw "costPick", docs/EffectSystem.md section 90).
         private const int PayCostSource = 4901;
-        // Banish: the game's banish machines are monster rows, so a Spell keeps a Spell row (Remove Trap / Warrior Elimination) and borrows the
-        // banish slots ("actionFrom"): Legendary Knight Hermos "target 1 monster; banish it" (0x140156ED0, filter row driven) and Armoroid
-        // "banish all ..." (0x140157050). Both read the clone's own filter row (docs/EffectSystem.md section 35).
-        private const int BanishTargetSource = 11887;
+        // Banish all: the game's banish-all machine is a monster row, so a Spell keeps Warrior Elimination's row and borrows Armoroid's
+        // "banish all ..." slots ("actionFrom", 0x140157050), which read the clone's own filter row (docs/EffectSystem.md section 35).
         private const int BanishAllSource = 7057;
         // Add from the banished cards: Dragoncarnation "Target 1 of your banished Dragon monsters; add it to your hand", any filter.
         private const int SalvageBanishedSource = 10561;
-        // Costs paid with the card itself (docs/EffectSystem.md section 37). Each is the ROW of a game card activated from that place (the GY / hand
-        // effects table, the field ignition table) whose slot 3 is that cost; the action's slots are composed onto it ("actionFrom") and "require"
-        // keeps the game's own "this card is there and can pay" check, which the action card's condition knows nothing about.
-        private const int BanishSelfSource = 9409;     // Rose Lover: "You can banish this card from your GY; ..." (cost 0x1401FA670)
-        private const int DiscardSelfSource = 7572;    // Hecatrice: "You can discard this card to the GY; ..." (cost 0x1401FCEB0, on the hand-effect list)
-        private const int TributeSelfSource = 10232;   // Planet Pathfinder: "You can Tribute this card; ..." (cost 0x1401F8BA0)
+        // Costs paid with the card itself (docs/EffectSystem.md sections 37, 102) have no donor: the own row of the place + "costSlot" (OwnPlace).
         // Special Summon this card from the hand: Watch Cat "If you control no monsters: You can Special Summon this card from your hand" (machine
         // 0x140161E20). Its condition is replaced by the game's plain "this card can be Special Summoned" check; if no_monsters adds Watch Cat's own.
         private const int SummonSelfSource = 13582;
@@ -81,8 +73,6 @@ namespace WolfEx
         // control). N is the card's own: Yu-Gi-Oh-Effects answers the game's boost table (StatTable_BoostB) with "stats".
         // Detach N materials from this card: Thunder End Dragon's ignition row (cost 0x1401FF4D0, its check 0x1400FBFF0; N answered by Yu-Gi-Oh-Effects).
         private const int DetachSource = 9762;
-        // "Target 1 card; return it to the hand": Spiritualism, a Spell whose target is the generic filter row (machine 0x140157350).
-        private const int ReturnSource = 5246;
         private const int GainAtkSource = 4905;
         private const int GainAtkOwnSource = 11427;
         // Negation (docs/EffectSystem.md section 39): the negate-and-destroy machine 0x14015EA50 with Cond_NegateTargetMatches (0x1400FC410) as its
@@ -714,13 +704,13 @@ namespace WolfEx
                 else if (a.damageAction() is { } damage)
                     steps.Add(new JsonObject { ["op"] = "damage", ["n"] = int.Parse(damage.NUMBER().GetText()), ["who"] = Who(damage.side(), "opponent") });
             }
-            // the row (how the card is activated) is Pot of Greed's; what it does is the steps
-            return new JsonObject { ["from"] = DrawSource, ["condition"] = "always", ["steps"] = steps };
+            // the row is the card's own raw row (section 103, was Pot of Greed's); what it does is the steps
+            return new JsonObject { ["rawRow"] = true, ["condition"] = "always", ["steps"] = steps };
         }
 
         private static JsonObject CompileAs(EffectScriptParser.AsScriptContext source)
         {
-            int from = source.NUMBER() != null ? int.Parse(source.NUMBER().GetText()) : CardIdByName(source.STRING().GetText().Trim('"'));
+            int from = source.NUMBER() != null ? int.Parse(source.NUMBER().GetText()) : AsCardIdByName(source.STRING().GetText().Trim('"'));
             var result = new JsonObject { ["from"] = from };
             if (source.statPart().Length > 0)
                 result["stats"] = Stats(source.statPart());
@@ -888,10 +878,14 @@ namespace WolfEx
                             "main_or_battle_phase" => "mainOrBattlePhase",
                             "your_main_or_battle_phase" => "yourMainOrBattlePhase",
                             "opponent_main_or_battle_phase" => "opponentMainOrBattlePhase",
+                            "end_phase" => "endPhase",                       // Check_Phase, End Phase (duel.dll's Life Shaver condition)
+                            "your_end_phase" => "yourEndPhase",
+                            "opponent_end_phase" => "opponentEndPhase",
                             "your_turn" => "yourTurn",
                             "opponent_turn" => "opponentTurn",
                             "battled" => "battledThisTurn",                  // marker 1024 on this card's zone (section 93)
                             "lp_lower" => "lpLower",                         // your LP are lower than your opponent's (Check_LifePoints)
+                            "both_extra_decks" => "bothExtraDecks",          // both players have an Extra Deck card (Check_BothExtraDecks; duel.dll 0x180286840)
                             _ => "noMonsters",
                         });
                 }
@@ -918,27 +912,25 @@ namespace WolfEx
                         throw new ScriptError($"cost {self.GetText()} already says where the effect is activated; it cannot have an 'on ...:' trigger.");
                     if (actions[^1].summonAction()?.summonZones().GetText() is "self" or "self_grave")
                         throw new ScriptError($"special_summon(self) cannot have the cost {self.GetText()}.");
-                    (int donor, string? check, string? costSlot) = self.GetText() switch
+                    // No donor (docs/EffectSystem.md section 102): the own row of the place it is activated from - GY / hand = table 2
+                    // (in_grave / in_hand), field = table 3 (ignition) - with the game's self cost named in slot 3 ("costSlot"); each cost and
+                    // check is generic for an id it does not list. canDiscardSelf = "this card is in your hand" (the game's send-from-hand
+                    // rows use the same condition).
+                    (string place, string? check, string costSlot) = self.GetText() switch
                     {
-                        "banish_self" => (BanishSelfSource, "canBanishSelfFromGrave", null),
-                        "discard_self" => (DiscardSelfSource, "canDiscardSelf", null),
-                        // the same hand / field rows with the game's send-to-GY costs in slot 3 (Yu-Gi-Oh-Effects "costSlot", section 84);
-                        // canDiscardSelf = "this card is in your hand" (the game's send-from-hand rows use the same condition)
-                        "send_self" => (DiscardSelfSource, "canDiscardSelf", "sendSelfFromHand"),
-                        "send_self_field" => (TributeSelfSource, null, "sendSelfFromField"),
-                        "banish_self_hand" => (DiscardSelfSource, "canDiscardSelf", "banishSelfFromHand"),     // Cost_BanishSelfFromHand
-                        "banish_self_field" => (TributeSelfSource, null, "banishSelfFromField"),              // Cost_BanishSelfFromField
-                        "tribute_self_hand" => (DiscardSelfSource, "canDiscardSelf", "tributeSelfFromHand"),   // Cost_TributeSelfFromHand
-                        _ => (TributeSelfSource, "canTributeSelf", null),
+                        "banish_self" => ("in_grave", "canBanishSelfFromGrave", "banishSelfFromGrave"),   // Cost_BanishSelfFromGrave
+                        "discard_self" => ("in_hand", "canDiscardSelf", "discardSelf"),                    // Cost_DiscardSelf
+                        "send_self" => ("in_hand", "canDiscardSelf", "sendSelfFromHand"),                  // Cost_SendSelfFromHandToGrave
+                        "send_self_field" => ("ignition", null, "sendSelfFromField"),                      // Cost_SendSelfFromFieldToGrave
+                        "banish_self_hand" => ("in_hand", "canDiscardSelf", "banishSelfFromHand"),         // Cost_BanishSelfFromHand
+                        "banish_self_field" => ("ignition", null, "banishSelfFromField"),                  // Cost_BanishSelfFromField
+                        "tribute_self_hand" => ("in_hand", "canDiscardSelf", "tributeSelfFromHand"),       // Cost_TributeSelfFromHand
+                        _ => ("ignition", "canTributeSelf", "tributeSelf"),                                // Cost_TributeSelf
                     };
-                    ComposeOnto(compiled, donor);
+                    OwnPlace(compiled, place);
                     if (check != null)
                         AddRequire(compiled, check);
-                    if (costSlot != null)
-                    {
-                        compiled["costSlot"] = costSlot;
-                        compiled["effectOnly"] = true;   // the donor only lends its row's place, not its identity
-                    }
+                    compiled["costSlot"] = costSlot;
                 }
                 else if (body.costClause() is { } detachCost && detachCost.detachCost() is { } detach)
                 {
@@ -980,8 +972,7 @@ namespace WolfEx
                         if (body.trigger() != null)
                             throw new ScriptError("cost banish_self_and(...) is activated from the GY; it cannot have an 'on ...:' trigger.");
                         costPick["self"] = true;
-                        ComposeOnto(compiled, BanishSelfSource);
-                        compiled["effectOnly"] = true;
+                        OwnPlace(compiled, "in_grave");   // the own GY row (section 102); the raw pick banishes this card too
                         AddRequire(compiled, "canBanishSelfFromGrave");
                     }
                     compiled["costPick"] = costPick;
@@ -994,15 +985,13 @@ namespace WolfEx
                 if (body.trigger() is { } graveTrigger && graveTrigger.triggerName().GetText() == "in_grave")
                 {
                     // "If this card is in your GY: You can ...": activated from the GY. The GY / hand effects table (table 2) is asked for a card
-                    // there; Quillbolt Hedgehog's row in it has no cost, and the action's slots are composed onto it ("actionFrom"). "inGrave"
-                    // keeps it to the GY (the same table answers for the banished cards); docs/EffectSystem.md section 51.
+                    // there with no id list (section 51), so the row is the plugin's own (section 102, was Quillbolt Hedgehog's). "inGrave"
+                    // keeps it to the GY (the same table answers for the banished cards).
                     if (graveTrigger.summonConditions() != null)
                         throw new ScriptError("'on in_grave' takes no (from ..., by ...) conditions.");
                     if (actions[^1].summonAction()?.summonZones().GetText() is "self" or "self_grave")
                         throw new ScriptError("special_summon(self) from the GY is special_summon(self_grave); it needs no 'on in_grave:'.");
-                    ComposeOnto(compiled, SummonSelfGraveSource);
-                    compiled["trigger"] = "in_grave";
-                    AddRequire(compiled, "inGrave");
+                    OwnPlace(compiled, "in_grave");
                 }
                 else if (body.trigger() is { } trigger)
                 {
@@ -1096,12 +1085,35 @@ namespace WolfEx
             compiled["from"] = rowCard;
         }
 
+        // Activated from a place with no game card's row (docs/EffectSystem.md section 102): Yu-Gi-Oh-Effects' own row there - "in_grave" /
+        // "in_hand" = table 2, "ignition" = table 3 - as an own trigger. The action is unchanged: a raw row stays raw (no donor at all), a
+        // donor action keeps "from" / "actionFrom" for its slots (the plugin takes "from" as the action card of an own trigger).
+        private static void OwnPlace(JsonObject compiled, string place)
+        {
+            compiled["ownTrigger"] = true;
+            compiled["effectOnly"] = true;
+            compiled["trigger"] = place;
+            if (place == "in_grave")
+                AddRequire(compiled, "inGrave");   // table 2 also answers for the banished cards (Check_InGrave)
+            else if (place == "in_hand")
+                AddRequire(compiled, "inHand");    // table 2 also answers for the GY (Check_InHand)
+        }
+
         // "own": "toHand" for a search / salvage, "summon" for a Special Summon from a list ("deck.scan" ending in Summon), "toGrave" for a send.
         private static void MarkOwnMachine(JsonObject step)
         {
             if (step.ContainsKey("own") || step["deck"] is not JsonObject deck || deck["scan"]?.GetValue<string>() is not string scan)
                 return;
-            int source = step["actionFrom"]?.GetValue<int>() ?? step["from"]!.GetValue<int>();
+            // a revive in a chain picks when it resolves too (Monster Reborn's slot 4 would target at activation): the own summon step on
+            // the same raw row, not Monster Reborn's functions (section 101)
+            if (step["targetDo"]?.GetValue<string>() == "revive")
+            {
+                step.Remove("targetDo");
+                step["own"] = "summon";
+                step["condition"] = "listHasMatch";
+                return;
+            }
+            int source = step["actionFrom"]?.GetValue<int>() ?? step["from"]?.GetValue<int>() ?? 0;
             if (scan.EndsWith("Summon"))
                 step["own"] = "summon";
             else if (source is SearchSource or SalvageSource)
@@ -1477,6 +1489,29 @@ namespace WolfEx
             throw new ScriptError($"no game card is named \"{name}\" (card_names.json); check the spelling or use its Konami id: as(<id>).");
         }
 
+        // as("Card name") can also name a card only Master Duel's engine has (released after the game): engine_card_names.json, name -> Konami id
+        // (Tools/Scripts/make_full_effect_library.py). Under that engine the card plays as it (Yu-Gi-Oh-MoreCards -> Core_EngineLend). Only as(...)
+        // reads it: card_names.json stays the game's cards, which other readers turn into game ids.
+        private static System.Collections.Generic.Dictionary<string, int>? _engineNamedCards;
+
+        private static int AsCardIdByName(string name)
+        {
+            if (TryCardIdByName(name) is > 0 and int id)
+                return id;
+            if (_engineNamedCards == null)
+            {
+                _engineNamedCards = new System.Collections.Generic.Dictionary<string, int>(System.StringComparer.OrdinalIgnoreCase);
+                string path = Path.Combine(AppContext.BaseDirectory, "engine_card_names.json");
+                if (File.Exists(path) && JsonNode.Parse(File.ReadAllText(path)) is JsonObject names)
+                    foreach (var (n, value) in names)
+                        if (value != null)
+                            _engineNamedCards.TryAdd(n, value.GetValue<int>());
+            }
+            if (_engineNamedCards.TryGetValue(name, out int engine))
+                return engine;
+            return CardIdByName(name);   // the usual "no card is named" error
+        }
+
         private static JsonObject CompileAction(EffectScriptParser.ActionContext action)
         {
             if (action.equipAction() is { } equip)
@@ -1573,7 +1608,8 @@ namespace WolfEx
                 if (kind == "card") kind = "monster";
                 returnFilter["target"] = true;
                 returnFilter["kind"] = kind == "monster" ? "monster" : "spelltrap";
-                return new JsonObject { ["from"] = ReturnSource, ["filter"] = returnFilter };
+                // Spiritualism's slots run raw (section 103): Slot0_ReturnTargetToHand + the generic filter-row target slots, prompt 348
+                return new JsonObject { ["rawRow"] = true, ["targetDo"] = "return", ["filter"] = returnFilter };
             }
 
             if (action.gainAtkAction() is { } gainAtk)
@@ -1635,7 +1671,8 @@ namespace WolfEx
                     if (kind == "card") kind = "monster";
                     banishFilter["target"] = true;
                     banishFilter["kind"] = kind == "monster" ? "monster" : "spelltrap";
-                    return new JsonObject { ["from"] = TargetDestroySource, ["actionFrom"] = BanishTargetSource, ["filter"] = banishFilter };
+                    // Hermos's banish step on a raw row (section 103): Slot0_BanishTarget + the generic filter-row target slots, prompt 293
+                    return new JsonObject { ["rawRow"] = true, ["targetDo"] = "banish", ["filter"] = banishFilter };
                 }
                 return new JsonObject { ["from"] = DestroySource, ["actionFrom"] = BanishAllSource, ["filter"] = banishFilter };
             }
@@ -1647,7 +1684,8 @@ namespace WolfEx
             {
                 if (draw.side() != null)
                     throw new ScriptError("draw(N, player) can only be chained with other draw / gain_lp / damage actions so far.");
-                return new JsonObject { ["from"] = DrawSource, ["draw"] = int.Parse(draw.NUMBER().GetText()) };
+                // Pot of Greed's functions on a raw row (section 103); the count is the card's own "draw"
+                return new JsonObject { ["rawRow"] = true, ["do"] = "draw", ["draw"] = int.Parse(draw.NUMBER().GetText()) };
             }
 
             if (action.searchAction() is { } search)
@@ -1681,7 +1719,9 @@ namespace WolfEx
                     "opponent_grave" => "opponentGrave",
                     _ => "bothGravesSummon",
                 };
-                return new JsonObject { ["from"] = ReviveSource, ["deck"] = DeckFilter(revive.choices(), scan) };
+                // No donor (docs/EffectSystem.md section 101): Monster Reborn's functions run raw under this card's own id - target picked
+                // from the list at activation (Slot4_SelectFromList_Driver), summoned when it resolves (Slot0_SpecialSummonTarget_Driver)
+                return new JsonObject { ["rawRow"] = true, ["targetDo"] = "revive", ["deck"] = DeckFilter(revive.choices(), scan) };
             }
 
             if (action.sendAction() is { } send)
@@ -1718,7 +1758,8 @@ namespace WolfEx
                 if (kind == "card") kind = "monster";
                 filter["target"] = true;
                 filter["kind"] = kind == "monster" ? "monster" : "spelltrap";
-                return new JsonObject { ["from"] = TargetDestroySource, ["filter"] = filter };
+                // Remove Trap's slots on a raw row (section 103): Slot0_DestroyFirstTarget + the generic filter-row target slots, prompt 281
+                return new JsonObject { ["rawRow"] = true, ["targetDo"] = "destroy", ["filter"] = filter };
             }
             return new JsonObject { ["from"] = DestroySource, ["filter"] = filter };
         }

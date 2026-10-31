@@ -101,6 +101,9 @@ namespace Card
         // The vanilla card whose effect this card borrows ("effectClone": { "from": N } in cards.json, applied by Yu-Gi-Oh-Effects).
         // Single-effect clones play under that id when free. Multi-effect clones use 0 here: each effect is routed independently.
         uint16_t CloneFrom = 0;
+        // The same single-effect source, any id: under Master Duel's engine (Core) the card plays as that card - any card the engine knows,
+        // the ones released after the game included - when it is not otherwise in the duel (Core_EngineLend). 0 = none.
+        uint16_t EngineSource = 0;
         // The card whose name this one is treated as ("sameName": { "card": N, "always": true } in cards.json; 0 = its own name). The game's
         // own cards get theirs from bin/CARD_Same.bin in Setup_CardPropTable, which never reads ids past 14968 (docs/CardSame.md). Always:
         // the identity id (props +0x2C, what Card_IsSameName compares in duels) becomes N. Not always ("while an effect says so"): only
@@ -113,6 +116,9 @@ namespace Card
         std::optional<uint64_t> Genres;
         std::optional<std::vector<uint32_t>> Related;
         uint32_t Password = 0;
+        // "konamiId": Konami's database id. Master Duel's duel engine (Core, docs/MasterDuelEngine.md) knows a card's effect by it, so the card
+        // is given to the engine under it; a card without one gets ID + 20000 (past every real card's id).
+        uint16_t KonamiId = 0;
         // Per language (letter E F G I J R S): "text": { "F": { "name", "description", "indexLetters", "sortAs" } }; English's indexLetters /
         // sortAs are top-level keys (its name and description are Name / Description). Empty = not given. The game table points into these,
         // so they never change after loading; WriteGameTableEntry picks the game's current language each card setup.
