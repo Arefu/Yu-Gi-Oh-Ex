@@ -149,6 +149,12 @@ CORE_API int __cdecl Core_GetCardRarity(int CardId);
 CORE_API int __cdecl Core_GetCardRarityCount(int CardId, int RarityId);
 CORE_API int __cdecl Core_AddCardRarity(int CardId, int RarityId, int Count);
 
+/* A card's own picture for its rarity (full art, broken frame: docs/Shiny.md "Card pictures"). Call it first in a hook on
+   Get_IllustrationData (0x14086D050) that serves a card's art itself: 1 = Core put the picture in *Bytes / *Size (allocated with the
+   game's malloc, like the game's own art: the face builder frees it), 0 = serve the art as usual. CardId is the id the hook was given.
+   Added after version 1 like AddCredits: NULL with an older Core. */
+CORE_API int __cdecl Core_GetFaceArt(int CardId, void** Bytes, size_t* Size);
+
 #ifdef __cplusplus
 }
 
@@ -182,6 +188,7 @@ namespace Core
         int(__cdecl* GetCardRarity)(int) = nullptr;                                  // NULL with a Core that predates it
         int(__cdecl* GetCardRarityCount)(int, int) = nullptr;                        // NULL with a Core that predates it
         int(__cdecl* AddCardRarity)(int, int, int) = nullptr;                        // NULL with a Core that predates it
+        int(__cdecl* GetFaceArt)(int, void**, size_t*) = nullptr;                    // NULL with a Core that predates it
     };
 
     inline Api& Functions()
@@ -232,6 +239,7 @@ namespace Core
         CORE_BIND(GetCardRarity);
         CORE_BIND(GetCardRarityCount);
         CORE_BIND(AddCardRarity);
+        CORE_BIND(GetFaceArt);
 #undef CORE_BIND
         return true;
     }

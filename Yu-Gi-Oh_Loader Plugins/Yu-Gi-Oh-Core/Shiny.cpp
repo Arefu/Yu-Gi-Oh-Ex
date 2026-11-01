@@ -18,8 +18,11 @@
 #include <unordered_map>
 #include <vector>
 
+#include <fstream>
+
 #include "CardTable.h"
 #include "Detours.h"
+#include "Yu-Gi-Oh-Mods.h"
 #include "Logger.h"
 #include "Rarity.h"
 #include "Save.h"
@@ -36,10 +39,14 @@ namespace
     uintptr_t orig_AddQuad = 0x1408795A0;             // AddQuad(batch, x0, y0, x1, y1, u0, v0, u1, v1, int, colour)
     uintptr_t orig_CardFaceRender = 0x140754420;      // void CardFace_RenderToTarget(CardFace*)      (records the face's drawing)
     uintptr_t orig_CreateDevice = 0x14090D2B0;        // jmp [__imp_D3D11CreateDeviceAndSwapChain]
+    uintptr_t orig_GetIllustration = 0x14086D050;     // bool Get_IllustrationData(manager, u16 konamiId, void** bytes, size_t* size): the art
+                                                      // CardFace_Build decodes (PNG or JPEG, any size) into face->ArtTexture, then frees
+    constexpr uintptr_t kGameIatMalloc = 0x1409F9548; // the game's imported malloc: the art buffer is freed with its imported free
     constexpr uintptr_t kFullCardProps = 0x142927600; // FullCardProps[65536], 160 bytes, by Konami id
     constexpr size_t kPulledCards = 4448;             // ScreenRandomPackStore::PulledCards (std::vector<u16>), the rare slot last
     constexpr uint16_t kNoCard = 0xFFFF;
     constexpr UINT kFaceW = 400, kFaceH = 580;
+    constexpr size_t kFaceBatchCount = 0x748;         // CardFace::BatchCount (u64): CardFace_RenderToTarget draws batches 0 .. BatchCount-1
     constexpr const char* kExtensionTag = "shiny";
 
     struct U16Vector { uint16_t* First; uint16_t* Last; uint16_t* End; };
@@ -76,27 +83,44 @@ namespace
     bool g_MouseTilt = true;
     std::string g_Preview;
     bool g_AnimeFrames = false;     // Yu-Gi-Oh-AnimeCards lays the face out its own way: no name / text box regions then
+    float g_FullFrameAlpha = 0.35f; // how much of the frame shows over a full-art picture
     HWND g_Window = nullptr;
 
-    // ---- owned rarities (the save) ----
+    // ---- owned prints (the save) ----
+    // A print is a rarity (its type; 0 = Common) and an artwork (0 = the card's normal art, n = its alternate art n, cardart\<card>.alt<n>).
+    // Per card and print: copies owned now, copies ever pulled from packs, and whether the player has seen it (its face was drawn with
+    // that print). Save extension "shiny", version 2: u16 card, u8 rarity, u8 art, u16 owned, u16 pulled, u8 seen (9 bytes each).
+    // Version 1 (u16 card, u8 rarity, u16 count) is read as art 0, owned = pulled = count, seen.
+    struct Owned { uint16_t Count = 0, Pulled = 0; bool Seen = false; };
+    constexpr uint16_t PrintOf(uint8_t rarity, uint8_t art) { return static_cast<uint16_t>(rarity | art << 8); }
+    constexpr uint8_t RarityOf(uint16_t print) { return static_cast<uint8_t>(print & 0xFF); }
+    constexpr uint8_t ArtOf(uint16_t print) { return static_cast<uint8_t>(print >> 8); }
+
     std::recursive_mutex g_Lock;    // everything below
-    std::unordered_map<uint16_t, std::map<uint8_t, uint16_t>> g_Owned;
-    std::unordered_map<uint16_t, uint8_t> g_Shown;   // card -> rarity shown (highest tier owned)
+    std::unordered_map<uint16_t, std::map<uint16_t, Owned>> g_Owned;   // card -> print -> copies
+    std::unordered_map<uint16_t, uint16_t> g_Shown;   // card -> the print it is shown as (highest tier owned, then the highest art)
     bool g_Loaded = false;
 
     void Recompute(uint16_t card)
     {
         auto it = g_Owned.find(card);
-        int bestTier = -1; uint8_t best = 0;
+        int bestTier = -1; int bestArt = -1; int best = -1;
         if (it != g_Owned.end())
-            for (const auto& [rarity, count] : it->second)
-                if (const Rarity::Def* d = Rarity::ById(rarity); d && count && d->Tier > bestTier)
+            for (const auto& [print, owned] : it->second)
+            {
+                const Rarity::Def* d = RarityOf(print) ? Rarity::ById(RarityOf(print)) : nullptr;
+                if (!owned.Count || (RarityOf(print) && !d))
+                    continue;
+                const int tier = d ? d->Tier : 0;
+                if (tier > bestTier || (tier == bestTier && ArtOf(print) > bestArt))
                 {
-                    bestTier = d->Tier;
-                    best = rarity;
+                    bestTier = tier;
+                    bestArt = ArtOf(print);
+                    best = print;
                 }
-        if (best)
-            g_Shown[card] = best;
+            }
+        if (best > 0)   // a plain Common in the normal art is shown as the game draws it
+            g_Shown[card] = static_cast<uint16_t>(best);
         else
             g_Shown.erase(card);
     }
@@ -114,27 +138,42 @@ namespace
             return;
         std::vector<uint8_t> data(static_cast<size_t>(size));
         Save::GetExtension(kExtensionTag, data.data(), size);
-        if (data[0] != 1)
+        const uint8_t version = data[0];
+        if (version != 1 && version != 2)
         {
-            Logger::WriteLog(std::format("Shiny: the save's rarities are version {}, this Core reads 1: left as they are", data[0]), MODULE_NAME, 1);
+            Logger::WriteLog(std::format("Shiny: the save's rarities are version {}, this Core reads 1 and 2: left as they are", version), MODULE_NAME, 1);
             g_Loaded = false;   // never written back over
             return;
         }
+        auto u16 = [&](size_t at) { return static_cast<uint16_t>(data[at] | data[at + 1] << 8); };
+        const size_t step = version == 1 ? 5 : 9;
         int entries = 0;
-        for (size_t i = 1; i + 5 <= data.size(); i += 5)
+        for (size_t i = 1; i + step <= data.size(); i += step)
         {
-            const uint16_t card = static_cast<uint16_t>(data[i] | data[i + 1] << 8);
-            const uint8_t rarity = data[i + 2];
-            const uint16_t count = static_cast<uint16_t>(data[i + 3] | data[i + 4] << 8);
-            if (count)
+            Owned owned;
+            uint16_t print;
+            if (version == 1)
             {
-                g_Owned[card][rarity] = count;
+                print = PrintOf(data[i + 2], 0);
+                owned.Count = owned.Pulled = u16(i + 3);
+                owned.Seen = true;
+            }
+            else
+            {
+                print = PrintOf(data[i + 2], data[i + 3]);
+                owned.Count = u16(i + 4);
+                owned.Pulled = u16(i + 6);
+                owned.Seen = data[i + 8] != 0;
+            }
+            if (owned.Count || owned.Pulled)
+            {
+                g_Owned[u16(i)][print] = owned;
                 ++entries;
             }
         }
-        for (const auto& [card, rarities] : g_Owned)
+        for (const auto& [card, prints] : g_Owned)
             Recompute(card);
-        Logger::WriteLog(std::format("Shiny: {} card rarit{} owned ({} cards) from the save", entries, entries == 1 ? "y" : "ies", g_Owned.size()), MODULE_NAME, 0);
+        Logger::WriteLog(std::format("Shiny: {} card print{} ({} cards) from the save", entries, entries == 1 ? "" : "s", g_Owned.size()), MODULE_NAME, 0);
     }
 
     int __cdecl WriteFilter(unsigned char*, int, void*)
@@ -143,12 +182,14 @@ namespace
         if (!g_Loaded)
             return 0;
         std::vector<uint8_t> data;
-        data.push_back(1);
-        for (const auto& [card, rarities] : g_Owned)
-            for (const auto& [rarity, count] : rarities)
-                if (count)
-                    data.insert(data.end(), { static_cast<uint8_t>(card & 0xFF), static_cast<uint8_t>(card >> 8), rarity,
-                                              static_cast<uint8_t>(count & 0xFF), static_cast<uint8_t>(count >> 8) });
+        data.push_back(2);
+        for (const auto& [card, prints] : g_Owned)
+            for (const auto& [print, owned] : prints)
+                if (owned.Count || owned.Pulled)   // one you no longer own is still remembered as pulled
+                    data.insert(data.end(), { static_cast<uint8_t>(card & 0xFF), static_cast<uint8_t>(card >> 8), RarityOf(print), ArtOf(print),
+                                              static_cast<uint8_t>(owned.Count & 0xFF), static_cast<uint8_t>(owned.Count >> 8),
+                                              static_cast<uint8_t>(owned.Pulled & 0xFF), static_cast<uint8_t>(owned.Pulled >> 8),
+                                              static_cast<uint8_t>(owned.Seen ? 1 : 0) });
         if (data.size() == 1)
             Save::SetExtension(kExtensionTag, nullptr, 0);   // nothing owned: no entry
         else
@@ -156,17 +197,99 @@ namespace
         return 0;
     }
 
+    // ---- the card's own pictures: content folders' cardart\<card>.<tag>.png / .jpg ----
+    // tags: alt1 .. alt9 (alternate artworks, a print's art), alt / broken / full / extended (a rarity's Rarity::ArtStyle)
+    const char* const kArtFile[] = { "", "alt", "broken", "full", "extended", "printed" };
+    constexpr int kMaxAlts = 9;
+    std::map<std::string, std::vector<uint8_t>> g_Pictures;   // "<card>.<tag>" -> file bytes (empty: none); under g_Lock, nodes never move
+    std::unordered_map<uint16_t, uint8_t> g_AltCount;         // card -> how many alternate artworks it has (alt1 .. altN)
+
+    const std::vector<uint8_t>* PictureFile(uint16_t card, const std::string& tag)
+    {
+        std::lock_guard<std::recursive_mutex> guard(g_Lock);
+        const std::string key = std::format("{}.{}", card, tag);
+        auto it = g_Pictures.find(key);
+        if (it == g_Pictures.end())
+        {
+            std::vector<uint8_t> bytes;
+            for (const char* ext : { "png", "jpg" })
+                if (bytes.empty())
+                    if (const auto path = YGO::Mods::Find(std::format("cardart\\{}.{}", key, ext)); !path.empty())
+                    {
+                        std::ifstream file(path, std::ios::binary);
+                        bytes.assign(std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>());
+                    }
+            it = g_Pictures.emplace(key, std::move(bytes)).first;
+        }
+        return it->second.empty() ? nullptr : &it->second;
+    }
+    const std::vector<uint8_t>* PictureFile(uint16_t card, int32_t style) { return PictureFile(card, std::string(kArtFile[style])); }
+
+    // Alternate artworks: alt1, alt2, ... up to the first one missing. Only the file's presence is checked here.
+    int AltCount(uint16_t card)
+    {
+        std::lock_guard<std::recursive_mutex> guard(g_Lock);
+        if (auto it = g_AltCount.find(card); it != g_AltCount.end())
+            return it->second;
+        int n = 0;
+        while (n < kMaxAlts && (!YGO::Mods::Find(std::format("cardart\\{}.alt{}.png", card, n + 1)).empty() ||
+                                !YGO::Mods::Find(std::format("cardart\\{}.alt{}.jpg", card, n + 1)).empty()))
+            ++n;
+        g_AltCount[card] = static_cast<uint8_t>(n);
+        return n;
+    }
+
+    // The picture for a rarity's art style, and the style it is drawn as (*found). A whole-card style (broken, full, extended, printed)
+    // takes any whole-card picture of the card when it has none of its own kind (real ones first: a text-free broken frame, then a printed
+    // scan): the picture says how it is drawn.
+    const std::vector<uint8_t>* Picture(uint16_t card, int32_t style, int32_t* found = nullptr)
+    {
+        if (style <= Rarity::ArtNormal || style > Rarity::ArtPrinted)
+            return nullptr;
+        std::vector<int32_t> order{ style };
+        if (style >= Rarity::ArtBroken)
+            for (int32_t s : { Rarity::ArtBroken, Rarity::ArtPrinted, Rarity::ArtExtended, Rarity::ArtFull })
+                if (s != style)
+                    order.push_back(s);
+        for (int32_t s : order)
+            if (const std::vector<uint8_t>* bytes = PictureFile(card, s))
+            {
+                if (found)
+                    *found = s;
+                return bytes;
+            }
+        return nullptr;
+    }
+
+    // Full art made from the card's own art (no picture of its own): its square art, cropped to the card's shape. Pendulum art isn't
+    // square (it runs behind the Pendulum box), so those need a picture.
+    bool CanCoverArt(uint16_t card)
+    {
+        const int frame = Frame(card);
+        return frame < 13 || frame > 17;
+    }
+
+    // A rarity with its own art can land on a card: it has a picture for it, or (full / extended art) its own art can cover the card.
+    bool CanHaveArt(uint16_t card, const Rarity::Def* d)
+    {
+        if (d->Art == Rarity::ArtNormal || Picture(card, d->Art))
+            return true;
+        return (d->Art == Rarity::ArtFull || d->Art == Rarity::ArtExtended) && CanCoverArt(card);
+    }
+
     // ---- packs ----
     std::mt19937 g_Rng{ std::random_device{}() };
     std::vector<const Rarity::Def*> g_Rolls;          // rarities packs can roll, rarest first
     const Rarity::Def* g_Fallback = nullptr;          // the rare slot's "nothing rarer" (Rare)
 
-    const Rarity::Def* Roll(bool rareSlot)
+    const Rarity::Def* Roll(bool rareSlot, uint16_t card)
     {
         for (const Rarity::Def* d : g_Rolls)
         {
             if (!rareSlot && d->RollSlot != Rarity::Slot::Any)
                 continue;
+            if (!CanHaveArt(card, d))
+                continue;   // a rarity with its own art only lands on cards that can be drawn with it
             const int odds = (std::max)(1, static_cast<int>(static_cast<long long>(d->Odds) * g_OddsScale / 100));
             if (std::uniform_int_distribution<int>(0, odds - 1)(g_Rng) == 0)
                 return d;
@@ -185,15 +308,21 @@ namespace
         for (size_t i = 0; i < count; ++i)
         {
             const uint16_t card = pulled.First[i];
-            const Rarity::Def* d = Roll(i + 1 == count);   // the rare slot is pushed last
-            if (!d)
-                continue;
-            uint16_t& owned = g_Owned[card][d->Id];
-            if (owned < 0xFFFF)
-                ++owned;
+            const Rarity::Def* d = Roll(i + 1 == count, card);   // the rare slot is pushed last
+            // the artwork: each of the card's printed artworks is as likely as the others (0 = its normal art)
+            const int alts = AltCount(card);
+            const uint8_t art = alts ? static_cast<uint8_t>(std::uniform_int_distribution<int>(0, alts)(g_Rng)) : 0;
+            if (!d && !art)
+                continue;   // a Common in its normal art: the game's own card, nothing to keep
+            Owned& owned = g_Owned[card][PrintOf(d ? d->Id : 0, art)];
+            if (owned.Count < 0xFFFF)
+                ++owned.Count;
+            if (owned.Pulled < 0xFFFF)
+                ++owned.Pulled;
+            owned.Seen = false;   // a new pull is new until its face is drawn
             Recompute(card);
-            if (d->Tier >= 20)
-                Logger::WriteLog(std::format("Shiny pull: {} ({}) as {}", CardName(card), card, d->Name), MODULE_NAME, 0);
+            Logger::WriteLog(std::format("{}{} ripped: {} ({})", d ? d->Name : "Common", art ? std::format(" (alternate art {})", art) : "",
+                CardName(card), card), MODULE_NAME, 0);
         }
     }
 
@@ -208,10 +337,36 @@ namespace
     };
     std::unordered_map<uint16_t, Layout> g_Layout;    // under g_Lock
 
+    // The rarity and artwork a face is built with: a fixed ShinyPreview's rarity, else the print shown for the card (faces are cached, so
+    // cycle can't change it). ShinyPreview=alt<n> shows every card that has it in alternate art n.
+    const Rarity::Def* BuildRarity(uint16_t card, uint8_t* art)
+    {
+        *art = 0;
+        if (!g_Preview.empty() && _stricmp(g_Preview.c_str(), "cycle") != 0)
+        {
+            if (_strnicmp(g_Preview.c_str(), "alt", 3) == 0 && g_Preview.size() == 4 && g_Preview[3] >= '1' && g_Preview[3] <= '9')
+            {
+                *art = static_cast<uint8_t>(g_Preview[3] - '0');
+                return nullptr;
+            }
+            return Rarity::ByKey(g_Preview);
+        }
+        std::lock_guard<std::recursive_mutex> guard(g_Lock);
+        auto it = g_Shown.find(card);
+        if (it == g_Shown.end())
+            return nullptr;
+        *art = ArtOf(it->second);
+        return RarityOf(it->second) ? Rarity::ById(RarityOf(it->second)) : nullptr;
+    }
+
     struct BuildContext
     {
         bool Active = false;
         uint16_t Card = kNoCard;
+        int32_t Style = Rarity::ArtNormal;              // the picture's style, when there is one
+        const std::vector<uint8_t>* Picture = nullptr;  // served as the card's art (Hook_GetIllustration)
+        bool CoverArt = false;                          // full art from the card's own art: cropped to the card's shape, over all of it
+        int Quads = 0;                                  // AddQuad calls so far: 0 is the art (batch 0), 1 the frame (batch 1)
         std::vector<Rect> Squares;
         Rect Art;
         float ArtArea = 0;
@@ -222,6 +377,35 @@ namespace
     {
         if (t_Build.Active)
         {
+            // A whole-card picture: the art (batch 0) covers the card; the frame (batch 1) is not drawn (its painted frame is in the
+            // picture) or drawn see-through (full art). Batches 0 and 1 draw exactly 6 vertices, so a hidden quad stays, at zero area.
+            const int quad = t_Build.Quads++;
+            if ((t_Build.Picture || t_Build.CoverArt) && t_Build.Style >= Rarity::ArtBroken)
+            {
+                if (quad == 0)
+                {
+                    const bool flipX = x0 > x1, flipY = y0 > y1;
+                    x0 = flipX ? kFaceW : 0.0f; x1 = flipX ? 0.0f : kFaceW;
+                    y0 = flipY ? kFaceH : 0.0f; y1 = flipY ? 0.0f : kFaceH;
+                    if (t_Build.CoverArt)
+                    {
+                        // the square art cropped across to the card's shape (400 : 580), so it covers the card unstretched
+                        const float keep = static_cast<float>(kFaceW) / kFaceH, mid = (u0 + u1) * 0.5f, half = (u1 - u0) * 0.5f * keep;
+                        u0 = mid - half;
+                        u1 = mid + half;
+                    }
+                }
+                else if (quad == 1 && (t_Build.Style == Rarity::ArtBroken || t_Build.Style == Rarity::ArtPrinted))
+                {
+                    x1 = x0;
+                    y1 = y0;
+                }
+                else if (quad == 1)
+                {
+                    const uint32_t c = static_cast<uint32_t>(colour);
+                    colour = static_cast<int>((static_cast<uint32_t>(((c >> 24) & 0xFF) * g_FullFrameAlpha) << 24) | (c & 0xFFFFFF));
+                }
+            }
             const Rect r{ (std::min)(x0, x1), (std::min)(y0, y1), (std::max)(x0, x1), (std::max)(y0, y1) };
             const float area = r.W() * r.H();
             if (area > 150.0f * 150.0f && area < 0.9f * kFaceW * kFaceH && area > t_Build.ArtArea)
@@ -250,6 +434,8 @@ namespace
             if (l.Art.Y1 > l.Text.Y0)
                 l.Art.Y1 = l.Text.Y0;     // pendulum art runs behind the text box: no art foil on the text
         }
+        if ((b.Picture || b.CoverArt) && b.Style >= Rarity::ArtBroken)
+            l.Art = { 0, 0, static_cast<float>(kFaceW), static_cast<float>(kFaceH) };   // the art is the whole card
         l.NameWhite = (frame == 7 || frame == 8 || frame == 12 || frame == 15 || frame == 18) ? 1.0f : 0.0f;
 
         // the stars: the last run of `n` squares of one size on one line, evenly spaced (glyphs never are)
@@ -289,31 +475,6 @@ namespace
         return l;
     }
 
-    // ---- what each step saw (the summary in the log every 15 s, while something changes) ----
-    struct Stats
-    {
-        std::atomic<uint32_t> Built{}, Recorded{}, FaceClears{}, GreyClears{}, Matched{}, NoCardWaiting{}, Slot0{}, Draws{}, NoRarity{}, BadVs{}, NoRtv{}, Foil{};
-        std::atomic<uint32_t> OtherColour{};   // the last non-grey clear of a 400 x 580 target, as 0xRRGGBB
-    } g_Stats;
-
-    void LogStats()
-    {
-        static ULONGLONG next = 0;
-        static uint32_t lastSum = 0;
-        const ULONGLONG now = GetTickCount64();
-        if (now < next)
-            return;
-        next = now + 15000;
-        const uint32_t sum = g_Stats.Built + g_Stats.Recorded + g_Stats.FaceClears + g_Stats.Slot0 + g_Stats.Draws + g_Stats.Foil;
-        if (sum == lastSum)
-            return;
-        lastSum = sum;
-        Logger::WriteLog(std::format("Shiny: {} faces built, {} drawn; 400x580 clears {} ({} grey: {} matched a card, {} with none waiting; last other colour {:06X}); "
-            "draws with a card face {} -> {} with a rarity, {} vertex shader not usable, {} no target, {} foil passes",
-            g_Stats.Built.load(), g_Stats.Recorded.load(), g_Stats.FaceClears.load(), g_Stats.GreyClears.load(), g_Stats.Matched.load(), g_Stats.NoCardWaiting.load(),
-            g_Stats.OtherColour.load(), g_Stats.Draws.load(), g_Stats.Draws - g_Stats.NoRarity, g_Stats.BadVs.load(), g_Stats.NoRtv.load(), g_Stats.Foil.load()), MODULE_NAME, 0);
-    }
-
     // ---- face texture <-> card ----
     std::unordered_map<void*, uint16_t> g_FaceCard;   // CardFace* -> card (Build -> RenderToTarget)
     std::deque<uint16_t> g_PendingFaces;              // cards whose drawing was recorded, waiting for their clear to run
@@ -325,14 +486,62 @@ namespace
         t_Build = {};
         t_Build.Active = true;
         t_Build.Card = card;
+        // A rarity's whole-card picture first (broken frame, full art), else the print's alternate artwork, else the rarity's alt picture.
+        uint8_t art = 0;
+        const Rarity::Def* d = BuildRarity(card, &art);
+        int32_t style = Rarity::ArtNormal;
+        if (d && d->Art >= Rarity::ArtBroken)
+            t_Build.Picture = Picture(card, d->Art, &style);
+        if (!t_Build.Picture && art)
+            if ((t_Build.Picture = PictureFile(card, std::format("alt{}", art))) != nullptr)
+                style = Rarity::ArtAlt;
+        if (!t_Build.Picture && d && d->Art == Rarity::ArtAlt)
+            t_Build.Picture = Picture(card, Rarity::ArtAlt, &style);
+        if (t_Build.Picture)
+            t_Build.Style = style;
+        else if (d && (d->Art == Rarity::ArtFull || d->Art == Rarity::ArtExtended) && CanCoverArt(card))
+        {
+            t_Build.CoverArt = true;   // no picture of its own: its art over the whole card
+            t_Build.Style = Rarity::ArtFull;
+        }
         const char result = reinterpret_cast<char(__fastcall*)(void*, uint16_t)>(orig_CardFaceBuild)(face, card);
+        // a printed scan already has its name, text and icons: only batch 0 (the art, now the whole card) is drawn
+        if (result && t_Build.Picture && t_Build.Style == Rarity::ArtPrinted)
+        {
+            auto& batches = *reinterpret_cast<volatile uint64_t*>(static_cast<uint8_t*>(face) + kFaceBatchCount);
+            if (batches > 1)
+                batches = 1;
+        }
         Layout layout = MakeLayout(t_Build);
         t_Build = std::move(outer);
-        ++g_Stats.Built;
         std::lock_guard<std::recursive_mutex> guard(g_Lock);
         g_Layout[card] = layout;
         g_FaceCard[face] = card;
         return result;
+    }
+
+    // The art of a face being built for a card with its own picture: that picture (only inside CardFace_Build, so other art users,
+    // such as the card details view, keep the normal art).
+    bool ServeFaceArt(uint16_t card, void** buffer, size_t* size)
+    {
+        if (!t_Build.Active || t_Build.Card != card || !t_Build.Picture || !buffer || !size)
+            return false;
+        using Malloc_t = void*(__cdecl*)(size_t);
+        const Malloc_t gameMalloc = *reinterpret_cast<const volatile Malloc_t*>(kGameIatMalloc);
+        void* copy = gameMalloc ? gameMalloc(t_Build.Picture->size()) : nullptr;
+        if (!copy)
+            return false;
+        memcpy(copy, t_Build.Picture->data(), t_Build.Picture->size());
+        *buffer = copy;
+        *size = t_Build.Picture->size();
+        return true;
+    }
+
+    bool __fastcall Hook_GetIllustration(int64_t manager, uint16_t card, void** buffer, size_t* size)
+    {
+        if (ServeFaceArt(card, buffer, size))
+            return true;
+        return reinterpret_cast<bool(__fastcall*)(int64_t, uint16_t, void**, size_t*)>(orig_GetIllustration)(manager, card, buffer, size);
     }
 
     void __fastcall Hook_CardFaceRender(void* face)
@@ -349,7 +558,6 @@ namespace
             if (g_PendingFaces.size() > 64)
                 g_PendingFaces.pop_front();   // never grows without bound if clears are missed
         }
-        ++g_Stats.Recorded;
         reinterpret_cast<void(__fastcall*)(void*)>(orig_CardFaceRender)(face);
     }
 
@@ -496,48 +704,29 @@ namespace
     // so both clears are hooked; on the deferred one it runs inside CardFace_RenderToTarget, right after that face was queued.
     void NoteClear(ID3D11RenderTargetView* rtv, const FLOAT col[4])
     {
-        const bool grey = col && std::fabs(col[0] - 0.502f) < 0.01f && std::fabs(col[1] - 0.502f) < 0.01f && std::fabs(col[2] - 0.502f) < 0.01f;
-        if (rtv && col)
+        if (!rtv || !col || std::fabs(col[0] - 0.502f) >= 0.01f || std::fabs(col[1] - 0.502f) >= 0.01f || std::fabs(col[2] - 0.502f) >= 0.01f)
+            return;
+        ID3D11Resource* res = nullptr;
+        rtv->GetResource(&res);
+        if (!res)
+            return;
+        D3D11_TEXTURE2D_DESC td{};
+        static_cast<ID3D11Texture2D*>(res)->GetDesc(&td);
+        if (td.Width == kFaceW && td.Height == kFaceH)
         {
-            ID3D11Resource* res = nullptr;
-            rtv->GetResource(&res);
-            D3D11_TEXTURE2D_DESC td{};
-            if (res)
-                static_cast<ID3D11Texture2D*>(res)->GetDesc(&td);
-            if (res && td.Width == kFaceW && td.Height == kFaceH)
+            std::lock_guard<std::recursive_mutex> guard(g_Lock);
+            uint16_t card = kNoCard;
+            if (!g_PendingFaces.empty())
             {
-                ++g_Stats.FaceClears;
-                if (!grey)
-                    g_Stats.OtherColour = (static_cast<uint32_t>(std::clamp(col[0], 0.0f, 1.0f) * 255) << 16) |
-                                          (static_cast<uint32_t>(std::clamp(col[1], 0.0f, 1.0f) * 255) << 8) | static_cast<uint32_t>(std::clamp(col[2], 0.0f, 1.0f) * 255);
+                card = g_PendingFaces.front();
+                g_PendingFaces.pop_front();
             }
-            if (res && grey)
-            {
-                if (td.Width == kFaceW && td.Height == kFaceH)
-                {
-                    ++g_Stats.GreyClears;
-                    std::lock_guard<std::recursive_mutex> guard(g_Lock);
-                    uint16_t card = kNoCard;
-                    if (!g_PendingFaces.empty())
-                    {
-                        card = g_PendingFaces.front();
-                        g_PendingFaces.pop_front();
-                    }
-                    if (card != kNoCard)
-                    {
-                        ++g_Stats.Matched;
-                        g_TexCard[res] = card;
-                    }
-                    else
-                    {
-                        ++g_Stats.NoCardWaiting;
-                        g_TexCard.erase(res);
-                    }
-                }
-            }
-            if (res)
-                res->Release();
+            if (card != kNoCard)
+                g_TexCard[res] = card;
+            else
+                g_TexCard.erase(res);
         }
+        res->Release();
     }
 
     ClearRTV_t o_ClearRTVDeferred = nullptr;
@@ -581,11 +770,9 @@ namespace
     template <class F>
     void WithFoil(ID3D11DeviceContext* c, F&& drawAgain)
     {
-        LogStats();
         const uint16_t card = g_Slot0Card;
         if (card == kNoCard || !g_PS)
             return;
-        ++g_Stats.Draws;
 
         LARGE_INTEGER now;
         QueryPerformanceCounter(&now);
@@ -599,37 +786,28 @@ namespace
             {
                 auto it = g_Shown.find(card);
                 if (it == g_Shown.end())
-                {
-                    ++g_Stats.NoRarity;
                     return;
-                }
-                d = Rarity::ById(it->second);
+                if (auto o = g_Owned.find(card); o != g_Owned.end())
+                    if (auto r = o->second.find(it->second); r != o->second.end())
+                        r->second.Seen = true;   // the player has seen this pull now
+                d = RarityOf(it->second) ? Rarity::ById(RarityOf(it->second)) : nullptr;
             }
             if (auto it = g_Layout.find(card); it != g_Layout.end())
                 l = it->second;
         }
         if (!d || (!d->NameInk && !d->ArtFoil && !d->FrameFoil && !d->Coating && !d->Desaturate && !d->Watermark))
-        {
-            ++g_Stats.NoRarity;
             return;
-        }
 
         ID3D11VertexShader* vs = nullptr;
         c->VSGetShader(&vs, nullptr, nullptr);
         const bool ok = vs && VertexShaderOk(vs);
         if (vs) vs->Release();
         if (!ok)
-        {
-            ++g_Stats.BadVs;
             return;
-        }
         ID3D11RenderTargetView* rtv = nullptr;
         c->OMGetRenderTargets(1, &rtv, nullptr);
         if (!rtv)
-        {
-            ++g_Stats.NoRtv;
             return;   // nothing to draw into (a depth-only pass)
-        }
 
         ShinyCB cb{};
         cb.Time = seconds; cb.Strength = g_Strength; cb.Speed = g_Speed;
@@ -675,7 +853,6 @@ namespace
         c->OMSetBlendState(g_Blend, zero, 0xFFFFFFFF);
         c->OMSetDepthStencilState(DepthState(ds), sref);
         drawAgain();
-        ++g_Stats.Foil;
 
         c->PSSetShader(ps, nullptr, 0);
         c->PSSetConstantBuffers(0, 1, &cb0);
@@ -735,7 +912,8 @@ namespace
         DetourAttach(&(PVOID&)o_DrawInst, H_DrawInst);
         DetourAttach(&(PVOID&)o_DrawIdxInst, H_DrawIdxInst);
         const LONG err = DetourTransactionCommit();
-        Logger::WriteLog(std::format("Shiny: Direct3D hooks {} (deferred context clear {})", err, o_ClearRTVDeferred ? "hooked" : "not found"), MODULE_NAME, err == NO_ERROR ? 0 : 2);
+        if (err != NO_ERROR || !o_ClearRTVDeferred)
+            Logger::WriteLog(std::format("Shiny: Direct3D hooks failed ({}{}): cards are not drawn shiny", err, o_ClearRTVDeferred ? "" : ", no deferred context"), MODULE_NAME, 2);
     }
 
     using CreateDev_t = HRESULT(WINAPI*)(IDXGIAdapter*, D3D_DRIVER_TYPE, HMODULE, UINT, const D3D_FEATURE_LEVEL*, UINT, UINT,
@@ -777,7 +955,7 @@ int Shiny::ShownRarity(uint16_t card)
 {
     std::lock_guard<std::recursive_mutex> guard(g_Lock);
     auto it = g_Shown.find(card);
-    return it == g_Shown.end() ? 0 : it->second;
+    return it == g_Shown.end() ? 0 : RarityOf(it->second);
 }
 
 int Shiny::Count(uint16_t card, uint8_t rarity)
@@ -786,8 +964,11 @@ int Shiny::Count(uint16_t card, uint8_t rarity)
     auto it = g_Owned.find(card);
     if (it == g_Owned.end())
         return 0;
-    auto r = it->second.find(rarity);
-    return r == it->second.end() ? 0 : r->second;
+    int total = 0;   // every artwork of that rarity
+    for (const auto& [print, owned] : it->second)
+        if (RarityOf(print) == rarity)
+            total += owned.Count;
+    return total;
 }
 
 int Shiny::Add(uint16_t card, uint8_t rarity, int count)
@@ -795,16 +976,24 @@ int Shiny::Add(uint16_t card, uint8_t rarity, int count)
     if (!rarity || !Rarity::ById(rarity))
         return 0;
     std::lock_guard<std::recursive_mutex> guard(g_Lock);
-    auto& owned = g_Owned[card];
-    const int value = std::clamp(static_cast<int>(owned[rarity]) + count, 0, 0xFFFF);
-    if (value)
-        owned[rarity] = static_cast<uint16_t>(value);
-    else
-        owned.erase(rarity);
-    if (owned.empty())
+    auto& prints = g_Owned[card];
+    const uint16_t print = PrintOf(rarity, 0);   // given copies are in the normal art
+    Owned& owned = prints[print];
+    const int value = std::clamp(static_cast<int>(owned.Count) + count, 0, 0xFFFF);
+    owned.Count = static_cast<uint16_t>(value);
+    if (count > 0)
+        owned.Seen = false;   // given copies are new too
+    if (!owned.Count && !owned.Pulled)
+        prints.erase(print);
+    if (prints.empty())
         g_Owned.erase(card);
     Recompute(card);
     return value;
+}
+
+bool Shiny::FaceArt(uint16_t card, void** bytes, size_t* size)
+{
+    return ServeFaceArt(card, bytes, size);
 }
 
 void Shiny::Install()
@@ -825,6 +1014,7 @@ void Shiny::Install()
     g_Speed = std::clamp(IniFloat(ini, "ShinySpeed", 1.0f), 0.0f, 10.0f);
     g_MouseTilt = GetPrivateProfileIntA("Yu-Gi-Oh-Core", "ShinyMouseTilt", 1, ini.c_str()) != 0;
     g_Preview = IniText(ini, "ShinyPreview", "");
+    g_FullFrameAlpha = std::clamp(IniFloat(ini, "ShinyFullArtFrame", 0.35f), 0.0f, 1.0f);
     g_AnimeFrames = GetModuleHandleA("Yu-Gi-Oh-AnimeCards.dll") != nullptr ||
                     GetPrivateProfileIntA("Yu-Gi-Oh-Core", "Yu-Gi-Oh-AnimeCards", 0, ini.c_str()) == 1;   // it may load after Core
     QueryPerformanceFrequency(&g_Qpf);
@@ -847,6 +1037,7 @@ void Shiny::Install()
     DetourAttach(&(PVOID&)orig_CardFaceBuild, Hook_CardFaceBuild);
     DetourAttach(&(PVOID&)orig_AddQuad, Hook_AddQuad);
     DetourAttach(&(PVOID&)orig_CardFaceRender, Hook_CardFaceRender);
+    DetourAttach(&(PVOID&)orig_GetIllustration, Hook_GetIllustration);
     DetourAttach(&(PVOID&)orig_CreateDevice, Hook_CreateDevice);
     const LONG err = DetourTransactionCommit();
     Logger::WriteLog(std::format("Shiny cards: {} rarities, {} rolled by packs (odds x{}%), preview '{}', game hooks {}", Rarity::All().size(), g_Rolls.size(),

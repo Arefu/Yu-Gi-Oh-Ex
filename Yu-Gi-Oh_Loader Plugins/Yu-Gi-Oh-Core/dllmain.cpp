@@ -90,6 +90,11 @@ extern "C"
         return CardId >= 0 && CardId <= 0xFFFF && RarityId > 0 && RarityId <= 0xFF ? Shiny::Add(static_cast<uint16_t>(CardId), static_cast<uint8_t>(RarityId), Count) : 0;
     }
 
+    CORE_API int __cdecl Core_GetFaceArt(int CardId, void** Bytes, size_t* Size)
+    {
+        return CardId >= 0 && CardId <= 0xFFFF && Shiny::FaceArt(static_cast<uint16_t>(CardId), Bytes, Size) ? 1 : 0;
+    }
+
     CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size)
     {
         const std::u8string name = Save::CurrentSavePath().filename().u8string();

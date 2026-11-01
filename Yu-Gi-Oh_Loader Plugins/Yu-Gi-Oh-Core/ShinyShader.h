@@ -11,7 +11,7 @@
 //   frame foil   on the regions in FrameMask (attribute, stars, art border, card edge, text box border, the whole frame, the name box)
 //   watermark    a faint medallion in the text box (20th / 25th / 10000 Secret)
 //   name ink     the card name's own pixels recoloured (silver, gold, rainbow, speckled, ...)
-// Every layer's light comes from the mouse (MouseTilt) or a slow sweep, so the foil moves like a tilted card.
+// Every layer's light comes from a slow sweep, or from the mouse on a card shown big (MouseTilt), so the foil moves like a tilted card.
 inline constexpr const char* kShinyHlsl = R"HLSL(
 Texture2D Face : register(t0);
 SamplerState Smp : register(s0);
@@ -242,9 +242,12 @@ float4 main(PSIn i) : SV_TARGET
     float t = Time * Speed;
     float lum = Luma(face.rgb);
 
-    // the light: follows the mouse across the screen (MouseTilt), else a slow sweep of its own
-    float2 view = Tilt > 0.5 ? (i.Pos.xy - Mouse) / max(Screen.y, 1.0)
-                             : float2(sin(t * 0.4 + Phase * TAU), cos(t * 0.3 + Phase * TAU)) * 0.35;
+    // the light: a slow sweep of its own; on a card shown big (the card details view: over half the screen's height, measured from how
+    // fast the face's v changes per screen pixel) it follows the mouse instead (MouseTilt), twice as strongly, like tilting the card
+    float2 sweep = float2(sin(t * 0.4 + Phase * TAU), cos(t * 0.3 + Phase * TAU)) * 0.35;
+    float cardHeight = 1.0 / max(abs(ddx(i.UV.y)) + abs(ddy(i.UV.y)), 1e-5);
+    float big = saturate((cardHeight / max(Screen.y, 1.0) - 0.5) / 0.15) * step(0.5, Tilt);
+    float2 view = lerp(sweep, (i.Pos.xy - Mouse) / max(Screen.y, 1.0) * 2.0, big);
     float ang = dot(i.UV, float2(0.8, 1.1)) + dot(view, float2(1.2, 0.9)) + Phase;
     float bandPos = frac(t * 0.08 + Phase) * 3.0 - 1.0;
     float band = exp(-pow((dot(i.UV, float2(0.6, 0.8)) - bandPos + view.x * 0.5) * 7.0, 2.0));

@@ -74,13 +74,61 @@ Rolling: the rare slot tries every rare-slot or any-slot rarity, rarest first; t
 ```
 
 Fields: `name`, `tier`, `odds` (1 in N; 0 = never), `slot` (rare / any / none), `nameInk`, `nameColour` (#RRGGBB), `artFoil`,
-`frameFoil`, `regions`, `coating`, `coatStrength` (0..2), `desaturate` (0..1), `watermark`, `note`.
+`frameFoil`, `regions`, `coating`, `coatStrength` (0..2), `desaturate` (0..1), `watermark`, `art`, `note`.
+
+## Card pictures (full art, broken frames, alternative art)
+
+A rarity's `art` says it has its own picture of the card. Over Rush is `broken`, Full Over Rush is `full`, and Grand Master is
+`extended`. The picture is `cardart\<card id>.<style>.png` (or `.jpg`) in any content folder, so a mod's `Yu-Gi-Oh-Ex\cardart\` works.
+
+| `art` | The picture | How it is drawn |
+|---|---|---|
+| `alt` | another artwork | in place of the art, in the normal frame |
+| `broken` | the whole card, frame painted in, the art breaking out | covers the card; the game's frame is not drawn; name, text, icons on top |
+| `full` | the whole card, no frame | covers the card; the game's frame goes over it see-through (`ShinyFullArtFrame`, default 0.35) |
+| `extended` | as `full` (a `full` picture is used if there is no `extended` one) | as `full` |
+| `printed` | a scan of the printed card, text and all | covers the card; the game draws nothing over it (`CardFace+0x748` BatchCount set to 1) |
+
+* **Full art needs no picture.** A `full` / `extended` rarity on a card with no picture of its own uses the card's own art, cropped
+  across to the card's shape and stretched over the whole card, with the see-through frame on top. Every card can have it except
+  Pendulums (their art isn't square).
+* Any size works: the game decodes PNG or JPEG of any size and stretches it over the art's rectangle. A whole-card picture should
+  have the card's layout, with the art window at 49-351 x 107-407 of 400 x 580.
+* A whole-card rarity uses any whole-card picture of the card, real ones first: `broken`, then `printed`, then `extended` / `full`. The
+  picture's own style decides how it is drawn.
+* Packs only roll a rarity with `art` for cards it can be drawn on. Over Rush only lands on cards with a broken-frame or printed picture.
+  Full Over Rush lands on any card that isn't a Pendulum.
+* **Alternate artworks** are `cardart\<card id>.alt1` .. `alt9`. A card pulled from a pack comes in one of its artworks, each as likely,
+  and the save keeps which (a print = rarity + art). The card shows its highest-tier print, then the highest art.
+* `ShinyPreview` set to one rarity (not `cycle`) also shows the pictures, and `alt1` .. `alt9` shows every card in that artwork. Faces
+  are cached, so a card pulled with a new picture or art shows it once its face is rebuilt (or after a restart).
+* How: the face build is hooked. While it runs, `Get_IllustrationData` (0x14086D050) returns the picture; plugins that serve custom
+  cards' art themselves ask `Core_GetFaceArt` first (MoreCards does). The first `AddQuad` (the art, batch 0) is stretched to the whole
+  card. The second (the frame, batch 1) becomes zero-area (`broken`, `printed`) or has its alpha scaled (`full`).
+
+**The Rarities mod** (`Mods\Rarities`, shipped in releases) holds every picture. It requires `Yu-Gi-Oh-Core/Shiny`, so switching it
+on switches Shiny on. Its `rarities.json` makes Over Rush roll 1 in 24 and Full Over Rush 1 in 60 rare slots. Three scripts fill it
+(they write into the repo's `Mods\Rarities` by default, `--mod` for another folder):
+
+| Script | What |
+|---|---|
+| `Tools/Scripts/make_fullframe_mod.py` | Master Duel's Over Frame cards (`md/of_card_asset.bytes`, 20 cards) from a Master Duel export, text-free broken frames, matched to LOTD and Cards-mod ids by English name. Also writes `mod.json` and `rarities.json`. |
+| `Tools/Scripts/fetch_extended_art.py` | Every card on Yugipedia's "Extended art" list (the TCG's extended art / the OCG's Over-Frame prints): Master Duel's text-free render (`-VG-EA`) as `broken`, else a scan of the printed card as `printed`. 72 cards on 2026-11-01 (8 text-free, 64 scans). |
+| `Tools/Scripts/fetch_alt_arts.py` | Every alternate artwork on YGOPRODeck, matched by passcode (LOTD's `bin\CARD_Pass.bin`, the Cards mod's `password`): 115 cards, 151 artworks on 2026-11-01. |
+
+There is no source of broken-frame art for every card: only cards Konami printed that way have it. Master Duel has no frameless
+full art (its other 512 x 1024 pictures are Pendulum art), which is why full art is drawn from the card's own art.
 
 ## Save
 
-Save extension tag `shiny`: a version byte (1), then 5 bytes per entry: `u16 card, u8 rarity, u16 count`. It is read when the card
-table takes over a save (`CardTable::AddTakeListener`) and written by a save write filter. The data is kept whether Shiny is on or off.
-A save made by a newer Core with a later version is left as it is.
+Save extension tag `shiny`: a version byte (2), then 9 bytes per card and print: `u16 card, u8 rarity (its type: the rarity id, 0 =
+Common), u8 art (0 = the card's own artwork, n = alternate art n), u16 owned (copies now), u16 pulled (copies ever pulled from packs),
+u8 seen (1 once its face has been drawn with that print; a new pull or gift is 0)`. An entry stays while it is owned or was ever pulled;
+a Common in its own artwork isn't kept. Version 1 saves (`u16 card, u8 rarity, u16 count`) are read as art 0, owned = pulled = count, seen. It is read when the card table takes over a save (`CardTable::AddTakeListener`) and written by a save
+write filter. The data is kept whether Shiny is on or off. A save made by a newer Core with a later version is left as it is.
+
+Every pull with a rarity or an alternate art is logged as `<rarity>[ (alternate art n)] ripped: <card> (<id>)`, e.g.
+`Ultra Rare ripped: Blue-Eyes White Dragon (4007)`.
 
 Exports (Yu-Gi-Oh-Core.h), for prizes, shops and trade pages: `Core_GetCardRarity(card)`, `Core_GetCardRarityCount(card, rarity)`,
 `Core_AddCardRarity(card, rarity, count)`.
@@ -103,9 +151,6 @@ The rarity is per card id. Every copy of a card you own as an Ultra shows as an 
 
 ## Not done yet
 
-* **Alternative / full art** (Over Rush, Full Over Rush, Grand Master, extended art). These need a different picture per rarity. The
-  plan is a per-card, per-rarity art override using the same streamed art path as Card Manager's Art tab. The pictures could come from
-  the player's own Master Duel or Duel Links install, extracted locally: Konami's assets are not downloaded or shipped with Yu-Gi-Oh-Ex.
 * The 20th / 25th / 10000 logos, which need their picture.
 * Choosing which owned rarity a card shows, per card or per deck slot. Today a card always shows its highest tier.
 * Showing the rarity on the pack result grid (a label or sound for big pulls). Today big pulls are logged.

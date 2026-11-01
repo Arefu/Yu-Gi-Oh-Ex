@@ -19,7 +19,7 @@
 //   { "rarities": [ { "key": "ultra", "odds": 20 },
 //                   { "id": 128, "key": "neon", "name": "Neon Rare", "tier": 33, "odds": 400, "slot": "rare",
 //                     "nameInk": "colour", "nameColour": "#40FFE0", "artFoil": "holo", "frameFoil": "rainbow",
-//                     "regions": ["attribute", "stars", "border"], "coating": "sparkle" } ] }
+//                     "regions": ["attribute", "stars", "border"], "coating": "sparkle", "art": "broken" } ] }
 // Names for the numbers: see the k*Names tables in Rarity.cpp.
 namespace Rarity
 {
@@ -31,6 +31,16 @@ namespace Rarity
     enum Region : int32_t { RegAttribute = 1, RegStars = 2, RegArtBorder = 4, RegEdge = 8, RegTextBorder = 16, RegWholeFrame = 32, RegNameBox = 64 };
     enum Mark : int32_t { MarkNone, Mark20th, Mark25th, Mark10000 };
     enum class Slot { None, Rare, Any };     // which pack slots can roll it
+    // The card's own picture for this rarity, from the content folders' cardart\<cardId>.<style>.png (or .jpg), when one is there:
+    //   alt       another artwork in the normal frame
+    //   broken    the whole card as one picture, the art breaking out of a frame painted into it (Over Rush; Master Duel's 512 x 1024
+    //             card pictures); the game's frame is not drawn, the text goes on top
+    //   full      the art covers the whole card with no frame (Full Over Rush); the game's frame is drawn see-through over it
+    //   extended  the art runs over the frame's art border (Grand Master); drawn as full
+    //   printed   a scan of the printed card, text and all (an extended-art print with no text-free picture): shown as it is, the game
+    //             draws nothing over it
+    // Without a picture the card is drawn as usual.
+    enum ArtStyle : int32_t { ArtNormal, ArtAlt, ArtBroken, ArtFull, ArtExtended, ArtPrinted };
 
     struct Def
     {
@@ -50,7 +60,8 @@ namespace Rarity
         float CoatStrength = 1.0f;
         float Desaturate = 0.0f;
         int32_t Watermark = MarkNone;
-        std::string Note;                    // e.g. "the artwork leaves its frame on real cards (needs alternative art)"
+        int32_t Art = ArtNormal;
+        std::string Note;                   // e.g. "the artwork leaves its frame on real cards (needs alternative art)"
     };
 
     // The catalogue: the built-in rarities with rarities.json applied (read once, at the first call). Sorted by id.

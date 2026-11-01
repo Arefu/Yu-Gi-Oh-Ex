@@ -1450,6 +1450,10 @@ bool __fastcall Hook_Get_IllustrationData(int64_t a1, uint16_t konamiId, void** 
 {
     using Get_IllustrationData_t = bool(__fastcall*)(int64_t, uint16_t, void**, size_t*);
 
+    // A card face being built with the card's own picture for its rarity (Core's full art / broken frame) gets that picture first.
+    if (Core::Load() && Core::Functions().GetFaceArt && Core::Functions().GetFaceArt(konamiId, buffer, size))
+        return true;
+
     // If `konamiId` is currently a borrowed id for a duel (see the duel-session remap in Card.h), the caller
     // wants the REAL custom card's art, not whatever the real vanilla card at that borrowed slot normally
     // has - ExtraLoadIDs only knows custom ids, so without this it always falls through to the vanilla loader

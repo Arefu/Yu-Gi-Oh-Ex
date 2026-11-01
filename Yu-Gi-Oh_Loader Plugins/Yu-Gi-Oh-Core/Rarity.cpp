@@ -20,6 +20,7 @@ namespace
                                        "reliefGold", "rainbow" };
     const char* const kCoatNames[] = { "none", "parallel", "duelTerminal", "millennium", "kaibaCorp", "starfoil", "mosaic", "shatterfoil", "crisscross", "sparkle" };
     const char* const kMarkNames[] = { "none", "20th", "25th", "10000" };
+    const char* const kArtNames[] = { "normal", "alt", "broken", "full", "extended", "printed" };
     const std::pair<const char*, int32_t> kRegionNames[] = { { "attribute", RegAttribute }, { "stars", RegStars }, { "artBorder", RegArtBorder },
         { "edge", RegEdge }, { "border", RegEdge }, { "textBorder", RegTextBorder }, { "wholeFrame", RegWholeFrame }, { "nameBox", RegNameBox } };
 
@@ -129,8 +130,13 @@ namespace
         v[0].Fallback = true;                              // a rare-slot card that rolls nothing rarer is a Rare (silver name)
         v[51].NameColour[0] = 0.25f; v[51].NameColour[1] = 0.55f; v[51].NameColour[2] = 1.0f;   // Colorful: blue by default
         for (Def& d : v)
+        {
             if (d.Coating == CoatParallel || d.Coating == CoatDuelTerminal)
                 d.CoatStrength = 0.8f;
+            if (d.Key == "over-rush") d.Art = ArtBroken;          // the art leaves its frame
+            if (d.Key == "full-over-rush") d.Art = ArtFull;       // the art covers the whole card
+            if (d.Key == "grand-master") d.Art = ArtExtended;     // extended art
+        }
         return v;
     }
 
@@ -170,6 +176,7 @@ namespace
         if (entry.contains("frameFoil")) d->FrameFoil = Lookup(kFoilNames, entry["frameFoil"], d->FrameFoil);
         if (entry.contains("coating")) d->Coating = Lookup(kCoatNames, entry["coating"], d->Coating);
         if (entry.contains("watermark")) d->Watermark = Lookup(kMarkNames, entry["watermark"], d->Watermark);
+        if (entry.contains("art")) d->Art = Lookup(kArtNames, entry["art"], d->Art);
         if (entry.contains("desaturate") && entry["desaturate"].is_number()) d->Desaturate = std::clamp(entry["desaturate"].get<float>(), 0.0f, 1.0f);
         if (entry.contains("coatStrength") && entry["coatStrength"].is_number()) d->CoatStrength = std::clamp(entry["coatStrength"].get<float>(), 0.0f, 2.0f);
         if (entry.contains("regions") && entry["regions"].is_array())
