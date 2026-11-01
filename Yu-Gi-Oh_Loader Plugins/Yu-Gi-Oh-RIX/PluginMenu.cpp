@@ -346,14 +346,8 @@ namespace
         Refresh(true);
     }
 
-    // The game closes itself if it has not within a few seconds of being asked, so a restart never hangs on something else.
-    DWORD WINAPI ForceExit(LPVOID)
-    {
-        Sleep(4000);
-        ExitProcess(0);
-    }
-
-    // Runs the loader again (it waits for this process to end first), then closes the game.
+    // Runs the loader again (it waits for this process to end first), then closes the game at once. Not through the game's own quit request:
+    // the player already said yes to the restart, so no second "quit" box (the plugin list is already in Config.ini).
     void RestartGame()
     {
         char loader[MAX_PATH] = {};
@@ -376,8 +370,7 @@ namespace
         CloseHandle(info.hThread);
 
         Logger::WriteLog("Restarting the game for the plugin changes", MODULE_NAME, 0);
-        YGO::RIX::RequestQuit(YGO::RIX::GetGlobalInstance());
-        CloseHandle(CreateThread(nullptr, 0, ForceExit, nullptr, 0, nullptr));
+        ExitProcess(0);
     }
 
     void* g_MainScreen = nullptr;   // the main menu the list was left from

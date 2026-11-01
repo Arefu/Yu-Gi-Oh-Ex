@@ -41,12 +41,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
         }
         Logger::WriteLog(std::format("Running from: {}", Path), MODULE_NAME, 0);
 
+        // No engine: an error in the console (no message box), and the game runs on without Effects.
         if (!MasterDuelEngineLoaded())
         {
-            Logger::WriteLog("Effects can't load: Core's Master Duel engine is off. Set [Yu-Gi-Oh-Core] MasterDuelEngine=1 and put duel.dll in "
-                "Plugins\\Yu-Gi-Oh-Core.", MODULE_NAME, 2);
-            MessageBoxA(NULL, "Effects can't load: Core's Master Duel engine is off.\nSet MasterDuelEngine=1 under [Yu-Gi-Oh-Core] in Config.ini.",
-                "Yu-Gi-Oh-Effects", MB_ICONERROR);
+            Logger::WriteLog("Effects not loaded: it needs Core's Master Duel engine. Switch on the \"Master Duel Engine\" mod in the Mod Manager "
+                "(or set [Yu-Gi-Oh-Core] MasterDuelEngine=1 with duel.dll in Plugins\\Yu-Gi-Oh-Core).", MODULE_NAME, 2);
             break;
         }
 

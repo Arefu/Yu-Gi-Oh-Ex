@@ -106,6 +106,10 @@ constexpr uint32_t kAtkDefCombinedFontId = 35;
 constexpr uint32_t kLargeAtkDefFontId = 36;
 constexpr float kAtkDefNativeSize = 18.0f;
 static bool kUseLargeAtkDefFont = true;
+// LargeFontScale: how much the large font's numbers are scaled (1 = its native 32 px). Above 1 only stays sharp with a higher-resolution
+// atlas that keeps the same .fbin (docs/CardRendering.md "Fonts", way 2), e.g. the 8x FONT_ID_CARD_ATKDEF_SCALE.png the Anime Frames
+// mod brings; AtkTextScale / DefTextScale are for the 18 px font only.
+static float kLargeFontScale = 1.0f;
 constexpr uint32_t kFontSentinel = 0xFFFFFFFFu;
 
 using fn_sub_1408795A0 = void(__fastcall*)(void*, float, float, float, float, float, float, float, float, int, int);
@@ -571,10 +575,11 @@ extern "C" void* Hook_sub_140877EC0(void* out, float x, float y, float z)
 
     void* result = orig_sub_140877EC0(out, tx, ty, z);
 
-    // Fonts are plain bitmaps at one pixel size (see docs/CardRendering.md), so any scale above 1 blurs them. With the 32 px font the
-    // numbers are drawn at its native size, unscaled; AtkTextScale / DefTextScale only apply to the 18 px fonts.
+    // Fonts are plain bitmaps at one pixel size (see docs/CardRendering.md), so any scale above 1 blurs them unless the atlas has the
+    // pixels. With the 32 px font the numbers use LargeFontScale (1 = native size; more with a higher-resolution atlas); AtkTextScale /
+    // DefTextScale only apply to the 18 px fonts.
     if (UseLargeAtkDefFont() && !HasAtkDefLabels())
-        scale = 1.0f;
+        scale = kLargeFontScale;
 
     if (scale != 1.0f)
     {
@@ -676,6 +681,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         if (cfgEnd != cfgBuf) kCustomSTIconY = vCustomSTIconY;
 
         kUseLargeAtkDefFont = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "UseLargeAtkDefFont", 1, ".\\Config.ini") != 0;
+        GetPrivateProfileStringA("Yu-Gi-Oh-AnimeCards", "LargeFontScale", "1", cfgBuf, sizeof(cfgBuf), ".\\Config.ini");
+        cfgEnd = nullptr; float vLargeFontScale = std::strtof(cfgBuf, &cfgEnd);
+        if (cfgEnd != cfgBuf && vLargeFontScale > 0.1f && vLargeFontScale <= 8.0f) kLargeFontScale = vLargeFontScale;
         kHideLevelBadge = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "HideLevelBadge", 1, ".\\Config.ini");
         kSpellTrapAttribute = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "SpellTrapAttribute", 0, ".\\Config.ini") != 0;
         kStarsAlignRight = GetPrivateProfileIntA("Yu-Gi-Oh-AnimeCards", "StarsAlign", 0, ".\\Config.ini") == 1;

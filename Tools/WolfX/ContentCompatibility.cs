@@ -30,6 +30,8 @@ namespace WolfX
                 var checkedPlugins = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
                 void CheckPlugin(string plugin)
                 {
+                    int slash = plugin.IndexOfAny(['/', '\\']);   // "Plugin/Setting[=value]": the setting is switched on by the loader
+                    if (slash >= 0) plugin = plugin[..slash].Trim();
                     plugin = plugin.EndsWith(".dll", StringComparison.OrdinalIgnoreCase) ? plugin[..^4] : plugin;
                     if (!checkedPlugins.Add(plugin)) return;
                     if (!dlls.TryGetValue(plugin, out string? dll))

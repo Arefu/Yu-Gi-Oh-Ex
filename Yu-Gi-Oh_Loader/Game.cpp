@@ -2,6 +2,7 @@
 #include <iostream>
 #include <Shlwapi.h>
 #include <detours.h>
+#include <set>
 #include <string>
 #include <vector>
 #include <sstream>
@@ -266,8 +267,60 @@ void Game::LookForPlugins()
 
     // Content made with WolfX (Yu-Gi-Oh-Ex\content.json) switches on the plugins it needs, and says which are not installed. So do the
     // mods that are on (<game>\Mods, Yu-Gi-Oh-Mods.h): their own content.json and the plugins their mod.json "requires" (with a link).
-    std::vector<std::string> missing = YGO::Manifest::ApplyContent(plugins, YGO::Manifest::ReadContent(gGamePath));
-    for (const YGO::Mods::Mod& mod : YGO::Mods::Active(std::filesystem::path(gGamePath)))
+    // Settings a plugin, content or mod requires ("Plugin/Setting", Yu-Gi-Oh-Manifest.h) are read the way the game will read them: a mod
+    // that is on and sets the key in its own Config.ini wins (later mods first, Core's ModConfig.h), unless [Yu-Gi-Oh-Core] ModConfig=0.
+    const std::vector<YGO::Mods::Mod> activeMods = YGO::Mods::Active(std::filesystem::path(gGamePath));
+    const bool modConfig = GetPrivateProfileIntA(Section, "ModConfig", 1, ConfigPath) != 0;
+    const std::string configPath = ConfigPath;
+    const YGO::Manifest::SettingReader readSetting = [&activeMods, modConfig, configPath](const std::string& section, const std::string& key, const std::string& fallback)
+    {
+        if (modConfig)
+        {
+            for (auto mod = activeMods.rbegin(); mod != activeMods.rend(); ++mod)
+            {
+                const std::string modIni = (mod->Folder / L"Config.ini").string();
+                const std::string value = YGO::Manifest::ReadIni(modIni, section, key, "\x01");
+                if (value != "\x01")
+                    return value;
+            }
+        }
+        return YGO::Manifest::ReadIni(configPath, section, key, fallback);
+    };
+
+    // Plugins switched on only because content or a mod needed them ([Yu-Gi-Oh-Core] SwitchedOnFor) start off here, so they go off
+    // again once nothing needs them (the mod was switched off); the ones still needed are switched back on just below.
+    const auto Lower = [](std::string s) { for (char& c : s) c = static_cast<char>(tolower(static_cast<unsigned char>(c))); return s; };
+    std::set<std::string> switchedOnFor;
+    {
+        char list[2048] = {};
+        GetPrivateProfileStringA(Section, "SwitchedOnFor", "", list, sizeof(list), ConfigPath);
+        std::string item;
+        for (const char* p = list;; ++p)
+        {
+            if (*p == ',' || *p == '\0')
+            {
+                if (!item.empty())
+                    switchedOnFor.insert(Lower(item));
+                item.clear();
+                if (*p == '\0')
+                    break;
+            }
+            else if (*p != ' ')
+                item += *p;
+        }
+    }
+    std::set<std::string> wasOn;
+    for (YGO::Manifest::Plugin& plugin : plugins)
+    {
+        if (switchedOnFor.count(Lower(plugin.Key)) && !plugin.Details.Enforced)
+            plugin.Enabled = false;
+        if (plugin.Enabled)
+            wasOn.insert(Lower(plugin.Key));
+    }
+
+    std::vector<YGO::Manifest::SettingNeed> neededSettings;
+    std::vector<std::string> missing = YGO::Manifest::ApplyContent(plugins, YGO::Manifest::ReadContent(gGamePath), &neededSettings);
+    for (const YGO::Mods::Mod& mod : activeMods)
     {
         std::vector<YGO::Manifest::ContentNeed> needs = YGO::Manifest::ReadContentFile((mod.Folder / L"Yu-Gi-Oh-Ex" / L"content.json").wstring());
         for (YGO::Manifest::ContentNeed& need : needs)
@@ -276,14 +329,29 @@ void Game::LookForPlugins()
         for (const YGO::Mods::Requirement& need : mod.Requires)
         {
             if (const YGO::Manifest::Plugin* current = YGO::Manifest::Current(plugins, need.Plugin))   // or the plugin that replaced it
+            {
                 required.Plugins.push_back(current->Name);
+                if (!need.Setting.empty())
+                    required.Settings.push_back({ current->Name, need.Setting, need.Value });
+            }
             else
                 missing.push_back(required.File + " needs " + need.Plugin + (need.Url.empty() ? "" : " - get it from " + need.Url));
         }
         needs.push_back(std::move(required));
-        for (std::string& line : YGO::Manifest::ApplyContent(plugins, needs))
+        for (std::string& line : YGO::Manifest::ApplyContent(plugins, needs, &neededSettings))
             missing.push_back(std::move(line));
     }
+    // what content and mods switched on this time is remembered, to switch it off again when they stop needing it
+    {
+        std::string list;
+        for (const YGO::Manifest::Plugin& plugin : plugins)
+            if (plugin.Enabled && !wasOn.count(Lower(plugin.Key)))
+                list += (list.empty() ? "" : ",") + plugin.Key;
+        WritePrivateProfileStringA(Section, "SwitchedOnFor", list.empty() ? nullptr : list.c_str(), ConfigPath);
+    }
+    // ... and the settings that content, those mods and the plugins they switched on require are switched on in Config.ini.
+    for (const std::string& line : YGO::Manifest::EnableSettings(plugins, neededSettings, readSetting, configPath))
+        OutputDebugStringA(("Yu-Gi-Oh_Loader: Config.ini " + line + " (required by content, a mod or a plugin it switched on)\n").c_str());
     if (!missing.empty())
     {
         std::string text = "Some content (the Yu-Gi-Oh-Ex folder or a mod) needs plugins that are not installed, so it won't show up in the game:\n\n";
@@ -292,7 +360,7 @@ void Game::LookForPlugins()
         text += "\nPut those plugins in the Plugins folder, or switch the mod off in the Mod Manager.";
         MessageBoxA(nullptr, text.c_str(), "Yu-Gi-Oh-Ex", MB_OK | MB_ICONWARNING);
     }
-    YGO::Manifest::Resolve(plugins);
+    YGO::Manifest::Resolve(plugins, readSetting);
 
     std::string leftovers, leftoverNames;
     for (const YGO::Manifest::Plugin& plugin : plugins)

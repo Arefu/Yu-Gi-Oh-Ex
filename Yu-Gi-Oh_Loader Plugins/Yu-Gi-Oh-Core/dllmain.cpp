@@ -20,6 +20,7 @@
 #include "Tweaks.h"
 #include "SaveScreen.h"
 #include "SaveSlots.h"
+#include "Shiny.h"
 #include "UserDecks.h"
 #include "Yu-Gi-Oh-Core.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
@@ -77,6 +78,18 @@ extern "C"
 
     CORE_API int __cdecl Core_EngineToDisplay(int EngineId) { return EngineId > 0 && EngineId <= 0xFFFF ? MasterDuel::ToDisplay(static_cast<uint16_t>(EngineId)) : EngineId; }
 
+    CORE_API int __cdecl Core_GetCardRarity(int CardId) { return CardId >= 0 && CardId <= 0xFFFF ? Shiny::ShownRarity(static_cast<uint16_t>(CardId)) : 0; }
+
+    CORE_API int __cdecl Core_GetCardRarityCount(int CardId, int RarityId)
+    {
+        return CardId >= 0 && CardId <= 0xFFFF && RarityId > 0 && RarityId <= 0xFF ? Shiny::Count(static_cast<uint16_t>(CardId), static_cast<uint8_t>(RarityId)) : 0;
+    }
+
+    CORE_API int __cdecl Core_AddCardRarity(int CardId, int RarityId, int Count)
+    {
+        return CardId >= 0 && CardId <= 0xFFFF && RarityId > 0 && RarityId <= 0xFF ? Shiny::Add(static_cast<uint16_t>(CardId), static_cast<uint8_t>(RarityId), Count) : 0;
+    }
+
     CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size)
     {
         const std::u8string name = Save::CurrentSavePath().filename().u8string();
@@ -117,6 +130,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 
         // Credits: the built-in thanks, Yu-Gi-Oh-Ex\credits.json, what plugins add and the plugin list, then the game's own credits (Credits.h).
         Credits::Install();
+
+        // Shiny cards: real-card rarities rolled in packs, kept in the save, drawn as foil (Shiny.h; Shiny=1). Before BulkPacks: its pack
+        // hook must be the inner one, so the bulk job's per-pack calls get their rarities rolled too.
+        Shiny::Install();
 
         // Limit breakers no store plugin owns: booster packs from Yu-Gi-Oh-Ex/packs.json (new packs in the game's free slots, new shop rows).
         Packs::Install();

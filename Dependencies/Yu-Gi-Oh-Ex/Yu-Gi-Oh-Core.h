@@ -140,6 +140,15 @@ CORE_API int __cdecl Core_EngineLend(int DisplayId, int EngineId, int PropsGameI
    version 1 like AddCredits: NULL with an older Core. */
 CORE_API int __cdecl Core_EngineToDisplay(int EngineId);
 
+/* Card rarities (Core Shiny.h, docs/Shiny.md): the save keeps how many copies of each rarity (Rarity.h ids, 1 = Rare .. 57 built in,
+   128-255 from rarities.json) the player owns per Konami id. GetCardRarity = the rarity the card is shown with (the highest tier owned,
+   0 = none); GetCardRarityCount = copies of one rarity; AddCardRarity adds (or with a negative Count removes) copies and returns the new
+   count, for prizes, a shop or a trade page. They work whether or not [Yu-Gi-Oh-Core] Shiny is on (it only decides whether packs roll
+   rarities and whether they are drawn). Added after version 1 like AddCredits: NULL with an older Core. */
+CORE_API int __cdecl Core_GetCardRarity(int CardId);
+CORE_API int __cdecl Core_GetCardRarityCount(int CardId, int RarityId);
+CORE_API int __cdecl Core_AddCardRarity(int CardId, int RarityId, int Count);
+
 #ifdef __cplusplus
 }
 
@@ -170,6 +179,9 @@ namespace Core
         void(__cdecl* EngineSetDisplayId)(int, int) = nullptr;                       // NULL with a Core that predates it
         int(__cdecl* EngineLend)(int, int, int) = nullptr;                           // NULL with a Core that predates it
         int(__cdecl* EngineToDisplay)(int) = nullptr;                                // NULL with a Core that predates it
+        int(__cdecl* GetCardRarity)(int) = nullptr;                                  // NULL with a Core that predates it
+        int(__cdecl* GetCardRarityCount)(int, int) = nullptr;                        // NULL with a Core that predates it
+        int(__cdecl* AddCardRarity)(int, int, int) = nullptr;                        // NULL with a Core that predates it
     };
 
     inline Api& Functions()
@@ -217,6 +229,9 @@ namespace Core
         CORE_BIND(EngineSetDisplayId);
         CORE_BIND(EngineLend);
         CORE_BIND(EngineToDisplay);
+        CORE_BIND(GetCardRarity);
+        CORE_BIND(GetCardRarityCount);
+        CORE_BIND(AddCardRarity);
 #undef CORE_BIND
         return true;
     }

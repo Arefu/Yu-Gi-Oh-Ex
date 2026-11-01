@@ -1,11 +1,12 @@
 {
   "title": "Core",
-  "version": "1.3.17",
+  "version": "1.3.19",
   "description": "The save, plugin list, game data loading, the crash log, small game tweaks and limit breakers (booster packs from packs.json, extra user deck slots: as many as the save uses + 256). Always on.",
   "enforced": true,
   "content": [
     "credits.json",
-    "packs.json"
+    "packs.json",
+    "rarities.json"
   ],
   "settings": [
     {
@@ -17,6 +18,51 @@
       "min": 1,
       "max": 9999,
       "step": 1
+    },
+    {
+      "key": "Shiny",
+      "title": "Shiny cards",
+      "kind": "toggle",
+      "default": "0",
+      "help": "Real-card rarities: cards pulled from booster packs can come as Rare, Super, Ultra, Secret, Prismatic Secret, Ultimate, Ghost, Gold, Platinum, Collector's, Starlight, Quarter Century Secret, Parallel, Starfoil, Mosaic, Shatterfoil and more (every printed rarity is in Yu-Gi-Oh-Ex\\rarities.json's built-in list). They are kept in your save, and the cards are drawn with animated foil, gold or silver names and so on. A card shows the rarest one you own. Off = no rolls and no foil; rarities you pulled stay in the save. Restart after changing it."
+    },
+    {
+      "key": "ShinyOddsScale",
+      "title": "Shiny odds (%)",
+      "kind": "number",
+      "default": "100",
+      "help": "Percent of every rarity's odds: 100 = as listed (Super 1 in 5 rare-slot cards, Ultra 1 in 12, Secret 1 in 31, Starlight 1 in 576, ...), 50 = twice as many shinies, 200 = half as many. Restart after changing it.",
+      "min": 1,
+      "max": 10000,
+      "step": 10
+    },
+    {
+      "key": "ShinyStrength",
+      "title": "Shiny strength",
+      "kind": "text",
+      "default": "1",
+      "help": "How strongly the foil is drawn, 0 to 2. Restart after changing it."
+    },
+    {
+      "key": "ShinySpeed",
+      "title": "Shiny speed",
+      "kind": "text",
+      "default": "1",
+      "help": "How fast the foil moves (1 = normal, 0 = still). Restart after changing it."
+    },
+    {
+      "key": "ShinyMouseTilt",
+      "title": "Shiny follows the mouse",
+      "kind": "toggle",
+      "default": "1",
+      "help": "The light on the foil follows the mouse pointer, as if you were tilting the card. Off = it sweeps slowly by itself. Restart after changing it."
+    },
+    {
+      "key": "ShinyPreview",
+      "title": "Shiny preview",
+      "kind": "text",
+      "default": "",
+      "help": "For trying rarities out: draw EVERY card as this rarity (its key, e.g. starlight, quarter-century-secret, gold, ultimate, ghost, or its name), or cycle = every rarity in turn, 3 seconds each. Empty = off (cards show the rarities you own). Changes nothing in the save. Restart after changing it."
     },
     {
       "key": "DuelFormat",

@@ -93,7 +93,10 @@ namespace PluginManifest
             var known = _plugins.Where(p => p != plugin).Select(p => p.Name).ToList();
             foreach (var name in known)
                 requiresList.Items.Add(name, manifest.Requires.Contains(name, StringComparer.OrdinalIgnoreCase));
-            foreach (var missing in manifest.Requires.Where(r => !known.Contains(r, StringComparer.OrdinalIgnoreCase)))
+            // "Plugin/Setting[=value]" entries (a setting of that plugin that has to be on) are kept as they are; untick one to drop it.
+            foreach (var setting in manifest.Requires.Where(r => r.IndexOfAny(['/', '\\']) >= 0))
+                requiresList.Items.Add(setting + "   (setting)", true);
+            foreach (var missing in manifest.Requires.Where(r => r.IndexOfAny(['/', '\\']) < 0 && !known.Contains(r, StringComparer.OrdinalIgnoreCase)))
                 requiresList.Items.Add(missing + "   (not installed)", true);
 
             // The DLLs that belong to a plugin are in the same folder as it.
@@ -171,8 +174,9 @@ namespace PluginManifest
             var path = new List<string> { start };
             bool Walk(string name, IEnumerable<string> requires)
             {
-                foreach (var next in requires)
+                foreach (var entry in requires)
                 {
+                    var next = entry.IndexOfAny(['/', '\\']) is int slash and >= 0 ? entry[..slash] : entry;
                     if (string.Equals(next, start, StringComparison.OrdinalIgnoreCase)) { path.Add(next); return true; }
                     if (path.Contains(next, StringComparer.OrdinalIgnoreCase)) continue;
                     var file = _plugins.FirstOrDefault(p => string.Equals(p.Name, next, StringComparison.OrdinalIgnoreCase));

@@ -1,5 +1,5 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "title": "Anime Cards",
   "description": "Makes the anime style cards draw properly.",
   "settings": [
@@ -43,6 +43,13 @@
       "default": "1",
       "help": "Draw ATK/DEF with the game's larger (32 px) number font, so the scaled numbers stay sharper.",
       "hidden": true
+    },
+    {
+      "key": "LargeFontScale",
+      "title": "Large font scale",
+      "kind": "text",
+      "default": "1",
+      "help": "How big ATK/DEF are drawn with the large font (1 = its own 32 px). Above 1 stays sharp only with a higher-resolution number font (fontbin\\FONT_ID_CARD_ATKDEF_SCALE.png, e.g. the Anime Frames mod's 8x one). AtkTextScale / DefTextScale are for the small font."
     },
     {
       "key": "CustomAtkX",

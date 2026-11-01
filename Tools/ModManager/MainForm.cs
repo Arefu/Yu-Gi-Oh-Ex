@@ -27,7 +27,7 @@ namespace ModManager
         private readonly FlowLayoutPanel _details = new() { Dock = DockStyle.Fill, FlowDirection = FlowDirection.TopDown, WrapContents = false, AutoScroll = true, Padding = new Padding(8) };
         private readonly ListView _problems = new() { Dock = DockStyle.Fill, View = View.Details, FullRowSelect = true, MultiSelect = false };
         private readonly ToolStripStatusLabel _status = new() { Spring = true, TextAlign = ContentAlignment.MiddleLeft };
-        private readonly Button _up = Make("Move up"), _down = Make("Move down"), _install = Make("Install..."), _remove = Make("Remove"),
+        private readonly Button _up = Make("Move up"), _down = Make("Move down"), _install = Make("Install..."), _installFolder = Make("Install folder..."), _remove = Make("Remove"),
             _open = Make("Open folder"), _export = Make("Export .zip..."), _create = Make("Create mod..."), _refresh = Make("Refresh"), _play = Make("Play");
 
         private static Button Make(string text) => new() { Text = text, Width = 120, Height = 30, Margin = new Padding(0, 0, 0, 6) };
@@ -58,7 +58,7 @@ namespace ModManager
             top.Controls.AddRange([change, _gameLabel]);
 
             var buttons = new FlowLayoutPanel { Dock = DockStyle.Right, FlowDirection = FlowDirection.TopDown, Width = 136, Padding = new Padding(8, 0, 8, 0) };
-            buttons.Controls.AddRange([_up, _down, _install, _remove, _open, _export, _create, _refresh, _play]);
+            buttons.Controls.AddRange([_up, _down, _install, _installFolder, _remove, _open, _export, _create, _refresh, _play]);
 
             var listArea = new Panel { Dock = DockStyle.Fill };
             listArea.Controls.Add(_list);
@@ -93,6 +93,7 @@ namespace ModManager
             _up.Click += (_, _) => MoveSelected(-1);
             _down.Click += (_, _) => MoveSelected(1);
             _install.Click += (_, _) => PickAndInstall();
+            _installFolder.Click += (_, _) => PickFolderAndInstall();
             _remove.Click += (_, _) => RemoveSelected();
             _open.Click += (_, _) => { if (Selected() is Mod mod) Open(mod.IsLocal ? Path.Combine(mod.Folder, "Yu-Gi-Oh-Ex") : mod.Folder); };
             _export.Click += (_, _) => ExportSelected();
@@ -399,6 +400,8 @@ namespace ModManager
                         bool have = installed.Contains(need.Plugin);
                         bool brings = bundled.Contains(need.Plugin, StringComparer.OrdinalIgnoreCase);
                         string state = have ? "installed" : brings ? "comes with this mod" : ModLibrary.IsStock(need.Plugin) ? "missing (part of Yu-Gi-Oh-Ex)" : "missing";
+                        if (need.Setting.Length > 0)
+                            state += $", with {need.Setting} {(need.Value.Length > 0 ? "set to " + need.Value : "on")} (switched on when the game starts)";
                         Add($"{(have || brings ? "✓" : "✗")} {need.Plugin}: {state}", color: have || brings ? Color.SeaGreen : Color.Firebrick).Margin = new Padding(12, 0, 0, 2);
                         if (!have && need.Url.Length > 0)
                             Link("Get " + need.Plugin, need.Url);
@@ -415,16 +418,19 @@ namespace ModManager
 
         // ---- install, remove, export, create, play ----
 
+        // a mod .zip, or an extracted mod folder
+        private static bool Installable(string path) => path.EndsWith(".zip", StringComparison.OrdinalIgnoreCase) || Directory.Exists(path);
+
         private void Drag_Enter(object? sender, DragEventArgs e)
         {
-            if (e.Data?.GetData(DataFormats.FileDrop) is string[] files && files.Any(f => f.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)))
+            if (e.Data?.GetData(DataFormats.FileDrop) is string[] files && files.Any(Installable))
                 e.Effect = DragDropEffects.Copy;
         }
 
         private void Drag_Drop(object? sender, DragEventArgs e)
         {
             if (e.Data?.GetData(DataFormats.FileDrop) is string[] files)
-                foreach (string file in files.Where(f => f.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)))
+                foreach (string file in files.Where(Installable))
                     Install(file);
         }
 
@@ -434,6 +440,14 @@ namespace ModManager
             if (dialog.ShowDialog(this) == DialogResult.OK)
                 foreach (string file in dialog.FileNames)
                     Install(file);
+        }
+
+        // An extracted mod (the folder with mod.json, Yu-Gi-Oh-Ex, YGO_2020 ... in it): copied in, the folder itself is left as it is.
+        private void PickFolderAndInstall()
+        {
+            using var dialog = new FolderBrowserDialog { Description = "Pick an extracted mod's folder", UseDescriptionForTitle = true };
+            if (dialog.ShowDialog(this) == DialogResult.OK)
+                Install(dialog.SelectedPath);
         }
 
         private void Install(string zip)

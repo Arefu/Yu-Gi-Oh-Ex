@@ -68,6 +68,8 @@ namespace
         return reinterpret_cast<ULONG_PTR>(blob) >= low && reinterpret_cast<ULONG_PTR>(blob) < high;
     }
 
+    std::vector<void(__cdecl*)(bool)> g_TakeListeners;
+
     // g_Table takes over a live blob: its low part from the blob, its high part from the save that was read (or none: a new profile).
     void TakeBlob(unsigned char* blob, bool fromSave)
     {
@@ -77,6 +79,8 @@ namespace
             LoadHigh();
         else
             std::memset(g_Table.data() + CardTable::SavedSize, 0, CardTable::Size - CardTable::SavedSize);
+        for (auto listener : g_TakeListeners)
+            listener(fromSave);
     }
 
     // Changes made through g_Table go back into its blob (before it is replaced, and before it is saved).
@@ -150,6 +154,13 @@ namespace
         std::memcpy(blob + kBlobTable, g_Table.data(), CardTable::SavedSize);
         return 1;
     }
+}
+
+void CardTable::AddTakeListener(void(__cdecl* listener)(bool fromSave))
+{
+    std::lock_guard<std::mutex> guard(g_Lock);
+    if (listener)
+        g_TakeListeners.push_back(listener);
 }
 
 bool CardTable::Install()

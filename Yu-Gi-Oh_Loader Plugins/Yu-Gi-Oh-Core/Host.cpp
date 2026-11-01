@@ -293,12 +293,48 @@ namespace Host
         Cascade(*root, enabled, visited, changed);
 
         const std::string ini = IniPath();
+        // switched by hand: no longer one the loader switched on for a mod (SwitchedOnFor, Game.cpp), so it stays as the player set it
+        {
+            char list[2048] = {};
+            GetPrivateProfileStringA(kSection, "SwitchedOnFor", "", list, sizeof(list), ini.c_str());
+            std::string kept, item;
+            for (const char* p = list;; ++p)
+            {
+                if (*p == ',' || *p == '\0')
+                {
+                    if (!item.empty() && std::none_of(changed.begin(), changed.end(), [&](const Runtime* r) { return Lower(r->P.Key) == Lower(item); }))
+                        kept += (kept.empty() ? "" : ",") + item;
+                    item.clear();
+                    if (*p == '\0')
+                        break;
+                }
+                else if (*p != ' ')
+                    item += *p;
+            }
+            if (list[0])
+                WritePrivateProfileStringA(kSection, "SwitchedOnFor", kept.empty() ? nullptr : kept.c_str(), ini.c_str());
+        }
+        std::vector<YGO::Manifest::SettingNeed> settings;
         for (Runtime* runtime : changed)
         {
             WritePrivateProfileStringA(kSection, runtime->P.Key.c_str(), runtime->P.Enabled ? "1" : "0", ini.c_str());
             Logger::WriteLog(std::format("{} switched {}", runtime->P.Name, runtime->P.Enabled ? "on" : "off"), MODULE_NAME, 0);
+            if (runtime->P.Enabled)
+                settings.insert(settings.end(), runtime->P.Details.RequiredSettings.begin(), runtime->P.Details.RequiredSettings.end());
         }
-        const int count = static_cast<int>(changed.size());
+        // Switching a plugin on also switches on the settings it requires ("Plugin/Setting" in its manifest's "requires").
+        if (enabled)
+            settings.insert(settings.end(), root->P.Details.RequiredSettings.begin(), root->P.Details.RequiredSettings.end());
+        if (!settings.empty())
+        {
+            std::vector<Plugin> plain;
+            for (const Runtime& runtime : g_List)
+                plain.push_back(runtime.P);
+            const auto reader = [&ini](const std::string& section, const std::string& key, const std::string& fallback) { return YGO::Manifest::ReadIni(ini, section, key, fallback); };
+            for (const std::string& line : YGO::Manifest::EnableSettings(plain, settings, reader, ini))
+                Logger::WriteLog(std::format("Config.ini {} (required by a plugin switched on)", line), MODULE_NAME, 0);
+        }
+        const int count = static_cast<int>(changed.size()) + (settings.empty() ? 0 : 1);
         RefreshLocked();
         return count;
     }

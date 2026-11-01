@@ -42,11 +42,27 @@ A `<DLL name>.json` next to a DLL (`Plugins\Yu-Gi-Oh-Cards.json`, `Plugins\YGO-E
 | `title` | What the plugin list calls it. Default: the DLL's name. |
 | `description` | One short line under it. It does not scroll in the game's box, keep it under about 56 characters. Default: nothing. |
 | `enforced` | Always on; the list shows it as "Always on" and does not switch it. Yu-Gi-Oh-Core and Yu-Gi-Oh-RIX are enforced even without a manifest. |
-| `requires` | DLL names (no `.dll`) that have to be on for this one to load. List **real** dependencies only: Core is always loaded, so a plugin that does not call it does not list it. |
+| `requires` | DLL names (no `.dll`) that have to be on for this one to load. List **real** dependencies only: Core is always loaded, so a plugin that does not call it does not list it. `"Plugin/Setting"` also needs that plugin's Config.ini setting on, `"Plugin/Setting=value"` set to that value (below). |
 | `dlls` | More DLLs (same folder) that belong to this plugin. They have no entry of their own and load with it, just before it. |
 | `content` | The files in `<game>\Yu-Gi-Oh-Ex` this plugin applies (`"cards.json"`, `"pages\\"` for a folder). WolfX reads it to keep `Yu-Gi-Oh-Ex\content.json` up to date, and the loader switches on the plugins that file names (see [WolfXContent.md](WolfXContent.md)). |
 
 | `newSave` | The plugin changes the game so much that it needs a save made with it (an overhaul such as Forbidden Memories). `true` uses the DLL's name as the save tag; a string (`"forbidden-memories"`) names the tag, so several plugins of one overhaul can share it. See below. |
+
+### Required settings
+
+A `requires` entry can name a setting as well as a plugin: `"Yu-Gi-Oh-Core/MasterDuelEngine"` means Core has to be on **and**
+`[Yu-Gi-Oh-Core] MasterDuelEngine` has to be on (anything except empty, `0`, `false`, `off` or `no`). `"Yu-Gi-Oh-Core/DuelFormat=speed"`
+needs that exact value (not case-sensitive).
+
+* The section is the one the required plugin's manifest `settings` gives the key, otherwise the plugin's DLL name. A key that isn't in
+  Config.ini counts as that setting's `default`. A mod that is on and sets the key in its own Config.ini wins, as it does in the game.
+* A plugin whose setting isn't met is **blocked**, the same as one whose plugin is off. The list shows "Not loaded: it needs Master Duel engine
+  (Core) on".
+* Switching the plugin on in the Plugins menu or WolfX (`Core_SetPluginEnabled`) also sets the setting. So does the loader when content.json
+  or a mod switches the plugin on.
+* The same form works in a mod's `mod.json` `requires` and in content.json `plugins`. The loader then sets the setting in Config.ini while the
+  mod is on.
+* The PluginManifest tool shows these entries as "(setting)" rows. Untick a row to drop it.
 
 ### Plugins that need a new save
 

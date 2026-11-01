@@ -51,7 +51,10 @@ made with exactly the tags of the plugins and mods that are on.
 * Files the game writes still go to `<game>\Yu-Gi-Oh-Ex` (`LocalContentFolder`).
 
 `requires` lists plugin DLL names (no `.dll`). A plain name is fine for plugins that come with Yu-Gi-Oh-Ex; give a `url` for anything
-else. The mod's `Yu-Gi-Oh-Ex\content.json` (WolfX writes it) also counts: the plugins it names are needed too.
+else. The mod's `Yu-Gi-Oh-Ex\content.json` (WolfX writes it) also counts: the plugins it names are needed too. `"Plugin/Setting"`
+(or `"Plugin/Setting=value"`) also needs a setting of that plugin, for example `"Yu-Gi-Oh-Core/MasterDuelEngine"`. While the mod is on,
+the loader switches the plugin on and sets the setting in the player's Config.ini
+([PluginManifests.md](PluginManifests.md#required-settings)).
 
 ### Settings (Config.ini)
 
@@ -133,7 +136,9 @@ How a plugin reads its content (instead of `<game>\Yu-Gi-Oh-Ex\<file>`), from `Y
 
 `Tools/ModManager` (`ModManager.exe [--game <folder>] [--create] [mod.zip ...]`):
 
-* **Install** a `.zip` (button, drag it onto the window, or open it with the Mod Manager). Installing a newer copy of a mod keeps its place
+* **Install** a `.zip` (button, drag it onto the window, or open it with the Mod Manager), or an **extracted mod folder**: use **Install folder...**
+  or drag the folder onto the window. The mod's files must be at the top of the folder, or in one folder inside it, the same rule as a zip. The
+  folder is copied, not moved, so you can keep editing your copy and install it again to update. Installing a newer copy of a mod keeps its place
   and on/off state. A mod that brings plugins asks first (plugins are programs that run in the game) and can be installed without them.
 * Tick to switch on/off, **Move up / down** for the order; saved straight away.
 * The selected mod: what it changes, the plugins it needs (installed / missing, with **links** to get them), what clashes.
@@ -143,7 +148,9 @@ How a plugin reads its content (instead of `<game>\Yu-Gi-Oh-Ex\<file>`), from `Y
 * **Export .zip** re-packs an installed mod; **Create mod** packs your own content; **Play** starts `Yu-Gi-Oh_Loader.exe`.
 
 The loader does the same plugin check when the game starts: a mod that is on switches on the plugins it needs, and a message names the
-ones that are missing (with the mod's link).
+ones that are missing (with the mod's link). Plugins switched on only for a mod (or WolfX content) are listed in `[Yu-Gi-Oh-Core]
+SwitchedOnFor`, and switch off again on the next start once nothing needs them. Switching one by hand in the game's plugin list takes it
+off that list, so your choice stays.
 
 ## Binary merges
 

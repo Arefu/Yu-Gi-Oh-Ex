@@ -235,9 +235,10 @@ namespace Wolf.Mods
             };
             foreach (DataGridViewRow row in _requires.Rows)
             {
-                string plugin = ModLibrary.StripDll(row.Cells[0].Value?.ToString()?.Trim() ?? "");
-                if (plugin.Length > 0 && !info.Requires.Any(r => r.Plugin.Equals(plugin, StringComparison.OrdinalIgnoreCase)))
-                    info.Requires.Add(new ModRequirement { Plugin = plugin, Url = row.Cells[1].Value?.ToString()?.Trim() ?? "" });
+                // "Plugin" or "Plugin/Setting[=value]" (a setting of that plugin the mod needs on)
+                var need = ModRequirement.Parse(row.Cells[0].Value?.ToString()?.Trim() ?? "", row.Cells[1].Value?.ToString()?.Trim() ?? "");
+                if (need.Plugin.Length > 0 && !info.Requires.Any(r => r.Text.Equals(need.Text, StringComparison.OrdinalIgnoreCase)))
+                    info.Requires.Add(need);
             }
 
             try

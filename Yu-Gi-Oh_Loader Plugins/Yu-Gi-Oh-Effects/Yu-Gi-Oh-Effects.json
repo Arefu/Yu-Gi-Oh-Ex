@@ -1,7 +1,10 @@
 {
-  "version": "1.3.16",
+  "version": "1.3.17",
   "title": "Effects",
   "description": "Custom card effects, fusion/ritual/synchro/xyz/link rules and game card effect overrides.",
+  "requires": [
+    "Yu-Gi-Oh-Core/MasterDuelEngine"
+  ],
   "content": [
     "effects.json",
     "summoning.json"

@@ -16,4 +16,8 @@ namespace CardTable
     constexpr size_t SavedSize = 20000;       // the part the blob holds
 
     bool Install();
+
+    // Called when the table takes over a live blob: fromSave = a save was read (its extension came with it), false = a new profile.
+    // Runs under the table's lock: a listener must not call back into CardTable. Add listeners before the game reads a save.
+    void AddTakeListener(void(__cdecl* listener)(bool fromSave));
 }

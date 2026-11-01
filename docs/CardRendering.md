@@ -112,6 +112,10 @@ The name colour comes from `g_CardNameColorByFrame[frame]`: white on Spell, Trap
 **Batches 0, 1 and 2 have a fixed vertex count of 6** (constants written at `0x14074F930`, `0x14074FA19`, `0x14074FAFE`), not a count taken from the vertex cursor. Never skip their `AddQuad`: the batch would draw the next 6 vertices instead. Skipping the line quad made batch 2 draw the attribute icon's quad with the white texture (a solid white square). To hide one, emit a zero-area quad.
 
 `CardFace_RenderToTarget` then draws batch by batch (texture, matrix, blend flag) into the target, cleared to 0xFF808080.
+It records on the card-face renderer's own **deferred** D3D11 context (`g_CardFaceRenderer` 0x14332A990, made by
+`Renderer_CreateDeferredContext` 0x1408C7B90), not the immediate one (`g_MainRenderer` 0x14332A3A0). A deferred context's methods are
+different functions, so a hook on the immediate context's `ClearRenderTargetView` never sees a face being drawn: hook the deferred
+context's too (Core `Shiny.cpp` makes a throwaway deferred context at start to find it).
 
 ## What Yu-Gi-Oh-AnimeCards hooks, in these terms
 
@@ -139,6 +143,9 @@ Changes made for the anime frames in `Mods/Anime Frames` (2026-09-29):
   The game lays ATK/DEF out bottom-right (36) and the card text top-left (9), so the same y put the two numbers at different heights. On
   Link monsters the right-hand box (the red one) shows the Link rating. `IsAbilityWrapFont` also checked only the first card-text font.
 * Config keys (`[Yu-Gi-Oh-AnimeCards]`): `CustomAtkX/Y`, `CustomDefX/Y` (centres), `AttributeX/Y`, `LinkAttributeX/Y`, `AttributeSize`.
+  `LargeFontScale` (default 1) scales ATK/DEF when the large font (36) is used. `AtkTextScale` / `DefTextScale` only apply to the 18 px
+  font. Above 1 stays sharp with a higher-resolution atlas and the same `.fbin` (way 2 under "Fonts" below). The Anime Frames mod ships 8x
+  `FONT_ID_CARD_ATKDEF(_SCALE).png` and sets 1.7.
 * The **level badge** (a star or rank icon plus the number, drawn by the duel UI over each card in your hand, not part of the card face) is
   hidden: `DuelCardView_UpdateLevelBadge` (`0x1407C6980`) reads the view's card data (`view+0x30`): `+292` kind (1 level, 2 rank, else
   off), `+284` the number, `+164` the location (zone 13 = hand). The hook sets the kind to 0 for that one call. Config

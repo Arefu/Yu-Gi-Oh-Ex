@@ -21,8 +21,8 @@ namespace ModManager
                     game = args[++i];
                 else if (args[i].Equals("--create", StringComparison.OrdinalIgnoreCase))
                     create = true;
-                else if (args[i].EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
-                    zips.Add(args[i]);
+                else if (args[i].EndsWith(".zip", StringComparison.OrdinalIgnoreCase) || Directory.Exists(args[i]))
+                    zips.Add(args[i]);   // a mod .zip or an extracted mod folder
             }
             Application.Run(new MainForm(game, create, zips));
         }

@@ -19,7 +19,9 @@
           "description": "One line.",
           "details": "Longer text, shown by the Mod Manager.",
           "requires": [ "Yu-Gi-Oh-MoreCards",             plugin DLL names (no .dll) the mod needs ...
-                        { "plugin": "Yu-Gi-Oh-Foo", "url": "https://..." } ]   ... with where to get one that isn't part of Yu-Gi-Oh-Ex
+                        { "plugin": "Yu-Gi-Oh-Foo", "url": "https://..." },   ... with where to get one that isn't part of Yu-Gi-Oh-Ex
+                        "Yu-Gi-Oh-Core/MasterDuelEngine" ]          ... and a setting of it that has to be on ("=value" for a value);
+                                                                   the loader sets it in Config.ini while the mod is on
           "newSave": "tag",                               needs a save made with it
           "exclusive": true                               a clean slate: no other mod, and not <game>\Yu-Gi-Oh-Ex / YGO_2020 / YGO_2020-Ex
         }
@@ -68,6 +70,8 @@ namespace YGO
         {
             std::string Plugin;
             std::string Url;
+            std::string Setting;   // "Plugin/Setting[=value]": a setting of that plugin that has to be on (Yu-Gi-Oh-Manifest.h "Required settings")
+            std::string Value;     // the value it needs (empty = on)
         };
 
         struct Mod
@@ -156,6 +160,16 @@ namespace YGO
                         need.Plugin = item["plugin"].get<std::string>();
                         if (item.contains("url") && item["url"].is_string())
                             need.Url = item["url"].get<std::string>();
+                    }
+                    // "Plugin/Setting" or "Plugin/Setting=value" (same form as a plugin manifest's "requires")
+                    if (const size_t slash = need.Plugin.find_first_of("/\\"); slash != std::string::npos)
+                    {
+                        std::string rest = need.Plugin.substr(slash + 1);
+                        need.Plugin.resize(slash);
+                        const size_t equals = rest.find('=');
+                        need.Setting = rest.substr(0, equals);
+                        if (equals != std::string::npos)
+                            need.Value = rest.substr(equals + 1);
                     }
                     if (need.Plugin.size() > 4 && SameId(need.Plugin.substr(need.Plugin.size() - 4), ".dll"))
                         need.Plugin.resize(need.Plugin.size() - 4);

@@ -13,6 +13,29 @@ namespace Wolf.Mods
     {
         public string Plugin { get; set; } = "";
         public string Url { get; set; } = "";
+        /// <summary>"Plugin/Setting[=value]": a Config.ini setting of that plugin that has to be on (Value empty) or have Value.</summary>
+        public string Setting { get; set; } = "";
+        public string Value { get; set; } = "";
+
+        /// <summary>How mod.json writes it: "Plugin", "Plugin/Setting" or "Plugin/Setting=value".</summary>
+        public string Text => Setting.Length == 0 ? Plugin : Plugin + "/" + Setting + (Value.Length > 0 ? "=" + Value : "");
+
+        /// <summary>Splits "Plugin/Setting=value" (Yu-Gi-Oh-Manifest.h "Required settings") into Plugin, Setting and Value.</summary>
+        public static ModRequirement Parse(string text, string url = "")
+        {
+            var need = new ModRequirement { Url = url };
+            int slash = text.IndexOfAny(['/', '\\']);
+            string plugin = slash < 0 ? text : text[..slash];
+            if (slash >= 0)
+            {
+                string rest = text[(slash + 1)..];
+                int equals = rest.IndexOf('=');
+                need.Setting = (equals < 0 ? rest : rest[..equals]).Trim();
+                need.Value = equals < 0 ? "" : rest[(equals + 1)..].Trim();
+            }
+            need.Plugin = ModLibrary.StripDll(plugin.Trim());
+            return need;
+        }
     }
 
     /// <summary>
@@ -68,13 +91,10 @@ namespace Wolf.Mods
                 {
                     var need = new ModRequirement();
                     if (item is JsonValue plain && plain.TryGetValue(out string? name))
-                        need.Plugin = name;
+                        need = ModRequirement.Parse(name);
                     else if (item is JsonObject entry)
-                    {
-                        need.Plugin = entry["plugin"] is JsonValue p && p.TryGetValue(out string? plugin) ? plugin : "";
-                        need.Url = entry["url"] is JsonValue u && u.TryGetValue(out string? url) ? url : "";
-                    }
-                    need.Plugin = ModLibrary.StripDll(need.Plugin.Trim());
+                        need = ModRequirement.Parse(entry["plugin"] is JsonValue p && p.TryGetValue(out string? plugin) ? plugin : "",
+                                                    entry["url"] is JsonValue u && u.TryGetValue(out string? url) ? url : "");
                     if (need.Plugin.Length > 0)
                         info.Requires.Add(need);
                 }
@@ -119,8 +139,8 @@ namespace Wolf.Mods
             {
                 var requires = new JsonArray();
                 foreach (ModRequirement need in Requires.Where(r => r.Plugin.Length > 0))
-                    requires.Add(string.IsNullOrWhiteSpace(need.Url) ? JsonValue.Create(need.Plugin)
-                                                                     : new JsonObject { ["plugin"] = need.Plugin, ["url"] = need.Url.Trim() });
+                    requires.Add(string.IsNullOrWhiteSpace(need.Url) ? JsonValue.Create(need.Text)
+                                                                     : new JsonObject { ["plugin"] = need.Text, ["url"] = need.Url.Trim() });
                 root["requires"] = requires;
             }
             return root;
@@ -227,7 +247,7 @@ namespace Wolf.Mods
         {
             var needs = new List<ModRequirement>();
             foreach (ModRequirement need in Info.Requires)
-                if (!needs.Any(n => n.Plugin.Equals(need.Plugin, StringComparison.OrdinalIgnoreCase)))
+                if (!needs.Any(n => n.Text.Equals(need.Text, StringComparison.OrdinalIgnoreCase)))
                     needs.Add(need);
             foreach (string plugin in ModLibrary.ContentPlugins(ContentFolder))
                 if (!needs.Any(n => n.Plugin.Equals(plugin, StringComparison.OrdinalIgnoreCase)))
@@ -767,11 +787,12 @@ namespace Wolf.Mods
 
         public static bool IsGameRunning() => Process.GetProcessesByName("YuGiOh").Length > 0;
 
-        /// <summary>What a mod .zip holds, before it is installed.</summary>
+        /// <summary>What a mod .zip (or an extracted mod folder) holds, before it is installed.</summary>
         public sealed class Package
         {
-            public required string ZipPath { get; init; }
-            public required string Root { get; init; }   // "" or "folder/": where mod.json / Yu-Gi-Oh-Ex / ... sit in the zip
+            public required string ZipPath { get; init; }   // the .zip, or the folder when IsFolder
+            public bool IsFolder { get; init; }
+            public required string Root { get; init; }   // "" or "folder/": where mod.json / Yu-Gi-Oh-Ex / ... sit in the zip or folder
             public required ModInfo Info { get; init; }
             public required string SuggestedId { get; init; }
             public List<string> Plugins { get; } = [];    // zip entries under Plugins/ (any file: dlls and their manifests)
@@ -780,9 +801,37 @@ namespace Wolf.Mods
 
         private static readonly string[] ModMarkers = ["mod.json", "info.ini", "yu-gi-oh-ex/", "ygo_2020/", "ygo_2020-ex.toc", "plugins/", "config.ini"];
 
-        /// <summary>Reads a mod .zip (mod.json at the top, or inside one folder). Throws InvalidDataException when it isn't a mod.</summary>
+        /// <summary>
+        /// Reads an extracted mod folder the same way as a .zip: the mod's files at the top of it, or inside one folder in it. Throws
+        /// InvalidDataException when it isn't a mod.
+        /// </summary>
+        public static Package InspectFolder(string folder)
+        {
+            folder = Path.GetFullPath(folder).TrimEnd(Path.DirectorySeparatorChar);
+            var names = Directory.EnumerateFileSystemEntries(folder, "*", SearchOption.AllDirectories)
+                .Select(p => Path.GetRelativePath(folder, p).Replace('\\', '/') + (Directory.Exists(p) ? "/" : "")).ToList();
+            bool IsMod(string prefix) => names.Any(n => n.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) &&
+                ModMarkers.Any(m => n[prefix.Length..].StartsWith(m, StringComparison.OrdinalIgnoreCase)));
+
+            string root = "";
+            if (!IsMod(""))
+            {
+                var tops = names.Select(n => n.Split('/')[0]).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+                root = tops.Count == 1 && IsMod(tops[0] + "/") ? tops[0] + "/" : throw new InvalidDataException(
+                    "This folder isn't a mod: it needs a mod.json, a Yu-Gi-Oh-Ex folder, a YGO_2020 folder, a YGO_2020-Ex patch or a Config.ini at the top (or in one folder).");
+            }
+            string modFolder = Path.Combine(folder, root.TrimEnd('/'));
+            ModInfo info = ModInfo.Read(modFolder, root.Length > 0 ? root.TrimEnd('/') : Path.GetFileName(folder));
+            var package = new Package { ZipPath = folder, IsFolder = true, Root = root, Info = info, SuggestedId = MakeId(info.Name) };
+            package.Plugins.AddRange(names.Where(n => n.StartsWith(root + "Plugins/", StringComparison.OrdinalIgnoreCase) && !n.EndsWith('/')));
+            return package;
+        }
+
+        /// <summary>Reads a mod .zip (mod.json at the top, or inside one folder), or an extracted mod folder. Throws InvalidDataException when it isn't a mod.</summary>
         public static Package Inspect(string zipPath)
         {
+            if (Directory.Exists(zipPath))
+                return InspectFolder(zipPath);
             using ZipArchive zip = ZipFile.OpenRead(zipPath);
             var names = zip.Entries.Select(e => e.FullName.Replace('\\', '/')).ToList();
             bool IsMod(string prefix) => names.Any(n => n.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) &&
@@ -863,6 +912,31 @@ namespace Wolf.Mods
                 Directory.Delete(staging, recursive: true);
             Directory.CreateDirectory(staging);
             string fullStaging = Path.GetFullPath(staging) + Path.DirectorySeparatorChar;
+            if (package.IsFolder)
+            {
+                // an extracted folder: copied, never moved (it's the player's working copy)
+                string source = Path.GetFullPath(Path.Combine(package.ZipPath, package.Root.TrimEnd('/'))).TrimEnd(Path.DirectorySeparatorChar);
+                string fullTarget = Path.GetFullPath(target).TrimEnd(Path.DirectorySeparatorChar);
+                if (source.Equals(fullTarget, StringComparison.OrdinalIgnoreCase))
+                {
+                    Directory.Delete(staging, recursive: true);
+                    throw new InvalidDataException("That folder is the installed mod itself.");
+                }
+                if (fullStaging.StartsWith(source + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase))
+                {
+                    Directory.Delete(staging, recursive: true);
+                    throw new InvalidDataException("The game's Mods folder is inside that folder; pick the mod's own folder.");
+                }
+                foreach (string file in Directory.EnumerateFiles(source, "*", SearchOption.AllDirectories))
+                {
+                    string destination = Path.Combine(staging, Path.GetRelativePath(source, file));
+                    Directory.CreateDirectory(Path.GetDirectoryName(destination)!);
+                    File.Copy(file, destination, overwrite: true);
+                }
+                foreach (string dir in Directory.EnumerateDirectories(source, "*", SearchOption.AllDirectories))
+                    Directory.CreateDirectory(Path.Combine(staging, Path.GetRelativePath(source, dir)));
+            }
+            else
             using (ZipArchive zip = ZipFile.OpenRead(package.ZipPath))
             {
                 foreach (ZipArchiveEntry entry in zip.Entries)

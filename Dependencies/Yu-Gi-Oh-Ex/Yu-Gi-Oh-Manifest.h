@@ -11,7 +11,9 @@
           "description": "Faster game.",             one short line shown under it (default: nothing)
           "enforced": true,                          it can not be turned off (default: false)
           "settings": [ ... ],                       the Config.ini settings it reads (WolfX's Config editor shows them); see ConfigCatalog.cs
-          "requires": [ "Yu-Gi-Oh-Core", "Yu-Gi-Oh-GUI" ],  DLL names (no .dll) that have to be on for this one to load
+          "requires": [ "Yu-Gi-Oh-Core", "Yu-Gi-Oh-GUI" ],  DLL names (no .dll) that have to be on for this one to load;
+                                                     "Plugin/Setting" also needs that plugin's Config.ini setting on, "Plugin/Setting=value"
+                                                     set to that value (see "Required settings" below)
           "dlls": [ "Yu-Gi-Oh-FooHelper" ],          more DLLs (same folder) that belong to this plugin: they are not listed on their own,
                                                      and they load with it, just before it
           "content": [ "cards.json", "pages\\" ]       the files in <game>\Yu-Gi-Oh-Ex this plugin applies to the game ("x\\" = a folder);
@@ -36,9 +38,16 @@
     The loader switches those plugins on (and what they require) before it injects anything (ApplyContent below), and says which
     are not installed, so content made on one PC tells another what it needs.
 
+    Required settings: "Yu-Gi-Oh-Core/MasterDuelEngine" in "requires" means Yu-Gi-Oh-Core has to be on AND [Yu-Gi-Oh-Core]
+    MasterDuelEngine has to be on (anything but empty, 0, false, off, no); "Yu-Gi-Oh-Core/DuelFormat=speed" needs that exact value
+    (case-insensitive). The section is the one the required plugin's manifest "settings" gives the key (default: the plugin's DLL name);
+    a key missing from Config.ini counts as that setting's "default". A plugin whose setting is not met is blocked like one whose plugin
+    is off ("needs Master Duel engine (Yu-Gi-Oh-Core) on"). Switching the plugin on (Core_SetPluginEnabled) also sets the setting; a mod's
+    mod.json "requires" takes the same form, and the loader sets the setting in Config.ini when the mod is on (EnableSettings).
+
     The loader, Yu-Gi-Oh-Core and Yu-Gi-Oh-RIX all include this file, so they agree on what "can load" means:
       - an enforced plugin is always on;
-      - a plugin that is on is only ACTIVE when everything it requires is installed and active;
+      - a plugin that is on is only ACTIVE when everything it requires is installed and active, and the settings it requires are on;
       - active plugins load requirements first.
     Header only; needs nlohmann's json.hpp on the include path.
 */
@@ -47,6 +56,7 @@
 #include <algorithm>
 #include <cctype>
 #include <fstream>
+#include <functional>
 #include <string>
 #include <vector>
 
@@ -56,6 +66,24 @@ namespace YGO
 {
     namespace Manifest
     {
+        // "Plugin/Setting" or "Plugin/Setting=value" in a "requires" list: a setting of that plugin that has to be on (Value empty) or
+        // have that value.
+        struct SettingNeed
+        {
+            std::string Plugin;
+            std::string Key;
+            std::string Value;
+        };
+
+        // One entry of a manifest's "settings" (only what working out requirements needs).
+        struct SettingInfo
+        {
+            std::string Key;
+            std::string Section;   // empty = the plugin's DLL name
+            std::string Title;
+            std::string Default;
+        };
+
         struct Info
         {
             std::string Title;
@@ -63,7 +91,9 @@ namespace YGO
             std::string Version;
             std::string Description;
             bool Enforced = false;
-            std::vector<std::string> Requires;   // DLL names without ".dll"
+            std::vector<std::string> Requires;   // DLL names without ".dll" (a "Plugin/Setting" entry adds its plugin here too)
+            std::vector<SettingNeed> RequiredSettings;   // the "Plugin/Setting[=value]" entries of "requires"
+            std::vector<SettingInfo> Settings;   // its "settings"
             std::vector<std::string> Dlls;       // more DLLs that belong to this plugin (names without ".dll")
             std::vector<std::string> Content;    // the Yu-Gi-Oh-Ex files it applies ("cards.json", "pages\\")
             struct Replaced { std::string Name, Note; };
@@ -107,6 +137,40 @@ namespace YGO
             return name;
         }
 
+        inline std::string Trim(std::string text)
+        {
+            while (!text.empty() && std::isspace(static_cast<unsigned char>(text.back())))
+                text.pop_back();
+            size_t start = 0;
+            while (start < text.size() && std::isspace(static_cast<unsigned char>(text[start])))
+                ++start;
+            return text.substr(start);
+        }
+
+        // Splits a "requires" entry: "Plugin", "Plugin/Setting" or "Plugin/Setting=value" ("\" works as the separator too). Returns the
+        // plugin's DLL name (no .dll); `setting` gets the setting part (Key empty = none).
+        inline std::string ParseRequirement(const std::string& entry, SettingNeed& setting)
+        {
+            setting = {};
+            const size_t slash = entry.find_first_of("/\\");
+            if (slash == std::string::npos)
+                return StripDll(Trim(entry));
+            std::string plugin = StripDll(Trim(entry.substr(0, slash)));
+            std::string rest = entry.substr(slash + 1);
+            const size_t equals = rest.find('=');
+            setting.Plugin = plugin;
+            setting.Key = Trim(equals == std::string::npos ? rest : rest.substr(0, equals));
+            setting.Value = equals == std::string::npos ? std::string() : Trim(rest.substr(equals + 1));
+            return plugin;
+        }
+
+        // A setting's value counts as on unless it is empty, 0, false, off or no.
+        inline bool IsOn(const std::string& value)
+        {
+            const std::string v = Trim(value);
+            return !(v.empty() || v == "0" || SameName(v, "false") || SameName(v, "off") || SameName(v, "no"));
+        }
+
         // A missing or unreadable file is just "no manifest": every field has a default.
         inline Info Read(const std::string& jsonPath)
         {
@@ -148,9 +212,27 @@ namespace YGO
                 {
                     for (const auto& item : *it)
                     {
-                        if (item.is_string())
-                            info.Requires.push_back(StripDll(item.get<std::string>()));
+                        if (!item.is_string())
+                            continue;
+                        SettingNeed setting;
+                        const std::string plugin = ParseRequirement(item.get<std::string>(), setting);
+                        if (plugin.empty())
+                            continue;
+                        if (std::none_of(info.Requires.begin(), info.Requires.end(), [&](const std::string& known) { return SameName(known, plugin); }))
+                            info.Requires.push_back(plugin);
+                        if (!setting.Key.empty())
+                            info.RequiredSettings.push_back(std::move(setting));
                     }
+                }
+            }
+            if (auto it = root.find("settings"); it != root.end() && it->is_array())
+            {
+                for (const auto& item : *it)
+                {
+                    if (!item.is_object() || !item.contains("key") || !item["key"].is_string())
+                        continue;
+                    auto field = [&](const char* key) { return item.contains(key) && item[key].is_string() ? item[key].get<std::string>() : std::string(); };
+                    info.Settings.push_back({ field("key"), field("section"), field("title"), field("default") });
                 }
             }
             for (const char* key : { "content", "Content" })
@@ -268,6 +350,102 @@ namespace YGO
             return plugin;
         }
 
+        // Reads a Config.ini value: (section, key, fallback) -> value. The default reads the Config.ini next to this process's exe (the game's,
+        // in the game; Yu-Gi-Oh-Core's mod settings answer through the same call there). The loader passes its own (its Config.ini path, and
+        // the Config.ini of the mods that are on).
+        using SettingReader = std::function<std::string(const std::string& section, const std::string& key, const std::string& fallback)>;
+
+        inline std::string ReadIni(const std::string& iniPath, const std::string& section, const std::string& key, const std::string& fallback)
+        {
+            char buffer[512] = {};
+            GetPrivateProfileStringA(section.c_str(), key.c_str(), fallback.c_str(), buffer, sizeof(buffer), iniPath.c_str());
+            return buffer;
+        }
+
+        inline std::string ProcessConfigPath()
+        {
+            char path[MAX_PATH] = {};
+            GetModuleFileNameA(nullptr, path, MAX_PATH);
+            std::string folder = path;
+            folder = folder.substr(0, folder.find_last_of("\\/") + 1);
+            return folder + "Config.ini";
+        }
+
+        inline SettingReader DefaultReader()
+        {
+            const std::string ini = ProcessConfigPath();
+            return [ini](const std::string& section, const std::string& key, const std::string& fallback) { return ReadIni(ini, section, key, fallback); };
+        }
+
+        // The required plugin's manifest entry for a setting, if it declares one.
+        inline const SettingInfo* FindSetting(const Plugin* plugin, const std::string& key)
+        {
+            if (!plugin)
+                return nullptr;
+            for (const SettingInfo& setting : plugin->Details.Settings)
+            {
+                if (SameName(setting.Key, key))
+                    return &setting;
+            }
+            return nullptr;
+        }
+
+        // Where a required setting lives: the section its plugin's manifest gives it, else the plugin's DLL name.
+        inline std::string SectionOf(const std::vector<Plugin>& plugins, const SettingNeed& need)
+        {
+            const Plugin* plugin = Current(plugins, need.Plugin);
+            const SettingInfo* setting = FindSetting(plugin, need.Key);
+            if (setting && !setting->Section.empty())
+                return setting->Section;
+            return plugin ? plugin->Name : need.Plugin;
+        }
+
+        // The value Config.ini (or the manifest default, when the key is not there) gives a required setting.
+        inline std::string SettingValue(const std::vector<Plugin>& plugins, const SettingNeed& need, const SettingReader& reader)
+        {
+            const SettingInfo* setting = FindSetting(Current(plugins, need.Plugin), need.Key);
+            return reader(SectionOf(plugins, need), need.Key, setting ? setting->Default : std::string());
+        }
+
+        inline bool SettingMet(const std::vector<Plugin>& plugins, const SettingNeed& need, const SettingReader& reader)
+        {
+            const std::string value = SettingValue(plugins, need, reader);
+            return need.Value.empty() ? IsOn(value) : SameName(Trim(value), need.Value);
+        }
+
+        // What switching a required setting on writes: its value, or 1.
+        inline std::string WantedValue(const SettingNeed& need)
+        {
+            return need.Value.empty() ? "1" : need.Value;
+        }
+
+        // "Master Duel engine (Yu-Gi-Oh-Core) on" / "DuelFormat (Yu-Gi-Oh-Core) set to speed", for the plugin list and message boxes.
+        inline std::string DescribeSetting(const std::vector<Plugin>& plugins, const SettingNeed& need)
+        {
+            const Plugin* plugin = Current(plugins, need.Plugin);
+            const SettingInfo* setting = FindSetting(plugin, need.Key);
+            const std::string name = setting && !setting->Title.empty() ? setting->Title : need.Key;
+            const std::string owner = plugin && !plugin->Details.Title.empty() ? plugin->Details.Title : need.Plugin;
+            return name + " (" + owner + ") " + (need.Value.empty() ? "on" : "set to " + need.Value);
+        }
+
+        // Writes every required setting of the given needs that is not met into a Config.ini. Returns "<Section> <Key>=<value>" lines for
+        // what was written.
+        inline std::vector<std::string> EnableSettings(const std::vector<Plugin>& plugins, const std::vector<SettingNeed>& needs,
+                                                       const SettingReader& reader, const std::string& iniPath)
+        {
+            std::vector<std::string> written;
+            for (const SettingNeed& need : needs)
+            {
+                if (need.Key.empty() || SettingMet(plugins, need, reader))
+                    continue;
+                const std::string section = SectionOf(plugins, need), value = WantedValue(need);
+                WritePrivateProfileStringA(section.c_str(), need.Key.c_str(), value.c_str(), iniPath.c_str());
+                written.push_back("[" + section + "] " + need.Key + "=" + value);
+            }
+            return written;
+        }
+
         // A DLL named in another plugin's "dlls" (same folder) belongs to that plugin: it loses its own entry and goes into the owner's Owned list.
         inline void ClaimOwned(std::vector<Plugin>& plugins)
         {
@@ -302,6 +480,7 @@ namespace YGO
         {
             std::string File;
             std::vector<std::string> Plugins;
+            std::vector<SettingNeed> Settings;   // "Plugin/Setting[=value]" entries (their plugin is in Plugins too)
         };
 
         // A content.json (<game>\Yu-Gi-Oh-Ex\content.json, or a mod's Mods\<id>\Yu-Gi-Oh-Ex\content.json), or nothing when there is none
@@ -325,8 +504,12 @@ namespace YGO
                 {
                     for (const auto& plugin : entry["plugins"])
                     {
-                        if (plugin.is_string())
-                            need.Plugins.push_back(StripDll(plugin.get<std::string>()));
+                        if (!plugin.is_string())
+                            continue;
+                        SettingNeed setting;
+                        need.Plugins.push_back(ParseRequirement(plugin.get<std::string>(), setting));
+                        if (!setting.Key.empty())
+                            need.Settings.push_back(std::move(setting));
                     }
                 }
                 needs.push_back(std::move(need));
@@ -346,13 +529,17 @@ namespace YGO
         }
 
         // Switches on every plugin the content needs, and everything those require (call before Resolve). Returns the lines
-        // "<file> needs <plugin>" for plugins that are not installed.
-        inline std::vector<std::string> ApplyContent(std::vector<Plugin>& plugins, const std::vector<ContentNeed>& needs)
+        // "<file> needs <plugin>" for plugins that are not installed. `settings`, when given, collects the settings the content and the
+        // plugins it switched on require (for EnableSettings).
+        inline std::vector<std::string> ApplyContent(std::vector<Plugin>& plugins, const std::vector<ContentNeed>& needs,
+                                                     std::vector<SettingNeed>* settings = nullptr)
         {
             std::vector<std::string> missing;
             std::vector<std::string> pending;
             for (const ContentNeed& need : needs)
             {
+                if (settings)
+                    settings->insert(settings->end(), need.Settings.begin(), need.Settings.end());
                 for (const std::string& name : need.Plugins)
                 {
                     if (const Plugin* current = Current(plugins, name))
@@ -370,6 +557,8 @@ namespace YGO
                     if (!SameName(plugin.Name, name) || plugin.Enabled)
                         continue;
                     plugin.Enabled = true;
+                    if (settings)
+                        settings->insert(settings->end(), plugin.Details.RequiredSettings.begin(), plugin.Details.RequiredSettings.end());
                     for (const std::string& required : plugin.Details.Requires)
                         if (const Plugin* current = Current(plugins, required))
                             pending.push_back(current->Name);
@@ -378,9 +567,12 @@ namespace YGO
             return missing;
         }
 
-        // Fills Active and Problem from Enabled (and Enforced, which forces a plugin on).
-        inline void Resolve(std::vector<Plugin>& plugins)
+        // Fills Active and Problem from Enabled (and Enforced, which forces a plugin on). `reader` answers the required settings (empty = the
+        // Config.ini next to this process's exe).
+        inline void Resolve(std::vector<Plugin>& plugins, SettingReader reader = {})
         {
+            if (!reader)
+                reader = DefaultReader();
             MarkReplaced(plugins);
             for (Plugin& plugin : plugins)
             {
@@ -410,6 +602,17 @@ namespace YGO
                             plugin.Problem = "needs " + required + ", which is off";
                         else
                             continue;
+                        plugin.Active = false;
+                        changed = true;
+                        break;
+                    }
+                    if (!plugin.Active)
+                        continue;
+                    for (const SettingNeed& need : plugin.Details.RequiredSettings)
+                    {
+                        if (SettingMet(plugins, need, reader))
+                            continue;
+                        plugin.Problem = "needs " + DescribeSetting(plugins, need);
                         plugin.Active = false;
                         changed = true;
                         break;

@@ -112,9 +112,11 @@
     <ClCompile Include="ModConfig.cpp" />
     <ClCompile Include="Packs.cpp" />
     <ClCompile Include="Patch.cpp" />
+    <ClCompile Include="Rarity.cpp" />
     <ClCompile Include="Save.cpp" />
     <ClCompile Include="SaveScreen.cpp" />
     <ClCompile Include="SaveSlots.cpp" />
+    <ClCompile Include="Shiny.cpp" />
     <ClCompile Include="UserDecks.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +140,9 @@
     <ClInclude Include="Save.h" />
     <ClInclude Include="SaveScreen.h" />
     <ClInclude Include="SaveSlots.h" />
+    <ClInclude Include="Rarity.h" />
+    <ClInclude Include="Shiny.h" />
+    <ClInclude Include="ShinyShader.h" />
     <ClInclude Include="UserDecks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
