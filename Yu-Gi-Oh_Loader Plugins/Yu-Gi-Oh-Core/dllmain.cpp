@@ -2,7 +2,6 @@
 #include <format>
 #include <string>
 
-#include "BulkPacks.h"
 #include "CardTable.h"
 #include "Crash.h"
 #include "Credits.h"
@@ -20,7 +19,7 @@
 #include "Tweaks.h"
 #include "SaveScreen.h"
 #include "SaveSlots.h"
-#include "Shiny.h"
+#include "DeckTags.h"
 #include "UserDecks.h"
 #include "Yu-Gi-Oh-Core.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
@@ -64,6 +63,39 @@ extern "C"
         return UserDecks::ExtraCount();
     }
 
+    CORE_API int __cdecl Core_GetDeckTags(int DeckId, char* Out, int Size)
+    {
+        const std::wstring tags = DeckId >= 0 ? DeckTags::Get(static_cast<unsigned>(DeckId)) : std::wstring();
+        if (tags.empty())
+        {
+            if (Out && Size > 0)
+                Out[0] = '\0';
+            return 0;
+        }
+        const int length = WideCharToMultiByte(CP_UTF8, 0, tags.data(), static_cast<int>(tags.size()), nullptr, 0, nullptr, nullptr);
+        if (Out && Size > length)
+        {
+            WideCharToMultiByte(CP_UTF8, 0, tags.data(), static_cast<int>(tags.size()), Out, Size, nullptr, nullptr);
+            Out[length] = '\0';
+        }
+        else if (Out && Size > 0)
+            Out[0] = '\0';
+        return length;
+    }
+
+    CORE_API int __cdecl Core_SetDeckTags(int DeckId, const char* Tags)
+    {
+        if (DeckId < 0)
+            return 0;
+        const int bytes = Tags ? static_cast<int>(strlen(Tags)) : 0;
+        std::wstring wide(bytes ? MultiByteToWideChar(CP_UTF8, 0, Tags, bytes, nullptr, 0) : 0, L'\0');
+        if (!wide.empty())
+            MultiByteToWideChar(CP_UTF8, 0, Tags, bytes, wide.data(), static_cast<int>(wide.size()));
+        return DeckTags::Set(static_cast<unsigned>(DeckId), wide) ? 1 : 0;
+    }
+
+    CORE_API uint64_t __cdecl Core_GetDeckTagMask(int DeckId, int Row) { return DeckId >= 0 ? DeckTags::GetMask(static_cast<unsigned>(DeckId), Row) : 0; }
+
     CORE_API int __cdecl Core_EngineReady(void) { return MasterDuel::Ready() ? 1 : 0; }
 
     CORE_API void* __cdecl Core_EngineProc(const char* Name) { return reinterpret_cast<void*>(MasterDuel::Proc(Name)); }
@@ -78,21 +110,10 @@ extern "C"
 
     CORE_API int __cdecl Core_EngineToDisplay(int EngineId) { return EngineId > 0 && EngineId <= 0xFFFF ? MasterDuel::ToDisplay(static_cast<uint16_t>(EngineId)) : EngineId; }
 
-    CORE_API int __cdecl Core_GetCardRarity(int CardId) { return CardId >= 0 && CardId <= 0xFFFF ? Shiny::ShownRarity(static_cast<uint16_t>(CardId)) : 0; }
-
-    CORE_API int __cdecl Core_GetCardRarityCount(int CardId, int RarityId)
+    CORE_API void __cdecl Core_AddCardTableListener(CoreCardTableListener Listener)
     {
-        return CardId >= 0 && CardId <= 0xFFFF && RarityId > 0 && RarityId <= 0xFF ? Shiny::Count(static_cast<uint16_t>(CardId), static_cast<uint8_t>(RarityId)) : 0;
-    }
-
-    CORE_API int __cdecl Core_AddCardRarity(int CardId, int RarityId, int Count)
-    {
-        return CardId >= 0 && CardId <= 0xFFFF && RarityId > 0 && RarityId <= 0xFF ? Shiny::Add(static_cast<uint16_t>(CardId), static_cast<uint8_t>(RarityId), Count) : 0;
-    }
-
-    CORE_API int __cdecl Core_GetFaceArt(int CardId, void** Bytes, size_t* Size)
-    {
-        return CardId >= 0 && CardId <= 0xFFFF && Shiny::FaceArt(static_cast<uint16_t>(CardId), Bytes, Size) ? 1 : 0;
+        // A bool and an unsigned char argument pass the same way.
+        CardTable::AddTakeListener(reinterpret_cast<void(__cdecl*)(bool)>(Listener));
     }
 
     CORE_API int __cdecl Core_GetSaveFile(char* Out, int Size)
@@ -136,14 +157,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         // Credits: the built-in thanks, Yu-Gi-Oh-Ex\credits.json, what plugins add and the plugin list, then the game's own credits (Credits.h).
         Credits::Install();
 
-        // Shiny cards: real-card rarities rolled in packs, kept in the save, drawn as foil (Shiny.h; Shiny=1). Before BulkPacks: its pack
-        // hook must be the inner one, so the bulk job's per-pack calls get their rarities rolled too.
-        Shiny::Install();
-
         // Limit breakers no store plugin owns: booster packs from Yu-Gi-Oh-Ex/packs.json (new packs in the game's free slots, new shop rows).
         Packs::Install();
-        // Buying many packs at once in the shop's buy box, opened together (BulkPacks.h; MaxPacksPerPurchase).
-        BulkPacks::Install();
         // Deck size limits (MinMainDeck/MaxMainDeck/MaxExtraDeck/MaxSideDeck) and the engine's dormant Speed/Rush rules (DuelFormat).
         DeckLimits::Install();
         DuelFormat::Install();
@@ -167,6 +182,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             CardTable::Install();
             // 256 user deck slots (the save holds 32; the rest in the save extension), from Toon Jinzo's Yu-Gi-Oh-DeckSlots (UserDecks.h).
             UserDecks::Install();
+            // Tags on user decks and filtering the deck list by them, on the game's card filter panel; kept in the save extension (DeckTags.h).
+            DeckTags::Install();
         }
         break;
     }

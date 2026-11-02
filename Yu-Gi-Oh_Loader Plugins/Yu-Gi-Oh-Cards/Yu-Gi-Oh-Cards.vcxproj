@@ -104,6 +104,9 @@
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Genres.cpp" />
     <ClCompile Include="Related.cpp" />
+    <ClCompile Include="BulkPacks.cpp" />
+    <ClCompile Include="Rarity.cpp" />
+    <ClCompile Include="Shiny.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Yu-Gi-Oh.def" />
@@ -117,6 +120,10 @@
     <ClInclude Include="Text.h" />
     <ClInclude Include="Genres.h" />
     <ClInclude Include="Related.h" />
+    <ClInclude Include="BulkPacks.h" />
+    <ClInclude Include="Rarity.h" />
+    <ClInclude Include="Shiny.h" />
+    <ClInclude Include="ShinyShader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

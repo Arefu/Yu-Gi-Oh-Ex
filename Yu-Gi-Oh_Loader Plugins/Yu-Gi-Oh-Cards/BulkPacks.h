@@ -1,6 +1,6 @@
 #pragma once
 
-// Buying many booster packs at once in the game's own shop, a Core limit breaker (2026-11-01), [Yu-Gi-Oh-Core] in Config.ini:
+// Buying many booster packs at once in the game's own shop (2026-11-01; moved here from Core with Shiny, which it has to install after), [Yu-Gi-Oh-Core] in Config.ini:
 //   MaxPacksPerPurchase=999   most packs one purchase can buy (1 = the game's one pack at a time)
 //
 // How the game buys a pack (traced in the IDB 2026-11-01, docs/Packs.md "Buying many packs"):

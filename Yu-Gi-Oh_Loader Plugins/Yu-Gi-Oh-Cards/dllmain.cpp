@@ -2,6 +2,7 @@
 #include "HookDiagnostics.h"
 #include <cstring>
 
+#include "BulkPacks.h"
 #include "Card.h"
 #include "Detours.h"
 #include "Genres.h"
@@ -9,8 +10,28 @@
 #include "Logger.h"
 #include "Related.h"
 #include "Save.h"
+#include "Shiny.h"
 #include "Text.h"
 #include "Yu-Gi-Oh-Core.h"
+
+// Card rarities (docs/Shiny.md), for prizes, a shop or a trade page: rarity ids are Rarity.h's (1 = Rare .. 57 built in, 128-255 from rarities.json), per
+// Konami id. GetCardRarity = the rarity the card is shown with (the highest tier owned, 0 = none); GetCardRarityCount = copies of one rarity;
+// AddCardRarity adds (or with a negative Count removes) copies and returns the new count. They work whether or not Shiny is on. Find them with
+// GetProcAddress on this DLL.
+extern "C"
+{
+    __declspec(dllexport) int __cdecl Cards_GetCardRarity(int CardId) { return CardId >= 0 && CardId <= 0xFFFF ? Shiny::ShownRarity(static_cast<uint16_t>(CardId)) : 0; }
+
+    __declspec(dllexport) int __cdecl Cards_GetCardRarityCount(int CardId, int RarityId)
+    {
+        return CardId >= 0 && CardId <= 0xFFFF && RarityId > 0 && RarityId <= 0xFF ? Shiny::Count(static_cast<uint16_t>(CardId), static_cast<uint8_t>(RarityId)) : 0;
+    }
+
+    __declspec(dllexport) int __cdecl Cards_AddCardRarity(int CardId, int RarityId, int Count)
+    {
+        return CardId >= 0 && CardId <= 0xFFFF && RarityId > 0 && RarityId <= 0xFF ? Shiny::Add(static_cast<uint16_t>(CardId), static_cast<uint8_t>(RarityId), Count) : 0;
+    }
+}
 
 typedef char(__fastcall* Setup_CardPropTable_t)(const int* a1, int language);
 static uintptr_t orig_Setup_CardPropTable = 0x14076BFC0;
@@ -66,6 +87,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
     case DLL_PROCESS_ATTACH:
     {
         DetourRestoreAfterWith();
+
+        // Shiny cards (Shiny.h; Shiny=1), then buying many packs (BulkPacks.h). This order matters: both detour OpenPackAndGrantCards and Shiny's must be the
+        // inner one, so the bulk job's per-pack calls get their rarities rolled too. Core was loaded first, so Save, the card table and mod settings are up.
+        Shiny::Install();
+        BulkPacks::Install();
 
         if (!HookDiagnostics::Begin("Card tables, text and related cards", MODULE_NAME, Logger::WriteLog))
             break;

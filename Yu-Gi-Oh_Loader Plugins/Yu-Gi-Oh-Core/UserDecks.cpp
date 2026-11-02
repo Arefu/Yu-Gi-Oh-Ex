@@ -12,6 +12,7 @@
 #include <mutex>
 #include <vector>
 
+#include "DeckTags.h"
 #include "Detours.h"
 #include "Logger.h"
 #include "Save.h"
@@ -401,6 +402,7 @@ namespace
             for (unsigned k = 0; k < g_Count; ++k)
                 if (Used(k) || !usedOnly)
                     Push(vector, static_cast<int>(kFirstExtraId + k));
+        vector->Last = vector->First + DeckTags::FilterSlots(vector->First, vector->Last - vector->First);   // its one caller is the deck editor's list
         return result;
     }
 
@@ -432,6 +434,7 @@ namespace
             Logger::WriteLog(std::format("User decks: a new profile, {} empty extra slots", g_Count), MODULE_NAME, 0);
         }
         Forget();
+        DeckTags::OnProfile(loaded != nullptr);
         return result;
     }
 

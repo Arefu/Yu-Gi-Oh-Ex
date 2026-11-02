@@ -111,6 +111,17 @@ CORE_API void __cdecl Core_SetOnlineDuelFormat(int Format);
    slot is a deck with no cards. Added after version 1 like AddCredits: NULL with an older Core (32 slots only). */
 CORE_API int __cdecl Core_GetExtraUserDecks(int* FirstId);
 
+/* A user deck's tags (ids 0-31 and the extras; docs/UserDecks.md), kept in the save. A deck has free-text tags and picks on the card filter panel's
+   icon rows. Get: copies the text (UTF-8, comma separated: "GX, Combo") with a NUL into Out when it fits in Size (else Out gets an empty string)
+   and returns its length, 0 when there is none; Out may be NULL to ask the length. Set: replaces the text and keeps the picks (NULL or empty
+   clears it), trimming each tag and dropping empty ones and repeats; returns 1, or 0 when DeckId is not a user deck or its slot holds no deck.
+   GetDeckTagMask: the picks on one row of the panel, a bit per option of that row (rows 1 frame, 2 Attribute, 3 Spell/Trap property, 4 Monster Type,
+   8 Link Arrows, 12 limit status, 13 genre, 14 copies owned; the table is at 0x140A7A260). Written with the game's next save write. Game thread only: they look the deck up. Added after
+   version 1 like AddCredits: NULL with an older Core. */
+CORE_API int __cdecl Core_GetDeckTags(int DeckId, char* Out, int Size);
+CORE_API int __cdecl Core_SetDeckTags(int DeckId, const char* Tags);
+CORE_API uint64_t __cdecl Core_GetDeckTagMask(int DeckId, int Row);
+
 /* Master Duel's duel engine (docs/MasterDuelEngine.md): Core loads Plugins\Yu-Gi-Oh-Core\duel.dll when [Yu-Gi-Oh-Core] MasterDuelEngine=1.
    EngineReady: 1 once it is loaded and has card data. EngineProc: one of its exports by name ("DLL_DuelSysAct", "DLL_SetCardNamed" ...), NULL
    when it is not loaded; the signatures are in docs/MasterDuelEngine.md. EngineRefreshCards: gives it the game's card data again (every card
@@ -140,20 +151,11 @@ CORE_API int __cdecl Core_EngineLend(int DisplayId, int EngineId, int PropsGameI
    version 1 like AddCredits: NULL with an older Core. */
 CORE_API int __cdecl Core_EngineToDisplay(int EngineId);
 
-/* Card rarities (Core Shiny.h, docs/Shiny.md): the save keeps how many copies of each rarity (Rarity.h ids, 1 = Rare .. 57 built in,
-   128-255 from rarities.json) the player owns per Konami id. GetCardRarity = the rarity the card is shown with (the highest tier owned,
-   0 = none); GetCardRarityCount = copies of one rarity; AddCardRarity adds (or with a negative Count removes) copies and returns the new
-   count, for prizes, a shop or a trade page. They work whether or not [Yu-Gi-Oh-Core] Shiny is on (it only decides whether packs roll
-   rarities and whether they are drawn). Added after version 1 like AddCredits: NULL with an older Core. */
-CORE_API int __cdecl Core_GetCardRarity(int CardId);
-CORE_API int __cdecl Core_GetCardRarityCount(int CardId, int RarityId);
-CORE_API int __cdecl Core_AddCardRarity(int CardId, int RarityId, int Count);
-
-/* A card's own picture for its rarity (full art, broken frame: docs/Shiny.md "Card pictures"). Call it first in a hook on
-   Get_IllustrationData (0x14086D050) that serves a card's art itself: 1 = Core put the picture in *Bytes / *Size (allocated with the
-   game's malloc, like the game's own art: the face builder frees it), 0 = serve the art as usual. CardId is the id the hook was given.
-   Added after version 1 like AddCredits: NULL with an older Core. */
-CORE_API int __cdecl Core_GetFaceArt(int CardId, void** Bytes, size_t* Size);
+/* The card table took over a profile: FromSave 1 = a save was read (its extension came with it, so read yours now), 0 = a new profile. For a plugin
+   that keeps per-card data in the save extension (Yu-Gi-Oh-MoreCards' rarities). Runs under the table's lock on whatever thread the game loads
+   on. Add it before the game reads a save (in DllMain). Added after version 1 like AddCredits: NULL with an older Core. */
+typedef void(__cdecl* CoreCardTableListener)(unsigned char FromSave);
+CORE_API void __cdecl Core_AddCardTableListener(CoreCardTableListener Listener);
 
 #ifdef __cplusplus
 }
@@ -178,6 +180,9 @@ namespace Core
         void(__cdecl* SetDeckLimits)(int, int, int, int) = nullptr;                  // NULL with a Core that predates it
         void(__cdecl* SetOnlineDuelFormat)(int) = nullptr;                           // NULL with a Core that predates it
         int(__cdecl* GetExtraUserDecks)(int*) = nullptr;                             // NULL with a Core that predates it
+        int(__cdecl* GetDeckTags)(int, char*, int) = nullptr;                        // NULL with a Core that predates it
+        int(__cdecl* SetDeckTags)(int, const char*) = nullptr;                       // NULL with a Core that predates it
+        uint64_t(__cdecl* GetDeckTagMask)(int, int) = nullptr;                       // NULL with a Core that predates it
         int(__cdecl* EngineReady)() = nullptr;                                       // NULL with a Core that predates it
         void*(__cdecl* EngineProc)(const char*) = nullptr;                           // NULL with a Core that predates it
         int(__cdecl* EngineRefreshCards)() = nullptr;                                // NULL with a Core that predates it
@@ -185,10 +190,7 @@ namespace Core
         void(__cdecl* EngineSetDisplayId)(int, int) = nullptr;                       // NULL with a Core that predates it
         int(__cdecl* EngineLend)(int, int, int) = nullptr;                           // NULL with a Core that predates it
         int(__cdecl* EngineToDisplay)(int) = nullptr;                                // NULL with a Core that predates it
-        int(__cdecl* GetCardRarity)(int) = nullptr;                                  // NULL with a Core that predates it
-        int(__cdecl* GetCardRarityCount)(int, int) = nullptr;                        // NULL with a Core that predates it
-        int(__cdecl* AddCardRarity)(int, int, int) = nullptr;                        // NULL with a Core that predates it
-        int(__cdecl* GetFaceArt)(int, void**, size_t*) = nullptr;                    // NULL with a Core that predates it
+        void(__cdecl* AddCardTableListener)(CoreCardTableListener) = nullptr;        // NULL with a Core that predates it
     };
 
     inline Api& Functions()
@@ -229,6 +231,9 @@ namespace Core
         CORE_BIND(SetDeckLimits);
         CORE_BIND(SetOnlineDuelFormat);
         CORE_BIND(GetExtraUserDecks);
+        CORE_BIND(GetDeckTags);
+        CORE_BIND(SetDeckTags);
+        CORE_BIND(GetDeckTagMask);
         CORE_BIND(EngineReady);
         CORE_BIND(EngineProc);
         CORE_BIND(EngineRefreshCards);
@@ -236,10 +241,7 @@ namespace Core
         CORE_BIND(EngineSetDisplayId);
         CORE_BIND(EngineLend);
         CORE_BIND(EngineToDisplay);
-        CORE_BIND(GetCardRarity);
-        CORE_BIND(GetCardRarityCount);
-        CORE_BIND(AddCardRarity);
-        CORE_BIND(GetFaceArt);
+        CORE_BIND(AddCardTableListener);
 #undef CORE_BIND
         return true;
     }

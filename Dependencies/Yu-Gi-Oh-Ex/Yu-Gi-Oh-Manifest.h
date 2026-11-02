@@ -14,6 +14,8 @@
           "requires": [ "Yu-Gi-Oh-Core", "Yu-Gi-Oh-GUI" ],  DLL names (no .dll) that have to be on for this one to load;
                                                      "Plugin/Setting" also needs that plugin's Config.ini setting on, "Plugin/Setting=value"
                                                      set to that value (see "Required settings" below)
+          "loadAfter": [ "Yu-Gi-Oh-MoreCards" ],     only the order: when that plugin is on too, it loads before this one (for detours that
+                                                     have to nest a certain way). It doesn't have to be on, and isn't switched on
           "dlls": [ "Yu-Gi-Oh-FooHelper" ],          more DLLs (same folder) that belong to this plugin: they are not listed on their own,
                                                      and they load with it, just before it
           "content": [ "cards.json", "pages\\" ]       the files in <game>\Yu-Gi-Oh-Ex this plugin applies to the game ("x\\" = a folder);
@@ -93,6 +95,7 @@ namespace YGO
             bool Enforced = false;
             std::vector<std::string> Requires;   // DLL names without ".dll" (a "Plugin/Setting" entry adds its plugin here too)
             std::vector<SettingNeed> RequiredSettings;   // the "Plugin/Setting[=value]" entries of "requires"
+            std::vector<std::string> LoadAfter;  // DLL names: when these are on too they load first ("loadAfter"; order only)
             std::vector<SettingInfo> Settings;   // its "settings"
             std::vector<std::string> Dlls;       // more DLLs that belong to this plugin (names without ".dll")
             std::vector<std::string> Content;    // the Yu-Gi-Oh-Ex files it applies ("cards.json", "pages\\")
@@ -244,6 +247,18 @@ namespace YGO
                     {
                         if (item.is_string())
                             info.Content.push_back(item.get<std::string>());
+                    }
+                }
+            }
+            for (const char* key : { "loadAfter", "LoadAfter" })
+            {
+                auto it = root.find(key);
+                if (it != root.end() && it->is_array())
+                {
+                    for (const auto& item : *it)
+                    {
+                        if (item.is_string())
+                            info.LoadAfter.push_back(StripDll(item.get<std::string>()));
                     }
                 }
             }
@@ -621,7 +636,7 @@ namespace YGO
             }
         }
 
-        // The active plugins in the order they should load: everything a plugin requires comes before it; otherwise enforced ones first, then by name.
+        // The active plugins in the order they should load: everything a plugin requires or loads after comes before it; otherwise enforced ones first, then by name.
         inline std::vector<size_t> LoadOrder(const std::vector<Plugin>& plugins)
         {
             std::vector<size_t> pending;
@@ -648,13 +663,16 @@ namespace YGO
                 for (auto it = pending.begin(); it != pending.end();)
                 {
                     bool ready = true;
-                    for (const std::string& required : plugins[*it].Details.Requires)
+                    for (const std::vector<std::string>* names : { &plugins[*it].Details.Requires, &plugins[*it].Details.LoadAfter })
                     {
-                        const Plugin* current = Current(plugins, required);
-                        for (size_t j = 0; j < plugins.size(); ++j)
+                        for (const std::string& required : *names)
                         {
-                            if (current && &plugins[j] == current && plugins[j].Active && !placed[j])
-                                ready = false;
+                            const Plugin* current = Current(plugins, required);
+                            for (size_t j = 0; j < plugins.size(); ++j)
+                            {
+                                if (current && &plugins[j] == current && plugins[j].Active && !placed[j])
+                                    ready = false;
+                            }
                         }
                     }
                     if (ready)

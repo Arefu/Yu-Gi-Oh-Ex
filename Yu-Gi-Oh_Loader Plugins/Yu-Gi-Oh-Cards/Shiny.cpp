@@ -20,8 +20,8 @@
 
 #include <fstream>
 
-#include "CardTable.h"
 #include "Detours.h"
+#include "Yu-Gi-Oh-Core.h"
 #include "Yu-Gi-Oh-Mods.h"
 #include "Logger.h"
 #include "Rarity.h"
@@ -125,7 +125,7 @@ namespace
             g_Shown.erase(card);
     }
 
-    void __cdecl OnTake(bool fromSave)
+    void __cdecl OnTake(unsigned char fromSave)
     {
         std::lock_guard<std::recursive_mutex> guard(g_Lock);
         g_Owned.clear();
@@ -141,7 +141,7 @@ namespace
         const uint8_t version = data[0];
         if (version != 1 && version != 2)
         {
-            Logger::WriteLog(std::format("Shiny: the save's rarities are version {}, this Core reads 1 and 2: left as they are", version), MODULE_NAME, 1);
+            Logger::WriteLog(std::format("Shiny: the save's rarities are version {}, this build reads 1 and 2: left as they are", version), MODULE_NAME, 1);
             g_Loaded = false;   // never written back over
             return;
         }
@@ -998,9 +998,15 @@ bool Shiny::FaceArt(uint16_t card, void** bytes, size_t* size)
 
 void Shiny::Install()
 {
-    // The saved rarities are always read and written back, so they survive Shiny being off (and the exports work either way).
-    CardTable::AddTakeListener(&OnTake);
-    Save::AddWriteFilter(&WriteFilter, nullptr);
+    // The saved rarities are always read and written back, so they survive Shiny being off (and the exports work either way). With this
+    // plugin off Core keeps the "shiny" extension as it is: Save.cpp holds every tag it read until its owner changes it.
+    if (!Core::Load() || !Core::Functions().AddCardTableListener || !Core::Functions().AddSaveWriteFilter)
+    {
+        Logger::WriteLog("Shiny cards: this Core has no card table listener, rarities are off", MODULE_NAME, 2);
+        return;
+    }
+    Core::Functions().AddCardTableListener(&OnTake);
+    Core::Functions().AddSaveWriteFilter(&WriteFilter, nullptr);
 
     const std::string ini = Save::GameFolder() + "Config.ini";
     g_On = GetPrivateProfileIntA("Yu-Gi-Oh-Core", "Shiny", 0, ini.c_str()) != 0;

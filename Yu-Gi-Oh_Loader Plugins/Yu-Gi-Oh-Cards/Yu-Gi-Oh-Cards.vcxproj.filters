@@ -30,6 +30,15 @@
     <ClCompile Include="Limit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BulkPacks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rarity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Shiny.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Yu-Gi-Oh.def">
@@ -47,6 +56,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Limit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BulkPacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rarity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shiny.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShinyShader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

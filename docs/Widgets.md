@@ -14,8 +14,21 @@ Correction from the tracker:
 
 * There is **no checkbox or on/off toggle** widget. The only stepped control is `RIX::ScreenHelpSetting::tickLine_t` (a row of 10 ticks, `Level1`..`Level10`, used for the volume bars).
 * The widget that would carry a *choice* is a menu button (`MenuKit::widget_Item`) whose label you change with `SetLabelById`. That is how the Plugins list should show On/Off.
-* Text entry exists only as `widget_EntryCode`/`widget_EntryDigit` (digit-by-digit code, used by the Live setting screen) and `widget_KeyEntry` (key rebinding). There is no free-text field.
+* Text entry widgets exist only as `widget_EntryCode`/`widget_EntryDigit` (digit-by-digit code, used by the Live setting screen) and `widget_KeyEntry` (key rebinding). No widget takes free text. The game's only free-text input is a Win32 dialog, which any code can use; see "The text dialog" below.
 * All widgets derive from `RIX::widget_Base` (vftable `0x1409FA680`, 6 slots, base fields `+8 .. +0x2F`; constructor `sub_14087BF90`). Derived widgets are copied with move constructors that take the source widget as the second argument.
+
+## The text dialog (traced 2026-11-02)
+
+Not a RIX widget: a modeless Win32 dialog, resource 103 in the exe (title in the resource "Virtual Keyboard", replaced with the game's name when shown), floating over the game window with an OS edit box, OK and Cancel. The deck name and the card filter panel's Name row use it (so deck tags' free text does too, [UserDecks.md](UserDecks.md)). There is one global instance.
+
+| Function | Address | What it does |
+| --- | --- | --- |
+| `TextInputDialog_Open` | 0x1408CA670 | Takes `{ +16 initial text, +24 title, +32 body }`, all `wchar_t*` and copied; +0..+15 are not read, so a length limit can't be passed. Status becomes 1, or 2 if the window can't be made |
+| `TextInputDialog_GetStatus` | 0x1408CA640 | 0 none, 1 open, 2 cancelled, 3 OK. Poll it every frame |
+| `TextInputDialog_GetText` | 0x1408CA650 | The text after OK, valid until Close |
+| `TextInputDialog_Close` | 0x1408CA5E0 | Destroys the window, clears the text, status back to 0. Call it after acting on a result |
+
+The caller has to keep its screen idle while the dialog is open, because game input keeps running behind it (the deck editor sits in its state 18). The result is capped at 199 characters. A character font 9 lacks brings up a Cancel/Try Again/Continue box. The page engine has no kind or action for it yet.
 
 ## What Yu-Gi-Oh-RIX covers (2026-09-29)
 

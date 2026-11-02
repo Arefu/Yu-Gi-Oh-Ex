@@ -12,4 +12,8 @@ namespace Save
     // The saved card ownership table of a profile: one byte per Konami id (0x4E20 entries),
     // bits 0-2 = owned copies, bit 3 = "new" flag. nullptr if the profile has no save.
     unsigned char* GetCardUnlockTable(unsigned int profile);
+
+    // Core_GetSaveExtension / Core_SetSaveExtension (Yu-Gi-Oh-Core.h). Get returns 0 when Core can't answer.
+    int GetExtension(const char* tag, void* out, int size);
+    void SetExtension(const char* tag, const void* data, int size);
 }

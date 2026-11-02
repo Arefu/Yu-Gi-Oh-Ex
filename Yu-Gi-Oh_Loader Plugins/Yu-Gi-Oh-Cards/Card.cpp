@@ -21,6 +21,7 @@
 #include "Logger.h"
 #include "Yu-Gi-Oh-Memory.h"
 #include "Save.h"
+#include "Shiny.h"
 #include "Text.h"
 #include "Yu-Gi-Oh-Mods.h"
 #include "EffectSourceLending.h"
@@ -1450,8 +1451,8 @@ bool __fastcall Hook_Get_IllustrationData(int64_t a1, uint16_t konamiId, void** 
 {
     using Get_IllustrationData_t = bool(__fastcall*)(int64_t, uint16_t, void**, size_t*);
 
-    // A card face being built with the card's own picture for its rarity (Core's full art / broken frame) gets that picture first.
-    if (Core::Load() && Core::Functions().GetFaceArt && Core::Functions().GetFaceArt(konamiId, buffer, size))
+    // A card face being built with the card's own picture for its rarity (full art / broken frame) gets that picture first.
+    if (Shiny::FaceArt(konamiId, buffer, size))
         return true;
 
     // If `konamiId` is currently a borrowed id for a duel (see the duel-session remap in Card.h), the caller

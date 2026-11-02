@@ -97,7 +97,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BulkPacks.cpp" />
     <ClCompile Include="CardTable.cpp" />
     <ClCompile Include="Crash.cpp" />
     <ClCompile Include="Credits.cpp" />
@@ -112,11 +111,10 @@
     <ClCompile Include="ModConfig.cpp" />
     <ClCompile Include="Packs.cpp" />
     <ClCompile Include="Patch.cpp" />
-    <ClCompile Include="Rarity.cpp" />
     <ClCompile Include="Save.cpp" />
     <ClCompile Include="SaveScreen.cpp" />
     <ClCompile Include="SaveSlots.cpp" />
-    <ClCompile Include="Shiny.cpp" />
+    <ClCompile Include="DeckTags.cpp" />
     <ClCompile Include="UserDecks.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -125,7 +123,6 @@
   <ItemGroup>
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Core.h" />
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Manifest.h" />
-    <ClInclude Include="BulkPacks.h" />
     <ClInclude Include="Credits.h" />
     <ClInclude Include="DeckLimits.h" />
     <ClInclude Include="DuelFormat.h" />
@@ -140,9 +137,7 @@
     <ClInclude Include="Save.h" />
     <ClInclude Include="SaveScreen.h" />
     <ClInclude Include="SaveSlots.h" />
-    <ClInclude Include="Rarity.h" />
-    <ClInclude Include="Shiny.h" />
-    <ClInclude Include="ShinyShader.h" />
+    <ClInclude Include="DeckTags.h" />
     <ClInclude Include="UserDecks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
