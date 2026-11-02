@@ -580,7 +580,14 @@ namespace
     ID3D11DepthStencilState* g_DepthForNull = nullptr;
     std::unordered_map<void*, bool> g_VsOk;                       // vertex shader -> outputs SV_POSITION, COLOR0, TEXCOORD0 (render thread)
     std::unordered_map<void*, std::vector<uint8_t>> g_VsCode;     // under g_Lock
-    LARGE_INTEGER g_Qpf{}, g_Qpc0{};
+    // The foil's clock. Not QueryPerformanceCounter or GetTickCount: Speed Hacks scales those by its multiplier, and foil should move at the same speed either way.
+    uint64_t RealTime100ns()
+    {
+        FILETIME now{};
+        GetSystemTimePreciseAsFileTime(&now);
+        return static_cast<uint64_t>(now.dwHighDateTime) << 32 | now.dwLowDateTime;
+    }
+    uint64_t g_Start100ns = 0;
     uint16_t g_Slot0Card = kNoCard;                               // the card whose face is in pixel shader slot 0 now (render thread)
 
     // matches cbuffer Shiny in ShinyShader.h (11 x 16 bytes)
@@ -774,9 +781,7 @@ namespace
         if (card == kNoCard || !g_PS)
             return;
 
-        LARGE_INTEGER now;
-        QueryPerformanceCounter(&now);
-        const float seconds = static_cast<float>(static_cast<double>(now.QuadPart - g_Qpc0.QuadPart) / static_cast<double>(g_Qpf.QuadPart));
+        const float seconds = static_cast<float>(static_cast<double>(RealTime100ns() - g_Start100ns) / 1e7);
 
         const Rarity::Def* d = PreviewRarity(seconds);
         Layout l;
@@ -1023,8 +1028,7 @@ void Shiny::Install()
     g_FullFrameAlpha = std::clamp(IniFloat(ini, "ShinyFullArtFrame", 0.35f), 0.0f, 1.0f);
     g_AnimeFrames = GetModuleHandleA("Yu-Gi-Oh-AnimeCards.dll") != nullptr ||
                     GetPrivateProfileIntA("Yu-Gi-Oh-Core", "Yu-Gi-Oh-AnimeCards", 0, ini.c_str()) == 1;   // it may load after Core
-    QueryPerformanceFrequency(&g_Qpf);
-    QueryPerformanceCounter(&g_Qpc0);
+    g_Start100ns = RealTime100ns();
 
     for (const Rarity::Def& d : Rarity::All())
     {

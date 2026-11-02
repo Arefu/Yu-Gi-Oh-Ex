@@ -1,5 +1,5 @@
 {
-  "version": "1.3.1",
+  "version": "1.3.2",
   "title": "Funky",
   "description": "Debug tools for me. Needs GUI.",
   "requires": [
@@ -7,6 +7,33 @@
     "Yu-Gi-Oh-GUI"
   ],
   "settings": [
+    {
+      "key": "StartScreen",
+      "title": "Start on screen",
+      "kind": "number",
+      "default": "0",
+      "help": "Start the game straight on this screen, to check something without clicking through: skips the logos and the title, loads your save, then opens it (25 = deck editor, 29 = card shop). 0 = start as usual. Debug Tools > Screens sets it too.",
+      "min": 0,
+      "max": 200,
+      "step": 1
+    },
+    {
+      "key": "StartPage",
+      "title": "Start on page",
+      "kind": "text",
+      "default": "",
+      "help": "The same for a page in Yu-Gi-Oh-Ex\\pages, by name. Wins over Start on screen."
+    },
+    {
+      "key": "StartSlot",
+      "title": "Start save slot",
+      "kind": "number",
+      "default": "0",
+      "help": "The save slot a start on a screen or page loads. 0 = the one you played last. A slot with no save shows the save-select screen.",
+      "min": 0,
+      "max": 99,
+      "step": 1
+    },
     {
       "key": "DemoMenuButtons",
       "title": "Demo menu buttons",

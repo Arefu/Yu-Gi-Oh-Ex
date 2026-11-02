@@ -8,8 +8,8 @@
 // row as free text, comma separated (there is no archetype or era row). They live in the save extension "DeckTags", so they follow save slots and the vanilla game never sees them.
 //
 // Deck Options gets "Edit Tags" and "Filter Decks". Each opens widget_TrunkFilterCategories (the deck editor's state 6) with g_TrunkFilterState swapped
-// for the deck's tags or the list's filter. The help bar's Accept Tags / Apply Filter (the "ENT" / Start button) keeps the picks, Cancel (Back) drops
-// them; either way the player's card filter goes back. The panel's number rows (Level, ATK...) mean nothing for a deck and don't open in these modes.
+// for the deck's tags or the list's filter. Picks apply as they are made and show live at the far right (the deck's info panel, or the deck list itself);
+// the help bar's Done (Back) leaves, and the player's card filter goes back. Number rows (Level, ATK...) are tags too: a deck's values are tested with the filter's.
 //
 // A deck passes the filter when, for every row in use, it has at least one of the row's picks, and has a text tag containing one of the
 // filter's words. The filter lasts until the editor is left. Matching decks and the first empty slot stay listed, so a new deck can still be made and

@@ -93,6 +93,7 @@
     <ClCompile Include="..\..\Dependencies\Dear ImGui\imgui_widgets.cpp" />
     <ClCompile Include="DebugTools.cpp" />
     <ClCompile Include="DuelTest.cpp" />
+    <ClCompile Include="QuickStart.cpp" />
     <ClCompile Include="UiWitchcraft.cpp" />
     <ClCompile Include="dllmain.cpp" />
   </ItemGroup>
@@ -112,6 +113,7 @@
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-UI.h" />
     <ClInclude Include="DebugTools.h" />
     <ClInclude Include="DuelTest.h" />
+    <ClInclude Include="QuickStart.h" />
     <ClInclude Include="UiWitchcraft.h" />
     <ClInclude Include="..\..\Dependencies\Yu-Gi-Oh-Ex\YuGiOh\YuGiOh-UTIL.h" />
   </ItemGroup>

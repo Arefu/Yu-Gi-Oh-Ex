@@ -116,7 +116,7 @@ CORE_API int __cdecl Core_GetExtraUserDecks(int* FirstId);
    and returns its length, 0 when there is none; Out may be NULL to ask the length. Set: replaces the text and keeps the picks (NULL or empty
    clears it), trimming each tag and dropping empty ones and repeats; returns 1, or 0 when DeckId is not a user deck or its slot holds no deck.
    GetDeckTagMask: the picks on one row of the panel, a bit per option of that row (rows 1 frame, 2 Attribute, 3 Spell/Trap property, 4 Monster Type,
-   8 Link Arrows, 12 limit status, 13 genre, 14 copies owned; the table is at 0x140A7A260). Written with the game's next save write. Game thread only: they look the deck up. Added after
+   8 Link Arrows, 12 limit status, 13 genre, 14 copies owned; on a number row, 5-7 and 9-11, the comparisons picked; the table is at 0x140A7A260). Written with the game's next save write. Game thread only: they look the deck up. Added after
    version 1 like AddCredits: NULL with an older Core. */
 CORE_API int __cdecl Core_GetDeckTags(int DeckId, char* Out, int Size);
 CORE_API int __cdecl Core_SetDeckTags(int DeckId, const char* Tags);
@@ -150,6 +150,11 @@ CORE_API int __cdecl Core_EngineLend(int DisplayId, int EngineId, int PropsGameI
    what a plugin keyed on game ids looks a record's engine id up as inside duel.dll. Ids not mapped come back unchanged. Added after
    version 1 like AddCredits: NULL with an older Core. */
 CORE_API int __cdecl Core_EngineToDisplay(int EngineId);
+
+/* Makes the title screen's next Play load this save slot straight away, without the save-select screen (0 = the slot last played). Returns the slot,
+   or 0 when it can't: the slot has no save, or can't be played with this set of plugins. For a tool that starts the game on a chosen screen (Funky's
+   quick start). Added after version 1 like AddCredits: NULL with an older Core. */
+CORE_API int __cdecl Core_QuickPlaySlot(int Slot);
 
 /* The card table took over a profile: FromSave 1 = a save was read (its extension came with it, so read yours now), 0 = a new profile. For a plugin
    that keeps per-card data in the save extension (Yu-Gi-Oh-MoreCards' rarities). Runs under the table's lock on whatever thread the game loads
@@ -191,6 +196,7 @@ namespace Core
         int(__cdecl* EngineLend)(int, int, int) = nullptr;                           // NULL with a Core that predates it
         int(__cdecl* EngineToDisplay)(int) = nullptr;                                // NULL with a Core that predates it
         void(__cdecl* AddCardTableListener)(CoreCardTableListener) = nullptr;        // NULL with a Core that predates it
+        int(__cdecl* QuickPlaySlot)(int) = nullptr;                                  // NULL with a Core that predates it
     };
 
     inline Api& Functions()
@@ -242,6 +248,7 @@ namespace Core
         CORE_BIND(EngineLend);
         CORE_BIND(EngineToDisplay);
         CORE_BIND(AddCardTableListener);
+        CORE_BIND(QuickPlaySlot);
 #undef CORE_BIND
         return true;
     }

@@ -8,6 +8,9 @@ Code: `Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Cards/Shiny.cpp`, `Rarity.cpp`, `ShinySh
 
 With More Cards switched off there are no rolls and no foil. Core still keeps the save's `shiny` data as it is, so nothing is lost.
 
+**With Speed Hacks:** it scales `QueryPerformanceCounter` and `GetTickCount` by its multiplier, so the foil's clock is `GetSystemTimePreciseAsFileTime`, which it leaves
+alone. Foil moves at the same speed with or without it. A change to the PC's clock can make the foil jump once, which is harmless.
+
 ## Settings (`[Yu-Gi-Oh-Core]`, declared in Yu-Gi-Oh-MoreCards.json; the section stayed when the code moved, so existing settings keep working)
 
 | Key | Default | |

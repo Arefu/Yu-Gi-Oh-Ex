@@ -110,6 +110,8 @@ extern "C"
 
     CORE_API int __cdecl Core_EngineToDisplay(int EngineId) { return EngineId > 0 && EngineId <= 0xFFFF ? MasterDuel::ToDisplay(static_cast<uint16_t>(EngineId)) : EngineId; }
 
+    CORE_API int __cdecl Core_QuickPlaySlot(int Slot) { return SaveScreen::QuickPlay(Slot); }
+
     CORE_API void __cdecl Core_AddCardTableListener(CoreCardTableListener Listener)
     {
         // A bool and an unsigned char argument pass the same way.

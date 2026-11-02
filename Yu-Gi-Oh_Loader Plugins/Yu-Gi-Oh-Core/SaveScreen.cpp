@@ -790,6 +790,8 @@ namespace
 
     // ---- hooks
 
+    bool g_QuickPlay = false;   // Core_QuickPlaySlot chose the slot: leave the title's Play alone until it has gone to SignIn
+
     // Play on the title asks for ScreenSignIn (6) through the pending screen of the main record; this screen goes in between.
     void __fastcall Hook_TitleUpdate(int64_t self, int64_t ui, double seconds)
     {
@@ -798,7 +800,7 @@ namespace
         if (!g_Screen)
             return;
         int* record = MainRecord(ui);
-        if (record && record[0] == kScreenTitle && (record[2] == kScreenSignIn || g_BackFromGame))
+        if (record && record[0] == kScreenTitle && (record[2] == kScreenSignIn || g_BackFromGame) && !g_QuickPlay)
         {
             g_BackFromGame = false;   // backing out of the game lands here, not on the title
             record[2] = kScreenId;
@@ -830,11 +832,26 @@ namespace
             {
                 if (record[0] == kScreenTitle && g_LastScreen == kScreenMainMenu)
                     g_BackFromGame = true;
+                if (record[0] != kScreenTitle)
+                    g_QuickPlay = false;
                 g_LastScreen = record[0];
             }
         }
         ScreenBase_Tick(g_Screen, ui);
     }
+}
+
+int SaveScreen::QuickPlay(int slot)
+{
+    if (!SaveSlots::ShouldAsk())
+        return SaveSlots::LastSlot();   // SaveSlot in Config.ini: already no picker, and that slot is the one
+    if (slot == 0)
+        slot = SaveSlots::LastSlot();
+    if (slot < 1 || slot > SaveSlots::Count() || !SaveSlots::Read(slot).Exists || !SaveSlots::CanPlay(slot))
+        return 0;
+    SaveSlots::Select(slot, false);
+    g_QuickPlay = true;
+    return slot;
 }
 
 bool SaveScreen::Install()

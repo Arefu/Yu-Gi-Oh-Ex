@@ -18,6 +18,7 @@
 #include "YuGiOh/YuGiOh-UTIL.h"
 #include "YuGiOh/YuGiOh-UI.h"
 #include "DuelTest.h"
+#include "QuickStart.h"
 #include "UiWitchcraft.h"
 
 namespace
@@ -182,6 +183,8 @@ namespace
             RIX::Functions().GotoScreen(kScreens[selected].Id);
         if (ImGui::IsItemHovered())
             ImGui::SetTooltip("Uses the game's own screen change. Some screens need state the game sets up first and may not work from here.");
+
+        QuickStart::DrawTool(kScreens[selected].Id, kScreens[selected].Name);
     }
 
     // ---- main menu ----
@@ -506,6 +509,7 @@ namespace DebugTools
     void Init()
     {
         DuelTest::Install();
+        QuickStart::Install();
 
         if (!RIX::Load())
             return;
@@ -523,6 +527,7 @@ namespace DebugTools
     void Draw()
     {
         DuelTest::LateInstall();   // once; every frame calls Draw, the window or not
+        QuickStart::Tick();
         if (!g_ShowTools)
             return;
 

@@ -353,6 +353,7 @@ Debug and test tools on GUI. Status: Partial (some widgets are known broken and 
 - Duel test bench: test hands (`DuelTestHand`), bulk add by id or name, put an archetype on top of the Deck, preset Fusion tests.
 - UI tab: fire safe duel animations by id.
 - UI Witchcraft test bench.
+- Quick start: `StartScreen` / `StartPage` / `StartSlot` start the game straight on a screen or page, skipping the logos, title and save-select screen (`Core_QuickPlaySlot`). Set in Debug Tools > Screens too. Working.
 
 ### Retired and renamed plugins
 
