@@ -3,7 +3,7 @@
 `bin/CARD_Same.bin` lists the cards whose name counts as another card's name, such as Harpie Lady 1 -> Harpie Lady and
 Cyber Dragon Zwei -> Cyber Dragon. The parser is `File Type Libraries/CARD_Same.bin` (`Types.CardSameTable`). You edit it on the
 Card Manager's **Properties** tab, in the **Same name as** row. Custom cards get the same thing from `"sameName"` in cards.json, set
-on the New cards page and applied by Yu-Gi-Oh-MoreCards.
+on the New cards page and applied by Yu-Gi-Oh-Cards.
 
 ## Layout
 
@@ -58,7 +58,7 @@ IDB: named `Card_IsSameName`, `j_Card_IsSameName` and `Get_CardIdentityIdFromKon
 { "id": 15300, "name": "Harpie Lady 4", "sameName": { "card": 4068, "always": true } }
 ```
 
-`"sameName": 4068` (just a number) means always. Yu-Gi-Oh-MoreCards (`Card.cpp`, ParseCard and WriteGameTableEntry) writes the two
+`"sameName": 4068` (just a number) means always. Yu-Gi-Oh-Cards (`Card.cpp`, ParseCard and WriteGameTableEntry) writes the two
 ids into the custom card's props and its FULL_CARD_PROPS entry, the way the exe does for the game's cards. A custom card that borrows
 a vanilla id in a duel keeps them, because the props hook serves the custom card's props for the borrowed id.
 

@@ -26,7 +26,7 @@ namespace WolfEx
 
         private readonly BindingList<Row> _rows = [];
         private string _gameFolder = "";
-        // "starter" (a random starter deck dealt to a new profile, Yu-Gi-Oh-MoreCards): kept as read and written back unchanged
+        // "starter" (a random starter deck dealt to a new profile, Yu-Gi-Oh-Cards): kept as read and written back unchanged
         private JsonNode? _starter;
         private const string InfoText = "Ids 3900-14968 are the game's cards, 15300-65534 are new cards. \"Add from game data\" lists what a new profile starts with.";
 

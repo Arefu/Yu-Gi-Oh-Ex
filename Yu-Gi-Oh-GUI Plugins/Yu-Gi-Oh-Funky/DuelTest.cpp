@@ -61,7 +61,7 @@ namespace
     uint16_t ActiveDuelSessionId(uint16_t id)
     {
         static auto resolve = reinterpret_cast<unsigned short(__cdecl*)(unsigned short)>(
-            GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-MoreCards.dll"), "Card_GetActiveDuelSessionId"));
+            GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-Cards.dll"), "Card_GetActiveDuelSessionId"));
         return resolve ? resolve(id) : id;
     }
 
@@ -74,7 +74,7 @@ namespace
     uint16_t ResolveForDeck(uint16_t id)
     {
         static auto resolve = reinterpret_cast<unsigned short(__cdecl*)(unsigned short)>(
-            GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-MoreCards.dll"), "Card_ResolveDuelSessionId"));
+            GetProcAddress(GetModuleHandleA("Yu-Gi-Oh-Cards.dll"), "Card_ResolveDuelSessionId"));
         return resolve ? resolve(id) : id;
     }
 
@@ -274,7 +274,7 @@ namespace
 
     // Writes the seat's test deck into a deck struct. Each id is resolved here (Card_ResolveDuelSessionId: a custom card above 16383 or with
     // an effect clone gets the id it plays under this duel), because the hook order is not fixed: since Core starts Funky at the main menu,
-    // Yu-Gi-Oh-MoreCards' Duel_LoadDeck hook runs FIRST and resolves the deck that was there, then this overwrites it (2026-10-14: Flint
+    // Yu-Gi-Oh-Cards' Duel_LoadDeck hook runs FIRST and resolves the deck that was there, then this overwrites it (2026-10-14: Flint
     // Cragger 16403 went in unresolved, cut to 14 bits, and never reached the duel). Resolving an id twice gives the same answer.
     void WriteTestDeck(int seat, int32_t* deck)
     {
@@ -311,8 +311,8 @@ namespace
             skipped ? std::format(", {} id(s) the game does not have skipped", skipped) : std::string()));
     }
 
-    // The OUTER Duel_LoadDeck hook, attached late (LateInstall, on the first frame) so it wraps Yu-Gi-Oh-MoreCards' hook. Player 0's call
-    // writes both seats: MoreCards reserves the vanilla ids of BOTH deck structs on player 0's call.
+    // The OUTER Duel_LoadDeck hook, attached late (LateInstall, on the first frame) so it wraps Yu-Gi-Oh-Cards' hook. Player 0's call
+    // writes both seats: Cards reserves the vanilla ids of BOTH deck structs on player 0's call.
     LoadDeck_t orig_LoadDeckOuter = reinterpret_cast<LoadDeck_t>(YGO::Addr::Duel_LoadDeck);
 
     int64_t __fastcall Hook_LoadDeckOuter(char player, int32_t* deck)

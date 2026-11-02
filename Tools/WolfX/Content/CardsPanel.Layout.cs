@@ -227,7 +227,7 @@ namespace WolfEx
                 grid.Controls.Add(rows[row].Label, 0, row);
                 grid.Controls.Add(rows[row].Field, 1, row);
             }
-            var tab = Tab("Properties", grid, Note($"Saved to Yu-Gi-Oh-Ex\\cards.json (Yu-Gi-Oh-MoreCards) with everything else about the card, its genres, related cards " +
+            var tab = Tab("Properties", grid, Note($"Saved to Yu-Gi-Oh-Ex\\cards.json (Yu-Gi-Oh-Cards) with everything else about the card, its genres, related cards " +
                                                     $"and links tabs too. Ids {MinId}-{MaxId}; ATK and DEF in steps of 10, \"?\" is the game's unknown value. \"Owned from the start\": copies every profile has."));
             return tab;
         }
@@ -250,7 +250,7 @@ namespace WolfEx
             sortRow.Controls.Add(_sortAs);
             sortRow.Controls.Add(new Label
             {
-                Text = "The name the deck editor sorts it under (empty: its name). Yu-Gi-Oh-MoreCards places it among the game's cards by this.",
+                Text = "The name the deck editor sorts it under (empty: its name). Yu-Gi-Oh-Cards places it among the game's cards by this.",
                 AutoSize = true, ForeColor = SystemColors.GrayText, Margin = new Padding(8, 8, 3, 3),
             });
             fields.Controls.Add(sortRow);

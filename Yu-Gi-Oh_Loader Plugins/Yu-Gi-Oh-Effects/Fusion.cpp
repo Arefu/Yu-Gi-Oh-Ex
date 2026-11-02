@@ -19,7 +19,7 @@
 namespace
 {
     // In a duel a custom card above 16383 (or one lending its effect source's id, docs/EffectSystem.md section 32) plays under a BORROWED
-    // vanilla id (Yu-Gi-Oh-MoreCards, ygo-duel-id-remap-plan). The hooks get engine ids: a fusion id is turned back into the custom card
+    // vanilla id (Yu-Gi-Oh-Cards, ygo-duel-id-remap-plan). The hooks get engine ids: a fusion id is turned back into the custom card
     // (Card_GetRealIdForBorrowed) before g_Recipes is asked, and a custom material id is handed out as the id it plays under
     // (Card_GetActiveDuelSessionId), so the game's same-name check compares like with like.
     constexpr int kFirstExtraCardId = 0x3BC4;   // 15300, as in Yu-Gi-Oh-Cards/Card.h
@@ -308,7 +308,7 @@ namespace
     {
         if (g_RealIdForBorrowed && g_ActiveDuelId)
             return;
-        if (HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-MoreCards.dll"))
+        if (HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-Cards.dll"))
         {
             g_RealIdForBorrowed = reinterpret_cast<IdMap_t>(GetProcAddress(cards, "Card_GetRealIdForBorrowed"));
             g_ActiveDuelId = reinterpret_cast<IdMap_t>(GetProcAddress(cards, "Card_GetActiveDuelSessionId"));

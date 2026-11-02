@@ -130,7 +130,7 @@ Values (in conditions and in any text as `{...}`):
 | `game:character.<id>` | 1 when a character is unlocked |
 | `game:language` | the game's language id |
 
-| `game:password.<8 digits>` | the card with that password (0 = none; custom cards' passwords too, with Yu-Gi-Oh-MoreCards) |
+| `game:password.<8 digits>` | the card with that password (0 = none; custom cards' passwords too, with Yu-Gi-Oh-Cards) |
 | `game:atk.<id>` / `game:def.<id>` | a card's ATK / DEF (empty when it is "?"; a Link monster's DEF is empty) |
 | `game:level.<id>`, `game:kind.<id>`, `game:attribute.<id>`, `game:type.<id>` | its level / rank / link rating and the game's numbers for its kind, attribute and type |
 | `game:monster.<id>`, `game:spell.<id>`, `game:trap.<id>`, `game:link.<id>`, `game:known.<id>` | 1 or 0 (`known` = its ATK isn't "?") |

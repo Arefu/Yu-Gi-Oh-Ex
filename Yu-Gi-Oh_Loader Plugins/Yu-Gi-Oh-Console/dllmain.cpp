@@ -21,7 +21,7 @@ console_out conout(ctxout);
 
 // A line looks like:
 //
-//   12:34:56.789 INFO  [Yu-Gi-Oh-MoreCards] Loaded 1 card(s) from cards.json
+//   12:34:56.789 INFO  [Yu-Gi-Oh-Cards] Loaded 1 card(s) from cards.json
 //
 // The time is bright white, the level and the message are coloured by severity, and the module name has a colour of its own (the same
 // every time, so a plugin is easy to follow in a busy log). Only one thread writes at a

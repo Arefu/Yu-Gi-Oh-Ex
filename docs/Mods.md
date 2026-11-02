@@ -33,7 +33,7 @@ Every part is optional. In the zip they can sit at the top or inside one folder.
   "description": "One line.",
   "details": "Longer text: credits, what changed.",
   "requires": [
-    "Yu-Gi-Oh-MoreCards",
+    "Yu-Gi-Oh-Cards",
     { "plugin": "Yu-Gi-Oh-Foo", "url": "https://where.to/get/it" }
   ]
 }

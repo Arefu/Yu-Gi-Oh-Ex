@@ -8,7 +8,7 @@
 //   - bytes 0..19999 are the blob's table: copied in when a save is merged into the live blob (ValidateAndMerge / its legacy twin) or a
 //     new profile is made (InitNewBlob), and written back into every blob the game saves (a save write filter);
 //   - bytes 20000..65535 have no room in the blob: they are kept in the save extension (tag "cards.high", u16 id + u8 byte per owned card).
-// The game's own `id < 20000` checks around the table are a card plugin's business (Yu-Gi-Oh-MoreCards widens them); Core only makes the
+// The game's own `id < 20000` checks around the table are a card plugin's business (Yu-Gi-Oh-Cards widens them); Core only makes the
 // table big enough. docs/SaveSlots.md has the save layout.
 namespace CardTable
 {

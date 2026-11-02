@@ -159,11 +159,11 @@ def write_mod_files(mod):
             "name": "Rarities",
             "version": "1.1",
             "description": "Real-card showcase prints: broken frames, full art and alternate artworks.",
-            "details": "Needs Shiny=1 (Yu-Gi-Oh-MoreCards). Over Rush Rare: the card's real extended-art (over-frame) print, the art breaking out "
+            "details": "Needs Shiny=1 (Yu-Gi-Oh-Cards). Over Rush Rare: the card's real extended-art (over-frame) print, the art breaking out "
                        "of its frame. Full Over Rush Rare: the art over the whole card. Every card pulled comes in one of its printed artworks. "
                        "ShinyPreview=over-rush, full-over-rush or alt1 shows them on every card. Made by Tools/Scripts/make_fullframe_mod.py, "
                        "fetch_extended_art.py and fetch_alt_arts.py.",
-            "requires": ["Yu-Gi-Oh-MoreCards/Shiny"],
+            "requires": ["Yu-Gi-Oh-Cards/Shiny"],
         }, f, indent=2)
         f.write("\n")
     # Over Rush (broken frame) lands only on cards with a picture; Full Over Rush (full art) on any card that isn't a Pendulum

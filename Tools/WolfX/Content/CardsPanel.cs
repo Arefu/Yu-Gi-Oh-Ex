@@ -9,7 +9,7 @@ namespace WolfEx
 {
     /// <summary>
     /// Yu-Gi-Oh-Ex/cards.json: new cards, and their art next to it. Field names and values are the ones the
-    /// Yu-Gi-Oh-MoreCards plugin reads (Card.h / Card.cpp).
+    /// Yu-Gi-Oh-Cards plugin reads (Card.h / Card.cpp).
     /// </summary>
     internal sealed partial class CardsPanel : UserControl, IContentPanel
     {
@@ -83,7 +83,7 @@ namespace WolfEx
             ("Forbidden", 0), ("Limited", 1), ("SemiLimited", 2), ("Unlimited", 3),
         };
 
-        // cards.json's "linkmarkers" names, in bit order (Yu-Gi-Oh-MoreCards Card.cpp LinkMarkerBits)
+        // cards.json's "linkmarkers" names, in bit order (Yu-Gi-Oh-Cards Card.cpp LinkMarkerBits)
         internal static readonly string[] LinkMarkerNames = ["Top-Left", "Top", "Top-Right", "Left", "Right", "Bottom-Left", "Bottom", "Bottom-Right"];
 
         // The plugin accepts ids from the first one after the game's own to the last before 65535 (the game's "no card"); ids past 19999,
@@ -160,7 +160,7 @@ namespace WolfEx
 
             /// <summary>
             /// The card whose name this one is treated as ("sameName": { "card": 4068, "always": true } in cards.json, kept in Extra; 0 = its
-            /// own name). Yu-Gi-Oh-MoreCards puts it in the card's identity ids, as bin\CARD_Same.bin does for the game's cards (docs/CardSame.md).
+            /// own name). Yu-Gi-Oh-Cards puts it in the card's identity ids, as bin\CARD_Same.bin does for the game's cards (docs/CardSame.md).
             /// </summary>
             public int SameNameCard
             {

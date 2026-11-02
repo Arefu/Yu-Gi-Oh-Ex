@@ -157,7 +157,7 @@ CORE_API int __cdecl Core_EngineToDisplay(int EngineId);
 CORE_API int __cdecl Core_QuickPlaySlot(int Slot);
 
 /* The card table took over a profile: FromSave 1 = a save was read (its extension came with it, so read yours now), 0 = a new profile. For a plugin
-   that keeps per-card data in the save extension (Yu-Gi-Oh-MoreCards' rarities). Runs under the table's lock on whatever thread the game loads
+   that keeps per-card data in the save extension (Yu-Gi-Oh-Cards' rarities). Runs under the table's lock on whatever thread the game loads
    on. Add it before the game reads a save (in DllMain). Added after version 1 like AddCredits: NULL with an older Core. */
 typedef void(__cdecl* CoreCardTableListener)(unsigned char FromSave);
 CORE_API void __cdecl Core_AddCardTableListener(CoreCardTableListener Listener);

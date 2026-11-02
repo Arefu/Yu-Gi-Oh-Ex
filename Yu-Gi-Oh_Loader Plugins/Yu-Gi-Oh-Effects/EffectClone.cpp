@@ -261,7 +261,7 @@ namespace
     {
         if (!g_RealId)
         {
-            HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-MoreCards.dll");
+            HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-Cards.dll");
             if (!cards)
                 return 0;
             g_RealId = reinterpret_cast<RealId_t>(GetProcAddress(cards, "Card_GetRealIdForBorrowed"));
@@ -2095,7 +2095,7 @@ namespace
             return customId;   // an overridden game card plays under its own id
         if (!g_ActiveId)
         {
-            if (HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-MoreCards.dll"))
+            if (HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-Cards.dll"))
                 g_ActiveId = reinterpret_cast<ActiveId_t>(GetProcAddress(cards, "Card_GetActiveDuelSessionId"));
             if (!g_ActiveId)
                 return customId;

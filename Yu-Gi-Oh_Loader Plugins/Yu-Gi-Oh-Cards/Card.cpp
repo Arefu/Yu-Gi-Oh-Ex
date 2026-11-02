@@ -1693,6 +1693,7 @@ unsigned char* __fastcall Hook_Get_LiveUnlockCounts(unsigned int profile)
 
     // Read once per launch. Resetting unavailable cards remains the default for mod switches;
     // persistence is opt-in. Both modes keep unavailable cards out of the display buffer.
+    // The section keeps the plugin's old name: moving it would silently turn this off on upgrade, and off resets saved cards.
     static const bool preserveUnavailableCards = GetPrivateProfileIntW(
         L"Yu-Gi-Oh-MoreCards", L"PreserveUnavailableCards", 0, L".\\Config.ini") != 0;
     if (saved && !preserveUnavailableCards)

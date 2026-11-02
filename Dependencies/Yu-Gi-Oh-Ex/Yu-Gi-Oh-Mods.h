@@ -18,7 +18,7 @@
           "version": "1.0", "author": "...", "website": "https://...",
           "description": "One line.",
           "details": "Longer text, shown by the Mod Manager.",
-          "requires": [ "Yu-Gi-Oh-MoreCards",             plugin DLL names (no .dll) the mod needs ...
+          "requires": [ "Yu-Gi-Oh-Cards",             plugin DLL names (no .dll) the mod needs ...
                         { "plugin": "Yu-Gi-Oh-Foo", "url": "https://..." },   ... with where to get one that isn't part of Yu-Gi-Oh-Ex
                         "Yu-Gi-Oh-Core/MasterDuelEngine" ]          ... and a setting of it that has to be on ("=value" for a value);
                                                                    the loader sets it in Config.ini while the mod is on

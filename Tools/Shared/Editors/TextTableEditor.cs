@@ -9,7 +9,7 @@ namespace Wolf.Editors
     /// The grid shows every language; the box below edits the selected cell, with a preview of its @ colours.
     /// Opens the game's tables with Yu-Gi-Oh-Ex/text.json on top. Changes to the game's entries are saved into the game's own files;
     /// entries added after them (for custom card kinds, types or prompts, in every language at once) go to text.json, which
-    /// Yu-Gi-Oh-Core serves to the game (MoreCards did until 2026-10-02).
+    /// Yu-Gi-Oh-Core serves to the game (Cards did until 2026-10-02).
     /// </summary>
     public sealed class TextTableEditor : UserControl, IGameEditor
     {

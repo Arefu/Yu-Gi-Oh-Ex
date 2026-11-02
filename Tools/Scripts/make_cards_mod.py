@@ -220,12 +220,12 @@ def main():
             if 'scale' in card:
                 entry['scale'] = card['scale']
             # the card's exact kind ("Dragon/Ritual/Pendulum/Effect"): "kind" is the nearest the game has today, this is the truth the
-            # effect system will grow to (Ritual Pendulum, Ritual Tuner, ...). Yu-Gi-Oh-MoreCards ignores keys it doesn't know.
+            # effect system will grow to (Ritual Pendulum, Ritual Tuner, ...). Yu-Gi-Oh-Cards ignores keys it doesn't know.
             entry['typeline'] = card.get('typeline', [])
         image = f'art/{FOLDERS[kind]}/{password}.jpg'
         fetch_art(card, content / image, failed)
         # "konamiId": Konami's database id (YGOPRODeck misc_info konami_id), the id Master Duel's duel.dll knows the card's effect by:
-        # Yu-Gi-Oh-MoreCards gives the card to the engine under it (docs/MasterDuelEngine.md)
+        # Yu-Gi-Oh-Cards gives the card to the engine under it (docs/MasterDuelEngine.md)
         konami = (card.get('misc_info') or [{}])[0].get('konami_id')
         entries.append({'id': id_for(str(password), FIRST_CARD_ID), **({'konamiId': konami} if konami else {}), 'name': card['name'],
                         'description': description(card), 'copies': 0, 'image': image, **entry, 'password': password})
@@ -233,7 +233,7 @@ def main():
         if done % 250 == 0:
             print(f'{done} / {len(missing)} cards', flush=True)
 
-    # Archetypes: each card gets the code of its YGOPRODeck archetype ("archetypes", read by Yu-Gi-Oh-MoreCards: the game's archetype checks,
+    # Archetypes: each card gets the code of its YGOPRODeck archetype ("archetypes", read by Yu-Gi-Oh-Cards: the game's archetype checks,
     # Fusion materials such as "2 "Dream Mirror" monsters"). A name the game's list (CARD_Named Archetypes.json) has keeps its code; a new
     # one gets a code from FIRST_NEW_ARCHETYPE, kept in archetype-ids.json, and is listed in the mod's Archetypes.json (WolfX shows the names).
     known = {a['name'].lower(): a['code'] for a in json.loads(ARCHETYPE_LIST.read_text(encoding='utf-8'))['archetypes']}

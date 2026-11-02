@@ -2,6 +2,7 @@
 #include <iostream>
 #include <Shlwapi.h>
 #include <detours.h>
+#include <filesystem>
 #include <set>
 #include <string>
 #include <vector>
@@ -14,6 +15,84 @@
 #include "Yu-Gi-Oh-Mods.h"
 
 #pragma comment(lib, "Comdlg32.lib")
+
+// A message box with Yes / No / Don't ask again. Windows has no such box, so it is the Abort / Retry / Ignore one with its buttons relabelled just as it
+// opens. That one also has no close button and ignores Esc, so every answer is a choice the player made.
+static HHOOK gLeftoverBoxHook = nullptr;
+
+static LRESULT CALLBACK LeftoverBoxHook(int code, WPARAM wParam, LPARAM lParam)
+{
+    if (code == HCBT_ACTIVATE)
+    {
+        const HWND box = reinterpret_cast<HWND>(wParam);
+        SetDlgItemTextW(box, IDABORT, L"Yes");
+        SetDlgItemTextW(box, IDRETRY, L"No");
+        SetDlgItemTextW(box, IDIGNORE, L"Don't ask again");
+
+        // The last label is longer than a button: take the room from the box's left, which a line listing plugin files always leaves.
+        constexpr int kExtra = 36;
+        for (const int id : { IDABORT, IDRETRY, IDIGNORE })
+        {
+            const HWND button = GetDlgItem(box, id);
+            RECT rect{};
+            GetWindowRect(button, &rect);
+            MapWindowPoints(HWND_DESKTOP, box, reinterpret_cast<POINT*>(&rect), 2);
+            const int width = rect.right - rect.left + (id == IDIGNORE ? kExtra : 0);
+            SetWindowPos(button, nullptr, rect.left - kExtra, rect.top, width, rect.bottom - rect.top, SWP_NOZORDER | SWP_NOACTIVATE);
+        }
+
+        const HHOOK hook = gLeftoverBoxHook;
+        gLeftoverBoxHook = nullptr;
+        UnhookWindowsHookEx(hook);
+        return 0;
+    }
+    return CallNextHookEx(gLeftoverBoxHook, code, wParam, lParam);
+}
+
+enum class LeftoverAnswer { Yes, No, DontAskAgain };
+
+static LeftoverAnswer AskAboutLeftovers(const std::string& text)
+{
+    gLeftoverBoxHook = SetWindowsHookExW(WH_CBT, LeftoverBoxHook, nullptr, GetCurrentThreadId());
+    const int answer = MessageBoxA(nullptr, text.c_str(), "Yu-Gi-Oh-Ex", MB_ABORTRETRYIGNORE | MB_ICONQUESTION | MB_DEFBUTTON1);
+    if (gLeftoverBoxHook)
+    {
+        UnhookWindowsHookEx(gLeftoverBoxHook);
+        gLeftoverBoxHook = nullptr;
+    }
+    return answer == IDABORT ? LeftoverAnswer::Yes : answer == IDIGNORE ? LeftoverAnswer::DontAskAgain : LeftoverAnswer::No;
+}
+
+// Moves a leftover plugin's files to <plugins>\_retired\<yyyy-MM-dd>[\YGO-Ex], as WolfX and the Mod Manager do (Tools\Shared\Mods\RetiredPlugins.cs): nothing is deleted.
+// Returns the files it couldn't move, one per line.
+static std::string RetireLeftover(const std::string& pluginsFolder, const YGO::Manifest::Plugin& plugin)
+{
+    SYSTEMTIME now{};
+    GetLocalTime(&now);
+    char date[16];
+    snprintf(date, sizeof(date), "%04d-%02d-%02d", now.wYear, now.wMonth, now.wDay);
+    std::filesystem::path target = std::filesystem::path(pluginsFolder) / "_retired" / date;
+    std::filesystem::path source = pluginsFolder;
+    if (plugin.Gui)
+    {
+        target /= "YGO-Ex";
+        source /= "YGO-Ex";
+    }
+
+    std::string failed;
+    std::error_code error;
+    std::filesystem::create_directories(target, error);
+    for (const char* extension : { ".dll", ".json", ".pdb", ".lib", ".exp", ".ini" })
+    {
+        const std::filesystem::path file = source / (plugin.Name + extension);
+        if (!std::filesystem::exists(file, error))
+            continue;
+        std::filesystem::rename(file, target / file.filename(), error);
+        if (error)
+            failed += "  " + file.filename().string() + "\n";
+    }
+    return failed;
+}
 
 // Steam's own uninstall entry for Legacy of the Duelist (app 1150640). Steam writes InstallLocation
 // here under HKLM. We read it, and when Steam didn't (a non-Steam copy), we keep the player's chosen
@@ -380,7 +459,8 @@ void Game::LookForPlugins()
             OutputDebugStringA(("Yu-Gi-Oh_Loader: " + plugin.Name + " is not loaded, it " + plugin.Problem + "\n").c_str());
     }
 
-    // Told once per set of leftovers ([Yu-Gi-Oh-Core] ReplacedNotice remembers which were shown).
+    // Asked until answered: Yes moves them, No asks again next start, Don't ask again lasts until the set of leftovers changes
+    // ([Yu-Gi-Oh-Core] ReplacedNotice remembers which).
     if (!leftovers.empty())
     {
         char shown[1024] = {};
@@ -388,9 +468,20 @@ void Game::LookForPlugins()
         if (leftoverNames != shown)
         {
             const std::string text = "These plugin files are left over from an older Yu-Gi-Oh-Ex. They were not loaded:\n\n" + leftovers +
-                "\nYou can delete them, or let WolfX (Files > Game files & loading) or the Mod Manager move them to Plugins\\_retired.";
-            MessageBoxA(nullptr, text.c_str(), "Yu-Gi-Oh-Ex", MB_OK | MB_ICONINFORMATION);
-            WritePrivateProfileStringA(Section, "ReplacedNotice", leftoverNames.c_str(), ConfigPath);
+                "\nMove them to Plugins\\_retired?";
+            const LeftoverAnswer answer = AskAboutLeftovers(text);
+            if (answer == LeftoverAnswer::DontAskAgain)
+                WritePrivateProfileStringA(Section, "ReplacedNotice", leftoverNames.c_str(), ConfigPath);
+            else if (answer == LeftoverAnswer::Yes)
+            {
+                std::string failed;
+                for (const YGO::Manifest::Plugin& plugin : plugins)
+                    if (!plugin.ReplacedBy.empty())
+                        failed += RetireLeftover(pluginsFolder, plugin);
+                WritePrivateProfileStringA(Section, "ReplacedNotice", nullptr, ConfigPath);
+                if (!failed.empty())
+                    MessageBoxA(nullptr, ("Could not move:\n\n" + failed).c_str(), "Yu-Gi-Oh-Ex", MB_OK | MB_ICONWARNING);
+            }
         }
     }
 

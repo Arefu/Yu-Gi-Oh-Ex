@@ -26,5 +26,5 @@ reading is never overwritten.
 
 ## Custom cards
 
-Yu-Gi-Oh-MoreCards (`Card.cpp`, WriteGameTableEntry) now gives a custom card its index initial: the first character of its name, the
+Yu-Gi-Oh-Cards (`Card.cpp`, WriteGameTableEntry) now gives a custom card its index initial: the first character of its name, the
 non-Japanese rule. Before this, it had none, because `Setup_FullCardProps` ran before the card had a name.

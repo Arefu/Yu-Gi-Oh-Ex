@@ -15,7 +15,7 @@ namespace Types
 
         /// <summary>
         /// A Link monster's arrows: it has no DEF, so the DEF bits hold the arrow mask (bit 0 top-left, 1 top, 2 top-right, 3 left, 4 right,
-        /// 5 bottom-left, 6 bottom, 7 bottom-right; the order Yu-Gi-Oh-MoreCards' "linkmarkers" uses).
+        /// 5 bottom-left, 6 bottom, 7 bottom-right; the order Yu-Gi-Oh-Cards' "linkmarkers" uses).
         /// </summary>
         public int LinkArrows
         {

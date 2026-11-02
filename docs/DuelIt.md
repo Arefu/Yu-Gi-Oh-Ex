@@ -16,7 +16,7 @@ Normal console line format; the message after `] ` is `TAG key=value ...` (value
 |---|---|---|
 | `DUEL_BEGIN` | after `YGO::DUEL::Engine_Init` | id, date, mode (Campaign/Challenge/BattlePack/Online/Free), online, tag, match (Ranked/Friendly), rounds, localSeat, localSide, startSide, rng (PlayerState.field_3768) |
 | `SEAT` | `LiveSeats__SetName` (online) | seat, name |
-| `CARDS` | PlayerState at duel start | side, zone (deck/extra/hand), cards = `slot:id,...` (real ids, custom cards resolved via Yu-Gi-Oh-MoreCards) |
+| `CARDS` | PlayerState at duel start | side, zone (deck/extra/hand), cards = `slot:id,...` (real ids, custom cards resolved via Yu-Gi-Oh-Cards) |
 | `MSG` | `Duel__MsgQueue__PumpAndMirror` pops it (execution order) | n, code, name (`DuelMsgCode`), side, a1-a3 (full 32 bits: `HighWordPrefix` 0x6D entries are folded into the next message), lp (both sides, as the message starts - before its handler changes LP) |
 | `MOVE` | `YGO__UI__OnCardMove` | slot, kind, from, to (location = zone<<1 \| side \| index<<6) |
 | `LP` | after `LP_ApplyDamage_Internal` / `LP_ApplyGain_Internal` | side, kind, amount, lp (informational; DuelIt applies LP from MSG 0x23/0x24/0x25) |

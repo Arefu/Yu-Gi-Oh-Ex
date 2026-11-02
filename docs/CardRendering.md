@@ -26,7 +26,7 @@ GFX::RenderThread_ProcessQueues (render thread, every frame)
 * `g_CardImageTable` (`0x140D4E0C8`) points at the `CardImageManager`: a slot per internal id (`RefCount`, `CacheIndex`), a cache of at most
   **120** card textures (released ones are evicted oldest first and their render target reused), and `FrameTextures[19]`, the
   plain frame of each frame type. Those double as the placeholder while a card is still loading.
-* Only internal ids below 10166 are cached (checks at `0x140752A31` and `0x140754192`, both patched by Yu-Gi-Oh-MoreCards).
+* Only internal ids below 10166 are cached (checks at `0x140752A31` and `0x140754192`, both patched by Yu-Gi-Oh-Cards).
 * Because the face is baked into a texture, **changing how a card looks means changing `CardFace_Build`'s output** (its quads, text,
   matrices). Nothing later knows about names or ATK.
 

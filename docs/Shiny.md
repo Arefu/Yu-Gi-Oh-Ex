@@ -1,17 +1,17 @@
 # Shiny cards (card rarities)
 
-Yu-Gi-Oh-MoreCards gives cards **real-card rarities** (it was in Core until 2026-11-02). Cards pulled from booster packs can come as Super, Ultra, Secret, Starlight,
+Yu-Gi-Oh-Cards gives cards **real-card rarities** (it was in Core until 2026-11-02). Cards pulled from booster packs can come as Super, Ultra, Secret, Starlight,
 Quarter Century Secret and so on. The save keeps how many of each you own, and every card face is drawn with its rarity as animated
 foil over the game's own card. This started as Toon Jinzo's Yu-Gi-Oh-Foil plugin (three finishes) and grew into the full rarity list.
 The game records card faces on a deferred Direct3D context, so the face clear is hooked on both contexts (docs/CardRendering.md).
 Code: `Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Cards/Shiny.cpp`, `Rarity.cpp`, `ShinyShader.h`.
 
-With More Cards switched off there are no rolls and no foil. Core still keeps the save's `shiny` data as it is, so nothing is lost.
+With Cards switched off there are no rolls and no foil. Core still keeps the save's `shiny` data as it is, so nothing is lost.
 
 **With Speed Hacks:** it scales `QueryPerformanceCounter` and `GetTickCount` by its multiplier, so the foil's clock is `GetSystemTimePreciseAsFileTime`, which it leaves
 alone. Foil moves at the same speed with or without it. A change to the PC's clock can make the foil jump once, which is harmless.
 
-## Settings (`[Yu-Gi-Oh-Core]`, declared in Yu-Gi-Oh-MoreCards.json; the section stayed when the code moved, so existing settings keep working)
+## Settings (`[Yu-Gi-Oh-Core]`, declared in Yu-Gi-Oh-Cards.json; the section stayed when the code moved, so existing settings keep working)
 
 | Key | Default | |
 |---|---|---|
@@ -111,8 +111,8 @@ A rarity's `art` says it has its own picture of the card. Over Rush is `broken`,
   serves custom cards' art, asks `Shiny::FaceArt` first. The first `AddQuad` (the art, batch 0) is stretched to the whole
   card. The second (the frame, batch 1) becomes zero-area (`broken`, `printed`) or has its alpha scaled (`full`).
 
-**The Rarities mod** (`Mods\Rarities`, shipped in releases) holds every picture. It requires `Yu-Gi-Oh-MoreCards/Shiny`, so switching it
-on switches More Cards and Shiny on. Its `rarities.json` makes Over Rush roll 1 in 24 and Full Over Rush 1 in 60 rare slots. Three scripts fill it
+**The Rarities mod** (`Mods\Rarities`, shipped in releases) holds every picture. It requires `Yu-Gi-Oh-Cards/Shiny`, so switching it
+on switches Cards and Shiny on. Its `rarities.json` makes Over Rush roll 1 in 24 and Full Over Rush 1 in 60 rare slots. Three scripts fill it
 (they write into the repo's `Mods\Rarities` by default, `--mod` for another folder):
 
 | Script | What |
@@ -135,7 +135,7 @@ write filter. The data is kept whether Shiny is on or off. A save made by a newe
 Every pull with a rarity or an alternate art is logged as `<rarity>[ (alternate art n)] ripped: <card> (<id>)`, e.g.
 `Ultra Rare ripped: Blue-Eyes White Dragon (4007)`.
 
-Exports of `Yu-Gi-Oh-MoreCards.dll` (`GetProcAddress`), for prizes, shops and trade pages: `Cards_GetCardRarity(card)`,
+Exports of `Yu-Gi-Oh-Cards.dll` (`GetProcAddress`), for prizes, shops and trade pages: `Cards_GetCardRarity(card)`,
 `Cards_GetCardRarityCount(card, rarity)`, `Cards_AddCardRarity(card, rarity, count)`.
 
 ## Detour order
@@ -143,7 +143,7 @@ Exports of `Yu-Gi-Oh-MoreCards.dll` (`GetProcAddress`), for prizes, shops and tr
 Three orders matter, and all three are set on purpose. A later detour runs first and calls the earlier one.
 
 * **Shiny before BulkPacks** (`dllmain.cpp`): both detour `OpenPackAndGrantCards`. Shiny's must be inside, or bulk purchases roll no rarities.
-* **More Cards before Anime Cards** (`"loadAfter"` in Anime Cards' manifest): both detour `CardFace_Build` and `AddQuad`. Shiny's must be inside, so that it records
+* **Cards before Anime Cards** (`"loadAfter"` in Anime Cards' manifest): both detour `CardFace_Build` and `AddQuad`. Shiny's must be inside, so that it records
   the positions Anime Cards moved things to. Plugins otherwise load by name, which would put Anime Cards first.
 * **Shiny before `Card.cpp`'s art hook**: `Card::Install` attaches later, at card setup, so custom art asks Shiny first.
 

@@ -17,7 +17,7 @@ Install
 1. Copy the "Forbidden Memories" folder into <game folder>\Mods\
    (so you have <game folder>\Mods\Forbidden Memories\mod.json).
 2. Make sure these plugins are installed and enabled:
-   Yu-Gi-Oh-MoreCards, Yu-Gi-Oh-AnimeCards, Yu-Gi-Oh-Campaign, Yu-Gi-Oh-FM
+   Yu-Gi-Oh-Cards, Yu-Gi-Oh-AnimeCards, Yu-Gi-Oh-Campaign, Yu-Gi-Oh-FM
 3. Enable the mod in the Mod Manager (it is exclusive: turn other mods off).
 4. Start a NEW save. The mod needs its own profile; old saves will not work with it.
 

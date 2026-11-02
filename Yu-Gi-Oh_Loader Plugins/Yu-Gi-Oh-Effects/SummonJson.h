@@ -27,7 +27,7 @@ namespace SummonJson
     const std::vector<Entry>& Entries();
 
     // In a duel a custom card can play under a vanilla id (docs/EffectSystem.md section 32): the id it plays under now, and the custom card a
-    // borrowed id stands for (0 = none). Both are lookups into Yu-Gi-Oh-MoreCards; without it ids are their own.
+    // borrowed id stands for (0 = none). Both are lookups into Yu-Gi-Oh-Cards; without it ids are their own.
     uint16_t EngineId(uint16_t id);
     uint16_t RealIdForBorrowed(uint16_t id);
 }

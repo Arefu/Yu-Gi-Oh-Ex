@@ -43,12 +43,12 @@ Each page's header says which files it writes and which plugin its JSON needs.
 | Page | Standard (game files) | Additional (Yu-Gi-Oh-Ex) | Plugin |
 |---|---|---|---|
 | Card Manager | `bin\CARD_Prop.bin`, `bin\CARD_Indx/Name/Desc_<L>.bin`, `bin\CARD_Pass.bin`, `bin\CARD_Named.bin` (game cards) | custom cards: `cards.json` via New cards; genres / related / links as below | |
-| Card genres | `bin\CARD_Genre.bin` | `genres.json`: cards not in CARD_IntID.bin | Yu-Gi-Oh-MoreCards (`Genres.cpp`) |
-| Related cards | `bin\tagdata.bin`, `bin\taginfo_<L>.bin` | `relatedcards.json`: new tags, custom cards, related cards that are custom or use a new tag | Yu-Gi-Oh-MoreCards (`Related.cpp`) |
+| Card genres | `bin\CARD_Genre.bin` | `genres.json`: cards not in CARD_IntID.bin | Yu-Gi-Oh-Cards (`Genres.cpp`) |
+| Related cards | `bin\tagdata.bin`, `bin\taginfo_<L>.bin` | `relatedcards.json`: new tags, custom cards, related cards that are custom or use a new tag | Yu-Gi-Oh-Cards (`Related.cpp`) |
 | Card links | `bin\CARD_Link.bin` | `cardlinks.json`: links with custom cards / archetypes (419+) | none yet (the game never reads the file) |
-| Card ids | `bin\CARD_IntID.bin` (game ids only) | - (custom cards get slots from Yu-Gi-Oh-MoreCards) | |
+| Card ids | `bin\CARD_IntID.bin` (game ids only) | - (custom cards get slots from Yu-Gi-Oh-Cards) | |
 | Name sort | `bin\CARD_Sort_<L>.bin`, `CARD_Sort2_<L>.bin` | - (custom cards are ranked by the plugin) | |
-| Text tables | `bin\WORD_/DLG_ Indx + Text` (the game's entries) | `text.json`: entries added after the game's | Yu-Gi-Oh-MoreCards (`Text.cpp`; Core had it 2026-10-02 to 2026-10-04) |
+| Text tables | `bin\WORD_/DLG_ Indx + Text` (the game's entries) | `text.json`: entries added after the game's | Yu-Gi-Oh-Cards (`Text.cpp`; Core had it 2026-10-02 to 2026-10-04) |
 | Characters | `main\chardata_<L>.bin` (the game's characters) | `characters.json`: new characters | Yu-Gi-Oh-Campaign |
 | Decks | `main\deckdata_<L>.bin`, `decks.zib` | `decks.json`: new decks, and the cards of a game deck that holds custom cards | Yu-Gi-Oh-Campaign |
 | Story editor | `main\dueldata_<L>.bin`, `main\scriptdata_<L>.bin` | `storyduels.json`, `storyscripts.json`: new duels and scenes | Yu-Gi-Oh-Campaign |
@@ -59,9 +59,9 @@ Each page's header says which files it writes and which plugin its JSON needs.
 | Packs | `main\packdefdata_<L>.bin`, `packs.zib` | | |
 | Strings | `strings\Strings_STEAM_<L>.BND`, `main\ui\credits\credits.dat` | | |
 | Forbidden & Limited | `bin\pd_limits.bin` | | |
-| New cards / Effects | | `cards.json` + art (effects inside it) | Yu-Gi-Oh-MoreCards (+ Yu-Gi-Oh-Effects for effects) |
+| New cards / Effects | | `cards.json` + art (effects inside it) | Yu-Gi-Oh-Cards (+ Yu-Gi-Oh-Effects for effects) |
 | New packs | | `packs.json` | Yu-Gi-Oh-Core |
-| Unlocks | | `unlocks.json` | Yu-Gi-Oh-MoreCards |
+| Unlocks | | `unlocks.json` | Yu-Gi-Oh-Cards |
 | Pages / Menus | | `pages\*.json`, `menus\menus.json` | Yu-Gi-Oh-RIX |
 
 JSON the old WolfEx wrote for game content (changes to game entries in `genres.json`, a tutorial or How to Play JSON for the game's own
@@ -140,7 +140,7 @@ keeps `Yu-Gi-Oh-Ex\content.json` up to date (`Tools/WolfX/ContentManifest.cs`; i
 hand, updates it):
 
 ```json
-{ "content": [ { "file": "cards.json", "plugins": [ "Yu-Gi-Oh-MoreCards", "Yu-Gi-Oh-Effects" ] },
+{ "content": [ { "file": "cards.json", "plugins": [ "Yu-Gi-Oh-Cards", "Yu-Gi-Oh-Effects" ] },
                { "file": "tutorials\\", "plugins": [], "note": "no plugin applies this yet" } ] }
 ```
 

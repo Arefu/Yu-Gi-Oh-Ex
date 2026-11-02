@@ -10,8 +10,8 @@ namespace DuelTest
     // Reads the saved list from [Yu-Gi-Oh-Funky] in Config.ini and attaches the detour.
     void Install();
 
-    // Attaches the test deck hook OUTSIDE Yu-Gi-Oh-MoreCards' Duel_LoadDeck hook (called on the first frame, after every plugin loaded),
-    // so a .ydc test deck is in the deck struct before MoreCards resolves custom ids and reserves vanilla ids for source-id lending.
+    // Attaches the test deck hook OUTSIDE Yu-Gi-Oh-Cards' Duel_LoadDeck hook (called on the first frame, after every plugin loaded),
+    // so a .ydc test deck is in the deck struct before Cards resolves custom ids and reserves vanilla ids for source-id lending.
     void LateInstall();
 
     // The "Test hand" part of the Debug Tools window.

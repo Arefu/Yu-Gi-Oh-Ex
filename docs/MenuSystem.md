@@ -153,7 +153,7 @@ DemoMenuButtons=1    ; adds "Debug Tools" and "Credits" to the main menu and "Fu
 `Yu-Gi-Oh-RIX` adds a **Plugins** button to Help & Options. It opens a list on the main menu (one button per plugin, `Name: On/Off`),
 Back returns to Help & Options.
 
-* The list is in `[Yu-Gi-Oh-Core]` in `Config.ini` (Core owns it; RIX only draws the menu through Core's toggles. Older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read): `Yu-Gi-Oh-MoreCards=1` for a DLL in `Plugins\` (the loader injects it when 1), `YGO-Ex/Yu-Gi-Oh-Funky=1`
+* The list is in `[Yu-Gi-Oh-Core]` in `Config.ini` (Core owns it; RIX only draws the menu through Core's toggles. Older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read): `Yu-Gi-Oh-Cards=1` for a DLL in `Plugins\` (the loader injects it when 1), `YGO-Ex/Yu-Gi-Oh-Funky=1`
   for a DLL in `Plugins\YGO-Ex\` (Yu-Gi-Oh-Core starts it when 1, once the main menu is up). The loader adds every plugin it finds as 0; `Yu-Gi-Oh-RIX` is always loaded.
 * `PluginsPerPage` (3 to 7, default 6) is in the same section; the first page has a button that changes it.
 * A button shows the DLL's name and no description. `<DLL name>.json` next to the DLL changes that:

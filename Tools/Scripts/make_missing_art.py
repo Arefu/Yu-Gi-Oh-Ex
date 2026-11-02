@@ -1,4 +1,4 @@
-"""Writes Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Cards/MissingArt.h: the art a custom card without a picture shows (MoreCards
+"""Writes Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Cards/MissingArt.h: the art a custom card without a picture shows (Cards
 Hook_Get_IllustrationData), the 'missing texture' checkerboard - magenta and black, 8 x 8 squares - as a 304 x 304 JPEG like the
 game's own card art, kept as raw bytes in the DLL (no file to ship). Run again to change it."""
 import io, os

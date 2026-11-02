@@ -42,7 +42,7 @@ Every page saves by the same rule, and the page header (grey line under the page
 | **Additional** | something the game's files can't hold (a new card id, a 241st character, a new pack) | JSON in the **Yu-Gi-Oh-Ex** folder | yes - the header names it |
 
 Teach with one example of each: change Blue-Eyes' ATK (standard, works with no mods) and add a custom card (additional, needs
-Yu-Gi-Oh-MoreCards).
+Yu-Gi-Oh-Cards).
 
 ### 1.3 Two ways to open the game data
 
@@ -83,9 +83,9 @@ Which page needs which plugin (from `docs/WolfXContent.md`, worth a table in the
 
 | Page | Additional file | Plugin |
 |---|---|---|
-| New cards / Effects | cards.json | Yu-Gi-Oh-MoreCards (+ Yu-Gi-Oh-Effects for effects) |
-| Card genres / Related cards / Unlocks | genres.json / relatedcards.json / unlocks.json | Yu-Gi-Oh-MoreCards |
-| Text tables | text.json | Yu-Gi-Oh-MoreCards |
+| New cards / Effects | cards.json | Yu-Gi-Oh-Cards (+ Yu-Gi-Oh-Effects for effects) |
+| Card genres / Related cards / Unlocks | genres.json / relatedcards.json / unlocks.json | Yu-Gi-Oh-Cards |
+| Text tables | text.json | Yu-Gi-Oh-Cards |
 | Characters / Decks / Story editor | characters.json / decks.json / storyduels.json + storyscripts.json | Yu-Gi-Oh-Campaign |
 | New packs | packs.json | Yu-Gi-Oh-Core |
 | Pages / Menus | pages\, menus\menus.json | Yu-Gi-Oh-RIX |
@@ -210,7 +210,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 
 #### New cards
 
-* **Purpose**: create custom cards (cards.json + art). Needs **Yu-Gi-Oh-MoreCards**.
+* **Purpose**: create custom cards (cards.json + art). Needs **Yu-Gi-Oh-Cards**.
 * **Saves to**: `Yu-Gi-Oh-Ex\cards.json` and the art copied next to it as `<id>.jpg/.png`.
 * **Layout**: like the Card Manager - list (Find, Id / Name / Kind), the card preview (drawn the same way as a game card), tabs
   **Properties, Text, Art**. Toolbar: Save, New card, Duplicate, Delete..., **Genres, related cards, links...** (opens the card in the Card
@@ -219,7 +219,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
   * Card id (15300-65534; New card picks the next free one).
   * Kind, Attribute, Type, Level / Rank / Link rating, ATK, DEF, Spell/Trap icon, **Link arrows** (saved as `linkmarkers`),
     **Pendulum scale** (`scale`), Archetypes (a new archetype gets the next free code from 419 and is added to Archetypes.json).
-  * **Same name as** (`sameName`): the card whose name this one counts as, always or while an effect says so (MoreCards applies it).
+  * **Same name as** (`sameName`): the card whose name this one counts as, always or while an effect says so (Cards applies it).
   * Limitation (Forbidden / Limited / Semi-Limited / Unlimited) and **Owned from the start** (copies every profile has).
   * Text: name, description. Art: Choose art..., with warnings.
 * **Workflows to demo**: make a monster from scratch; make a Spell; Duplicate a card to make a variant; add art; give it an effect (hand
@@ -234,7 +234,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 
 #### Effects
 
-* **Purpose**: give custom cards effects, written in **EffectScript** or built from **blocks**. Needs Yu-Gi-Oh-MoreCards **and**
+* **Purpose**: give custom cards effects, written in **EffectScript** or built from **blocks**. Needs Yu-Gi-Oh-Cards **and**
   Yu-Gi-Oh-Effects.
 * **Saves to**: the card's `effectScript` (the text) and `effectClone` (what the game runs) in cards.json, with the rest of the card.
 * **Layout**: card list with tick boxes (Filter, Check all shown, Clear all checks); the editor with **Script** and **Blocks (drag and drop)**
@@ -279,7 +279,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 #### Card genres
 
 * **Purpose**: the genre tags (Draw, Destroy Monster, Search Deck...) the game uses on the card details page and in the duel AI.
-* **Saves to**: game cards -> `bin\CARD_Genre.bin`; custom cards -> `genres.json` (Yu-Gi-Oh-MoreCards).
+* **Saves to**: game cards -> `bin\CARD_Genre.bin`; custom cards -> `genres.json` (Yu-Gi-Oh-Cards).
 * **Options**: Show (Cards with genres / Changed / All cards), Find, New card... (give genres to a card that has none), the genre tick list
   (64 bits; some marked "hidden" - the game clears them when it reads the file - or "unused").
 * **Teach**: why genres matter (AI choices, "related" filters); hidden bits.
@@ -287,7 +287,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 #### Related cards
 
 * **Purpose**: the deck editor's **Related cards** panel ("Related to: Blue-Eyes", "Supports Dragon"...).
-* **Saves to**: `bin\tagdata.bin` and `bin\taginfo_<L>.bin`; new tags and custom cards -> `relatedcards.json` (Yu-Gi-Oh-MoreCards).
+* **Saves to**: `bin\tagdata.bin` and `bin\taginfo_<L>.bin`; new tags and custom cards -> `relatedcards.json` (Yu-Gi-Oh-Cards).
 * **Layout**: tabs **Cards** (a card's related cards, each with a tag and a "why") and **Tags** (the tag definitions: name text, conditions).
 * **Options**: Text language; Cards: Add related cards..., Change tag..., Remove, Show tag; Tags: New tag, Duplicate, From conditions,
   Apply, Revert, Cards using it.
@@ -306,7 +306,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 
 * **Purpose**: `CARD_IntID.bin`, the Konami id -> internal id map.
 * **Options**: Show (All ids / Cards / Reserved ids), Find, Copy next free id, set an internal id (0 = no card).
-* **Warn**: advanced; custom cards never go in this table (Yu-Gi-Oh-MoreCards gives them slots). 904 Konami ids are reserved with no card -
+* **Warn**: advanced; custom cards never go in this table (Yu-Gi-Oh-Cards gives them slots). 904 Konami ids are reserved with no card -
   the game keeps data for them, don't reuse them.
 
 #### Name sort
@@ -384,7 +384,7 @@ Template used for each page: **Purpose · Saves to · Layout · Options · Workf
 
 #### Unlocks
 
-* **Purpose**: `unlocks.json` - cards every profile owns (Yu-Gi-Oh-MoreCards).
+* **Purpose**: `unlocks.json` - cards every profile owns (Yu-Gi-Oh-Cards).
 * **Options**: Add by name..., Add by id, Remove selected, Add from game data (what a new profile starts with), Import JSON..., "Owned at
   least (0-3)" per card, "Replace the game's default unlocks".
 * **Starter deck**: `"starter": {"deckName": "Starter Deck", "groups": [{"count": 16, "cards": [[id, weight], ...]}]}` deals a new profile a
@@ -499,7 +499,7 @@ Each episode: goal shown up front -> steps -> save -> in-game result -> how to u
 * **DAT / TOC** - the game's archive (YGO_2020.dat) and its table of contents (YGO_2020.toc).
 * **Extracted folder** - files copied out of the archive.
 * **Yu-Gi-Oh-Ex folder** - where additional content (JSON + art) lives.
-* **Plugin** - a DLL the launcher loads into the game (Core, RIX, MoreCards, Effects, Campaign, Media...). The full list is in [GLOSSARY.md](../GLOSSARY.md#plugins).
+* **Plugin** - a DLL the launcher loads into the game (Core, RIX, Cards, Effects, Campaign, Media...). The full list is in [GLOSSARY.md](../GLOSSARY.md#plugins).
 * **content.json** - WolfX's list of which plugins your content needs.
 * **Konami id / internal id / password** - see 1.5.
 * **Kind** - the card's kind number (Normal, Effect, Fusion, Link...), which decides its frame.

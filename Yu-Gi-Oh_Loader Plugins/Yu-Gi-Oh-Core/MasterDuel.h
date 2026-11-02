@@ -6,7 +6,7 @@
 // Master Duel's duel engine (docs/MasterDuelEngine.md). duel.dll is the game's own duel engine, extended by Konami for Master Duel: the same
 // effect rows and machines, the same message queue, the same card ids, with every card released since. Core loads it from
 // Plugins\Yu-Gi-Oh-Core\duel.dll when [Yu-Gi-Oh-Core] MasterDuelEngine=1, gives it its work memory and the game's card data (the cards
-// Yu-Gi-Oh-MoreCards adds included: it calls Core_EngineRefreshCards once its cards are in), and lets other plugins reach its exports.
+// Yu-Gi-Oh-Cards adds included: it calls Core_EngineRefreshCards once its cards are in), and lets other plugins reach its exports.
 namespace MasterDuel
 {
     bool Install();
@@ -17,7 +17,7 @@ namespace MasterDuel
     // The engine's export of that name ("DLL_DuelSysAct" ...), or nullptr.
     FARPROC Proc(const char* name);
 
-    // Builds the engine's card data from the game's card tables again (the game's lookups, so every card MoreCards added is in it).
+    // Builds the engine's card data from the game's card tables again (the game's lookups, so every card Cards added is in it).
     // Returns how many cards it has.
     int RefreshCards();
 

@@ -58,7 +58,7 @@ What WolfX can do:
 |---|---|
 | **Core** | Always on. The save redirect and save slots, the plugin list, game data loading (the Ex patch), mods' own settings, booster packs and new shop rows, shiny cards (every real rarity, rolled in packs and kept in the save), Speed/Rush duels and deck size limits, the crash log, credits. |
 | **RIX** | Always on. The in-game menus: new main menu buttons, RIX pages, the Plugins list, widgets for other plugins. |
-| **More Cards** | Custom cards, unlocks, card genres, related cards and text tables. |
+| **Cards** | Custom cards, unlocks, card genres, related cards and text tables. |
 | **Effects** | Custom card effects, Fusion / Ritual / Synchro / Xyz / Link rules, and changed effects for game cards. |
 | **Campaign** | Characters, decks, story duels and scenes, new tutorials, and new campaign series past the game's 6. |
 | **Media** | Your own music in place of the game's (per arena, per opponent, per story duel), voice lines in duels, and mp4 videos (cutscenes, summon cut-ins). |

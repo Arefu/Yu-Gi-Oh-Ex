@@ -80,10 +80,10 @@ namespace YGO
                 if (props && props->KonamiID != 0)
                     return static_cast<uint16_t>(props->KonamiID);
             }
-            // custom cards: their "password" in cards.json, which Yu-Gi-Oh-MoreCards answers for (Card_FindByPassword); 0 without that plugin
+            // custom cards: their "password" in cards.json, which Yu-Gi-Oh-Cards answers for (Card_FindByPassword); 0 without that plugin
             using FindCustom_t = unsigned short(__cdecl*)(unsigned int);
             static const auto findCustom = [] {
-                HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-MoreCards.dll");
+                HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-Cards.dll");
                 return cards ? reinterpret_cast<FindCustom_t>(GetProcAddress(cards, "Card_FindByPassword")) : nullptr;
             }();
             return findCustom ? findCustom(Password) : 0;

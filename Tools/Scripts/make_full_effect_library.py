@@ -6,7 +6,7 @@ Run it on the effect_reference.json build_effect_reference.py writes (it skips i
     python make_full_effect_library.py <ygoprodeck cardinfo.json (?misc=yes)> <Cards mod cards.json> <WolfX Content folder>
 
 Why it is safe for every card, the specially handled ones included: under Master Duel's engine (Core MasterDuelEngine=1, the Effects plugin
-requires it) a single-effect clone PLAYS AS its source for the duel (Yu-Gi-Oh-MoreCards -> Core_EngineLend): the engine's own rows for that
+requires it) a single-effect clone PLAYS AS its source for the duel (Yu-Gi-Oh-Cards -> Core_EngineLend): the engine's own rows for that
 id and every branch Konami keyed on it apply, with the custom card's own stats. docs/MasterDuelEngine.md "Lending".
 
 The entries the reference already has (read from the game's tables by docs/effect-scripts/build_effect_reference.py, with composed scripts)

@@ -142,7 +142,7 @@ does not access the game or its saves.
 
 ## Buying many packs (2026-11-01)
 
-More Cards `BulkPacks.cpp` (in Core until 2026-11-02), `[Yu-Gi-Oh-Core] MaxPacksPerPurchase=999` (1 = the game's one at a time). With More Cards
+Cards `BulkPacks.cpp` (in Core until 2026-11-02), `[Yu-Gi-Oh-Core] MaxPacksPerPurchase=999` (1 = the game's one at a time). With Cards
 off the shop sells one pack at a time. Replaces the third-party "Bulk Booster Purchase" `winmm.dll` (a warning is logged when a `winmm.dll` is loaded from the game folder).
 
 **For the player:** pick a pack as usual. When you can afford more than one, the buy box shows `«  ‹  1 pack  ›  »`

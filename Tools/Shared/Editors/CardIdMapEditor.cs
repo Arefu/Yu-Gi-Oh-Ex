@@ -9,7 +9,7 @@ namespace Wolf.Editors
     /// The card id table (bin/CARD_INTID.bin, File Type Libraries/CardIntId): which internal id (the card's props, name, art) each Konami
     /// id uses, with the problems the game would have with it.
     /// A game Konami id's internal id can be changed and is saved into the game's file (the game ignores the file unless it stays 22138
-    /// bytes, which the library keeps). Custom cards don't go in it (Yu-Gi-Oh-MoreCards gives them their own slots): your
+    /// bytes, which the library keeps). Custom cards don't go in it (Yu-Gi-Oh-Cards gives them their own slots): your
     /// Yu-Gi-Oh-Ex\cards.json cards are listed, with the next Konami id free for a new card. Ids in the table without a card are reserved
     /// (the exe keeps effect data for them) and never offered as free; only 15300+ is.
     /// </summary>
@@ -86,7 +86,7 @@ namespace Wolf.Editors
 
         public IReadOnlyCollection<string> Files => [CardIdMap.GamePath];
 
-        public string SavesTo => $"Standard: {CardIdMap.GamePath}. Custom cards never go in it (Yu-Gi-Oh-MoreCards gives them slots); they are listed from Yu-Gi-Oh-Ex\\cards.json.";
+        public string SavesTo => $"Standard: {CardIdMap.GamePath}. Custom cards never go in it (Yu-Gi-Oh-Cards gives them slots); they are listed from Yu-Gi-Oh-Ex\\cards.json.";
 
         private static ToolStripButton Button(string text, string tip, Action click)
         {

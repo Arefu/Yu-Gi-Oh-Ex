@@ -19,8 +19,8 @@ namespace WolfX
         /// <summary>What the plugins in this repository apply, for when their manifests can't be found (content made for another PC).</summary>
         private static readonly (string Pattern, string Plugin)[] Known =
         [
-            ("cards.json", "Yu-Gi-Oh-MoreCards"), ("unlocks.json", "Yu-Gi-Oh-MoreCards"), ("genres.json", "Yu-Gi-Oh-MoreCards"),
-            ("relatedcards.json", "Yu-Gi-Oh-MoreCards"), ("text.json", "Yu-Gi-Oh-MoreCards"),
+            ("cards.json", "Yu-Gi-Oh-Cards"), ("unlocks.json", "Yu-Gi-Oh-Cards"), ("genres.json", "Yu-Gi-Oh-Cards"),
+            ("relatedcards.json", "Yu-Gi-Oh-Cards"), ("text.json", "Yu-Gi-Oh-Cards"),
             ("characters.json", "Yu-Gi-Oh-Campaign"), ("decks.json", "Yu-Gi-Oh-Campaign"), ("storyduels.json", "Yu-Gi-Oh-Campaign"),
             ("storyscripts.json", "Yu-Gi-Oh-Campaign"), (@"tutorials\", "Yu-Gi-Oh-Campaign"),
             ("packs.json", "Yu-Gi-Oh-Core"),

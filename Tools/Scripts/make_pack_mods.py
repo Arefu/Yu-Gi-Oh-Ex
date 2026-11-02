@@ -243,7 +243,7 @@ def main():
     write_json(unlocked / 'mod.json', mod_json(
         'Cards - Unlocked', f'Every card in the Cards mod ({len(every)}) is yours from the start, 3 of each.',
         'Turn on with the Cards mod. For testing and for playing without collecting; use Cards - Booster Packs to collect them instead.',
-        ['Yu-Gi-Oh-MoreCards']))
+        ['Yu-Gi-Oh-Cards']))
 
     # ---- Cards - Booster Packs: each card in the set it first came out in ----
     groups = defaultdict(lambda: {'common': [], 'rare': []})
@@ -420,7 +420,7 @@ def main():
         'Extras row (Card Store > Buy Booster Packs). Structure Decks are bought on Card Store > Buy Decks (pages\\booster-blast-decks.bob), '
         'whole and once per save, into your saved decks with 3 of every card. Yu-Gi-Oh-Core shares the game\'s free pack slots between rows, '
         'so there is no limit on packs.',
-        ['Yu-Gi-Oh-Core', 'Yu-Gi-Oh-MoreCards', 'Yu-Gi-Oh-Campaign', 'Yu-Gi-Oh-RIX']))
+        ['Yu-Gi-Oh-Core', 'Yu-Gi-Oh-Cards', 'Yu-Gi-Oh-Campaign', 'Yu-Gi-Oh-RIX']))
 
     print(f'Cards - Unlocked: {len(every)} cards')
     print(f'Cards - Booster Packs: {len(packs)} packs in {len(rows)} rows ({unmatched} printed cards skipped: Skill cards, tokens, '

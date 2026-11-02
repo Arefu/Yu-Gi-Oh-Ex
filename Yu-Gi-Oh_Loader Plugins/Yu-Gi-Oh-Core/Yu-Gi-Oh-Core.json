@@ -1,6 +1,6 @@
 {
   "title": "Core",
-  "version": "1.3.32",
+  "version": "1.3.34",
   "description": "The save, plugin list, game data loading, the crash log, small game tweaks, deck tags and limit breakers (booster packs from packs.json, extra user deck slots: as many as the save uses + 256). Always on.",
   "enforced": true,
   "content": [
@@ -233,7 +233,7 @@
       "title": "Replaced notice",
       "kind": "text",
       "default": "",
-      "help": "Written by the loader: the leftover (renamed, merged or retired) plugins it last told you about, so it says so only once. Clear it to see the message again."
+      "help": "Written by the loader: the leftover (renamed, merged or retired) plugins you answered Don't ask again for. Clear it to be asked again."
     }
   ],
   "replaces": [

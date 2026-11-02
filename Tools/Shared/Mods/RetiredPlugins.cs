@@ -6,7 +6,7 @@ namespace Wolf.Mods
     /// <summary>
     /// Plugins an installed plugin's manifest "replaces" (Dependencies\Yu-Gi-Oh-Ex\Yu-Gi-Oh-Manifest.h): renamed (Yu-Gi-Oh-Music -&gt;
     /// Yu-Gi-Oh-Media), merged in, or retired. Copying a new build over an old folder leaves their DLLs behind; the loader never loads
-    /// them and says so once. This finds those files and moves them to Plugins\_retired\&lt;date&gt; (nothing is deleted).
+    /// them and offers to move them itself. This finds those files and moves them to Plugins\_retired\&lt;date&gt; (nothing is deleted).
     /// </summary>
     public static class RetiredPlugins
     {
@@ -34,7 +34,7 @@ namespace Wolf.Mods
                 foreach (string manifest in Directory.EnumerateFiles(folder, "*.json"))
                 {
                     string name = Path.GetFileNameWithoutExtension(manifest);
-                    if (!File.Exists(Path.Combine(folder, name + ".dll")))
+                    if (!File.Exists(Path.Combine(folder, name + ".dll")) || LostToItsSuccessor(manifest))
                         continue;
                     foreach (var (old, note) in Replaces(manifest))
                         if (!old.Equals(name, StringComparison.OrdinalIgnoreCase))
@@ -53,6 +53,54 @@ namespace Wolf.Mods
                 }
             }
             return found;
+        }
+
+        /// <summary>
+        /// Two plugins can each name the other in "replaces" when a name came back (Yu-Gi-Oh-Cards -&gt; Yu-Gi-Oh-MoreCards -&gt; Yu-Gi-Oh-Cards, and an old manifest
+        /// is still in the folder). The newer version wins, as in Yu-Gi-Oh-Manifest.h: true for the one that lost, whose own "replaces" then counts for nothing.
+        /// </summary>
+        public static bool LostToItsSuccessor(string manifestPath)
+        {
+            string folder = Path.GetDirectoryName(manifestPath) ?? "";
+            string name = Path.GetFileNameWithoutExtension(manifestPath);
+            foreach (var (other, _) in Replaces(manifestPath))
+            {
+                string otherManifest = Path.Combine(folder, other + ".json");
+                if (!File.Exists(otherManifest) || !File.Exists(Path.Combine(folder, other + ".dll")))
+                    continue;
+                if (!Replaces(otherManifest).Any(r => r.Name.Equals(name, StringComparison.OrdinalIgnoreCase)))
+                    continue;
+                int newer = CompareVersions(ManifestVersion(otherManifest), ManifestVersion(manifestPath));
+                if (newer > 0 || (newer == 0 && string.CompareOrdinal(other, name) < 0))
+                    return true;
+            }
+            return false;
+        }
+
+        private static string ManifestVersion(string manifestPath)
+        {
+            try
+            {
+                var root = JsonNode.Parse(File.ReadAllText(manifestPath), documentOptions: new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip, AllowTrailingCommas = true });
+                return root?["version"] is JsonValue value && value.TryGetValue(out string? version) ? version : "";
+            }
+            catch (Exception ex) when (ex is JsonException or IOException or UnauthorizedAccessException)
+            {
+                return "";
+            }
+        }
+
+        private static int CompareVersions(string a, string b)
+        {
+            static long[] Parts(string text) => text.Split('.').Select(p => long.TryParse(new string(p.TakeWhile(char.IsAsciiDigit).ToArray()), out long n) ? n : 0).ToArray();
+            long[] left = Parts(a), right = Parts(b);
+            for (int i = 0; i < Math.Max(left.Length, right.Length); ++i)
+            {
+                long x = i < left.Length ? left[i] : 0, y = i < right.Length ? right[i] : 0;
+                if (x != y)
+                    return x < y ? -1 : 1;
+            }
+            return 0;
         }
 
         /// <summary>A manifest's "replaces": names, or { "name", "note" }.</summary>

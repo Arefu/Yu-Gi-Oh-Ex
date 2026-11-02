@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -10,5 +11,6 @@
     <Compile Include="../../Tools/WolfX/SaveProfileIdentity.cs" Link="SaveProfileIdentity.cs" />
     <Compile Include="../../Tools/WolfX/ContentManifest.cs" Link="ContentManifest.cs" />
     <Compile Include="../../Tools/WolfX/ContentCompatibility.cs" Link="ContentCompatibility.cs" />
+    <Compile Include="../../Tools/Shared/Mods/RetiredPlugins.cs" Link="RetiredPlugins.cs" />
   </ItemGroup>
 </Project>

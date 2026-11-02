@@ -34,7 +34,7 @@ namespace
 
     template <typename T> T Get(const char* name) { return reinterpret_cast<T>(g_Engine ? GetProcAddress(g_Engine, name) : nullptr); }
 
-    // The game's decoded card properties (YGO::CARDS::IN_MEMORY_CARD_PROP, 0x30 bytes; Yu-Gi-Oh-MoreCards Card.h has the same struct).
+    // The game's decoded card properties (YGO::CARDS::IN_MEMORY_CARD_PROP, 0x30 bytes; Yu-Gi-Oh-Cards Card.h has the same struct).
     struct GameCardProps
     {
         int Id, Attack10, ArrowsOrDefense10, Kind, Type, Attribute, Level, Icon, Limitation, PendulumScale, StarType;
@@ -143,7 +143,7 @@ namespace
     char __fastcall Hook_Setup_CardPropTable(const int* a1, int language)
     {
         const char result = orig_Setup_CardPropTable(a1, language);
-        // the game's cards; Yu-Gi-Oh-MoreCards calls Core_EngineRefreshCards again once it has added its own (its hook runs around this one)
+        // the game's cards; Yu-Gi-Oh-Cards calls Core_EngineRefreshCards again once it has added its own (its hook runs around this one)
         MasterDuel::RefreshCards();
         return result;
     }
@@ -156,7 +156,7 @@ int MasterDuel::RefreshCards()
     const auto getInternal = reinterpret_cast<GetInternal_t>(YGO::Addr::Get_InternalIdFromKonamiId);
     const auto getProps = reinterpret_cast<GetProps_t>(YGO::Addr::Get_CardPropsFromInternalId);
 
-    // every card the game's lookups know (MoreCards widens them past the game's 14-bit ids), by internal id
+    // every card the game's lookups know (Cards widens them past the game's 14-bit ids), by internal id
     std::vector<int> idOfRecord;
     int maxId = 0;
     for (int id = 1; id <= 0x7FFF; ++id)
@@ -204,7 +204,7 @@ int MasterDuel::RefreshCards()
         if (idOfRecord[r] >= firstId)
             idToRecord[static_cast<size_t>(idOfRecord[r] - firstId)] = static_cast<uint16_t>(r);
 
-    // genres: the game's CARD_Genre (u64 per internal id) for its cards; MoreCards' cards have none here yet
+    // genres: the game's CARD_Genre (u64 per internal id) for its cards; Cards' cards have none here yet
     std::vector<uint64_t> genres(count, 0);
     if (const GameDataFile* f = CardFile(0x90); f && f->Data)
         memcpy(genres.data(), f->Data, (std::min)(static_cast<size_t>(f->Size), genres.size() * 8));
@@ -216,7 +216,7 @@ int MasterDuel::RefreshCards()
     Get<void(*)(const void*, int)>("DLL_SetCardProperty")(g_Props.data(), static_cast<int>(count * 8));
     Get<void(*)(const void*)>("DLL_SetInternalID")(g_IdToRecord.data());
     Get<void(*)(const void*)>("DLL_SetCardGenre")(g_Genres.data());
-    // archetypes, same-name and the card links are the game's own files (the same formats; MoreCards' cards are not in them yet)
+    // archetypes, same-name and the card links are the game's own files (the same formats; Cards' cards are not in them yet)
     if (const GameDataFile* f = CardFile(0xC0); f && f->Data)
         Get<void(*)(const void*)>("DLL_SetCardNamed")(f->Data);
     if (const GameDataFile* f = CardFile(0xB0); f && f->Data)
@@ -259,7 +259,7 @@ void MasterDuel::SetDisplayId(int engineId, int displayId)
 
 uint16_t MasterDuel::ToEngine(uint16_t gameId) { return g_ToEngine[gameId] ? g_ToEngine[gameId] : gameId; }
 
-// a deck card: a borrowed duel id first (MoreCards borrows game ids for cards past 16383), then the card's own mapping
+// a deck card: a borrowed duel id first (Cards borrows game ids for cards past 16383), then the card's own mapping
 uint16_t MasterDuel::DeckToEngine(uint16_t gameId) { return g_DisplayToEngine[gameId] ? g_DisplayToEngine[gameId] : ToEngine(gameId); }
 
 std::vector<uint16_t> MasterDuel::EngineIds()

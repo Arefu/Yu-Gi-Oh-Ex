@@ -560,7 +560,7 @@ namespace WolfEx
             {
                 if (tree.asScript() is { } asScript)
                 {
-                    // The whole behaviour of one game card. In a duel Yu-Gi-Oh-MoreCards lends this card that id when it is free, so every
+                    // The whole behaviour of one game card. In a duel Yu-Gi-Oh-Cards lends this card that id when it is free, so every
                     // id-keyed rule of the engine treats it as that card (docs/EffectSystem.md section 32).
                     return CompileAs(asScript);
                 }
@@ -1490,7 +1490,7 @@ namespace WolfEx
         }
 
         // as("Card name") can also name a card only Master Duel's engine has (released after the game): engine_card_names.json, name -> Konami id
-        // (Tools/Scripts/make_full_effect_library.py). Under that engine the card plays as it (Yu-Gi-Oh-MoreCards -> Core_EngineLend). Only as(...)
+        // (Tools/Scripts/make_full_effect_library.py). Under that engine the card plays as it (Yu-Gi-Oh-Cards -> Core_EngineLend). Only as(...)
         // reads it: card_names.json stays the game's cards, which other readers turn into game ids.
         private static System.Collections.Generic.Dictionary<string, int>? _engineNamedCards;
 

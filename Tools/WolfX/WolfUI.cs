@@ -224,11 +224,11 @@ namespace WolfX
                 Select("Card Manager");
                 manager.ShowCard(id);
             };
-            Content("Cards", "New cards", cards, "Additional: Yu-Gi-Oh-Ex\\cards.json + art (needs Yu-Gi-Oh-MoreCards).");
+            Content("Cards", "New cards", cards, "Additional: Yu-Gi-Oh-Ex\\cards.json + art (needs Yu-Gi-Oh-Cards).");
             cards.SaveRequested = () => _pages.First(page => page.Content == cards).Editor!.Save();
             var effects = new EffectsPanel();
             effects.Attach(cards);
-            Content("Cards", "Effects", effects, "Additional: new cards' effects are saved with cards.json (needs Yu-Gi-Oh-MoreCards); game cards' changed effects in Yu-Gi-Oh-Ex\\effects.json (\"overridden\"). Both need Yu-Gi-Oh-Effects.");
+            Content("Cards", "Effects", effects, "Additional: new cards' effects are saved with cards.json (needs Yu-Gi-Oh-Cards); game cards' changed effects in Yu-Gi-Oh-Ex\\effects.json (\"overridden\"). Both need Yu-Gi-Oh-Effects.");
             var library = new EffectLibraryPanel();
             library.UseTemplate = script =>
             {
@@ -256,7 +256,7 @@ namespace WolfX
             // Shop
             Add("Shop", "Packs", PackDefinitionsEditor, null, "Standard: main\\packdefdata_<lang>.bin and the packs' cards in packs.zib.");
             Content("Shop", "New packs", new PacksPanel(), "Additional: Yu-Gi-Oh-Ex\\packs.json, new packs for the shop (Yu-Gi-Oh-Core). The game's own packs are on Packs.");
-            Content("Shop", "Unlocks", new UnlocksPanel(), "Additional: Yu-Gi-Oh-Ex\\unlocks.json, cards every profile owns (needs Yu-Gi-Oh-MoreCards).");
+            Content("Shop", "Unlocks", new UnlocksPanel(), "Additional: Yu-Gi-Oh-Ex\\unlocks.json, cards every profile owns (needs Yu-Gi-Oh-Cards).");
 
             // Text
             Editor("Text", "Text tables", new TextTableEditor());

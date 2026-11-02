@@ -7,7 +7,7 @@ namespace Wolf.Editors
     /// <summary>
     /// The trunk's "sort by name" order (bin/CARD_Sort_# + CARD_Sort2_#, File Type Libraries/CardSort): the cards in each language's name
     /// order, whether that still matches the names (it goes stale when cards are renamed), and a rebuild from the names for the
-    /// Latin-script languages, saved into the game data. Custom cards have no place in these files: Yu-Gi-Oh-MoreCards ranks them
+    /// Latin-script languages, saved into the game data. Custom cards have no place in these files: Yu-Gi-Oh-Cards ranks them
     /// (NameSortRankFor, FULL_CARD_PROPS +0x18) using their cards.json names.
     /// </summary>
     public sealed class CardSortEditor : UserControl, IGameEditor
@@ -33,7 +33,7 @@ namespace Wolf.Editors
         public IReadOnlyCollection<string> Files =>
             [CardIdMap.GamePath, .. CardNameSort.Languages.SelectMany(l => new[] { SortPath(l), Sort2Path(l) })];
 
-        public string SavesTo => "Standard: bin\\CARD_Sort_<lang>.bin and CARD_Sort2_<lang>.bin. Custom cards are ranked by Yu-Gi-Oh-MoreCards from their cards.json names.";
+        public string SavesTo => "Standard: bin\\CARD_Sort_<lang>.bin and CARD_Sort2_<lang>.bin. Custom cards are ranked by Yu-Gi-Oh-Cards from their cards.json names.";
 
         private static string SortPath(char language) => Path.Combine(CardNameSort.GameFolder, CardNameSort.SortName(language));
 

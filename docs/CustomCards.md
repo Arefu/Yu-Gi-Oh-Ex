@@ -2,7 +2,7 @@
 
 `<game>\Yu-Gi-Oh-Ex\cards.json` holds every custom card (ids 15300-65534; who owns ids past 19999 is kept by Yu-Gi-Oh-Core's CardTable.cpp in the save extension) and **everything about it**: stats, text in every
 language, art, archetypes, same name, summoning requirements, effect, and the parts the game keeps in other tables for its own
-cards (genres, related cards, links, password, name order, index letters). WolfX's **New cards** page writes it; Yu-Gi-Oh-MoreCards
+cards (genres, related cards, links, password, name order, index letters). WolfX's **New cards** page writes it; Yu-Gi-Oh-Cards
 (`Yu-Gi-Oh_Loader Plugins/Yu-Gi-Oh-Cards`) reads it.
 
 Game cards are unchanged: their edits go into the game's files (WolfX patch archive) or the page's own Yu-Gi-Oh-Ex JSON.
@@ -11,17 +11,17 @@ Game cards are unchanged: their edits go into the game's files (WolfX patch arch
 
 An entry whose `id` is a game card's Konami id changes that card instead of adding one: `name`, `description`, `atk`, `def`, `level`,
 `kind`, `attribute`, `type`, `icon`, and (2026-10-19) **`image`**, new art for it (a 304 x 304 JPEG, relative to the content folder the
-entry came from), served by MoreCards' `Hook_Get_IllustrationData`.
+entry came from), served by Cards' `Hook_Get_IllustrationData`.
 
-`cardpool.json` (`{ "cards": [ids] }`, joined across mods; MoreCards `LoadCardPool`): when any copy lists cards, only those exist for the
+`cardpool.json` (`{ "cards": [ids] }`, joined across mods; Cards `LoadCardPool`): when any copy lists cards, only those exist for the
 player. Every other card reads as not owned in the trunk, deck editor and deck checks (the four read-only callers of
 `Get_LiveUnlockCounts`), so it can't be seen or used. The save keeps its copies; removing the file brings them back. The
 Forbidden Memories mod uses it. Untested in game.
 
 ## Ownership when content is unavailable
 
-MoreCards resets saved ownership for unavailable custom cards by default, retaining the original behavior when switching mods.
-To keep those copies instead, enable **PreserveUnavailableCards** in More Cards' plugin settings or add this to `Config.ini`:
+Cards resets saved ownership for unavailable custom cards by default, retaining the original behavior when switching mods.
+To keep those copies instead, enable **PreserveUnavailableCards** in Cards' plugin settings or add this to `Config.ini`:
 
 ```ini
 [Yu-Gi-Oh-MoreCards]
@@ -31,9 +31,9 @@ PreserveUnavailableCards=1
 Restart the game after changing the option. `0` (or an omitted key) resets unavailable custom ids; `1` preserves them when a card
 is removed or its JSON cannot be loaded. In both modes, only loaded cards appear in the trunk. With preservation enabled, restoring
 the same card id makes its saved copies available again. The `copies` value remains a minimum grant, so use `copies: 0` when checking
-persistence. This cannot recover counts already erased without a backup or a new grant. The option applies while MoreCards is loaded.
+persistence. This cannot recover counts already erased without a backup or a new grant. The option applies while Cards is loaded.
 
-To verify a MoreCards build, use Core with a separate toolkit save and back up both that profile and the Steam save:
+To verify a Cards build, use Core with a separate toolkit save and back up both that profile and the Steam save:
 
 1. Enable `PreserveUnavailableCards=1`. Give card 15300 two copies in the test save, keep it out of saved decks, and load a valid `cards.json` entry with `copies: 0`.
 2. Open Deck Edit and check that the trunk shows two copies. Save and exit normally.
@@ -49,15 +49,15 @@ To verify a MoreCards build, use Core with a separate toolkit save and back up b
 
 | Key | Example | Game table it stands for | Read by |
 |---|---|---|---|
-| `"atk"` / `"def"` | `"?"` | CARD_Prop's 511 = unknown | MoreCards: props 511, FULL_CARD_PROPS effective 0 / raw 0xFFFF (as `Get_EffectiveAttackFromKonamiId` / `Get_RawAttackFromKonamiId` do) |
-| `"genres"` | `["DRAW", "SPSUMMON"]` | CARD_Genre.bin | MoreCards `WriteGameTableEntry` / `BorrowInto` (over genres.json) |
-| `"related"` | `[{"card": 4007, "tag": 12, "name": "..."}]` | tagdata.bin | MoreCards `Related.cpp` (the card's whole list, over relatedcards.json) |
+| `"atk"` / `"def"` | `"?"` | CARD_Prop's 511 = unknown | Cards: props 511, FULL_CARD_PROPS effective 0 / raw 0xFFFF (as `Get_EffectiveAttackFromKonamiId` / `Get_RawAttackFromKonamiId` do) |
+| `"genres"` | `["DRAW", "SPSUMMON"]` | CARD_Genre.bin | Cards `WriteGameTableEntry` / `BorrowInto` (over genres.json) |
+| `"related"` | `[{"card": 4007, "tag": 12, "name": "..."}]` | tagdata.bin | Cards `Related.cpp` (the card's whole list, over relatedcards.json) |
 | `"links"` | `[{"target": 4007, "kind": "card"}]` | CARD_Link.bin | nobody: the game never reads CARD_Link (docs/CardLink.md) |
 | `"password"` | `12345678` | CARD_Pass.bin | `Card_FindByPassword` export, used by `YuGiOh-PASS.h` `FindCardByPassword` (Card Shop Enter Password) |
-| `"sortAs"` | `"Dark Magician"` | CARD_Sort / Sort2 | MoreCards `NameSortRankFor` (default: the name) |
-| `"indexLetters"` | `"DAR"` | CARD_Kana1/2/3 | MoreCards `IndexInitial` (first letter; default: from the name) |
-| `"text"` | `{"F": {"name": "...", "description": "...", "indexLetters": "...", "sortAs": "..."}}` | CARD_Name/Desc/Kana/Sort per language | MoreCards picks the game's current language each card setup; empty = English |
-| `"imageUncensored"` | `"15300_uncensored.jpg"` | the uncensored art zib (2020.full.illust_j) | MoreCards `Hook_Get_IllustrationData`: served while `g_bIsJpVersion` is set (the game in Japanese), else `"image"` |
+| `"sortAs"` | `"Dark Magician"` | CARD_Sort / Sort2 | Cards `NameSortRankFor` (default: the name) |
+| `"indexLetters"` | `"DAR"` | CARD_Kana1/2/3 | Cards `IndexInitial` (first letter; default: from the name) |
+| `"text"` | `{"F": {"name": "...", "description": "...", "indexLetters": "...", "sortAs": "..."}}` | CARD_Name/Desc/Kana/Sort per language | Cards picks the game's current language each card setup; empty = English |
+| `"imageUncensored"` | `"15300_uncensored.jpg"` | the uncensored art zib (2020.full.illust_j) | Cards `Hook_Get_IllustrationData`: served while `g_bIsJpVersion` is set (the game in Japanese), else `"image"` |
 
 Genre keys / tag conditions / link targets: docs/CardGenre.md, docs/RelatedCards.md, docs/CardLink.md.
 
@@ -70,7 +70,7 @@ Genre keys / tag conditions / link targets: docs/CardGenre.md, docs/RelatedCards
 * New cards page tabs: Properties (+ password, "?" ATK/DEF), Text (language picker, index letters, sort as), Art, Required cards,
   Genres, Related cards, Links (the same editor instances as their pages and the Card Manager's tabs).
 * Nothing left uncovered (2026-10-11). The "other 4 bits" after the Pendulum Scale are bits 27-30 of CARD_Prop's second word: bits 27-28
-  are the star type (1 Level, 2 Rank, 3 Link; the Rank / Link getters return 0 without it), which MoreCards sets from the kind;
+  are the star type (1 Level, 2 Rank, 3 Link; the Rank / Link getters return 0 without it), which Cards sets from the kind;
   the exe drops bits 29-30 when it loads. The Card Manager no longer shows them and sets the star type from the kind too.
   The uncensored picture is `"imageUncensored"` (New cards > Art).
 
@@ -78,4 +78,4 @@ Untested in game (2026-10-04): built only.
 
 ## A card without art
 
-A custom card with no `"image"`, or whose file is missing, shows the **missing-texture checkerboard** (magenta and black, 8 x 8, a 304 x 304 JPEG like the game's card art), built into Yu-Gi-Oh-MoreCards as raw bytes (`MissingArt.h`, made by `Tools/Scripts/make_missing_art.py`). Before 2026-10-11 it borrowed Blue-Eyes White Dragon's art.
+A custom card with no `"image"`, or whose file is missing, shows the **missing-texture checkerboard** (magenta and black, 8 x 8, a 304 x 304 JPEG like the game's card art), built into Yu-Gi-Oh-Cards as raw bytes (`MissingArt.h`, made by `Tools/Scripts/make_missing_art.py`). Before 2026-10-11 it borrowed Blue-Eyes White Dragon's art.

@@ -41,7 +41,7 @@ Every heading on this page is a link you can paste (right-click the heading on G
 1. [A to Z of names](#a-to-z-of-names)
 2. [How it fits together](#how-it-fits-together)
 3. [Plugins](#plugins)
-   - [Loader](#loader-yu-gi-oh_loaderexe) · [Core](#core-yu-gi-oh-core) · [RIX](#rix-yu-gi-oh-rix) · [More Cards](#more-cards-yu-gi-oh-morecards) · [Effects](#effects-yu-gi-oh-effects) · [Campaign](#campaign-yu-gi-oh-campaign) · [Media](#media-yu-gi-oh-media) · [Tag Duel](#tag-duel-yu-gi-oh-tagduel) · [Multiplayer](#multiplayer-yu-gi-oh-mp) · [Forbidden Memories rules](#forbidden-memories-rules-yu-gi-oh-fm) · [Anime Cards](#anime-cards-yu-gi-oh-animecards) · [Patch Me Out](#patch-me-out-yu-gi-oh-patchmeout) · [Speed Hacks](#speed-hacks-yu-gi-oh-speedhacks) · [Console](#console-yu-gi-oh-console) · [GUI](#gui-yu-gi-oh-gui) · [Funky](#funky-yu-gi-oh-funky)
+   - [Loader](#loader-yu-gi-oh_loaderexe) · [Core](#core-yu-gi-oh-core) · [RIX](#rix-yu-gi-oh-rix) · [Cards](#cards-yu-gi-oh-cards) · [Effects](#effects-yu-gi-oh-effects) · [Campaign](#campaign-yu-gi-oh-campaign) · [Media](#media-yu-gi-oh-media) · [Tag Duel](#tag-duel-yu-gi-oh-tagduel) · [Multiplayer](#multiplayer-yu-gi-oh-mp) · [Forbidden Memories rules](#forbidden-memories-rules-yu-gi-oh-fm) · [Anime Cards](#anime-cards-yu-gi-oh-animecards) · [Patch Me Out](#patch-me-out-yu-gi-oh-patchmeout) · [Speed Hacks](#speed-hacks-yu-gi-oh-speedhacks) · [Console](#console-yu-gi-oh-console) · [GUI](#gui-yu-gi-oh-gui) · [Funky](#funky-yu-gi-oh-funky)
    - [Retired and renamed plugins](#retired-and-renamed-plugins)
 4. [BOB and BAB (scripting)](#bob-and-bab-scripting)
 5. [Tools](#tools)
@@ -91,7 +91,7 @@ Every heading on this page is a link you can paste (right-click the heading on G
 | **Media** | Plugin for your own music, voice lines and mp4 videos. Was called Music. |
 | **Mod settings** | A mod's own `Config.ini`. Core reads it over yours while the mod is on, so a mod never needs you to edit your settings. |
 | **ModManager** | A tool that installs, orders and switches mods. |
-| **More Cards** | Plugin for custom cards, unlocks, genres, related cards and text. Its source folder is `Yu-Gi-Oh-Cards`. |
+| **Cards** | Plugin for custom cards, unlocks, genres, related cards and text. Its source folder is `Yu-Gi-Oh-Cards`. |
 | **Page engine** | RIX's version 2 pages: brand-new screens built from the game's own widgets. |
 | **Patch Me Out** | Quick-duel tweaks: skip rock-paper-scissors, choose who goes first, starting LP. |
 | **PluginManifest** | A tool that writes a plugin's manifest. |
@@ -119,7 +119,7 @@ Yu-Gi-Oh_Loader.exe ──starts──> YuGiOh.exe
         └─ injects plugins (Binaries\<config>\Plugins\)
              ├─ Core   (always on: save, plugin list, data loading, Ex patch, packs)
              ├─ RIX    (always on: menus, buttons, pages, BOB page runtime)
-             └─ the plugins you switch on (More Cards, Effects, Campaign, Media, ...)
+             └─ the plugins you switch on (Cards, Effects, Campaign, Media, ...)
 
 WolfX ──writes──> YGO_2020-Ex.toc/.dat  changes to the game's own files (Core serves them)
       ──writes──> <game>\Yu-Gi-Oh-Ex\    new content as JSON (plugins read it)
@@ -152,7 +152,7 @@ Plugin source is in `Yu-Gi-Oh_Loader Plugins\` (injected by the loader) and `Yu-
 | Required settings: `"Plugin/Setting"` or `"Plugin/Setting=value"` in a manifest's, mod.json's or content.json's requires needs that plugin's Config.ini setting too. A plugin whose setting is off is blocked ("needs Master Duel engine (Core) on"). Switching the plugin on, or a mod or content that needs it, sets the setting. Effects requires `Yu-Gi-Oh-Core/MasterDuelEngine`. | Built 2026-11-01, untested |
 | Applies mods: each mod's `requires` and `content.json`, with a message box naming missing plugins. Plugins switched on only for a mod or content are remembered (`SwitchedOnFor`) and go off again once nothing needs them; switching one by hand in game takes it off that list. | Built 2026-11-01, untested |
 | `content.json`: switches on the plugins your WolfX content needs. | Built |
-| Replaced plugins: never loads a plugin a manifest says was replaced, moves its on/off switch to the successor, and shows a one-time notice. | Built |
+| Replaced plugins: never loads a plugin a manifest says was replaced, moves its on/off switch to the successor, and asks whether to move the files to `Plugins\_retired` (Yes / No / Don't ask again). | Built |
 | `--wait <pid>` restart support (used by the in-game Plugins list to restart the game). | Built |
 
 ### Core (`Yu-Gi-Oh-Core`)
@@ -199,13 +199,13 @@ Always on, UI only. RIX is also the name of the game's own UI framework (screens
 | **Demo Page** | A main-menu button that walks through every wrapped widget (`menus\rix-demo.json`, copies in `docs/examples/rix-demo`). | Working |
 | **Image and text nodes** | `RIX_AddImage` / `RIX_AddText` / `RIX_RemoveNode` for any plugin (negative width or height flips the image). | Working |
 
-### More Cards (`Yu-Gi-Oh-MoreCards`)
+### Cards (`Yu-Gi-Oh-Cards`)
 
-Source folder `Yu-Gi-Oh-Cards`, built as `Yu-Gi-Oh-MoreCards.dll`. Docs: [CustomCards.md](docs/CustomCards.md), [CardGenre.md](docs/CardGenre.md), [RelatedCards.md](docs/RelatedCards.md), [CardLink.md](docs/CardLink.md), [CardSame.md](docs/CardSame.md), [CardKana.md](docs/CardKana.md), [TextTables.md](docs/TextTables.md).
+Docs: [CustomCards.md](docs/CustomCards.md), [CardGenre.md](docs/CardGenre.md), [RelatedCards.md](docs/RelatedCards.md), [CardLink.md](docs/CardLink.md), [CardSame.md](docs/CardSame.md), [CardKana.md](docs/CardKana.md), [TextTables.md](docs/TextTables.md).
 
 | Feature | What it does | Status |
 |---|---|---|
-| **Shiny cards (rarities)** | `Shiny=1`: every printed card rarity (57 built in, Yugipedia's list: Rare .. Starlight, Quarter Century Secret, Gold, Platinum, Ghost, Ultimate, Collector's, Parallel, Duel Terminal, Millennium, KaibaCorp, Starfoil / Mosaic / Shatterfoil, Rush) is rolled per card when packs open, kept in the save (extension `shiny`), and drawn as layered animated foil (name ink, art foil, frame foil regions, coating). `rarities.json` (mods merged) changes odds and adds rarities. `ShinyPreview` shows a rarity on every card. Exports `Cards_GetCardRarity` / `Cards_GetCardRarityCount` / `Cards_AddCardRarity`. Prints = rarity + artwork (save v2 keeps owned / pulled / seen per print; every pull logged "X ripped"). Card pictures (`cardart\<id>.<broken|printed|full|extended|alt1..9>`): broken frame (Over Rush, real extended-art cards only), full art for every non-Pendulum card from its own art (Full Over Rush), printed scans, alternate artworks rolled per pull. All pictures ship in the **Rarities** mod (`Mods\Rarities`, requires MoreCards/Shiny), filled by `make_fullframe_mod.py` (Master Duel), `fetch_extended_art.py` (Yugipedia), `fetch_alt_arts.py` (YGOPRODeck). On a big card (details view) the foil follows the mouse, elsewhere it sweeps. From Toon Jinzo's Yu-Gi-Oh-Foil. docs/Shiny.md. | Built 2026-11-01; first run drew nothing (faces are recorded on a deferred context), fixed, retest |
+| **Shiny cards (rarities)** | `Shiny=1`: every printed card rarity (57 built in, Yugipedia's list: Rare .. Starlight, Quarter Century Secret, Gold, Platinum, Ghost, Ultimate, Collector's, Parallel, Duel Terminal, Millennium, KaibaCorp, Starfoil / Mosaic / Shatterfoil, Rush) is rolled per card when packs open, kept in the save (extension `shiny`), and drawn as layered animated foil (name ink, art foil, frame foil regions, coating). `rarities.json` (mods merged) changes odds and adds rarities. `ShinyPreview` shows a rarity on every card. Exports `Cards_GetCardRarity` / `Cards_GetCardRarityCount` / `Cards_AddCardRarity`. Prints = rarity + artwork (save v2 keeps owned / pulled / seen per print; every pull logged "X ripped"). Card pictures (`cardart\<id>.<broken|printed|full|extended|alt1..9>`): broken frame (Over Rush, real extended-art cards only), full art for every non-Pendulum card from its own art (Full Over Rush), printed scans, alternate artworks rolled per pull. All pictures ship in the **Rarities** mod (`Mods\Rarities`, requires Cards/Shiny), filled by `make_fullframe_mod.py` (Master Duel), `fetch_extended_art.py` (Yugipedia), `fetch_alt_arts.py` (YGOPRODeck). On a big card (details view) the foil follows the mouse, elsewhere it sweeps. From Toon Jinzo's Yu-Gi-Oh-Foil. docs/Shiny.md. | Built 2026-11-01; first run drew nothing (faces are recorded on a deferred context), fixed, retest |
 | **Buying many packs** | The Card Shop's buy box picks how many packs (clickable arrows, Left/Right 1, Up/Down 10, wheel; up to `MaxPacksPerPurchase`, default 999). They open together: one wrapper marked `N packs`, one flip, then each card pulled listed once (new, then rare, then most pulled) in a grid with a page control under it and wheel scrolling. | Built |
 | **Custom cards** | `cards.json`: new cards with any id from 15,300 to 65,534, kept as-is (never remapped). Name, text per language, kind, stats (including `?` ATK/DEF), art (and an uncensored art), archetypes, password, genres, related cards, links, same name, sort name, index letters. | Working |
 | **Exact card kinds** | Cards keep their true type line (`typeline`, for example Ritual Pendulum) next to the nearest kind the game has. | Built |
@@ -241,7 +241,7 @@ The card effect engine for new cards, and changed effects for game cards. The ga
 | **Whose phase triggers** | `opponent_standby_phase`, `each_standby_phase`, `opponent_end_phase`, `each_end_phase`: the engine's phase handler families, traced. docs/EffectSystem.md section 60. | Built 2026-10-25, IDA-transcribed phase-driver test passes, not run in a duel |
 | **Own triggers (no donor)** | `"ownTrigger"`: the plugin's own effect row (action composed onto it) + its own phase offer (a virtual row after the phase table's last row calling the game's handler family); no game card borrowed. All phase triggers without an exact game match use it, and every `ignition` effect (a row in the field ignition table, offered by the game's own activation menu; section 96), and "When this card is Normal / Special Summoned" (offered from the summon evaluator with its own ref layout; section 99), and `on in_grave:` plus every self cost (`banish_self`, `discard_self`, `tribute_self` and the send / banish / Tribute-from-hand-or-field ones: the own row of the GY / hand / field table with the game's cost function in slot 3; section 102). docs/EffectSystem.md section 61. | Built 2026-10-25 (self costs 2026-10-30), tests pass, not run in a duel |
 | **Donor-free actions** | Search (`search(deck or grave ..., N, X)`), add from the GY / banished, Special Summon from any zone, send / banish from a zone, "Special Summon this card from your hand", `revive(...)` (Monster Reborn's own functions, section 101), `draw(N)` and destroy / return / banish 1 target (section 103) run the game's own functions under the card's own id, with no game card's row (Reinforcement of the Army, Magnet Circle LV2, Unexpected Dai, Foolish Burial, Watch Cat, Monster Reborn, Rose Lover, Hecatrice, Planet Pathfinder, Pot of Greed, Remove Trap, Spiritualism, Legendary Knight Hermos retired). 83% of the Cards mod's compiled effect steps are donor-free (23% on 2026-10-28 morning). docs/EffectSystem.md sections 98-103. | Built 2026-10-28 / 2026-10-30, tests pass, not run in a duel |
-| **Master Duel engine** | Offline duels played on Master Duel's own duel engine (`Plugins\Yu-Gi-Oh-Core\duel.dll`, `[Yu-Gi-Oh-Core] MasterDuelEngine=1`): Core loads it, gives it the game's cards (MoreCards' cards by their Konami id, `"konamiId"` in cards.json) and redirects duel start, the tick, the screen's state and its commands to it; duel.dll animates through the game's own animation calls. The Cards mod's new cards play with Konami's own effects. A single-effect clone plays AS its source (`Core_EngineLend`, any card the engine knows). Card-name declarations open the game's list picker with the legal names. Yu-Gi-Oh-Effects requires it (refuses to load without it) and hooks its effect row lookup: raw-row effects whose slots have duel.dll twins (`MasterDuelFunctionMap.h`, game -> duel.dll function map; `Core_EngineToDisplay` for the ids) run on it, the rest of its composed effects are not ported yet and log why (docs/Overnight-2026-10-30.md section 6b). Tag / online / tutorial duels stay on the game's engine. docs/MasterDuelEngine.md. | Built 2026-10-30, experimental; duels run in the game (user 2026-10-30), lending / name picker untested |
+| **Master Duel engine** | Offline duels played on Master Duel's own duel engine (`Plugins\Yu-Gi-Oh-Core\duel.dll`, `[Yu-Gi-Oh-Core] MasterDuelEngine=1`): Core loads it, gives it the game's cards (Cards' cards by their Konami id, `"konamiId"` in cards.json) and redirects duel start, the tick, the screen's state and its commands to it; duel.dll animates through the game's own animation calls. The Cards mod's new cards play with Konami's own effects. A single-effect clone plays AS its source (`Core_EngineLend`, any card the engine knows). Card-name declarations open the game's list picker with the legal names. Yu-Gi-Oh-Effects requires it (refuses to load without it) and hooks its effect row lookup: raw-row effects whose slots have duel.dll twins (`MasterDuelFunctionMap.h`, game -> duel.dll function map; `Core_EngineToDisplay` for the ids) run on it, the rest of its composed effects are not ported yet and log why (docs/Overnight-2026-10-30.md section 6b). Tag / online / tutorial duels stay on the game's engine. docs/MasterDuelEngine.md. | Built 2026-10-30, experimental; duels run in the game (user 2026-10-30), lending / name picker untested |
 | **Summon conditions** | Conditions on how a card was summoned (from the GY, by effect, Xyz and so on). | Built |
 | **Negation** | `negate(...)`: negate activations through the game's negation table. | Built |
 | **Continuous locks** | `lock(...)`: Jinzo / Royal Decree / Skill Drain style locks and narrower monster locks. | Built |
@@ -363,7 +363,8 @@ Debug and test tools on GUI. Status: Partial (some widgets are known broken and 
 | Yu-Gi-Oh-BetterLoad | Merged into Core (archive name, loose files, the Ex patch). |
 | Yu-Gi-Oh-SaveMe | Merged into Core (save redirect). |
 | Yu-Gi-Oh-Music | Renamed Yu-Gi-Oh-Media. |
-| Yu-Gi-Oh-Cards, Yu-Gi-Oh-ZCards | Now Yu-Gi-Oh-MoreCards. |
+| Yu-Gi-Oh-MoreCards | Renamed Yu-Gi-Oh-Cards (2026-11-02), the name it had before. When both manifests are in a folder, each naming the other in `replaces`, the newer version wins. |
+| Yu-Gi-Oh-ZCards | Merged into Yu-Gi-Oh-Cards. |
 | Yu-Gi-Oh-Tracer | Retired (debug only, no longer needed). |
 | RIX Plugin Settings screen (id 101) | Removed. Plugin settings are edited in WolfX, not in game. |
 | PatchMeOut FreeStore / NoBan, crash log | FreeStore removed; NoBan moved to Multiplayer; the crash log moved to Core. |
@@ -465,12 +466,12 @@ Everything in `<game>\Yu-Gi-Oh-Ex\` (or a mod's `Yu-Gi-Oh-Ex\`), and who reads i
 
 | File | Read by | What's in it |
 |---|---|---|
-| `cards.json` | More Cards, Effects | Custom cards and game card overrides, with everything per card (effects, recipes, genres, related, links, password...). |
-| `unlocks.json` | More Cards | Owned copies, starter grants, random starter. |
-| `cardpool.json` | More Cards | The only cards that exist for the player. |
-| `genres.json`, `relatedcards.json` | More Cards | Genres and related cards for game cards. |
-| `text.json` | More Cards | WORD/DLG text additions. |
-| `Archetypes.json` | Tools, More Cards | Archetype names (per language) and new archetype codes. |
+| `cards.json` | Cards, Effects | Custom cards and game card overrides, with everything per card (effects, recipes, genres, related, links, password...). |
+| `unlocks.json` | Cards | Owned copies, starter grants, random starter. |
+| `cardpool.json` | Cards | The only cards that exist for the player. |
+| `genres.json`, `relatedcards.json` | Cards | Genres and related cards for game cards. |
+| `text.json` | Cards | WORD/DLG text additions. |
+| `Archetypes.json` | Tools, Cards | Archetype names (per language) and new archetype codes. |
 | `effects.json` | Effects | Game card effect overrides. |
 | `summoning.json` | Effects | Fusion / Ritual / Synchro / Xyz / Link rules for game cards. |
 | `characters.json`, `decks.json`, `storyduels.json`, `storyscripts.json` | Campaign | New characters, decks, story duels and scenes. |

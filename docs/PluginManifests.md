@@ -18,7 +18,7 @@ Its interface is `Dependencies/Yu-Gi-Oh-Ex/Yu-Gi-Oh-Core.h` (`Core::Load()` find
 
 ## The plugin list in Config.ini
 
-`[Yu-Gi-Oh-Core]` (next to Core's own settings; older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read) has one line per plugin: `Yu-Gi-Oh-MoreCards=1` for a DLL in `Plugins\` (the loader injects it when it can load) and
+`[Yu-Gi-Oh-Core]` (next to Core's own settings; older `[Yu-Gi-Oh-RIX]` / `[Plugins]` lists are not read) has one line per plugin: `Yu-Gi-Oh-Cards=1` for a DLL in `Plugins\` (the loader injects it when it can load) and
 `YGO-Ex/Yu-Gi-Oh-Funky=1` for one in `Plugins\YGO-Ex\` (Core starts it). New plugins are added as `0`. Enforced plugins are always written as `1`.
 `PluginsPerPage` (3 to 5) is in the same section.
 
@@ -88,10 +88,10 @@ Copying a new build over an old folder leaves the old DLLs behind, so:
 
 - The loader never loads a replaced plugin. Anything that asks for it by name (`requires`, content.json) gets the plugin that replaced it.
 - The old Config.ini switch moves to the new plugin and the old line is removed.
-- The player is told once which leftover files can go. `[Yu-Gi-Oh-Core] ReplacedNotice` remembers which ones were already shown.
-- To clean up, use WolfX **Files > Game files & loading > Retired plugins...** or the Mod Manager's orange **Leftover** rows (double-click). Both move the files to `Plugins\_retired\<date>`; nothing is deleted.
+- The loader lists the leftover files and asks whether to move them to `Plugins\_retired\<date>`; nothing is deleted. **Yes** moves them, **No** asks again next start, **Don't ask again** lasts until the set of leftovers changes (`[Yu-Gi-Oh-Core] ReplacedNotice` remembers which).
+- WolfX **Files > Game files & loading > Retired plugins...** and the Mod Manager's orange **Leftover** rows (double-click) do the same move.
 
-Current entries: Media replaces Music; MoreCards replaces Yu-Gi-Oh-Cards and ZCards; Core replaces BetterLoad, SaveMe, BetterCardShop (now BOB pages + Core packs) and Tracer.
+Current entries: Media replaces Music; Cards replaces Yu-Gi-Oh-Cards and ZCards; Core replaces BetterLoad, SaveMe, BetterCardShop (now BOB pages + Core packs) and Tracer.
 
 ## The tool
 

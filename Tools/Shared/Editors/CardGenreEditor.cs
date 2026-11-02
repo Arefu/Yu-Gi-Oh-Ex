@@ -9,7 +9,7 @@ namespace Wolf.Editors
     /// ("Recover LP", "Special Summon"...), which the duel code (AI) also checks. Left: the cards; right: the selected card's genres as check
     /// boxes. The file is indexed by internal id, so CARD_IntID.bin is needed to know which card is which.
     /// Opens the game's genres with Yu-Gi-Oh-Ex\genres.json on top. Saving puts every card the game has (CARD_IntID.bin) into CARD_Genre.bin
-    /// and only the cards it has no place for into genres.json, which Yu-Gi-Oh-MoreCards applies. A custom card in cards.json keeps its genres in
+    /// and only the cards it has no place for into genres.json, which Yu-Gi-Oh-Cards applies. A custom card in cards.json keeps its genres in
     /// its own entry there ("genres", <see cref="CustomCards"/>): an edit goes straight into that entry, and genres.json only keeps ids
     /// cards.json doesn't have (older genres.json entries for custom cards move into cards.json on the next save).
     /// </summary>
@@ -51,7 +51,7 @@ namespace Wolf.Editors
 
         public IReadOnlyCollection<string> Files => [CardGenreTable.GamePath, CardIdMap.GamePath];
 
-        public string SavesTo => $"Standard: {CardGenreTable.GamePath}. Additional: a custom card's genres in its cards.json entry, other cards the game doesn't have in Yu-Gi-Oh-Ex\\{CardGenreJson.FileName} (needs Yu-Gi-Oh-MoreCards).";
+        public string SavesTo => $"Standard: {CardGenreTable.GamePath}. Additional: a custom card's genres in its cards.json entry, other cards the game doesn't have in Yu-Gi-Oh-Ex\\{CardGenreJson.FileName} (needs Yu-Gi-Oh-Cards).";
 
         public CardGenreEditor()
         {
@@ -241,7 +241,7 @@ namespace Wolf.Editors
                 _changed = false;
                 Refill();
                 _status.Text = (binChanged ? $"Saved {CardGenreTable.GamePath} into {_gameFiles.Describe(CardGenreTable.GamePath)}" : "CARD_Genre.bin unchanged") +
-                    (custom > 0 ? $"; {custom} cards cards.json doesn't have to {JsonPath} (Yu-Gi-Oh-MoreCards applies it)" : "") +
+                    (custom > 0 ? $"; {custom} cards cards.json doesn't have to {JsonPath} (Yu-Gi-Oh-Cards applies it)" : "") +
                     (inCards > 0 ? $"; {inCards} custom cards' genres are in cards.json" + (cardsSaved ? "" : " (cards.json NOT saved: see the New cards page)") : "") + ".";
                 return cardsSaved;
             }

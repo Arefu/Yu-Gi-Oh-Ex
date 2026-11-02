@@ -12,7 +12,7 @@ namespace Wolf.Editors
     /// "Tags": every tag; edit its group, conditions, key and text, or add new ones.
     /// Opens the game's data with Yu-Gi-Oh-Ex\relatedcards.json on top. Saving puts the game's tags and the game's cards' related cards
     /// into tagdata.bin and taginfo_*.bin (tagdata.bin is indexed by internal id); new tags, custom cards (15300+) and related cards that
-    /// are custom cards or use a new tag go to relatedcards.json, which Yu-Gi-Oh-MoreCards applies.
+    /// are custom cards or use a new tag go to relatedcards.json, which Yu-Gi-Oh-Cards applies.
     /// </summary>
     public sealed class RelatedCardsEditor : UserControl, IGameEditor, ICardFocus
     {
@@ -70,7 +70,7 @@ namespace Wolf.Editors
         public IReadOnlyCollection<string> Files =>
             [RelatedCards.TagDataPath, CardIdMap.GamePath, .. RelatedCards.Languages.Select(RelatedCards.TagInfoPath)];
 
-        public string SavesTo => $"Standard: {RelatedCards.TagDataPath} and taginfo_<lang>.bin. Additional: a custom card's related cards in its cards.json entry, new tags and other cards in Yu-Gi-Oh-Ex\\{RelatedCardsJson.FileName} (needs Yu-Gi-Oh-MoreCards).";
+        public string SavesTo => $"Standard: {RelatedCards.TagDataPath} and taginfo_<lang>.bin. Additional: a custom card's related cards in its cards.json entry, new tags and other cards in Yu-Gi-Oh-Ex\\{RelatedCardsJson.FileName} (needs Yu-Gi-Oh-Cards).";
 
         private char Language => _language.SelectedItem is string text && text.Length > 0 ? text[0] : 'E';
 
@@ -439,7 +439,7 @@ namespace Wolf.Editors
                 _changed = false;
                 RefillCards();
                 _status.Text = (write.Count > 0 ? $"Saved {string.Join(", ", write.Keys.Select(Path.GetFileName))} into {_gameFiles.Describe(RelatedCards.TagDataPath)}" : "The game's files are unchanged") +
-                    (tags + cards > 0 ? $"; {tags} new tags and {cards} cards to {JsonPath} (Yu-Gi-Oh-MoreCards applies it)" : "") +
+                    (tags + cards > 0 ? $"; {tags} new tags and {cards} cards to {JsonPath} (Yu-Gi-Oh-Cards applies it)" : "") +
                     (cardsSaved ? "; custom cards' related cards are in cards.json." : "; cards.json NOT saved (see the New cards page).");
                 return cardsSaved;
             }

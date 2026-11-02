@@ -29,7 +29,7 @@ namespace Types
     /// <see cref="SameNameMode.WhileEffect"/>. A card with no row gets its own id in both. Card_IsSameName (0x14076D6E0, called 300+
     /// times by the duel engine: fusion materials, "a card with the same name", Xyz...) compares the +0x2C ids. Setup_FullCardProps copies
     /// them to FULL_CARD_PROPS +0x6C / +0x70. Rows for custom cards (14969+) are never read; their same-name card is "sameName" in
-    /// cards.json, applied by Yu-Gi-Oh-MoreCards. See docs/CardSame.md.
+    /// cards.json, applied by Yu-Gi-Oh-Cards. See docs/CardSame.md.
     /// </summary>
     public sealed class CardSameTable
     {

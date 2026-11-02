@@ -72,7 +72,7 @@ try
     string exFolder = Path.Combine(gameFolder, "Yu-Gi-Oh-Ex"), pluginsFolder = Path.Combine(gameFolder, "Plugins");
     Directory.CreateDirectory(exFolder); Directory.CreateDirectory(pluginsFolder);
     void Dll(string name) => File.WriteAllBytes(Path.Combine(pluginsFolder, name + ".dll"), []);
-    Dll("Yu-Gi-Oh-Core"); Dll("Yu-Gi-Oh-MoreCards");
+    Dll("Yu-Gi-Oh-Core"); Dll("Yu-Gi-Oh-Cards");
     Test("Compiled card effects require the effect plugin, ordinary text does not", () =>
     {
         string path = Path.Combine(exFolder, "cards.json");
@@ -94,7 +94,7 @@ try
     Test("Transitive manifest dependencies and companion DLLs are checked", () =>
     {
         File.WriteAllText(Path.Combine(exFolder, "cards.json"), "{}");
-        File.WriteAllText(Path.Combine(pluginsFolder, "Yu-Gi-Oh-MoreCards.json"), "{\"requires\":[\"Helper\"]}");
+        File.WriteAllText(Path.Combine(pluginsFolder, "Yu-Gi-Oh-Cards.json"), "{\"requires\":[\"Helper\"]}");
         Dll("Helper"); File.WriteAllText(Path.Combine(pluginsFolder, "Helper.json"), "{\"dlls\":[\"Companion.dll\"]}");
         Check(ContentCompatibility.Check(gameFolder, exFolder).Single(e => e.Content == "cards.json").Status.Contains("Companion"), "Missing nested companion must be reported.");
         Dll("Companion"); Check(!ContentCompatibility.Check(gameFolder, exFolder).Single(e => e.Content == "cards.json").Problem, "Installed dependencies must satisfy report.");
@@ -104,6 +104,23 @@ try
         File.WriteAllText(Path.Combine(gameFolder, "Config.ini"), "[Yu-Gi-Oh-Core]\nPluginsPath=MissingPlugins\n");
         Check(ContentManifest.PluginsFolder(gameFolder) == Path.Combine(gameFolder, "MissingPlugins"), "Report must use actual configured directory.");
         Check(ContentCompatibility.Check(gameFolder, exFolder).Single(e => e.Content == "cards.json").Status.Contains("Missing plugin"), "Configured missing DLLs must be reported.");
+    });
+    Test("A plugin name that came back: the old manifest is the leftover, not the new plugin", () =>
+    {
+        // Yu-Gi-Oh-Cards -> Yu-Gi-Oh-MoreCards -> Yu-Gi-Oh-Cards: copying a new build over an old folder leaves two manifests naming each other.
+        string plugins = Path.Combine(root, "renamedBack");
+        Directory.CreateDirectory(plugins);
+        void Manifest(string name, string version, string replaces)
+        {
+            File.WriteAllBytes(Path.Combine(plugins, name + ".dll"), []);
+            File.WriteAllText(Path.Combine(plugins, name + ".json"), $"{{\"version\":\"{version}\",\"replaces\":[\"{replaces}\"]}}");
+        }
+        Manifest("Yu-Gi-Oh-MoreCards", "1.3.7", "Yu-Gi-Oh-Cards");
+        Manifest("Yu-Gi-Oh-Cards", "1.4.0", "Yu-Gi-Oh-MoreCards");
+        var leftovers = Wolf.Mods.RetiredPlugins.Find(plugins);
+        Check(leftovers.Count == 1 && leftovers[0].Name == "Yu-Gi-Oh-MoreCards" && leftovers[0].ReplacedBy == "Yu-Gi-Oh-Cards", "Only the older plugin may be retired.");
+        Check(Wolf.Mods.RetiredPlugins.LostToItsSuccessor(Path.Combine(plugins, "Yu-Gi-Oh-MoreCards.json")), "The older manifest lost.");
+        Check(!Wolf.Mods.RetiredPlugins.LostToItsSuccessor(Path.Combine(plugins, "Yu-Gi-Oh-Cards.json")), "The newer manifest stands.");
     });
     Console.WriteLine($"{passed} regression checks passed.");
 }

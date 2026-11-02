@@ -422,7 +422,7 @@ namespace
         g_Picking = g_PickDone = false;
         if (g_Failed || !MasterDuel::Ready() || !Eligible())
             return orig_InitEngine();
-        // the game's own setup first: it loads the decks (Yu-Gi-Oh-MoreCards borrows its duel ids then and tells Core, SetDisplayId) and
+        // the game's own setup first: it loads the decks (Yu-Gi-Oh-Cards borrows its duel ids then and tells Core, SetDisplayId) and
         // sets what the duel screen needs; then duel.dll starts the same duel and its state replaces the game's
         MasterDuel::ClearDisplayIds();
         const uint64_t result = orig_InitEngine();
@@ -619,7 +619,7 @@ namespace
     // (while the name picker is open the screen reads its list, the game's own block)
     int64_t __fastcall Hook_ListAttr(int i) { return g_Active && !g_Picking ? Call<int64_t>("DLL_DuelListGetItemAttribute", i) : orig_ListAttr(i); }
     // duel.dll answers with its own card id (a new card's Konami id, e.g. Albion 15994): the screen wants the id the card has in this duel
-    // (MoreCards' borrowed id), or a list of new cards came up blank (no art, 0 ATK / DEF, Level x0) while the info panel was right.
+    // (Cards' borrowed id), or a list of new cards came up blank (no art, 0 ATK / DEF, Level x0) while the info panel was right.
     int64_t __fastcall Hook_ListId(int i)
     {
         if (!g_Active || g_Picking)

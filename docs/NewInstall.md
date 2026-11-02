@@ -61,7 +61,7 @@ Three places, all writing the same `[Yu-Gi-Oh-Core]` lines in `Config.ini`:
 [Yu-Gi-Oh-Core]
 Yu-Gi-Oh-Core=1          ; always on (written as 1 whatever you put)
 Yu-Gi-Oh-RIX=1           ; always on
-Yu-Gi-Oh-MoreCards=0
+Yu-Gi-Oh-Cards=0
 Yu-Gi-Oh-Effects=0
 Yu-Gi-Oh-Campaign=0
 Yu-Gi-Oh-Media=0

@@ -878,7 +878,7 @@ namespace WolfX
             if (CardNames.FrameOf((int)record.Kind) == CardFrame.Link)
                 record.LinkArrows = _arrows.Value;   // in place of DEF
             record.ScaleLeft = (int)_scaleLeft.Value;
-            // What Level means follows the kind (as Yu-Gi-Oh-MoreCards does for custom cards): without it an Xyz shows Rank 0, a Link rating 0.
+            // What Level means follows the kind (as Yu-Gi-Oh-Cards does for custom cards): without it an Xyz shows Rank 0, a Link rating 0.
             record.StarType = CardNames.FrameOf((int)record.Kind) switch
             {
                 CardFrame.Xyz => 2,

@@ -49,7 +49,7 @@ namespace
     {
         if (g_ActiveDuelId && g_RealIdForBorrowed)
             return;
-        if (HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-MoreCards.dll"))
+        if (HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-Cards.dll"))
         {
             g_ActiveDuelId = reinterpret_cast<IdMap_t>(GetProcAddress(cards, "Card_GetActiveDuelSessionId"));
             g_RealIdForBorrowed = reinterpret_cast<IdMap_t>(GetProcAddress(cards, "Card_GetRealIdForBorrowed"));

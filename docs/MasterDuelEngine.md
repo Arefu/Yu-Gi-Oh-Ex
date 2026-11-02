@@ -28,17 +28,17 @@ Switching the mod off brings back the game's engine (and the player's own `Maste
 Memories) loads alone, so the engine mod is off while it's on.
 
 Plugin roles: **Core** (always on) loads the engine, feeds it the game's card data and redirects the duel to it; it knows nothing about other
-plugins. **Yu-Gi-Oh-MoreCards** and **Yu-Gi-Oh-Effects** are optional: they only call Core's API (`Core_EngineReady`, `Core_EngineProc`,
+plugins. **Yu-Gi-Oh-Cards** and **Yu-Gi-Oh-Effects** are optional: they only call Core's API (`Core_EngineReady`, `Core_EngineProc`,
 `Core_EngineRefreshCards`, Yu-Gi-Oh-Core.h), never each other.
 
 ## Status
 
 | Stage | What | State |
 |---|---|---|
-| 1 | Core loads duel.dll, work memory, card data from the game's lookups (MoreCards' cards included via `Core_EngineRefreshCards`), self-test CPU duel to console.log | built 2026-10-30 (Core 1.3.4, MoreCards 1.3.3), not run in the game; `[Yu-Gi-Oh-Core] MasterDuelEngine=1` |
+| 1 | Core loads duel.dll, work memory, card data from the game's lookups (Cards' cards included via `Core_EngineRefreshCards`), self-test CPU duel to console.log | built 2026-10-30 (Core 1.3.4, Cards 1.3.3), not run in the game; `[Yu-Gi-Oh-Core] MasterDuelEngine=1` |
 | 2 | Redirect the duel screen to it (Core `MasterDuelBridge.cpp`) | built 2026-10-30, not run in the game: offline duels only (not tag / online / tutorial) |
-| 3a | Card ids: MoreCards gives each card the engine its Konami id (`"konamiId"` in cards.json, 4,281 Cards mod cards; `make_cards_mod.py` writes it), else id + 20000; borrowed duel ids shown on screen (`Core_EngineMapCard` / `Core_EngineSetDisplayId`) | built 2026-10-30, not run |
-| 3b | MoreCards: custom cards' archetypes / same-name / genres into the engine's Named / Same / Genre data | not built |
+| 3a | Card ids: Cards gives each card the engine its Konami id (`"konamiId"` in cards.json, 4,281 Cards mod cards; `make_cards_mod.py` writes it), else id + 20000; borrowed duel ids shown on screen (`Core_EngineMapCard` / `Core_EngineSetDisplayId`) | built 2026-10-30, not run |
+| 3b | Cards: custom cards' archetypes / same-name / genres into the engine's Named / Same / Genre data | not built |
 | 4 | Effects: effects.json / cards.json effect rows into duel.dll's own tables | not built (rows are the same 48-byte format) |
 
 Standalone proof (2026-10-30, scratchpad `mdspike/spike.py`): Python ctypes loaded duel.dll (imports only KERNEL32), fed it the game's own
@@ -74,7 +74,7 @@ as the game's 0x14349C5C8).
 ## What the bridge does (built 2026-10-30, `MasterDuelBridge.cpp`)
 
 - **Duel start** (`DuelSetup_InitEngine` 0x14005FD90 detoured): Core forgets the last duel's display ids, the game's own setup runs (it loads
-  the decks; MoreCards borrows its duel ids and reports them), then `Duel_DuelEngine` (824 bytes) is copied into duel.dll's config - it IS that
+  the decks; Cards borrows its duel ids and reports them), then `Duel_DuelEngine` (824 bytes) is copied into duel.dll's config - it IS that
   block (seed / LP key at +0, player types +8, first player +40, deck blocks +44 + 192 x player, rules +812) - with the deck ids turned into
   engine ids, `DLL_SetEffectDelegate(animation, busy)` is set and `DLL_DuelSysInitCustom(DuelFormat, 0, 0, 0, -1, -1, 0)` starts the duel.
 - **Animations**: duel.dll runs its own message queue and executor (`sub_18010FAC0` = the game's `Duel__MsgQueue__PumpAndMirror`,
@@ -178,7 +178,7 @@ opened the game's type declaration (Fiend / Sea Serpent / Zombie). `ToGameDialog
 
 Lending (`Core_EngineLend`, 2026-10-31): for one duel the card the screen shows as display id D plays as engine id E, with E's record in
 duel.dll's card table rewritten from a game card's props (duel.dll reads Core's table in place, `DLL_SetCardProperty` keeps the pointer), and
-put back at the next duel start. Yu-Gi-Oh-MoreCards lends a single-effect clone (`effectClone.from`, any id) its source when no real copy of it
+put back at the next duel start. Yu-Gi-Oh-Cards lends a single-effect clone (`effectClone.from`, any id) its source when no real copy of it
 is in either deck: the clone then IS the source to the engine (every row and id-keyed branch) with its own stats. WolfX's Effect library
 offers every card that way (`as(<id>)`).
 

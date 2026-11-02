@@ -75,7 +75,7 @@ namespace
 
     // ---------------------------------------------------------------- cards
 
-    // Yu-Gi-Oh-MoreCards lends vanilla ids to custom cards for the length of a duel; this gives the custom card's real id.
+    // Yu-Gi-Oh-Cards lends vanilla ids to custom cards for the length of a duel; this gives the custom card's real id.
     uint16_t RealCardId(uint16_t id)
     {
         using Fn = unsigned short(__cdecl*)(unsigned short);
@@ -83,7 +83,7 @@ namespace
         static bool looked = false;
         if (!looked)
         {
-            if (HMODULE module = GetModuleHandleA("Yu-Gi-Oh-MoreCards.dll"))
+            if (HMODULE module = GetModuleHandleA("Yu-Gi-Oh-Cards.dll"))
                 lookup = reinterpret_cast<Fn>(GetProcAddress(module, "Card_GetRealIdForBorrowed"));
             looked = true;
         }

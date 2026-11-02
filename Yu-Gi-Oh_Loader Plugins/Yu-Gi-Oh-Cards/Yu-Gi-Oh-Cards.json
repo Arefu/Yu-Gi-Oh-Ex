@@ -1,6 +1,6 @@
 {
-  "version": "1.3.7",
-  "title": "More Cards",
+  "version": "1.4.1",
+  "title": "Cards",
   "description": "Custom cards, unlocks, card pool, card genres, related cards, text tables, shiny card rarities and buying many packs at once.",
   "content": [
     "cards.json",
@@ -14,6 +14,7 @@
   "settings": [
     {
       "key": "PreserveUnavailableCards",
+      "section": "Yu-Gi-Oh-MoreCards",
       "kind": "toggle",
       "default": "0",
       "help": "Keep saved copies of unavailable custom cards when switching mods or when cards.json fails to load. Off resets those cards as before. Restart the game after changing this option."
@@ -91,12 +92,12 @@
   ],
   "replaces": [
     {
-      "name": "Yu-Gi-Oh-Cards",
-      "note": "renamed to Yu-Gi-Oh-MoreCards"
+      "name": "Yu-Gi-Oh-MoreCards",
+      "note": "renamed to Yu-Gi-Oh-Cards"
     },
     {
       "name": "Yu-Gi-Oh-ZCards",
-      "note": "merged into Yu-Gi-Oh-MoreCards"
+      "note": "merged into Yu-Gi-Oh-Cards"
     }
   ]
 }

@@ -14,7 +14,7 @@
           "requires": [ "Yu-Gi-Oh-Core", "Yu-Gi-Oh-GUI" ],  DLL names (no .dll) that have to be on for this one to load;
                                                      "Plugin/Setting" also needs that plugin's Config.ini setting on, "Plugin/Setting=value"
                                                      set to that value (see "Required settings" below)
-          "loadAfter": [ "Yu-Gi-Oh-MoreCards" ],     only the order: when that plugin is on too, it loads before this one (for detours that
+          "loadAfter": [ "Yu-Gi-Oh-Cards" ],         only the order: when that plugin is on too, it loads before this one (for detours that
                                                      have to nest a certain way). It doesn't have to be on, and isn't switched on
           "dlls": [ "Yu-Gi-Oh-FooHelper" ],          more DLLs (same folder) that belong to this plugin: they are not listed on their own,
                                                      and they load with it, just before it
@@ -30,12 +30,12 @@
     Replaced plugins: someone who copies a new build over an old folder keeps the old DLLs (Yu-Gi-Oh-Music.dll next to Yu-Gi-Oh-Media.dll).
     A plugin that another installed plugin's manifest "replaces" never loads (Resolve: Problem = "replaced by ..."), and anything that
     asks for it by name - another manifest's "requires", content.json - gets the plugin that replaced it (Current). Yu-Gi-Oh-Core moves
-    the old Config.ini switch to the new plugin and tells the player once which leftover files can go; WolfX and ModManager offer to move
-    them to Plugins\_retired.
+    the old Config.ini switch to the new plugin, and the loader asks whether to move the leftover files to Plugins\_retired (Yes / No / Don't
+    ask again); WolfX and ModManager offer the same.
 
     <game>\Yu-Gi-Oh-Ex\content.json (written by WolfX whenever the content changes) lists the content there and the plugins it needs:
 
-        { "content": [ { "file": "genres.json", "plugins": [ "Yu-Gi-Oh-MoreCards" ] }, ... ] }
+        { "content": [ { "file": "genres.json", "plugins": [ "Yu-Gi-Oh-Cards" ] }, ... ] }
 
     The loader switches those plugins on (and what they require) before it injects anything (ApplyContent below), and says which
     are not installed, so content made on one PC tells another what it needs.
@@ -324,6 +324,43 @@ namespace YGO
             return nullptr;
         }
 
+        // Dotted version numbers, part by part: -1 a is older, 0 the same, 1 a is newer. A missing or non-numeric part counts as 0.
+        inline int CompareVersions(const std::string& a, const std::string& b)
+        {
+            size_t x = 0, y = 0;
+            while (x < a.size() || y < b.size())
+            {
+                const auto part = [](const std::string& text, size_t& at)
+                {
+                    long value = 0;
+                    while (at < text.size() && text[at] >= '0' && text[at] <= '9')
+                        value = value * 10 + (text[at++] - '0');
+                    while (at < text.size() && text[at] != '.')
+                        ++at;
+                    if (at < text.size())
+                        ++at;
+                    return value;
+                };
+                const long left = part(a, x), right = part(b, y);
+                if (left != right)
+                    return left < right ? -1 : 1;
+            }
+            return 0;
+        }
+
+        // Two plugins can each name the other in "replaces" when a name came back (Yu-Gi-Oh-Cards -> Yu-Gi-Oh-MoreCards -> Yu-Gi-Oh-Cards, and an old
+        // manifest is still in the folder). Marking both would load neither, so the newer version wins (the same version: the first by name).
+        inline bool ReplaceClaimStands(const Plugin& successor, const Plugin& plugin)
+        {
+            bool mutual = false;
+            for (const Info::Replaced& old : plugin.Details.Replaces)
+                mutual = mutual || SameName(old.Name, successor.Name);
+            if (!mutual)
+                return true;
+            const int newer = CompareVersions(successor.Details.Version, plugin.Details.Version);
+            return newer != 0 ? newer > 0 : successor.Name < plugin.Name;
+        }
+
         // Fills ReplacedBy / ReplacedNote: a plugin some other installed plugin's manifest "replaces" (call before Resolve; Resolve does).
         inline void MarkReplaced(std::vector<Plugin>& plugins)
         {
@@ -338,7 +375,7 @@ namespace YGO
                 {
                     for (Plugin& plugin : plugins)
                     {
-                        if (&plugin != &successor && SameName(plugin.Name, old.Name) && !SameName(plugin.Name, successor.Name))
+                        if (&plugin != &successor && SameName(plugin.Name, old.Name) && !SameName(plugin.Name, successor.Name) && ReplaceClaimStands(successor, plugin))
                         {
                             plugin.ReplacedBy = successor.Name;
                             plugin.ReplacedNote = old.Note;

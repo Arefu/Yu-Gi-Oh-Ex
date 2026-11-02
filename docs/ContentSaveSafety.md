@@ -19,7 +19,7 @@ Game archive writes continue to use the existing archive writer.
 
 ## Plugin startup
 
-Console, Core tweaks, AnimeCards, MoreCards, Effects, GUI and PatchMeOut report
+Console, Core tweaks, AnimeCards, Cards, Effects, GUI and PatchMeOut report
 hook transaction begin/update/commit failures through `HookDiagnostics`. Errors
 include the hook group, transaction stage, Windows error code and message, and
 the failed original-pointer slot when Detours provides it. Success is reported

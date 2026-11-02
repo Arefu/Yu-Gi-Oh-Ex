@@ -335,7 +335,7 @@ namespace Wolf.Mods
         /// <summary>The plugins that come with Yu-Gi-Oh-Ex, so a mod needing one doesn't need a link.</summary>
         public static readonly string[] StockPlugins =
         [
-            "Yu-Gi-Oh-Core", "Yu-Gi-Oh-RIX", "Yu-Gi-Oh-MoreCards", "Yu-Gi-Oh-Campaign", "Yu-Gi-Oh-Effects", "Yu-Gi-Oh-Media",
+            "Yu-Gi-Oh-Core", "Yu-Gi-Oh-RIX", "Yu-Gi-Oh-Cards", "Yu-Gi-Oh-Campaign", "Yu-Gi-Oh-Effects", "Yu-Gi-Oh-Media",
             "Yu-Gi-Oh-AnimeCards", "Yu-Gi-Oh-MP", "Yu-Gi-Oh-TagDuel", "Yu-Gi-Oh-Console", "Yu-Gi-Oh-GUI", "Yu-Gi-Oh-PatchMeOut",
             "Yu-Gi-Oh-Funky", "Yu-Gi-Oh-SpeedHacks",
         ];
@@ -343,8 +343,8 @@ namespace Wolf.Mods
         /// <summary>What content.json files name when there is no manifest to ask (same table as WolfX's ContentManifest).</summary>
         private static readonly (string Pattern, string Plugin)[] KnownContent =
         [
-            ("cards.json", "Yu-Gi-Oh-MoreCards"), ("unlocks.json", "Yu-Gi-Oh-MoreCards"), ("genres.json", "Yu-Gi-Oh-MoreCards"),
-            ("relatedcards.json", "Yu-Gi-Oh-MoreCards"), ("text.json", "Yu-Gi-Oh-MoreCards"),
+            ("cards.json", "Yu-Gi-Oh-Cards"), ("unlocks.json", "Yu-Gi-Oh-Cards"), ("genres.json", "Yu-Gi-Oh-Cards"),
+            ("relatedcards.json", "Yu-Gi-Oh-Cards"), ("text.json", "Yu-Gi-Oh-Cards"),
             ("characters.json", "Yu-Gi-Oh-Campaign"), ("decks.json", "Yu-Gi-Oh-Campaign"), ("storyduels.json", "Yu-Gi-Oh-Campaign"),
             ("storyscripts.json", "Yu-Gi-Oh-Campaign"),
             ("packs.json", "Yu-Gi-Oh-Core"),
@@ -609,7 +609,7 @@ namespace Wolf.Mods
                 foreach (string manifest in Directory.EnumerateFiles(folder, "*.json"))
                 {
                     string name = Path.GetFileNameWithoutExtension(manifest);
-                    if (File.Exists(Path.Combine(folder, name + ".dll")))
+                    if (File.Exists(Path.Combine(folder, name + ".dll")) && !RetiredPlugins.LostToItsSuccessor(manifest))
                         foreach (var (old, _) in RetiredPlugins.Replaces(manifest))
                             map.TryAdd(old, name);
                 }

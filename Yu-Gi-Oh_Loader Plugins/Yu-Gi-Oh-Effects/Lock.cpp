@@ -83,12 +83,12 @@ namespace
         return reinterpret_cast<const uint8_t*>(kPlayerState + kPlayerStride * (player & 1) + kZones + kZoneSize * zone);
     }
 
-    // In a duel a custom card may play under a borrowed vanilla id (Yu-Gi-Oh-MoreCards): this is the custom card it stands for, 0 = none.
+    // In a duel a custom card may play under a borrowed vanilla id (Yu-Gi-Oh-Cards): this is the custom card it stands for, 0 = none.
     uint16_t RealId(uint16_t id)
     {
         using RealId_t = unsigned short(__cdecl*)(unsigned short);
         static RealId_t real = [] {
-            HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-MoreCards.dll");
+            HMODULE cards = GetModuleHandleA("Yu-Gi-Oh-Cards.dll");
             return cards ? reinterpret_cast<RealId_t>(GetProcAddress(cards, "Card_GetRealIdForBorrowed")) : nullptr;
         }();
         const uint16_t mapped = real ? real(id) : 0;
