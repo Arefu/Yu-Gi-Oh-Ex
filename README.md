@@ -6,7 +6,7 @@ Hey you, I see you looking at this page wondering what on Earth you're doing bei
 
 Yu-Gi-Oh-Ex is a suite of tools, plugins and mods for [Yu-Gi-Oh Legacy of the Duelist Link Evolution](https://store.steampowered.com/app/1150640/YuGiOh_Legacy_of_the_Duelist__Link_Evolution/) on Steam: new cards with real effects, new campaign series, packs, music, menus, tag duels and a whole lot more. The name is a little play on Microsoft's convention of putting "Ex" at the end of a function that extends another one. When talking about the suite of tools I'd rather call it WolfX.
 
-**Quick links:** [Getting Started](#getting-started) · [Feature Glossary](GLOSSARY.md) · [Wiki](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki) · [Guides](#guides) · [License](#license)
+**Quick links:** [Getting Started](#getting-started) · [Feature Glossary](GLOSSARY.md) · [Wiki](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki) · [Guides](#guides) · [Discord](https://discord.gg/rr3zDhWRkZ) · [License](#license)
 
 ## A note on AI
 
@@ -28,6 +28,8 @@ Designed and tested with the latest Steam build of the game. You should always b
 The wiki's **[How To: Optional Features](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki/How-To-%E2%80%90-Optional-Features)** lists every optional feature and how a player or a mod turns it on and off. **[docs/NewInstall.md](docs/NewInstall.md)** walks through a first start from a stock game folder, every on/off switch (including what the always-on Core changes and the settings that put the base game back), and what a mod can and can't set.
 
 I would suggest checking the Project's [Wiki Page](https://github.com/Arefu/Yu-Gi-Oh-Ex/wiki) and the `docs\` folder: almost everything I know about the game is written down there.
+
+If you get stuck, open an issue here or come ask on [Arefu's Den](https://discord.gg/rr3zDhWRkZ) on Discord.
 
 ## What's in here
 
@@ -56,9 +58,9 @@ What WolfX can do:
 
 | Plugin | What it does |
 |---|---|
-| **Core** | Always on. The save redirect and save slots, the plugin list, game data loading (the Ex patch), mods' own settings, booster packs and new shop rows, shiny cards (every real rarity, rolled in packs and kept in the save), Speed/Rush duels and deck size limits, the crash log, credits. |
+| **Core** | Always on. The save redirect and save slots, the plugin list, game data loading (the Ex patch), mods' own settings, booster packs and new shop rows, extra user deck slots, deck tags, Speed/Rush duels and deck size limits, the crash log, credits. |
 | **RIX** | Always on. The in-game menus: new main menu buttons, RIX pages, the Plugins list, widgets for other plugins. |
-| **Cards** | Custom cards, unlocks, card genres, related cards and text tables. |
+| **Cards** | Custom cards, unlocks, card pool, card genres, related cards, text tables, shiny cards (every real rarity, rolled in packs and kept in the save) and buying many packs at once. |
 | **Effects** | Custom card effects, Fusion / Ritual / Synchro / Xyz / Link rules, and changed effects for game cards. |
 | **Campaign** | Characters, decks, story duels and scenes, new tutorials, and new campaign series past the game's 6. |
 | **Media** | Your own music in place of the game's (per arena, per opponent, per story duel), voice lines in duels, and mp4 videos (cutscenes, summon cut-ins). |
