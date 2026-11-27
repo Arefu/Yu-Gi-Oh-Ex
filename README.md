@@ -58,7 +58,7 @@ What WolfX can do:
 
 | Plugin | What it does |
 |---|---|
-| **Core** | Always on. The save redirect and save slots, the plugin list, game data loading (the Ex patch), mods' own settings, booster packs and new shop rows, extra user deck slots, deck tags, Speed/Rush duels and deck size limits, the crash log, credits. |
+| **Core** | Always on. The save redirect and save slots, the plugin list, game data loading (the Ex patch), mods' own settings, booster packs and new shop rows, extra user deck slots, deck tags, the trunk's New sort, Speed/Rush duels and deck size limits, the crash log, credits. |
 | **RIX** | Always on. The in-game menus: new main menu buttons, RIX pages, the Plugins list, widgets for other plugins. |
 | **Cards** | Custom cards, unlocks, card pool, card genres, related cards, text tables, shiny cards (every real rarity, rolled in packs and kept in the save) and buying many packs at once. |
 | **Effects** | Custom card effects, Fusion / Ritual / Synchro / Xyz / Link rules, and changed effects for game cards. |

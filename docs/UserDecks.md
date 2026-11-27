@@ -81,6 +81,30 @@ The types are named in the IDB and in `Dependencies/Yu-Gi-Oh-Ex/YuGiOh/YuGiOh-DE
 aside while the panel is borrowed and puts it back, so the player's card filter is untouched. `ScreenDeckEditor_SlideTo` 0x140839D80 moves the columns so the
 panel sits at the left (x 33); the card grid is off screen and the panel's hit tests go through `ToLocal`, so the mouse follows.
 
+## Trunk: sort by New
+
+The trunk's sort button (L / R, or clicking it) gets one more step after the game's last: **New**. Cards the save marks NEW (saved card table
+bit 3 clear, the same test as the grid's NEW badge) come first, then the rest; both halves are in name order. Core `TrunkNewSort.cpp`.
+
+Which cards count as new is read once, when the deck editor opens, and kept until it is opened again. Hovering a card clears its NEW mark in
+the save, so a live read would move cards on the next filter change; the snapshot keeps the order still. The game resets the sort to Name
+on every opening, and New goes back off with it.
+
+How the game sorts (IDB, 2026-11-27):
+
+| Name | Address | What it is |
+|---|---|---|
+| `g_CardSortModes` | 0x140C8C670 | 11 entries of 40 bytes: { mode, comparator factory `std::function<bool(u16,u16)>`, group key factory `std::function<int(u16)>`, header arg, string id }. Mode 5 (Pendulum scale) has string id 0 |
+| `widget_CardSortBar` | ctor 0x14088F450 | +128 the label, +192 mode, +196 enabled mask (ctor: all; the trunk clears 10, deck zones 8 and 10) |
+| `CardSortBar_Step` | 0x14088F580 | `(mode + dir + 11) % 11` over the mask, then label + fit to 210 wide. Hooked: the deck editor's trunk gets a 12th step |
+| `CardSortBar_SetMode` | 0x14088FA40 | Set mode + label (TrunkView_BuildCardList sets 0) |
+| `widget_TrunkZone::SortAndFillGrid` | 0x1408BFC30 | Sorts the shown ids (+1600) with the mode's comparator, `SetCards`. Hooked: in New, stable partition then `SetCards` again |
+| `TrunkView_BuildCardList` | 0x1408BFEF0 | Only from `ScreenDeckEditor::OnEnter`. Hooked: remembers the trunk, New off, snapshot after |
+| `TrunkZone_JumpGroup` / `TrunkZone_UpdateRowHeaders` | 0x1408BF770 / 0x1408C0270 | Use the mode's group key. In New the bar's mode stays 0 (Name), so both keep working |
+| `Card_IsNewlyOwned` | 0x1408BF720 | Slot 1 of the trunk's counter interface (trunk+48); `Card_MarkSeen` 0x1408BFEA0 is slot 2 |
+
+The label is `L"New"` (English only): `SetTextById` takes a wide string pointer for anything above string id 2214.
+
 ## For plugins
 
 `Core_GetDeckTags(deckId, out, size)` and `Core_SetDeckTags(deckId, "GX, Combo")` read and replace a user deck's free text (UTF-8, game thread only).

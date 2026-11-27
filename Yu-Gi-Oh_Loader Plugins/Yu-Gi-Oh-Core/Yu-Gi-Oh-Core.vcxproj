@@ -115,6 +115,7 @@
     <ClCompile Include="SaveScreen.cpp" />
     <ClCompile Include="SaveSlots.cpp" />
     <ClCompile Include="DeckTags.cpp" />
+    <ClCompile Include="TrunkNewSort.cpp" />
     <ClCompile Include="UserDecks.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +139,7 @@
     <ClInclude Include="SaveScreen.h" />
     <ClInclude Include="SaveSlots.h" />
     <ClInclude Include="DeckTags.h" />
+    <ClInclude Include="TrunkNewSort.h" />
     <ClInclude Include="UserDecks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

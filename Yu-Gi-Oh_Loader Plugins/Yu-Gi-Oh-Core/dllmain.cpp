@@ -20,6 +20,7 @@
 #include "SaveScreen.h"
 #include "SaveSlots.h"
 #include "DeckTags.h"
+#include "TrunkNewSort.h"
 #include "UserDecks.h"
 #include "Yu-Gi-Oh-Core.h"
 #include "YuGiOh/YuGiOh-Addresses.h"
@@ -186,6 +187,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
             UserDecks::Install();
             // Tags on user decks and filtering the deck list by them, on the game's card filter panel; kept in the save extension (DeckTags.h).
             DeckTags::Install();
+            // A "New" step on the trunk's sort button: the save's NEW cards first, as they were when the deck editor opened (TrunkNewSort.h).
+            TrunkNewSort::Install();
         }
         break;
     }
